@@ -1,0 +1,14 @@
+.DS_Store
+.venv/
+.pytest_cache/
+.ruff_cache/
+__pycache__/
+*.py[cod]
+
+# External research codes and large generated artifacts are fetched reproducibly.
+external/
+artifacts/
+results/
+
+# Local toolchain outputs.
+external/**/build/

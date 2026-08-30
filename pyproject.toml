@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fusion-baselines"
+version = "0.1.0"
+description = "Reproducible stellarator baseline and evidence tooling"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+]
+benchmark = [
+  "stellcoilbench",
+]
+
+[tool.uv.sources]
+stellcoilbench = { path = "external/stellcoilbench", editable = true }
+
+[project.scripts]
+fusion-baselines = "fusion_baselines.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/fusion_baselines"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+extend-exclude = ["artifacts", "environments", "external"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

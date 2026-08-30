@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "claim_class": "resolution_study_negative_result",
+  "surface_requested_s": 0.21875,
+  "surface_selected_s": 0.2175,
+  "published_epsilon_effective_3_2": 2.381383325116633e-06,
+  "levels": {
+    "low": {
+      "config": {
+        "surfaces": [
+          0.21875
+        ],
+        "theta_n": 48,
+        "phi_n": 48,
+        "max_m_mode": 0,
+        "max_n_mode": 0,
+        "npart": 24,
+        "multra": 2,
+        "acc_req": 0.04,
+        "no_bins": 50,
+        "nstep_per": 12,
+        "nstep_min": 100,
+        "nstep_max": 300,
+        "calc_nstep_max": 0,
+        "max_rational_field_periods": 100000,
+        "rational_surface_policy": "error",
+        "ref_swi": 2,
+        "write_progress": false,
+        "write_diagnostic": false
+      },
+      "runtime_seconds": 5.769270084041636,
+      "epsilon_effective_3_2": 1.2383174563506875e-05,
+      "calculated_over_published": 5.19999213604151,
+      "approximation_used": false
+    },
+    "default": {
+      "config": {
+        "surfaces": [
+          0.21875
+        ],
+        "theta_n": 64,
+        "phi_n": 64,
+        "max_m_mode": 0,
+        "max_n_mode": 0,
+        "npart": 40,
+        "multra": 2,
+        "acc_req": 0.02,
+        "no_bins": 50,
+        "nstep_per": 20,
+        "nstep_min": 200,
+        "nstep_max": 500,
+        "calc_nstep_max": 0,
+        "max_rational_field_periods": 100000,
+        "rational_surface_policy": "error",
+        "ref_swi": 2,
+        "write_progress": false,
+        "write_diagnostic": false
+      },
+      "runtime_seconds": 5.17010362498695,
+      "epsilon_effective_3_2": 1.0555637160117093e-05,
+      "calculated_over_published": 4.432565328221616,
+      "approximation_used": false
+    },
+    "high": {
+      "config": {
+        "surfaces": [
+          0.21875
+        ],
+        "theta_n": 96,
+        "phi_n": 96,
+        "max_m_mode": 0,
+        "max_n_mode": 0,
+        "npart": 80,
+        "multra": 2,
+        "acc_req": 0.01,
+        "no_bins": 50,
+        "nstep_per": 40,
+        "nstep_min": 400,
+        "nstep_max": 1000,
+        "calc_nstep_max": 0,
+        "max_rational_field_periods": 100000,
+        "rational_surface_policy": "error",
+        "ref_swi": 2,
+        "write_progress": false,
+        "write_diagnostic": false
+      },
+      "runtime_seconds": 5.740074375004042,
+      "epsilon_effective_3_2": 7.84117440296891e-06,
+      "calculated_over_published": 3.2926972824019725,
+      "approximation_used": false
+    },
+    "ultra": {
+      "config": {
+        "surfaces": [
+          0.21875
+        ],
+        "theta_n": 160,
+        "phi_n": 160,
+        "max_m_mode": 0,
+        "max_n_mode": 0,
+        "npart": 160,
+        "multra": 2,
+        "acc_req": 0.005,
+        "no_bins": 50,
+        "nstep_per": 80,
+        "nstep_min": 800,
+        "nstep_max": 2000,
+        "calc_nstep_max": 0,
+        "max_rational_field_periods": 100000,
+        "rational_surface_policy": "error",
+        "ref_swi": 2,
+        "write_progress": false,
+        "write_diagnostic": false
+      },
+      "runtime_seconds": 8.926487167016603,
+      "epsilon_effective_3_2": 7.772995501322577e-06,
+      "calculated_over_published": 3.2640673256338846,
+      "approximation_used": false
+    }
+  },
+  "high_to_ultra_relative_change": 0.008771251911149695,
+  "conclusion": "High and ultra settings agree within 1%, but remain more than three times the published value; tested resolution is not the sole explanation for the failed crosscheck."
+}

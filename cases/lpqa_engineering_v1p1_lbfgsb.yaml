@@ -1,0 +1,31 @@
+description: "LPQA engineering-feasibility screening v1.1: refined-clearance safety margin, order 4, L-BFGS-B."
+surface_params:
+  surface: "input.LandremanPaul2021_QA"
+  range: "half period"
+
+coils_params:
+  ncoils: 4
+  order: 4
+
+optimizer_params:
+  algorithm: "L-BFGS-B"
+  max_iterations: 500
+  verbose: true
+
+coil_objective_terms:
+  total_length: "l2_threshold"
+  coil_curvature: "lp_threshold"
+  coil_curvature_p: 2
+  coil_mean_squared_curvature: "l2_threshold"
+  coil_arclength_variation: "l2_threshold"
+  linking_number: ""
+  flux_threshold: 1.0e-8
+  length_threshold: 220.0
+  # 1.10 m reactor-scale is deliberately above the 1.06 m finite-build floor.
+  # The extra 40 mm is a pre-optimization discretization safety margin for the
+  # independent refined-distance holdout.
+  cc_threshold: 1.1
+  cs_threshold: 1.3
+  curvature_threshold: 1.0
+  msc_threshold: 1.0
+  arclength_variation_threshold: 1.0

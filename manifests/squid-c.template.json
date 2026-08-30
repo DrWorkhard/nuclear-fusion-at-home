@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "case_id": "squid-c-authoritative",
+  "kind": "squid_c",
+  "source": {
+    "url": "https://doi.org/10.1017/S0022377825100974",
+    "citation": "Goodman et al., Journal of Plasma Physics 91, E153 (2025/2026 online publication)",
+    "authority": "Replace with the authoritative data-release URL and authorship statement"
+  },
+  "conventions": {
+    "length_unit": "REQUIRED",
+    "field_unit": "REQUIRED",
+    "coordinate_system": "REQUIRED",
+    "current_sign": "REQUIRED"
+  },
+  "equilibrium": {
+    "code": "VMEC or VMEC++",
+    "version": "REQUIRED",
+    "free_boundary": "REQUIRED",
+    "nfp": "REQUIRED",
+    "mpol": "REQUIRED",
+    "ntor": "REQUIRED",
+    "ns": "REQUIRED",
+    "convergence_tolerances": "REQUIRED"
+  },
+  "files": [
+    {"role": "vmec_input", "path": "REQUIRED", "sha256": "REQUIRED"},
+    {"role": "vmec_output", "path": "REQUIRED", "sha256": "REQUIRED"},
+    {"role": "profiles", "path": "REQUIRED", "sha256": "REQUIRED"},
+    {"role": "coils", "path": "REQUIRED", "sha256": "REQUIRED"},
+    {"role": "currents", "path": "REQUIRED", "sha256": "REQUIRED"},
+    {"role": "metadata", "path": "REQUIRED", "sha256": "REQUIRED"}
+  ],
+  "reference_metrics": {
+    "aspect_ratio": {"value": "REQUIRED", "tolerance": "REQUIRED"},
+    "volume_averaged_beta": {"value": "REQUIRED", "tolerance": "REQUIRED"},
+    "iota_profile": {"value": "REQUIRED", "tolerance": "REQUIRED"},
+    "quasi_isodynamic_metric": {"definition": "REQUIRED", "value": "REQUIRED", "tolerance": "REQUIRED"},
+    "coil_normal_field_error": {"definition": "REQUIRED", "value": "REQUIRED", "tolerance": "REQUIRED"}
+  }
+}
