@@ -1,0 +1,302 @@
+{
+  "schema_version": 1,
+  "claim_class": "reproduced_and_repeat_checked",
+  "software": {
+    "simsopt": "0.1.dev5668+ga79006b0b",
+    "python": "3.12.13"
+  },
+  "inputs": {
+    "field_sha256": "e9553d284add189723c135f86a9b37a2c99f69e1a4d51b703f3320338bb652ce",
+    "surface_sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8",
+    "nfp": 5,
+    "start_R": [
+      5.792059625,
+      5.856517381,
+      5.920975136999999,
+      5.985432893,
+      6.049890648999999,
+      6.1143484049999985
+    ],
+    "start_Z": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "section_phi_radians": [
+      0.0,
+      0.3141592653589793,
+      0.6283185307179586,
+      0.9424777960769379
+    ],
+    "nfieldlines": 6,
+    "tmax": 2000.0,
+    "tol": 1e-07,
+    "surface_grid": [
+      64,
+      64
+    ],
+    "interpolation_grid": [
+      20,
+      40,
+      10
+    ]
+  },
+  "repeats": [
+    {
+      "runtime_seconds": 0.6256442079902627,
+      "trajectory_hash": "922696402e8240945192bddb31cff6b6f7bc3a9b406879f7171a1d2dc389d7cf",
+      "poincare_hits_hash": "5cc396a44df905ce79a6ec17e798887fd0364f21aaf0fe46011527553b04f7bb",
+      "trajectory_points_per_line": [
+        19519,
+        17236,
+        16534,
+        16848,
+        17797,
+        20063
+      ],
+      "poincare_rows_per_line": [
+        523,
+        523,
+        521,
+        522,
+        523,
+        523
+      ],
+      "summary": {
+        "per_line": [
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              131
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.5679736772519662,
+            "phi0_extent": {
+              "R_min": 5.6892677330879255,
+              "R_max": 6.1032289188837785,
+              "Z_min": -0.6839895128027619,
+              "Z_max": 0.6831665888998023
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              131
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.6435121338154877,
+            "phi0_extent": {
+              "R_min": 5.843065154019776,
+              "R_max": 6.0198983393727445,
+              "Z_min": -0.38170486141564675,
+              "Z_max": 0.38170132789482686
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              130,
+              130
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.6167325496143948,
+            "phi0_extent": {
+              "R_min": 5.920947236801877,
+              "R_max": 5.947814483388848,
+              "Z_min": -0.06473643663904949,
+              "Z_max": 0.06474486766676393
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              130
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.6278823501429301,
+            "phi0_extent": {
+              "R_min": 5.885791538445546,
+              "R_max": 5.985408045284536,
+              "Z_min": -0.2365801380890568,
+              "Z_max": 0.23611273031621072
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              131
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.6457177589604122,
+            "phi0_extent": {
+              "R_min": 5.794253393280474,
+              "R_max": 6.049752907474418,
+              "Z_min": -0.49778681185531326,
+              "Z_max": 0.49731086529552343
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              131
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.5253054730713077,
+            "phi0_extent": {
+              "R_min": 5.664161130558471,
+              "R_max": 6.114488135052642,
+              "Z_min": -0.7204414644768549,
+              "Z_max": 0.7189001480504693
+            }
+          }
+        ],
+        "all_lines_unterminated": true,
+        "minimum_hits_per_plane": 130
+      }
+    },
+    {
+      "runtime_seconds": 0.2592282500118017,
+      "trajectory_hash": "922696402e8240945192bddb31cff6b6f7bc3a9b406879f7171a1d2dc389d7cf",
+      "poincare_hits_hash": "5cc396a44df905ce79a6ec17e798887fd0364f21aaf0fe46011527553b04f7bb",
+      "trajectory_points_per_line": [
+        19519,
+        17236,
+        16534,
+        16848,
+        17797,
+        20063
+      ],
+      "poincare_rows_per_line": [
+        523,
+        523,
+        521,
+        522,
+        523,
+        523
+      ],
+      "summary": {
+        "per_line": [
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              131
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.5679736772519662,
+            "phi0_extent": {
+              "R_min": 5.6892677330879255,
+              "R_max": 6.1032289188837785,
+              "Z_min": -0.6839895128027619,
+              "Z_max": 0.6831665888998023
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              131
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.6435121338154877,
+            "phi0_extent": {
+              "R_min": 5.843065154019776,
+              "R_max": 6.0198983393727445,
+              "Z_min": -0.38170486141564675,
+              "Z_max": 0.38170132789482686
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              130,
+              130
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.6167325496143948,
+            "phi0_extent": {
+              "R_min": 5.920947236801877,
+              "R_max": 5.947814483388848,
+              "Z_min": -0.06473643663904949,
+              "Z_max": 0.06474486766676393
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              130
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.6278823501429301,
+            "phi0_extent": {
+              "R_min": 5.885791538445546,
+              "R_max": 5.985408045284536,
+              "Z_min": -0.2365801380890568,
+              "Z_max": 0.23611273031621072
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              131
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.6457177589604122,
+            "phi0_extent": {
+              "R_min": 5.794253393280474,
+              "R_max": 6.049752907474418,
+              "Z_min": -0.49778681185531326,
+              "Z_max": 0.49731086529552343
+            }
+          },
+          {
+            "plane_hit_counts": [
+              130,
+              131,
+              131,
+              131
+            ],
+            "termination_count": 0,
+            "iota_from_phi0_hits": -0.5253054730713077,
+            "phi0_extent": {
+              "R_min": 5.664161130558471,
+              "R_max": 6.114488135052642,
+              "Z_min": -0.7204414644768549,
+              "Z_max": 0.7189001480504693
+            }
+          }
+        ],
+        "all_lines_unterminated": true,
+        "minimum_hits_per_plane": 130
+      }
+    }
+  ],
+  "bit_identical_trajectories": true,
+  "bit_identical_poincare_hits": true,
+  "interpretation_limits": [
+    "This is a deterministic regression of the optimized filament-coil field, not authoritative W7-X coil validation.",
+    "The iota estimate is a diagnostic linear fit to section-hit angles and is not used as an equilibrium-quality certificate.",
+    "Interpolation and tracing resolution require convergence checks before a physics claim."
+  ]
+}

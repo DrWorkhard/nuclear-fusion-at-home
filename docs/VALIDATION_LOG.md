@@ -147,3 +147,14 @@
   published `2.38e-6` value.
 - Scope limit: the release lacks the original radial Boozer file and NEO control
   deck; solver execution is checked, paper reproduction is not.
+
+## 2026-08-30 — W7-X-target coil-field regression
+
+- Two interpolated and two direct Biot-Savart tracing repeats are bit-identical
+  within their respective fidelity paths.
+- Six of six sampled lines remain unterminated through `tmax=2000`, with at least
+  130 hits on each of four sections per field period.
+- Interpolated and direct hit counts are identical; section extents agree within
+  4.72 mm at worst.
+- Scope limit: this checks the optimized StellCoilBench filament field targeting
+  the W7-X boundary, not surveyed/as-built W7-X coil geometry.

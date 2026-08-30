@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "claim_class": "cross_fidelity_regression",
+  "interpolated_hits_hash": "5cc396a44df905ce79a6ec17e798887fd0364f21aaf0fe46011527553b04f7bb",
+  "direct_hits_hash": "9c853d4cf29457b2a62c84040beaf50e206547122f504d340d05b7f2d28bb006",
+  "plane_hit_counts_identical": true,
+  "all_lines_unterminated_both": true,
+  "per_line_phi0_extent_absolute_difference_m": [
+    {
+      "R_min": 0.0006313695430018029,
+      "R_max": 0.0004650007500490716,
+      "Z_min": 0.00113743519424081,
+      "Z_max": 0.000314163143280477
+    },
+    {
+      "R_min": 7.733469917781122e-05,
+      "R_max": 6.66915673175339e-05,
+      "Z_min": 0.0002943119178953624,
+      "Z_max": 0.00032627524887479664
+    },
+    {
+      "R_min": 2.808443084489909e-05,
+      "R_max": 2.3215873276249965e-05,
+      "Z_min": 0.00016684976689103348,
+      "Z_max": 0.0001884539615577413
+    },
+    {
+      "R_min": 3.651677886651328e-05,
+      "R_max": 2.7560196367737433e-05,
+      "Z_min": 0.00010924678144388911,
+      "Z_max": 0.00010721443650496543
+    },
+    {
+      "R_min": 4.891268157791728e-05,
+      "R_max": 6.71392038933405e-05,
+      "Z_min": 2.8673804872869635e-05,
+      "Z_max": 0.00024704077595866236
+    },
+    {
+      "R_min": 0.004723384424954347,
+      "R_max": 0.0001413060763679752,
+      "Z_min": 0.0014268104155635841,
+      "Z_max": 0.00010089185474737583
+    }
+  ],
+  "maximum_phi0_extent_absolute_difference_m": 0.004723384424954347,
+  "per_line_iota_diagnostic_absolute_difference": [
+    0.0008344252053916756,
+    5.1445467509902976e-05,
+    0.0015165965460820496,
+    9.533105095893557e-05,
+    8.734856981795769e-05,
+    0.0008324029451557413
+  ],
+  "maximum_iota_diagnostic_absolute_difference": 0.0015165965460820496,
+  "conclusion": "The fast interpolated regression preserves hit counts and confinement classification; its section extents agree with direct Biot-Savart tracing within the recorded maximum absolute difference."
+}

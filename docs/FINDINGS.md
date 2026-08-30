@@ -375,3 +375,21 @@ the published value is `2.381e-6`.
 but paper reproduction fails and cannot be repaired by the tested resolution
 increase alone. The missing original radial Boozer file and NEO control deck are
 now explicit provenance blockers; no transport-accuracy claim is made.
+
+## F-025 — The W7-X-target coil field has a deterministic Poincare regression
+
+**Class:** reproduced and cross-fidelity checked
+**Date:** 2026-08-30
+
+Six field lines from the serialized order-8 W7-X-target coil solution were traced
+to four sections per field period for `tmax=2000`. Two interpolated-field repeats
+and two direct Biot-Savart repeats are internally bit-identical. Every line remains
+inside the boundary stopping surface and supplies at least 130 hits per section.
+Interpolated and direct paths give identical hit counts; their section-extrema
+differ by at most 4.72 mm, on the outermost sampled line. The inexpensive
+interpolant takes 0.26 s after setup versus 80.6 s for direct tracing.
+
+**Implication:** coil-field topology now has a numerical regression in addition
+to a plot, with a direct-field holdout. It validates the serialized optimized
+filament field and software path, not the authoritative as-built W7-X coils, and
+the diagnostic section-angle iota fit is not promoted to an equilibrium metric.

@@ -19,7 +19,8 @@ The project is ready for SQuID-C when all gates below are satisfied.
 
 - [x] Authoritative W7-X equilibrium ingested.
 - [ ] Equilibrium metrics reproduced within declared tolerances.
-- [ ] Coil field and Poincare regression established.
+- [x] Coil field and Poincare regression established for the serialized
+      W7-X-target benchmark coils, including a direct Biot-Savart holdout.
 - [x] Perturbation/sensitivity protocol recorded.
 
 ## G4 — QI bridge
