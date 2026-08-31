@@ -1,0 +1,242 @@
+{
+  "schema_version": 1,
+  "audit_date": "2026-08-31",
+  "subject": {
+    "name": "SQuID-C",
+    "doi": "10.1017/S0022377825100974",
+    "title": "A quasi-isodynamic stellarator configuration towards a fusion power plant"
+  },
+  "publisher": {
+    "article_url": "https://www.cambridge.org/core/journals/journal-of-plasma-physics/article/quasiisodynamic-stellarator-configuration-towards-a-fusion-power-plant/C8A4D1BBC282A9632924B5B85173A6AC",
+    "article_html_sha256": "684ddfd80001cf2ef1e622ea750622f69c97d92508276b078d0f40c590561530",
+    "empty_supplementary_materials_metadata": true
+  },
+  "crossref": {
+    "url": "https://api.crossref.org/works/10.1017%2FS0022377825100974",
+    "response_sha256": "3deb3acb95c3a3e5a5025803557f013dc7e714e71877d8bd33bca648018abb7f",
+    "registered_title": "A quasi-isodynamic stellarator configuration towards a fusion power plant",
+    "relations": {},
+    "relation_count": 0
+  },
+  "zenodo": {
+    "queries": {
+      "configuration_name": {
+        "query": "\"SQuID-C\"",
+        "url": "https://zenodo.org/api/records/?q=%22SQuID-C%22&size=25",
+        "hits_total": 0,
+        "response_sha256": "fa62d5c8ed4700eaab344d3cbc6f13d54180126409a40efd9b79f1aa902b13dd"
+      },
+      "article_doi": {
+        "query": "\"10.1017/S0022377825100974\"",
+        "url": "https://zenodo.org/api/records/?q=%2210.1017%2FS0022377825100974%22&size=25",
+        "hits_total": 0,
+        "response_sha256": "a29bd9077809f5498a314f23c32422f90fa8f26f7975142ccd16c4203824a8e2"
+      },
+      "article_title": {
+        "query": "\"A quasi-isodynamic stellarator configuration towards a fusion power plant\"",
+        "url": "https://zenodo.org/api/records/?q=%22A+quasi-isodynamic+stellarator+configuration+towards+a+fusion+power+plant%22&size=25",
+        "hits_total": 0,
+        "response_sha256": "48d23e074487a4dd0bb2dd8a25779a7c0c1392cb9013201bc1f9b9288e8beedd"
+      }
+    },
+    "all_zero_hits": true
+  },
+  "datacite": {
+    "queries": {
+      "related_article_doi": {
+        "query": "relatedIdentifiers.relatedIdentifier:\"10.1017/S0022377825100974\"",
+        "url": "https://api.datacite.org/dois?query=relatedIdentifiers.relatedIdentifier%3A%2210.1017%2FS0022377825100974%22&page%5Bsize%5D=25",
+        "hits_total": 0,
+        "dois": [],
+        "response_sha256": "22a50198342398d7c46658d4ff8dcd41f5a5e6736501a09c12a3909395bee3c6"
+      },
+      "article_title": {
+        "query": "titles.title:\"A quasi-isodynamic stellarator configuration towards a fusion power plant\"",
+        "url": "https://api.datacite.org/dois?query=titles.title%3A%22A+quasi-isodynamic+stellarator+configuration+towards+a+fusion+power+plant%22&page%5Bsize%5D=25",
+        "hits_total": 0,
+        "dois": [],
+        "response_sha256": "ddf7030d556dbab3180210d5f57a4f4eb5846d4060cc4e38730377a0374c8f66"
+      }
+    },
+    "all_zero_hits": true
+  },
+  "github": {
+    "organization": "proximafusion",
+    "repositories_url": "https://api.github.com/orgs/proximafusion/repos?per_page=100&type=public",
+    "repositories_response_sha256": "098cd482914f39400325836d8845917040712f23b7207a1baa95021491f9ca9f",
+    "repository_count": 9,
+    "total_paths": 4035,
+    "all_trees_complete": true,
+    "matching_paths": [],
+    "repositories": [
+      {
+        "name": "vmecpp",
+        "url": "https://github.com/proximafusion/vmecpp",
+        "default_branch": "main",
+        "tree_sha": "557d9bad56b07433934cbbda7cd257e985260521",
+        "tree_response_sha256": "7f66918f586a459fb8a2785bdd2f07a2e1ddabebf257da727bdbc6dd0dc34a25",
+        "tree_truncated": false,
+        "path_count": 2125,
+        "matching_paths": []
+      },
+      {
+        "name": "vmecpp-validation",
+        "url": "https://github.com/proximafusion/vmecpp-validation",
+        "default_branch": "main",
+        "tree_sha": "4017e53095c09e2ead20c6bb64c12796583520c5",
+        "tree_response_sha256": "09ded663ec43f096e49dfc0e0c5cdbd2f63cbe651af4e98cae93b584ef9726a9",
+        "tree_truncated": false,
+        "path_count": 35,
+        "matching_paths": []
+      },
+      {
+        "name": "vmecpp-benchmarks",
+        "url": "https://github.com/proximafusion/vmecpp-benchmarks",
+        "default_branch": "main",
+        "tree_sha": "05ba5cc512b92b3f2f57f2d6a4e1d35b2f1832c5",
+        "tree_response_sha256": "642d7cf2697b9ed682a563617d2d2f62812ae57d8193d9267263d8ea23f377d4",
+        "tree_truncated": false,
+        "path_count": 15,
+        "matching_paths": []
+      },
+      {
+        "name": "vmecpp_large_cpp_tests",
+        "url": "https://github.com/proximafusion/vmecpp_large_cpp_tests",
+        "default_branch": "main",
+        "tree_sha": "394a09a6b264057ad08e28c22fa84517e4a96d8d",
+        "tree_response_sha256": "d65e6f714e13187cb26c529118047f2e592a9f4cd8d36ac184fb2019c3249c6a",
+        "tree_truncated": false,
+        "path_count": 1470,
+        "matching_paths": []
+      },
+      {
+        "name": "the_numerics_of_vmecpp",
+        "url": "https://github.com/proximafusion/the_numerics_of_vmecpp",
+        "default_branch": "main",
+        "tree_sha": "f04fc069fbc8281c1fe0531551212a5c896d02d7",
+        "tree_response_sha256": "12cea40a835e7fcc79b4cf207a1422eecebef2567e98f50acd7f9a0a7795d976",
+        "tree_truncated": false,
+        "path_count": 53,
+        "matching_paths": []
+      },
+      {
+        "name": "constellaration",
+        "url": "https://github.com/proximafusion/constellaration",
+        "default_branch": "main",
+        "tree_sha": "112b20ae07193910d467d26033fe51022e641b9f",
+        "tree_response_sha256": "167350eb79890cb617746677e49f15703aa0cb067c3f632a5baf1db711e0b3e4",
+        "tree_truncated": false,
+        "path_count": 125,
+        "matching_paths": []
+      },
+      {
+        "name": "open_stellarator_models",
+        "url": "https://github.com/proximafusion/open_stellarator_models",
+        "default_branch": "main",
+        "tree_sha": "af86bcaee80301e02a099f9fcecaf5849b053231",
+        "tree_response_sha256": "aa0ff5b0d4509f8962c4d8ed50307c9845c22dcebc4844f0c1cef4362b5a1f2a",
+        "tree_truncated": false,
+        "path_count": 5,
+        "matching_paths": []
+      },
+      {
+        "name": "raytrax",
+        "url": "https://github.com/proximafusion/raytrax",
+        "default_branch": "main",
+        "tree_sha": "6f094daf359eb75cfa42df4d77adede760e16acc",
+        "tree_response_sha256": "40ef072ecf074b13dec0730f677879a721a2151ff0227448aed39e7af2d01604",
+        "tree_truncated": false,
+        "path_count": 141,
+        "matching_paths": []
+      },
+      {
+        "name": "coilstellaration",
+        "url": "https://github.com/proximafusion/coilstellaration",
+        "default_branch": "main",
+        "tree_sha": "03d1dc236044b97c5bd2fdf608a151754f9479dd",
+        "tree_response_sha256": "5c00addd7df214a338d931561f7a8e9b11afbd881e1cf29a0e1c55a7547f3210",
+        "tree_truncated": false,
+        "path_count": 66,
+        "matching_paths": []
+      }
+    ],
+    "scope_limit": "All public repository paths were searched. Blob contents were not exhaustively searched because unauthenticated GitHub code search is unavailable."
+  },
+  "hugging_face": {
+    "organization": "proxima-fusion",
+    "datasets_url": "https://huggingface.co/api/datasets?author=proxima-fusion&limit=100&full=true",
+    "datasets_response_sha256": "c7ab4cb49c312be83b81dd680ed57395ae6b6524194e2c6ad23fe4268511026a",
+    "dataset_count": 4,
+    "matching_paths": [],
+    "datasets": [
+      {
+        "id": "proxima-fusion/constellaration",
+        "url": "https://huggingface.co/datasets/proxima-fusion/constellaration",
+        "revision_sha": "8da71572eb63ce93e77ce89bec0d7c30b7eba89e",
+        "path_count": 7028,
+        "matching_paths": [],
+        "tree_page_response_sha256": [
+          "ec67adf0ab502096d0ab82e9d69fabd5d8b50870bf21e205fa34e91114963199",
+          "9ccc2ed1f537a51ea0ad2bd1c26b0af0c9934b95063a8f56e514e87e81857875",
+          "9dec789802876955de27c59bfcbe3cc54bb89f8a1968a1d1284f0bb4a960da5e",
+          "ec1c8ae368bcd09d01769c9c1ccaca23b447b0f09955377d62fe7a0c37c6edc3",
+          "e3198892576e055a811f178644127a7b17b6aec97b2e5419bfaa2ea0aa09fb00",
+          "633129705e596f595675d3a5d0f15320988206572ff02139e7268f8ac37bb860",
+          "9c89e9a3bf0c3a15257a300bd69c90697415c23f45ba7bbb27ced771c1c7a832",
+          "3bb2a1cd76feb4aa217b2dbdd3bd61e1a84da33ab0bf428f816d5e9224a10ae9"
+        ]
+      },
+      {
+        "id": "proxima-fusion/constellaration-bench-results",
+        "url": "https://huggingface.co/datasets/proxima-fusion/constellaration-bench-results",
+        "revision_sha": "2b944aabd49b1455900dc9c03b3c45e5753a005c",
+        "path_count": 143,
+        "matching_paths": [],
+        "tree_page_response_sha256": [
+          "fa900addf429d88d6d8980a4747165deb975b814a152c16f1e93712b1f2b8494"
+        ]
+      },
+      {
+        "id": "proxima-fusion/constellaration-bench-submissions",
+        "url": "https://huggingface.co/datasets/proxima-fusion/constellaration-bench-submissions",
+        "revision_sha": "fb89c52376bfc3f82f8a67290ad30ce003843a27",
+        "path_count": 274,
+        "matching_paths": [],
+        "tree_page_response_sha256": [
+          "7b8d09ef6a3e267f28783f50eccf3352e1771d3e14c8a69d86668a32c0bdfb65"
+        ]
+      },
+      {
+        "id": "proxima-fusion/coilstellaration",
+        "url": "https://huggingface.co/datasets/proxima-fusion/coilstellaration",
+        "revision_sha": "286a268c664938519af6ceacfb4ec8143f64e20e",
+        "path_count": 223,
+        "matching_paths": [],
+        "tree_page_response_sha256": [
+          "7025fb7c59dde2cf182f69990bfd99c50177f5da78e3e9ae4698949d70bf927b"
+        ]
+      }
+    ],
+    "coilstellaration_results_schema": {
+      "url": "https://datasets-server.huggingface.co/first-rows?dataset=proxima-fusion%2Fcoilstellaration&config=results&split=train",
+      "response_sha256": "995eac1065c47885eea9bec1c74828a55c52b5d0ff4cbc805a8e38ac1568eecb",
+      "feature_count": 179,
+      "human_provenance_columns": [],
+      "boundary_link_column": "constellaration_boundary_id"
+    },
+    "scope_limit": "Every public dataset path was searched. Multi-gigabyte row payloads were not exhaustively scanned; CoilStellaration exposes opaque boundary IDs and no human paper/DOI/source column in its results schema, so an anonymous row cannot be authoritatively mapped to SQuID-C."
+  },
+  "required_authoritative_artifacts_not_located": [
+    "fixed-boundary finite-beta target VMEC input and converged output",
+    "coil-generated free-boundary VMEC input and converged output",
+    "complete coil geometry or winding volumes with signed currents and symmetry",
+    "MAKEGRID response file or an exact reproducible generation recipe",
+    "pressure and current profiles, physical scale, and field normalization",
+    "the run settings needed to reproduce the paper-level coil and physics metrics"
+  ],
+  "assessment": {
+    "authoritative_machine_readable_package_located": false,
+    "public_absence_audit_passed": true,
+    "statement": "No publicly identified authoritative SQuID-C machine package was located in the audited primary-source channels as of the audit date. This records search coverage and is not proof that no unpublished, anonymous, or unindexed data exist."
+  }
+}

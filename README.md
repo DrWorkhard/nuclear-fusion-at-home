@@ -59,4 +59,6 @@ uv run python scripts/run_stellcoilbench_case.py \
 ./scripts/bootstrap_neo_jax.sh
 uv run fusion-baselines summarize-equilibrium \
   manifests/qi-goodman-2022.json --data-root .
+uv run python scripts/audit_squid_c_availability.py \
+  evidence/squid-c-availability-$(date +%F).json
 ```

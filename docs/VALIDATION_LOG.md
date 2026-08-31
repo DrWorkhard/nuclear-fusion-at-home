@@ -203,3 +203,21 @@
   VMEC and Boozer summaries finite.
 - Added Goodman nfp=2 only as a new manifest and ran the identical command; all
   declared fields matched without code changes.
+
+## 2026-08-31 — SQuID-C public-data availability
+
+- Publisher metadata: empty supplementary-material list.
+- Crossref: zero article relations.
+- Zenodo: zero exact results for name, DOI, and full article title.
+- DataCite: zero results for related DOI and full article title.
+- Proxima Fusion GitHub: nine public repositories, 4,035 paths, no truncated
+  trees, zero SQuID-C path-name matches.
+- Proxima Fusion Hugging Face: four datasets, 7,668 fully paginated paths at
+  recorded revisions, zero SQuID-C path-name matches.
+- CoilStellaration results schema: 179 fields, no paper/DOI/citation/source/name
+  field; its opaque boundary IDs cannot establish authoritative identity.
+- Repeated end-to-end audit after fixing URL path encoding: passed and wrote
+  `evidence/squid-c-availability-audit-2026-08-31.json`.
+- Scope limit: GitHub blob contents and multi-gigabyte Hugging Face row payloads
+  were not exhaustively searched. The result is “no publicly identified package
+  located”, not proof of universal non-existence.

@@ -2,6 +2,11 @@
 
 The project is ready for SQuID-C when all gates below are satisfied.
 
+Current status: the public-data absence audit is complete, but the project is not
+yet scientifically ready. G1 still lacks a witnessed remote CI run, G3 still
+fails the full equilibrium V&V tolerance set, and G6 cannot close raw/derived
+lineage until authoritative files are obtained.
+
 ## G1 — Reproducible environment
 
 - [x] One-command environment creation on the canonical platform.
@@ -49,5 +54,7 @@ The project is ready for SQuID-C when all gates below are satisfied.
 - [x] Schema for equilibrium, profiles, coils, currents, scale, and provenance.
 - [x] Paper reproduction metrics and tolerances predeclared.
 - [ ] Raw/derived data lineage and hashes recorded.
-- [ ] Authoritative SQuID-C files obtained or their absence documented as the only
-      remaining external blocker.
+- [x] Authoritative SQuID-C files obtained or their absence documented as the only
+      remaining external blocker. The 2026-08-31 audit found no publicly
+      identified authoritative package; this is a bounded search result, not a
+      proof that unpublished or anonymously indexed data do not exist.

@@ -489,3 +489,36 @@ metadata matched in both cases.
 by adding files and a manifest, without changing Python code. Paper-specific
 metric reproduction can still require a versioned adapter when the publication
 defines a unique objective; that is kept separate from generic intake.
+
+## F-030 — No publicly identified authoritative SQuID-C package was located
+
+**Class:** reproducible bounded primary-source availability audit
+**Date:** 2026-08-31
+
+The publisher page exposes an empty `supplementaryMaterials` list, and Crossref
+records no DOI relations. Exact Zenodo searches by configuration name, article
+DOI, and title returned zero records; DataCite searches by related DOI and title
+also returned zero. All 4,035 paths in all nine public Proxima Fusion GitHub
+repositories were checked from complete recursive trees without a SQuID-C name
+match.
+
+Proxima's four public Hugging Face datasets required an additional check because
+ConStellaration and CoilStellaration are directly relevant. All 7,668 repository
+paths were checked at recorded revisions without a name match. CoilStellaration's
+179-column results schema links to a ConStellaration boundary only by an opaque
+ID and exposes no human paper, DOI, citation, or source column. Its multi-gigabyte
+row payloads were not exhaustively searched, so an anonymous row cannot be ruled
+out—but it also could not serve as an authoritative SQuID-C baseline without a
+publisher/author mapping.
+
+**Verification:** `scripts/audit_squid_c_availability.py` reruns the APIs and
+publisher metadata checks. The dated evidence records endpoint-response hashes,
+repository/dataset revisions, pagination coverage, search limitations, and the
+six still-missing artifact classes.
+
+**Implication:** the external SQuID-C intake blocker is now documented rather
+than inferred from a general web search. We should request the fixed- and
+free-boundary VMEC cases, profiles, coil/current data, MGRID recipe, scale, and
+paper run settings from the authors; figures or anonymous dataset rows are not
+acceptable substitutes. This does not close the separate internal W7-X V&V and
+CI gates.

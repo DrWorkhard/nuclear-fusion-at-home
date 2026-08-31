@@ -5,7 +5,13 @@
   "source": {
     "url": "https://doi.org/10.1017/S0022377825100974",
     "citation": "Goodman et al., Journal of Plasma Physics 91, E153 (2025/2026 online publication)",
-    "authority": "Replace with the authoritative data-release URL and authorship statement"
+    "authority": "Replace with the authoritative data-release URL and authorship statement",
+    "availability_audit": {
+      "as_of": "2026-08-31",
+      "path": "evidence/squid-c-availability-audit-2026-08-31.json",
+      "sha256": "64c89871352e8bcf2b3faff54c995366e06c2783fa4ab3ee900d436412bd9fc2",
+      "authoritative_machine_readable_package_located": false
+    }
   },
   "conventions": {
     "length_unit": "REQUIRED",
