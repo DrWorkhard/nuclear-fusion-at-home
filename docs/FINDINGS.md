@@ -393,3 +393,52 @@ interpolant takes 0.26 s after setup versus 80.6 s for direct tracing.
 to a plot, with a direct-field holdout. It validates the serialized optimized
 filament field and software path, not the authoritative as-built W7-X coils, and
 the diagnostic section-angle iota fit is not promoted to an equilibrium metric.
+
+## F-026 — The stock finite-build fallback fails on a real LPQA candidate
+
+**Class:** reproduced failure plus independent geometric holdout
+**Date:** 2026-08-31
+
+StellCoilBench's Gmsh fallback passed its selected upstream unit tests but could
+not mesh any of the four unique coils of the serialized LPQA engineering
+candidate at `h=0.05 m`. The OCC route reported intersecting/overlapping facets,
+and the STL route reported an invalid exterior boundary. Source inspection shows
+that its nominally rotation-minimizing cross-section frame is actually
+reconstructed from a fixed z reference at every point and can be discontinuous
+near reference-axis alignment.
+
+An independent periodic parallel-transport sweep produced six mesh levels from
+`h=0.05 m` to `0.01 m`, preserving four nonempty physical tags with no zero or
+nonfinite tetrahedron volumes. At the finest level the total volume differs from
+centerline length times area by `0.0290%`; the two finest volumes differ by
+`0.00990%`.
+
+**Implication:** the explicit structured representation passes the frozen
+finite-build screen, while the pinned upstream Gmsh path is not qualified for
+real optimization outputs. Synthetic meshing tests alone would have produced a
+false sense of readiness.
+
+## F-027 — Structural convergence exposes an invalid physical regime
+
+**Class:** predeclared failed test followed by predeclared diagnostic extension
+**Date:** 2026-08-31
+
+The frozen `0.03 -> 0.02 m` P1 scikit-fem comparison failed all four 10%
+convergence limits: maximum/mean displacement changed by `22.8%/24.9%`, and
+p95/mean Von Mises stress by `14.6%/14.7%`. The subsequently declared
+`0.015 -> 0.010 m` extension passed at `8.75%`, `9.03%`, `4.41%`, and `4.08%`,
+respectively. Repeating the finest solve produced bit-identical acceptance
+metrics.
+
+The converged trend is not an absolute engineering prediction. The scikit-fem
+backend fixes the lowest 15% of each coil in z even when the upstream driver
+labels the configuration as a spring foundation. More decisively, it predicts
+`0.978 m` maximum displacement for a `0.05 m` winding-pack width, far outside
+the small-deformation regime of linear elasticity. Maximum element stress also
+continues upward to `22.3 GPa` and is excluded from the convergence gate.
+
+**Implication:** the load-to-FEM pipeline is deterministic and has an extended
+mesh-convergence record, but its absolute displacement/stress values must not be
+optimized or cited as reactor limits. Near-term engineering optimization should
+use electromagnetic force/load proxies while a geometrically nonlinear,
+support-aware, independently cross-checked structural model is developed.

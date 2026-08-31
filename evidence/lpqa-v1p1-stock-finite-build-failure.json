@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "date": "2026-08-31",
+  "case": "LPQA engineering v1.1 L-BFGS-B serialized candidate",
+  "source_coils_sha256": "7ae1b1968b8ca34fa94cc0e67cfad41577219ed43bcd902b695c7b7cc04ecd2e",
+  "case_sha256": "4a0bd130270fc887988ac33de974e04b6fac6da2da2faaa0e66a4f49535b64b9",
+  "stellcoilbench_commit": "c7949edc4ea6378fc3be633304c69c288c3b79b5",
+  "simsopt_commit": "a79006b0bc1e6df8ab48de284e3457d39a49b995",
+  "requested_unique_coils": 4,
+  "width_m": 0.05,
+  "height_m": 0.05,
+  "target_h_m": 0.05,
+  "result": "skipped",
+  "meshed_unique_coils": 0,
+  "driver_reason": "Mesh generation failed",
+  "failure_modes": {
+    "occ_through_sections": [
+      "PLC Error: A segment and a facet intersect at point",
+      "Invalid boundary mesh (overlapping facets)"
+    ],
+    "stl_to_volume": "Invalid exterior boundary mesh for parametrization"
+  },
+  "convergence_table_sha256": "d5f99596051b779fffe9b11c1affd0d69843b0c086b323b6874cee32e94409c9",
+  "accepted": false
+}

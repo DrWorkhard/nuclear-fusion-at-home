@@ -34,8 +34,11 @@ The project is ready for SQuID-C when all gates below are satisfied.
 
 ## G5 — Engineering and robustness
 
-- [ ] Finite-build coil representation validated.
-- [ ] Structural solve has a mesh-convergence record.
+- [x] Finite-build coil representation validated for the independent periodic
+      structured sweep; the upstream Gmsh fallback fails on the real candidate.
+- [x] Structural solve has a mesh-convergence record (extended series converges
+      numerically, but the resulting deformation invalidates linear mechanics
+      as an absolute design model).
 - [x] Manufacturing perturbation distribution is predeclared.
 - [ ] Free-boundary validation is separated from optimization.
 

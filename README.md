@@ -43,6 +43,7 @@ Detailed cross-code V&V still has documented failures. See:
 - [SQuID-C readiness gates](docs/SQUID_C_READINESS.md)
 - [SQuID-C reproduction contract](docs/SQUID_C_ACCEPTANCE.md)
 - [Manufacturing-robustness protocol](docs/ROBUSTNESS_PROTOCOL.md)
+- [Finite-build and structural protocol](docs/STRUCTURAL_PROTOCOL.md)
 
 ## Canonical commands
 

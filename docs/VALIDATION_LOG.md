@@ -158,3 +158,22 @@
   4.72 mm at worst.
 - Scope limit: this checks the optimized StellCoilBench filament field targeting
   the W7-X boundary, not surveyed/as-built W7-X coil geometry.
+
+## 2026-08-31 — Finite-build and structural path
+
+- Added and locked `gmsh 4.15.2`, `meshio 5.3.5`, and `scikit-fem 12.0.2` in
+  the engineering extra.
+- Selected upstream finite-build/structural tests: 45 passed, 1 skipped.
+- Stock Gmsh sweep on the real LPQA v1.1 candidate: zero of four coils meshed;
+  both through-sections and STL recovery failed on invalid boundary geometry.
+- Independent structured-sweep series: six resolutions, 2,622 to 327,000
+  tetrahedra; four physical tags and no degenerate tetrahedra at every level.
+- Finest mesh volume error against exact centerline-length times area: 0.0290%;
+  finest-step volume change: 0.00990%.
+- Primary structural convergence (`0.03 -> 0.02 m`): failed all four predeclared
+  10% thresholds.
+- Diagnostic extension (`0.015 -> 0.010 m`): passed all four 10% thresholds;
+  finest repeat metrics were bit-identical.
+- Scope limit: the scikit-fem support is a fixed lower-z region, not the labelled
+  spring foundation, and the approximately 0.978 m displacement invalidates
+  small-deformation linear elasticity as an absolute engineering model.

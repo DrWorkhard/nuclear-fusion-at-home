@@ -19,6 +19,11 @@ dev = [
 benchmark = [
   "stellcoilbench",
 ]
+engineering = [
+    "gmsh>=4.15.2",
+    "meshio>=5.3.5",
+    "scikit-fem>=12.0.2",
+]
 
 [tool.uv.sources]
 stellcoilbench = { path = "external/stellcoilbench", editable = true }

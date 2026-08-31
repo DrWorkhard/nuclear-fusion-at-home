@@ -12,6 +12,16 @@ Run `./scripts/bootstrap_macos.sh`. It verifies repository commits and input
 hashes after installation. `uv.lock` pins all Python dependencies, including the
 resolved SIMSOPT Git commit.
 
+Finite-build and scikit-fem structural diagnostics additionally use the locked
+engineering extra:
+
+```bash
+uv sync --extra dev --extra engineering
+```
+
+This installs Gmsh, meshio, and scikit-fem. DOLFINx and ParaStell are not part of
+the qualified Apple ARM environment.
+
 ## Known host-specific corrections
 
 On the qualified host, the Command Line Tools directory

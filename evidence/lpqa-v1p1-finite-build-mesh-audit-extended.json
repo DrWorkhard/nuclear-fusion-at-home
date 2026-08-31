@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "expected_centerline_area_volume_m3": 0.05445389968363942,
+  "meshes": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_050/coils_structured.msh",
+      "sha256": "d7ff8ef1f77d5328b9a2faf4dda67ceb367b2ef4e08198f6acb363c221abb02f",
+      "points": 1748,
+      "tetrahedra": 2622,
+      "physical_tags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "per_physical_tag": {
+        "1": {
+          "tetrahedra": 654,
+          "volume_m3": 0.013556949457932751
+        },
+        "2": {
+          "tetrahedra": 696,
+          "volume_m3": 0.01442169083519236
+        },
+        "3": {
+          "tetrahedra": 600,
+          "volume_m3": 0.012460006417469516
+        },
+        "4": {
+          "tetrahedra": 672,
+          "volume_m3": 0.013910914976834152
+        }
+      },
+      "total_volume_m3": 0.054349561687428785,
+      "minimum_abs_tetra_volume_m3": 1.5330229535690623e-05,
+      "zero_or_nonfinite_tetrahedra": 0,
+      "negative_signed_tetrahedra": 0,
+      "relative_error_vs_centerline_proxy": 0.0019160794142717007
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_040/coils_structured.msh",
+      "sha256": "bb08c7af2c97ce786029774f11c9bf4885ad2ba9ccd1c20dacee66db496c919e",
+      "points": 4914,
+      "tetrahedra": 13104,
+      "physical_tags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "per_physical_tag": {
+        "1": {
+          "tetrahedra": 3264,
+          "volume_m3": 0.013563882016725181
+        },
+        "2": {
+          "tetrahedra": 3480,
+          "volume_m3": 0.014429666346164358
+        },
+        "3": {
+          "tetrahedra": 3000,
+          "volume_m3": 0.012470876009724968
+        },
+        "4": {
+          "tetrahedra": 3360,
+          "volume_m3": 0.013919067117134304
+        }
+      },
+      "total_volume_m3": 0.05438349148974882,
+      "minimum_abs_tetra_volume_m3": 3.0616307182218518e-06,
+      "zero_or_nonfinite_tetrahedra": 0,
+      "negative_signed_tetrahedra": 0,
+      "relative_error_vs_centerline_proxy": 0.0012929871744660365
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_030/coils_structured.msh",
+      "sha256": "98d99f65995400b87b884d93bf26205354b596aa9083dd28d91bd732fcc92a21",
+      "points": 6552,
+      "tetrahedra": 17472,
+      "physical_tags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "per_physical_tag": {
+        "1": {
+          "tetrahedra": 4368,
+          "volume_m3": 0.013568972496818208
+        },
+        "2": {
+          "tetrahedra": 4632,
+          "volume_m3": 0.014435146399107344
+        },
+        "3": {
+          "tetrahedra": 4008,
+          "volume_m3": 0.012479695044818466
+        },
+        "4": {
+          "tetrahedra": 4464,
+          "volume_m3": 0.0139245637796095
+        }
+      },
+      "total_volume_m3": 0.05440837772035352,
+      "minimum_abs_tetra_volume_m3": 2.2624974000648343e-06,
+      "zero_or_nonfinite_tetrahedra": 0,
+      "negative_signed_tetrahedra": 0,
+      "relative_error_vs_centerline_proxy": 0.0008359725116175506
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_020/coils_structured.msh",
+      "sha256": "51e09f7530c5e5b1436c959bcf73ab300e73b2dc0b78e6a2dd5b8c40074b3441",
+      "points": 17440,
+      "tetrahedra": 58860,
+      "physical_tags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "per_physical_tag": {
+        "1": {
+          "tetrahedra": 14688,
+          "volume_m3": 0.013572809310716014
+        },
+        "2": {
+          "tetrahedra": 15606,
+          "volume_m3": 0.01443925211035504
+        },
+        "3": {
+          "tetrahedra": 13500,
+          "volume_m3": 0.01248512928176197
+        },
+        "4": {
+          "tetrahedra": 15066,
+          "volume_m3": 0.013929178864103027
+        }
+      },
+      "total_volume_m3": 0.05442636956693605,
+      "minimum_abs_tetra_volume_m3": 6.662102107947541e-07,
+      "zero_or_nonfinite_tetrahedra": 0,
+      "negative_signed_tetrahedra": 0,
+      "relative_error_vs_centerline_proxy": 0.0005055674040484806
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/res_0_015/coils_structured.msh",
+      "sha256": "438f47a286bd1635c769ec6cd24785c650d809602425934f9c30ed8f1585de91",
+      "points": 36375,
+      "tetrahedra": 139680,
+      "physical_tags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "per_physical_tag": {
+        "1": {
+          "tetrahedra": 34848,
+          "volume_m3": 0.013574046690450724
+        },
+        "2": {
+          "tetrahedra": 37056,
+          "volume_m3": 0.014440760335763223
+        },
+        "3": {
+          "tetrahedra": 32064,
+          "volume_m3": 0.01248735123402711
+        },
+        "4": {
+          "tetrahedra": 35712,
+          "volume_m3": 0.013930572860939289
+        }
+      },
+      "total_volume_m3": 0.05443273112118034,
+      "minimum_abs_tetra_volume_m3": 2.79603131682384e-07,
+      "zero_or_nonfinite_tetrahedra": 0,
+      "negative_signed_tetrahedra": 0,
+      "relative_error_vs_centerline_proxy": 0.00038874281882590923
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/res_0_010/coils_structured.msh",
+      "sha256": "d7b7bd0ab495ae5e5d7209851038e2327a27b5f0240a0bdd541f10a8886d8c6f",
+      "points": 78480,
+      "tetrahedra": 327000,
+      "physical_tags": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "per_physical_tag": {
+        "1": {
+          "tetrahedra": 81600,
+          "volume_m3": 0.013575140259894043
+        },
+        "2": {
+          "tetrahedra": 86700,
+          "volume_m3": 0.014442016414232317
+        },
+        "3": {
+          "tetrahedra": 75000,
+          "volume_m3": 0.01248898081979134
+        },
+        "4": {
+          "tetrahedra": 83700,
+          "volume_m3": 0.013931985255307386
+        }
+      },
+      "total_volume_m3": 0.054438122749225076,
+      "minimum_abs_tetra_volume_m3": 1.1716216458576328e-07,
+      "zero_or_nonfinite_tetrahedra": 0,
+      "negative_signed_tetrahedra": 0,
+      "relative_error_vs_centerline_proxy": 0.00028973011126853657
+    }
+  ],
+  "finest_two_relative_volume_change": 9.904140283403595e-05,
+  "acceptance": {
+    "four_nonempty_physical_tags_all_meshes": true,
+    "finite_nonzero_tetrahedra_all_meshes": true,
+    "finest_volume_proxy_relative_error_le_0_05": true,
+    "finest_two_relative_volume_change_le_0_02": true
+  },
+  "accepted": true
+}
