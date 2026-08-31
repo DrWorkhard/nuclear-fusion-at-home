@@ -45,6 +45,7 @@ Detailed cross-code V&V still has documented failures. See:
 - [Manufacturing-robustness protocol](docs/ROBUSTNESS_PROTOCOL.md)
 - [Finite-build and structural protocol](docs/STRUCTURAL_PROTOCOL.md)
 - [Free-boundary holdout protocol](docs/FREE_BOUNDARY_PROTOCOL.md)
+- [W7-X equilibrium regression protocol](docs/W7X_EQUILIBRIUM_PROTOCOL.md)
 
 ## Canonical commands
 

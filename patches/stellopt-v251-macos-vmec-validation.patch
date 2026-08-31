@@ -1,0 +1,171 @@
+diff --git a/BENCHMARKS/make_pppl.inc b/BENCHMARKS/make_pppl.inc
+index 35d53ea..1af1a91 100644
+--- a/BENCHMARKS/make_pppl.inc
++++ b/BENCHMARKS/make_pppl.inc
+@@ -3,11 +3,13 @@
+ #######################################################################
+   SHELL = /bin/sh
+   PWD1 = `pwd`
+-  MYHOME = $(HOME)/bin
+-  PRECOMP:= /lib/cpp -traditional -DLINUX
++  STELLOPT_ROOT := $(abspath $(dir $(realpath $(lastword $(MAKEFILE_LIST))))/..)/
++  MYHOME = $(STELLOPT_ROOT)local
++  PRECOMP:= /usr/bin/cpp -traditional -DLINUX
++  FC = /opt/homebrew/bin/gfortran
+   COMPILE = $(FC)
+   COMPILE_FREE = $(FC) -ffree-form -ffree-line-length-none -ffixed-line-length-none
+-  LINK    = ld $(FLAGS) -o
++  LINK    = $(FC) $(FLAGS) -o
+   LINK_AR = ar -ruv
+   LINK_C  = $(CC) -shared -Wl,-z-defs
+ 
+@@ -15,17 +17,15 @@
+ #            Define Compiler Flags
+ #######################################################################
+ #  FLAGS_R = -O2 -g -fexternal-blas -fbacktrace -fcheck=all 
+-  FLAGS_R = -g -O2 -fexternal-blas -fbacktrace
+-  FLAGS_D = -g -O0 -fexternal-blas -fcheck=all 
+-  LIBS    = -L$(BLASHOME)/lib -lopenblas \
+-            -L$(SCALAPACK_HOME)/lib -lscalapack \
+-            -L$(BLACS_HOME)/lib -lmpiblacs -lmpiblacsCinit \
+-            -lmpiblacsF77init -lmpiblacs 
++  FLAGS_R = -g -O2 -fexternal-blas -fbacktrace -std=legacy -fallow-argument-mismatch
++  FLAGS_D = -g -O0 -fexternal-blas -fbacktrace -fcheck=all -std=legacy -fallow-argument-mismatch
++  LIBS    = -L/opt/homebrew/opt/lapack/lib -llapack -lblas
+ 
+ #######################################################################
+ #            MPI Options
+ #######################################################################
+   LMPI    = T
++  MPIHOME = /opt/homebrew/opt/open-mpi
+   MPI_COMPILE = $(MPIHOME)/bin/mpif90
+   MPI_COMPILE_FREE = $(MPIHOME)/bin/mpif90 -ffree-form \
+                      -ffree-line-length-none -ffixed-line-length-none
+@@ -42,15 +42,15 @@
+ #######################################################################
+ #            NAG Options
+ #######################################################################
+-  LNAG = T
++  LNAG = F
+   NAG_LIB = -L$(NAG_ROOT)/lib -lnag_nag
+ 
+ #######################################################################
+ #            NETCDF Options
+ #######################################################################
+   LNETCDF = T
+-  NETCDF_INC = -I$(NETCDF_HOME)/include
+-  NETCDF_LIB = -L$(NETCDF_HOME)/lib -lnetcdf -lnetcdff
++  NETCDF_INC = -I/opt/homebrew/opt/netcdf-fortran/include -I/opt/homebrew/opt/netcdf/include
++  NETCDF_LIB = -L/opt/homebrew/opt/netcdf-fortran/lib -lnetcdff -L/opt/homebrew/opt/netcdf/lib -lnetcdf
+ 
+   # FOR GCC6
+   #NETCDF_LIB = -L$(NETCDF_HOME)/lib -lnetcdff
+@@ -58,7 +58,7 @@
+ #######################################################################
+ #            NTCC Options
+ #######################################################################
+-  LNTCC = T
++  LNTCC = F
+   NTCC_INC = -I$(NTCCHOME)/mod
+   NTCC_LIB = -L$(NTCCHOME)/lib -laladdinsub -lr8slatec -ladpak\
+              -lcppsub -lcomput -lpspline -lportlib -lezcdf -lmds_sub \
+@@ -67,7 +67,7 @@
+ #######################################################################
+ #            HDF5 Options
+ #######################################################################
+-  LHDF5 = T
++  LHDF5 = F
+   HDF5_INC = -I$(HDF5_HOME)/include
+   HDF5_LIB = -L$(HDF5_HOME)/lib -lhdf5_hl -lhdf5_fortran -lhdf5 \
+              -lhdf5hl_fortran -lpthread -lz -lm
+@@ -75,21 +75,21 @@
+ #######################################################################
+ #             PGPLOT Options
+ #######################################################################
+-  LPGPLOT = T
++  LPGPLOT = F
+   PGPLOT_INC = -I$(PGPLOT_DIR)
+   PGPLOT_LIB = -L$(PGPLOT_DIR) -lpgplot -L/usr/X11R6/lib -lX11
+ 
+ #######################################################################
+ #             SILO Options
+ #######################################################################
+-  LSILO = T
++  LSILO = F
+   SILO_INC = -I$(SILOHOME)/include
+   SILO_LIB = -L$(SILOHOME)/lib -lsilo
+ 
+ #######################################################################
+ #            GENE Options
+ #######################################################################
+-  LGENE = T
++  LGENE = F
+   GENE_INC = -I$(GENE_PATH)
+   GENE_DIR = $(GENE_PATH)
+   LIB_GENE = libgene.a
+@@ -102,7 +102,7 @@
+ #######################################################################
+ #            COILOPT++ Options
+ #######################################################################
+-  LCOILOPT = T
++  LCOILOPT = F
+   COILOPT_INC = -I$(COILOPT_PATH)
+   COILOPTPP_DIR = $(COILOPT_PATH)
+   LIB_COILOPTPP = libcoilopt++.a
+@@ -112,7 +112,7 @@
+ #######################################################################
+ #            TERPSICHORE Options
+ #######################################################################
+-  LTERPSICHORE= T
++  LTERPSICHORE= F
+   TERPSICHORE_INC = -I$(TERPSICHORE_PATH)
+   TERPSICHORE_DIR = $(TERPSICHORE_PATH)
+   LIB_TERPSICHORE = libterpsichore.a
+@@ -121,7 +121,7 @@
+ #######################################################################
+ #            TRAVIS Options
+ #######################################################################
+-  LTRAVIS= T
++  LTRAVIS= F
+   TRAVIS_DIR = $(TRAVIS_PATH)
+   LIB_TRAVIS = libtravis64_sopt.a
+   LIB_MCONF  = libmconf64.a
+diff --git a/LIBSTELL/Sources/Miscel/getfilesize.f b/LIBSTELL/Sources/Miscel/getfilesize.f
+index 14f9005..c58ace5 100644
+--- a/LIBSTELL/Sources/Miscel/getfilesize.f
++++ b/LIBSTELL/Sources/Miscel/getfilesize.f
+@@ -2,7 +2,7 @@
+       IMPLICIT NONE
+       CHARACTER(LEN=*), INTENT(in)  :: infile
+       INTEGER, INTENT(out)       :: filesize
+-      INTEGER :: istat, info(12)
++      INTEGER :: istat, info(13)
+       LOGICAL :: lexist, lopen, lvalid
+ !  JDH 2010-07-20 Commented out below - not needed. Replaced with declaration
+ !    without EXTERNAL.
+diff --git a/VMEC2000/Sources/Input_Output/wrout.f b/VMEC2000/Sources/Input_Output/wrout.f
+index 09b17bb..52c5f60 100644
+--- a/VMEC2000/Sources/Input_Output/wrout.f
++++ b/VMEC2000/Sources/Input_Output/wrout.f
+@@ -95,7 +95,7 @@
+ !   L o c a l   P a r a m e t e r s
+ !-----------------------------------------------
+       REAL(rprec), PARAMETER :: c1p5 = 1.5_dp
+-      LOGICAL :: lnyquist = .FALSE.                               !=false, eliminate nyquist stuff
++      LOGICAL :: lnyquist = .TRUE.                                !=false, eliminate nyquist stuff
+ #ifdef NETCDF
+       CHARACTER(LEN=*), PARAMETER, DIMENSION(1) ::
+      1             r1dim = (/'radius'/), mn1dim = (/'mn_mode'/),
+diff --git a/VMEC2000/Sources/NESTOR_vacuum/analyt.f b/VMEC2000/Sources/NESTOR_vacuum/analyt.f
+index 5b6b55a..0c2a683 100644
+--- a/VMEC2000/Sources/NESTOR_vacuum/analyt.f
++++ b/VMEC2000/Sources/NESTOR_vacuum/analyt.f
+@@ -152,7 +152,7 @@
+ !
+ !       2. n>=1  and  m>=1
+ !
+-                 CALL analysum2 (grpmn, bvec, slm, tlm, slp, tlp,
++                 CALL analysum2 (grpmn, bvec, slp, tlp, slm, tlm,
+      1               m, n, l, ivacskip, ndim)
+                ENDIF
+             END DO

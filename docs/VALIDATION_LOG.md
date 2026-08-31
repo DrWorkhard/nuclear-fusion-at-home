@@ -221,3 +221,19 @@
 - Scope limit: GitHub blob contents and multi-gigabyte Hugging Face row payloads
   were not exhaustively searched. The result is “no publicly identified package
   located”, not proof of universal non-existence.
+
+## 2026-08-31 — Version-compatible W7-X equilibrium V&V
+
+- Built STELLOPT `v251`/VMEC 8.52 at commit `e59aff...` with the upstream
+  validation patches and recorded Apple Silicon build patch.
+- Native reference run terminated normally after 2,922.57 solver seconds;
+  binary, input, log, wout, auxiliary outputs, toolchain, and libraries hashed.
+- VMEC++ and VMEC 8.52 both reached the requested `1e-12` residual level at
+  `ns=201`, `mpol=10`, `ntor=10`.
+- Project-protected geometry, aspect, beta, iota, and B metrics: passed.
+- Real-space upstream grid and independent doubled-resolution holdout: passed.
+- Full fixed-boundary wout comparison: failed, 56/59 fields passed.
+- The prior broad `bsubsmns` discrepancy against VMEC 9.0 disappears in the
+  matched 8.52 comparison.
+- Remaining exceptions: axis-only `chipf` output and two micro-pascal-scale
+  pressure-profile differences; all are retained in machine-readable evidence.

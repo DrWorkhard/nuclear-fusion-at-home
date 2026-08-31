@@ -2,10 +2,11 @@
 
 The project is ready for SQuID-C when all gates below are satisfied.
 
-Current status: the public-data absence audit is complete, but the project is not
-yet scientifically ready. G1 still lacks a witnessed remote CI run, G3 still
-fails the full equilibrium V&V tolerance set, and G6 cannot close raw/derived
-lineage until authoritative files are obtained.
+Current status: the public-data absence audit and the scoped W7-X physics gate
+are complete, but the project is not fully ready. G1 still lacks a witnessed
+remote CI run, full-file W7-X V&V retains three explicitly recorded output
+warnings, and G6 cannot close raw/derived lineage until authoritative files are
+obtained.
 
 ## G1 — Reproducible environment
 
@@ -23,7 +24,9 @@ lineage until authoritative files are obtained.
 ## G3 — W7-X regression
 
 - [x] Authoritative W7-X equilibrium ingested.
-- [ ] Equilibrium metrics reproduced within declared tolerances.
+- [x] The declared project equilibrium metrics are reproduced within pinned
+      tolerances against a native, version-compatible VMEC 8.52 run. Full-file
+      V&V remains separately failed at 56/59 fields; see the W7-X protocol.
 - [x] Coil field and Poincare regression established for the serialized
       W7-X-target benchmark coils, including a direct Biot-Savart holdout.
 - [x] Perturbation/sensitivity protocol recorded.

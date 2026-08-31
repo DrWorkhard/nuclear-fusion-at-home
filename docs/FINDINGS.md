@@ -132,7 +132,8 @@ available Fortran reference to absolute differences of approximately
 failures include several half-grid and axis-derived quantities.
 
 **Implication:** the equilibrium is a useful protected-metric regression, but it
-must not be called a complete independent validation. The W7-X gate remains open.
+must not be called a complete independent validation. This initial comparison is
+superseded, but not erased, by the version-compatible investigation in F-031.
 
 ## F-010 — The open QI bridge has authoritative inputs, outputs and metric code
 
@@ -522,3 +523,38 @@ free-boundary VMEC cases, profiles, coil/current data, MGRID recipe, scale, and
 paper run settings from the authors; figures or anonymous dataset rows are not
 acceptable substitutes. This does not close the separate internal W7-X V&V and
 CI gates.
+
+## F-031 — A matched VMEC 8.52 reference closes the scoped W7-X physics gate
+
+**Class:** independent implementation reproduction with retained negative controls
+**Date:** 2026-08-31
+
+A native STELLOPT `v251`/VMEC 8.52 executable was built from pinned source with
+the two patches specified by Proxima's validation repository and one documented
+GNU Fortran 16 compatibility change. It completed the exact StellCoilBench W7-X
+input normally in 2,922.57 seconds. VMEC++ and VMEC 8.52 both took 3,708 final
+iterations and reached the requested `1e-12` force-residual level. Aspect, volume,
+beta, iota, magnetic axis, Fourier geometry, and protected magnetic coefficients
+pass the pinned comparison tolerances.
+
+Independent real-space reconstruction on the `73 x 72` holdout grid has maximum
+normalized differences `3.85e-10` and `1.93e-9` for R and Z, and between
+`6.55e-10` and `5.96e-9` for the three cylindrical B components. All are more
+than 8,000 times inside the upstream W7-X-class tolerances.
+
+The result is not a full-file pass: 56/59 fields pass. `chipf` differs only at
+the axis because the current VMEC++ assembly leaves that element zero; its
+interior maximum normalized difference is `2.28e-9`, within the `1e-8`
+fixed-boundary tolerance. `presf` and `pres` differ by less than `7.5e-6 Pa`
+absolute and `2.7e-11` relative to their L-infinity scale, but still miss the
+upstream bit-near array tolerances. No exception is deleted from the evidence.
+
+The older VMEC 9.0 comparison's broad `bsubsmns` failure disappears: the matched
+8.52 maximum absolute coefficient difference is `2.10e-8`. This identifies
+version/output semantics—not a discrepant reconstructed physical B field—as the
+cause of the prior alarming result.
+
+**Implication:** WP2's declared physics regression gate is closed without claiming
+full `wout` equivalence. The remaining three output-level warnings should be
+reported upstream and retained as regression tests, but they do not block
+SQuID-C equilibrium intake.

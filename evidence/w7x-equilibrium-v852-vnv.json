@@ -1,0 +1,381 @@
+{
+  "schema_version": 1,
+  "inputs": {
+    "under_test": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/vmecpp/w7x-stellcoilbench/wout.nc",
+      "sha256": "a67658e2ea96e8f01e00ab0abb93530a2c0ebf582d0a81811cf25c7d5aff2e47"
+    },
+    "reference": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/vmec2000/w7x-v852-reference/wout_w7xbaseline.nc",
+      "sha256": "a5ac1b8e958dd452974b5d7e203543e49436b2bc1ec036f1d6257aef7b477460"
+    },
+    "strict_comparison": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/w7x-vmecpp-v852-comparison.json",
+      "sha256": "3efa6f685329062c30109e03dcb27ba56c83634ef7375e21fd623a6657a61d1e"
+    }
+  },
+  "tolerance_source": {
+    "repository": "https://github.com/proximafusion/vmecpp-validation",
+    "commit": "4017e53095c09e2ead20c6bb64c12796583520c5",
+    "case_class": "w7x"
+  },
+  "mode_arrays_equal": true,
+  "versions": {
+    "under_test": 8.52,
+    "reference": 8.52
+  },
+  "convergence": {
+    "under_test": {
+      "fsqr": 9.999008270264213e-13,
+      "fsqz": 1.849211472271349e-13,
+      "fsql": 2.324606161530768e-15
+    },
+    "reference": {
+      "fsqr": 9.999927325032304e-13,
+      "fsqz": 1.8494510116665705e-13,
+      "fsql": 2.3245726620722707e-15
+    },
+    "requested_force_residual_level": 1e-12,
+    "both_reach_requested_level": true
+  },
+  "strict_fixed_boundary_summary": {
+    "passed": 56,
+    "checked": 59,
+    "overall_pass": false
+  },
+  "official_w7x_class_summary": {
+    "passed": 56,
+    "checked": 59,
+    "overall_pass": false,
+    "failed": [
+      {
+        "variable": "presf",
+        "status": "fail",
+        "max_normalized_error": 1.0833643201108216e-09,
+        "tolerance": 5e-11
+      },
+      {
+        "variable": "chipf",
+        "status": "fail",
+        "max_normalized_error": 0.6825396825396826,
+        "tolerance": 5e-05
+      },
+      {
+        "variable": "pres",
+        "status": "fail",
+        "max_normalized_error": 3.6020824836816665e-11,
+        "tolerance": 1e-11
+      }
+    ]
+  },
+  "failed_variable_diagnostics": {
+    "presf": {
+      "max_normalized_error": 1.0833643201108216e-09,
+      "max_error_index": [
+        200
+      ],
+      "test_at_max_error": -3.4248031972967206,
+      "reference_at_max_error": -3.4248031925030467,
+      "max_normalized_error_without_radial_endpoints": 3.461344058848748e-11,
+      "max_absolute_error": 7.442373316735029e-06,
+      "linf_error_over_reference_linf": 2.6209367567782112e-11
+    },
+    "chipf": {
+      "max_normalized_error": 0.6825396825396826,
+      "max_error_index": [
+        0
+      ],
+      "test_at_max_error": 0.0,
+      "reference_at_max_error": 2.15,
+      "max_normalized_error_without_radial_endpoints": 2.2813895204799584e-09,
+      "max_absolute_error": 2.15,
+      "linf_error_over_reference_linf": 0.9947705515151166
+    },
+    "pres": {
+      "max_normalized_error": 3.6020824836816665e-11,
+      "max_error_index": [
+        197
+      ],
+      "test_at_max_error": 2483.5528470036465,
+      "reference_at_max_error": 2483.552846914151,
+      "max_normalized_error_without_radial_endpoints": 3.6020824836816665e-11,
+      "max_absolute_error": 7.184105925261974e-06,
+      "linf_error_over_reference_linf": 2.538579074671301e-11
+    }
+  },
+  "chipf_axis_source_diagnosis": {
+    "classification": "source-supported output-path discrepancy",
+    "vmecpp_commit": "1d7e09941c89210be95b6b20f4d4d555f0a63096",
+    "vmec2000_commit": "e59affaec7713aee8da1f1bccdf05cc0612c12e3",
+    "vmecpp_output_assembly": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/vmecpp/src/vmecpp/cpp/vmecpp/vmec/output_quantities/output_quantities.cc",
+      "sha256": "95b3c927f04bdb12d7a8105c736a8167c441c4a2b13ba2ec360a9c6c2e16d096",
+      "required_fragments_present": {
+        "wout.chipf = VectorXd::Zero(fc.ns);": true,
+        "wout.chipf[jF] =": true
+      },
+      "all_required_fragments_present": true
+    },
+    "vmecpp_current_path": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/vmecpp/src/vmecpp/cpp/vmecpp/vmec/ideal_mhd_model/ideal_mhd_model.cc",
+      "sha256": "52addf42678e8dced4938d42e8ba8eccd488791434c71ab0fcec9a5020301850",
+      "required_fragments_present": {
+        "for (int jFi = r_.nsMinFi; jFi < r_.nsMaxFi; ++jFi)": true,
+        "m_p_.chipF[jFi - r_.nsMinF1] =": true
+      },
+      "all_required_fragments_present": true
+    },
+    "vmecpp_radial_partition": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/vmecpp/src/vmecpp/cpp/vmecpp/vmec/radial_partitioning/radial_partitioning.cc",
+      "sha256": "d2095969ad6e49f05d5afce12d34b5aa0e138de896462053e7c9f785e5367c79",
+      "required_fragments_present": {
+        "nsMinFi = 1;": true
+      },
+      "all_required_fragments_present": true
+    },
+    "fortran_profile_path": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellopt-v251/VMEC2000/Sources/Initialization_Cleanup/profil1d.f",
+      "sha256": "f956a44c4feecd3682d893b14504e5b755303dcde41bb18439756e2aade7e45e",
+      "required_fragments_present": {
+        "DO i = 1,ns": true,
+        "chipf(i) = torflux_edge * polflux_deriv(si)": true
+      },
+      "all_required_fragments_present": true
+    },
+    "interpretation": "VMEC++ zero-initializes the assembled chipf output. In the current-constrained update, nsMinFi starts at 1, so the axis entry is not updated; Fortran's profile path explicitly fills indices 1 through ns. This matches the observed axis-only difference but is not a general validation of either convention."
+  },
+  "protected_project_metrics": {
+    "selection_basis": "WP2's geometry, aspect, beta, iota and selected magnetic-field regression scope; this is intentionally narrower than full wout V&V.",
+    "checks": {
+      "aspect": {
+        "variable": "aspect",
+        "status": "pass",
+        "max_normalized_error": 2.0919582780983514e-14,
+        "tolerance": 1e-13
+      },
+      "volume_p": {
+        "variable": "volume_p",
+        "status": "pass",
+        "max_normalized_error": 5.433705968567033e-15,
+        "tolerance": 1e-13
+      },
+      "betatotal": {
+        "variable": "betatotal",
+        "status": "pass",
+        "max_normalized_error": 4.203817930514937e-14,
+        "tolerance": 1e-09
+      },
+      "iotaf": {
+        "variable": "iotaf",
+        "status": "pass",
+        "max_normalized_error": 2.5349982747979056e-09,
+        "tolerance": 1e-07
+      },
+      "raxis_cc": {
+        "variable": "raxis_cc",
+        "status": "pass",
+        "max_normalized_error": 5.532847959921754e-11,
+        "tolerance": 1e-08
+      },
+      "zaxis_cs": {
+        "variable": "zaxis_cs",
+        "status": "pass",
+        "max_normalized_error": 5.810512871777407e-11,
+        "tolerance": 1e-08
+      },
+      "rmnc": {
+        "variable": "rmnc",
+        "status": "pass",
+        "max_normalized_error": 5.699044561246749e-10,
+        "tolerance": 1e-07
+      },
+      "zmns": {
+        "variable": "zmns",
+        "status": "pass",
+        "max_normalized_error": 5.78004345414546e-10,
+        "tolerance": 1e-07
+      },
+      "bmnc": {
+        "variable": "bmnc",
+        "status": "pass",
+        "max_normalized_error": 4.2175797111830047e-10,
+        "tolerance": 1e-07
+      },
+      "bsupumnc": {
+        "variable": "bsupumnc",
+        "status": "pass",
+        "max_normalized_error": 6.1001830267016835e-09,
+        "tolerance": 1e-06
+      },
+      "bsupvmnc": {
+        "variable": "bsupvmnc",
+        "status": "pass",
+        "max_normalized_error": 9.864953248397616e-11,
+        "tolerance": 1e-07
+      }
+    },
+    "overall_pass": true
+  },
+  "realspace": {
+    "official_grid": {
+      "theta_points": 37,
+      "phi_points_per_field_period": 36,
+      "checks": {
+        "geometry_r": {
+          "max_normalized_error": 3.774146678382136e-10,
+          "max_error_index": [
+            162,
+            314
+          ],
+          "test_at_max_error": 5.730386964312067,
+          "reference_at_max_error": 5.73038696177192,
+          "official_w7x_tolerance": 5e-05,
+          "passes_official_w7x_tolerance": true
+        },
+        "geometry_z": {
+          "max_normalized_error": 1.914560319153641e-09,
+          "max_error_index": [
+            163,
+            169
+          ],
+          "test_at_max_error": 0.36964441751646954,
+          "reference_at_max_error": 0.3696444148942027,
+          "official_w7x_tolerance": 5e-05,
+          "passes_official_w7x_tolerance": true
+        },
+        "b_r": {
+          "max_normalized_error": 5.961907819314088e-09,
+          "max_error_index": [
+            166,
+            279
+          ],
+          "test_at_max_error": 0.2151771456119134,
+          "reference_at_max_error": 0.21517715285668756,
+          "official_w7x_tolerance": 5e-05,
+          "passes_official_w7x_tolerance": true
+        },
+        "b_phi": {
+          "max_normalized_error": 6.550074610278496e-10,
+          "max_error_index": [
+            177,
+            18
+          ],
+          "test_at_max_error": 2.375802292348262,
+          "reference_at_max_error": 2.375802290137086,
+          "official_w7x_tolerance": 5e-05,
+          "passes_official_w7x_tolerance": true
+        },
+        "b_z": {
+          "max_normalized_error": 4.594482939238403e-09,
+          "max_error_index": [
+            160,
+            18
+          ],
+          "test_at_max_error": 0.32084818948830784,
+          "reference_at_max_error": 0.32084819555692234,
+          "official_w7x_tolerance": 0.0001,
+          "passes_official_w7x_tolerance": true
+        },
+        "b_sub_s": {
+          "max_normalized_error": 3.122201591758925e-08,
+          "max_error_index": [
+            2,
+            371
+          ],
+          "test_at_max_error": 0.08387213728611788,
+          "reference_at_max_error": 0.08387217112679206,
+          "official_w7x_tolerance": null,
+          "passes_official_w7x_tolerance": null,
+          "note": "Diagnostic reconstruction of the covariant radial component; the upstream V&V suite does not define a real-space tolerance for it."
+        }
+      },
+      "all_official_realspace_checks_pass": true
+    },
+    "refined_holdout_grid": {
+      "theta_points": 73,
+      "phi_points_per_field_period": 72,
+      "checks": {
+        "geometry_r": {
+          "max_normalized_error": 3.8468617709877964e-10,
+          "max_error_index": [
+            162,
+            1275
+          ],
+          "test_at_max_error": 5.66631063150517,
+          "reference_at_max_error": 5.666310628940733,
+          "official_w7x_tolerance": 5e-05,
+          "passes_official_w7x_tolerance": true
+        },
+        "geometry_z": {
+          "max_normalized_error": 1.92940978759621e-09,
+          "max_error_index": [
+            163,
+            4774
+          ],
+          "test_at_max_error": -0.3644285222136242,
+          "reference_at_max_error": -0.36442851958108247,
+          "official_w7x_tolerance": 5e-05,
+          "passes_official_w7x_tolerance": true
+        },
+        "b_r": {
+          "max_normalized_error": 5.962555716041528e-09,
+          "max_error_index": [
+            166,
+            1062
+          ],
+          "test_at_max_error": 0.22971767831163448,
+          "reference_at_max_error": 0.2297176856438947,
+          "official_w7x_tolerance": 5e-05,
+          "passes_official_w7x_tolerance": true
+        },
+        "b_phi": {
+          "max_normalized_error": 6.550074610278496e-10,
+          "max_error_index": [
+            177,
+            36
+          ],
+          "test_at_max_error": 2.375802292348262,
+          "reference_at_max_error": 2.375802290137086,
+          "official_w7x_tolerance": 5e-05,
+          "passes_official_w7x_tolerance": true
+        },
+        "b_z": {
+          "max_normalized_error": 4.594482939238403e-09,
+          "max_error_index": [
+            160,
+            36
+          ],
+          "test_at_max_error": 0.32084818948830784,
+          "reference_at_max_error": 0.32084819555692234,
+          "official_w7x_tolerance": 0.0001,
+          "passes_official_w7x_tolerance": true
+        },
+        "b_sub_s": {
+          "max_normalized_error": 3.2281549811745114e-08,
+          "max_error_index": [
+            0,
+            3105
+          ],
+          "test_at_max_error": 0.029450052087077107,
+          "reference_at_max_error": 0.029450018854835044,
+          "official_w7x_tolerance": null,
+          "passes_official_w7x_tolerance": null,
+          "note": "Diagnostic reconstruction of the covariant radial component; the upstream V&V suite does not define a real-space tolerance for it."
+        }
+      },
+      "all_official_realspace_checks_pass": true
+    },
+    "both_grids_pass_official_protected_checks": true
+  },
+  "assessment": {
+    "full_wout_vnv_pass": false,
+    "protected_realspace_geometry_and_field_pass": true,
+    "project_w7x_regression_gate_pass": true,
+    "gate_closed": true,
+    "reason": "The version-compatible VMEC 8.52 comparison removes the broad bsubsmns discrepancy. Both solvers converge, every protected WP2 metric passes its pinned tolerance, and real-space geometry/B pass on the upstream and refined grids. Full-wout V&V remains failed by presf, pres and chipf; chipf is an axis-only mismatch and the pressure differences are micro-pascal-scale output differences. These exceptions are warnings, not silently waived checks.",
+    "known_output_exceptions": {
+      "chipf": "The maximum error is at radial index 0; all interior points pass the fixed-boundary chipf tolerance. Pinned VMEC++ initializes the assembled axis value to zero while VMEC 8.52 writes the profile/extrapolated value.",
+      "presf_and_pres": "Both miss the upstream bit-near tolerance. Maximum absolute differences are below 7.5e-6 Pa and L-infinity-relative differences are below 2.7e-11."
+    }
+  }
+}
