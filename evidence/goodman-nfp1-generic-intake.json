@@ -1,0 +1,78 @@
+{
+  "boozer": {
+    "mode_count": 3200,
+    "nfp": 1,
+    "ns": 201
+  },
+  "case_id": "goodman-qi-vacuum-nfp1",
+  "conventions": {
+    "coordinate_system": "VMEC right-handed flux coordinates; cylindrical boundary Fourier coefficients",
+    "current_sign": "VMEC input convention; vacuum case has zero plasma current",
+    "field_unit": "T (VMEC normalized equilibrium scale)",
+    "length_unit": "m (VMEC normalized equilibrium scale)"
+  },
+  "expected_actual": {
+    "free_boundary": {
+      "actual": false,
+      "expected": false,
+      "matches": true
+    },
+    "mpol": {
+      "actual": 8,
+      "expected": 8,
+      "matches": true
+    },
+    "nfp": {
+      "actual": 1,
+      "expected": 1,
+      "matches": true
+    },
+    "ns": {
+      "actual": 201,
+      "expected": 201,
+      "matches": true
+    },
+    "ntor": {
+      "actual": 14,
+      "expected": 14,
+      "matches": true
+    }
+  },
+  "expected_metadata_matches": true,
+  "files": {
+    "boozer_output": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/plots/plot_boundaries/boozmn_QI_nfp1.nc",
+      "sha256": "b0e5e4428b29e0cc2e68b098ebde028d22231e0fe07de117bcd4a7c7253b6b2a"
+    },
+    "vmec_input": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp1/vacuum/input.QI_nfp1",
+      "sha256": "01cd6bb1f227b60cf194cb74a0a4a6c5adbf15adece6c9d198b914afb3960a45"
+    },
+    "vmec_output": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp1/vacuum/wout_QI_nfp1.nc",
+      "sha256": "30dd98d68d8e10fd75a3ee80ba1f52266fc57940c759a461374467655a42f463"
+    }
+  },
+  "kind": "open_qi",
+  "schema_version": 1,
+  "source": {
+    "archive_md5": "f6983a41403da28247025be631522caa",
+    "citation": "Goodman et al., Constructing precisely quasi-isodynamic magnetic fields, Journal of Plasma Physics 89 (2023), data release v1.0",
+    "license": "CC-BY-4.0",
+    "url": "https://doi.org/10.5281/zenodo.7220257"
+  },
+  "vmec": {
+    "aspect": 9.999791450167796,
+    "beta_total": 0.0,
+    "free_boundary": false,
+    "iota_axis": 0.6137752634899358,
+    "iota_edge": 0.6030350056430105,
+    "iota_max": 0.6137752634899358,
+    "iota_min": 0.6016126807206528,
+    "mpol": 8,
+    "nfp": 1,
+    "ns": 201,
+    "ntor": 14,
+    "volume_m3": 0.19612973587181354
+  }
+}

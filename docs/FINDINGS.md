@@ -471,3 +471,21 @@ candidate still fails the magnetic squared-flux cut-in, and this first run is
 vacuum-only at reduced Fourier/radial resolution. A publishable candidate must
 repeat the holdout at converged VMEC resolution and finite pressure/current,
 including topology and an independent code/version check.
+
+## F-029 — Equilibrium intake no longer requires case-specific code
+
+**Class:** tested generic interface plus real-data transfer control
+**Date:** 2026-08-31
+
+A core manifest-to-NetCDF adapter now validates hashes and conventions, extracts
+VMEC geometry/physics metadata, checks declared versus actual
+`nfp/mpol/ntor/ns/free_boundary`, and optionally summarizes a Boozer transform.
+It contains no `case_id`, Goodman, or field-period dispatch. A synthetic unknown
+configuration test passes in core CI. The same CLI then ingested the published
+Goodman nfp=1 and nfp=2 equilibria from two data-only manifests; all declared
+metadata matched in both cases.
+
+**Implication:** a SQuID-C equilibrium/Boozer pair can enter the validation stack
+by adding files and a manifest, without changing Python code. Paper-specific
+metric reproduction can still require a versioned adapter when the publication
+defines a unique objective; that is kept separate from generic intake.

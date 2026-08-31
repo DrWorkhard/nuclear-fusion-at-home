@@ -57,4 +57,6 @@ uv run python scripts/run_stellcoilbench_case.py \
 ./scripts/bootstrap_qi_data.sh
 ./scripts/bootstrap_simple.sh
 ./scripts/bootstrap_neo_jax.sh
+uv run fusion-baselines summarize-equilibrium \
+  manifests/qi-goodman-2022.json --data-root .
 ```

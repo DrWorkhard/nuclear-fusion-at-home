@@ -30,7 +30,8 @@ The project is ready for SQuID-C when all gates below are satisfied.
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).
-- [ ] No case-specific code is required to add a new equilibrium.
+- [x] New equilibria enter through a case-independent manifest-to-VMEC/Boozer
+      intake path; nfp=1 and an unmodified nfp=2 transfer case pass it.
 
 ## G5 — Engineering and robustness
 

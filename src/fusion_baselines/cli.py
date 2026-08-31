@@ -7,6 +7,7 @@ import json
 from pathlib import Path
 
 from fusion_baselines.external import verify_external_spec
+from fusion_baselines.intake import summarize_equilibrium_manifest
 from fusion_baselines.manifest import load_manifest, validate_manifest
 from fusion_baselines.provenance import build_run_record, write_json_atomic
 
@@ -28,6 +29,11 @@ def _parser() -> argparse.ArgumentParser:
         help="Trusted root against which file paths are resolved (default: manifest directory)",
     )
     validate.add_argument("--structure-only", action="store_true")
+
+    summarize = commands.add_parser("summarize-equilibrium")
+    summarize.add_argument("manifest", type=Path)
+    summarize.add_argument("--data-root", type=Path)
+    summarize.add_argument("--output", type=Path)
 
     verify = commands.add_parser("verify-stellcoilbench")
     verify.add_argument("--project-root", type=Path, default=Path.cwd())
@@ -57,6 +63,16 @@ def main() -> int:
                 print(f"ERROR: {error}")
             return 1
         print(f"verified: {args.spec}")
+        return 0
+
+    if args.command == "summarize-equilibrium":
+        manifest = load_manifest(args.manifest)
+        data_root = args.data_root if args.data_root is not None else args.manifest.parent
+        result = summarize_equilibrium_manifest(manifest, data_root)
+        if args.output:
+            write_json_atomic(args.output, result)
+        else:
+            print(json.dumps(result, indent=2, sort_keys=True))
         return 0
 
     manifest = load_manifest(args.manifest)

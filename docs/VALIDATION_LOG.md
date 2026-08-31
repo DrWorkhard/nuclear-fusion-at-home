@@ -193,3 +193,13 @@
 - Scope limit: the candidate is magnetically infeasible by the earlier cut-in;
   finite-beta/current, VMEC-resolution, topology, and independent-solver
   holdouts remain required before a physics/design claim.
+
+## 2026-08-31 — Generic equilibrium intake
+
+- Added a case-independent manifest-to-VMEC/Boozer summary path and CLI.
+- Core test creates an unknown synthetic configuration; no case-id dispatch is
+  required. Full core suite: 9 passed.
+- Goodman nfp=1 real-data intake: all five declared equilibrium fields matched;
+  VMEC and Boozer summaries finite.
+- Added Goodman nfp=2 only as a new manifest and ran the identical command; all
+  declared fields matched without code changes.

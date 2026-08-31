@@ -9,7 +9,15 @@ from typing import Any
 from fusion_baselines.provenance import sha256_file
 
 KINDS = {"w7x", "open_qi", "squid_c"}
-FILE_ROLES = {"vmec_input", "vmec_output", "coils", "currents", "profiles", "metadata"}
+FILE_ROLES = {
+    "boozer_output",
+    "coils",
+    "currents",
+    "metadata",
+    "profiles",
+    "vmec_input",
+    "vmec_output",
+}
 REQUIRED_TOP_LEVEL = {"schema_version", "case_id", "kind", "source", "files", "conventions"}
 
 
