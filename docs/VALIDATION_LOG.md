@@ -177,3 +177,19 @@
 - Scope limit: the scikit-fem support is a fixed lower-z region, not the labelled
   spring foundation, and the approximately 0.978 m displacement invalidates
   small-deformation linear elasticity as an absolute engineering model.
+
+## 2026-08-31 — Free-boundary holdout
+
+- Frozen a no-writeback validation protocol before execution.
+- Exported 4 unique / 16 physical LPQA coils to one MAKEGRID current circuit;
+  source and generated-file hashes recorded.
+- Independent vector-potential loop integral: `phiedge=0.0783837406 Wb`.
+- VMEC++ fixed-boundary and free-boundary vacuum runs both met `1e-9` residual
+  tolerances at `mpol=ntor=6`, `ns=[8,16,31]`.
+- Standard response grid: all predeclared volume, axis, and cross-section
+  comparisons passed.
+- `101 -> 151` R/Z response-grid refinement: all predeclared sensitivity bounds
+  passed; largest relative core-metric change was 0.0956% for axis iota.
+- Scope limit: the candidate is magnetically infeasible by the earlier cut-in;
+  finite-beta/current, VMEC-resolution, topology, and independent-solver
+  holdouts remain required before a physics/design claim.

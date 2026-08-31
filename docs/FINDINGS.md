@@ -442,3 +442,32 @@ mesh-convergence record, but its absolute displacement/stress values must not be
 optimized or cited as reactor limits. Near-term engineering optimization should
 use electromagnetic force/load proxies while a geometrically nonlinear,
 support-aware, independently cross-checked structural model is developed.
+
+## F-028 — The first immutable free-boundary holdout passes in vacuum
+
+**Class:** predeclared pipeline qualification with response-grid holdout
+**Date:** 2026-08-31
+
+The serialized LPQA v1.1 L-BFGS-B coils were exported as one current circuit and
+evaluated by VMEC++ 0.7.3 without optimizer writeback. The toroidal flux was
+independently obtained from the Biot-Savart vector-potential line integral. Both
+the `mpol=6`, `ntor=6`, `ns=31` fixed-boundary reference and the free-boundary
+vacuum equilibrium reached the requested `1e-9` force-residual tolerance.
+
+On the standard `101 x 101 x 24` response grid, the free-boundary volume differs
+from the truncated target by `0.0266%`, the magnetic-axis R curve differs from
+the fixed reference by `0.0383%` RMS, and boundary cross-section RMS distances
+at the two frozen toroidal sections are `1.04%` and `0.686%` of the target
+minor-radius proxies. Every predeclared screen passes.
+
+Refining the response grid to `151 x 151 x 24` changes volume, aspect, axis iota,
+and edge iota by `0.00735%`, `0.00290%`, `0.0956%`, and `0.00961%`. The normalized
+cross-section errors change by `0.000411` and `0.000386`, also within the frozen
+limits.
+
+**Implication:** free-boundary validation is now operational and strictly
+separate from optimization. This is not an improvement claim: the input
+candidate still fails the magnetic squared-flux cut-in, and this first run is
+vacuum-only at reduced Fourier/radial resolution. A publishable candidate must
+repeat the holdout at converged VMEC resolution and finite pressure/current,
+including topology and an independent code/version check.

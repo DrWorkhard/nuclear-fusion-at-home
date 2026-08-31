@@ -40,7 +40,8 @@ The project is ready for SQuID-C when all gates below are satisfied.
       numerically, but the resulting deformation invalidates linear mechanics
       as an absolute design model).
 - [x] Manufacturing perturbation distribution is predeclared.
-- [ ] Free-boundary validation is separated from optimization.
+- [x] Free-boundary validation is separated from optimization and exercised as
+      an immutable vacuum holdout with a response-grid refinement.
 
 ## G6 — SQuID-C intake contract
 

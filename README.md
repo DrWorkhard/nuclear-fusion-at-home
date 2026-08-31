@@ -44,6 +44,7 @@ Detailed cross-code V&V still has documented failures. See:
 - [SQuID-C reproduction contract](docs/SQUID_C_ACCEPTANCE.md)
 - [Manufacturing-robustness protocol](docs/ROBUSTNESS_PROTOCOL.md)
 - [Finite-build and structural protocol](docs/STRUCTURAL_PROTOCOL.md)
+- [Free-boundary holdout protocol](docs/FREE_BOUNDARY_PROTOCOL.md)
 
 ## Canonical commands
 

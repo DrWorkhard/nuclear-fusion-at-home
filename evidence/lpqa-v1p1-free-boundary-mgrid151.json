@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "protocol": "docs/FREE_BOUNDARY_PROTOCOL.md",
+  "vmecpp_version": "0.7.3",
+  "vmecpp_source_commit": "1d7e09941c89210be95b6b20f4d4d555f0a63096",
+  "prepared_case": {
+    "schema_version": 1,
+    "source_coils": "/Users/sebastianwirkert/workspace/fusion/artifacts/runs/lpqa-engineering-v1p1-lbfgsb/biot_savart_optimized.json",
+    "source_coils_sha256": "7ae1b1968b8ca34fa94cc0e67cfad41577219ed43bcd902b695c7b7cc04ecd2e",
+    "source_surface": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+    "source_surface_sha256": "4c6ba4bc391a69b5b6a5e84ff82df9b0ce92e20c42f2a47f89a9283fd5bc3458",
+    "coils_file": "/Users/sebastianwirkert/workspace/fusion/artifacts/free-boundary/lpqa-v1p1/coils.lpqa-v1p1",
+    "coils_file_sha256": "98a2eb0afb057e11bdc60c52a444c8089fee72229f408ca9dd04b35e390c067b",
+    "nfp": 2,
+    "stellarator_symmetry": true,
+    "physical_coils": 16,
+    "unique_coils": 4,
+    "current_groups": 1,
+    "extcur_A": [
+      261852.6781077149
+    ],
+    "unique_coil_currents_A": [
+      261852.6781077149,
+      383781.55018731626,
+      207022.45450845486,
+      397418.94183197804
+    ],
+    "phiedge_Wb": 0.07838374059840286,
+    "flux_quadrature_points": 2000,
+    "target_extent_m": {
+      "r_min": 0.6133981588161315,
+      "r_max": 1.3004272454377006,
+      "z_min": -0.38866976855011526,
+      "z_max": 0.3886697685501151
+    }
+  },
+  "prepared_case_sha256": "5d62127ea2ba124221486c83507e005a87635419dc747b05815906e0551e8b67",
+  "vmec_input_sha256": "4c6ba4bc391a69b5b6a5e84ff82df9b0ce92e20c42f2a47f89a9283fd5bc3458",
+  "response_grid": {
+    "r_points": 151,
+    "z_points": 151,
+    "phi_points": 24,
+    "margin_fraction": 0.4,
+    "construction_elapsed_s": 5.00115733302664
+  },
+  "fixed_boundary": {
+    "elapsed_s": 0.37006691697752103,
+    "ier_flag": 0,
+    "force_residuals": {
+      "fsqr": 9.674968705676142e-10,
+      "fsqz": 6.339407443395231e-10,
+      "fsql": 2.10884506044609e-11
+    },
+    "residual_converged": true,
+    "niter": 246,
+    "volume_m3": 0.5647123630248436,
+    "aspect": 6.000007793589545,
+    "iota_axis": 0.4222244884461168,
+    "iota_edge": 0.4159337130848887,
+    "beta_total": 0.0
+  },
+  "free_boundary": {
+    "elapsed_s": 1.4263261669548228,
+    "ier_flag": 0,
+    "force_residuals": {
+      "fsqr": 8.783203345839351e-10,
+      "fsqz": 4.1624152454444483e-10,
+      "fsql": 2.348849961209053e-11
+    },
+    "residual_converged": true,
+    "niter": 372,
+    "volume_m3": 0.5645205470212614,
+    "aspect": 6.000859662940839,
+    "iota_axis": 0.42184032437336616,
+    "iota_edge": 0.4141953431327076,
+    "beta_total": 0.0
+  },
+  "comparisons": {
+    "target_volume_m3": 0.5647123630248435,
+    "free_vs_target_volume_relative_error": 0.0003396702748893985,
+    "free_vs_fixed_volume_relative_error": 0.000339670274889595,
+    "axis_r_rms_relative_to_fixed_mean_r": 0.00043711979184143853,
+    "cross_sections": {
+      "0.0": {
+        "symmetric_rms_distance_m": 0.0016773597571776082,
+        "target_minor_radius_proxy_m": 0.16851159841478522,
+        "normalized_rms_distance": 0.009953972147655069
+      },
+      "0.25": {
+        "symmetric_rms_distance_m": 0.0010820024752221534,
+        "target_minor_radius_proxy_m": 0.1670753978758406,
+        "normalized_rms_distance": 0.006476132865631277
+      }
+    }
+  },
+  "outputs": {
+    "fixed_wout_sha256": "906f1fc9e145f5b4d18a3730253d9a1bfe00c150bce8e5f204a32366114ad7c0",
+    "free_wout_sha256": "ea08eca27b1afd6f8335d72b0be6710b7644722beede599ffb5e3d21be36d185"
+  },
+  "acceptance": {
+    "fixed_converged": true,
+    "free_converged": true,
+    "free_target_volume_within_0_05": true,
+    "free_fixed_volume_within_0_05": true,
+    "axis_r_rms_within_0_02": true,
+    "cross_section_rms_within_0_05": true
+  },
+  "accepted": true,
+  "optimization_writeback": false
+}
