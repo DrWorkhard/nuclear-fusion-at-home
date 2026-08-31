@@ -42,6 +42,7 @@ Detailed cross-code V&V still has documented failures. See:
 - [Decision log](docs/DECISIONS.md)
 - [SQuID-C readiness gates](docs/SQUID_C_READINESS.md)
 - [SQuID-C reproduction contract](docs/SQUID_C_ACCEPTANCE.md)
+- [SQuID-C authoritative-data request](docs/SQUID_C_DATA_REQUEST.md)
 - [Manufacturing-robustness protocol](docs/ROBUSTNESS_PROTOCOL.md)
 - [Finite-build and structural protocol](docs/STRUCTURAL_PROTOCOL.md)
 - [Free-boundary holdout protocol](docs/FREE_BOUNDARY_PROTOCOL.md)

@@ -28,7 +28,7 @@ engineering = [
 ]
 
 [tool.uv.sources]
-stellcoilbench = { path = "external/stellcoilbench", editable = true }
+stellcoilbench = { git = "https://github.com/akaptano/stellcoilbench.git", rev = "c7949edc4ea6378fc3be633304c69c288c3b79b5" }
 
 [project.scripts]
 fusion-baselines = "fusion_baselines.cli:main"

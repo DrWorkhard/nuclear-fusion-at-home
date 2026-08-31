@@ -23,6 +23,13 @@
       "branch": "main",
       "commit": "4017e53095c09e2ead20c6bb64c12796583520c5"
     },
+    "stellopt_vmec2000": {
+      "url": "https://github.com/PrincetonUniversity/STELLOPT.git",
+      "tag": "v251",
+      "commit": "e59affaec7713aee8da1f1bccdf05cc0612c12e3",
+      "vmec_version": "8.52",
+      "resolved_at": "2026-08-31"
+    },
     "simple": {
       "url": "https://github.com/itpplasma/SIMPLE.git",
       "branch": "main",
@@ -50,6 +57,14 @@
       "file": "qifiles.zip",
       "size_bytes": 1057077931,
       "md5": "f6983a41403da28247025be631522caa"
+    },
+    "squid_c_paper": {
+      "url": "https://doi.org/10.1017/S0022377825100974",
+      "publisher_url": "https://www.cambridge.org/core/journals/journal-of-plasma-physics/article/quasiisodynamic-stellarator-configuration-towards-a-fusion-power-plant/C8A4D1BBC282A9632924B5B85173A6AC",
+      "citation": "Goodman et al., Journal of Plasma Physics 91, E153",
+      "published_online": "2026-01-30",
+      "article_license": "CC-BY-NC-SA-4.0",
+      "data_package_status": "not publicly identified as of 2026-08-31"
     }
   }
 }

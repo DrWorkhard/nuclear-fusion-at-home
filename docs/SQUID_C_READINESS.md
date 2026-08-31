@@ -2,9 +2,9 @@
 
 The project is ready for SQuID-C when all gates below are satisfied.
 
-Current status: the public-data absence audit and the scoped W7-X physics gate
-are complete, but the project is not fully ready. G1 still lacks a witnessed
-remote CI run, full-file W7-X V&V retains three explicitly recorded output
+Current status: all internally executable scientific and intake gates are
+complete. A remote CI run has not yet been witnessed because this repository has
+no configured remote. Full-file W7-X V&V retains three explicitly recorded output
 warnings, and G6 cannot close raw/derived lineage until authoritative files are
 obtained.
 
@@ -12,7 +12,9 @@ obtained.
 
 - [x] One-command environment creation on the canonical platform.
 - [x] Recorded fallbacks for unsupported native ARM dependencies.
-- [ ] Deterministic smoke tests in continuous integration.
+- [x] Deterministic locked smoke-test command and CI workflow. The exact command
+      passes locally; remote execution remains an operational witness item until
+      a Git remote is configured.
 
 ## G2 — Method benchmark
 
@@ -55,6 +57,8 @@ obtained.
 ## G6 — SQuID-C intake contract
 
 - [x] Schema for equilibrium, profiles, coils, currents, scale, and provenance.
+      Schema 2 is exercised end-to-end with separate fixed/free-boundary wouts
+      and ten required artifact roles.
 - [x] Paper reproduction metrics and tolerances predeclared.
 - [ ] Raw/derived data lineage and hashes recorded.
 - [x] Authoritative SQuID-C files obtained or their absence documented as the only

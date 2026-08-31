@@ -237,3 +237,37 @@
   matched 8.52 comparison.
 - Remaining exceptions: axis-only `chipf` output and two micro-pascal-scale
   pressure-profile differences; all are retained in machine-readable evidence.
+
+## 2026-08-31 — SQuID-C schema-2 dry run
+
+- Audited schema 1 and found it admitted a nominal SQuID-C case with one VMEC
+  artifact despite the stronger prose contract.
+- Added mandatory distinct fixed/free-boundary inputs and outputs, profiles,
+  coils, currents, MGRID recipe, solver controls, and metadata.
+- Added bytes/SHA-256/origin or derivation-parent/recipe validation.
+- Added scale, conventions, source authority/license/time, and symmetry checks.
+- Complete ten-role synthetic package: passed and both wouts reached generic intake.
+- Negative tests for missing MGRID, wrong byte count, undeclared lineage parent,
+  and the unfilled template: passed by rejecting each invalid package.
+- Full core suite: 13 passed.
+
+## 2026-08-31 — Locked core CI
+
+- Replaced moving major action tags with exact commits corresponding to
+  `actions/checkout v4.4.0` and `astral-sh/setup-uv v7.6.0`.
+- CI runner fixed to Ubuntu 24.04 with read-only contents permission and timeout.
+- Environment synchronization now rejects lock drift via `uv sync --locked`.
+- Workflow and local execution use the same `scripts/run_core_ci.sh` entry point.
+- Exact local execution: Ruff passed and 13 tests passed.
+- First fresh-clone holdout: failed before tests because `uv` tried to resolve the
+  absent optional `external/stellcoilbench` path; the original local pass had
+  been conditioned on that ignored checkout.
+- First attempted remediation (`--no-install-local`): failed because lock
+  validation still required metadata from the absent path source.
+- Final remediation: the optional package source now uses StellCoilBench's exact
+  Git commit in the lock. Its separate local checkout remains independently
+  pinned for source/data audits, but is no longer required to install core CI.
+- Second fresh-clone holdout with no `external/` tree or pre-existing virtual
+  environment: Ruff and all 13 tests passed; the clone remained clean.
+- Scope limit: no Git remote is configured, so no remote-hosted run URL or runner
+  log can yet be recorded.

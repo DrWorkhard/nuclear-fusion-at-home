@@ -1,11 +1,13 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "case_id": "squid-c-authoritative",
   "kind": "squid_c",
   "source": {
     "url": "https://doi.org/10.1017/S0022377825100974",
-    "citation": "Goodman et al., Journal of Plasma Physics 91, E153 (2025/2026 online publication)",
-    "authority": "Replace with the authoritative data-release URL and authorship statement",
+    "citation": "Goodman et al., Journal of Plasma Physics 91, E153 (2025; published online 2026)",
+    "authority": "REQUIRED_AUTHOR_OR_PUBLISHER_DATA_RELEASE",
+    "license": "REQUIRED_DATA_LICENSE",
+    "retrieved_at": "REQUIRED_ISO_8601_TIMESTAMP",
     "availability_audit": {
       "as_of": "2026-08-31",
       "path": "evidence/squid-c-availability-audit-2026-08-31.json",
@@ -17,31 +19,78 @@
     "length_unit": "REQUIRED",
     "field_unit": "REQUIRED",
     "coordinate_system": "REQUIRED",
-    "current_sign": "REQUIRED"
+    "current_sign": "REQUIRED",
+    "toroidal_angle": "REQUIRED",
+    "poloidal_angle": "REQUIRED",
+    "minor_radius_definition": "REQUIRED"
   },
-  "equilibrium": {
-    "code": "VMEC or VMEC++",
-    "version": "REQUIRED",
-    "free_boundary": "REQUIRED",
-    "nfp": "REQUIRED",
-    "mpol": "REQUIRED",
-    "ntor": "REQUIRED",
-    "ns": "REQUIRED",
-    "convergence_tolerances": "REQUIRED"
+  "scale": {
+    "effective_minor_radius_m": "REQUIRED_POSITIVE_NUMBER",
+    "on_axis_field_T": "REQUIRED_POSITIVE_NUMBER",
+    "definition": "REQUIRED_STATE_WHICH_PAPER_DESIGN_POINT_THE_FILES_USE"
+  },
+  "symmetry": {
+    "nfp": "REQUIRED_POSITIVE_INTEGER",
+    "stellarator_symmetry": "REQUIRED_BOOLEAN",
+    "unique_coil_count": "REQUIRED_POSITIVE_INTEGER",
+    "full_coil_count": "REQUIRED_POSITIVE_INTEGER",
+    "expansion_rule": "REQUIRED"
+  },
+  "equilibria": {
+    "fixed_boundary": {
+      "code": "REQUIRED",
+      "version": "REQUIRED",
+      "free_boundary": false,
+      "nfp": "REQUIRED",
+      "mpol": "REQUIRED",
+      "ntor": "REQUIRED",
+      "ns": "REQUIRED",
+      "convergence_tolerances": "REQUIRED",
+      "input_role": "fixed_boundary_vmec_input",
+      "output_role": "fixed_boundary_vmec_output"
+    },
+    "coil_generated_free_boundary": {
+      "code": "REQUIRED",
+      "version": "REQUIRED",
+      "free_boundary": true,
+      "nfp": "REQUIRED",
+      "mpol": "REQUIRED",
+      "ntor": "REQUIRED",
+      "ns": "REQUIRED",
+      "convergence_tolerances": "REQUIRED",
+      "input_role": "free_boundary_vmec_input",
+      "output_role": "free_boundary_vmec_output"
+    }
   },
   "files": [
-    {"role": "vmec_input", "path": "REQUIRED", "sha256": "REQUIRED"},
-    {"role": "vmec_output", "path": "REQUIRED", "sha256": "REQUIRED"},
-    {"role": "profiles", "path": "REQUIRED", "sha256": "REQUIRED"},
-    {"role": "coils", "path": "REQUIRED", "sha256": "REQUIRED"},
-    {"role": "currents", "path": "REQUIRED", "sha256": "REQUIRED"},
-    {"role": "metadata", "path": "REQUIRED", "sha256": "REQUIRED"}
+    {"role": "fixed_boundary_vmec_input", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "fixed_boundary_vmec_output", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "free_boundary_vmec_input", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "free_boundary_vmec_output", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "profiles", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "coils", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "currents", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "mgrid_recipe", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "solver_controls", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"},
+    {"role": "metadata", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"}
   ],
   "reference_metrics": {
-    "aspect_ratio": {"value": "REQUIRED", "tolerance": "REQUIRED"},
-    "volume_averaged_beta": {"value": "REQUIRED", "tolerance": "REQUIRED"},
-    "iota_profile": {"value": "REQUIRED", "tolerance": "REQUIRED"},
-    "quasi_isodynamic_metric": {"definition": "REQUIRED", "value": "REQUIRED", "tolerance": "REQUIRED"},
-    "coil_normal_field_error": {"definition": "REQUIRED", "value": "REQUIRED", "tolerance": "REQUIRED"}
+    "volume_averaged_beta": {"value": 0.02, "acceptance_interval": [0.0195, 0.0205], "upper_exclusive": true},
+    "coil_normal_field_mean_abs": {"definition": "mean(abs((B dot n_hat)/abs(B)))", "value": 0.0027, "acceptance_interval": [0.00265, 0.00275], "upper_exclusive": true},
+    "coil_normal_field_max_abs": {"definition": "max(abs((B dot n_hat)/abs(B))) on the author grid", "value": 0.012, "acceptance_interval": [0.0115, 0.0125], "upper_exclusive": true},
+    "pressure_profile": {"definition": "p(s) proportional to 1-s for the canonical 2% beta result"},
+    "coil_table": {
+      "columns": ["L_over_a", "d_over_a", "kappa_times_a", "c_over_a", "current_MA"],
+      "rows": [
+        [18.07, 0.595, 1.673, 0.953, 1.586],
+        [20.82, 0.524, 1.669, 0.868, 1.532],
+        [21.84, 0.512, 1.784, 0.880, 1.422],
+        [22.83, 0.488, 2.028, 0.944, 1.313],
+        [22.35, 0.488, 2.026, 0.992, 1.216]
+      ],
+      "tolerance": "half a unit in each value's last printed decimal place"
+    },
+    "iota_profile": {"value": "REQUIRED_FROM_AUTHOR_DATA", "tolerance": "REQUIRED"},
+    "quasi_isodynamic_metric": {"definition": "REQUIRED", "value": "REQUIRED", "tolerance": "REQUIRED"}
   }
 }

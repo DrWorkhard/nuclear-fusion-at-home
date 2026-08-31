@@ -13,7 +13,34 @@ added from the supplied raw outputs without replacing these paper checks.
   pressure profile `p(s) proportional to 1-s`, including coil ripple.
 - Required artifacts: fixed-boundary target, coil-generated free-boundary input
   and wout, pressure/current profiles, complete coil centre-lines or winding
-  volumes, signed currents, symmetry expansion, and physical scale.
+  volumes, signed currents, MGRID recipe, solver controls, symmetry expansion,
+  and physical scale.
+
+The paper confirms that the coil optimization includes the plasma-current field,
+targets volume-averaged beta 2%, and reports subsequent calculations on the
+coil-generated equilibrium including coil ripple. It also reports separate
+free-boundary finite-pressure scans. These states must not be collapsed into one
+ambiguous `wout`.
+
+## Machine-readable admission contract
+
+SQuID-C uses manifest schema 2. Admission requires unique file roles for both
+fixed- and free-boundary VMEC inputs and outputs plus profiles, coils, currents,
+MGRID recipe, solver controls, and metadata. Every file declares byte size,
+SHA-256, and either an authoritative source URL or its parent roles and exact
+derivation recipe. The manifest also records:
+
+- code versions, resolution, convergence tolerances, and free-boundary state for
+  both equilibria;
+- coordinate/current/angle/minor-radius conventions;
+- physical minor-radius and field scale;
+- field periods, stellarator symmetry, unique/full coil counts, and exact
+  symmetry expansion;
+- data authority, license, and retrieval timestamp.
+
+The unfilled template is deliberately invalid. A complete synthetic package with
+all ten roles is exercised in core tests and both equilibrium states reach the
+generic intake without case-specific code.
 
 ## Paper-level coil checks
 

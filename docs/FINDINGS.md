@@ -558,3 +558,54 @@ cause of the prior alarming result.
 full `wout` equivalence. The remaining three output-level warnings should be
 reported upstream and retained as regression tests, but they do not block
 SQuID-C equilibrium intake.
+
+## F-032 — The first SQuID-C template was structurally under-specified
+
+**Class:** failed contract audit followed by tested schema hardening
+**Date:** 2026-08-31
+
+The schema-1 template listed the expected artifacts, but the executable validator
+would have admitted `kind=squid_c` with only one VMEC input or output. It did not
+require separate fixed- and free-boundary states, MGRID construction, solver
+controls, physical scale, symmetry expansion, file sizes, authoritative origin,
+or derivation lineage. Thus the prose contract was stronger than the code.
+
+Schema 2 now makes all ten artifact roles mandatory, rejects duplicate roles and
+template placeholders, verifies byte sizes and SHA-256 hashes, distinguishes
+authoritative files from locally derived files, validates every declared parent
+role, and binds both equilibria to code/version/resolution/convergence metadata.
+A complete synthetic SQuID-C package passes the contract and both equilibrium
+states enter the generic intake. Missing MGRID, wrong byte size, and an undeclared
+lineage parent each fail dedicated tests. The core suite now has 13 passing tests.
+
+The paper-level values were rechecked against the publisher text: the coil design
+targets 2% volume-averaged beta including the plasma-current background; the
+canonical reported state uses `p(s) proportional to 1-s` and includes coil ripple;
+and the reported mean/maximum relative field errors are 0.27%/1.2%.
+
+**Implication:** once an authoritative package is supplied, no schema or intake
+code change is needed. G6's raw/derived hashes remain correctly open because
+inventing them from the publication would defeat the contract.
+
+## F-033 — The first green core-CI run depended on an ignored checkout
+
+**Class:** failed clean-room holdout followed by reproduced remediation
+**Date:** 2026-08-31
+
+The locked CI command initially passed in the working repository but failed in a
+fresh clone before collecting tests. Although the benchmark extra was not
+selected, lock validation still attempted to read the optional editable source
+at `external/stellcoilbench`; that ignored checkout existed only in the working
+repository. `--no-install-local` did not help because metadata were required
+before installation selection.
+
+The optional source is now the exact StellCoilBench Git commit
+`c7949edc4ea6378fc3be633304c69c288c3b79b5` rather than a local path. The separate
+checkout at the same commit remains the pinned source/data audit tree. A second
+fresh clone—with neither `external/` nor an existing virtual environment—resolved
+the lock, installed the core package, passed Ruff and all 13 tests, and left the
+clone clean.
+
+**Implication:** the core workflow is clean-checkout reproducible. A hosted run is
+still unwitnessed because no remote is configured, but that is now an operational
+publication step rather than a hidden dependency in the scientific intake path.
