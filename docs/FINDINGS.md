@@ -1,5 +1,22 @@
 # Findings log
 
+## F-036 — Wider QI coverage exposes an invalid invariant-domain sample
+
+**Class:** preregistered negative screen with retrospective analytical diagnosis
+**Date:** 2026-09-09
+
+The expanded five-radius/nine-pitch study passes for nfp2 and nfp3. nfp1 fails
+one of its 45 cells: s=0.10, q=0.01 lies below the minimum possible field and
+admits no orbit. A Fourier second-derivative interpolation bound confirms this
+beyond the sampled grid. The failed screen is retained, not waived. The other
+134/135 cells have stable sampled actions and two poloidally closed contour
+graphs. The larger action envelopes also show why numerical convergence is not
+itself a confinement-quality criterion. Details: QI_COVERAGE_TOPOLOGY_RESULTS.md.
+
+The strict QI integration command additionally passes five non-skipping data
+checks after a fresh extraction in a detached clean clone. Neither result closes
+the full QI, native-solver integration, engineering or SQuID-C readiness gates.
+
 ## F-035 — Independent geometric tracing agrees on the frozen QI sample
 
 **Class:** independent reconstruction cross-check of the same equilibrium data

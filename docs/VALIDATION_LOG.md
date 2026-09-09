@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-09 — Expanded QI coverage, negative-domain diagnosis and clean bootstrap
+
+- Preregistered run: nfp1 fails one inaccessible invariant cell; nfp2/nfp3 pass.
+  134/135 distinct cells pass action/contour screens; process exit 2 retained.
+- Retrospective Fourier bound confirms the excluded cell's entire interpolated
+  surface lies above Bstar, with lower margin 5.24299e-4 T. No threshold changed.
+- 147 path/hash records match; three bound unit tests pass. Full suite 75 passed,
+  Ruff clean, eleven netCDF fixture deprecation warnings retained.
+- Detached clone at 587db93: locked environment and cached-archive fresh data
+  extraction; strict QI integration 5 passed, 0 skipped, W7-X explicitly deselected.
+- Results, limits and the two failed pre-test harness attempts are documented
+  in QI_COVERAGE_TOPOLOGY_RESULTS.md. No author data requested or external writes.
+
 ## 2026-09-09 — Expanded QI screen implementation, before real-data execution
 
 - Protocol committed first as 520dc95; no new real-data results inspected yet.

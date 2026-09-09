@@ -16,6 +16,9 @@ bounded result; missing author data is not the only remaining blocker.
       passes locally; remote execution remains an operational witness item until
       a Git remote is configured.
 - [ ] Automated scientific integration suite from a fresh data bootstrap.
+      Partial: strict QI numerical/metadata suite passes five non-skipping tests
+      after cached-archive extraction in a fresh detached clone. A full native
+      W7-X/solver bootstrap and hosted execution remain unwitnessed.
 
 ## G2 — Method benchmark
 
@@ -45,8 +48,11 @@ bounded result; missing author data is not the only remaining blocker.
 - [x] Independent geometric tracing agrees on 27 sampled traces and 135 pitch
       cells. See QI_TRACE_CROSSCHECK_RESULTS.md for scope and tolerances.
 - [ ] Resolution-stable QI objective and independent maximum-J assessment qualified.
-      Remaining: pitch/radial coverage, well-family identity, B-contour topology
-      and finite-pressure maximum-J; the bounded action study is not a full QI score.
+      Expanded five-radius/nine-pitch study: nfp2/nfp3 pass; nfp1 retains one
+      inaccessible-domain failure. 134/135 cells pass sampled action and poloidal
+      contour screens (QI_COVERAGE_TOPOLOGY_RESULTS.md). Remaining: full invariant
+      domain, well-family identity, continuum topology and finite-pressure maximum-J;
+      a bounded action study is not a full QI score.
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).
