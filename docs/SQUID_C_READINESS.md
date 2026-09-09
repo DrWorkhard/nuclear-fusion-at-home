@@ -63,6 +63,9 @@ bounded result; missing author data is not the only remaining blocker.
 
 - [x] Structured sweep mesh generation and volume/tag screens exercised.
 - [ ] Finite-build self-intersections, quality, orientation and solid clearances checked.
+      Partial: all six structured meshes pass intrinsic cell-quality, shared-face
+      orientation and boundary-topology screens. Spatial nonoverlap, full assembly
+      clearance and physical winding-pack orientation are still unqualified.
 - [x] Structural discretization series recorded; the final pair passes its screen.
 - [ ] Mesh independence and physically valid mechanical predictions established.
       The large deformation invalidates the absolute linear-model predictions.

@@ -1,5 +1,14 @@
 # Validation log
 
+## 2026-09-09 — Intrinsic coil mesh audit
+
+- Protocol 2c75cc9 and implementation 9ee1796 committed before real mesh execution.
+- Three analytical/adversarial test groups pass; full suite 78 passed, Ruff clean.
+- All six mesh hashes match; all six pass positive volume, cell uniqueness,
+  mean-ratio quality, face-orientation and closed-ring boundary screens.
+- Audit execution 2.686 s, NumPy 2.5.2 / meshio 5.3.5. No mesh modified or repaired.
+- No spatial nonoverlap, full assembly clearance or mechanical-validity claim.
+
 ## 2026-09-09 — Expanded QI coverage, negative-domain diagnosis and clean bootstrap
 
 - Preregistered run: nfp1 fails one inaccessible invariant cell; nfp2/nfp3 pass.

@@ -1,5 +1,23 @@
 # Findings log
 
+## F-037 — Six structured coil meshes pass intrinsic integrity screens
+
+**Class:** preregistered mesh audit with adversarial analytical controls
+**Date:** 2026-09-09
+
+Protocol 2c75cc9 preceded implementation 9ee1796 and the six real mesh checks.
+All meshes have positive nondegenerate tetrahedra, no repeated/duplicate cells,
+consistent shared-face orientations and mean-ratio quality >=0.10. Each of the
+four tagged coil boundaries has two triangles per boundary edge, one connected
+component and Euler characteristic zero. The three test groups include an
+overlapping pair of positive tetrahedra that fails orientation consistency.
+
+This closes a bounded intrinsic-mesh check, **not** spatial nonoverlap or
+engineering validity. Nonlocal intersections can pass these tests. Symmetry
+copies were not remeshed, and coil/plasma clearances, winding-pack orientation,
+physical supports/materials and valid mechanical predictions remain unqualified.
+Evidence: mesh-integrity-2026-09-09.json. Full local suite: 78 passed; Ruff clean.
+
 ## F-036 — Wider QI coverage exposes an invalid invariant-domain sample
 
 **Class:** preregistered negative screen with retrospective analytical diagnosis
