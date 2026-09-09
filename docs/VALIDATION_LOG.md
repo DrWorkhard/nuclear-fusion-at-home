@@ -8,6 +8,10 @@
 - Finest action differences: nfp1 6.2645e-6, nfp2 3.8171e-6, nfp3 9.0674e-6.
 - Local test suite: 64 passed; ten fixture-writing deprecation warnings retained.
 - Result: QI_TRACE_CROSSCHECK_RESULTS.md and independent-trace-crosscheck.json.
+- Final clean-clone check at b97b7ce: exact run_core_ci.sh on detached HEAD
+  installs 11 packages, passes Ruff and 61 tests, explicitly skips the three
+  unbootstrapped scientific-data tests, and retains ten fixture deprecation warnings.
+- All 74 path/hash references in the new QI measurement evidence match.
 
 ## 2026-09-09 — Bounce-action v1 transfer experiment
 
