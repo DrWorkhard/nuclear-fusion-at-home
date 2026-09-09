@@ -1,0 +1,44 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "errors": [],
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp1.json",
+        "sha256": "475630b9154c7f4944c1a29c8d7b0cfa40812c78496029dd7b10ddc936091727"
+      },
+      "max_relative_quadrature_discrepancy": 5.410518699733302e-10,
+      "pass": true,
+      "tolerance": 1e-06,
+      "wells_checked": 4320
+    },
+    {
+      "errors": [],
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp2.json",
+        "sha256": "50809d6b3a53bd39a89da3b41be25b282740e3de36173d7d4ac3b53e5a5c8e86"
+      },
+      "max_relative_quadrature_discrepancy": 4.678470943986213e-10,
+      "pass": true,
+      "tolerance": 1e-06,
+      "wells_checked": 4320
+    },
+    {
+      "errors": [],
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp3.json",
+        "sha256": "dd3a5aa45408d2b8bb56595b0d3442a0e4f107e3580c9587185a60de6ed5c7bb"
+      },
+      "max_relative_quadrature_discrepancy": 5.123044211075012e-10,
+      "pass": true,
+      "tolerance": 1e-06,
+      "wells_checked": 4320
+    }
+  ],
+  "evaluation_code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/verify_bounce_action_evidence.py",
+    "sha256": "e6bbe963492dd21041188af1b995e8c69a7fa051df0557e4cb43f65a06db4de9"
+  },
+  "method": "independent 128-point Gauss-Legendre per linear segment",
+  "schema_version": 1
+}

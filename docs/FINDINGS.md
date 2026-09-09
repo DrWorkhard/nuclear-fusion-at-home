@@ -1,5 +1,20 @@
 # Findings log
 
+## F-034 — Well-resolved bounce-action measurement passes its first frozen study
+
+**Class:** reproduced numerical qualification with independent quadrature
+**Date:** 2026-09-09
+
+Protocol 75c0ba8 preceded implementation 372a63f and all real-data runs. The
+nfp=1,2,3 cases pass the specified phi/alpha/domain-length refinements and
+complete-well coverage screens. The largest final phi action change is 1.0836e-4
+relative, below the fixed 1e-3 limit. Independent quadrature verifies 12,960
+recorded well integrals with maximum relative discrepancy below 5.5e-10.
+
+This qualifies a bounded measurement study, not QI topology or maximum-J.
+Definitions, analytic checks, results and open limitations are in
+QI_MEASUREMENT_RESULTS_V1.md. The full scientific qualification remains open.
+
 ## F-001 — Host platform is resource-capable but compatibility-sensitive
 
 **Class:** reproduced

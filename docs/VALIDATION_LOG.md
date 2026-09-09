@@ -1,5 +1,13 @@
 # Validation log
 
+## 2026-09-09 — Bounce-action v1 transfer experiment
+
+- All three cases complete all five frozen trace resolutions; all screens pass.
+- 12,960 saved well actions independently re-integrated; maximum discrepancy
+  <5.5e-10 relative against a 1e-6 threshold; all raw trace hashes match.
+- Full details: QI_MEASUREMENT_RESULTS_V1.md and evidence/qi-measurement-v1/.
+- Scientific QI qualification remains false pending the stated additional checks.
+
 ## 2026-09-09 — Bounce-action v1 kernel, before real-data experiments
 
 - Protocol committed first as 75c0ba8.
