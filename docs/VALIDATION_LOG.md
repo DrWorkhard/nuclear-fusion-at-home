@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-09 — Bounce-action v1 kernel, before real-data experiments
+
+- Protocol committed first as 75c0ba8.
+- Piecewise-linear action integrates each segment analytically, retains complete
+  and boundary-censored wells, and preserves per-alpha coverage.
+- Twelve tests pass: analytic triangular/parabolic mirrors, independent 128-point
+  Gauss-Legendre integration, threshold contacts, censoring, scaling, deliberately
+  perturbed field-line lengths and invalid traces. Full local suite: 62 passed.
+- Real-data experiment runner checks frozen source/wout hashes, rejects overwrite,
+  records trace warnings and persists every stage. Its real-data outcome is pending.
+
 ## 2026-09-09 — Comprehensive audit and readiness correction
 
 - Detailed findings and limits: `docs/AUDIT_2026-09-09.md`.
