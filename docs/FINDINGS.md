@@ -526,6 +526,11 @@ CI gates.
 
 ## F-031 — A matched VMEC 8.52 reference closes the scoped W7-X physics gate
 
+**Audit correction, 2026-09-09:** the real-space tolerance class below was wrong;
+the corrected fixed-boundary margin is 16.77x. The expanded local comparison is
+60/63, not full-file V&V. The variable selection and grid were retrospective.
+See AUDIT_2026-09-09.md and the new dated evidence. Historical text follows.
+
 **Class:** independent implementation reproduction with retained negative controls
 **Date:** 2026-08-31
 
@@ -561,6 +566,11 @@ SQuID-C equilibrium intake.
 
 ## F-032 — The first SQuID-C template was structurally under-specified
 
+**Audit correction, 2026-09-09:** the implication that no adapter changes remain
+is withdrawn. Empty metrics and failed solver outputs could pass; scientific
+admission was not implemented. The revised code and readiness gates distinguish
+basic intake from scientific reproduction. Historical text follows.
+
 **Class:** failed contract audit followed by tested schema hardening
 **Date:** 2026-08-31
 
@@ -588,6 +598,10 @@ code change is needed. G6's raw/derived hashes remain correctly open because
 inventing them from the publication would defeat the contract.
 
 ## F-033 — The first green core-CI run depended on an ignored checkout
+
+**Audit correction, 2026-09-09:** the main-branch clone passed, but a detached
+checkout failed because a test assumed branch=main. That test is corrected,
+detached HEAD is tested explicitly, and the workflow now pins uv 0.11.2.
 
 **Class:** failed clean-room holdout followed by reproduced remediation
 **Date:** 2026-08-31

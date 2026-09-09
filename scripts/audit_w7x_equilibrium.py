@@ -129,12 +129,12 @@ def _realspace_comparison(
         error = _normalized_error(test[name], reference[name])
         record = _max_record(test[name], reference[name], error)
         if name != "b_sub_s":
-            tolerance = get_tolerance(f"flux_surface_{name}", "w7x")
-            record["official_w7x_tolerance"] = tolerance
-            record["passes_official_w7x_tolerance"] = record["max_normalized_error"] <= tolerance
+            tolerance = get_tolerance(f"flux_surface_{name}")
+            record["fixed_boundary_tolerance"] = tolerance
+            record["passes_fixed_boundary_tolerance"] = record["max_normalized_error"] <= tolerance
         else:
-            record["official_w7x_tolerance"] = None
-            record["passes_official_w7x_tolerance"] = None
+            record["fixed_boundary_tolerance"] = None
+            record["passes_fixed_boundary_tolerance"] = None
             record["note"] = (
                 "Diagnostic reconstruction of the covariant radial component; the upstream "
                 "V&V suite does not define a real-space tolerance for it."
@@ -146,7 +146,7 @@ def _realspace_comparison(
         "phi_points_per_field_period": nphi,
         "checks": checks,
         "all_official_realspace_checks_pass": all(
-            record["passes_official_w7x_tolerance"] for record in protected
+            record["passes_fixed_boundary_tolerance"] for record in protected
         ),
     }
 
@@ -164,13 +164,20 @@ def main() -> int:
     vmecpp_root = project_root / "external/vmecpp"
     vmec2000_root = project_root / "external/stellopt-v251"
     sys.path.insert(0, str(validation_root))
-    from src.tolerances import get_tolerance  # noqa: PLC0415
+    from src.tolerances import _DEFAULT_TOL, _TOLERANCES  # noqa: PLC0415
+
+    def get_tolerance(name):
+        tolerance = _TOLERANCES.get(name, _DEFAULT_TOL)
+        return tolerance[0] if isinstance(tolerance, tuple) else tolerance
 
     strict = json.loads(args.strict_comparison.read_text())
+    for role, path in (("under_test", args.under_test), ("reference", args.reference)):
+        if strict.get(f"{role}_sha256") != _sha256(path):
+            raise ValueError(f"strict comparison is not bound to the supplied {role} file")
     official_checks = []
     for check in strict["checks"]:
         record = dict(check)
-        tolerance = get_tolerance(check["variable"], "w7x")
+        tolerance = get_tolerance(check["variable"])
         record["tolerance"] = tolerance
         if "max_normalized_error" in check:
             record["status"] = "pass" if check["max_normalized_error"] <= tolerance else "fail"
@@ -188,7 +195,7 @@ def main() -> int:
         convergence = {
             role: {
                 name: float(np.asarray(dataset[name][:]).item())
-                for name in ("fsqr", "fsqz", "fsql")
+                for name in ("fsqr", "fsqz", "fsql", "ier_flag")
             }
             for role, dataset in (
                 ("under_test", test_dataset),
@@ -231,7 +238,11 @@ def main() -> int:
         and refined_grid["all_official_realspace_checks_pass"]
     )
     converged_to_requested_level = all(
-        values["fsqr"] <= 1.01e-12 and values["fsqz"] <= 1.01e-12 and values["fsql"] <= 1.01e-12
+        values["ier_flag"] == 0
+        and all(
+            np.isfinite(values[name]) and 0 <= values[name] <= 1.01e-12
+            for name in ("fsqr", "fsqz", "fsql")
+        )
         for values in convergence.values()
     )
     project_gate_pass = (
@@ -244,6 +255,10 @@ def main() -> int:
 
     evidence = {
         "schema_version": 1,
+        "evaluation_code": {
+            "path": str(Path(__file__).resolve()),
+            "sha256": _sha256(Path(__file__)),
+        },
         "inputs": {
             "under_test": {
                 "path": str(args.under_test.resolve()),
@@ -261,7 +276,7 @@ def main() -> int:
         "tolerance_source": {
             "repository": "https://github.com/proximafusion/vmecpp-validation",
             "commit": _git_head(validation_root),
-            "case_class": "w7x",
+            "case_class": "fixed_boundary_tuple_index_0",
         },
         "mode_arrays_equal": mode_arrays_equal,
         "versions": versions,
@@ -275,7 +290,7 @@ def main() -> int:
             "checked": strict["variables_checked"],
             "overall_pass": strict["overall_pass"],
         },
-        "official_w7x_class_summary": {
+        "fixed_boundary_63_variable_summary": {
             "passed": len(official_checks) - len(official_failed),
             "checked": len(official_checks),
             "overall_pass": not official_failed,
@@ -321,22 +336,23 @@ def main() -> int:
         },
         "protected_project_metrics": {
             "selection_basis": (
-                "WP2's geometry, aspect, beta, iota and selected magnetic-field "
-                "regression scope; this is intentionally narrower than full wout V&V."
+                "Retrospective qualification within WP2 scope. Exact variable list and grids "
+                "were not preregistered before observing the results."
             ),
             "checks": protected_checks,
             "overall_pass": protected_arrays_pass,
         },
         "realspace": {
+            "grid_status": "post-hoc diagnostic regridding of the same Fourier coefficients",
             "official_grid": official_grid,
-            "refined_holdout_grid": refined_grid,
+            "refined_diagnostic_grid": refined_grid,
             "both_grids_pass_official_protected_checks": (
                 official_grid["all_official_realspace_checks_pass"]
                 and refined_grid["all_official_realspace_checks_pass"]
             ),
         },
         "assessment": {
-            "full_wout_vnv_pass": not official_failed,
+            "all_63_compared_variables_pass": not official_failed,
             "protected_realspace_geometry_and_field_pass": realspace_pass,
             "project_w7x_regression_gate_pass": project_gate_pass,
             "gate_closed": project_gate_pass,
@@ -344,8 +360,8 @@ def main() -> int:
                 "The version-compatible VMEC 8.52 comparison removes the broad bsubsmns "
                 "discrepancy. Both solvers converge, every protected WP2 metric passes its "
                 "pinned tolerance, and real-space geometry/B pass on the upstream and refined "
-                "grids. Full-wout V&V remains failed by presf, pres and chipf; chipf is an "
-                "axis-only mismatch and the pressure differences are micro-pascal-scale "
+                "grids. The 63-variable comparison remains failed by presf, pres and chipf; "
+                "chipf is an axis-only mismatch and pressure differences are micro-pascal-scale "
                 "output differences. These exceptions are warnings, not silently waived checks."
             ),
             "known_output_exceptions": {

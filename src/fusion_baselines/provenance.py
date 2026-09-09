@@ -33,7 +33,7 @@ def _git(path: Path, *args: str) -> str | None:
 
 
 def git_state(path: Path) -> dict[str, Any]:
-    """Describe a Git checkout, including whether tracked content is dirty."""
+    """Describe a Git checkout; dirty includes tracked changes and untracked files."""
     root = _git(path, "rev-parse", "--show-toplevel")
     if root is None:
         return {"path": str(path.resolve()), "available": False}

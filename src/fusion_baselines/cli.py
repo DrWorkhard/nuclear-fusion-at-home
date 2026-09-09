@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
 from fusion_baselines.external import verify_external_spec
@@ -46,6 +47,14 @@ def _parser() -> argparse.ArgumentParser:
 
 
 def main() -> int:
+    try:
+        return _main()
+    except (ValueError, OSError) as error:
+        print(f"ERROR: {error}", file=sys.stderr)
+        return 1
+
+
+def _main() -> int:
     args = _parser().parse_args()
     if args.command == "capture-environment":
         external = {"stellcoilbench": args.stellcoilbench} if args.stellcoilbench else {}
@@ -73,7 +82,7 @@ def main() -> int:
             write_json_atomic(args.output, result)
         else:
             print(json.dumps(result, indent=2, sort_keys=True))
-        return 0
+        return 0 if result.get("intake_checks_pass", result["expected_metadata_matches"]) else 1
 
     manifest = load_manifest(args.manifest)
     data_root = args.data_root if args.data_root is not None else args.manifest.parent

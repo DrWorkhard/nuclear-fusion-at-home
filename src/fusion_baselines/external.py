@@ -24,13 +24,28 @@ def verify_external_spec(project_root: Path, spec_path: Path) -> list[str]:
     """Verify repository revision and file hashes from an external-data spec."""
     spec: dict[str, Any] = json.loads(spec_path.read_text())
     errors: list[str] = []
+    project_root = project_root.resolve()
     repository = (project_root / spec["repository"]["path"]).resolve()
+    if not repository.is_relative_to(project_root):
+        return ["repository path escapes project root"]
     actual_commit = _head(repository)
     expected_commit = spec["repository"]["commit"]
     if actual_commit != expected_commit:
         errors.append(f"repository commit is {actual_commit!r}; expected {expected_commit}")
+    if actual_commit is not None:
+        status = subprocess.run(
+            ["git", "-C", str(repository), "status", "--porcelain"],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        if status.returncode or status.stdout.strip():
+            errors.append("repository has unverified working-tree changes")
     for item in spec["files"]:
         candidate = (project_root / item["path"]).resolve()
+        if not candidate.is_relative_to(project_root):
+            errors.append(f"file path escapes project root: {item['path']}")
+            continue
         if not candidate.is_file():
             errors.append(f"missing file: {item['path']}")
         else:

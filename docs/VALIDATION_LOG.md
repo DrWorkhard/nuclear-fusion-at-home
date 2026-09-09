@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-09 — Comprehensive audit and readiness correction
+
+- Detailed findings and limits: `docs/AUDIT_2026-09-09.md`.
+- Fixed real VMEC logical-name handling; Goodman nfp=1/2 metadata reruns pass.
+- W7-X corrected fixed-boundary tolerances pass the scoped regression; 60/63
+  compared variables pass overall, retaining presf/pres/chipf failures.
+- Core validation now checks invalid numeric metadata, lineage cycles, path
+  aliases, solver termination/residuals, beta/iota and CLI failure signaling.
+- Local suite: 50 passed, including three optional real-data integration checks.
+- Fresh detached working-snapshot clone: exact CI command passes Ruff and
+  47 tests; three data-dependent tests explicitly skip. Hosted CI not witnessed.
+- Malformed-manifest probe: 1,645 mutations, zero uncaught exceptions.
+- Artifact integrity: all 58 path/hash pairs match; hash-only records excluded.
+- Readiness downgraded: scientific admission and internal research qualifications
+  remain open. Historical results retained and superseded with dated evidence.
+
 ## 2026-08-30 — Core repository
 
 - `uv sync --python 3.12 --extra dev`: succeeded.

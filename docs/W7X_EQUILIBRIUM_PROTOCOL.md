@@ -25,23 +25,31 @@ the remaining changes select the local Apple Silicon compiler and libraries.
 
 ## Project physics gate
 
-The project gate implements WP2's original scope. It passes only if:
+The project gate is a retrospective qualification within WP2's broad scope.
+The exact variable list and grids were committed together with results, so they
+were not preregistered. It passes only if:
 
 1. both outputs report VMEC 8.52 and use identical Fourier-mode arrays;
-2. both reach `fsqr`, `fsqz`, and `fsql <= 1.01e-12`;
+2. both have ier_flag=0 and finite, nonnegative `fsqr`, `fsqz`, `fsql <= 1.01e-12`;
 3. `aspect`, `volume_p`, `betatotal`, `iotaf`, magnetic axis, surface geometry,
    `|B|`, and contravariant magnetic coefficients pass the pinned fixed-boundary
    array tolerances;
 4. reconstructed real-space `R`, `Z`, `B_R`, `B_phi`, and `B_Z` pass Proxima's
-   W7-X tolerances both on a `37 x 36` grid and on an unconsumed `73 x 72` grid.
+   fixed-boundary tolerances on `37 x 36` and `73 x 72` diagnostic grids.
+
+The old get_tolerance(name, "w7x") call selected the upstream free-boundary
+class. This fixed-boundary case now uses tuple index 0 throughout. Its minimum
+real-space tolerance/error ratio is 16.77, not over 8,000. Regridding the same
+Fourier coefficients is a useful numerical diagnostic, not an independent dataset.
 
 This selection follows the project plan's geometry, aspect, beta, iota, and
 selected magnetic-metric scope. It is not called full `wout` validation.
 
 ## Full-file V&V and known failures
 
-All 59 fixed-boundary fields are also compared without exceptions. That stricter
-test currently passes 56/59 and therefore fails overall:
+The original local comparison covered 59 variables. Adding ier_flag, rmax_surf,
+rmin_surf and zmax_surf extends it to 63 variables, of which 60 pass. This local
+comparison is not the entire upstream V&V suite and still fails overall:
 
 - `chipf` differs only at the magnetic axis: VMEC++ writes zero and VMEC 8.52
   writes `2.15`; every interior point passes the fixed-boundary tolerance. Source
@@ -72,17 +80,19 @@ uv run python scripts/run_vmec2000_reference.py \
 uv run python scripts/compare_wout_core.py \
   artifacts/vmecpp/w7x-stellcoilbench/wout.nc \
   artifacts/vmec2000/w7x-v852-reference/wout_w7xbaseline.nc \
-  evidence/w7x-vmecpp-v852-comparison.json
+  evidence/w7x-vmecpp-v852-comparison-audit-2026-09-09.json
 uv run python scripts/audit_w7x_equilibrium.py \
   artifacts/vmecpp/w7x-stellcoilbench/wout.nc \
   artifacts/vmec2000/w7x-v852-reference/wout_w7xbaseline.nc \
-  evidence/w7x-vmecpp-v852-comparison.json \
-  evidence/w7x-equilibrium-v852-vnv.json
+  evidence/w7x-vmecpp-v852-comparison-audit-2026-09-09.json \
+  evidence/w7x-equilibrium-v852-vnv-audit-2026-09-09.json
 ```
 
 The native VMEC reference took 2,922.57 seconds on the canonical M1 host.
 Generated files remain ignored; their hashes, toolchain, dynamic libraries,
 metrics, and normal-termination marker are recorded in evidence.
+The September audit reevaluates those existing raw files; it does not rerun the
+48-minute reference solve. Original evidence is preserved as historical output.
 
 Primary implementation sources:
 

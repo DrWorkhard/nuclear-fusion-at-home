@@ -33,8 +33,12 @@ The primary question is:
 The core environment and pinned StellCoilBench/SIMSOPT/VMEC++ stack run natively
 on Apple M1. The Landreman-Paul QA case is bit-reproducible, the W7-X coil and
 equilibrium baselines run, and all three authoritative Goodman QI vacuum cases
-now pass through the generic intake, equilibrium, QI and maximum-J interfaces.
-Detailed cross-code V&V still has documented failures. See:
+have been exercised through equilibrium, legacy QI and J diagnostic routines.
+Generic real-data metadata intake is verified for nfp=1 and nfp=2. The September 9
+audit withdrew the full-readiness claim: scientific admission, a qualified QI
+objective and a physically valid engineering model remain open. See:
+
+- [Audit and corrected readiness assessment](docs/AUDIT_2026-09-09.md)
 
 - [Project plan](docs/PROJECT_PLAN.md)
 - [Evidence standard](docs/EVIDENCE_STANDARD.md)

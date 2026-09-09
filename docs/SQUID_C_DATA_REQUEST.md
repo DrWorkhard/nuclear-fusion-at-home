@@ -4,8 +4,8 @@
 
 This is the minimal request needed to reproduce the published SQuID-C baseline
 without reconstructing scientific data from figures. It is intentionally
-specific enough that a response can be admitted directly through
-`manifests/squid-c.template.json`.
+specific enough to clarify the provisional mapping in
+`manifests/squid-c.template.json`. Adapter work and scientific evaluation remain.
 
 ## Draft request
 
@@ -22,16 +22,18 @@ the coil-generated equilibrium.
 Could you provide, or point us to an authoritative release containing:
 
 1. the fixed-boundary VMEC input and converged `wout` for the stage-1 target;
-2. the free-boundary VMEC input and converged `wout` for the canonical
-   coil-generated, 2% volume-averaged-beta, linear-pressure state;
+2. the VMEC input and converged `wout` for the canonical coil-generated,
+   2% volume-averaged-beta, linear-pressure state, confirming its boundary mode;
+   separately, the free-boundary stability-scan states and profiles;
 3. the pressure and current profiles in machine-readable form;
 4. all unique coil centre-lines or winding volumes, signed currents, curve
    orientation, stellarator/field-period expansion rule, and physical scale;
 5. the MAKEGRID/MGRID construction inputs or exact recipe;
 6. VMEC/ONSET versions, Fourier/radial resolution, convergence controls, and any
    patches needed to reproduce the files;
-7. the grid/quadrature convention used for the reported mean 0.27% and maximum
-   1.2% relative normal-field errors;
+7. the reduction, weighting, field-composition and grid conventions for the
+   reported average 0.27% and maximum 1.2% field errors, plus tolerances for beta
+   and reference profiles;
 8. if available, the Boozer, NEO, SIMPLE, ballooning, and beta-scan inputs/outputs
    used for the paper's protected physics checks; and
 9. a license, release URL/version, and checksum list for provenance.

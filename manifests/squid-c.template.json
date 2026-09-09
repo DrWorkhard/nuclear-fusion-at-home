@@ -2,6 +2,7 @@
   "schema_version": 2,
   "case_id": "squid-c-authoritative",
   "kind": "squid_c",
+  "contract_status": "provisional scaffold; canonical free-boundary state requires author confirmation",
   "source": {
     "url": "https://doi.org/10.1017/S0022377825100974",
     "citation": "Goodman et al., Journal of Plasma Physics 91, E153 (2025; published online 2026)",
@@ -75,9 +76,9 @@
     {"role": "metadata", "path": "REQUIRED", "bytes": "REQUIRED", "sha256": "REQUIRED", "origin": "authoritative", "source_url": "REQUIRED"}
   ],
   "reference_metrics": {
-    "volume_averaged_beta": {"value": 0.02, "acceptance_interval": [0.0195, 0.0205], "upper_exclusive": true},
-    "coil_normal_field_mean_abs": {"definition": "mean(abs((B dot n_hat)/abs(B)))", "value": 0.0027, "acceptance_interval": [0.00265, 0.00275], "upper_exclusive": true},
-    "coil_normal_field_max_abs": {"definition": "max(abs((B dot n_hat)/abs(B))) on the author grid", "value": 0.012, "acceptance_interval": [0.0115, 0.0125], "upper_exclusive": true},
+    "volume_averaged_beta": {"value": 0.02, "acceptance_interval": "REQUIRED_FROM_AUTHOR_OUTPUT_AND_SOLVER_ERROR", "upper_exclusive": true, "acceptance_basis": "REQUIRED; 2% is a nominal target, not evidence for a 2.0%-rounding interval"},
+    "coil_normal_field_mean_abs": {"definition": "REQUIRED_AUTHOR_REDUCTION_AND_QUADRATURE", "value": 0.0027, "acceptance_interval": [0.00265, 0.00275], "upper_exclusive": true, "acceptance_basis": "Inferred rounding interval; author reduction and rounding convention unconfirmed"},
+    "coil_normal_field_max_abs": {"definition": "REQUIRED_AUTHOR_ABSOLUTE_VALUE_AND_GRID_CONVENTION", "value": 0.012, "acceptance_interval": [0.0115, 0.0125], "upper_exclusive": true, "acceptance_basis": "Inferred rounding interval; author grid and rounding convention unconfirmed"},
     "pressure_profile": {"definition": "p(s) proportional to 1-s for the canonical 2% beta result"},
     "coil_table": {
       "columns": ["L_over_a", "d_over_a", "kappa_times_a", "c_over_a", "current_MA"],
@@ -88,9 +89,16 @@
         [22.83, 0.488, 2.028, 0.944, 1.313],
         [22.35, 0.488, 2.026, 0.992, 1.216]
       ],
-      "tolerance": "half a unit in each value's last printed decimal place"
+      "printed_rows": [
+        ["18.07", "0.595", "1.673", "0.953", "1.586"],
+        ["20.82", "0.524", "1.669", "0.868", "1.532"],
+        ["21.84", "0.512", "1.784", "0.88", "1.422"],
+        ["22.83", "0.488", "2.028", "0.944", "1.313"],
+        ["22.35", "0.488", "2.026", "0.992", "1.216"]
+      ],
+      "tolerance": "Inferred half-last-printed-digit intervals; use printed_rows, especially coil 3 c/a = 0.88 (half-width 0.005); author confirmation pending"
     },
-    "iota_profile": {"value": "REQUIRED_FROM_AUTHOR_DATA", "tolerance": "REQUIRED"},
-    "quasi_isodynamic_metric": {"definition": "REQUIRED", "value": "REQUIRED", "tolerance": "REQUIRED"}
+    "iota_profile": {"value": "REQUIRED_FULL_IOTAF_ON_AUTHOR_NS_GRID", "absolute_tolerance": "REQUIRED"},
+    "quasi_isodynamic_metric": {"definition": "REQUIRED", "value": "REQUIRED", "absolute_tolerance": "REQUIRED"}
   }
 }

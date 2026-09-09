@@ -2,11 +2,11 @@
 
 The project is ready for SQuID-C when all gates below are satisfied.
 
-Current status: all internally executable scientific and intake gates are
-complete. A remote CI run has not yet been witnessed because this repository has
-no configured remote. Full-file W7-X V&V retains three explicitly recorded output
-warnings, and G6 cannot close raw/derived lineage until authoritative files are
-obtained.
+Audit revision 2026-09-09: the claim that all internally executable gates were
+complete is withdrawn. We can receive and inspect an author package; scientific
+reproduction and improvement certification remain open. See
+[the audit report](AUDIT_2026-09-09.md). The August availability search is a dated,
+bounded result; missing author data is not the only remaining blocker.
 
 ## G1 — Reproducible environment
 
@@ -15,6 +15,7 @@ obtained.
 - [x] Deterministic locked smoke-test command and CI workflow. The exact command
       passes locally; remote execution remains an operational witness item until
       a Git remote is configured.
+- [ ] Automated scientific integration suite from a fresh data bootstrap.
 
 ## G2 — Method benchmark
 
@@ -22,13 +23,15 @@ obtained.
 - [x] At least one Landreman-Paul result reproduced.
 - [x] Independent checks of core coil metrics.
 - [x] Equal-budget experiment protocol.
+- [ ] Strong feasible constrained baseline and actual equal-budget method comparison.
 
 ## G3 — W7-X regression
 
 - [x] Authoritative W7-X equilibrium ingested.
 - [x] The declared project equilibrium metrics are reproduced within pinned
       tolerances against a native, version-compatible VMEC 8.52 run. Full-file
-      V&V remains separately failed at 56/59 fields; see the W7-X protocol.
+      comparison remains separately failed at 60/63 fields; see the W7-X protocol.
+      The selection and grid refinement were retrospective, not preregistered.
 - [x] Coil field and Poincare regression established for the serialized
       W7-X-target benchmark coils, including a direct Biot-Savart holdout.
 - [x] Perturbation/sensitivity protocol recorded.
@@ -36,7 +39,8 @@ obtained.
 ## G4 — QI bridge
 
 - [x] Authoritative open QI equilibrium ingested.
-- [x] QI and maximum-J metrics reproduced.
+- [x] Legacy QI and published J routines executed.
+- [ ] Resolution-stable QI objective and independent maximum-J assessment qualified.
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).
@@ -45,11 +49,11 @@ obtained.
 
 ## G5 — Engineering and robustness
 
-- [x] Finite-build coil representation validated for the independent periodic
-      structured sweep; the upstream Gmsh fallback fails on the real candidate.
-- [x] Structural solve has a mesh-convergence record (extended series converges
-      numerically, but the resulting deformation invalidates linear mechanics
-      as an absolute design model).
+- [x] Structured sweep mesh generation and volume/tag screens exercised.
+- [ ] Finite-build self-intersections, quality, orientation and solid clearances checked.
+- [x] Structural discretization series recorded; the final pair passes its screen.
+- [ ] Mesh independence and physically valid mechanical predictions established.
+      The large deformation invalidates the absolute linear-model predictions.
 - [x] Manufacturing perturbation distribution is predeclared.
 - [x] Free-boundary validation is separated from optimization and exercised as
       an immutable vacuum holdout with a response-grid refinement.
@@ -59,9 +63,9 @@ obtained.
 - [x] Schema for equilibrium, profiles, coils, currents, scale, and provenance.
       Schema 2 is exercised end-to-end with separate fixed/free-boundary wouts
       and ten required artifact roles.
-- [x] Paper reproduction metrics and tolerances predeclared.
+- [ ] Author-confirmed canonical state, beta tolerance and field-error quadrature.
+- [ ] Executable coil reconstruction and paper-metric reproduction evaluator.
 - [ ] Raw/derived data lineage and hashes recorded.
-- [x] Authoritative SQuID-C files obtained or their absence documented as the only
-      remaining external blocker. The 2026-08-31 audit found no publicly
+- [x] Bounded availability search recorded. The 2026-08-31 audit found no publicly
       identified authoritative package; this is a bounded search result, not a
       proof that unpublished or anonymously indexed data do not exist.

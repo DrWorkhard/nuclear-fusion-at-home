@@ -2,6 +2,10 @@
 
 ## Objective
 
+Status correction, 2026-09-09: readiness is not achieved. The authoritative
+package is one external dependency; scientific evaluators and internal
+qualification work remain. See AUDIT_2026-09-09.md for the ordered remediation.
+
 Build a reproducible, method-neutral platform that can establish credible
 stellarator coil-design improvements and is ready to accept SQuID-C as the target
 baseline without redesigning the workflow.

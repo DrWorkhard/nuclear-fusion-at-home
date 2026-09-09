@@ -4,8 +4,9 @@ import hashlib
 
 import netCDF4
 import numpy as np
+import pytest
 
-from fusion_baselines.intake import summarize_equilibrium_manifest
+from fusion_baselines.intake import _vmec_summary, summarize_equilibrium_manifest
 
 
 def _digest(path) -> str:
@@ -65,3 +66,22 @@ def test_generic_equilibrium_intake_has_no_case_dispatch(tmp_path):
     assert result["vmec"]["iota_edge"] == 0.7
     assert result["boozer"] == {"nfp": 3, "ns": 4, "mode_count": 3}
     assert np.isfinite(result["vmec"]["volume_m3"])
+
+
+@pytest.mark.parametrize("name", ["lfreeb", "lfreeb__logical__"])
+@pytest.mark.parametrize("value", [0, 1])
+def test_real_vmec_logical_names(tmp_path, name, value):
+    path = tmp_path / "wout.nc"
+    with netCDF4.Dataset(path, "w") as dataset:
+        dataset.createVariable(name, "i4").assignValue(value)
+    assert _vmec_summary(path)["free_boundary"] is bool(value)
+
+
+def test_missing_or_masked_boundary_flag_is_unknown(tmp_path):
+    path = tmp_path / "wout.nc"
+    with netCDF4.Dataset(path, "w"):
+        pass
+    assert _vmec_summary(path)["free_boundary"] is None
+    with netCDF4.Dataset(path, "r+") as dataset:
+        dataset.createVariable("lfreeb__logical__", "i4")
+    assert _vmec_summary(path)["free_boundary"] is None

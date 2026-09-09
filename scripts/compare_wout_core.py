@@ -10,7 +10,13 @@ from pathlib import Path
 import netCDF4
 import numpy as np
 
+from fusion_baselines.provenance import sha256_file
+
 SCALARS = [
+    "ier_flag",
+    "rmax_surf",
+    "rmin_surf",
+    "zmax_surf",
     "niter",
     "wb",
     "wp",
@@ -102,8 +108,8 @@ def main() -> int:
             if name not in test.variables or name not in reference.variables:
                 records.append({"variable": name, "status": "missing", "tolerance": tolerance})
                 continue
-            value = np.asarray(test[name][:])
-            expected = np.asarray(reference[name][:])
+            value = np.ma.asarray(test[name][:], dtype=float).filled(np.nan)
+            expected = np.ma.asarray(reference[name][:], dtype=float).filled(np.nan)
             if value.shape != expected.shape:
                 records.append(
                     {
@@ -129,9 +135,16 @@ def main() -> int:
     failed = [record for record in records if record["status"] != "pass"]
     summary = {
         "schema_version": 1,
+        "evaluation_code": {
+            "path": str(Path(__file__).resolve()),
+            "sha256": sha256_file(Path(__file__)),
+        },
         "tolerance_source_commit": subprocess_head(project_root / "external/vmecpp-validation"),
         "under_test": str(args.under_test.resolve()),
         "reference": str(args.reference.resolve()),
+        "under_test_sha256": sha256_file(args.under_test),
+        "reference_sha256": sha256_file(args.reference),
+        "comparison_scope": "63-variable local comparison; not the entire upstream V&V suite",
         "variables_checked": len(records),
         "variables_passed": len(records) - len(failed),
         "overall_pass": not failed,
