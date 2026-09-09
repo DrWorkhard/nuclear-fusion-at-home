@@ -1,5 +1,20 @@
 # Findings log
 
+## F-035 — Independent geometric tracing agrees on the frozen QI sample
+
+**Class:** independent reconstruction cross-check of the same equilibrium data
+**Date:** 2026-09-09
+
+Protocol 399a8fa preceded implementation fc435e3 and the 27 real-data checks.
+The new Newton/geometry-based tracer agrees with the published root/magnetic
+arc-length tracer for every tested pitch. Finest maximum relative action
+differences are 6.2645e-6, 3.8171e-6 and 9.0674e-6, below the frozen 1e-3 limit.
+All coordinate, B, cumulative-length, well-count and coverage screens pass.
+
+This supplies an independent tracing check for F-034's bounded measurement
+study. It does not validate the source equilibrium, QI contour topology or
+finite-pressure maximum-J. See QI_TRACE_CROSSCHECK_RESULTS.md.
+
 ## F-034 — Well-resolved bounce-action measurement passes its first frozen study
 
 **Class:** reproduced numerical qualification with independent quadrature

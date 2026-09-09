@@ -38,7 +38,13 @@ Generic real-data metadata intake is verified for nfp=1 and nfp=2. The September
 audit withdrew the full-readiness claim: scientific admission, a qualified QI
 objective and a physically valid engineering model remain open. See:
 
+The first preregistered bounce-action study now passes on all three open-QI
+vacuum cases, with independent quadrature and geometry-based tracing checks.
+Its scope and the remaining QI qualification work are documented below.
+
 - [Audit and corrected readiness assessment](docs/AUDIT_2026-09-09.md)
+- [Bounce-action measurement results](docs/QI_MEASUREMENT_RESULTS_V1.md)
+- [Independent tracing results](docs/QI_TRACE_CROSSCHECK_RESULTS.md)
 
 - [Project plan](docs/PROJECT_PLAN.md)
 - [Evidence standard](docs/EVIDENCE_STANDARD.md)

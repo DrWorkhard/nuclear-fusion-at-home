@@ -40,7 +40,13 @@ bounded result; missing author data is not the only remaining blocker.
 
 - [x] Authoritative open QI equilibrium ingested.
 - [x] Legacy QI and published J routines executed.
+- [x] Preregistered bounce-action measurement/refinement screens on three vacuum
+      cases; 12,960 integrals independently checked by quadrature.
+- [x] Independent geometric tracing agrees on 27 sampled traces and 135 pitch
+      cells. See QI_TRACE_CROSSCHECK_RESULTS.md for scope and tolerances.
 - [ ] Resolution-stable QI objective and independent maximum-J assessment qualified.
+      Remaining: pitch/radial coverage, well-family identity, B-contour topology
+      and finite-pressure maximum-J; the bounded action study is not a full QI score.
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).

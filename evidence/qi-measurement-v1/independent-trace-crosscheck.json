@@ -1,0 +1,1391 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "case": "nfp1",
+      "checks": [
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.047516380338955e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.1514144369572108e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.0342748844992542e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.034199661693492e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.259904009083158e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 3.588240815588506e-13,
+          "max_relative_B_difference": 9.845457782375888e-13,
+          "normalized_cumulative_length_difference": 2.771241171471808e-05,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.3280582053984986e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.4220830271870497e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.2875936607213987e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.2322095008631138e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.4033935597245204e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 1.7763568394002505e-15,
+          "max_relative_B_difference": 1.8809398483199402e-12,
+          "normalized_cumulative_length_difference": 2.8034790323548782e-05,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.6443419689335954e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.6579569094131728e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.4977201248832515e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.3380337662803896e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.548909243338393e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 3.552713678800501e-15,
+          "max_relative_B_difference": 2.0293766667123236e-12,
+          "normalized_cumulative_length_difference": 2.8370108994653893e-05,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.75
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.667772578352384e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.51653983893452e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.719548004989861e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.389644871289789e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.500209690145752e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 3.623767952376511e-13,
+          "max_relative_B_difference": 9.845457782375888e-13,
+          "normalized_cumulative_length_difference": 7.999546251062701e-06,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 9.664413952892303e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.4406789070936554e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.0712182069776475e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.050062497431341e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.136244637744426e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 2.6645352591003757e-15,
+          "max_relative_B_difference": 1.8809398483199402e-12,
+          "normalized_cumulative_length_difference": 7.954364069224887e-06,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.230142412822488e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.813557794777992e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.261382854923838e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.9729972365095705e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.696900078484447e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 3.552713678800501e-15,
+          "max_relative_B_difference": 2.0293766667123236e-12,
+          "normalized_cumulative_length_difference": 9.257170209602644e-06,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.75
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.7930095051486035e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.5935393433696987e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.0630830164236613e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.9727491142873532e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.6493415078144835e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 3.623767952376511e-13,
+          "max_relative_B_difference": 1.1222134332911082e-12,
+          "normalized_cumulative_length_difference": 3.254644333879948e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 4.550798526459232e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.992709980358498e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.1197846752650804e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.1844667499326675e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.1965914429600275e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 3.552713678800501e-15,
+          "max_relative_B_difference": 1.8809398483199402e-12,
+          "normalized_cumulative_length_difference": 3.331195707334986e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 2.6723293493481863,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.2645020946217045e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 2.9196933370536824,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.939790851559266e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.1670573247591784,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 4.080550945806394e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.4144213124646745,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.205750562784715e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 3.661785300170171,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.2418197416218533e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 3.552713678800501e-15,
+          "max_relative_B_difference": 2.09099404457902e-12,
+          "normalized_cumulative_length_difference": 4.666764561758539e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.75
+        }
+      ],
+      "pass": true,
+      "v1_evidence": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp1.json",
+        "sha256": "475630b9154c7f4944c1a29c8d7b0cfa40812c78496029dd7b10ddc936091727"
+      }
+    },
+    {
+      "case": "nfp2",
+      "checks": [
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.7235852601826807e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.1085735384174242e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.99560324445347e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.6124663037464515e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.4425374704751803e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 1.3378187446733136e-14,
+          "max_relative_B_difference": 1.2774226121337051e-12,
+          "normalized_cumulative_length_difference": 7.533425158654769e-06,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.2162532209435426e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.6495881240595764e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.5081507291524474e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.0921883412183817e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.881176366302917e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 2.1280754936015e-12,
+          "normalized_cumulative_length_difference": 8.928330654729332e-06,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.5963540790874262e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.1856293483567555e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.9351272657907046e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.549103042337464e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.2805287920757422e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 1.805555704947892e-12,
+          "normalized_cumulative_length_difference": 1.0383051828530744e-05,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.75
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 4.196299707492912e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 4.903890917118403e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.626164951255674e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.4331617682070714e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.2389186783721158e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 1.3378187446733136e-14,
+          "max_relative_B_difference": 1.4019896354966477e-12,
+          "normalized_cumulative_length_difference": 2.0080310454738975e-06,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.069947126041697e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.84566756836702e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.049601401298844e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 4.685512575042239e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 4.448571627069242e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 2.1280754936015e-12,
+          "normalized_cumulative_length_difference": 2.5881323281821034e-06,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.1343902581233465e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 9.311762608543717e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.050196102171725e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.1816502916478555e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.606007755343256e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 1.805555704947892e-12,
+          "normalized_cumulative_length_difference": 3.528250407837412e-06,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.75
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.2706872987156004e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.914434830309403e-07,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.0424396955931456e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.909026400465535e-07,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.069190047723993e-07,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 1.3405943022348765e-14,
+          "max_relative_B_difference": 1.4559464744934303e-12,
+          "normalized_cumulative_length_difference": 1.0189551979174412e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.0456201659246886e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.1204935412022508e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.5404179877508426e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.0504455172366534e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.0115286008804958e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 2.1280754936015e-12,
+          "normalized_cumulative_length_difference": 1.1039199521268011e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 1.0661755139798383,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.4274650352040794e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.181935761441304,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.8170961222938615e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.2976960089027696,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.7229551518015427e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.4134562563642352,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.3524212485460652e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.529216503825701,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.3284985025396878e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 2.896016759734721e-12,
+          "normalized_cumulative_length_difference": 1.9460926397100008e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.75
+        }
+      ],
+      "pass": true,
+      "v1_evidence": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp2.json",
+        "sha256": "50809d6b3a53bd39a89da3b41be25b282740e3de36173d7d4ac3b53e5a5c8e86"
+      }
+    },
+    {
+      "case": "nfp3",
+      "checks": [
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.266176732196762e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 0.00010481759495872822,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 9.820041151664682e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.882291159562072e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.13173327958161e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 4.796163466380676e-14,
+          "max_relative_B_difference": 2.4213964167074664e-12,
+          "normalized_cumulative_length_difference": 4.43358823013614e-05,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 0.00010269917767868897,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 0.00011627497034916168,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 0.00010945637371784223,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 9.991939163311869e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 9.237616050605801e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 4.547473508864641e-13,
+          "max_relative_B_difference": 3.2096547641913276e-12,
+          "normalized_cumulative_length_difference": 5.008541749836974e-05,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 0.00011801601552874352,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 0.00012247691012978734,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 0.000114315595598935,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 0.00010564847984340098,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 9.860539180062133e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 4.2157388691066444e-12,
+          "normalized_cumulative_length_difference": 5.409412304349348e-05,
+          "pass": true,
+          "resolution": [
+            401,
+            16,
+            2
+          ],
+          "s": 0.75
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.0928320488167174e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.6154635959674266e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.5364766708557696e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.1820803626004803e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 1.9980282319309595e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 4.8405723873656825e-14,
+          "max_relative_B_difference": 2.4213964167074664e-12,
+          "normalized_cumulative_length_difference": 1.1280389024178726e-05,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.5898893837528192e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.8676032490571046e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.7991009826200397e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.4741832927777097e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.263681348946278e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 4.565237077258644e-13,
+          "max_relative_B_difference": 3.2096547641913276e-12,
+          "normalized_cumulative_length_difference": 1.3009842985567974e-05,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.947151112153712e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 3.0318322109756934e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.8677699622781105e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.613444291643674e-05,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 2.4301627702394413e-05,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 4.2157388691066444e-12,
+          "normalized_cumulative_length_difference": 1.5091357121476183e-05,
+          "pass": true,
+          "resolution": [
+            801,
+            16,
+            2
+          ],
+          "s": 0.75
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.532705035449226e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.6093058903593516e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.149514769988485e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.7746657284862835e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 4.9844802982867975e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 4.8405723873656825e-14,
+          "max_relative_B_difference": 2.4227286843370166e-12,
+          "normalized_cumulative_length_difference": 3.674619214758036e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.25
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.595804324189714e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.1320915348293e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.618266804287899e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.566149759912321e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 5.765427101067644e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 4.565237077258644e-13,
+          "max_relative_B_difference": 3.2096547641913276e-12,
+          "normalized_cumulative_length_difference": 4.987709515315748e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.5
+        },
+        {
+          "cells": [
+            {
+              "bounce_field": 0.7662178820323451,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 8.832978081185772e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.8399165966508425,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 9.067397028772461e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9136153112693399,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 7.261498655264376e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 0.9873140258878373,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.69942831965642e-06,
+              "pass": true,
+              "well_counts_match": true
+            },
+            {
+              "bounce_field": 1.0610127405063348,
+              "full_alpha_coverage": true,
+              "max_relative_action_difference": 6.205131744430048e-06,
+              "pass": true,
+              "well_counts_match": true
+            }
+          ],
+          "coordinate_residual_max": 8.881784197001252e-16,
+          "max_relative_B_difference": 4.2157388691066444e-12,
+          "normalized_cumulative_length_difference": 7.073281451839072e-06,
+          "pass": true,
+          "resolution": [
+            1601,
+            16,
+            2
+          ],
+          "s": 0.75
+        }
+      ],
+      "pass": true,
+      "v1_evidence": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp3.json",
+        "sha256": "dd3a5aa45408d2b8bb56595b0d3442a0e4f107e3580c9587185a60de6ed5c7bb"
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/crosscheck_vmec_traces.py",
+      "sha256": "03d7eef878dad0f6326c869144de46b4c9ade2b40011eb36a814b3516fb4d9df"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/vmec_trace.py",
+      "sha256": "6f6d58d0076c2ddd2a8512a885e993153ac95498f11c1af8356b483c1f53175e"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/bounce_action.py",
+      "sha256": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06"
+    }
+  ],
+  "elapsed_seconds": 12.934746292,
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/QI_TRACE_CROSSCHECK_PROTOCOL.md",
+    "sha256": "eb95b9da5eb04610011bc677cc90361b2387c727050ca872b954981f29ccbcb0"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "fc435e3e252dc2080169dbf1fbb4991b2f613b16",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "status": "completed",
+  "thresholds": {
+    "normalized_length": 0.001,
+    "relative_B": 1e-08,
+    "relative_action": 0.001
+  }
+}

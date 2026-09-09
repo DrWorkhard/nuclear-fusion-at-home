@@ -1,5 +1,14 @@
 # Validation log
 
+## 2026-09-09 — Independent QI tracing cross-check
+
+- Protocol 399a8fa and implementation fc435e3 committed before real-data execution.
+- Circular-torus speed and nonzero-lambda coordinate inversion controls pass.
+- All 27 real-data trace checks / 135 pitch cells pass their frozen bounds.
+- Finest action differences: nfp1 6.2645e-6, nfp2 3.8171e-6, nfp3 9.0674e-6.
+- Local test suite: 64 passed; ten fixture-writing deprecation warnings retained.
+- Result: QI_TRACE_CROSSCHECK_RESULTS.md and independent-trace-crosscheck.json.
+
 ## 2026-09-09 — Bounce-action v1 transfer experiment
 
 - All three cases complete all five frozen trace resolutions; all screens pass.
