@@ -1,5 +1,16 @@
 # Decision log
 
+## D-008 — Qualify the bounce-action measurement before a new QI objective
+
+**Status:** accepted for first experiment
+**Date:** 2026-09-09
+
+Use an independently integrated, well-resolved action diagnostic with explicit
+coverage and numerical convergence checks. The existing smoothed legacy residual
+and alpha-averaged radial slope are insufficient as optimization certificates.
+The prospective experiment is frozen in QI_MEASUREMENT_PROTOCOL.md. Its envelope
+score is diagnostic; topology, branch matching and maximum-J remain separate work.
+
 ## D-001 — Use a baseline suite, not a single substitute for SQuID-C
 
 **Status:** accepted
