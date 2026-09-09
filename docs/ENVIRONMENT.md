@@ -49,3 +49,18 @@ dependency solvers cannot replace the augmented-Lagrangian SIMSOPT fork. The
 NEO-JAX environment is recreated with `./scripts/bootstrap_neo_jax.sh` and pins
 NEO-JAX 1.0.1 plus `booz-xform` 0.1.0 in
 `environments/neo-jax/uv.lock`.
+# Strict QI data integration
+
+`bash scripts/run_qi_integration.sh` creates the locked core environment,
+downloads/verifies and extracts the pinned Goodman archive, and runs five
+real-data tests without permitting missing-data skips. For an existing download
+cache, set `FUSION_QI_ARCHIVE=/absolute/path/qifiles.zip`; its published checksum
+is still checked and data are extracted into the current checkout. The cache is
+read-only to this path. Without a cache the download is about 1 GiB.
+
+The tests check nfp=1/2 metadata and independently retrace/integrate all three
+vacuum cases at s=0.5, five frozen pitches and sixteen field lines against tracked
+v1 action values (relative tolerance 1e-3). They need neither the original
+machine's absolute artifact paths nor an installed legacy SciPy tracer. This is
+a bounded QI numerical regression, not a fresh VMEC solve or full scientific
+qualification. W7-X/native-solver integration remains a separate, expensive gate.

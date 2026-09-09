@@ -1,6 +1,7 @@
 """Optional local raw-data regressions; core CI explicitly skips absent data."""
 
 import json
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -17,6 +18,8 @@ ROOT = Path(__file__).resolve().parents[1]
 def test_real_goodman_metadata(manifest_name):
     manifest = load_manifest(ROOT / "manifests" / manifest_name)
     if not all((ROOT / item["path"]).is_file() for item in manifest["files"]):
+        if os.environ.get("FUSION_REQUIRE_QI_DATA") == "1":
+            pytest.fail("required Goodman manifest files not bootstrapped")
         pytest.skip("authoritative Goodman data not bootstrapped")
     result = summarize_equilibrium_manifest(manifest, ROOT)
     assert result["expected_metadata_matches"]

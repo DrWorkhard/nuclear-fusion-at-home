@@ -2,12 +2,16 @@
 set -euo pipefail
 
 project_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-archive="$project_root/external/data/qifiles.zip"
+archive="${FUSION_QI_ARCHIVE:-$project_root/external/data/qifiles.zip}"
 extract_root="$project_root/external/data/qifiles-v1"
 download_url="https://zenodo.org/records/7220257/files/qifiles.zip?download=1"
 expected_md5="f6983a41403da28247025be631522caa"
 
-mkdir -p "$(dirname "$archive")" "$extract_root"
+if [[ -n "${FUSION_QI_ARCHIVE:-}" && ! -f "$archive" ]]; then
+  echo "ERROR: explicitly supplied QI archive does not exist: $archive" >&2
+  exit 1
+fi
+mkdir -p "$project_root/external/data" "$extract_root"
 if [[ ! -f "$archive" ]]; then
   curl --fail --location --continue-at - --output "$archive" "$download_url"
 fi
@@ -36,7 +40,7 @@ unzip -o "$archive" \
   'Files/plots/plot_epseffs_losses_vacc/nfp?_particle_data_s=0.25/confined_fraction.dat' \
   -d "$extract_root" >/dev/null
 
-uv run fusion-baselines validate-manifest \
+uv run --locked fusion-baselines validate-manifest \
   "$project_root/manifests/qi-goodman-2022.json" \
   --data-root "$project_root"
 echo "verified: Goodman et al. QI data release v1.0"
