@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-09 — Expanded QI screen implementation, before real-data execution
+
+- Protocol committed first as 520dc95; no new real-data results inspected yet.
+- Five analytic/invalid-input contour tests pass: poloidal and helical winding,
+  periodic seam, wrong orientation, multiple roots, contacts and Fourier/nfp
+  reconstruction. Unsupported contour classes fail closed.
+- Ruff passes; full local suite: 69 passed, eleven netCDF fixture deprecations.
+- Runner freezes the v1 Bstar interval on five radial surfaces and nine pitches,
+  records every case including failures, and refuses overwriting prior outputs.
+
 ## 2026-09-09 — Independent QI tracing cross-check
 
 - Protocol 399a8fa and implementation fc435e3 committed before real-data execution.
