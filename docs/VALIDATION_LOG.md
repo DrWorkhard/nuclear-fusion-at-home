@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-10 — Continuous inter-coil bound and portable rejected fixture
+
+- Supplemental diagnostic code/protocol 0f1d835 declared before its execution,
+  after candidates were known; not an unseen holdout. Three analytical test groups pass.
+- Continuous centerline lower bounds: 1.09245264/1.06131415 m at reactor scale;
+  both clear 1.06 m. Nonoverlap of different radius-enclosed idealized sections
+  is conditional; mesh enclosure and single-coil self-intersection remain open.
+- Tracked warm-start fixture differs from the original solely by one terminal LF;
+  a core regression verifies both byte hashes and preserves the producer's
+  missing project commit/dirty status explicitly.
+
 ## 2026-09-10 — Normalized feasibility continuation and independent holdout
 
 - Protocol 189632d and code b71bf45 precede all runs; four arms reproduce exactly.

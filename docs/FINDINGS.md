@@ -1,5 +1,25 @@
 # Findings log
 
+## F-040 — Continuous inter-coil distance is bounded, but feasibility is still failed
+
+**Class:** retrospective analytical bound supplementing a finite-grid audit
+**Date:** 2026-09-10
+
+After three analytical bound test groups, the existing all-pair N=20,000 samples
+and Fourier derivative bounds imply continuous reactor-scale centerline lower
+bounds of 1.09245264 m (L-BFGS-B) and 1.06131415 m (AL), both above 1.06 m.
+This addresses subgrid inter-coil distances for these two exact Fourier systems
+in ordinary floating-point arithmetic. Idealized radius-0.035355 m neighborhoods
+of distinct device-scale coils have lower gaps 0.03745/0.03437 m. Existing mesh
+enclosure, single-coil self-intersection and plasma/structural validity are not
+certified. The failed flux and length checks remain unchanged.
+
+The original rejected warm start is now a tracked fixture. Its numeric content
+is unchanged (only a final LF added), with exact parent-hash verification. Its
+historical producer record had no project commit and a dirty tree; that provenance
+gap is disclosed, not retroactively repaired. New experiments no longer depend
+on a private ignored artifact path for this starting field.
+
 ## F-039 — Normalization alone fails; the improved AL candidate remains infeasible
 
 **Class:** preregistered negative experiment with independent post-search rejection

@@ -2,6 +2,7 @@
 
 import argparse
 import contextlib
+import hashlib
 import importlib.metadata
 import inspect
 import json
@@ -34,8 +35,12 @@ class CapturedContext(BaseException):
 
 def prepare(root, raw):
     start = time.monotonic()
-    source = root / "artifacts/runs/lpqa-engineering-v1p1-lbfgsb/biot_savart_optimized.json"
-    if sha256_file(source) != SOURCE_SHA:
+    source = root / "fixtures/rejected-lpqa-warmstart/field.json"
+    source_bytes = source.read_bytes()
+    if (
+        not source_bytes.endswith(b"\n")
+        or hashlib.sha256(source_bytes[:-1]).hexdigest() != SOURCE_SHA
+    ):
         raise ValueError("warm-start field hash mismatch")
     source_field = load(str(source))
     surface_path = root / "external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA"
@@ -108,6 +113,8 @@ def prepare(root, raw):
         backend,
         {
             "source": reference(source),
+            "source_parent_sha256": SOURCE_SHA,
+            "source_transformation": "one terminal LF appended to archived producer bytes",
             "surface": reference(surface_path),
             "case": reference(case_path),
             "promotion": reference(raw / "promotion.npz"),

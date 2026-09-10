@@ -57,6 +57,13 @@ not be overstated. Force/torque, current margins, finite-build intersections,
 mechanics, QI and free-boundary robustness are still outside this admission.
 
 Evidence: normalized-feasibility-v1/ and normalized-feasibility-v1-holdout.json.
+
+Supplement: the later retrospective Fourier bound in
+normalized-feasibility-v1-continuous-clearance.json establishes continuous
+inter-coil centerline lower bounds 1.09245264/1.06131415 m. This upgrades that
+particular distance screen, but not curvature, plasma distance, mesh enclosure
+or the failed flux/length admission. See CONTINUOUS_COIL_CLEARANCE_CHECK.md.
+
 Holdout exits 2, as required for the failed acceptance. Three independent flux
 kernel test groups pass, including subthreshold values without clipping. Full
 local suite: 86 passed; Ruff clean. The eleven existing fixture deprecations and
