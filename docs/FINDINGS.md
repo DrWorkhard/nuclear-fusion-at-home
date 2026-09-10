@@ -1,5 +1,18 @@
 # Findings log
 
+## F-043 — A second field-line calculation preserves the finite-pressure findings
+
+**Class:** retrospective independent trace/integration-path comparison
+**Date:** 2026-09-10
+
+The hash-pinned Goodman tracer, using B/B^phi for length instead of geometric
+derivatives, passes all 84 trace comparisons and 320 radial-family comparisons.
+All 319 previously resolved signs survive an enlarged inter-tracer allowance;
+the one unresolved family stays unresolved. This supports the bounded F-042
+findings without validating the equilibrium or global maximum-J. Fresh extraction
+reproduces every finite-pressure metadata/file-hash record, and all 193 unique
+referenced path/hash pairs verify. See QI_PRESSURE_TRACE_RESULTS.md.
+
 ## F-042 — Individual radial actions resolve a bounded finite-pressure sign change
 
 **Class:** preregistered four-case pilot with retrospective independent quadrature

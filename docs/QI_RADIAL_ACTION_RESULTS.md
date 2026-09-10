@@ -57,6 +57,9 @@ stated VMEC straight-field-line gauge, not a gauge-independent non-omnigenous
 definition. Full invariant-domain coverage, continuum QI topology and independent
 finite-pressure trace validation remain open. No G4 or SQuID-C readiness closure.
 
+**Subsequent validation:** the four-case independent pressure-tracer cross-check
+now passes; see QI_PRESSURE_TRACE_RESULTS.md. The other scope limits remain.
+
 ## Fresh-clone regression
 
 A detached clean clone at 30c5944, with no pre-existing environment or data,

@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-10 — Independent pressure tracing and clean reconstruction
+
+- Retrospective protocol fdcaa36; implementation 9ce3178 before second-tracer run.
+- 84 grids, 3,360 action comparisons and 320 families pass; all 319 resolved signs
+  survive the larger combined allowance. One unresolved family retained.
+- Maximum relative B/normalized-length/relative-action differences:
+  3.473e-12 / 3.767e-5 / 1.212e-4. Normalized derivative difference <=4.442e-5.
+- Fresh detached clone at 9ce3178: Ruff, 112 tests pass, one missing W7-X skip;
+  main workspace: 113 pass. Eleven fixture warnings retained.
+- Clone's fresh finite-pressure extraction reproduces all 31 metadata records,
+  62 file hashes and archive hash; clone remains clean.
+- Recursive integrity audit: all 193 unique referenced path/hash pairs match.
+- Published tracer's legacy string escape emits SyntaxWarning; source unmodified.
+
 ## 2026-09-10 — Individual-well finite-pressure radial-action pilot
 
 - Protocol 598a4f9 and implementation 30c5944 precede all four runs.

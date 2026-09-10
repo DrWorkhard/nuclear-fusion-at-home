@@ -62,8 +62,9 @@ bounded result; missing author data is not the only remaining blocker.
       internally executable and must not be called blocked on SQuID-C files.
       Four-case fixed-invariant radial pilot matches 320 well families; independent
       quadrature confirms every derivative classification. nfp2 beta2 is negative
-      in the sampled domain; nfp3 beta2 remains mixed. Full domain/equilibrium-grid
-      and independent finite-pressure trace qualification remain open.
+      in the sampled domain; nfp3 beta2 remains mixed. A second tracer passes 84
+      trace and 320 family comparisons, preserving the resolved signs. Full-domain,
+      equilibrium-grid and gauge qualification remain open.
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).
