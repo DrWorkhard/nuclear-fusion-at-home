@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-10 — Individual-well finite-pressure radial-action pilot
+
+- Protocol 598a4f9 and implementation 30c5944 precede all four runs.
+- Twelve analytical/adversarial controls pass; 160 cells match, 320 families
+  pass refinement. nfp2 beta2 all negative; nfp3 beta2 mixed. One vacuum family
+  unresolved, not waived. Results are bounded and gauge-specific.
+- Retrospective second integrator 9e5d424 checks 13,440 wells with maximum
+  relative difference 5.315e-10; all derivative classifications unchanged.
+- Fresh detached clone 30c5944: core Ruff/105 passed/six expected data skips;
+  strict fresh QI bootstrap five passed/no skips/one W7-X deselected.
+- No global maximum-J or full scientific readiness conclusion.
+
 ## 2026-09-10 — Finite-pressure archive inventory
 
 - Implementation/protocol 08ac18e preceded the metadata run; nine targeted tests pass.

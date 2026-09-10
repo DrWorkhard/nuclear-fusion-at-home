@@ -1,5 +1,20 @@
 # Findings log
 
+## F-042 — Individual radial actions resolve a bounded finite-pressure sign change
+
+**Class:** preregistered four-case pilot with retrospective independent quadrature
+**Date:** 2026-09-10
+
+All 160 sampled cells match individual wells across radius and resolution; all
+320 families pass the numerical refinement screens. nfp2 vacuum has 80 positive
+derivatives; its nominal beta=2% counterpart has 80 negative derivatives. nfp3
+at this pressure remains mixed (42 negative, 38 positive); vacuum includes one
+unresolved family, retained. No alpha averaging or radial pitch retuning is used.
+All 13,440 integrals and all derivative classifications survive independent
+Gaussian quadrature. The result is restricted to the declared mid-radius domain,
+gauge and empirical error allowance, not global maximum-J or SQuID-C readiness.
+See QI_RADIAL_ACTION_RESULTS.md.
+
 ## F-041 — Finite-pressure QI data were already present but not imported
 
 **Class:** verified archive inventory; correction of an internal data-access gap
