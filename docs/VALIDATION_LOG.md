@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-10 — Normalized feasibility continuation and independent holdout
+
+- Protocol 189632d and code b71bf45 precede all runs; four arms reproduce exactly.
+- One shared normalization bundle plus 10/752 actual per-arm bundles; cap 1500.
+- Finest gradient error <=8.843e-9. Normalization alone does not fix L-BFGS-B.
+- Serialized-candidate holdout: both fail flux; AL additionally fails length by
+  0.842 mm at reactor scale. Flux quadrature refinements and sampled clearances
+  pass. Holdout exit 2 retained, no hard-threshold waiver.
+- Full suite 86 passed; three independent unthresholded-flux test groups pass.
+- Detailed numbers and limits: NORMALIZED_FEASIBILITY_RESULTS.md.
+
 ## 2026-09-10 — Common optimization oracle qualification completed
 
 - Corrected implementation ee71fe3; new immutable retry directory, original failure retained.

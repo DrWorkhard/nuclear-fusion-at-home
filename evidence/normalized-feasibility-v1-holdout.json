@@ -1,0 +1,281 @@
+{
+  "all_pass": false,
+  "candidates": [
+    {
+      "a0": 10.100286074838271,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/lbfgsb-1.json",
+        "sha256": "d157d1f879f2ab5b0fc85bba169a52530fd4abead608ebb4967de61bfd3f7ffe"
+      },
+      "bounded_geometry_flux_screen_pass": false,
+      "checks": {
+        "coil_coil_clearance": true,
+        "coil_flux_refinement": true,
+        "coil_plasma_clearance": true,
+        "curvature": true,
+        "flux_cut_in": false,
+        "length": true,
+        "surface_flux_refinement": true
+      },
+      "coil_coil": {
+        "1000": {
+          "centerline_distance_reactor_m": 1.0927909743509872,
+          "coil_pair": [
+            0,
+            2
+          ]
+        },
+        "200": {
+          "centerline_distance_reactor_m": 1.100032250463448,
+          "coil_pair": [
+            8,
+            9
+          ]
+        },
+        "20000": {
+          "centerline_distance_reactor_m": 1.0925896321578503,
+          "coil_pair": [
+            0,
+            2
+          ]
+        },
+        "5000": {
+          "centerline_distance_reactor_m": 1.0925900612221136,
+          "coil_pair": [
+            0,
+            2
+          ]
+        }
+      },
+      "coil_plasma": {
+        "128": 3.1628095203113986,
+        "256": 3.1624740926362143,
+        "512": 3.162302348541352,
+        "64": 3.1628095203113986
+      },
+      "elapsed_seconds": 25.942456208000294,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/lbfgsb-1/best_field.json",
+        "sha256": "ac4e62f247ecece7e1ab2da2f77a61a47dcd0f25f2a8226477f84328f2a4d716"
+      },
+      "flux": [
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461210333677199,
+          "surface_resolution": 32,
+          "unthresholded_quadratic_flux": 1.0993532024208016e-06
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461210333677199,
+          "surface_resolution": 64,
+          "unthresholded_quadratic_flux": 1.0993519361902207e-06
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461210333677199,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 1.0993519358223388e-06
+        },
+        {
+          "coil_quadrature": 800,
+          "mean_B_magnitude_T": 0.9461210333677199,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 1.099351935822335e-06
+        }
+      ],
+      "full_engineering_admission_pass": false,
+      "geometry": {
+        "1000": {
+          "maximum_curvature_reactor_inverse_m": 0.9002227168937783,
+          "unique_total_length_reactor_m": 219.99995562277078
+        },
+        "200": {
+          "maximum_curvature_reactor_inverse_m": 0.8980344996925915,
+          "unique_total_length_reactor_m": 219.99995562277078
+        },
+        "20000": {
+          "maximum_curvature_reactor_inverse_m": 0.9003281697180239,
+          "unique_total_length_reactor_m": 219.99995562277078
+        },
+        "5000": {
+          "maximum_curvature_reactor_inverse_m": 0.900326256242893,
+          "unique_total_length_reactor_m": 219.99995562277078
+        }
+      },
+      "method": "lbfgsb",
+      "work": {
+        "B_grid_evaluations": 4,
+        "B_points_total": 37888,
+        "all_pair_coil_distance_resolutions": [
+          200,
+          1000,
+          5000,
+          20000
+        ],
+        "distance_query_workers": -1,
+        "plasma_distance_curve_points": 20000,
+        "plasma_distance_surface_resolutions": [
+          64,
+          128,
+          256,
+          512
+        ]
+      }
+    },
+    {
+      "a0": 10.100286074838271,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/auglag-1.json",
+        "sha256": "3330f66e35ec8b6a6c657bbe931051f13671e25bd94da3931532d8b02708d867"
+      },
+      "bounded_geometry_flux_screen_pass": false,
+      "checks": {
+        "coil_coil_clearance": true,
+        "coil_flux_refinement": true,
+        "coil_plasma_clearance": true,
+        "curvature": true,
+        "flux_cut_in": false,
+        "length": false,
+        "surface_flux_refinement": true
+      },
+      "coil_coil": {
+        "1000": {
+          "centerline_distance_reactor_m": 1.0615474990226077,
+          "coil_pair": [
+            9,
+            13
+          ]
+        },
+        "200": {
+          "centerline_distance_reactor_m": 1.0702431451607541,
+          "coil_pair": [
+            9,
+            13
+          ]
+        },
+        "20000": {
+          "centerline_distance_reactor_m": 1.061542588484678,
+          "coil_pair": [
+            9,
+            13
+          ]
+        },
+        "5000": {
+          "centerline_distance_reactor_m": 1.0615474990226077,
+          "coil_pair": [
+            9,
+            13
+          ]
+        }
+      },
+      "coil_plasma": {
+        "128": 3.195284541057803,
+        "256": 3.1950302557573464,
+        "512": 3.1950302557573464,
+        "64": 3.2095437423175412
+      },
+      "elapsed_seconds": 25.547563042000547,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/auglag-1/best_field.json",
+        "sha256": "b5e397de5567950a8d7f5481971cdef46d1747297f07f1da5c04ca0e937a65ef"
+      },
+      "flux": [
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461247364874317,
+          "surface_resolution": 32,
+          "unthresholded_quadratic_flux": 2.1969262102133028e-07
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461247364874317,
+          "surface_resolution": 64,
+          "unthresholded_quadratic_flux": 2.196874476703955e-07
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461247364874318,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 2.1968744886746646e-07
+        },
+        {
+          "coil_quadrature": 800,
+          "mean_B_magnitude_T": 0.9461247364874318,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 2.1968744886746403e-07
+        }
+      ],
+      "full_engineering_admission_pass": false,
+      "geometry": {
+        "1000": {
+          "maximum_curvature_reactor_inverse_m": 0.9941441603684955,
+          "unique_total_length_reactor_m": 220.0008424529515
+        },
+        "200": {
+          "maximum_curvature_reactor_inverse_m": 0.9819701161857,
+          "unique_total_length_reactor_m": 220.00084245295147
+        },
+        "20000": {
+          "maximum_curvature_reactor_inverse_m": 0.994498564010858,
+          "unique_total_length_reactor_m": 220.0008424529515
+        },
+        "5000": {
+          "maximum_curvature_reactor_inverse_m": 0.994498564010858,
+          "unique_total_length_reactor_m": 220.0008424529515
+        }
+      },
+      "method": "auglag",
+      "work": {
+        "B_grid_evaluations": 4,
+        "B_points_total": 37888,
+        "all_pair_coil_distance_resolutions": [
+          200,
+          1000,
+          5000,
+          20000
+        ],
+        "distance_query_workers": -1,
+        "plasma_distance_curve_points": 20000,
+        "plasma_distance_surface_resolutions": [
+          64,
+          128,
+          256,
+          512
+        ]
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_normalized_candidates.py",
+      "sha256": "878982228e2ea3769b6f92d3640074349b80d499ae17950f9251a7a5ffe33d56"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/flux_metrics.py",
+      "sha256": "ba0db34c16ec38d81073f547add5074b3c5bb2bc67b1c319cd23eea8addb5ee5"
+    }
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/NORMALIZED_FEASIBILITY_PROTOCOL.md",
+    "sha256": "344b1924ad354d7308da9193e5d3daf96aeb15f9ca475eeb16d949cb7998fb18"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "b71bf454afa70c713d68c462449833c6a87ce3aa",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "status": "completed",
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/summary.json",
+    "sha256": "b812e620382550196ea2eac143ebcff25d47b0c715947b1e2142a96bb84dbf2f"
+  },
+  "used_for_optimizer_feedback": false
+}

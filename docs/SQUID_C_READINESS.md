@@ -30,6 +30,8 @@ bounded result; missing author data is not the only remaining blocker.
       Partial: full-vector/Jacobian oracle passes named-DOF, exact-budget and
       repeatability qualification. AL uses its 150-bundle cap; L-BFGS-B stops at
       10 while still infeasible. A common cap is not equal consumed work or a ranking.
+      Normalized follow-up also reproduces exactly; independent holdout rejects
+      both method-best candidates (flux; additionally AL length). Baseline remains open.
 
 ## G3 — W7-X regression
 

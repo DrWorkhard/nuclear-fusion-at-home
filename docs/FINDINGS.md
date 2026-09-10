@@ -1,5 +1,18 @@
 # Findings log
 
+## F-039 — Normalization alone fails; the improved AL candidate remains infeasible
+
+**Class:** preregistered negative experiment with independent post-search rejection
+**Date:** 2026-09-10
+
+The normalized common-vector study reproduces both methods exactly. L-BFGS-B
+still terminates after one iteration: its trial merit jumps from 0.5 to 1.38e18,
+then returns to the identical start. Thus small absolute scale alone does not
+explain F-038. AL uses 752 bundles and yields about fivefold lower holdout flux,
+but still misses the 1e-8 flux cut-in and exceeds the 220 m length bound by
+0.842 mm. Both candidates are rejected without loosening criteria. No feasible
+improvement or method ranking is established. See NORMALIZED_FEASIBILITY_RESULTS.md.
+
 ## F-038 — Exact optimization accounting exposes premature numerical convergence
 
 **Class:** repeated real-coil oracle qualification and retained negative optimization result

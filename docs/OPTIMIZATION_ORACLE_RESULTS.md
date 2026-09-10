@@ -39,6 +39,11 @@ least-squares merit. Thus a small absolute objective scale can satisfy a
 floating-point optimizer's termination test without meeting the physical bounds.
 The stop is reproduced, not interpreted as a good design.
 
+**Subsequent test:** NORMALIZED_FEASIBILITY_RESULTS.md shows that order-one
+normalization alone does not cure the one-step stop. Small objective scale is
+not a sufficient causal explanation; the failed trial/unchanged return is now
+recorded explicitly. The original evidence and its thresholds remain unchanged.
+
 A separate prospective experiment may normalize the **whole common vector** by
 its frozen initial norm. That positive scalar preserves its zero set and affects
 both methods equally, but changes numerical optimization and must receive its
