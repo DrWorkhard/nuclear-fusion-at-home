@@ -42,7 +42,8 @@ def fixture():
 def test_archived_values_and_physical_owner_order():
     doc = fixture()
     np.testing.assert_array_equal(named_serialized_values(doc, ["curve3:x", "curve0:x"]), [3, 0])
-    assert base_coil_owners(doc) == [(f"curve{i}", f"I{i}") for i in range(4)]
+    assert base_coil_owners(doc) == [(f"curve{i}", [(("current_to_scale",), f"I{i}")])
+                                    for i in range(4)]
     with pytest.raises(ValueError, match="fixed"):
         named_serialized_values(doc, ["curve0:y"])
     with pytest.raises(ValueError, match="duplicate"):
@@ -55,3 +56,16 @@ def test_archived_values_and_physical_owner_order():
     bad["simsopt_objs"]["scale0"]["current_to_scale"]["value"] = "scale0"
     with pytest.raises(ValueError, match="cyclic"):
         base_coil_owners(bad)
+
+
+def test_current_sum_keeps_repeated_shared_leaves_and_constant():
+    doc = fixture()
+    objects = doc["simsopt_objs"]
+    objects["sum"] = {"@class": "CurrentSum", "current_a": {"value": "I3"},
+                      "current_b": {"value": "scale0"}}
+    objects["coil3"]["current"] = {"value": "sum"}
+    assert base_coil_owners(doc)[-1] == ("curve3", [
+        (("current_a",), "I3"), (("current_b", "current_to_scale"), "I0")])
+    objects["sum"]["current_b"]["value"] = "sum"
+    with pytest.raises(ValueError, match="cyclic"):
+        base_coil_owners(doc)

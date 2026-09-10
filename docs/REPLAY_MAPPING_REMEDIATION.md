@@ -20,7 +20,7 @@ Before a remediated replay, implement and test a complete explicit permutation:
    global name's free DOF value; require exact equality to archived best.x.
 2. Map original and new curve/current owners by the first four physical coil
    graph entries, not numerical or alphabetical name order. Follow ScaledCurrent
-   to its underlying Current; reject unsupported expressions.
+   and CurrentSum trees to underlying Current leaves; reject other expressions.
 3. Require a bijection of all 207 free DOFs; preserve local parameter labels.
 4. Apply the permutation to saved x and the canonical seed-44 direction. Require
    the inverse-mapped original point's SHA-256 to match its original ledger hash.
@@ -33,3 +33,12 @@ This changes only replay mapping, never search settings, source best arrays,
 serialized candidate or the failed flux verdict. The prior direct serialized-field
 holdout does not insert raw arrays into a new global context and is unaffected.
 Future array-based warm starts must use an equally explicit mapping.
+
+Implementation correction before successful execution: the first mapping attempt
+at 720cb35 rejected the fourth coil's `CurrentSum` (no new full oracle bundles).
+The fourth current is a dependent sum, not a single scaled current. Its setup
+artifacts remain in `artifacts/guarded-feasibility-v1-replay-mapped/`. Extend the
+explicit graph traversal to both summands, including repeated shared leaves and
+the fixed current; require repeated owners to map consistently. Add a sum/cycle
+control and execute with new `-mapped-v2` output paths. No unsupported expression
+is silently skipped and no tolerance is relaxed.

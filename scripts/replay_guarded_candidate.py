@@ -67,12 +67,15 @@ def main():
         source_names = study["preparation"]["degrees_of_freedom"]
         if not np.array_equal(named_serialized_values(document, source_names), best_x):
             raise ValueError("archived named field parameters do not match saved best array")
-        for (curve_name, current_name), coil in zip(base_coil_owners(document),
+        for (curve_name, current_leaves), coil in zip(base_coil_owners(document),
                                                    ctx.Jf.field.coils[:4], strict=True):
-            current = coil.current
-            while hasattr(current, "current_to_scale"):
-                current = current.current_to_scale
-            for source, target in ((curve_name, coil.curve.name), (current_name, current.name)):
+            pairs = [(curve_name, coil.curve.name)]
+            for path, source in current_leaves:
+                current = coil.current
+                for attribute in path:
+                    current = getattr(current, attribute)
+                pairs.append((source, current.name))
+            for source, target in pairs:
                 if source in owner_map and owner_map[source] != target:
                     raise ValueError("conflicting physical owner mapping")
                 owner_map[source] = target

@@ -32,20 +32,29 @@ def base_coil_owners(document):
     if field["@class"] != "BiotSavart" or len(field["coils"]) != 16:
         raise ValueError("expected a sixteen-coil BiotSavart field")
     owners = []
+
+    def leaves(name, path=(), ancestors=()):
+        if name in ancestors:
+            raise ValueError("cyclic current graph")
+        obj = objects[name]
+        kind = obj["@class"]
+        if kind == "Current":
+            return [(path, name)]
+        attributes = {"ScaledCurrent": ["current_to_scale"],
+                      "CurrentSum": ["current_a", "current_b"]}.get(kind)
+        if attributes is None:
+            raise ValueError("unsupported current expression")
+        result = []
+        for attribute in attributes:
+            result.extend(leaves(obj[attribute]["value"], (*path, attribute), (*ancestors, name)))
+        return result
+
     for ref in field["coils"][:4]:
         coil = objects[ref["value"]]
         curve, current = coil["curve"]["value"], coil["current"]["value"]
         if objects[curve]["@class"] != "CurveXYZFourier":
             raise ValueError("expected direct base Fourier curve")
-        seen = set()
-        while objects[current]["@class"] == "ScaledCurrent":
-            if current in seen:
-                raise ValueError("cyclic current graph")
-            seen.add(current)
-            current = objects[current]["current_to_scale"]["value"]
-        if objects[current]["@class"] != "Current":
-            raise ValueError("unsupported current expression")
-        owners.append((curve, current))
+        owners.append((curve, leaves(current)))
     return owners
 
 
