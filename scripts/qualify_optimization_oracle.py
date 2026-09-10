@@ -366,7 +366,11 @@ def main():
         reference(Path(inspect.getfile(loop))),
         reference(Path(inspect.getfile(augmented_lagrangian_method))),
     ]
-    provenance["least_squares_source"] = reference(Path(inspect.getfile(least_squares)))
+    least_squares_path = Path(inspect.getfile(inspect.unwrap(least_squares)))
+    provenance["least_squares_source"] = reference(least_squares_path)
+    provenance["least_squares_support_sources"] = [
+        reference(least_squares_path.parent / name) for name in ["trf.py", "common.py"]
+    ]
     for installed, local in zip(
         provenance["installed_sources"],
         [

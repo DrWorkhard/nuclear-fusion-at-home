@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-10 — Guarded construction pre-search qualification
+
+- Protocol a8ba079 and implementation 692c04a precede the new search.
+- Both active refined-curvature directional gradients pass the frozen finest-step
+  criterion: normalized errors 3.5055e-9 and 2.3489e-8. Seven geometry-only
+  requests per field; original magnetic-field quadrature remains 200 points.
+- Full local suite: 133 passed, eleven existing fixture warnings; Ruff passes.
+- Before search, corrected SciPy provenance to unwrap the decorated entry point
+  and also hash TRF/common implementation files. Hashing only the wrapper would
+  identify `_util.py`, not the executing least-squares implementation.
+- No admissible candidate has yet been demonstrated by this qualification.
+
 ## 2026-09-10 — Continuous curvature enclosure
 
 - Protocol 26d9497, implementation d5eac8b, fixed seven-grid evaluation of three
