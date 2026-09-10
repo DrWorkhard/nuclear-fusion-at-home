@@ -58,6 +58,8 @@ bounded result; missing author data is not the only remaining blocker.
       contour screens (QI_COVERAGE_TOPOLOGY_RESULTS.md). Remaining: full invariant
       domain, well-family identity, continuum topology and finite-pressure maximum-J;
       a bounded action study is not a full QI score.
+      Finite-pressure Goodman data are now inventoried (31 cases); this work is
+      internally executable and must not be called blocked on SQuID-C files.
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).

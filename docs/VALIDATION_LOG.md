@@ -1,5 +1,13 @@
 # Validation log
 
+## 2026-09-10 — Finite-pressure archive inventory
+
+- Implementation/protocol 08ac18e preceded the metadata run; nine targeted tests pass.
+- Published MD5 matches; archive and all 62 selected input/wout files SHA-256 bound.
+- 31 actual beta/convergence/symmetry/resolution records retained. No equilibrium rerun.
+- Fresh extraction tree leaves vacuum data untouched; overwrite attempts rejected.
+- The available finite-pressure data remove an internal import gap, not the G4 gate.
+
 ## 2026-09-10 — Continuous inter-coil bound and portable rejected fixture
 
 - Supplemental diagnostic code/protocol 0f1d835 declared before its execution,

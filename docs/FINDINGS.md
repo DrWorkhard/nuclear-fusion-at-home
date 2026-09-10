@@ -1,5 +1,19 @@
 # Findings log
 
+## F-041 — Finite-pressure QI data were already present but not imported
+
+**Class:** verified archive inventory; correction of an internal data-access gap
+**Date:** 2026-09-10
+
+The existing Goodman release contains 31 finite-pressure wouts and matching
+inputs. All 62 files now have recorded hashes and observed equilibrium metadata.
+All wouts report normal termination, fixed boundary and stellarator symmetry.
+Filename beta values are approximate labels, not exact measured beta or author
+tolerances; nfp1 has ns=51, the other families ns=201. Our vacuum-only bootstrap
+had omitted these files. Finite-pressure action work can proceed without a new
+author package, but neither maximum-J nor SQuID-C readiness is established.
+See QI_FINITE_BETA_INVENTORY.md.
+
 ## F-040 — Continuous inter-coil distance is bounded, but feasibility is still failed
 
 **Class:** retrospective analytical bound supplementing a finite-grid audit
