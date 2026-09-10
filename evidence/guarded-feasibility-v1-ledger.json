@@ -1,0 +1,87 @@
+{
+  "all_pass": true,
+  "arms": [
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/trf-1.json",
+        "sha256": "8942d9699b3d0ad4006112868185bd2ce23ec628bb4d9c471b52ed11c4c51ecc"
+      },
+      "checks": {
+        "all_merits_match": true,
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "budget_stop_is_exact": true,
+        "contiguous_attempts": true,
+        "exact_proposal_count": true,
+        "fixed_coordinate_scale": true,
+        "gradient_screen": true,
+        "no_failed_evaluation": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "terminal_status": true,
+        "within_cap": true
+      },
+      "pass": true
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/trf-2.json",
+        "sha256": "0b769a2ff915798a735113af0a4d4a5202dc1e596deacc1eb41e69d62a93aa91"
+      },
+      "checks": {
+        "all_merits_match": true,
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "budget_stop_is_exact": true,
+        "contiguous_attempts": true,
+        "exact_proposal_count": true,
+        "fixed_coordinate_scale": true,
+        "gradient_screen": true,
+        "no_failed_evaluation": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "terminal_status": true,
+        "within_cap": true
+      },
+      "pass": true
+    }
+  ],
+  "checks": {
+    "declared_targets": true,
+    "normalization": true,
+    "regularization_preserved": true,
+    "repeat_counters": true,
+    "repeat_history": true,
+    "repeat_identities": true,
+    "single_shared_normalization": true,
+    "two_trf_repeats": true,
+    "unchanged_promotion_field": true
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_guarded_feasibility.py",
+      "sha256": "83aef7d7a3b9df854c3c1560a9023b7d4c150ea5e2d071512fe70c9ee8b3ccc5"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/oracle_audit.py",
+      "sha256": "6f93e893332a63f834461d90b6678e68eb2a3ed498d08a0f9e6ebe270fa6272b"
+    }
+  ],
+  "limits": "Accounting/source audit only; no feasibility claim or additional physics calls.",
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "e34d091b190fe679206dcec0b612e4e5806be184",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/summary.json",
+    "sha256": "da9aa81ac1f783732a16807c85f9423d0b9e929d6bdfb1329d98e458c2712870"
+  }
+}
