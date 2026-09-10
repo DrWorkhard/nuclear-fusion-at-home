@@ -10,7 +10,7 @@ import time
 from pathlib import Path
 
 import numpy as np
-from scipy.optimize import minimize
+from scipy.optimize import least_squares, minimize
 from simsopt import load
 from simsopt.field import BiotSavart, coils_via_symmetries
 from simsopt.geo import CurveXYZFourier, SurfaceRZFourier
@@ -21,6 +21,7 @@ from stellcoilbench.coil_optimization import _optimization_loop as loop
 from fusion_baselines.affine_coordinates import AffineCoordinates
 from fusion_baselines.budgeted_oracle import BudgetedOracle, BudgetExhausted, NamedVectorBackend
 from fusion_baselines.provenance import git_state, host_state, sha256_file, write_json_atomic
+from fusion_baselines.refined_curvature import make_refined_penalty
 
 SOURCE_SHA = "7ae1b1968b8ca34fa94cc0e67cfad41577219ed43bcd902b695c7b7cc04ecd2e"
 
@@ -34,7 +35,7 @@ class CapturedContext(BaseException):
         self.context = context
 
 
-def prepare(root, raw):
+def prepare(root, raw, *, guarded_curvature=False):
     start = time.monotonic()
     source = root / "fixtures/rejected-lpqa-warmstart/field.json"
     source_bytes = source.read_bytes()
@@ -78,7 +79,9 @@ def prepare(root, raw):
         np.savez_compressed(stream, points=points, source_B=old_b, promoted_B=new_b)
     case_path = root / "cases/lpqa_engineering_v1p1_lbfgsb.yaml"
     config = load_case(case_path)
-    terms = config.coil_objective_terms
+    terms = dict(config.coil_objective_terms)
+    if guarded_curvature:
+        terms.update(length_threshold=219.9, flux_threshold=8e-9)
     original = loop._run_optimization_step
 
     def capture(ctx):
@@ -108,6 +111,15 @@ def prepare(root, raw):
     finally:
         loop._run_optimization_step = original
     scales = [ctx.constraint_scaling.get(i, 1.0) for i in range(len(ctx.c_list))]
+    guard = None
+    if guarded_curvature:
+        index = next(i for i, term in ctx.constraint_idx_to_term.items()
+                     if term == "coil_curvature")
+        ctx.c_list[index] = make_refined_penalty(
+            [c.curve for c in ctx.Jf.field.coils[:4]], 0.99 * ctx.th["curvature_threshold"])
+        guard = {"component_index": index, "curvature_resolution": 1600,
+                 "curvature_target_reactor": 0.99, "length_target_reactor": 219.9,
+                 "flux_target": 8e-9, "field_quadrature_unchanged": 200}
     backend = NamedVectorBackend(ctx.Jf, ctx.c_list, scales)
     return (
         ctx,
@@ -125,6 +137,7 @@ def prepare(root, raw):
             "shared_preparation_seconds": time.monotonic() - start,
             "degrees_of_freedom": backend.names,
             "scales": scales,
+            "guarded_search_targets": guard,
             "thresholds": ctx.th,
             "constraint_terms": ctx.constraint_idx_to_term,
             "preparation_is_shared_and_outside_per_arm_budget": True,
@@ -237,7 +250,22 @@ def run_arm(method, repeat, backend, ctx, x0, raw, output, provenance, *, budget
                 "nit": int(solution.nit),
                 "nfev": int(solution.nfev),
             }
-        else:
+        elif method == "trf":
+            def residual(y):
+                return request(coordinates.physical(y))[0]
+
+            def jacobian(y):
+                return request(coordinates.physical(y))[1] * coordinates.scale
+
+            solution = least_squares(
+                residual, coordinates.solver(x0), jac=jacobian, method="trf",
+                tr_solver="exact", loss="linear", x_scale=1.0, max_nfev=100000,
+                ftol=1e-15, xtol=1e-15, gtol=1e-15)
+            record["solver_return"] = {
+                "success": bool(solution.success), "message": str(solution.message),
+                "nfev": int(solution.nfev), "njev": int(solution.njev),
+                "optimality": float(solution.optimality)}
+        elif method == "auglag":
             with (directory / "solver.log").open("x") as stream, contextlib.redirect_stdout(stream):
                 augmented_lagrangian_method(
                     f=None,
@@ -247,6 +275,8 @@ def run_arm(method, repeat, backend, ctx, x0, raw, output, provenance, *, budget
                     mu_init=10,
                     verbose=False,
                 )
+        else:
+            raise ValueError(f"unknown method: {method}")
         record["status"] = "solver_returned"
     except BudgetExhausted:
         record["status"] = "budget_exhausted"
@@ -292,7 +322,9 @@ def main():
     parser.add_argument("--raw", type=Path, default=Path("artifacts/oracle-qualification-v1"))
     parser.add_argument("--normalized-feasibility", action="store_true")
     parser.add_argument("--affine-feasibility", action="store_true")
+    parser.add_argument("--guarded-curvature", action="store_true")
     args = parser.parse_args()
+    args.affine_feasibility = args.affine_feasibility or args.guarded_curvature
     args.normalized_feasibility = args.normalized_feasibility or args.affine_feasibility
     if args.output.exists() or args.raw.exists():
         raise FileExistsError("oracle qualification directories already exist")
@@ -305,6 +337,7 @@ def main():
             root
             / "docs"
             / (
+                "GUARDED_FEASIBILITY_PROTOCOL.md" if args.guarded_curvature else
                 "AFFINE_FEASIBILITY_PROTOCOL.md" if args.affine_feasibility else
                 "NORMALIZED_FEASIBILITY_PROTOCOL.md"
                 if args.normalized_feasibility
@@ -314,10 +347,12 @@ def main():
         "base_oracle_protocol": reference(root / "docs/OPTIMIZATION_ORACLE_PROTOCOL.md"),
         "normalized_feasibility": args.normalized_feasibility,
         "affine_feasibility": args.affine_feasibility,
+        "guarded_curvature": args.guarded_curvature,
         "code": [
             reference(Path(__file__)),
             reference(root / "src/fusion_baselines/budgeted_oracle.py"),
             reference(root / "src/fusion_baselines/affine_coordinates.py"),
+            reference(root / "src/fusion_baselines/refined_curvature.py"),
         ],
         "versions": {
             name: importlib.metadata.version(name)
@@ -331,6 +366,7 @@ def main():
         reference(Path(inspect.getfile(loop))),
         reference(Path(inspect.getfile(augmented_lagrangian_method))),
     ]
+    provenance["least_squares_source"] = reference(Path(inspect.getfile(least_squares)))
     for installed, local in zip(
         provenance["installed_sources"],
         [
@@ -355,7 +391,17 @@ def main():
     args.raw.mkdir(parents=True)
     report = {**provenance, "status": "running", "qualification_pass": False}
     try:
-        ctx, backend, preparation = prepare(root, args.raw)
+        if args.guarded_curvature:
+            qualification = root / "evidence/guarded-curvature-gradient-v1.json"
+            qualified = json.loads(qualification.read_text())
+            if not qualified["all_pass"] or len(qualified["cases"]) != 2:
+                raise ValueError("active refined-curvature gradient qualification required")
+            for source in qualified["code"] + [qualified["protocol"]]:
+                if sha256_file(Path(source["path"])) != source["sha256"]:
+                    raise ValueError("curvature qualification source/protocol changed")
+            report["curvature_gradient_qualification"] = reference(qualification)
+        ctx, backend, preparation = prepare(
+            root, args.raw, guarded_curvature=args.guarded_curvature)
         report["preparation"] = preparation
         x0 = ctx.Jf.x.copy()
         if args.normalized_feasibility:
@@ -375,8 +421,9 @@ def main():
             }
         write_json_atomic(args.output / "summary.json", report)
         report["arms"] = []
+        report["methods"] = ["trf"] if args.guarded_curvature else ["lbfgsb", "auglag"]
         checks = {}
-        for method in ["lbfgsb", "auglag"]:
+        for method in report["methods"]:
             pair = []
             for repeat in [1, 2]:
                 ctx.Jf.x = x0.copy()
@@ -390,7 +437,8 @@ def main():
                     args.raw,
                     path,
                     provenance,
-                    budget=1500 if args.normalized_feasibility else 150,
+                    budget=(3000 if args.guarded_curvature else
+                            1500 if args.normalized_feasibility else 150),
                     coordinate_scale=0.01 if args.affine_feasibility else None,
                 )
                 pair.append(arm)

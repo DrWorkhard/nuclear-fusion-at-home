@@ -159,7 +159,7 @@ def main():
         "used_for_optimizer_feedback": False,
     }
     try:
-        for method in ["lbfgsb", "auglag"]:
+        for method in study.get("methods", ["lbfgsb", "auglag"]):
             arm_path = args.study / f"{method}-1.json"
             expected = next(r for r in study["arms"] if Path(r["path"]).name == arm_path.name)
             checked_path(expected)
