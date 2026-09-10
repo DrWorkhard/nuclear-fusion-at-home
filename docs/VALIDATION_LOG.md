@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-10 — Continuous curvature enclosure
+
+- Protocol 26d9497, implementation d5eac8b, fixed seven-grid evaluation of three
+  fields. Circle, off-grid ellipse, derivatives and stationary-curve controls pass;
+  additional complex-Fourier high-order reference agrees and is enclosed.
+- Original warm-start curvature upper bound 0.900368293/m at N=12,800; affine
+  lower bounds 1.003551769/1.031146018/m confirm both rejections. All levels retained.
+- Orthogonal-copy checks cover all 16 physical coils per field. Ordinary floating
+  point, not directed rounding; no other engineering/physics gate closed.
+
 ## 2026-09-10 — Affine-coordinate equal-budget search and rejected candidates
 
 - Protocol c7e6ae1; implementation 3ac761f. Both methods repeated twice, all

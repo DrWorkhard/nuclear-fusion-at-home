@@ -62,3 +62,22 @@ def test_stationary_curves_and_bad_inputs_fail_closed():
     for n in [0, 3, 4.5, True]:
         with pytest.raises(ValueError):
             curvature_enclosure(ellipse(), n)
+
+
+def test_high_order_against_independent_complex_fourier_evaluation():
+    rng = np.random.default_rng(91)
+    c = np.zeros((3, 17))
+    c[:, :3] = ellipse(2, 1.3, 0.127)
+    c[:, 3:] = rng.normal(size=(3, 14)) * 0.001
+    t = np.arange(16003) / 16003
+    omega = 2 * np.pi * np.arange(1, 9)
+    amplitudes = c[:, 2::2] - 1j*c[:, 1::2]
+    phase = np.exp(1j*omega[:, None]*t)
+    reference = np.array([np.real((amplitudes*(1j*omega)**k) @ phase).T for k in (1, 2, 3)])
+    np.testing.assert_allclose(derivatives(c, t), reference, atol=2e-11)
+    v, a = reference[:2]
+    peak = float((np.linalg.norm(np.cross(v, a), axis=1)/np.linalg.norm(v, axis=1)**3).max())
+    for n in [200, 400, 800]:
+        bound = curvature_enclosure(c, n)
+        assert bound["regularity_resolved"]
+        assert bound["maximum_upper_bound"] >= peak

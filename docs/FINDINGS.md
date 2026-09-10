@@ -1,5 +1,18 @@
 # Findings log
 
+## F-046 — A continuum curvature enclosure prevents coarse-grid false acceptance
+
+**Class:** analytic interpolation bound, analytical controls and frozen-field qualification
+**Date:** 2026-09-10
+
+The interval-wide squared-curvature bound certifies the original warm start's
+curvature below 1/m, while both affine candidates remain failed. At N=200 the
+L-BFGS-B candidate is correctly unresolved despite subthreshold samples; refinement
+finds a violating witness. Final intervals enclose the maximum over every curve
+parameter, subject to ordinary floating-point evaluation rather than directed
+rounding. This is a qualified acceptance check, not a feasible-design claim.
+See CONTINUOUS_CURVATURE_RESULTS.md.
+
 ## F-045 — Zero sampled curvature penalty hides real off-grid violations
 
 **Class:** independent geometry rejection with position-only violating witnesses
