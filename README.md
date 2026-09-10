@@ -49,6 +49,10 @@ the sampled domain, while nfp3 at that pressure remains mixed. This is not a
 global maximum-J certificate. Both recent optimization candidates remain rejected
 by the independent feasibility holdout; no SoTA improvement is claimed.
 
+A fixed affine-coordinate follow-up now achieves genuinely equal consumed
+oracle budgets, but both candidates still fail feasibility. Independent
+position-only checks confirm curvature peaks missed by the optimization grid.
+
 - [Audit and corrected readiness assessment](docs/AUDIT_2026-09-09.md)
 - [Bounce-action measurement results](docs/QI_MEASUREMENT_RESULTS_V1.md)
 - [Independent tracing results](docs/QI_TRACE_CROSSCHECK_RESULTS.md)
@@ -56,6 +60,8 @@ by the independent feasibility holdout; no SoTA improvement is claimed.
 - [Individual-well radial-action results](docs/QI_RADIAL_ACTION_RESULTS.md)
 - [Independent finite-pressure tracing](docs/QI_PRESSURE_TRACE_RESULTS.md)
 - [Rejected normalized optimization candidates](docs/NORMALIZED_FEASIBILITY_RESULTS.md)
+- [Affine-coordinate comparison and rejected candidates](docs/AFFINE_FEASIBILITY_RESULTS.md)
+- [Off-grid curvature violation witnesses](docs/CURVATURE_ALIASING_RESULTS.md)
 
 - [Project plan](docs/PROJECT_PLAN.md)
 - [Evidence standard](docs/EVIDENCE_STANDARD.md)

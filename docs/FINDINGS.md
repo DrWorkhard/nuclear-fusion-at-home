@@ -1,5 +1,31 @@
 # Findings log
 
+## F-045 — Zero sampled curvature penalty hides real off-grid violations
+
+**Class:** independent geometry rejection with position-only violating witnesses
+**Date:** 2026-09-10
+
+Both affine candidates have zero optimizer curvature penalty, with 200-point
+maxima below 1/m at reactor scale. Refined maxima are 1.00355069 and 1.03114211/m.
+Compiled derivative evaluation and a three-position circumcircle reconstruction
+confirm both violations independently of the NumPy Fourier-derivative holdout.
+The two finest position-only estimates agree within 4.36e-6 relative and remain
+above the hard limit. No tolerance is relaxed. Before larger search budgets,
+qualify curvature control between constraint nodes. See CURVATURE_ALIASING_RESULTS.md.
+
+## F-044 — Fixed coordinate scaling enables an actual equal-bundle pilot
+
+**Class:** preregistered repeated optimizer experiment, followed by failed holdout
+**Date:** 2026-09-10
+
+Using x=x0+0.01*y, both methods and both repeats consume exactly 1500 full
+physical bundles. L-BFGS-B no longer returns immediately; all proposal histories,
+values and counters reproduce. The physical-problem identity and ledger audit
+passes. AL has lower common merit for this start, but both candidates fail flux,
+length and curvature in the independent holdout. Both best proposals occur at
+the budget cap: convergence and feasibility remain unproved. No multi-start
+ranking or SoTA claim. See AFFINE_FEASIBILITY_RESULTS.md.
+
 ## F-043 — A second field-line calculation preserves the finite-pressure findings
 
 **Class:** retrospective independent trace/integration-path comparison

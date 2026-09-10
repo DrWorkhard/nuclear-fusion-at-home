@@ -32,6 +32,10 @@ bounded result; missing author data is not the only remaining blocker.
       10 while still infeasible. A common cap is not equal consumed work or a ranking.
       Normalized follow-up also reproduces exactly; independent holdout rejects
       both method-best candidates (flux; additionally AL length). Baseline remains open.
+      Fixed affine-coordinate follow-up now consumes exactly 1500 bundles for
+      each method and repeat, with identical physical problem and reproducible
+      histories. Both candidates still fail flux, length and off-grid curvature;
+      a feasible baseline and multiple initializations remain open.
 
 ## G3 — W7-X regression
 

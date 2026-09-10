@@ -1,5 +1,25 @@
 # Validation log
 
+## 2026-09-10 — Affine-coordinate equal-budget search and rejected candidates
+
+- Protocol c7e6ae1; implementation 3ac761f. Both methods repeated twice, all
+  physical proposal hashes/values/counters match; all four stop at exactly 1500 bundles.
+- Ten adapter tests; full local suite 123 passed, separate clone 122 passed plus
+  one missing-W7-X skip. Physical gradient error <=8.843e-9, no failed bundles.
+- Separate audit ba74e39 verifies unchanged physical problem/normalization/probes,
+  best physical-array hashes, exact accounting and selection; all pass.
+- Frozen independent holdout exits 2: both candidates fail flux, length and
+  curvature. AL length exceeds by 1.235 mm and curvature by 3.114%; no waiver.
+- Supplemental continuous inter-coil lower bounds 1.06843025/1.07312751 reactor m
+  pass 1.06 m; the failed metrics and unqualified engineering models remain.
+- Witness protocol/code e9fde75, three analytical test groups: compiled and
+  position-only methods confirm both off-grid curvature violations. All six
+  position step sizes retained, including finer-step roundoff deterioration.
+- Final suite including witness tests: 126 local passes; detached clone at
+  e9fde75 has 125 passes/one expected W7-X skip and remains clean. Ruff passes.
+- Integrity audit of nine affine evidence files: all 37 unique referenced
+  path/SHA-256 pairs match. No hosted-CI or feasible-design claim follows.
+
 ## 2026-09-10 — Independent pressure tracing and clean reconstruction
 
 - Retrospective protocol fdcaa36; implementation 9ce3178 before second-tracer run.
