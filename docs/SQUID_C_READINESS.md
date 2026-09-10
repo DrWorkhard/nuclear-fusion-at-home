@@ -36,6 +36,11 @@ bounded result; missing author data is not the only remaining blocker.
       each method and repeat, with identical physical problem and reproducible
       histories. Both candidates still fail flux, length and off-grid curvature;
       a feasible baseline and multiple initializations remain open.
+      Guarded trust-region follow-up repeats exactly at 3000 bundles and passes
+      geometry screens including continuous curvature/inter-coil bounds, but
+      flux remains 101.752 times the fixed limit. G2 stays open. Independent replay
+      exposed and corrected cross-process DOF ordering; all 14 archived best
+      arrays match their serialized field parameters. See GUARDED_FEASIBILITY_RESULTS.md.
 
 ## G3 — W7-X regression
 

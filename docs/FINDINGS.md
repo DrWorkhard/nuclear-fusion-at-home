@@ -1,5 +1,33 @@
 # Findings log
 
+## F-048 — Raw optimization arrays are not portable across runtime object ordering
+
+**Class:** failed independent replay, tested mapping correction and archive audit
+**Date:** 2026-09-10
+
+SIMSOPT ancestor ordering uses runtime object names. A fresh replay crossed the
+9-to-10 curve numbering boundary and assigned archived blocks to different coils.
+Original per-context gradient mapping and direct serialized-field holdouts were
+not affected. Explicit physical-coil/current-graph mapping restores all 207 DOFs:
+eight-bundle replay passes residuals, exact field/current identity and gradient
+checks. All 14 earlier saved vectors exactly match their archived named field
+parameters. Both failed replay/mapping attempts are retained. Future array-based
+warm starts must use a verified physical mapping, not positional assignment.
+See REPLAY_MAPPING_REMEDIATION.md and GUARDED_FEASIBILITY_RESULTS.md.
+
+## F-047 — Guarded construction passes geometry screens but not magnetic acceptance
+
+**Class:** preregistered repeated search followed by independent rejection
+**Date:** 2026-09-10
+
+Two identical 3000-bundle trust-region runs pass accounting and repeatability.
+The candidate passes length/plasma-distance refinement screens and continuous
+curvature/inter-coil bounds. Flux 1.017520282e-6 remains 101.752 times the fixed
+1e-8 limit. A 99.955% common-merit decrease mostly removes the initially dominant
+length penalty, not the magnetic error. The altered objective scaling makes
+scalar merits incomparable with prior studies. No feasible or SoTA baseline.
+See GUARDED_FEASIBILITY_RESULTS.md.
+
 ## F-046 — A continuum curvature enclosure prevents coarse-grid false acceptance
 
 **Class:** analytic interpolation bound, analytical controls and frozen-field qualification

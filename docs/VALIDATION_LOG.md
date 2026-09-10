@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-10 — Guarded search, independent rejection and replay repair
+
+- Search d74662e: both repeats exactly 3000 bundles, 5942 requests, 2941 hits,
+  one denied request, zero failures; same physical proposals, values and counters.
+- Independent ledger audit passes; fourteen analytical/adversarial ledger tests.
+- Frozen holdout exits 2: flux 1.017520282e-6 >1e-8. Other geometry screens pass;
+  continuous curvature upper 0.8763197223/m and inter-coil lower 1.0646590239 m pass.
+- Curvature CLI regression reproduces all 21 original field/grid records exactly.
+- Raw-vector fresh replay a24d5b8 fails field and best-residual identity. Root cause:
+  runtime names induce a different lexical global DOF order, not within-run drift.
+- First mapping 720cb35 rejects an unhandled CurrentSum; no full bundles consumed.
+  Retained setup directory and documented failure; added tested sum-graph traversal.
+- Remediated replay 25cddc6: eight full bundles; all checks pass, all sixteen
+  fields/currents/regularizations identical, directional-gradient error <=1.62318e-7.
+- Exact original named-array identity and hash audit passes all 14 prior runs.
+  No candidate/evidence overwrite, acceptance waiver or feasibility claim.
+- Final local suite: 150 passed; separate detached clone at 25cddc6: 149 passed,
+  one expected missing-W7-X skip. Ruff passes in both; eleven fixture warnings
+  retained. This is an updated separate checkout, not a newly bootstrapped solver.
+- Integrity audit over eleven guarded/archive evidence files checks 120 distinct
+  path/hash/revision references: 119 match current files; the failed replay's old
+  script matches its original Git blob at a24d5b8. Zero unresolved mismatches.
+
 ## 2026-09-10 — Guarded construction pre-search qualification
 
 - Protocol a8ba079 and implementation 692c04a precede the new search.

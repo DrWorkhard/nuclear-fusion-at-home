@@ -1,0 +1,347 @@
+{
+  "all_pass": true,
+  "arms": [
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/oracle-qualification-v1-retry1/lbfgsb-1.json",
+        "sha256": "062d131fc61b5304b7069e1d272bc56ea7bb034163bfffcc4dbe2c0b56e9de60"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/lbfgsb-1/best.npz",
+        "sha256": "4874c247bca1dd1b17b5f8ec90c48893d444f233a015f964c32cbd601648a3fc"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/lbfgsb-1/best_field.json",
+        "sha256": "ff15c5f003ae21ad8ab881b0010ec4892fe6c182d7733cb96225a12d800f4fa8"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/oracle-qualification-v1-retry1/summary.json",
+        "sha256": "a708f74430b440146ae0482f0383d53e953a1e2f0ca5bdf37aea5989b4959779"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/oracle-qualification-v1-retry1/lbfgsb-2.json",
+        "sha256": "073d98ea3e1f986eee5fed31604dce1287bd03f3e202de9e6c7dbcf76508e9b1"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/lbfgsb-2/best.npz",
+        "sha256": "4874c247bca1dd1b17b5f8ec90c48893d444f233a015f964c32cbd601648a3fc"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/lbfgsb-2/best_field.json",
+        "sha256": "ff15c5f003ae21ad8ab881b0010ec4892fe6c182d7733cb96225a12d800f4fa8"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/oracle-qualification-v1-retry1/summary.json",
+        "sha256": "a708f74430b440146ae0482f0383d53e953a1e2f0ca5bdf37aea5989b4959779"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/oracle-qualification-v1-retry1/auglag-1.json",
+        "sha256": "49ea22d81f27f009f9c1f2b95dbfb8b72b9add96d591f530cc26ae7a1f0a534f"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/auglag-1/best.npz",
+        "sha256": "427105dddbd17f899a1776f4b7aebaebd6419e861eb25d51ee49b78aaece92ab"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/auglag-1/best_field.json",
+        "sha256": "d14301512e2c9c53249dd1e223b6740f8a156e66d7cd978176b9ae880f1f13c0"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/oracle-qualification-v1-retry1/summary.json",
+        "sha256": "a708f74430b440146ae0482f0383d53e953a1e2f0ca5bdf37aea5989b4959779"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/oracle-qualification-v1-retry1/auglag-2.json",
+        "sha256": "abc70b6686686d6499384e24e8799e17839c76f00b8d25891e4214de2c293d52"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/auglag-2/best.npz",
+        "sha256": "427105dddbd17f899a1776f4b7aebaebd6419e861eb25d51ee49b78aaece92ab"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/auglag-2/best_field.json",
+        "sha256": "d14301512e2c9c53249dd1e223b6740f8a156e66d7cd978176b9ae880f1f13c0"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/oracle-qualification-v1-retry1/summary.json",
+        "sha256": "a708f74430b440146ae0482f0383d53e953a1e2f0ca5bdf37aea5989b4959779"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/lbfgsb-1.json",
+        "sha256": "d157d1f879f2ab5b0fc85bba169a52530fd4abead608ebb4967de61bfd3f7ffe"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/lbfgsb-1/best.npz",
+        "sha256": "5c6112de0702c7819bba221c3be1eb04899f23c2c5b25b916402205588fa5d6b"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/lbfgsb-1/best_field.json",
+        "sha256": "ac4e62f247ecece7e1ab2da2f77a61a47dcd0f25f2a8226477f84328f2a4d716"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/summary.json",
+        "sha256": "b812e620382550196ea2eac143ebcff25d47b0c715947b1e2142a96bb84dbf2f"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/lbfgsb-2.json",
+        "sha256": "45a3552b4fb5939fe15e0414be4f4531f91e19caff9cd62f2e085020a1c57e72"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/lbfgsb-2/best.npz",
+        "sha256": "5c6112de0702c7819bba221c3be1eb04899f23c2c5b25b916402205588fa5d6b"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/lbfgsb-2/best_field.json",
+        "sha256": "ac4e62f247ecece7e1ab2da2f77a61a47dcd0f25f2a8226477f84328f2a4d716"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/summary.json",
+        "sha256": "b812e620382550196ea2eac143ebcff25d47b0c715947b1e2142a96bb84dbf2f"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/auglag-1.json",
+        "sha256": "3330f66e35ec8b6a6c657bbe931051f13671e25bd94da3931532d8b02708d867"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/auglag-1/best.npz",
+        "sha256": "2f5f9bdf84e199e03e200d9eeac9f2812ca8be401d5e78c468194fb537196a9b"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/auglag-1/best_field.json",
+        "sha256": "b5e397de5567950a8d7f5481971cdef46d1747297f07f1da5c04ca0e937a65ef"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/summary.json",
+        "sha256": "b812e620382550196ea2eac143ebcff25d47b0c715947b1e2142a96bb84dbf2f"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/auglag-2.json",
+        "sha256": "2b291489af9d60d656fa5a056e84aedac4c05a500ac4afec50d4f0b598c9df4c"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/auglag-2/best.npz",
+        "sha256": "2f5f9bdf84e199e03e200d9eeac9f2812ca8be401d5e78c468194fb537196a9b"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-feasibility-v1/auglag-2/best_field.json",
+        "sha256": "b5e397de5567950a8d7f5481971cdef46d1747297f07f1da5c04ca0e937a65ef"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/summary.json",
+        "sha256": "b812e620382550196ea2eac143ebcff25d47b0c715947b1e2142a96bb84dbf2f"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/lbfgsb-1.json",
+        "sha256": "b7bedb55edd5cf3fbb2bbee63b4163bebcae38efb9955895ba98f88954f61046"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/affine-feasibility-v1/lbfgsb-1/best.npz",
+        "sha256": "c4de7e9d718790abe4b319fac0728236dca929433e8f2a68460af0fb3257ab14"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/affine-feasibility-v1/lbfgsb-1/best_field.json",
+        "sha256": "f69ce566774d9e92f107f6f72ddb2dde6e6f0c6c3ca2d1bf75b6d9fa28ccea2e"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/summary.json",
+        "sha256": "86737d7f09e3678dec161ac55e8f40b1004861101185bf50d8f22cc1fcf09b75"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/lbfgsb-2.json",
+        "sha256": "7373b23a78f0f72e95d53a154747455fd1b19a7c1a393652b9bdf66cbe22cfb8"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/affine-feasibility-v1/lbfgsb-2/best.npz",
+        "sha256": "c4de7e9d718790abe4b319fac0728236dca929433e8f2a68460af0fb3257ab14"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/affine-feasibility-v1/lbfgsb-2/best_field.json",
+        "sha256": "f69ce566774d9e92f107f6f72ddb2dde6e6f0c6c3ca2d1bf75b6d9fa28ccea2e"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/summary.json",
+        "sha256": "86737d7f09e3678dec161ac55e8f40b1004861101185bf50d8f22cc1fcf09b75"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/auglag-1.json",
+        "sha256": "9a8951c8164b22060747aa74b686376055e9a49284c7c3d31f1ee34522afb117"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/affine-feasibility-v1/auglag-1/best.npz",
+        "sha256": "dbc7b968fd4a8719760931645c75e61f52fd4b21994517ee46151503cec076eb"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/affine-feasibility-v1/auglag-1/best_field.json",
+        "sha256": "83f99996ec84540abc5fd23a2006251095f17430eb4168c8ab5d11b3d79f2996"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/summary.json",
+        "sha256": "86737d7f09e3678dec161ac55e8f40b1004861101185bf50d8f22cc1fcf09b75"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/auglag-2.json",
+        "sha256": "37cb23af48ed734dff04ab7c89d6319d10311e0a28ce9096244c3ef55b592926"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/affine-feasibility-v1/auglag-2/best.npz",
+        "sha256": "dbc7b968fd4a8719760931645c75e61f52fd4b21994517ee46151503cec076eb"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/affine-feasibility-v1/auglag-2/best_field.json",
+        "sha256": "83f99996ec84540abc5fd23a2006251095f17430eb4168c8ab5d11b3d79f2996"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/summary.json",
+        "sha256": "86737d7f09e3678dec161ac55e8f40b1004861101185bf50d8f22cc1fcf09b75"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/trf-1.json",
+        "sha256": "8942d9699b3d0ad4006112868185bd2ce23ec628bb4d9c471b52ed11c4c51ecc"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/guarded-feasibility-v1/trf-1/best.npz",
+        "sha256": "67a7c21987694d82fd8f8e03ed51f0f9681819124e8d47196a3114da75332e74"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/guarded-feasibility-v1/trf-1/best_field.json",
+        "sha256": "df790fda89d9fef88f953949dfeb525953e0881fc93ae15cbf51d175c7b6bece"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/summary.json",
+        "sha256": "da9aa81ac1f783732a16807c85f9423d0b9e929d6bdfb1329d98e458c2712870"
+      }
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/trf-2.json",
+        "sha256": "0b769a2ff915798a735113af0a4d4a5202dc1e596deacc1eb41e69d62a93aa91"
+      },
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/guarded-feasibility-v1/trf-2/best.npz",
+        "sha256": "67a7c21987694d82fd8f8e03ed51f0f9681819124e8d47196a3114da75332e74"
+      },
+      "checks": {
+        "exact_named_array_identity": true,
+        "original_ledger_hash": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/guarded-feasibility-v1/trf-2/best_field.json",
+        "sha256": "df790fda89d9fef88f953949dfeb525953e0881fc93ae15cbf51d175c7b6bece"
+      },
+      "pass": true,
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/summary.json",
+        "sha256": "da9aa81ac1f783732a16807c85f9423d0b9e929d6bdfb1329d98e458c2712870"
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_archived_dof_identity.py",
+      "sha256": "4a8e622f07a25ffa01516b2445664a155a1df8d800342cefd9f6a0f30c08910d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    }
+  ],
+  "limits": "Original serialized parameter identity only; not cross-process positional replay or feasibility.",
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "25cddc6582f091f4d7f5db11ad2b3007c19813f8",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "retrospective": true,
+  "schema_version": 1
+}
