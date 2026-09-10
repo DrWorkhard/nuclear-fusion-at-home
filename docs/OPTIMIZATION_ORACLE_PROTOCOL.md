@@ -41,6 +41,10 @@ completed vector. Best candidate means minimum 0.5*||vector||^2 among completed
 bundles, not last mutated solver state. Save that candidate without reevaluation;
 later validation has a separately declared cost and cannot feed back into search.
 
+Pre-execution implementation clarification: a failed attempt invalidates the
+one-point cache, since the stateful backend may have been left at a failed x.
+Returning to the previous successful x after such a failure is charged anew.
+
 ## Qualification runs
 
 Run four arms: L-BFGS-B twice and pinned SIMSOPT augmented Lagrangian twice,
