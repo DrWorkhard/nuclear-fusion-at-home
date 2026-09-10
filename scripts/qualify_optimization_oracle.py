@@ -50,7 +50,14 @@ def prepare(root, raw):
         padded[:, :9] = old
         curve.local_full_x = padded.ravel()
         curves.append(curve)
-    coils = coils_via_symmetries(curves, [c.current for c in source_field.coils[:4]], 2, True)
+    regularizations = [c.regularization for c in source_field.coils[:4]]
+    coils = coils_via_symmetries(
+        curves,
+        [c.current for c in source_field.coils[:4]],
+        2,
+        True,
+        regularizations=regularizations,
+    )
     promoted = BiotSavart(coils)
     points = surface.gamma().reshape(-1, 3)[:64].copy()
     source_field.set_points(points)
@@ -105,6 +112,8 @@ def prepare(root, raw):
             "case": reference(case_path),
             "promotion": reference(raw / "promotion.npz"),
             "promotion_relative_B_difference": error,
+            "regularizations_preserved": [float(c.regularization) for c in coils[:4]]
+            == [float(c.regularization) for c in source_field.coils[:4]],
             "shared_preparation_seconds": time.monotonic() - start,
             "degrees_of_freedom": backend.names,
             "scales": scales,

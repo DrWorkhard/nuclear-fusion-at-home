@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-10 — Common optimization oracle, first preparation failure
+
+- Protocol ec1fc43; tested implementation 119388f. Full local suite: 83 passed.
+- A GitHub dependency fetch failed with connection reset; a single retry restored
+  the exact locked benchmark environment. No dependency revision changed.
+- The first real-coil preparation preserved B through order promotion but failed
+  before optimizer execution: the adapter rebuilt plain Coil objects without
+  their existing finite-section regularization. Upstream constructs force objects
+  even when force is not selected as an optimization term and requires RegularizedCoil.
+- Failure is retained in evidence/oracle-qualification-v1/summary.json. The
+  correction copies the original regularizations; no threshold or physical model
+  is changed. A new result directory will be used for the rerun.
+- Font-cache and MPI socket sandbox warnings were observed; imports completed.
+
 ## 2026-09-09 — Intrinsic coil mesh audit
 
 - Protocol 2c75cc9 and implementation 9ee1796 committed before real mesh execution.
