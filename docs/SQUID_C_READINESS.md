@@ -27,6 +27,9 @@ bounded result; missing author data is not the only remaining blocker.
 - [x] Independent checks of core coil metrics.
 - [x] Equal-budget experiment protocol.
 - [ ] Strong feasible constrained baseline and actual equal-budget method comparison.
+      Partial: full-vector/Jacobian oracle passes named-DOF, exact-budget and
+      repeatability qualification. AL uses its 150-bundle cap; L-BFGS-B stops at
+      10 while still infeasible. A common cap is not equal consumed work or a ranking.
 
 ## G3 — W7-X regression
 

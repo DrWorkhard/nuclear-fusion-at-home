@@ -1,5 +1,19 @@
 # Findings log
 
+## F-038 — Exact optimization accounting exposes premature numerical convergence
+
+**Class:** repeated real-coil oracle qualification and retained negative optimization result
+**Date:** 2026-09-10
+
+Both methods reproduce identical proposal histories in their two repeats. AL
+hits the exact 150-bundle cap; L-BFGS-B stops after 10 total bundles (only three
+inside its solver). The latter reports convergence after one iteration despite
+flux about 110 times above the cut-in: the common squared-vector merit is near
+6e-13. Counters, gradient mapping, cache and deterministic repeats pass; neither
+method establishes physical feasibility or superiority. A preparation bug that
+dropped finite-section regularizations was retained and corrected before the
+successful retry. See OPTIMIZATION_ORACLE_RESULTS.md.
+
 ## F-037 — Six structured coil meshes pass intrinsic integrity screens
 
 **Class:** preregistered mesh audit with adversarial analytical controls

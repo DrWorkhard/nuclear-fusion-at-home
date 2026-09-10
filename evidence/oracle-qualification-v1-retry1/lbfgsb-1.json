@@ -1,0 +1,371 @@
+{
+  "best": {
+    "arrays": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/lbfgsb-1/best.npz",
+      "sha256": "4874c247bca1dd1b17b5f8ec90c48893d444f233a015f964c32cbd601648a3fc"
+    },
+    "attempt": 4,
+    "field": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/oracle-qualification-v1-retry1/lbfgsb-1/best_field.json",
+      "sha256": "ff15c5f003ae21ad8ab881b0010ec4892fe6c182d7733cb96225a12d800f4fa8"
+    },
+    "merit": 6.042887318364295e-13,
+    "x_sha256": "b25b144bf8503b3ce6be73b4ded8f8fff3c738bbd85da67ad234f6b081e06062"
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "sha256": "da18cd19ef782b2be68621c29795f55ab1d99a3be06befdd6e31537af7fa6dad"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/budgeted_oracle.py",
+      "sha256": "34949fa1f0a6a56e1406e5ea1bb763b1b2de6acefa12e7bbf958934bc1e18c3f"
+    }
+  ],
+  "counters": {
+    "attempts": 10,
+    "cache_hits": 0,
+    "denied": 0,
+    "failed_attempts": 0,
+    "limit": 150,
+    "requests": 10
+  },
+  "elapsed_seconds": 1.7202704589999485,
+  "evaluations": [
+    {
+      "attempt": 1,
+      "elapsed_seconds": 1.0613505840010475,
+      "merit": 6.043009110871566e-13,
+      "status": "completed",
+      "values": [
+        1.0993642809252596e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "208acdd59e4a89d2507276e8e6596521105a5f4fb865b8057fa7bdf0812470e8"
+    },
+    {
+      "attempt": 2,
+      "elapsed_seconds": 0.22680379200028256,
+      "merit": 6.045180873176564e-13,
+      "status": "completed",
+      "values": [
+        1.099561810284086e-06,
+        3.106193473980798e-13,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "858942f74cefb43a9bab49a7c9301aa135e000a57fab4bf9dc5d9fc39a5436d3"
+    },
+    {
+      "attempt": 3,
+      "elapsed_seconds": 0.03714629199930641,
+      "merit": 6.04837189872042e-13,
+      "status": "completed",
+      "values": [
+        1.0998519037403597e-06,
+        1.778037283690965e-12,
+        0.0,
+        4.1180047244995407e-10,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "c72040fad6492d47f41ada10572f0a62dfa9549bd6089c4ffb6c45993f1daf03"
+    },
+    {
+      "attempt": 4,
+      "elapsed_seconds": 0.03578345899950364,
+      "merit": 6.042887318364295e-13,
+      "status": "completed",
+      "values": [
+        1.0993532024207957e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "b25b144bf8503b3ce6be73b4ded8f8fff3c738bbd85da67ad234f6b081e06062"
+    },
+    {
+      "attempt": 5,
+      "elapsed_seconds": 0.03695287499976985,
+      "merit": 6.043206228785872e-13,
+      "status": "completed",
+      "values": [
+        1.099382210951032e-06,
+        5.3628850640058364e-15,
+        0.0,
+        1.2630369181543515e-12,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "63893bd519e22422b48487288b06d94afb24a9c40b765baa3c38d698fd0534aa"
+    },
+    {
+      "attempt": 6,
+      "elapsed_seconds": 0.03549037500124541,
+      "merit": 6.042993542030843e-13,
+      "status": "completed",
+      "values": [
+        1.0993628647567502e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "87d5f90e4dbb305a95aa7999da952fdfd33dba548ad2e03a7f47baad1e0d580c"
+    },
+    {
+      "attempt": 7,
+      "elapsed_seconds": 0.03536441700089199,
+      "merit": 6.043025432965078e-13,
+      "status": "completed",
+      "values": [
+        1.0993657656089786e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "7f476fdd486f6d44137ccd4f9bcce0ce8a2a5f8c6311b72aa70b18a4fbd8efff"
+    },
+    {
+      "attempt": 8,
+      "elapsed_seconds": 0.03575074999935168,
+      "merit": 6.043009110871566e-13,
+      "status": "completed",
+      "values": [
+        1.0993642809252596e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "208acdd59e4a89d2507276e8e6596521105a5f4fb865b8057fa7bdf0812470e8"
+    },
+    {
+      "attempt": 9,
+      "elapsed_seconds": 0.16748145899873634,
+      "merit": 1667117.0684216276,
+      "status": "completed",
+      "values": [
+        104.8726425889852,
+        0.001104890943347031,
+        5.2782055087184404e-05,
+        46.845922046839796,
+        222.3201817880615,
+        1808.6500662194828,
+        0.0,
+        20.0
+      ],
+      "x_sha256": "7d0e5ea61640fd163771e17907d2c6cb405d02bf4c5b4e83c5450e1041e2de51"
+    },
+    {
+      "attempt": 10,
+      "elapsed_seconds": 0.03563070800009882,
+      "merit": 6.043009110871566e-13,
+      "status": "completed",
+      "values": [
+        1.0993642809252596e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "x_sha256": "208acdd59e4a89d2507276e8e6596521105a5f4fb865b8057fa7bdf0812470e8"
+    }
+  ],
+  "external": {
+    "simsopt": {
+      "available": true,
+      "branch": "auglag_coils",
+      "commit": "a79006b0bc1e6df8ab48de284e3457d39a49b995",
+      "dirty": false,
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt"
+    },
+    "stellcoilbench": {
+      "available": true,
+      "branch": "main",
+      "commit": "c7949edc4ea6378fc3be633304c69c288c3b79b5",
+      "dirty": false,
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench"
+    }
+  },
+  "gradient_checks": [
+    {
+      "analytic": [
+        -1.4504261012963296e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "eps": 0.0001,
+      "finite_difference": [
+        -1.4504672813687839e-06,
+        -7.3370896814644254e-09,
+        0.0,
+        -2.05900236224977e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalized_errors": [
+        4.118007245423015e-11,
+        7.3370896814644254e-09,
+        0.0,
+        2.05900236224977e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "analytic": [
+        -1.4504261012963296e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "eps": 1e-05,
+      "finite_difference": [
+        -1.4504265118127362e-06,
+        -2.681442532002918e-10,
+        0.0,
+        -6.315184590771757e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalized_errors": [
+        4.105164065585108e-13,
+        2.681442532002918e-10,
+        0.0,
+        6.315184590771757e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "analytic": [
+        -1.4504261012963296e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "eps": 1e-06,
+      "finite_difference": [
+        -1.4504261141837072e-06,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "normalized_errors": [
+        1.2887377593578421e-14,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "gradient_screen_pass": true,
+  "host": {
+    "captured_at": "2026-09-10T00:02:15.029841+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "installed_sources": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/stellcoilbench/coil_optimization/_optimization_loop.py",
+      "sha256": "242407cf137303985122c2f043e94c955d4a782ff2d2697e09dc929342281f6b"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/solve/augmented_lagrangian.py",
+      "sha256": "07bce649673b7a397fcf918d557331abe5c2756545b84083159bc57b7280855e"
+    }
+  ],
+  "method": "lbfgsb",
+  "physical_feasibility_certified": false,
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/OPTIMIZATION_ORACLE_PROTOCOL.md",
+    "sha256": "39be627185b4cf2b407f3286b051ce9a03b5fd08b0773052f473373c8e8a475f"
+  },
+  "repeat": 1,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "ee71fe30f87248e657f409ef5b04619233fc2ecf",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "solver_return": {
+    "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH",
+    "nfev": 3,
+    "nit": 1,
+    "success": true
+  },
+  "status": "solver_returned",
+  "versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "simsopt": "0.1.dev5668+ga79006b0b",
+    "stellcoilbench": "0.1.0"
+  }
+}

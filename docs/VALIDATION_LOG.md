@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-10 — Common optimization oracle qualification completed
+
+- Corrected implementation ee71fe3; new immutable retry directory, original failure retained.
+- Four arms: identical repeats; derivative error <=1.289e-14; promoted B unchanged.
+- AL: 150 full bundles, 3561 cache hits, one denied new evaluation, exact stop.
+- L-BFGS-B: 10 bundles including seven probes; relative-reduction stop after one
+  iteration. Neither candidate meets the field-error cut-in; no feasible claim.
+- Full unit/integration suite 83 passed; Ruff clean. Legacy AL `disp` warning retained.
+- Details and prospective follow-up rationale: OPTIMIZATION_ORACLE_RESULTS.md.
+
 ## 2026-09-10 — Common optimization oracle, first preparation failure
 
 - Protocol ec1fc43; tested implementation 119388f. Full local suite: 83 passed.
