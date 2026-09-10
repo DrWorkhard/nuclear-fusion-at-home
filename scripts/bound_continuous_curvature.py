@@ -1,4 +1,4 @@
-"""Execute the frozen curvature enclosure qualification on three stored fields."""
+"""Apply the frozen curvature enclosure to a study's stored candidate fields."""
 
 import argparse
 import hashlib
@@ -31,18 +31,26 @@ def main():
     root = Path(__file__).resolve().parents[1]
     parser = argparse.ArgumentParser()
     parser.add_argument("output", type=Path)
+    parser.add_argument("--holdout", type=Path,
+                        default=root / "evidence/affine-feasibility-v1-holdout.json")
+    parser.add_argument("--study", type=Path,
+                        default=root / "evidence/affine-feasibility-v1/summary.json")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError(args.output)
-    holdout_path = root / "evidence/affine-feasibility-v1-holdout.json"
-    summary_path = root / "evidence/affine-feasibility-v1/summary.json"
+    holdout_path, summary_path = args.holdout, args.study
     holdout = json.loads(holdout_path.read_text())
     summary = json.loads(summary_path.read_text())
+    if (holdout["status"] != "completed" or summary["status"] != "completed"
+            or not summary["qualification_pass"]
+            or holdout["study"]["sha256"] != sha256_file(summary_path)):
+        raise ValueError("require completed holdout bound to the qualified study")
     fields = [("rejected-warmstart", summary["preparation"]["source"],
                summary["preparation"]["thresholds"]["a0"])]
     fields += [(c["method"], c["field"], c["a0"]) for c in holdout["candidates"]]
     result = {"schema_version": 1, "retrospective": True, "repository": git_state(root),
               "protocol": reference(root / "docs/CONTINUOUS_CURVATURE_PROTOCOL.md"),
+              "construction_protocol": summary["protocol"],
               "input_records": [reference(holdout_path), reference(summary_path)],
               "code": [reference(p) for p in (Path(__file__),
                   root / "src/fusion_baselines/curvature_bounds.py")], "fields": [],
