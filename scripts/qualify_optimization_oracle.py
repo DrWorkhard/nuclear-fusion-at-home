@@ -18,6 +18,7 @@ from simsopt.solve.augmented_lagrangian import augmented_lagrangian_method
 from stellcoilbench.case_loader import load_case
 from stellcoilbench.coil_optimization import _optimization_loop as loop
 
+from fusion_baselines.affine_coordinates import AffineCoordinates
 from fusion_baselines.budgeted_oracle import BudgetedOracle, BudgetExhausted, NamedVectorBackend
 from fusion_baselines.provenance import git_state, host_state, sha256_file, write_json_atomic
 
@@ -131,13 +132,21 @@ def prepare(root, raw):
     )
 
 
-def run_arm(method, repeat, backend, ctx, x0, raw, output, provenance, *, budget=150):
+def run_arm(method, repeat, backend, ctx, x0, raw, output, provenance, *, budget=150,
+            coordinate_scale=None):
     oracle = BudgetedOracle(backend, budget, len(x0))
+    coordinates = AffineCoordinates(x0, coordinate_scale) if coordinate_scale is not None else None
     state = {"x": x0.copy()}
     directory = raw / f"{method}-{repeat}"
     directory.mkdir()
     started = time.monotonic()
     record = {**provenance, "method": method, "repeat": repeat, "status": "running"}
+    record["coordinate_map"] = {
+        "kind": "affine" if coordinates else "identity",
+        "scale": coordinate_scale if coordinates else 1.0,
+        "physical_origin_sha256": hashlib.sha256(x0.tobytes()).hexdigest(),
+        "oracle_records_physical_coordinates": True,
+    }
     last_checkpoint = 0
 
     def checkpoint():
@@ -163,17 +172,18 @@ def run_arm(method, repeat, backend, ctx, x0, raw, output, provenance, *, budget
 
         @property
         def x(self):
-            return state["x"].copy()
+            return coordinates.solver(state["x"]) if coordinates else state["x"].copy()
 
         @x.setter
         def x(self, x):
-            state["x"] = np.asarray(x).copy()
+            state["x"] = coordinates.physical(x) if coordinates else np.asarray(x).copy()
 
         def J(self):
             return request(state["x"])[0][self.index]
 
         def dJ(self):
-            return request(state["x"])[1][self.index]
+            gradient = request(state["x"])[1][self.index]
+            return coordinates.gradient(gradient) if coordinates else gradient
 
     try:
         direction = np.random.default_rng(42).normal(size=len(x0))
@@ -202,12 +212,15 @@ def run_arm(method, repeat, backend, ctx, x0, raw, output, provenance, *, budget
         if method == "lbfgsb":
 
             def objective(x):
-                values, jacobian = request(x)
-                return float(values @ values / 2), jacobian.T @ values
+                values, jacobian = request(coordinates.physical(x) if coordinates else x)
+                gradient = jacobian.T @ values
+                return float(values @ values / 2), (
+                    coordinates.gradient(gradient) if coordinates else gradient
+                )
 
             solution = minimize(
                 objective,
-                x0.copy(),
+                coordinates.solver(x0) if coordinates else x0.copy(),
                 jac=True,
                 method="L-BFGS-B",
                 options={
@@ -278,7 +291,9 @@ def main():
     parser.add_argument("--output", type=Path, default=Path("evidence/oracle-qualification-v1"))
     parser.add_argument("--raw", type=Path, default=Path("artifacts/oracle-qualification-v1"))
     parser.add_argument("--normalized-feasibility", action="store_true")
+    parser.add_argument("--affine-feasibility", action="store_true")
     args = parser.parse_args()
+    args.normalized_feasibility = args.normalized_feasibility or args.affine_feasibility
     if args.output.exists() or args.raw.exists():
         raise FileExistsError("oracle qualification directories already exist")
     root = Path(__file__).resolve().parents[1]
@@ -290,6 +305,7 @@ def main():
             root
             / "docs"
             / (
+                "AFFINE_FEASIBILITY_PROTOCOL.md" if args.affine_feasibility else
                 "NORMALIZED_FEASIBILITY_PROTOCOL.md"
                 if args.normalized_feasibility
                 else "OPTIMIZATION_ORACLE_PROTOCOL.md"
@@ -297,9 +313,11 @@ def main():
         ),
         "base_oracle_protocol": reference(root / "docs/OPTIMIZATION_ORACLE_PROTOCOL.md"),
         "normalized_feasibility": args.normalized_feasibility,
+        "affine_feasibility": args.affine_feasibility,
         "code": [
             reference(Path(__file__)),
             reference(root / "src/fusion_baselines/budgeted_oracle.py"),
+            reference(root / "src/fusion_baselines/affine_coordinates.py"),
         ],
         "versions": {
             name: importlib.metadata.version(name)
@@ -373,6 +391,7 @@ def main():
                     path,
                     provenance,
                     budget=1500 if args.normalized_feasibility else 150,
+                    coordinate_scale=0.01 if args.affine_feasibility else None,
                 )
                 pair.append(arm)
                 report["arms"].append(reference(path))
