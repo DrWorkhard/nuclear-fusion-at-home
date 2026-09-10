@@ -124,8 +124,8 @@ def prepare(root, raw):
     )
 
 
-def run_arm(method, repeat, backend, ctx, x0, raw, output, provenance):
-    oracle = BudgetedOracle(backend, 150, len(x0))
+def run_arm(method, repeat, backend, ctx, x0, raw, output, provenance, *, budget=150):
+    oracle = BudgetedOracle(backend, budget, len(x0))
     state = {"x": x0.copy()}
     directory = raw / f"{method}-{repeat}"
     directory.mkdir()
@@ -270,6 +270,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=Path("evidence/oracle-qualification-v1"))
     parser.add_argument("--raw", type=Path, default=Path("artifacts/oracle-qualification-v1"))
+    parser.add_argument("--normalized-feasibility", action="store_true")
     args = parser.parse_args()
     if args.output.exists() or args.raw.exists():
         raise FileExistsError("oracle qualification directories already exist")
@@ -278,7 +279,17 @@ def main():
         "schema_version": 1,
         "repository": git_state(root),
         "host": host_state(),
-        "protocol": reference(root / "docs/OPTIMIZATION_ORACLE_PROTOCOL.md"),
+        "protocol": reference(
+            root
+            / "docs"
+            / (
+                "NORMALIZED_FEASIBILITY_PROTOCOL.md"
+                if args.normalized_feasibility
+                else "OPTIMIZATION_ORACLE_PROTOCOL.md"
+            )
+        ),
+        "base_oracle_protocol": reference(root / "docs/OPTIMIZATION_ORACLE_PROTOCOL.md"),
+        "normalized_feasibility": args.normalized_feasibility,
         "code": [
             reference(Path(__file__)),
             reference(root / "src/fusion_baselines/budgeted_oracle.py"),
@@ -321,8 +332,23 @@ def main():
     try:
         ctx, backend, preparation = prepare(root, args.raw)
         report["preparation"] = preparation
-        write_json_atomic(args.output / "summary.json", report)
         x0 = ctx.Jf.x.copy()
+        if args.normalized_feasibility:
+            shared = BudgetedOracle(backend, 1, len(x0))
+            values, _ = shared.evaluate(x0)
+            norm = float(np.linalg.norm(values))
+            if not np.isfinite(norm) or norm <= 0:
+                raise ValueError("initial common vector norm must be finite and positive")
+            factor = 1 / norm
+            backend.scales *= factor
+            report["normalization"] = {
+                "initial_norm": norm,
+                "factor": factor,
+                "shared_counters": shared.counters(),
+                "shared_evaluations": shared.records,
+                "normalized_scales": backend.scales.tolist(),
+            }
+        write_json_atomic(args.output / "summary.json", report)
         report["arms"] = []
         checks = {}
         for method in ["lbfgsb", "auglag"]:
@@ -330,7 +356,17 @@ def main():
             for repeat in [1, 2]:
                 ctx.Jf.x = x0.copy()
                 path = args.output / f"{method}-{repeat}.json"
-                arm = run_arm(method, repeat, backend, ctx, x0, args.raw, path, provenance)
+                arm = run_arm(
+                    method,
+                    repeat,
+                    backend,
+                    ctx,
+                    x0,
+                    args.raw,
+                    path,
+                    provenance,
+                    budget=1500 if args.normalized_feasibility else 150,
+                )
                 pair.append(arm)
                 report["arms"].append(reference(path))
                 if arm["status"] == "error":
