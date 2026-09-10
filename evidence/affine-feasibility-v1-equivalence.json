@@ -1,0 +1,133 @@
+{
+  "all_pass": true,
+  "arms": [
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/lbfgsb-1.json",
+        "sha256": "b7bedb55edd5cf3fbb2bbee63b4163bebcae38efb9955895ba98f88954f61046"
+      },
+      "best_origin": "solver_proposal",
+      "checks": {
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "budget_stop_is_exact": true,
+        "contiguous_attempts": true,
+        "exact_proposal_count": true,
+        "fixed_coordinate_scale": true,
+        "no_failed_evaluation": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "same_seven_physical_probes": true,
+        "within_cap": true
+      },
+      "pass": true
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/lbfgsb-2.json",
+        "sha256": "7373b23a78f0f72e95d53a154747455fd1b19a7c1a393652b9bdf66cbe22cfb8"
+      },
+      "best_origin": "solver_proposal",
+      "checks": {
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "budget_stop_is_exact": true,
+        "contiguous_attempts": true,
+        "exact_proposal_count": true,
+        "fixed_coordinate_scale": true,
+        "no_failed_evaluation": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "same_seven_physical_probes": true,
+        "within_cap": true
+      },
+      "pass": true
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/auglag-1.json",
+        "sha256": "9a8951c8164b22060747aa74b686376055e9a49284c7c3d31f1ee34522afb117"
+      },
+      "best_origin": "solver_proposal",
+      "checks": {
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "budget_stop_is_exact": true,
+        "contiguous_attempts": true,
+        "exact_proposal_count": true,
+        "fixed_coordinate_scale": true,
+        "no_failed_evaluation": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "same_seven_physical_probes": true,
+        "within_cap": true
+      },
+      "pass": true
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/auglag-2.json",
+        "sha256": "37cb23af48ed734dff04ab7c89d6319d10311e0a28ce9096244c3ef55b592926"
+      },
+      "best_origin": "solver_proposal",
+      "checks": {
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "budget_stop_is_exact": true,
+        "contiguous_attempts": true,
+        "exact_proposal_count": true,
+        "fixed_coordinate_scale": true,
+        "no_failed_evaluation": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "same_seven_physical_probes": true,
+        "within_cap": true
+      },
+      "pass": true
+    }
+  ],
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_affine_equivalence.py",
+    "sha256": "c5e7b5231ad44ac8caaa6d4abbc8868f69b21b56c1d246e8339d9743ee057271"
+  },
+  "limits": "No new physics calls; this audit does not establish feasibility.",
+  "new_study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/affine-feasibility-v1/summary.json",
+    "sha256": "86737d7f09e3678dec161ac55e8f40b1004861101185bf50d8f22cc1fcf09b75"
+  },
+  "old_study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-feasibility-v1/summary.json",
+    "sha256": "b812e620382550196ea2eac143ebcff25d47b0c715947b1e2142a96bb84dbf2f"
+  },
+  "physical_problem_checks": {
+    "case": true,
+    "constraint_terms": true,
+    "degrees_of_freedom": true,
+    "fixture_transformation": true,
+    "normalization_factor": true,
+    "normalization_initial_norm": true,
+    "normalization_normalized_scales": true,
+    "physical_source_parent": true,
+    "promotion_relative_B_difference": true,
+    "regularizations_preserved": true,
+    "scales": true,
+    "surface": true,
+    "thresholds": true
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "ba74e3938e582007a6884dc50ba1f2741e063f5b",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1
+}
