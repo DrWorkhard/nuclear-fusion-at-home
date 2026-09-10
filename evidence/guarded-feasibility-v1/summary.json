@@ -1,0 +1,437 @@
+{
+  "affine_feasibility": true,
+  "arms": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/trf-1.json",
+      "sha256": "8942d9699b3d0ad4006112868185bd2ce23ec628bb4d9c471b52ed11c4c51ecc"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-feasibility-v1/trf-2.json",
+      "sha256": "0b769a2ff915798a735113af0a4d4a5202dc1e596deacc1eb41e69d62a93aa91"
+    }
+  ],
+  "base_oracle_protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/OPTIMIZATION_ORACLE_PROTOCOL.md",
+    "sha256": "39be627185b4cf2b407f3286b051ce9a03b5fd08b0773052f473373c8e8a475f"
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "sha256": "8eaaeb159e81254c87da60d3df4a1a50a8b7ae6b9cf0f9a6174ba4efc1c22bde"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/budgeted_oracle.py",
+      "sha256": "34949fa1f0a6a56e1406e5ea1bb763b1b2de6acefa12e7bbf958934bc1e18c3f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/affine_coordinates.py",
+      "sha256": "6b0b1f77da24460b486d167fc745b3a8bbe3ba58e96814b97ea3c0d0d471040f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "sha256": "e504e6a600aa0f8ff141d0589b31829f421dbd0ba4601889b646ac11b734a967"
+    }
+  ],
+  "curvature_gradient_qualification": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/guarded-curvature-gradient-v1.json",
+    "sha256": "06eae2d9227bbb1af37be784d3237d58447830d0bfd4f9b6e1ea1a31a23312b6"
+  },
+  "external": {
+    "simsopt": {
+      "available": true,
+      "branch": "auglag_coils",
+      "commit": "a79006b0bc1e6df8ab48de284e3457d39a49b995",
+      "dirty": false,
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt"
+    },
+    "stellcoilbench": {
+      "available": true,
+      "branch": "main",
+      "commit": "c7949edc4ea6378fc3be633304c69c288c3b79b5",
+      "dirty": false,
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench"
+    }
+  },
+  "guarded_curvature": true,
+  "host": {
+    "captured_at": "2026-09-10T20:24:58.616421+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "installed_sources": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/stellcoilbench/coil_optimization/_optimization_loop.py",
+      "sha256": "242407cf137303985122c2f043e94c955d4a782ff2d2697e09dc929342281f6b"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/solve/augmented_lagrangian.py",
+      "sha256": "07bce649673b7a397fcf918d557331abe5c2756545b84083159bc57b7280855e"
+    }
+  ],
+  "least_squares_source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/least_squares.py",
+    "sha256": "5b1508ade745706ddf335eb9533314664d98449fd7cbff1f7ac05d2e8226624d"
+  },
+  "least_squares_support_sources": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py",
+      "sha256": "0c7c29d5d3fd6915720e9547f051d47e14ca5a821e7872686aa8cf1d1c4e4893"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py",
+      "sha256": "92d953094ad7336777a79dfb46ed6cac49542caa39ea539c30add09841541dd3"
+    }
+  ],
+  "methods": [
+    "trf"
+  ],
+  "normalization": {
+    "factor": 20808.485431056673,
+    "initial_norm": 4.805731792990083e-05,
+    "normalized_scales": [
+      20808.485431056673,
+      20403.578739395423,
+      20403.578739395423,
+      20403.57873939542,
+      21013.942131725984,
+      21642.564255794514,
+      20006.551017565747,
+      20808.485431056673
+    ],
+    "shared_counters": {
+      "attempts": 1,
+      "cache_hits": 0,
+      "denied": 0,
+      "failed_attempts": 0,
+      "limit": 1,
+      "requests": 1
+    },
+    "shared_evaluations": [
+      {
+        "attempt": 1,
+        "elapsed_seconds": 1.2614017919986509,
+        "merit": 1.1547529033077839e-09,
+        "status": "completed",
+        "values": [
+          1.0993642809252596e-06,
+          0.0,
+          0.0,
+          4.8044741697644636e-05,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "x_sha256": "208acdd59e4a89d2507276e8e6596521105a5f4fb865b8057fa7bdf0812470e8"
+      }
+    ]
+  },
+  "normalized_feasibility": true,
+  "preparation": {
+    "case": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/cases/lpqa_engineering_v1p1_lbfgsb.yaml",
+      "sha256": "4a0bd130270fc887988ac33de974e04b6fac6da2da2faaa0e66a4f49535b64b9"
+    },
+    "constraint_terms": {
+      "3": "total_length",
+      "4": "coil_curvature",
+      "5": "coil_mean_squared_curvature",
+      "6": "coil_arclength_variation",
+      "7": "linking_number"
+    },
+    "degrees_of_freedom": [
+      "Current1:x0",
+      "Current2:x0",
+      "Current3:x0",
+      "CurveXYZFourier5:xc(0)",
+      "CurveXYZFourier5:xs(1)",
+      "CurveXYZFourier5:xc(1)",
+      "CurveXYZFourier5:xs(2)",
+      "CurveXYZFourier5:xc(2)",
+      "CurveXYZFourier5:xs(3)",
+      "CurveXYZFourier5:xc(3)",
+      "CurveXYZFourier5:xs(4)",
+      "CurveXYZFourier5:xc(4)",
+      "CurveXYZFourier5:xs(5)",
+      "CurveXYZFourier5:xc(5)",
+      "CurveXYZFourier5:xs(6)",
+      "CurveXYZFourier5:xc(6)",
+      "CurveXYZFourier5:xs(7)",
+      "CurveXYZFourier5:xc(7)",
+      "CurveXYZFourier5:xs(8)",
+      "CurveXYZFourier5:xc(8)",
+      "CurveXYZFourier5:yc(0)",
+      "CurveXYZFourier5:ys(1)",
+      "CurveXYZFourier5:yc(1)",
+      "CurveXYZFourier5:ys(2)",
+      "CurveXYZFourier5:yc(2)",
+      "CurveXYZFourier5:ys(3)",
+      "CurveXYZFourier5:yc(3)",
+      "CurveXYZFourier5:ys(4)",
+      "CurveXYZFourier5:yc(4)",
+      "CurveXYZFourier5:ys(5)",
+      "CurveXYZFourier5:yc(5)",
+      "CurveXYZFourier5:ys(6)",
+      "CurveXYZFourier5:yc(6)",
+      "CurveXYZFourier5:ys(7)",
+      "CurveXYZFourier5:yc(7)",
+      "CurveXYZFourier5:ys(8)",
+      "CurveXYZFourier5:yc(8)",
+      "CurveXYZFourier5:zc(0)",
+      "CurveXYZFourier5:zs(1)",
+      "CurveXYZFourier5:zc(1)",
+      "CurveXYZFourier5:zs(2)",
+      "CurveXYZFourier5:zc(2)",
+      "CurveXYZFourier5:zs(3)",
+      "CurveXYZFourier5:zc(3)",
+      "CurveXYZFourier5:zs(4)",
+      "CurveXYZFourier5:zc(4)",
+      "CurveXYZFourier5:zs(5)",
+      "CurveXYZFourier5:zc(5)",
+      "CurveXYZFourier5:zs(6)",
+      "CurveXYZFourier5:zc(6)",
+      "CurveXYZFourier5:zs(7)",
+      "CurveXYZFourier5:zc(7)",
+      "CurveXYZFourier5:zs(8)",
+      "CurveXYZFourier5:zc(8)",
+      "CurveXYZFourier6:xc(0)",
+      "CurveXYZFourier6:xs(1)",
+      "CurveXYZFourier6:xc(1)",
+      "CurveXYZFourier6:xs(2)",
+      "CurveXYZFourier6:xc(2)",
+      "CurveXYZFourier6:xs(3)",
+      "CurveXYZFourier6:xc(3)",
+      "CurveXYZFourier6:xs(4)",
+      "CurveXYZFourier6:xc(4)",
+      "CurveXYZFourier6:xs(5)",
+      "CurveXYZFourier6:xc(5)",
+      "CurveXYZFourier6:xs(6)",
+      "CurveXYZFourier6:xc(6)",
+      "CurveXYZFourier6:xs(7)",
+      "CurveXYZFourier6:xc(7)",
+      "CurveXYZFourier6:xs(8)",
+      "CurveXYZFourier6:xc(8)",
+      "CurveXYZFourier6:yc(0)",
+      "CurveXYZFourier6:ys(1)",
+      "CurveXYZFourier6:yc(1)",
+      "CurveXYZFourier6:ys(2)",
+      "CurveXYZFourier6:yc(2)",
+      "CurveXYZFourier6:ys(3)",
+      "CurveXYZFourier6:yc(3)",
+      "CurveXYZFourier6:ys(4)",
+      "CurveXYZFourier6:yc(4)",
+      "CurveXYZFourier6:ys(5)",
+      "CurveXYZFourier6:yc(5)",
+      "CurveXYZFourier6:ys(6)",
+      "CurveXYZFourier6:yc(6)",
+      "CurveXYZFourier6:ys(7)",
+      "CurveXYZFourier6:yc(7)",
+      "CurveXYZFourier6:ys(8)",
+      "CurveXYZFourier6:yc(8)",
+      "CurveXYZFourier6:zc(0)",
+      "CurveXYZFourier6:zs(1)",
+      "CurveXYZFourier6:zc(1)",
+      "CurveXYZFourier6:zs(2)",
+      "CurveXYZFourier6:zc(2)",
+      "CurveXYZFourier6:zs(3)",
+      "CurveXYZFourier6:zc(3)",
+      "CurveXYZFourier6:zs(4)",
+      "CurveXYZFourier6:zc(4)",
+      "CurveXYZFourier6:zs(5)",
+      "CurveXYZFourier6:zc(5)",
+      "CurveXYZFourier6:zs(6)",
+      "CurveXYZFourier6:zc(6)",
+      "CurveXYZFourier6:zs(7)",
+      "CurveXYZFourier6:zc(7)",
+      "CurveXYZFourier6:zs(8)",
+      "CurveXYZFourier6:zc(8)",
+      "CurveXYZFourier7:xc(0)",
+      "CurveXYZFourier7:xs(1)",
+      "CurveXYZFourier7:xc(1)",
+      "CurveXYZFourier7:xs(2)",
+      "CurveXYZFourier7:xc(2)",
+      "CurveXYZFourier7:xs(3)",
+      "CurveXYZFourier7:xc(3)",
+      "CurveXYZFourier7:xs(4)",
+      "CurveXYZFourier7:xc(4)",
+      "CurveXYZFourier7:xs(5)",
+      "CurveXYZFourier7:xc(5)",
+      "CurveXYZFourier7:xs(6)",
+      "CurveXYZFourier7:xc(6)",
+      "CurveXYZFourier7:xs(7)",
+      "CurveXYZFourier7:xc(7)",
+      "CurveXYZFourier7:xs(8)",
+      "CurveXYZFourier7:xc(8)",
+      "CurveXYZFourier7:yc(0)",
+      "CurveXYZFourier7:ys(1)",
+      "CurveXYZFourier7:yc(1)",
+      "CurveXYZFourier7:ys(2)",
+      "CurveXYZFourier7:yc(2)",
+      "CurveXYZFourier7:ys(3)",
+      "CurveXYZFourier7:yc(3)",
+      "CurveXYZFourier7:ys(4)",
+      "CurveXYZFourier7:yc(4)",
+      "CurveXYZFourier7:ys(5)",
+      "CurveXYZFourier7:yc(5)",
+      "CurveXYZFourier7:ys(6)",
+      "CurveXYZFourier7:yc(6)",
+      "CurveXYZFourier7:ys(7)",
+      "CurveXYZFourier7:yc(7)",
+      "CurveXYZFourier7:ys(8)",
+      "CurveXYZFourier7:yc(8)",
+      "CurveXYZFourier7:zc(0)",
+      "CurveXYZFourier7:zs(1)",
+      "CurveXYZFourier7:zc(1)",
+      "CurveXYZFourier7:zs(2)",
+      "CurveXYZFourier7:zc(2)",
+      "CurveXYZFourier7:zs(3)",
+      "CurveXYZFourier7:zc(3)",
+      "CurveXYZFourier7:zs(4)",
+      "CurveXYZFourier7:zc(4)",
+      "CurveXYZFourier7:zs(5)",
+      "CurveXYZFourier7:zc(5)",
+      "CurveXYZFourier7:zs(6)",
+      "CurveXYZFourier7:zc(6)",
+      "CurveXYZFourier7:zs(7)",
+      "CurveXYZFourier7:zc(7)",
+      "CurveXYZFourier7:zs(8)",
+      "CurveXYZFourier7:zc(8)",
+      "CurveXYZFourier8:xc(0)",
+      "CurveXYZFourier8:xs(1)",
+      "CurveXYZFourier8:xc(1)",
+      "CurveXYZFourier8:xs(2)",
+      "CurveXYZFourier8:xc(2)",
+      "CurveXYZFourier8:xs(3)",
+      "CurveXYZFourier8:xc(3)",
+      "CurveXYZFourier8:xs(4)",
+      "CurveXYZFourier8:xc(4)",
+      "CurveXYZFourier8:xs(5)",
+      "CurveXYZFourier8:xc(5)",
+      "CurveXYZFourier8:xs(6)",
+      "CurveXYZFourier8:xc(6)",
+      "CurveXYZFourier8:xs(7)",
+      "CurveXYZFourier8:xc(7)",
+      "CurveXYZFourier8:xs(8)",
+      "CurveXYZFourier8:xc(8)",
+      "CurveXYZFourier8:yc(0)",
+      "CurveXYZFourier8:ys(1)",
+      "CurveXYZFourier8:yc(1)",
+      "CurveXYZFourier8:ys(2)",
+      "CurveXYZFourier8:yc(2)",
+      "CurveXYZFourier8:ys(3)",
+      "CurveXYZFourier8:yc(3)",
+      "CurveXYZFourier8:ys(4)",
+      "CurveXYZFourier8:yc(4)",
+      "CurveXYZFourier8:ys(5)",
+      "CurveXYZFourier8:yc(5)",
+      "CurveXYZFourier8:ys(6)",
+      "CurveXYZFourier8:yc(6)",
+      "CurveXYZFourier8:ys(7)",
+      "CurveXYZFourier8:yc(7)",
+      "CurveXYZFourier8:ys(8)",
+      "CurveXYZFourier8:yc(8)",
+      "CurveXYZFourier8:zc(0)",
+      "CurveXYZFourier8:zs(1)",
+      "CurveXYZFourier8:zc(1)",
+      "CurveXYZFourier8:zs(2)",
+      "CurveXYZFourier8:zc(2)",
+      "CurveXYZFourier8:zs(3)",
+      "CurveXYZFourier8:zc(3)",
+      "CurveXYZFourier8:zs(4)",
+      "CurveXYZFourier8:zc(4)",
+      "CurveXYZFourier8:zs(5)",
+      "CurveXYZFourier8:zc(5)",
+      "CurveXYZFourier8:zs(6)",
+      "CurveXYZFourier8:zc(6)",
+      "CurveXYZFourier8:zs(7)",
+      "CurveXYZFourier8:zc(7)",
+      "CurveXYZFourier8:zs(8)",
+      "CurveXYZFourier8:zc(8)"
+    ],
+    "guarded_search_targets": {
+      "component_index": 4,
+      "curvature_resolution": 1600,
+      "curvature_target_reactor": 0.99,
+      "field_quadrature_unchanged": 200,
+      "flux_target": 8e-09,
+      "length_target_reactor": 219.9
+    },
+    "preparation_is_shared_and_outside_per_arm_budget": true,
+    "promotion": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/guarded-feasibility-v1/promotion.npz",
+      "sha256": "ca8d358c7a9071e93565226c58113d4971d480c8a67d4451cfa3ae50595003f4"
+    },
+    "promotion_relative_B_difference": 0.0,
+    "regularizations_preserved": true,
+    "scales": [
+      1.0,
+      0.980541270386891,
+      0.980541270386891,
+      0.9805412703868909,
+      1.0098736979848935,
+      1.0400835912590245,
+      0.961461182931938,
+      1.0
+    ],
+    "shared_preparation_seconds": 0.21954170800017891,
+    "source": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/fixtures/rejected-lpqa-warmstart/field.json",
+      "sha256": "ef38a96aa6820de08d187f6362645b5450f009034706b06b2722566da9631e8c"
+    },
+    "source_parent_sha256": "7ae1b1968b8ca34fa94cc0e67cfad41577219ed43bcd902b695c7b7cc04ecd2e",
+    "source_transformation": "one terminal LF appended to archived producer bytes",
+    "surface": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+      "sha256": "4c6ba4bc391a69b5b6a5e84ff82df9b0ce92e20c42f2a47f89a9283fd5bc3458"
+    },
+    "thresholds": {
+      "a0": 10.100286074838271,
+      "arclength_variation_threshold": 102.0157787935719,
+      "cc_threshold": 0.10890780635810987,
+      "coil_width": 0.039602838675676315,
+      "cs_threshold": 0.12870922569594803,
+      "curvature_threshold": 10.100286074838271,
+      "finite_build_width": 0.05,
+      "flux_threshold": 8e-09,
+      "force_threshold": 0.0,
+      "length_threshold": 21.771660561953055,
+      "major_radius": 1.0098736979848935,
+      "minor_radius": 0.16831206437162433,
+      "msc_threshold": 10.100286074838271,
+      "torque_threshold": 0.0,
+      "torsion_threshold": 10.100286074838271
+    }
+  },
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/GUARDED_FEASIBILITY_PROTOCOL.md",
+    "sha256": "8be8cecf7d65967a91a3287b368d5decdab7e0424d0008a702fdea1a4972e4b3"
+  },
+  "qualification_pass": true,
+  "repeat_checks": {
+    "trf": {
+      "same_counters": true,
+      "same_proposals": true,
+      "same_status": true,
+      "same_values": true
+    }
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "d74662e750c9f745d3c0fea2bec07bb7eef023c8",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "status": "completed",
+  "versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "simsopt": "0.1.dev5668+ga79006b0b",
+    "stellcoilbench": "0.1.0"
+  }
+}
