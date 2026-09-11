@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Direkter SLSQP-Pilot: Protokoll](DIRECT_SLSQP_PILOT_PROTOCOL.md) — Neue beschränkte Konstruktion mit zwei festen 256-Bundle-Budgets und unabhängiger Prüfung beider Kandidaten; keine Umdeutung zum früheren Methodenvergleich.
 - [Direkte Ungleichungen: Qualifikation](DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md) — Alle 138 Zeilen bestehen die feste Ableitungsprüfung; unabhängige/native Metriken stimmen überein. Noch keine neue Konstruktion.
 - [AFFINE_FEASIBILITY_PROTOCOL ](AFFINE_FEASIBILITY_PROTOCOL.md) — Protokoll: Feste Koordinatenskalierung ermöglicht gleiche verbrauchte Budgets; beide Methoden bleiben im Holdout unzulässig.
 - [AFFINE_FEASIBILITY_RESULTS ](AFFINE_FEASIBILITY_RESULTS.md) — Ergebnis: Feste Koordinatenskalierung ermöglicht gleiche verbrauchte Budgets; beide Methoden bleiben im Holdout unzulässig.
