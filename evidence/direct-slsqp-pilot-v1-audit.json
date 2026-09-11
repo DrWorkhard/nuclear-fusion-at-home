@@ -1,0 +1,86 @@
+{
+  "additional_physics_calls": 0,
+  "all_pass": true,
+  "arms": [
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/slsqp-1.json",
+        "sha256": "04ea61a0a8c54d2ec94989a09a96cb93368d86229dd4f2897f10781ea603a73f"
+      },
+      "checks": {
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "ledger_counts": true,
+        "logical_work_accounted": true,
+        "named_serialized_parameter_identity": true,
+        "nonempty": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "status_partition": true
+      },
+      "pass": true
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/slsqp-2.json",
+        "sha256": "9de6d4b8b51958d66af6af01ec2b58bc647590af632c43ec59f7cb57f90fcaea"
+      },
+      "checks": {
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "ledger_counts": true,
+        "logical_work_accounted": true,
+        "named_serialized_parameter_identity": true,
+        "nonempty": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "status_partition": true
+      },
+      "pass": true
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_direct_slsqp_pilot.py",
+      "sha256": "c2154870f8569c598ddc909e9d6a0439817afb1be2784e0025e337df2ee1799f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_audit.py",
+      "sha256": "490bea18b06f6045fab9ec103aa4c01e6cc71aa9da1e0f21b04ff51e66c5759d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    }
+  ],
+  "physical_feasibility_certified": false,
+  "repeat_histories_match": true,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "062f3d8070c229e7ab6fd2297c6400ec5b028fc4",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/summary.json",
+    "sha256": "20f368bfd08afe63f6459675f24b2375e117d7f647c617b698ffec78bb6ac756"
+  }
+}
