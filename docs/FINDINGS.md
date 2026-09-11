@@ -1,5 +1,19 @@
 # Findings log
 
+## F-050 — Spatial residuals improve this fixed-cap search, but still fail flux acceptance
+
+**Class:** controlled repeated representation pilot, independent work audit and rejection
+**Date:** 2026-09-11
+
+Both representations repeat exactly at 128 proposals. Every spatial proposal
+preserves the scalar objective/gradient; scalar histories exactly reproduce the
+old guarded prefix. Spatial common merit is 5.88 times lower and independent raw
+flux 2.43 times lower, but wall time is about 20–26 times greater. Both candidates
+pass the declared geometry screens, including continuous curvature/clearance
+enclosures. Spatial flux still exceeds the fixed acceptance limit by 44.488 times;
+both are rejected. No equal-compute or multi-start ranking, Pareto dominance,
+feasible baseline or SoTA claim. See SPATIAL_TRF_PILOT_RESULTS.md.
+
 ## F-049 — Spatial flux factorization changes the solver model, not the objective
 
 **Class:** algebraic identity, physical Jacobian qualification and independent matrix check

@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-11 — Controlled spatial residual pilot and independent rejection
+
+- Protocol cb519cb, implementation 3ef165f; all four arms repeat exactly at
+  128 proposals, including extra-derivative counts. No failed physical bundle.
+- Independent audit f0dbcbe passes budgets, unchanged physical problem,
+  per-proposal scalar-merit identity and archived array/field identity. Both scalar
+  sequences exactly reproduce the old guarded study's first 128 proposals.
+- Across spatial proposals: maximum merit/gradient identity errors <=4.139e-14 /
+  2.471e-14. Extra work per spatial repeat: 131,072 single-point B calls, 131,072
+  single-point VJPs, 128 full-grid B requests; unequal work explicitly retained.
+- Frozen holdout exits 2: scalar/spatial flux 1.081333773e-6 / 4.448798671e-7,
+  both above 1e-8. All declared geometry screens pass; final continuous curvature
+  uppers 0.88904065 / 0.99044062 and clearance lowers 1.07908056 / 1.06968985 m pass.
+- Spatial curvature at N=200/400 is unresolved; all levels preserved. No waiver.
+- Independent Gram check reproduced in the separate core-only checkout at
+  259af03: all scalar diagnostics match exactly, no new physics calls. Checkout clean.
+- Final local suite: 173 passes; separate updated detached checkout at fb8b1c6:
+  172 passes/one expected missing-W7-X skip. Eleven fixture warnings retained;
+  Ruff passes and the separate checkout is clean. No fresh native-solver bootstrap.
+- Integrity audit of twelve spatial evidence files: 103 distinct path/hash/revision
+  references. 101 match current files; the two historical scripts match their
+  original Git blobs (c436a90 and 46c29a5). Zero unresolved mismatches.
+
 ## 2026-09-11 — Objective-preserving spatial flux qualification
 
 - Protocol d251721, implementation c436a90; eighteen core algebra/input controls.

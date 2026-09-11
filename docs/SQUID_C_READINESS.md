@@ -41,6 +41,11 @@ bounded result; missing author data is not the only remaining blocker.
       flux remains 101.752 times the fixed limit. G2 stays open. Independent replay
       exposed and corrected cross-process DOF ordering; all 14 archived best
       arrays match their serialized field parameters. See GUARDED_FEASIBILITY_RESULTS.md.
+      A controlled spatial-residual pilot now preserves the scalar objective and
+      repeats at 128 proposals per arm. Spatial raw flux is 2.43 times lower than
+      scalar, but still 44.488 times over the limit; both fail admission. Geometry
+      screens pass, while spatial derivative work is substantially greater.
+      Compute-aware and multi-start comparisons remain open (SPATIAL_TRF_PILOT_RESULTS.md).
 
 ## G3 — W7-X regression
 
