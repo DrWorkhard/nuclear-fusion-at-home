@@ -50,6 +50,10 @@ bounded result; missing author data is not the only remaining blocker.
       fails clearance. Spatial flux remains >=41.461 times the fixed limit.
       Feasible construction and multi-start comparisons remain open
       (TIMED_SPATIAL_PILOT_RESULTS.md).
+      A separately qualified direct-inequality SLSQP construction now repeats at
+      256 bundles and passes geometry/native extras, but flux remains 23.308
+      times the same limit. No converged or feasible baseline; G2 stays open
+      (DIRECT_SLSQP_PILOT_RESULTS.md).
 
 ## G3 — W7-X regression
 

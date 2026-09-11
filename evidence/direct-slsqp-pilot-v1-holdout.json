@@ -1,0 +1,282 @@
+{
+  "all_pass": false,
+  "all_repeats": true,
+  "candidates": [
+    {
+      "a0": 10.100286074838271,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/slsqp-1.json",
+        "sha256": "04ea61a0a8c54d2ec94989a09a96cb93368d86229dd4f2897f10781ea603a73f"
+      },
+      "bounded_geometry_flux_screen_pass": false,
+      "checks": {
+        "coil_coil_clearance": true,
+        "coil_flux_refinement": true,
+        "coil_plasma_clearance": true,
+        "curvature": true,
+        "flux_cut_in": false,
+        "length": true,
+        "surface_flux_refinement": true
+      },
+      "coil_coil": {
+        "1000": {
+          "centerline_distance_reactor_m": 1.090909376476595,
+          "coil_pair": [
+            0,
+            2
+          ]
+        },
+        "200": {
+          "centerline_distance_reactor_m": 1.100000456008859,
+          "coil_pair": [
+            8,
+            13
+          ]
+        },
+        "20000": {
+          "centerline_distance_reactor_m": 1.0906423232129734,
+          "coil_pair": [
+            0,
+            2
+          ]
+        },
+        "5000": {
+          "centerline_distance_reactor_m": 1.090645622255668,
+          "coil_pair": [
+            0,
+            2
+          ]
+        }
+      },
+      "coil_plasma": {
+        "128": 3.16770893552506,
+        "256": 3.167576989329447,
+        "512": 3.167567123753688,
+        "64": 3.1850278875200724
+      },
+      "elapsed_seconds": 29.610532791994046,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-slsqp-pilot-v1/slsqp-1/best_field.json",
+        "sha256": "bc341f48e2769438db96717557c5f40df6e1d065bdff5c5d4caabb8978c9980d"
+      },
+      "flux": [
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461260730982459,
+          "surface_resolution": 32,
+          "unthresholded_quadratic_flux": 2.330933800352169e-07
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461260730982459,
+          "surface_resolution": 64,
+          "unthresholded_quadratic_flux": 2.3308221166106548e-07
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461260730982459,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 2.3308221325679471e-07
+        },
+        {
+          "coil_quadrature": 800,
+          "mean_B_magnitude_T": 0.9461260730982459,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 2.33082213256795e-07
+        }
+      ],
+      "full_engineering_admission_pass": false,
+      "geometry": {
+        "1000": {
+          "maximum_curvature_reactor_inverse_m": 0.9769317390897108,
+          "unique_total_length_reactor_m": 219.90074863671515
+        },
+        "200": {
+          "maximum_curvature_reactor_inverse_m": 0.9735508389156404,
+          "unique_total_length_reactor_m": 219.90074863671518
+        },
+        "20000": {
+          "maximum_curvature_reactor_inverse_m": 0.9769793587546078,
+          "unique_total_length_reactor_m": 219.90074863671518
+        },
+        "5000": {
+          "maximum_curvature_reactor_inverse_m": 0.9769793587546078,
+          "unique_total_length_reactor_m": 219.90074863671515
+        }
+      },
+      "method": "direct-r1",
+      "work": {
+        "B_grid_evaluations": 4,
+        "B_points_total": 37888,
+        "all_pair_coil_distance_resolutions": [
+          200,
+          1000,
+          5000,
+          20000
+        ],
+        "distance_query_workers": -1,
+        "plasma_distance_curve_points": 20000,
+        "plasma_distance_surface_resolutions": [
+          64,
+          128,
+          256,
+          512
+        ]
+      }
+    },
+    {
+      "a0": 10.100286074838271,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/slsqp-2.json",
+        "sha256": "9de6d4b8b51958d66af6af01ec2b58bc647590af632c43ec59f7cb57f90fcaea"
+      },
+      "bounded_geometry_flux_screen_pass": false,
+      "checks": {
+        "coil_coil_clearance": true,
+        "coil_flux_refinement": true,
+        "coil_plasma_clearance": true,
+        "curvature": true,
+        "flux_cut_in": false,
+        "length": true,
+        "surface_flux_refinement": true
+      },
+      "coil_coil": {
+        "1000": {
+          "centerline_distance_reactor_m": 1.090909376476595,
+          "coil_pair": [
+            0,
+            2
+          ]
+        },
+        "200": {
+          "centerline_distance_reactor_m": 1.100000456008859,
+          "coil_pair": [
+            8,
+            13
+          ]
+        },
+        "20000": {
+          "centerline_distance_reactor_m": 1.0906423232129734,
+          "coil_pair": [
+            0,
+            2
+          ]
+        },
+        "5000": {
+          "centerline_distance_reactor_m": 1.090645622255668,
+          "coil_pair": [
+            0,
+            2
+          ]
+        }
+      },
+      "coil_plasma": {
+        "128": 3.16770893552506,
+        "256": 3.167576989329447,
+        "512": 3.167567123753688,
+        "64": 3.1850278875200724
+      },
+      "elapsed_seconds": 29.05662116598978,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-slsqp-pilot-v1/slsqp-2/best_field.json",
+        "sha256": "bc341f48e2769438db96717557c5f40df6e1d065bdff5c5d4caabb8978c9980d"
+      },
+      "flux": [
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461260730982459,
+          "surface_resolution": 32,
+          "unthresholded_quadratic_flux": 2.330933800352169e-07
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461260730982459,
+          "surface_resolution": 64,
+          "unthresholded_quadratic_flux": 2.3308221166106548e-07
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461260730982459,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 2.3308221325679471e-07
+        },
+        {
+          "coil_quadrature": 800,
+          "mean_B_magnitude_T": 0.9461260730982459,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 2.33082213256795e-07
+        }
+      ],
+      "full_engineering_admission_pass": false,
+      "geometry": {
+        "1000": {
+          "maximum_curvature_reactor_inverse_m": 0.9769317390897108,
+          "unique_total_length_reactor_m": 219.90074863671515
+        },
+        "200": {
+          "maximum_curvature_reactor_inverse_m": 0.9735508389156404,
+          "unique_total_length_reactor_m": 219.90074863671518
+        },
+        "20000": {
+          "maximum_curvature_reactor_inverse_m": 0.9769793587546078,
+          "unique_total_length_reactor_m": 219.90074863671518
+        },
+        "5000": {
+          "maximum_curvature_reactor_inverse_m": 0.9769793587546078,
+          "unique_total_length_reactor_m": 219.90074863671515
+        }
+      },
+      "method": "direct-r2",
+      "work": {
+        "B_grid_evaluations": 4,
+        "B_points_total": 37888,
+        "all_pair_coil_distance_resolutions": [
+          200,
+          1000,
+          5000,
+          20000
+        ],
+        "distance_query_workers": -1,
+        "plasma_distance_curve_points": 20000,
+        "plasma_distance_surface_resolutions": [
+          64,
+          128,
+          256,
+          512
+        ]
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_normalized_candidates.py",
+      "sha256": "c17aae2aeb69652f392b1e311de4f2dd1e587d6c84c170f6764b6443221fc341"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/flux_metrics.py",
+      "sha256": "ba0db34c16ec38d81073f547add5074b3c5bb2bc67b1c319cd23eea8addb5ee5"
+    }
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/NORMALIZED_FEASIBILITY_PROTOCOL.md",
+    "sha256": "344b1924ad354d7308da9193e5d3daf96aeb15f9ca475eeb16d949cb7998fb18"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "ccf80158fd14cb1cdaee250b530fcf0c72541b2d",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "status": "completed",
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/summary.json",
+    "sha256": "20f368bfd08afe63f6459675f24b2375e117d7f647c617b698ffec78bb6ac756"
+  },
+  "used_for_optimizer_feedback": false
+}

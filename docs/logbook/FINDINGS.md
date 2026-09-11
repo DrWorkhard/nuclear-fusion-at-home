@@ -1,5 +1,19 @@
 # Findings log
 
+## F-054 — Direct construction passes geometry and native extras, still fails flux
+
+**Class:** preregistered repeated constrained construction and independent rejection
+**Date:** 2026-09-11
+
+Both 256-bundle SLSQP arms reproduce exactly, including 715 requests and candidate
+selection at proposal 119. No proposal meets the 1e-8 internal selection screen;
+the predeclared least-violation fallback is retained. Independent holdout flux
+2.330822133e-7 remains 23.308 times above acceptance. Length, continuous curvature
+and inter-coil bounds, plasma-distance screen, refined native MSC/arclength
+variance and linking-zero screens pass. The terminal proposal has lower flux
+but larger violation and is not substituted after seeing results. No converged,
+feasible or SoTA baseline. See [results](../optimization/DIRECT_SLSQP_PILOT_RESULTS.md).
+
 ## F-053 — Explicit smooth inequalities pass fixed physical derivative qualification
 
 **Class:** preregistered numerical qualification, no optimization or admission

@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-11 — Direct SLSQP pilot, native holdout and historical-reference audit
+
+- Protocol/runner 3eda449, audit/native holdout 062f3d8. All proposal hashes,
+  vectors, counters and selection repeat exactly; search/audit frozen ccf8015.
+- Both arms: 256 complete bundles, 458 cache hits, one denial, no failed bundle.
+  Independent ledger/selection and named array/field identity audit passes.
+- Both immutable best fields: fine flux 2.330822133e-7, rejected. Continuous
+  curvature upper 0.976993064/m and clearance lower 1.090413138 m pass; all other
+  original bounded geometry/refinement screens pass. All levels retained.
+- Additional native MSC/arc checks at 200/800/3200 and linking at 200/800 pass.
+  No full-engineering or topological certificate follows from these screens.
+- New independent audit controls: six adversarial ledger tests; full suite before
+  hash-auditor addition 229 passed, 11 known warnings; two new hash-auditor tests pass.
+- Recent-reference audit: 471 explicit references across the declared inputs,
+  276 unique reference contexts; 398 current, 25 identically relocated, 48 matched
+  historical Git bytes, zero unresolved. Evidence recent-reference-audit-v1.json.
+  This checks lineage/bytes, not recomputation of all scientific outcomes.
+
 ## 2026-09-11 — Direct-inequality physical qualification passes
 
 - Implementation/protocol 9c6101c; both frozen states evaluated once with a full

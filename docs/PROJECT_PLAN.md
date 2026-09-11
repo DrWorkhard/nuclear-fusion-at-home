@@ -12,10 +12,12 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
 1. Erledigt: konservative glatte Ungleichungen aus roher Länge, Krümmung und
    Abständen implementiert; analytische Kontrollen und vollständige
    Richtungsableitungen an zwei festgelegten physikalischen Zuständen bestehen.
-2. Erst nach bestandener Qualifikation ein getrenntes beschränktes Suchprotokoll
-   festlegen: Initialisierung, Skalierung, Budget, Auswahlregel und Abbruch.
-3. Jeden ausgewählten Kandidaten unabhängig auf feineren Gittern und mit
-   kontinuierlichen Geometrieschranken prüfen. Keine nachträgliche Grenzwertänderung.
+2. Erledigt: getrennt festgelegter SLSQP-Pilot mit zwei identischen 256-Bundle-Läufen;
+   der ausgewählte Kandidat bleibt im Flux-Holdout unzulässig (Faktor 23,3).
+3. Erledigt für diesen Pilot: unabhängige feine Gitter, kontinuierliche
+   Geometrieschranken und zusätzliche native Bedingungen. Als Nächstes
+   Konvergenz/aktive Randbedingungen diagnostizieren; keine nachträgliche
+   Budgeterhöhung oder Grenzwertänderung des abgeschlossenen Versuchs.
 4. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

@@ -1,6 +1,6 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 11. September 2026, nach Abschluss des gleichen Zeitbudget-Vergleichs.
+Stand: 11. September 2026, nach direktem SLSQP-Pilot und unabhängigem Holdout.
 Dieses Dokument enthält die aktuelle Einschätzung; historische optimistischere
 Aussagen im Journal werden dadurch nicht wieder gültig.
 
@@ -21,7 +21,7 @@ und Verbesserungen daran zertifizieren.
 | Geometrie | Kontinuierliche Krümmungs- und Spulenabstandsschranken; bestätigte Verletzungen zwischen Stützstellen | Analytische Kontrollen und unabhängige Positionsprüfung. Gleitkommapolster, keine gerichtete Intervallarithmetik; keine vollständige Volumengeometrie |
 | W7-X | Ausgewählte physikalische Regression gegen versionspassendes VMEC 8.52 besteht | Erweiterter Vergleich 60/63; drei Ausgabedifferenzen bleiben, Auswahl teilweise retrospektiv |
 | QI bei endlichem Druck | 320 zugeordnete Potentialmulden-Familien in vier Fällen; Druckfall nfp2 durchgehend negative radiale Ableitungen im untersuchten Bereich, nfp3 gemischt | Unabhängige Quadratur und zweiter Feldlinienrechner; 319 aufgelöste Vorzeichen bestätigt, eines unaufgelöst. Keine globale maximum-J-Aussage |
-| Direkte Randbedingungen | 137 glatte Ungleichungen plus Roh-Fluxziel an zwei festen Feldern qualifiziert | Alle Ableitungszeilen bestehen die vorher festgelegte Prüfung; noch kein neuer Suchlauf oder zulässiger Entwurf |
+| Direkte Randbedingungen | 137 Ungleichungen qualifiziert; SLSQP-Pilot mit zwei exakt gleichen 256-Bundle-Läufen | Ausgewählte Felder bestehen Geometrie und zusätzliche native Metriken; Flux bleibt Faktor 23,3 über Grenze. Nicht konvergiert, nicht zulässig |
 | Software | 216 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Separater Kern-Checkout zuvor 207 bestanden + ein erwarteter W7-X-Skip; 11 bekannte NumPy-Warnungen. Kein vollständiger nativer Neuaufbau |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
@@ -30,7 +30,7 @@ Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [radiale Wirkung](qi/QI_RADIAL_ACTION_RESULTS.md) und
 [zweiter Feldlinienrechner](qi/QI_PRESSURE_TRACE_RESULTS.md).
 
-## Warum der jüngste Optimierungsversuch nicht als Erfolg zählt
+## Warum weiterhin keine zulässige Baseline vorliegt
 
 Die räumlichen Kandidaten erreichen im feineren Holdout einen Roh-Quadratic-Flux
 von 4,146e-7 beziehungsweise 4,149e-7. Zulässig wären höchstens 1e-8: Es fehlt
@@ -43,10 +43,17 @@ Startpunkt unter diesen Solver-Einstellungen. Sie beweist weder allgemeine
 Überlegenheit noch eine bessere Physik–Ingenieur-Paretofront. Eine kleine
 Strafzielfunktion setzt harte Beschränkungen nicht zuverlässig durch.
 
+Der nachfolgende [direkte SLSQP-Pilot](optimization/DIRECT_SLSQP_PILOT_RESULTS.md)
+erreicht 2,331e-7 im unabhängigen Flux-Holdout, bleibt also Faktor 23,3 über der
+Grenze. Geometrie und zusätzliche native Bedingungen bestehen. Der Lauf endet
+am Budget; weder Konvergenz noch eine zulässige klassische Baseline sind erreicht.
+Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
+
 ## Offene Arbeit, nach Bedeutung
 
 1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
-   einen getrennt festgelegten beschränkten Suchlauf prüfen. Danach mehrere
+   Konvergenz und aktive Randbedingungen des abgeschlossenen Piloten diagnostizieren,
+   dann einen getrennt festgelegten Folgelauf prüfen. Danach mehrere
    Initialisierungen und fairer Methodenvergleich. Nicht nur mehr Rechenzeit auf
    denselben Strafansatz geben.
 2. **QI-Maßstab:** vollständiger relevanter Invariantenbereich, Mulden-Identität,

@@ -46,6 +46,9 @@ aktueller oder universeller Beweis, dass keine Daten existieren.
   Bouncewirkungsableitungen. Der untersuchte Bereich ist begrenzt.
 - Der ausgewählte W7-X-Gleichgewichtsvergleich besteht. Im erweiterten
   Dateivergleich bleiben drei von 63 Größen abweichend.
+- Ein anschließender Pilot mit direkten Randbedingungen besteht Geometrie- und
+  zusätzliche native Prüfungen. Sein Magnetfeldfehler bleibt jedoch Faktor 23,3
+  über der festen Grenze; eine zulässige Baseline ist weiterhin offen.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 
