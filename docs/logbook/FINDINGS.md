@@ -1,5 +1,19 @@
 # Findings log
 
+## F-055 — Independent complex steps distinguish an unreliable difference screen
+
+**Class:** retained failed diagnostic followed by independently qualified derivatives
+**Date:** 2026-09-11
+
+The new selected-point finite-difference screen fails at 1.207e-6 versus its
+1e-6 limit, so no descent probes run. All four failing rows are pair clearances.
+Independent Fourier/complex value evaluation then matches all 120 pair directions
+at both frozen states, two seeds and three imaginary steps: maximum normalized
+discrepancy 2.402e-12 and step disagreement 1.166e-14. Other original rows pass
+unchanged. This supports cancellation in the tiny real difference, not a native
+gradient defect. The original failure is retained; a separately declared composite
+gate is required for new probes. See [results](../optimization/COMPLEX_CLEARANCE_RESULTS.md).
+
 ## F-054 — Direct construction passes geometry and native extras, still fails flux
 
 **Class:** preregistered repeated constrained construction and independent rejection

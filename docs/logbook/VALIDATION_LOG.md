@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-11 — Independent complex-clearance qualification passes
+
+- c1ca108 precedes all evaluations. Both states, all 120 pairs, seeds 47/48 and
+  h=1e-12/1e-20/1e-28 pass without tolerance changes.
+- Independent real-value discrepancy <=6.440e-15; directional discrepancy
+  <=2.402e-12; inter-step discrepancy <=1.166e-14. All stored current columns zero.
+- Unchanged non-pair rows of the original selected-state FD screen pass with
+  maximum error 4.167e-7. The original all-row FD gate remains failed.
+- Saved independent coefficients/directions/anchors permit core-only numerical
+  replay. No nonlinear descent probes or new optimization were performed here.
+
 ## 2026-09-11 — Independent complex-clearance check prepared
 
 - All four failed selected-state directional rows are pair clearances. New
