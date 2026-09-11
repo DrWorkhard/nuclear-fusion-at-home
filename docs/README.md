@@ -54,21 +54,25 @@ aktueller oder universeller Beweis, dass keine Daten existieren.
 
 ## Was inzwischen belastbar ist
 
-- Eine analytisch geprüfte räumliche Darstellung des Magnetfeldfehlers erhält
-  Zielfunktion und Gradienten. Ihre beschleunigte Ableitung ermöglicht einen
+- **Landreman-Paul QA / StellCoilBench:** Eine analytisch geprüfte räumliche
+  Darstellung des Magnetfeldfehlers erhält Zielfunktion und Gradienten.
+  Ihre beschleunigte Ableitung ermöglicht einen
   wiederholten Vergleich bei gleichem Zeitbudget. An einem festen Startpunkt ist
   der Magnetfeldfehler rund 2,35-fach kleiner; trotzdem sind alle Entwürfe unzulässig.
-- Unabhängige Geometrieprüfungen finden Krümmungsverletzungen zwischen den
-  Optimierungsstützstellen. Kontinuierliche Schranken verhindern hier falsche
+- **Landreman-Paul QA / StellCoilBench:** Unabhängige Geometrieprüfungen finden
+  Krümmungsverletzungen zwischen den Optimierungsstützstellen.
+  Kontinuierliche Schranken verhindern hier falsche
   Freigaben, unter ausdrücklich dokumentierten Gleitkomma-Annahmen.
-- QI-Teilmessungen sind gegen unabhängige Integration und Feldlinienrekonstruktion
-  geprüft. Endlicher Plasmadruck verändert die gemessenen Vorzeichen radialer
-  Bouncewirkungsableitungen. Der untersuchte Bereich ist begrenzt.
-- Der ausgewählte W7-X-Gleichgewichtsvergleich besteht. Im erweiterten
+- **Offene Goodman-QI-Fälle:** QI-Teilmessungen sind gegen unabhängige Integration
+  und Feldlinienrekonstruktion geprüft. Endlicher Plasmadruck verändert die
+  gemessenen Vorzeichen radialer Bouncewirkungsableitungen. Der untersuchte
+  Bereich ist begrenzt.
+- **W7-X:** Der ausgewählte Gleichgewichtsvergleich besteht. Im erweiterten
   Dateivergleich bleiben drei von 63 Größen abweichend.
-- Ein anschließender Pilot mit direkten Randbedingungen besteht Geometrie- und
-  zusätzliche native Prüfungen. Sein Magnetfeldfehler bleibt jedoch Faktor 23,3
-  über der festen Grenze; eine zulässige Baseline ist weiterhin offen.
+- **Landreman-Paul QA / StellCoilBench:** Ein anschließender Pilot mit direkten
+  Randbedingungen besteht Geometrie- und zusätzliche native Prüfungen. Sein
+  Magnetfeldfehler bleibt jedoch Faktor 23,3 über der festen Grenze;
+  eine zulässige Baseline ist weiterhin offen.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 
