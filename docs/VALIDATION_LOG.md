@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-11 — Batched derivative qualification and timed-study preparation
+
+- Protocol 4544385, implementation 44e3435. Four analytic/adversarial core controls.
+- First attempt fails report serialization after saving original.npz; NumPy
+  boolean reporting is corrected at d6694f5. Original raw files are retained.
+- Complete retry passes both states and all three repeats: matrix discrepancy
+  <=8.882e-16; field projections, original scalar gradient and directional checks
+  pass. Matrix assembly 0.304–0.337 s; no field-point mutation.
+- Timed protocol 919fc6f, final pre-run implementation 8d21af5: two 300-second arms
+  per representation with one shared recorded warmup. Seven deadline controls and
+  an additional representation branch/field-mismatch test pass.
+- Independent deadline/prefix audit 3b20d0b has seven additional adversarial tests;
+  final four-arm audit c12c811 and all-repeat physical holdout are ready before
+  outcome assessment. No heavy benchmark is launched concurrently with timing.
+
 ## 2026-09-11 — Controlled spatial residual pilot and independent rejection
 
 - Protocol cb519cb, implementation 3ef165f; all four arms repeat exactly at

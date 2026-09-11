@@ -1,5 +1,19 @@
 # Findings log
 
+## F-051 — Per-coil analytic contractions preserve the spatial Jacobian at lower cost
+
+**Class:** independent analytic kernel, physical matrix equivalence and repeated timings
+**Date:** 2026-09-11
+
+The ideal-filament field/Jacobian can be assembled with sixteen physical-coil
+contractions instead of 1024 separate adjoint traversals. Analytic controls and
+both fixed physical states pass; maximum normalized Jacobian discrepancy is
+8.882e-16. All three repetitions per state are identical, with assembly times
+0.304–0.337 s versus about 1.05 s for the previous reference. A report-serialization
+failure was retained and corrected before the successful full retry. No physical
+candidate improvement follows without a separately evaluated search. See
+BATCHED_SPATIAL_JACOBIAN_RESULTS.md.
+
 ## F-050 — Spatial residuals improve this fixed-cap search, but still fail flux acceptance
 
 **Class:** controlled repeated representation pilot, independent work audit and rejection
