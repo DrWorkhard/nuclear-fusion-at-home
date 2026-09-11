@@ -41,7 +41,14 @@ Prüfliste. Das [Journal](logbook/README.md) enthält den Arbeitsnachweis.
 ## Reihenfolge nach der klassischen Baseline
 
 QI-Messung und Ingenieurprüfungen qualifizieren, anschließend robuste Optimierung
-und freie Plasmareaktion zusammenführen. Erst dann lohnt sich eine Aussage über
+und freie Plasmareaktion zusammenführen. Langfristig eigene magnetische
+Plasmaoberflächen und QI-Gleichgewichte entwickeln: Die Oberflächenform wird
+selbst zum Entwurfsparameter, die Einschlussphysik am zugehörigen Gleichgewicht
+bewertet. Plasmakonfiguration und Spulen anschließend gemeinsam weiterentwickeln,
+damit Anforderungen an baubare und robuste Spulen auf den Plasmaentwurf
+zurückwirken. Die [Gesamtübersicht](README.md#langfristiger-plan-und-aktueller-schwerpunkt)
+ordnet diese geplanten Arbeiten gegenüber dem aktuellen Schwerpunkt ein.
+Erst dann lohnt sich eine Aussage über
 eine bessere Physik–Ingenieur-Paretofront. Lernende Surrogate, Active Learning,
 globale oder hybride Verfahren werden eingesetzt, wenn ihr messbarer Nutzen
 gegen die klassische Baseline geprüft werden kann.

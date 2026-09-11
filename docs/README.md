@@ -8,10 +8,11 @@ In etwa zehn Minuten: diese Seite, [Ergebnisstand](STATUS.md), dann
 
 Können wir Stellaratorspulen mit einem besseren Kompromiss aus Magnetfeldqualität,
 Baubarkeit und Robustheit konstruieren, und diesen Vorteil unabhängig am Computer
-nachweisen? Langfristig interessieren uns QI-Konfigurationen in Richtung Proxima
-Fusion und SQuID-C. Ein besserer Optimierungswert allein beantwortet die Frage
-nicht: Ein Entwurf muss zuerst alle festgelegten physikalischen und geometrischen
-Anforderungen erfüllen.
+nachweisen? Langfristig wollen wir eigene magnetische Plasmaoberflächen und
+QI-Plasmakonfigurationen samt passenden Spulen entwickeln, mit Proxima Fusion
+und SQuID-C als wissenschaftlicher Orientierung. Ein besserer Optimierungswert
+allein beantwortet die Frage nicht: Ein Entwurf muss zuerst alle festgelegten
+physikalischen und geometrischen Anforderungen erfüllen.
 
 Der bisherige Beitrag ist eine geprüfte Versuchs- und Validierungsinfrastruktur
 mit einigen methodischen Teilergebnissen. Es gibt **noch keinen nachgewiesenen
@@ -19,7 +20,28 @@ SoTA-Entwurf, keine zulässige neue Optimierungsbaseline und keine vollständige
 SQuID-C-Bereitschaft**. Auch ein qualifizierter Magnetfeldentwurf wäre noch kein
 Nachweis besserer Kraftwerksleistung oder wirtschaftlicher Energiegewinnung.
 
-## Drei Referenzfälle mit unterschiedlichen Aufgaben
+## Langfristiger Plan und aktueller Schwerpunkt
+
+| Schritt | Angestrebtes Ergebnis | Stand |
+| --- | --- | --- |
+| 1. Rechen- und Prüfwerkzeuge absichern | Gleichgewichte, Magnetfelder, QI-Eigenschaften und Spulengeometrie an bekannten Referenzfällen zuverlässig berechnen und unabhängig prüfen | **In Arbeit:** Teilprüfungen bestehen, weitere physikalische und technische Prüfungen sind offen |
+| 2. Spulen für eine vorgegebene Plasmaoberfläche entwickeln | Eine zulässige klassische Spulenlösung als Vergleichsbasis; darauf aufbauend faire Vergleiche von Optimierungsverfahren | **Aktueller Optimierungsschwerpunkt:** Landreman-Paul QA; noch keine neue zulässige Lösung |
+| 3. Eigene QI-Plasmakonfigurationen entwickeln | Die magnetische Plasmaoberfläche selbst variieren und das zugehörige Gleichgewicht auf günstige Einschlussbedingungen optimieren | Geplant; derzeit verwenden wir vorhandene Referenzkonfigurationen |
+| 4. Plasma und Spulen gemeinsam weiterentwickeln | Plasmakonfiguration und Spulen aufeinander abstimmen, einschließlich endlichem Plasmadruck, Fertigungsabweichungen und technischen Anforderungen | Langfristig geplant; erste Prüfwerkzeuge dafür entstehen bereits |
+| 5. Verbesserungen belastbar nachweisen | Eigene Entwürfe unabhängig prüfen und ihren Vorteil gegenüber reproduzierten Referenzentwürfen unter gleichen Anforderungen belegen | Offen; eine bessere Optimierungszahl allein genügt nicht |
+
+**Wir arbeiten derzeit an Schritt 1 und 2.** Die vorgegebene Plasmaoberfläche ist
+eine kontrollierte Entwicklungsaufgabe für unsere Methoden. In Schritt 3 wird
+ihre Form selbst zum Entwurfsparameter; gute Einschlussphysik muss am zugehörigen
+Gleichgewicht geprüft werden und folgt nicht allein aus der Oberflächenform.
+
+Die Schritte geben die Entwicklungsrichtung an und können sich überlappen.
+Insbesondere sollen Erkenntnisse über baubare Spulen auf die Entwicklung der
+Plasmakonfiguration zurückwirken. Unabhängige Prüfung begleitet alle Schritte.
+Der [Arbeitsplan](PROJECT_PLAN.md) konkretisiert die nächsten Aufgaben und
+Erfolgskriterien.
+
+## Aktuelle Arbeit an den drei Referenzfällen
 
 Die drei Referenzfälle prüfen unterschiedliche Teile der Forschung. Sie sind
 teilweise unabhängig bearbeitbar; eine feste Reihenfolge „erst W7-X, dann
