@@ -19,13 +19,33 @@ SoTA-Entwurf, keine zulässige neue Optimierungsbaseline und keine vollständige
 SQuID-C-Bereitschaft**. Auch ein qualifizierter Magnetfeldentwurf wäre noch kein
 Nachweis besserer Kraftwerksleistung oder wirtschaftlicher Energiegewinnung.
 
-## Warum drei Ausgangspunkte?
+## Drei Referenzfälle mit unterschiedlichen Aufgaben
 
-| Ausgangspunkt | Wissenschaftlicher Zweck | Was er nicht ersetzt |
+Die drei Referenzfälle prüfen unterschiedliche Teile der Forschung. Sie sind
+teilweise unabhängig bearbeitbar; eine feste Reihenfolge „erst W7-X, dann
+Landreman-Paul, dann Goodman“ ist nicht erforderlich. Der derzeitige Startpunkt
+der eigentlichen Spulenoptimierung ist der Landreman-Paul-QA-Fall.
+
+| Referenzfall | Wissenschaftlicher Zweck | Was er nicht ersetzt |
 | --- | --- | --- |
 | W7-X | Prüfen, ob unsere Gleichgewichtsberechnung für einen festgelegten W7-X-Modellfall die Ergebnisse einer etablierten Referenzrechnung reproduziert | Validierung des vollständigen gebauten Geräts |
-| Landreman-Paul QA / StellCoilBench | Kontrollierte Optimierungsversuche mit offenen Spulendaten | QI-Physik oder SQuID-C |
-| Offene Goodman-QI-Fälle | Messung von Teilchen-Bouncewirkung und QI-relevanter Physik; Übertragbarkeit | Globale QI-/maximum-J-Zertifizierung |
+| Landreman-Paul QA / StellCoilBench | Verfahren vergleichen, die für eine vorgegebene magnetische Plasmaoberfläche passende Spulen unter festen Geometriegrenzen konstruieren | Nachweis der Übertragbarkeit auf QI-Entwürfe oder SQuID-C |
+| Offene Goodman-QI-Fälle | An vorhandenen Magnetfeldkonfigurationen prüfen, ob wir Bouncewirkung und weitere QI-relevante Eigenschaften zuverlässig berechnen | Globale QI-/maximum-J-Zertifizierung |
+
+**Parallel bearbeitbar:** Die Spulenoptimierung und die QI-Auswertung lassen sich
+an ihren jeweiligen offenen Daten entwickeln. Für die Goodman-Auswertung sind
+noch keine selbst optimierten Spulen nötig. Der W7-X-Vergleich prüft die
+Gleichgewichtsberechnung, qualifiziert aber nicht automatisch die übrigen
+Werkzeuge. Er vergleicht numerische Rechnungen, keine experimentellen Messdaten.
+
+**Beim späteren QI-Spulenentwurf müssen die Ergebnisse zusammenkommen:** Die
+Optimierung erzeugt einen Kandidaten; Feld- und Gleichgewichtsberechnungen
+bestimmen seine magnetischen Eigenschaften; die QI-Auswertung untersucht die
+relevante Einschlussphysik. Zusammen mit unabhängigen Geometrie- und
+Ingenieurprüfungen entscheidet dies über seine Eignung und kann weitere
+Optimierungsschritte anleiten. Belastbare Erfolgsaussagen setzen geprüfte
+Werkzeuge und einen unabhängig geprüften Entwurf voraus. Ein methodischer Erfolg
+am QA-Fall allein belegt noch keinen Vorteil für QI-Entwürfe.
 
 SQuID-C ist eine spätere Zielbaseline. Wir benötigen dafür ein eindeutig
 zugeordnetes, maschinenlesbares Autorenpaket und eine qualifizierte Reproduktion.
