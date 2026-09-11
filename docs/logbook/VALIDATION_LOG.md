@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-11 — Local diagnostic retained as failed derivative qualification
+
+- Protocol/code d0f0b8d. Analytic LP control and both full-vector replays pass.
+- Selected-candidate seed-47 finest directional error 1.206971714e-6 exceeds
+  the fixed 1e-6 limit; command exits 2. All coarser steps remain recorded.
+- No physical descent probes run after the gate failure. Smaller error at 1e-7
+  suggests, but does not establish, finite-difference cancellation.
+- Actual current parameters/physical amperes and block-gradient norms rule out
+  the prior speculation that uniform scaling freezes raw megaampere variables.
+- Six analytic/malformed linear-model controls pass; full suite now 237 passed,
+  11 existing fixture warnings, Ruff/docs checks pass. Numerical gates stay separate.
+
 ## 2026-09-11 — Direct SLSQP pilot, native holdout and historical-reference audit
 
 - Protocol/runner 3eda449, audit/native holdout 062f3d8. All proposal hashes,
