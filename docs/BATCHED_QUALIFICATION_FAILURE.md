@@ -11,3 +11,10 @@ Correct the report boundary by explicitly converting every check value to a
 Python bool. No numerical formula, tolerance or input is changed. Preserve the
 first attempt's raw files and use new `spatial-flux-batched-v1-retry1` output paths
 for a complete rerun of both physical states and all three timing repetitions.
+
+Subsequent read-only comparison verifies that the retained original-state NPZ
+and the retry's original-state NPZ are byte-identical, including all ten arrays
+(x, z, dz, common values/Jacobian, field, normal, direction, scale, threshold).
+Both have SHA-256 b4e3d7bd607637dcf3c1f77848effd3cdbcc44b6b3f1ef93b2caa5dc232f7121.
+This confirms the reporting correction did not alter those numerical results;
+it does not recover the first attempt's missing timing/second-state report.
