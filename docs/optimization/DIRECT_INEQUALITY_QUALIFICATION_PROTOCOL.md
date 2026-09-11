@@ -50,3 +50,22 @@ Only after qualification may a separately frozen SLSQP or other constrained
 construction be run. Existing high-resolution flux/geometry and continuous
 curvature/inter-coil holdouts are unchanged and remain mandatory. All native
 additional constraints must also be checked before any feasible-baseline claim.
+
+## Implementation controls frozen before physical qualification
+
+There are 137 inequalities plus one objective row. Scale raw flux by the fixed
+constant 1e-6 for the directional screen; this is not a physical acceptance limit.
+Compute its gradient directly from the unthresholded field VJP. The installed
+SquaredFlux.dJ also suppresses gradients near zero via an absolute 1e-10 guard,
+so blindly setting its threshold to zero is insufficient for a globally raw
+objective. The two qualification states are above this guard and can be checked
+against the native scalar gradient; no sub-guard native-gradient agreement is claimed.
+
+Require native/independent metric and gradient agreement to normalized 1e-10:
+native raw flux, all 120 native pair minima, native all-16-coil/full-torus plasma
+minimum, and independent Fourier reconstruction of length, MSC, arclength variance
+and fine curvature maxima. Preserve full per-pair bounds and margins. Verify
+surface-node invariance under the physical symmetry transforms and zero native
+linking number separately. The two fields remain fixed controls, not candidates
+that must pass the new inequalities. A failed inequality is not a failed derivative
+qualification, and a passing derivative qualification is not physical admission.

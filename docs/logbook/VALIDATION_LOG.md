@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-11 — Direct-inequality implementation before physical qualification
+
+- Isolated core clone updated to 1675c35: 207 passed, one expected missing-native
+  W7-X skip, 11 existing NumPy fixture warnings; Ruff passes and clone is clean.
+- Added raw-flux plus 137 smooth inequality rows with explicit named full/free
+  derivative mapping. Eight mapping controls plus seven smooth-bound controls
+  pass. Full working-environment suite: 216 passed; Ruff/docs checks pass.
+- Qualification protocol is supplemented before physical evaluation with fixed
+  1e-6 flux scaling, 1e-10 native/independent checks and field-gradient handling.
+  Native SquaredFlux.dJ has an additional near-zero guard, so the proposed raw
+  objective differentiates the field integral directly instead of inheriting it.
+- Original promoted field and the frozen 128-proposal spatial candidate remain
+  the only qualification states. No new constrained search has been run.
+
 ## 2026-09-11 — Documentation architecture and regression controls
 
 - Finished and committed the timed study at 65b046b before restructuring.
