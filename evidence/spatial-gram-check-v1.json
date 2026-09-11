@@ -1,0 +1,71 @@
+{
+  "additional_physics_calls": 0,
+  "all_pass": true,
+  "cases": [
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/spatial-flux-local-vjp-v1/original.npz",
+        "sha256": "2d3d86198c04d6bfeae5f0037640195b09863d75230a9fb71b1d0786e7dc5cea"
+      },
+      "checks": {
+        "closed_form": true,
+        "independent_raw_quadrature": true,
+        "positive_semidefinite_screen": true
+      },
+      "gram_difference_error": 2.313564829930106e-15,
+      "maximum_eigenvalue": 18930.59874031086,
+      "minimum_eigenvalue": -2.140599202148416e-13,
+      "name": "original",
+      "pass": true,
+      "raw_quadrature_relative_error": 5.008088995322974e-15
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/spatial-flux-local-vjp-v1/guarded-trf-best.npz",
+        "sha256": "425637886dd1d4ad73a8e3a38d21451e1f012e5549d1d84400f6507a3443bc3e"
+      },
+      "checks": {
+        "closed_form": true,
+        "independent_raw_quadrature": true,
+        "positive_semidefinite_screen": true
+      },
+      "gram_difference_error": 4.54785561461116e-16,
+      "maximum_eigenvalue": 17522.735328370345,
+      "minimum_eigenvalue": -1.0530661436251404e-13,
+      "name": "guarded-trf-best",
+      "pass": true,
+      "raw_quadrature_relative_error": 8.324477122014288e-15
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/check_spatial_gram.py",
+      "sha256": "025ace3e0673363db5577ffb64315e3b3d31aed6349db0745d7c14ec5c9365fc"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "sha256": "30c294b717c8f4905730d2d3241a3c73db1196d0494a6811441cffc3d796446f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/flux_metrics.py",
+      "sha256": "ba0db34c16ec38d81073f547add5074b3c5bb2bc67b1c319cd23eea8addb5ee5"
+    }
+  ],
+  "directed_rounding": false,
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/SPATIAL_GRAM_CHECK.md",
+    "sha256": "38c0e2b10430b85aff641071ee989983136e0ffe37b754fe95e91da4969571a5"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "46c29a521d24c97c6cbe5a832cd3e66c0b8d51d0",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/spatial-flux-local-vjp-v1.json",
+    "sha256": "aef34cfd9c8a47937e1c51eab8e55df614c9b0a458e1a400774aea4646af1bb9"
+  }
+}

@@ -52,7 +52,8 @@ def main():
             "pass": all(checks.values())})
     result = {"schema_version": 1, "repository": git_state(root), "source": reference(source),
         "protocol": reference(root / "docs/SPATIAL_GRAM_CHECK.md"),
-        "code": [reference(Path(__file__)), reference(root / "src/fusion_baselines/spatial_flux.py"),
+        "code": [reference(Path(__file__)),
+                 reference(root / "src/fusion_baselines/spatial_flux.py"),
                  reference(root / "src/fusion_baselines/flux_metrics.py")],
         "cases": records, "all_pass": len(records) == 2 and all(r["pass"] for r in records),
         "additional_physics_calls": 0, "directed_rounding": False}
