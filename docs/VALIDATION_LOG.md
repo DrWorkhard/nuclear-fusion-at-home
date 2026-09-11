@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-11 — Completed timed comparison and all-repeat physical holdout
+
+- Traces and independent ledger audit committed at 7ae7c08; all checks pass.
+- Four time stops: 6358/6571 scalar and 770/763 spatial complete proposals;
+  recorded overruns 0.0072–0.0572 s. Repetitions match throughout common prefixes.
+- All-repeat independent holdout returns 2: all four flux failures retained;
+  scalar additionally fails sampled inter-coil distance. No threshold changes.
+- Final continuous curvature bounds pass all four; spatial coarse levels remain
+  unresolved. Continuous clearance passes spatial only; sampled witnesses already
+  disprove scalar admission. Bounds are not directed-rounding certificates.
+- Full working-environment suite: 199 passed, 11 existing NumPy fixture warnings;
+  Ruff passes. This is not a full native clean-bootstrap scientific suite.
+- Next-stage smooth-bound algebra has seven passing controls, protocol/code
+  committed ec3a645; no direct-inequality physical qualification or search yet.
+
 ## 2026-09-11 — Batched derivative qualification and timed-study preparation
 
 - Protocol 4544385, implementation 44e3435. Four analytic/adversarial core controls.

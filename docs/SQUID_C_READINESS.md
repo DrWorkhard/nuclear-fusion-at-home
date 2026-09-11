@@ -45,7 +45,11 @@ bounded result; missing author data is not the only remaining blocker.
       repeats at 128 proposals per arm. Spatial raw flux is 2.43 times lower than
       scalar, but still 44.488 times over the limit; both fail admission. Geometry
       screens pass, while spatial derivative work is substantially greater.
-      Compute-aware and multi-start comparisons remain open (SPATIAL_TRF_PILOT_RESULTS.md).
+      A two-repeat, one-start 300-second comparison now finds about 2.35x lower
+      spatial flux at equal time, but all four candidates fail flux; scalar also
+      fails clearance. Spatial flux remains >=41.461 times the fixed limit.
+      Feasible construction and multi-start comparisons remain open
+      (TIMED_SPATIAL_PILOT_RESULTS.md).
 
 ## G3 — W7-X regression
 

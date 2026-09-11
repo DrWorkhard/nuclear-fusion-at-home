@@ -76,13 +76,12 @@ missing.
 
 ## Order of execution
 
-Current experiment decision (2026-09-11): objective-preserving spatial flux
-factorization is qualified, including an independent matrix check and a repeated
-128-proposal pilot. It improves this pilot's magnetic error per proposal, but
-not to acceptance and with substantially more derivative work. Next qualify a
-cheaper spatial-Jacobian evaluation against the saved reference matrices before
-a compute-aware repeated-start study. Do not count this as G2 completion; retain
-the separate QI and physical engineering qualification work.
+Current experiment decision (2026-09-11): batched spatial derivatives are
+qualified. Two 300-second runs per representation preserve the objective and
+produce about 2.35x lower spatial flux, but every candidate fails admission.
+Next qualify raw smooth inequalities before a separately frozen constrained
+construction. Do not count this as G2 completion; retain multi-start comparison
+and the separate QI and physical engineering qualification work.
 
 WP0 -> WP1 and WP2 -> WP3 -> WP4 -> WP5. Work may overlap, but no optimization
 claim can outrun the validation layer on which it depends.

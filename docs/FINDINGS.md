@@ -1,5 +1,19 @@
 # Findings log
 
+## F-052 — Spatial benefit survives equal time, but no candidate is feasible
+
+**Class:** repeated fixed-start time-budget comparison and independent rejection
+**Date:** 2026-09-11
+
+Two 300-second runs per representation pass accounting, shared-prefix repetition
+and named archive checks. Spatial raw flux is about 2.34–2.35 times lower than
+scalar at this budget, but remains 41.461–41.487 times the fixed limit. All four
+candidates fail flux; both scalar candidates additionally violate inter-coil
+clearance, with explicit sampled witnesses. Spatial geometry bounds pass. This
+is neither Pareto dominance nor a feasible or multi-start SoTA baseline. Next
+qualify direct inequalities, not a longer unqualified penalty search. See
+TIMED_SPATIAL_PILOT_RESULTS.md.
+
 ## F-051 — Per-coil analytic contractions preserve the spatial Jacobian at lower cost
 
 **Class:** independent analytic kernel, physical matrix equivalence and repeated timings
