@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Komplexe-Schritt-Abstandsprüfung: Protokoll](COMPLEX_CLEARANCE_PROTOCOL.md) — Unabhängige Fourier-/Wertberechnung prüft alle 120 Abstandsbeschränkungen; soll Rundungsauslöschung von einem Ableitungsfehler unterscheiden.
 - [Lokale Diagnostik: gestoppt](DIRECT_DESCENT_DIAGNOSTIC_RESULTS.md) — Neue Richtungsprüfung verfehlt den festen Grenzwert; keine Abstiegsprobes. Rundungsauslöschung ist eine zu prüfende Vermutung.
 - [Lokale Abstiegsdiagnostik: Protokoll](DIRECT_DESCENT_DIAGNOSTIC_PROTOCOL.md) — Prüft das lokale Modell und echte nichtlineare Änderungen mit drei kleinen, begrenzten Schritten; keine Verlängerung des abgeschlossenen Piloten.
 - [Direkter SLSQP-Pilot: Ergebnis](DIRECT_SLSQP_PILOT_RESULTS.md) — Exakt wiederholter 256-Bundle-Lauf, unabhängige Auswahlprüfung, Geometrie/nativ bestanden, Flux abgelehnt; Konvergenz offen.

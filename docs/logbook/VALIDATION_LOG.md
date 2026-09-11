@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-11 — Independent complex-clearance check prepared
+
+- All four failed selected-state directional rows are pair clearances. New
+  protocol uses independent Fourier positions and holomorphic squared distances;
+  no native geometry derivatives, no conjugation, no change to old FD tolerance.
+- Five core controls pass. The first two-circle central-difference control at
+  h=1e-6 misses its comparison tolerance due to the steep beta=512 model. A
+  three-level test now requires quadratic error reduction and the same original
+  tolerance at h=1e-7; no physical-data qualification has yet been executed.
+- Both frozen states, all 120 pairs, two fixed directions and three complex
+  steps are required. Only a separate passing qualification can authorize the
+  declared composite gate for a newly named descent diagnostic.
+
 ## 2026-09-11 — Local diagnostic retained as failed derivative qualification
 
 - Protocol/code d0f0b8d. Analytic LP control and both full-vector replays pass.
