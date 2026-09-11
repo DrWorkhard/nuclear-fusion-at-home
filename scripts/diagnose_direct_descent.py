@@ -12,6 +12,7 @@ from scipy.optimize import linprog
 from simsopt import load
 from simsopt.geo import SurfaceRZFourier
 
+from fusion_baselines.composite_gradient_gate import composite_gradient_gate
 from fusion_baselines.direct_constraints import DirectConstraintBackend
 from fusion_baselines.linear_descent import assess_step, linear_model
 from fusion_baselines.provenance import git_state, host_state, sha256_file, write_json_atomic
@@ -72,6 +73,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("output", type=Path)
     parser.add_argument("raw", type=Path)
+    parser.add_argument("--clearance-qualification", type=Path)
     args = parser.parse_args()
     if args.output.exists() or args.raw.exists():
         raise FileExistsError("new diagnostic outputs required")
@@ -104,6 +106,7 @@ def main():
             for p in (
                 "scripts/diagnose_direct_descent.py",
                 "src/fusion_baselines/linear_descent.py",
+                "src/fusion_baselines/composite_gradient_gate.py",
             )
         ],
         "qualified_backend_code": study["qualified_backend_code"],
@@ -116,6 +119,22 @@ def main():
             )
         ],
     }
+    supplement = prior_diagnostic = None
+    if args.clearance_qualification is not None:
+        supplement = json.loads(args.clearance_qualification.read_text())
+        prior_path = checked(supplement["diagnostic"])
+        prior_diagnostic = json.loads(prior_path.read_text())
+        if prior_diagnostic["study"]["sha256"] != sha256_file(summary_path):
+            raise ValueError("complex qualification belongs to another study")
+        for ref in supplement["code"]:
+            checked(ref)
+        checked(supplement["protocol"])
+        report.update(
+            clearance_qualification=reference(args.clearance_qualification),
+            previous_diagnostic=reference(prior_path),
+            derivative_qualification_protocol=supplement["protocol"],
+            gradient_gate_method="unchanged nonpair FD plus independent complex pair qualification",
+        )
     args.raw.mkdir(parents=True)
     try:
         control = solve_model(np.array([0.0, -1.0]), np.array([[-1.0, 2.0], [1.0, 1.0]]), 1.0, 1.0)
@@ -220,7 +239,36 @@ def main():
                 }
             )
         report["selected_directional_checks"] = screens
-        report["checks"]["selected_gradient"] = screens[-1]["maximum_error"] <= 1e-6
+        report["original_all_row_forward_difference_pass"] = screens[-1]["maximum_error"] <= 1e-6
+        if supplement is None:
+            report["checks"]["selected_gradient"] = report[
+                "original_all_row_forward_difference_pass"
+            ]
+        else:
+            old_inverse = np.argsort(prior_diagnostic["source_indices_in_target_order"])
+            new_inverse = np.argsort(permutation)
+            matches = []
+            for name, state_x, state_values, state_jacobian in states:
+                old_state = next(s for s in prior_diagnostic["states"] if s["name"] == name)
+                with np.load(checked(old_state["arrays"]), allow_pickle=False) as old:
+                    matches.append(
+                        bool(
+                            np.array_equal(state_x[new_inverse], old["x"][old_inverse])
+                            and discrepancy(state_values, old["values"]).max() <= 1e-10
+                            and discrepancy(
+                                state_jacobian[:, new_inverse], old["jacobian"][:, old_inverse]
+                            ).max()
+                            <= 1e-10
+                        )
+                    )
+            report["checks"]["complex_source_states_match"] = all(matches)
+            gate = composite_gradient_gate(
+                screens[-1]["normalized_errors"],
+                supplement,
+                report["previous_diagnostic"]["sha256"],
+            )
+            report["composite_gradient_gate"] = gate
+            report["checks"]["composite_gradient"] = gate["accepted"]
         if all(report["checks"].values()):
             for name, x, values, jacobian in states:
                 for index, radius in enumerate((1e-4, 1e-3, 1e-2)):
