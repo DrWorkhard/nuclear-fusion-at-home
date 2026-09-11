@@ -15,6 +15,7 @@ from simsopt._core.derivative import Derivative
 from simsopt.field import BiotSavart
 from simsopt.objectives import SquaredFlux
 
+from fusion_baselines.local_field_jacobian import local_field_jacobian
 from fusion_baselines.provenance import git_state, sha256_file, write_json_atomic
 from fusion_baselines.serialized_dofs import (
     base_coil_owners,
@@ -48,6 +49,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("output", type=Path)
     parser.add_argument("raw", type=Path)
+    parser.add_argument("--single-point-vjp", action="store_true")
     args = parser.parse_args()
     if args.output.exists() or args.raw.exists():
         raise FileExistsError("qualification outputs must be new")
@@ -74,6 +76,14 @@ def main():
                               for cls in (BiotSavart, SquaredFlux, Derivative)],
         "versions": {n: importlib.metadata.version(n) for n in ("numpy", "scipy", "simsopt")},
         "cases": [], "all_pass": False, "optimization_performed": False}
+    if args.single_point_vjp:
+        prior_path = root / "evidence/spatial-flux-factorization-v1.json"
+        prior = json.loads(prior_path.read_text())
+        if not prior["all_pass"] or len(prior["cases"]) != 2:
+            raise ValueError("original spatial qualification required")
+        report["reference_qualification"] = reference(prior_path)
+        report["local_vjp_protocol"] = reference(root / "docs/SPATIAL_FLUX_LOCAL_VJP_PROTOCOL.md")
+        report["code"].append(reference(root / "src/fusion_baselines/local_field_jacobian.py"))
     args.raw.mkdir(parents=True)
     try:
         ctx, backend, preparation = prepare(root, args.raw, guarded_curvature=True)
@@ -128,12 +138,15 @@ def main():
             dz = np.empty((len(z), len(x)))
             covector = np.zeros((len(z), 3))
             derivative_started = time.monotonic()
-            for i in range(len(z)):
-                covector[i] = weights[i]
-                dz[i] = field.B_vjp(covector)(ctx.Jf)
-                covector[i] = 0
-                if (i+1) % 128 == 0:
-                    print(f"{name}: analytic spatial rows {i+1}/{len(z)}", flush=True)
+            if args.single_point_vjp:
+                dz = local_field_jacobian(field, ctx.Jf, points, weights)
+            else:
+                for i in range(len(z)):
+                    covector[i] = weights[i]
+                    dz[i] = field.B_vjp(covector)(ctx.Jf)
+                    covector[i] = 0
+                    if (i+1) % 128 == 0:
+                        print(f"{name}: analytic spatial rows {i+1}/{len(z)}", flush=True)
             derivative_seconds = time.monotonic()-derivative_started
             r, dr = lift_flux(z, dz, scale=k, threshold=threshold)
             lifted_values = np.concatenate((r, values[1:]))
@@ -145,6 +158,15 @@ def main():
                     / (values @ values),
                 "common_gradient_error": error(lifted_jac.T @ lifted_values, common_jac.T @ values)}
             checks = {key: bool(value <= 1e-10) for key, value in metrics.items()}
+            if args.single_point_vjp:
+                previous = next(c for c in prior["cases"] if c["name"] == name)
+                old_inverse = np.argsort(prior["source_indices_in_target_order"])
+                with np.load(checked(previous["arrays"]), allow_pickle=False) as arrays:
+                    old_x = arrays["x"][old_inverse][permutation]
+                    old_dz = arrays["dz"][:, old_inverse][:, permutation]
+                metrics["local_vs_full_vjp_error"] = error(dz, old_dz)
+                checks["local_vs_full_vjp"] = metrics["local_vs_full_vjp_error"] <= 1e-10
+                checks["same_physical_state"] = np.array_equal(x, old_x)
             if name == "guarded-trf-best":
                 checks["serialized_geometry_currents"] = all(
                     np.array_equal(a.curve.gamma(), b.curve.gamma())
@@ -176,6 +198,8 @@ def main():
                 "scalar_spectrum": spectrum(common_jac), "spatial_spectrum": spectrum(lifted_jac),
                 "arrays": reference(path), "work": {"full_common_bundles": 1,
                     "additional_B_vjp_calls": len(z), "additional_field_only_requests": 7,
+                    "B_vjp_points_per_call": 1 if args.single_point_vjp else len(z),
+                    "extra_single_point_B_calls": len(z) if args.single_point_vjp else 0,
                     "common_bundle_seconds": bundle_seconds,
                     "spatial_jacobian_seconds": derivative_seconds},
                 "elapsed_seconds": time.monotonic()-started, "pass": all(checks.values())}
