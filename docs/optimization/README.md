@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Lokale Abstiegsdiagnostik: Protokoll](DIRECT_DESCENT_DIAGNOSTIC_PROTOCOL.md) — Prüft das lokale Modell und echte nichtlineare Änderungen mit drei kleinen, begrenzten Schritten; keine Verlängerung des abgeschlossenen Piloten.
 - [Direkter SLSQP-Pilot: Ergebnis](DIRECT_SLSQP_PILOT_RESULTS.md) — Exakt wiederholter 256-Bundle-Lauf, unabhängige Auswahlprüfung, Geometrie/nativ bestanden, Flux abgelehnt; Konvergenz offen.
 - [Direkter SLSQP-Pilot: Protokoll](DIRECT_SLSQP_PILOT_PROTOCOL.md) — Neue beschränkte Konstruktion mit zwei festen 256-Bundle-Budgets und unabhängiger Prüfung beider Kandidaten; keine Umdeutung zum früheren Methodenvergleich.
 - [Direkte Ungleichungen: Qualifikation](DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md) — Alle 138 Zeilen bestehen die feste Ableitungsprüfung; unabhängige/native Metriken stimmen überein. Noch keine neue Konstruktion.
