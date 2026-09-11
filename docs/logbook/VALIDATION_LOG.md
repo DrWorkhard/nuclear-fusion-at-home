@@ -10,9 +10,12 @@
 - Nine structural/adversarial tests pass. Full suite: 208 passed, 11 existing
   NumPy fixture warnings. Initial lint catches three long lines after path
   expansion; formatting corrected; Ruff and diff whitespace checks now pass.
-- A separate migration audit is prepared to verify all original hashes at
-  65b046b and path-only AST changes in all 18 affected scientific scripts.
-  This is not a new physical validation of every historical experiment.
+- Post-commit migration audit passes: all 53 historical hashes verified at
+  65b046b, all destinations present, all 18 scientific scripts differ only in
+  document-path AST constants. Fifty documents retain identical live bytes;
+  two journals and one repaired navigation link account for the three changes.
+  Evidence: evidence/documentation-migration-v1.json. This is not a new physical
+  validation of every historical experiment.
 
 ## 2026-09-11 — Completed timed comparison and all-repeat physical holdout
 
