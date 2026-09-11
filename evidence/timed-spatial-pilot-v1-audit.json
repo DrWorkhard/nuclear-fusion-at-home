@@ -1,0 +1,233 @@
+{
+  "additional_physics_calls": 0,
+  "all_pass": true,
+  "arms": [
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/timed-spatial-pilot-v1/scalar-1.json",
+        "sha256": "bb4151ce7db0098d11816d2e5c6acdbc54e21a92c3aea1c7bb861997eca72bfc"
+      },
+      "checks": {
+        "all_merits_match": true,
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "coil_contractions": true,
+        "common_merit_identity": true,
+        "contiguous_attempts": true,
+        "current_vjp_calls": true,
+        "declared_wall_budget": true,
+        "exact_proposal_count": true,
+        "finite_timing": true,
+        "fixed_coordinate_scale": true,
+        "full_grid_field_requests": true,
+        "geometry_derivative_requests": true,
+        "gradient_identity": true,
+        "gradient_screen": true,
+        "merit_identity": true,
+        "named_archive_identity": true,
+        "no_failed_evaluation": true,
+        "no_single_point_B_calls": true,
+        "no_single_point_vjp_calls": true,
+        "original_common_count": true,
+        "overrun_accounted": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "terminal_status": true,
+        "wall_clock_stop": true,
+        "within_cap": true
+      },
+      "pass": true
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/timed-spatial-pilot-v1/scalar-2.json",
+        "sha256": "b38a872b972407862dc3da1382e715bc6cf8e167c983c1e5c4366757a9b2e81e"
+      },
+      "checks": {
+        "all_merits_match": true,
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "coil_contractions": true,
+        "common_merit_identity": true,
+        "contiguous_attempts": true,
+        "current_vjp_calls": true,
+        "declared_wall_budget": true,
+        "exact_proposal_count": true,
+        "finite_timing": true,
+        "fixed_coordinate_scale": true,
+        "full_grid_field_requests": true,
+        "geometry_derivative_requests": true,
+        "gradient_identity": true,
+        "gradient_screen": true,
+        "merit_identity": true,
+        "named_archive_identity": true,
+        "no_failed_evaluation": true,
+        "no_single_point_B_calls": true,
+        "no_single_point_vjp_calls": true,
+        "original_common_count": true,
+        "overrun_accounted": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "terminal_status": true,
+        "wall_clock_stop": true,
+        "within_cap": true
+      },
+      "pass": true
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/timed-spatial-pilot-v1/batched-1.json",
+        "sha256": "5b708d20232bf2eebb4789c51f1be2e2389d5eeb89af075e5d3334dc4793436a"
+      },
+      "checks": {
+        "all_merits_match": true,
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "coil_contractions": true,
+        "common_merit_identity": true,
+        "contiguous_attempts": true,
+        "current_vjp_calls": true,
+        "declared_wall_budget": true,
+        "exact_proposal_count": true,
+        "finite_timing": true,
+        "fixed_coordinate_scale": true,
+        "full_grid_field_requests": true,
+        "geometry_derivative_requests": true,
+        "gradient_identity": true,
+        "gradient_screen": true,
+        "merit_identity": true,
+        "named_archive_identity": true,
+        "no_failed_evaluation": true,
+        "no_single_point_B_calls": true,
+        "no_single_point_vjp_calls": true,
+        "original_common_count": true,
+        "overrun_accounted": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "terminal_status": true,
+        "wall_clock_stop": true,
+        "within_cap": true
+      },
+      "pass": true
+    },
+    {
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/timed-spatial-pilot-v1/batched-2.json",
+        "sha256": "61c4602dee778a8cf963a4a4ad87b4dd0bfe20428c929acbd8775dc44f6fe39e"
+      },
+      "checks": {
+        "all_merits_match": true,
+        "best_merit": true,
+        "best_physical_array_hash": true,
+        "best_selection": true,
+        "best_values": true,
+        "coil_contractions": true,
+        "common_merit_identity": true,
+        "contiguous_attempts": true,
+        "current_vjp_calls": true,
+        "declared_wall_budget": true,
+        "exact_proposal_count": true,
+        "finite_timing": true,
+        "fixed_coordinate_scale": true,
+        "full_grid_field_requests": true,
+        "geometry_derivative_requests": true,
+        "gradient_identity": true,
+        "gradient_screen": true,
+        "merit_identity": true,
+        "named_archive_identity": true,
+        "no_failed_evaluation": true,
+        "no_single_point_B_calls": true,
+        "no_single_point_vjp_calls": true,
+        "original_common_count": true,
+        "overrun_accounted": true,
+        "physical_coordinates_recorded": true,
+        "request_partition": true,
+        "terminal_status": true,
+        "wall_clock_stop": true,
+        "within_cap": true
+      },
+      "pass": true
+    }
+  ],
+  "checks": {
+    "declared_seconds": true,
+    "four_arms": true,
+    "normalization": true,
+    "same_constraint_terms": true,
+    "same_degrees_of_freedom": true,
+    "same_guarded_search_targets": true,
+    "same_regularizations_preserved": true,
+    "same_scales": true,
+    "same_thresholds": true,
+    "two_repeats_each": true
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_timed_spatial_pilot.py",
+      "sha256": "d1988f189bc5e1687b138f495277ed7acb01d6d9f8ced71e6b674732053de1a4"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/timed_audit.py",
+      "sha256": "9c890d81e497a84eed56e75bb6c3746a49f466c26fecf450b2535c765d154cd6"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/oracle_audit.py",
+      "sha256": "6f93e893332a63f834461d90b6678e68eb2a3ed498d08a0f9e6ebe270fa6272b"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    }
+  ],
+  "common_prefix_checks": {
+    "batched": {
+      "checks": {
+        "all_common_proposals_match": true,
+        "all_common_values_match": true,
+        "nonempty": true,
+        "same_stop_reason": true,
+        "same_terminal_status": true
+      },
+      "common_prefix_length": 763,
+      "counts": [
+        770,
+        763
+      ],
+      "pass": true
+    },
+    "scalar": {
+      "checks": {
+        "all_common_proposals_match": true,
+        "all_common_values_match": true,
+        "nonempty": true,
+        "same_stop_reason": true,
+        "same_terminal_status": true
+      },
+      "common_prefix_length": 6358,
+      "counts": [
+        6358,
+        6571
+      ],
+      "pass": true
+    }
+  },
+  "physical_feasibility_certified": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "0977098e736a50f332239ce0269df56086c3b635",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/timed-spatial-pilot-v1/summary.json",
+    "sha256": "228aa59ad68ca5b0c294685c9169d51c970d4e3f92f586192b488bc60aff2904"
+  }
+}
