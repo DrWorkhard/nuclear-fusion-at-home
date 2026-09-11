@@ -271,6 +271,7 @@ def main():
                     scale=k,
                     threshold=threshold,
                 )
+            checks = {key: bool(value) for key, value in checks.items()}
             record = {
                 "name": name,
                 "raw_phi": phi,
