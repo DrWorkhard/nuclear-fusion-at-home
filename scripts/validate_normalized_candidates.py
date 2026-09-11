@@ -134,6 +134,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("study", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--all-repeats", action="store_true")
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError("holdout output exists")
@@ -157,13 +158,25 @@ def main():
         "status": "running",
         "candidates": [],
         "used_for_optimizer_feedback": False,
+        "all_repeats": args.all_repeats,
     }
     try:
-        for method in study.get("methods", ["lbfgsb", "auglag"]):
-            arm_path = args.study / f"{method}-1.json"
-            expected = next(r for r in study["arms"] if Path(r["path"]).name == arm_path.name)
-            checked_path(expected)
-            arm = json.loads(arm_path.read_text())
+        selected = []
+        if args.all_repeats:
+            for ref in study["arms"]:
+                arm_path = checked_path(ref)
+                arm = json.loads(arm_path.read_text())
+                label = f"{arm.get('representation', arm['method'])}-r{arm['repeat']}"
+                selected.append((label, arm_path, arm))
+            if len({item[0] for item in selected}) != len(selected):
+                raise ValueError("duplicate representation/repeat labels")
+        else:
+            for method in study.get("methods", ["lbfgsb", "auglag"]):
+                arm_path = args.study / f"{method}-1.json"
+                expected = next(r for r in study["arms"] if Path(r["path"]).name == arm_path.name)
+                checked_path(expected)
+                selected.append((method, arm_path, json.loads(arm_path.read_text())))
+        for method, arm_path, arm in selected:
             candidate = check_candidate(checked_path(arm["best"]["field"]), surface, scale)
             result["candidates"].append({"method": method, "arm": reference(arm_path), **candidate})
             write_json_atomic(args.output, result)
