@@ -179,7 +179,7 @@ def main():
         "repository": git_state(root),
         "host": host_state(),
         "versions": {"numpy": np.__version__, "netCDF4": netCDF4.__version__},
-        "protocol": reference(root / "docs/QI_COVERAGE_TOPOLOGY_PROTOCOL.md"),
+        "protocol": reference(root / "docs/qi/QI_COVERAGE_TOPOLOGY_PROTOCOL.md"),
         "code": [
             reference(path)
             for path in [

@@ -51,7 +51,7 @@ def main():
             "maximum_eigenvalue": float(eig[-1]), "raw_quadrature_relative_error": phi_err,
             "pass": all(checks.values())})
     result = {"schema_version": 1, "repository": git_state(root), "source": reference(source),
-        "protocol": reference(root / "docs/SPATIAL_GRAM_CHECK.md"),
+        "protocol": reference(root / "docs/optimization/SPATIAL_GRAM_CHECK.md"),
         "code": [reference(Path(__file__)),
                  reference(root / "src/fusion_baselines/spatial_flux.py"),
                  reference(root / "src/fusion_baselines/flux_metrics.py")],

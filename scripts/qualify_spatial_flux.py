@@ -74,7 +74,7 @@ def main():
         "schema_version": 1,
         "repository": git_state(root),
         "status": "running",
-        "protocol": reference(root / "docs/SPATIAL_FLUX_FACTORIZATION_PROTOCOL.md"),
+        "protocol": reference(root / "docs/optimization/SPATIAL_FLUX_FACTORIZATION_PROTOCOL.md"),
         "study": reference(summary_path),
         "arm": reference(arm_path),
         "code": [
@@ -101,11 +101,13 @@ def main():
         if not prior["all_pass"] or len(prior["cases"]) != 2:
             raise ValueError("original spatial qualification required")
         report["reference_qualification"] = reference(prior_path)
-        report["local_vjp_protocol"] = reference(root / "docs/SPATIAL_FLUX_LOCAL_VJP_PROTOCOL.md")
+        report["local_vjp_protocol"] = reference(
+            root / "docs/optimization/SPATIAL_FLUX_LOCAL_VJP_PROTOCOL.md"
+        )
         report["code"].append(reference(root / "src/fusion_baselines/local_field_jacobian.py"))
         if args.batched:
             report["batched_protocol"] = reference(
-                root / "docs/BATCHED_SPATIAL_JACOBIAN_PROTOCOL.md"
+                root / "docs/optimization/BATCHED_SPATIAL_JACOBIAN_PROTOCOL.md"
             )
             report["code"].append(
                 reference(root / "src/fusion_baselines/batched_field_jacobian.py")

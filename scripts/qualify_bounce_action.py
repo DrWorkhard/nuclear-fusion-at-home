@@ -88,7 +88,7 @@ def run_case(root, case_name, output_root):
         "schema_version": 1,
         "case": case_name,
         "status": "running",
-        "protocol": file_record(root / "docs/QI_MEASUREMENT_PROTOCOL.md"),
+        "protocol": file_record(root / "docs/qi/QI_MEASUREMENT_PROTOCOL.md"),
         "inputs": {"wout": file_record(wout), "published_trace": file_record(source)},
         "code": [
             file_record(Path(__file__)),

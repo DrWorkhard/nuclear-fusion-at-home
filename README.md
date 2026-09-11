@@ -1,81 +1,28 @@
 # Fusion Baselines
 
-Reproducible research infrastructure for testing and improving stellarator
-coil designs, with a long-term focus on quasi-isodynamic (QI) configurations
-relevant to Proxima Fusion's design direction.
+Reproducible research on stellarator coil optimization, independent physical
+validation and a future SQuID-C baseline. W7-X is the physics/software regression,
+StellCoilBench/LPQA the method benchmark, and open Goodman configurations the QI bridge.
 
-The project starts from three deliberately separate baselines:
+## Research overview
 
-1. **W7-X** for physics and software regression against a built stellarator.
-2. **StellCoilBench** for standardized coil-optimization comparisons.
-3. **An open QI configuration** for QI-specific metrics before SQuID-C data is
-   available.
+Start with [the project overview](docs/README.md), [current assessment](docs/STATUS.md)
+and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
+Detailed protocols, results and the research journal are indexed one level below.
 
-SQuID-C is the target research baseline. It will be admitted only when its
-machine-readable equilibrium, profiles, coils, currents, scaling, and provenance
-are sufficient for an exact reproduction rather than a reconstruction from plots.
+Current assessment, 2026-09-11: qualified numerical methods and useful independent
+checks, but no newly feasible optimization baseline, no demonstrated SoTA design
+advance, and no complete SQuID-C readiness. All four candidates from the latest
+equal-wall-time pilot fail independent acceptance.
 
-## Research principle
-
-No method receives preferred status because it is labelled AI. Gradient methods,
-automatic differentiation, augmented-Lagrangian methods, global search, robust
-optimization, surrogate models, active learning, and hybrids are compared under
-the same constraints and computational budget.
-
-The primary question is:
-
-> Can we find coil systems that improve the physics-engineering Pareto frontier
-> when finite build, electromagnetic loading, manufacturing errors, and the
-> free-boundary plasma response are included?
-
-## Status
-
-The core environment and pinned StellCoilBench/SIMSOPT/VMEC++ stack run natively
-on Apple M1. The Landreman-Paul QA case is bit-reproducible, the W7-X coil and
-equilibrium baselines run, and all three authoritative Goodman QI vacuum cases
-have been exercised through equilibrium, legacy QI and J diagnostic routines.
-Generic real-data metadata intake is verified for nfp=1 and nfp=2. The September 9
-audit withdrew the full-readiness claim: scientific admission, a qualified QI
-objective and a physically valid engineering model remain open. See:
-
-The first preregistered bounce-action study now passes on all three open-QI
-vacuum cases, with independent quadrature and geometry-based tracing checks.
-Its scope and the remaining QI qualification work are documented below.
-
-September 10: 31 finite-pressure Goodman equilibria are now hash-inventoried.
-A four-case individual-well radial-action pilot has independent quadrature and
-second-tracer checks: nfp2 at nominal beta=2% has negative derivatives throughout
-the sampled domain, while nfp3 at that pressure remains mixed. This is not a
-global maximum-J certificate. Both recent optimization candidates remain rejected
-by the independent feasibility holdout; no SoTA improvement is claimed.
-
-A fixed affine-coordinate follow-up now achieves genuinely equal consumed
-oracle budgets, but both candidates still fail feasibility. Independent
-position-only checks confirm curvature peaks missed by the optimization grid.
-
-- [Audit and corrected readiness assessment](docs/AUDIT_2026-09-09.md)
-- [Bounce-action measurement results](docs/QI_MEASUREMENT_RESULTS_V1.md)
-- [Independent tracing results](docs/QI_TRACE_CROSSCHECK_RESULTS.md)
-- [Finite-pressure data inventory](docs/QI_FINITE_BETA_INVENTORY.md)
-- [Individual-well radial-action results](docs/QI_RADIAL_ACTION_RESULTS.md)
-- [Independent finite-pressure tracing](docs/QI_PRESSURE_TRACE_RESULTS.md)
-- [Rejected normalized optimization candidates](docs/NORMALIZED_FEASIBILITY_RESULTS.md)
-- [Affine-coordinate comparison and rejected candidates](docs/AFFINE_FEASIBILITY_RESULTS.md)
-- [Off-grid curvature violation witnesses](docs/CURVATURE_ALIASING_RESULTS.md)
-
-- [Project plan](docs/PROJECT_PLAN.md)
-- [Evidence standard](docs/EVIDENCE_STANDARD.md)
-- [Findings log](docs/FINDINGS.md)
-- [Decision log](docs/DECISIONS.md)
-- [SQuID-C readiness gates](docs/SQUID_C_READINESS.md)
-- [SQuID-C reproduction contract](docs/SQUID_C_ACCEPTANCE.md)
-- [SQuID-C authoritative-data request](docs/SQUID_C_DATA_REQUEST.md)
-- [Manufacturing-robustness protocol](docs/ROBUSTNESS_PROTOCOL.md)
-- [Finite-build and structural protocol](docs/STRUCTURAL_PROTOCOL.md)
-- [Free-boundary holdout protocol](docs/FREE_BOUNDARY_PROTOCOL.md)
-- [W7-X equilibrium regression protocol](docs/W7X_EQUILIBRIUM_PROTOCOL.md)
+Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
+Environment details: [validation overview](docs/validation/README.md).
+Documentation checks: `python scripts/check_docs.py`.
 
 ## Canonical commands
+
+Run bootstraps only in the intended environment. Keep the qualified native root
+environment intact; run core-only synchronization in a separate clone.
 
 ```bash
 ./scripts/bootstrap_macos.sh

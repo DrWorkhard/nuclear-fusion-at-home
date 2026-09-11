@@ -132,7 +132,7 @@ def main():
     tracer, _ = load_published_functions(source)
     result = {"schema_version": 1, "status": "running", "cases": [],
         "repository": git_state(root), "numpy": np.__version__, "scipy": scipy.__version__,
-        "protocol": reference(root / "docs/QI_PRESSURE_TRACE_PROTOCOL.md"),
+        "protocol": reference(root / "docs/qi/QI_PRESSURE_TRACE_PROTOCOL.md"),
         "code": [reference(p) for p in (Path(__file__), source,
             root / "scripts/evaluate_published_maximum_j.py",
             root / "scripts/measure_radial_action.py",

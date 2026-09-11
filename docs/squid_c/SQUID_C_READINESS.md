@@ -5,7 +5,7 @@ The project is ready for SQuID-C when all gates below are satisfied.
 Audit revision 2026-09-09: the claim that all internally executable gates were
 complete is withdrawn. We can receive and inspect an author package; scientific
 reproduction and improvement certification remain open. See
-[the audit report](AUDIT_2026-09-09.md). The August availability search is a dated,
+[the audit report](../validation/AUDIT_2026-09-09.md). The August availability search is a dated,
 bounded result; missing author data is not the only remaining blocker.
 
 ## G1 — Reproducible environment

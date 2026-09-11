@@ -102,7 +102,7 @@ def main():
         "status": "running",
         "cases": [],
         "repository": git_state(root),
-        "protocol": reference(root / "docs/QI_TRACE_CROSSCHECK_PROTOCOL.md"),
+        "protocol": reference(root / "docs/qi/QI_TRACE_CROSSCHECK_PROTOCOL.md"),
         "code": [
             reference(Path(__file__)),
             reference(root / "src/fusion_baselines/vmec_trace.py"),

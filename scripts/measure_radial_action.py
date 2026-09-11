@@ -139,7 +139,7 @@ def main():
     provenance = {
         "schema_version": 1, "repository": git_state(root), "host": host_state(),
         "input_references": [reference(finite_path), reference(vacuum_path)],
-        "protocol": reference(root / "docs/QI_RADIAL_ACTION_PROTOCOL.md"),
+        "protocol": reference(root / "docs/qi/QI_RADIAL_ACTION_PROTOCOL.md"),
         "steps": STEPS, "radii": RADII, "nphi": NPHI, "nalpha": 8, "periods": 4,
         "code": [reference(path) for path in (Path(__file__),
             root / "src/fusion_baselines/radial_action.py",

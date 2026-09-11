@@ -73,7 +73,7 @@ def main():
         "schema_version": 1,
         "repository": git_state(root),
         "host": host_state(),
-        "protocol": reference(root / "docs/TIMED_SPATIAL_PILOT_PROTOCOL.md"),
+        "protocol": reference(root / "docs/optimization/TIMED_SPATIAL_PILOT_PROTOCOL.md"),
         "qualification": reference(q_path),
         "parent_study": reference(parent_path),
         "code": [

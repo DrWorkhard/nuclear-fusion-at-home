@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "source_commit": "65b046b",
+  "description": "Original document paths and SHA-256 bytes at the pre-migration revision. This is a historical map, not a promise that live status documents never evolve.",
+  "updated_script_paths": [
+    "scripts/bound_continuous_coil_clearance.py",
+    "scripts/bound_continuous_curvature.py",
+    "scripts/check_mesh_integrity.py",
+    "scripts/check_spatial_gram.py",
+    "scripts/crosscheck_pressure_traces.py",
+    "scripts/crosscheck_vmec_traces.py",
+    "scripts/expand_qi_coverage.py",
+    "scripts/measure_radial_action.py",
+    "scripts/qualify_bounce_action.py",
+    "scripts/qualify_optimization_oracle.py",
+    "scripts/qualify_refined_curvature.py",
+    "scripts/qualify_spatial_flux.py",
+    "scripts/replay_guarded_candidate.py",
+    "scripts/run_free_boundary_holdout.py",
+    "scripts/run_spatial_trf_pilot.py",
+    "scripts/run_timed_spatial_pilot.py",
+    "scripts/validate_normalized_candidates.py",
+    "scripts/verify_curvature_witnesses.py"
+  ],
+  "moves": [
+    {
+      "from": "docs/AFFINE_FEASIBILITY_PROTOCOL.md",
+      "to": "docs/optimization/AFFINE_FEASIBILITY_PROTOCOL.md",
+      "source_sha256": "811b1f509059c807e7596592a266573d4b952bb80c5c1c297b78fc62c1f1d0bb"
+    },
+    {
+      "from": "docs/AFFINE_FEASIBILITY_RESULTS.md",
+      "to": "docs/optimization/AFFINE_FEASIBILITY_RESULTS.md",
+      "source_sha256": "65353a28ae4731fd8e65b309f8c7f8dd4e769392f8c72ddc6aae97904bd4c8e2"
+    },
+    {
+      "from": "docs/AUDIT_2026-09-09.md",
+      "to": "docs/validation/AUDIT_2026-09-09.md",
+      "source_sha256": "6a949b949b024df53eaf85868983f1b8cd9aba5cfe02bd850a00072fd622d4cc"
+    },
+    {
+      "from": "docs/BATCHED_QUALIFICATION_FAILURE.md",
+      "to": "docs/optimization/BATCHED_QUALIFICATION_FAILURE.md",
+      "source_sha256": "322886b2caca97fcc39697fb07a3d7b94fcd18d3f2f539647f1480753a8b1833"
+    },
+    {
+      "from": "docs/BATCHED_SPATIAL_JACOBIAN_PROTOCOL.md",
+      "to": "docs/optimization/BATCHED_SPATIAL_JACOBIAN_PROTOCOL.md",
+      "source_sha256": "d3a5f2a0326d619a718284efa4de89139f1ec0d9c69782c5901d3cb6a3c7d553"
+    },
+    {
+      "from": "docs/BATCHED_SPATIAL_JACOBIAN_RESULTS.md",
+      "to": "docs/optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md",
+      "source_sha256": "1558d0f1e9468963db3670932be49055c8d5c4e589d192ed6c7ea43872b4a6a6"
+    },
+    {
+      "from": "docs/CONTINUOUS_COIL_CLEARANCE_CHECK.md",
+      "to": "docs/geometry/CONTINUOUS_COIL_CLEARANCE_CHECK.md",
+      "source_sha256": "484e2448d43eb219e76af426d4ab08dc96d1f27fe25a94b4627aef8630024750"
+    },
+    {
+      "from": "docs/CONTINUOUS_CURVATURE_PROTOCOL.md",
+      "to": "docs/geometry/CONTINUOUS_CURVATURE_PROTOCOL.md",
+      "source_sha256": "e11bc7355cfaf8956dd1bd99aac98b89dbbe7dac4303a4120e7fea99d4fb69cf"
+    },
+    {
+      "from": "docs/CONTINUOUS_CURVATURE_RESULTS.md",
+      "to": "docs/geometry/CONTINUOUS_CURVATURE_RESULTS.md",
+      "source_sha256": "0df58850fecaaa43bec724b52931e059a3369dffe487eafbe2128732ed44c428"
+    },
+    {
+      "from": "docs/CURVATURE_ALIASING_AUDIT.md",
+      "to": "docs/geometry/CURVATURE_ALIASING_AUDIT.md",
+      "source_sha256": "cdc990b9585cbcb8f3d54fcdef0626763ce76af5b8a33218bc20a257cbe65649"
+    },
+    {
+      "from": "docs/CURVATURE_ALIASING_RESULTS.md",
+      "to": "docs/geometry/CURVATURE_ALIASING_RESULTS.md",
+      "source_sha256": "68572929efba222a2ce8e9622f65582b21aa81ec2d3f99e69093ba6b6d3e062f"
+    },
+    {
+      "from": "docs/DECISIONS.md",
+      "to": "docs/logbook/DECISIONS.md",
+      "source_sha256": "76e3446100c0fb48edc0b683c95bf1c8604392f192c83b5ef060019ba9fb6ebd"
+    },
+    {
+      "from": "docs/DIRECT_INEQUALITY_QUALIFICATION_PROTOCOL.md",
+      "to": "docs/optimization/DIRECT_INEQUALITY_QUALIFICATION_PROTOCOL.md",
+      "source_sha256": "41e2d5c283d81df24a1a082dfeb804cefd676011d81cf2090f1644a32924b62f"
+    },
+    {
+      "from": "docs/ENVIRONMENT.md",
+      "to": "docs/validation/ENVIRONMENT.md",
+      "source_sha256": "31fcbc99da2533ac085b250f9958b1d2496645898bb7016010296964001b6d2d"
+    },
+    {
+      "from": "docs/EVIDENCE_STANDARD.md",
+      "to": "docs/validation/EVIDENCE_STANDARD.md",
+      "source_sha256": "85a8d3625ada5ab14a54096bab1b7a88d5979156df4cdab6b64c3e5654186cd0"
+    },
+    {
+      "from": "docs/EXPERIMENT_PROTOCOL.md",
+      "to": "docs/validation/EXPERIMENT_PROTOCOL.md",
+      "source_sha256": "7c964bc588605561888196d4fa7e4e9a442fefd902e61dcdae6f0f09a01f5c65"
+    },
+    {
+      "from": "docs/FINDINGS.md",
+      "to": "docs/logbook/FINDINGS.md",
+      "source_sha256": "fc586c38356ee039ddc14bccc0fda3dd339be288c13eb24f96b584d55f1d3f68"
+    },
+    {
+      "from": "docs/FREE_BOUNDARY_PROTOCOL.md",
+      "to": "docs/engineering/FREE_BOUNDARY_PROTOCOL.md",
+      "source_sha256": "e86b3727857be39ec78b6061e7179873ba6193b9ced3aa1584d842abaa649472"
+    },
+    {
+      "from": "docs/GUARDED_FEASIBILITY_PROTOCOL.md",
+      "to": "docs/optimization/GUARDED_FEASIBILITY_PROTOCOL.md",
+      "source_sha256": "8be8cecf7d65967a91a3287b368d5decdab7e0424d0008a702fdea1a4972e4b3"
+    },
+    {
+      "from": "docs/GUARDED_FEASIBILITY_RESULTS.md",
+      "to": "docs/optimization/GUARDED_FEASIBILITY_RESULTS.md",
+      "source_sha256": "df62a97e48def73a6e5cabbe11363f88169eb656d41ac3b864e1830da5a7f08d"
+    },
+    {
+      "from": "docs/GUARDED_REPLAY_PROTOCOL.md",
+      "to": "docs/optimization/GUARDED_REPLAY_PROTOCOL.md",
+      "source_sha256": "afc0b7af498801cb0a2b14f29044f127129d1504324e3fb20a3e7167c5c2b11f"
+    },
+    {
+      "from": "docs/MESH_INTEGRITY_PROTOCOL.md",
+      "to": "docs/engineering/MESH_INTEGRITY_PROTOCOL.md",
+      "source_sha256": "4b1a72750c994d7721f2981b3d530f42cc7f33be1a3cd12fbf0b69169f15d574"
+    },
+    {
+      "from": "docs/NORMALIZED_FEASIBILITY_PROTOCOL.md",
+      "to": "docs/optimization/NORMALIZED_FEASIBILITY_PROTOCOL.md",
+      "source_sha256": "344b1924ad354d7308da9193e5d3daf96aeb15f9ca475eeb16d949cb7998fb18"
+    },
+    {
+      "from": "docs/NORMALIZED_FEASIBILITY_RESULTS.md",
+      "to": "docs/optimization/NORMALIZED_FEASIBILITY_RESULTS.md",
+      "source_sha256": "5777f80224eb9fc4cc1c1b35a837b1d9afea58018a615a94552aba18abe0c3f6"
+    },
+    {
+      "from": "docs/OPTIMIZATION_ORACLE_PROTOCOL.md",
+      "to": "docs/optimization/OPTIMIZATION_ORACLE_PROTOCOL.md",
+      "source_sha256": "39be627185b4cf2b407f3286b051ce9a03b5fd08b0773052f473373c8e8a475f"
+    },
+    {
+      "from": "docs/OPTIMIZATION_ORACLE_RESULTS.md",
+      "to": "docs/optimization/OPTIMIZATION_ORACLE_RESULTS.md",
+      "source_sha256": "0b4674c8552c57fc27fb5f190ccf0fdf33c5222c99d7e54a54e05ffba3970abc"
+    },
+    {
+      "from": "docs/QI_COVERAGE_TOPOLOGY_PROTOCOL.md",
+      "to": "docs/qi/QI_COVERAGE_TOPOLOGY_PROTOCOL.md",
+      "source_sha256": "ef81f178b0e78021cc3072c2ce38b4bdc9ec9a703b904063c6014991b2830d92"
+    },
+    {
+      "from": "docs/QI_COVERAGE_TOPOLOGY_RESULTS.md",
+      "to": "docs/qi/QI_COVERAGE_TOPOLOGY_RESULTS.md",
+      "source_sha256": "01cafc26c6e7f479dae6a3c13ca5bdc063b9cd0bcd7adfd4654760f36f5ae015"
+    },
+    {
+      "from": "docs/QI_FINITE_BETA_INVENTORY.md",
+      "to": "docs/qi/QI_FINITE_BETA_INVENTORY.md",
+      "source_sha256": "60cc062bc6ffed89f6eda1ebffdd1281c80305208e187b2b33a27c2033f7aa0c"
+    },
+    {
+      "from": "docs/QI_MEASUREMENT_PROTOCOL.md",
+      "to": "docs/qi/QI_MEASUREMENT_PROTOCOL.md",
+      "source_sha256": "06f025532ecb941457ba4031a288105d08b740539dde1a7b2a06ee3dce9a8683"
+    },
+    {
+      "from": "docs/QI_MEASUREMENT_RESULTS_V1.md",
+      "to": "docs/qi/QI_MEASUREMENT_RESULTS_V1.md",
+      "source_sha256": "8255b349a4d0b9962eeef5a8d5f2b7bab8ed5d7aa95498f91ccaa2ecb68d7183"
+    },
+    {
+      "from": "docs/QI_PRESSURE_TRACE_PROTOCOL.md",
+      "to": "docs/qi/QI_PRESSURE_TRACE_PROTOCOL.md",
+      "source_sha256": "40d65fb5dabf0b3a7f366159b686bd21a557af7a81f4a1051ab1ccf84b6d6966"
+    },
+    {
+      "from": "docs/QI_PRESSURE_TRACE_RESULTS.md",
+      "to": "docs/qi/QI_PRESSURE_TRACE_RESULTS.md",
+      "source_sha256": "b371f0ef01a5b3920c572777e6b808e28a4cee8d1d91e4731f1a6fe942dc3bd1"
+    },
+    {
+      "from": "docs/QI_RADIAL_ACTION_PROTOCOL.md",
+      "to": "docs/qi/QI_RADIAL_ACTION_PROTOCOL.md",
+      "source_sha256": "9f356d9c257fb0e4face9ee5a85c94c65ed9356f5e86cb7b8f022bb84567d7bd"
+    },
+    {
+      "from": "docs/QI_RADIAL_ACTION_RESULTS.md",
+      "to": "docs/qi/QI_RADIAL_ACTION_RESULTS.md",
+      "source_sha256": "dd99f7f78d8200a848ce0574151658eec5961032b06bc34c6a4b5302c3fc11a3"
+    },
+    {
+      "from": "docs/QI_TRACE_CROSSCHECK_PROTOCOL.md",
+      "to": "docs/qi/QI_TRACE_CROSSCHECK_PROTOCOL.md",
+      "source_sha256": "eb95b9da5eb04610011bc677cc90361b2387c727050ca872b954981f29ccbcb0"
+    },
+    {
+      "from": "docs/QI_TRACE_CROSSCHECK_RESULTS.md",
+      "to": "docs/qi/QI_TRACE_CROSSCHECK_RESULTS.md",
+      "source_sha256": "f5d9dd9130b997bc9dcf901fb8be9a76c8dc3f50ab8a5fec71ef9dfbc6b15cee"
+    },
+    {
+      "from": "docs/REPLAY_MAPPING_REMEDIATION.md",
+      "to": "docs/optimization/REPLAY_MAPPING_REMEDIATION.md",
+      "source_sha256": "2ca979573308e752c92fa99f4d6cb43413c78361d1568ff2796232e4f6865f25"
+    },
+    {
+      "from": "docs/ROBUSTNESS_PROTOCOL.md",
+      "to": "docs/engineering/ROBUSTNESS_PROTOCOL.md",
+      "source_sha256": "08420f676b8d1c65efcae43ad91cc93ecc92b04aa83c0d7f1297060e184007d1"
+    },
+    {
+      "from": "docs/SPATIAL_FLUX_FACTORIZATION_PROTOCOL.md",
+      "to": "docs/optimization/SPATIAL_FLUX_FACTORIZATION_PROTOCOL.md",
+      "source_sha256": "7b0583c1fe785cf5b582296d6a7c468ebaa092fbf1571f895b059137cd37c970"
+    },
+    {
+      "from": "docs/SPATIAL_FLUX_FACTORIZATION_RESULTS.md",
+      "to": "docs/optimization/SPATIAL_FLUX_FACTORIZATION_RESULTS.md",
+      "source_sha256": "fe072af6aedf99afa4428ce5cb00d88cd0ceaa63bcae3c4ddc16d3f652a14220"
+    },
+    {
+      "from": "docs/SPATIAL_FLUX_LOCAL_VJP_PROTOCOL.md",
+      "to": "docs/optimization/SPATIAL_FLUX_LOCAL_VJP_PROTOCOL.md",
+      "source_sha256": "3dd28d56bfeef584f1f5a6055e026f71991b09fc26b7c766419a09999f2a6bff"
+    },
+    {
+      "from": "docs/SPATIAL_GRAM_CHECK.md",
+      "to": "docs/optimization/SPATIAL_GRAM_CHECK.md",
+      "source_sha256": "38c0e2b10430b85aff641071ee989983136e0ffe37b754fe95e91da4969571a5"
+    },
+    {
+      "from": "docs/SPATIAL_TRF_PILOT_PROTOCOL.md",
+      "to": "docs/optimization/SPATIAL_TRF_PILOT_PROTOCOL.md",
+      "source_sha256": "e945fa80093bd06cf0457aff4ed21dee59b064385ea6cd153aaaa81c7fe883c1"
+    },
+    {
+      "from": "docs/SPATIAL_TRF_PILOT_RESULTS.md",
+      "to": "docs/optimization/SPATIAL_TRF_PILOT_RESULTS.md",
+      "source_sha256": "6d928775f30a26956a7d93cad4ce1aa308b873c77cdbf92d457f6fafe10206e0"
+    },
+    {
+      "from": "docs/SQUID_C_ACCEPTANCE.md",
+      "to": "docs/squid_c/SQUID_C_ACCEPTANCE.md",
+      "source_sha256": "cc16343cbb1de2407e416c2022789680b71077334de39648a8ad0007a7f08a96"
+    },
+    {
+      "from": "docs/SQUID_C_DATA_REQUEST.md",
+      "to": "docs/squid_c/SQUID_C_DATA_REQUEST.md",
+      "source_sha256": "a4170851b4e29a5c2519e94aceb58bf6dd108269d59da655693d1130bdbd5b84"
+    },
+    {
+      "from": "docs/SQUID_C_READINESS.md",
+      "to": "docs/squid_c/SQUID_C_READINESS.md",
+      "source_sha256": "4dbe95db3e5f9a29a254af8c5c24690d546dfa8b493bd79ac5047ad5f0581001"
+    },
+    {
+      "from": "docs/STRUCTURAL_PROTOCOL.md",
+      "to": "docs/engineering/STRUCTURAL_PROTOCOL.md",
+      "source_sha256": "95e2f6c6b305432b783ca24d7b7fe267ba3f0d8556fd963ad5457bd492af9373"
+    },
+    {
+      "from": "docs/TIMED_SPATIAL_PILOT_PROTOCOL.md",
+      "to": "docs/optimization/TIMED_SPATIAL_PILOT_PROTOCOL.md",
+      "source_sha256": "020a13b89176f0fc3e2c902c849af91ae54836431cd43fcff10a6568ef2aea8e"
+    },
+    {
+      "from": "docs/TIMED_SPATIAL_PILOT_RESULTS.md",
+      "to": "docs/optimization/TIMED_SPATIAL_PILOT_RESULTS.md",
+      "source_sha256": "07d00533f76d443d475eadfe02bc27a75b0479eec238255d98b85cd192079461"
+    },
+    {
+      "from": "docs/VALIDATION_LOG.md",
+      "to": "docs/logbook/VALIDATION_LOG.md",
+      "source_sha256": "57933c051f3d952e246347b4632865ba4feb074da64f8855f9d5b848610039ab"
+    },
+    {
+      "from": "docs/W7X_EQUILIBRIUM_PROTOCOL.md",
+      "to": "docs/validation/W7X_EQUILIBRIUM_PROTOCOL.md",
+      "source_sha256": "594d3efa09f3d309ad472e6ed89d6deaf95368374812c6b0fdc8ca57ce62406d"
+    }
+  ]
+}

@@ -49,7 +49,7 @@ def main():
                summary["preparation"]["thresholds"]["a0"])]
     fields += [(c["method"], c["field"], c["a0"]) for c in holdout["candidates"]]
     result = {"schema_version": 1, "retrospective": True, "repository": git_state(root),
-              "protocol": reference(root / "docs/CONTINUOUS_CURVATURE_PROTOCOL.md"),
+              "protocol": reference(root / "docs/geometry/CONTINUOUS_CURVATURE_PROTOCOL.md"),
               "construction_protocol": summary["protocol"],
               "input_records": [reference(holdout_path), reference(summary_path)],
               "code": [reference(p) for p in (Path(__file__),

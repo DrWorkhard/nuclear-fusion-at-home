@@ -26,7 +26,7 @@ def main():
     source = root / "evidence/affine-feasibility-v1-holdout.json"
     data = json.loads(source.read_text())
     result = {"schema_version": 1, "repository": git_state(root), "input": reference(source),
-              "protocol": reference(root / "docs/GUARDED_FEASIBILITY_PROTOCOL.md"),
+              "protocol": reference(root / "docs/optimization/GUARDED_FEASIBILITY_PROTOCOL.md"),
               "code": [reference(p) for p in (Path(__file__),
                   root / "src/fusion_baselines/refined_curvature.py")], "cases": []}
     for candidate in data["candidates"]:

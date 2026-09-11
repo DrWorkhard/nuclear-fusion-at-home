@@ -149,7 +149,7 @@ def main():
         "schema_version": 1,
         "repository": git_state(root),
         "study": reference(summary_path),
-        "protocol": reference(root / "docs/NORMALIZED_FEASIBILITY_PROTOCOL.md"),
+        "protocol": reference(root / "docs/optimization/NORMALIZED_FEASIBILITY_PROTOCOL.md"),
         "code": [
             reference(Path(__file__)),
             reference(root / "scripts/audit_coil_geometry.py"),

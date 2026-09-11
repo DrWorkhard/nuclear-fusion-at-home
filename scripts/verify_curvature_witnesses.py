@@ -37,7 +37,7 @@ def main():
         raise ValueError("require completed holdout")
     result = {"schema_version": 1, "retrospective": True, "repository": git_state(root),
               "holdout": reference(source), "protocol": reference(
-                  root / "docs/CURVATURE_ALIASING_AUDIT.md"),
+                  root / "docs/geometry/CURVATURE_ALIASING_AUDIT.md"),
               "code": [reference(p) for p in (Path(__file__),
                   root / "src/fusion_baselines/curvature_witness.py")], "candidates": []}
     for candidate in holdout["candidates"]:

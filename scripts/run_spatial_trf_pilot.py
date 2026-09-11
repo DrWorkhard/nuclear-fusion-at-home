@@ -42,7 +42,7 @@ def main():
         checked(source)
     solver = Path(inspect.getfile(inspect.unwrap(least_squares)))
     report = {"schema_version": 1, "repository": git_state(root), "host": host_state(),
-        "protocol": reference(root / "docs/SPATIAL_TRF_PILOT_PROTOCOL.md"),
+        "protocol": reference(root / "docs/optimization/SPATIAL_TRF_PILOT_PROTOCOL.md"),
         "qualification": reference(q_path), "parent_study": reference(old_path),
         "code": [reference(Path(__file__)),
             reference(root / "src/fusion_baselines/spatial_backend.py"), *qualified["code"]],

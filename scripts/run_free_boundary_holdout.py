@@ -305,7 +305,7 @@ def main() -> int:
     }
     evidence = {
         "schema_version": 1,
-        "protocol": "docs/FREE_BOUNDARY_PROTOCOL.md",
+        "protocol": "docs/engineering/FREE_BOUNDARY_PROTOCOL.md",
         "vmecpp_version": version("vmecpp"),
         "vmecpp_source_commit": _git_head(Path("external/vmecpp")),
         "prepared_case": prepared,

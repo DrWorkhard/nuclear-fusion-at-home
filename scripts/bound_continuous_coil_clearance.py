@@ -60,7 +60,7 @@ def main():
         "repository": git_state(root),
         "retrospective": True,
         "holdout": reference(args.holdout),
-        "protocol": reference(root / "docs/CONTINUOUS_COIL_CLEARANCE_CHECK.md"),
+        "protocol": reference(root / "docs/geometry/CONTINUOUS_COIL_CLEARANCE_CHECK.md"),
         "code": [
             reference(Path(__file__)),
             reference(root / "src/fusion_baselines/clearance_bounds.py"),

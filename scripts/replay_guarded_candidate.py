@@ -122,8 +122,8 @@ def main():
             best_values=best_values, initial_jacobian=initial_jacobian, best_jacobian=best_jacobian,
             archived_best_x=archived_best_x, permutation=permutation)
     report = {"schema_version": 1, "repository": git_state(root),
-        "protocol": reference(root / "docs/GUARDED_REPLAY_PROTOCOL.md"),
-        "remediation_protocol": reference(root / "docs/REPLAY_MAPPING_REMEDIATION.md")
+        "protocol": reference(root / "docs/optimization/GUARDED_REPLAY_PROTOCOL.md"),
+        "remediation_protocol": reference(root / "docs/optimization/REPLAY_MAPPING_REMEDIATION.md")
             if args.map_physical_dofs else None,
         "physical_owner_map": owner_map, "source_indices_in_target_order": permutation.tolist(),
         "code": [reference(Path(__file__)),

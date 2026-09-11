@@ -1,5 +1,18 @@
 # Decision log
 
+## D-009 — Keep documentation shallow, purpose-indexed and reviewer-readable
+
+**Status:** accepted; explicit user requirement
+**Date:** 2026-09-11
+
+The docs root contains only the scientific overview, current assessment and work
+plan. Detailed reports/protocols go into seven purpose-specific directories,
+each with a complete explanatory README; no third level is permitted. Persistent
+instructions are in [AGENTS.md](../../AGENTS.md), with automated layout/link tests.
+Historical evidence is not rewritten. Original document paths and hashes are
+preserved in the migration manifest; current scientific scripts change only
+document paths. New findings update both the relevant index and concise status.
+
 ## D-008 — Qualify the bounce-action measurement before a new QI objective
 
 **Status:** accepted for first experiment

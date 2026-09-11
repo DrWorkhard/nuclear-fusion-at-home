@@ -344,7 +344,9 @@ def main():
                 else "OPTIMIZATION_ORACLE_PROTOCOL.md"
             )
         ),
-        "base_oracle_protocol": reference(root / "docs/OPTIMIZATION_ORACLE_PROTOCOL.md"),
+        "base_oracle_protocol": reference(
+            root / "docs/optimization/OPTIMIZATION_ORACLE_PROTOCOL.md"
+        ),
         "normalized_feasibility": args.normalized_feasibility,
         "affine_feasibility": args.affine_feasibility,
         "guarded_curvature": args.guarded_curvature,

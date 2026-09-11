@@ -1,87 +1,58 @@
-# Project plan
+# Arbeitsplan und Erfolgskriterien
 
-## Objective
+Stand: 11. September 2026. [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
-Status correction, 2026-09-09: readiness is not achieved. The authoritative
-package is one external dependency; scientific evaluators and internal
-qualification work remain. See AUDIT_2026-09-09.md for the ordered remediation.
+## Nächstes entscheidendes Ergebnis
 
-Build a reproducible, method-neutral platform that can establish credible
-stellarator coil-design improvements and is ready to accept SQuID-C as the target
-baseline without redesigning the workflow.
+Eine klassische, unabhängig zulässige LPQA-Spulenkonstruktion. Die bisherigen
+Zeit- und Auswertungsbudgets sind sauber geprüft, aber alle neuen Kandidaten
+fallen durch den Holdout. Deshalb zuerst die Durchsetzung der Randbedingungen
+verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
 
-## Work packages
+1. Konservative glatte Ungleichungen aus roher Länge, Krümmung und Abständen
+   implementieren. Analytische Grenzfälle und vollständige Richtungsableitungen
+   an zwei festgelegten physikalischen Zuständen prüfen.
+2. Erst nach bestandener Qualifikation ein getrenntes beschränktes Suchprotokoll
+   festlegen: Initialisierung, Skalierung, Budget, Auswahlregel und Abbruch.
+3. Jeden ausgewählten Kandidaten unabhängig auf feineren Gittern und mit
+   kontinuierlichen Geometrieschranken prüfen. Keine nachträgliche Grenzwertänderung.
+4. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
+   starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 
-### WP0 — Reproducibility and evidence
+Ausgangspunkt: [direkte Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_PROTOCOL.md).
+Ein negatives Ergebnis schließt diesen Versuch, nicht automatisch das Arbeitspaket.
 
-- Record hardware, operating system, solver versions, source revisions, inputs,
-  seeds, tolerances, and compute budgets.
-- Separate facts reproduced locally from literature claims and hypotheses.
-- Preserve failed runs and negative findings when they affect conclusions.
+## Forschungspakete und Abnahme
 
-Exit: a fresh checkout can recreate the environment and run a smoke test.
+| Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
+| --- | --- | --- |
+| Reproduzierbarkeit | Vollständige wissenschaftliche Integration aus frischem Daten-/Solveraufbau | Gepinnte Quellen, neue Umgebung, explizite Nicht-Skips und dokumentierte Abweichungen |
+| Optimierungsbaseline | Zulässige starke klassische Lösung, danach mehrstartiger Vergleich | Gleiche Probleme/Budgets; serialisierte Ergebnisse bestehen unabhängige Grenzprüfungen |
+| W7-X-Regression | Bestehende Teilprüfung sichern; drei Ausgabedifferenzen getrennt halten | Keine Umdeutung von 60/63 in vollständige Übereinstimmung |
+| QI-Maßstab | Qualifizierte QI-/radiale-Wirkungsbewertung mit größerem Gültigkeitsbereich | Unabhängige Tracer/Integration, Domänenabdeckung, Mulden-Identität, Gauge- und Gleichgewichtsauflösung |
+| Ingenieurmodelle | Physikalisch gültige endliche Spulengeometrie und Mechanik | Keine nichtlokalen Überschneidungen; belegte Materialien/Lagerung; Konvergenz im gültigen Modellbereich |
+| SQuID-C | Exakte kanonische Reproduktion und übertragbare Bewertung | Autoritative Daten plus reproduzierte publizierte Größen, nicht nur erfolgreicher Import |
 
-### WP1 — StellCoilBench method baseline
+Die [detaillierten Gates](squid_c/SQUID_C_READINESS.md) sind die vollständige
+Prüfliste. Das [Journal](logbook/README.md) enthält den Arbeitsnachweis.
 
-- Pin and install StellCoilBench without vendoring generated results.
-- Reproduce at least one Landreman-Paul case.
-- Verify metric definitions independently where practical.
-- Establish equal-budget comparisons for optimization methods.
+## Reihenfolge nach der klassischen Baseline
 
-Exit: a local result is accepted by the same evaluation path used by the
-benchmark and is reproducible from recorded inputs.
+QI-Messung und Ingenieurprüfungen qualifizieren, anschließend robuste Optimierung
+und freie Plasmareaktion zusammenführen. Erst dann lohnt sich eine Aussage über
+eine bessere Physik–Ingenieur-Paretofront. Lernende Surrogate, Active Learning,
+globale oder hybride Verfahren werden eingesetzt, wenn ihr messbarer Nutzen
+gegen die klassische Baseline geprüft werden kann.
 
-### WP2 — W7-X physics regression
+Es gibt keine zugesagte Reihenfolge, in der alle Forschungsprobleme lösbar sind.
+Ein größerer Suchlauf darf seine schwächste Validierungsstufe nicht überholen.
+Die bisherigen QI- und Ingenieurdaten erlauben interne Weiterarbeit; SQuID-C-Daten
+sind dafür keine pauschale Vorbedingung.
 
-- Reproduce a published W7-X VMEC equilibrium.
-- Verify geometry, aspect ratio, beta, iota, and selected magnetic metrics.
-- Add coil-field and Poincare regression when the authoritative coil data path is
-  established.
+## Arbeitsweise
 
-Exit: deterministic metrics agree with the authoritative reference within
-predeclared tolerances, and deviations are explained.
-
-### WP3 — Open QI bridge
-
-- Select a machine-readable QI equilibrium with clear provenance.
-- Reproduce QI, maximum-J, neoclassical, and fast-particle screening metrics in
-  increasing fidelity.
-- Pin and run SIMPLE locally against the exact open QI wout files; distinguish
-  smoke-scale orbit tracing from reproduction of the published 5,000-particle
-  protocol.
-- Exercise exactly the data interfaces intended for SQuID-C.
-
-Exit: the QI case runs through equilibrium, coil, robustness, and validation
-interfaces without case-specific code.
-
-### WP4 — Robust coil optimization
-
-- Reproduce a strong classical augmented-Lagrangian baseline.
-- Add finite-build, force/stress, clearance, and tolerance objectives.
-- Compare local, global, stochastic, surrogate-assisted, and hybrid methods under
-  equal budgets.
-- Report Pareto sets; do not promote a single opaque weighted score as the main
-  scientific result.
-
-Exit: any claimed improvement survives independent high-resolution and
-free-boundary validation.
-
-### WP5 — SQuID-C readiness
-
-- Audit all gates in `docs/SQUID_C_READINESS.md`.
-- Prepare a canonical SQuID-C data manifest and reproduction protocol.
-
-Exit: only authoritative SQuID-C files and paper-specific run parameters remain
-missing.
-
-## Order of execution
-
-Current experiment decision (2026-09-11): batched spatial derivatives are
-qualified. Two 300-second runs per representation preserve the objective and
-produce about 2.35x lower spatial flux, but every candidate fails admission.
-Next qualify raw smooth inequalities before a separately frozen constrained
-construction. Do not count this as G2 completion; retain multi-start comparison
-and the separate QI and physical engineering qualification work.
-
-WP0 -> WP1 and WP2 -> WP3 -> WP4 -> WP5. Work may overlap, but no optimization
-claim can outrun the validation layer on which it depends.
+Neue Versuche vorab festlegen und committen; Ergebnisse, Gegenprüfungen und
+Fehlschläge danach getrennt dokumentieren und committen. Nutzeränderungen und
+historische Evidenz bleiben erhalten. Keine Publikation, Autorenkontakt oder
+externen Änderungen ohne entsprechenden Auftrag. Bei wesentlichen Befunden
+werden Ergebnisstand, dieser Plan und die jeweilige Bereichsübersicht aktualisiert.

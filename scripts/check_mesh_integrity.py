@@ -27,7 +27,7 @@ def main():
         "schema_version": 1,
         "status": "running",
         "repository": git_state(root),
-        "protocol": reference(root / "docs/MESH_INTEGRITY_PROTOCOL.md"),
+        "protocol": reference(root / "docs/engineering/MESH_INTEGRITY_PROTOCOL.md"),
         "code": [
             reference(Path(__file__)),
             reference(root / "src/fusion_baselines/mesh_integrity.py"),
