@@ -9,7 +9,10 @@ fixed order scalar-1, scalar-2, batched-1, batched-2. One original common bundle
 and one batched matrix at x0 are shared, recorded warmup outside the per-arm clocks.
 Timers include the seven original seed-42 gradient probes, optimizer work, cache
 requests and checkpoint writing. Preparation and final artifact serialization
-are excluded. No parallel heavy benchmark is run during this timing study.
+are excluded on deadline stops. If the solver returns early, report its
+end-to-end elapsed time (including final serialization) as an upper bound;
+do not claim an exact solver-only stop time. No parallel heavy benchmark is run
+during this timing study.
 
 Time is checked before every oracle request, including exact-point cache hits.
 An in-flight operation is not interrupted: record actual stop time and overrun,
