@@ -21,7 +21,8 @@ und Verbesserungen daran zertifizieren.
 | Geometrie | Kontinuierliche Krümmungs- und Spulenabstandsschranken; bestätigte Verletzungen zwischen Stützstellen | Analytische Kontrollen und unabhängige Positionsprüfung. Gleitkommapolster, keine gerichtete Intervallarithmetik; keine vollständige Volumengeometrie |
 | W7-X | Ausgewählte physikalische Regression gegen versionspassendes VMEC 8.52 besteht | Erweiterter Vergleich 60/63; drei Ausgabedifferenzen bleiben, Auswahl teilweise retrospektiv |
 | QI bei endlichem Druck | 320 zugeordnete Potentialmulden-Familien in vier Fällen; Druckfall nfp2 durchgehend negative radiale Ableitungen im untersuchten Bereich, nfp3 gemischt | Unabhängige Quadratur und zweiter Feldlinienrechner; 319 aufgelöste Vorzeichen bestätigt, eines unaufgelöst. Keine globale maximum-J-Aussage |
-| Software | 208 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | 11 bekannte NumPy-Warnungen in Test-Fixtures. Kein Ersatz für kompletten nativen Neuaufbau und wissenschaftliche Integration |
+| Direkte Randbedingungen | 137 glatte Ungleichungen plus Roh-Fluxziel an zwei festen Feldern qualifiziert | Alle Ableitungszeilen bestehen die vorher festgelegte Prüfung; noch kein neuer Suchlauf oder zulässiger Entwurf |
+| Software | 216 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Separater Kern-Checkout zuvor 207 bestanden + ein erwarteter W7-X-Skip; 11 bekannte NumPy-Warnungen. Kein vollständiger nativer Neuaufbau |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [Ableitungen](optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md),
@@ -44,8 +45,8 @@ Strafzielfunktion setzt harte Beschränkungen nicht zuverlässig durch.
 
 ## Offene Arbeit, nach Bedeutung
 
-1. **Zulässige klassische Baseline:** Direkte glatte Ungleichungen qualifizieren,
-   dann einen getrennt festgelegten beschränkten Suchlauf prüfen. Danach mehrere
+1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
+   einen getrennt festgelegten beschränkten Suchlauf prüfen. Danach mehrere
    Initialisierungen und fairer Methodenvergleich. Nicht nur mehr Rechenzeit auf
    denselben Strafansatz geben.
 2. **QI-Maßstab:** vollständiger relevanter Invariantenbereich, Mulden-Identität,

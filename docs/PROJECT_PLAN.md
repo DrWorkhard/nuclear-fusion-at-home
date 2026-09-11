@@ -9,9 +9,9 @@ Zeit- und Auswertungsbudgets sind sauber geprüft, aber alle neuen Kandidaten
 fallen durch den Holdout. Deshalb zuerst die Durchsetzung der Randbedingungen
 verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
 
-1. Konservative glatte Ungleichungen aus roher Länge, Krümmung und Abständen
-   implementieren. Analytische Grenzfälle und vollständige Richtungsableitungen
-   an zwei festgelegten physikalischen Zuständen prüfen.
+1. Erledigt: konservative glatte Ungleichungen aus roher Länge, Krümmung und
+   Abständen implementiert; analytische Kontrollen und vollständige
+   Richtungsableitungen an zwei festgelegten physikalischen Zuständen bestehen.
 2. Erst nach bestandener Qualifikation ein getrenntes beschränktes Suchprotokoll
    festlegen: Initialisierung, Skalierung, Budget, Auswahlregel und Abbruch.
 3. Jeden ausgewählten Kandidaten unabhängig auf feineren Gittern und mit

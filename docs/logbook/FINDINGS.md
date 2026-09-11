@@ -1,5 +1,19 @@
 # Findings log
 
+## F-053 — Explicit smooth inequalities pass fixed physical derivative qualification
+
+**Class:** preregistered numerical qualification, no optimization or admission
+**Date:** 2026-09-11
+
+Both prescribed physical states pass the raw flux/137-inequality map. Full
+138-row directional errors at the fixed 1e-8 step are <=5.738e-7 (limit 1e-6);
+all steps, including larger coarse-step errors and finest-step cancellation,
+are retained. Independent Fourier metrics, every native pair minimum and the
+all-16-coil plasma minimum agree; named replay and sampled symmetry checks pass.
+Both fields still violate internal inequalities. This qualifies measurements for
+a new constrained construction, not feasibility or a method ranking. See
+[the result](../optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md).
+
 ## F-052 — Spatial benefit survives equal time, but no candidate is feasible
 
 **Class:** repeated fixed-start time-budget comparison and independent rejection

@@ -2,12 +2,13 @@
 
 Zweck: reproduzierbare Optimierungsorakel, geprüfte Ableitungen und kontrollierte Suchversuche auf dem offenen LPQA-Fall.
 
-Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbudget den Magnetfeldfehler an einem Startpunkt um etwa Faktor 2,35. Kein Kandidat erfüllt alle Zulässigkeitsgrenzen. Direkte Ungleichungen sind der nächste Qualifikationsschritt, noch kein Suchergebnis.
+Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbudget den Magnetfeldfehler an einem Startpunkt um etwa Faktor 2,35. Kein Kandidat erfüllt alle Zulässigkeitsgrenzen. Direkte Ungleichungen sind nun an zwei eingefrorenen Feldern qualifiziert, aber noch kein Suchergebnis.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
+- [Direkte Ungleichungen: Qualifikation](DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md) — Alle 138 Zeilen bestehen die feste Ableitungsprüfung; unabhängige/native Metriken stimmen überein. Noch keine neue Konstruktion.
 - [AFFINE_FEASIBILITY_PROTOCOL ](AFFINE_FEASIBILITY_PROTOCOL.md) — Protokoll: Feste Koordinatenskalierung ermöglicht gleiche verbrauchte Budgets; beide Methoden bleiben im Holdout unzulässig.
 - [AFFINE_FEASIBILITY_RESULTS ](AFFINE_FEASIBILITY_RESULTS.md) — Ergebnis: Feste Koordinatenskalierung ermöglicht gleiche verbrauchte Budgets; beide Methoden bleiben im Holdout unzulässig.
 - [BATCHED_QUALIFICATION_FAILURE ](BATCHED_QUALIFICATION_FAILURE.md) — Dokument: Erhaltener JSON-Serialisierungsfehler beim ersten Ableitungsversuch; exakte Abgrenzung zum erfolgreichen Retry.
@@ -34,4 +35,3 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
 Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
 [Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
-

@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-11 — Direct-inequality physical qualification passes
+
+- Implementation/protocol 9c6101c; both frozen states evaluated once with a full
+  Jacobian and at all eight predeclared perturbed points; no optimization.
+- All 138 finest-step directional errors <=5.738e-7, limit 1e-6. Native raw-flux
+  gradient difference <=6.188e-11, limit 1e-10. Coarser/lower-error steps retained.
+- Independent Fourier geometry/metrics, all 120 native pair minima, full-torus
+  sampled symmetry, native all-16 plasma minimum and linking-zero checks pass.
+- Original named parameters and archived candidate geometry/current graph agree.
+- Counters describe logical sample sets; squared distances are calculated again
+  for raw-minimum reporting. Additional native crosschecks are separately counted.
+- Evidence: evidence/direct-inequality-qualification-v1.json. Neither control
+  field passes all internal constraints; this is a measurement pass only.
+
 ## 2026-09-11 — Direct-inequality implementation before physical qualification
 
 - Isolated core clone updated to 1675c35: 207 passed, one expected missing-native
