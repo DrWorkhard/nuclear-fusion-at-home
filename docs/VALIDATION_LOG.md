@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-11 — Objective-preserving spatial flux qualification
+
+- Protocol d251721, implementation c436a90; eighteen core algebra/input controls.
+- Both physical states pass raw flux/gradient, total merit/gradient and directional
+  criteria. 1024 extra analytic full-point VJPs per state; all matrices hash-bound.
+- Local-point protocol c4a3344, implementation bf1f5f0: matrix differences
+  <=2.221e-16; original criteria pass. Three cache/restoration/error-path controls.
+- Independent Gram protocol/code 46c29a5: both closed-form/PSD/raw-quadrature checks
+  pass without further physics calls. Subsequent source change is formatting only.
+- Counted representation wrapper has two analytic core controls. Full suite at
+  224bf86: 173 local passes; separate updated detached checkout 172 passes/one
+  expected missing-W7-X skip. Eleven fixture warnings retained; Ruff passes.
+- Separate pilot protocol cb519cb and implementation 3ef165f freeze 128 proposals
+  per arm, two repeats and unequal-work disclosure; no physical success inferred.
+
 ## 2026-09-10 — Guarded search, independent rejection and replay repair
 
 - Search d74662e: both repeats exactly 3000 bundles, 5942 requests, 2941 hits,

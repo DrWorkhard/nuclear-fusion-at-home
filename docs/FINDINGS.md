@@ -1,5 +1,19 @@
 # Findings log
 
+## F-049 — Spatial flux factorization changes the solver model, not the objective
+
+**Class:** algebraic identity, physical Jacobian qualification and independent matrix check
+**Date:** 2026-09-11
+
+Replacing aggregated quadratic flux by a norm-scaled spatial residual preserves
+the full scalar merit and exact gradient (errors <=2.046e-14) on both fixed fields.
+Effective Jacobian ranks increase from 2/3 to 171/204. A closed-form Gram check
+identifies the additional positive-semidefinite Gauss-Newton term; this does not
+prove better optimization. A single-point analytic VJP implementation matches the
+full-point matrices to <=2.221e-16 and takes about 1.05 s rather than 11.1 s in
+these measurements. Extra B/VJP work remains explicit. See
+SPATIAL_FLUX_FACTORIZATION_RESULTS.md. Candidate quality requires a separate pilot.
+
 ## F-048 — Raw optimization arrays are not portable across runtime object ordering
 
 **Class:** failed independent replay, tested mapping correction and archive audit
