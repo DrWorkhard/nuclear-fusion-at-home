@@ -23,7 +23,7 @@ Nachweis besserer Kraftwerksleistung oder wirtschaftlicher Energiegewinnung.
 
 | Ausgangspunkt | Wissenschaftlicher Zweck | Was er nicht ersetzt |
 | --- | --- | --- |
-| W7-X | Regression von Gleichgewicht, Spulenfeld und Software an einem realen Stellarator | Validierung des vollständigen gebauten Geräts |
+| W7-X | Prüfen, ob unsere Gleichgewichtsberechnung für einen festgelegten W7-X-Modellfall die Ergebnisse einer etablierten Referenzrechnung reproduziert | Validierung des vollständigen gebauten Geräts |
 | Landreman-Paul QA / StellCoilBench | Kontrollierte Optimierungsversuche mit offenen Spulendaten | QI-Physik oder SQuID-C |
 | Offene Goodman-QI-Fälle | Messung von Teilchen-Bouncewirkung und QI-relevanter Physik; Übertragbarkeit | Globale QI-/maximum-J-Zertifizierung |
 
