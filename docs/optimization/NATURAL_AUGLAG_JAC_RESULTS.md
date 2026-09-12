@@ -1,4 +1,4 @@
-# Jacobiskalierte AL: analytische Kontrolle, physikalischer Versuch noch offen
+# Jacobiskalierte AL: wiederholte Suche auditiert, feine Abnahme offen
 
 Stand 2026-09-12. [Vorabfestlegung](NATURAL_AUGLAG_JAC_PROTOCOL.md), Ausführung
 bei `2061cee`. Bericht: `evidence/natural-auglag-jac-control-v1.json`.
@@ -46,9 +46,31 @@ hoch. Nach deren Commit sind zwei neue physikalische Wiederholungen und ihre
 feinen Abnahmen der nächste Arbeitsschritt. Keine neue zulässige Baseline und
 kein Methodenfortschritt behauptet.
 
-Zwischenstand der laufenden physikalischen Studie bei `6db0040`: Der erste
-Arm ist mit1033 Bundles abgeschlossen (1775 Anfragen,742 Cachetreffer, keine
-fehlgeschlagenen/global verweigerten Auswertungen). Ausgewählter Punkt898:
-Suchgitter-Flux2,391020203776514e-7, interne Verletzung0. Rund23,91-fache feste
-Fluxgrenze; keine unabhängige Freigabe. Der zweite Arm läuft noch, Gesamtaudit
-und feine Abnahmen sind offen. Dieser Zwischenstand ersetzt keinen Studienabschluss.
+## Physikalische Suche und unabhängiger Audit abgeschlossen
+
+Start bei `6db0040`: Beide Arme mit1033 Bundles abgeschlossen (je1775 Anfragen,
+742 Cachetreffer, keine fehlgeschlagenen/global verweigerten Auswertungen).
+Ausgewählter Punkt898: Suchgitter-Flux2,391020203776514e-7, interne Verletzung0.
+Rund23,91-fache feste Fluxgrenze; keine unabhängige Freigabe. Beide vollständigen
+Suchpfade, Stufen, Budgets und Zusatzarbeitszähler stimmen exakt überein.
+
+Der separate Audit `evidence/natural-auglag-jac-v1-driver/audit.json` bestätigt
+je28 Einzelarmprüfungen plus alle11 Profil-/Kontrollprüfungen. Quellen und
+Protokoll passen zur vorher gespeicherten analytischen Kontrolle; tatsächlich
+nur `x_scale=jac` statt1. Die maximale normierte native Gradientidentitäts-
+abweichung ist4,62907490117459e-13 bei fester1e-10-Grenze.
+
+Feldhash beider Kandidaten `e0a4650ba0f558f6ee5d9c7f0ac0f112d116ffe4eecf52d309afc986a6bbbd57`.
+Beide Arrayhashes `cde262ca4ac393dbb5fc9dde1b41316932530497b02097a0dff461f809b30085`.
+Die Zeiten805,24s und1060,10s sind keine kontrollierte Laufzeitmessung;
+parallel liefen leichte Tests/Metadatenarbeiten, keine schwere Suche/Installation.
+Die beobachtete Platzreserve blieb mit mindestens6199681024Bytes über2GiB.
+
+Alle acht Stufen enden an ihrem festen Teilbudget. Insbesondere ist der
+ausgewählte beste Geometriekandidat nicht zwingend der letzte Stufenpunkt.
+Dieser hat gemeldete Lagrangegradient-Maxnorm17,9223 und Verletzung3,57347e-5;
+weder Konvergenz noch globale Unerreichbarkeit der Grenzen ist nachgewiesen.
+
+Jetzt vollständige feine Abnahme beider Felder, ohne neue Grenzwerte oder
+Budgeterhöhung. Erst nach deren dokumentiertem Abschluss die fünf getrennt
+ausgewählten Referenzfelder rekonstruieren. Langfristiger Schritt2 bleibt offen.

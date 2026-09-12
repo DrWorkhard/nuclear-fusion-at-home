@@ -1,0 +1,81 @@
+{
+  "all_pass": true,
+  "audit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-jac-v1-driver/audit.json",
+    "sha256": "1fb53873758e140dec378f3e26f09e99c0f986bb3e311ebdfe956fa841fbc420"
+  },
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_jac_scaled_study.py",
+    "sha256": "6d1f0ee792bbf1777b8a5330cf6ae009448d825e9930fbbe943636d20cefc9e2"
+  },
+  "disk_preflight": {
+    "free_bytes": 6266953728,
+    "path": "/Users/sebastianwirkert/workspace/fusion",
+    "required_bytes": 2147483648,
+    "sufficient": true
+  },
+  "holdouts_pending": true,
+  "physical_feasibility_certified": false,
+  "prior_documentation": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/NATURAL_AUGLAG_RECOVERY_RESULTS.md",
+    "sha256": "30dd0f7ca32c85380f99a4b83b3d1e62981ecfbac5ef83c258a0a5a511464b14"
+  },
+  "prior_prefix_audit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-driver-v1/recovery-audit.json",
+    "sha256": "1a7c9b5b7f15692d8ec34839ac26f74375d781835ae781ce7001e7264f4c9656"
+  },
+  "prior_validation": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/summary.json",
+    "sha256": "8f1f9fc9105034a47da0738c0e0342dd6925cec1be751f3c8e8bc7276631f6aa"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "6db0040a7b5513a6d7abd7904ced2e3602798634",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "status": "completed",
+  "steps": [
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/run_natural_auglag_jac.py",
+        "evidence/natural-auglag-jac-v1",
+        "artifacts/natural-auglag-jac-v1"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-jac-v1-driver/two-scaled-arms.log",
+        "sha256": "5ad3e82eb7e2310a12165d1fbe86d5e6eb91a343f03c05de130e3fac0a94e3a4"
+      },
+      "minimum_observed_free_bytes": 6199681024,
+      "name": "two-scaled-arms",
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_natural_auglag_jac.py",
+        "sha256": "3fd1842b27b35a9f5f58c01bf9db30a79b4856b1325679090251595e6542b996"
+      },
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/audit_natural_auglag_jac.py",
+        "evidence/natural-auglag-jac-v1",
+        "evidence/natural-auglag-jac-v1-driver/audit.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-jac-v1-driver/independent-audit.log",
+        "sha256": "a48c46604be2b7887d969cd71cfa0f15a656ddbe7280bbdbd9a65efa0ec0d9c2"
+      },
+      "minimum_observed_free_bytes": 6214123520,
+      "name": "independent-audit",
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_natural_auglag_jac.py",
+        "sha256": "2d40d6009350cf16f883babb994d443580be818988519760d127e23079a4ee69"
+      },
+      "status": "passed"
+    }
+  ]
+}

@@ -16,7 +16,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 - [Unveränderte AL-Recovery: Ergebnisse](NATURAL_AUGLAG_RECOVERY_RESULTS.md) — Zwei exakt wiederholte Suchläufe und historische Präfixe unabhängig bestätigt; alle feinen Abnahmen abgeschlossen, Geometrie/nativ bestanden, Flux Faktor26,99 über Grenze.
 
-- [Jacobiskalierte AL: Ergebnisse](NATURAL_AUGLAG_JAC_RESULTS.md) — Analytischer beschränkter Kontrollfall bestanden; physikalischer Versuch und unabhängige Abnahme noch offen.
+- [Jacobiskalierte AL: Ergebnisse](NATURAL_AUGLAG_JAC_RESULTS.md) — Analytische Kontrolle und zwei exakt wiederholte Suchläufe unabhängig bestätigt; grober Flux Faktor23,91 zu hoch, feine Abnahme folgt.
 
 - [Jacobiskalierte AL: Protokoll](NATURAL_AUGLAG_JAC_PROTOCOL.md) — Getrennt festgelegter klassischer Ein-Options-Versuch mit `x_scale=jac`; identische Physik/Budgets, erst nach abgeschlossener unveränderter Recovery und Abnahme.
 

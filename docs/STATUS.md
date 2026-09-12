@@ -1,7 +1,7 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
 Stand: 12. September 2026, nach frischem nativen Neuaufbau und QI-Gauge-Audit;
-AL-Wiederholung vollständig abgelehnt, separater Skalierungsversuch läuft.
+AL-Wiederholung vollständig abgelehnt, Skalierungsversuch auditiert/Abnahme offen.
 Dieses Dokument enthält die aktuelle Einschätzung; historische optimistischere
 Aussagen im Journal werden dadurch nicht wieder gültig.
 
@@ -62,7 +62,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    frische Wiederholung jetzt vollständig und unabhängig qualifiziert, beide
    historischen Präfixe exakt. Vollständige feine Abnahme abgeschlossen:
    Geometrie/nativ bestehen, Flux Faktor26,9859 zu groß. Jetzt die separat
-   vorab festgelegte Jacobispalten-Skalierung bei sonst identischen Einstellungen.
+   vorab festgelegte Jacobispalten-Skalierung bei sonst identischen Einstellungen
+   ebenfalls wiederholt und auditiert: grober Flux Faktor23,91 zu hoch,
+   vollständige feine Abnahme folgt. Kein Konvergenznachweis.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
    Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024

@@ -41,7 +41,9 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    veränderte Annahmekriterien.
    Ein anschließender [Jacobispalten-Skalierungsversuch](optimization/NATURAL_AUGLAG_JAC_PROTOCOL.md)
    ist getrennt vorab festgelegt: nur `x_scale=jac` statt1, keine geänderte Physik.
-   Recovery/Abnahme ist geschlossen und committed; Skalierungsversuch läuft.
+   Recovery/Abnahme ist geschlossen und committed; auch beide skalierten
+   Suchläufe und ihr unabhängiger Audit sind abgeschlossen. Grober Flux Faktor23,91
+   über Grenze; jetzt deren vollständige feine Abnahmen.
    Daneben ist die [Bestandsaufnahme vorhandener LPQA-Felder](optimization/UPSTREAM_LPQA_INVENTORY_RESULTS.md)
    unabhängig abgeschlossen: fünf Metadatenkandidaten für separate Rekonstruktion,
    keine ungeprüfte Übernahme als zulässige Baseline oder neue Suchinitialisierung.

@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-12 — Jacobian-scaled physical search repeats exactly and passes independent audit
+
+- Two fresh1033-bundle arms at6db0040, each1775 requests/742 cache hits and no
+  failed/global-denied evaluations. Full histories/stages/work exact. Selected898
+  coarse flux2.391020203776514e-7, zero internal violation, still23.91 times limit.
+- Independent audit passes28 checks per arm and11 profile/control checks;
+  code/options/protocol bound to the prior control. Coupled native gradient guard
+  <=4.6291e-13. Field/array hashes repeat identically. Minimum observed free
+  6199681024Bytes.805/1060s are not controlled timing comparisons.
+- All stages exhaust their fixed subbudget. Final stage differs from global
+  selected best and is not stationary; no convergence or impossibility claim.
+  Search closed, fine holdouts next. All affected overviews/index updated.
+  All48 profile/stage/adapter/holdout-driver tests pass; docs/diff pass before
+  commit and new physical work.
+
 ## 2026-09-12 — Recheck completed-result evidence availability and hashes
 
 - Existing reference auditor checks17 explicitly listed completed reports:

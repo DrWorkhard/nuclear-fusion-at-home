@@ -1,0 +1,137 @@
+{
+  "additional_physics_calls": 0,
+  "all_pass": true,
+  "arms": [
+    {
+      "all_pass": true,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-jac-v1/natural-auglag-jac-1.json",
+        "sha256": "9eb78ae59d0993b9fb8461ac0672692d93100dac3f2af928507d336b54f132e6"
+      },
+      "checks": {
+        "all_coupled_identities": true,
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "independent_gradient_screen": true,
+        "ledger_counts": true,
+        "merit_identity": true,
+        "multiplier_sequence": true,
+        "named_field_identity": true,
+        "native_and_spatial_work": true,
+        "nine_qualification_bundles": true,
+        "nonempty": true,
+        "request_accounting": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "selected_minimum": true,
+        "stage_count": true,
+        "stage_partition": true,
+        "status_partition": true,
+        "target_semantics": true,
+        "termination": true
+      }
+    },
+    {
+      "all_pass": true,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-jac-v1/natural-auglag-jac-2.json",
+        "sha256": "e8eadeeb2b6bd2b4aea4520b1cc4350913c4394b9fbe5bc32f42a471c8510ba1"
+      },
+      "checks": {
+        "all_coupled_identities": true,
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "independent_gradient_screen": true,
+        "ledger_counts": true,
+        "merit_identity": true,
+        "multiplier_sequence": true,
+        "named_field_identity": true,
+        "native_and_spatial_work": true,
+        "nine_qualification_bundles": true,
+        "nonempty": true,
+        "request_accounting": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "selected_minimum": true,
+        "stage_count": true,
+        "stage_partition": true,
+        "status_partition": true,
+        "target_semantics": true,
+        "termination": true
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_natural_auglag_jac.py",
+      "sha256": "2d40d6009350cf16f883babb994d443580be818988519760d127e23079a4ee69"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/auglag_profile_audit.py",
+      "sha256": "533de22dd7a64879103adf6470155dfa004cd168fe08ee2163c788a2aeb31ec0"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/natural_auglag_audit.py",
+      "sha256": "90f29095ebefd448f55039d6599ba2fcb9c6650f4065c53ced6231763fba8e97"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_audit.py",
+      "sha256": "70ae783c99a9c9c318a5117867db57fdae2be25668eb795e1980ac56125fd01d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/prefix_audit.py",
+      "sha256": "36f47c9457a2ddab92d6a84b35a0e659f95c8f2234248ba43e7f272f0767aa8a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    }
+  ],
+  "control": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-jac-control-v1.json",
+    "sha256": "d5b6f444684d7aace2537b3109c96c61fcb62a461823c92fc9735fd3c3d15ed1"
+  },
+  "physical_feasibility_certified": false,
+  "profile_checks": {
+    "analytic_complementarity": true,
+    "analytic_direct_values": true,
+    "analytic_fixed_control": true,
+    "analytic_multiplier_signs": true,
+    "analytic_solution": true,
+    "analytic_stationarity": true,
+    "analytic_violation": true,
+    "arm_profiles": true,
+    "solver_options": true,
+    "study_profile": true,
+    "threads": true
+  },
+  "repeated": true,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "ccac33f4157c358d273ea74d94fe13367a2a13fd",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-jac-v1/summary.json",
+    "sha256": "9db8509b6d658a242b0a0df63f9749e2896f7da5d8ffcfdcfb43b0456843974e"
+  }
+}
