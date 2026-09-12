@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Separate SLSQP-1024 construction prepared while GN repetition runs
+
+- Old 256-bundle study remains immutable. New explicit runner mode retains the
+  exact same default implementation/physical problem and changes only the
+  prospective bundle limit to 1024 under a separate protocol and fresh outputs.
+- Both fresh SLSQP repeats must reproduce the entire old 256-proposal prefix.
+  This is not a continuation from a saved candidate or an equal-wall-time claim.
+- Preparation is exploratory, before any new SLSQP evaluation and before feeding
+  back any new holdouts. Execution waits until both current GN search arms end.
+  Project work plan is updated; both READMEs remain accurate about the active GN
+  pilot and pending independent admission. Ruff/docs/diff checks pass.
+
 ## 2026-09-12 — Native-covector setup passes; independent pilot auditor prepared
 
 - At 1913edd all three shared state/gradient/H_GN qualifications pass, preserving

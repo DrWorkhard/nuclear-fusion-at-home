@@ -31,12 +31,12 @@ def checked(record):
     return path
 
 
-def run_arm(backend, ctx, x0, directory, output, repeat):
+def run_arm(backend, ctx, x0, directory, output, repeat, *, budget=256):
     directory.mkdir()
     ctx.Jf.x = x0.copy()
     backend.work = dict.fromkeys(backend.work, 0)
     coordinates = AffineCoordinates(x0, 0.01)
-    oracle = InequalityOracle(backend.evaluate, 256, len(x0), 137, tolerance=1e-8)
+    oracle = InequalityOracle(backend.evaluate, budget, len(x0), 137, tolerance=1e-8)
     record = {
         "method": "slsqp",
         "representation": "direct",
@@ -158,10 +158,12 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("study", type=Path)
     parser.add_argument("raw", type=Path)
+    parser.add_argument("--budget-1024", action="store_true")
     args = parser.parse_args()
     if args.study.exists() or args.raw.exists():
         raise FileExistsError("new immutable study paths required")
     root = Path(__file__).resolve().parents[1]
+    budget = 1024 if args.budget_1024 else 256
     qualification_path = root / "evidence/direct-inequality-qualification-v1.json"
     qualification = json.loads(qualification_path.read_text())
     if qualification["status"] != "completed" or not qualification["all_pass"]:
@@ -173,7 +175,9 @@ def main():
         "schema_version": 1,
         "repository": git_state(root),
         "host": host_state(),
-        "protocol": reference(root / "docs/optimization/DIRECT_SLSQP_PILOT_PROTOCOL.md"),
+        "protocol": reference(root / (
+            "docs/optimization/DIRECT_SLSQP_1024_PROTOCOL.md" if args.budget_1024
+            else "docs/optimization/DIRECT_SLSQP_PILOT_PROTOCOL.md")),
         "qualification": reference(qualification_path),
         "status": "running",
         "qualification_pass": False,
@@ -194,7 +198,7 @@ def main():
             "ftol": 1e-10,
             "maxiter": 100000,
             "jacobian": "analytic",
-            "bundle_limit": 256,
+            "bundle_limit": budget,
         },
         "thread_environment": {
             name: os.environ.get(name)
@@ -229,7 +233,8 @@ def main():
         arms = []
         for repeat in (1, 2):
             output = args.study / f"slsqp-{repeat}.json"
-            arms.append(run_arm(backend, ctx, x0, args.raw / f"slsqp-{repeat}", output, repeat))
+            arms.append(run_arm(backend, ctx, x0, args.raw / f"slsqp-{repeat}", output, repeat,
+                                budget=budget))
             report["arms"].append(reference(output))
             write_json_atomic(args.study / "summary.json", report)
         a, b = arms

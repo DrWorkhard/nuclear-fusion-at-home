@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Neuer SLSQP-1024-Lauf: Protokoll](DIRECT_SLSQP_1024_PROTOCOL.md) — Klassische Vergleichskonstruktion mit gleichem maximalem Bundlebudget wie GN, unverändertem Originalstart und Pflicht zur Reproduktion des alten 256-Vorschläge-Präfixes.
 - [Native Feldprojektion: Zwischenstand](GN_NATIVE_COVECTOR_RESULTS.md) — Alle drei Vorqualifikationen bestehen; korrigierte Wiederholungen laufen, unabhängiger Zähl-/Auswahlprüfer ist vorbereitet, Abnahme offen.
 - [Native Feldprojektion: korrigierter Pilot](GN_NATIVE_COVECTOR_PROTOCOL.md) — Konsistente Identitätsprüfung bei unveränderten Werten/Gradienten/H_GN; drei feste Zustandsprüfungen und Pflicht zur exakten Wiederholung des alten Suchpräfixes.
 - [Gespeicherter GN-Fehlerpunkt: Ergebnis](GN_FAILED_POINT_RESULTS.md) — Native Zustandsstabilität und unabhängige Ableitungen bestehen; die separat gerundete Feldprojektion verursacht die Identitätsabweichung im Suchadapter.
