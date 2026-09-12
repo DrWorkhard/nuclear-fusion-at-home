@@ -57,6 +57,8 @@ Vertices nachgeprüft. Kontakte/doppelte Geometrie werden nicht verworfen,
 ungültige Indizes und wiederholte Traversierung abgelehnt. Insgesamt19
 Geometriekontrollen bestanden. Nächster Schritt: separate Studie an allen sechs
 unveränderten Spulennetzen registrieren und danach ausführen/auditieren.
+Dieses [separate Netzprotokoll](MESH_NONLOCAL_PROTOCOL.md) ist nun registriert;
+es startet erst nach QI-Studie und SLSQP-Nachoptimierung samt deren Abnahmen.
 Nachbarpaare, getrennte Netzregionen, vier Grundspulen und spätere Symmetriekopien
 müssen explizite getrennte Gültigkeitsbereiche behalten. Noch kein realer
 Spulen-Nichtüberlappungsnachweis, keine qualifizierte Wickelpaketorientierung,

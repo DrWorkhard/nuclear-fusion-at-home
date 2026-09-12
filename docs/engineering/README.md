@@ -9,6 +9,7 @@ Aktueller Schluss: Softwarepfade und begrenzte Konvergenzprüfungen laufen. Alle
 ## Dokumente
 
 - [Tetraeder-Nichtüberlappung: Kontrollkern](TETRA_NONOVERLAP_METHOD.md) — Trennrichtungen, unabhängige Innenpunkte und vollständige Boxhierarchie-Paarbuchhaltung bestehen19 Tests; reale Spulennetze weiterhin ungeprüft.
+- [Nichtlokale Netzüberschneidung: Protokoll](MESH_NONLOCAL_PROTOCOL.md) — Sechs unveränderte Netze, sämtliche nicht benachbarten Tetraederpaare, konservative Trenn-/Innenpunktnachweise und unabhängige vollständige Paarbilanz; noch nicht ausgeführt.
 
 - [FREE_BOUNDARY_PROTOCOL ](FREE_BOUNDARY_PROTOCOL.md) — Protokoll: Unveränderlicher Vakuum-Holdout der Plasmareaktion; getrennt von Optimierung und ohne Rückschreiben.
 - [MESH_INTEGRITY_PROTOCOL ](MESH_INTEGRITY_PROTOCOL.md) — Protokoll: Prüfung aller sechs eingefrorenen Netze auf intrinsische Qualität, Orientierung und Randtopologie.

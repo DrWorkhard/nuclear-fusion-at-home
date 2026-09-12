@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Register bounded six-mesh nonlocal collision study; full regression544 passes
+
+- Register all six unchanged old meshes, all unordered tetrahedron pairs without
+  shared vertices, leaf16 padded bounding hierarchy and retained separation/LP
+  witnesses. Full independent partition/witness audit required. Neighbor pairs,
+  symmetry copies/plasma and physical pack/mechanics qualification explicitly excluded.
+- Caps1200s/2000000 SAT pairs per mesh,2GiB reserve, incomplete states never pass.
+  Execute only after active QI and already registered SLSQP polishing/holdouts.
+  No real mesh intersection evaluated in this step.
+- Full suite544 passes with69 known NumPy/netCDF fixture deprecations; Ruff/docs/
+  diff pass. Engineering detail/index/status and both READMEs/plan checked;
+  scientific gates remain open. Native strict import remains separately failed.
+
 ## 2026-09-12 — Qualify conservative broad phase on exhaustive small controls
 
 - Additive deterministic bounding-box hierarchy records each partition event and
