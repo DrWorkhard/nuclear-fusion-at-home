@@ -1,0 +1,11 @@
+{
+  "reason": "The first read-only postmortem preceded a one-line Ruff formatting correction. Preserve its exact source; canonical current-code report is failure-audit-v2.",
+  "original_report": "evidence/slsqp-polish-v1-failure-audit.json",
+  "original_source_path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_polish_failure.py",
+  "archived_source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/slsqp-polish-v1/audit_polish_failure.preformat.py",
+    "sha256": "d26d93e2e173e8b8b67b555613eaedbb0fa10590827a20178854e9aa55ac3d5a"
+  },
+  "numerical_change": false,
+  "new_physics_calls": 0
+}

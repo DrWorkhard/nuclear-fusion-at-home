@@ -74,8 +74,9 @@ bounded result; missing author data is not the only remaining blocker.
       reported zeros. A separately qualified normalized first archive start
       completes exact AL repeats, independent audit and all four fine holdouts:
       geometry/native pass, flux8.955120977790992e-8 still fails1e-8 by8.955x.
-      A separate2048-bundle SLSQP polishing study is preregistered/prepared but
-      not yet executed;1033 bundles of AL construction are counted explicitly.
+      The separate2048-bundle SLSQP polishing attempt stops after nine startup
+      bundles at four clearance derivative rows, before its solver starts.
+      Independent postmortem confirms records, not qualification; AL cost retained.
       See [alternate start](../optimization/UPSTREAM_START_RESULTS.md) and
       [polishing](../optimization/SLSQP_POLISH_RESULTS.md). G2 remains open.
 

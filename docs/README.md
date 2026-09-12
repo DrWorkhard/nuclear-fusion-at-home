@@ -148,6 +148,10 @@ Ein anschließend separat qualifizierter Start aus dem ersten Archiveintrag
 verbessert den Flux weiter: beide Suchpfade und alle feinen Prüfungen abgeschlossen,
 Geometrie/nativ bestehen, Flux aber weiterhin Faktor8,955 über der festen Grenze.
 Weiterhin kein neuer zulässiger Entwurf.
+Die separat versuchte [SLSQP-Nachoptimierung](optimization/SLSQP_POLISH_RESULTS.md)
+stoppt bereits im Ableitungstest vor Solverstart. Der Postmortem bestätigt alle
+neun Startauswertungen; die vier auffälligen Abstand-Ableitungen werden separat
+untersucht, keine Umdeutung des Fehlschlags als zulässige Konstruktion.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der
 [frische native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md) besteht

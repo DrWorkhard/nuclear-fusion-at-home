@@ -62,8 +62,11 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    Getrennt registriert ist jetzt eine klassische SLSQP-Nachoptimierung des
    festgelegten AL-Kandidaten: zwei2048-Bundle-Pfade bei unveränderter Physik,
    einschließlich der1033-Bundle-Vorarbeit bilanziert. Die vorherige QI-Studie
-   ist jetzt geschlossen; als Nächstes ausführen, separat auditieren und alle
-   vier feinen Abnahmen rechnen. Keine Aussage gleicher Methodenbudgets.
+   ist jetzt geschlossen. Der ausgeführte Versuch stoppt nach neun Start-Bundles
+   an vier Abstand-Ableitungen, vor dem Solver. Separater Postmortem bestätigt
+   Quellen/Punkte/Arithmetik, nicht die Qualifikation. Jetzt eine unabhängige
+   komplexe-Schritt-Prüfung am festen Start registrieren; keine Grenzlockerung
+   oder Wahl der günstigsten realen Schrittweite. Keine Aussage gleicher Methodenbudgets.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

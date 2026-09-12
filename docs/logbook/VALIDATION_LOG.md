@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-12 — Preserve polishing startup failure and independently audit all nine bundles
+
+- Run at438aef4; named physical source and138 initial values reproduce exactly.
+  The unchanged1e-8 finite-difference gate fails by3.402551e-6 at four pair rows;
+  all18 nonpair rows<=2.751679e-7. Zero optimizer iterations, no second repeat,
+  no new holdout/qualified candidate. All reports and failure exit1 retained.
+- Separate17-check postmortem confirms all nine physical point hashes, FD
+  arithmetic, counters/work and selection; ordinary construction gates remain
+  false. No extra physics evaluation. Cause is still a hypothesis.
+- Initial unit-test import lacked the scripts path and Ruff found one101-char
+  line. Corrected both; ten tests and Ruff/docs/diff pass. The first arithmetic
+  audit preceded the formatting correction; its exact source is hash-verified
+  archived, report retained, current-source v2 also passes. No numerical change.
+- Detail/index, both READMEs/status/plan/readiness reviewed and updated. Next:
+  independently qualify all120 pair derivatives at the same frozen start;
+  do not select a favorable finite-difference step or bypass the failed guard.
+
 ## 2026-09-12 — Close all16 fresh QI equilibria and independent96-grid evaluation
 
 - All16 cold starts at dd8b15a finish within their1800s caps and all residuals<=1e-12.

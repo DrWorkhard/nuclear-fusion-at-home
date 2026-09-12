@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "/Users/sebastianwirkert/workspace/fusion/scripts/run_slsqp_polish.py", line 147, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/sebastianwirkert/workspace/fusion/scripts/run_slsqp_polish.py", line 124, in main
+    runs.append(run_arm(backend, ctx, x0, args.raw / path.stem, path, repeat, budget=2048))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/sebastianwirkert/workspace/fusion/scripts/run_direct_slsqp_pilot.py", line 104, in run_arm
+    raise ValueError("initial physical gradient screen failed")
+ValueError: initial physical gradient screen failed

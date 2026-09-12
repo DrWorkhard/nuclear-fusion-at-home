@@ -89,7 +89,10 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    Ableitungsqualifikation samt Audit. Auch beide1033-Bundle-Suchpfade sind exakt
    gleich und unabhängig auditiert: grober Flux8,95e-8, interne Geometrie erfüllt;
    weiterhin über1e-8. Alle feinen Abnahmen sind abgeschlossen: Geometrie/nativ
-   bestehen, Flux8,955e-8 bleibt Faktor8,955 zu hoch. Der begrenzte Versuch ist
+   bestehen, Flux8,955e-8 bleibt Faktor8,955 zu hoch. Die anschließende
+   [SLSQP-Nachoptimierung](optimization/SLSQP_POLISH_RESULTS.md) stoppt vor
+   Solverstart an vier Abstand-Ableitungen; neun Start-Bundles unabhängig
+   bestätigt, keine neue qualifizierte Konstruktion. Der begrenzte AL-Versuch ist
    geschlossen; keine allgemeine Methodenrangfolge oder Pareto-Dominanz.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
