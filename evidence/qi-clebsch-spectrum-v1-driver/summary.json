@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/diagnose_clebsch_spectrum.py",
+    "evidence/qi-clebsch-spectrum-v1.json",
+    "artifacts/qi-clebsch-spectrum-v1"
+  ],
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-clebsch-spectrum-v1-driver/command.log",
+    "sha256": "9e082eb09e628f6831ba4ec0bf7462ccb2c0e9c2327dd5eaa2bb2e5f2be32434"
+  },
+  "minimum_observed_free_bytes": 6042742784,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "7832e95451841f0b1b5ad1c9ab6c55810937710f",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 2,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_guarded_command.py",
+    "sha256": "4da34bb00b8b21d437de79317ae9f3108512068feb011312215c124c06ecb442"
+  },
+  "status": "command_failed"
+}

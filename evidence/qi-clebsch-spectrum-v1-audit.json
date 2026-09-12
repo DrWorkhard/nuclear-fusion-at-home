@@ -1,0 +1,463 @@
+{
+  "absolute_drift_certified": false,
+  "all_pass": true,
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_clebsch_spectrum.py",
+      "sha256": "8314030b9b8a9ff79ed2b35179fce25ca1764fd4e7e76aa178e9d2f6d47a56f0"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spectral_projection.py",
+      "sha256": "5eda753b54f68ff9eeba87775223396ee26d2e21eb7a732425eb94d414a10f97"
+    }
+  ],
+  "direct_masked_DFT_calls": 96,
+  "explicit_projection_calls": 48,
+  "grids": [
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "toroidal": true,
+        "toroidal_classification": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 64,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "mode_mask": true,
+        "poloidal": true,
+        "poloidal_classification": true,
+        "poloidal_refinement": true,
+        "toroidal": true,
+        "toroidal_classification": true,
+        "toroidal_refinement": true
+      },
+      "physical_screens": {
+        "poloidal": false,
+        "toroidal": false
+      },
+      "resolution": 128,
+      "surface": 0.75
+    }
+  ],
+  "new_field_evaluations": 0,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "7832e95451841f0b1b5ad1c9ab6c55810937710f",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-clebsch-spectrum-v1.json",
+    "sha256": "1ffeac2284ad33176c8bf5d06f4009cc9a8d0a837452df09b1c28fe1a398e28f"
+  },
+  "spectral_hypothesis_screen_pass": false
+}

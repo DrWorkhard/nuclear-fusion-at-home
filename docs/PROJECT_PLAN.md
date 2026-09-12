@@ -81,7 +81,11 @@ die Feldorientierung, bleibt aber mit19/24 vollständigen Gitterpässen negativ.
 Die getrennte Halbflächen-/Produktzerlegung bestätigt jetzt: radiale Interpolation
 allein erklärt die fünf Fehler nicht; zehn von48 Halbflächengittern scheitern
 bereits ohne sie. Nächster Teiltest: Spektraltrunkierung und Wout-Ausgabekonventionen
-an den unveränderten Daten klären, ohne nachträgliche Grenzlockerung.
+an den unveränderten Daten klären, ohne nachträgliche Grenzlockerung. Die getrennte
+64/128-Spektralprüfung ist inzwischen abgeschlossen: Projektionen stabil, aber
+alle48 Endpunktgitter verfehlen die feste Komponenten-Reproduktionsgrenze. Als
+nächstes Autoren-Eingaben/Produzenten und eine frische QI-Auflösungsstudie vorbereiten;
+keine ungeprüfte Datenkorrektur als Driftqualifikation verwenden.
 
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |

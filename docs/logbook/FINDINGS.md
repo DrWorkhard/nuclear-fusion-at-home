@@ -1,5 +1,19 @@
 # Findings log
 
+## F-069 — Stable spectral projection does not reproduce the stored QI field components
+
+**Class:** preregistered spectral hypothesis test with explicit trigonometric audit
+**Date:** 2026-09-12
+
+All48 half-surface grids complete; old nested samples reproduce exactly, Parseval
+error<=3.955e-16 and64/128 projection refinement<=4.732e-11. Yet no poloidal or
+toroidal endpoint comparison meets1e-5: projected Clebsch-vs-stored components
+retain errors up to1.60396e-3.96 direct DFT/48 explicit reconstruction calls
+independently confirm the band/projection result. Simple component truncation
+alone is inadequate; Jacobian truncation/lambda output/producer reconstruction
+remain open. No data repair or absolute drift certificate. See
+[spectral diagnostic](../qi/QI_CLEBSCH_SPECTRAL_RESULTS.md).
+
 ## F-068 — Qualified alternative start improves classical construction but still fails flux
 
 **Class:** preregistered new-start trial, exact repeated search and independent fine rejection

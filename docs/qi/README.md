@@ -9,7 +9,7 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 ## Dokumente
 
 - [Clebsch-Spektrum: Protokoll](QI_CLEBSCH_SPECTRAL_PROTOCOL.md) — Unveränderte Halbflächen,64/128-Gitter, exakte gespeicherte Modenmaske, Projektions- und Parseval-Gegenrechnung.
-- [Clebsch-Spektrum: Stand](QI_CLEBSCH_SPECTRAL_RESULTS.md) — Quellen-/Modeninspektion und Registrierung; noch keine spektrale Ursachenbehauptung.
+- [Clebsch-Spektrum: Ergebnis](QI_CLEBSCH_SPECTRAL_RESULTS.md) —48 Endpunktgitter unabhängig geprüft; stabile Projektionen, aber alle verfehlen1e-5. Einfache Feldmoden-Trunkierung allein erklärt die Darstellungsabweichung nicht.
 
 - [Clebsch-Interpolation: Protokoll](QI_CLEBSCH_INTERPOLATION_PROTOCOL.md) — Algebraische Trennung aller24 Restfelder in Halbflächen- und Interpolationsbeiträge; unveränderte Grenzwerte.
 - [Clebsch-Interpolation: Ergebnis](QI_CLEBSCH_INTERPOLATION_RESULTS.md) — Alle24 Zerlegungen unabhängig bestätigt; zehn von48 Halbflächengittern scheitern bereits ohne Interpolation. Radiale Produktinterpolation allein als Erklärung ausgeschlossen.

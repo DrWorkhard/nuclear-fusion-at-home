@@ -39,7 +39,11 @@ Zusätzlicher Schritt1-Teiltest: Die signierte QI-Flusskonvention stimmt in
 die feste Grenze. Der unabhängige Audit bestätigt19/24 vollständige Gitterpässe,
 nicht die Freigabe absoluter Drift. Eine getrennt auditierte Produktzerlegung
 schließt radiale Interpolation als alleinige Ursache aus: Fehler bestehen schon
-auf zehn ursprünglichen Halbflächengittern. [Ergebnis](qi/QI_CLEBSCH_RESULTS.md).
+auf zehn ursprünglichen Halbflächengittern. Auch einfache Projektion der
+Clebsch-Feldkomponenten auf gespeicherte Moden erklärt sie nicht an der festen
+1e-5-Grenze, obwohl die Winkelverfeinerung besteht. Autoren-Eingaben und neue
+QI-Gleichgewichts-/Auflösungsrechnungen sind der nächste Prüfpunkt.
+[Ergebnis](qi/QI_CLEBSCH_RESULTS.md).
 
 ## Warum weiterhin keine zulässige Baseline vorliegt
 

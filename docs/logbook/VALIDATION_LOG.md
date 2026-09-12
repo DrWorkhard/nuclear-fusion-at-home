@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Spectral diagnosis closes with stable but mismatching component projections
+
+- At7832e95 all48 endpoint grids complete. Old samples reproduce exactly;
+  Parseval<=3.955e-16,64/128 refinement<=4.732e-11. Every component projection
+  fails1e-5, max poloidal1.603963528436975e-3. No original field overwritten.
+- Independent96 direct-DFT and48 trigonometric projection calls confirm bands,
+  component errors and refinement; no new field calls. Guardexit2 is regular
+  hypothesis rejection, min free6042742784Bytes. Simple field-mode truncation
+  alone is not sufficient; g/lambda/producer effects remain open.
+- F-069/detail/index/status/plan updated; both READMEs accurately retain open
+  absolute drift. All eight spectral tests pass with strict RuntimeWarning
+  filter; Ruff/docs/diff pass before commit. Old ABI warning is not healed.
+
 ## 2026-09-12 — Prepare spectral projection audit and retain native import-warning failure
 
 - Seven Fourier-mask/conjugation/Parseval controls plus direct-DFT mutation
