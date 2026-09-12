@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Vorhandene LPQA-Felder: Rekonstruktionsergebnis](UPSTREAM_LPQA_RECONSTRUCTION_RESULTS.md) — Alle fünf Quellen-/Feldgegenprüfungen bestanden; tatsächlicher Roh-Flux nahe1e-6 statt gemeldeter Null, alle fünf an1e-8 abgelehnt. Geometrische Gitterschirme bestanden.
+
 - [Vorhandene LPQA-Felder: Rekonstruktionsprotokoll](UPSTREAM_LPQA_RECONSTRUCTION_PROTOCOL.md) — Fünf fest ausgewählte Archivfelder, Symmetrie-/Stromidentität, direkte Biot-Savart-Gegenrechnung und unveränderte feine Gitterabnahme; noch keine vollständige Baselinefreigabe.
 
 - [Vorhandene LPQA-Referenzen: Inventarergebnis](UPSTREAM_LPQA_INVENTORY_RESULTS.md) — 5301 quellgeprüfte Berichte, 27 gemeldet passende Datensätze und fünf unqualifizierte Rekonstruktionskandidaten; 2954 geschwellte Nullmeldungen sind keine Roh-Fluxfreigabe.

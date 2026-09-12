@@ -140,8 +140,10 @@ Abnahme ist abgeschlossen: Geometrie/nativ bestehen, Flux Faktor26,99 zu hoch.
 Der getrennt registrierte Jacobispalten-Skalierungsversuch besteht inzwischen
 beide exakten Wiederholungen und den unabhängigen Audit. Seine feine Abnahme
 ist ebenfalls abgeschlossen: Flux rund11,4% kleiner, aber höhere Krümmung und
-weiter Faktor23,91 über der Grenze. Fünf getrennt festgelegte Archivfelder sind
-für eine unabhängige Rekonstruktion ausgewählt, noch nicht freigegeben.
+weiter Faktor23,91 über der Grenze. Auch fünf getrennt festgelegte Archivfelder
+sind inzwischen unabhängig rekonstruiert: Quellen/Feldberechnung stimmen,
+doch alle tatsächlichen Roh-Fluxwerte nahe1e-6 verfehlen1e-8 um rund Faktor100.
+Ihre geschwellten Nullmeldungen sind keine zulässige Baseline.
 Weiterhin kein neuer zulässiger Entwurf.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der

@@ -47,8 +47,12 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    Daneben ist die [Bestandsaufnahme vorhandener LPQA-Felder](optimization/UPSTREAM_LPQA_INVENTORY_RESULTS.md)
    unabhängig abgeschlossen: fünf Metadatenkandidaten für separate Rekonstruktion,
    keine ungeprüfte Übernahme als zulässige Baseline oder neue Suchinitialisierung.
-   Deren [statische Rekonstruktion](optimization/UPSTREAM_LPQA_RECONSTRUCTION_PROTOCOL.md)
-   ist vorbereitet und wird nach dem skalierten Abschlusscommit ausgeführt.
+   Deren [statische Rekonstruktion](optimization/UPSTREAM_LPQA_RECONSTRUCTION_RESULTS.md)
+   ist vollständig abgeschlossen: Quellen/Felder und geometrische Gitterschirme
+   bestehen, Roh-Flux bei allen fünf rund100-mal zu hoch. Als nächsten getrennten
+   Konstruktionsstart den bereits vor jeder Feldrechnung erstplatzierten
+   Archiveintrag untersuchen: explizite Anpassung an dieselbe feste Stromsumme,
+   neue Startqualifikation, keine Auswahl/Toleranzanpassung aus Holdoutwerten.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

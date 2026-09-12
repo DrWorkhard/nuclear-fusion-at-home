@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-12 — Reconstruct and independently reject all five fixed upstream fields
+
+- At aa8741d all five exact sources pass independent serialized-state/current/
+  symmetry tests;257-point positions match exactly. Ten native/direct-field
+  screens pass, worst normalized error5.533820417961848e-16 versus1e-12.
+- All four flux grids and geometry/plasma refinements complete for every field.
+  Geometry passes; raw flux9.99952935e-7–9.99974416e-7 fails1e-8 in every case.
+  No candidate substitution, current normalization or optimizer feedback.
+- Separate component-wise field replay/source/admission audit passes all five;
+  30 native grids,10 direct grids,10 additional cached-quadrature audit replays.
+  Guarded execution exits0 meaning completed, not admitted; free>=6209859584Bytes.
+- Correction: old reported |B|~1.0963T is not the same metric as our surface mean,
+  now measured~0.94606T. Old producer SIMSOPT revision unavailable locally; no
+  retrospective producer reproduction claimed. Source current sums unchanged.
+- FindingF-065/detail/index and both READMEs/status/plan updated. No full step1/2
+  completion; next separately qualify a fixed alternative construction start.
+  All37 relevant field/serialization/inventory tests pass; docs/diff pass before commit.
+
 ## 2026-09-12 — Close all scaled-AL holdouts with retained negative flux result
 
 - At0bbd053 all four phases complete, exit2/0/0/0. Both fine flux values

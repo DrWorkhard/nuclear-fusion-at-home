@@ -1,5 +1,19 @@
 # Findings log
 
+## F-065 — Five reported zero-flux archive fields fail the independent raw-flux gate
+
+**Class:** source-preserving static reconstruction with independent field replay
+**Date:** 2026-09-12
+
+All five fixed shortlist sources, physical currents, Fourier coefficients and
+symmetry checks pass. Independent direct Biot-Savart agrees within5.534e-16
+normalized. All geometric/refinement grid checks pass but raw flux is about
+9.9995–9.9997e-7, nearly100 times our1e-8 gate, consistent with their much looser
+1e-6 clipping threshold. No universal claim about all5301 records, no admitted
+baseline. Reported historical field-strength values are not comparable to our
+surface mean; reconstructed means are about0.94606T. See
+[static result](../optimization/UPSTREAM_LPQA_RECONSTRUCTION_RESULTS.md).
+
 ## F-064 — Jacobian scaling lowers flux in a repeated one-start trial, still infeasible
 
 **Class:** fixed single-option classical comparison with independent negative holdouts

@@ -1,0 +1,175 @@
+{
+  "all_pass": true,
+  "cached_quadrature_field_replays": 10,
+  "candidates": [
+    {
+      "all_pass": true,
+      "checks": {
+        "all_grids": true,
+        "reported_admission_arithmetic": true,
+        "saved_fields": true,
+        "saved_source_identity": true,
+        "two_crosschecks": true,
+        "unchanged_base_regularizations": true,
+        "unchanged_coefficients": true,
+        "unchanged_currents": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-lpqa-reconstruction-v1/candidate-1/field-200.json",
+        "sha256": "2d4fa6b315161510d6c98378ee7718251861380edeec0e716c22cdb0f5286f5f"
+      },
+      "field_replays": [
+        {
+          "native_normalized_error": 7.140493139722416e-16,
+          "resolution": 200,
+          "saved_numpy_normalized_error": 5.902905851328768e-16
+        },
+        {
+          "native_normalized_error": 8.068235998053638e-16,
+          "resolution": 800,
+          "saved_numpy_normalized_error": 7.027857024041146e-16
+        }
+      ]
+    },
+    {
+      "all_pass": true,
+      "checks": {
+        "all_grids": true,
+        "reported_admission_arithmetic": true,
+        "saved_fields": true,
+        "saved_source_identity": true,
+        "two_crosschecks": true,
+        "unchanged_base_regularizations": true,
+        "unchanged_coefficients": true,
+        "unchanged_currents": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-lpqa-reconstruction-v1/candidate-2/field-200.json",
+        "sha256": "db49eaf76594836348509b245592887fb10fc3ce2676d00b049409c0b3301e77"
+      },
+      "field_replays": [
+        {
+          "native_normalized_error": 7.791361360319881e-16,
+          "resolution": 200,
+          "saved_numpy_normalized_error": 5.396847427995526e-16
+        },
+        {
+          "native_normalized_error": 1.0488523176472411e-15,
+          "resolution": 800,
+          "saved_numpy_normalized_error": 8.662879875838507e-16
+        }
+      ]
+    },
+    {
+      "all_pass": true,
+      "checks": {
+        "all_grids": true,
+        "reported_admission_arithmetic": true,
+        "saved_fields": true,
+        "saved_source_identity": true,
+        "two_crosschecks": true,
+        "unchanged_base_regularizations": true,
+        "unchanged_coefficients": true,
+        "unchanged_currents": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-lpqa-reconstruction-v1/candidate-3/field-200.json",
+        "sha256": "682fc3ac6d36b5d5705c8986e074136793fe9c125edddc379e839f9f5fd6c532"
+      },
+      "field_replays": [
+        {
+          "native_normalized_error": 6.828951818896169e-16,
+          "resolution": 200,
+          "saved_numpy_normalized_error": 4.542933688969439e-16
+        },
+        {
+          "native_normalized_error": 8.083736946057739e-16,
+          "resolution": 800,
+          "saved_numpy_normalized_error": 1.0371267395744221e-15
+        }
+      ]
+    },
+    {
+      "all_pass": true,
+      "checks": {
+        "all_grids": true,
+        "reported_admission_arithmetic": true,
+        "saved_fields": true,
+        "saved_source_identity": true,
+        "two_crosschecks": true,
+        "unchanged_base_regularizations": true,
+        "unchanged_coefficients": true,
+        "unchanged_currents": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-lpqa-reconstruction-v1/candidate-4/field-200.json",
+        "sha256": "fd62fb91797266b7b23ee99026cbbf5b9e509cae0981b312d7033d0667c58c49"
+      },
+      "field_replays": [
+        {
+          "native_normalized_error": 5.822058658345461e-16,
+          "resolution": 200,
+          "saved_numpy_normalized_error": 4.585973723508303e-16
+        },
+        {
+          "native_normalized_error": 7.531795791527215e-16,
+          "resolution": 800,
+          "saved_numpy_normalized_error": 8.087309868639295e-16
+        }
+      ]
+    },
+    {
+      "all_pass": true,
+      "checks": {
+        "all_grids": true,
+        "reported_admission_arithmetic": true,
+        "saved_fields": true,
+        "saved_source_identity": true,
+        "two_crosschecks": true,
+        "unchanged_base_regularizations": true,
+        "unchanged_coefficients": true,
+        "unchanged_currents": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-lpqa-reconstruction-v1/candidate-5/field-200.json",
+        "sha256": "04fe9a4d0e60edb181575a4568a31b521472a5d4460bac0a3e8b6733c6560a3f"
+      },
+      "field_replays": [
+        {
+          "native_normalized_error": 6.715651992543441e-16,
+          "resolution": 200,
+          "saved_numpy_normalized_error": 5.667848928154234e-16
+        },
+        {
+          "native_normalized_error": 9.659893884330563e-16,
+          "resolution": 800,
+          "saved_numpy_normalized_error": 8.903441835098303e-16
+        }
+      ]
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_upstream_reconstruction.py",
+      "sha256": "23a0483ab0a047a4d651dfa9fcd00b5447b75bc0cbb48fa71e4dbca71ceacac3"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_field_state.py",
+      "sha256": "6b86dbe1cb89e3f46188c500591b56a23441c04cf7dab475b3c3844965ab9d0c"
+    }
+  ],
+  "new_native_B_calls": 0,
+  "physical_feasibility_certified": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "aa8741dbdda1b41c804f288f8bdb3f5b7fe46af1",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "scope": "source_parameters_cached_field_arrays_and_admission_arithmetic_not_new_fine_geometry",
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-lpqa-reconstruction-v1.json",
+    "sha256": "9d0f691fdf058665bdf68a4ab14a6c08c047cb6cd3eb0eb54d87181299781065"
+  }
+}

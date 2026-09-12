@@ -29,6 +29,9 @@ Metriken werden nicht durch die aktuelle Quellinspektion rückwirkend zertifizie
 
 Auch die Vergleichbarkeit bleibt offen: Die fünf melden |B| etwa1,0963T und
 Basisstromsumme1249999,2463040038A; unsere lokale Summe ist1250075,624635464A.
+Diese Feldmeldungen sind nicht mit unserem Oberflächenmittel gleichzusetzen:
+die [spätere Rekonstruktion](UPSTREAM_LPQA_RECONSTRUCTION_RESULTS.md) misst dort
+stattdessen etwa0,94606T. Unterschiedliche Messdefinitionen bleiben getrennt.
 Unterschiedliche Starts, Produzenten und Rechenbudgets verhindern eine direkte
 Methodenrangfolge. Stromwerte werden nicht still angepasst und geschwellte
 Zielfunktionswerte nicht als Rohwerte übernommen.
@@ -50,6 +53,8 @@ rekonstruieren, Symmetrien/Ströme/Parameterisierung prüfen, Roh-Flux und Geome
 mit unseren festgelegten Gittern auswerten. Dies erhält ein eigenes Protokoll
 und beginnt erst nach Abschluss der laufenden kontrollierten Suche. Das Inventar
 allein schließt weder die zulässige Baseline noch langfristigen Schritt2.
+Die inzwischen abgeschlossene Rekonstruktion bestätigt alle fünf Quellen/
+Felder, lehnt jedoch jeden Roh-Flux nahe1e-6 gegenüber1e-8 ab.
 
 ## Getrennt vorbereitete Rekonstruktion
 

@@ -1,7 +1,7 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
 Stand: 12. September 2026, nach frischem nativen Neuaufbau und QI-Gauge-Audit;
-AL und Skalierungsversuch vollständig abgelehnt; Referenzrekonstruktion folgt.
+AL, Skalierungsversuch und fünf rekonstruierte Referenzfelder vollständig geprüft/abgelehnt.
 Dieses Dokument enthält die aktuelle Einschätzung; historische optimistischere
 Aussagen im Journal werden dadurch nicht wieder gültig.
 
@@ -65,8 +65,11 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    vorab festgelegte Jacobispalten-Skalierung bei sonst identischen Einstellungen
    ebenfalls vollständig wiederholt, auditiert und fein geprüft: Flux rund11,4%
    kleiner, jedoch höhere Krümmung und Faktor23,91 über Grenze. Kein
-   Konvergenznachweis. Jetzt die fünf separat ausgewählten Archivfelder mit
-   direkter Quellen-/Biot-Savart-Gegenprüfung rekonstruieren; noch keine Zulassung.
+   Konvergenznachweis. Die fünf separat ausgewählten Archivfelder bestehen
+   inzwischen Quellen-/Biot-Savart-Gegenprüfungen und geometrische Gitterschirme,
+   ihr Roh-Flux nahe1e-6 bleibt aber rund100-mal zu groß. Geschwellte Nullwerte
+   begründen keine Zulassung. Ein neuer Konstruktionsstart muss separat festgelegt
+   und bei gleicher physikalischer Problemdefinition qualifiziert werden.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
    Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024
