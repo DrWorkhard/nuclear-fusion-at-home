@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Prepare additive composite-gate SLSQP arm and independent full-ledger audit
+
+- Old kernels untouched; AST test confirms identical solver invocation and all
+  callback functions. Only named source direction, initial array storage/replay
+  and explicit composite gate differ. All original FD arrays/flags retained.
+- Six tests pass: bad nonpair/full-matrix/point mapping fails, mock solver starts
+  only after all nine bundles; corrupt initial matrix stops after one bundle and
+  before FD/solver. Independent audit verifies startup against old/source arrays.
+- Detail/index and both READMEs/status/plan reviewed; Ruff/docs/diff pass before
+  commit. Native two-arm run and all four holdouts remain next, no design admission.
+
 ## 2026-09-12 — Register separate composite-gate SLSQP retry after closed independent qualification
 
 - Same fixed AL state, all physical limits,2048 bundles per fresh repeat and
