@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Alternate-start search closes with exact repeats and passing independent audit
+
+- Starting at3f88576 both1033-bundle arms finish;1898 requests/865 cache hits,
+  no failed/global-denied bundles. Histories, stages, best fields/arrays and work
+  match exactly. Best1033: coarse flux8.95478252250164e-8, internal violation0.
+- Independent audit passes29 checks per arm plus11 profile/control checks;
+  qualified source and named initial vector explicitly bound. Native coupled
+  gradient error<=5.129e-13. Minimum free6096891904Bytes. No controlled timing
+  claim from799/866s; small QI diagnostics ran alongside, no heavy search/install.
+- Search/detail/index/status/plan closed; both READMEs remain accurate about no
+  feasible design. Fine holdouts next. Relevant solver/audit tests and docs/diff
+  pass before commit; no new holdout has influenced selection.
+
 ## 2026-09-12 — Inspect finite Wout outputs and preregister spectral residual diagnosis
 
 - Current pinned wrout projects Jacobian/field components separately to finite

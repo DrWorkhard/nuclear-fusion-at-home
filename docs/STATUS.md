@@ -78,7 +78,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    begründen keine Zulassung. Ein neuer Konstruktionsstart muss separat festgelegt
    und bei gleicher physikalischer Problemdefinition qualifiziert werden. Der
    erste vorab ausgewählte Archiveintrag besteht nun diese getrennte Strom-/Feld-/
-   Ableitungsqualifikation samt Audit; sein Flux bleibt unzulässig. Suche folgt.
+   Ableitungsqualifikation samt Audit. Auch beide1033-Bundle-Suchpfade sind exakt
+   gleich und unabhängig auditiert: grober Flux8,95e-8, interne Geometrie erfüllt;
+   weiterhin über1e-8. Feine unabhängige Abnahme folgt.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
    Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024

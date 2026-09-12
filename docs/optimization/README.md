@@ -9,7 +9,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 ## Dokumente
 
 - [Alternativer Start: Protokoll](UPSTREAM_START_PROTOCOL.md) — Erster vorab ausgewählter Archiveintrag, explizite feste Stromsumme, neue Qualifikation vor unverändertem klassischen Pilot.
-- [Alternativer Start: Ergebnis](UPSTREAM_START_RESULTS.md) — Strom-/Feld-/138-Zeilen-Startqualifikation und separater Audit bestanden; noch keine Suche oder zulässige Lösung.
+- [Alternativer Start: Ergebnis](UPSTREAM_START_RESULTS.md) — Startqualifikation und beide1033-Bundle-Suchpfade unabhängig bestanden; grober Flux8,95e-8 noch unzulässig, feine Abnahme folgt.
 
 - [Vorhandene LPQA-Felder: Rekonstruktionsergebnis](UPSTREAM_LPQA_RECONSTRUCTION_RESULTS.md) — Alle fünf Quellen-/Feldgegenprüfungen bestanden; tatsächlicher Roh-Flux nahe1e-6 statt gemeldeter Null, alle fünf an1e-8 abgelehnt. Geometrische Gitterschirme bestanden.
 

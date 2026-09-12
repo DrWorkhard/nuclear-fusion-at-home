@@ -54,7 +54,9 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    Archiveintrag untersucht: explizite Anpassung an dieselbe feste Stromsumme,
    neue Startqualifikation samt unabhängigem Audit bestanden, keine Auswahl/
    Toleranzanpassung aus Holdoutwerten. Jetzt den registrierten neuen Start im
-   unveränderten klassischen1033-Bundle-Piloten mit zwei Wiederholungen verwenden.
+   unveränderten klassischen1033-Bundle-Piloten geprüft: beide Wiederholungen
+   exakt gleich und unabhängig auditiert, grober Flux8,95e-8. Jetzt unverändert
+   alle vier feinen Abnahmephasen für beide ausgewählten Felder abschließen.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

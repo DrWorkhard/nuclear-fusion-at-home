@@ -1,0 +1,1168 @@
+{
+  "analytic_control": {
+    "counters": {
+      "attempts": 13,
+      "cache_hits": 27,
+      "denied": 0,
+      "failed_attempts": 0,
+      "limit": 1033,
+      "requests": 40
+    },
+    "pass_control": true,
+    "stages": [
+      {
+        "denied": 0,
+        "end_attempts": 6,
+        "lagrangian_gradient_max": 1.5543122344752192e-15,
+        "multipliers": [
+          0.0,
+          0.0
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 1.0,
+        "requests": [
+          {
+            "attempt": 1,
+            "merit": 2.5,
+            "x_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+          },
+          {
+            "attempt": 1,
+            "merit": 2.5,
+            "x_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+          },
+          {
+            "attempt": 2,
+            "merit": 1.7639320225002102,
+            "x_sha256": "8d4f571d5ebcd10dc5606378e2d084d388dd671abb20f14507f530c8445c8443"
+          },
+          {
+            "attempt": 2,
+            "merit": 1.7639320225002102,
+            "x_sha256": "8d4f571d5ebcd10dc5606378e2d084d388dd671abb20f14507f530c8445c8443"
+          },
+          {
+            "attempt": 3,
+            "merit": 2.3138496555507655,
+            "x_sha256": "f0eada8125cd3fe517131dfee0b73ab5d3a8f717f56be7c9da0a5c5467ebe14c"
+          },
+          {
+            "attempt": 4,
+            "merit": 1.4118869359122133,
+            "x_sha256": "5ee56a4ff8ab0406f4da900d3354054a113d48df4e54c05a3be69753a96980d4"
+          },
+          {
+            "attempt": 4,
+            "merit": 1.4118869359122133,
+            "x_sha256": "5ee56a4ff8ab0406f4da900d3354054a113d48df4e54c05a3be69753a96980d4"
+          },
+          {
+            "attempt": 5,
+            "merit": 1.0354908714974114,
+            "x_sha256": "5b44caeae4a136498ad13ed5ab90ec56a09e8daeca16177a2e384e9699e9bfc7"
+          },
+          {
+            "attempt": 5,
+            "merit": 1.0354908714974114,
+            "x_sha256": "5b44caeae4a136498ad13ed5ab90ec56a09e8daeca16177a2e384e9699e9bfc7"
+          },
+          {
+            "attempt": 6,
+            "merit": 0.9090909090909092,
+            "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+          },
+          {
+            "attempt": 6,
+            "merit": 0.9090909090909092,
+            "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 6,
+          "merit": 0.9090909090909092,
+          "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+        },
+        "selected_values": [
+          0.8264462809917354,
+          -0.09090909090909105,
+          -0.09090909090909084
+        ],
+        "solver": {
+          "nfev": 6,
+          "njev": 5,
+          "status": 1,
+          "success": true
+        },
+        "stage": 1,
+        "start_attempts": 1,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9090909090909105,
+          0.9090909090909084
+        ],
+        "violation": 0.09090909090909105
+      },
+      {
+        "denied": 0,
+        "end_attempts": 7,
+        "lagrangian_gradient_max": 1.3322676295501878e-15,
+        "multipliers": [
+          0.9090909090909105,
+          0.9090909090909084
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 0.09090909090909105,
+        "requests": [
+          {
+            "attempt": 6,
+            "merit": 1.15702479338843,
+            "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+          },
+          {
+            "attempt": 6,
+            "merit": 1.15702479338843,
+            "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+          },
+          {
+            "attempt": 7,
+            "merit": 1.081893313298272,
+            "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+          },
+          {
+            "attempt": 7,
+            "merit": 1.081893313298272,
+            "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 7,
+          "merit": 1.081893313298272,
+          "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+        },
+        "selected_values": [
+          0.983539375725702,
+          -0.008264462809917106,
+          -0.008264462809917337
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 2,
+        "start_attempts": 6,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9917355371900816,
+          0.9917355371900818
+        ],
+        "violation": 0.008264462809917337
+      },
+      {
+        "denied": 0,
+        "end_attempts": 8,
+        "lagrangian_gradient_max": 1.7763568394002505e-15,
+        "multipliers": [
+          0.9917355371900816,
+          0.9917355371900818
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 0.008264462809917337,
+        "requests": [
+          {
+            "attempt": 7,
+            "merit": 1.0989686496823985,
+            "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+          },
+          {
+            "attempt": 7,
+            "merit": 1.0989686496823985,
+            "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+          },
+          {
+            "attempt": 8,
+            "merit": 1.0983477283593395,
+            "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+          },
+          {
+            "attempt": 8,
+            "merit": 1.0983477283593395,
+            "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 8,
+          "merit": 1.0983477283593395,
+          "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+        },
+        "selected_values": [
+          0.9984979348721269,
+          -0.0007513148009015147,
+          -0.0007513148009016024
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 3,
+        "start_attempts": 7,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9992486851990967,
+          0.9992486851990978
+        ],
+        "violation": 0.0007513148009016024
+      },
+      {
+        "denied": 0,
+        "end_attempts": 9,
+        "lagrangian_gradient_max": 1.9984014443252818e-15,
+        "multipliers": [
+          0.9992486851990967,
+          0.9992486851990978
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 0.0007513148009016024,
+        "requests": [
+          {
+            "attempt": 8,
+            "merit": 1.0998548737525828,
+            "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+          },
+          {
+            "attempt": 8,
+            "merit": 1.0998548737525828,
+            "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+          },
+          {
+            "attempt": 9,
+            "merit": 1.0998497421714006,
+            "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+          },
+          {
+            "attempt": 9,
+            "merit": 1.0998497421714006,
+            "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 9,
+          "merit": 1.0998497421714006,
+          "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+        },
+        "selected_values": [
+          0.9998634019740008,
+          -6.830134553648115e-05,
+          -6.830134553652556e-05
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 4,
+        "start_attempts": 8,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999316986544615,
+          0.9999316986544631
+        ],
+        "violation": 6.830134553652556e-05
+      },
+      {
+        "denied": 0,
+        "end_attempts": 10,
+        "lagrangian_gradient_max": 8.881784197001252e-16,
+        "multipliers": [
+          0.9999316986544615,
+          0.9999316986544631
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 6.830134553652556e-05,
+        "requests": [
+          {
+            "attempt": 9,
+            "merit": 1.0999863821830642,
+            "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+          },
+          {
+            "attempt": 9,
+            "merit": 1.0999863821830642,
+            "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+          },
+          {
+            "attempt": 10,
+            "merit": 1.0999863397733023,
+            "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+          },
+          {
+            "attempt": 10,
+            "merit": 1.0999863397733023,
+            "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 10,
+          "merit": 1.0999863397733023,
+          "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+        },
+        "selected_values": [
+          0.9999875816120931,
+          -6.209213230690125e-06,
+          -6.209213230578877e-06
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 5,
+        "start_attempts": 9,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999937907867684,
+          0.9999937907867689
+        ],
+        "violation": 6.209213230690125e-06
+      },
+      {
+        "denied": 0,
+        "end_attempts": 11,
+        "lagrangian_gradient_max": 1.3322676295501878e-15,
+        "multipliers": [
+          0.9999937907867684,
+          0.9999937907867689
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 6.209213230690125e-06,
+        "requests": [
+          {
+            "attempt": 10,
+            "merit": 1.0999987585081983,
+            "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+          },
+          {
+            "attempt": 10,
+            "merit": 1.0999987585081983,
+            "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+          },
+          {
+            "attempt": 11,
+            "merit": 1.0999987581577044,
+            "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+          },
+          {
+            "attempt": 11,
+            "merit": 1.0999987581577044,
+            "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 11,
+          "merit": 1.0999987581577044,
+          "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+        },
+        "selected_values": [
+          0.9999988710524583,
+          -5.644739302645974e-07,
+          -5.644739300497335e-07
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 6,
+        "start_attempts": 10,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999994355260711,
+          0.9999994355260694
+        ],
+        "violation": 5.644739302645974e-07
+      },
+      {
+        "denied": 0,
+        "end_attempts": 12,
+        "lagrangian_gradient_max": 1.3322676295501878e-15,
+        "multipliers": [
+          0.9999994355260711,
+          0.9999994355260694
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 5.644739302645974e-07,
+        "requests": [
+          {
+            "attempt": 11,
+            "merit": 1.0999998871081136,
+            "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+          },
+          {
+            "attempt": 11,
+            "merit": 1.0999998871081136,
+            "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+          },
+          {
+            "attempt": 12,
+            "merit": 1.099999887105217,
+            "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+          },
+          {
+            "attempt": 12,
+            "merit": 1.099999887105217,
+            "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 12,
+          "merit": 1.099999887105217,
+          "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+        },
+        "selected_values": [
+          0.9999998973683792,
+          -5.1315811600005645e-08,
+          -5.1315811805303396e-08
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 7,
+        "start_attempts": 11,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999999486841871,
+          0.9999999486841874
+        ],
+        "violation": 5.1315811805303396e-08
+      },
+      {
+        "denied": 0,
+        "end_attempts": 13,
+        "lagrangian_gradient_max": 5.551115123125783e-16,
+        "multipliers": [
+          0.9999999486841871,
+          0.9999999486841874
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 5.1315811805303396e-08,
+        "requests": [
+          {
+            "attempt": 12,
+            "merit": 1.0999999897368613,
+            "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+          },
+          {
+            "attempt": 12,
+            "merit": 1.0999999897368613,
+            "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+          },
+          {
+            "attempt": 13,
+            "merit": 1.0999999897368373,
+            "x_sha256": "cd9552eaa4104c61456d8789d27c9075cace526042664235f95b4379628da03b"
+          },
+          {
+            "attempt": 13,
+            "merit": 1.0999999897368373,
+            "x_sha256": "cd9552eaa4104c61456d8789d27c9075cace526042664235f95b4379628da03b"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 13,
+          "merit": 1.0999999897368373,
+          "x_sha256": "cd9552eaa4104c61456d8789d27c9075cace526042664235f95b4379628da03b"
+        },
+        "selected_values": [
+          0.9999999906698523,
+          -4.665073882748061e-09,
+          -4.665073823490974e-09
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 8,
+        "start_attempts": 12,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999999953349259,
+          0.9999999953349257
+        ],
+        "violation": 4.665073882748061e-09
+      }
+    ],
+    "stop_reason": "eight_stages_completed",
+    "x": [
+      1.0000000046650739,
+      -4.665073823490974e-09
+    ]
+  },
+  "arms": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1/natural-auglag-jac-1.json",
+      "sha256": "eaa64df7e8876b4a508c517a96b604ee934d6924d39423fbc945d991c3ee8db2"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1/natural-auglag-jac-2.json",
+      "sha256": "d526fe3f0748cae1e7666cf822092f1e9b0caa1ff02058228d4b957f66fe38ef"
+    }
+  ],
+  "checks": {
+    "gradient_screens": true,
+    "identical_complete_histories": true,
+    "same_best": true,
+    "same_counters": true,
+    "same_stages": true,
+    "same_stop": true,
+    "same_work": true
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_natural_auglag_jac.py",
+      "sha256": "3fd1842b27b35a9f5f58c01bf9db30a79b4856b1325679090251595e6542b996"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/jac_scaled_solver.py",
+      "sha256": "057410cc688bcc9409d82a8936e70bac80de79da1d8fca9fffe6f494bdca38b4"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/staged_auglag.py",
+      "sha256": "27cafbf5e0193fa1e7af44993c03c23b1cf3fad74f252f8ba0d00d85f34899a8"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/natural_auglag.py",
+      "sha256": "51bf52feca2837e4bf0dee36f81734b0439d494f9328e71bb4fa48beded0840a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/natural_flux_backend.py",
+      "sha256": "f6d8c901c1be48316f51c11e7b0c341c0899023af3dd7ee786c1624a860f65bf"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/gauss_newton_backend.py",
+      "sha256": "94cd886adc46068c52599da45f4bac98efeed400f4619d6a2a01d5dbb6f66427"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/batched_field_jacobian.py",
+      "sha256": "6e79e1f3643836a0a86b0fc19b683fbbddab3bc568617856c0d02cef1138446d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_oracle.py",
+      "sha256": "5e7c154b8290339e224e629393f551e2c74fab7804ccda5a40d1fcac81b8c916"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_upstream_start.py",
+      "sha256": "7876909464fc005d32e32bfb25531ce8a8eb1c894d2342ff3ee574ca44a626be"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/prepare_upstream_start.py",
+      "sha256": "07e00389215f716324e149fdc6e8fb58ec20035de08d4c7516329815d04046ea"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/current_normalization.py",
+      "sha256": "b3fbe13e28475bc66d7d8c27e3275e82eb457abd2859aa7455fb3791219d5c9a"
+    }
+  ],
+  "construction_tolerance": 1e-08,
+  "control": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-jac-control-v1.json",
+    "sha256": "d5b6f444684d7aace2537b3109c96c61fcb62a461823c92fc9735fd3c3d15ed1"
+  },
+  "flux_scale": 1e-06,
+  "host": {
+    "captured_at": "2026-09-12T12:11:22.151305+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "labels": [
+    "raw_flux_scaled",
+    "length",
+    "curvature-0",
+    "curvature-1",
+    "curvature-2",
+    "curvature-3",
+    "coil-pair-0-1",
+    "coil-pair-0-2",
+    "coil-pair-0-3",
+    "coil-pair-0-4",
+    "coil-pair-0-5",
+    "coil-pair-0-6",
+    "coil-pair-0-7",
+    "coil-pair-0-8",
+    "coil-pair-0-9",
+    "coil-pair-0-10",
+    "coil-pair-0-11",
+    "coil-pair-0-12",
+    "coil-pair-0-13",
+    "coil-pair-0-14",
+    "coil-pair-0-15",
+    "coil-pair-1-2",
+    "coil-pair-1-3",
+    "coil-pair-1-4",
+    "coil-pair-1-5",
+    "coil-pair-1-6",
+    "coil-pair-1-7",
+    "coil-pair-1-8",
+    "coil-pair-1-9",
+    "coil-pair-1-10",
+    "coil-pair-1-11",
+    "coil-pair-1-12",
+    "coil-pair-1-13",
+    "coil-pair-1-14",
+    "coil-pair-1-15",
+    "coil-pair-2-3",
+    "coil-pair-2-4",
+    "coil-pair-2-5",
+    "coil-pair-2-6",
+    "coil-pair-2-7",
+    "coil-pair-2-8",
+    "coil-pair-2-9",
+    "coil-pair-2-10",
+    "coil-pair-2-11",
+    "coil-pair-2-12",
+    "coil-pair-2-13",
+    "coil-pair-2-14",
+    "coil-pair-2-15",
+    "coil-pair-3-4",
+    "coil-pair-3-5",
+    "coil-pair-3-6",
+    "coil-pair-3-7",
+    "coil-pair-3-8",
+    "coil-pair-3-9",
+    "coil-pair-3-10",
+    "coil-pair-3-11",
+    "coil-pair-3-12",
+    "coil-pair-3-13",
+    "coil-pair-3-14",
+    "coil-pair-3-15",
+    "coil-pair-4-5",
+    "coil-pair-4-6",
+    "coil-pair-4-7",
+    "coil-pair-4-8",
+    "coil-pair-4-9",
+    "coil-pair-4-10",
+    "coil-pair-4-11",
+    "coil-pair-4-12",
+    "coil-pair-4-13",
+    "coil-pair-4-14",
+    "coil-pair-4-15",
+    "coil-pair-5-6",
+    "coil-pair-5-7",
+    "coil-pair-5-8",
+    "coil-pair-5-9",
+    "coil-pair-5-10",
+    "coil-pair-5-11",
+    "coil-pair-5-12",
+    "coil-pair-5-13",
+    "coil-pair-5-14",
+    "coil-pair-5-15",
+    "coil-pair-6-7",
+    "coil-pair-6-8",
+    "coil-pair-6-9",
+    "coil-pair-6-10",
+    "coil-pair-6-11",
+    "coil-pair-6-12",
+    "coil-pair-6-13",
+    "coil-pair-6-14",
+    "coil-pair-6-15",
+    "coil-pair-7-8",
+    "coil-pair-7-9",
+    "coil-pair-7-10",
+    "coil-pair-7-11",
+    "coil-pair-7-12",
+    "coil-pair-7-13",
+    "coil-pair-7-14",
+    "coil-pair-7-15",
+    "coil-pair-8-9",
+    "coil-pair-8-10",
+    "coil-pair-8-11",
+    "coil-pair-8-12",
+    "coil-pair-8-13",
+    "coil-pair-8-14",
+    "coil-pair-8-15",
+    "coil-pair-9-10",
+    "coil-pair-9-11",
+    "coil-pair-9-12",
+    "coil-pair-9-13",
+    "coil-pair-9-14",
+    "coil-pair-9-15",
+    "coil-pair-10-11",
+    "coil-pair-10-12",
+    "coil-pair-10-13",
+    "coil-pair-10-14",
+    "coil-pair-10-15",
+    "coil-pair-11-12",
+    "coil-pair-11-13",
+    "coil-pair-11-14",
+    "coil-pair-11-15",
+    "coil-pair-12-13",
+    "coil-pair-12-14",
+    "coil-pair-12-15",
+    "coil-pair-13-14",
+    "coil-pair-13-15",
+    "coil-pair-14-15",
+    "plasma-0",
+    "plasma-1",
+    "plasma-2",
+    "plasma-3",
+    "msc-0",
+    "msc-1",
+    "msc-2",
+    "msc-3",
+    "arclength-0",
+    "arclength-1",
+    "arclength-2",
+    "arclength-3"
+  ],
+  "methods": [
+    "natural-auglag-jac"
+  ],
+  "preparation": {
+    "canonical_fixture": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/fixtures/rejected-lpqa-warmstart/field.json",
+      "sha256": "ef38a96aa6820de08d187f6362645b5450f009034706b06b2722566da9631e8c"
+    },
+    "canonical_total": 1250075.624635464,
+    "case": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/cases/lpqa_engineering_v1p1_lbfgsb.yaml",
+      "sha256": "4a0bd130270fc887988ac33de974e04b6fac6da2da2faaa0e66a4f49535b64b9"
+    },
+    "current_factor": 1.0000611027020105,
+    "degrees_of_freedom": [
+      "Current1:x0",
+      "Current2:x0",
+      "Current3:x0",
+      "CurveXYZFourier1:xc(0)",
+      "CurveXYZFourier1:xs(1)",
+      "CurveXYZFourier1:xc(1)",
+      "CurveXYZFourier1:xs(2)",
+      "CurveXYZFourier1:xc(2)",
+      "CurveXYZFourier1:xs(3)",
+      "CurveXYZFourier1:xc(3)",
+      "CurveXYZFourier1:xs(4)",
+      "CurveXYZFourier1:xc(4)",
+      "CurveXYZFourier1:xs(5)",
+      "CurveXYZFourier1:xc(5)",
+      "CurveXYZFourier1:xs(6)",
+      "CurveXYZFourier1:xc(6)",
+      "CurveXYZFourier1:xs(7)",
+      "CurveXYZFourier1:xc(7)",
+      "CurveXYZFourier1:xs(8)",
+      "CurveXYZFourier1:xc(8)",
+      "CurveXYZFourier1:yc(0)",
+      "CurveXYZFourier1:ys(1)",
+      "CurveXYZFourier1:yc(1)",
+      "CurveXYZFourier1:ys(2)",
+      "CurveXYZFourier1:yc(2)",
+      "CurveXYZFourier1:ys(3)",
+      "CurveXYZFourier1:yc(3)",
+      "CurveXYZFourier1:ys(4)",
+      "CurveXYZFourier1:yc(4)",
+      "CurveXYZFourier1:ys(5)",
+      "CurveXYZFourier1:yc(5)",
+      "CurveXYZFourier1:ys(6)",
+      "CurveXYZFourier1:yc(6)",
+      "CurveXYZFourier1:ys(7)",
+      "CurveXYZFourier1:yc(7)",
+      "CurveXYZFourier1:ys(8)",
+      "CurveXYZFourier1:yc(8)",
+      "CurveXYZFourier1:zc(0)",
+      "CurveXYZFourier1:zs(1)",
+      "CurveXYZFourier1:zc(1)",
+      "CurveXYZFourier1:zs(2)",
+      "CurveXYZFourier1:zc(2)",
+      "CurveXYZFourier1:zs(3)",
+      "CurveXYZFourier1:zc(3)",
+      "CurveXYZFourier1:zs(4)",
+      "CurveXYZFourier1:zc(4)",
+      "CurveXYZFourier1:zs(5)",
+      "CurveXYZFourier1:zc(5)",
+      "CurveXYZFourier1:zs(6)",
+      "CurveXYZFourier1:zc(6)",
+      "CurveXYZFourier1:zs(7)",
+      "CurveXYZFourier1:zc(7)",
+      "CurveXYZFourier1:zs(8)",
+      "CurveXYZFourier1:zc(8)",
+      "CurveXYZFourier2:xc(0)",
+      "CurveXYZFourier2:xs(1)",
+      "CurveXYZFourier2:xc(1)",
+      "CurveXYZFourier2:xs(2)",
+      "CurveXYZFourier2:xc(2)",
+      "CurveXYZFourier2:xs(3)",
+      "CurveXYZFourier2:xc(3)",
+      "CurveXYZFourier2:xs(4)",
+      "CurveXYZFourier2:xc(4)",
+      "CurveXYZFourier2:xs(5)",
+      "CurveXYZFourier2:xc(5)",
+      "CurveXYZFourier2:xs(6)",
+      "CurveXYZFourier2:xc(6)",
+      "CurveXYZFourier2:xs(7)",
+      "CurveXYZFourier2:xc(7)",
+      "CurveXYZFourier2:xs(8)",
+      "CurveXYZFourier2:xc(8)",
+      "CurveXYZFourier2:yc(0)",
+      "CurveXYZFourier2:ys(1)",
+      "CurveXYZFourier2:yc(1)",
+      "CurveXYZFourier2:ys(2)",
+      "CurveXYZFourier2:yc(2)",
+      "CurveXYZFourier2:ys(3)",
+      "CurveXYZFourier2:yc(3)",
+      "CurveXYZFourier2:ys(4)",
+      "CurveXYZFourier2:yc(4)",
+      "CurveXYZFourier2:ys(5)",
+      "CurveXYZFourier2:yc(5)",
+      "CurveXYZFourier2:ys(6)",
+      "CurveXYZFourier2:yc(6)",
+      "CurveXYZFourier2:ys(7)",
+      "CurveXYZFourier2:yc(7)",
+      "CurveXYZFourier2:ys(8)",
+      "CurveXYZFourier2:yc(8)",
+      "CurveXYZFourier2:zc(0)",
+      "CurveXYZFourier2:zs(1)",
+      "CurveXYZFourier2:zc(1)",
+      "CurveXYZFourier2:zs(2)",
+      "CurveXYZFourier2:zc(2)",
+      "CurveXYZFourier2:zs(3)",
+      "CurveXYZFourier2:zc(3)",
+      "CurveXYZFourier2:zs(4)",
+      "CurveXYZFourier2:zc(4)",
+      "CurveXYZFourier2:zs(5)",
+      "CurveXYZFourier2:zc(5)",
+      "CurveXYZFourier2:zs(6)",
+      "CurveXYZFourier2:zc(6)",
+      "CurveXYZFourier2:zs(7)",
+      "CurveXYZFourier2:zc(7)",
+      "CurveXYZFourier2:zs(8)",
+      "CurveXYZFourier2:zc(8)",
+      "CurveXYZFourier3:xc(0)",
+      "CurveXYZFourier3:xs(1)",
+      "CurveXYZFourier3:xc(1)",
+      "CurveXYZFourier3:xs(2)",
+      "CurveXYZFourier3:xc(2)",
+      "CurveXYZFourier3:xs(3)",
+      "CurveXYZFourier3:xc(3)",
+      "CurveXYZFourier3:xs(4)",
+      "CurveXYZFourier3:xc(4)",
+      "CurveXYZFourier3:xs(5)",
+      "CurveXYZFourier3:xc(5)",
+      "CurveXYZFourier3:xs(6)",
+      "CurveXYZFourier3:xc(6)",
+      "CurveXYZFourier3:xs(7)",
+      "CurveXYZFourier3:xc(7)",
+      "CurveXYZFourier3:xs(8)",
+      "CurveXYZFourier3:xc(8)",
+      "CurveXYZFourier3:yc(0)",
+      "CurveXYZFourier3:ys(1)",
+      "CurveXYZFourier3:yc(1)",
+      "CurveXYZFourier3:ys(2)",
+      "CurveXYZFourier3:yc(2)",
+      "CurveXYZFourier3:ys(3)",
+      "CurveXYZFourier3:yc(3)",
+      "CurveXYZFourier3:ys(4)",
+      "CurveXYZFourier3:yc(4)",
+      "CurveXYZFourier3:ys(5)",
+      "CurveXYZFourier3:yc(5)",
+      "CurveXYZFourier3:ys(6)",
+      "CurveXYZFourier3:yc(6)",
+      "CurveXYZFourier3:ys(7)",
+      "CurveXYZFourier3:yc(7)",
+      "CurveXYZFourier3:ys(8)",
+      "CurveXYZFourier3:yc(8)",
+      "CurveXYZFourier3:zc(0)",
+      "CurveXYZFourier3:zs(1)",
+      "CurveXYZFourier3:zc(1)",
+      "CurveXYZFourier3:zs(2)",
+      "CurveXYZFourier3:zc(2)",
+      "CurveXYZFourier3:zs(3)",
+      "CurveXYZFourier3:zc(3)",
+      "CurveXYZFourier3:zs(4)",
+      "CurveXYZFourier3:zc(4)",
+      "CurveXYZFourier3:zs(5)",
+      "CurveXYZFourier3:zc(5)",
+      "CurveXYZFourier3:zs(6)",
+      "CurveXYZFourier3:zc(6)",
+      "CurveXYZFourier3:zs(7)",
+      "CurveXYZFourier3:zc(7)",
+      "CurveXYZFourier3:zs(8)",
+      "CurveXYZFourier3:zc(8)",
+      "CurveXYZFourier4:xc(0)",
+      "CurveXYZFourier4:xs(1)",
+      "CurveXYZFourier4:xc(1)",
+      "CurveXYZFourier4:xs(2)",
+      "CurveXYZFourier4:xc(2)",
+      "CurveXYZFourier4:xs(3)",
+      "CurveXYZFourier4:xc(3)",
+      "CurveXYZFourier4:xs(4)",
+      "CurveXYZFourier4:xc(4)",
+      "CurveXYZFourier4:xs(5)",
+      "CurveXYZFourier4:xc(5)",
+      "CurveXYZFourier4:xs(6)",
+      "CurveXYZFourier4:xc(6)",
+      "CurveXYZFourier4:xs(7)",
+      "CurveXYZFourier4:xc(7)",
+      "CurveXYZFourier4:xs(8)",
+      "CurveXYZFourier4:xc(8)",
+      "CurveXYZFourier4:yc(0)",
+      "CurveXYZFourier4:ys(1)",
+      "CurveXYZFourier4:yc(1)",
+      "CurveXYZFourier4:ys(2)",
+      "CurveXYZFourier4:yc(2)",
+      "CurveXYZFourier4:ys(3)",
+      "CurveXYZFourier4:yc(3)",
+      "CurveXYZFourier4:ys(4)",
+      "CurveXYZFourier4:yc(4)",
+      "CurveXYZFourier4:ys(5)",
+      "CurveXYZFourier4:yc(5)",
+      "CurveXYZFourier4:ys(6)",
+      "CurveXYZFourier4:yc(6)",
+      "CurveXYZFourier4:ys(7)",
+      "CurveXYZFourier4:yc(7)",
+      "CurveXYZFourier4:ys(8)",
+      "CurveXYZFourier4:yc(8)",
+      "CurveXYZFourier4:zc(0)",
+      "CurveXYZFourier4:zs(1)",
+      "CurveXYZFourier4:zc(1)",
+      "CurveXYZFourier4:zs(2)",
+      "CurveXYZFourier4:zc(2)",
+      "CurveXYZFourier4:zs(3)",
+      "CurveXYZFourier4:zc(3)",
+      "CurveXYZFourier4:zs(4)",
+      "CurveXYZFourier4:zc(4)",
+      "CurveXYZFourier4:zs(5)",
+      "CurveXYZFourier4:zc(5)",
+      "CurveXYZFourier4:zs(6)",
+      "CurveXYZFourier4:zc(6)",
+      "CurveXYZFourier4:zs(7)",
+      "CurveXYZFourier4:zc(7)",
+      "CurveXYZFourier4:zs(8)",
+      "CurveXYZFourier4:zc(8)"
+    ],
+    "guarded_search_targets": {
+      "component_index": 4,
+      "curvature_resolution": 1600,
+      "curvature_target_reactor": 0.99,
+      "field_quadrature_unchanged": 200,
+      "flux_target": 8e-09,
+      "length_target_reactor": 219.9
+    },
+    "identity_checks": {
+      "all_currents": true,
+      "coefficients": true,
+      "fixed_total": true,
+      "parameter_count": true,
+      "regularizations": true,
+      "serialized_currents": true
+    },
+    "normalization_error": 1.422002730115073e-16,
+    "normalized_start": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-start-study-v1/normalized_start.json",
+      "sha256": "2388aec7801fb857e66c33936df6a94d3b4fa712426e3b0c453cec39760413e3"
+    },
+    "physical_currents": [
+      335211.418699445,
+      424442.55335238966,
+      285753.7582092035,
+      204667.89437442587,
+      -335211.418699445,
+      -424442.55335238966,
+      -285753.7582092035,
+      -204667.89437442587,
+      335211.418699445,
+      424442.55335238966,
+      285753.7582092035,
+      204667.89437442587,
+      -335211.418699445,
+      -424442.55335238966,
+      -285753.7582092035,
+      -204667.89437442587
+    ],
+    "preparation_is_shared_and_outside_per_arm_budget": true,
+    "reconstruction": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-lpqa-reconstruction-v1.json",
+      "sha256": "9d0f691fdf058665bdf68a4ab14a6c08c047cb6cd3eb0eb54d87181299781065"
+    },
+    "reconstruction_audit": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-lpqa-reconstruction-v1-audit.json",
+      "sha256": "55dfe67f809af595a0f39d1c00f96784b05ac34aded4840a3debd9146dccd055"
+    },
+    "shared_preparation_seconds": 0.3435412500111852,
+    "source": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/submissions/LandremanPaul2021_QA/auto/2026-02-17_083339_92598/order_8/biot_savart_optimized.json",
+      "sha256": "40c3abd2c172fdfc94be6a2b5de05ef2e29c3f37c8b4fbd04c6fdb47eef69b4a"
+    },
+    "source_currents": [
+      335190.93762746657,
+      424416.62035010813,
+      285736.29894927517,
+      204655.38937715394
+    ],
+    "source_field_probe": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-lpqa-reconstruction-v1/candidate-1/field-crosscheck-200.npz",
+      "sha256": "903986c2ee9a844db3bff3202f1f6dde9d0f4f36c2de5c5e3c225205214b4244"
+    },
+    "surface": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+      "sha256": "4c6ba4bc391a69b5b6a5e84ff82df9b0ce92e20c42f2a47f89a9283fd5bc3458"
+    },
+    "thresholds": {
+      "a0": 10.100286074838271,
+      "arclength_variation_threshold": 102.0157787935719,
+      "cc_threshold": 0.10890780635810987,
+      "coil_width": 0.039602838675676315,
+      "cs_threshold": 0.12870922569594803,
+      "curvature_threshold": 10.100286074838271,
+      "finite_build_width": 0.05,
+      "flux_threshold": 8e-09,
+      "force_threshold": 0.0,
+      "length_threshold": 21.771660561953055,
+      "major_radius": 1.0098736979848935,
+      "minor_radius": 0.16831206437162433,
+      "msc_threshold": 10.100286074838271,
+      "torque_threshold": 0.0,
+      "torsion_threshold": 10.100286074838271
+    }
+  },
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/UPSTREAM_START_PROTOCOL.md",
+    "sha256": "575ffbb03aa77d17b98a6f4bb10fa5c5dc1a48cde274b1264864521fb394a0f8"
+  },
+  "qualification": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-qualification-v1.json",
+    "sha256": "a7573ec30fddf199b47d2d934ded7e5bb38b9489294202c2b615abdbe0cc3fa1"
+  },
+  "qualification_audit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-qualification-v1-audit.json",
+    "sha256": "17ba52f4e81152a1a0e5a613d1e84cfb1a1d77d8d8b6b677f5c8b2406d0cf0c8"
+  },
+  "qualification_pass": true,
+  "qualified_backend_code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_upstream_start.py",
+      "sha256": "477da327fc4833a9d59e0cf9f75ec2b9dd5b6825b99fe0d2ee5f74d368945428"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/prepare_upstream_start.py",
+      "sha256": "07e00389215f716324e149fdc6e8fb58ec20035de08d4c7516329815d04046ea"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_direct_constraints.py",
+      "sha256": "55619247f3bcfed650b5a12cc575c30ff1457501d23eeefe0282b6ca27a5192e"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "sha256": "6de1ecd5ad843bc67e87175e8597e94a74e016fab9b6651512bbff2c15c20fa0"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_natural_auglag_jac.py",
+      "sha256": "3fd1842b27b35a9f5f58c01bf9db30a79b4856b1325679090251595e6542b996"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/current_normalization.py",
+      "sha256": "b3fbe13e28475bc66d7d8c27e3275e82eb457abd2859aa7455fb3791219d5c9a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/direct_constraints.py",
+      "sha256": "92e898e0ee05be4ce8086972441714c94dc8750b2240621e72103c117b70f1fc"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/smooth_bounds.py",
+      "sha256": "6d5a5dbc1a40a134767f33e41a4fb78c98f5ecc5dc9044b8f1315035ce308476"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_field_state.py",
+      "sha256": "6b86dbe1cb89e3f46188c500591b56a23441c04cf7dab475b3c3844965ab9d0c"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "sha256": "30c294b717c8f4905730d2d3241a3c73db1196d0494a6811441cffc3d796446f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py",
+      "sha256": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "sha256": "e504e6a600aa0f8ff141d0589b31829f421dbd0ba4601889b646ac11b734a967"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/natural_flux_backend.py",
+      "sha256": "f6d8c901c1be48316f51c11e7b0c341c0899023af3dd7ee786c1624a860f65bf"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/gauss_newton_backend.py",
+      "sha256": "94cd886adc46068c52599da45f4bac98efeed400f4619d6a2a01d5dbb6f66427"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/batched_field_jacobian.py",
+      "sha256": "6e79e1f3643836a0a86b0fc19b683fbbddab3bc568617856c0d02cef1138446d"
+    }
+  ],
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "3f88576996dc4e6a7c71eefe629c74ce98ea1907",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "solver_options": {
+    "ftol": 1e-10,
+    "gtol": 1e-10,
+    "loss": "linear",
+    "max_nfev": 100000,
+    "method": "trf",
+    "tr_solver": "exact",
+    "x_scale": "jac",
+    "xtol": 1e-10
+  },
+  "solver_sources": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/least_squares.py",
+      "sha256": "5b1508ade745706ddf335eb9533314664d98449fd7cbff1f7ac05d2e8226624d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py",
+      "sha256": "0c7c29d5d3fd6915720e9547f051d47e14ca5a821e7872686aa8cf1d1c4e4893"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py",
+      "sha256": "92d953094ad7336777a79dfb46ed6cac49542caa39ea539c30add09841541dd3"
+    }
+  ],
+  "start_id": "upstream-first-ranked-normalized-v1",
+  "status": "completed",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}
