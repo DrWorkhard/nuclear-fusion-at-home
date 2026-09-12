@@ -76,3 +76,14 @@ keine Suche auslösen; dafür bestehen sieben reine Steuerungskontrollen.
 Gesamte Suite366 bestanden,20 bekannte Warnungen; Ruff/Dokument-/Diffprüfung
 bestanden. Sieben ursprüngliche Mathematikdateien und drei SciPy-Solverdateien
 stimmen weiterhin mit ihren archivierten Hashes überein.
+
+Für den anschließenden Abnahmeschritt ist ein ressourcenüberwachter Driver
+vorbereitet: `scripts/run_coil_holdouts.py`. Er verlangt eine abgeschlossene
+Zwei-Arm-Studie und den hashgebundenen bestandenen unabhängigen Studienaudit.
+Er führt die vier bestehenden Werkzeuge sequenziell aus, ohne deren Mathematik,
+Gitter oder Grenzen zu ändern. Ein reguläres physikalisches FAIL (Exit2) bleibt
+erfasst und überspringt keine weiteren Prüfungen; Ausführungsfehler, fehlende
+Kandidaten oder unvollständige Auflösungsreihen stoppen hingegen den Driver.
+Sein Abschlussflag bestätigt nur vier ausgeführte Prüfungen, nicht Zulässigkeit.
+13 Steuerungskontrollen bestehen, einschließlich absichtlich falscher Flags und
+fehlender Ergebnisse. Die 2-GiB-Reserve gilt auch hier.

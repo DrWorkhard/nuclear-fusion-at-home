@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Prepare sequential complete coil holdout orchestration
+
+- New driver invokes all four unchanged existing validators after a qualified
+  two-arm study and a hash-bound passing independent audit. Each phase records
+  command, source, log, output hashes and minimum observed free space.
+- Physical rejection exit2 is accepted only with completed two-candidate report
+  and matching false flag; it cannot bypass curvature, clearance or native checks.
+  Execution errors and incomplete reports fail closed. Completion is not admission.
+- All13 driver controls pass. Detail/log updated; both READMEs/status/plan still
+  correctly report active unchanged recovery and pending fine acceptance.
+  Full suite406 passes with20 known warnings; Ruff/docs/diff pass before commit
+  and execution. No changes to the four underlying validators.
+
 ## 2026-09-12 — Independently audit scaled-control endpoint and preregistered profile
 
 - New pure checker recomputes closed-form objective/constraints, stationarity,
