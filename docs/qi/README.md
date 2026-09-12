@@ -9,6 +9,7 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 ## Dokumente
 
 - [Gemeinsamer Feldlinienwinkel: Protokoll](QI_PEST_FIDELITY_PROTOCOL.md) — Neue Diagnose eines möglichen Parametrisierungsbeitrags zu den16 frischen/historischen Feldunterschieden; feste Inversion/Kettenregel/Brent-Gegenprüfung, alte Ergebnisse unverändert.
+- [Gemeinsamer Feldlinienwinkel: Vorbereitung](QI_PEST_FIDELITY_RESULTS.md) — Newton/Kettenregel und unabhängige skalare Brent-Inversion bestehen zwölf analytische Kontrollen; noch keine neue Auswertung realer QI-Dateien.
 
 - [Autoren/Produzenten](QI_PRODUCER_INVENTORY.md) — Vier9.0-Wouts und Eingaben gebunden; strenge Fluss-Bitgleichheit scheitert auf Rundungsniveau. VMEC++-Iterationsoption ist keine historische Produzentenidentität.
 - [Frische QI-Auflösung: Protokoll](QI_FRESH_RESOLUTION_PROTOCOL.md) — Vier Fälle mit je2x2 radialer/Winkel-Verfeinerung; feste Solvergrenzen, Quellen-/Feldgegenprüfung und unveränderte alte Ergebnisse.

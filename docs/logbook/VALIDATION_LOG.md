@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Qualify pure straight-field-coordinate inversion and tangent controls
+
+- Additive vectorized Newton/chain-rule kernel and independent scalar Fourier/
+  Brent roots; fixed protocol limits and explicit negative sampled-Jacobian/
+  nonconvergence flags. No new Wout evaluation or physical reinterpretation.
+- Twelve algebraic controls pass, including exact nested grids, periodicity,
+  both Cartesian tangent finite differences, invalid inputs and a50-update cap
+  whose separate Brent solution does not erase the Newton failure.
+- Two Ruff runs found the same101-character error-message line; first word
+  reordering did not shorten it, then wording shortened without numerical change.
+  Tests/Ruff/docs/diff pass after correction. Detail/index
+  added; both READMEs/status/plan reviewed, scientific assessment unchanged.
+
 ## 2026-09-12 — Close both composite-gate searches and independent full-ledger audit
 
 - Both2048-bundle paths at ede0ba8 are complete and exactly repeated, including
