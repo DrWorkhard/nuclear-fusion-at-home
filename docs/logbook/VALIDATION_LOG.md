@@ -17,7 +17,10 @@
 - Reviewed the earlier uncommitted composite-diagnostic report and late reference
   audit for inclusion with this documentation update. Historical evidence and
   failed records are unchanged. The two earlier commit-review timeouts remain
-  documented below; verify Git completion separately before reporting a commit.
+  documented below.
+- Local commit 7333cd6 succeeded and includes both the updated documentation and
+  the previously pending diagnostic/evidence files. The post-commit worktree was
+  clean; the earlier Git permission-review blocker is resolved. No push occurred.
 
 ## 2026-09-12 CEST — Final core replay, reference audit and commit blocker
 
