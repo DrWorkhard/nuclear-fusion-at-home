@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Prepare endpoint matrix-Fourier diagnostics and independent product audit
+
+- Additive reader locates both half-grid indices from exact full/half meshes,
+  evaluates Nyquist/geometric coefficient matrices and retains both endpoint
+  fields. Decomposition records node residual, weighted residual, product term
+  and reconstructed original residual separately; no physical limits change.
+- Independent auditor recomputes products after point interpolation and verifies
+  original arrays, norms and classifications. Ten algebraic controls plus one
+  audit mutation control pass; combined Clebsch set21 tests passes. Ruff/docs/
+  diff pass. No real endpoint results yet; overviews still accurately show open cause.
+
 ## 2026-09-12 — Register exact product-interpolation decomposition for all24 QI grids
 
 - Freeze original failed screen and all24 cases; evaluate both neighboring half
