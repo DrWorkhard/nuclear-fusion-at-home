@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Independently validate box-partition and spatial witness certificates on controls
+
+- Original-vertex node boxes, index bijection, disjoint pair-frontier accounting
+  and exhaustive leaf loops independently reconstruct producer candidates.
+  Truncation retains explicit uncovered cardinality; no false complete flag.
+- Separate scalar projection/padding and barycentric reconstruction audits reject
+  corrupted witnesses. Fifteen new controls pass,34 targeted spatial tests total.
+  Only small synthetic geometry, no original coil mesh/collision calculation.
+- Engineering method/index updated, both READMEs/status/plan reviewed; Ruff/docs/
+  diff pass before commit. Native composite SLSQP continues independently;
+  real geometry study remains behind its completion/holdouts.
+
 ## 2026-09-12 — Prepare additive composite-gate SLSQP arm and independent full-ledger audit
 
 - Old kernels untouched; AST test confirms identical solver invocation and all

@@ -63,3 +63,25 @@ Nachbarpaare, getrennte Netzregionen, vier Grundspulen und spätere Symmetriekop
 müssen explizite getrennte Gültigkeitsbereiche behalten. Noch kein realer
 Spulen-Nichtüberlappungsnachweis, keine qualifizierte Wickelpaketorientierung,
 keine Verbesserung der ungültigen absoluten linearen Mechanikprognose.
+
+## Unabhängige Zertifikatprüfung vorbereitet
+
+Ein neuer Auditor rekonstruiert alle Knotenboxen aus Originalvertices, prüft
+Indexbijektion und Halbierung der Knotenintervalle und führt eine eigene Menge
+disjunkter, noch offener Paarbereiche. Er ruft die Produzenten-Traversierung
+nicht auf. Jedes Blatt wird vollständig durch eigene Paar-/Boxschleifen geprüft.
+Auch abgeschnittene Protokolle behalten eine explizite Restpaarzahl; unvollständige
+Abdeckung wird nie als vollständig gemeldet. Acht neue Mutations-/Kontrolltests
+bestanden, einschließlich gleicher kompletter Kandidatenlisten und Ablehnung
+veränderter Boxen, Indizes, Polster, doppelter Ereignisse oder falscher Paarzahlen.
+
+Separater Witness-Audit projiziert alle ursprünglichen Vertices komponentenweise
+auf die gespeicherte normierte Achse und verlangt erneut eine strikt positive
+gepolsterte Lücke. Innenpunkte werden aus beiden gespeicherten baryzentrischen
+Gewichtssätzen direkt rekonstruiert; bloßer Kontakt/LP-Fehler bleibt unaufgelöst.
+Sieben neue Kontrollen inklusive falscher Achsen, Ursprünge, Lücken, Polster und
+Innenpunkte bestehen. Insgesamt34 gezielte Geometrietests und Ruff bestanden.
+
+Noch keine echte Kollisionsstudie: Ausführung/Streaming der sechs Originalnetze
+und ein vollständiger Dateiaudit fehlen. Die laufende SLSQP-Studie wird dadurch
+nicht belastet; alle Tests dieses Schritts verwenden kleine Kontrollgeometrien.
