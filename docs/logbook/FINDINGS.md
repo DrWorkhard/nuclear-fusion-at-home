@@ -1,5 +1,19 @@
 # Findings log
 
+## F-070 — Fresh QI angular refinement repairs sampled identities, not historical fidelity
+
+**Class:** preregistered16-cell equilibrium matrix with independent field/arithmetic audit
+**Date:** 2026-09-12
+
+All16 cold starts reach all three1e-12 residuals.92/96 field grids pass fixed
+Clebsch screens, including all48 at doubled solver angular resolution (maximum
+poloidal residual2.585e-6). Radial refinement is not uniformly beneficial.
+Only9/16 cells pass evaluation-grid refinement and2/16 historical fidelity;
+none passes every screen. Old-loop replay agrees within9.076e-15 and all
+classifications are independently confirmed. Historical19/24 stays unchanged;
+no source replacement, modal-convergence or absolute drift certificate. See
+[complete matrix](../qi/QI_FRESH_RESOLUTION_RESULTS.md).
+
 ## F-069 — Stable spectral projection does not reproduce the stored QI field components
 
 **Class:** preregistered spectral hypothesis test with explicit trigonometric audit

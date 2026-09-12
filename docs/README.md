@@ -165,6 +165,11 @@ es ist keine Verbesserung des Magnetfelds. nfp2 beta2 bleibt im getesteten
 Bereich unter allen drei Neumarkierungen negativ. Der anschließende begrenzte
 Flussnormierungstest bestätigt die Feldorientierung, bleibt aber mit19/24
 vollständigen Gitterpässen negativ; fünf poloidale Restabweichungen sind offen.
+Die anschließende [frische16-Zellen-Auflösungsstudie](qi/QI_FRESH_RESOLUTION_RESULTS.md)
+ist vollständig unabhängig geprüft: feinere Solver-Winkelauflösung besteht die
+untersuchten Identitäten, doch Auswertungsverfeinerung und historische
+Feldübereinstimmung bestehen nicht durchgehend. Keine Gesamtfreigabe oder
+Ersetzung der Autorenreferenzen.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 

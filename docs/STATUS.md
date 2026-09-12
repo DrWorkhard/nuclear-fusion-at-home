@@ -41,9 +41,13 @@ nicht die Freigabe absoluter Drift. Eine getrennt auditierte Produktzerlegung
 schließt radiale Interpolation als alleinige Ursache aus: Fehler bestehen schon
 auf zehn ursprünglichen Halbflächengittern. Auch einfache Projektion der
 Clebsch-Feldkomponenten auf gespeicherte Moden erklärt sie nicht an der festen
-1e-5-Grenze, obwohl die Winkelverfeinerung besteht. Autoren-Eingaben und neue
-QI-Gleichgewichts-/Auflösungsrechnungen sind der nächste Prüfpunkt.
-[Ergebnis](qi/QI_CLEBSCH_RESULTS.md).
+1e-5-Grenze, obwohl die Winkelverfeinerung besteht. Die anschließende
+[frische16-Zellen-Studie](qi/QI_FRESH_RESOLUTION_RESULTS.md) ist abgeschlossen:
+alle Solver konvergiert,96 Feldgitter unabhängig bestätigt. Bei verdoppelter
+Solver-Winkelauflösung bestehen alle untersuchten Identitäten. Nur9/16 Zellen
+bestehen jedoch den Auswertungsverfeinerungs- und2/16 den historischen
+Fidelitätsschirm; keine Zelle besteht alles. Innere Gleichgewichtsauflösung und
+Produzentenunterschiede bleiben zu klären, keine absolute Driftfreigabe.
 
 ## Warum weiterhin keine zulässige Baseline vorliegt
 

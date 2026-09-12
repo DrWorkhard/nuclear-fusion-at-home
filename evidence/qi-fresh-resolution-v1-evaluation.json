@@ -1,0 +1,4813 @@
+{
+  "absolute_drift_certified": false,
+  "all_arithmetic_screens_pass": false,
+  "all_physical_screens_pass": false,
+  "cells": [
+    {
+      "angular": 1,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 6.938893903907228e-18,
+        "zbs": 3.469446951953614e-18
+      },
+      "case": "nfp2-vacuum",
+      "fidelity_screen_pass": true,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-0-s0.25-n64.npz",
+            "sha256": "f7d4d607768f8b8a6b0a375f03a97ef9a694df9812e8e416a9d50b37ee716593"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.0001039219909593688,
+            "magnitude": 6.351605600620282e-05,
+            "missing_2pi": 5.283296341957526,
+            "poloidal": 0.0005091821097830945,
+            "toroidal": 0.00011952778214274367,
+            "wrong_sign": 1.9998889652220595
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-0-s0.25-n128.npz",
+            "sha256": "459655d2d77c7f11fda15716c115676e063109874348b89fc9360c98430d0a3d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 4.0913840012820647e-07,
+            "magnitude": 5.166770606816013e-07,
+            "poloidal": 9.733000567584333e-06,
+            "toroidal": 5.29650614266402e-06
+          },
+          "errors": {
+            "cartesian": 0.000104331129359497,
+            "magnitude": 6.403273306688442e-05,
+            "missing_2pi": 5.283299629497202,
+            "poloidal": 0.0005189151103506788,
+            "toroidal": 0.0001248242882854077,
+            "wrong_sign": 1.9998856776823841
+          },
+          "fidelity": {
+            "ep": 0.00015262079469161488,
+            "et": 0.0004837910866912061,
+            "iota": 3.8451819863727366e-05,
+            "mod_b": 2.6127599142307628e-05,
+            "rz": 4.050786311421708e-05
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-0-s0.5-n64.npz",
+            "sha256": "215d3e8b29166df95cf1d472eac480e724ddef8ffa2c2a4704e4b84c4d1e7572"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00012635885311636816,
+            "magnitude": 9.189992571529811e-05,
+            "missing_2pi": 5.283301277938715,
+            "poloidal": 0.00048560228269268005,
+            "toroidal": 0.0001285153028921126,
+            "wrong_sign": 1.9998840292408715
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-0-s0.5-n128.npz",
+            "sha256": "f2c190c956f090f04c7d5ab640eee09960f24da8dd97cfefab3b2cbe7f46ff6d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 4.8928405667878795e-09,
+            "magnitude": 1.5767302525705848e-06,
+            "poloidal": 1.0814089164558165e-06,
+            "toroidal": 9.064099162210053e-06
+          },
+          "errors": {
+            "cartesian": 0.00012635396027580137,
+            "magnitude": 9.34766559678687e-05,
+            "missing_2pi": 5.283301277938715,
+            "poloidal": 0.00048668369160913586,
+            "toroidal": 0.00013757940205432265,
+            "wrong_sign": 1.9998840292408715
+          },
+          "fidelity": {
+            "ep": 0.00012947677362421504,
+            "et": 0.0002990984951444636,
+            "iota": 3.379979804929434e-07,
+            "mod_b": 1.992724484408153e-05,
+            "rz": 3.551215328308272e-05
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-0-s0.75-n64.npz",
+            "sha256": "80879385d4afedafacf0025052ed81ee089fd7db9cb15c77470254243254a52d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": false,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.0002469870287128144,
+            "magnitude": 0.0001536512237164864,
+            "missing_2pi": 5.283259041664051,
+            "poloidal": 0.0010438150162616904,
+            "toroidal": 0.00022860277626581067,
+            "wrong_sign": 1.999926265515535
+          },
+          "physical_screen_pass": false,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-0-s0.75-n128.npz",
+            "sha256": "24142949215668604c49c3ce98f119d6dbca3ca9576bcc0a0a11d503e1ab412b"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": false,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 8.027941449444468e-06,
+            "magnitude": 9.833204214753342e-06,
+            "poloidal": 8.985898242068382e-06,
+            "toroidal": 1.208760594879118e-07
+          },
+          "errors": {
+            "cartesian": 0.0002550149701622589,
+            "magnitude": 0.00016348442793123974,
+            "missing_2pi": 5.283259041664051,
+            "poloidal": 0.0010528009145037587,
+            "toroidal": 0.00022872365232529858,
+            "wrong_sign": 1.999926265515535
+          },
+          "fidelity": {
+            "ep": 8.602966173747581e-05,
+            "et": 0.00015310856946855816,
+            "iota": 1.8993548306367458e-06,
+            "mod_b": 1.496184641206268e-05,
+            "rz": 1.9879280629459385e-05
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": false,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 201,
+      "numerically_converged": true,
+      "physical_screen_pass": false,
+      "status": "completed",
+      "volume_error": 2.044416266235146e-15
+    },
+    {
+      "angular": 1,
+      "arithmetic_screen_pass": false,
+      "boundary_errors": {
+        "rbc": 6.938893903907228e-18,
+        "zbs": 3.469446951953614e-18
+      },
+      "case": "nfp2-vacuum",
+      "fidelity_screen_pass": true,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-1-s0.25-n64.npz",
+            "sha256": "2a9e2b05984e53e4c87ca5ec2e348e677103b8ee26fc5ad8f5b8f8d75153c12d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00010408798002301872,
+            "magnitude": 6.299916340281608e-05,
+            "missing_2pi": 5.283296782625489,
+            "poloidal": 0.0005094637614000565,
+            "toroidal": 0.00011982832147417582,
+            "wrong_sign": 1.9998885245540972
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-1-s0.25-n128.npz",
+            "sha256": "a1000178da0c6ed8bdedbcd3e17b92a3ef5f06cf8c9b619c26128d0b044caaf0"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 4.483833823020806e-07,
+            "magnitude": 1.2709047874565792e-06,
+            "poloidal": 1.0346172250385666e-05,
+            "toroidal": 5.233838014356078e-06
+          },
+          "errors": {
+            "cartesian": 0.0001045363634053208,
+            "magnitude": 6.427006819027266e-05,
+            "missing_2pi": 5.283300018086423,
+            "poloidal": 0.0005198099336504422,
+            "toroidal": 0.0001250621594885319,
+            "wrong_sign": 1.999885289093164
+          },
+          "fidelity": {
+            "ep": 0.00017289731280558063,
+            "et": 0.0004764609547312447,
+            "iota": 1.3302456483010872e-06,
+            "mod_b": 1.8859919438574637e-05,
+            "rz": 4.108362048230987e-05
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-1-s0.5-n64.npz",
+            "sha256": "4c4d075ef39e71aa7ddee599355af11134bc2121b5f1725115653a8a5197984f"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00012648490576759377,
+            "magnitude": 9.168198464934709e-05,
+            "missing_2pi": 5.283301659660529,
+            "poloidal": 0.0004838155373165331,
+            "toroidal": 0.00012864313520485025,
+            "wrong_sign": 1.9998836475190578
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-1-s0.5-n128.npz",
+            "sha256": "5e3843798927da805dee5c82d1c55225b69d67b51d3acfd6ae73d458735f84ed"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 4.980319506298937e-09,
+            "magnitude": 1.947545742346144e-06,
+            "poloidal": 9.157806120601675e-07,
+            "toroidal": 9.177782033688536e-06
+          },
+          "errors": {
+            "cartesian": 0.00012647992544808747,
+            "magnitude": 9.362953039169323e-05,
+            "missing_2pi": 5.283301659660529,
+            "poloidal": 0.00048473131792859325,
+            "toroidal": 0.0001378209172385388,
+            "wrong_sign": 1.9998836475190578
+          },
+          "fidelity": {
+            "ep": 0.00014831502192159607,
+            "et": 0.0003118819286740448,
+            "iota": 3.928308547784809e-06,
+            "mod_b": 1.8730914779446466e-05,
+            "rz": 3.617734256296137e-05
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-1-s0.75-n64.npz",
+            "sha256": "6db415d1fd62e0cf3280d31d26ff60a90fa9cdf9e49f428eb0270a5ac20d79c4"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": false,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.0002465252955336898,
+            "magnitude": 0.0001535705751170217,
+            "missing_2pi": 5.283259498710139,
+            "poloidal": 0.0010390394124277732,
+            "toroidal": 0.00022815528300834054,
+            "wrong_sign": 1.9999258084694471
+          },
+          "physical_screen_pass": false,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-1-s0.75-n128.npz",
+            "sha256": "c1facab5d3d19b390d048b8c40f00cf266d109b566e508ffb476b0f5a2aa8523"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": false,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 8.353508400700885e-06,
+            "magnitude": 9.832416229225006e-06,
+            "poloidal": 8.59628902048987e-06,
+            "toroidal": 1.3084974951382334e-07
+          },
+          "errors": {
+            "cartesian": 0.0002548788039343907,
+            "magnitude": 0.0001634029913462467,
+            "missing_2pi": 5.283259498710139,
+            "poloidal": 0.001047635701448263,
+            "toroidal": 0.00022828613275785437,
+            "wrong_sign": 1.9999258084694471
+          },
+          "fidelity": {
+            "ep": 9.644040125197134e-05,
+            "et": 0.00015857064820594996,
+            "iota": 5.689413685727729e-07,
+            "mod_b": 1.4181431193698536e-05,
+            "rz": 2.0661692335844898e-05
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": false,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 401,
+      "numerically_converged": true,
+      "physical_screen_pass": false,
+      "status": "completed",
+      "volume_error": 2.044416266235146e-15
+    },
+    {
+      "angular": 2,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 6.938893903907228e-18,
+        "zbs": 3.469446951953614e-18
+      },
+      "case": "nfp2-vacuum",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-2-s0.25-n64.npz",
+            "sha256": "85c6a43351508ef4676abf57c7f2d161e96c26eba02224f9a39bd50acee8df70"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.821903322161895e-07,
+            "magnitude": 6.514197621814354e-07,
+            "missing_2pi": 5.283185145775496,
+            "poloidal": 2.0766070203287748e-06,
+            "toroidal": 3.8802307806645513e-07,
+            "wrong_sign": 2.0000001614040905
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-2-s0.25-n128.npz",
+            "sha256": "eff3449963a21fdb155a2528b0e31a1e5dbb79fbe868e8c549481e48e113812a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.9974334821916076e-09,
+            "magnitude": 4.928792008393875e-09,
+            "poloidal": 4.1304350525855666e-12,
+            "toroidal": 3.3266910233283244e-09
+          },
+          "errors": {
+            "cartesian": 2.841877656983811e-07,
+            "magnitude": 6.563485541898293e-07,
+            "missing_2pi": 5.2831851497020805,
+            "poloidal": 2.076602889893722e-06,
+            "toroidal": 3.9134976908978346e-07,
+            "wrong_sign": 2.0000001574775057
+          },
+          "fidelity": {
+            "ep": 0.004721066656841115,
+            "et": 0.007391681421418422,
+            "iota": 4.6159524905386995e-05,
+            "mod_b": 0.0003461650532398126,
+            "rz": 0.0005995535119385281
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-2-s0.5-n64.npz",
+            "sha256": "e056e95b2b3addb99bf9557865b2fe4c7822ada2fc7ec482b82dbda0ffba822e"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.815016342458049e-07,
+            "magnitude": 3.2322024671678464e-07,
+            "missing_2pi": 5.283185199814038,
+            "poloidal": 1.3742518904101324e-06,
+            "toroidal": 2.5365321374532404e-07,
+            "wrong_sign": 2.0000001073655493
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-2-s0.5-n128.npz",
+            "sha256": "e58822c4897345321017eeca71321033b443a4f65aaaed6f07447bb8cce818c4"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 3.5386887368587325e-11,
+            "magnitude": 5.627557970557784e-09,
+            "poloidal": 2.0870343227874496e-10,
+            "toroidal": 2.0779001910496925e-09
+          },
+          "errors": {
+            "cartesian": 1.8153702113317347e-07,
+            "magnitude": 3.288478046873424e-07,
+            "missing_2pi": 5.283185199814038,
+            "poloidal": 1.3740431869778536e-06,
+            "toroidal": 2.5573111393637374e-07,
+            "wrong_sign": 2.0000001073655493
+          },
+          "fidelity": {
+            "ep": 0.004532132141093325,
+            "et": 0.005170892822442204,
+            "iota": 5.146583359483259e-07,
+            "mod_b": 0.0004716344803502474,
+            "rz": 0.0005703435697422061
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-2-s0.75-n64.npz",
+            "sha256": "990ac3261a96e8cb8c22f24a8845f6c286ec877789ba4917377b17adfb91128a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.773730935460462e-07,
+            "magnitude": 2.172761043363904e-07,
+            "missing_2pi": 5.283185226633847,
+            "poloidal": 1.0877784890117382e-06,
+            "toroidal": 2.0902192795192088e-07,
+            "wrong_sign": 2.0000000805457403
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-2-s0.75-n128.npz",
+            "sha256": "5a15c3df18e45671a6b93288f84f0bbf5b01006baf8fe6a66a8582ee0620d4e2"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.260748049541911e-13,
+            "magnitude": 8.45716848566853e-10,
+            "poloidal": 6.391224189175626e-08,
+            "toroidal": 5.997596426642173e-10
+          },
+          "errors": {
+            "cartesian": 1.7737296747124124e-07,
+            "magnitude": 2.1812182118495725e-07,
+            "missing_2pi": 5.283185226633847,
+            "poloidal": 1.1516907309034944e-06,
+            "toroidal": 2.096216875945851e-07,
+            "wrong_sign": 2.0000000805457403
+          },
+          "fidelity": {
+            "ep": 0.0027933662357233517,
+            "et": 0.00264760041443319,
+            "iota": 2.0426651379246152e-06,
+            "mod_b": 0.0004990396289608872,
+            "rz": 0.0003496800325542969
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 201,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 6.113680814442901e-12
+    },
+    {
+      "angular": 2,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 6.938893903907228e-18,
+        "zbs": 3.469446951953614e-18
+      },
+      "case": "nfp2-vacuum",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-3-s0.25-n64.npz",
+            "sha256": "be41c29cb3e84cf1ad46cf2f700a3aba73bc0f441c084a04407d20ff6e085e63"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 7.515972603002264e-08,
+            "magnitude": 1.655432654831039e-07,
+            "missing_2pi": 5.283185264552206,
+            "poloidal": 5.063125128553615e-07,
+            "toroidal": 9.785859692569456e-08,
+            "wrong_sign": 2.0000000426273803
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-3-s0.25-n128.npz",
+            "sha256": "62409aa9a787b650e70e1beffaade09b3e6a9cfd7751e23cc2b35b75aa20f4d2"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.797175405330543e-10,
+            "magnitude": 5.106838130664112e-09,
+            "poloidal": 1.2438688250865142e-10,
+            "toroidal": 2.6239863305676173e-09
+          },
+          "errors": {
+            "cartesian": 7.533944357055569e-08,
+            "magnitude": 1.70650103613768e-07,
+            "missing_2pi": 5.283185265888092,
+            "poloidal": 5.061881259728528e-07,
+            "toroidal": 1.0048258325626218e-07,
+            "wrong_sign": 2.0000000412914956
+          },
+          "fidelity": {
+            "ep": 0.004736492536116762,
+            "et": 0.00741060759741759,
+            "iota": 3.541519437821883e-06,
+            "mod_b": 0.00034692988777983933,
+            "rz": 0.0006018473838832075
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-3-s0.5-n64.npz",
+            "sha256": "d5b1fe25c7914ad0d19e62b622330d98cc07f8f24b83d5f4fc3bda685bf0197f"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 6.456528705469062e-08,
+            "magnitude": 1.1743548401591441e-07,
+            "missing_2pi": 5.283185279582838,
+            "poloidal": 3.492995118722323e-07,
+            "toroidal": 6.440740123951886e-08,
+            "wrong_sign": 2.000000027596747
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-3-s0.5-n128.npz",
+            "sha256": "9f4372d89e15c3ac77a403d19f601e31b4ab70f05bba1b44f50332c10e3ec445"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 4.716436125454759e-10,
+            "magnitude": 2.6550097935670886e-10,
+            "poloidal": 2.5877840207803986e-09,
+            "toroidal": 1.2497209362622348e-09
+          },
+          "errors": {
+            "cartesian": 6.50369306672361e-08,
+            "magnitude": 1.1770098499527112e-07,
+            "missing_2pi": 5.283185279582838,
+            "poloidal": 3.518872958930127e-07,
+            "toroidal": 6.565712217578109e-08,
+            "wrong_sign": 2.000000027596747
+          },
+          "fidelity": {
+            "ep": 0.0045447798244237295,
+            "et": 0.005169011575637195,
+            "iota": 3.2834645057322476e-06,
+            "mod_b": 0.00047267984191698393,
+            "rz": 0.0005706482167294435
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-3-s0.75-n64.npz",
+            "sha256": "5ba97772ee4f9a4f8f3eeecd2b9573f2c3a3d9ca0d5df2cdfe3068b42f80dd6d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.0723534253019125e-07,
+            "magnitude": 8.732248348633361e-08,
+            "missing_2pi": 5.283185292228911,
+            "poloidal": 4.760594970471699e-07,
+            "toroidal": 9.13428485959365e-08,
+            "wrong_sign": 2.000000014950675
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-3-s0.75-n128.npz",
+            "sha256": "2eecf30ed1a0a00094f90c68835e853446d73e30464539ccf9974c1919347f6d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 4.402829218501365e-14,
+            "magnitude": 3.5749351937720014e-14,
+            "poloidal": 0.0,
+            "toroidal": 3.1120608419224014e-09
+          },
+          "errors": {
+            "cartesian": 1.0723529850189907e-07,
+            "magnitude": 8.732244773698167e-08,
+            "missing_2pi": 5.283185292228911,
+            "poloidal": 4.760594970471699e-07,
+            "toroidal": 9.445490943785891e-08,
+            "wrong_sign": 2.000000014950675
+          },
+          "fidelity": {
+            "ep": 0.0028040822327728035,
+            "et": 0.0026504736825032097,
+            "iota": 6.928315163801102e-07,
+            "mod_b": 0.000501894186385312,
+            "rz": 0.00035005174279210125
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 401,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 6.113680814442901e-12
+    },
+    {
+      "angular": 1,
+      "arithmetic_screen_pass": false,
+      "boundary_errors": {
+        "rbc": 6.938893903907228e-18,
+        "zbs": 3.469446951953614e-18
+      },
+      "case": "nfp2-beta2",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-4-s0.25-n64.npz",
+            "sha256": "16831fbab35215d7977ac8ee77517efe148fb021123bb560c372b59ceedf5b75"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00010665092667472227,
+            "magnitude": 5.631859159820815e-05,
+            "missing_2pi": 5.283273696568841,
+            "poloidal": 0.0004684074219065523,
+            "toroidal": 0.00012143918266516957,
+            "wrong_sign": 1.9999116106107457
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-4-s0.25-n128.npz",
+            "sha256": "01142973d0354eda8e6b08ee23ff0502be2ce513e41a7f65cd4cb3b2bdc5e6b5"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 2.77856112603563e-07,
+            "magnitude": 2.7108182959519942e-06,
+            "poloidal": 1.890338689988514e-05,
+            "toroidal": 3.150595089621591e-06
+          },
+          "errors": {
+            "cartesian": 0.00010692878278732583,
+            "magnitude": 5.9029409894160145e-05,
+            "missing_2pi": 5.283209764365758,
+            "poloidal": 0.00048731080880643743,
+            "toroidal": 0.00012458977775479116,
+            "wrong_sign": 1.9999755428138286
+          },
+          "fidelity": {
+            "ep": 0.0013266190937976853,
+            "et": 0.0025610194871617427,
+            "iota": 0.0017511629372710669,
+            "mod_b": 0.001084608489578558,
+            "rz": 0.000984229401448306
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-4-s0.5-n64.npz",
+            "sha256": "175f448482f49148fbb84ff06d1ea9a325a140d3efb53030649337f44011539f"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00012907934599334976,
+            "magnitude": 8.299702545711784e-05,
+            "missing_2pi": 5.28328426255873,
+            "poloidal": 0.0004736613259101427,
+            "toroidal": 0.00013020097426895004,
+            "wrong_sign": 1.9999010446208554
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-4-s0.5-n128.npz",
+            "sha256": "6ed1b450e9f1ed139263d44a3647c93184fee16ec24925e3c6b04a86de63afbb"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 8.394734035593377e-08,
+            "magnitude": 4.148229273290364e-07,
+            "poloidal": 8.577122344048801e-06,
+            "toroidal": 5.937195948325783e-06
+          },
+          "errors": {
+            "cartesian": 0.0001291632933337057,
+            "magnitude": 8.341184838444687e-05,
+            "missing_2pi": 5.283213918533984,
+            "poloidal": 0.0004822384482541915,
+            "toroidal": 0.00013613817021727582,
+            "wrong_sign": 1.9999713886456036
+          },
+          "fidelity": {
+            "ep": 0.0009330975389303386,
+            "et": 0.0016399286306159493,
+            "iota": 0.0005256244938942611,
+            "mod_b": 0.00037086741891158027,
+            "rz": 0.0006649907113121742
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-4-s0.75-n64.npz",
+            "sha256": "8550501d2867551db9e43cfef80a32c22bb238b9b3da30435b46bf13a3df22aa"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.0002261540191894473,
+            "magnitude": 0.00014370601945887715,
+            "missing_2pi": 5.28315732897418,
+            "poloidal": 0.0008776077030882804,
+            "toroidal": 0.00024446141589830404,
+            "wrong_sign": 2.0000279782054062
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-4-s0.75-n128.npz",
+            "sha256": "da34b9913e68c94f72eaf6c778286772b6807f67d7dcb5fb41a56d6de9865f7e"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 4.685351037370816e-06,
+            "magnitude": 8.78517808201992e-06,
+            "poloidal": 0.0,
+            "toroidal": 7.65159328702694e-07
+          },
+          "errors": {
+            "cartesian": 0.0002308393702268181,
+            "magnitude": 0.00015249119754089707,
+            "missing_2pi": 5.283215205842418,
+            "poloidal": 0.0008776077030882804,
+            "toroidal": 0.00024522657522700673,
+            "wrong_sign": 1.9999701013371678
+          },
+          "fidelity": {
+            "ep": 0.00046853818134485895,
+            "et": 0.0007829827665566025,
+            "iota": 0.0004483941254372903,
+            "mod_b": 0.000697852426212538,
+            "rz": 0.00033040552001253957
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 201,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 2.044416266235146e-15
+    },
+    {
+      "angular": 1,
+      "arithmetic_screen_pass": false,
+      "boundary_errors": {
+        "rbc": 6.938893903907228e-18,
+        "zbs": 3.469446951953614e-18
+      },
+      "case": "nfp2-beta2",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-5-s0.25-n64.npz",
+            "sha256": "c427c8083dfd880724315b5d76ac5d97989793b6e7cb75f0fe2c5b49470e2452"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00010688235980242558,
+            "magnitude": 5.581565081291218e-05,
+            "missing_2pi": 5.2832735837903675,
+            "poloidal": 0.00046914491163771715,
+            "toroidal": 0.00012163507897972384,
+            "wrong_sign": 1.9999117233892187
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-5-s0.25-n128.npz",
+            "sha256": "d2997369959993447c681b1dae6aab97aee6b06f94409e499e7d431da2351ac5"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 2.966110210411894e-07,
+            "magnitude": 2.964624133569826e-06,
+            "poloidal": 1.9351125463362272e-05,
+            "toroidal": 2.9771737358681217e-06
+          },
+          "errors": {
+            "cartesian": 0.00010717897082346677,
+            "magnitude": 5.878027494648201e-05,
+            "missing_2pi": 5.2832097129195885,
+            "poloidal": 0.0004884960371010794,
+            "toroidal": 0.00012461225271559196,
+            "wrong_sign": 1.999975594259998
+          },
+          "fidelity": {
+            "ep": 0.001330923114582119,
+            "et": 0.0026031181681547663,
+            "iota": 0.0017126443708778138,
+            "mod_b": 0.001089511848518133,
+            "rz": 0.0009836283654945186
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-5-s0.5-n64.npz",
+            "sha256": "f9ec02e8b96025e8250f58613c4414e8048826b386315a34c3df14da7617a8fb"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00012929982690997188,
+            "magnitude": 8.279605622916833e-05,
+            "missing_2pi": 5.2832844104123105,
+            "poloidal": 0.0004733671913599368,
+            "toroidal": 0.00013031238267454819,
+            "wrong_sign": 1.9999008967672756
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-5-s0.5-n128.npz",
+            "sha256": "89c3b624c04769deff2fabe3f3f1f750481bd49866803e4af664095a39b0d2ec"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.3890276213263109e-07,
+            "magnitude": 4.1557465698615584e-07,
+            "poloidal": 8.444939238059753e-06,
+            "toroidal": 6.081995079946405e-06
+          },
+          "errors": {
+            "cartesian": 0.0001294387296721045,
+            "magnitude": 8.321163088615449e-05,
+            "missing_2pi": 5.283213992589932,
+            "poloidal": 0.00048181213059799653,
+            "toroidal": 0.0001363943777544946,
+            "wrong_sign": 1.9999713145896543
+          },
+          "fidelity": {
+            "ep": 0.0009216244242766711,
+            "et": 0.001644314578274572,
+            "iota": 0.0005268817210952736,
+            "mod_b": 0.0003718131741860997,
+            "rz": 0.0006606321601691483
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-5-s0.75-n64.npz",
+            "sha256": "de210b4bf01b64abbd8ef669d82eb9ad9f2c56af29dee410e903c2d19250f4a2"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00022575597011129464,
+            "magnitude": 0.00014363165130414714,
+            "missing_2pi": 5.2831573362049795,
+            "poloidal": 0.0008734126653847914,
+            "toroidal": 0.00024402013795707153,
+            "wrong_sign": 2.0000279709746076
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-5-s0.75-n128.npz",
+            "sha256": "b4268f90527fe9ac6152b59510fdd6e3360a91ab10b6cfba545d98bcd96c98fd"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 4.97620115931318e-06,
+            "magnitude": 8.781847029880097e-06,
+            "poloidal": 0.0,
+            "toroidal": 7.49401655135586e-07
+          },
+          "errors": {
+            "cartesian": 0.00023073217127060782,
+            "magnitude": 0.00015241349833402723,
+            "missing_2pi": 5.28321522971003,
+            "poloidal": 0.0008734126653847914,
+            "toroidal": 0.0002447695396122071,
+            "wrong_sign": 1.9999700774695568
+          },
+          "fidelity": {
+            "ep": 0.0004638150343526567,
+            "et": 0.0007816116164519034,
+            "iota": 0.0004478939945444793,
+            "mod_b": 0.0006984113171199448,
+            "rz": 0.00033004947919911177
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 401,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 2.044416266235146e-15
+    },
+    {
+      "angular": 2,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 6.938893903907228e-18,
+        "zbs": 3.469446951953614e-18
+      },
+      "case": "nfp2-beta2",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-6-s0.25-n64.npz",
+            "sha256": "ad561124b7306d0a68f83b741e0c937ee93d1313a5b79d50060948ccb7281b04"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.3348654495753662e-07,
+            "magnitude": 6.070994665827361e-07,
+            "missing_2pi": 5.283185275779093,
+            "poloidal": 2.5841107149030884e-06,
+            "toroidal": 2.805078965320863e-07,
+            "wrong_sign": 2.0000000314004938
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-6-s0.25-n128.npz",
+            "sha256": "c93fab55cb1750bb737d340ffb5ebcf41ac4da19688938d6158bdfb26b97b6cc"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 3.337620134530588e-09,
+            "magnitude": 7.570797468046041e-10,
+            "poloidal": 4.3664532817135e-10,
+            "toroidal": 2.543793664062306e-09
+          },
+          "errors": {
+            "cartesian": 2.368241650920672e-07,
+            "magnitude": 6.078565463295407e-07,
+            "missing_2pi": 5.283185281681397,
+            "poloidal": 2.583674069574917e-06,
+            "toroidal": 2.830516901961486e-07,
+            "wrong_sign": 2.0000000254981884
+          },
+          "fidelity": {
+            "ep": 0.0047270082034848076,
+            "et": 0.008837252616111898,
+            "iota": 0.0017515464170249073,
+            "mod_b": 0.0013079985804899826,
+            "rz": 0.0010570592202713276
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-6-s0.5-n64.npz",
+            "sha256": "7ee9efd66bb36111df83794dac60bf5886d9f7e55208f76f128f40159ccce9ee"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.6574498608150512e-07,
+            "magnitude": 2.991662859501632e-07,
+            "missing_2pi": 5.283185295231898,
+            "poloidal": 1.920752792478556e-06,
+            "toroidal": 1.82658810527085e-07,
+            "wrong_sign": 2.0000000119476886
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-6-s0.5-n128.npz",
+            "sha256": "65751dd844a156f95149c3cd187f0e1cf508db598db0bfef4efc1d9641fbdaa5"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 6.232824791099547e-10,
+            "magnitude": 1.2004210312697327e-11,
+            "poloidal": 8.291838172656046e-09,
+            "toroidal": 9.495501706101446e-11
+          },
+          "errors": {
+            "cartesian": 1.6636826856061507e-07,
+            "magnitude": 2.991542817398505e-07,
+            "missing_2pi": 5.2831853002340265,
+            "poloidal": 1.9124609543059e-06,
+            "toroidal": 1.82563855510024e-07,
+            "wrong_sign": 2.0000000069455597
+          },
+          "fidelity": {
+            "ep": 0.004582262473636199,
+            "et": 0.0060474233467668085,
+            "iota": 0.0005247368041789713,
+            "mod_b": 0.0006480520266276696,
+            "rz": 0.0007856818585128666
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-6-s0.75-n64.npz",
+            "sha256": "5142211a4e0df250fe960c7b25d4d182f3bacc381499c3d0b5f889427c72b302"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.7194998824469438e-07,
+            "magnitude": 1.9986533527526008e-07,
+            "missing_2pi": 5.2831853149045385,
+            "poloidal": 1.7415155807026782e-06,
+            "toroidal": 1.712975670230328e-07,
+            "wrong_sign": 1.9999999922750475
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-6-s0.75-n128.npz",
+            "sha256": "224968796846bf5d099fb85a8dc1731327ffc0b08310ddbbaf452e876bd6b5e1"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 7.993365102328288e-11,
+            "magnitude": 4.109480513050127e-09,
+            "poloidal": 2.6146329198950546e-08,
+            "toroidal": 1.2684292589652652e-10
+          },
+          "errors": {
+            "cartesian": 1.7202992189571767e-07,
+            "magnitude": 2.039748157883102e-07,
+            "missing_2pi": 5.283185303131328,
+            "poloidal": 1.7676619099016287e-06,
+            "toroidal": 1.7117072409713628e-07,
+            "wrong_sign": 2.0000000040482586
+          },
+          "fidelity": {
+            "ep": 0.002847278801362692,
+            "et": 0.0030620642857167963,
+            "iota": 0.00044814455408725973,
+            "mod_b": 0.0008877804145815318,
+            "rz": 0.00047828015517881975
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 201,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 6.113680814442901e-12
+    },
+    {
+      "angular": 2,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 6.938893903907228e-18,
+        "zbs": 3.469446951953614e-18
+      },
+      "case": "nfp2-beta2",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-7-s0.25-n64.npz",
+            "sha256": "c86d03eb2f639d3ee0b3586dd6674e399e5fed606fddcf6e189354c90b0af746"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 6.09521347307491e-08,
+            "magnitude": 1.5526407677546562e-07,
+            "missing_2pi": 5.283185300292293,
+            "poloidal": 6.429563614280589e-07,
+            "toroidal": 7.388215951184426e-08,
+            "wrong_sign": 2.0000000068872925
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-7-s0.25-n128.npz",
+            "sha256": "ca885eb7a7aebe7005dec53c6db6e4230c6127f0070fcab61ee3a593670e4f34"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 2.0041290482709128e-10,
+            "magnitude": 1.437446572022993e-09,
+            "poloidal": 1.1308480457672712e-10,
+            "toroidal": 2.670101078321066e-11
+          },
+          "errors": {
+            "cartesian": 6.115254763557619e-08,
+            "magnitude": 1.567015233474886e-07,
+            "missing_2pi": 5.283185301361977,
+            "poloidal": 6.428432766234822e-07,
+            "toroidal": 7.385545850106105e-08,
+            "wrong_sign": 2.000000005817609
+          },
+          "fidelity": {
+            "ep": 0.00473768821585624,
+            "et": 0.008860288218827332,
+            "iota": 0.00171487862084152,
+            "mod_b": 0.0013059826816975532,
+            "rz": 0.0010574047046867823
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-7-s0.5-n64.npz",
+            "sha256": "fda2160e48cea4e606caf8c5ca8e66707e1eff66ecb8c04ed237ad48caafca1d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 5.402839558598446e-08,
+            "magnitude": 1.2151559172058743e-07,
+            "missing_2pi": 5.283185303747927,
+            "poloidal": 4.820931924608888e-07,
+            "toroidal": 5.9220440826804184e-08,
+            "wrong_sign": 2.00000000343166
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-7-s0.5-n128.npz",
+            "sha256": "7bec61cce19a8bfbf91444ec9e6da617e84d12ae7e8fd2c2420c8da0be4cdf63"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.7068970124874894e-10,
+            "magnitude": 3.3087463653535784e-11,
+            "poloidal": 2.0442167032112305e-09,
+            "toroidal": 3.6162043041490003e-10
+          },
+          "errors": {
+            "cartesian": 5.419908528723321e-08,
+            "magnitude": 1.2154867918424097e-07,
+            "missing_2pi": 5.2831853052611955,
+            "poloidal": 4.800489757576776e-07,
+            "toroidal": 5.9582061257219084e-08,
+            "wrong_sign": 2.0000000019183917
+          },
+          "fidelity": {
+            "ep": 0.004591117601884323,
+            "et": 0.006044426226860149,
+            "iota": 0.0005261282251417532,
+            "mod_b": 0.0006495050315520264,
+            "rz": 0.0007857236203338807
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-7-s0.75-n64.npz",
+            "sha256": "005a10b6f66710dff662761907dbf67d41c81ae97ed3e9365d3b9036ac15dbb7"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 9.680734106757702e-08,
+            "magnitude": 7.68734528005467e-08,
+            "missing_2pi": 5.283185313506048,
+            "poloidal": 4.794087003247342e-07,
+            "toroidal": 9.794114480599978e-08,
+            "wrong_sign": 1.9999999936735389
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-7-s0.75-n128.npz",
+            "sha256": "4a2b452f5d36834f90760d6cfe7a1dd5efd02c0d106fc3795b3333d01ebfbfb8"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 0.0,
+            "magnitude": 0.0,
+            "poloidal": 4.107993173060918e-08,
+            "toroidal": 7.490611339909229e-10
+          },
+          "errors": {
+            "cartesian": 9.680734106757702e-08,
+            "magnitude": 7.68734528005467e-08,
+            "missing_2pi": 5.283185303994317,
+            "poloidal": 5.204886320553434e-07,
+            "toroidal": 9.86902059399907e-08,
+            "wrong_sign": 2.0000000031852694
+          },
+          "fidelity": {
+            "ep": 0.002854828598319104,
+            "et": 0.003063910463178999,
+            "iota": 0.0004479780159888369,
+            "mod_b": 0.000889045946884055,
+            "rz": 0.00047856690611445217
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 401,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 6.113680814442901e-12
+    },
+    {
+      "angular": 1,
+      "arithmetic_screen_pass": false,
+      "boundary_errors": {
+        "rbc": 8.673617379884035e-19,
+        "zbs": 6.938893903907228e-18
+      },
+      "case": "nfp3-vacuum",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-8-s0.25-n64.npz",
+            "sha256": "21d362310abc4ba9c1cfd5b32215cc73a38e31012db1889dc4728cf12770b3bf"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00025211500675660165,
+            "magnitude": 0.00020238843157037445,
+            "missing_2pi": 5.2831845486159335,
+            "poloidal": 0.000574074560997463,
+            "toroidal": 0.00024283063630451613,
+            "wrong_sign": 2.0000007585636532
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-8-s0.25-n128.npz",
+            "sha256": "e4b503c63302dae898d7a219e026e71739ccb5031cc40daf13248bb56f28a130"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 5.9592144698951736e-06,
+            "magnitude": 9.842606588962333e-06,
+            "poloidal": 4.493299147603769e-06,
+            "toroidal": 5.282716890463071e-07
+          },
+          "errors": {
+            "cartesian": 0.0002580742212264968,
+            "magnitude": 0.00021223103815933678,
+            "missing_2pi": 5.2831845486159335,
+            "poloidal": 0.0005785678601450668,
+            "toroidal": 0.00024335890799356244,
+            "wrong_sign": 2.0000007585636532
+          },
+          "fidelity": {
+            "ep": 0.0007785930800693389,
+            "et": 0.003589551216754246,
+            "iota": 1.239483106640904e-05,
+            "mod_b": 0.00043440962910735624,
+            "rz": 0.0003110657513701196
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-8-s0.5-n64.npz",
+            "sha256": "020497a434c8d70a713b0e34a3c9b8432f1ff30065b239f17b608f33df66676c"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00032390731052842786,
+            "magnitude": 0.00037659586810157085,
+            "missing_2pi": 5.283210872514061,
+            "poloidal": 0.00041693196019284537,
+            "toroidal": 0.00026772667393254457,
+            "wrong_sign": 1.999974434665525
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-8-s0.5-n128.npz",
+            "sha256": "dda31345b8b6ffb8ec757b626bbf2e64cdfaa249d7c2a3b8dd4e21518d32eb0a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.718301034338461e-05,
+            "magnitude": 1.9131325384372255e-05,
+            "poloidal": 2.1955747892855437e-05,
+            "toroidal": 9.098240762135299e-06
+          },
+          "errors": {
+            "cartesian": 0.00034109032087181247,
+            "magnitude": 0.0003957271934859431,
+            "missing_2pi": 5.283210872514061,
+            "poloidal": 0.0004388877080857008,
+            "toroidal": 0.00027682491469467987,
+            "wrong_sign": 1.999974434665525
+          },
+          "fidelity": {
+            "ep": 0.0010289819853763784,
+            "et": 0.003909620620035203,
+            "iota": 3.3975934001340136e-05,
+            "mod_b": 0.0007465836745382985,
+            "rz": 0.0004863156525146649
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-8-s0.75-n64.npz",
+            "sha256": "4486d3d1d796e86e06e6fa59bf117b13ef98ad6266b728e23708ed8ab7dfaf78"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.0004571518545350964,
+            "magnitude": 0.0005325017555467704,
+            "missing_2pi": 5.283166421647055,
+            "poloidal": 0.0005164115108822868,
+            "toroidal": 0.0004168410943486192,
+            "wrong_sign": 2.0000188855325325
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-8-s0.75-n128.npz",
+            "sha256": "e08aa60dcfad7b814adeecf9caa72f944b40b4bce0d6a33b0fef37ba5bb9e2b8"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 2.4699845601329398e-05,
+            "magnitude": 3.189156516905352e-05,
+            "poloidal": 1.6508323598635015e-06,
+            "toroidal": 1.4774943514681807e-06
+          },
+          "errors": {
+            "cartesian": 0.0004818517001364258,
+            "magnitude": 0.000564393320715824,
+            "missing_2pi": 5.2832039450942005,
+            "poloidal": 0.0005180623432421503,
+            "toroidal": 0.00041831858870008736,
+            "wrong_sign": 1.9999813620853861
+          },
+          "fidelity": {
+            "ep": 0.0006924462237382582,
+            "et": 0.002164776366036732,
+            "iota": 1.1559088615942237e-05,
+            "mod_b": 0.0005214994122083701,
+            "rz": 0.00032676765246332257
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 201,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 5.579550745139781e-16
+    },
+    {
+      "angular": 1,
+      "arithmetic_screen_pass": false,
+      "boundary_errors": {
+        "rbc": 8.673617379884035e-19,
+        "zbs": 6.938893903907228e-18
+      },
+      "case": "nfp3-vacuum",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-9-s0.25-n64.npz",
+            "sha256": "1c15a0d5ecc002714d6d4de027e70532254793a01e3d1532c9c887985e1a088e"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.000249273462897905,
+            "magnitude": 0.00020149588505020488,
+            "missing_2pi": 5.283184838460942,
+            "poloidal": 0.0005598030197349553,
+            "toroidal": 0.00023982840207046162,
+            "wrong_sign": 2.0000004687186443
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-9-s0.25-n128.npz",
+            "sha256": "7250c58b269b775879ab34ab117755bab3304ab5bdd51ddb37d8255cc8c9c832"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 6.830338346465632e-06,
+            "magnitude": 9.681806902955657e-06,
+            "poloidal": 2.9490543900928274e-06,
+            "toroidal": 2.0253413527714158e-07
+          },
+          "errors": {
+            "cartesian": 0.00025610380124437064,
+            "magnitude": 0.00021117769195316054,
+            "missing_2pi": 5.283184838460942,
+            "poloidal": 0.0005627520741250481,
+            "toroidal": 0.00024003093620573876,
+            "wrong_sign": 2.0000004687186443
+          },
+          "fidelity": {
+            "ep": 0.00040030816973158885,
+            "et": 0.0009375028429365038,
+            "iota": 1.5843369492785087e-05,
+            "mod_b": 0.0001320345849313157,
+            "rz": 0.00013298538733766025
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-9-s0.5-n64.npz",
+            "sha256": "bf1b790f4c8772f42c817756ef0f1880234d8b7d060f60b0187019efc44d8d72"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.000321159701467634,
+            "magnitude": 0.0003754282962930646,
+            "missing_2pi": 5.283210674909366,
+            "poloidal": 0.00040887919640600676,
+            "toroidal": 0.00026769916622236355,
+            "wrong_sign": 1.9999746322702205
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-9-s0.5-n128.npz",
+            "sha256": "e3227721ff333c6ff322e6ffb824166326bdb0c35a2b11f4433e6290f0b0da95"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.7461418777530422e-05,
+            "magnitude": 1.9163486609011867e-05,
+            "poloidal": 2.3825122845158792e-05,
+            "toroidal": 7.671675878650629e-06
+          },
+          "errors": {
+            "cartesian": 0.0003386211202451644,
+            "magnitude": 0.00039459178290207646,
+            "missing_2pi": 5.283218440148917,
+            "poloidal": 0.00043270431925116555,
+            "toroidal": 0.0002753708421010142,
+            "wrong_sign": 1.999966867030669
+          },
+          "fidelity": {
+            "ep": 0.0005246911082001863,
+            "et": 0.0016524226511539816,
+            "iota": 2.0273828986283604e-05,
+            "mod_b": 0.0002895780151994798,
+            "rz": 0.0002093739356211557
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-9-s0.75-n64.npz",
+            "sha256": "dc51e320c3aa25ddf6c77a9be0ff6211b1f0ec54932eb8868b52ab9f023641c0"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00045809062740903946,
+            "magnitude": 0.0005315741487434135,
+            "missing_2pi": 5.2831666885730835,
+            "poloidal": 0.0005176620995979977,
+            "toroidal": 0.00041780932565797134,
+            "wrong_sign": 2.0000186186065028
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-9-s0.75-n128.npz",
+            "sha256": "78e2ee8b8148c2149058c536e51bf5c4bcc16d345c3d37ed7073854ac2ded15a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 2.4696257641287694e-05,
+            "magnitude": 3.200237300326591e-05,
+            "poloidal": 3.005112327126051e-06,
+            "toroidal": 8.153559499240342e-07
+          },
+          "errors": {
+            "cartesian": 0.00048278688505032716,
+            "magnitude": 0.0005635765217466794,
+            "missing_2pi": 5.283199401244968,
+            "poloidal": 0.0005206672119251238,
+            "toroidal": 0.0004186246816078954,
+            "wrong_sign": 1.9999859059346181
+          },
+          "fidelity": {
+            "ep": 0.00042198463060012304,
+            "et": 0.001163030191655872,
+            "iota": 2.499834729552397e-06,
+            "mod_b": 0.0002604609209417552,
+            "rz": 0.00017296026758100314
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 401,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 5.579550745139781e-16
+    },
+    {
+      "angular": 2,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 8.673617379884035e-19,
+        "zbs": 6.938893903907228e-18
+      },
+      "case": "nfp3-vacuum",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-10-s0.25-n64.npz",
+            "sha256": "6ed6411d9eed916a6d63de82f287542cc3f93af610a9b35e74438babab1b9e62"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 4.4212112291704756e-07,
+            "magnitude": 1.5608086784006215e-06,
+            "missing_2pi": 5.28318482096824,
+            "poloidal": 7.016220440011591e-07,
+            "toroidal": 5.87814048927605e-07,
+            "wrong_sign": 2.0000004862113463
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-10-s0.25-n128.npz",
+            "sha256": "b7c1064776948f150e1561e18373b39f61f79b8ffbd92a8968474d50c076904a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.875652106189521e-09,
+            "magnitude": 0.0,
+            "poloidal": 0.0,
+            "toroidal": 4.369317832827559e-09
+          },
+          "errors": {
+            "cartesian": 4.439967750232371e-07,
+            "magnitude": 1.5608086784006215e-06,
+            "missing_2pi": 5.28318482096824,
+            "poloidal": 7.016220440011591e-07,
+            "toroidal": 5.921833667604325e-07,
+            "wrong_sign": 2.0000004862113463
+          },
+          "fidelity": {
+            "ep": 0.002033468474651261,
+            "et": 0.004116618806643423,
+            "iota": 1.2427282520377503e-05,
+            "mod_b": 0.0004985547116984906,
+            "rz": 0.000520230622376038
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-10-s0.5-n64.npz",
+            "sha256": "6aef676af08750dbdd7de11a428d1408d027563ae3f0c83831e9f4ecf4316497"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.1274464916495095e-07,
+            "magnitude": 7.91092505157802e-07,
+            "missing_2pi": 5.2831851329321395,
+            "poloidal": 2.898019836339046e-07,
+            "toroidal": 2.7178641661580454e-07,
+            "wrong_sign": 2.000000174247447
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-10-s0.5-n128.npz",
+            "sha256": "1a40a61b75e07c07a46b5ef57ff016ebeae644e63524bddedefc64d10bf7aacb"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.2248324245056851e-08,
+            "magnitude": 6.069842398398886e-12,
+            "poloidal": 6.286928275549359e-09,
+            "toroidal": 1.3573221976781473e-09
+          },
+          "errors": {
+            "cartesian": 2.249929734100078e-07,
+            "magnitude": 7.910985750002004e-07,
+            "missing_2pi": 5.2831851329321395,
+            "poloidal": 2.9608891190945395e-07,
+            "toroidal": 2.731437388134827e-07,
+            "wrong_sign": 2.000000174247447
+          },
+          "fidelity": {
+            "ep": 0.002408381484227831,
+            "et": 0.0038747433399063803,
+            "iota": 3.3334057187084376e-05,
+            "mod_b": 0.0007527590604116884,
+            "rz": 0.000672077684589054
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-10-s0.75-n64.npz",
+            "sha256": "4a7da9339715ce24dc6ee91db7f23d65230372515eb0ae7bc19133f1bbeaa905"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 3.3331582676253847e-07,
+            "magnitude": 6.692712346747933e-07,
+            "missing_2pi": 5.283185207471644,
+            "poloidal": 3.5343447725398653e-07,
+            "toroidal": 3.0306695192682274e-07,
+            "wrong_sign": 2.000000099707942
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-10-s0.75-n128.npz",
+            "sha256": "5c315569814dee8a2a5744a1b8fa8d884ae26972db8ec5803f5aab262e7e5a66"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 5.980297683792828e-08,
+            "magnitude": 5.044240995318404e-08,
+            "poloidal": 3.804037024938927e-09,
+            "toroidal": 3.1261506612179285e-08
+          },
+          "errors": {
+            "cartesian": 3.9311880360046675e-07,
+            "magnitude": 7.197136446279773e-07,
+            "missing_2pi": 5.283185209826353,
+            "poloidal": 3.5723851427892546e-07,
+            "toroidal": 3.34328458539002e-07,
+            "wrong_sign": 2.0000000973532326
+          },
+          "fidelity": {
+            "ep": 0.0016761024784255289,
+            "et": 0.00212941575935387,
+            "iota": 1.165802798719362e-05,
+            "mod_b": 0.0006307060214647102,
+            "rz": 0.0004423656126860354
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 201,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 3.933397290298707e-12
+    },
+    {
+      "angular": 2,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 8.673617379884035e-19,
+        "zbs": 6.938893903907228e-18
+      },
+      "case": "nfp3-vacuum",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-11-s0.25-n64.npz",
+            "sha256": "1af35f94e90371a7f58d42b70ae3a82b9119dcdc79537212a68ef5e18ef84e80"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.086971574537443e-07,
+            "magnitude": 3.945789936309769e-07,
+            "missing_2pi": 5.283185181215365,
+            "poloidal": 2.103564830759928e-07,
+            "toroidal": 1.447863454713048e-07,
+            "wrong_sign": 2.0000001259642213
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-11-s0.25-n128.npz",
+            "sha256": "9e056b1cdf7a2201a063dbbc09c0c9d308959fc9baf3fafab6c3396869c1fd6e"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 0.0,
+            "magnitude": 1.2088375586769507e-10,
+            "poloidal": 1.6884528523877745e-08,
+            "toroidal": 7.716614716208938e-10
+          },
+          "errors": {
+            "cartesian": 1.086971574537443e-07,
+            "magnitude": 3.946998773868446e-07,
+            "missing_2pi": 5.283185181215365,
+            "poloidal": 2.2724101159987054e-07,
+            "toroidal": 1.455580069429257e-07,
+            "wrong_sign": 2.0000001259642213
+          },
+          "fidelity": {
+            "ep": 0.001983897721443848,
+            "et": 0.0028771840236705482,
+            "iota": 1.805941765831154e-05,
+            "mod_b": 0.00025951022230542923,
+            "rz": 0.0003866888881537479
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-11-s0.5-n64.npz",
+            "sha256": "57ea2c07b552fb8671c013460c1f2f8c289a2af056c97aa6f3a872651107b1df"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.4708698452962246e-07,
+            "magnitude": 2.956819771351992e-07,
+            "missing_2pi": 5.283185259445033,
+            "poloidal": 1.6856811370535784e-07,
+            "toroidal": 1.5095229552303877e-07,
+            "wrong_sign": 2.0000000477345536
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-11-s0.5-n128.npz",
+            "sha256": "8041125e8b441347e9e9bf9014f73a896eb088ff9e401be23e602e0009906a5a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 5.001848450263695e-10,
+            "magnitude": 1.0939042160149032e-08,
+            "poloidal": 3.2317193390665726e-09,
+            "toroidal": 1.2108556805147668e-09
+          },
+          "errors": {
+            "cartesian": 1.4758716937464883e-07,
+            "magnitude": 3.0662101929534823e-07,
+            "missing_2pi": 5.283185256212367,
+            "poloidal": 1.717998330444244e-07,
+            "toroidal": 1.5216315120355353e-07,
+            "wrong_sign": 2.0000000509672193
+          },
+          "fidelity": {
+            "ep": 0.0023118342645927128,
+            "et": 0.0025735983828051533,
+            "iota": 1.9725605235998422e-05,
+            "mod_b": 0.00042513912785824986,
+            "rz": 0.00047550817653021083
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-11-s0.75-n64.npz",
+            "sha256": "eaaa0a6cc28939017e1be5c7ad001236f799d2954825cd7ff0d8ead58f127948"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.979523897873679e-07,
+            "magnitude": 4.0374042825046617e-07,
+            "missing_2pi": 5.283185277714305,
+            "poloidal": 3.4325839727625246e-07,
+            "toroidal": 2.619667346537822e-07,
+            "wrong_sign": 2.000000029465281
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-11-s0.75-n128.npz",
+            "sha256": "89d14bed9131a53416a025517398f0fe785a218cdc470525c0e67bb65702838d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.638443709602272e-08,
+            "magnitude": 1.6113809443848285e-09,
+            "poloidal": 2.988209730501877e-09,
+            "toroidal": 2.4286326734824244e-09
+          },
+          "errors": {
+            "cartesian": 3.1433682688339064e-07,
+            "magnitude": 4.05351809194851e-07,
+            "missing_2pi": 5.283185282301649,
+            "poloidal": 3.4624660700675434e-07,
+            "toroidal": 2.643953673272646e-07,
+            "wrong_sign": 2.000000024877937
+          },
+          "fidelity": {
+            "ep": 0.001625582867565908,
+            "et": 0.0015228830906031739,
+            "iota": 2.075205213336595e-06,
+            "mod_b": 0.0004211207200937411,
+            "rz": 0.00033763139931902253
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 401,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 3.933397290298707e-12
+    },
+    {
+      "angular": 1,
+      "arithmetic_screen_pass": false,
+      "boundary_errors": {
+        "rbc": 8.673617379884035e-19,
+        "zbs": 6.938893903907228e-18
+      },
+      "case": "nfp3-beta2",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-12-s0.25-n64.npz",
+            "sha256": "e64aa1cc5ec55bbba635a51aadc08fea5f410981099d17507814e376cdfb59ac"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00023900900978146667,
+            "magnitude": 0.00016227417358606247,
+            "missing_2pi": 5.283148906276983,
+            "poloidal": 0.00036239559615376644,
+            "toroidal": 0.00024263382080789577,
+            "wrong_sign": 2.000036400902604
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-12-s0.25-n128.npz",
+            "sha256": "003accfbf3c1970a223126d1c6bcd185219d0e95deeb272d32bee72b064d356f"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 2.114456001809555e-08,
+            "magnitude": 8.629610406387289e-06,
+            "poloidal": 2.046181720575537e-05,
+            "toroidal": 1.871422763917484e-08
+          },
+          "errors": {
+            "cartesian": 0.00023903015434148476,
+            "magnitude": 0.00017090378399244976,
+            "missing_2pi": 5.283157629501223,
+            "poloidal": 0.0003828574133595218,
+            "toroidal": 0.0002426151065802566,
+            "wrong_sign": 2.000027677678363
+          },
+          "fidelity": {
+            "ep": 0.010954619831137512,
+            "et": 0.08397834887218952,
+            "iota": 0.00013429243903428922,
+            "mod_b": 0.010032064993676303,
+            "rz": 0.006946821798372498
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-12-s0.5-n64.npz",
+            "sha256": "0a830eceffa775f765ea7e4b9080044c690b2b06f5e3b9a847f01df1d1973767"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00034963505528658596,
+            "magnitude": 0.00034140922710946614,
+            "missing_2pi": 5.283165497553165,
+            "poloidal": 0.00034632192980476505,
+            "toroidal": 0.0002994343305872452,
+            "wrong_sign": 2.0000198096264206
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-12-s0.5-n128.npz",
+            "sha256": "0e99fd0e7f7c9e5c646d7087f22e4b07e25aabdadf57664f9181c3aea02eef27"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.758443299892308e-05,
+            "magnitude": 1.7720605560713485e-05,
+            "poloidal": 1.3660266421724066e-05,
+            "toroidal": 1.0253673043547867e-05
+          },
+          "errors": {
+            "cartesian": 0.00036721948828550904,
+            "magnitude": 0.00035912983267017963,
+            "missing_2pi": 5.283181424207735,
+            "poloidal": 0.0003599821962264891,
+            "toroidal": 0.00030968800363079306,
+            "wrong_sign": 2.0000038829718525
+          },
+          "fidelity": {
+            "ep": 0.014784591411689585,
+            "et": 0.08297281014032434,
+            "iota": 0.0011595577053599149,
+            "mod_b": 0.01249729169649857,
+            "rz": 0.008625054948357988
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-12-s0.75-n64.npz",
+            "sha256": "9a435670265728d3f98a7a30fac1c39d100ef0d8c372a4c902c2bde3936a82d4"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.0004809238915691724,
+            "magnitude": 0.00052012375105765,
+            "missing_2pi": 5.2830051076846045,
+            "poloidal": 0.00047818434114426284,
+            "toroidal": 0.00033276149848176384,
+            "wrong_sign": 2.0001801994949817
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-12-s0.75-n128.npz",
+            "sha256": "ebfa03e53bbb9b032221b12228c963b245893b696b6a1a1c9b4635e9c3177bd8"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 2.793752418373994e-05,
+            "magnitude": 2.9734301835427973e-05,
+            "poloidal": 0.0,
+            "toroidal": 1.6361945272950682e-05
+          },
+          "errors": {
+            "cartesian": 0.0005088614157529123,
+            "magnitude": 0.000549858052893078,
+            "missing_2pi": 5.282980201776346,
+            "poloidal": 0.00047818434114426284,
+            "toroidal": 0.0003491234437547145,
+            "wrong_sign": 2.0002287335746067
+          },
+          "fidelity": {
+            "ep": 0.013035630418751314,
+            "et": 0.05107726331858961,
+            "iota": 0.0001701288981985627,
+            "mod_b": 0.009846298898608358,
+            "rz": 0.007626777337645419
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 201,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 5.579550745139781e-16
+    },
+    {
+      "angular": 1,
+      "arithmetic_screen_pass": false,
+      "boundary_errors": {
+        "rbc": 8.673617379884035e-19,
+        "zbs": 6.938893903907228e-18
+      },
+      "case": "nfp3-beta2",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-13-s0.25-n64.npz",
+            "sha256": "7225afa3eb61073a4348c5303fae6e64cf9c780643cf2cd07f8a45eba3883ee4"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.00024814181496265135,
+            "magnitude": 0.00016222832558462097,
+            "missing_2pi": 5.2831524201928595,
+            "poloidal": 0.0004396389900603084,
+            "toroidal": 0.0002470112062790545,
+            "wrong_sign": 2.0000328869867263
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-13-s0.25-n128.npz",
+            "sha256": "401cf52825f6ebae892ecf1b969c328be58dbf97e6b6d965f3ad8d1d526932f5"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.19525971821661e-06,
+            "magnitude": 8.939441131476932e-06,
+            "poloidal": 0.0,
+            "toroidal": 1.9998561916873513e-07
+          },
+          "errors": {
+            "cartesian": 0.00024933707468086796,
+            "magnitude": 0.0001711677667160979,
+            "missing_2pi": 5.283174250504852,
+            "poloidal": 0.0004396389900603084,
+            "toroidal": 0.00024681122065988575,
+            "wrong_sign": 2.0000110566747344
+          },
+          "fidelity": {
+            "ep": 0.005698866596640055,
+            "et": 0.03404125592706936,
+            "iota": 0.00035632838226828945,
+            "mod_b": 0.004803049126877628,
+            "rz": 0.0033436741634874003
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-13-s0.5-n64.npz",
+            "sha256": "e3f5d53c6e40c8999c8445f6d82e71ef30e99cc02501bb084b72beff38049389"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.0003970706566431645,
+            "magnitude": 0.0003509005361740834,
+            "missing_2pi": 5.283152770418549,
+            "poloidal": 0.0005803707102981172,
+            "toroidal": 0.00031579383343859584,
+            "wrong_sign": 2.000032536761038
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-13-s0.5-n128.npz",
+            "sha256": "6c4c7e0e83549a91ba3643c32558544a970dfd3023ffbe9ec6b51d81f5fb3b9a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.8363458938232768e-05,
+            "magnitude": 1.8449637745643376e-05,
+            "poloidal": 8.256266654016356e-06,
+            "toroidal": 1.336141844304284e-05
+          },
+          "errors": {
+            "cartesian": 0.00041543411558139727,
+            "magnitude": 0.00036935017391972677,
+            "missing_2pi": 5.283151751649304,
+            "poloidal": 0.0005886269769521335,
+            "toroidal": 0.0003291552518816387,
+            "wrong_sign": 2.000033555530282
+          },
+          "fidelity": {
+            "ep": 0.006575353340768575,
+            "et": 0.03313756310440062,
+            "iota": 0.00045191395838295456,
+            "mod_b": 0.005069563610762965,
+            "rz": 0.0034184891025184293
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-13-s0.75-n64.npz",
+            "sha256": "0e6a5bab89cb394de7a9e44e289af871f9f1e30b7a7c337d4c453f3ad42903c6"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 0.000606400217009039,
+            "magnitude": 0.0005421967371431064,
+            "missing_2pi": 5.282998421099264,
+            "poloidal": 0.0007155114276607838,
+            "toroidal": 0.0003874987822856079,
+            "wrong_sign": 2.000186886080322
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-13-s0.75-n128.npz",
+            "sha256": "27dd27d426a7984391f918643b45eae810db87475edb65582b1dac349dcf6a2f"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 0.0,
+            "magnitude": 2.9124391124554132e-05,
+            "poloidal": 3.58167599927979e-05,
+            "toroidal": 0.0
+          },
+          "errors": {
+            "cartesian": 0.000606400217009039,
+            "magnitude": 0.0005713211282676606,
+            "missing_2pi": 5.282998421099264,
+            "poloidal": 0.0007513281876535817,
+            "toroidal": 0.0003874987822856079,
+            "wrong_sign": 2.000186886080322
+          },
+          "fidelity": {
+            "ep": 0.005786119178935453,
+            "et": 0.020500211802942724,
+            "iota": 0.0001654478465314968,
+            "mod_b": 0.004252674760855633,
+            "rz": 0.0029186359923179055
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 401,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 5.579550745139781e-16
+    },
+    {
+      "angular": 2,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 8.673617379884035e-19,
+        "zbs": 6.938893903907228e-18
+      },
+      "case": "nfp3-beta2",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-14-s0.25-n64.npz",
+            "sha256": "eca8dec89838d75ab9cb4a995ad512651db41dae7530cf35cb729d430876b8dc"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 6.680508403470542e-07,
+            "magnitude": 1.510283494460435e-06,
+            "missing_2pi": 5.283185171679729,
+            "poloidal": 7.046856034804454e-07,
+            "toroidal": 6.299719756287012e-07,
+            "wrong_sign": 2.0000001354998567
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-14-s0.25-n128.npz",
+            "sha256": "0636112ed47c6abb957388259632c503e68108e06a630d8ba6a9d6bf224fbcce"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 5.334187426622547e-09,
+            "magnitude": 4.831993805672594e-09,
+            "poloidal": 8.945917896404323e-09,
+            "toroidal": 1.8572420565754935e-09
+          },
+          "errors": {
+            "cartesian": 6.733850277736767e-07,
+            "magnitude": 1.5151154882661077e-06,
+            "missing_2pi": 5.28318514341067,
+            "poloidal": 7.136315213768498e-07,
+            "toroidal": 6.318292176852767e-07,
+            "wrong_sign": 2.0000001637689167
+          },
+          "fidelity": {
+            "ep": 0.011247626400366336,
+            "et": 0.08263210998890988,
+            "iota": 0.00014363107902948258,
+            "mod_b": 0.009903107277284422,
+            "rz": 0.006838437192732061
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-14-s0.5-n64.npz",
+            "sha256": "0aad8de695384609ad0fdfd82d385f57eaf2a54c72d43d553d502e2a9635a63b"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 3.3338107885399104e-07,
+            "magnitude": 6.689065250183452e-07,
+            "missing_2pi": 5.283185299228123,
+            "poloidal": 6.067608726582244e-07,
+            "toroidal": 2.894807378634661e-07,
+            "wrong_sign": 2.0000000079514644
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-14-s0.5-n128.npz",
+            "sha256": "2807c369fc600f2987c1fe45e4cd25283bad2c35d65ce819c9613deb43b280a2"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 0.0,
+            "magnitude": 5.5273862114516285e-09,
+            "poloidal": 6.449479601873102e-09,
+            "toroidal": 2.6928586552398833e-09
+          },
+          "errors": {
+            "cartesian": 3.3338107885399104e-07,
+            "magnitude": 6.744339112297968e-07,
+            "missing_2pi": 5.283185285787339,
+            "poloidal": 6.132103522600975e-07,
+            "toroidal": 2.92173596518706e-07,
+            "wrong_sign": 2.000000021392248
+          },
+          "fidelity": {
+            "ep": 0.014757246540944954,
+            "et": 0.08147149124898069,
+            "iota": 0.0011361838728534135,
+            "mod_b": 0.012279666265266241,
+            "rz": 0.008439934039084527
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-14-s0.75-n64.npz",
+            "sha256": "09a4e42784314173dda148cd82ad49df47024ede1e24d4a7a6bb770528d2f45e"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 4.873145208802196e-07,
+            "magnitude": 8.216878776236151e-07,
+            "missing_2pi": 5.283185274738888,
+            "poloidal": 1.1406441984349694e-06,
+            "toroidal": 4.200727614106423e-07,
+            "wrong_sign": 2.000000032440698
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-14-s0.75-n128.npz",
+            "sha256": "2c72cf9a93c593e14de7fc1f2efe0ac326f118baa10442bf0926e36215c16c49"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.6010076615080234e-09,
+            "magnitude": 3.4767915922240837e-09,
+            "poloidal": 7.270993767450007e-10,
+            "toroidal": 2.66181534300628e-08
+          },
+          "errors": {
+            "cartesian": 4.889155285417276e-07,
+            "magnitude": 8.251646692158391e-07,
+            "missing_2pi": 5.283185248760527,
+            "poloidal": 1.1413712978117144e-06,
+            "toroidal": 4.466909148407051e-07,
+            "wrong_sign": 2.000000058419059
+          },
+          "fidelity": {
+            "ep": 0.012893271433073178,
+            "et": 0.05003272236306592,
+            "iota": 0.00016561921117552725,
+            "mod_b": 0.009735561817609619,
+            "rz": 0.007475400056955402
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 201,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 3.933397290298707e-12
+    },
+    {
+      "angular": 2,
+      "arithmetic_screen_pass": true,
+      "boundary_errors": {
+        "rbc": 8.673617379884035e-19,
+        "zbs": 6.938893903907228e-18
+      },
+      "case": "nfp3-beta2",
+      "fidelity_screen_pass": false,
+      "grids": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-15-s0.25-n64.npz",
+            "sha256": "ad06f2efb7d22ed15814200ad90972f1494df50fd62585aae28f7e4828fab5b2"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.7041920840346783e-07,
+            "magnitude": 4.183487761210826e-07,
+            "missing_2pi": 5.2831852614896775,
+            "poloidal": 4.3222497177232715e-07,
+            "toroidal": 2.2834839951300354e-07,
+            "wrong_sign": 2.0000000456899096
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-15-s0.25-n128.npz",
+            "sha256": "e71b753af0e1c0a71cbb74d636a8818485eecad24b7e5da766e91693c2055811"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 2.6379649220669923e-10,
+            "magnitude": 2.7977280156625017e-11,
+            "poloidal": 0.0,
+            "toroidal": 8.333968766457208e-10
+          },
+          "errors": {
+            "cartesian": 2.7068300489567453e-07,
+            "magnitude": 4.18320798840926e-07,
+            "missing_2pi": 5.283185275026764,
+            "poloidal": 4.3222497177232715e-07,
+            "toroidal": 2.2918179638964926e-07,
+            "wrong_sign": 2.000000032152824
+          },
+          "fidelity": {
+            "ep": 0.006858310687014205,
+            "et": 0.040891954359651074,
+            "iota": 0.0003406598031894248,
+            "mod_b": 0.005468836061524738,
+            "rz": 0.0038428481508815094
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-15-s0.5-n64.npz",
+            "sha256": "9aa01bcf04fe1fb5a818d8a73ff44201f0d00fb3110759f5fc1a2047bf3aa51f"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.3356244685759737e-07,
+            "magnitude": 2.773558175994188e-07,
+            "missing_2pi": 5.2831853113730105,
+            "poloidal": 3.1269297909825363e-07,
+            "toroidal": 1.252638210069115e-07,
+            "wrong_sign": 1.9999999958065764
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-15-s0.5-n128.npz",
+            "sha256": "aa194c117378d8bcfccf5733c7603a4a5af65abca16924418bd694a6b00d0846"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.2003029651153962e-12,
+            "magnitude": 2.4935501968060716e-12,
+            "poloidal": 4.753129969109302e-10,
+            "toroidal": 1.5481236629457725e-10
+          },
+          "errors": {
+            "cartesian": 1.3356124655463226e-07,
+            "magnitude": 2.77353324049222e-07,
+            "missing_2pi": 5.283185313331074,
+            "poloidal": 3.122176661013427e-07,
+            "toroidal": 1.2510900864061694e-07,
+            "wrong_sign": 1.9999999938485116
+          },
+          "fidelity": {
+            "ep": 0.00792136489286769,
+            "et": 0.039802431274405865,
+            "iota": 0.0005500277504090212,
+            "mod_b": 0.006012505722788746,
+            "rz": 0.003987558733335351
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-15-s0.75-n64.npz",
+            "sha256": "1e4442f74af946541c6cbe3ccb03f09fc06056ae3be67e641b20e4de36af00e8"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 5.466229601266421e-07,
+            "magnitude": 3.8920176699817726e-07,
+            "missing_2pi": 5.283185450185261,
+            "poloidal": 1.1509776093042028e-06,
+            "toroidal": 4.6215062048355874e-07,
+            "wrong_sign": 1.999999856994326
+          },
+          "physical_screen_pass": true,
+          "resolution": 64,
+          "surface": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/cell-15-s0.75-n128.npz",
+            "sha256": "e980f7157f9045ae4c69b8e891b5b258bae40b6d738279f803886f61ddbbd8ca"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "error_refinement": {
+            "cartesian": 1.8286373661397748e-09,
+            "magnitude": 4.557008007477959e-10,
+            "poloidal": 8.466238859376898e-10,
+            "toroidal": 2.3851907659925302e-08
+          },
+          "errors": {
+            "cartesian": 5.484515974927818e-07,
+            "magnitude": 3.8965746779892506e-07,
+            "missing_2pi": 5.283185450185261,
+            "poloidal": 1.1501309854182651e-06,
+            "toroidal": 4.86002528143484e-07,
+            "wrong_sign": 1.999999856994326
+          },
+          "fidelity": {
+            "ep": 0.006929040498655383,
+            "et": 0.024324910037614403,
+            "iota": 0.0001006733033841467,
+            "mod_b": 0.005031536389523746,
+            "rz": 0.0035004056062642687
+          },
+          "nested_errors": {
+            "bp": 0.0,
+            "bt": 0.0,
+            "clebsch": 0.0,
+            "ep": 0.0,
+            "et": 0.0,
+            "g": 0.0,
+            "height": 0.0,
+            "iota": 0.0,
+            "lp": 0.0,
+            "lt": 0.0,
+            "mod_b": 0.0,
+            "native": 0.0,
+            "phi": 0.0,
+            "psi": 0.0,
+            "radius": 0.0,
+            "theta": 0.0
+          },
+          "physical_screen_pass": true,
+          "resolution": 128,
+          "surface": 0.75
+        }
+      ],
+      "ns": 401,
+      "numerically_converged": true,
+      "physical_screen_pass": true,
+      "status": "completed",
+      "volume_error": 3.933397290298707e-12
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/evaluate_qi_resolution.py",
+      "sha256": "0008bc0edf7cd9b98697fe7913de954f6a888cad2a169523db2c173e5863c5eb"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_field_grid.py",
+      "sha256": "fc2827312a394468aaa07e4b23094479af8b82c15df8d5babf9d39fefe2a58e9"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clebsch_field.py",
+      "sha256": "392fd2470c95bbdb850bf278d95d74291c5dc28f5f827e09a20e5ef347022240"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/vmec_trace.py",
+      "sha256": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_resolution.py",
+      "sha256": "3d2c9448add0622b17d01c5527aacd0c5d5fd2f29e987a1375f41b2d7669825b"
+    }
+  ],
+  "old_fields": [
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp2-vacuum-s0.25.npz",
+        "sha256": "8d441274777190f4693313be5c5667e20bec5eb0b6d59836c83216c1f0afb283"
+      },
+      "case": "nfp2-vacuum",
+      "surface": 0.25,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/wout_QI_nfp2.nc",
+        "sha256": "d32ba013a5019d9997032dc89dc8548f1ec85abbd5d6e618eb0239393bb4875e"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp2-vacuum-s0.5.npz",
+        "sha256": "41b8b625c71e15d17ca8504daf4512a8d805e0d1393041927f32a91ffaba3c6b"
+      },
+      "case": "nfp2-vacuum",
+      "surface": 0.5,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/wout_QI_nfp2.nc",
+        "sha256": "d32ba013a5019d9997032dc89dc8548f1ec85abbd5d6e618eb0239393bb4875e"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp2-vacuum-s0.75.npz",
+        "sha256": "d1de7bbbe39e5c2df91632e3b6d180c735eb1b01302e57a1dc20c328f367a15f"
+      },
+      "case": "nfp2-vacuum",
+      "surface": 0.75,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/wout_QI_nfp2.nc",
+        "sha256": "d32ba013a5019d9997032dc89dc8548f1ec85abbd5d6e618eb0239393bb4875e"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp2-beta2-s0.25.npz",
+        "sha256": "51e07fb58fcb2d20cf41c1ad10bd4a94d1c93396979caa2e02306e4bd887e4b6"
+      },
+      "case": "nfp2-beta2",
+      "surface": 0.25,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/wout_nfp2_beta_2.00.nc",
+        "sha256": "7538a1dda702761aba4df6dab702b0bc717c1023e52ffe7b5d7f1ae0b678a7cc"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp2-beta2-s0.5.npz",
+        "sha256": "fa7275241c2e3fbdaeeed9daf25bc2b66ae3bf1aae59ee18626e7bd5cfd86084"
+      },
+      "case": "nfp2-beta2",
+      "surface": 0.5,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/wout_nfp2_beta_2.00.nc",
+        "sha256": "7538a1dda702761aba4df6dab702b0bc717c1023e52ffe7b5d7f1ae0b678a7cc"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp2-beta2-s0.75.npz",
+        "sha256": "8bb0cf1459f49fea62dcc6b122ce49ceef6e6da59fc65ed2f18701e42bb49c9c"
+      },
+      "case": "nfp2-beta2",
+      "surface": 0.75,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/wout_nfp2_beta_2.00.nc",
+        "sha256": "7538a1dda702761aba4df6dab702b0bc717c1023e52ffe7b5d7f1ae0b678a7cc"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp3-vacuum-s0.25.npz",
+        "sha256": "a0618e20d084daa6855a5069916dbe2af5c40272cf8a369ac4caad6cc7e91cc3"
+      },
+      "case": "nfp3-vacuum",
+      "surface": 0.25,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/wout_QI_nfp3.nc",
+        "sha256": "92627283deca5d5dcda8de252ce0fedf540f8157043d04f2848d8965bf83d77a"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp3-vacuum-s0.5.npz",
+        "sha256": "b0f33c9668f765900c7974adb176eeaf63ce6af4d6c6273aa225c1d824b0c85d"
+      },
+      "case": "nfp3-vacuum",
+      "surface": 0.5,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/wout_QI_nfp3.nc",
+        "sha256": "92627283deca5d5dcda8de252ce0fedf540f8157043d04f2848d8965bf83d77a"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp3-vacuum-s0.75.npz",
+        "sha256": "e2b0fee3e6f7797120564ec18ad2c59d0cba536e38de85c4bc29f95e642736ec"
+      },
+      "case": "nfp3-vacuum",
+      "surface": 0.75,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/wout_QI_nfp3.nc",
+        "sha256": "92627283deca5d5dcda8de252ce0fedf540f8157043d04f2848d8965bf83d77a"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp3-beta2-s0.25.npz",
+        "sha256": "0b1d343414e4a4391f3bee1fc431dcd173ddd90aa54d226d9ca1832e2fd6d398"
+      },
+      "case": "nfp3-beta2",
+      "surface": 0.25,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/wout_nfp3_beta_2.00.nc",
+        "sha256": "b0ae4684f771f30aac4789d363f6006b5afabc20211d057565d8ece020ee2572"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp3-beta2-s0.5.npz",
+        "sha256": "63f961456cff826432b6e86390d60eac0376a316a9aaa11354a21548c35c847f"
+      },
+      "case": "nfp3-beta2",
+      "surface": 0.5,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/wout_nfp3_beta_2.00.nc",
+        "sha256": "b0ae4684f771f30aac4789d363f6006b5afabc20211d057565d8ece020ee2572"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1-evaluation/old-nfp3-beta2-s0.75.npz",
+        "sha256": "38dd6342c51169b72b09747a85930bc37bdccb7cc3a4c207e58d2d7dca46b832"
+      },
+      "case": "nfp3-beta2",
+      "surface": 0.75,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/wout_nfp3_beta_2.00.nc",
+        "sha256": "b0ae4684f771f30aac4789d363f6006b5afabc20211d057565d8ece020ee2572"
+      }
+    }
+  ],
+  "old_replay": [
+    {
+      "case": "nfp2-vacuum",
+      "errors": {
+        "bp": 1.738076184585342e-15,
+        "bt": 1.5513720404105303e-15,
+        "ep": 1.4393167189333146e-15,
+        "et": 1.1102230246251565e-16,
+        "g": 9.540979117872439e-18,
+        "iota": 0.0,
+        "lp": 4.440892098500626e-16,
+        "lt": 1.3877787807814457e-16,
+        "mod_b": 1.1186855937623455e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "case": "nfp2-vacuum",
+      "errors": {
+        "bp": 1.738076184585342e-15,
+        "bt": 1.8961213827239816e-15,
+        "ep": 1.4393167189333146e-15,
+        "et": 1.1102230246251565e-16,
+        "g": 9.540979117872439e-18,
+        "iota": 0.0,
+        "lp": 4.440892098500626e-16,
+        "lt": 1.3877787807814457e-16,
+        "mod_b": 1.2585212929826387e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "case": "nfp2-vacuum",
+      "errors": {
+        "bp": 1.9637032522064654e-15,
+        "bt": 1.091960701802756e-15,
+        "ep": 1.1992938361893213e-15,
+        "et": 1.3877787807814457e-16,
+        "g": 9.974659986866641e-18,
+        "iota": 0.0,
+        "lp": 4.3228453877737886e-16,
+        "lt": 1.6653345369377348e-16,
+        "mod_b": 1.1184238966718065e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "case": "nfp2-vacuum",
+      "errors": {
+        "bp": 1.9637032522064654e-15,
+        "bt": 2.015927449482011e-15,
+        "ep": 1.3991761422208749e-15,
+        "et": 2.0816681711721685e-16,
+        "g": 9.974659986866641e-18,
+        "iota": 0.0,
+        "lp": 8.645690775547577e-16,
+        "lt": 1.6653345369377348e-16,
+        "mod_b": 1.1184238966718065e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "case": "nfp2-vacuum",
+      "errors": {
+        "bp": 1.4075298900017758e-15,
+        "bt": 2.1925698229770136e-15,
+        "ep": 1.1814918392516975e-15,
+        "et": 1.942890293094024e-16,
+        "g": 7.806255641895632e-18,
+        "iota": 1.1102230246251565e-16,
+        "lp": 4.283241532843574e-16,
+        "lt": 3.885780586188048e-16,
+        "mod_b": 1.3977449666061453e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "case": "nfp2-vacuum",
+      "errors": {
+        "bp": 1.7203143100021703e-15,
+        "bt": 2.1879223311093047e-15,
+        "ep": 1.6737801056065713e-15,
+        "et": 1.942890293094024e-16,
+        "g": 2.6020852139652106e-17,
+        "iota": 1.1102230246251565e-16,
+        "lp": 7.138735888072624e-16,
+        "lt": 3.885780586188048e-16,
+        "mod_b": 1.6767708514289711e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "case": "nfp2-beta2",
+      "errors": {
+        "bp": 1.4290536802474573e-15,
+        "bt": 1.554927905150538e-15,
+        "ep": 1.029398562834055e-15,
+        "et": 1.0408340855860843e-16,
+        "g": 9.107298248878237e-18,
+        "iota": 0.0,
+        "lp": 3.3306690738754696e-16,
+        "lt": 8.326672684688674e-17,
+        "mod_b": 1.402407258108338e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "case": "nfp2-beta2",
+      "errors": {
+        "bp": 1.7466211647468924e-15,
+        "bt": 2.073237206867384e-15,
+        "ep": 1.7499775568178934e-15,
+        "et": 1.3877787807814457e-16,
+        "g": 9.974659986866641e-18,
+        "iota": 0.0,
+        "lp": 8.881784197001252e-16,
+        "lt": 1.1102230246251565e-16,
+        "mod_b": 1.402407258108338e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "case": "nfp2-beta2",
+      "errors": {
+        "bp": 1.4160343066342526e-15,
+        "bt": 1.6676682819319293e-15,
+        "ep": 9.015055247708743e-16,
+        "et": 1.1102230246251565e-16,
+        "g": 9.974659986866641e-18,
+        "iota": 0.0,
+        "lp": 5.543805449634797e-16,
+        "lt": 1.3877787807814457e-16,
+        "mod_b": 1.1183498141791959e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "case": "nfp2-beta2",
+      "errors": {
+        "bp": 1.8093771695882118e-15,
+        "bt": 1.8344351101251224e-15,
+        "ep": 1.8030110495417486e-15,
+        "et": 1.6653345369377348e-16,
+        "g": 9.974659986866641e-18,
+        "iota": 0.0,
+        "lp": 6.098185994598278e-16,
+        "lt": 2.498001805406602e-16,
+        "mod_b": 1.3979372677239948e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "case": "nfp2-beta2",
+      "errors": {
+        "bp": 2.2637338842546624e-15,
+        "bt": 9.964650559150866e-16,
+        "ep": 1.4787074270005925e-15,
+        "et": 2.220446049250313e-16,
+        "g": 8.239936510889834e-18,
+        "iota": 0.0,
+        "lp": 7.595122313072718e-16,
+        "lt": 1.3877787807814457e-16,
+        "mod_b": 1.1149121594242803e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "case": "nfp2-beta2",
+      "errors": {
+        "bp": 2.2637338842546624e-15,
+        "bt": 2.1546495349614737e-15,
+        "ep": 1.4787074270005925e-15,
+        "et": 2.220446049250313e-16,
+        "g": 9.974659986866641e-18,
+        "iota": 0.0,
+        "lp": 7.595122313072718e-16,
+        "lt": 1.6653345369377348e-16,
+        "mod_b": 1.1145191057210599e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "case": "nfp3-vacuum",
+      "errors": {
+        "bp": 1.3322676295501878e-15,
+        "bt": 1.1102230246251565e-15,
+        "ep": 9.254011152177264e-16,
+        "et": 2.220446049250313e-16,
+        "g": 2.3418766925686896e-17,
+        "iota": 0.0,
+        "lp": 8.645373653117764e-16,
+        "lt": 1.3877787807814457e-16,
+        "mod_b": 3.637866372873795e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "case": "nfp3-vacuum",
+      "errors": {
+        "bp": 1.4432899320127035e-15,
+        "bt": 1.3877787807814457e-15,
+        "ep": 1.5203018321434076e-15,
+        "et": 2.220446049250313e-16,
+        "g": 2.6020852139652106e-17,
+        "iota": 0.0,
+        "lp": 1.0806717066397205e-15,
+        "lt": 2.220446049250313e-16,
+        "mod_b": 3.637866372873795e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "case": "nfp3-vacuum",
+      "errors": {
+        "bp": 1.3799448865986862e-15,
+        "bt": 1.1102230246251565e-15,
+        "ep": 9.118113315728106e-16,
+        "et": 2.220446049250313e-16,
+        "g": 2.42861286636753e-17,
+        "iota": 0.0,
+        "lp": 9.21768323197016e-16,
+        "lt": 3.3306690738754696e-16,
+        "mod_b": 3.226961972473637e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "case": "nfp3-vacuum",
+      "errors": {
+        "bp": 3.609086626488872e-15,
+        "bt": 2.1246817874547925e-15,
+        "ep": 1.172328854879328e-15,
+        "et": 3.3306690738754696e-16,
+        "g": 2.6020852139652106e-17,
+        "iota": 0.0,
+        "lp": 1.1266057283519086e-15,
+        "lt": 3.3306690738754696e-16,
+        "mod_b": 3.226961972473637e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "case": "nfp3-vacuum",
+      "errors": {
+        "bp": 1.423935634442521e-15,
+        "bt": 1.9103930334451162e-15,
+        "ep": 1.1664426026327684e-15,
+        "et": 2.498001805406602e-16,
+        "g": 2.42861286636753e-17,
+        "iota": 0.0,
+        "lp": 9.89588585945123e-16,
+        "lt": 2.220446049250313e-16,
+        "mod_b": 1.8118522373066305e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "case": "nfp3-vacuum",
+      "errors": {
+        "bp": 2.237613139838247e-15,
+        "bt": 2.010018234136169e-15,
+        "ep": 1.4256520698844948e-15,
+        "et": 3.3306690738754696e-16,
+        "g": 2.6020852139652106e-17,
+        "iota": 0.0,
+        "lp": 1.764959968539573e-15,
+        "lt": 3.0531133177191805e-16,
+        "mod_b": 2.8184368135880923e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "case": "nfp3-beta2",
+      "errors": {
+        "bp": 1.2212453270876722e-15,
+        "bt": 1.2212453270876722e-15,
+        "ep": 9.815756417581308e-16,
+        "et": 2.220446049250313e-16,
+        "g": 2.7755575615628914e-17,
+        "iota": 0.0,
+        "lp": 1.6646723459581093e-15,
+        "lt": 2.7755575615628914e-16,
+        "mod_b": 3.0418500836614883e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "case": "nfp3-beta2",
+      "errors": {
+        "bp": 1.6653345369377348e-15,
+        "bt": 1.6653345369377348e-15,
+        "ep": 1.5705210268130094e-15,
+        "et": 3.191891195797325e-16,
+        "g": 2.7755575615628914e-17,
+        "iota": 0.0,
+        "lp": 1.5892321042596864e-15,
+        "lt": 3.3306690738754696e-16,
+        "mod_b": 3.8517949391467934e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "case": "nfp3-beta2",
+      "errors": {
+        "bp": 1.9352024545974888e-15,
+        "bt": 9.992007221626409e-16,
+        "ep": 1.1485647807004045e-15,
+        "et": 2.220446049250313e-16,
+        "g": 1.734723475976807e-17,
+        "iota": 0.0,
+        "lp": 8.904040933284237e-16,
+        "lt": 2.7755575615628914e-16,
+        "mod_b": 2.624518776651657e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "case": "nfp3-beta2",
+      "errors": {
+        "bp": 1.9352024545974888e-15,
+        "bt": 1.6586575079784314e-15,
+        "ep": 1.4038013986338278e-15,
+        "et": 3.3306690738754696e-16,
+        "g": 2.7755575615628914e-17,
+        "iota": 0.0,
+        "lp": 1.848271587756078e-15,
+        "lt": 3.608224830031759e-16,
+        "mod_b": 2.8219488145045337e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "case": "nfp3-beta2",
+      "errors": {
+        "bp": 1.6384025161767413e-15,
+        "bt": 1.4810108204214661e-15,
+        "ep": 1.1543687462663613e-15,
+        "et": 3.3306690738754696e-16,
+        "g": 2.42861286636753e-17,
+        "iota": 0.0,
+        "lp": 8.535366927140333e-16,
+        "lt": 4.996003610813204e-16,
+        "mod_b": 2.4070115727486266e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "case": "nfp3-beta2",
+      "errors": {
+        "bp": 2.0480031452209268e-15,
+        "bt": 2.265293787433101e-15,
+        "ep": 1.5391583283551485e-15,
+        "et": 4.440892098500626e-16,
+        "g": 2.42861286636753e-17,
+        "iota": 0.0,
+        "lp": 1.202801573184118e-15,
+        "lt": 4.996003610813204e-16,
+        "mod_b": 3.0073925905214935e-15,
+        "phi": 0.0,
+        "psi": 0.0,
+        "theta": 0.0
+      },
+      "resolution": 32,
+      "surface": 0.75
+    }
+  ],
+  "original_screen": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-clebsch-v1.json",
+    "sha256": "dc18fadf67c1cb01b40ad97a58585259c386746987a2b24f1511d1760d209df1"
+  },
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/qi/QI_FRESH_RESOLUTION_PROTOCOL.md",
+    "sha256": "1b86c7897ea7f118e7c87cb78ee40c1702aac684368724b10f920b94842430cf"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "2a9e5b6eb4fd3965e6d734e83a225d7e6eb94c63",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "status": "completed",
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1.json",
+    "sha256": "00a24ab7f16e186100ff0e2f95ba40bcd81662914dd051294a124fb013e0eb00"
+  }
+}

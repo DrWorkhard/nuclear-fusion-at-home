@@ -1,0 +1,27 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/evaluate_qi_resolution.py",
+    "evidence/qi-fresh-resolution-v1.json",
+    "evidence/qi-fresh-resolution-v1-evaluation.json",
+    "artifacts/qi-fresh-resolution-v1-evaluation"
+  ],
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1-evaluation-driver/command.log",
+    "sha256": "383bbeefb237b5c62c3cb575d5a8ef3b5a2bf57afd013b30a26c9cfa4e244f51"
+  },
+  "minimum_observed_free_bytes": 5579808768,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "2a9e5b6eb4fd3965e6d734e83a225d7e6eb94c63",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 2,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_guarded_command.py",
+    "sha256": "4da34bb00b8b21d437de79317ae9f3108512068feb011312215c124c06ecb442"
+  },
+  "status": "command_failed"
+}

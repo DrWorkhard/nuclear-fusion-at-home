@@ -41,6 +41,10 @@ advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
   the interpretation limit; absolute physical drift validation remains open.
   A separate signed-flux check confirms the field orientation, but five poloidal
   identities exceed the fixed tolerance:19/24 grids pass the full screen.
+  The [fresh16-cell resolution matrix](docs/qi/QI_FRESH_RESOLUTION_RESULTS.md)
+  is now independently audited: doubled solver angular resolution passes all
+  sampled identities, but evaluation-refinement and historical-fidelity failures
+  prevent overall qualification. No historical data replaced.
 
 Earlier equal-time spatial-residual improvements remain limited to one start and
 infeasible fields. A [field-strength audit](docs/optimization/FIELD_STRENGTH_AUDIT.md)

@@ -61,8 +61,9 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    keine nachträgliche Verlängerung dieses abgeschlossenen Budgets.
    Getrennt registriert ist jetzt eine klassische SLSQP-Nachoptimierung des
    festgelegten AL-Kandidaten: zwei2048-Bundle-Pfade bei unveränderter Physik,
-   einschließlich der1033-Bundle-Vorarbeit bilanziert. Erst nach der laufenden
-   QI-Studie ausführen; keine Aussage gleicher Methodenbudgets.
+   einschließlich der1033-Bundle-Vorarbeit bilanziert. Die vorherige QI-Studie
+   ist jetzt geschlossen; als Nächstes ausführen, separat auditieren und alle
+   vier feinen Abnahmen rechnen. Keine Aussage gleicher Methodenbudgets.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 
@@ -92,7 +93,12 @@ nächstes Autoren-Eingaben/Produzenten und eine frische QI-Auflösungsstudie vor
 keine ungeprüfte Datenkorrektur als Driftqualifikation verwenden.
 Die Autoren-/Produzentenbestandsaufnahme ist abgeschlossen: vier9.0-Wouts,
 keine exakte historische Binärzuordnung. Die getrennte16-Zellen-Studie mit
-201/401 Radien und einfacher/doppelter Winkelauflösung ist nun vorab registriert.
+201/401 Radien und einfacher/doppelter Winkelauflösung ist jetzt abgeschlossen
+und unabhängig geprüft: alle Solver konvergieren, bei Winkel2 bestehen alle
+untersuchten Feldidentitäten. Nur9/16 Zellen bestehen den Auswertungs-
+Verfeinerungs- und2/16 den historischen Fidelitätsschirm. Innere Gleichgewichts-
+auflösung/Modenbasis und Produzentenunterschiede weiter untersuchen; kein
+ungeprüfter Referenzaustausch oder Abschluss von Schritt1.
 
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |

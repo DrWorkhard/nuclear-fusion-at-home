@@ -1,5 +1,24 @@
 # Validation log
 
+## 2026-09-12 — Close all16 fresh QI equilibria and independent96-grid evaluation
+
+- All16 cold starts at dd8b15a finish within their1800s caps and all residuals<=1e-12.
+  Matrix evaluation at2a9e5b6 retains92/96 identity passes,9/16 evaluation-refinement
+  passes,2/16 historical-fidelity passes. Doubled solver angles pass all48 identity
+  grids. No cell passes all requirements; old19/24 remains immutable.
+- Independent old-loop reconstruction (12 historical+48 new Wout/radius calls)
+  agrees within9.076e-15; complete saved-array arithmetic, source/input/boundary,
+  residuals and classifications pass. Evaluator exit2 is the retained negative
+  refinement result, not an IO/implementation failure; separate audit exit0.
+- Raw solver/evaluation data409314445 bytes; all three guards finish without a
+  resource interruption. One read-only progress monitor raced a not-yet-created
+  log and raised FileNotFoundError; the solver run was unaffected.
+- Detail, F-070, QI index, both READMEs/status/plan and readiness ledger updated.
+  All19 proportionate QI tests pass (49 known fixture deprecations); Ruff/docs/diff
+  pass. The initial test command named a nonexistent audit-test file and ran zero
+  tests; corrected to the existing test_qi_resolution_audit.py before commit. Strict native
+  import warning remains unresolved. Next: registered SLSQP polishing, not G4 release.
+
 ## 2026-09-12 — Register bounded six-mesh nonlocal collision study; full regression544 passes
 
 - Register all six unchanged old meshes, all unordered tetrahedron pairs without

@@ -1,0 +1,1400 @@
+{
+  "absolute_drift_certified": false,
+  "all_numerically_converged": true,
+  "cells": [
+    {
+      "angular": 1,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp2-vacuum",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a1"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a1",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a1/effective_input.json",
+        "sha256": "78753a242a0f0ce2ff1cd218bd5b90bc442dc0e9adcfc70f9bf1e758655385ab"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/wout_QI_nfp2.nc",
+        "sha256": "d32ba013a5019d9997032dc89dc8548f1ec85abbd5d6e618eb0239393bb4875e"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+        "sha256": "a15d0134a362727976a6c22b59b12a7f3a6c740576ef5a28f5727721ed700209"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a1/solver.log",
+        "sha256": "f1d201274a971398031abe9346daa0ec25e30982e148da2015f245c5c38e935c"
+      },
+      "ns": 201,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a1/original_input.json",
+        "sha256": "a11bbeb1c16b63c826333dec3f60aa226670d889422c949c0871f2a5357daf55"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a1",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+          "--ns",
+          "201",
+          "--angular",
+          "1"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a1/solver.json",
+        "sha256": "6ab452567937323dbde46601e180f3072a3629789e65ac173f977030dc0c0891"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a1/wout.nc",
+        "sha256": "6e826a9af1123ac26593b02a9ec5d2a2f598761e9727c0b9a4d6050e06be5c06"
+      }
+    },
+    {
+      "angular": 1,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp2-vacuum",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a1"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a1",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a1/effective_input.json",
+        "sha256": "c075c4c1b2926827f98227da38fb9af5ad68774251357995717c96ec6ae231b4"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/wout_QI_nfp2.nc",
+        "sha256": "d32ba013a5019d9997032dc89dc8548f1ec85abbd5d6e618eb0239393bb4875e"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+        "sha256": "a15d0134a362727976a6c22b59b12a7f3a6c740576ef5a28f5727721ed700209"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a1/solver.log",
+        "sha256": "276d0f3a48e88c6373971b0500b8cf796950aaae3cf5897b71ed1f68aac94277"
+      },
+      "ns": 401,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a1/original_input.json",
+        "sha256": "a11bbeb1c16b63c826333dec3f60aa226670d889422c949c0871f2a5357daf55"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a1",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+          "--ns",
+          "401",
+          "--angular",
+          "1"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a1/solver.json",
+        "sha256": "12180b6e2f46168a15c23f9c27bb0bc0ec5a6b73cb36479e084c42258f369ab2"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a1/wout.nc",
+        "sha256": "4bb09db4c044ba4063c36e42ff619af608b9c4ac94da0192da56303fdbeb76eb"
+      }
+    },
+    {
+      "angular": 2,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp2-vacuum",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2/effective_input.json",
+        "sha256": "960c94c4291d1166f1b61b1af4ee6198e6a28098d6a0bed8004cd7bac5b64bdd"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/wout_QI_nfp2.nc",
+        "sha256": "d32ba013a5019d9997032dc89dc8548f1ec85abbd5d6e618eb0239393bb4875e"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+        "sha256": "a15d0134a362727976a6c22b59b12a7f3a6c740576ef5a28f5727721ed700209"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2/solver.log",
+        "sha256": "63a6051843a0dd883515c48993031d510281255e502b400911f8b02a49a57ca0"
+      },
+      "ns": 201,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2/original_input.json",
+        "sha256": "a11bbeb1c16b63c826333dec3f60aa226670d889422c949c0871f2a5357daf55"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+          "--ns",
+          "201",
+          "--angular",
+          "2"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2/solver.json",
+        "sha256": "8e0e3a05431271031232ef7436647db20bf58f0d5f29540e8348e427e0b95312"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2/wout.nc",
+        "sha256": "906f0a939f87e7643fd62fe0c918f056d6dbbd1013798a8e80d4dfd4f26a7a97"
+      }
+    },
+    {
+      "angular": 2,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp2-vacuum",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a2"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a2",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a2/effective_input.json",
+        "sha256": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/wout_QI_nfp2.nc",
+        "sha256": "d32ba013a5019d9997032dc89dc8548f1ec85abbd5d6e618eb0239393bb4875e"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+        "sha256": "a15d0134a362727976a6c22b59b12a7f3a6c740576ef5a28f5727721ed700209"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a2/solver.log",
+        "sha256": "a7dbdf35b7e2f8ac3ed8265072d247ddc1fe9551727d1ba43eb4012b4887ee6e"
+      },
+      "ns": 401,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a2/original_input.json",
+        "sha256": "a11bbeb1c16b63c826333dec3f60aa226670d889422c949c0871f2a5357daf55"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a2",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+          "--ns",
+          "401",
+          "--angular",
+          "2"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a2/solver.json",
+        "sha256": "0301b3b1b64e7cdbbc43a62471c742bf4de34340cbb869d3358d1d31e6b76a8e"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s401-a2/wout.nc",
+        "sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e"
+      }
+    },
+    {
+      "angular": 1,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp2-beta2",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a1"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a1",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a1/effective_input.json",
+        "sha256": "ecf886be6cbf3c7a8231f8082f081404e67cacfb6e8d022b82eb3e3a7dc07056"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/wout_nfp2_beta_2.00.nc",
+        "sha256": "7538a1dda702761aba4df6dab702b0bc717c1023e52ffe7b5d7f1ae0b678a7cc"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+        "sha256": "325478ed16ca74c8853d2df9957208117f10d65b756ba743df2c77f7a9a06845"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a1/solver.log",
+        "sha256": "78a57976b873853e030d140e224815ef0b075ffff469d9fb76f7780c0be3f5c4"
+      },
+      "ns": 201,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a1/original_input.json",
+        "sha256": "89715287a739e5afaaa1655bdcf073d16343a5d7b3c9ccfae7537089eabe5f52"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a1",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+          "--ns",
+          "201",
+          "--angular",
+          "1"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a1/solver.json",
+        "sha256": "a5b1060c1232e432ded6492700b324a56e4a230adafb524386ffb90cf7e5d11a"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a1/wout.nc",
+        "sha256": "b1f71bcba686c4dde428d0b609f56d1307739f58cb25e93cdfb4c8a4636badb8"
+      }
+    },
+    {
+      "angular": 1,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp2-beta2",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a1"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a1",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a1/effective_input.json",
+        "sha256": "54ab5fe5da973fefb0303a6aab898680c2ac27c5dac9e83535e7904b5d128df7"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/wout_nfp2_beta_2.00.nc",
+        "sha256": "7538a1dda702761aba4df6dab702b0bc717c1023e52ffe7b5d7f1ae0b678a7cc"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+        "sha256": "325478ed16ca74c8853d2df9957208117f10d65b756ba743df2c77f7a9a06845"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a1/solver.log",
+        "sha256": "38fe030709be540cdc888aed44f88050938a867f416718e6b7bc460ae9fd245c"
+      },
+      "ns": 401,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a1/original_input.json",
+        "sha256": "89715287a739e5afaaa1655bdcf073d16343a5d7b3c9ccfae7537089eabe5f52"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a1",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+          "--ns",
+          "401",
+          "--angular",
+          "1"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a1/solver.json",
+        "sha256": "192c4e24d443870c234d85929601aad771581b0c746b7abdfded20b2b5d9a7e9"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a1/wout.nc",
+        "sha256": "25ea9ad7abbbdfa2c0d8b1433c4a6c972672cf884801c6e61d7879e25c2d0fde"
+      }
+    },
+    {
+      "angular": 2,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp2-beta2",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a2"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a2",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a2/effective_input.json",
+        "sha256": "b8b8b6cc9e1b9fe41f2ff7582b751691ab2457d7af3d02894f8c649785f71a24"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/wout_nfp2_beta_2.00.nc",
+        "sha256": "7538a1dda702761aba4df6dab702b0bc717c1023e52ffe7b5d7f1ae0b678a7cc"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+        "sha256": "325478ed16ca74c8853d2df9957208117f10d65b756ba743df2c77f7a9a06845"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a2/solver.log",
+        "sha256": "c49ac165cf152ebb9589817dece97ec361a0428670de3554442eeb1016582a51"
+      },
+      "ns": 201,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a2/original_input.json",
+        "sha256": "89715287a739e5afaaa1655bdcf073d16343a5d7b3c9ccfae7537089eabe5f52"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a2",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+          "--ns",
+          "201",
+          "--angular",
+          "2"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a2/solver.json",
+        "sha256": "5fbeb9ec30c4330338db24b4ce436eb2cbcfdbc19a2ad5c146dd822ada9a37fe"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s201-a2/wout.nc",
+        "sha256": "546c9e5d8fb001c35ab3d31628fc6e6de8bf1ac89ed031181222f7bcc832fcbc"
+      }
+    },
+    {
+      "angular": 2,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp2-beta2",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a2"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a2",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a2/effective_input.json",
+        "sha256": "b72fa3c838066f27432d59afa6a65adfb084256eb8e556ffc1802d5d807acec6"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/wout_nfp2_beta_2.00.nc",
+        "sha256": "7538a1dda702761aba4df6dab702b0bc717c1023e52ffe7b5d7f1ae0b678a7cc"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+        "sha256": "325478ed16ca74c8853d2df9957208117f10d65b756ba743df2c77f7a9a06845"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a2/solver.log",
+        "sha256": "1ad64ef0851d524a94726bb2c05c378f9fd58c0b70ab4a892f3c27a7daeaa797"
+      },
+      "ns": 401,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a2/original_input.json",
+        "sha256": "89715287a739e5afaaa1655bdcf073d16343a5d7b3c9ccfae7537089eabe5f52"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a2",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+          "--ns",
+          "401",
+          "--angular",
+          "2"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a2/solver.json",
+        "sha256": "65935c443a66455fc8067b0eccd73b5477de75740a368ab9411e751393c68136"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-beta2-s401-a2/wout.nc",
+        "sha256": "3ab3084308e7563bbc7559e496d9bc2ad55832f6fe4f9af91a27f141b1edeeca"
+      }
+    },
+    {
+      "angular": 1,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp3-vacuum",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a1"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a1",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a1/effective_input.json",
+        "sha256": "10c72879186c9dcc97f2f2fb3da2a0797ea53874ce7909b8edd0ad0125909063"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/wout_QI_nfp3.nc",
+        "sha256": "92627283deca5d5dcda8de252ce0fedf540f8157043d04f2848d8965bf83d77a"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+        "sha256": "e4f93ad4fd6f4897d7ec409708a257dffdb6fbf2fe69123f1dc42df5795fea01"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a1/solver.log",
+        "sha256": "418313a280fb85a3d8d761f9bd04dcb44ca56e3ef5b0647f127eaa976805a151"
+      },
+      "ns": 201,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a1/original_input.json",
+        "sha256": "3889b6bbe313f0a4d923b97f50b9f125712a27ff0cdb7128e6c274ba3f79c54b"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a1",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+          "--ns",
+          "201",
+          "--angular",
+          "1"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a1/solver.json",
+        "sha256": "1e1c7195ad86b7584c9e636de512d864bbe447b7bae36a92556f68a881ac4241"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a1/wout.nc",
+        "sha256": "c66d155444a2c69b729776fcff92d819ec19687901cf6456625e4d05edb9270c"
+      }
+    },
+    {
+      "angular": 1,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp3-vacuum",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a1"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a1",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a1/effective_input.json",
+        "sha256": "8d96e300c5b40f106e4124345d7e00c88c9088e96a2c0ff21d74fda258514267"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/wout_QI_nfp3.nc",
+        "sha256": "92627283deca5d5dcda8de252ce0fedf540f8157043d04f2848d8965bf83d77a"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+        "sha256": "e4f93ad4fd6f4897d7ec409708a257dffdb6fbf2fe69123f1dc42df5795fea01"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a1/solver.log",
+        "sha256": "95cfe16e9544686546ef0c40343ae2a1ae274ff3fe1c42a74c70bd75b71337d9"
+      },
+      "ns": 401,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a1/original_input.json",
+        "sha256": "3889b6bbe313f0a4d923b97f50b9f125712a27ff0cdb7128e6c274ba3f79c54b"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a1",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+          "--ns",
+          "401",
+          "--angular",
+          "1"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a1/solver.json",
+        "sha256": "d5eb5ee37a5e2678d9f722676751681d5a1e3ef141427ff28e63dfa359233374"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a1/wout.nc",
+        "sha256": "371a77ead4b0862b1a1fef712ef3e05a38cab58905022898130fed4f7b0dd5ad"
+      }
+    },
+    {
+      "angular": 2,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp3-vacuum",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a2"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a2",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a2/effective_input.json",
+        "sha256": "9c6a1cd48eef5733119912cf6ccf97345b7c1eb58f7084601400ffb1d7e2dc7e"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/wout_QI_nfp3.nc",
+        "sha256": "92627283deca5d5dcda8de252ce0fedf540f8157043d04f2848d8965bf83d77a"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+        "sha256": "e4f93ad4fd6f4897d7ec409708a257dffdb6fbf2fe69123f1dc42df5795fea01"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a2/solver.log",
+        "sha256": "a8f559b975587a04d96eef3b3fe442c02dd4990c9a9f6f5b5a41a9c321e7c24d"
+      },
+      "ns": 201,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a2/original_input.json",
+        "sha256": "3889b6bbe313f0a4d923b97f50b9f125712a27ff0cdb7128e6c274ba3f79c54b"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a2",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+          "--ns",
+          "201",
+          "--angular",
+          "2"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a2/solver.json",
+        "sha256": "77d8d6b38bcc68df9a08887174ecc5f4fee69b3b0477de9cc027864631a5d576"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s201-a2/wout.nc",
+        "sha256": "4d7a3431573275a4d87646710ee7102d0c4e888886052c12f4f73faa61da3a7f"
+      }
+    },
+    {
+      "angular": 2,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp3-vacuum",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a2"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a2",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a2/effective_input.json",
+        "sha256": "461371158e32473c1e9b57adc82e61700897ff940fa566256414fd1d9beef563"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/wout_QI_nfp3.nc",
+        "sha256": "92627283deca5d5dcda8de252ce0fedf540f8157043d04f2848d8965bf83d77a"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+        "sha256": "e4f93ad4fd6f4897d7ec409708a257dffdb6fbf2fe69123f1dc42df5795fea01"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a2/solver.log",
+        "sha256": "d5fa9d8c560b920b521599ddb4fc51400a124574defea0e4258635f03bb9a9f4"
+      },
+      "ns": 401,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a2/original_input.json",
+        "sha256": "3889b6bbe313f0a4d923b97f50b9f125712a27ff0cdb7128e6c274ba3f79c54b"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a2",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+          "--ns",
+          "401",
+          "--angular",
+          "2"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a2/solver.json",
+        "sha256": "5974fdcb859523297832cf9216767e93a856a1ae4464af9df4be4dd14d96cb43"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-vacuum-s401-a2/wout.nc",
+        "sha256": "5d9a9b90a199d68e08992cd9be916de89f0418dc64fa25a2f91ee89799f79ae8"
+      }
+    },
+    {
+      "angular": 1,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp3-beta2",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a1"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a1",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a1/effective_input.json",
+        "sha256": "188c4ffd2d49665787c5e1b2b8286f4fbadfd63b6ad544190604a6bc8c167a31"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/wout_nfp3_beta_2.00.nc",
+        "sha256": "b0ae4684f771f30aac4789d363f6006b5afabc20211d057565d8ece020ee2572"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+        "sha256": "b473c81a9f1e6bffbf83c8a2334d1dbf58b32992c6c5656b1c2971a933d87d6f"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a1/solver.log",
+        "sha256": "a7078b0d9fb0a3042c0398c9ccd5c569d98184b11e08dc4f97094271e84b1576"
+      },
+      "ns": 201,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a1/original_input.json",
+        "sha256": "a2e23ac3a4511e75f7f894192fcc56e9f249f692c3733f69b414e874c7e7f0cb"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a1",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+          "--ns",
+          "201",
+          "--angular",
+          "1"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a1/solver.json",
+        "sha256": "ae20b6c8cfcfa2b1cf8a06ec20f2c086b347dc470b3cf434147b3b135335f168"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a1/wout.nc",
+        "sha256": "e9cd586b3c03d9ff0274b184bcf4fa6bfe1fc2db9a68457b246501f3267683d2"
+      }
+    },
+    {
+      "angular": 1,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp3-beta2",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a1"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a1",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a1/effective_input.json",
+        "sha256": "400aa5eb42cbaddb679eb5c46406cd1e813e55b47004c528d0d73d7836249ac0"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/wout_nfp3_beta_2.00.nc",
+        "sha256": "b0ae4684f771f30aac4789d363f6006b5afabc20211d057565d8ece020ee2572"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+        "sha256": "b473c81a9f1e6bffbf83c8a2334d1dbf58b32992c6c5656b1c2971a933d87d6f"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a1/solver.log",
+        "sha256": "0200e74260c16c4514b11785488b8eaf6efd62f2aa865361c57b23f36aee09e6"
+      },
+      "ns": 401,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a1/original_input.json",
+        "sha256": "a2e23ac3a4511e75f7f894192fcc56e9f249f692c3733f69b414e874c7e7f0cb"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a1",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+          "--ns",
+          "401",
+          "--angular",
+          "1"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a1/solver.json",
+        "sha256": "b87f74b1be8ebe3ae8f314c11d52fc1c9a41b498def5c9ea8a992368dc8e6633"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a1/wout.nc",
+        "sha256": "6c07a1ec08fa62e08a775bd07bb20973430558739d941085447a3bedf8ad08ca"
+      }
+    },
+    {
+      "angular": 2,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp3-beta2",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a2"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a2",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a2/effective_input.json",
+        "sha256": "fc1427ce1b25f7e73749c0e193a356939d5ee1b0c5a733f5f88cefa2a46b09c6"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/wout_nfp3_beta_2.00.nc",
+        "sha256": "b0ae4684f771f30aac4789d363f6006b5afabc20211d057565d8ece020ee2572"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+        "sha256": "b473c81a9f1e6bffbf83c8a2334d1dbf58b32992c6c5656b1c2971a933d87d6f"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a2/solver.log",
+        "sha256": "7d4c46fe41ddca94f963ea84bae852c8ce17872fc4736bc883ad5bec1871373e"
+      },
+      "ns": 201,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a2/original_input.json",
+        "sha256": "a2e23ac3a4511e75f7f894192fcc56e9f249f692c3733f69b414e874c7e7f0cb"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a2",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+          "--ns",
+          "201",
+          "--angular",
+          "2"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a2/solver.json",
+        "sha256": "c0d3b5980e0bc5e75a30d5b696c1440777613c9530fb4dee3d5f518d7bde0f6c"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s201-a2/wout.nc",
+        "sha256": "d5b2dec0a9e3a2328d3fbbb4855c84abd5c019aefe626c20b61251bf1ebebe16"
+      }
+    },
+    {
+      "angular": 2,
+      "author_checks": {
+        "ac": true,
+        "am": true,
+        "curtor": true,
+        "delt": true,
+        "ftol_array": true,
+        "lasym": true,
+        "mpol": true,
+        "ncurr": true,
+        "nfp": true,
+        "niter_array": true,
+        "ns_array": true,
+        "nstep": true,
+        "ntor": true,
+        "pcurr_type": true,
+        "phiedge": true,
+        "pmass_type": true,
+        "pres_scale": true,
+        "rbc": true,
+        "zbs": true
+      },
+      "case": "nfp3-beta2",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+        "solve",
+        "artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a2"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a2",
+      "effective": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a2/effective_input.json",
+        "sha256": "a4ee07e9453edb4cd028b1c2cdd26a9c00fc9286143a5f0aeb5349c79d7a4b75"
+      },
+      "effective_controls_match": true,
+      "historical_wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/wout_nfp3_beta_2.00.nc",
+        "sha256": "b0ae4684f771f30aac4789d363f6006b5afabc20211d057565d8ece020ee2572"
+      },
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+        "sha256": "b473c81a9f1e6bffbf83c8a2334d1dbf58b32992c6c5656b1c2971a933d87d6f"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a2/solver.log",
+        "sha256": "d8b9049ac376a180e68482ebd460be35cf6317bec31b74fad1280f22edb0c48a"
+      },
+      "ns": 401,
+      "numerically_converged": true,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a2/original_input.json",
+        "sha256": "a2e23ac3a4511e75f7f894192fcc56e9f249f692c3733f69b414e874c7e7f0cb"
+      },
+      "prepare": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+          "prepare",
+          "artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a2",
+          "--input",
+          "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+          "--ns",
+          "401",
+          "--angular",
+          "2"
+        ],
+        "returncode": 0,
+        "stderr": "",
+        "stdout": ""
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a2/solver.json",
+        "sha256": "7db6e5ce0074c44561962d5b49f8785ac8c14a7e08f1f56fdae66598133ac893"
+      },
+      "status": "completed",
+      "timeout": false,
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp3-beta2-s401-a2/wout.nc",
+        "sha256": "c9087c592b84899b65d023d4b5a3eb5525cd7cd7811a1bea31f39f8708d7d6a7"
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_qi_resolution.py",
+      "sha256": "ceea25cf8ddbb4135cdfab4e23f5b98868bd621576c79d3bec67f443901022e2"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qi_equilibrium_worker.py",
+      "sha256": "d044a52b4b830cc170fb4b93a18b043450097a6dfca854669d8592529a8c8dd3"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_resolution.py",
+      "sha256": "3d2c9448add0622b17d01c5527aacd0c5d5fd2f29e987a1375f41b2d7669825b"
+    }
+  ],
+  "exact_historical_reproduction": false,
+  "host": {
+    "captured_at": "2026-09-12T13:25:49.500306+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "inventory": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-producer-inventory-v1.json",
+    "sha256": "f0ade5988fe2bfeb3cfb758d23b97373b2439dd5d9e5d94ac4b8cd3f8805cc7b"
+  },
+  "lock": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/uv.lock",
+    "sha256": "34cf6b801280f26a66a517e1061169026edbde02494e0fc3b527fd4cb2be2af8"
+  },
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/qi/QI_FRESH_RESOLUTION_PROTOCOL.md",
+    "sha256": "1b86c7897ea7f118e7c87cb78ee40c1702aac684368724b10f920b94842430cf"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "dd8b15a89b889dc8d6de9cd5a73a7e1cbd81b96e",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "solver": {
+    "iteration_styles": [
+      "vmec_8_52",
+      "parvmec"
+    ],
+    "sources": [
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/__init__.py",
+        "sha256": "877d12115ad4f2d4706919b7fc4cca2d9e98504b4a054c80ec81c48d4ccd433a"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/cpp/_vmecpp.cpython-312-darwin.so",
+        "sha256": "8f0acaf63d878e17e9f1b1779c9695a21e1a45b690639dbf76886f7a7799684f"
+      }
+    ],
+    "version": "0.7.3"
+  },
+  "status": "completed",
+  "threads": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

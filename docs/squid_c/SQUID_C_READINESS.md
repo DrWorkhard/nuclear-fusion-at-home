@@ -119,8 +119,10 @@ bounded result; missing author data is not the only remaining blocker.
       poloidal failures. Independent decomposition excludes radial interpolation
       alone; fixed-mode projection also fails1e-5 despite stable64/128 sampling.
       Four historical Wouts identify9.0, not an exact reconstructable producer.
-      A new16-cell radial/angular resolution study is running; partial solver
-      convergence is not a field, drift or G4 qualification. See
+      The16-cell radial/angular study is now closed and independently audited:
+      all solves converge and doubled solver angular resolution passes all sampled
+      identities. Only9/16 cells pass evaluation refinement and2/16 historical
+      fidelity; no cell passes all screens. G4 and absolute drift remain open. See
       [fresh resolution](../qi/QI_FRESH_RESOLUTION_RESULTS.md).
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
