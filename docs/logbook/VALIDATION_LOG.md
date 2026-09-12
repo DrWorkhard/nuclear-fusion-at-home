@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-12 — Consistent native-covector guard prepared before corrected pilot
+
+- Adapter now optionally uses the exact native residual projection for the GN
+  gradient identity while retaining the batched projection as a separate check
+  and recording the old uncoupled error. No direct value/gradient/H_GN changes.
+- New analytic amplification fixture reproduces an old-guard failure with a tiny
+  projection perturbation and shows corrected guard success with identical
+  objective, gradient and Hessian. Invalid reference residual is rejected.
+- Corrected pilot must first qualify original/selected119/failed29, then preserve
+  the complete old 28-vector prefix and proposal-29 parameter hash. Same two
+  repeats, options, budgets, stopping/selection rules and independent holdouts.
+- Full suite: 273 passed, 11 known warnings. Ruff/docs/diff checks pass after one
+  long runner line was corrected. Both READMEs/status/plan point to this bounded
+  qualification/retry, not an already successful search.
+
 ## 2026-09-12 — Isolated failed-point routes identify projection-rounding amplification
 
 - 51245f3 precedes the fresh native point evaluation. Archived/full fresh native

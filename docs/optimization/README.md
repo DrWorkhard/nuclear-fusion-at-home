@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Native Feldprojektion: korrigierter Pilot](GN_NATIVE_COVECTOR_PROTOCOL.md) — Konsistente Identitätsprüfung bei unveränderten Werten/Gradienten/H_GN; drei feste Zustandsprüfungen und Pflicht zur exakten Wiederholung des alten Suchpräfixes.
 - [Gespeicherter GN-Fehlerpunkt: Ergebnis](GN_FAILED_POINT_RESULTS.md) — Native Zustandsstabilität und unabhängige Ableitungen bestehen; die separat gerundete Feldprojektion verursacht die Identitätsabweichung im Suchadapter.
 - [Gespeicherter GN-Fehlerpunkt: Protokoll](GN_FAILED_POINT_PROTOCOL.md) — Frische native Auswertung, getrennte Feldkovektoren/Matrizen und unabhängige affine Stromprüfung zur Ursachenunterscheidung.
 - [GN-Fehlerreplay: Protokoll](GN_FAILURE_REPLAY_PROTOCOL.md) — Höchstens 29 Bundles, exakte Wiederholung des gescheiterten Präfixes und vollständige Erfassung des Fehlerpunkts, ohne Grenzwertänderung.

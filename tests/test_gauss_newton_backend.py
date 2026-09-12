@@ -47,6 +47,34 @@ def test_shared_oracle_cache_and_budget_covers_hessian_points():
         backend.hessian_for(x+1)
 
 
+def test_reference_covector_prevents_projection_rounding_amplification_without_changing_hessian():
+    native_z = np.array([1e-3, 1e-3])
+    batch_z = native_z + np.array([1e-16, 0])
+    dz = np.array([[1e7], [-1e7]])
+
+    def direct(x):
+        return np.array([native_z @ native_z/2, 1.]), np.vstack((native_z @ dz, [0.])), {}
+
+    old = GaussNewtonBackend(direct, lambda: (batch_z, dz), flux_scale=1)
+    with pytest.raises(ValueError, match='identity failed'):
+        old.evaluate([0.])
+    corrected = GaussNewtonBackend(direct, lambda: (batch_z, dz), flux_scale=1,
+                                  native_residual=lambda: native_z)
+    values, jac, _ = corrected.evaluate([0.])
+    np.testing.assert_array_equal(values, direct([0.])[0])
+    np.testing.assert_array_equal(jac, direct([0.])[1])
+    np.testing.assert_array_equal(corrected.hessian_for([0.]), dz.T @ dz)
+    assert corrected.records[-1]['gradient_normalized_error'] <= 1e-10
+    assert corrected.records[-1]['uncoupled_gradient_normalized_error'] > 1e-10
+
+
+def test_invalid_reference_covector_is_rejected():
+    backend, _ = make_backend()
+    backend.native_residual = lambda: [np.nan, 0.]
+    with pytest.raises(ValueError, match='invalid'):
+        backend.evaluate([0.2, -0.1])
+
+
 @pytest.mark.parametrize('mode', ['value', 'gradient', 'shape', 'nonfinite'])
 def test_reject_inconsistent_bundle_and_invalidate_old_hessian(mode):
     backend, _ = make_backend()

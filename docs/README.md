@@ -117,8 +117,9 @@ exakt reproduziert und vollständig erfasst. Die
 [isolierte Gegenprüfung](optimization/GN_FAILED_POINT_RESULTS.md) zeigt eine
 Verstärkung kleiner Rundungsunterschiede zweier Feldprojektionen im Prüfvergleich;
 native Matrizen und unabhängige Stromprüfungen stimmen überein. Als Nächstes
-qualifizieren wir die konsistente Verwendung derselben nativen Feldprojektion
-an drei festen Zuständen. Zielfunktion, Gradienten, GN-Matrix und Grenzwerte
+folgt die [festgelegte Qualifikation und Wiederholung](optimization/GN_NATIVE_COVECTOR_PROTOCOL.md)
+mit derselben nativen Feldprojektion an drei festen Zuständen und unverändertem
+Suchpräfix. Zielfunktion, Gradienten, GN-Matrix und Grenzwerte
 bleiben unverändert; es liegt weiterhin kein neuer zulässiger Entwurf vor.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).

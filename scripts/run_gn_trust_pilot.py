@@ -24,6 +24,7 @@ from fusion_baselines.gauss_newton_backend import GaussNewtonBackend
 from fusion_baselines.inequality_oracle import InequalityOracle
 from fusion_baselines.provenance import git_state, host_state, sha256_file, write_json_atomic
 from fusion_baselines.serialized_dofs import base_coil_owners, dof_permutation
+from fusion_baselines.spatial_flux import spatial_flux
 
 OPTIONS = dict(gtol=1e-12, xtol=1e-12, barrier_tol=1e-10, initial_tr_radius=0.1,
                initial_constr_penalty=1., initial_barrier_parameter=1e-3,
@@ -61,16 +62,23 @@ def control():
                          and result.optimality <= 1e-8 and result.constr_violation <= 1e-8)}
 
 
-def make_gn(direct):
+def make_gn(direct, *, native_covector=False):
+    def native_residual():
+        if not np.array_equal(direct.field.get_points_cart_ref(), direct.points):
+            raise ValueError('field points changed before native covector request')
+        return spatial_flux(direct.field.B().reshape(direct.normal.shape), direct.normal)
+
     return GaussNewtonBackend(direct.evaluate, lambda: batched_field_jacobian(
-        direct.field, direct.global_objective, direct.points, direct.weights))
+        direct.field, direct.global_objective, direct.points, direct.weights),
+        native_residual=native_residual if native_covector else None)
 
 
-def run_arm(direct, ctx, x0, raw, output, repeat, permutation, *, limit=1024):
+def run_arm(direct, ctx, x0, raw, output, repeat, permutation, *, limit=1024,
+            native_covector=False):
     raw.mkdir()
     ctx.Jf.x = x0.copy()
     direct.work = dict.fromkeys(direct.work, 0)
-    backend = make_gn(direct)
+    backend = make_gn(direct, native_covector=native_covector)
     coordinates = AffineCoordinates(x0, 0.01)
     oracle = InequalityOracle(backend.evaluate, limit, len(x0), 137, tolerance=1e-8)
     record = dict(method='gn-trust', representation='direct', repeat=repeat,
@@ -84,6 +92,8 @@ def run_arm(direct, ctx, x0, raw, output, repeat, permutation, *, limit=1024):
                       gn_work=dict(assemblies=len(backend.records),
                                    assembly_attempts=backend.spatial_attempts,
                                    failed_assemblies=backend.spatial_attempts-len(backend.records),
+                                   native_covector_B_requests=backend.spatial_attempts
+                                   if native_covector else 0,
                                    coil_contractions=16*len(backend.records),
                                    geometry_derivative_requests=32*len(backend.records),
                                    current_VJP_requests=16*len(backend.records)),
@@ -197,7 +207,10 @@ def main():
     parser.add_argument('study', type=Path)
     parser.add_argument('raw', type=Path)
     parser.add_argument('--failure-replay', action='store_true')
+    parser.add_argument('--native-covector', action='store_true')
     args = parser.parse_args()
+    if args.failure_replay and args.native_covector:
+        raise ValueError('old failure replay and corrected search are separate studies')
     if args.study.exists() or args.raw.exists():
         raise FileExistsError('new immutable study paths required')
     root = Path(__file__).resolve().parents[1]
@@ -238,6 +251,23 @@ def main():
     args.study.mkdir(parents=True)
     args.raw.mkdir(parents=True)
     try:
+        point_diagnostic = failure_replay = failure_arm = None
+        if args.native_covector:
+            report['native_covector_protocol'] = reference(
+                root / 'docs/optimization/GN_NATIVE_COVECTOR_PROTOCOL.md')
+            point_path = root / 'evidence/gn-failed-point-v1.json'
+            point_diagnostic = json.loads(point_path.read_text())
+            required = ('fresh_covector_gradient', 'native_matrix_agreement',
+                        'full_route_state_stability', 'affine_current_checks',
+                        'finest_geometry_direction')
+            if not all(point_diagnostic['checks'][k] for k in required):
+                raise ValueError('independent native-covector point diagnosis required')
+            for ref in point_diagnostic['code']:
+                checked(ref)
+            checked(point_diagnostic['native_source'])
+            report['point_diagnostic'] = reference(point_path)
+            failure_replay = json.loads(checked(point_diagnostic['replay']).read_text())
+            failure_arm = json.loads(checked(failure_replay['arms'][0]).read_text())
         if args.failure_replay:
             report['diagnostic_protocol'] = reference(
                 root / 'docs/optimization/GN_FAILURE_REPLAY_PROTOCOL.md')
@@ -273,7 +303,7 @@ def main():
         record_permutation = dof_permutation(
             old_study['preparation']['degrees_of_freedom'], direct.names, owners)
         from_old = np.argsort(qualification['source_indices_in_target_order'])[record_permutation]
-        gn, qualification_checks = make_gn(direct), []
+        gn, qualification_checks = make_gn(direct, native_covector=args.native_covector), []
         for state in qualification['states']:
             with np.load(checked(state['arrays']), allow_pickle=False) as saved:
                 x = saved['x'][from_old]
@@ -289,9 +319,24 @@ def main():
                                        for a, b in zip(direct.field.coils, stored_field.coils,
                                                        strict=True)))
             qualification_checks.append(dict(name=state['name'], checks=checks))
+        if args.native_covector:
+            from_failure = np.argsort(failure_replay['source_indices_in_target_order'])[
+                record_permutation]
+            failed_arrays_path = checked(failure_arm['failed_bundle']['arrays'])
+            with np.load(failed_arrays_path, allow_pickle=False) as data:
+                x = data['x'][from_failure]
+                values, jacobian, _ = gn.evaluate(x)
+                dz = data['dz'][:, from_failure]
+                checks = dict(values=error(values, data['values']) <= 1e-10,
+                              jacobian=error(jacobian, data['jacobian'][:, from_failure]) <= 1e-10,
+                              hessian=error(gn.hessian_for(x), dz.T @ dz/1e-6) <= 1e-10,
+                              old_uncoupled_failure_retained=gn.records[-1][
+                                  'uncoupled_gradient_normalized_error'] > 1e-10)
+            qualification_checks.append(dict(name='failed29', checks=checks))
         report.update(preparation=prep, source_indices_in_target_order=record_permutation.tolist(),
                       labels=direct.labels, shared_qualification=qualification_checks,
-                      shared_native_work=dict(direct.work), shared_gn_assemblies=len(gn.records))
+                      shared_native_work=dict(direct.work), shared_gn_assemblies=len(gn.records),
+                      shared_gn_identity=gn.records)
         if not all(all(s['checks'].values()) for s in qualification_checks):
             raise ValueError('shared physical GN qualification failed')
         write_json_atomic(args.study/'summary.json', report)
@@ -316,7 +361,7 @@ def main():
         for repeat in (1, 2):
             output = args.study / f'gn-trust-{repeat}.json'
             runs.append(run_arm(direct, ctx, x0, args.raw / f'gn-trust-{repeat}', output, repeat,
-                                record_permutation))
+                                record_permutation, native_covector=args.native_covector))
             report['arms'].append(reference(output))
             write_json_atomic(args.study/'summary.json', report)
         a, b = runs
@@ -329,6 +374,14 @@ def main():
                 for r, s in zip(a['evaluations'], b['evaluations'], strict=True)),
             same_best=a['best']['x_sha256'] == b['best']['x_sha256'],
             same_logical_work=a['work'] == b['work'] and a['gn_work'] == b['gn_work'])
+        if args.native_covector:
+            checks['old_prefix_unchanged'] = all(
+                len(run['evaluations']) >= 29 and all(
+                    row['x_sha256'] == old['x_sha256'] and row['values'] == old['values']
+                    for row, old in zip(run['evaluations'][:28], failure_arm['evaluations'][:28],
+                                        strict=True))
+                and run['evaluations'][28]['x_sha256'] == failure_arm['evaluations'][28]['x_sha256']
+                for run in runs)
         report.update(status='completed', checks=checks, qualification_pass=all(checks.values()))
     except Exception as exc:
         report.update(status='error', error=f'{type(exc).__name__}: {exc}')
