@@ -10,6 +10,7 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 
 - [Autoren/Produzenten](QI_PRODUCER_INVENTORY.md) — Vier9.0-Wouts und Eingaben gebunden; strenge Fluss-Bitgleichheit scheitert auf Rundungsniveau. VMEC++-Iterationsoption ist keine historische Produzentenidentität.
 - [Frische QI-Auflösung: Protokoll](QI_FRESH_RESOLUTION_PROTOCOL.md) — Vier Fälle mit je2x2 radialer/Winkel-Verfeinerung; feste Solvergrenzen, Quellen-/Feldgegenprüfung und unveränderte alte Ergebnisse.
+- [Frische QI-Auflösung: Ergebnis](QI_FRESH_RESOLUTION_RESULTS.md) — Additive Matrixausführung mit unabhängigem Eingabevergleich vorbereitet; noch keine neue physikalische Freigabe.
 
 - [Clebsch-Spektrum: Protokoll](QI_CLEBSCH_SPECTRAL_PROTOCOL.md) — Unveränderte Halbflächen,64/128-Gitter, exakte gespeicherte Modenmaske, Projektions- und Parseval-Gegenrechnung.
 - [Clebsch-Spektrum: Ergebnis](QI_CLEBSCH_SPECTRAL_RESULTS.md) —48 Endpunktgitter unabhängig geprüft; stabile Projektionen, aber alle verfehlen1e-5. Einfache Feldmoden-Trunkierung allein erklärt die Darstellungsabweichung nicht.

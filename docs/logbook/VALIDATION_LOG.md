@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Prepare immutable QI cold starts and independent input guards
+
+- Nine controls pass for the2x2 numerical matrix, preserved physical fields,
+  negative-n namelist conversion, missing fields/duplicate or nonfinite modes and nonregistered
+  changes. Separate VMEC++ worker saves inputs before solving; root driver uses
+  independent f90nml checks and preserves all16 cells/errors/timeouts.
+- Eight actual VMEC++ input-parser roundtrips pass without any solver call.
+- Existing environments/kernels unchanged; no new physical solve yet. Detail/
+  index and both READMEs/status/plan reviewed, overall gates unchanged. Ruff/docs/
+  diff pass before implementation commit and guarded physical execution.
+
 ## 2026-09-12 — Bind author QI inputs and register fresh resolution matrix
 
 - Four old Wouts all version9.0,ns201,ftolv1e-16; matching local author namelists
