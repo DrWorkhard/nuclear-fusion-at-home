@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Qualify pure spectral/current-subspace projection controls
+
+- Additive full/geometry/current/projected-geometry spectra keep all singular
+  values and explicit column mappings. Bad current rank/condition prevents
+  projection while retaining other computed spectra, not a field-design failure.
+- Five analytic/negative controls pass: known1/2 and4/5 projection fractions,
+  zero tangent, permutations, rank loss, NaNs/shapes and scalar overflow.
+  Review added explicit scalar finite checks before physical use; no real result
+  corrected or overwritten. Ruff/docs/diff pass.
+- New detail/index and both READMEs/status/plan reviewed; next action updated to
+  execute the now registered diagnosis. No actual source matrices evaluated yet.
+
 ## 2026-09-12 — Register current-source quadratic curvature and conditioning diagnosis
 
 - Exactly the two closed sources and32 events/six trials from F-077; new field

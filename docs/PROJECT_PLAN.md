@@ -48,7 +48,7 @@ endlichen Formschritte verschlechtern den Flux trotz bestandener Ableitungen.
 
 Nächste Reihenfolge:
 
-1. **Krümmung/Konditionierung separat registrieren und prüfen:** bereits bewährtes
+1. **Registrierte [Krümmung/Konditionierungsprüfung](optimization/GEOMETRIC_CURVATURE_PROTOCOL.md) ausführen:** bereits bewährtes
    quadratisches Fluxmodell an genau den zwei aktuellen Quellen und sechs
    festgehaltenen Probes untersuchen. Keine neuen Radien aus den Ergebnissen wählen.
 2. **Nächsten klassischen Suchlauf begründen und vorab festlegen:** etwa ein
