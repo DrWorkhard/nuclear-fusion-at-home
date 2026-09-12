@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Preregister metadata-only inventory of pinned upstream LPQA submissions
+
+- The Jacobian-scaled physical trial starts at6db0040 after committed full
+  recovery closure. No change to its original start, kernels, budgets or options.
+- Separate read-only inventory protocol covers all tracked LPQA results.json
+  in the existing pin, no archive unpacking/download/new fields. Explicit
+  reported four-coil/order8/geometry/field screens select at most five candidates
+  for future reconstruction, not admission or a fair-method ranking.
+- Preserve unknowns, source revisions and thresholded-flux ambiguity; test and
+  independently recount before any physical use. Detail index updated; both
+  READMEs/status/plan checked. This is preparation, no inventory result yet.
+
 ## 2026-09-12 — Close all recovery holdouts; guard the separate scaled-study start
 
 - At54cbd8c all four holdout phases complete with exit2/0/0/0. Both candidates

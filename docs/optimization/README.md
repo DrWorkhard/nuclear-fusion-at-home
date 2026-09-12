@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Vorhandene LPQA-Referenzen: Inventarprotokoll](UPSTREAM_LPQA_INVENTORY_PROTOCOL.md) — Vollständige lokale Metadatenbestandsaufnahme und explizit unqualifizierte Rekonstruktions-Warteliste; keine Gleichsetzung geschwellter Nullwerte mit verschwindendem Feldfehler.
+
 - [Unveränderte AL-Recovery: Ergebnisse](NATURAL_AUGLAG_RECOVERY_RESULTS.md) — Zwei exakt wiederholte Suchläufe und historische Präfixe unabhängig bestätigt; alle feinen Abnahmen abgeschlossen, Geometrie/nativ bestanden, Flux Faktor26,99 über Grenze.
 
 - [Jacobiskalierte AL: Ergebnisse](NATURAL_AUGLAG_JAC_RESULTS.md) — Analytischer beschränkter Kontrollfall bestanden; physikalischer Versuch und unabhängige Abnahme noch offen.
