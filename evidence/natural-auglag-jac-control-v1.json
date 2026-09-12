@@ -1,0 +1,612 @@
+{
+  "all_pass": true,
+  "analytic_control": {
+    "counters": {
+      "attempts": 13,
+      "cache_hits": 27,
+      "denied": 0,
+      "failed_attempts": 0,
+      "limit": 1033,
+      "requests": 40
+    },
+    "pass_control": true,
+    "stages": [
+      {
+        "denied": 0,
+        "end_attempts": 6,
+        "lagrangian_gradient_max": 1.5543122344752192e-15,
+        "multipliers": [
+          0.0,
+          0.0
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 1.0,
+        "requests": [
+          {
+            "attempt": 1,
+            "merit": 2.5,
+            "x_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+          },
+          {
+            "attempt": 1,
+            "merit": 2.5,
+            "x_sha256": "374708fff7719dd5979ec875d56cd2286f6d3cf7ec317a3b25632aab28ec37bb"
+          },
+          {
+            "attempt": 2,
+            "merit": 1.7639320225002102,
+            "x_sha256": "8d4f571d5ebcd10dc5606378e2d084d388dd671abb20f14507f530c8445c8443"
+          },
+          {
+            "attempt": 2,
+            "merit": 1.7639320225002102,
+            "x_sha256": "8d4f571d5ebcd10dc5606378e2d084d388dd671abb20f14507f530c8445c8443"
+          },
+          {
+            "attempt": 3,
+            "merit": 2.3138496555507655,
+            "x_sha256": "f0eada8125cd3fe517131dfee0b73ab5d3a8f717f56be7c9da0a5c5467ebe14c"
+          },
+          {
+            "attempt": 4,
+            "merit": 1.4118869359122133,
+            "x_sha256": "5ee56a4ff8ab0406f4da900d3354054a113d48df4e54c05a3be69753a96980d4"
+          },
+          {
+            "attempt": 4,
+            "merit": 1.4118869359122133,
+            "x_sha256": "5ee56a4ff8ab0406f4da900d3354054a113d48df4e54c05a3be69753a96980d4"
+          },
+          {
+            "attempt": 5,
+            "merit": 1.0354908714974114,
+            "x_sha256": "5b44caeae4a136498ad13ed5ab90ec56a09e8daeca16177a2e384e9699e9bfc7"
+          },
+          {
+            "attempt": 5,
+            "merit": 1.0354908714974114,
+            "x_sha256": "5b44caeae4a136498ad13ed5ab90ec56a09e8daeca16177a2e384e9699e9bfc7"
+          },
+          {
+            "attempt": 6,
+            "merit": 0.9090909090909092,
+            "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+          },
+          {
+            "attempt": 6,
+            "merit": 0.9090909090909092,
+            "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 6,
+          "merit": 0.9090909090909092,
+          "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+        },
+        "selected_values": [
+          0.8264462809917354,
+          -0.09090909090909105,
+          -0.09090909090909084
+        ],
+        "solver": {
+          "nfev": 6,
+          "njev": 5,
+          "status": 1,
+          "success": true
+        },
+        "stage": 1,
+        "start_attempts": 1,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9090909090909105,
+          0.9090909090909084
+        ],
+        "violation": 0.09090909090909105
+      },
+      {
+        "denied": 0,
+        "end_attempts": 7,
+        "lagrangian_gradient_max": 1.3322676295501878e-15,
+        "multipliers": [
+          0.9090909090909105,
+          0.9090909090909084
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 0.09090909090909105,
+        "requests": [
+          {
+            "attempt": 6,
+            "merit": 1.15702479338843,
+            "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+          },
+          {
+            "attempt": 6,
+            "merit": 1.15702479338843,
+            "x_sha256": "b3248d9408b51bf6982361c4e5c405f9bfe9cf9548b5776631a8dbfe37f80ecb"
+          },
+          {
+            "attempt": 7,
+            "merit": 1.081893313298272,
+            "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+          },
+          {
+            "attempt": 7,
+            "merit": 1.081893313298272,
+            "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 7,
+          "merit": 1.081893313298272,
+          "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+        },
+        "selected_values": [
+          0.983539375725702,
+          -0.008264462809917106,
+          -0.008264462809917337
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 2,
+        "start_attempts": 6,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9917355371900816,
+          0.9917355371900818
+        ],
+        "violation": 0.008264462809917337
+      },
+      {
+        "denied": 0,
+        "end_attempts": 8,
+        "lagrangian_gradient_max": 1.7763568394002505e-15,
+        "multipliers": [
+          0.9917355371900816,
+          0.9917355371900818
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 0.008264462809917337,
+        "requests": [
+          {
+            "attempt": 7,
+            "merit": 1.0989686496823985,
+            "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+          },
+          {
+            "attempt": 7,
+            "merit": 1.0989686496823985,
+            "x_sha256": "b87df73c924584738ff314b081bf1edfa020a92225902504b81a491f37693f5a"
+          },
+          {
+            "attempt": 8,
+            "merit": 1.0983477283593395,
+            "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+          },
+          {
+            "attempt": 8,
+            "merit": 1.0983477283593395,
+            "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 8,
+          "merit": 1.0983477283593395,
+          "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+        },
+        "selected_values": [
+          0.9984979348721269,
+          -0.0007513148009015147,
+          -0.0007513148009016024
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 3,
+        "start_attempts": 7,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9992486851990967,
+          0.9992486851990978
+        ],
+        "violation": 0.0007513148009016024
+      },
+      {
+        "denied": 0,
+        "end_attempts": 9,
+        "lagrangian_gradient_max": 1.9984014443252818e-15,
+        "multipliers": [
+          0.9992486851990967,
+          0.9992486851990978
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 0.0007513148009016024,
+        "requests": [
+          {
+            "attempt": 8,
+            "merit": 1.0998548737525828,
+            "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+          },
+          {
+            "attempt": 8,
+            "merit": 1.0998548737525828,
+            "x_sha256": "c2fffa724292c78a99be2625ca5128ee82b0385b190d30e07a3fbc044807fad9"
+          },
+          {
+            "attempt": 9,
+            "merit": 1.0998497421714006,
+            "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+          },
+          {
+            "attempt": 9,
+            "merit": 1.0998497421714006,
+            "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 9,
+          "merit": 1.0998497421714006,
+          "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+        },
+        "selected_values": [
+          0.9998634019740008,
+          -6.830134553648115e-05,
+          -6.830134553652556e-05
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 4,
+        "start_attempts": 8,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999316986544615,
+          0.9999316986544631
+        ],
+        "violation": 6.830134553652556e-05
+      },
+      {
+        "denied": 0,
+        "end_attempts": 10,
+        "lagrangian_gradient_max": 8.881784197001252e-16,
+        "multipliers": [
+          0.9999316986544615,
+          0.9999316986544631
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 6.830134553652556e-05,
+        "requests": [
+          {
+            "attempt": 9,
+            "merit": 1.0999863821830642,
+            "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+          },
+          {
+            "attempt": 9,
+            "merit": 1.0999863821830642,
+            "x_sha256": "bdea002e9c41cd0b52c254f895f1ff4de603e4625aa32866e11f91c2c96be7f5"
+          },
+          {
+            "attempt": 10,
+            "merit": 1.0999863397733023,
+            "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+          },
+          {
+            "attempt": 10,
+            "merit": 1.0999863397733023,
+            "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 10,
+          "merit": 1.0999863397733023,
+          "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+        },
+        "selected_values": [
+          0.9999875816120931,
+          -6.209213230690125e-06,
+          -6.209213230578877e-06
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 5,
+        "start_attempts": 9,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999937907867684,
+          0.9999937907867689
+        ],
+        "violation": 6.209213230690125e-06
+      },
+      {
+        "denied": 0,
+        "end_attempts": 11,
+        "lagrangian_gradient_max": 1.3322676295501878e-15,
+        "multipliers": [
+          0.9999937907867684,
+          0.9999937907867689
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 6.209213230690125e-06,
+        "requests": [
+          {
+            "attempt": 10,
+            "merit": 1.0999987585081983,
+            "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+          },
+          {
+            "attempt": 10,
+            "merit": 1.0999987585081983,
+            "x_sha256": "2baf023aaee788042153598399acc9095dbb01668b92976a43880a9f0669f122"
+          },
+          {
+            "attempt": 11,
+            "merit": 1.0999987581577044,
+            "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+          },
+          {
+            "attempt": 11,
+            "merit": 1.0999987581577044,
+            "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 11,
+          "merit": 1.0999987581577044,
+          "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+        },
+        "selected_values": [
+          0.9999988710524583,
+          -5.644739302645974e-07,
+          -5.644739300497335e-07
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 6,
+        "start_attempts": 10,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999994355260711,
+          0.9999994355260694
+        ],
+        "violation": 5.644739302645974e-07
+      },
+      {
+        "denied": 0,
+        "end_attempts": 12,
+        "lagrangian_gradient_max": 1.3322676295501878e-15,
+        "multipliers": [
+          0.9999994355260711,
+          0.9999994355260694
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 5.644739302645974e-07,
+        "requests": [
+          {
+            "attempt": 11,
+            "merit": 1.0999998871081136,
+            "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+          },
+          {
+            "attempt": 11,
+            "merit": 1.0999998871081136,
+            "x_sha256": "eec5da647c95ed286c3e1e9db734db7ed0c9c4dbffbaf0e7cba2b5342b021d05"
+          },
+          {
+            "attempt": 12,
+            "merit": 1.099999887105217,
+            "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+          },
+          {
+            "attempt": 12,
+            "merit": 1.099999887105217,
+            "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 12,
+          "merit": 1.099999887105217,
+          "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+        },
+        "selected_values": [
+          0.9999998973683792,
+          -5.1315811600005645e-08,
+          -5.1315811805303396e-08
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 7,
+        "start_attempts": 11,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999999486841871,
+          0.9999999486841874
+        ],
+        "violation": 5.1315811805303396e-08
+      },
+      {
+        "denied": 0,
+        "end_attempts": 13,
+        "lagrangian_gradient_max": 5.551115123125783e-16,
+        "multipliers": [
+          0.9999999486841871,
+          0.9999999486841874
+        ],
+        "next_rho": 10.0,
+        "previous_violation": 5.1315811805303396e-08,
+        "requests": [
+          {
+            "attempt": 12,
+            "merit": 1.0999999897368613,
+            "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+          },
+          {
+            "attempt": 12,
+            "merit": 1.0999999897368613,
+            "x_sha256": "a09487efebe7470e5f5d409b600d7a2190caa45303326e4bca3406a68b78014e"
+          },
+          {
+            "attempt": 13,
+            "merit": 1.0999999897368373,
+            "x_sha256": "cd9552eaa4104c61456d8789d27c9075cace526042664235f95b4379628da03b"
+          },
+          {
+            "attempt": 13,
+            "merit": 1.0999999897368373,
+            "x_sha256": "cd9552eaa4104c61456d8789d27c9075cace526042664235f95b4379628da03b"
+          }
+        ],
+        "rho": 10.0,
+        "selected": {
+          "attempt": 13,
+          "merit": 1.0999999897368373,
+          "x_sha256": "cd9552eaa4104c61456d8789d27c9075cace526042664235f95b4379628da03b"
+        },
+        "selected_values": [
+          0.9999999906698523,
+          -4.665073882748061e-09,
+          -4.665073823490974e-09
+        ],
+        "solver": {
+          "nfev": 2,
+          "njev": 2,
+          "status": 1,
+          "success": true
+        },
+        "stage": 8,
+        "start_attempts": 12,
+        "status": "solver_returned",
+        "updated_multipliers": [
+          0.9999999953349259,
+          0.9999999953349257
+        ],
+        "violation": 4.665073882748061e-09
+      }
+    ],
+    "stop_reason": "eight_stages_completed",
+    "x": [
+      1.0000000046650739,
+      -4.665073823490974e-09
+    ]
+  },
+  "arms": [],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_natural_auglag_jac.py",
+      "sha256": "3fd1842b27b35a9f5f58c01bf9db30a79b4856b1325679090251595e6542b996"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/jac_scaled_solver.py",
+      "sha256": "057410cc688bcc9409d82a8936e70bac80de79da1d8fca9fffe6f494bdca38b4"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/staged_auglag.py",
+      "sha256": "27cafbf5e0193fa1e7af44993c03c23b1cf3fad74f252f8ba0d00d85f34899a8"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/natural_auglag.py",
+      "sha256": "51bf52feca2837e4bf0dee36f81734b0439d494f9328e71bb4fa48beded0840a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/natural_flux_backend.py",
+      "sha256": "f6d8c901c1be48316f51c11e7b0c341c0899023af3dd7ee786c1624a860f65bf"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/gauss_newton_backend.py",
+      "sha256": "94cd886adc46068c52599da45f4bac98efeed400f4619d6a2a01d5dbb6f66427"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/batched_field_jacobian.py",
+      "sha256": "6e79e1f3643836a0a86b0fc19b683fbbddab3bc568617856c0d02cef1138446d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_oracle.py",
+      "sha256": "5e7c154b8290339e224e629393f551e2c74fab7804ccda5a40d1fcac81b8c916"
+    }
+  ],
+  "construction_tolerance": 1e-08,
+  "flux_scale": 1e-06,
+  "host": {
+    "captured_at": "2026-09-12T10:45:48.184255+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "methods": [
+    "natural-auglag-jac"
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/NATURAL_AUGLAG_JAC_PROTOCOL.md",
+    "sha256": "5cc07574af28a726e9969855014819cc07f03707d397ec46d37c002522389be2"
+  },
+  "qualification_pass": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "2061cee265f6a1105a5db375ea0aef2d14046103",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "solver_options": {
+    "ftol": 1e-10,
+    "gtol": 1e-10,
+    "loss": "linear",
+    "max_nfev": 100000,
+    "method": "trf",
+    "tr_solver": "exact",
+    "x_scale": "jac",
+    "xtol": 1e-10
+  },
+  "solver_sources": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/least_squares.py",
+      "sha256": "5b1508ade745706ddf335eb9533314664d98449fd7cbff1f7ac05d2e8226624d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/trf.py",
+      "sha256": "0c7c29d5d3fd6915720e9547f051d47e14ca5a821e7872686aa8cf1d1c4e4893"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lsq/common.py",
+      "sha256": "92d953094ad7336777a79dfb46ed6cac49542caa39ea539c30add09841541dd3"
+    }
+  ],
+  "status": "control_completed",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  }
+}

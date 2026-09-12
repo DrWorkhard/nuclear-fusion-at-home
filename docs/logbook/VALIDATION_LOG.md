@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Jacobian-scaled analytical AL control passes
+
+- Preregistered runner at2061cee: exact same constrained quadratic and fixed
+  limits, x=(1.0000000046650739,-4.665073823490974e-9), maximum violation
+  4.665073882748061e-9, final stationarity max5.551115123125783e-16.
+- Eight stages,13 analytical bundles,40 requests,27 cache hits, no failures or
+  denied work. No plasma field calls; control_completed does not qualify physics.
+  Effective options and project/SciPy source hashes retained in the raw report.
+- Detail/index added; both READMEs/status/plan checked, unchanged open steps1/2.
+  Physical run remains conditional on closing recovery and all its holdouts.
+  Eight adapter/stage tests pass; documentation and diff checks pass before commit.
+
 ## 2026-09-12 — Preregister a separate classical Jacobian-column-scaled AL pilot
 
 - Saved natural-residual Jacobians have positive column-norm spreads about401

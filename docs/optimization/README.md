@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Jacobiskalierte AL: Ergebnisse](NATURAL_AUGLAG_JAC_RESULTS.md) — Analytischer beschränkter Kontrollfall bestanden; physikalischer Versuch und unabhängige Abnahme noch offen.
+
 - [Jacobiskalierte AL: Protokoll](NATURAL_AUGLAG_JAC_PROTOCOL.md) — Getrennt festgelegter klassischer Ein-Options-Versuch mit `x_scale=jac`; identische Physik/Budgets, erst nach abgeschlossener unveränderter Recovery und Abnahme.
 
 - [Feldstärkenaudit](FIELD_STRENGTH_AUDIT.md) — Prüft an vorhandenen Holdouts, ob bloß geringere Feldstärke die kleineren rohen Fluxwerte erklärt; feste Basisstromsumme und globale Skalenkontrolle, keine neue Abnahmegrenze.
