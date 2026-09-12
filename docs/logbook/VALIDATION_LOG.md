@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-12 — Qualify native geometric direction/trial workflow before real probes
+
+- Full source value/Jacobian replay, exactly six frozen LP directions, both fixed
+  FD epsilons and both complex pair steps; only passing directions get a trial.
+  Complete bundles, pending failed points and complex checkpoints retained.
+- Independent JSON rotations/real Fourier/chain-rule audit verifies all six
+  directions, new16-copy serialized shapes, constant currents and exact work.
+  Six new controls pass, including32-bundle toy flow, negative FD with remaining
+  directions continuing and native interruption retaining completed work.
+- One patch failed against reformatted source without modifying files, then
+  reapplied against inspected lines. No actual native coil source evaluated.
+  Full regression651 passed/144 retained fixture warnings; Ruff/docs/diff pass.
+  Detail/index and both READMEs/status/plan reviewed; software count synchronized.
+  Next commit then execute all registered real probes and independent audit.
+
 ## 2026-09-12 — Close all six real fixed-radius LPs and independent primal-dual file audit
 
 - At849809f all six original-array geometric LPs solve in1–6 simplex iterations.

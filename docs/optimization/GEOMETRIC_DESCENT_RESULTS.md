@@ -74,3 +74,29 @@ Modelle und ihren Audit schließen, danach die bereits festgelegten nativen
 Ableitungs- und Kontrollschritte. Keine Anpassung der Radien aus LP-Ergebnissen.
 Gesamte Regression645 Tests bestanden,144 bekannte Fixture-DeprecationWarnings;
 Ruff/Dokumentstruktur/Diffprüfung bestanden. Strenge Importqualifikation weiterhin offen.
+
+## Native Richtungs-/Schrittphase vorbereitet
+
+Additiver Treiber übernimmt exakt die sechs abgeschlossenen LP-Punkte. Er
+reproduziert die Quellen samt ganzer138x207-Jacobimatrix, prüft pro Richtung
+beide festen zentralen Differenzen und beide komplexen Paarableitungen und
+erlaubt erst danach den einen echten Kontrollschritt. Alle Bundles, auch die
+vollständigen Jacobimatrizen, angefragte Fehlerpunkte, Positionsdaten und jeder
+komplexe Zwischenwert werden erhalten. Keine weitere LP- oder Stromoptimierung.
+
+Der separate Auditor liest Fourierkoeffizienten/Symmetrien aus JSON und prüft
+alle Paarableitungen mit reellen Fouriersummen/gewichteter Kettenregel. Er
+verifiziert auch sämtliche16 Kopien und Regularisierungen jedes neuen Feldes,
+die feste Stromverteilung, FD-Punkte und Vorhersage-/Ist-Klassifikation.
+
+Sechs neue Kontrollen bestehen: beide FD-Schrittweiten zwingend, komplexer
+Gegenfall/NaN, Verbesserung ohne geometrische Freigabe, kompletter synthetischer
+32-Bundle-Ablauf mit echter Fourier-/komplexer-/reeller Gegenrechnung, negative
+Ableitungsklasse mit weiterlaufenden übrigen Richtungen und erhaltene native
+Unterbrechung. Ein erster Patch passte nach automatischer Formatierung nicht
+mehr auf den Quelltext und wurde ohne Änderung abgelehnt; anschließend gezielt
+auf die gelesene Fassung angewandt. Keine echten Spulenprobes bisher.
+
+Gesamte Regression651 Tests bestanden,144 bekannte Fixture-Warnungen; Ruff,
+Dokumentstruktur und Diffprüfung bestanden. Nach Implementierungscommit folgen
+die vorab registrierten echten Probes und ihr unabhängiger Audit.
