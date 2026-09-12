@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Close all six real fixed-radius LPs and independent primal-dual file audit
+
+- At849809f all six original-array geometric LPs solve in1–6 simplex iterations.
+  Independent scalar certificates pass: primal residual<=1.377e-14,
+  stationarity<=2.776e-17, normalized primal-dual gap<=2.221e-16.
+- Separate file auditor reconstructs all inputs/steps/objectives/certificates,
+  passes, makes zero new LP/native calls. Six producer LP calls, six certificates;
+  all six linearly predict descent, no actual magnetic-field improvement measured.
+- Detail/index and both READMEs/status/plan reviewed; top-level next task remains
+  geometric derivative/descent diagnosis, now beyond the linear-model phase.
+  Eleven model controls/Ruff/docs/diff pass. Native registered maximum32-bundle
+  direction/step phase next, without choosing radii after seeing these LPs.
+
 ## 2026-09-12 — Qualify source-bound six-model driver and independent file certificate audit
 
 - Exact two current-minimum fields plus closed original/current/fine audits;

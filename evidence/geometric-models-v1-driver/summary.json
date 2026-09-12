@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/solve_geometric_models.py",
+    "evidence/geometric-models-v1.json",
+    "artifacts/geometric-models-v1"
+  ],
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/geometric-models-v1-driver/command.log",
+    "sha256": "175237fc95a9dc84b87be7756cc3b12c93a99ba0782fc6e3d088241ab831a83b"
+  },
+  "minimum_observed_free_bytes": 4919615488,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "849809f99c0d3888538db1d0c1eac26ecb0e4ae8",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 0,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_guarded_command.py",
+    "sha256": "4da34bb00b8b21d437de79317ae9f3108512068feb011312215c124c06ecb442"
+  },
+  "status": "completed"
+}

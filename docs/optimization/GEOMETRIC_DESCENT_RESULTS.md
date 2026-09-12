@@ -1,7 +1,43 @@
-# Geometrischer Abstieg: Kontrollkerne vorbereitet
+# Geometrischer Abstieg: sechs lineare Modelle auditiert, echte Schritte offen
 
 2026-09-12, [Protokoll](GEOMETRIC_DESCENT_PROTOCOL.md) bei a56c9e1 registriert.
-Noch kein LP mit tatsächlichen Spulendaten und keine neue native Formauswertung.
+Die sechs LPs aus tatsächlichen Spulendaten sind inzwischen ausgeführt und
+unabhängig auditiert. Noch keine neue native Formauswertung. Die späteren
+Vorbereitungsabschnitte halten den vorherigen Implementierungsstand fest.
+
+## Sechs lineare Teilprobleme abgeschlossen
+
+Ausführung bei849809f: alle sechs HiGHS-DS-LPs erfolgreich, sechs unabhängige
+skalare Primal-Dual-Zertifikate bestanden. Der separate Dateiaudit bestätigt
+Quellen, explizite204-Spalten-Zuordnung, Modelle, Schritte, Kosten und Zertifikate,
+ohne neue LP- oder native Rechnung. Höchster normierter Primalrest1,377e-14,
+Stationaritätsrest2,776e-17, normierte Dualitätslücke2,221e-16.
+Je18 Einzelchecks pro Modell plus zwei Fall-/vier Gesamtchecks bestätigen die
+vollständige Ablage. Als nichtverschwindende Ungleichungs-Marginalwerte treten
+beim AL-Fall das Paar(8,12), ab Radius1e-5 zusätzlich die Länge auf; beim
+SLSQP-Fall bei allen Radien Länge sowie Paare(0,1) und(8,12). Alle Zahlen im
+Solverprotokoll. Das sind aktive Zeilen des skalierten LPs, keine neuen
+physikalischen Grenzen oder belastbaren technischen Kostenprioritäten.
+
+| Quelle | Radius | Vorhergesagte Roh-Fluxänderung |
+| --- | --- | --- |
+| AL | 1e-6 | −1,48199958e-11 |
+| AL | 1e-5 | −3,31317841e-11 |
+| AL | 1e-4 | −1,69744571e-10 |
+| SLSQP | 1e-6 | −1,80236672e-12 |
+| SLSQP | 1e-5 | −1,81506554e-11 |
+| SLSQP | 1e-4 | −1,81633542e-10 |
+
+Die Modelle enthalten somit Abstiegsrichtungen. Das zeigt weder einen echten
+Fluxgewinn noch erhaltene Geometrie bei endlicher Schrittweite und ist kein
+Nachweis globaler oder nichtlinearer Optimalität. Die sechs LPs brauchen jeweils
+1–6 Simplexiterationen; tatsächliche Auswertungsarbeit bleibt null neue native
+Bundles. Native Ableitungs- und Schrittqualifikation folgt mit unverändertem
+registriertem Höchstbudget32, allen Radien und beiden Differenzenschritten.
+
+Evidenz: `evidence/geometric-models-v1.json`, `...-audit.json`, beide Driver-
+Verzeichnisse und `artifacts/geometric-models-v1/`. Quellen/alte Ergebnisse bleiben
+unverändert; weitere Formsuche wird nicht aus einer bloßen LP-Verbesserung freigegeben.
 
 Der Modellbauer erhält alle Ungleichungen und benutzt unverändertb=g/r, ohne
 Addition einer Zulässigkeitstoleranz. Ein verschwindender Gradient wird separat
