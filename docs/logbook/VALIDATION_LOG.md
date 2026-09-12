@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Prepare one-sided spatial separation and independent interior-witness controls
+
+- Read primary Eberly separating-axis derivation and existing mesh/generator
+  scope; finest old mesh327000 tetrahedra. No real mesh collision run performed.
+- Additive convex-tet kernel retains explicit separation witnesses; no axis found
+  means unresolved, not overlap. Independent barycentric LP plus separate4x4
+  solves verifies strict common interior points; contact/errors stay unresolved.
+- Ten tests pass, including32 fixed random SAT/LP comparisons, containment,
+  contact, AABB-overlap false implication, rigid transforms and invalid data.
+  Floating padding is not interval certification. Ruff/docs/diff pass.
+- Engineering detail/index and all overviews checked; G5 unchanged. Safe broad
+  phase and a preregistered full old-mesh study remain future work. QI continues.
+
 ## 2026-09-12 — Reject malformed Fourier mode identity before fresh field evaluation
 
 - Additive reader now rejects duplicate or fractional geometric/Nyquist mode
