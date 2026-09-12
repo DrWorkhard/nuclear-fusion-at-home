@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-12 — GN trust pilot preparation and retained analytic-control failure
+
+- Six new adapter tests cover GN matrix/coordinate scaling, cache/budget coupling,
+  malformed field/gradient data and invalidation of stale Hessians. Full suite:
+  271 passed, 11 known fixture warnings; Ruff/docs/diff checks pass after three
+  initial long lines in the new runner were corrected.
+- First analytic constrained control with gtol=1e-8 returns status 1 and zero
+  violation, but x=(0.9998141304394035, 0.00011587229577422913) misses the fixed
+  1e-5 solution-error limit. Optimality=9.746514262332084e-9; control is failed.
+- Before any physical evaluation, gtol is tightened to 1e-12 for control and
+  search. The control limit and physical admission limits remain unchanged.
+  No search, feasible candidate or completed long-term step is implied.
+- Repeated analytic control now passes: x=(0.9999993008300088,
+  1.637981277959684e-7), optimality=2.653433028854124e-13, violation zero.
+  Both READMEs, current test count and work plan reflect readiness to execute
+  the separately fixed pilot; physical setup checks must still pass at runtime.
+
 ## 2026-09-12 — Quadratic field-model qualification and independent raw-array audit
 
 - Physical run after 5eb5c7f: both state qualifications and all four frozen probe

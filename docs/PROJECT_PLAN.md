@@ -18,8 +18,9 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    Geometrieschranken und zusätzliche native Bedingungen. Die getrennte
    quadratische Feldmodellprüfung besteht an allen vier eingefrorenen Proben,
    einschließlich vollständigem nativen Matrixvergleich und Kern-Audit.
-4. Als Nächstes einen klassischen beschränkten Solver mit explizitem
-   Gauss-Newton-Modell qualifizieren und einen neuen Versuch vorab festlegen.
+4. Als Nächstes den [festgelegten GN-Trust-Piloten](optimization/GN_TRUST_PILOT_PROTOCOL.md)
+   ausführen: Anbindung und analytischer Kontrollfall bestehen, physikalischer
+   Zustandsvergleich vor der Suche und unabhängige Abnahme danach bleiben Pflicht.
    Keine nachträgliche Budgeterhöhung des abgeschlossenen SLSQP-Piloten.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.

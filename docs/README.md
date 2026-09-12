@@ -109,8 +109,10 @@ Der anschließende [quadratische Modelltest](optimization/QUADRATIC_FIELD_MODEL_
 sagt an allen vier Testschritten das richtige Änderungs-Vorzeichen voraus und
 verringert den Vorhersagefehler gegenüber dem linearen Modell um mindestens
 99,907%. Vollständige native Ableitungsmatrizen und ein separater Kern-Audit
-bestätigen die Rechnung. Als Nächstes folgt ein getrennt vorab festgelegter
-Optimierungsversuch mit dieser Krümmungsinformation und unabhängiger Abnahme.
+bestätigen die Rechnung. Als Nächstes folgt der
+[vorab festgelegte GN-Trust-Pilot](optimization/GN_TRUST_PILOT_PROTOCOL.md)
+mit dieser Krümmungsinformation: zwei Wiederholungen mit höchstens je 1024
+vollständigen Auswertungen, anschließend unabhängige Abnahme beider Ergebnisse.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 

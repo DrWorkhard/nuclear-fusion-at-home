@@ -22,8 +22,9 @@ The [quadratic field-model diagnostic](docs/optimization/QUADRATIC_FIELD_MODEL_R
 predicts the correct change sign on all four frozen probes and reduces prediction
 error by at least 99.907% versus the linear model. Full native Jacobian comparisons
 and a separate core audit pass. Earlier failed checks remain recorded. Next:
-preregister a constrained classical search using this Gauss-Newton curvature,
-then independently validate its output. The diagnostic probes are not admitted designs.
+execute the [fixed GN trust pilot](docs/optimization/GN_TRUST_PILOT_PROTOCOL.md)
+(two repeats, at most 1024 full bundles each), then independently validate its
+output. The diagnostic probes are not admitted designs.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking
