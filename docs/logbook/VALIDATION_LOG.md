@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Register bounded fixed-geometry current optimization before another shape search
+
+- Source review confirms the frozen objective is affine in three current DOFs
+  at fixed geometry/total. Classic separable least-squares/variable projection
+  basis checked against original Golub/Pereyra abstract and NIST primary record;
+  direct SIAM page returned403, no full-text-read or novelty claim.
+- Exactly prior AL and composite-SLSQP selected fields, explicit1e7 current
+  scaling/named mapping, six fixed±0.001 probes, SVD+independent QR/rank/normal-
+  equation screens and unchanged fine field holdouts preregistered. No geometry
+  change, relaxed threshold, rank claim or current-result measurement yet.
+- Protocol/index and both READMEs/status/plan reviewed; docs/diff pass. Real work
+  waits for current finest-mesh completion/audit; pure controls may proceed.
+
 ## 2026-09-12 — Qualify single finest-mesh completion driver and exact certificate-prefix audit
 
 - Fixed original finest mesh, old2M source and closed committed QI/mesh audits;
