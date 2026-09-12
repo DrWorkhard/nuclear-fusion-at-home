@@ -32,7 +32,7 @@ Das Feld hat SHA `18a8587012e655146c57347529075379f0e0d44350dad75761994caf509edb
 bestehen; **all_pass=false** wegen beider historischer Präfixprüfungen. Das engere
 `qualification_pass=true` der Suchzusammenfassung prüft nur die beiden neuen
 Wiederholungen und darf nicht als Bestehen des gesamten Protokolls gelesen werden.
-Die unveränderten unabhängigen Holdouts folgen als Kandidatendiagnostik; sie
+Die unveränderten unabhängigen Holdouts wurden als Kandidatendiagnostik ausgeführt; sie
 können den fehlgeschlagenen historischen Vergleich nicht nachträglich heilen.
 
 ## Abgeschlossene unabhängige Kandidatendiagnostik

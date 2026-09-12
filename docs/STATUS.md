@@ -23,7 +23,7 @@ und Verbesserungen daran zertifizieren.
 | QI bei endlichem Druck | 320 zugeordnete Potentialmulden-Familien in vier Fällen; Druckfall nfp2 durchgehend negative radiale Ableitungen im untersuchten Bereich, nfp3 gemischt | Unabhängige Quadratur und zweiter Feldlinienrechner; 319 aufgelöste Vorzeichen bestätigt, eines unaufgelöst. Keine globale maximum-J-Aussage |
 | Direkte Randbedingungen | 137 Ungleichungen qualifiziert; SLSQP-Pilot mit zwei exakt gleichen 256-Bundle-Läufen | Ausgewählte Felder bestehen Geometrie und zusätzliche native Metriken; Flux bleibt Faktor 23,3 über Grenze. Nicht konvergiert, nicht zulässig |
 | Lokales Fluxmodell | Quadratische Vorhersage an allen vier festen Testschritten richtig im Vorzeichen; Fehler mindestens 99,907% kleiner als linear | Vollständiger nativer Jacobianvergleich und unabhängiger Kern-Audit bestehen. Lokale Diagnose, noch kein neuer Optimierungserfolg |
-| Software | 314 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte vorhandene QI-/W7-X-Datenregression: alle sechs Tests, null Skips; fehlende W7-X-Daten werden im Gegenlauf zurückgewiesen. 11 bekannte NumPy-Warnungen; kein vollständiger nativer Neuaufbau |
+| Software | 324 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte vorhandene QI-/W7-X-Datenregression: alle sechs Tests, null Skips; fehlende W7-X-Daten werden im Gegenlauf zurückgewiesen. 20 Warnungen derselben bekannten NumPy/netCDF4-Art; kein vollständiger nativer Neuaufbau |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [Ableitungen](optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md),

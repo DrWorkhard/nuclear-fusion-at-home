@@ -8,6 +8,8 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 
 ## Dokumente
 
+- [Radiale Gauge: Vorbereitung](QI_RADIAL_GAUGE_RESULTS.md) — Offset-/Periodizitäts-/Kettenregelkontrollen bestehen; exakter Real-Daten-Replay und verschobene Traces stehen noch aus.
+
 - [Radiale Gauge: Protokoll](QI_RADIAL_GAUGE_PROTOCOL.md) — Vorab festgelegte Kettenregel-/Vorzeichendiagnose unter radialer Feldlinien-Neumarkierung; unveränderte Fälle, Pitchwerte und Pflicht zum exakten Standard-Replay.
 
 - [QI_COVERAGE_TOPOLOGY_PROTOCOL ](QI_COVERAGE_TOPOLOGY_PROTOCOL.md) — Protokoll: Erweiterung auf fünf Radien/neun Pitch-Werte und Konturwindung; eine unzugängliche nfp1-Zelle bleibt fehlgeschlagen.

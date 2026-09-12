@@ -24,9 +24,13 @@ def _fourier(theta, phi, modes_m, modes_n, coefficients, *, sine=False):
     return result
 
 
-def trace_geometry(wout: Path, surface: float, nphi: int, nalpha: int, periods: int):
+def trace_geometry(
+    wout: Path, surface: float, nphi: int, nalpha: int, periods: int, *, alpha_offset: float = 0.0
+):
     if nphi < 2 or nalpha < 1 or periods < 1:
         raise ValueError("invalid trace resolution")
+    if not np.isfinite(alpha_offset):
+        raise ValueError("finite alpha offset required")
     with netCDF4.Dataset(wout) as dataset:
 
         def read(name):
@@ -52,6 +56,8 @@ def trace_geometry(wout: Path, surface: float, nphi: int, nalpha: int, periods: 
         iota = float(_interpolate(half, read("iotas")[1:], surface))
     phi = np.linspace(0, 2 * np.pi * periods / nfp, nphi)[:, None]
     alpha = np.linspace(0, 2 * np.pi, nalpha, endpoint=False)[None, :]
+    if alpha_offset != 0:
+        alpha = alpha + alpha_offset
     target = alpha + iota * phi
     theta = target.copy()
     for _ in range(50):

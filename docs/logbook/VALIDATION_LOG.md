@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Optional alpha offset and analytic gauge controls pass
+
+- Added a finite optional alpha offset with unchanged zero-offset calculation.
+  Ten new controls pass: torus formula, periodicity with lambda, exact default,
+  nonfinite rejection and known chain-rule/omnigenous/wrong-derivative examples.
+- Full suite324 passed; Ruff/docs/diff pass. Twenty warnings are the same known
+  NumPy/netCDF4 deprecation triggered by additional synthetic fixtures, not a new
+  warning type. HTML source failed; publisher PDF definitions were read instead.
+- Both READMEs/status/plan reviewed; real-data gauge qualification remains open.
+  The native coil-search kernels are untouched. Runner/exact old trace replay next.
+
 ## 2026-09-12 — SLSQP-1024 fine holdouts complete; flux still rejected
 
 - Both fields replay all required grids and continuous bounds identically.

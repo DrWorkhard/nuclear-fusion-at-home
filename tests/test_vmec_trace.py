@@ -55,3 +55,34 @@ def test_lambda_inversion_and_invalid_data(tmp_path):
         d["bmnc"][:, 0] = np.nan
     with pytest.raises(ValueError, match="nonfinite"):
         trace_geometry(path, 0.5, 101, 8, 2)
+
+
+def test_alpha_offset_formula_and_exact_default(tmp_path):
+    path = tmp_path / "wout.nc"
+    _torus(path)
+    default = trace_geometry(path, 0.5, 101, 8, 2)
+    explicit = trace_geometry(path, 0.5, 101, 8, 2, alpha_offset=0.0)
+    assert all(np.array_equal(default[k], explicit[k]) for k in default)
+    shifted = trace_geometry(path, 0.5, 101, 8, 2, alpha_offset=0.3)
+    theta = default["alpha"][None, :] + 0.3 + 0.7 * default["phi"][:, None]
+    speed = np.sqrt((3 + 0.4 * np.cos(theta)) ** 2 + (0.4 * 0.7) ** 2)
+    np.testing.assert_allclose(shifted["theta"], theta, atol=1e-12)
+    np.testing.assert_allclose(shifted["speed"], speed, rtol=1e-12)
+
+
+def test_alpha_full_turn_periodicity_with_lambda(tmp_path):
+    path = tmp_path / "wout.nc"
+    _torus(path)
+    with netCDF4.Dataset(path, "r+") as d:
+        d["lmns"][:, 1] = 0.1
+    a = trace_geometry(path, 0.5, 101, 8, 2, alpha_offset=0.2)
+    b = trace_geometry(path, 0.5, 101, 8, 2, alpha_offset=0.2 + 2 * np.pi)
+    for key in ("B", "speed", "length"):
+        np.testing.assert_allclose(a[key], b[key], rtol=1e-12, atol=1e-12)
+    np.testing.assert_allclose(b["theta"] - a["theta"], 2 * np.pi, rtol=0, atol=1e-12)
+
+
+@pytest.mark.parametrize("offset", [np.nan, np.inf, -np.inf])
+def test_invalid_offset_rejected_before_reading_file(tmp_path, offset):
+    with pytest.raises(ValueError, match="finite alpha"):
+        trace_geometry(tmp_path / "absent.nc", 0.5, 101, 8, 2, alpha_offset=offset)
