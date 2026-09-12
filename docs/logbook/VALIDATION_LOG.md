@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Qualify single finest-mesh completion driver and exact certificate-prefix audit
+
+- Fixed original finest mesh, old2M source and closed committed QI/mesh audits;
+  new4M scan with hard1200s worker timeout. Original spatial kernels unchanged.
+- Separate prefix auditor checks every original witness line bytewise and exact
+  index/node/event prefix; full new independent spatial audit follows. Four new
+  controls pass, including an overlapping toy with valid prefix but no geometry
+  admission, changed/missing certificate rows and bad sources/open predecessors.
+- First Ruff run found a102-character line, corrected before execution. Tests/
+  Ruff/docs/diff pass; detail/index and both READMEs/status/plan reviewed. No real
+  new mesh calculation yet; next run and audit separate completion study.
+
 ## 2026-09-12 — Close complete real QI straight-field-coordinate matrix and scalar audit
 
 - At3ca9876 all60 original128-grid fields replay exactly before120 new grids;
