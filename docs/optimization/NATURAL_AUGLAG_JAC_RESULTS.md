@@ -33,6 +33,15 @@ Kontrollrechnung. Der ursprüngliche Auditor bleibt bytegleich. 22 reine
 Kontrollen prüfen insbesondere die Ablehnung abweichender Optionen, Methoden,
 Threads, Koordinatenskalen und falscher analytischer Erfolgsflags.
 
-Noch offen: zwei physikalische Wiederholungen und alle feinen Abnahmen. Der
-unveränderte Recovery-Lauf und dessen Holdouts werden zuvor abgeschlossen und
-dokumentiert. Keine neue zulässige Baseline und kein Methodenfortschritt behauptet.
+Der separate Startdriver verlangt jetzt den vollständig gespeicherten und
+committeten Recovery-Abschluss, alle vier feinen Berichte mit passenden
+Exitcodes, ihre Hashes und die committete Ergebnisdokumentation. Er verweigert
+unvollständige, doppelte oder fehlgeschlagene Phasen und Feedbacknutzung;
+sieben reine Steuerungskontrollen bestehen. Die neue Suche und ihr Audit laufen
+sequenziell unter der2-GiB-Reserve, ohne Änderungen am alten oder neuen Suchkernel.
+
+Die [unveränderte Recovery](NATURAL_AUGLAG_RECOVERY_RESULTS.md) ist nun samt
+allen Holdouts abgeschlossen: Geometrie/nativ bestehen, Flux Faktor26,9859 zu
+hoch. Nach deren Commit sind zwei neue physikalische Wiederholungen und ihre
+feinen Abnahmen der nächste Arbeitsschritt. Keine neue zulässige Baseline und
+kein Methodenfortschritt behauptet.

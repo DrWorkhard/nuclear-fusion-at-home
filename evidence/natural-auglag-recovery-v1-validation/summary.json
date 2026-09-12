@@ -1,0 +1,133 @@
+{
+  "all_four_phases_completed": true,
+  "audit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-driver-v1/pilot-audit.json",
+    "sha256": "1f8aeb13b9432c6febc974ed6666fbe006e36df661b40a1cbd50a65468c7eb84"
+  },
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_coil_holdouts.py",
+    "sha256": "76a2a267718847fa6128c606549b3d433bf3026fa9fc751ec6faa22aba537a5a"
+  },
+  "disk_preflight": {
+    "free_bytes": 6268063744,
+    "path": "/Users/sebastianwirkert/workspace/fusion",
+    "required_bytes": 2147483648,
+    "sufficient": true
+  },
+  "full_engineering_admission": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "54cbd8c8a47d67faf33b82bd571d931fe93db955",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "status": "completed",
+  "steps": [
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/validate_normalized_candidates.py",
+        "evidence/natural-auglag-recovery-v1",
+        "evidence/natural-auglag-recovery-v1-validation/holdout.json",
+        "--all-repeats"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/holdout.log",
+        "sha256": "7ec7474779244a016eaf2d78323d4999598dac3379b9c1d67efc716029d48338"
+      },
+      "minimum_observed_free_bytes": 6267166720,
+      "name": "holdout",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/holdout.json",
+        "sha256": "b1078cf40207919b13a0b9cce36725357868c985c1b7e024dfd5729395c23b91"
+      },
+      "returncode": 2,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_normalized_candidates.py",
+        "sha256": "c17aae2aeb69652f392b1e311de4f2dd1e587d6c84c170f6764b6443221fc341"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/bound_continuous_curvature.py",
+        "evidence/natural-auglag-recovery-v1-validation/curvature.json",
+        "--holdout",
+        "evidence/natural-auglag-recovery-v1-validation/holdout.json",
+        "--study",
+        "evidence/natural-auglag-recovery-v1/summary.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/curvature.log",
+        "sha256": "dfe95dca75efcf16447b6e1d3c1fbb4623ae8ebc790be764a63cbf00b03884cb"
+      },
+      "minimum_observed_free_bytes": 6267097088,
+      "name": "curvature",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/curvature.json",
+        "sha256": "c6a80f98800210e10ce5055d7e9dc26d099a1b877503243a8c80e526b3f95fdd"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_curvature.py",
+        "sha256": "fb87e1a1d0f29f1663a9417cd08ecbd027cf6179ba3d4483740177b4018afd18"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/bound_continuous_coil_clearance.py",
+        "evidence/natural-auglag-recovery-v1-validation/holdout.json",
+        "evidence/natural-auglag-recovery-v1-validation/clearance.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/clearance.log",
+        "sha256": "58ae7a9654cea974324e015bb1a51c49f635882be9bf879331a2befa834ef9ba"
+      },
+      "minimum_observed_free_bytes": 6267068416,
+      "name": "clearance",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/clearance.json",
+        "sha256": "67ab5087779ff77f1c6bc35541ac24d049b7ea6855cd08063370218b4b1a33ba"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_coil_clearance.py",
+        "sha256": "ed02d56beea8b6cffccacfd0a289492a0cbba686e7e6bdd0be263d6e81903db2"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/validate_direct_native_constraints.py",
+        "evidence/natural-auglag-recovery-v1-validation/holdout.json",
+        "evidence/natural-auglag-recovery-v1-validation/native.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/native.log",
+        "sha256": "a48c46604be2b7887d969cd71cfa0f15a656ddbe7280bbdbd9a65efa0ec0d9c2"
+      },
+      "minimum_observed_free_bytes": 6267047936,
+      "name": "native",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/native.json",
+        "sha256": "7d30147ab28988b37b914f70e93fe64f331d11e79ff923b04334bdd71a10cbbe"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_direct_native_constraints.py",
+        "sha256": "60478504a0ea5d69f07be2e7398f2dc7fc2952d9fc711ba3c5cb27f4b9d96149"
+      },
+      "status": "completed"
+    }
+  ],
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1/summary.json",
+    "sha256": "267bebf0f92ba8d35db4f00848abc0c654342c34a304f28f25a31abdf69a09da"
+  },
+  "used_for_optimizer_feedback": false
+}

@@ -1,7 +1,7 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
 Stand: 12. September 2026, nach frischem nativen Neuaufbau und QI-Gauge-Audit;
-AL-Wiederholung auditiert, feine Abnahme folgt.
+AL-Wiederholung vollständig abgelehnt, separater Skalierungsversuch folgt.
 Dieses Dokument enthält die aktuelle Einschätzung; historische optimistischere
 Aussagen im Journal werden dadurch nicht wieder gültig.
 
@@ -26,7 +26,7 @@ und Verbesserungen daran zertifizieren.
 | Direkte Randbedingungen | 137 Ungleichungen qualifiziert; SLSQP-Pilot mit zwei exakt gleichen 256-Bundle-Läufen | Ausgewählte Felder bestehen Geometrie und zusätzliche native Metriken; Flux bleibt Faktor 23,3 über Grenze. Nicht konvergiert, nicht zulässig |
 | Lokales Fluxmodell | Quadratische Vorhersage an allen vier festen Testschritten richtig im Vorzeichen; Fehler mindestens 99,907% kleiner als linear | Vollständiger nativer Jacobianvergleich und unabhängiger Kern-Audit bestehen. Lokale Diagnose, noch kein neuer Optimierungserfolg |
 | QI-Gauge | Alle84 alten Traces exakt wiederholt; 25 nfp3-Familien wechseln bei unverändertem Feld die Vorzeichenklasse | Unabhängige Zuordnungs-/Kettenregelprüfung besteht; drei feste Gauge-Steigungen, kein global gauge-unabhängiger Maximum-J-Maßstab |
-| Software | 406 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte QI-/W7-X-Datenregression jetzt auch nach frischem Neuaufbau bestanden; fehlende W7-X-Daten werden im Gegenlauf zurückgewiesen. 20 Warnungen derselben bekannten NumPy/netCDF4-Art; keine Hosted-CI-Ausführung |
+| Software | 413 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte QI-/W7-X-Datenregression jetzt auch nach frischem Neuaufbau bestanden; fehlende W7-X-Daten werden im Gegenlauf zurückgewiesen. 20 Warnungen derselben bekannten NumPy/netCDF4-Art; keine Hosted-CI-Ausführung |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [Ableitungen](optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md),
@@ -60,8 +60,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    gesondert aufarbeiten: erster Arm vollständig, zweiter nur bis Bundle 700
    gespeichert. Einzelarm/Präfix inzwischen unabhängig geprüft; separat festgelegte
    frische Wiederholung jetzt vollständig und unabhängig qualifiziert, beide
-   historischen Präfixe exakt. Der grobe Flux bleibt Faktor27 zu groß;
-   vollständige feine Abnahme folgt.
+   historischen Präfixe exakt. Vollständige feine Abnahme abgeschlossen:
+   Geometrie/nativ bestehen, Flux Faktor26,9859 zu groß. Jetzt die separat
+   vorab festgelegte Jacobispalten-Skalierung bei sonst identischen Einstellungen.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
    Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024

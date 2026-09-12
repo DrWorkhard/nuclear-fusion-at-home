@@ -1,0 +1,187 @@
+{
+  "all_pass": true,
+  "candidates": [
+    {
+      "checks": {
+        "arclength_variation_all_levels_pass": true,
+        "arclength_variation_finite": true,
+        "arclength_variation_refinement": true,
+        "linking_zero_all_levels": true,
+        "msc_all_levels_pass": true,
+        "msc_finite": true,
+        "msc_refinement": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/natural-auglag-recovery-v1/natural-auglag-1/best_field.json",
+        "sha256": "79b19f89d491c86b5733ec14eda382e045ee5341601b6bfefefe8c755fa0120d"
+      },
+      "levels": [
+        {
+          "arclength_variation": [
+            1.7352391335399575,
+            2.91250805873234,
+            3.194924013004506,
+            2.483467229077583
+          ],
+          "linking_number": 0.0,
+          "msc": [
+            3.7700358276070283,
+            4.024755867479619,
+            5.331372951165806,
+            4.652416645768832
+          ],
+          "resolution": 200
+        },
+        {
+          "arclength_variation": [
+            1.7352391335399568,
+            2.91250805873234,
+            3.1949240130045053,
+            2.4834672290775837
+          ],
+          "linking_number": 0.0,
+          "msc": [
+            3.7700358276070265,
+            4.024755867479693,
+            5.331372951165615,
+            4.652416645766466
+          ],
+          "resolution": 800
+        },
+        {
+          "arclength_variation": [
+            1.7352391335399575,
+            2.9125080587323406,
+            3.194924013004504,
+            2.483467229077583
+          ],
+          "msc": [
+            3.7700358276070265,
+            4.024755867479694,
+            5.331372951165614,
+            4.652416645766464
+          ],
+          "resolution": 3200
+        }
+      ],
+      "method": "direct-r1",
+      "pass": true
+    },
+    {
+      "checks": {
+        "arclength_variation_all_levels_pass": true,
+        "arclength_variation_finite": true,
+        "arclength_variation_refinement": true,
+        "linking_zero_all_levels": true,
+        "msc_all_levels_pass": true,
+        "msc_finite": true,
+        "msc_refinement": true
+      },
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/natural-auglag-recovery-v1/natural-auglag-2/best_field.json",
+        "sha256": "79b19f89d491c86b5733ec14eda382e045ee5341601b6bfefefe8c755fa0120d"
+      },
+      "levels": [
+        {
+          "arclength_variation": [
+            1.7352391335399575,
+            2.91250805873234,
+            3.194924013004506,
+            2.483467229077583
+          ],
+          "linking_number": 0.0,
+          "msc": [
+            3.7700358276070283,
+            4.024755867479619,
+            5.331372951165806,
+            4.652416645768832
+          ],
+          "resolution": 200
+        },
+        {
+          "arclength_variation": [
+            1.7352391335399568,
+            2.91250805873234,
+            3.1949240130045053,
+            2.4834672290775837
+          ],
+          "linking_number": 0.0,
+          "msc": [
+            3.7700358276070265,
+            4.024755867479693,
+            5.331372951165615,
+            4.652416645766466
+          ],
+          "resolution": 800
+        },
+        {
+          "arclength_variation": [
+            1.7352391335399575,
+            2.9125080587323406,
+            3.194924013004504,
+            2.483467229077583
+          ],
+          "msc": [
+            3.7700358276070265,
+            4.024755867479694,
+            5.331372951165614,
+            4.652416645766464
+          ],
+          "resolution": 3200
+        }
+      ],
+      "method": "direct-r2",
+      "pass": true
+    }
+  ],
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_direct_native_constraints.py",
+    "sha256": "60478504a0ea5d69f07be2e7398f2dc7fc2952d9fc711ba3c5cb27f4b9d96149"
+  },
+  "full_engineering_admission": false,
+  "holdout": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/holdout.json",
+    "sha256": "b1078cf40207919b13a0b9cce36725357868c985c1b7e024dfd5729395c23b91"
+  },
+  "native_sources": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curveobjectives.py",
+      "sha256": "f6395ccb7977b84b6fe8cf5df96ff6d7debe7fdbf9190b4cd7441a4bcdcae51d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curvexyzfourier.py",
+      "sha256": "c3c9e0cdcc6420b408dd39dcd815fc8860a4c78dd3302491fa24cc6fdacdc10c"
+    }
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/DIRECT_SLSQP_PILOT_PROTOCOL.md",
+    "sha256": "cba065ac70a1eecf1737163277efbf9266ba1e6d12e4e2ece606230a1887b2e8"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "54cbd8c8a47d67faf33b82bd571d931fe93db955",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "status": "completed",
+  "thresholds": {
+    "a0": 10.100286074838271,
+    "arclength_variation_threshold": 102.0157787935719,
+    "cc_threshold": 0.10890780635810987,
+    "coil_width": 0.039602838675676315,
+    "cs_threshold": 0.12870922569594803,
+    "curvature_threshold": 10.100286074838271,
+    "finite_build_width": 0.05,
+    "flux_threshold": 8e-09,
+    "force_threshold": 0.0,
+    "length_threshold": 21.771660561953055,
+    "major_radius": 1.0098736979848935,
+    "minor_radius": 0.16831206437162433,
+    "msc_threshold": 10.100286074838271,
+    "torque_threshold": 0.0,
+    "torsion_threshold": 10.100286074838271
+  },
+  "used_for_optimizer_feedback": false
+}

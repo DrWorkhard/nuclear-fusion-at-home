@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-12 — Close all recovery holdouts; guard the separate scaled-study start
+
+- At54cbd8c all four holdout phases complete with exit2/0/0/0. Both candidates
+  fine flux2.698587472179773e-7 fails; length219.8992300m, curvature upper
+  0.83335802/m, continuous clearance lower1.08660607m, plasma gap3.17350852m
+  pass their fixed screens. Native metrics/refinement/linking checks all pass.
+- All resolution levels retained, including unresolved200-point curvature;
+  smallest observed free6267047936Bytes. No source, objective or threshold changes.
+  Bounded recovery now closed, not long-term step2. FindingF-063 and all affected
+  overviews/readiness updated. No old incomplete-study flag rewritten.
+- New scaled-start driver requires committed unchanged prior four reports and
+  documentation plus passing original-prefix audit. Seven prerequisite/commit
+  controls pass; unchanged mathematical runner retains preregistered hashes.
+  Full suite413 passes with20 known warnings; Ruff/docs/diff pass before recording
+  and starting new study.
+
 ## 2026-09-12 — Unchanged AL recovery completes and passes both independent audits
 
 - Two fresh1033-bundle arms, exact full histories/stages/work/counters. Both

@@ -6,8 +6,9 @@ Stand: 12. September 2026. [Projektfrage](README.md) · [Ergebnisstand](STATUS.m
 
 Eine klassische, unabhängig zulässige LPQA-Spulenkonstruktion. Die bisherigen
 Zeit- und Auswertungsbudgets sind sauber geprüft, aber alle neuen Kandidaten
-fallen durch den Holdout. Deshalb zuerst die Durchsetzung der Randbedingungen
-verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
+fallen durch den Holdout. Bei den neuesten Kandidaten bestehen die geprüften
+Geometriebedingungen; jetzt den Magnetfeldfehler unter unveränderten Grenzen
+senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
 
 1. Erledigt: konservative glatte Ungleichungen aus roher Länge, Krümmung und
    Abständen implementiert; analytische Kontrollen und vollständige
@@ -33,13 +34,14 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    erster Arm und gespeichertes 700-Bundle-Präfix unabhängig bestätigt. Der native
    Ressourcen-Retry ist bestanden. Die getrennte AL-Wiederholung besteht nun
    beide vollständigen Suchpfade und historischen Präfixaudits bei unveränderten
-   Optionen. Grober Flux Faktor27 zu hoch; jetzt sämtliche feinen Abnahmen.
+   Optionen. Sämtliche feinen Abnahmen abgeschlossen: Geometrie/nativ bestehen,
+   Flux Faktor26,9859 zu hoch. Dieser begrenzte Versuch ist geschlossen.
    Keine parallelen schweren Installationsarbeiten.
    Keine nachträgliche Budgeterhöhung oder
    veränderte Annahmekriterien.
    Ein anschließender [Jacobispalten-Skalierungsversuch](optimization/NATURAL_AUGLAG_JAC_PROTOCOL.md)
    ist getrennt vorab festgelegt: nur `x_scale=jac` statt1, keine geänderte Physik.
-   Erst nach vollständig geschlossener Recovery/Abnahme ausführen.
+   Recovery/Abnahme ist geschlossen; nach deren Commit jetzt ausführen.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

@@ -1,5 +1,19 @@
 # Findings log
 
+## F-063 — Unchanged natural-AL recovery is reproducible but fails independent flux
+
+**Class:** preregistered repeated classical construction, independently rejected
+**Date:** 2026-09-12
+
+Two new1033-bundle arms and old1033/700 prefixes match exactly. Both independent
+search audits pass. All four fine holdout phases complete: geometry, continuous
+curvature/inter-coil bounds and native extra metrics pass, but fine flux
+2.698587472179773e-7 is26.9859 times the unchanged1e-8 limit. The curvature
+enclosure is unresolved at200 points and passes from400; all levels retained.
+No convergence, feasible-baseline, full-engineering or method-superiority claim.
+Original IO-interrupted study remains incomplete. See
+[closed recovery](../optimization/NATURAL_AUGLAG_RECOVERY_RESULTS.md).
+
 ## F-062 — Fresh local native reconstruction and scientific integration now witnessed
 
 **Class:** fresh-install/build/solver regression with independently archived outputs

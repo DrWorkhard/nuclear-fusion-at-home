@@ -1,0 +1,397 @@
+{
+  "candidates": [
+    {
+      "a0": 10.100286074838271,
+      "actual_mesh_enclosure_or_self_intersection_certified": false,
+      "centerline_requirement_pass": true,
+      "continuous_centerline_lower_bound_reactor_m": 1.0866060702842504,
+      "continuous_distance_lower_bound": 0.10758171226369441,
+      "curve_bounds": [
+        {
+          "acceleration_bound": 344.58903441955994,
+          "center": [
+            1.1990300276046375,
+            0.21282737075884725,
+            0.039496640977197496
+          ],
+          "radius_bound": 2.171667067113856,
+          "speed_bound": 21.88713119659184
+        },
+        {
+          "acceleration_bound": 373.9323503622324,
+          "center": [
+            1.0540194323857688,
+            0.5970494613244155,
+            0.08736402731743344
+          ],
+          "radius_bound": 2.2926066467512483,
+          "speed_bound": 23.665706969061965
+        },
+        {
+          "acceleration_bound": 369.16835508828905,
+          "center": [
+            0.6927936349832415,
+            0.8707267439276718,
+            0.08132353385609638
+          ],
+          "radius_bound": 2.068413340233147,
+          "speed_bound": 22.23453843997661
+        },
+        {
+          "acceleration_bound": 414.12288570647763,
+          "center": [
+            0.2637274495710066,
+            1.003874872948273,
+            0.05339315097426275
+          ],
+          "radius_bound": 2.195180056665319,
+          "speed_bound": 23.765088231669132
+        },
+        {
+          "acceleration_bound": 344.58903441955994,
+          "center": [
+            1.1990300276046375,
+            -0.21282737075884725,
+            -0.039496640977197496
+          ],
+          "radius_bound": 2.171667067113856,
+          "speed_bound": 21.88713119659184
+        },
+        {
+          "acceleration_bound": 373.9323503622324,
+          "center": [
+            1.0540194323857688,
+            -0.5970494613244155,
+            -0.08736402731743344
+          ],
+          "radius_bound": 2.2926066467512483,
+          "speed_bound": 23.665706969061965
+        },
+        {
+          "acceleration_bound": 369.16835508828905,
+          "center": [
+            0.6927936349832415,
+            -0.8707267439276718,
+            -0.08132353385609638
+          ],
+          "radius_bound": 2.068413340233147,
+          "speed_bound": 22.23453843997661
+        },
+        {
+          "acceleration_bound": 414.12288570647763,
+          "center": [
+            0.2637274495710066,
+            -1.003874872948273,
+            -0.05339315097426275
+          ],
+          "radius_bound": 2.195180056665319,
+          "speed_bound": 23.765088231669132
+        },
+        {
+          "acceleration_bound": 344.58903441955994,
+          "center": [
+            -1.1990300276046375,
+            -0.2128273707588471,
+            0.039496640977197496
+          ],
+          "radius_bound": 2.171667067113856,
+          "speed_bound": 21.88713119659184
+        },
+        {
+          "acceleration_bound": 373.9323503622324,
+          "center": [
+            -1.0540194323857688,
+            -0.5970494613244154,
+            0.08736402731743344
+          ],
+          "radius_bound": 2.2926066467512483,
+          "speed_bound": 23.665706969061965
+        },
+        {
+          "acceleration_bound": 369.16835508828905,
+          "center": [
+            -0.6927936349832416,
+            -0.8707267439276717,
+            0.08132353385609638
+          ],
+          "radius_bound": 2.068413340233147,
+          "speed_bound": 22.23453843997661
+        },
+        {
+          "acceleration_bound": 414.12288570647763,
+          "center": [
+            -0.2637274495710067,
+            -1.003874872948273,
+            0.05339315097426275
+          ],
+          "radius_bound": 2.195180056665319,
+          "speed_bound": 23.765088231669132
+        },
+        {
+          "acceleration_bound": 344.58903441955994,
+          "center": [
+            -1.1990300276046375,
+            0.2128273707588471,
+            -0.039496640977197496
+          ],
+          "radius_bound": 2.171667067113856,
+          "speed_bound": 21.88713119659184
+        },
+        {
+          "acceleration_bound": 373.9323503622324,
+          "center": [
+            -1.0540194323857688,
+            0.5970494613244154,
+            -0.08736402731743344
+          ],
+          "radius_bound": 2.2926066467512483,
+          "speed_bound": 23.665706969061965
+        },
+        {
+          "acceleration_bound": 369.16835508828905,
+          "center": [
+            -0.6927936349832416,
+            0.8707267439276717,
+            -0.08132353385609638
+          ],
+          "radius_bound": 2.068413340233147,
+          "speed_bound": 22.23453843997661
+        },
+        {
+          "acceleration_bound": 414.12288570647763,
+          "center": [
+            -0.2637274495710067,
+            1.003874872948273,
+            -0.05339315097426275
+          ],
+          "radius_bound": 2.195180056665319,
+          "speed_bound": 23.765088231669132
+        }
+      ],
+      "different_coil_tube_gap_lower_bound_device_m": 0.036871034145039644,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/natural-auglag-recovery-v1/natural-auglag-1/best_field.json",
+        "sha256": "79b19f89d491c86b5733ec14eda382e045ee5341601b6bfefefe8c755fa0120d"
+      },
+      "global_acceleration_bound": 414.12288570647763,
+      "global_separation_bound": 7.007959688084144,
+      "global_speed_bound": 23.765088231669132,
+      "idealized_section_enclosing_radius_device_m": 0.03535533905932738,
+      "method": "direct-r1",
+      "sampled_minimum_device_m": 0.1076018516730676,
+      "squared_distance_interpolation_error_bound": 4.333669884503864e-06
+    },
+    {
+      "a0": 10.100286074838271,
+      "actual_mesh_enclosure_or_self_intersection_certified": false,
+      "centerline_requirement_pass": true,
+      "continuous_centerline_lower_bound_reactor_m": 1.0866060702842504,
+      "continuous_distance_lower_bound": 0.10758171226369441,
+      "curve_bounds": [
+        {
+          "acceleration_bound": 344.58903441955994,
+          "center": [
+            1.1990300276046375,
+            0.21282737075884725,
+            0.039496640977197496
+          ],
+          "radius_bound": 2.171667067113856,
+          "speed_bound": 21.88713119659184
+        },
+        {
+          "acceleration_bound": 373.9323503622324,
+          "center": [
+            1.0540194323857688,
+            0.5970494613244155,
+            0.08736402731743344
+          ],
+          "radius_bound": 2.2926066467512483,
+          "speed_bound": 23.665706969061965
+        },
+        {
+          "acceleration_bound": 369.16835508828905,
+          "center": [
+            0.6927936349832415,
+            0.8707267439276718,
+            0.08132353385609638
+          ],
+          "radius_bound": 2.068413340233147,
+          "speed_bound": 22.23453843997661
+        },
+        {
+          "acceleration_bound": 414.12288570647763,
+          "center": [
+            0.2637274495710066,
+            1.003874872948273,
+            0.05339315097426275
+          ],
+          "radius_bound": 2.195180056665319,
+          "speed_bound": 23.765088231669132
+        },
+        {
+          "acceleration_bound": 344.58903441955994,
+          "center": [
+            1.1990300276046375,
+            -0.21282737075884725,
+            -0.039496640977197496
+          ],
+          "radius_bound": 2.171667067113856,
+          "speed_bound": 21.88713119659184
+        },
+        {
+          "acceleration_bound": 373.9323503622324,
+          "center": [
+            1.0540194323857688,
+            -0.5970494613244155,
+            -0.08736402731743344
+          ],
+          "radius_bound": 2.2926066467512483,
+          "speed_bound": 23.665706969061965
+        },
+        {
+          "acceleration_bound": 369.16835508828905,
+          "center": [
+            0.6927936349832415,
+            -0.8707267439276718,
+            -0.08132353385609638
+          ],
+          "radius_bound": 2.068413340233147,
+          "speed_bound": 22.23453843997661
+        },
+        {
+          "acceleration_bound": 414.12288570647763,
+          "center": [
+            0.2637274495710066,
+            -1.003874872948273,
+            -0.05339315097426275
+          ],
+          "radius_bound": 2.195180056665319,
+          "speed_bound": 23.765088231669132
+        },
+        {
+          "acceleration_bound": 344.58903441955994,
+          "center": [
+            -1.1990300276046375,
+            -0.2128273707588471,
+            0.039496640977197496
+          ],
+          "radius_bound": 2.171667067113856,
+          "speed_bound": 21.88713119659184
+        },
+        {
+          "acceleration_bound": 373.9323503622324,
+          "center": [
+            -1.0540194323857688,
+            -0.5970494613244154,
+            0.08736402731743344
+          ],
+          "radius_bound": 2.2926066467512483,
+          "speed_bound": 23.665706969061965
+        },
+        {
+          "acceleration_bound": 369.16835508828905,
+          "center": [
+            -0.6927936349832416,
+            -0.8707267439276717,
+            0.08132353385609638
+          ],
+          "radius_bound": 2.068413340233147,
+          "speed_bound": 22.23453843997661
+        },
+        {
+          "acceleration_bound": 414.12288570647763,
+          "center": [
+            -0.2637274495710067,
+            -1.003874872948273,
+            0.05339315097426275
+          ],
+          "radius_bound": 2.195180056665319,
+          "speed_bound": 23.765088231669132
+        },
+        {
+          "acceleration_bound": 344.58903441955994,
+          "center": [
+            -1.1990300276046375,
+            0.2128273707588471,
+            -0.039496640977197496
+          ],
+          "radius_bound": 2.171667067113856,
+          "speed_bound": 21.88713119659184
+        },
+        {
+          "acceleration_bound": 373.9323503622324,
+          "center": [
+            -1.0540194323857688,
+            0.5970494613244154,
+            -0.08736402731743344
+          ],
+          "radius_bound": 2.2926066467512483,
+          "speed_bound": 23.665706969061965
+        },
+        {
+          "acceleration_bound": 369.16835508828905,
+          "center": [
+            -0.6927936349832416,
+            0.8707267439276717,
+            -0.08132353385609638
+          ],
+          "radius_bound": 2.068413340233147,
+          "speed_bound": 22.23453843997661
+        },
+        {
+          "acceleration_bound": 414.12288570647763,
+          "center": [
+            -0.2637274495710067,
+            1.003874872948273,
+            -0.05339315097426275
+          ],
+          "radius_bound": 2.195180056665319,
+          "speed_bound": 23.765088231669132
+        }
+      ],
+      "different_coil_tube_gap_lower_bound_device_m": 0.036871034145039644,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/natural-auglag-recovery-v1/natural-auglag-2/best_field.json",
+        "sha256": "79b19f89d491c86b5733ec14eda382e045ee5341601b6bfefefe8c755fa0120d"
+      },
+      "global_acceleration_bound": 414.12288570647763,
+      "global_separation_bound": 7.007959688084144,
+      "global_speed_bound": 23.765088231669132,
+      "idealized_section_enclosing_radius_device_m": 0.03535533905932738,
+      "method": "direct-r2",
+      "sampled_minimum_device_m": 0.1076018516730676,
+      "squared_distance_interpolation_error_bound": 4.333669884503864e-06
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_coil_clearance.py",
+      "sha256": "ed02d56beea8b6cffccacfd0a289492a0cbba686e7e6bdd0be263d6e81903db2"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clearance_bounds.py",
+      "sha256": "2d1332da47ed3b77c35418c5fca6063608839730e0a3acc5b043520734e2fd00"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1"
+    }
+  ],
+  "holdout": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1-validation/holdout.json",
+    "sha256": "b1078cf40207919b13a0b9cce36725357868c985c1b7e024dfd5729395c23b91"
+  },
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/geometry/CONTINUOUS_COIL_CLEARANCE_CHECK.md",
+    "sha256": "484e2448d43eb219e76af426d4ab08dc96d1f27fe25a94b4627aef8630024750"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "54cbd8c8a47d67faf33b82bd571d931fe93db955",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "retrospective": true,
+  "schema_version": 1
+}

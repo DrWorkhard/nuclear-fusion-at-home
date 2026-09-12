@@ -34,9 +34,31 @@ DOF-Zuordnung ist separat überprüft.
   6274572288Bytes bleibt über der2-GiB-Reserve. Suchlaufzeiten sind keine
   kontrollierten Methodenvergleichszeiten.
 
-## Noch offene Abnahme
+## Vollständige feine Abnahme: unzulässig wegen Magnetfeldfehler
 
-Jetzt beide Felder mit allen vier bestehenden feinen Prüfwerkzeugen bewerten.
-Keine neue Grenze und kein Feedback in den abgeschlossenen Suchlauf. Erst danach
-ist dieser begrenzte Versuch vollständig geschlossen und der vorab registrierte
-Jacobiskalierungsversuch ausführbar. Langfristiger Schritt2 bleibt offen.
+Bei `54cbd8c` führt der sequenzielle Driver alle vier bestehenden Werkzeuge aus.
+Die Berichte liegen in `evidence/natural-auglag-recovery-v1-validation/`.
+Beide Felder liefern in sämtlichen geprüften Ergebnisgrößen gleiche Werte.
+
+| Größe | Ergebnis | Feste Grenze / Bewertung |
+| --- | --- | --- |
+| Roh-Flux, feinstes Oberflächen-/Spulengitter | 2,698587472179773e-7 | <=1e-8: **FAIL, Faktor26,9859** |
+| Gesamtlänge, vier Basisspulen | 219,89923004246256m | <=220m: PASS |
+| Kontinuierliche Krümmungsoberschranke | 0,8333580202880169/m | <=1/m: PASS |
+| Kontinuierliche Spulenabstandsuntergrenze | 1,0866060702842504m | >=1,06m: PASS |
+| Feinster Spulen-Plasma-Abstand | 3,1735085164845853m | >=1,3m: PASS im Gittertest |
+| Native mittlere quadratische Krümmung, Maximum | 5,331372951165614 | Alle Auflösungen/Verfeinerung PASS |
+| Native Bogenlängenvarianz, Maximum | 3,194924013004504 | Alle Auflösungen/Verfeinerung PASS |
+
+Alle vier Fluxgitter und geometrischen Auflösungen erhalten; Fluxverfeinerung
+besteht. Die kontinuierliche Krümmung ist bei200 Punkten noch unaufgelöst,
+ab400 Punkten PASS; der unaufgelöste Level bleibt dokumentiert. Native
+Verkettungszahl auf beiden festgelegten Gittern null. Mittleres |B| im feinsten
+Fluxgitter0,9461251760804333T. Keine vollständige Volumen-/Ingenieurfreigabe.
+
+Driver-Exitcodes2/0/0/0 bedeuten reguläre Fluxablehnung und anschließend
+vollständig ausgeführte weitere Prüfungen, keinen verschwiegenen Ausführungsfehler.
+Minimale beobachtete freie Kapazität6267047936Bytes >2GiB. Keine neuen Grenzen,
+keine Budgetverlängerung und kein Feedback in den abgeschlossenen Suchlauf.
+Dieser begrenzte Versuch ist vollständig geschlossen; langfristiger Schritt2
+bleibt offen. Nächster getrennt registrierter Versuch: Jacobispalten-Skalierung.
