@@ -69,6 +69,15 @@ bounded result; missing author data is not the only remaining blocker.
       independent audit and all fine holdouts:11.4% lower flux at this start but
       greater curvature and still23.91 times over the fixed flux limit. No
       Pareto dominance or feasible baseline (NATURAL_AUGLAG_JAC_RESULTS.md).
+      Five metadata-selected archive fields now pass independent reconstruction
+      but all raw flux values remain about100 times too high despite clipped
+      reported zeros. A separately qualified normalized first archive start
+      completes exact AL repeats, independent audit and all four fine holdouts:
+      geometry/native pass, flux8.955120977790992e-8 still fails1e-8 by8.955x.
+      A separate2048-bundle SLSQP polishing study is preregistered/prepared but
+      not yet executed;1033 bundles of AL construction are counted explicitly.
+      See [alternate start](../optimization/UPSTREAM_START_RESULTS.md) and
+      [polishing](../optimization/SLSQP_POLISH_RESULTS.md). G2 remains open.
 
 ## G3 — W7-X regression
 
@@ -106,6 +115,13 @@ bounded result; missing author data is not the only remaining blocker.
       finds opposite radial sign classes in 25 nfp3 families under relabeling
       alone. Independent chain-rule checks pass; this confirms an interpretation
       limit, not a field improvement (QI_RADIAL_GAUGE_RESULTS.md).
+      Signed Clebsch comparison gives19/24 complete grid passes, retaining five
+      poloidal failures. Independent decomposition excludes radial interpolation
+      alone; fixed-mode projection also fails1e-5 despite stable64/128 sampling.
+      Four historical Wouts identify9.0, not an exact reconstructable producer.
+      A new16-cell radial/angular resolution study is running; partial solver
+      convergence is not a field, drift or G4 qualification. See
+      [fresh resolution](../qi/QI_FRESH_RESOLUTION_RESULTS.md).
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).

@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-12 — Synchronize readiness ledger with already closed optimization/QI findings
+
+- G2 now explicitly retains the five rejected raw-flux archive fields and the
+  fine8.955x-rejected AL alternate start; polishing is prepared, not executed.
+- G4 records19/24 Clebsch, negative interpolation/spectral explanations, historical
+ 9.0 producer limit and currently incomplete fresh matrix. No checkbox advanced.
+- Existing details provide the evidence; no new calculation. Both READMEs/status/
+  plan/index remain accurate, docs/diff checks pass. This closes a stale-detail
+  documentation gap rather than a scientific gate.
+
 ## 2026-09-12 — Full regression and explicit reused-kernel binding before new QI field evaluation
 
 - Full suite523 tests passes with53 known NumPy/netCDF fixture deprecations;
