@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-12 — Qualify full QI coordinate study and independent audit on toy matrix
+
+- Exact12+48 source rows, old128-grid replay before any new coordinates, full
+  64/128 saved root/field grids, frozen original/new fidelity and refinement
+  screens. Closed committed coil and six-mesh predecessors required.
+- Three new controls pass, including complete60-row/120-grid toy execution,
+  61,440 independent scalar-root audits and rejection of altered fidelity.
+  NaN negative test exposed Python-max hiding a nonfinite second position field
+  in the new auditor; explicit matched finite-array checks fix it before any
+  real QI evaluation. New real-data reports were not affected or overwritten.
+- Initial Ruff issues (unused import, line lengths and loop-variable binding)
+  corrected; targeted tests/Ruff/docs/diff pass. Detail/index and both READMEs/
+  status/plan reviewed. Full regression613 passed with144 fixture deprecations,
+  Ruff/docs/diff pass. Strict import warning remains open; physical study not run.
+
 ## 2026-09-12 — Close real six-mesh study and independent all-witness audit
 
 - v2 at f5ccea2: five complete nonlocal passes; finest scan terminates at exactly

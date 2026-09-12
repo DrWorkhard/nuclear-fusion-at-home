@@ -45,3 +45,37 @@ unveränderten strengen analytischen/skalaren Übereinstimmungen. Keine physikal
 Akzeptanzgrenze geändert. Alle neuen Dateiaufrufe betreffen kleine synthetische
 Testdaten, keine historischen/frischen QI-Gleichgewichte. Vollständige Studie und
 Datei-/Ergebnisaudit noch umzusetzen, kein neuer QI-Fidelitätsbefund.
+
+## Vollständiger Studien-/Auditpfad an einer synthetischen Matrix geprüft
+
+Der neue Treiber verlangt exakt zwölf historische und48 frische Wout/Radius-
+Paare samt abgeschlossenem QI-Originalaudit und committed SLSQP-/Netzvorgängern.
+Er reproduziert zuerst alle60 gespeicherten128er VMEC-Feldarrays, einschließlich
+der gespeicherten nativen/Clebsch-Vektoren, bevor ein neuer Winkel ausgewertet
+wird. Danach sämtliche64/128-Gitter; alte und neue Vergleichsfehler stehen
+nebeneinander. Fehlende Koordinatenreferenzen werden negativ statt still entfernt.
+
+Der separate Auditor berechnet die32x32 gemeinsamen Punkte je Datei/Radius mit
+eigenen skalaren Roots/Fouriersummen, prüft Quellidentität, gespeicherte Root-/Feld-
+Zuordnung, beide Tangenten, verschachtelte Arrays, vollständige Fehlerarithmetik,
+alte Fidelitätsklassen und neue Aggregate. Theta-Vergleich ausdrücklich absolut
+<=1e-10, andere Feldgrößen normiert; keine Umdefinition der ursprünglichen Studie.
+Der alte128er Replayeintrag ist als Ausführungs-Gate protokolliert; die neue
+unabhängige Wout-Gegenrechnung betrifft die vorab festgelegten32er Punkte.
+
+Drei zusätzliche Softwarekontrollen bestehen, darunter eine vollständige
+synthetische60-Zeilen-Matrix mit120 Gittern und61.440 unabhängigen skalaren
+Punktinversionen. Ein absichtlich veränderter Vergleichswert wird abgelehnt.
+Eine NaN-Negativkontrolle fand vor echter Ausführung einen Fehler im neuen
+Auditor: Python-max konnte ein NaN im zweiten Positionsanteil verdecken.
+Explizite Form-/Endlichkeitsprüfungen aller Eingabearrays beheben dies; die
+Negativkontrolle besteht. Keine reale QI-Rechnung oder Evidenz war betroffen.
+
+Nächster Schritt: unveränderte registrierte echte Matrix erst nach Commit
+dieses qualifizierten Pfads ausführen, anschließend separaten Auditor und
+alle negativen Klassifikationen dokumentieren. Alte Autorenreferenzen bleiben.
+
+Gesamtregression vor echter Ausführung:613 Tests bestanden,144 bekannte
+NumPy/netCDF-Fixture-DeprecationWarnings einschließlich der neuen Kontrollen;
+Ruff, Dokumentstruktur und Diffprüfung bestanden. Die separat dokumentierte
+strenge native Importwarnung bleibt offen; keine behauptete ABI-Freiheit.
