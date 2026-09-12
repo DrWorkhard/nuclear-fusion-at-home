@@ -1,5 +1,14 @@
 # Validation log
 
+## 2026-09-12 — Hash-check second explicit set of closed reports
+
+- At96fd644 existing integrity checker verifies21 specified reconstruction,
+  alternate-start, fine-holdout, QI diagnostic/audit, import-warning and producer
+  reports:405 references,313 contexts, all current, zero unresolved. Running QI
+  matrix and unexecuted polishing excluded. Original17-report audit unchanged.
+- No numerical results recomputed or negative result promoted. Detail/index and
+  overviews checked; evidence-integrity tests and docs/diff checks pass before commit.
+
 ## 2026-09-12 — Synchronize readiness ledger with already closed optimization/QI findings
 
 - G2 now explicitly retains the five rejected raw-flux archive fields and the

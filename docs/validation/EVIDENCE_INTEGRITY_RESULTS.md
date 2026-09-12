@@ -18,3 +18,17 @@ Richtigkeit**. Sie durchsucht explizite Pfad-/Hash-Paare der17 Eingabe-JSONs und
 folgt verlinkten Berichten nicht rekursiv. Die bereits getrennt ausgeführten
 numerischen Audits/feinen Abnahmen behalten deshalb ihren eigenen Status,
 einschließlich negativer Fluxergebnisse und offener QI-/Ingenieurqualifikation.
+
+## Ergänzende abgeschlossene Berichte, zweite feste Auswahl
+
+Bei96fd644 wurde eine getrennte Auswahl von21 inzwischen geschlossenen Berichten
+geprüft: LPQA-Rekonstruktion, Startqualifikation, beide vollständigen AL-Arme,
+deren Audit/alle vier feinen Abnahmen, Clebsch-/Interpolations-/Spektraldiagnostik
+mit Audits sowie Importwarnung und Produzenteninventar. Laufende QI-Rechnungen
+und die noch nicht gestartete SLSQP-Nachoptimierung sind ausdrücklich ausgeschlossen.
+
+`evidence/completed-september12-reference-audit-v2.json`:405 Pfad-/Hash-Vorkommen
+in313 Referenzkontexten, alle aktuell hashgleich, null unaufgelöst. Die Auswahl
+ersetzt weder die erste17er Auswahl noch einen rekursiven Gesamtaudit. Negative
+wissenschaftliche Ergebnisse bleiben negativ; es wurden keine neuen Feld-,
+Gleichgewichts- oder Mechanikrechnungen ausgeführt.

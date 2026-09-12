@@ -10,7 +10,7 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 - [netCDF4-Importwarnung](NETCDF_IMPORT_WARNING.md) — Drei Prozessvarianten zeigen NumPys Standardfilter und den weiterhin fehlgeschlagenen strengen nativen Import; keine Umgebungsänderung oder behauptete ABI-Heilung.
 
-- [Evidenzintegrität: Ergebnisse](EVIDENCE_INTEGRITY_RESULTS.md) — 5501 aktuelle Hashverweise in 17 abgeschlossenen Berichten geprüft; Dateiintegrität ist kein Ersatz für physikalische Gegenprüfungen.
+- [Evidenzintegrität: Ergebnisse](EVIDENCE_INTEGRITY_RESULTS.md) — Erste Auswahl:5501 Verweise in17 Berichten; ergänzend405 Verweise in21 weiteren abgeschlossenen Berichten, alle hashgleich. Keine rekursive Gesamtaudit-/Physikbehauptung.
 
 - [Frische native Integration: Ergebnis](FRESH_NATIVE_INTEGRATION_RESULTS.md) — Alle21 Aufbau-/Rechenphasen und sechs strikte Tests bestanden; neue W7-X-Ausgaben, erweiterter Vergleich weiter60/63. Lokale Reproduzierbarkeit belegt, globale Physikgates offen.
 
