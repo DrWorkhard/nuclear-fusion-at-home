@@ -1,5 +1,20 @@
 # Findings log
 
+## F-058 — GN guard compared gradients built from differently rounded field projections
+
+**Class:** isolated failed-point numerical diagnosis, no construction result
+**Date:** 2026-09-12
+
+The archived native gradient reproduces exactly in a fresh field and remains
+stable after the local-matrix/perturbation checks. D.T*z_native/1e-6 agrees with
+the native full VJP within 3.603e-13; using separately accumulated z_batch gives
+the original 1.638e-10 failure. Native single-point rows and affine current-field
+differences independently pass. The earlier model qualification used native z;
+the new search adapter did not. Next qualify a consistent native-covector guard
+at all three frozen states, retaining the original failed flag and unchanged
+objective, Jacobian, GN matrix and admission limits. See
+[point results](../optimization/GN_FAILED_POINT_RESULTS.md).
+
 ## F-057 — Natural quadratic flux model predicts all four frozen probe changes
 
 **Class:** independently qualified local model, not a construction result

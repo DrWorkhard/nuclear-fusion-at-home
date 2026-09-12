@@ -24,9 +24,12 @@ error by at least 99.907% versus the linear model. Full native Jacobian comparis
 and a separate core audit pass. The subsequent
 [GN trust pilot stopped](docs/optimization/GN_TRUST_PILOT_RESULTS.md) at proposal 29
 because its field/gradient identity guard failed; no second arm or candidate
-admission followed. An exact 29-proposal replay now captures the failed bundle.
-Next: isolated fresh-field, native-matrix and affine-current checks to diagnose
-its cause, without changing tolerances or solver settings.
+admission followed. Exact replay and an
+[isolated point diagnosis](docs/optimization/GN_FAILED_POINT_RESULTS.md) identify
+amplification of separately rounded field projections in the guard; native
+matrices and affine-current checks pass. Next: qualify consistent use of the
+native field projection at three frozen states, preserving the old failed flag,
+objective, gradients, GN matrix and tolerances before another search.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

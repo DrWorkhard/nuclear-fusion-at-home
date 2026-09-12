@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Gespeicherter GN-Fehlerpunkt: Ergebnis](GN_FAILED_POINT_RESULTS.md) — Native Zustandsstabilität und unabhängige Ableitungen bestehen; die separat gerundete Feldprojektion verursacht die Identitätsabweichung im Suchadapter.
 - [Gespeicherter GN-Fehlerpunkt: Protokoll](GN_FAILED_POINT_PROTOCOL.md) — Frische native Auswertung, getrennte Feldkovektoren/Matrizen und unabhängige affine Stromprüfung zur Ursachenunterscheidung.
 - [GN-Fehlerreplay: Protokoll](GN_FAILURE_REPLAY_PROTOCOL.md) — Höchstens 29 Bundles, exakte Wiederholung des gescheiterten Präfixes und vollständige Erfassung des Fehlerpunkts, ohne Grenzwertänderung.
 - [GN-Trust-Pilot: gestoppt](GN_TRUST_PILOT_RESULTS.md) — Nach 28 vollständigen Bundles scheitert die Feld-/Gradientidentität; zweiter Arm nicht gestartet, Fehlerpfad muss den problematischen Punkt vollständig erfassen.

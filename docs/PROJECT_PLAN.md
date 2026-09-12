@@ -20,8 +20,10 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    einschließlich vollständigem nativen Matrixvergleich und Kern-Audit.
 4. Der [GN-Trust-Pilot](optimization/GN_TRUST_PILOT_RESULTS.md) stoppt am 29.
    Vorschlag durch die Feld-/Gradient-Schutzprüfung. Der begrenzte Fehlerreplay
-   stimmt exakt überein und erfasst den vollständigen Punkt. Als Nächstes seine
-   isolierte native Feld-/Matrix-/Stromprüfung; kein weiterer Suchlauf vor Klärung.
+   stimmt exakt überein. Die isolierte Feld-/Matrix-/Stromprüfung identifiziert
+   unterschiedliche Feldprojektionsrundung im Prüfvergleich. Als Nächstes die
+   konsistente native Projektion an drei festen Zuständen qualifizieren, bevor
+   eine neue Suche mit unveränderter Mathematik/Abnahme startet.
    Keine nachträgliche Budgeterhöhung des abgeschlossenen SLSQP-Piloten.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.

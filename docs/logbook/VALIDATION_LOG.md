@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Isolated failed-point routes identify projection-rounding amplification
+
+- 51245f3 precedes the fresh native point evaluation. Archived/full fresh native
+  gradients agree exactly. Batched D with native z differs <=3.603e-13, local
+  native D with native z <=1.304e-13; batched z retains the 1.638e-10 failure.
+- Native spatial matrices, six affine current-field differences, finest fixed
+  geometry direction and restoration checks pass. No cache-instability evidence.
+  The diagnostic preserves each route's separate flag, including the failed one.
+- Root/project READMEs, status and plan now identify native-covector coupling
+  qualification as next, not further cause speculation or an admitted design.
+
 ## 2026-09-12 — Exact GN failure replay and isolated-point diagnostic preparation
 
 - aa59807 replay matches every prior complete value vector/status/parameter hash

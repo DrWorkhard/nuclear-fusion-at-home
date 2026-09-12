@@ -113,8 +113,12 @@ bestätigen die Rechnung. Der anschließende
 [GN-Trust-Pilot](optimization/GN_TRUST_PILOT_RESULTS.md) wurde jedoch am 29.
 Vorschlag durch die Feld-/Gradient-Schutzprüfung gestoppt; die zweite Wiederholung
 startete nicht. Ein begrenzter Wiederholungslauf hat den Fehlerpunkt inzwischen
-exakt reproduziert und vollständig erfasst. Als Nächstes folgt seine isolierte
-Gegenprüfung mit frischen Feld-/Ableitungsberechnungen. Die Grenzwerte
+exakt reproduziert und vollständig erfasst. Die
+[isolierte Gegenprüfung](optimization/GN_FAILED_POINT_RESULTS.md) zeigt eine
+Verstärkung kleiner Rundungsunterschiede zweier Feldprojektionen im Prüfvergleich;
+native Matrizen und unabhängige Stromprüfungen stimmen überein. Als Nächstes
+qualifizieren wir die konsistente Verwendung derselben nativen Feldprojektion
+an drei festen Zuständen. Zielfunktion, Gradienten, GN-Matrix und Grenzwerte
 bleiben unverändert; es liegt weiterhin kein neuer zulässiger Entwurf vor.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).

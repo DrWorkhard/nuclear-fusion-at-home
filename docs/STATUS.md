@@ -53,7 +53,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
 ## Offene Arbeit, nach Bedeutung
 
 1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
-   die Schutzprüfung des am 29. Vorschlag gestoppten GN-Trust-Piloten untersuchen.
+   die korrigierte Kopplung der Schutzprüfung des am 29. Vorschlag gestoppten
+   GN-Trust-Piloten qualifizieren: getrennte Feldprojektionsrundung ist als Ursache
+   der geprüften Abweichung eingegrenzt, native Matrix-/Stromkontrollen bestehen.
    Das quadratische Feldmodell besteht die Prüfung an vier eingefrorenen Proben,
    nicht automatisch an allen neuen Suchpunkten. Die zuvor fehlgeschlagene Abstand-Ableitungsprüfung ist
    unabhängig untersucht, der historische Fehlerstatus bleibt erhalten.
