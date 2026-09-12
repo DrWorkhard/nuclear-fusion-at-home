@@ -66,3 +66,13 @@ sowie Zurückweisung singulärer oder ungültiger Eingaben. Das ist noch keine
 Ausführung der fünf Referenzfälle. Der Ressourcenwächter protokolliert den
 expliziten statischen Befehl und seine Ausgabe; kein Hintergrundstart vor
 abgeschlossener vorheriger Suche/Abnahme.
+
+Zusätzlicher reiner Quellenprüfer liest die vier Fourier-Koeffizientensätze,
+Regularisierungen und alle16 physikalischen Ströme direkt aus dem serialisierten
+Objektgraphen, ohne nativen Deserialisierer. Zehn Kontrollen decken skalierte/
+summierte Ströme, veraltete Konstruktorargumente, Zyklen, Nichtendlichkeit und
+falsche Basisgeometrie ab. Der Runner prüft seine geladenen Daten dagegen.
+Ein separater Endauditor ist vorbereitet: unveränderte Quellparameter, erneute
+komponentenweise Biot-Savart-Summen aus den gespeicherten Arrays sowie
+Abnahmearithmetik/Gittervollständigkeit. Zwei zusätzliche Kreisfeld-/Fehlerkontrollen
+bestehen; keine erneute feine Geometrieprüfung durch diesen reinen Audit behauptet.

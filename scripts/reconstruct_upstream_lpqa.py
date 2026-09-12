@@ -15,6 +15,7 @@ from validate_normalized_candidates import check_candidate
 from fusion_baselines.curvature_bounds import derivatives
 from fusion_baselines.filament_field import filament_field
 from fusion_baselines.provenance import git_state, sha256_file, write_json_atomic
+from fusion_baselines.serialized_field_state import serialized_state
 
 
 def reference(path):
@@ -109,7 +110,8 @@ def main():
                 "scripts/audit_coil_geometry.py",
                 "src/fusion_baselines/filament_field.py",
                 "src/fusion_baselines/curvature_bounds.py",
-                "src/fusion_baselines/flux_metrics.py",
+            "src/fusion_baselines/flux_metrics.py",
+            "src/fusion_baselines/serialized_field_state.py",
             )
         ],
     )
@@ -132,6 +134,7 @@ def main():
             write_json_atomic(args.output, report)
             checked(row["source"])
             source = checked(row["selected_field"])
+            serialized = serialized_state(json.loads(source.read_text()))
             original = load(str(source))
             field = copy_quadrature(original, 200)
             currents = np.array([c.current.get_value() for c in original.coils])
@@ -147,6 +150,15 @@ def main():
                     np.allclose(
                         currents[:4], row["reported"]["final_current_per_coil"], rtol=1e-12, atol=0
                     )
+                ),
+                serialized_currents=np.array_equal(currents, serialized["currents"]),
+                serialized_coefficients=np.array_equal(
+                    np.asarray([c.curve.local_full_x for c in original.coils[:4]]),
+                    serialized["coefficients"],
+                ),
+                serialized_regularizations=np.array_equal(
+                    [float(c.regularization) for c in original.coils[:4]],
+                    serialized["base_regularizations"],
                 ),
             )
             candidate.update(

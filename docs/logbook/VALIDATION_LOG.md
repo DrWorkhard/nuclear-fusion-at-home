@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Prepare independent serialized-state and reconstruction report audits
+
+- Direct graph reader extracts authoritative DOF arrays, not potentially stale
+  constructor values or runtime names; evaluates only supported current sum/scale
+  expressions and rejects cycles, invalid values/order/base aliases. Ten controls
+  pass. Static runner compares native-loaded coefficients/currents/regularizations.
+- Separate final auditor independently replays component-wise Biot-Savart from
+  cached quadratures, source parameter identity and fixed holdout arithmetic.
+  Two pure circle/singularity controls pass; this is preparation, not actual
+  reconstructed-field success. Fine geometry is not recomputed by this auditor.
+- Detail/overviews reviewed; scaling repeat remains active, no new physical
+  success or baseline claim. Full suite454 passes with20 known warnings;
+  Ruff/docs/diff pass before commit.
+
 ## 2026-09-12 — Prepare static field reconstruction and independent Biot-Savart kernel
 
 - Eight analytical/invalid-input controls pass for a direct NumPy filament sum,
