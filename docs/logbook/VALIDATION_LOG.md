@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Preregister static reconstruction of the five fixed upstream fields
+
+- Frozen five inventory-selected field hashes, unchanged coefficients/currents,
+  original LPQA surface/scale and exact16-coil symmetry checks. Quadrature-only
+  reconstruction at200/800 points; no hidden warmstart or current normalization.
+- Additional independent Fourier/Biot-Savart sums at64 fixed surface points,
+  predeclared1e-12 guards, followed by existing four-grid and geometry holdout.
+  Every candidate retained. No full admission until continuum/native/problem-
+  identity/repeat checks follow for any surviving candidate.
+- Execution waits for completed documented scaling trial and all its holdouts.
+  Detail/index recorded, both READMEs/status/plan still correct. Docs/diff pass;
+  no physical reconstruction performed in this preparation step.
+
 ## 2026-09-12 — Complete source-bound upstream LPQA inventory and independent recount
 
 - All5301 tracked LPQA result reports match exact Git blob bytes:31 flat/5270

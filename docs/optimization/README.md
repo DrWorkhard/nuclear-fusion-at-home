@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Vorhandene LPQA-Felder: Rekonstruktionsprotokoll](UPSTREAM_LPQA_RECONSTRUCTION_PROTOCOL.md) — Fünf fest ausgewählte Archivfelder, Symmetrie-/Stromidentität, direkte Biot-Savart-Gegenrechnung und unveränderte feine Gitterabnahme; noch keine vollständige Baselinefreigabe.
+
 - [Vorhandene LPQA-Referenzen: Inventarergebnis](UPSTREAM_LPQA_INVENTORY_RESULTS.md) — 5301 quellgeprüfte Berichte, 27 gemeldet passende Datensätze und fünf unqualifizierte Rekonstruktionskandidaten; 2954 geschwellte Nullmeldungen sind keine Roh-Fluxfreigabe.
 
 - [Vorhandene LPQA-Referenzen: Inventarprotokoll](UPSTREAM_LPQA_INVENTORY_PROTOCOL.md) — Vollständige lokale Metadatenbestandsaufnahme und explizit unqualifizierte Rekonstruktions-Warteliste; keine Gleichsetzung geschwellter Nullwerte mit verschwindendem Feldfehler.
