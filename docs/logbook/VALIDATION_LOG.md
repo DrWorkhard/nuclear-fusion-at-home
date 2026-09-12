@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Natural-flux AL identity and prospective staged experiment
+
+- Added the classical inequality AL residual with native spatial flux, preserving
+  raw Phi/1e-6 rather than the earlier quartic penalty. Seven kernel controls pass
+  for exact merit/gradient identity, multiplier sign, independent direction,
+  hinge and invalid parameters. Ruff/docs/diff checks pass.
+- Preregistered two fresh eight-stage constructions (9+8*128 maximum bundles),
+  fixed multiplier/rho policy, exact analytic solver control and unchanged physical
+  holdouts. Adapter/control must be separately tested and committed before running.
+- Both READMEs/status/plan reviewed: ongoing SLSQP and absent feasible baseline
+  remain current. This preparation changes neither live search nor conclusions.
+
 ## 2026-09-12 — Keep live protocol hash unchanged; separate SLSQP audit commentary
 
 - Moved the purely descriptive auditor addendum from 577016e out of the active

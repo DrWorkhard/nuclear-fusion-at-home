@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Natürliche Flux-AL: Protokoll](NATURAL_AUGLAG_PROTOCOL.md) — Klassische Least-Squares-AL mit rohem Flux, analytisch geprüftem Residuum und festem achtstufigem Budget; keine Gleichsetzung mit früherer quartischer Flux-Strafe.
+
 - [SLSQP-1024: Zwischenstand](DIRECT_SLSQP_1024_RESULTS.md) — Laufender Vergleich; ab Vorschlag 62 kleine, aber für die verlangte exakte Reproduktion unzulässige historische Präfixabweichung. Ursachenklärung und Abnahme offen.
 
 - [Neuer SLSQP-1024-Lauf: Protokoll](DIRECT_SLSQP_1024_PROTOCOL.md) — Klassische Vergleichskonstruktion mit gleichem maximalem Bundlebudget wie GN, unverändertem Originalstart und Pflicht zur Reproduktion des alten 256-Vorschläge-Präfixes.
