@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "vmecpp_version": "0.7.3",
+  "vmecpp_source_commit": "1d7e09941c89210be95b6b20f4d4d555f0a63096",
+  "input": {
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench/plasma_surfaces/input.W7-X_without_coil_ripple_beta0p05_d23p4_tm",
+    "sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8",
+    "nfp": 5,
+    "mpol": 10,
+    "ntor": 10,
+    "ns_array": [
+      11,
+      49,
+      79,
+      101,
+      153,
+      201
+    ],
+    "ftol_array": [
+      1e-08,
+      1e-09,
+      1e-10,
+      1e-11,
+      5e-12,
+      1e-12
+    ],
+    "niter_array": [
+      5000,
+      5000,
+      5000,
+      5000,
+      5000,
+      5000
+    ],
+    "free_boundary": false
+  },
+  "host": {
+    "machine": "arm64",
+    "python": "3.12.13",
+    "max_threads": 1
+  },
+  "elapsed_seconds": 267.01068379200296,
+  "output": {
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmecpp/w7x-stellcoilbench/wout.nc",
+    "sha256": "a67658e2ea96e8f01e00ab0abb93530a2c0ebf582d0a81811cf25c7d5aff2e47",
+    "ier_flag": 0,
+    "residual_converged": true,
+    "niter": 3708,
+    "ns": 201,
+    "mpol": 10,
+    "ntor": 10,
+    "nfp": 5,
+    "force_residuals": {
+      "fsqr": 9.999008270264213e-13,
+      "fsqz": 1.849211472271349e-13,
+      "fsql": 2.324606161530768e-15
+    },
+    "aspect": 10.463334418745251,
+    "volume_m3": 29.729955553273644,
+    "beta_total": 0.04484064575914305,
+    "beta_poloidal": 0.5016662460591552,
+    "beta_toroidal": 0.049242070527756004,
+    "magnetic_energy": 2.6063123181450645,
+    "thermal_energy": 0.11686872739563375,
+    "iota_axis": 0.8613729900858986,
+    "iota_edge": 1.0038602420722567,
+    "iota_min": 0.8555742537407764,
+    "iota_max": 1.0038602420722567
+  }
+}

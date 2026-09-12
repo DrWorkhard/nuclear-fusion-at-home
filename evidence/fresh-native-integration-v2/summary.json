@@ -1,0 +1,514 @@
+{
+  "all_pass": true,
+  "caches": "local Git objects, checksum-verified QI zip, locked uv download/wheel cache",
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_fresh_native_integration.py",
+      "sha256": "6911fcc43b8aa2d0c53fe0d8339302a3254870b4b4d812da28b3ed2b725e6b71"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bootstrap_macos.sh",
+      "sha256": "b3b78e2926ddbd78d59a4c4c773ee813bea6d1fad698db7cac06bb778ebd2d72"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bootstrap_vmecpp.sh",
+      "sha256": "35a480dc53b85d12ed0c465101fe196ed31b1bb09641b3ad1cdd1a5c94a5d724"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bootstrap_vmec2000.sh",
+      "sha256": "67efd2244686cf5b9b7e020eb4a72abaa51f57b81b9cfdc9369373300d287c93"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bootstrap_qi_data.sh",
+      "sha256": "9174850b1ba100774644a6611622a6dfb554e3bda6acfffd42ae09be53f47ec0"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_scientific_integration.py",
+      "sha256": "2989e3d79fe8f9bb93dc51e1f691cee67367882eaff9b99fa4c7004b6ebf0f6d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/resource_guard.py",
+      "sha256": "85558ec13d446b822a7601c741767bc44435dd95d278ae752d829409143dc2db"
+    }
+  ],
+  "controlled_environment": {
+    "FUSION_NO_SYSTEM_INSTALL": "1",
+    "FUSION_QI_ARCHIVE": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles.zip",
+    "HOMEBREW_NO_AUTO_UPDATE": "1",
+    "HOMEBREW_NO_INSTALL_FROM_API": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "copied_solver_outputs": false,
+  "disk_preflight": {
+    "free_bytes": 7411015680,
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp",
+    "required_bytes": 5368709120,
+    "sufficient": true
+  },
+  "disk_reserve_bytes": 2147483648,
+  "fresh_binary": {
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellopt-v251/VMEC2000/Release/xvmec2000",
+    "sha256": "fc05443f445f6255645de316ccd77158114c9f89b6a8e189eb48ff0662c24013"
+  },
+  "fresh_checkout": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+  "full_global_physics_qualification": false,
+  "host": {
+    "captured_at": "2026-09-12T10:14:37.334655+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "input": {
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench/plasma_surfaces/input.W7-X_without_coil_ripple_beta0p05_d23p4_tm",
+    "sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8"
+  },
+  "planned_additional_working_bytes": 3221225472,
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/validation/FRESH_NATIVE_INTEGRATION_PROTOCOL.md",
+    "sha256": "7388ed91208552f676d201802ba291c34b7fe4940ffd57d698f37f66734da4dc"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "b32bc88ab6fd23f059059910b21cea55dfcc50ac",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "resource_protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/validation/FRESH_NATIVE_RETRY_PROTOCOL.md",
+    "sha256": "c0f7e046e41a366f59715b921bba0f84ef5c95beb398ea77555a95139c605349"
+  },
+  "schema_version": 2,
+  "scratch": "/private/tmp/fusion-native-clean-62xzhkrp",
+  "sparse_stellcoilbench_paths": [
+    "src",
+    "plasma_surfaces",
+    "cases/basic_LandremanPaulQA.yaml",
+    "cases/basic_W7X.yaml"
+  ],
+  "status": "completed",
+  "steps": [
+    {
+      "command": [
+        "brew",
+        "list",
+        "--versions",
+        "gcc",
+        "open-mpi",
+        "netcdf",
+        "netcdf-fortran",
+        "lapack"
+      ],
+      "cwd": "/Users/sebastianwirkert/workspace/fusion",
+      "elapsed_seconds": 0.5123409160005394,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/01-prerequisites.log",
+        "sha256": "c9c97854cd5ef4040bf4ed11a434d7f77e312602b0aef71fb3571f574fe3c9b1"
+      },
+      "minimum_observed_free_bytes": 7411007488,
+      "name": "prerequisites",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "/Users/sebastianwirkert/workspace/fusion",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp",
+      "elapsed_seconds": 1.5326014590100385,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/02-clone-project.log",
+        "sha256": "c2056662cec1b5f9e1d0f0006f542fd464ef6005fe97d14cf772f298efda9217"
+      },
+      "minimum_observed_free_bytes": 7215202304,
+      "name": "clone-project",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "checkout",
+        "--detach",
+        "b32bc88ab6fd23f059059910b21cea55dfcc50ac"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 0.5140977499831934,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/03-pin-project.log",
+        "sha256": "6256b353ef450e754ac0e11bf71c429f8f3cbf2f63e41636161dcad900a29fb3"
+      },
+      "minimum_observed_free_bytes": 7215198208,
+      "name": "pin-project",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 5.067770041991025,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/04-clone-stellcoilbench.log",
+        "sha256": "2c5bf63cc518fdff3d14aeacc993f4c7d4347f106cc7e9f5ff204624e7e4079c"
+      },
+      "minimum_observed_free_bytes": 6874943488,
+      "name": "clone-stellcoilbench",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench",
+        "sparse-checkout",
+        "set",
+        "--no-cone",
+        "/*",
+        "!/*/",
+        "/src",
+        "/plasma_surfaces",
+        "/cases/basic_LandremanPaulQA.yaml",
+        "/cases/basic_W7X.yaml"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 0.5147384589945432,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/05-sparse-stellcoilbench.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "minimum_observed_free_bytes": 6874935296,
+      "name": "sparse-stellcoilbench",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench",
+        "checkout",
+        "--detach",
+        "c7949edc4ea6378fc3be633304c69c288c3b79b5"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 1.0145973750040866,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/06-pin-stellcoilbench.log",
+        "sha256": "662b3f0c49e58566a345d3e70e72accfc5daa4626347efc94febaf592617d77c"
+      },
+      "minimum_observed_free_bytes": 6821679104,
+      "name": "pin-stellcoilbench",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "/Users/sebastianwirkert/workspace/fusion/external/simsopt",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/simsopt"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 1.02462199999718,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/07-clone-simsopt.log",
+        "sha256": "9fba718240a66488a3db4b822e6db4bac40032a2cdbf7aa015f4650b48e05617"
+      },
+      "minimum_observed_free_bytes": 6740115456,
+      "name": "clone-simsopt",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/simsopt",
+        "checkout",
+        "--detach",
+        "a79006b0bc1e6df8ab48de284e3457d39a49b995"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 1.0254494590044487,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/08-pin-simsopt.log",
+        "sha256": "6687acbf819777e157b6b176c4200d1f6ac3f68eaa9cc94eeddd87a1c233226b"
+      },
+      "minimum_observed_free_bytes": 6573047808,
+      "name": "pin-simsopt",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "/Users/sebastianwirkert/workspace/fusion/external/vmecpp",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/vmecpp"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 0.5150249169964809,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/09-clone-vmecpp.log",
+        "sha256": "d068762106724eefc5c1d66e92f7d390f1d885964779c2b1046b795125342984"
+      },
+      "minimum_observed_free_bytes": 6564012032,
+      "name": "clone-vmecpp",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/vmecpp",
+        "checkout",
+        "--detach",
+        "1d7e09941c89210be95b6b20f4d4d555f0a63096"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 0.5150806249876041,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/10-pin-vmecpp.log",
+        "sha256": "3bd1c1ab0282f95b38069c4f870fbcfbea6ab739e73d39d741959da1877049df"
+      },
+      "minimum_observed_free_bytes": 6541578240,
+      "name": "pin-vmecpp",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "/Users/sebastianwirkert/workspace/fusion/external/vmecpp-validation",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/vmecpp-validation"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 0.5150982080085669,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/11-clone-vmecpp-validation.log",
+        "sha256": "64ed966ca8262d7614a34d8a6000299909030a051dd2fce01e0cd0292b4942a8"
+      },
+      "minimum_observed_free_bytes": 6541410304,
+      "name": "clone-vmecpp-validation",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/vmecpp-validation",
+        "checkout",
+        "--detach",
+        "4017e53095c09e2ead20c6bb64c12796583520c5"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 0.515898040990578,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/12-pin-vmecpp-validation.log",
+        "sha256": "8b697d4c1566cdb5667db05d732f14fb9e76a341d25e212c42dba34120bdfe7f"
+      },
+      "minimum_observed_free_bytes": 6541185024,
+      "name": "pin-vmecpp-validation",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "--no-checkout",
+        "/Users/sebastianwirkert/workspace/fusion/external/stellopt-v251",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellopt-v251"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 0.5146650829992723,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/13-clone-stellopt-v251.log",
+        "sha256": "20e168ab1e1e0a52bf22d8b10fafe9f7353215d3ff527172d1d94aec63fc7ee5"
+      },
+      "minimum_observed_free_bytes": 6537453568,
+      "name": "clone-stellopt-v251",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "-C",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellopt-v251",
+        "checkout",
+        "--detach",
+        "e59affaec7713aee8da1f1bccdf05cc0612c12e3"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 0.5146977919794153,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/14-pin-stellopt-v251.log",
+        "sha256": "74559d71d171904ccc2a10472c0f89a0cf7dd50308956dd22ac9eb7e2a80291d"
+      },
+      "minimum_observed_free_bytes": 6514073600,
+      "name": "pin-stellopt-v251",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/bootstrap_macos.sh"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 11.191788708005333,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/15-benchmark-environment.log",
+        "sha256": "43a94427a98d3e47ae19e2398b0db783408c22de2339445164b556ca482e3f88"
+      },
+      "minimum_observed_free_bytes": 6495956992,
+      "name": "benchmark-environment",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/bootstrap_vmecpp.sh"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 7.11196937499335,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/16-vmecpp-environment.log",
+        "sha256": "479c916e8cd9283ef5957616479e2a519e3edf69ccdb5fe23e0e830e939dec9a"
+      },
+      "minimum_observed_free_bytes": 6487654400,
+      "name": "vmecpp-environment",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/bootstrap_vmec2000.sh"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 135.563592874998,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/17-vmec852-build.log",
+        "sha256": "745d412a8bed8ef667d5f1d88c109a8cbdb8dadcbf185fb7c0bf3f4876c42735"
+      },
+      "minimum_observed_free_bytes": 6453817344,
+      "name": "vmec852-build",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "bash",
+        "scripts/bootstrap_qi_data.sh"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 14.299647042003926,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/18-qi-fresh-extraction.log",
+        "sha256": "66e6350aa292f17952f3befbacecbe440993e6ba6bee46916a109e8bfc4f2349"
+      },
+      "minimum_observed_free_bytes": 6429863936,
+      "name": "qi-fresh-extraction",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/environments/vmecpp/.venv/bin/python",
+        "scripts/run_vmecpp_equilibrium.py",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench/plasma_surfaces/input.W7-X_without_coil_ripple_beta0p05_d23p4_tm",
+        "artifacts/vmecpp/w7x-stellcoilbench"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 268.6661422920006,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/19-fresh-vmecpp-w7x.log",
+        "sha256": "b87ad65376573d3e8089cd96803cea3e68161bc2975ccd7db0e6e35e54a883d1"
+      },
+      "minimum_observed_free_bytes": 6407929856,
+      "name": "fresh-vmecpp-w7x",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/.venv/bin/python",
+        "scripts/run_vmec2000_reference.py",
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench/plasma_surfaces/input.W7-X_without_coil_ripple_beta0p05_d23p4_tm",
+        "artifacts/vmec2000/w7x-v852-reference"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 496.4369550419797,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/20-fresh-vmec852-w7x.log",
+        "sha256": "d1ee78b92de5948b231e33aefb8b0e340f11d63a5b12cf910f4a010dc0c5a75b"
+      },
+      "minimum_observed_free_bytes": 6381441024,
+      "name": "fresh-vmec852-w7x",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "/private/tmp/fusion-native-clean-62xzhkrp/repo/.venv/bin/python",
+        "scripts/run_scientific_integration.py",
+        "evidence/fresh-native-six-tests-v1"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo",
+      "elapsed_seconds": 2.545633000001544,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/21-strict-six-test-integration.log",
+        "sha256": "ba198d36f34ba3d32629901c7e1dd8c2b76c5bb8c8f24f627e730b86c7bf52e3"
+      },
+      "minimum_observed_free_bytes": 6381441024,
+      "name": "strict-six-test-integration",
+      "returncode": 0,
+      "status": "passed"
+    }
+  ],
+  "strict_integration": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/strict-summary.json",
+    "sha256": "25258a1c8be1a41a81fa41a872ed7666f5e2da99fcd5409c950f7f8ae6cda409"
+  },
+  "system_installation_permitted": false,
+  "wouts": [
+    {
+      "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmecpp/w7x-stellcoilbench/wout.nc",
+      "sha256": "a67658e2ea96e8f01e00ab0abb93530a2c0ebf582d0a81811cf25c7d5aff2e47"
+    },
+    {
+      "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmec2000/w7x-v852-reference/wout_w7xbaseline.nc",
+      "sha256": "a5ac1b8e958dd452974b5d7e203543e49436b2bc1ec036f1d6257aef7b477460"
+    }
+  ]
+}

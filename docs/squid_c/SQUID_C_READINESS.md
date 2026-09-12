@@ -15,14 +15,14 @@ bounded result; missing author data is not the only remaining blocker.
 - [x] Deterministic locked smoke-test command and CI workflow. The exact command
       passes locally; remote execution remains an operational witness item until
       a Git remote is configured.
-- [ ] Automated scientific integration suite from a fresh data bootstrap.
-      Partial: strict QI numerical/metadata suite passes five non-skipping tests
-      after cached-archive extraction in a fresh detached clone. A full native
-      W7-X/solver bootstrap and hosted execution remain unwitnessed. The strict
-      combined cached-data regression now passes all six tests with zero skips;
-      a missing-W7-X counterrun fails rather than skips. A fresh native attempt
-      failed during source checkout, before installation/build, through disk
-      exhaustion; see [resource incident](../validation/RESOURCE_INTERRUPTION.md).
+- [x] Automated scientific integration suite from a fresh data bootstrap.
+      Local fresh retry passes all21 phases: locked new environments, newly built
+      VMEC8.52, fresh VMEC++/VMEC8.52 W7-X and re-extracted QI data. All six strict
+      tests execute with zero skips; extended W7-X remains60/63. Eleven raw files
+      hash-verified in a separate archive; independent companion physics audit
+      passes. Same host and allowed caches, not a fresh SIMSOPT source build or
+      hosted run. See [fresh result](../validation/FRESH_NATIVE_INTEGRATION_RESULTS.md).
+      The first [disk failure](../validation/RESOURCE_INTERRUPTION.md) is retained.
 
 ## G2 — Method benchmark
 

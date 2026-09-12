@@ -1,5 +1,19 @@
 # Findings log
 
+## F-062 — Fresh local native reconstruction and scientific integration now witnessed
+
+**Class:** fresh-install/build/solver regression with independently archived outputs
+**Date:** 2026-09-12
+
+All21 reconstruction phases and six strict scientific tests pass at b32bc88,
+including freshly built VMEC8.52 and new W7-X outputs from both solvers. Eleven
+raw files are hash-verified in a post-run archive. Separate archive-based comparison
+retains exactly60/63 and pres/presf/chipf failures; scoped physics/refined-grid audit
+passes. Resource guard maintained at least6381441024bytes free after a preserved
+first disk-exhaustion failure. Local G1 fresh integration subgate now satisfied;
+same hardware and permitted caches, not global QI/engineering qualification or
+complete long-term step1/2. See [result](../validation/FRESH_NATIVE_INTEGRATION_RESULTS.md).
+
 ## F-061 — Radial action signs change under gauge relabeling in unchanged nfp3 fields
 
 **Class:** fixed four-case physical diagnostic with independent arithmetic audit

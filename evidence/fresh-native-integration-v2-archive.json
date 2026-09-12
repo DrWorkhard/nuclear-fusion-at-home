@@ -1,0 +1,204 @@
+{
+  "all_pass": true,
+  "archive_after_completed_execution": true,
+  "code": {
+    "bytes": 5002,
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/archive_fresh_native.py",
+    "sha256": "1ba106749657246bdacd9d059054445985f02a9c75241f4bca20f35ab6da5b2b"
+  },
+  "files": [
+    {
+      "archive": {
+        "bytes": 1985192,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/external/stellopt-v251/VMEC2000/Release/xvmec2000",
+        "sha256": "fc05443f445f6255645de316ccd77158114c9f89b6a8e189eb48ff0662c24013"
+      },
+      "original": {
+        "bytes": 1985192,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellopt-v251/VMEC2000/Release/xvmec2000",
+        "sha256": "fc05443f445f6255645de316ccd77158114c9f89b6a8e189eb48ff0662c24013"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 1753,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/external/stellcoilbench/plasma_surfaces/input.W7-X_without_coil_ripple_beta0p05_d23p4_tm",
+        "sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8"
+      },
+      "original": {
+        "bytes": 1753,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench/plasma_surfaces/input.W7-X_without_coil_ripple_beta0p05_d23p4_tm",
+        "sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 4047,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/evidence/w7x-vmec2000-v852-reference.json",
+        "sha256": "d1ee78b92de5948b231e33aefb8b0e340f11d63a5b12cf910f4a010dc0c5a75b"
+      },
+      "original": {
+        "bytes": 4047,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/evidence/w7x-vmec2000-v852-reference.json",
+        "sha256": "d1ee78b92de5948b231e33aefb8b0e340f11d63a5b12cf910f4a010dc0c5a75b"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 1772,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmecpp/w7x-stellcoilbench/summary.json",
+        "sha256": "b87ad65376573d3e8089cd96803cea3e68161bc2975ccd7db0e6e35e54a883d1"
+      },
+      "original": {
+        "bytes": 1772,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmecpp/w7x-stellcoilbench/summary.json",
+        "sha256": "b87ad65376573d3e8089cd96803cea3e68161bc2975ccd7db0e6e35e54a883d1"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 14312232,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmecpp/w7x-stellcoilbench/wout.nc",
+        "sha256": "a67658e2ea96e8f01e00ab0abb93530a2c0ebf582d0a81811cf25c7d5aff2e47"
+      },
+      "original": {
+        "bytes": 14312232,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmecpp/w7x-stellcoilbench/wout.nc",
+        "sha256": "a67658e2ea96e8f01e00ab0abb93530a2c0ebf582d0a81811cf25c7d5aff2e47"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 1753,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmec2000/w7x-v852-reference/input.w7xbaseline",
+        "sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8"
+      },
+      "original": {
+        "bytes": 1753,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench/plasma_surfaces/input.W7-X_without_coil_ripple_beta0p05_d23p4_tm",
+        "sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 23644972,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmec2000/w7x-v852-reference/jxbout.w7xbaseline.txt",
+        "sha256": "bdcb89ff02897bf0bde98f72db180b866c78943d24a83fa7b677f74f36c7cd91"
+      },
+      "original": {
+        "bytes": 23644972,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmec2000/w7x-v852-reference/jxbout.w7xbaseline.txt",
+        "sha256": "bdcb89ff02897bf0bde98f72db180b866c78943d24a83fa7b677f74f36c7cd91"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 39017,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmec2000/w7x-v852-reference/mercier.w7xbaseline",
+        "sha256": "7d7c76644112fb6cf2db7d606448f4ad2fa19c420900f4c0becc9504a6e7bf0f"
+      },
+      "original": {
+        "bytes": 39017,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmec2000/w7x-v852-reference/mercier.w7xbaseline",
+        "sha256": "7d7c76644112fb6cf2db7d606448f4ad2fa19c420900f4c0becc9504a6e7bf0f"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 12843,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmec2000/w7x-v852-reference/run.log",
+        "sha256": "0523d24573a4e7270f3b0638fa4e823c16f0bb683bf17064a714d067eeec0fae"
+      },
+      "original": {
+        "bytes": 12843,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmec2000/w7x-v852-reference/run.log",
+        "sha256": "0523d24573a4e7270f3b0638fa4e823c16f0bb683bf17064a714d067eeec0fae"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 103702,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmec2000/w7x-v852-reference/threed1.w7xbaseline",
+        "sha256": "fd8cd0deae687ac43d2124b5e0a0711153bd5dfeb20889d138bb02a895e98c94"
+      },
+      "original": {
+        "bytes": 103702,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmec2000/w7x-v852-reference/threed1.w7xbaseline",
+        "sha256": "fd8cd0deae687ac43d2124b5e0a0711153bd5dfeb20889d138bb02a895e98c94"
+      }
+    },
+    {
+      "archive": {
+        "bytes": 10504852,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmec2000/w7x-v852-reference/wout_w7xbaseline.nc",
+        "sha256": "a5ac1b8e958dd452974b5d7e203543e49436b2bc1ec036f1d6257aef7b477460"
+      },
+      "original": {
+        "bytes": 10504852,
+        "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmec2000/w7x-v852-reference/wout_w7xbaseline.nc",
+        "sha256": "a5ac1b8e958dd452974b5d7e203543e49436b2bc1ec036f1d6257aef7b477460"
+      }
+    }
+  ],
+  "fresh_project_status": {
+    "available": true,
+    "branch": "",
+    "commit": "b32bc88ab6fd23f059059910b21cea55dfcc50ac",
+    "dirty": true,
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo"
+  },
+  "global_physics_certified": false,
+  "minimum_observed_free_bytes": 6381441024,
+  "native_execution": {
+    "command": [
+      "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellopt-v251/VMEC2000/Release/xvmec2000",
+      "input.w7xbaseline"
+    ],
+    "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmec2000/w7x-v852-reference",
+    "mode": "fresh",
+    "normal_termination_marker": true,
+    "vmec_reported_compute_seconds": 495.81,
+    "wall_seconds_observed": 495.9350334999908
+  },
+  "native_metrics": {
+    "aspect": 10.463334418745012,
+    "betatotal": 0.044840645759186976,
+    "fsql": 2.3245726620722707e-15,
+    "fsqr": 9.999927325032304e-13,
+    "fsqz": 1.8494510116665705e-13,
+    "ier_flag": 0,
+    "mpol": 10,
+    "nfp": 5,
+    "niter": 3708,
+    "ns": 201,
+    "ntor": 10,
+    "version_": 8.52,
+    "volume_p": 29.72995555327381
+  },
+  "original_checkout_retained": true,
+  "original_reports_modified": false,
+  "report": {
+    "bytes": 19277,
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/summary.json",
+    "sha256": "b1e1c647eecd1a4ee4761205d8ef2536f6628bc7e7260ff174cd4fc967d75718"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "6608bf566660ce3ca3675197ae2abe8c9e2303bb",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "strict_xml_audit": {
+    "all_pass": true,
+    "checks": {
+      "exact_test_set": true,
+      "no_duplicates": true,
+      "no_errors": true,
+      "no_failures": true,
+      "no_skips": true
+    },
+    "test_count": 6
+  }
+}

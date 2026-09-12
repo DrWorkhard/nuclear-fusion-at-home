@@ -1,5 +1,24 @@
 # Validation log
 
+## 2026-09-12 — Fresh native retry completes all21 phases and six strict tests
+
+- At b32bc88: locked fresh environments, verified sparse sources, newly built
+  VMEC8.52 and fresh VMEC++/VMEC8.52 W7-X outputs. No old binary/wout input and
+  no system installations. All six strict tests pass, zero skips, including
+  required60/63 extended comparison and retained pres/presf/chipf differences.
+- Build135.56s, VMEC++268.67s, native496.44s; no controlled speed claim. Minimum
+  sampled disk free6381441024bytes exceeds2GiB. Native residuals meet1e-12.
+- Isolated runner regenerates its fixed-name reference report in the fresh
+  checkout; historical root report untouched. Post-run byte-identical raw archive
+  and explicit provenance/companion comparison are being recorded.
+- AL recovery queue has now started after native success, never concurrently
+  with the fresh solver. Eleven raw files archived byte-identically; all phase,
+  log, source, JUnit and auxiliary hashes rechecked. Separate archive-based
+  comparison retains60/63 (expected exit1), physics audit passes (exit0).
+- Both READMEs/status/plan/readiness updated for scoped G1 completion; findingF-062.
+  Full suite366/20 known warnings, Ruff/docs/diff pass. No complete step1/2 or
+  SQuID-C readiness claim. Root historical reference evidence unchanged.
+
 ## 2026-09-12 — Retrospective field-strength/current-sum audit
 
 - Inspect all ten existing finest holdouts from timed, direct256, GN1024 and

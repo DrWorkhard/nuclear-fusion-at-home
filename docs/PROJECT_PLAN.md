@@ -30,9 +30,10 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    Geometrie/nativ bestehen, Flux abgelehnt. Auch SLSQP ist fein geprüft:
    Geometrie/nativ bestehen, Flux Faktor 12,665 zu hoch. Jetzt den
    durch Speicherplatzmangel unterbrochenen natürlichen Flux-AL-Piloten aufarbeiten;
-   erster Arm abgeschlossen, zweiter nur bis Bundle 700 gespeichert. Vor Retry
-   Platzreserve und begrenzten Quellcheckout absichern; keine parallelen schweren
-   Installationsarbeiten. Analytische Kontrolle und Startprüfung bestehen.
+   erster Arm und gespeichertes 700-Bundle-Präfix unabhängig bestätigt. Der native
+   Ressourcen-Retry ist bestanden, die getrennte AL-Wiederholung läuft nun mit
+   unveränderten Optionen und historischen Präfixbedingungen. Keine parallelen
+   schweren Installationsarbeiten. Analytische Kontrolle und Startprüfung bestehen.
    Keine nachträgliche Budgeterhöhung oder
    veränderte Annahmekriterien.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
@@ -55,7 +56,7 @@ geprüften Strom-/Druckannahmen. Reine Algebra ersetzt diese Gegenrechnung nicht
 
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |
-| Reproduzierbarkeit | Vollständige wissenschaftliche Integration aus frischem Daten-/Solveraufbau | Gepinnte Quellen, neue Umgebung, explizite Nicht-Skips und dokumentierte Abweichungen |
+| Reproduzierbarkeit | **Lokal erledigt:** frischer gesperrter Daten-/Solveraufbau und wissenschaftliche Integration; unabhängige Hardware/Hosted-CI bleiben getrennt offen | Alle21 Phasen und sechs Nicht-Skip-Tests bestanden; neue W7-X-Ausgaben, elf archivierte Rohdateien, explizite60/63-Abweichungen |
 | Optimierungsbaseline | Zulässige starke klassische Lösung, danach mehrstartiger Vergleich | Gleiche Probleme/Budgets; serialisierte Ergebnisse bestehen unabhängige Grenzprüfungen |
 | W7-X-Regression | Bestehende Teilprüfung sichern; drei Ausgabedifferenzen getrennt halten | Keine Umdeutung von 60/63 in vollständige Übereinstimmung |
 | QI-Maßstab | Qualifizierte QI-/radiale-Wirkungsbewertung mit größerem Gültigkeitsbereich | Unabhängige Tracer/Integration, Domänenabdeckung, Mulden-Identität, Gauge- und Gleichgewichtsauflösung |

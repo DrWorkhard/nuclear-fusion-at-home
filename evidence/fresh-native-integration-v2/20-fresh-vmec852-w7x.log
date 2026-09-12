@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "case": "StellCoilBench W7-X fixed-boundary equilibrium",
+  "execution": {
+    "mode": "fresh",
+    "command": [
+      "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellopt-v251/VMEC2000/Release/xvmec2000",
+      "input.w7xbaseline"
+    ],
+    "cwd": "/private/tmp/fusion-native-clean-62xzhkrp/repo/artifacts/vmec2000/w7x-v852-reference",
+    "wall_seconds_observed": 495.9350334999908,
+    "vmec_reported_compute_seconds": 495.81,
+    "normal_termination_marker": true
+  },
+  "source": {
+    "repository": "https://github.com/PrincetonUniversity/STELLOPT",
+    "commit": "e59affaec7713aee8da1f1bccdf05cc0612c12e3",
+    "vmec_version": "8.52",
+    "patch_path": "patches/stellopt-v251-macos-vmec-validation.patch",
+    "patch_sha256": "a2fdf45bb885a5f283f6b97af727c8056ff777fb746c0c8dbc8460fa803196d8",
+    "patch_matches_source_tree": true
+  },
+  "platform": {
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "machine": "arm64",
+    "gfortran": "GNU Fortran (Homebrew GCC 16.2.0) 16.2.0"
+  },
+  "binary": {
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellopt-v251/VMEC2000/Release/xvmec2000",
+    "sha256": "fc05443f445f6255645de316ccd77158114c9f89b6a8e189eb48ff0662c24013",
+    "dynamic_libraries": [
+      "\t/opt/homebrew/opt/lapack/lib/liblapack.3.dylib (compatibility version 3.0.0, current version 3.12.0)",
+      "\t/opt/homebrew/opt/lapack/lib/libblas.3.dylib (compatibility version 3.0.0, current version 3.12.0)",
+      "\t/opt/homebrew/opt/netcdf-fortran/lib/libnetcdff.7.dylib (compatibility version 7.0.0, current version 7.1.0)",
+      "\t/opt/homebrew/opt/netcdf/lib/libnetcdf.22.dylib (compatibility version 22.0.0, current version 22.0.0)",
+      "\t/opt/homebrew/opt/open-mpi/lib/libmpi_usempif08.40.dylib (compatibility version 81.0.0, current version 81.3.0)",
+      "\t/opt/homebrew/opt/open-mpi/lib/libmpi_usempi_ignore_tkr.40.dylib (compatibility version 81.0.0, current version 81.1.0)",
+      "\t/opt/homebrew/opt/open-mpi/lib/libmpi_mpifh.40.dylib (compatibility version 81.0.0, current version 81.1.0)",
+      "\t/opt/homebrew/opt/open-mpi/lib/libmpi.40.dylib (compatibility version 81.0.0, current version 81.7.0)",
+      "\t/opt/homebrew/opt/gcc/lib/gcc/current/libgfortran.5.dylib (compatibility version 6.0.0, current version 6.0.0)",
+      "\t/opt/homebrew/opt/gcc/lib/gcc/current/libquadmath.0.dylib (compatibility version 1.0.0, current version 1.0.0)",
+      "\t/usr/lib/libSystem.B.dylib (compatibility version 1.0.0, current version 1351.0.0)"
+    ]
+  },
+  "input": {
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/external/stellcoilbench/plasma_surfaces/input.W7-X_without_coil_ripple_beta0p05_d23p4_tm",
+    "bytes": 1753,
+    "sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8"
+  },
+  "outputs": {
+    "input.w7xbaseline": {
+      "bytes": 1753,
+      "sha256": "f927a2a4d0adba1dc12406ae9fbf51a82d38cb6f00f0b9cab1ff8908ef35fac8"
+    },
+    "jxbout.w7xbaseline.txt": {
+      "bytes": 23644972,
+      "sha256": "bdcb89ff02897bf0bde98f72db180b866c78943d24a83fa7b677f74f36c7cd91"
+    },
+    "mercier.w7xbaseline": {
+      "bytes": 39017,
+      "sha256": "7d7c76644112fb6cf2db7d606448f4ad2fa19c420900f4c0becc9504a6e7bf0f"
+    },
+    "run.log": {
+      "bytes": 12843,
+      "sha256": "0523d24573a4e7270f3b0638fa4e823c16f0bb683bf17064a714d067eeec0fae"
+    },
+    "threed1.w7xbaseline": {
+      "bytes": 103702,
+      "sha256": "fd8cd0deae687ac43d2124b5e0a0711153bd5dfeb20889d138bb02a895e98c94"
+    },
+    "wout_w7xbaseline.nc": {
+      "bytes": 10504852,
+      "sha256": "a5ac1b8e958dd452974b5d7e203543e49436b2bc1ec036f1d6257aef7b477460"
+    }
+  },
+  "metrics": {
+    "version_": 8.52,
+    "ier_flag": 0,
+    "niter": 3708,
+    "ns": 201,
+    "mpol": 10,
+    "ntor": 10,
+    "nfp": 5,
+    "fsqr": 9.999927325032304e-13,
+    "fsqz": 1.8494510116665705e-13,
+    "fsql": 2.3245726620722707e-15,
+    "aspect": 10.463334418745012,
+    "volume_p": 29.72995555327381,
+    "betatotal": 0.044840645759186976
+  }
+}

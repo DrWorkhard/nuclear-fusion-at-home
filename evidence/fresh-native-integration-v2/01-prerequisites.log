@@ -1,0 +1,5 @@
+gcc 16.2.0
+lapack 3.12.1_1
+netcdf 4.10.1
+netcdf-fortran 4.6.4
+open-mpi 5.0.10

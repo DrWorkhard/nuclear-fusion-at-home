@@ -1,6 +1,7 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 12. September 2026, nach direktem SLSQP-Pilot, unabhängigem Holdout und lokaler Modelldiagnose.
+Stand: 12. September 2026, nach frischem nativen Neuaufbau und QI-Gauge-Audit;
+AL-Wiederholung läuft.
 Dieses Dokument enthält die aktuelle Einschätzung; historische optimistischere
 Aussagen im Journal werden dadurch nicht wieder gültig.
 
@@ -20,11 +21,12 @@ und Verbesserungen daran zertifizieren.
 | Ableitungsberechnung | Räumliche Jacobimatrix in 0,304–0,337 s statt etwa 1,05 s | Zwei eingefrorene Zustände, drei Wiederholungen; maximale normierte Matrixabweichung 8,882e-16. Kein Entwurfsfortschritt für sich |
 | Geometrie | Kontinuierliche Krümmungs- und Spulenabstandsschranken; bestätigte Verletzungen zwischen Stützstellen | Analytische Kontrollen und unabhängige Positionsprüfung. Gleitkommapolster, keine gerichtete Intervallarithmetik; keine vollständige Volumengeometrie |
 | W7-X | Ausgewählte physikalische Regression gegen versionspassendes VMEC 8.52 besteht | Erweiterter Vergleich 60/63; drei Ausgabedifferenzen bleiben, Auswahl teilweise retrospektiv |
+| Frischer nativer Aufbau | Alle21 Phasen mit gesperrten neuen Umgebungen, frischem VMEC8.52-Build und zwei neuen W7-X-Rechnungen bestanden | Sechs wissenschaftliche Tests ohne Skip; erneuter separater Physikaudit besteht, elf Rohdateien bytegleich archiviert. Gleicher Rechner/erlaubte Caches, keine globale Physikqualifikation |
 | QI bei endlichem Druck | 320 zugeordnete Potentialmulden-Familien in vier Fällen; Druckfall nfp2 durchgehend negative radiale Ableitungen im untersuchten Bereich, nfp3 gemischt | Unabhängige Quadratur und zweiter Feldlinienrechner; 319 aufgelöste Vorzeichen bestätigt, eines unaufgelöst. Keine globale maximum-J-Aussage |
 | Direkte Randbedingungen | 137 Ungleichungen qualifiziert; SLSQP-Pilot mit zwei exakt gleichen 256-Bundle-Läufen | Ausgewählte Felder bestehen Geometrie und zusätzliche native Metriken; Flux bleibt Faktor 23,3 über Grenze. Nicht konvergiert, nicht zulässig |
 | Lokales Fluxmodell | Quadratische Vorhersage an allen vier festen Testschritten richtig im Vorzeichen; Fehler mindestens 99,907% kleiner als linear | Vollständiger nativer Jacobianvergleich und unabhängiger Kern-Audit bestehen. Lokale Diagnose, noch kein neuer Optimierungserfolg |
 | QI-Gauge | Alle84 alten Traces exakt wiederholt; 25 nfp3-Familien wechseln bei unverändertem Feld die Vorzeichenklasse | Unabhängige Zuordnungs-/Kettenregelprüfung besteht; drei feste Gauge-Steigungen, kein global gauge-unabhängiger Maximum-J-Maßstab |
-| Software | 366 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte vorhandene QI-/W7-X-Datenregression: alle sechs Tests, null Skips; fehlende W7-X-Daten werden im Gegenlauf zurückgewiesen. 20 Warnungen derselben bekannten NumPy/netCDF4-Art; kein vollständiger nativer Neuaufbau |
+| Software | 366 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte QI-/W7-X-Datenregression jetzt auch nach frischem Neuaufbau bestanden; fehlende W7-X-Daten werden im Gegenlauf zurückgewiesen. 20 Warnungen derselben bekannten NumPy/netCDF4-Art; keine Hosted-CI-Ausführung |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [Ableitungen](optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md),
@@ -56,7 +58,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
 1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
    den durch Speicherplatzmangel unterbrochenen natürlichen Flux-AL-Piloten
    gesondert aufarbeiten: erster Arm vollständig, zweiter nur bis Bundle 700
-   gespeichert; keine Zwei-Wiederholungs-Qualifikation. SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
+   gespeichert. Einzelarm/Präfix inzwischen unabhängig geprüft; separat festgelegte
+   frische Wiederholung läuft, noch keine Zwei-Wiederholungs-Qualifikation.
+   SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
    Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024
    Bundles exakt und besteht den unabhängigen Protokoll-Audit sowie Geometrie/
@@ -80,11 +84,13 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
 3. **Ingenieurphysik:** nichtlokale Selbstüberschneidung und Baugruppenabstände,
    reale Wicklungspakete, Material-/Lagerungsannahmen und gültige Mechanik.
    Die bisherige große Verformung macht absolute lineare Spannungsprognosen ungültig.
-4. **Reproduzierbarkeit und Zielbaseline:** vollständiger nativer Neuaufbau,
-   autorisierte kanonische SQuID-C-Daten und ausführbarer Vergleich mit den
+4. **Zielbaseline und externe Ausführung:** autorisierte kanonische SQuID-C-Daten
+   und ausführbarer Vergleich mit den
    publizierten Zielgrößen. Fehlende Daten sind nicht das einzige Hindernis.
-   Der neue Clone scheiterte vor Installation/Build am Platzbedarf des
-   StellCoilBench-Ergebnisarchivs; [Fehlerbericht](validation/RESOURCE_INTERRUPTION.md).
+   Der lokale frische native Integrationspfad ist inzwischen belegt; die
+   [erfolgreiche Wiederholung](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md)
+   ersetzt nicht unabhängige Hardware oder Hosted-CI. Der erste Speicherplatz-
+   [Fehlschlag](validation/RESOURCE_INTERRUPTION.md) bleibt erhalten.
 
 Die vollständige Prüfliste steht in [SQuID-C-Bereitschaft](squid_c/SQUID_C_READINESS.md).
 Ein fachlicher Review sollte insbesondere die Definition der Entwurfszulässigkeit,

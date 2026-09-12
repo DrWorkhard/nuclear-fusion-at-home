@@ -1,0 +1,416 @@
+{
+  "schema_version": 1,
+  "evaluation_code": {
+    "path": "/private/tmp/fusion-native-clean-62xzhkrp/repo/scripts/compare_wout_core.py",
+    "sha256": "5d68a95c9b494abe4f0885bfb9fe59143f6c03feccb314d1dcb47e5dacd442ad"
+  },
+  "tolerance_source_commit": "4017e53095c09e2ead20c6bb64c12796583520c5",
+  "under_test": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmecpp/w7x-stellcoilbench/wout.nc",
+  "reference": "/Users/sebastianwirkert/workspace/fusion/artifacts/fresh-native-integration-v2/artifacts/vmec2000/w7x-v852-reference/wout_w7xbaseline.nc",
+  "under_test_sha256": "a67658e2ea96e8f01e00ab0abb93530a2c0ebf582d0a81811cf25c7d5aff2e47",
+  "reference_sha256": "a5ac1b8e958dd452974b5d7e203543e49436b2bc1ec036f1d6257aef7b477460",
+  "comparison_scope": "63-variable local comparison; not the entire upstream V&V suite",
+  "variables_checked": 63,
+  "variables_passed": 60,
+  "overall_pass": false,
+  "failed": [
+    {
+      "variable": "presf",
+      "status": "fail",
+      "max_normalized_error": 1.0833643201108216e-09,
+      "tolerance": 1e-11
+    },
+    {
+      "variable": "chipf",
+      "status": "fail",
+      "max_normalized_error": 0.6825396825396826,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "pres",
+      "status": "fail",
+      "max_normalized_error": 3.6020824836816665e-11,
+      "tolerance": 1e-11
+    }
+  ],
+  "checks": [
+    {
+      "variable": "ier_flag",
+      "status": "pass",
+      "max_normalized_error": 0.0,
+      "tolerance": 1e-16
+    },
+    {
+      "variable": "rmax_surf",
+      "status": "pass",
+      "max_normalized_error": 1.2376879417741956e-16,
+      "tolerance": 1e-12
+    },
+    {
+      "variable": "rmin_surf",
+      "status": "pass",
+      "max_normalized_error": 1.5851495960155154e-16,
+      "tolerance": 1e-12
+    },
+    {
+      "variable": "zmax_surf",
+      "status": "pass",
+      "max_normalized_error": 0.0,
+      "tolerance": 1e-12
+    },
+    {
+      "variable": "niter",
+      "status": "pass",
+      "max_normalized_error": 0.0,
+      "tolerance": 0.2
+    },
+    {
+      "variable": "wb",
+      "status": "pass",
+      "max_normalized_error": 3.558809396538519e-14,
+      "tolerance": 1e-12
+    },
+    {
+      "variable": "wp",
+      "status": "pass",
+      "max_normalized_error": 9.851032537807656e-14,
+      "tolerance": 1e-12
+    },
+    {
+      "variable": "aspect",
+      "status": "pass",
+      "max_normalized_error": 2.0919582780983514e-14,
+      "tolerance": 1e-13
+    },
+    {
+      "variable": "betatotal",
+      "status": "pass",
+      "max_normalized_error": 4.203817930514937e-14,
+      "tolerance": 1e-09
+    },
+    {
+      "variable": "betapol",
+      "status": "pass",
+      "max_normalized_error": 8.043882280507854e-13,
+      "tolerance": 1e-09
+    },
+    {
+      "variable": "betator",
+      "status": "pass",
+      "max_normalized_error": 3.9388481697919637e-14,
+      "tolerance": 1e-09
+    },
+    {
+      "variable": "betaxis",
+      "status": "pass",
+      "max_normalized_error": 1.688107224584892e-12,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "b0",
+      "status": "pass",
+      "max_normalized_error": 5.162827374752844e-12,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "rbtor0",
+      "status": "pass",
+      "max_normalized_error": 3.5044819287554706e-12,
+      "tolerance": 5e-10
+    },
+    {
+      "variable": "rbtor",
+      "status": "pass",
+      "max_normalized_error": 1.3532113757246743e-12,
+      "tolerance": 1e-10
+    },
+    {
+      "variable": "IonLarmor",
+      "status": "pass",
+      "max_normalized_error": 2.6638972587090565e-17,
+      "tolerance": 1e-12
+    },
+    {
+      "variable": "volavgB",
+      "status": "pass",
+      "max_normalized_error": 1.5899903410854946e-14,
+      "tolerance": 1e-10
+    },
+    {
+      "variable": "ctor",
+      "status": "pass",
+      "max_normalized_error": 1.0953965572244448e-09,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "Aminor_p",
+      "status": "pass",
+      "max_normalized_error": 3.2780440859022612e-15,
+      "tolerance": 1e-13
+    },
+    {
+      "variable": "Rmajor_p",
+      "status": "pass",
+      "max_normalized_error": 1.1233000069654395e-14,
+      "tolerance": 1e-13
+    },
+    {
+      "variable": "volume_p",
+      "status": "pass",
+      "max_normalized_error": 5.433705968567033e-15,
+      "tolerance": 1e-13
+    },
+    {
+      "variable": "fsqr",
+      "status": "pass",
+      "max_normalized_error": 9.190547680892823e-17,
+      "tolerance": 1.0
+    },
+    {
+      "variable": "fsqz",
+      "status": "pass",
+      "max_normalized_error": 2.3953939522148603e-17,
+      "tolerance": 1.0
+    },
+    {
+      "variable": "fsql",
+      "status": "pass",
+      "max_normalized_error": 3.3499458497360666e-20,
+      "tolerance": 1.0
+    },
+    {
+      "variable": "iotaf",
+      "status": "pass",
+      "max_normalized_error": 2.5349982747979056e-09,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "q_factor",
+      "status": "pass",
+      "max_normalized_error": 2.9429738972797614e-09,
+      "tolerance": 1e-06
+    },
+    {
+      "variable": "presf",
+      "status": "fail",
+      "max_normalized_error": 1.0833643201108216e-09,
+      "tolerance": 1e-11
+    },
+    {
+      "variable": "phi",
+      "status": "pass",
+      "max_normalized_error": 0.0,
+      "tolerance": 1e-16
+    },
+    {
+      "variable": "phipf",
+      "status": "pass",
+      "max_normalized_error": 0.0,
+      "tolerance": 1e-16
+    },
+    {
+      "variable": "chi",
+      "status": "pass",
+      "max_normalized_error": 1.0531833757586411e-10,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "chipf",
+      "status": "fail",
+      "max_normalized_error": 0.6825396825396826,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "jcuru",
+      "status": "pass",
+      "max_normalized_error": 2.8671790906537633e-08,
+      "tolerance": 0.001
+    },
+    {
+      "variable": "jcurv",
+      "status": "pass",
+      "max_normalized_error": 2.0139955538835734e-07,
+      "tolerance": 1e-05
+    },
+    {
+      "variable": "iotas",
+      "status": "pass",
+      "max_normalized_error": 2.080385665546364e-09,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "mass",
+      "status": "pass",
+      "max_normalized_error": 1.0643265941284715e-13,
+      "tolerance": 1e-11
+    },
+    {
+      "variable": "pres",
+      "status": "fail",
+      "max_normalized_error": 3.6020824836816665e-11,
+      "tolerance": 1e-11
+    },
+    {
+      "variable": "beta_vol",
+      "status": "pass",
+      "max_normalized_error": 1.5225697830441488e-12,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "buco",
+      "status": "pass",
+      "max_normalized_error": 8.778719938484814e-16,
+      "tolerance": 1e-11
+    },
+    {
+      "variable": "bvco",
+      "status": "pass",
+      "max_normalized_error": 2.4064535691756914e-12,
+      "tolerance": 1e-09
+    },
+    {
+      "variable": "vp",
+      "status": "pass",
+      "max_normalized_error": 7.586733035726434e-12,
+      "tolerance": 1e-09
+    },
+    {
+      "variable": "specw",
+      "status": "pass",
+      "max_normalized_error": 1.5276426447089946e-09,
+      "tolerance": 1e-05
+    },
+    {
+      "variable": "phips",
+      "status": "pass",
+      "max_normalized_error": 0.0,
+      "tolerance": 1e-16
+    },
+    {
+      "variable": "over_r",
+      "status": "pass",
+      "max_normalized_error": 4.1317511283110585e-12,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "jdotb",
+      "status": "pass",
+      "max_normalized_error": 0.002795495488626532,
+      "tolerance": 0.2
+    },
+    {
+      "variable": "bdotgradv",
+      "status": "pass",
+      "max_normalized_error": 5.564211016548664e-12,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "DMerc",
+      "status": "pass",
+      "max_normalized_error": 2.135214426535527e-07,
+      "tolerance": 0.002
+    },
+    {
+      "variable": "DShear",
+      "status": "pass",
+      "max_normalized_error": 4.72068340987346e-09,
+      "tolerance": 1e-05
+    },
+    {
+      "variable": "DWell",
+      "status": "pass",
+      "max_normalized_error": 3.911155531488785e-08,
+      "tolerance": 0.0001
+    },
+    {
+      "variable": "DCurr",
+      "status": "pass",
+      "max_normalized_error": 1.01511482402693e-08,
+      "tolerance": 0.0001
+    },
+    {
+      "variable": "DGeod",
+      "status": "pass",
+      "max_normalized_error": 9.425004909081464e-08,
+      "tolerance": 1e-05
+    },
+    {
+      "variable": "equif",
+      "status": "pass",
+      "max_normalized_error": 1.411018908590282e-08,
+      "tolerance": 0.0001
+    },
+    {
+      "variable": "raxis_cc",
+      "status": "pass",
+      "max_normalized_error": 5.532847959921754e-11,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "zaxis_cs",
+      "status": "pass",
+      "max_normalized_error": 5.810512871777407e-11,
+      "tolerance": 1e-08
+    },
+    {
+      "variable": "rmnc",
+      "status": "pass",
+      "max_normalized_error": 5.699044561246749e-10,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "zmns",
+      "status": "pass",
+      "max_normalized_error": 5.78004345414546e-10,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "lmns",
+      "status": "pass",
+      "max_normalized_error": 3.944619855520743e-09,
+      "tolerance": 1e-05
+    },
+    {
+      "variable": "bmnc",
+      "status": "pass",
+      "max_normalized_error": 4.2175797111830047e-10,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "gmnc",
+      "status": "pass",
+      "max_normalized_error": 1.4360030058933094e-08,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "bsubumnc",
+      "status": "pass",
+      "max_normalized_error": 1.606685332808967e-09,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "bsubvmnc",
+      "status": "pass",
+      "max_normalized_error": 2.7742694079954107e-09,
+      "tolerance": 1e-07
+    },
+    {
+      "variable": "bsubsmns",
+      "status": "pass",
+      "max_normalized_error": 2.0667764066848248e-08,
+      "tolerance": 1e-06
+    },
+    {
+      "variable": "bsupumnc",
+      "status": "pass",
+      "max_normalized_error": 6.1001830267016835e-09,
+      "tolerance": 1e-06
+    },
+    {
+      "variable": "bsupvmnc",
+      "status": "pass",
+      "max_normalized_error": 9.864953248397616e-11,
+      "tolerance": 1e-07
+    }
+  ]
+}

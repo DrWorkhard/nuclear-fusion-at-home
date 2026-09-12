@@ -12,42 +12,30 @@ Detailed protocols, results and the research journal are indexed one level below
 
 Current assessment, 2026-09-12: qualified numerical methods and useful independent
 checks, but no newly feasible optimization baseline, no demonstrated SoTA design
-advance, and no complete SQuID-C readiness. All four candidates from the latest
-equal-wall-time pilot fail independent acceptance. The subsequent direct-constraint
-SLSQP pilot passes the tested geometry and additional native checks, but its
-selected candidate's independently measured raw flux remains 23.3 times the limit;
-the budget-limited run does not establish convergence.
+advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
 
-The [quadratic field-model diagnostic](docs/optimization/QUADRATIC_FIELD_MODEL_RESULTS.md)
-predicts the correct change sign on all four frozen probes and reduces prediction
-error by at least 99.907% versus the linear model. Full native Jacobian comparisons
-and a separate core audit pass. The subsequent
-[GN trust pilot stopped](docs/optimization/GN_TRUST_PILOT_RESULTS.md) at proposal 29
-because its field/gradient identity guard failed; no second arm or candidate
-admission followed. Exact replay and an
-[isolated point diagnosis](docs/optimization/GN_FAILED_POINT_RESULTS.md) identify
-amplification of separately rounded field projections in the guard; native
-matrices and affine-current checks pass. The
-[native-projection retry](docs/optimization/GN_NATIVE_COVECTOR_RESULTS.md) now passes
-all three frozen-state qualifications and finishes two exactly repeated
-1024-bundle searches. Independent ledger/prefix, geometry and native-metric checks
-pass, but independently refined flux is still 24.7 times the limit. Original objectives, gradients, GN
-matrices and tolerances are unchanged. The separate
-[SLSQP-1024 construction](docs/optimization/DIRECT_SLSQP_1024_RESULTS.md) also
-repeats exactly within its new study, but fails the preregistered historical-prefix
-comparison. Geometry and native-metric holdouts pass, but independently refined
-flux remains 12.7 times the limit. Both bounded construction studies are closed
-without an admissible design. A preregistered classical natural-flux AL follow-up
-passed its analytic control and initial derivative screen, but was interrupted
-by disk exhaustion during a concurrent fresh clone. One 1033-bundle repeat is
-saved; the second has only 700 persisted bundles. Independent auditing, a
-separate retry and admission remain pending. The fresh native rebuild failed
-before installation; see the [incident record](docs/validation/RESOURCE_INTERRUPTION.md).
+- [Fresh native integration](docs/validation/FRESH_NATIVE_INTEGRATION_RESULTS.md)
+  now passes: locked new environments, newly built VMEC8.52, fresh W7-X outputs
+  from both solvers, and all six scientific tests with zero skips. The extended
+  W7-X comparison deliberately retains three failures out of 63 quantities.
+- [SLSQP-1024](docs/optimization/DIRECT_SLSQP_1024_RESULTS.md) passes tested
+  geometry/native metrics but its refined flux is 12.7 times the limit; its new
+  repeats agree internally but fail the historical-prefix requirement.
+  [GN-1024](docs/optimization/GN_NATIVE_COVECTOR_RESULTS.md) passes repeat/audit
+  checks but remains 24.7 times over the same flux limit. Neither is feasible.
+- [Natural-flux AL](docs/optimization/NATURAL_AUGLAG_RESULTS.md): the original
+  interrupted study's full first arm and saved 700-bundle second prefix are
+  independently verified. A separately preregistered unchanged recovery is
+  running after the successful native rebuild; final auditing/holdouts pending.
+  The [disk incident](docs/validation/RESOURCE_INTERRUPTION.md) remains preserved.
+- [QI gauge tests](docs/qi/QI_RADIAL_GAUGE_RESULTS.md) reproduce all84 old traces
+  but find25 nfp3 families with sign changes under field-line relabeling alone.
+  [The full drift/phase transformation](docs/qi/QI_DRIFT_COORDINATES.md) explains
+  the interpretation limit; absolute physical drift validation remains open.
 
-For QI qualification, the [radial-gauge audit](docs/qi/QI_RADIAL_GAUGE_RESULTS.md)
-reproduces all 84 old traces exactly but finds sign changes in 25 nfp3 well
-families under field-line relabeling alone. Independent chain-rule checks pass.
-This exposes a limit of the radial diagnostic, not a physical design improvement.
+Earlier equal-time spatial-residual improvements remain limited to one start and
+infeasible fields. A [field-strength audit](docs/optimization/FIELD_STRENGTH_AUDIT.md)
+rules out simple mean-field weakening as their explanation; it does not establish SoTA.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

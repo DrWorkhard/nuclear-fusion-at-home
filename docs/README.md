@@ -132,8 +132,18 @@ unterbrochen: Ein 1033-Bundle-Arm ist gespeichert, vom zweiten nur 700 Bundles.
 Der gleichzeitig gestartete frische Clone scheiterte vor Installation/Build.
 Die [Fehleranalyse](validation/RESOURCE_INTERRUPTION.md) hält Originalberichte,
 gezielte Wiederherstellung und erforderliche Ressourcenprüfungen getrennt fest.
-Unabhängiger Stufenaudit, gesonderter Retry und Abnahme bleiben offen.
+Der unabhängige Postmortem bestätigt den vollständigen ersten Arm und das
+gespeicherte zweite Präfix. Der gesonderte, unveränderte Retry läuft jetzt nach
+erfolgreichem nativen Neuaufbau; Schlussaudit und Abnahme bleiben offen.
 Weiterhin kein neuer zulässiger Entwurf.
+
+Ein Teil von Schritt1 ist neu abgeschlossen: Der
+[frische native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md) besteht
+alle21 Phasen, einschließlich gesperrter neuer Umgebungen, neu gebautem VMEC8.52
+und zwei neuen W7-X-Rechnungen. Alle sechs strikten wissenschaftlichen Tests
+laufen ohne Skip durch; der erweiterte Vergleich bleibt ausdrücklich60/63.
+Quellen, Rohdaten und Prüfberichte sind hashgebunden archiviert. Das qualifiziert
+diesen lokalen Pfad, nicht die noch offenen QI-/Ingenieurmodelle.
 
 Für Schritt1 zeigt die [neue Gauge-Prüfung](qi/QI_RADIAL_GAUGE_RESULTS.md): Alle84
 alten Traces reproduzieren exakt, aber bei nfp3 wechseln25 Muldenfamilien allein
