@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-12 — Strict cached-data integration passes; missing-W7-X run rejects
+
+- fcbc3ce precedes both calls. Qualified root: exactly six passed, zero skips,
+  exact JUnit identity audit passes. Isolated core checkout at the same revision:
+  five passed, one missing-W7-X failure, zero skips; runner returns 2 as intended.
+  Both logs/XML/summaries retained; copied negative report keeps original hashes.
+- This closes the silent-skip software gap, not fresh-build, fresh-solve or global
+  QI qualification. Both READMEs/status/plan reviewed; their open scientific-gate
+  assessment is unchanged. Detail results, docs and diff checks pass.
+
 ## 2026-09-12 — Fail-closed combined scientific integration prepared
 
 - Optional core fixture policy retained, but explicit W7-X integration now fails

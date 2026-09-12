@@ -1,0 +1,68 @@
+{
+  "all_pass": false,
+  "code": [
+    {
+      "path": "/private/tmp/fusion-radial-clean.DLF3QM/repo/scripts/run_scientific_integration.py",
+      "sha256": "2989e3d79fe8f9bb93dc51e1f691cee67367882eaff9b99fa4c7004b6ebf0f6d"
+    },
+    {
+      "path": "/private/tmp/fusion-radial-clean.DLF3QM/repo/tests/conftest.py",
+      "sha256": "5735c23ad9d7f7f8f2d9632a1242faecd8bf0870f042b75b8c9f814ab52de74f"
+    },
+    {
+      "path": "/private/tmp/fusion-radial-clean.DLF3QM/repo/tests/test_qi_data_integration.py",
+      "sha256": "20700d1e3838594ecb9fa140d5cb9a413a89a27023e3b3c824b61ae020f664d2"
+    },
+    {
+      "path": "/private/tmp/fusion-radial-clean.DLF3QM/repo/tests/test_scientific_integration.py",
+      "sha256": "078b4915da22f1b2a1d103c6083dfe63774c1cb3bcfa6f2f1e2dce2df99c5bd0"
+    },
+    {
+      "path": "/private/tmp/fusion-radial-clean.DLF3QM/repo/src/fusion_baselines/integration_audit.py",
+      "sha256": "e9609759f1fe448384b717398dc62a357bb6ab65f85f023575272bb1f6744dd9"
+    }
+  ],
+  "command": [
+    "/private/tmp/fusion-radial-clean.DLF3QM/repo/.venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "-rA",
+    "tests/test_qi_data_integration.py",
+    "tests/test_scientific_integration.py",
+    "--junitxml=/private/tmp/fusion-radial-clean.DLF3QM/repo/evidence/scientific-integration-missing-w7x-v1/tests.xml"
+  ],
+  "log": {
+    "path": "/private/tmp/fusion-radial-clean.DLF3QM/repo/evidence/scientific-integration-missing-w7x-v1/pytest.log",
+    "sha256": "9d30b7a2720799353cdd9d8090f5a0a2928a376e134337df6b157d738d43f26f"
+  },
+  "report": {
+    "path": "/private/tmp/fusion-radial-clean.DLF3QM/repo/evidence/scientific-integration-missing-w7x-v1/tests.xml",
+    "sha256": "b1a4716d241bac5f062a4ad0a5d55beaf6bc6fd0ab03109122953f5693f7d468"
+  },
+  "repository": {
+    "available": true,
+    "branch": "",
+    "commit": "fcbc3ce1647a20001bece00c3344a595ead94479",
+    "dirty": true,
+    "path": "/private/tmp/fusion-radial-clean.DLF3QM/repo"
+  },
+  "required_data": {
+    "FUSION_REQUIRE_QI_DATA": "1",
+    "FUSION_REQUIRE_W7X_DATA": "1"
+  },
+  "returncode": 1,
+  "schema_version": 1,
+  "scope": "six cached-data regressions; no fresh solver/build or global QI qualification",
+  "test_report_audit": {
+    "all_pass": false,
+    "checks": {
+      "exact_test_set": true,
+      "no_duplicates": true,
+      "no_errors": true,
+      "no_failures": false,
+      "no_skips": true
+    },
+    "test_count": 6
+  }
+}

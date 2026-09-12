@@ -40,4 +40,16 @@ bundlebudgetierte SLSQP-Suchcode bleibt unberührt.
 
 ## Ergebnisse
 
-Ausführung und Gegenkontrolle stehen noch aus.
+Präregistrierung fcbc3ce. Root-Ausführung
+`evidence/scientific-integration-cached-v1`: **6 bestanden, 0 Skips**; unabhängiger
+JUnit-Audit besteht. Der strengere Aufruf hat den W7-X-Teil tatsächlich geprüft.
+
+Gegenlauf im isolierten Kern-Checkout derselben Revision ohne W7-X-Ausgaben:
+`evidence/scientific-integration-missing-w7x-v1`: **5 bestanden, 1 fehlgeschlagen,
+0 Skips**, Runnerstatus 2. Der Fehler benennt die fehlenden W7-X-Dateien. Das ist
+die erwartete Ablehnung eines unvollständigen Integrationsumfangs; der negative
+Bericht wird mitsamt Originalpfaden/Hashes erhalten. Keine Änderung der Rohdaten
+oder der qualifizierten nativen Root-Umgebung.
+
+Damit ist die fehlende-Daten-Prüflücke geschlossen. Frischer nativer Build und
+Solverlauf sowie globale QI-Qualifikation bleiben ausdrücklich offen.
