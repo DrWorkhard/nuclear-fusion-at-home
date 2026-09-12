@@ -16,6 +16,10 @@ if ! command -v brew >/dev/null 2>&1; then
 fi
 for formula in gcc open-mpi netcdf netcdf-fortran lapack; do
   if ! brew list --versions "$formula" >/dev/null 2>&1; then
+    if [[ "${FUSION_NO_SYSTEM_INSTALL:-0}" == "1" ]]; then
+      echo "ERROR: $formula prerequisite unavailable; system installation forbidden." >&2
+      exit 1
+    fi
     brew install "$formula"
   fi
 done

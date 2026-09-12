@@ -13,6 +13,10 @@ if ! command -v brew >/dev/null 2>&1; then
   exit 1
 fi
 if ! brew list --versions open-mpi >/dev/null 2>&1; then
+  if [[ "${FUSION_NO_SYSTEM_INSTALL:-0}" == "1" ]]; then
+    echo "ERROR: OpenMPI prerequisite unavailable; system installation forbidden." >&2
+    exit 1
+  fi
   brew install open-mpi
 fi
 
@@ -50,6 +54,6 @@ clone_pinned \
 sdk_path="$(xcrun --show-sdk-path)"
 export CPLUS_INCLUDE_PATH="$sdk_path/usr/include/c++/v1${CPLUS_INCLUDE_PATH:+:$CPLUS_INCLUDE_PATH}"
 
-uv sync --python 3.12 --extra dev --extra benchmark
-uv run fusion-baselines verify-stellcoilbench
-uv run pytest -q
+uv sync --locked --python 3.12 --extra dev --extra benchmark
+uv run --locked fusion-baselines verify-stellcoilbench
+uv run --locked pytest -q

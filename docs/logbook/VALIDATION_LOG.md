@@ -1,5 +1,25 @@
 # Validation log
 
+## 2026-09-12 — Preregister isolated native rebuild and fresh W7-X integration
+
+- Native/VMEC++ bootstraps now require locked resolution; other behavior/pins
+  unchanged. Fresh scratch checkout, source/download caches explicitly allowed,
+  no copied binaries/wouts, no system package installations. Existing native
+  environment and external changes remain untouched.
+- Protocol fixes the original W7-X case, residuals, comparisons and strict6 tests.
+  Failures must remain visible; cached wheel installation is not falsely called
+  a fresh SIMSOPT source build. Both READMEs/status/plan still correctly leave
+  fresh native integration open. Shell syntax/docs/diff checks before execution.
+- First nominally read-only Homebrew query tried an API-cache refresh and returned
+  a cache-permission error, although installed versions were printed. Retained as
+  preflight failure; with automatic update/API retrieval explicitly disabled,
+  the same query succeeds. All required packages are installed. Added an explicit
+  no-system-install bootstrap mode so no failed query can trigger brew install.
+- Two stubbed-shell countertests prove both installers stop before any system
+  install on a failed package check. Shell/Python syntax, Ruff, docs and diff pass
+  after one path-format fix. Fresh runner records each phase and pins project
+  revision explicitly, retaining failures and forbidding old wout/binary reuse.
+
 ## 2026-09-12 — Four-case radial-gauge diagnosis and independent audit completed
 
 - 121f9ab execution:244 new traces; all84 historical zero-gauge arrays and old

@@ -17,6 +17,6 @@ if [[ "$actual_commit" != "$expected_commit" ]]; then
   exit 1
 fi
 
-uv sync --project environments/vmecpp --python 3.12
-uv run --project environments/vmecpp python -c \
+uv sync --locked --project environments/vmecpp --python 3.12
+uv run --locked --project environments/vmecpp python -c \
   'from importlib.metadata import version; import vmecpp; print(version("vmecpp"))'
