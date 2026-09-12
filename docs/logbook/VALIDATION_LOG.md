@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-12 — SLSQP-1024 independent audit prepared; old-prefix discrepancy observed
+
+- Added explicit 1024 auditor mode with independent stored derivative-screen
+  calculation, work/selection/named-field checks and historical 256-row prefix.
+  Seven exact-prefix controls pass, including rejection of a single-ULP change.
+  Full suite 295 passed, 11 known warnings; Ruff/docs/diff checks pass.
+- Read-only interim comparison of running first arm finds first old-prefix
+  mismatch at proposal 62: parameter hash differs, maximum absolute difference
+  among its 138 values is 2.842170943040401e-14. Rows 1–61 match exactly.
+  This already contradicts the predeclared exact-prefix condition; no tolerance
+  is being introduced. Full run/repeat and independent final audit remain pending.
+- Diff against historical runner 3eda449 shows only prospective budget/CLI/protocol
+  plumbing; direct backend, coordinate and oracle kernels unchanged. This does
+  not identify the numerical cause. Both READMEs/status/plan still correctly keep
+  baseline qualification open. No live search code changed.
+
 ## 2026-09-12 — Strict cached-data integration passes; missing-W7-X run rejects
 
 - fcbc3ce precedes both calls. Qualified root: exactly six passed, zero skips,

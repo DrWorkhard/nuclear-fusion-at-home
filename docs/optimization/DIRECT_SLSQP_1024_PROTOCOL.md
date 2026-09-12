@@ -46,3 +46,13 @@ Auch ein zulässiges Feld an diesem einen Startpunkt schließt Schritt 2 nicht:
 Danach mindestens fünf vorab festgelegte Initialisierungen und belastbare
 Budget-/Methodenvergleiche gemäß dem übergreifenden Versuchsprotokoll. Kein SoTA-
 oder vollständiger Kraftwerksnachweis aus diesem Konstruktionslauf.
+
+## Unabhängiger Nachprüfer
+
+`scripts/audit_direct_slsqp_pilot.py STUDY OUTPUT --budget-1024` prüft das
+vorab festgelegte 1024-Limit, sämtliche Werte-/Zähl-/Auswahlregeln, benannte
+Parameteridentität, Ableitungsschirm und beide historischen 256-Präfixe. Die
+historische Standardbetriebsart behält ihr Limit 256. Der Präfixprüfer meldet
+erste Abweichung und deren Größe, akzeptiert aber auch eine einzige ULP nicht
+als bitgenaue Übereinstimmung. Sieben analytische/adversariale Kontrollen bestehen.
+Diese Prüferimplementierung verändert keine laufende Suchroutine.
