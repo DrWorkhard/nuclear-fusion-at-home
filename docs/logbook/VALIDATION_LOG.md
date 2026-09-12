@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Implement two-representation Clebsch screen and separate array replay
+
+- Additive symmetric-Wout sampler retains old linear interpolation/tracer code;
+  separate Nyquist coefficients supply contravariant field/Jacobian/magnitude,
+  geometric Fourier modes supply tangents and lambda derivatives. Fixed negative
+  edge-flux convention is compared, not fitted. All24 planned grids retained.
+- Nine torus/nonzero-lambda/sign/2pi/singularity/grid controls plus separate
+  Cartesian-component replay control pass. Including old tracer:17 tests pass,
+  19 known warnings. Ruff/docs/diff pass. No real QI evaluation yet.
+- Detail/index/overviews reviewed; absolute drift remains open. Main LPQA arm
+  has stored500 bundles at this point; no search outcome inferred from progress.
+
 ## 2026-09-12 — Register a bounded signed-flux/Clebsch prerequisite for QI drift
 
 - Primary paper specifies canonical drift and half-bounce convention; pinned
