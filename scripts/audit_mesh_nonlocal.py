@@ -4,7 +4,7 @@ import argparse
 import json
 from pathlib import Path
 
-from mesh_nonlocal_inputs import LEVELS, checked, frozen_inputs, load_mesh
+from mesh_nonlocal_inputs import LEVELS, checked, frozen_inputs, load_mesh, source_code_bindings
 
 from fusion_baselines.mesh_nonlocal_audit import audit_scan
 from fusion_baselines.mesh_nonlocal_scan import reference
@@ -27,15 +27,21 @@ def main():
             or source["source"] != reference(original_path)
             or [r["index"] for r in source["meshes"]] != list(range(6))):
         raise ValueError("complete terminal six-mesh source ledger required")
-    for ref in [source["protocol"], *source["code"], *source["predecessor"]]:
+    bindings = source_code_bindings(root, original)
+    if source["historical_source_code"] != bindings:
+        raise ValueError("historical code resolution does not replay")
+    for ref in [source["protocol"], source["retry_protocol"], *source["code"],
+                *source["predecessor"]]:
         checked(ref)
     report = dict(repository=git_state(root), study=reference(args.study), status="running",
                   meshes=[], all_pass=False, all_nonlocal_screens_pass=False,
+                  historical_source_code=bindings,
                   code=[reference(root / p) for p in (
                       "scripts/audit_mesh_nonlocal.py", "scripts/mesh_nonlocal_inputs.py",
                       "src/fusion_baselines/mesh_nonlocal_audit.py",
                       "src/fusion_baselines/tetra_partition_audit.py",
-                      "src/fusion_baselines/tetra_witness_audit.py")],
+                      "src/fusion_baselines/tetra_witness_audit.py",
+                      "src/fusion_baselines/evidence_integrity.py")],
                   new_separating_axis_searches=0, new_interior_lp_calls=0,
                   complete_engineering_admission=False)
     try:
@@ -56,7 +62,8 @@ def main():
             worker = json.loads(checked(row["worker"]).read_text())
             if (worker["mesh"] != old["mesh"] or worker["index"] != row["index"]
                     or worker["target_h_m"] != row["target_h_m"]
-                    or worker["intrinsic_source"] != source["source"]):
+                    or worker["intrinsic_source"] != source["source"]
+                    or worker["historical_source_code"] != bindings):
                 raise ValueError("worker redirected from original source")
             checked(worker["code"])
             scan = json.loads(checked(worker["scan"]).read_text())

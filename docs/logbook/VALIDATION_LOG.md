@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Implement explicit historical-code bindings for unchanged six-mesh retry
+
+- Only old intrinsic code uses exact recorded-revision SHA resolution; meshes,
+  manifests and active numerical sources still require current byte identity.
+  Study/worker/auditor record and crosscheck each source resolution explicitly.
+- Eight source/negative/resolver tests pass. Read-only real-source preflight
+  passes all six meshes, one historical script and unchanged current numeric core.
+  No real collision calculation; all original spatial kernels/caps unchanged.
+- First Ruff check found unsorted imports, corrected; Ruff/docs/diff pass.
+  Detail/index and both READMEs/status/plan reviewed; same open scientific gates.
+  Original failed driver remains immutable; next execute new v2 paths.
+
 ## 2026-09-12 — Preserve six-mesh preflight failure and register exact historical-code resolution
 
 - At891e8a5 the driver exits1 before study/raw directories or mesh workers:

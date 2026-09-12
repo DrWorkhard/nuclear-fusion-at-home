@@ -6,6 +6,7 @@ from pathlib import Path
 import meshio
 import numpy as np
 
+from fusion_baselines.evidence_integrity import resolve_reference
 from fusion_baselines.provenance import sha256_file
 
 LEVELS = [0.05, 0.04, 0.03, 0.02, 0.015, 0.01]
@@ -16,6 +17,16 @@ def checked(ref):
     if sha256_file(path) != ref["sha256"]:
         raise ValueError("frozen mesh source binding mismatch")
     return path
+
+
+def source_code_bindings(root, source):
+    """Historical source only: exact bytes at the report's own recorded revision."""
+    repository = source["repository"]
+    records = [resolve_reference(ref, root, repository["path"], repository["commit"])
+               for ref in source["code"]]
+    if not records or any(r["status"] not in {"current", "historical_git"} for r in records):
+        raise ValueError("unresolved historical intrinsic source code")
+    return records
 
 
 def frozen_inputs(root):
@@ -34,8 +45,7 @@ def frozen_inputs(root):
                 or str(mesh) != manifest["path"] or row["mesh"]["sha256"] != manifest["sha256"]
                 or row["target_h_m"] != manifest["target_h_m"]):
             raise ValueError("source mesh identity/intrinsic result mismatch")
-    for ref in source["code"]:
-        checked(ref)
+    source_code_bindings(root, source)
     return path, source
 
 

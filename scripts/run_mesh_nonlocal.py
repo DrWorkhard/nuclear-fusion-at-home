@@ -7,7 +7,7 @@ import subprocess
 import sys
 from pathlib import Path
 
-from mesh_nonlocal_inputs import checked, frozen_inputs
+from mesh_nonlocal_inputs import checked, frozen_inputs, source_code_bindings
 from run_jac_scaled_study import require_committed
 
 from fusion_baselines.mesh_nonlocal_scan import reference
@@ -18,6 +18,7 @@ CODE = (
     "scripts/run_mesh_nonlocal.py", "scripts/mesh_nonlocal_worker.py",
     "scripts/mesh_nonlocal_inputs.py", "src/fusion_baselines/mesh_nonlocal_scan.py",
     "src/fusion_baselines/tetra_broad_phase.py", "src/fusion_baselines/tetra_nonoverlap.py",
+    "src/fusion_baselines/evidence_integrity.py",
 )
 
 
@@ -52,7 +53,8 @@ def main():
     previous = closed_predecessor(root)
     source_path, source = frozen_inputs(root)
     protocol = root / "docs/engineering/MESH_NONLOCAL_PROTOCOL.md"
-    for path in [protocol, source_path, *(root / p for p in CODE)]:
+    retry = root / "docs/engineering/MESH_NONLOCAL_RETRY_PROTOCOL.md"
+    for path in [protocol, retry, source_path, *(root / p for p in CODE)]:
         require_committed(root, path)
     disk = space_check(root, 3*GIB)
     args.study.mkdir(parents=True)
@@ -60,6 +62,8 @@ def main():
     report = dict(repository=git_state(root), status="running", all_six_terminal=False,
                   all_nonlocal_screens_pass=False, source=reference(source_path),
                   predecessor=previous, protocol=reference(protocol), disk_preflight=disk,
+                  retry_protocol=reference(retry),
+                  historical_source_code=source_code_bindings(root, source),
                   code=[reference(root / p) for p in CODE],
                   meshes=[dict(index=i, mesh=r["mesh"], target_h_m=r["target_h_m"],
                                status="not_started") for i, r in enumerate(source["meshes"])],

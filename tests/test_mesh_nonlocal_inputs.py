@@ -7,6 +7,7 @@ import numpy as np
 import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
+import mesh_nonlocal_inputs as inputs
 import run_mesh_nonlocal as runner
 from mesh_nonlocal_inputs import LEVELS, frozen_inputs, load_mesh
 
@@ -28,7 +29,10 @@ def fixture(root):
         path = root / f"manifest-{i}.json"
         path.write_text(json.dumps(dict(meshes=group)))
         manifests.append(reference(path))
-    result = dict(status="completed", all_pass=True, meshes=rows, manifests=manifests, code=[])
+    code = root / "old_code.py"
+    code.write_text("# original test source\n")
+    result = dict(status="completed", all_pass=True, meshes=rows, manifests=manifests,
+                  code=[reference(code)], repository=dict(path=str(root), commit="9ee1796"))
     path = root / "evidence/mesh-integrity-2026-09-09.json"
     path.write_text(json.dumps(result))
     return path, result
@@ -53,6 +57,39 @@ def test_missing_level_cannot_be_hidden(tmp_path):
     source["meshes"].pop()
     path.write_text(json.dumps(source))
     with pytest.raises(ValueError, match="all six"):
+        frozen_inputs(tmp_path)
+
+
+def test_historical_code_resolution_is_exact_and_explicit(tmp_path, monkeypatch):
+    path, source = fixture(tmp_path)
+    original = Path(source["code"][0]["path"])
+    original.write_text("# changed current source\n")
+    with pytest.raises(ValueError, match="unresolved historical"):
+        frozen_inputs(tmp_path)
+    calls = []
+
+    def historical(ref, root, recorded, revision):
+        calls.append((ref, root, recorded, revision))
+        return dict(**ref, status="historical_git", source_revision=revision,
+                    git_path="old_code.py")
+
+    monkeypatch.setattr(inputs, "resolve_reference", historical)
+    assert frozen_inputs(tmp_path)[1] == source
+    binding = inputs.source_code_bindings(tmp_path, source)
+    assert binding[0]["sha256"] == source["code"][0]["sha256"]
+    assert all(c[2:] == (str(tmp_path), "9ee1796") for c in calls)
+    Path(source["meshes"][0]["mesh"]["path"]).write_text("changed physical file")
+    before = len(calls)
+    with pytest.raises(ValueError, match="binding"):
+        frozen_inputs(tmp_path)
+    assert len(calls) == before  # no historical fallback for a corrupt physical mesh
+
+
+def test_empty_or_unresolved_source_codes_never_pass(tmp_path, monkeypatch):
+    path, source = fixture(tmp_path)
+    source["code"] = []
+    path.write_text(json.dumps(source))
+    with pytest.raises(ValueError, match="unresolved historical"):
         frozen_inputs(tmp_path)
 
 

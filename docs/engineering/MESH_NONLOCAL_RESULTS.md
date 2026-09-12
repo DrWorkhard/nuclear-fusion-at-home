@@ -11,6 +11,15 @@ aufgelöst, Netze und numerischer Kern unverändert. Der negative Treiberbericht
 bleibt erhalten; [getrennt festgelegter Retry](MESH_NONLOCAL_RETRY_PROTOCOL.md)
 soll die historische Provenienz explizit auflösen, ohne Physikchecks zu umgehen.
 
+Der bei ae8d05a registrierte Retry-Pfad ist jetzt implementiert: explizite
+historische Codeauflösung in Studie, Worker und Auditor, ausschließlich an der
+ursprünglichen Revision und mit exakt passendem SHA. Reale sechs Netze/Manifeste
+bestehen die unveränderte Vorprüfung; die historische Skriptquelle wird als
+`historical_git`, der numerische Kern als `current` ausgewiesen. Kein neuer
+Kollisionsaufruf bei diesem Vorabtest. Acht Quellen-/Resolverkontrollen bestehen,
+einschließlich beschädigter physikalischer Dateien ohne historischen Fallback.
+Numerische räumliche Kerne und Caps unverändert. Neue Ausführung unter v2 folgt.
+
 ## Aufbewahrte Implementierungsvorbereitung
 
 2026-09-12. [Protokoll](MESH_NONLOCAL_PROTOCOL.md) bei2a9e5b6 vorab registriert.

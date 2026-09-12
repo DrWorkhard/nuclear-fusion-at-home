@@ -6,7 +6,7 @@ from pathlib import Path
 
 import meshio
 import numpy as np
-from mesh_nonlocal_inputs import frozen_inputs, load_mesh
+from mesh_nonlocal_inputs import frozen_inputs, load_mesh, source_code_bindings
 
 from fusion_baselines.mesh_nonlocal_scan import reference, scan
 from fusion_baselines.provenance import write_json_atomic
@@ -25,6 +25,7 @@ def main():
     original = source["meshes"][args.index]
     report = dict(status="running", index=args.index, target_h_m=original["target_h_m"],
                   mesh=original["mesh"], intrinsic_source=reference(source_path),
+                  historical_source_code=source_code_bindings(root, source),
                   code=reference(Path(__file__)), nonlocal_screen_pass=False,
                   versions=dict(numpy=np.__version__, meshio=meshio.__version__))
     write_json_atomic(args.output, report)
