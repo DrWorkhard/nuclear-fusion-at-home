@@ -69,7 +69,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    inzwischen Quellen-/Biot-Savart-Gegenprüfungen und geometrische Gitterschirme,
    ihr Roh-Flux nahe1e-6 bleibt aber rund100-mal zu groß. Geschwellte Nullwerte
    begründen keine Zulassung. Ein neuer Konstruktionsstart muss separat festgelegt
-   und bei gleicher physikalischer Problemdefinition qualifiziert werden.
+   und bei gleicher physikalischer Problemdefinition qualifiziert werden. Der
+   erste vorab ausgewählte Archiveintrag besteht nun diese getrennte Strom-/Feld-/
+   Ableitungsqualifikation samt Audit; sein Flux bleibt unzulässig. Suche folgt.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
    Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024

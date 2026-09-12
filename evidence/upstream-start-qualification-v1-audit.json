@@ -1,0 +1,65 @@
+{
+  "all_pass": true,
+  "checks": {
+    "all_direction_arithmetic": true,
+    "all_nine_coupled_guards": true,
+    "canonical_problem": true,
+    "common_scale": true,
+    "complete_work": true,
+    "completed": true,
+    "directional_record": true,
+    "exact_coefficients": true,
+    "exact_regularizations": true,
+    "execution_checks": true,
+    "field_error_record": true,
+    "field_scaling": true,
+    "finest_direction_screen": true,
+    "fixed_direction": true,
+    "fixed_protocol": true,
+    "fixed_source": true,
+    "fixed_total": true,
+    "flux_residual_identity": true,
+    "named_state": true,
+    "native_gradient_identity": true,
+    "native_metrics": true,
+    "no_search": true,
+    "original_field_probes": true
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_upstream_start.py",
+      "sha256": "c477a382dfc67b80aff96e55784b4d72ce98890b183c5ad450e31c00a9d99f88"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/start_qualification_audit.py",
+      "sha256": "fb9023787ab1b5d0619adebc23255301625ba30cd49d331fd3690c05fee430fd"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_field_state.py",
+      "sha256": "6b86dbe1cb89e3f46188c500591b56a23441c04cf7dab475b3c3844965ab9d0c"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/current_normalization.py",
+      "sha256": "b3fbe13e28475bc66d7d8c27e3275e82eb457abd2859aa7455fb3791219d5c9a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    }
+  ],
+  "current_error": 1.422002730115073e-16,
+  "field_error": 4.487194411460773e-16,
+  "new_physical_calls": 0,
+  "physical_feasibility_certified": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "e4c576fb4ce92b78a9eac2a43be1b45575079d82",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-qualification-v1.json",
+    "sha256": "a7573ec30fddf199b47d2d934ded7e5bb38b9489294202c2b615abdbe0cc3fa1"
+  }
+}

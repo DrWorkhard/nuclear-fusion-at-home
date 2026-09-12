@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — First upstream start passes normalized-field and full-row qualification
+
+- At e4c576f the exact first-ranked source is explicitly normalized by
+  1.0000611027020105 to1250075.624635464A. Parameter/regularization identity
+  passes;64-point field scale error4.4872e-16. All nine coupled bundle checks
+  pass, maximum native gradient error2.0520e-13. Additional native metric checks
+  pass; finest directional error4.3514e-7 at fixed1e-6 tolerance.
+- Independent auditor passes23 recomputed/reference checks, zero new physical
+  calls. All four finite-difference steps retained. Guarded worker exits0;
+  no search and no physical admission: coarse flux1.0001222082961255e-6.
+- Detail/index/status/plan updated, both READMEs remain accurate. All32 relevant
+  tests plus Ruff/docs/diff pass before the completed qualification is committed.
+
 ## 2026-09-12 — Implement additive normalized-start qualification and independent audit
 
 - Source preparation preserves Fourier coefficients/regularizations, explicitly

@@ -51,8 +51,10 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    ist vollständig abgeschlossen: Quellen/Felder und geometrische Gitterschirme
    bestehen, Roh-Flux bei allen fünf rund100-mal zu hoch. Als nächsten getrennten
    Konstruktionsstart den bereits vor jeder Feldrechnung erstplatzierten
-   Archiveintrag untersuchen: explizite Anpassung an dieselbe feste Stromsumme,
-   neue Startqualifikation, keine Auswahl/Toleranzanpassung aus Holdoutwerten.
+   Archiveintrag untersucht: explizite Anpassung an dieselbe feste Stromsumme,
+   neue Startqualifikation samt unabhängigem Audit bestanden, keine Auswahl/
+   Toleranzanpassung aus Holdoutwerten. Jetzt den registrierten neuen Start im
+   unveränderten klassischen1033-Bundle-Piloten mit zwei Wiederholungen verwenden.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

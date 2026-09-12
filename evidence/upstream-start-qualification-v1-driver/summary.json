@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/qualify_upstream_start.py",
+    "evidence/upstream-start-qualification-v1.json",
+    "artifacts/upstream-start-qualification-v1"
+  ],
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-qualification-v1-driver/command.log",
+    "sha256": "8506f7d8d1a20bf199fda37939d1a9c39fef54d5c0ad1148ed1b7c0c7af396a6"
+  },
+  "minimum_observed_free_bytes": 6183284736,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "e4c576fb4ce92b78a9eac2a43be1b45575079d82",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 0,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_guarded_command.py",
+    "sha256": "4da34bb00b8b21d437de79317ae9f3108512068feb011312215c124c06ecb442"
+  },
+  "status": "completed"
+}
