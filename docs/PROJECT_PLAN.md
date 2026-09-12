@@ -48,6 +48,10 @@ exakt reproduziert, aber25 nfp3-Familien wechseln bei bloßer Neumarkierung ihre
 Vorzeichenklasse. Deshalb den physikalischen Wirkungs-/Präzessionsmaßstab und
 seine Gauge-Bedeutung klären; kein naives Optimieren einer frei wählbaren
 radialen Vorzeichenstatistik. Der volle Invariantenbereich bleibt offen.
+Die [Koordinatenanalyse](qi/QI_DRIFT_COORDINATES.md) erklärt die Transformation
+des vollständigen Driftpaares. Nächster Physiktest: absolute Normalisierung und
+direkte Führungszentrum-Drift gegen Wirkungsableitung, mit identischer Phase und
+geprüften Strom-/Druckannahmen. Reine Algebra ersetzt diese Gegenrechnung nicht.
 
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |

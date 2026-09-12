@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Interpret QI gauge effects using the full action-drift pair
+
+- Read primary Hamiltonian drift equations and assumptions in Rodríguez,
+  Helander & Goodman2024, equations1.2 and appendixA. Own chain-rule derivation
+  explains changing angular component while a fixed physical phase contraction
+  stays invariant when both drift and phase covectors are transformed.
+- Added pure algebraic controls, not new equilibrium/orbit measurements and not
+  an independent revalidation of the old chain-rule data. Absolute frequency,
+  signed flux/canonical mapping and direct guiding-centre comparison remain open.
+- QI index/detail updated. Both READMEs/status/plan retain the gauge/physics gap;
+  next step is an actual physical drift crosscheck, not optimizing gauge choice.
+- Eleven algebraic controls pass; full suite359 passed with20 known warnings.
+  Ruff/docs/diff pass. Fresh VMEC++ W7-X has finished; fresh VMEC8.52 is running.
+
 ## 2026-09-12 — Preregister natural-AL IO-recovery and explicit postmortem audit
 
 - Original incomplete study remains immutable and cannot pass the normal auditor.
