@@ -28,6 +28,14 @@ Der maschinenlesbare Kontrollbericht `evidence/natural-auglag-control-v1.json`
 bei b35efae bestätigt die oben genannten Werte und alle Kontrollgrenzen. Er
 enthält nur analytische, keine physikalischen Auswertungen.
 
-Noch offen: physikalische Wiederholungen,
-unabhängiger Stufen-/Auswahlaudit und vollständige feine Abnahmen. Weder eine
+Der unabhängige Stufen-/Auswahlprüfer ist vorbereitet. Er berechnet sämtliche
+Meritwerte, minimale Stufenauswahl, Multiplikator-/rho-Folge, Bundlepartition,
+Zusatzarbeit, Zielstopp und benannte Feldidentität erneut. Acht Stufenkontrollen
+und eine explizite Terminationsprofilkontrolle bestehen. Der Standardprüfer für
+einzelne Solver behält sein altes Verhalten; die Stufenlogik muss explizit gewählt
+und zusätzlich inhaltlich geprüft werden. Vollsuite jetzt 314 bestanden,
+11 bekannte Warnungen, Ruff bestanden.
+
+Noch offen: physikalische Wiederholungen, Anwendung des unabhängigen Audits und
+vollständige feine Abnahmen. Weder eine
 zulässige Konstruktion noch ein Methoden- oder SoTA-Vorteil ist nachgewiesen.

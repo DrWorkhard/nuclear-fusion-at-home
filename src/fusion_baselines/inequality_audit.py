@@ -5,9 +5,11 @@ import hashlib
 import numpy as np
 
 
-def audit_inequality_arm(arm, x, values, *, expected_limit=256):
+def audit_inequality_arm(arm, x, values, *, expected_limit=256, stop_profile="single_solver"):
     if type(expected_limit) is not int or expected_limit < 1:
         raise ValueError("positive predeclared expected budget required")
+    if stop_profile not in {"single_solver", "staged_al"}:
+        raise ValueError("unknown predeclared termination profile")
     records, counters = arm["evaluations"], arm["counters"]
     completed = [r for r in records if r["status"] == "completed"]
     failed = [r for r in records if r["status"] == "error"]
@@ -31,6 +33,22 @@ def audit_inequality_arm(arm, x, values, *, expected_limit=256):
         )
         or (arm["status"] == "solver_returned" and counters["denied"] == 0),
     }
+    if stop_profile == "staged_al":
+        # Detailed stage accounting/target checks belong to the additional AL audit.
+        checks["correct_stop"] = (
+            counters["denied"] == 0
+            and arm.get("converged") is False
+            and (
+                (
+                    arm["status"] == "stages_completed"
+                    and arm["stop_reason"] == "eight_stages_completed"
+                )
+                or (
+                    arm["status"] == "construction_stopped"
+                    and arm["stop_reason"] == "construction_target"
+                )
+            )
+        )
     keys, metrics_pass = [], True
     for record in completed:
         vector = np.asarray(record["values"], dtype=float)

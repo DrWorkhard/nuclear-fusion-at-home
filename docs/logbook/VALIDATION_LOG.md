@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Independent staged-AL audit ready before physical execution
+
+- Added arithmetic replay of every stage merit, first-minimum selection,
+  multiplier/rho recurrence, physical-bundle partition, cache/composition work
+  and target-stop semantics. Separate explicit stop profile preserves old
+  single-solver audits and forbids false convergence claims.
+- Nine new audit/profile controls pass, including modified costs, rho,
+  multipliers, selection, budgets, target and work. Full suite 314 passed,
+  11 known warnings; Ruff/docs/diff checks pass. Both READMEs/status/plan remain
+  current: SLSQP holdouts pending, AL still only prepared and analytically tested.
+
 ## 2026-09-12 — GN-1024 complete independent holdouts reject flux only
 
 - Both serialized fields independently replay all four flux grids, every geometry
