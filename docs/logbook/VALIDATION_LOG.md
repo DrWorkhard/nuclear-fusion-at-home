@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Register separate composite-gate SLSQP retry after closed independent qualification
+
+- Same fixed AL state, all physical limits,2048 bundles per fresh repeat and
+  unchanged search/selection. New gate requires full138x207 replay and all nine
+  old startup physical points/values, unchanged nonpair FD, bound passing
+  independent120-pair qualification. Original all-row FD flag stays explicit.
+- AL1033, failed9, native qualification1 and independent pair/auditor work kept
+  separate from new two-arm construction. All four holdouts still required.
+- Protocol/index and next steps recorded, overviews reviewed; docs/diff pass.
+  Additive implementation/tests next, no new search started in this step.
+
 ## 2026-09-12 — Close independent derivative qualification at fixed failed polishing start
 
 - At42ca07e one native bundle replays138 values exactly, original analytic
