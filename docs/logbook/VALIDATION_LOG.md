@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-12 — Recheck completed-result evidence availability and hashes
+
+- Existing reference auditor checks17 explicitly listed completed reports:
+  fresh native archive/physics, full recovery/holdouts, analytic scaled control
+  and upstream inventory. All5501 references resolve to current matching files,
+  5474 unique reference contexts. No unresolved references; no new physics.
+- Scope is explicit JSON path/hash pairs, not recursive traversal or a new
+  scientific validation. Live studies excluded. Detail/index updated; both
+  READMEs/status/plan remain accurate. Both integrity tests pass; docs/diff pass.
+
 ## 2026-09-12 — Prepare independent serialized-state and reconstruction report audits
 
 - Direct graph reader extracts authoritative DOF arrays, not potentially stale

@@ -8,6 +8,8 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Evidenzintegrität: Ergebnisse](EVIDENCE_INTEGRITY_RESULTS.md) — 5501 aktuelle Hashverweise in 17 abgeschlossenen Berichten geprüft; Dateiintegrität ist kein Ersatz für physikalische Gegenprüfungen.
+
 - [Frische native Integration: Ergebnis](FRESH_NATIVE_INTEGRATION_RESULTS.md) — Alle21 Aufbau-/Rechenphasen und sechs strikte Tests bestanden; neue W7-X-Ausgaben, erweiterter Vergleich weiter60/63. Lokale Reproduzierbarkeit belegt, globale Physikgates offen.
 
 - [Nativer Retry: Ressourcenprotokoll](FRESH_NATIVE_RETRY_PROTOCOL.md) — Selektiver Checkout, 5-GiB-Startprüfung und überwachte 2-GiB-Reserve; ursprüngliche Physik-/Abnahmekriterien unverändert.
