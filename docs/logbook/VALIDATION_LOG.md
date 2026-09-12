@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Qualify streamed nonlocal scan/audit including partial failures on small controls
+
+- Compressed pair witnesses plus complete partition certificates; distinguish
+  processed prefix from broad-phase delivered leaf. Both work/time caps and
+  injected narrow-phase errors preserve partial evidence and never admit.
+- Independent auditor re-enumerates original-vertex candidates and verifies
+  each nonlocal witness, tags/counters/classification; shared-vertex scope stays
+  explicit. Five new workflow tests pass,39 spatial tests total; no real coil mesh.
+- Detail/index and both READMEs/status/plan reviewed; Ruff/docs/diff pass before
+  commit. Six-mesh executable wrappers and file provenance remain to implement,
+  physical execution still waits for closed SLSQP search and holdouts.
+
 ## 2026-09-12 — Independently validate box-partition and spatial witness certificates on controls
 
 - Original-vertex node boxes, index bijection, disjoint pair-frontier accounting
