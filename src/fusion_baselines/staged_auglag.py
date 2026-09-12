@@ -60,7 +60,7 @@ def solve_stages(
         stages.append(record)
         best = None
 
-        def compose(y, start=start, record=record, lam=lam.copy(), rho=rho):
+        def compose(y, start=start, record=record, lam=lam, rho=rho):
             nonlocal best
             x = x0 + 0.01 * np.asarray(y)
             cached = backend.last_x is not None and np.array_equal(x, backend.last_x)

@@ -1,5 +1,14 @@
 # Validation log
 
+## 2026-09-12 — Analytic AL control recorded; correct premature Ruff statement
+
+- Machine-readable b35efae control passes all fixed limits with 16 synthetic
+  bundles and the recorded x=(1.0000000046650739,-4.665073789293459e-9).
+- Correction: the full suite did pass 305 tests, but b35efae's Ruff statement was
+  premature: B008 remained after the closure fix. Binding the non-mutated stage
+  multiplier array directly removes it without a mathematical change. Ten affected
+  controls and Ruff now pass; docs/diff pass. No physical AL run has started.
+
 ## 2026-09-12 — Staged natural-AL adapter and analytic solver control
 
 - Implemented the preregistered eight-stage control, per-stage denied proposals,

@@ -17,10 +17,17 @@ qualifizierte batched Jacobimatrix. Jede vollständige physikalische Auswertung
 muss weiterhin die ursprünglichen GN-Identitätsgrenzen bestehen. Stufen-Meritwerte,
 Multiplikatoren, Auswahl und Zusatzarbeit werden getrennt gespeichert.
 
-Vollsuite: 305 Tests bestanden, 11 bekannte Warnungen; Ruff bestanden. Fünf
-Lintwarnungen über Schleifenvariablen wurden durch explizite Bindung des
-inneren Stufenzustands beseitigt. Keine bestehenden Suchkerne geändert.
+Vollsuite: 305 Tests bestanden, 11 bekannte Warnungen. Nach fünf behobenen
+Schleifenbindungswarnungen blieb zunächst eine weitere Ruff-Warnung B008 über
+`lam.copy()` im Standardargument bestehen. Die frühere Ruff-Erfolgsaussage in
+b35efae war verfrüht. Bindung an das nicht mutierte Stufenarray beseitigt sie;
+erneut zehn betroffene Tests und jetzt Ruff bestanden. Keine Suchmathematik
+oder bestehenden Suchkerne geändert.
 
-Noch offen: committeter Kontrollbericht, physikalische Wiederholungen,
+Der maschinenlesbare Kontrollbericht `evidence/natural-auglag-control-v1.json`
+bei b35efae bestätigt die oben genannten Werte und alle Kontrollgrenzen. Er
+enthält nur analytische, keine physikalischen Auswertungen.
+
+Noch offen: physikalische Wiederholungen,
 unabhängiger Stufen-/Auswahlaudit und vollständige feine Abnahmen. Weder eine
 zulässige Konstruktion noch ein Methoden- oder SoTA-Vorteil ist nachgewiesen.
