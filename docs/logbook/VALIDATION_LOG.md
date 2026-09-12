@@ -12,6 +12,12 @@
   independently recount before any physical use. Detail index updated; both
   READMEs/status/plan checked. This is preparation, no inventory result yet.
 
+Preparation check:17 parser/selection tests pass for flat/wrapped formats,
+missing/nonfinite values, continuation disagreement, wrong coil counts and
+stable five-item ranking. Inventory runner verifies every metadata file against
+the exact Git blob before parsing; it preserves parse errors and does not load
+coils. Ruff/docs/diff pass before the metadata execution.
+
 ## 2026-09-12 — Close all recovery holdouts; guard the separate scaled-study start
 
 - At54cbd8c all four holdout phases complete with exit2/0/0/0. Both candidates
