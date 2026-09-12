@@ -21,3 +21,18 @@ Die strenge Normalrestnorm des Protokolls ist unverändert; aus einem
 Numerikfehlschlag nahe Maschinenpräzision darf kein toleranzgeheilter Pass
 werden. Nächster Schritt: echte quellgebundene Probes/Dateiaudit und alle
 unveränderten Feld-Holdouts nach abgeschlossenem feinsten Netz-Audit.
+
+## Explizite symbolische Stromzuordnung
+
+Zusätzlicher Leser löst den gesamten serialisierten Stromausdruck als16x3-
+Matrix plus konstanten Vektor auf. Er verlangt exakt drei getrennte freie
+Stromblätter mit Skalierung1e7, feste vierte Summe und alle16 Symmetriezeichen;
+die globalen Spalten kommen ausschließlich aus expliziten Namen. Zwei synthetische
+Tests bestätigen die unabhängige physikalische Rekonstruktion, eine umgekehrte
+Namensreihenfolge und die Ablehnung veränderter Skalierung/Symmetriekopien.
+
+Ein erster Kontrollaufbau kombinierte versehentlich die alte Ordnung4-Fixture
+mit Namen eines anderen Ordnung8-Laufs und wurde erwartungsgemäß abgelehnt.
+Die Kontrolle benutzt jetzt einen in sich konsistenten synthetischen207-DOF-
+Graphen; keine Produktionsdaten/-Namen wurden passend gemacht. Insgesamt zehn
+reine LS-/Stromgraphkontrollen bestanden, native Probes weiterhin noch nicht ausgeführt.

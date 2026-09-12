@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Qualify explicit symbolic current-expression and named-column mapping
+
+- New reader reconstructs all16 current expressions as exact16x3 affine matrix
+  plus fixed offsets, checking1e7 scaling, three free leaves, total and symmetry.
+  Two synthetic permutation/scaling/symmetry controls pass; ten current controls total.
+- Initial test fixture incorrectly mixed the old order4 file with another
+  order8 run names; correctly rejected. Replaced by a self-contained synthetic
+  graph, no production DOF names/data changed. Ruff import separation corrected.
+- Tests/Ruff/docs/diff pass, detail/index and both READMEs/status/plan reviewed;
+  native current source evaluation remains next after finest-mesh closure.
+
 ## 2026-09-12 — Qualify independent linear current fit kernels on analytic controls
 
 - Fixed three-column SVD with explicit rank/condition/normal-rest qualification;
