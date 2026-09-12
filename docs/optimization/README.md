@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [GN-Trust-Pilot: gestoppt](GN_TRUST_PILOT_RESULTS.md) — Nach 28 vollständigen Bundles scheitert die Feld-/Gradientidentität; zweiter Arm nicht gestartet, Fehlerpfad muss den problematischen Punkt vollständig erfassen.
 - [GN-Trust-Pilot: Protokoll](GN_TRUST_PILOT_PROTOCOL.md) — Klassischer Solver mit expliziter Fluxkrümmung, festen 1024-Bundle-Grenzen und zwei Wiederholungen; unveränderte unabhängige Abnahme.
 - [Quadratisches Feldmodell: Ergebnis](QUADRATIC_FIELD_MODEL_RESULTS.md) — Alle vier Vorzeichen stimmen, mindestens 99,907% geringerer Vorhersagefehler als linear; vollständiger nativer Matrixvergleich und unabhängiger Kern-Audit bestehen.
 - [Quadratisches Feldmodell: Protokoll](QUADRATIC_FIELD_MODEL_PROTOCOL.md) — Vorab festgelegte Qualifikation und Vorhersageprüfung an allen vier gespeicherten Testschritten; keine neue Optimierung.

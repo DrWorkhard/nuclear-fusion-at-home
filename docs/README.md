@@ -109,10 +109,12 @@ Der anschließende [quadratische Modelltest](optimization/QUADRATIC_FIELD_MODEL_
 sagt an allen vier Testschritten das richtige Änderungs-Vorzeichen voraus und
 verringert den Vorhersagefehler gegenüber dem linearen Modell um mindestens
 99,907%. Vollständige native Ableitungsmatrizen und ein separater Kern-Audit
-bestätigen die Rechnung. Als Nächstes folgt der
-[vorab festgelegte GN-Trust-Pilot](optimization/GN_TRUST_PILOT_PROTOCOL.md)
-mit dieser Krümmungsinformation: zwei Wiederholungen mit höchstens je 1024
-vollständigen Auswertungen, anschließend unabhängige Abnahme beider Ergebnisse.
+bestätigen die Rechnung. Der anschließende
+[GN-Trust-Pilot](optimization/GN_TRUST_PILOT_RESULTS.md) wurde jedoch am 29.
+Vorschlag durch die Feld-/Gradient-Schutzprüfung gestoppt; die zweite Wiederholung
+startete nicht. Als Nächstes wird genau dieser Fehlerpunkt in einem begrenzten
+Wiederholungslauf vollständig erfasst und unabhängig untersucht. Die Grenzwerte
+bleiben unverändert; es liegt weiterhin kein neuer zulässiger Entwurf vor.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 

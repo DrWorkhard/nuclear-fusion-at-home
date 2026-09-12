@@ -53,8 +53,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
 ## Offene Arbeit, nach Bedeutung
 
 1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
-   einen neuen krümmungsinformierten Versuch festlegen: Das quadratische Feldmodell
-   besteht die Prüfung an allen vier eingefrorenen Proben. Die zuvor fehlgeschlagene Abstand-Ableitungsprüfung ist
+   die Schutzprüfung des am 29. Vorschlag gestoppten GN-Trust-Piloten untersuchen.
+   Das quadratische Feldmodell besteht die Prüfung an vier eingefrorenen Proben,
+   nicht automatisch an allen neuen Suchpunkten. Die zuvor fehlgeschlagene Abstand-Ableitungsprüfung ist
    unabhängig untersucht, der historische Fehlerstatus bleibt erhalten.
    Danach einen getrennt festgelegten Folgelauf, mehrere
    Initialisierungen und fairer Methodenvergleich. Nicht nur mehr Rechenzeit auf

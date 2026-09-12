@@ -21,10 +21,11 @@ the budget-limited run does not establish convergence.
 The [quadratic field-model diagnostic](docs/optimization/QUADRATIC_FIELD_MODEL_RESULTS.md)
 predicts the correct change sign on all four frozen probes and reduces prediction
 error by at least 99.907% versus the linear model. Full native Jacobian comparisons
-and a separate core audit pass. Earlier failed checks remain recorded. Next:
-execute the [fixed GN trust pilot](docs/optimization/GN_TRUST_PILOT_PROTOCOL.md)
-(two repeats, at most 1024 full bundles each), then independently validate its
-output. The diagnostic probes are not admitted designs.
+and a separate core audit pass. The subsequent
+[GN trust pilot stopped](docs/optimization/GN_TRUST_PILOT_RESULTS.md) at proposal 29
+because its field/gradient identity guard failed; no second arm or candidate
+admission followed. Next: a bounded replay to capture and independently diagnose
+that failed bundle, without changing tolerances or solver settings.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

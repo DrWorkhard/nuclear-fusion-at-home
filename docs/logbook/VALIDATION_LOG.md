@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — GN trust v1 retained as failed field/gradient identity qualification
+
+- e159155: analytic control and both shared native state/matrix checks pass.
+  First arm stops at proposal 29: 28 complete bundles, one failure, 51 cache hits,
+  80 requests, no denial; wall time 23.241 s. Second arm never starts.
+- Failure hash fbfa2c2c55998b24f94e2ec0a38b99ff8dcc276306102061719eec854aaa3f59.
+  Original failure handler lacks the failed point's full arrays and numerical
+  identity errors; this limitation is explicitly retained. The last 28 accepted
+  bundles have maximum normalized gradient discrepancy 6.935e-11 (limit 1e-10).
+- Best stored proposal 22 has objective 0.590416404, no internal violation;
+  no independent holdout/admission. Neither a successful pilot nor a method gain.
+- Updated both READMEs, status, plan and optimization index. Next: preregister
+  bounded deterministic error capture/replay with unchanged solver and limits.
+
 ## 2026-09-12 — GN trust pilot preparation and retained analytic-control failure
 
 - Six new adapter tests cover GN matrix/coordinate scaling, cache/budget coupling,
