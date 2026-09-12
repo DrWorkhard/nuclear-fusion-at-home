@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Register a bounded signed-flux/Clebsch prerequisite for QI drift
+
+- Primary paper specifies canonical drift and half-bounce convention; pinned
+  SIMSOPT source explicitly uses minus VMEC edge flux over2pi. Register this
+  sign, positive/missing2pi negative controls, four fixed cases/three radii/two
+  grids and1e-3 representation screen before new physical values are measured.
+- Crosscheck different Wout representations, not an independent equilibrium or
+  frequency certification. Own radial geometry Jacobian is explicitly outside
+  this subtest. Small diagnostic only; main LPQA study continues separately.
+- Detail/index updated; current overviews retain open absolute drift gate.
+  Documentation/diff checks pass before protocol commit; no new numerical result.
+
 ## 2026-09-12 — Bind the alternate-start study to qualified inputs and unchanged AL kernel
 
 - Additive runner reuses the original scaled-AL run_arm unchanged; checks all

@@ -8,6 +8,9 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 
 ## Dokumente
 
+- [Clebsch-Normierung: Protokoll](QI_CLEBSCH_PROTOCOL.md) — Vier feste Wout-Fälle, signierter Fluss samt2pi-Faktor, unabhängige Fourierdarstellungen und Negativkontrollen; keine absolute Driftfreigabe.
+- [Clebsch-Normierung: Stand](QI_CLEBSCH_RESULTS.md) — Registrierung vor realen Feldprüfungen.
+
 - [Drift und Koordinaten](QI_DRIFT_COORDINATES.md) — Primärquellen-/Kettenregeleinordnung: beide Driftkomponenten und dieselbe physikalische Phase transformieren; reine algebraische Kontrolle, noch keine absolute Frequenzvalidierung.
 
 - [Radiale Gauge: Ergebnis](QI_RADIAL_GAUGE_RESULTS.md) — Alle84 alten Traces exakt wiederholt; 25 nfp3-Familien wechseln unter Neumarkierung das Vorzeichen, unabhängige Zuordnungs-/Kettenregelprüfung besteht.
