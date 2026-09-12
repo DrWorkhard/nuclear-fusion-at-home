@@ -8,6 +8,9 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 
 ## Dokumente
 
+- [Clebsch-Interpolation: Protokoll](QI_CLEBSCH_INTERPOLATION_PROTOCOL.md) — Algebraische Trennung aller24 Restfelder in Halbflächen- und Interpolationsbeiträge; unveränderte Grenzwerte.
+- [Clebsch-Interpolation: Stand](QI_CLEBSCH_INTERPOLATION_RESULTS.md) — Registrierte Diagnose, noch keine Ursachenzuordnung.
+
 - [Clebsch-Normierung: Protokoll](QI_CLEBSCH_PROTOCOL.md) — Vier feste Wout-Fälle, signierter Fluss samt2pi-Faktor, unabhängige Fourierdarstellungen und Negativkontrollen; keine absolute Driftfreigabe.
 - [Clebsch-Normierung: Ergebnis](QI_CLEBSCH_RESULTS.md) — Alle24 Feld-/Fehlerrechnungen unabhängig bestätigt;19 Gitter bestehen, fünf poloidale Identitäten verfehlen die feste Grenze. Keine absolute Driftfreigabe.
 

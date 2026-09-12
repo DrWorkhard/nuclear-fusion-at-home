@@ -1,5 +1,14 @@
 # Validation log
 
+## 2026-09-12 — Register exact product-interpolation decomposition for all24 QI grids
+
+- Freeze original failed screen and all24 cases; evaluate both neighboring half
+  surfaces with a separate matrix-Fourier path and split each residual into
+  interpolated node residual minus t*(1-t)*delta_g*delta_b. Require1e-12 replay/
+  decomposition; retain1e-3 endpoint screen and all48 node grids.
+- No new values yet; a surviving node error would refute interpolation as sole
+  cause. Detail/index and overviews reviewed; docs/diff pass before commit.
+
 ## 2026-09-12 — Signed-flux screen completes with five preserved poloidal failures
 
 - All24 registered QI grids complete at0dca1ec; field-vector/magnitude/toroidal
