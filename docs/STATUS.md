@@ -53,11 +53,12 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
 ## Offene Arbeit, nach Bedeutung
 
 1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
-   beide neuen Studien unabhängig abnehmen: Der SLSQP-1024-Lauf wiederholt
+   den SLSQP-1024-Lauf unabhängig abnehmen: Er wiederholt
    sich intern exakt, scheitert aber am historischen Präfixvergleich; grober
    Flux Faktor 12,7 über Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024
-   Bundles exakt und besteht den unabhängigen Protokoll-Audit; der grobe Flux
-   bleibt Faktor 24,7 über der Grenze. Getrennte Feldprojektionsrundung war
+   Bundles exakt und besteht den unabhängigen Protokoll-Audit sowie Geometrie/
+   native Zusatzmetriken; der verfeinerte Flux bleibt Faktor 24,7 über der Grenze.
+   Getrennte Feldprojektionsrundung war
    Ursache der alten Schutzverletzung.
    Das quadratische Feldmodell besteht die Prüfung an vier eingefrorenen Proben,
    nicht automatisch an allen neuen Suchpunkten. Die zuvor fehlgeschlagene Abstand-Ableitungsprüfung ist

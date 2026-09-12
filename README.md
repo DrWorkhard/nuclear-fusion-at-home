@@ -30,12 +30,12 @@ amplification of separately rounded field projections in the guard; native
 matrices and affine-current checks pass. The
 [native-projection retry](docs/optimization/GN_NATIVE_COVECTOR_RESULTS.md) now passes
 all three frozen-state qualifications and finishes two exactly repeated
-1024-bundle searches. Independent ledger/prefix audits pass, but the selected
-coarse flux is still 24.7 times the limit. Original objectives, gradients, GN
+1024-bundle searches. Independent ledger/prefix, geometry and native-metric checks
+pass, but independently refined flux is still 24.7 times the limit. Original objectives, gradients, GN
 matrices and tolerances are unchanged. The separate
 [SLSQP-1024 construction](docs/optimization/DIRECT_SLSQP_1024_RESULTS.md) also
 repeats exactly within its new study, but fails the preregistered historical-prefix
-comparison. Its selected coarse flux remains 12.7 times the limit. Both studies'
+comparison. Its selected coarse flux remains 12.7 times the limit. Its
 independent physical holdouts are next; a classical natural-flux AL follow-up
 has been preregistered and its analytic solver control passes.
 

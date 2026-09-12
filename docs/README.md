@@ -119,13 +119,14 @@ Verstärkung kleiner Rundungsunterschiede zweier Feldprojektionen im Prüfvergle
 native Matrizen und unabhängige Stromprüfungen stimmen überein. Die
 [korrigierte Wiederholung](optimization/GN_NATIVE_COVECTOR_RESULTS.md) besteht
 alle drei Zustandsqualifikationen; beide 1024-Bundle-Suchen sind exakt
-reproduziert und unabhängig im Auswertungsprotokoll geprüft. Der ausgewählte
-grobe Flux bleibt Faktor 24,7 über der Grenze. Zielfunktion, Gradienten,
+reproduziert und unabhängig im Auswertungsprotokoll geprüft. Geometrie und native
+Zusatzmetriken bestehen; der unabhängig verfeinerte Flux bleibt Faktor 24,7
+über der Grenze. Zielfunktion, Gradienten,
 GN-Matrix und Grenzwerte bleiben unverändert. Auch die neuen
 [SLSQP-1024-Wiederholungen](optimization/DIRECT_SLSQP_1024_RESULTS.md) stimmen
 untereinander exakt überein, verfehlen aber den verlangten historischen
-Präfixvergleich. Ihr grober Flux bleibt Faktor 12,7 über der Grenze. Jetzt die
-unabhängigen Abnahmen beider Studien; anschließend ist ein klassischer
+Präfixvergleich. Ihr grober Flux bleibt Faktor 12,7 über der Grenze. Jetzt ihre
+unabhängige Abnahme; anschließend ist ein klassischer
 AL-Versuch mit natürlichen Fluxresiduen vorab festgelegt und analytisch geprüft.
 Weiterhin kein neuer zulässiger Entwurf.
 

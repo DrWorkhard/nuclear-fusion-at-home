@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — GN-1024 complete independent holdouts reject flux only
+
+- Both serialized fields independently replay all four flux grids, every geometry
+  and plasma grid, continuous curvature/clearance bounds, native MSC/arc metrics
+  and linking. Same results for both repeats; all prescribed levels retained.
+- Refined Phi=2.4713046015452125e-7 fails limit1e-8. Length219.821748818m,
+  curvature upper0.764994807/m, clearance lower1.122587112m and sampled
+  plasma distance3.085070251m pass. Native metrics/refinement/linking pass.
+- This closes the GN pilot negatively for flux feasibility, not steps1/2. Both
+  READMEs/status/plan/index updated; docs/diff checks pass. SLSQP holdouts next.
+
 ## 2026-09-12 — SLSQP-1024 complete, exact internal repeat, failed historical prefix
 
 - Two 1024-bundle histories/selected fields repeat exactly. Independent arm

@@ -1,4 +1,4 @@
-# GN-Pilot mit nativer Feldprojektion — Suche abgeschlossen, Abnahme offen
+# GN-Pilot mit nativer Feldprojektion — unabhängig geprüft, Flux abgelehnt
 
 Stand: 2026-09-12. Protokoll/Implementierung 1913edd.
 Beide Läufe in `evidence/gn-trust-native-v1` sind abgeschlossen und eingefroren.
@@ -34,6 +34,29 @@ Maximale gekoppelte Gradientabweichung 5,811e-13 (Grenze 1e-10); die erhaltene
 ungekoppelte Diagnose erreicht 4,031e-10. Der exakt erhaltene alte Präfix stützt,
 dass die Korrektur die Schutzprüfung, nicht die Suchmathematik verändert hat.
 
-Noch offen: alle feinen Flux-/Geometrie-/nativen Holdouts. Zuerst läuft der vorab
-festgelegte frische SLSQP-1024-Vergleich ohne Holdout-Rückmeldung. Keine zulässige
-neue Baseline und kein Abschluss von langfristigem Schritt 1/2.
+## Unabhängige Abnahme beider Felder
+
+Die beiden Felder ergeben exakt gleiche Abnahmewerte. Alle vier Fluxgitter,
+Geometriestufen 200/1000/5000/20000, Plasmaauflösungen 64/128/256/512 und sämtliche
+Stufen der kontinuierlichen Schranken bleiben erhalten. Keine Holdout-Rückmeldung.
+
+| Größe | Feinster Wert / Schranke | Grenze | Urteil |
+| --- | ---: | ---: | --- |
+| Roh-Flux, 128x128 / 800 Spulenpunkte | 2,4713046015452125e-7 | <=1e-8 | **Abgelehnt**, Faktor 24,713 |
+| Gesamtlänge | 219,821748818 m | <=220 m | Bestanden |
+| Kontinuierliche Krümmungsobergrenze | 0,764994807 /m | <=1 /m | Bestanden |
+| Kontinuierliche Spulenabstandsuntergrenze | 1,122587112 m | >=1,06 m | Bestanden |
+| Feinster Spule/Plasma-Stichprobenabstand | 3,085070251 m | >=1,3 m | Bestanden |
+| Höchste native MSC | 6,618675179 | <=10,100286075 | Bestanden |
+| Höchste native Bogenlängenvarianz | 3,099528483 | <=102,015778794 | Bestanden |
+
+Fluxverfeinerung und native MSC-/Varianzverfeinerung bestehen; Linking ist bei
+200 und 800 Punkten null. Krümmung N=200 bleibt unaufgelöst, ab N=400 bestehen
+alle feineren Schranken. Gleitkommapolster, keine gerichtete Intervallarithmetik.
+Keine vollständige Wicklungspaket-, Mechanik- oder Teilchentransportabnahme.
+
+Evidenz: `evidence/gn-trust-native-v1-{holdout,curvature,clearance,native}.json`.
+Der begrenzte Versuch einschließlich Kandidatenprüfung ist abgeschlossen und
+negativ hinsichtlich Flux-Zulässigkeit. Keine neue Baseline und kein Abschluss
+von langfristigem Schritt 1/2. Der separat festgelegte SLSQP-1024-Lauf und ein
+natürlicher Flux-AL-Folgeansatz bleiben getrennte Konstruktionen.

@@ -15,7 +15,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 - [SLSQP-1024: Suchergebnis](DIRECT_SLSQP_1024_RESULTS.md) — Neue Wiederholungen exakt, historischer Präfix ab 62 abweichend und Audit daher fehlgeschlagen; grober Flux Faktor 12,7 über Grenze, feine Abnahme offen.
 
 - [Neuer SLSQP-1024-Lauf: Protokoll](DIRECT_SLSQP_1024_PROTOCOL.md) — Klassische Vergleichskonstruktion mit gleichem maximalem Bundlebudget wie GN, unverändertem Originalstart und Pflicht zur Reproduktion des alten 256-Vorschläge-Präfixes.
-- [Native Feldprojektion: Suchergebnis](GN_NATIVE_COVECTOR_RESULTS.md) — Beide 1024-Bundle-Suchen exakt wiederholt und unabhängig auditiert; grober Flux Faktor 24,7 über Grenze, feine Abnahme offen.
+- [Native Feldprojektion: geprüftes Ergebnis](GN_NATIVE_COVECTOR_RESULTS.md) — Beide 1024-Bundle-Suchen exakt wiederholt und auditiert; feine Geometrie-/native Abnahme besteht, Flux Faktor 24,7 über Grenze abgelehnt.
 - [Native Feldprojektion: korrigierter Pilot](GN_NATIVE_COVECTOR_PROTOCOL.md) — Konsistente Identitätsprüfung bei unveränderten Werten/Gradienten/H_GN; drei feste Zustandsprüfungen und Pflicht zur exakten Wiederholung des alten Suchpräfixes.
 - [Gespeicherter GN-Fehlerpunkt: Ergebnis](GN_FAILED_POINT_RESULTS.md) — Native Zustandsstabilität und unabhängige Ableitungen bestehen; die separat gerundete Feldprojektion verursacht die Identitätsabweichung im Suchadapter.
 - [Gespeicherter GN-Fehlerpunkt: Protokoll](GN_FAILED_POINT_PROTOCOL.md) — Frische native Auswertung, getrennte Feldkovektoren/Matrizen und unabhängige affine Stromprüfung zur Ursachenunterscheidung.
