@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Qualify fixed-radius model and independent scalar primal-dual certificates
+
+- Additive LP model keeps every true linearized inequality, no tolerance added
+  to g/r; zero gradients and unsuccessful HiGHS returns remain explicit.
+- Eight analytic/negative controls pass: known active-row/lower-bound optimum,
+  incorrect marginal signs/points/costs/NaNs, exact scaling, zero gradient and
+  infeasible solve. Independent checker makes no optimization calls.
+- Ruff/docs/diff pass. New detail/index and both READMEs/status/plan reviewed;
+  no actual coil LP or native field evaluated. Next source-bound workflow and
+  native directional probes under the unchanged registered maximum32 bundles.
+
 ## 2026-09-12 — Register geometric model/descent diagnosis before further shape optimization
 
 - Exactly two closed current-minimized sources;204 shape parameters, fixed currents,
