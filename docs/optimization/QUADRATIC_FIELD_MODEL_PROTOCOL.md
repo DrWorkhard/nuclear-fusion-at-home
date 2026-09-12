@@ -66,3 +66,12 @@ alle Testschrittresiduen; spätere Kern-Replays dürfen keine nativen Solver bra
 
 Bei bestandenem Modelltest einen neuen krümmungsinformierten Optimierungsversuch
 getrennt planen und committen. Die alten Flux-/Geometriegrenzen bleiben unverändert.
+
+## Herkunftskorrektur vor physikalischem Lauf
+
+Der erste Start bei c81fdbd stoppt vor dem Aufbau: Zwei Skripte der historischen
+gebündelten Qualifikation haben nach der dokumentierten Ordnerumstellung andere
+Bytes. Keine Rohdateien oder physikalischen Auswertungen entstanden. Historische
+Prüfskripte werden deshalb gegen ihren aufgezeichneten Git-Stand geprüft; alle
+tatsächlich ausgeführten Kerne und das aktuelle qualifizierte Backend müssen
+weiterhin gegen die aktuellen Bytes bestehen. Keine numerische Grenze ändert sich.

@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-12 — Quadratic diagnostic preflight failure retained and corrected
+
+- First invocation at c81fdbd exits 1 before setup: `input/code hash mismatch`
+  for `scripts/qualify_spatial_flux.py`. No output report/raw directory or physical
+  evaluations exist. Inspection finds two historical runner/preparation scripts
+  changed during the documented path migration; the four used field/mapping
+  kernels retain their qualified bytes.
+- The new runner now resolves archived qualification scripts against their
+  recorded Git revision, while requiring current-byte agreement for every live
+  kernel and the separately qualified current preparation/direct backend.
+  The existing tested lineage resolver is reused; no tolerance or frozen state
+  changes. This correction precedes any physical diagnostic evaluation.
+- Thirteen quadratic-model/lineage controls, Ruff, documentation checks and diff
+  whitespace checks pass. Overall status and next action remain unchanged.
+
 ## 2026-09-12 — Quadratic field-model diagnostic prepared before physical evaluation
 
 - Added the prospective four-probe protocol, pure quadratic/residual-remainder

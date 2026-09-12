@@ -15,6 +15,7 @@ from simsopt.geo import SurfaceRZFourier
 
 from fusion_baselines.batched_field_jacobian import batched_field_jacobian
 from fusion_baselines.direct_constraints import DirectConstraintBackend
+from fusion_baselines.evidence_integrity import resolve_reference
 from fusion_baselines.local_field_jacobian import local_field_jacobian
 from fusion_baselines.provenance import git_state, host_state, sha256_file, write_json_atomic
 from fusion_baselines.quadratic_flux_model import quadratic_flux_model
@@ -65,7 +66,16 @@ def main():
     batch = json.loads(batch_path.read_text())
     if not prior["qualification_pass"] or not batch["all_pass"]:
         raise ValueError("passing source qualifications required")
-    for ref in prior["qualified_backend_code"] + batch["code"] + batch["installed_sources"]:
+    batch_lineage = [resolve_reference(ref, root, batch["repository"]["path"],
+                                       batch["repository"]["commit"]) for ref in batch["code"]]
+    if any(ref["status"] == "unresolved" for ref in batch_lineage):
+        raise ValueError("unresolved historical batched qualification source")
+    live_kernel_names = {"batched_field_jacobian.py", "local_field_jacobian.py",
+                         "spatial_flux.py", "serialized_dofs.py"}
+    live_batch_code = [ref for ref in batch["code"] if Path(ref["path"]).name in live_kernel_names]
+    if {Path(ref["path"]).name for ref in live_batch_code} != live_kernel_names:
+        raise ValueError("missing live kernel pin")
+    for ref in prior["qualified_backend_code"] + live_batch_code + batch["installed_sources"]:
         checked(ref)
     study = json.loads(checked(prior["study"]).read_text())
     arm = json.loads(checked(prior["arm"]).read_text())
@@ -78,6 +88,7 @@ def main():
         "protocol": reference(root / "docs/optimization/QUADRATIC_FIELD_MODEL_PROTOCOL.md"),
         "source_diagnostic": reference(prior_path),
         "prior_batched_qualification": reference(batch_path),
+        "historical_batched_code_lineage": batch_lineage,
         "status": "running", "qualification_pass": False,
         "optimization_performed": False, "checks": {}, "states": [], "probes": [],
         "versions": {n: importlib.metadata.version(n) for n in ("numpy", "scipy", "simsopt")},
@@ -87,6 +98,7 @@ def main():
         "code": [reference(root / p) for p in (
             "scripts/diagnose_quadratic_field_model.py",
             "src/fusion_baselines/quadratic_flux_model.py",
+            "src/fusion_baselines/evidence_integrity.py",
             "src/fusion_baselines/batched_field_jacobian.py",
             "src/fusion_baselines/local_field_jacobian.py")],
         "additional_work": dict.fromkeys((
