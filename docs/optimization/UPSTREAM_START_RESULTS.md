@@ -42,3 +42,8 @@ Der grobe Roh-Flux ist1,0001222082961255e-6: **keine Zulässigkeit**. Diese Prü
 qualifiziert den explizit transformierten Start, nicht einen Entwurfsfortschritt.
 Nächster Schritt: registrierten klassischen1033-Bundle-Versuch ausführen, beide
 Pfade unabhängig auditieren und ausgewählte Felder vollständig fein prüfen.
+Der additive Studienrunner und sein unabhängiger Auditor sind vorbereitet:
+`scripts/run_upstream_start.py`, `scripts/audit_upstream_study.py`. Sie binden
+die abgeschlossene Startprüfung und prüfen erste Parametervektoren explizit;
+das eigentliche Suchverfahren bleibt der unveränderte alte Armkern. Die gesamte
+Suite besteht mit469 Tests/20 bekannten Warnungen; Ruff/Dokumentprüfung bestehen.

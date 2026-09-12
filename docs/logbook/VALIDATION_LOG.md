@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Bind the alternate-start study to qualified inputs and unchanged AL kernel
+
+- Additive runner reuses the original scaled-AL run_arm unchanged; checks all
+  qualification/native/solver source hashes, explicit physical parameters and
+  named start vector before execution. Audit reuses the unchanged independent
+  arm/stage/profile arithmetic and adds the qualified initial-vector check.
+- Repeat equality deliberately concerns physical histories/stages/work, not
+  elapsed time. Review corrected a whole-record comparison that would also have
+  compared timings before any run. No prior kernel or evidence changed.
+- Full suite469 passes,20 known warnings; Ruff/docs/diff pass. Detail/status
+  updated; both READMEs/plan remain accurate. Physical study starts after commit.
+
 ## 2026-09-12 — First upstream start passes normalized-field and full-row qualification
 
 - At e4c576f the exact first-ranked source is explicitly normalized by
