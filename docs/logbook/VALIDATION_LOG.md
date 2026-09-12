@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Bind author QI inputs and register fresh resolution matrix
+
+- Four old Wouts all version9.0,ns201,ftolv1e-16; matching local author namelists
+  found. Metadata inventory completes with exit2: exact edge flux differs by
+  2.43e-17Wb (about7.73e-16 relative), dimensions match. Preserve this strict
+  bit-comparison failure; no physical tolerance relaxed or historical identity claimed.
+- Installed VMEC++0.7.3 introspection confirms both iteration styles; source/
+  binary hashes retained. Local8.52 output source remains distinct from9.0;
+  local STELLOPT PARVMEC labels1.0. Half-grid Wout lambda unchanged. No builds.
+- Register all four cases with201/401 radial surfaces and1x/2x angular grids,
+  frozen1e-12 residuals/10000 iterations per stage/1800s cell cap, same physics.
+  No new equilibrium measured. Detail/index/status/plan and both READMEs reviewed;
+  producer distinction does not close either step. Ruff/docs/diff pass before commit.
+
 ## 2026-09-12 — Spectral diagnosis closes with stable but mismatching component projections
 
 - At7832e95 all48 endpoint grids complete. Old samples reproduce exactly;

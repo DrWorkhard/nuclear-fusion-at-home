@@ -86,6 +86,9 @@ an den unveränderten Daten klären, ohne nachträgliche Grenzlockerung. Die get
 alle48 Endpunktgitter verfehlen die feste Komponenten-Reproduktionsgrenze. Als
 nächstes Autoren-Eingaben/Produzenten und eine frische QI-Auflösungsstudie vorbereiten;
 keine ungeprüfte Datenkorrektur als Driftqualifikation verwenden.
+Die Autoren-/Produzentenbestandsaufnahme ist abgeschlossen: vier9.0-Wouts,
+keine exakte historische Binärzuordnung. Die getrennte16-Zellen-Studie mit
+201/401 Radien und einfacher/doppelter Winkelauflösung ist nun vorab registriert.
 
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |

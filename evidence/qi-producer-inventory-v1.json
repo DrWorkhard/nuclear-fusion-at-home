@@ -1,0 +1,372 @@
+{
+  "all_author_wouts_version_9": true,
+  "all_dimensions_and_flux_match": false,
+  "cases": [
+    {
+      "case": "nfp2-vacuum",
+      "dimensions_and_flux_match": false,
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+        "sha256": "a15d0134a362727976a6c22b59b12a7f3a6c740576ef5a28f5727721ed700209"
+      },
+      "input_controls": {
+        "ac": 0.0,
+        "am": [
+          1.0,
+          -1.0
+        ],
+        "curtor": 0.0,
+        "delt": 0.9,
+        "ftol_array": [
+          1e-16,
+          1e-13,
+          1e-13,
+          1e-14,
+          1e-15,
+          1e-16
+        ],
+        "mpol": 5,
+        "ncurr": 1,
+        "nfp": 2,
+        "niter_array": [
+          10000,
+          10000,
+          100000,
+          100000,
+          100000,
+          100000
+        ],
+        "ns_array": [
+          12,
+          25,
+          51,
+          101,
+          151,
+          201
+        ],
+        "nstep": 200,
+        "ntor": 10,
+        "pcurr_type": "power_series",
+        "phiedge": 0.03141592653589793,
+        "pmass_type": "power_series",
+        "pres_scale": 0.0
+      },
+      "metadata": {
+        "edge_flux": 0.031415926535897955,
+        "fsql": 6.21175510481216e-21,
+        "fsqr": 9.813968684344941e-17,
+        "fsqz": 2.5659760537568103e-17,
+        "ftolv": 1e-16,
+        "ier_flag": 0,
+        "mpol": 5,
+        "nfp": 2,
+        "niter": 5414,
+        "ns": 201,
+        "ntor": 10,
+        "signgs": -1,
+        "version_": 9.0
+      },
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-radial-action-v1/nfp2-vacuum.json",
+        "sha256": "e4621d06e2b2d921b50c9e5cc443eff021d519becea8a92407fca5cfaa5a612c"
+      },
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/wout_QI_nfp2.nc",
+        "sha256": "d32ba013a5019d9997032dc89dc8548f1ec85abbd5d6e618eb0239393bb4875e"
+      }
+    },
+    {
+      "case": "nfp2-beta2",
+      "dimensions_and_flux_match": false,
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/input.nfp2_beta_2.00",
+        "sha256": "325478ed16ca74c8853d2df9957208117f10d65b756ba743df2c77f7a9a06845"
+      },
+      "input_controls": {
+        "ac": 0.0,
+        "am": [
+          1.0,
+          -1.0
+        ],
+        "curtor": 0.0,
+        "delt": 0.9,
+        "ftol_array": [
+          1e-16,
+          1e-13,
+          1e-13,
+          1e-14,
+          1e-15,
+          1e-16
+        ],
+        "mpol": 5,
+        "ncurr": 1,
+        "nfp": 2,
+        "niter_array": [
+          10000,
+          10000,
+          100000,
+          100000,
+          100000,
+          100000
+        ],
+        "ns_array": [
+          12,
+          25,
+          51,
+          101,
+          151,
+          201
+        ],
+        "nstep": 200,
+        "ntor": 10,
+        "pcurr_type": "power_series",
+        "phiedge": 0.03141592653589793,
+        "pmass_type": "power_series",
+        "pres_scale": 21241.40397674808
+      },
+      "metadata": {
+        "edge_flux": 0.031415926535897955,
+        "fsql": 6.536152982218131e-21,
+        "fsqr": 9.829809795030626e-17,
+        "fsqz": 2.376310166886622e-17,
+        "ftolv": 1e-16,
+        "ier_flag": 0,
+        "mpol": 5,
+        "nfp": 2,
+        "niter": 4941,
+        "ns": 201,
+        "ntor": 10,
+        "signgs": -1,
+        "version_": 9.0
+      },
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-radial-action-v1/nfp2-beta2.json",
+        "sha256": "ed5a34a4adc6c868dc86c7dd1e9df8c11609651514670c7ff40ce42a8b67610e"
+      },
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp2/beta/wout_nfp2_beta_2.00.nc",
+        "sha256": "7538a1dda702761aba4df6dab702b0bc717c1023e52ffe7b5d7f1ae0b678a7cc"
+      }
+    },
+    {
+      "case": "nfp3-vacuum",
+      "dimensions_and_flux_match": false,
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/input.QI_nfp3",
+        "sha256": "e4f93ad4fd6f4897d7ec409708a257dffdb6fbf2fe69123f1dc42df5795fea01"
+      },
+      "input_controls": {
+        "ac": 0.0,
+        "am": [
+          1.0,
+          -1.0
+        ],
+        "curtor": 0.0,
+        "delt": 0.9,
+        "ftol_array": [
+          1e-13,
+          1e-13,
+          1e-13,
+          1e-13,
+          1e-14,
+          1e-15,
+          1e-16
+        ],
+        "mpol": 9,
+        "ncurr": 1,
+        "nfp": 3,
+        "niter_array": [
+          600,
+          10000,
+          10000,
+          10000,
+          10000,
+          10000,
+          100000
+        ],
+        "ns_array": [
+          12,
+          25,
+          51,
+          75,
+          101,
+          151,
+          201
+        ],
+        "nstep": 200,
+        "ntor": 10,
+        "pcurr_type": "power_series",
+        "phiedge": 0.03141592653589793,
+        "pmass_type": "power_series",
+        "pres_scale": 0.0
+      },
+      "metadata": {
+        "edge_flux": 0.031415926535897955,
+        "fsql": 2.0135082126443106e-17,
+        "fsqr": 9.551540141922067e-17,
+        "fsqz": 9.869139680058842e-17,
+        "ftolv": 1e-16,
+        "ier_flag": 0,
+        "mpol": 9,
+        "nfp": 3,
+        "niter": 6779,
+        "ns": 201,
+        "ntor": 10,
+        "signgs": -1,
+        "version_": 9.0
+      },
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-radial-action-v1/nfp3-vacuum.json",
+        "sha256": "78250d84cb0e7cfb2d3934acbcc565a3ca3f2a0512458007cedba0a433cba947"
+      },
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp3/vacuum/wout_QI_nfp3.nc",
+        "sha256": "92627283deca5d5dcda8de252ce0fedf540f8157043d04f2848d8965bf83d77a"
+      }
+    },
+    {
+      "case": "nfp3-beta2",
+      "dimensions_and_flux_match": false,
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/input.nfp3_beta_2.00",
+        "sha256": "b473c81a9f1e6bffbf83c8a2334d1dbf58b32992c6c5656b1c2971a933d87d6f"
+      },
+      "input_controls": {
+        "ac": 0.0,
+        "am": [
+          1.0,
+          -1.0
+        ],
+        "curtor": 0.0,
+        "delt": 0.9,
+        "ftol_array": [
+          1e-13,
+          1e-13,
+          1e-13,
+          1e-13,
+          1e-14,
+          1e-15,
+          1e-16
+        ],
+        "mpol": 9,
+        "ncurr": 1,
+        "nfp": 3,
+        "niter_array": [
+          600,
+          10000,
+          10000,
+          10000,
+          10000,
+          10000,
+          100000
+        ],
+        "ns_array": [
+          12,
+          25,
+          51,
+          75,
+          101,
+          151,
+          201
+        ],
+        "nstep": 200,
+        "ntor": 10,
+        "pcurr_type": "power_series",
+        "phiedge": 0.03141592653589793,
+        "pmass_type": "power_series",
+        "pres_scale": 11160.041541555855
+      },
+      "metadata": {
+        "edge_flux": 0.031415926535897955,
+        "fsql": 2.040232762161981e-18,
+        "fsqr": 9.985777460364387e-17,
+        "fsqz": 4.613184878811241e-17,
+        "ftolv": 1e-16,
+        "ier_flag": 0,
+        "mpol": 9,
+        "nfp": 3,
+        "niter": 33284,
+        "ns": 201,
+        "ntor": 10,
+        "signgs": -1,
+        "version_": 9.0
+      },
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-radial-action-v1/nfp3-beta2.json",
+        "sha256": "6ba2a60ea8ca94945d1c21ce40732e63035d2482d63c5f96ea466954743094fa"
+      },
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-finite-beta-v1/Files/configurations/nfp3/beta/wout_nfp3_beta_2.00.nc",
+        "sha256": "b0ae4684f771f30aac4789d363f6006b5afabc20211d057565d8ece020ee2572"
+      }
+    }
+  ],
+  "checkout": {
+    "available": true,
+    "branch": "",
+    "commit": "1d7e09941c89210be95b6b20f4d4d555f0a63096",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion/external/vmecpp"
+  },
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/inventory_qi_producers.py",
+    "sha256": "6a82a0301f8935072734b9058f0cf7d7ac5916200b6d62ffe0abad15f9dce25a"
+  },
+  "exact_historical_producer_identified": false,
+  "illustrative_sources": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellopt-v251/VMEC2000/Sources/General/vmec_params.f",
+      "sha256": "e96667742ccb49389aafdd25dc65e255f0bf2a6ae1b98f0269c48b23b1f7ff1f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellopt-v251/PARVMEC/Sources/General/vmec_params.f",
+      "sha256": "cd9df4ff7f8f0e1e2aa3f7f00385e572afec3e1355410aeefee7694d14e20f2d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/vmecpp/src/vmecpp/cpp/vmecpp/vmec/output_quantities/output_quantities.cc",
+      "sha256": "95b3c927f04bdb12d7a8105c736a8167c441c4a2b13ba2ec360a9c6c2e16d096"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/vmecpp/src/vmecpp/cpp/vmecpp/common/sizes/sizes.cc",
+      "sha256": "6650cf7b1ecd3d60dbc358b56f2c3ef42258a66f72e3f1ccea3adbeddad67c8a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/mhd/vmec_diagnostics.py",
+      "sha256": "09e3dbffc7bce245bea101c5230bb0b4bdfa8a7c2f3b199eb14e8fc0a8b52598"
+    }
+  ],
+  "new_equilibria": 0,
+  "probe": {
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+      "-c",
+      "\nimport hashlib, importlib.metadata, json, pathlib, vmecpp\nd = importlib.metadata.distribution('vmecpp')\nfiles = [pathlib.Path(vmecpp.__file__)]\nfiles += [pathlib.Path(d.locate_file(p)) for p in d.files if str(p).endswith('.so')]\nprint(json.dumps(dict(version=d.version, iteration_styles=[v.value for v in vmecpp.IterationStyle],\n    sources=[dict(path=str(p),sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in files])))\n"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "ecae04a208a8da5cf996093263ce0411cf78d79f",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "vmecpp": {
+    "iteration_styles": [
+      "vmec_8_52",
+      "parvmec"
+    ],
+    "sources": [
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/__init__.py",
+        "sha256": "877d12115ad4f2d4706919b7fc4cca2d9e98504b4a054c80ec81c48d4ccd433a"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/cpp/_vmecpp.cpython-312-darwin.so",
+        "sha256": "8f0acaf63d878e17e9f1b1779c9695a21e1a45b690639dbf76886f7a7799684f"
+      }
+    ],
+    "version": "0.7.3"
+  }
+}
