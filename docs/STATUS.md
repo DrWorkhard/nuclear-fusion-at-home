@@ -95,8 +95,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    bestätigt, keine neue qualifizierte Konstruktion. Die separate komplexe/
    reelle Gegenrechnung qualifiziert nun alle120 Paarableitungen an diesem
    Start; der neue zusammengesetzte Such-Prüfpfad besteht beide exakten2048-
-   Bundle-Wiederholungen und den unabhängigen Audit. Grober Flux8,192e-8 bleibt
-   zu groß; feine Abnahmen offen, beide Suchpfade enden am Budget.
+   Bundle-Wiederholungen und den unabhängigen Audit. Alle feinen Abnahmen
+   abgeschlossen: Geometrie/nativ bestehen, Flux8,191665e-8 bleibt Faktor8,19
+   zu groß. Beide Suchpfade enden am Budget, keine Zulassung oder Pareto-Dominanz.
    Der begrenzte AL-Versuch ist
    geschlossen; keine allgemeine Methodenrangfolge oder Pareto-Dominanz.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen

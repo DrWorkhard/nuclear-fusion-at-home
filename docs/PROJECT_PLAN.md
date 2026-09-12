@@ -68,8 +68,10 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    komplexe-Schritt-Prüfung am festen Start abgeschlossen: beide Richtungen/
    alle120 Paarzeilen bestehen, unabhängige reelle Kettenregel bestätigt.
    Der neue SLSQP-Lauf mit zusammengesetztem Startgate ist vollständig wiederholt:
-   beide2048-Bundle-Pfade exakt gleich, unabhängiger Audit besteht. Jetzt alle
-   vier feinen Abnahmen schließen; grober Flux bleibt Faktor8,19 zu hoch,
+   beide2048-Bundle-Pfade exakt gleich, unabhängiger Audit besteht. Alle vier
+   feinen Abnahmen geschlossen: Geometrie/nativ bestehen, Flux Faktor8,19 zu hoch.
+   Als Nächstes die bereits registrierte sechs-Netze-Prüfung für Schritt1 ausführen;
+   einen weiteren Konstruktionsversuch für Schritt2 separat begründen/festlegen,
    keine Wahl der günstigsten realen Schrittweite oder gelockerte Physikgrenzen.
    Keine Aussage gleicher Methodenbudgets.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine

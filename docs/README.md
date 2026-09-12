@@ -155,8 +155,9 @@ untersucht, keine Umdeutung des Fehlschlags als zulässige Konstruktion.
 Diese separate Gegenprüfung besteht inzwischen: komplexe Schritte und unabhängige
 reelle Kettenregel bestätigen die Paarableitungen bis4,063e-11. Der neue Suchlauf
 mit qualifiziertem Startgate ist vollständig wiederholt und unabhängig auditiert:
-beide2048-Bundle-Pfade exakt gleich, grober Flux weiterhin Faktor8,19 zu hoch.
-Beide enden am Budget; feine Abnahme noch offen, keine Zulassung.
+beide2048-Bundle-Pfade exakt gleich und sämtliche feinen Abnahmen abgeschlossen.
+Geometrie/nativ bestehen; feiner Flux8,191665e-8 bleibt Faktor8,19 zu hoch.
+Beide enden am Budget; der Versuch ist geschlossen, keine Zulassung.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der
 [frische native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md) besteht

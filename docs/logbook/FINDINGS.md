@@ -1,5 +1,19 @@
 # Findings log
 
+## F-072 — Composite-gate polishing gives another modest flux reduction, not feasibility
+
+**Class:** preregistered hybrid construction, exact repeats, independent audit and fine holdouts
+**Date:** 2026-09-12
+
+Both2048-bundle paths repeat exactly;10 profile/32 per-arm audit checks pass.
+All four fine holdouts complete for both candidates. Fine flux8.191665362116152e-8
+is about8.53% below the previous AL candidate but8.1917 times over1e-8. Geometry,
+native metrics and linking pass. Continuous curvature upper0.8007962530/m,
+clearance lower1.0875120845m, length219.9000016604m, sampled plasma gap2.96549m.
+Compared with the AL source, length rises and plasma gap falls: not full Pareto
+dominance. No convergence, equal-budget ranking, feasible baseline or SoTA claim.
+See [completed polishing](../optimization/SLSQP_COMPOSITE_RESULTS.md).
+
 ## F-071 — Independent derivatives support cancellation at the failed polishing start
 
 **Class:** preregistered two-direction complex qualification plus independent real chain rule

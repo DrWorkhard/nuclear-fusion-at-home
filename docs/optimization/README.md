@@ -9,7 +9,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 ## Dokumente
 
 - [SLSQP mit zusammengesetztem Startgate: Protokoll](SLSQP_COMPOSITE_PROTOCOL.md) — Identischer AL-Start und Physik; neuer vollständiger Start-Jacobian-/alter9-Bundle-Replay, unabhängige Paarqualifikation plus unveränderte Nicht-Paar-FD-Grenze, zwei2048-Bundle-Suchen.
-- [SLSQP mit zusammengesetztem Startgate: Ergebnis](SLSQP_COMPOSITE_RESULTS.md) — Beide2048-Bundle-Arme exakt wiederholt und unabhängig auditiert; grober Flux8,192e-8 bleibt über Grenze. Feine Abnahmen noch offen.
+- [SLSQP mit zusammengesetztem Startgate: Ergebnis](SLSQP_COMPOSITE_RESULTS.md) — Beide2048-Bundle-Arme exakt wiederholt/auditiert, alle feinen Abnahmen geschlossen; Geometrie/nativ bestehen, Flux8,191665e-8 bleibt unzulässig. Keine Pareto-Dominanz.
 
 - [Nachoptimierungsstart: Ableitungsprotokoll](POLISH_START_DERIVATIVE_PROTOCOL.md) — Fester gescheiterter Startup-Zustand, zwei Quellbasis-Richtungen, drei komplexe Schrittweiten und unabhängige reelle Kettenregel; keine neue Suche.
 - [Nachoptimierungsstart: Ableitungsergebnis](POLISH_START_DERIVATIVE_RESULTS.md) — Beide Richtungen/alle120 Paarzeilen qualifiziert, reeller35-Prüfungen-Audit bestätigt; Abweichungen<=4,063e-11 stützen Rundungserklärung. Alter FD-Test bleibt negativ, neue Suche noch offen.

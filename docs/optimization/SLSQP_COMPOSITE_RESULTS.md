@@ -1,4 +1,39 @@
-# SLSQP mit zusammengesetztem Startgate: Suche unabhängig bestätigt
+# SLSQP mit zusammengesetztem Startgate: vollständig geprüft, Flux abgelehnt
+
+## Unabhängige feine Abnahme abgeschlossen, 2026-09-12
+
+Alle vier registrierten Abnahmephasen bei b7a9610 vollständig durchgeführt:
+Flux-/Geometrie-Holdout, kontinuierliche Krümmung, kontinuierlicher Spulenabstand
+und zusätzliche native Bedingungen. Reguläre Exitcodes2/0/0/0; der negative
+Fluxbefund hat keine spätere Prüfung unterdrückt. Alle entsprechenden
+physikalischen Zahlen beider Wiederholungen stimmen exakt überein.
+
+| Prüfgröße, Reaktorskalierung | Ergebnis | Unveränderte Grenze |
+| --- | --- | --- |
+| Roh-Quadratic-Flux,128x128/800 Spulenpunkte | 8,191665362116152e-8 | <=1e-8: abgelehnt |
+| Mittlerer Feldbetrag | 0,9461249131T | Diagnostik, kein Freigabekriterium |
+| Gesamtlänge der vier Grundspulen | 219,9000016604m | <=220m: bestanden |
+| Kontinuierliche Krümmungsobergrenze | 0,8007962530/m | <=1/m: bestanden |
+| Kontinuierliche Spulenabstandsuntergrenze | 1,0875120845m | >=1,06m: bestanden |
+| Spulen-Plasma-Abstand,512er Gitter | 2,9654936517m | >=1,3m: Gitterschirm bestanden |
+| Maximale native MSC / Bogenlängenvariation | 6,8100975643 / 7,0023184256 | <=10,1002860748 /102,0157787936: bestanden |
+
+Feldverfeinerung und native Linking-Prüfung bestehen. Alle sieben
+Krümmungsauflösungen200 bis12800 sind erhalten. In `curvature.json` ist
+`fields[0]` weiterhin die generische alte Quelle `rejected-warmstart`; nur
+`direct-r1` und `direct-r2` sind die hier geprüften neuen Kandidaten.
+
+Der feine Flux liegt rund8,53% unter dem vorigen AL-Kandidaten, aber weiterhin
+Faktor8,1917 über der physikalischen Grenze. Krümmung und Spulenabstand verbessern
+sich ebenfalls, Länge steigt leicht und Plasmaabstand sinkt: **keine vollständige
+Pareto-Dominanz**, keine Aussage gleicher Methodenbudgets. Keine zulässige
+Baseline, kein Konvergenz- oder SoTA-Nachweis. Diese getrennte Studie ist
+geschlossen; ihr Budget wird nicht nachträglich erweitert.
+
+Evidenz: `evidence/slsqp-composite-v1-validation/summary.json` samt allen vier
+quellgebundenen Einzelberichten und Logs. Nächster registrierter Teil von Schritt1:
+Nichtlokalitätsprüfung aller sechs eingefrorenen Spulennetze. Der nächste
+Konstruktionsversuch für Schritt2 benötigt ein eigenes vorab begründetes Protokoll.
 
 ## Abgeschlossene Suchrechnung, 2026-09-12
 
@@ -23,8 +58,8 @@ Methodenvergleich, keine Zulassung durch den positiven Studienaudit.
 
 Evidenz: `evidence/slsqp-composite-v1/summary.json`, beide Armberichte,
 `evidence/slsqp-composite-v1-driver/` und
-`evidence/slsqp-composite-v1-audit.json`. Feine Abnahme noch offen: als Nächstes
-alle vier unveränderten Holdoutphasen für beide Kandidaten, auch bei negativem Flux.
+`evidence/slsqp-composite-v1-audit.json`. Die damals noch offene feine Abnahme
+ist im obigen Abschnitt separat abgeschlossen.
 
 ## Aufbewahrter Zwischenstand vor Abschluss
 

@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Close all four composite-SLSQP fine holdouts, retain physical rejection
+
+- At b7a9610, unchanged holdout/curvature/clearance/native drivers all complete,
+  regular exitcodes2/0/0/0. Both candidates have exactly equal checked physical
+  values. Fine flux8.191665362116152e-8 fails1e-8; geometry/native/linking pass.
+- Continuous curvature upper0.80079625303/m, coil clearance lower1.08751208447m;
+  all seven curvature levels retained. Generic curvature fields[0] is the old
+  source, not the new candidate; direct-r1/r2 explicitly identified.
+- F-072 and affected detail/index/both READMEs/status/plan/readiness updated.
+  No convergence, feasibility or full Pareto claim; all diagnostics retained.
+  Targeted holdout tests plus docs/diff checks pass. Next frozen six-mesh study,
+  no retroactive extension of this closed construction budget.
+
 ## 2026-09-12 — Qualify pure straight-field-coordinate inversion and tangent controls
 
 - Additive vectorized Newton/chain-rule kernel and independent scalar Fourier/

@@ -80,8 +80,9 @@ bounded result; missing author data is not the only remaining blocker.
       Complex-step and independent real-chain-rule qualification now pass all120
       pair derivatives in two fixed directions. The new composite-gate search
       completes both2048-bundle arms with exact full-path repeats and a passing
-      independent audit. Fine holdouts remain; coarse flux8.192e-8 still fails.
-      Both paths stop at budget; old failure and G2 remain unqualified.
+      independent audit. All four fine holdouts now complete: geometry/native
+      pass, flux8.191665362116152e-8 still fails1e-8. Both paths stop at budget;
+      old failure and G2 remain unqualified, no full Pareto dominance.
       See [alternate start](../optimization/UPSTREAM_START_RESULTS.md) and
       [polishing](../optimization/SLSQP_POLISH_RESULTS.md). G2 remains open.
 
