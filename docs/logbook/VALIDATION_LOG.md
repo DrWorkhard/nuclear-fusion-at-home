@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Register coordinate-aware QI fidelity diagnosis without changing old screens
+
+- Read primary STELLOPT/booz_xform straight-field-angle definitions; derive
+  transformed tangent chain rule in our existing geometric-phi convention.
+  Same16 fresh/4 historical Wouts, three surfaces and64/128 grids, fixed scalar
+  bracketing audit and old-array replay required. No old failure reclassification.
+- Current equal-VMEC-angle differences may include parametrization, a hypothesis
+  not an observed new result. iota/volume are unchanged by this coordinate map;
+  no global bijectivity, physical equivalence or absolute drift claim.
+- Protocol/index and overviews reviewed, docs/diff pass. Only pure coordinate
+  controls may proceed now; real evaluation waits behind SLSQP+mesh closures.
+
 ## 2026-09-12 — Complete frozen six-mesh drivers; full589-test regression and search checkpoint
 
 - Source/manifest hashes, all six fixed levels/four tags and closed committed
