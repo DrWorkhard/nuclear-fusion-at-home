@@ -80,7 +80,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    erste vorab ausgewählte Archiveintrag besteht nun diese getrennte Strom-/Feld-/
    Ableitungsqualifikation samt Audit. Auch beide1033-Bundle-Suchpfade sind exakt
    gleich und unabhängig auditiert: grober Flux8,95e-8, interne Geometrie erfüllt;
-   weiterhin über1e-8. Feine unabhängige Abnahme folgt.
+   weiterhin über1e-8. Alle feinen Abnahmen sind abgeschlossen: Geometrie/nativ
+   bestehen, Flux8,955e-8 bleibt Faktor8,955 zu hoch. Der begrenzte Versuch ist
+   geschlossen; keine allgemeine Methodenrangfolge oder Pareto-Dominanz.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
    Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024

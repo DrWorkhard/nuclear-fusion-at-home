@@ -32,6 +32,8 @@ advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
   fine flux is11.4% lower but still23.91 times the limit, curvature higher.
   Five separately selected upstream fields now pass independent reconstruction
   but all fail raw flux by about100 times, despite reported clipped zeros.
+  A separately qualified first-source start now completes both repeated searches
+  and all fine holdouts: geometry/native checks pass, flux still8.955 times too high.
   The [disk incident](docs/validation/RESOURCE_INTERRUPTION.md) remains preserved.
 - [QI gauge tests](docs/qi/QI_RADIAL_GAUGE_RESULTS.md) reproduce all84 old traces
   but find25 nfp3 families with sign changes under field-line relabeling alone.

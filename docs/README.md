@@ -144,6 +144,9 @@ weiter Faktor23,91 über der Grenze. Auch fünf getrennt festgelegte Archivfelde
 sind inzwischen unabhängig rekonstruiert: Quellen/Feldberechnung stimmen,
 doch alle tatsächlichen Roh-Fluxwerte nahe1e-6 verfehlen1e-8 um rund Faktor100.
 Ihre geschwellten Nullmeldungen sind keine zulässige Baseline.
+Ein anschließend separat qualifizierter Start aus dem ersten Archiveintrag
+verbessert den Flux weiter: beide Suchpfade und alle feinen Prüfungen abgeschlossen,
+Geometrie/nativ bestehen, Flux aber weiterhin Faktor8,955 über der festen Grenze.
 Weiterhin kein neuer zulässiger Entwurf.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der

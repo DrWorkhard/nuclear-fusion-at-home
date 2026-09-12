@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Close all alternate-start holdouts with preserved negative flux result
+
+- At121dbaa both candidates complete all four phases, exit2/0/0/0. Fine flux
+  8.955120977790992e-8 fails1e-8. Length219.89799m, continuous candidate curvature
+  upper0.85528686/m, clearance lower1.08240411m and native extras pass. Curvature
+  file also contains source: candidate identities selected by path, not position.
+- All refinements retained, including passing200-point curvature. Minimum free
+  6101098496Bytes. Flux about2.67x lower than same solver/old start; not all lengths/
+  gaps improve, no Pareto or feasibility/convergence claim. No holdout feedback.
+- F-068/detail/index and both READMEs/status/plan updated.47 relevant solver/audit
+  tests and complete498-test suite pass (20 known deprecations); strict isolated
+  netCDF import warning is separately under review, not included in that pass.
+  Documentation/diff checks pass before closing the study commit.
+
 ## 2026-09-12 — Alternate-start search closes with exact repeats and passing independent audit
 
 - Starting at3f88576 both1033-bundle arms finish;1898 requests/865 cache hits,

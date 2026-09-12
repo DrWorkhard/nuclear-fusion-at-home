@@ -1,5 +1,18 @@
 # Findings log
 
+## F-068 — Qualified alternative start improves classical construction but still fails flux
+
+**Class:** preregistered new-start trial, exact repeated search and independent fine rejection
+**Date:** 2026-09-12
+
+Both1033-bundle paths and independent audits pass; all four fine holdout phases
+complete. Fine flux8.955120977790992e-8 is about2.67 times lower than the same
+scaled AL at the old start, but8.955 times above1e-8. Length219.89799m, continuous
+curvature upper0.85528686/m, clearance lower1.08240411m and native extra metrics
+pass. Mean field0.9461249614T. No feasible baseline, convergence, method ranking
+or Pareto dominance; length/clearances are not uniformly improved. See
+[complete alternate-start study](../optimization/UPSTREAM_START_RESULTS.md).
+
 ## F-067 — Radial product interpolation does not explain the QI poloidal residuals
 
 **Class:** independently audited exact residual decomposition, negative causal test

@@ -1,0 +1,282 @@
+{
+  "all_pass": false,
+  "all_repeats": true,
+  "candidates": [
+    {
+      "a0": 10.100286074838271,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1/natural-auglag-jac-1.json",
+        "sha256": "eaa64df7e8876b4a508c517a96b604ee934d6924d39423fbc945d991c3ee8db2"
+      },
+      "bounded_geometry_flux_screen_pass": false,
+      "checks": {
+        "coil_coil_clearance": true,
+        "coil_flux_refinement": true,
+        "coil_plasma_clearance": true,
+        "curvature": true,
+        "flux_cut_in": false,
+        "length": true,
+        "surface_flux_refinement": true
+      },
+      "coil_coil": {
+        "1000": {
+          "centerline_distance_reactor_m": 1.0831516496978575,
+          "coil_pair": [
+            8,
+            12
+          ]
+        },
+        "200": {
+          "centerline_distance_reactor_m": 1.1007467117095067,
+          "coil_pair": [
+            0,
+            1
+          ]
+        },
+        "20000": {
+          "centerline_distance_reactor_m": 1.0826363890998705,
+          "coil_pair": [
+            8,
+            12
+          ]
+        },
+        "5000": {
+          "centerline_distance_reactor_m": 1.0826370801055678,
+          "coil_pair": [
+            8,
+            12
+          ]
+        }
+      },
+      "coil_plasma": {
+        "128": 3.1076995201531807,
+        "256": 3.1076995201531807,
+        "512": 3.1076995201531807,
+        "64": 3.1224678310571106
+      },
+      "elapsed_seconds": 28.979039541009115,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-start-study-v1/natural-auglag-jac-1/best_field.json",
+        "sha256": "6ee2a013254b2f30195291dfd4d13c6a166d06d5286cb966db92a2646db2fb5f"
+      },
+      "flux": [
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461249614024069,
+          "surface_resolution": 32,
+          "unthresholded_quadratic_flux": 8.954782522501726e-08
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461249614024068,
+          "surface_resolution": 64,
+          "unthresholded_quadratic_flux": 8.9551208727921e-08
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461249614024069,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 8.955120977791188e-08
+        },
+        {
+          "coil_quadrature": 800,
+          "mean_B_magnitude_T": 0.9461249614024069,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 8.955120977790992e-08
+        }
+      ],
+      "full_engineering_admission_pass": false,
+      "geometry": {
+        "1000": {
+          "maximum_curvature_reactor_inverse_m": 0.8551312938498203,
+          "unique_total_length_reactor_m": 219.89799235560042
+        },
+        "200": {
+          "maximum_curvature_reactor_inverse_m": 0.8551312938498203,
+          "unique_total_length_reactor_m": 219.89799235560045
+        },
+        "20000": {
+          "maximum_curvature_reactor_inverse_m": 0.8552816527070298,
+          "unique_total_length_reactor_m": 219.89799235560042
+        },
+        "5000": {
+          "maximum_curvature_reactor_inverse_m": 0.8552715755269092,
+          "unique_total_length_reactor_m": 219.89799235560042
+        }
+      },
+      "method": "direct-r1",
+      "work": {
+        "B_grid_evaluations": 4,
+        "B_points_total": 37888,
+        "all_pair_coil_distance_resolutions": [
+          200,
+          1000,
+          5000,
+          20000
+        ],
+        "distance_query_workers": -1,
+        "plasma_distance_curve_points": 20000,
+        "plasma_distance_surface_resolutions": [
+          64,
+          128,
+          256,
+          512
+        ]
+      }
+    },
+    {
+      "a0": 10.100286074838271,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1/natural-auglag-jac-2.json",
+        "sha256": "d526fe3f0748cae1e7666cf822092f1e9b0caa1ff02058228d4b957f66fe38ef"
+      },
+      "bounded_geometry_flux_screen_pass": false,
+      "checks": {
+        "coil_coil_clearance": true,
+        "coil_flux_refinement": true,
+        "coil_plasma_clearance": true,
+        "curvature": true,
+        "flux_cut_in": false,
+        "length": true,
+        "surface_flux_refinement": true
+      },
+      "coil_coil": {
+        "1000": {
+          "centerline_distance_reactor_m": 1.0831516496978575,
+          "coil_pair": [
+            8,
+            12
+          ]
+        },
+        "200": {
+          "centerline_distance_reactor_m": 1.1007467117095067,
+          "coil_pair": [
+            0,
+            1
+          ]
+        },
+        "20000": {
+          "centerline_distance_reactor_m": 1.0826363890998705,
+          "coil_pair": [
+            8,
+            12
+          ]
+        },
+        "5000": {
+          "centerline_distance_reactor_m": 1.0826370801055678,
+          "coil_pair": [
+            8,
+            12
+          ]
+        }
+      },
+      "coil_plasma": {
+        "128": 3.1076995201531807,
+        "256": 3.1076995201531807,
+        "512": 3.1076995201531807,
+        "64": 3.1224678310571106
+      },
+      "elapsed_seconds": 27.192513540998334,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/upstream-start-study-v1/natural-auglag-jac-2/best_field.json",
+        "sha256": "6ee2a013254b2f30195291dfd4d13c6a166d06d5286cb966db92a2646db2fb5f"
+      },
+      "flux": [
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461249614024069,
+          "surface_resolution": 32,
+          "unthresholded_quadratic_flux": 8.954782522501726e-08
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461249614024068,
+          "surface_resolution": 64,
+          "unthresholded_quadratic_flux": 8.9551208727921e-08
+        },
+        {
+          "coil_quadrature": 200,
+          "mean_B_magnitude_T": 0.9461249614024069,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 8.955120977791188e-08
+        },
+        {
+          "coil_quadrature": 800,
+          "mean_B_magnitude_T": 0.9461249614024069,
+          "surface_resolution": 128,
+          "unthresholded_quadratic_flux": 8.955120977790992e-08
+        }
+      ],
+      "full_engineering_admission_pass": false,
+      "geometry": {
+        "1000": {
+          "maximum_curvature_reactor_inverse_m": 0.8551312938498203,
+          "unique_total_length_reactor_m": 219.89799235560042
+        },
+        "200": {
+          "maximum_curvature_reactor_inverse_m": 0.8551312938498203,
+          "unique_total_length_reactor_m": 219.89799235560045
+        },
+        "20000": {
+          "maximum_curvature_reactor_inverse_m": 0.8552816527070298,
+          "unique_total_length_reactor_m": 219.89799235560042
+        },
+        "5000": {
+          "maximum_curvature_reactor_inverse_m": 0.8552715755269092,
+          "unique_total_length_reactor_m": 219.89799235560042
+        }
+      },
+      "method": "direct-r2",
+      "work": {
+        "B_grid_evaluations": 4,
+        "B_points_total": 37888,
+        "all_pair_coil_distance_resolutions": [
+          200,
+          1000,
+          5000,
+          20000
+        ],
+        "distance_query_workers": -1,
+        "plasma_distance_curve_points": 20000,
+        "plasma_distance_surface_resolutions": [
+          64,
+          128,
+          256,
+          512
+        ]
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_normalized_candidates.py",
+      "sha256": "c17aae2aeb69652f392b1e311de4f2dd1e587d6c84c170f6764b6443221fc341"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/flux_metrics.py",
+      "sha256": "ba0db34c16ec38d81073f547add5074b3c5bb2bc67b1c319cd23eea8addb5ee5"
+    }
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/NORMALIZED_FEASIBILITY_PROTOCOL.md",
+    "sha256": "344b1924ad354d7308da9193e5d3daf96aeb15f9ca475eeb16d949cb7998fb18"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "121dbaa246588ad6bd622abd43af6ec0226689e6",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "status": "completed",
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1/summary.json",
+    "sha256": "a11ae4370b267b8d9645b7dbd604fe48fbf8608894243680464ab51dbb774ae5"
+  },
+  "used_for_optimizer_feedback": false
+}

@@ -1,0 +1,133 @@
+{
+  "all_four_phases_completed": true,
+  "audit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-audit.json",
+    "sha256": "5a4e2cd3b3925274d01dc423293769a0d8eb856e09991a15adc7461697489bb7"
+  },
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_coil_holdouts.py",
+    "sha256": "76a2a267718847fa6128c606549b3d433bf3026fa9fc751ec6faa22aba537a5a"
+  },
+  "disk_preflight": {
+    "free_bytes": 6106533888,
+    "path": "/Users/sebastianwirkert/workspace/fusion",
+    "required_bytes": 2147483648,
+    "sufficient": true
+  },
+  "full_engineering_admission": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "121dbaa246588ad6bd622abd43af6ec0226689e6",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "status": "completed",
+  "steps": [
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/validate_normalized_candidates.py",
+        "evidence/upstream-start-study-v1",
+        "evidence/upstream-start-study-v1-validation/holdout.json",
+        "--all-repeats"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-validation/holdout.log",
+        "sha256": "af30580a4f96d292d6c4d635b3f0bbed8bfe13fd21b8c4a23d578bd392da315d"
+      },
+      "minimum_observed_free_bytes": 6101098496,
+      "name": "holdout",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-validation/holdout.json",
+        "sha256": "6d2c1eeb01b84bc9a394ca3d0ca0fd6bd848a901d4c86c052734936ef6617c24"
+      },
+      "returncode": 2,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_normalized_candidates.py",
+        "sha256": "c17aae2aeb69652f392b1e311de4f2dd1e587d6c84c170f6764b6443221fc341"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/bound_continuous_curvature.py",
+        "evidence/upstream-start-study-v1-validation/curvature.json",
+        "--holdout",
+        "evidence/upstream-start-study-v1-validation/holdout.json",
+        "--study",
+        "evidence/upstream-start-study-v1/summary.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-validation/curvature.log",
+        "sha256": "ea9011096ea31120de27080f34f5badb3a13191fddcc49d97be0c5b4fb86dd07"
+      },
+      "minimum_observed_free_bytes": 6105604096,
+      "name": "curvature",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-validation/curvature.json",
+        "sha256": "73f60d390704a103e6f0cbfdacdf3afc79dda20c5a60c7b8f6f99526c7aa312b"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_curvature.py",
+        "sha256": "fb87e1a1d0f29f1663a9417cd08ecbd027cf6179ba3d4483740177b4018afd18"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/bound_continuous_coil_clearance.py",
+        "evidence/upstream-start-study-v1-validation/holdout.json",
+        "evidence/upstream-start-study-v1-validation/clearance.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-validation/clearance.log",
+        "sha256": "6dbeff3768eff45cfd91cc166021b5e5a4382cafb89b7e6056543cabba1b476c"
+      },
+      "minimum_observed_free_bytes": 6105571328,
+      "name": "clearance",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-validation/clearance.json",
+        "sha256": "4b2a6c4daff3419bd12c490369c818cf0709d58847b4d3ed7d30cfb2322d96a2"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_coil_clearance.py",
+        "sha256": "ed02d56beea8b6cffccacfd0a289492a0cbba686e7e6bdd0be263d6e81903db2"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/validate_direct_native_constraints.py",
+        "evidence/upstream-start-study-v1-validation/holdout.json",
+        "evidence/upstream-start-study-v1-validation/native.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-validation/native.log",
+        "sha256": "a48c46604be2b7887d969cd71cfa0f15a656ddbe7280bbdbd9a65efa0ec0d9c2"
+      },
+      "minimum_observed_free_bytes": 6105550848,
+      "name": "native",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1-validation/native.json",
+        "sha256": "0e72a959bd2a9d99203283c14da2147f344d396fc0f05bbb3dd530f4881c9d2c"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_direct_native_constraints.py",
+        "sha256": "60478504a0ea5d69f07be2e7398f2dc7fc2952d9fc711ba3c5cb27f4b9d96149"
+      },
+      "status": "completed"
+    }
+  ],
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/upstream-start-study-v1/summary.json",
+    "sha256": "a11ae4370b267b8d9645b7dbd604fe48fbf8608894243680464ab51dbb774ae5"
+  },
+  "used_for_optimizer_feedback": false
+}
