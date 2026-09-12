@@ -19,3 +19,10 @@ oder Entwurfsbefund an den realen Daten.
 
 Nächster Schritt: quellgebundene32-Ereignis-Feldwiedergabe, zwei vollständige
 gebündelte/native Matrizengegenprüfungen und unabhängiger Vorhersage-/Spektralaudit.
+
+2026-09-13: Drei zusätzliche reine Kontrollen prüfen die transparente Zählung
+der nativen Feld-/VJP-/Spulenableitungsanfragen. Ein absichtlicher Fehler am
+zweiten Einzelpunkt erhält die erste fertige Matrixzeile, zählt begonnene und
+fertige Arbeit getrennt und stellt die ursprünglichen Beobachtungspunkte wieder
+her. Die numerischen Matrixkerne bleiben unverändert. Alle drei Tests, Ruff,
+Dokument- und Diffprüfung bestehen; weiterhin keine neue reale Feldrechnung.

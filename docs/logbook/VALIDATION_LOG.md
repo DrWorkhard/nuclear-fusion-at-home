@@ -1,5 +1,13 @@
 # Validation log
 
+## 2026-09-13 — Qualify transparent native matrix request accounting
+
+- Three pure controls pass for unchanged local/batched-kernel wrappers, including
+  partial VJP failure: completed rows retained, requests/completions distinct,
+  original observation points restored. No physical field evaluated.
+- Ruff/docs/diff pass. Detail updated; both READMEs/status/plan/index reviewed,
+  overall assessment unchanged. Next source-bound replay and independent audit.
+
 ## 2026-09-12 — Qualify pure spectral/current-subspace projection controls
 
 - Additive full/geometry/current/projected-geometry spectra keep all singular
