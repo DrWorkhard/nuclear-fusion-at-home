@@ -49,3 +49,8 @@ Abschluss-Checkpoint verdecken. Kein erneuter Vollcheckout des Ergebnisarchivs.
 Keine gleichzeitigen schweren Arbeiten während Installation/Build. Der AL-Retry
 benötigt eine neue Ausgabekennung und unveränderte, vorab festgelegte Rechenbudgets;
 die abgebrochene Studie bleibt unverändert. Schritt 1 und 2 bleiben offen.
+
+Der [separate Retry](FRESH_NATIVE_RETRY_PROTOCOL.md) legt begrenzten Checkout,
+Startreserve und laufende Ressourcenwächter vor neuer Ausführung fest.
+Alle zehn Ressourcen-/Clone-/Prozesskontrollen und die gesamte Suite (348 Tests,
+20 bekannte Warnungen) bestehen; Ruff, Dokumentstruktur und Diffprüfung bestehen.

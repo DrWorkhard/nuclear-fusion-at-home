@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Preregister bounded native retry and resource guards
+
+- New retry protocol preserves all original scientific pins and checks. SCB
+  sparse checkout excludes large submission/case archives, preserving sources
+  and both hash-pinned benchmark cases. Other source clones remain complete.
+- Budget estimate 3 GiB working storage plus 2 GiB reserve; 5 GiB preflight and
+  periodic subprocess reserve checks. Own process group is stopped on failure;
+  original exceptions survive a failed final checkpoint. No parallel heavy jobs.
+- All ten synthetic reserve/path/clone/process controls pass. Full suite348
+  passes with20 known warnings; Ruff/docs/diff pass after formatting one overlong
+  test line. Both READMEs/status/plan still correctly report interrupted studies and
+  open native integration; no new physical result or changed acceptance rule.
+
 ## 2026-09-12 — Disk exhaustion interrupts fresh clone and second natural-AL arm
 
 - Fresh native attempt at db6abf5 checked out the full StellCoilBench archive;

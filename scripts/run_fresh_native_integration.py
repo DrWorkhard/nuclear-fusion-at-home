@@ -4,12 +4,19 @@ import argparse
 import json
 import os
 import shutil
-import subprocess
+import sys
 import tempfile
 import time
 from pathlib import Path
 
 from fusion_baselines.provenance import git_state, host_state, sha256_file, write_json_atomic
+from fusion_baselines.resource_guard import (
+    GIB,
+    STELLCOILBENCH_PATHS,
+    guarded_run,
+    space_check,
+    sparse_patterns,
+)
 
 PINS = {
     "stellcoilbench": "c7949edc4ea6378fc3be633304c69c288c3b79b5",
@@ -36,10 +43,14 @@ def main():
     scratch = Path(tempfile.mkdtemp(prefix="fusion-native-clean-", dir="/private/tmp"))
     fresh = scratch / "repo"
     report = dict(
-        schema_version=1,
+        schema_version=2,
         repository=git_state(root),
         host=host_state(),
         protocol=reference(root / "docs/validation/FRESH_NATIVE_INTEGRATION_PROTOCOL.md"),
+        resource_protocol=reference(root / "docs/validation/FRESH_NATIVE_RETRY_PROTOCOL.md"),
+        disk_reserve_bytes=2 * GIB,
+        planned_additional_working_bytes=3 * GIB,
+        sparse_stellcoilbench_paths=STELLCOILBENCH_PATHS,
         scratch=str(scratch),
         fresh_checkout=str(fresh),
         status="running",
@@ -56,6 +67,7 @@ def main():
                 "scripts/bootstrap_vmec2000.sh",
                 "scripts/bootstrap_qi_data.sh",
                 "scripts/run_scientific_integration.py",
+                "src/fusion_baselines/resource_guard.py",
             )
         ],
     )
@@ -96,21 +108,38 @@ def main():
         checkpoint()
         print(f"fresh integration: {name}", flush=True)
         started = time.monotonic()
-        with path.open("xb") as log:
-            process = subprocess.run(
-                command, cwd=cwd, env=env, stdout=log, stderr=subprocess.STDOUT
+        try:
+            with path.open("xb") as log:
+                process = guarded_run(
+                    command,
+                    cwd=cwd,
+                    env=env,
+                    stdout=log,
+                    space_root=scratch,
+                    reserve_bytes=report["disk_reserve_bytes"],
+                )
+        except Exception as error:
+            record.update(
+                status="error",
+                error=f"{type(error).__name__}: {error}",
+                elapsed_seconds=time.monotonic() - started,
             )
+            if path.exists():
+                record["log"] = reference(path)
+            raise
         record.update(
-            returncode=process.returncode,
+            **process,
             elapsed_seconds=time.monotonic() - started,
             log=reference(path),
-            status="passed" if process.returncode == 0 else "failed",
+            status="passed" if process["returncode"] == 0 else "failed",
         )
         checkpoint()
-        if process.returncode:
-            raise RuntimeError(f"{name} failed ({process.returncode}); retained log: {path}")
+        if process["returncode"]:
+            raise RuntimeError(f"{name} failed ({process['returncode']}); retained log: {path}")
 
     try:
+        report["disk_preflight"] = space_check(scratch, 5 * GIB)
+        checkpoint()
         run(
             "prerequisites",
             ["brew", "list", "--versions", "gcc", "open-mpi", "netcdf", "netcdf-fortran", "lapack"],
@@ -125,9 +154,23 @@ def main():
                 raise FileNotFoundError(f"missing read-only source cache: {source}")
             run(
                 f"clone-{name}",
-                ["git", "clone", "--no-hardlinks", str(source), str(destination)],
+                ["git", "clone", "--no-hardlinks", "--no-checkout", str(source), str(destination)],
                 fresh,
             )
+            if name == "stellcoilbench":
+                run(
+                    "sparse-stellcoilbench",
+                    [
+                        "git",
+                        "-C",
+                        str(destination),
+                        "sparse-checkout",
+                        "set",
+                        "--no-cone",
+                        *sparse_patterns(STELLCOILBENCH_PATHS),
+                    ],
+                    fresh,
+                )
             run(f"pin-{name}", ["git", "-C", str(destination), "checkout", "--detach", pin], fresh)
         run("benchmark-environment", ["bash", "scripts/bootstrap_macos.sh"], fresh)
         run("vmecpp-environment", ["bash", "scripts/bootstrap_vmecpp.sh"], fresh)
@@ -196,7 +239,17 @@ def main():
         report.update(status="error", all_pass=False, error=f"{type(error).__name__}: {error}")
         raise
     finally:
-        checkpoint()
+        active_error = sys.exc_info()[0] is not None
+        try:
+            checkpoint()
+        except OSError as checkpoint_error:
+            print(
+                f"Final checkpoint failed; previous record retained: {checkpoint_error}",
+                file=sys.stderr,
+                flush=True,
+            )
+            if not active_error:
+                raise
     print(json.dumps({"all_pass": report["all_pass"]}), flush=True)
 
 

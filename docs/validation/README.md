@@ -8,6 +8,8 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Nativer Retry: Ressourcenprotokoll](FRESH_NATIVE_RETRY_PROTOCOL.md) — Selektiver Checkout, 5-GiB-Startprüfung und überwachte 2-GiB-Reserve; ursprüngliche Physik-/Abnahmekriterien unverändert.
+
 - [Speicherplatzfehler und Wiederherstellung](RESOURCE_INTERRUPTION.md) — Frischer Clone scheitert vor Installation; parallele AL-Wiederholung unterbrochen. Originalberichte bleiben erhalten, gezielte temporäre Bereinigung und Ressourcenprüfung folgen.
 
 - [Frische native Integration: Protokoll](FRESH_NATIVE_INTEGRATION_PROTOCOL.md) — Isolierter gesperrter Neuaufbau mit frisch gebautem VMEC8.52 und neuen W7-X-Ausgaben; kein Eingriff in qualifizierte Umgebung oder Systempakete.
