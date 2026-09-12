@@ -1,6 +1,32 @@
-# SLSQP mit zusammengesetztem Startgate: zweite Wiederholung läuft
+# SLSQP mit zusammengesetztem Startgate: Suche unabhängig bestätigt
 
-## Gespeicherter Zwischenstand, 2026-09-12
+## Abgeschlossene Suchrechnung, 2026-09-12
+
+Beide2048-Bundle-Arme bei ede0ba8 vollständig gespeichert: je6047 Anfragen,
+3998 Cachetreffer, eine abgewiesene Budgetüberschreitung, null fehlgeschlagene
+Auswertungen. Beide vollständigen Punkt-/Wertverläufe, Auswahl, Zähler und
+Arbeitsmengen stimmen exakt überein. Separater Audit besteht zehn Profilprüfungen
+und je32 Armprüfungen, ohne zusätzliche Physikaufrufe.
+
+Ausgewählt wird jeweils Bundle1573 mit Roh-Flux8,191534720971661e-8 und
+interner Maximalverletzung8,28366242267009e-9. Diese liegt innerhalb der vorab
+festgelegten1e-8-Auswahltoleranz, ist nicht identisch mit exakt erfüllten
+Konstruktionsungleichungen. Vollständiger Start und neun alte Startpunkte stimmen;
+das qualifizierte zusammengesetzte Gate besteht, der alte all-row-FD-Test bleibt
+negativ. Beide Solver enden am Budget, nicht mit nachgewiesener Konvergenz.
+
+Pro Arm9.830.400.000 Spulenpaar- und6.710.886.400 Plasmapaar-Stichproben.
+Zusammen mit1033 AL-Bundles beträgt die nominelle Konstruktionsobergrenze
+3081 pro Hybridpfad; gesonderte Startup-/Ableitungsqualifikationen und deren
+unabhängige Gegenrechnungen bleiben zusätzlich bilanziert. Kein fairer isolierter
+Methodenvergleich, keine Zulassung durch den positiven Studienaudit.
+
+Evidenz: `evidence/slsqp-composite-v1/summary.json`, beide Armberichte,
+`evidence/slsqp-composite-v1-driver/` und
+`evidence/slsqp-composite-v1-audit.json`. Feine Abnahme noch offen: als Nächstes
+alle vier unveränderten Holdoutphasen für beide Kandidaten, auch bei negativem Flux.
+
+## Aufbewahrter Zwischenstand vor Abschluss
 
 Ausführung bei ede0ba8. Erster Arm vollständig mit2048 Bundles/6047 Anfragen/
 3998 Cachetreffern und einem Budgetcap gespeichert, null fehlgeschlagene

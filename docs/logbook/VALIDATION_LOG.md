@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-12 — Close both composite-gate searches and independent full-ledger audit
+
+- Both2048-bundle paths at ede0ba8 are complete and exactly repeated, including
+  all point hashes/values, selection, counters and native work. Each6047 requests,
+  3998 cache hits, one denied proposal, zero failed evaluations, budget stop.
+- Independent audit passes10 profile and32 checks per arm with zero new physics
+  calls. Selected bundle1573: coarse flux8.191534720971661e-8, violation
+  8.28366242267009e-9 within preregistered selection tolerance; no convergence or
+  fine admission claim. Original full FD screen remains failed and distinct.
+- Detail/index and both READMEs/status/plan synchronized; readiness reviewed.
+  A read-only log lookup initially used the wrong validation-directory path;
+  actual logbook path read subsequently, no experiment affected. Next all four
+  unchanged fine holdouts. All27 targeted composite/ledger/holdout tests pass;
+  documentation structure and diff checks pass.
+
 ## 2026-09-12 — Register coordinate-aware QI fidelity diagnosis without changing old screens
 
 - Read primary STELLOPT/booz_xform straight-field-angle definitions; derive

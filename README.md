@@ -39,8 +39,9 @@ advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
   all nine startup bundles, not a qualified new construction.
   Independent complex-step and real-chain-rule checks now qualify its pair
   derivatives at the fixed start. The separately registered composite-gate retry
-  is now running: first2048-bundle arm saved, second in progress. Coarse flux
-  remains8.19 times the limit; repeat audit and fine admission are still open.
+  now completes both2048-bundle arms with exactly repeated paths and a passing
+  independent audit. Coarse flux remains8.19 times the limit; fine admission
+  is still open, and both searches stopped at their budget caps.
   The [disk incident](docs/validation/RESOURCE_INTERRUPTION.md) remains preserved.
 - [QI gauge tests](docs/qi/QI_RADIAL_GAUGE_RESULTS.md) reproduce all84 old traces
   but find25 nfp3 families with sign changes under field-line relabeling alone.

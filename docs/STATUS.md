@@ -94,7 +94,10 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    Solverstart an vier Abstand-Ableitungen; neun Start-Bundles unabhängig
    bestätigt, keine neue qualifizierte Konstruktion. Die separate komplexe/
    reelle Gegenrechnung qualifiziert nun alle120 Paarableitungen an diesem
-   Start; neuer zusammengesetzter Such-Prüfpfad folgt. Der begrenzte AL-Versuch ist
+   Start; der neue zusammengesetzte Such-Prüfpfad besteht beide exakten2048-
+   Bundle-Wiederholungen und den unabhängigen Audit. Grober Flux8,192e-8 bleibt
+   zu groß; feine Abnahmen offen, beide Suchpfade enden am Budget.
+   Der begrenzte AL-Versuch ist
    geschlossen; keine allgemeine Methodenrangfolge oder Pareto-Dominanz.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über

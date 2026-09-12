@@ -67,9 +67,9 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    Quellen/Punkte/Arithmetik, nicht die Qualifikation. Jetzt eine unabhängige
    komplexe-Schritt-Prüfung am festen Start abgeschlossen: beide Richtungen/
    alle120 Paarzeilen bestehen, unabhängige reelle Kettenregel bestätigt.
-   Der neue SLSQP-Lauf mit zusammengesetztem Startgate ist registriert und läuft:
-   erster2048-Bundle-Arm gespeichert, zweiter in Arbeit. Anschließend unabhängigen
-   Audit und alle vier feinen Abnahmen schließen;
+   Der neue SLSQP-Lauf mit zusammengesetztem Startgate ist vollständig wiederholt:
+   beide2048-Bundle-Pfade exakt gleich, unabhängiger Audit besteht. Jetzt alle
+   vier feinen Abnahmen schließen; grober Flux bleibt Faktor8,19 zu hoch,
    keine Wahl der günstigsten realen Schrittweite oder gelockerte Physikgrenzen.
    Keine Aussage gleicher Methodenbudgets.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine

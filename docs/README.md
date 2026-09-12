@@ -154,8 +154,9 @@ neun Startauswertungen; die vier auffälligen Abstand-Ableitungen werden separat
 untersucht, keine Umdeutung des Fehlschlags als zulässige Konstruktion.
 Diese separate Gegenprüfung besteht inzwischen: komplexe Schritte und unabhängige
 reelle Kettenregel bestätigen die Paarableitungen bis4,063e-11. Der neue Suchlauf
-mit qualifiziertem Startgate läuft: erster2048-Bundle-Arm gespeichert, zweiter
-in Arbeit; grober Flux weiterhin Faktor8,19 zu hoch. Audit und feine Abnahme offen.
+mit qualifiziertem Startgate ist vollständig wiederholt und unabhängig auditiert:
+beide2048-Bundle-Pfade exakt gleich, grober Flux weiterhin Faktor8,19 zu hoch.
+Beide enden am Budget; feine Abnahme noch offen, keine Zulassung.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der
 [frische native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md) besteht
