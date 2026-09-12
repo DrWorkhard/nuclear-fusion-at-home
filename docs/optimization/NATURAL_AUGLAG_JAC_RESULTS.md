@@ -45,3 +45,10 @@ allen Holdouts abgeschlossen: Geometrie/nativ bestehen, Flux Faktor26,9859 zu
 hoch. Nach deren Commit sind zwei neue physikalische Wiederholungen und ihre
 feinen Abnahmen der nächste Arbeitsschritt. Keine neue zulässige Baseline und
 kein Methodenfortschritt behauptet.
+
+Zwischenstand der laufenden physikalischen Studie bei `6db0040`: Der erste
+Arm ist mit1033 Bundles abgeschlossen (1775 Anfragen,742 Cachetreffer, keine
+fehlgeschlagenen/global verweigerten Auswertungen). Ausgewählter Punkt898:
+Suchgitter-Flux2,391020203776514e-7, interne Verletzung0. Rund23,91-fache feste
+Fluxgrenze; keine unabhängige Freigabe. Der zweite Arm läuft noch, Gesamtaudit
+und feine Abnahmen sind offen. Dieser Zwischenstand ersetzt keinen Studienabschluss.

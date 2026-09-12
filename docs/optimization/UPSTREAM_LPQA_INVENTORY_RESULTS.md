@@ -50,3 +50,19 @@ rekonstruieren, Symmetrien/Ströme/Parameterisierung prüfen, Roh-Flux und Geome
 mit unseren festgelegten Gittern auswerten. Dies erhält ein eigenes Protokoll
 und beginnt erst nach Abschluss der laufenden kontrollierten Suche. Das Inventar
 allein schließt weder die zulässige Baseline noch langfristigen Schritt2.
+
+## Getrennt vorbereitete Rekonstruktion
+
+Das [neue Protokoll](UPSTREAM_LPQA_RECONSTRUCTION_PROTOCOL.md) ist inzwischen
+vorab committed. Der statische Runner verlangt den abgeschlossenen committeten
+Jacobi-Versuch einschließlich seiner Holdouts, unveränderte Inventar-/Feldhashes,
+Spulenzahl/Ordnung/Symmetrien und berichtete Ströme. Originale bleiben unverändert;
+ein neuer200-Punkte-Quadraturklon erhält Geometrie, Ströme und Regularisierungen.
+Fehlerpunkte werden mit ihren tatsächlichen Feldarrays gespeichert.
+
+Die unabhängige direkte Filamentfeldsumme besteht acht reine Kontrollen:
+analytisches Kreisfeld samt Vorzeichen, Stromlinearität, Überlagerung, Translation
+sowie Zurückweisung singulärer oder ungültiger Eingaben. Das ist noch keine
+Ausführung der fünf Referenzfälle. Der Ressourcenwächter protokolliert den
+expliziten statischen Befehl und seine Ausgabe; kein Hintergrundstart vor
+abgeschlossener vorheriger Suche/Abnahme.

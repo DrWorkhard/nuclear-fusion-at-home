@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-12 — Prepare static field reconstruction and independent Biot-Savart kernel
+
+- Eight analytical/invalid-input controls pass for a direct NumPy filament sum,
+  including exact circular-axis field, orientation/current sign, superposition
+  and translation. Independent of native field implementation.
+- Reconstruction runner checks source/current/symmetry identities, retains new
+  quadrature-only fields and both native/independent field arrays before holdouts.
+  Actual failing crosscheck attempts remain counted; no physical reconstruction
+  until preceding scaled-study/holdout closure is committed.
+- Generic single-command wrapper reuses the tested own-process disk guard,
+  captures command/log/returncode and preserves earlier exceptions on IO failure.
+  Four real wrapper controls pass, preserving exit0/2, output hashes, existing
+  files and rejecting empty commands. Native import/help smoke passes. Full
+  suite442 passes with20 known warnings; Ruff/docs/diff pass. Detail and both
+  READMEs/status/plan checked; no reconstructed physical result yet.
+
 ## 2026-09-12 — Preregister static reconstruction of the five fixed upstream fields
 
 - Frozen five inventory-selected field hashes, unchanged coefficients/currents,
