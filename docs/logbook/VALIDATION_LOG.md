@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Implement additive normalized-start qualification and independent audit
+
+- Source preparation preserves Fourier coefficients/regularizations, explicitly
+  constructs three conditioned free currents and a derived fourth at the old
+  fixed sum. Old preparation/backends remain untouched. Qualification records
+  fixed64-point field scaling and all138 directional rows at four fixed steps.
+- Separate auditor recomputes current/field/gradient identities and directional
+  arithmetic from source bytes/arrays without native calls. Ten normalization
+  and five directional-audit controls pass, including corrupted/missing data.
+- Initial targeted pytest invocation named a nonexistent test file: zero tests
+  ran. Corrected command passed27 tests; expanded final set passed32. Ruff/docs/
+  diff checks pass before physical execution. Overviews remain accurate.
+
 ## 2026-09-12 — Register first-ranked upstream start without holdout-based substitution
 
 - Fixed inventory entry1, common current rescaling to the original fixed sum,
