@@ -32,3 +32,6 @@ Vor physikalischer Feldauswertung nochmals vollständige Regression:
 523 Tests bestanden,53 bekannte DeprecationWarnings, Ruff/Dokumentprüfung bestanden.
 Auch wiederverwendete alte Feld-/Interpolationskerne werden im neuen Bericht
 explizit hashgebunden, nicht nur durch den aktuellen Git-Stand implizit festgehalten.
+Eine weitere Eingabesicherung lehnt doppelte und nichtganzzahlige geometrische/
+Nyquist-Moden ab, bevor Matrixfelder entstehen. Beide zusätzlichen Mutations-
+kontrollen bestehen; Grenzwerte und echte Felddaten wurden dafür nicht angepasst.

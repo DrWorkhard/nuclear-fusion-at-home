@@ -30,6 +30,12 @@ def sample(wout, surface, resolution):
             return np.array([np.interp(surface, grid, v) for v in values.T])
 
         m, n, mn, nn = [read(k) for k in ("xm", "xn", "xm_nyq", "xn_nyq")]
+        for mm, nk in ((m, n), (mn, nn)):
+            pairs = np.column_stack((mm, nk / nfp))
+            if (mm.ndim != 1 or nk.shape != mm.shape or not len(mm)
+                    or np.any(mm < 0) or not np.array_equal(pairs, np.rint(pairs))
+                    or len(np.unique(pairs, axis=0)) != len(pairs)):
+                raise ValueError("unique integer geometric/Nyquist mode pairs required")
         phi, theta = np.meshgrid(2 * np.pi * np.arange(resolution) / (resolution * nfp),
                                  2 * np.pi * np.arange(resolution) / resolution, indexing="ij")
         phase = m[:, None] * theta.ravel() - n[:, None] * phi.ravel()

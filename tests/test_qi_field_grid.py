@@ -49,3 +49,13 @@ def test_relative_comparison_not_allowed_zero_scale():
 def test_nonnested_arrays_rejected():
     with pytest.raises(ValueError):
         nested_errors({"g": np.ones((3, 3))}, {"g": np.ones((8, 8))})
+
+
+@pytest.mark.parametrize("mode,value", [("xm", 0), ("xn_nyq", 0.5)])
+def test_duplicate_or_fractional_modes_rejected(tmp_path, mode, value):
+    path = tmp_path / "wout.nc"
+    fixture(path)
+    with netCDF4.Dataset(path, "r+") as ds:
+        ds[mode][1] = value
+    with pytest.raises(ValueError, match="mode pairs"):
+        sample(path, 0.5, 64)

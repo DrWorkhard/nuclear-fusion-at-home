@@ -1,5 +1,13 @@
 # Validation log
 
+## 2026-09-12 — Reject malformed Fourier mode identity before fresh field evaluation
+
+- Additive reader now rejects duplicate or fractional geometric/Nyquist mode
+  pairs, in addition to existing nonfinite-data guards. Two new mutation controls
+  added; no actual field outcome inspected or threshold changed for this guard.
+- QI sampler/auditor/control tests pass; Ruff/docs/diff pass. Detail and all
+  overviews checked, no material scientific-status change. Solver code untouched.
+
 ## 2026-09-12 — Hash-check second explicit set of closed reports
 
 - At96fd644 existing integrity checker verifies21 specified reconstruction,
