@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Implement independent polishing-start derivative qualification and real audit
+
+- Additive source-role mapping, one native-bundle replay, two source-basis
+  directions and all complex steps. Separate real Fourier/chain-rule auditor
+  reconstructs serialized rotation/reflection without native transform matrices.
+- Analytic constant-distance test initially omitted the specified minus-one
+  offset in its expected value; corrected the fixture, not either physical kernel.
+  Initial long-line lint errors corrected before any bound report execution.
+- Eighteen targeted old/new controls pass; Ruff/docs/diff pass before commit.
+  Detail/index and both READMEs/status/plan checked; scientific status unchanged.
+  No real new field or derivative evaluation yet; next run the registered check.
+
 ## 2026-09-12 — Register independent derivative check at unchanged failed polishing start
 
 - Fixed physical-start hash, original source-name basis and seeds46/47; one new
