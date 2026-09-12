@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-12 — Retrospective field-strength/current-sum audit
+
+- Inspect all ten existing finest holdouts from timed, direct256, GN1024 and
+  SLSQP1024 studies; no new field calls. Check a possible confound: raw flux can
+  fall by simply weakening the field. Report saved mean field and global-scale
+  normalized diagnostic without adding or relaxing any acceptance criterion.
+- Pinned current factory fixes the sum of four base currents; the last physical
+  current is derived from the three free currents, not individually held fixed.
+  This does not alone prove equal field magnitude for arbitrary coil geometries.
+- Both READMEs/status/plan reviewed: all designs remain rejected. Detailed audit
+  and index added. All ten total currents equal1250075.624635464A; meanB span
+  2.8183ppm. Timed raw ratios2.35046065/2.34340194 become2.35046683/2.34340985
+  after global mean-field normalization. No simple field-weakening explanation.
+- First metadata execution started despite RuffE501 on a descriptive string.
+  Exact source snapshot/hash and v1 report retained; formatting-only correctedv2
+  repeats every numeric/input record exactly. Full suite366/20 known warnings,
+  Ruff/docs/diff pass. No new acceptance rule, no new field evaluations.
+
 ## 2026-09-12 — Prepare guarded AL recovery queue, without changing search mathematics
 
 - Queue waits for actual successful fresh native solver/test phases; failures,

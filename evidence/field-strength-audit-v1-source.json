@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "reason": "Preserve exact v1 source before formatting-only correction of E501; v1 metadata audit started despite the lint warning.",
+  "report": "evidence/field-strength-audit-v1.json",
+  "report_sha256": "67b16116083a2f03884b1a310c888b2a841e6e06ad42c76a54aa63413e53e248",
+  "source_snapshot": "artifacts/field-strength-audit-v1/runner.py",
+  "source_sha256": "e056af3cf6424b879e48c8ba83dee13e78e546f879f7742442be8af2e536866c",
+  "snapshot_matches_original_report_code_hash": true,
+  "v2_report": "evidence/field-strength-audit-v2.json",
+  "v2_report_sha256": "98a71b84de56425398479ec5f175b3a61e8b32716490f9149fe42a9e2cf1d69c",
+  "all_numeric_records_and_source_references_identical": true,
+  "comparison_excluded_fields": ["repository", "code"],
+  "new_magnetic_field_evaluations": 0
+}

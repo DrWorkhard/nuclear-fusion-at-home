@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Feldstärkenaudit](FIELD_STRENGTH_AUDIT.md) — Prüft an vorhandenen Holdouts, ob bloß geringere Feldstärke die kleineren rohen Fluxwerte erklärt; feste Basisstromsumme und globale Skalenkontrolle, keine neue Abnahmegrenze.
+
 - [Natürliche AL: Wiederherstellungsprotokoll](NATURAL_AUGLAG_RECOVERY_PROTOCOL.md) — Expliziter Einzelarm-/Präfix-Postmortem und neuer unveränderter Zwei-Arm-Lauf; unterbrochene Originalstudie bleibt unqualifiziert.
 
 - [Natürliche Flux-AL: unterbrochener Pilot](NATURAL_AUGLAG_RESULTS.md) — Erster 1033-Bundle-Arm und gespeichertes 700-Bundle-Präfix unabhängig bestätigt; Studie bleibt unvollständig, Wiederholung und Abnahme offen.
