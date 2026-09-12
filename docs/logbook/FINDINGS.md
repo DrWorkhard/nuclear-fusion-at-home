@@ -1,5 +1,18 @@
 # Findings log
 
+## F-075 — Separate finest-mesh completion closes the six-resolution nonlocal scope
+
+**Class:** preregistered single-mesh repeat, exact historical prefix and independent full audit
+**Date:** 2026-09-12
+
+Finest unchanged327000-tetra mesh completes after2,222,785 SAT calls, zero overlaps/
+unresolved pairs. All53,464,336,500 pair possibilities accounted;8,905,300 shared-
+vertex candidates explicitly excluded. Old2M witness lines/1,336,562 events are
+exact prefixes, full new spatial audit passes. Combined with five old passes,
+all six resolutions complete the non-shared-vertex screen; old v2 cap unchanged.
+No adjacent-pair/full-assembly/winding-pack/mechanics admission or new feasible
+coil design. See [independent completion](../engineering/MESH_FINE_COMPLETION_RESULTS.md).
+
 ## F-074 — Common straight-field coordinates explain part, not all, of historical QI differences
 
 **Class:** preregistered complete coordinate-diagnosis matrix and independent scalar audit

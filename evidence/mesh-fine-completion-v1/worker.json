@@ -1,0 +1,21 @@
+{
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/mesh_fine_completion_worker.py",
+    "sha256": "29890f39d4daebbfcb9d95197c01065ac03f9001547ee17c6ba848ca72b8a77d"
+  },
+  "complete_scan": true,
+  "intrinsic_source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/mesh-integrity-2026-09-09.json",
+    "sha256": "6136fab85d4a03a5d9e805a4be1d3a3c081f7b70a1795772fb8c0a8b121277fe"
+  },
+  "mesh": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/res_0_010/coils_structured.msh",
+    "sha256": "d7b7bd0ab495ae5e5d7209851038e2327a27b5f0240a0bdd541f10a8886d8c6f"
+  },
+  "nonlocal_screen_pass": true,
+  "scan": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/mesh-fine-completion-v1/summary.json",
+    "sha256": "3c85b8cfaee2b4cadedf4abbe9c4126b52f5c9ec9e03ba435478934e95dd473b"
+  },
+  "status": "completed"
+}

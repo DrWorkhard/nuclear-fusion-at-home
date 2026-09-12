@@ -1,0 +1,95 @@
+{
+  "all_pass": true,
+  "classification_checks": {
+    "complete": true,
+    "exitcode": true,
+    "physical": true
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_mesh_fine_completion.py",
+      "sha256": "13a08b61e1d9c901e8a19547100f31f0f409f2bb6f011861e6e4724ea5efc3cd"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_mesh_fine_completion.py",
+      "sha256": "3d57915e90d647f175b09dc1d52f17f2c7d7f0a72b9b10f700cb72ff96daff9c"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/mesh_nonlocal_inputs.py",
+      "sha256": "3a7e28de1e3800d4f877c9d3808abd22241bdcba45bb6e32665b06c9d2cf6694"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/mesh_prefix_audit.py",
+      "sha256": "fd7a35a80c531b760521b70cf17e7205c8ed5e94be9525bf3a9535a1e8bc655d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/mesh_nonlocal_audit.py",
+      "sha256": "6b086796f436a3b6db022d349291d7f5c529efe29128b47861d0e66218805c9a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/tetra_partition_audit.py",
+      "sha256": "b6175e9a6bd1a6f739ba1dd446526598e38b0efa03e9262c8eb5cea7eb27bc1b"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/tetra_witness_audit.py",
+      "sha256": "2f4f786bb6cc5b874847561eb93fdd28b848ef53e658f7279f032f175fa50efb"
+    }
+  ],
+  "finest_nonlocal_screen_pass": true,
+  "full_engineering_admission": false,
+  "prefix": {
+    "all_pass": true,
+    "checks": {
+      "all_old_events": true,
+      "all_old_witnesses": true,
+      "indices": true,
+      "new_work_covers_prefix": true,
+      "nodes": true,
+      "padding": true
+    },
+    "new_physics_calls": 0,
+    "old_events_checked": 1336562,
+    "old_witnesses_checked": 2000000
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "ebc7e79ffb9343846e155ffd5262a538f517fcfc",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/mesh-fine-completion-v1/summary.json",
+    "sha256": "a61473f4c8b828744b1c8ec0354ed268f3bfba495b0fcc621be86bdd79ac826a"
+  },
+  "spatial": {
+    "all_pass": true,
+    "complete": true,
+    "exceptional_witnesses": [],
+    "full_engineering_admission": false,
+    "independent_counts": {
+      "lp_calls": 0,
+      "narrow_errors": 0,
+      "positive_between_tags": 0,
+      "positive_interior_pairs": 0,
+      "positive_within_tag": 0,
+      "processed_candidates": 11128085,
+      "sat_calls": 2222785,
+      "separated_pairs": 2222785,
+      "shared_vertex_pairs": 8905300,
+      "unresolved_pairs": 0
+    },
+    "independent_partition": {
+      "box_separated_pairs": 53453208415,
+      "candidate_count": 11128085,
+      "complete": true,
+      "covered_pairs": 53464336500,
+      "events": 1498064,
+      "nodes": 65535,
+      "remaining_pairs": 0,
+      "total_pairs": 53464336500
+    },
+    "nonlocal_screen_pass": true
+  },
+  "status": "completed"
+}

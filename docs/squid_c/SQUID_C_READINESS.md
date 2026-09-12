@@ -151,6 +151,10 @@ bounded result; missing author data is not the only remaining blocker.
       remains incomplete. All3,358,644 stored separation witnesses independently
       checked, including correct partial coverage. Neighbor pairs, full assembly
       clearance and physical winding-pack orientation remain unqualified; G5 open.
+      The separate finest-mesh completion now passes full coverage with2,222,785
+      separating witnesses, independently audited together with the exact old2M
+      witness/event prefix. Combined series has six complete scoped passes;
+      original capped report retained, excluded geometry/mechanics and G5 remain open.
 - [x] Structural discretization series recorded; the final pair passes its screen.
 - [ ] Mesh independence and physically valid mechanical predictions established.
       The large deformation invalidates the absolute linear-model predictions.

@@ -75,7 +75,10 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    alle Zertifikate unabhängig bestätigt. Auch der registrierte QI-Koordinatentest
    ist geschlossen:4/16 neue Fidelitäts-/5/16 Vergleichsverfeinerungsschirme
    bestehen, keine allgemeine Heilung durch Umparametrisierung. Als Nächstes den
-   separat registrierten feinsten Netzabschluss mit verpflichtendem2M-Präfix;
+   separat registrierten feinsten Netzabschluss mit verpflichtendem2M-Präfix
+   ausgeführt und auditiert: vollständig, alle sechs Auflösungen bestehen jetzt
+   den begrenzten Nichtüberlappungsschirm. Als nächster Optimierungsteil ist die
+   exakte Stromminimierung an den zwei festen AL-/SLSQP-Geometrien registriert;
    einen weiteren Konstruktionsversuch für Schritt2 separat begründen/festlegen,
    keine Wahl der günstigsten realen Schrittweite oder gelockerte Physikgrenzen.
    Keine Aussage gleicher Methodenbudgets.

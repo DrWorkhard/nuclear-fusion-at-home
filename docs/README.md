@@ -190,9 +190,10 @@ Gleichgewichte; die alten negativen Ergebnisse bleiben unverändert.
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 
 Für Schritt1 ist jetzt auch die [sechs-Netze-Prüfung](engineering/MESH_NONLOCAL_RESULTS.md)
-geschlossen: fünf vollständige Nichtüberlappungspässe, feinster Test am festen
-Paarcap unvollständig. Sämtliche gespeicherten Trennnachweise sind unabhängig
-bestätigt; Nachbarpaare, vollständige Baugruppen und gültige Mechanik bleiben offen.
+geschlossen; der [gesonderte feinste Abschluss](engineering/MESH_FINE_COMPLETION_RESULTS.md)
+ergänzt die ursprünglichen fünf vollständigen Pässe zu sechs. Sämtliche
+Trennnachweise und der alte2M-Präfix sind unabhängig bestätigt. Der ursprüngliche
+Paarcap bleibt erhalten; Nachbarpaare, vollständige Baugruppen und gültige Mechanik offen.
 
 ## Wie Erfolg beurteilt wird
 

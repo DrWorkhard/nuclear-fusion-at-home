@@ -1,0 +1,115 @@
+{
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_mesh_fine_completion.py",
+      "sha256": "3d57915e90d647f175b09dc1d52f17f2c7d7f0a72b9b10f700cb72ff96daff9c"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/mesh_fine_completion_worker.py",
+      "sha256": "29890f39d4daebbfcb9d95197c01065ac03f9001547ee17c6ba848ca72b8a77d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/mesh_nonlocal_inputs.py",
+      "sha256": "3a7e28de1e3800d4f877c9d3808abd22241bdcba45bb6e32665b06c9d2cf6694"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/mesh_nonlocal_scan.py",
+      "sha256": "7d56f51c81c9ea3b5253eb995469db6e3fb843da64a99b3f5e1cd7b207e00e7f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/tetra_broad_phase.py",
+      "sha256": "73e7bc79924aff97181086a53cf1e0d046027339f5c15e838ad603eb3afed43f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/tetra_nonoverlap.py",
+      "sha256": "ad80dde1e96c7714ec343382b7e818ad462c059e68b1d5ed3c278e26de7e90de"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/evidence_integrity.py",
+      "sha256": "65655c4a70458bfc8f29bade1bc7e0c4f3eb791da6b6199ee89066a3a179263d"
+    }
+  ],
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/mesh_fine_completion_worker.py",
+    "evidence/mesh-fine-completion-v1/worker.json",
+    "artifacts/mesh-fine-completion-v1"
+  ],
+  "complete_scan": true,
+  "disk_preflight": {
+    "free_bytes": 4930932736,
+    "path": "/Users/sebastianwirkert/workspace/fusion",
+    "required_bytes": 3221225472,
+    "sufficient": true
+  },
+  "full_engineering_admission": false,
+  "hard_timeout_seconds": 1200,
+  "historical_source_code": [
+    {
+      "git_path": "scripts/check_mesh_integrity.py",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/check_mesh_integrity.py",
+      "sha256": "c9b6c5c98c80db0bd91780d409b6cf2532f4339400d9039a3ab9ba6e88ee4a8f",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "historical_git"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/mesh_integrity.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/mesh_integrity.py",
+      "sha256": "66ea9f725f0b5e2d8d55971900e85cbb1eba44cde8e2d765bae3c0430b41b04e",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    }
+  ],
+  "intrinsic_source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/mesh-integrity-2026-09-09.json",
+    "sha256": "6136fab85d4a03a5d9e805a4be1d3a3c081f7b70a1795772fb8c0a8b121277fe"
+  },
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/mesh-fine-completion-v1/worker.log",
+    "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
+  },
+  "mesh": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/res_0_010/coils_structured.msh",
+    "sha256": "d7b7bd0ab495ae5e5d7209851038e2327a27b5f0240a0bdd541f10a8886d8c6f"
+  },
+  "nonlocal_screen_pass": true,
+  "old_scan": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/mesh-nonlocal-v2/mesh-5/summary.json",
+    "sha256": "9248c8bd33b95d91681cfdbf7bec115a8adb75e88e8e386358bb113c174bc153"
+  },
+  "predecessor": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/mesh-nonlocal-v2/summary.json",
+      "sha256": "c5819669fd919ddca0fc4c88df75461044648eb14c66145d62c74436bde19669"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/mesh-nonlocal-v2-audit.json",
+      "sha256": "7153a906796596602afea4a3104ef31a46e92c807c95f2457f671a17b653538b"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-pest-fidelity-v1.json",
+      "sha256": "c9b1a4c70728865e1522ad8b0af911387f924e18dee253603754503dd9ef1dc7"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-pest-fidelity-v1-audit.json",
+      "sha256": "4c7dcce9c8a4810b7e45d6510476f688444ddfbc5ca7c4b3af7688259b5d3b7a"
+    }
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/engineering/MESH_FINE_COMPLETION_PROTOCOL.md",
+    "sha256": "775840eac00499e18221032a2bba3d3614f3d6c6dab6d62bf6a0d615eeb70826"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "c04411d2c5b9f256882cdf1d48b87bc440781284",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 0,
+  "status": "completed",
+  "worker": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/mesh-fine-completion-v1/worker.json",
+    "sha256": "26150b14fca2c85d06a9fe844a9981cfee994503e850d5539c0824c6461b00b4"
+  }
+}

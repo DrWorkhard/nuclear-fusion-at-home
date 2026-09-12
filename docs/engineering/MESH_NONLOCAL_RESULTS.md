@@ -1,5 +1,10 @@
 # Nichtlokale Netzüberschneidung: fünf vollständige Pässe, feinster Test unvollständig
 
+**Späterer gesonderter Abschluss:** Das einzige unvollständige Netz besteht
+inzwischen die [separate vollständige Wiederholung](MESH_FINE_COMPLETION_RESULTS.md)
+einschließlich exaktem2M-Präfix und erneutem unabhängigem Audit. Dieser historische
+sechs-Netze-Bericht und sein ursprünglicher Paarcap bleiben unverändert.
+
 ## Tatsächliche räumliche Prüfung und unabhängiger Audit abgeschlossen
 
 2026-09-12, Retry-Ausführung bei f5ccea2 nach Quellauflösung gemäß ae8d05a.

@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Close finest-mesh full coverage, exact2M prefix and independent spatial audit
+
+- At c04411d the unchanged finest mesh completes2,222,785 SAT calls in300.76s;
+  zero narrow errors, LPs, overlaps or unresolved pairs.53,464,336,500 pair
+  possibilities accounted,8,905,300 shared-vertex candidates excluded.
+- Independent full partition/witness audit passes; all old2M witness lines and
+  1,336,562 events exactly reproduce.85MiB additional raw data. Both original
+  capped v2 and its new extra work retained, not silently counted as a resume.
+- F-075/detail/index and both READMEs/status/plan/readiness synchronized. Combined
+  six-resolution scope now complete, not full G5/mechanics or step1 completion.
+  All49 targeted spatial/prefix/source tests and docs/diff checks pass.
+  Next fixed-geometry current diagnosis at the two preregistered source fields.
+
 ## 2026-09-12 — Qualify explicit symbolic current-expression and named-column mapping
 
 - New reader reconstructs all16 current expressions as exact16x3 affine matrix
