@@ -1,5 +1,19 @@
 # Findings log
 
+## F-073 — Five original meshes pass bounded nonlocal nonoverlap; finest cap remains open
+
+**Class:** preregistered unchanged six-mesh scan and independent spatial certificate audit
+**Date:** 2026-09-12
+
+All six scans terminal; h=.05/.04/.03/.02/.015 complete with zero overlaps or
+unresolved non-shared-vertex pairs. h=.010 hits its fixed2M SAT-call cap:
+822,324,039 of53,464,336,500 broad pair possibilities and61 delivered candidates
+remain unprocessed. Independent auditor validates all stored partitions and
+3,358,644 separating witnesses, including the negative incomplete classification.
+No LP/interval proof or global assembly/neighbor-pair/mechanics admission. Original
+magnetically infeasible mesh source, not the newest optimized coils. See
+[six-mesh results](../engineering/MESH_NONLOCAL_RESULTS.md).
+
 ## F-072 — Composite-gate polishing gives another modest flux reduction, not feasibility
 
 **Class:** preregistered hybrid construction, exact repeats, independent audit and fine holdouts

@@ -1,4 +1,50 @@
-# Nichtlokale Netzüberschneidung: Streaming-Prüfpfad vorbereitet
+# Nichtlokale Netzüberschneidung: fünf vollständige Pässe, feinster Test unvollständig
+
+## Tatsächliche räumliche Prüfung und unabhängiger Audit abgeschlossen
+
+2026-09-12, Retry-Ausführung bei f5ccea2 nach Quellauflösung gemäß ae8d05a.
+Alle sechs ursprünglichen Netze unverändert geprüft; keine geänderten numerischen
+Kerne, physikalischen Grenzen oder Caps. Alle sechs Worker terminal, Studie
+wegen der fehlenden Gesamtfreigabe mit regulärem Exit2 abgeschlossen.
+
+| h auf Geräteskala/m | Tetraeder | Tatsächliche nichtlokale SAT-Paarprüfungen | Ergebnis |
+| --- | --- | --- | --- |
+| 0,05 | 2622 | 2608 | vollständig bestanden |
+| 0,04 | 13104 | 50381 | vollständig bestanden |
+| 0,03 | 17472 | 67008 | vollständig bestanden |
+| 0,02 | 58860 | 327459 | vollständig bestanden |
+| 0,015 | 139680 | 911188 | vollständig bestanden |
+| 0,010 | 327000 | 2000000 | festgelegter Paarcap, unvollständig |
+
+In allen tatsächlich geprüften nichtlokalen Paaren gibt es einen positiven
+Trennnachweis; keine LP-Aufrufe, bestätigten Innenüberschneidungen, unaufgelösten
+Paarfälle oder Rechenfehler. Dies schließt beim letzten Netz unbekannte
+Überschneidungen im **noch ungeprüften Bereich** ausdrücklich nicht aus.
+
+Separater Audit besteht für alle sechs gespeicherten Zertifikate, einschließlich
+der korrekten unvollständigen Klassifikation. Er rekonstruiert sämtliche
+gespeicherten Box-/Indexpartitionen aus Originalvertices und prüft alle
+3.358.644 gespeicherten Einzelpaar-Trennnachweise durch separate Projektion,
+ohne neue Trennachsensuche oder LP. Der feinste Scan hat52.642.012.461 der
+53.464.336.500 ungeordneten Paarmöglichkeiten im Boxbaum abgearbeitet;
+822.324.039 bleiben in nicht traversierten Paarbereichen. Zusätzlich61 bereits
+gelieferte Blattkandidaten sind noch nicht verarbeitet. Die Paarzählung ist
+disjunkt, aber nicht mit der Zahl tatsächlich nötiger SAT-Aufrufe gleichzusetzen.
+
+126MiB neue Rohzertifikate; etwa274s für den feinsten Scan inklusive Speicherung,
+kein Zeitcap/Plattenabbruch. Dort7.923.543 verarbeitete gemeinsame-Vertex-Paare
+ausdrücklich ausgenommen. Für keinen Fall gelten die Schirme für alle
+Nachbarpaare, vollständige Symmetriebaugruppen, echte Wicklungspakete oder
+mechanische Gültigkeit. Ursprünglicher magnetisch unzulässiger Netzquellentwurf,
+nicht die zuletzt nachoptimierten Filamente. G5 und Schritt1 bleiben offen.
+
+Evidenz: `evidence/mesh-nonlocal-v2/summary.json`, sechs Worker/Logs,
+`evidence/mesh-nonlocal-v2-audit.json`, beide Schutztreiber, Rohdaten
+`artifacts/mesh-nonlocal-v2/`. Alle unabhängigen Quellen-/Zähler-/Negativtests
+bestanden. Diese fest budgetierte Studie ist geschlossen; eine vollständige
+Prüfung des letzten Netzes braucht ein getrenntes Protokoll, keine Umdeutung
+oder nachträgliche Verlängerung dieses Caps. Nächster bereits registrierter
+Physikteiltest: QI-Vergleich im gemeinsamen geraden Feldlinienwinkel.
 
 ## Erster echter Start vor Netzrechnung gestoppt
 

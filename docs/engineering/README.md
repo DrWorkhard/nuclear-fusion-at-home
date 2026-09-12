@@ -2,15 +2,15 @@
 
 Zweck: das Ziel über ideale Filamentspulen hinaus um Fertigungsfehler, Volumennetze, mechanische Modelle und freie Plasmagrenzen erweitern.
 
-Aktueller Schluss: Softwarepfade und begrenzte Konvergenzprüfungen laufen. Alle sechs untersuchten Netze bestehen intrinsische Qualitätsprüfungen. Nichtlokale Überlappung, reale Baugruppen und eine physikalisch gültige Mechanik sind unqualifiziert; große Verformungen machen die absoluten linearen Spannungsprognosen ungültig.
+Aktueller Schluss: Alle sechs untersuchten Netze bestehen intrinsische Qualitätsprüfungen. Fünf bestehen jetzt zusätzlich den unabhängig auditierten Nichtüberlappungsschirm ohne gemeinsame Vertexindizes; der feinste Test bleibt nach seinem Paarcap unvollständig. Nachbarpaare, reale Baugruppen und eine physikalisch gültige Mechanik sind weiter offen; große Verformungen machen die absoluten linearen Spannungsprognosen ungültig.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
-- [Tetraeder-Nichtüberlappung: Kontrollkern](TETRA_NONOVERLAP_METHOD.md) — Trennrichtungen, Innenpunkte, vollständige Paarbuchhaltung und unabhängige Partition-/Witness-Audits bestehen34 Tests; reale Spulennetze weiterhin ungeprüft.
-- [Nichtlokale Netzüberschneidung: Protokoll](MESH_NONLOCAL_PROTOCOL.md) — Sechs unveränderte Netze, sämtliche nicht benachbarten Tetraederpaare, konservative Trenn-/Innenpunktnachweise und unabhängige vollständige Paarbilanz; noch nicht ausgeführt.
-- [Nichtlokale Netzüberschneidung: Ergebnis](MESH_NONLOCAL_RESULTS.md) — Erster Start scheitert vor Netzrechnung an historischer Quellpfad-Änderung; alle elf Quellenverweise unabhängig auflösbar, keine realen Kollisionsresultate.
+- [Tetraeder-Nichtüberlappung: Kontrollkern](TETRA_NONOVERLAP_METHOD.md) — Trennrichtungen, Innenpunkte, vollständige Paarbuchhaltung und unabhängige Partition-/Witness-Audits bestehen34 Kernkontrollen; reale Ergebnisse separat im Netzbericht.
+- [Nichtlokale Netzüberschneidung: Protokoll](MESH_NONLOCAL_PROTOCOL.md) — Sechs unveränderte Netze, Paare ohne gemeinsame Vertexindizes, konservative Trenn-/Innenpunktnachweise und unabhängige vollständige Paarbilanz.
+- [Nichtlokale Netzüberschneidung: Ergebnis](MESH_NONLOCAL_RESULTS.md) — Fünf vollständige Pässe und ein korrekt unvollständiger Paarcap; alle3.358.644 Einzelpaar-Nachweise unabhängig bestätigt, keine vollständige Volumen-/Mechanikfreigabe.
 - [Nichtlokale Netzüberschneidung: Retry](MESH_NONLOCAL_RETRY_PROTOCOL.md) — Explizite historische Git-/SHA-Auflösung ausschließlich für alten Quellcode; gleiche Netze, numerische Kerne, Grenzen und vollständige Matrix unter neuen Pfaden.
 
 - [FREE_BOUNDARY_PROTOCOL ](FREE_BOUNDARY_PROTOCOL.md) — Protokoll: Unveränderlicher Vakuum-Holdout der Plasmareaktion; getrennt von Optimierung und ohne Rückschreiben.

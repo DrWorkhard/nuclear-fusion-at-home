@@ -70,7 +70,9 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    Der neue SLSQP-Lauf mit zusammengesetztem Startgate ist vollständig wiederholt:
    beide2048-Bundle-Pfade exakt gleich, unabhängiger Audit besteht. Alle vier
    feinen Abnahmen geschlossen: Geometrie/nativ bestehen, Flux Faktor8,19 zu hoch.
-   Als Nächstes die bereits registrierte sechs-Netze-Prüfung für Schritt1 ausführen;
+   Die registrierte sechs-Netze-Prüfung für Schritt1 ist inzwischen geschlossen:
+   fünf vollständige Nichtüberlappungspässe, feinster Test am Paarcap unvollständig,
+   alle Zertifikate unabhängig bestätigt. Jetzt den registrierten QI-Koordinatentest;
    einen weiteren Konstruktionsversuch für Schritt2 separat begründen/festlegen,
    keine Wahl der günstigsten realen Schrittweite oder gelockerte Physikgrenzen.
    Keine Aussage gleicher Methodenbudgets.

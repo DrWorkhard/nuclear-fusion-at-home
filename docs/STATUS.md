@@ -123,6 +123,10 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    Konsistenz besteht; direkte physikalische Driftgegenrechnung noch offen.
 3. **Ingenieurphysik:** nichtlokale Selbstüberschneidung und Baugruppenabstände,
    reale Wicklungspakete, Material-/Lagerungsannahmen und gültige Mechanik.
+   Der [sechs-Netze-Teiltest](engineering/MESH_NONLOCAL_RESULTS.md) ist geschlossen:
+   fünf vollständige Nichtüberlappungspässe ohne gemeinsame Vertexindizes,
+   feinster Test bei zwei Millionen Paarprüfungen korrekt unvollständig.
+   Alle gespeicherten Zertifikate unabhängig auditiert; kein Gesamtvolumenpass.
    Die bisherige große Verformung macht absolute lineare Spannungsprognosen ungültig.
 4. **Zielbaseline und externe Ausführung:** autorisierte kanonische SQuID-C-Daten
    und ausführbarer Vergleich mit den

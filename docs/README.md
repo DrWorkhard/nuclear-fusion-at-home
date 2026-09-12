@@ -183,6 +183,11 @@ Ersetzung der Autorenreferenzen.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 
+Für Schritt1 ist jetzt auch die [sechs-Netze-Prüfung](engineering/MESH_NONLOCAL_RESULTS.md)
+geschlossen: fünf vollständige Nichtüberlappungspässe, feinster Test am festen
+Paarcap unvollständig. Sämtliche gespeicherten Trennnachweise sind unabhängig
+bestätigt; Nachbarpaare, vollständige Baugruppen und gültige Mechanik bleiben offen.
+
 ## Wie Erfolg beurteilt wird
 
 Methoden sind gleichberechtigt: klassische Optimierung, automatische Ableitungen,

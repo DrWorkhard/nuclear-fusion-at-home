@@ -59,6 +59,12 @@ Earlier equal-time spatial-residual improvements remain limited to one start and
 infeasible fields. A [field-strength audit](docs/optimization/FIELD_STRENGTH_AUDIT.md)
 rules out simple mean-field weakening as their explanation; it does not establish SoTA.
 
+The [six-mesh nonoverlap study](docs/engineering/MESH_NONLOCAL_RESULTS.md) now
+has five independently confirmed complete passes in its non-shared-vertex scope.
+The finest mesh reaches its fixed two-million-pair cap and remains incomplete;
+all stored certificates are verified. Neighbor pairs, full assemblies and valid
+mechanics remain open, as do long-term steps1 and2.
+
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking
 both READMEs, the current assessment and the work plan for affected summaries.

@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Close real six-mesh study and independent all-witness audit
+
+- v2 at f5ccea2: five complete nonlocal passes; finest scan terminates at exactly
+  2M SAT calls with822,324,039 broad pair possibilities and61 delivered candidates
+  still pending. No reclassification as complete. All meshes unchanged.
+- Independent six-row audit passes all stored partitions/counters and3,358,644
+  separation witnesses, without SAT search/LP calls. No confirmed or unresolved
+  overlap in the evaluated domain; unknown remaining domain is not certified.
+  Original study exit2 retained; independent audit exit0,126MiB raw data.
+- F-073/detail/index and both READMEs/status/plan/readiness synchronized;
+  source failure retained. Targeted spatial tests/docs/diff pass. Next registered
+  QI coordinate study; any completion of the finest mesh needs its own protocol.
+
 ## 2026-09-12 — Qualify additive QI coordinate readers on synthetic Wout fixtures
 
 - Separate vectorized arbitrary-angle reader and independent radial-weight/
