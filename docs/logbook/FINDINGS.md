@@ -1,5 +1,19 @@
 # Findings log
 
+## F-061 — Radial action signs change under gauge relabeling in unchanged nfp3 fields
+
+**Class:** fixed four-case physical diagnostic with independent arithmetic audit
+**Date:** 2026-09-12
+
+All84 old traces and every c=0 stencil/sign reproduce exactly. Under c=-1/0/+1
+radial field-line relabeling, five nfp3 vacuum and20 nfp3 beta2 families include
+both positive and negative classifications. All160 cells match; chain-rule error
+<=1.663e-4 normalized, all fixed screens pass. Independent interval/stencil/sign
+audits pass for all320 families. nfp2 beta2 remains negative for all80 sampled
+families in every tested gauge. This is not a changed field or global maximum-J
+certificate; define a physically appropriate measure before optimizing it.
+See [results](../qi/QI_RADIAL_GAUGE_RESULTS.md).
+
 ## F-060 — Fresh SLSQP repeats agree, but do not reproduce the historical prefix
 
 **Class:** repeated construction with retained failed protocol condition

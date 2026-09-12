@@ -40,6 +40,12 @@ Ein negatives Ergebnis schließt diesen Versuch, nicht automatisch das Arbeitspa
 
 ## Forschungspakete und Abnahme
 
+QI-Nachschärfung aus dem Gauge-Test: Die ursprünglichen Traces/Ableitungen sind
+exakt reproduziert, aber25 nfp3-Familien wechseln bei bloßer Neumarkierung ihre
+Vorzeichenklasse. Deshalb den physikalischen Wirkungs-/Präzessionsmaßstab und
+seine Gauge-Bedeutung klären; kein naives Optimieren einer frei wählbaren
+radialen Vorzeichenstatistik. Der volle Invariantenbereich bleibt offen.
+
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |
 | Reproduzierbarkeit | Vollständige wissenschaftliche Integration aus frischem Daten-/Solveraufbau | Gepinnte Quellen, neue Umgebung, explizite Nicht-Skips und dokumentierte Abweichungen |

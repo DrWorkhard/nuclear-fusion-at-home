@@ -41,6 +41,11 @@ without an admissible design. A preregistered classical natural-flux AL follow-u
 is running after passing its analytic control and complete initial derivative
 screen; independent stage auditing and admission remain pending.
 
+For QI qualification, the [radial-gauge audit](docs/qi/QI_RADIAL_GAUGE_RESULTS.md)
+reproduces all 84 old traces exactly but finds sign changes in 25 nfp3 well
+families under field-line relabeling alone. Independent chain-rule checks pass.
+This exposes a limit of the radial diagnostic, not a physical design improvement.
+
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking
 both READMEs, the current assessment and the work plan for affected summaries.

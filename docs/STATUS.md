@@ -23,7 +23,8 @@ und Verbesserungen daran zertifizieren.
 | QI bei endlichem Druck | 320 zugeordnete Potentialmulden-Familien in vier Fällen; Druckfall nfp2 durchgehend negative radiale Ableitungen im untersuchten Bereich, nfp3 gemischt | Unabhängige Quadratur und zweiter Feldlinienrechner; 319 aufgelöste Vorzeichen bestätigt, eines unaufgelöst. Keine globale maximum-J-Aussage |
 | Direkte Randbedingungen | 137 Ungleichungen qualifiziert; SLSQP-Pilot mit zwei exakt gleichen 256-Bundle-Läufen | Ausgewählte Felder bestehen Geometrie und zusätzliche native Metriken; Flux bleibt Faktor 23,3 über Grenze. Nicht konvergiert, nicht zulässig |
 | Lokales Fluxmodell | Quadratische Vorhersage an allen vier festen Testschritten richtig im Vorzeichen; Fehler mindestens 99,907% kleiner als linear | Vollständiger nativer Jacobianvergleich und unabhängiger Kern-Audit bestehen. Lokale Diagnose, noch kein neuer Optimierungserfolg |
-| Software | 324 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte vorhandene QI-/W7-X-Datenregression: alle sechs Tests, null Skips; fehlende W7-X-Daten werden im Gegenlauf zurückgewiesen. 20 Warnungen derselben bekannten NumPy/netCDF4-Art; kein vollständiger nativer Neuaufbau |
+| QI-Gauge | Alle84 alten Traces exakt wiederholt; 25 nfp3-Familien wechseln bei unverändertem Feld die Vorzeichenklasse | Unabhängige Zuordnungs-/Kettenregelprüfung besteht; drei feste Gauge-Steigungen, kein global gauge-unabhängiger Maximum-J-Maßstab |
+| Software | 336 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte vorhandene QI-/W7-X-Datenregression: alle sechs Tests, null Skips; fehlende W7-X-Daten werden im Gegenlauf zurückgewiesen. 20 Warnungen derselben bekannten NumPy/netCDF4-Art; kein vollständiger nativer Neuaufbau |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [Ableitungen](optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md),
@@ -69,6 +70,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    denselben Strafansatz geben.
 2. **QI-Maßstab:** vollständiger relevanter Invariantenbereich, Mulden-Identität,
    Topologie, Gleichgewichtsauflösung und Koordinaten-/Gauge-Unabhängigkeit.
+   Der neue kontrollierte Test bestätigt bei nfp3 Vorzeichenabhängigkeit von der
+   radialen Feldlinienmarkierung; deren Bedeutung für den physikalischen
+   Präzessions-/Optimierungsmaßstab muss geklärt werden.
 3. **Ingenieurphysik:** nichtlokale Selbstüberschneidung und Baugruppenabstände,
    reale Wicklungspakete, Material-/Lagerungsannahmen und gültige Mechanik.
    Die bisherige große Verformung macht absolute lineare Spannungsprognosen ungültig.

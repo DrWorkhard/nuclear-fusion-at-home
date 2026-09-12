@@ -2,13 +2,13 @@
 
 Zweck: eine numerisch belastbare QI-relevante Messung aus offenen Goodman-Gleichgewichten aufbauen.
 
-Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale Wirkungsableitungen sind unabhängig gegengeprüft. Der nfp2-Druckfall hat im gemessenen Bereich negative Ableitungen, nfp3 bleibt gemischt. Die zugänglichen Invariantenbereiche, globale Topologie, Gauge- und Gleichgewichtsauflösung bleiben offen; kein vollständiges QI-/maximum-J-Zertifikat.
+Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale Wirkungsableitungen sind unabhängig gegengeprüft. Der nfp2-Druckfall bleibt im begrenzten Gauge-Test negativ. Bei nfp3 wechseln25 Familien allein durch Feldlinien-Neumarkierung das Vorzeichen; die Kettenregel ist unabhängig bestätigt. Invariantenbereich, globale Topologie, physikalischer Gauge-/Präzessionsmaßstab und Gleichgewichtsauflösung bleiben offen; kein vollständiges QI-/maximum-J-Zertifikat.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
-- [Radiale Gauge: Vorbereitung](QI_RADIAL_GAUGE_RESULTS.md) — Offset-/Periodizitäts-/Kettenregelkontrollen bestehen; exakter Real-Daten-Replay und verschobene Traces stehen noch aus.
+- [Radiale Gauge: Ergebnis](QI_RADIAL_GAUGE_RESULTS.md) — Alle84 alten Traces exakt wiederholt; 25 nfp3-Familien wechseln unter Neumarkierung das Vorzeichen, unabhängige Zuordnungs-/Kettenregelprüfung besteht.
 
 - [Radiale Gauge: Protokoll](QI_RADIAL_GAUGE_PROTOCOL.md) — Vorab festgelegte Kettenregel-/Vorzeichendiagnose unter radialer Feldlinien-Neumarkierung; unveränderte Fälle, Pitchwerte und Pflicht zum exakten Standard-Replay.
 

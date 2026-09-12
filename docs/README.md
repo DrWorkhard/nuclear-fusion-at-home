@@ -132,6 +132,13 @@ nach bestandener analytischer Kontrolle und vollständiger Start-Ableitungsprüf
 unabhängiger Stufenaudit und Abnahme folgen nach Abschluss.
 Weiterhin kein neuer zulässiger Entwurf.
 
+Für Schritt1 zeigt die [neue Gauge-Prüfung](qi/QI_RADIAL_GAUGE_RESULTS.md): Alle84
+alten Traces reproduzieren exakt, aber bei nfp3 wechseln25 Muldenfamilien allein
+durch radiale Feldlinien-Neumarkierung ihre Vorzeichenklasse. Die unabhängige
+Kettenregelprüfung bestätigt die Ursache. Das begrenzt die bisherige Diagnose;
+es ist keine Verbesserung des Magnetfelds. nfp2 beta2 bleibt im getesteten
+Bereich unter allen drei Neumarkierungen negativ.
+
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 
 ## Wie Erfolg beurteilt wird

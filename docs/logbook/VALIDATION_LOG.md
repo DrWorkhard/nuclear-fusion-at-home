@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Four-case radial-gauge diagnosis and independent audit completed
+
+- 121f9ab execution:244 new traces; all84 historical zero-gauge arrays and old
+  stencils/signs exact. All160 cells/320 families match. All prescribed numerical
+  screens pass. nfp3 vacuum5 and beta2 20 families have opposing gauge signs;
+  both nfp2 cases retain all sampled signs. Maximum chain error1.663e-4 normalized.
+- Independent audit rechecks raw hashes/c=0 arrays, full matching edges, stencil
+  binding, differences, sign/error classifications and summaries; all four pass.
+  Twelve analytical/adversarial audit controls pass. Full suite336 passed,
+  20 known-type warnings; Ruff/docs/diff checks pass.
+- Both READMEs/status/plan/QI index and findingF-061 updated. This identifies a
+  physical-interpretation limit, not better confinement or closed step1. Computation
+  overlapped bundlebudgeted AL search; no controlled walltime assertion.
+
 ## 2026-09-12 — Gauge trace runner prepared; natural-AL search started
 
 - Gauge runner retains fixed cases/pitches, exact replay of every old c=0 array,
