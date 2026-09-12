@@ -1,7 +1,15 @@
-# Jacobiskalierte AL: wiederholte Suche auditiert, feine Abnahme offen
+# Jacobiskalierte AL: vollständig geprüft, wegen Flux abgelehnt
 
-Stand 2026-09-12. [Vorabfestlegung](NATURAL_AUGLAG_JAC_PROTOCOL.md), Ausführung
-bei `2061cee`. Bericht: `evidence/natural-auglag-jac-control-v1.json`.
+Stand 2026-09-12. [Vorabfestlegung](NATURAL_AUGLAG_JAC_PROTOCOL.md).
+Beide Suchläufe und alle feinen Abnahmen sind abgeschlossen: Geometrie/nativ
+bestehen, Roh-Flux bleibt Faktor23,91 über der Grenze. Rund11,4% kleinerer Flux
+als bei unskalierter AL an diesem einen Start, aber höhere Krümmung; keine
+zulässige Baseline, Pareto-Dominanz oder allgemeine Methodenrangfolge.
+
+## Analytische Kontrolle und Vorbereitung
+
+Kontrollausführung bei `2061cee`:
+`evidence/natural-auglag-jac-control-v1.json`.
 
 Die echte achtstufige Steuerung mit `x_scale=jac` besteht dieselbe analytisch
 lösbare beschränkte Quadratik wie der unskalierte Ansatz. Ergebnis
@@ -40,11 +48,10 @@ unvollständige, doppelte oder fehlgeschlagene Phasen und Feedbacknutzung;
 sieben reine Steuerungskontrollen bestehen. Die neue Suche und ihr Audit laufen
 sequenziell unter der2-GiB-Reserve, ohne Änderungen am alten oder neuen Suchkernel.
 
-Die [unveränderte Recovery](NATURAL_AUGLAG_RECOVERY_RESULTS.md) ist nun samt
+Die [unveränderte Recovery](NATURAL_AUGLAG_RECOVERY_RESULTS.md) war zuvor samt
 allen Holdouts abgeschlossen: Geometrie/nativ bestehen, Flux Faktor26,9859 zu
-hoch. Nach deren Commit sind zwei neue physikalische Wiederholungen und ihre
-feinen Abnahmen der nächste Arbeitsschritt. Keine neue zulässige Baseline und
-kein Methodenfortschritt behauptet.
+hoch. Erst nach deren Commit begannen die zwei neuen physikalischen
+Wiederholungen. Keine Grenze oder abgeschlossene Studie wurde umgedeutet.
 
 ## Physikalische Suche und unabhängiger Audit abgeschlossen
 
@@ -71,6 +78,35 @@ ausgewählte beste Geometriekandidat nicht zwingend der letzte Stufenpunkt.
 Dieser hat gemeldete Lagrangegradient-Maxnorm17,9223 und Verletzung3,57347e-5;
 weder Konvergenz noch globale Unerreichbarkeit der Grenzen ist nachgewiesen.
 
-Jetzt vollständige feine Abnahme beider Felder, ohne neue Grenzwerte oder
-Budgeterhöhung. Erst nach deren dokumentiertem Abschluss die fünf getrennt
-ausgewählten Referenzfelder rekonstruieren. Langfristiger Schritt2 bleibt offen.
+## Vollständige feine Abnahme und begrenzter Optionsvergleich
+
+Bei `0bbd053` alle vier Abnahmephasen durchgeführt; Exitcodes2/0/0/0 sind die
+reguläre Fluxablehnung und drei weitere abgeschlossene Prüfungen, keine
+unterdrückten Ausführungsfehler. Ergebnisse:
+`evidence/natural-auglag-jac-v1-validation/`. Beide Kandidaten ergeben dieselben
+feinen Werte, alle Gitter und native Zusatzbedingungen wurden erfasst.
+
+| Größe | Jacobiskaliert | Unveränderte AL | Feste Abnahme |
+| --- | --- | --- | --- |
+| Feinster Roh-Flux | 2,390957922567119e-7 | 2,698587472179773e-7 | Beide FAIL, <=1e-8 verlangt |
+| Länge, vier Basisspulen | 219,85937081825747m | 219,89923004246256m | Beide PASS, <=220m |
+| Kontinuierliche Krümmungsoberschranke | 0,9048537172466973/m | 0,8333580202880169/m | Beide PASS, <=1/m |
+| Kontinuierliche Spulenabstandsuntergrenze | 1,086196393700305m | 1,0866060702842504m | Beide PASS, >=1,06m |
+| Feinster Plasmaabstand | 3,127415460818699m | 3,1735085164845853m | Beide PASS im Gittertest, >=1,3m |
+
+Fluxverfeinerung besteht. Krümmung bei200 Punkten unaufgelöst, ab400 Punkten
+PASS; alle sieben Level erhalten. Native maximale mittlere quadratische
+Krümmung6,811191032519679, maximale Bogenlängenvarianz3,814195150037828;
+sämtliche nativen Grenz-/Verfeinerungsprüfungen bestanden, Verkettungszahl auf
+beiden Gittern null. Kleinste beobachtete freie Kapazität6196854784Bytes >2GiB.
+
+Fluxverhältnis unskaliert/skaliert1,128663723735614, also rund11,4% niedriger.
+Mittleres |B|0,9461250214970208T gegenüber0,9461251760804333T, kein relevanter
+mittlerer Feldstärkeverlust. Dieser Ein-Start-Optionsvergleich ist keine
+Mehrstart-Methodenrangfolge; höhere Krümmung und etwas kleinere Abstände
+verhindern außerdem eine einfache Pareto-Dominanzbehauptung. Beide Felder sind
+unzulässig, volle Ingenieurphysik bleibt offen.
+
+Dieser begrenzte Versuch ist vollständig geschlossen. Nächster Schritt:
+die fünf separat festgelegten Archivfelder rekonstruieren. Langfristiger
+Schritt2 bleibt offen; keine nachträgliche Budgetverlängerung.

@@ -138,8 +138,10 @@ gespeicherte zweite Präfix. Der gesonderte, unveränderte
 vollständigen Wiederholungen und historischen Präfixaudits. Auch die feine
 Abnahme ist abgeschlossen: Geometrie/nativ bestehen, Flux Faktor26,99 zu hoch.
 Der getrennt registrierte Jacobispalten-Skalierungsversuch besteht inzwischen
-beide exakten Wiederholungen und den unabhängigen Audit; grober Flux Faktor23,91
-zu hoch, feine Abnahme folgt.
+beide exakten Wiederholungen und den unabhängigen Audit. Seine feine Abnahme
+ist ebenfalls abgeschlossen: Flux rund11,4% kleiner, aber höhere Krümmung und
+weiter Faktor23,91 über der Grenze. Fünf getrennt festgelegte Archivfelder sind
+für eine unabhängige Rekonstruktion ausgewählt, noch nicht freigegeben.
 Weiterhin kein neuer zulässiger Entwurf.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der

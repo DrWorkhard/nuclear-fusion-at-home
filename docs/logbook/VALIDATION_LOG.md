@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Close all scaled-AL holdouts with retained negative flux result
+
+- At0bbd053 all four phases complete, exit2/0/0/0. Both fine flux values
+  2.390957922567119e-7 fail1e-8. Length219.8593708m, continuous curvature upper
+  0.90485372/m, clearance lower1.08619639m, plasma gap3.12741546m pass.
+- All flux/geometry levels retained including unresolved200-point curvature;
+  native MSC/arc/linking and refinement checks pass. Minimum observed free
+  6196854784Bytes. No accepted design or full engineering certification.
+- Fine flux11.4% lower than unscaled at same start/cap, mean field effectively
+  equal; curvature higher and gaps smaller, so no Pareto dominance or general
+  method ranking. FindingF-064, both READMEs/status/plan/index/readiness updated.
+  Fixed trial closed. Static five-source reconstruction follows only after commit.
+  All42 holdout/profile/start-driver tests pass; docs/diff pass before commit.
+
 ## 2026-09-12 — Jacobian-scaled physical search repeats exactly and passes independent audit
 
 - Two fresh1033-bundle arms at6db0040, each1775 requests/742 cache hits and no

@@ -1,5 +1,18 @@
 # Findings log
 
+## F-064 — Jacobian scaling lowers flux in a repeated one-start trial, still infeasible
+
+**Class:** fixed single-option classical comparison with independent negative holdouts
+**Date:** 2026-09-12
+
+Both1033-bundle arms match exactly and pass independent profile/work/selection
+audits. All four fine holdouts complete: geometry/native checks pass, fine raw
+flux2.390957922567119e-7 remains23.91 times over1e-8. Flux is about11.4% lower
+than unscaled recovery at the same start/cap, with essentially equal mean field;
+curvature rises and gaps shrink slightly. No feasible baseline, Pareto dominance,
+convergence or multi-start method ranking. See
+[closed scaled trial](../optimization/NATURAL_AUGLAG_JAC_RESULTS.md).
+
 ## F-063 — Unchanged natural-AL recovery is reproducible but fails independent flux
 
 **Class:** preregistered repeated classical construction, independently rejected

@@ -1,0 +1,9 @@
+geometry holdout: natural-auglag-jac-1 n=200
+geometry holdout: natural-auglag-jac-1 n=1000
+geometry holdout: natural-auglag-jac-1 n=5000
+geometry holdout: natural-auglag-jac-1 n=20000
+geometry holdout: natural-auglag-jac-2 n=200
+geometry holdout: natural-auglag-jac-2 n=1000
+geometry holdout: natural-auglag-jac-2 n=5000
+geometry holdout: natural-auglag-jac-2 n=20000
+{"all_pass": false}

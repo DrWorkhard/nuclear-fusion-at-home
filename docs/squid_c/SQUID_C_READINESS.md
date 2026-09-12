@@ -65,6 +65,10 @@ bounded result; missing author data is not the only remaining blocker.
       and historical-prefix audits; all fine holdouts complete, geometry/native
       checks pass but flux remains26.99 times the limit. G2 remains open
       (NATURAL_AUGLAG_RECOVERY_RESULTS.md).
+      The separate Jacobian-scaled AL trial also completes both exact repeats,
+      independent audit and all fine holdouts:11.4% lower flux at this start but
+      greater curvature and still23.91 times over the fixed flux limit. No
+      Pareto dominance or feasible baseline (NATURAL_AUGLAG_JAC_RESULTS.md).
 
 ## G3 — W7-X regression
 

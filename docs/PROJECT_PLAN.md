@@ -42,11 +42,13 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    Ein anschließender [Jacobispalten-Skalierungsversuch](optimization/NATURAL_AUGLAG_JAC_PROTOCOL.md)
    ist getrennt vorab festgelegt: nur `x_scale=jac` statt1, keine geänderte Physik.
    Recovery/Abnahme ist geschlossen und committed; auch beide skalierten
-   Suchläufe und ihr unabhängiger Audit sind abgeschlossen. Grober Flux Faktor23,91
-   über Grenze; jetzt deren vollständige feine Abnahmen.
+   Suchläufe, unabhängiger Audit und alle feinen Abnahmen sind abgeschlossen.
+   Flux rund11,4% kleiner bei höherer Krümmung, weiterhin Faktor23,91 über Grenze.
    Daneben ist die [Bestandsaufnahme vorhandener LPQA-Felder](optimization/UPSTREAM_LPQA_INVENTORY_RESULTS.md)
    unabhängig abgeschlossen: fünf Metadatenkandidaten für separate Rekonstruktion,
    keine ungeprüfte Übernahme als zulässige Baseline oder neue Suchinitialisierung.
+   Deren [statische Rekonstruktion](optimization/UPSTREAM_LPQA_RECONSTRUCTION_PROTOCOL.md)
+   ist vorbereitet und wird nach dem skalierten Abschlusscommit ausgeführt.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 
