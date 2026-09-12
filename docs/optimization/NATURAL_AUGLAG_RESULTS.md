@@ -66,3 +66,13 @@ Ruff/Dokument-/Diffprüfung bestehen.
 Noch offen: der [separat festgelegte Wiederholungsversuch](NATURAL_AUGLAG_RECOVERY_PROTOCOL.md)
 und vollständige feine Abnahmen. Weder eine
 zulässige Konstruktion noch ein Methoden- oder SoTA-Vorteil ist nachgewiesen.
+
+Der Wiederholungsdriver wartet ausdrücklich auf bestandenen Abschluss der neuen
+nativen Integration, startet dann den unveränderten Originalrunner und führt
+beide unabhängigen Audits aus. Auch dabei gilt die überwachte 2-GiB-Platzreserve.
+Keine automatischen Holdouts vor Auswertung/Dokumentation der Suchergebnisse.
+Fehlgeschlagene, alte kopierte oder unvollständige native Voraussetzungen dürfen
+keine Suche auslösen; dafür bestehen sieben reine Steuerungskontrollen.
+Gesamte Suite366 bestanden,20 bekannte Warnungen; Ruff/Dokument-/Diffprüfung
+bestanden. Sieben ursprüngliche Mathematikdateien und drei SciPy-Solverdateien
+stimmen weiterhin mit ihren archivierten Hashes überein.

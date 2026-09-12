@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-12 — Prepare guarded AL recovery queue, without changing search mathematics
+
+- Queue waits for actual successful fresh native solver/test phases; failures,
+  copied outputs and incomplete prerequisites cannot start a search. Two-hour
+  wait cap is operational, not an optimizer-budget extension. Search keeps the
+  original source hashes, solver options and1033-bundle caps.
+- New independent recovery auditor binds the normal pilot audit and checks both
+  fixed old prefixes (1033/700) and code/options/thread equality. No new physics
+  during auditing; study completion cannot qualify physical feasibility.
+- Seven prerequisite controls pass (including duplicate/failed-phase rejection),
+  alongside seven exact-prefix controls. Full suite366 passed,20 known warnings;
+  Ruff/docs/diff pass. Original seven math files and three SciPy solver sources
+  still match their archived hashes. Root READMEs/status/plan reviewed, no changed
+  scientific assessment. No search starts before fresh native completion.
+
 ## 2026-09-12 — Interpret QI gauge effects using the full action-drift pair
 
 - Read primary Hamiltonian drift equations and assumptions in Rodríguez,
