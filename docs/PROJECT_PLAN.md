@@ -24,10 +24,11 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    unterschiedliche Feldprojektionsrundung im Prüfvergleich. Die konsistente
    native Projektion ist an drei festen Zuständen qualifiziert; beide korrigierten
    1024-Bundle-Läufe und ihr unabhängiger Protokoll-Audit bestehen, der grobe Flux
-   bleibt Faktor 24,7 über der Grenze. Jetzt den getrennt festgelegten
-   SLSQP-1024-Lauf vom Originalstart
-   ausführen, ohne die alten Versuche zu verändern oder Holdouts zurückzuspeisen.
-   Keine nachträgliche Budgeterhöhung des abgeschlossenen SLSQP-Piloten.
+   bleibt Faktor 24,7 über der Grenze. Der getrennte SLSQP-1024-Lauf ist ebenfalls
+   intern exakt reproduziert (grober Flux Faktor 12,7), scheitert aber am
+   geforderten historischen Präfix. Jetzt beide feinen Abnahmen und danach den
+   vorab festgelegten natürlichen Flux-AL-Pilot; dessen analytische Kontrolle
+   besteht. Keine nachträgliche Budgeterhöhung oder veränderte Annahmekriterien.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

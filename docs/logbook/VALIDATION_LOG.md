@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — SLSQP-1024 complete, exact internal repeat, failed historical prefix
+
+- Two 1024-bundle histories/selected fields repeat exactly. Independent arm
+  accounting, derivative, selection and named-field checks pass. Prefixes fail
+  at62 in both; 195 mismatched rows and max normalized difference 0.07436129
+  within first256. Audit returns2/all_pass=false, retained as negative evidence.
+- Selected921: raw coarse Phi=1.2664815589163422e-7, v=8.929310818528435e-7.
+  No convergence/admission. Search summary's narrower qualification flag cannot
+  supersede the independent protocol failure. Full fine holdouts next.
+- Both READMEs, status, plan, area index and findingF-060 updated. Documentation/
+  diff checks pass. Old studies, budgets and requirements unchanged.
+
 ## 2026-09-12 — Analytic AL control recorded; correct premature Ruff statement
 
 - Machine-readable b35efae control passes all fixed limits with 16 synthetic

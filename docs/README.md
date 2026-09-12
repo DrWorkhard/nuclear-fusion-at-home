@@ -121,9 +121,13 @@ native Matrizen und unabhängige Stromprüfungen stimmen überein. Die
 alle drei Zustandsqualifikationen; beide 1024-Bundle-Suchen sind exakt
 reproduziert und unabhängig im Auswertungsprotokoll geprüft. Der ausgewählte
 grobe Flux bleibt Faktor 24,7 über der Grenze. Zielfunktion, Gradienten,
-GN-Matrix und Grenzwerte bleiben unverändert. Als Nächstes der separat
-festgelegte SLSQP-1024-Lauf und die unabhängigen Abnahmen beider Studien;
-weiterhin kein neuer zulässiger Entwurf.
+GN-Matrix und Grenzwerte bleiben unverändert. Auch die neuen
+[SLSQP-1024-Wiederholungen](optimization/DIRECT_SLSQP_1024_RESULTS.md) stimmen
+untereinander exakt überein, verfehlen aber den verlangten historischen
+Präfixvergleich. Ihr grober Flux bleibt Faktor 12,7 über der Grenze. Jetzt die
+unabhängigen Abnahmen beider Studien; anschließend ist ein klassischer
+AL-Versuch mit natürlichen Fluxresiduen vorab festgelegt und analytisch geprüft.
+Weiterhin kein neuer zulässiger Entwurf.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 

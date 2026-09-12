@@ -1,5 +1,19 @@
 # Findings log
 
+## F-060 — Fresh SLSQP repeats agree, but do not reproduce the historical prefix
+
+**Class:** repeated construction with retained failed protocol condition
+**Date:** 2026-09-12
+
+Both fresh 1024-bundle arms match exactly and pass independent ledger/selection
+checks. Their first historical discrepancy occurs at proposal 62 (2.842e-14
+absolute value difference), growing to 0.07436 normalized within the old256
+prefix. The entire prefix condition fails; a tiny initial perturbation does not
+justify calling the later trajectories identical. Selected proposal 921 has
+coarse raw flux 1.26648e-7 and internal violation 8.929e-7, so remains inadmissible.
+No demonstrated convergence or method ranking. See
+[results](../optimization/DIRECT_SLSQP_1024_RESULTS.md).
+
 ## F-059 — Qualified GN curvature does not yield a feasible design within 1024 bundles
 
 **Class:** repeatable budget-limited construction; fine holdouts pending
