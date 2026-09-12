@@ -32,6 +32,16 @@ def test_independent_selection_and_counters():
     assert all(audit_inequality_arm(arm, [1], arm["best"]["values"]).values())
 
 
+def test_other_predeclared_limit_is_explicit_not_inferred_from_untrusted_record():
+    arm = fixture()
+    arm['counters']['limit'] = 1024
+    assert not audit_inequality_arm(arm, [1], arm['best']['values'])['fixed_limit']
+    assert all(audit_inequality_arm(arm, [1], arm['best']['values'],
+                                    expected_limit=1024).values())
+    with pytest.raises(ValueError):
+        audit_inequality_arm(arm, [1], arm['best']['values'], expected_limit=True)
+
+
 @pytest.mark.parametrize("corruption", ["best", "tolerance", "requests", "violation", "key"])
 def test_detect_corrupt_ledger(corruption):
     arm = deepcopy(fixture())

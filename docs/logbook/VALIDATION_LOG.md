@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-12 — Native-covector setup passes; independent pilot auditor prepared
+
+- At 1913edd all three shared state/gradient/H_GN qualifications pass, preserving
+  the old failed29 uncoupled error. First arm's running checkpoint at 950 bundles
+  has zero failed attempts; this is not final evidence or physical admission.
+- Added independent checks for every GN identity/work record, actual evaluated
+  vectors behind accepted iterations, target-stop/nonconvergence distinction and
+  exact original-prefix comparison. Existing ledger auditor now accepts only an
+  explicitly supplied expected budget, retaining 256 as its historical default.
+- Seven new adversarial/budget controls pass. Full suite: 280 passed, 11 known
+  warnings; Ruff/docs/diff checks pass. One overlong audit-script line corrected.
+  These lightweight checks ran during a bundle-budgeted construction, not an
+  equal-wall-time comparison; no comparative wall-time inference is permitted.
+- Both READMEs, status and area index reflect qualified setup and ongoing pilot;
+  all candidate holdouts remain pending. No live physics code was changed while
+  the corrected pilot was running.
+
 ## 2026-09-12 — Consistent native-covector guard prepared before corrected pilot
 
 - Adapter now optionally uses the exact native residual projection for the GN

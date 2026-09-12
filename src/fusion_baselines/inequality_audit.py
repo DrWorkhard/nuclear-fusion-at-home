@@ -5,7 +5,9 @@ import hashlib
 import numpy as np
 
 
-def audit_inequality_arm(arm, x, values):
+def audit_inequality_arm(arm, x, values, *, expected_limit=256):
+    if type(expected_limit) is not int or expected_limit < 1:
+        raise ValueError("positive predeclared expected budget required")
     records, counters = arm["evaluations"], arm["counters"]
     completed = [r for r in records if r["status"] == "completed"]
     failed = [r for r in records if r["status"] == "error"]
@@ -18,7 +20,7 @@ def audit_inequality_arm(arm, x, values):
         "failure_count": len(failed) == counters["failed_attempts"],
         "request_partition": counters["requests"]
         == len(records) + counters["cache_hits"] + counters["denied"],
-        "fixed_limit": counters["limit"] == 256,
+        "fixed_limit": counters["limit"] == expected_limit,
         "fixed_selection_tolerance": tolerance == 1e-8,
         "gradient_screen": arm["gradient_screen_pass"] is True,
         "correct_stop": (
