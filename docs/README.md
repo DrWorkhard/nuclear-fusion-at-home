@@ -159,6 +159,11 @@ beide2048-Bundle-Pfade exakt gleich und sämtliche feinen Abnahmen abgeschlossen
 Geometrie/nativ bestehen; feiner Flux8,191665e-8 bleibt Faktor8,19 zu hoch.
 Beide enden am Budget; der Versuch ist geschlossen, keine Zulassung.
 
+Die getrennte [Stromminimierung bei fester Geometrie](optimization/FIXED_GEOMETRY_CURRENT_RESULTS.md)
+ist nativ und unabhängig qualifiziert. Die zusätzliche grobe Fluxsenkung beträgt
+höchstens0,000012813%; die feinen Feld-Holdouts folgen noch. Kein neuer Form- oder
+Zulässigkeitsnachweis.
+
 Ein Teil von Schritt1 ist neu abgeschlossen: Der
 [frische native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md) besteht
 alle21 Phasen, einschließlich gesperrter neuer Umgebungen, neu gebautem VMEC8.52

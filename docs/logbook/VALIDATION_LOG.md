@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-12 — Execute and independently audit both fixed-geometry current minimizers
+
+- At1b78832 both original138-value bundles replay exactly; full-rank three-current
+  minima and all native qualification checks pass. Independent57 checks per state
+  validate provenance, all16 coil transforms/current signs, QR/normal equations,
+  predictions and complete counters, without new native calls.
+- Coarse flux reductions only0.0000128129% (AL) and0.00000592349% (SLSQP).
+  Geometry unchanged; no new feasible design. Native relative flux-prediction
+  discrepancy<=7.966e-14, affine probes<=4.441e-16. Raw data2.1MiB.
+- Four total native bundles/four B-VJPs plus16 extra B-grid requests; two SVD/two
+  QR fits, audit adds two singular-value checks/two QR solves, no native work.
+  Drivers exit0; implementation unchanged, dirty report flag from new output files.
+- Detail/index and both READMEs/status/plan updated; seven targeted controls,
+  Ruff/docs/diff pass. Next all eight preregistered fine field holdouts, not a
+  shape search or a claimed completed step2.
+
 ## 2026-09-12 — Qualify full fixed-current workflow, independent audit and frozen holdouts
 
 - Added exact two-source/provenance checks, seven central field probes plus one

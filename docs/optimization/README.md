@@ -8,8 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
-- [Feste Geometrie, optimale Ströme: Protokoll](FIXED_GEOMETRY_CURRENT_PROTOCOL.md) — Zwei unveränderte AL-/SLSQP-Spulenformen, exaktes dreidimensionales Strom-LS-Teilproblem, unabhängiges QR/Provenienz-/Feld-Holdout; klassische Diagnose, noch nicht ausgeführt.
-- [Feste Geometrie, optimale Ströme: Vorbereitung](FIXED_GEOMETRY_CURRENT_RESULTS.md) — Analytische SVD-/QR-/Stromgraphkontrollen und synthetischer Zwei-Zustände-Treiber, Datei-Audit, Fehlererhaltung sowie acht Feld-Holdouts vorbereitet; echte Studie noch nicht ausgeführt.
+- [Feste Geometrie, optimale Ströme: Protokoll](FIXED_GEOMETRY_CURRENT_PROTOCOL.md) — Zwei unveränderte AL-/SLSQP-Spulenformen, exaktes dreidimensionales Strom-LS-Teilproblem, unabhängiges QR/Provenienz-/Feld-Holdout; klassische Diagnose ohne Neuheitsbehauptung.
+- [Feste Geometrie, optimale Ströme: Teilresultat](FIXED_GEOMETRY_CURRENT_RESULTS.md) — Beide echten linearen Teilprobleme und je57 unabhängige Checks bestehen; zusätzlicher grober Fluxgewinn höchstens0,000012813%, feine Feld-Holdouts noch offen.
 
 - [SLSQP mit zusammengesetztem Startgate: Protokoll](SLSQP_COMPOSITE_PROTOCOL.md) — Identischer AL-Start und Physik; neuer vollständiger Start-Jacobian-/alter9-Bundle-Replay, unabhängige Paarqualifikation plus unveränderte Nicht-Paar-FD-Grenze, zwei2048-Bundle-Suchen.
 - [SLSQP mit zusammengesetztem Startgate: Ergebnis](SLSQP_COMPOSITE_RESULTS.md) — Beide2048-Bundle-Arme exakt wiederholt/auditiert, alle feinen Abnahmen geschlossen; Geometrie/nativ bestehen, Flux8,191665e-8 bleibt unzulässig. Keine Pareto-Dominanz.

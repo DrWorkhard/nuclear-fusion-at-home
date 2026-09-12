@@ -1,8 +1,47 @@
-# Feste Geometrie, optimale Ströme: lineare Kontrollkerne vorbereitet
+# Feste Geometrie, optimale Ströme: native Teilprobleme und Audit bestanden
 
 2026-09-12. [Protokoll](FIXED_GEOMETRY_CURRENT_PROTOCOL.md) bei ebc7e79 vorab
-registriert. Noch keine der beiden tatsächlichen Spulenformen neu ausgewertet,
-kein gemessener zusätzlicher Fluxgewinn.
+registriert; Implementierung bei1b78832. Beide tatsächlichen Spulenformen sind
+jetzt neu ausgewertet und unabhängig auditiert. Der zusätzliche Stromgewinn ist
+äußerst klein; die festgelegten feinen Feld-Holdouts folgen noch. Die nachstehenden
+Vorbereitungsabschnitte dokumentieren den Zustand vor dieser Ausführung.
+
+## Native Ausführung und Datei-Audit
+
+| Feste Form | Grober Flux vorher | Stromminimum | Relative Senkung |
+| --- | --- | --- | --- |
+| AL | 8,95478252250164e-8 | 8,954781375131198e-8 | 0,0000128129% |
+| SLSQP | 8,191534720971661e-8 | 8,191534235747067e-8 | 0,00000592349% |
+
+Jeweils Rang3, Kondition5,586 beziehungsweise5,360. Alle sechs affinen Feldprobes
+liegen innerhalb4,441e-16; die native Roh-Fluxvorhersage stimmt relativ bis
+7,966e-14. Beide vollständigen ursprünglichen138-Wert-Bundles reproduzieren exakt.
+Alle137 geometrischen Werte und die serialisierten geometrischen Koeffizienten
+bleiben unverändert. Je57 unabhängige Datei-/Array-Prüfungen bestehen, einschließlich
+aller16 physikalischen Kopien und Stromvorzeichen. Der separate QR-Rechner
+bestätigt das Minimum; unabhängig rekonstruierter Normalrest höchstens1,046e-14.
+
+Grundströme vorher/nachher, inA:
+
+- AL: [332570,82572;377088,42559;287349,09363;253067,27969] →
+  [332571,13639;377087,65817;287349,96423;253066,86585].
+- SLSQP: [287532,97340;306020,66037;338118,16657;318403,82430] →
+  [287533,03112;306020,24591;338118,40426;318403,94334].
+
+Unveränderte Summe1250075,624635464A. B-Mittel vorher/nachher liegt bei beiden
+nahe0,946125T; Änderungen von−4,20nT (AL) beziehungsweise+22,47nT (SLSQP). Exakte Werte und
+alle16 Vorzeichenkopien im Bericht. Das ist vorerst eine Aussage auf dem festen
+Konstruktionsgitter, keine globale Formoptimalität oder physikalische Zulassung.
+
+Arbeit insgesamt: vier vollständige native Bundles mit vier B-VJPs sowie16
+zusätzliche B-Gitteranfragen, also20 B-Anfragen einschließlich Cacheabfragen.
+Zwei SVD- und zwei QR-Lösungen; unabhängiger Dateiaudit zusätzlich zwei
+Singulärwertprüfungen und zwei QR-Lösungen, null neue native Felder. Rund2,1MiB
+Rohdaten. Quellen und aktiver Code unverändert committed; der Berichtsstatus
+`dirty=true` entsteht durch die neu erzeugten, noch uncommitteten Laufberichte.
+
+Evidenz: `evidence/fixed-currents-v1.json`, `...-audit.json`, beide zugehörigen
+Driver-Verzeichnisse und `artifacts/fixed-currents-v1/`.
 
 Additiver Drei-Spalten-SVD-Rechner mit den festen Rang-/Konditions-/Normalrest-
 Schirmen; getrennte QR-Zerlegung mit expliziter dreistufiger Rücksubstitution

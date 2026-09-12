@@ -78,7 +78,8 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    registrierte feinste Netzabschluss mit verpflichtendem2M-Präfix ist ebenfalls
    ausgeführt und auditiert: vollständig, alle sechs Auflösungen bestehen jetzt
    den begrenzten Nichtüberlappungsschirm. Als nächster Optimierungsteil ist die
-   exakte Stromminimierung an den zwei festen AL-/SLSQP-Geometrien registriert;
+   exakte Stromminimierung an den zwei festen AL-/SLSQP-Geometrien bereits nativ
+   und unabhängig qualifiziert; minimaler grober Gewinn, feine Holdouts folgen.
    einen weiteren Konstruktionsversuch für Schritt2 separat begründen/festlegen,
    keine Wahl der günstigsten realen Schrittweite oder gelockerte Physikgrenzen.
    Keine Aussage gleicher Methodenbudgets.

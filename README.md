@@ -44,6 +44,9 @@ advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
   flux8.191665e-8 remains8.19 times the limit. Both searches stopped at their caps;
   the trial is closed, feasibility and fair multi-start comparisons remain open.
   The [disk incident](docs/validation/RESOURCE_INTERRUPTION.md) remains preserved.
+- [Fixed-geometry current minimization](docs/optimization/FIXED_GEOMETRY_CURRENT_RESULTS.md)
+  now passes both native and independent checks. Additional coarse flux reductions
+  are at most0.000012813%; fine holdouts remain next. No geometry change or feasibility.
 - [QI gauge tests](docs/qi/QI_RADIAL_GAUGE_RESULTS.md) reproduce all84 old traces
   but find25 nfp3 families with sign changes under field-line relabeling alone.
   [The full drift/phase transformation](docs/qi/QI_DRIFT_COORDINATES.md) explains

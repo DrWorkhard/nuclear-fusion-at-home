@@ -104,6 +104,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    Bundle-Wiederholungen und den unabhängigen Audit. Alle feinen Abnahmen
    abgeschlossen: Geometrie/nativ bestehen, Flux8,191665e-8 bleibt Faktor8,19
    zu groß. Beide Suchpfade enden am Budget, keine Zulassung oder Pareto-Dominanz.
+   Die separat qualifizierte Stromminimierung bei beiden unveränderten Formen
+   senkt den groben Flux nur um höchstens0,000012813%; unabhängige Checks bestehen,
+   feine Feld-Holdouts stehen noch aus.
    Der begrenzte AL-Versuch ist
    geschlossen; keine allgemeine Methodenrangfolge oder Pareto-Dominanz.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
