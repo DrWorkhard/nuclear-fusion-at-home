@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Exact GN failure replay and isolated-point diagnostic preparation
+
+- aa59807 replay matches every prior complete value vector/status/parameter hash
+  and the failed proposal-29 hash. Failed arrays and field are now saved without
+  any new failure-handler physics calls. Historical pilot qualification stays false.
+- Captured relative field error 2.44458500491268e-14, maximum normalized gradient
+  error 1.6380461907001947e-10 at Current5:x0 in the recorded source basis.
+  Recomputed from saved z/Dz/direct gradient; no threshold relaxation.
+- Prepared separate fresh-field, full/local native matrix and affine-current
+  value-difference checks. Both READMEs/status/plan now move from error capture
+  to isolated point diagnosis; no further construction search is authorized yet.
+- Full suite after capture changes: 271 passed, 11 known warnings; Ruff,
+  documentation and diff checks pass before isolated-point evaluation.
+
 ## 2026-09-12 — Bounded GN error replay prepared
 
 - Failure handler now retains complete failed x/value/Jacobian/z/Dz arrays,

@@ -24,8 +24,9 @@ error by at least 99.907% versus the linear model. Full native Jacobian comparis
 and a separate core audit pass. The subsequent
 [GN trust pilot stopped](docs/optimization/GN_TRUST_PILOT_RESULTS.md) at proposal 29
 because its field/gradient identity guard failed; no second arm or candidate
-admission followed. Next: a bounded replay to capture and independently diagnose
-that failed bundle, without changing tolerances or solver settings.
+admission followed. An exact 29-proposal replay now captures the failed bundle.
+Next: isolated fresh-field, native-matrix and affine-current checks to diagnose
+its cause, without changing tolerances or solver settings.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

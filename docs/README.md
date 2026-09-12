@@ -112,8 +112,9 @@ verringert den Vorhersagefehler gegenüber dem linearen Modell um mindestens
 bestätigen die Rechnung. Der anschließende
 [GN-Trust-Pilot](optimization/GN_TRUST_PILOT_RESULTS.md) wurde jedoch am 29.
 Vorschlag durch die Feld-/Gradient-Schutzprüfung gestoppt; die zweite Wiederholung
-startete nicht. Als Nächstes wird genau dieser Fehlerpunkt in einem begrenzten
-Wiederholungslauf vollständig erfasst und unabhängig untersucht. Die Grenzwerte
+startete nicht. Ein begrenzter Wiederholungslauf hat den Fehlerpunkt inzwischen
+exakt reproduziert und vollständig erfasst. Als Nächstes folgt seine isolierte
+Gegenprüfung mit frischen Feld-/Ableitungsberechnungen. Die Grenzwerte
 bleiben unverändert; es liegt weiterhin kein neuer zulässiger Entwurf vor.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).

@@ -26,3 +26,12 @@ zur Erfassung und Gegenprüfung des fehlgeschlagenen Bundles. Grenzwerte,
 physikalisches Problem und Solveroptionen bleiben unverändert. Kein weiterer
 Optimierungspilot vor der Klärung. Alter Bericht und gespeichertes Feld bleiben
 erhalten; langfristige Schritte 1/2 bleiben offen.
+
+## Exakter Fehlerreplay
+
+Der bei aa59807 vorab festgelegte 29-Bundle-Replay reproduziert alle 28 vorherigen
+Vektoren und den Fehlerhash exakt (`evidence/gn-failure-replay-v1/summary.json`).
+Der fehlgeschlagene Punkt ist nun vollständig als Array und Feld gespeichert.
+Feldwertfehler 2,445e-14 relativ; größter normierter Gradientfehler 1,638e-10
+in einem freien Stromparameter. Das reproduziert die Schutzverletzung, nicht
+ihre Ursache. Nächster Schritt ist die getrennte isolierte Punktdiagnose.
