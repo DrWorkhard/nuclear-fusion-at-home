@@ -60,8 +60,10 @@ bounded result; missing author data is not the only remaining blocker.
       (DIRECT_SLSQP_PILOT_RESULTS.md).
       Subsequent GN/SLSQP-1024 fine holdouts pass geometry/native metrics but fail
       flux by factors 24.7/12.7; SLSQP additionally fails its historical-prefix
-      criterion. Natural AL has one complete arm and an IO-interrupted repeat,
-      not a qualified two-repeat result. G2 remains open.
+      criterion. Original natural AL has one complete arm and an IO-interrupted
+      repeat. Its separately preregistered recovery now passes both full repeats
+      and historical-prefix audits; coarse flux remains27 times the limit, fine
+      holdouts next. G2 remains open (NATURAL_AUGLAG_RECOVERY_RESULTS.md).
 
 ## G3 — W7-X regression
 

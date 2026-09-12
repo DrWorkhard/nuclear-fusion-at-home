@@ -1,7 +1,7 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
 Stand: 12. September 2026, nach frischem nativen Neuaufbau und QI-Gauge-Audit;
-AL-Wiederholung läuft.
+AL-Wiederholung auditiert, feine Abnahme folgt.
 Dieses Dokument enthält die aktuelle Einschätzung; historische optimistischere
 Aussagen im Journal werden dadurch nicht wieder gültig.
 
@@ -59,7 +59,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    den durch Speicherplatzmangel unterbrochenen natürlichen Flux-AL-Piloten
    gesondert aufarbeiten: erster Arm vollständig, zweiter nur bis Bundle 700
    gespeichert. Einzelarm/Präfix inzwischen unabhängig geprüft; separat festgelegte
-   frische Wiederholung läuft, noch keine Zwei-Wiederholungs-Qualifikation.
+   frische Wiederholung jetzt vollständig und unabhängig qualifiziert, beide
+   historischen Präfixe exakt. Der grobe Flux bleibt Faktor27 zu groß;
+   vollständige feine Abnahme folgt.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
    Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024

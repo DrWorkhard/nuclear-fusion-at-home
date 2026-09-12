@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Unchanged AL recovery completes and passes both independent audits
+
+- Two fresh1033-bundle arms, exact full histories/stages/work/counters. Both
+  select1029, raw coarse flux2.6986169559754677e-7, internal violation
+  3.72556785421807e-9. Eight stages completed, no convergence claim.
+- Pilot audit28 checks per arm passes; recovery audit12 checks passes, including
+  exact1033/700 historical prefixes and unchanged code/options/threads. Original
+  incomplete study not reclassified. Minimum sampled free6274572288Bytes >2GiB.
+- Search outputs, audits and logs preserved; fine holdouts next, prior to any
+  new scaled physical study. Both READMEs/status/plan/index updated. All28
+  stage/prefix/driver tests and docs/diff checks pass before scoped commit.
+- Count correction: the old postmortem has28 arm checks, not29 as an earlier
+  journal/detail entry said. Recounted actual JSON; outcomes unchanged.
+
 ## 2026-09-12 — Prepare sequential complete coil holdout orchestration
 
 - New driver invokes all four unchanged existing validators after a qualified

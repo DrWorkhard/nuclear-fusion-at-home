@@ -1,0 +1,116 @@
+{
+  "additional_physics_calls": 0,
+  "all_pass": true,
+  "arms": [
+    {
+      "all_pass": true,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1/natural-auglag-1.json",
+        "sha256": "8932651d0e988d8cadf98aa1abb6f6d43fa4b927515d93c2c70e7f6fb8a31683"
+      },
+      "checks": {
+        "all_coupled_identities": true,
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "independent_gradient_screen": true,
+        "ledger_counts": true,
+        "merit_identity": true,
+        "multiplier_sequence": true,
+        "named_field_identity": true,
+        "native_and_spatial_work": true,
+        "nine_qualification_bundles": true,
+        "nonempty": true,
+        "request_accounting": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "selected_minimum": true,
+        "stage_count": true,
+        "stage_partition": true,
+        "status_partition": true,
+        "target_semantics": true,
+        "termination": true
+      }
+    },
+    {
+      "all_pass": true,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1/natural-auglag-2.json",
+        "sha256": "b75ab307e083d5f981225149364e02bd8eec4417a388a4f433d0feae2ead9abd"
+      },
+      "checks": {
+        "all_coupled_identities": true,
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "independent_gradient_screen": true,
+        "ledger_counts": true,
+        "merit_identity": true,
+        "multiplier_sequence": true,
+        "named_field_identity": true,
+        "native_and_spatial_work": true,
+        "nine_qualification_bundles": true,
+        "nonempty": true,
+        "request_accounting": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "selected_minimum": true,
+        "stage_count": true,
+        "stage_partition": true,
+        "status_partition": true,
+        "target_semantics": true,
+        "termination": true
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_natural_auglag_pilot.py",
+      "sha256": "cf641441407c46f6252f563135011f7278cde6cc2f741ae381e2b884f6c45449"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/natural_auglag_audit.py",
+      "sha256": "90f29095ebefd448f55039d6599ba2fcb9c6650f4065c53ced6231763fba8e97"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_audit.py",
+      "sha256": "70ae783c99a9c9c318a5117867db57fdae2be25668eb795e1980ac56125fd01d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/prefix_audit.py",
+      "sha256": "36f47c9457a2ddab92d6a84b35a0e659f95c8f2234248ba43e7f272f0767aa8a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    }
+  ],
+  "physical_feasibility_certified": false,
+  "repeated": true,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "a9a867b0d93338b789d41e3ef4e07d0b65a5389a",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1/summary.json",
+    "sha256": "267bebf0f92ba8d35db4f00848abc0c654342c34a304f28f25a31abdf69a09da"
+  }
+}

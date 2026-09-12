@@ -133,8 +133,10 @@ Der gleichzeitig gestartete frische Clone scheiterte vor Installation/Build.
 Die [Fehleranalyse](validation/RESOURCE_INTERRUPTION.md) hält Originalberichte,
 gezielte Wiederherstellung und erforderliche Ressourcenprüfungen getrennt fest.
 Der unabhängige Postmortem bestätigt den vollständigen ersten Arm und das
-gespeicherte zweite Präfix. Der gesonderte, unveränderte Retry läuft jetzt nach
-erfolgreichem nativen Neuaufbau; Schlussaudit und Abnahme bleiben offen.
+gespeicherte zweite Präfix. Der gesonderte, unveränderte
+[Retry](optimization/NATURAL_AUGLAG_RECOVERY_RESULTS.md) besteht inzwischen beide
+vollständigen Wiederholungen und historischen Präfixaudits. Feine Abnahme folgt;
+der Flux auf dem Suchgitter bleibt Faktor27 über der Grenze.
 Weiterhin kein neuer zulässiger Entwurf.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der

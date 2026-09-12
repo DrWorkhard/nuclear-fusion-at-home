@@ -1,0 +1,86 @@
+{
+  "additional_physics_calls": 0,
+  "all_pass": true,
+  "checks": {
+    "audit_bound": true,
+    "completed": true,
+    "independent_pilot_audit": true,
+    "original_protocol": true,
+    "qualified": true,
+    "repeat1_historical_prefix": true,
+    "repeat2_historical_prefix": true,
+    "same_math_code": true,
+    "same_options": true,
+    "same_solver_code": true,
+    "same_threads": true,
+    "two_arms": true
+  },
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_natural_auglag_recovery.py",
+    "sha256": "1cc798cb8d70f290b6ef5bb3392c0fe3f436744efc511cdb75068d63e90ce675"
+  },
+  "incident": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/resource-interruption-2026-09-12.json",
+    "sha256": "dfc21c102b8207c70bc18ed560a3579e16b2d70f0c1ea323c9fe1ed02d49c50e"
+  },
+  "original_study_reclassified_as_complete": false,
+  "physical_feasibility_certified": false,
+  "pilot_audit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-driver-v1/pilot-audit.json",
+    "sha256": "1f8aeb13b9432c6febc974ed6666fbe006e36df661b40a1cbd50a65468c7eb84"
+  },
+  "prefixes": [
+    {
+      "all_pass": true,
+      "first_mismatch": null,
+      "fresh": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1/natural-auglag-1.json",
+        "sha256": "8932651d0e988d8cadf98aa1abb6f6d43fa4b927515d93c2c70e7f6fb8a31683"
+      },
+      "max_absolute_value_difference": 0.0,
+      "max_normalized_value_difference": 0.0,
+      "mismatch_count": 0,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-pilot-v1/natural-auglag-1.json",
+        "sha256": "c35465904087e3cf91ad2e17b1b8943f1286ec3f691bd8d39f970a4cc49ec17e"
+      },
+      "repeat": 1,
+      "required_length": 1033,
+      "sufficient_records": true
+    },
+    {
+      "all_pass": true,
+      "first_mismatch": null,
+      "fresh": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1/natural-auglag-2.json",
+        "sha256": "b75ab307e083d5f981225149364e02bd8eec4417a388a4f433d0feae2ead9abd"
+      },
+      "max_absolute_value_difference": 0.0,
+      "max_normalized_value_difference": 0.0,
+      "mismatch_count": 0,
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-pilot-v1/natural-auglag-2.json",
+        "sha256": "bfef9491a6896b49895e6af0531bfc41e9400255c6fabc4622aa4cdb71774178"
+      },
+      "repeat": 2,
+      "required_length": 700,
+      "sufficient_records": true
+    }
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/NATURAL_AUGLAG_RECOVERY_PROTOCOL.md",
+    "sha256": "2b27ca2d5f5e1cfdbe398b6089f2aa562644341de1209e0f6d585267fffd2963"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "a9a867b0d93338b789d41e3ef4e07d0b65a5389a",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-recovery-v1/summary.json",
+    "sha256": "267bebf0f92ba8d35db4f00848abc0c654342c34a304f28f25a31abdf69a09da"
+  }
+}

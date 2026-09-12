@@ -31,9 +31,10 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    Geometrie/nativ bestehen, Flux Faktor 12,665 zu hoch. Jetzt den
    durch Speicherplatzmangel unterbrochenen natürlichen Flux-AL-Piloten aufarbeiten;
    erster Arm und gespeichertes 700-Bundle-Präfix unabhängig bestätigt. Der native
-   Ressourcen-Retry ist bestanden, die getrennte AL-Wiederholung läuft nun mit
-   unveränderten Optionen und historischen Präfixbedingungen. Keine parallelen
-   schweren Installationsarbeiten. Analytische Kontrolle und Startprüfung bestehen.
+   Ressourcen-Retry ist bestanden. Die getrennte AL-Wiederholung besteht nun
+   beide vollständigen Suchpfade und historischen Präfixaudits bei unveränderten
+   Optionen. Grober Flux Faktor27 zu hoch; jetzt sämtliche feinen Abnahmen.
+   Keine parallelen schweren Installationsarbeiten.
    Keine nachträgliche Budgeterhöhung oder
    veränderte Annahmekriterien.
    Ein anschließender [Jacobispalten-Skalierungsversuch](optimization/NATURAL_AUGLAG_JAC_PROTOCOL.md)

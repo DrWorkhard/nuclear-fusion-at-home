@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Unveränderte AL-Recovery: Ergebnisse](NATURAL_AUGLAG_RECOVERY_RESULTS.md) — Zwei neue exakt wiederholte Suchläufe und beide historische Präfixe unabhängig bestätigt; Flux auf Suchgitter Faktor27 über Grenze, feine Abnahmen folgen.
+
 - [Jacobiskalierte AL: Ergebnisse](NATURAL_AUGLAG_JAC_RESULTS.md) — Analytischer beschränkter Kontrollfall bestanden; physikalischer Versuch und unabhängige Abnahme noch offen.
 
 - [Jacobiskalierte AL: Protokoll](NATURAL_AUGLAG_JAC_PROTOCOL.md) — Getrennt festgelegter klassischer Ein-Options-Versuch mit `x_scale=jac`; identische Physik/Budgets, erst nach abgeschlossener unveränderter Recovery und Abnahme.

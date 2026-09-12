@@ -54,7 +54,7 @@ Die Originalberichte bleiben unverändert, ihre letzten `running`-Flags werden
 durch den [gesonderten Fehlerbericht](../validation/RESOURCE_INTERRUPTION.md)
 eingeordnet. Keine qualifizierte Zwei-Wiederholungs-Studie und keine Konvergenz.
 
-Der explizite unabhängige Postmortem-Audit besteht: alle29 Einzelarmprüfungen
+Der explizite unabhängige Postmortem-Audit besteht: alle28 Einzelarmprüfungen
 (Stufen-/Multiplikatorrechnung, Auswahl, Budget, native Zusatzarbeit, Ableitungen,
 benannte Feldidentität) und alle700 gespeicherten Präfix-Bundles stimmen exakt.
 `evidence/natural-auglag-pilot-v1-postmortem.json` hält zugleich `all_pass=false`
@@ -63,8 +63,10 @@ weist sie erwartungsgemäß ab, ohne einen Abschlussbericht zu erzeugen.
 Die gesamte Suite bleibt bei348 bestandenen Tests,20 bekannten Warnungen;
 Ruff/Dokument-/Diffprüfung bestehen.
 
-Noch offen: der [separat festgelegte Wiederholungsversuch](NATURAL_AUGLAG_RECOVERY_PROTOCOL.md)
-und vollständige feine Abnahmen. Weder eine
+Der [separat festgelegte Wiederholungsversuch](NATURAL_AUGLAG_RECOVERY_RESULTS.md)
+ist inzwischen in beiden Armen und beiden historischen Präfixen unabhängig
+bestätigt. Seine vollständigen feinen Abnahmen folgen; die Originalstudie bleibt
+unvollständig. Weder eine
 zulässige Konstruktion noch ein Methoden- oder SoTA-Vorteil ist nachgewiesen.
 
 Der Wiederholungsdriver wartet ausdrücklich auf bestandenen Abschluss der neuen

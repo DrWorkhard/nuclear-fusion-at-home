@@ -25,8 +25,9 @@ advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
   checks but remains 24.7 times over the same flux limit. Neither is feasible.
 - [Natural-flux AL](docs/optimization/NATURAL_AUGLAG_RESULTS.md): the original
   interrupted study's full first arm and saved 700-bundle second prefix are
-  independently verified. A separately preregistered unchanged recovery is
-  running after the successful native rebuild; final auditing/holdouts pending.
+  independently verified. The [unchanged recovery](docs/optimization/NATURAL_AUGLAG_RECOVERY_RESULTS.md)
+  now passes both full repeats and independent historical-prefix audits;
+  fine holdouts are next. Coarse flux remains27 times the limit.
   The [disk incident](docs/validation/RESOURCE_INTERRUPTION.md) remains preserved.
 - [QI gauge tests](docs/qi/QI_RADIAL_GAUGE_RESULTS.md) reproduce all84 old traces
   but find25 nfp3 families with sign changes under field-line relabeling alone.
