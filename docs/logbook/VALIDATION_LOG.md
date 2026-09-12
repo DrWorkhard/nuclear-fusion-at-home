@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Complete source-bound upstream LPQA inventory and independent recount
+
+- All5301 tracked LPQA result reports match exact Git blob bytes:31 flat/5270
+  wrapped, zero parse errors.27 meet reported-value screens; fixed top five
+  recorded with endpoint field hashes. No field loads/evaluations or extraction.
+- 2954 reports claim zero squared flux. All five shortlisted states use1e-6
+  clipping thresholds and older producer revisions; no inferred1e-8 raw pass.
+  Their current sum/mean field differ from the local baseline; no fair ranking.
+- Separate audit independently recomputes source/hash/path/value/screen/count/
+  ranking checks and passes. A loop-binding Ruff finding was fixed before audit
+  execution; no failed numerical run. All17 parser controls pass. New detail/index;
+  both READMEs/status/plan updated for ongoing scaling trial, no new feasible
+  baseline. Full suite430 passes/20 known warnings; Ruff/docs/diff pass.
+
 ## 2026-09-12 — Preregister metadata-only inventory of pinned upstream LPQA submissions
 
 - The Jacobian-scaled physical trial starts at6db0040 after committed full

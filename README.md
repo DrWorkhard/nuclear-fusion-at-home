@@ -28,7 +28,7 @@ advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
   independently verified. The [unchanged recovery](docs/optimization/NATURAL_AUGLAG_RECOVERY_RESULTS.md)
   now passes both full repeats and independent historical-prefix audits;
   all fine holdouts are complete: geometry/native checks pass, flux fails by
-  26.99 times. A separate preregistered Jacobian-scaling test is next.
+  26.99 times. The separate preregistered Jacobian-scaling test is now running.
   The [disk incident](docs/validation/RESOURCE_INTERRUPTION.md) remains preserved.
 - [QI gauge tests](docs/qi/QI_RADIAL_GAUGE_RESULTS.md) reproduce all84 old traces
   but find25 nfp3 families with sign changes under field-line relabeling alone.
