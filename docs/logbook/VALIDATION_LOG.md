@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-12 — Register first-ranked upstream start without holdout-based substitution
+
+- Fixed inventory entry1, common current rescaling to the original fixed sum,
+  identical207-DOF filament/geometric problem, separate start qualification and
+  unchanged two-arm1033-bundle scaled-AL trial. No new physical calls yet.
+- Existing reconstruction/negative holdouts remain immutable; no choice of a
+  different source from their new geometry outcomes. Regularizations retained
+  but no engineering equivalence claimed. Both READMEs/status/plan reviewed:
+  their next-start task remains accurate. Docs/diff checks pass before commit.
+
 ## 2026-09-12 — Reconstruct and independently reject all five fixed upstream fields
 
 - At aa8741d all five exact sources pass independent serialized-state/current/

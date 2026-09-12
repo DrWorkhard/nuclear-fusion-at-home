@@ -8,6 +8,9 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Alternativer Start: Protokoll](UPSTREAM_START_PROTOCOL.md) — Erster vorab ausgewählter Archiveintrag, explizite feste Stromsumme, neue Qualifikation vor unverändertem klassischen Pilot.
+- [Alternativer Start: Stand](UPSTREAM_START_RESULTS.md) — Registrierung; noch keine Qualifikation oder Suche abgeschlossen.
+
 - [Vorhandene LPQA-Felder: Rekonstruktionsergebnis](UPSTREAM_LPQA_RECONSTRUCTION_RESULTS.md) — Alle fünf Quellen-/Feldgegenprüfungen bestanden; tatsächlicher Roh-Flux nahe1e-6 statt gemeldeter Null, alle fünf an1e-8 abgelehnt. Geometrische Gitterschirme bestanden.
 
 - [Vorhandene LPQA-Felder: Rekonstruktionsprotokoll](UPSTREAM_LPQA_RECONSTRUCTION_PROTOCOL.md) — Fünf fest ausgewählte Archivfelder, Symmetrie-/Stromidentität, direkte Biot-Savart-Gegenrechnung und unveränderte feine Gitterabnahme; noch keine vollständige Baselinefreigabe.
