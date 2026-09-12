@@ -66,13 +66,13 @@ def make_gn(direct):
         direct.field, direct.global_objective, direct.points, direct.weights))
 
 
-def run_arm(direct, ctx, x0, raw, output, repeat, permutation):
+def run_arm(direct, ctx, x0, raw, output, repeat, permutation, *, limit=1024):
     raw.mkdir()
     ctx.Jf.x = x0.copy()
     direct.work = dict.fromkeys(direct.work, 0)
     backend = make_gn(direct)
     coordinates = AffineCoordinates(x0, 0.01)
-    oracle = InequalityOracle(backend.evaluate, 1024, len(x0), 137, tolerance=1e-8)
+    oracle = InequalityOracle(backend.evaluate, limit, len(x0), 137, tolerance=1e-8)
     record = dict(method='gn-trust', representation='direct', repeat=repeat,
                   status='running', coordinate_scale=0.01, selection_tolerance=1e-8,
                   gradient_screen_pass=False, iterations=[], hessian_requests=0)
@@ -166,6 +166,16 @@ def run_arm(direct, ctx, x0, raw, output, repeat, permutation):
         record.update(status='error', stop_reason='error', error=f'{type(exc).__name__}: {exc}')
         raise
     finally:
+        if backend.failed_bundle is not None:
+            failure_path = raw / 'failed_bundle.npz'
+            with failure_path.open('xb') as stream:
+                np.savez_compressed(stream, **backend.failed_bundle)
+            ctx.Jf.x = backend.failed_bundle['x'].copy()
+            failure_field = raw / 'failed_field.json'
+            ctx.Jf.field.save(str(failure_field))
+            record['failed_bundle'] = dict(arrays=reference(failure_path),
+                                          field=reference(failure_field),
+                                          metrics=backend.failed_metrics)
         if oracle.best is not None:
             best = oracle.best
             ctx.Jf.x = best['x'].copy()
@@ -186,6 +196,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('study', type=Path)
     parser.add_argument('raw', type=Path)
+    parser.add_argument('--failure-replay', action='store_true')
     args = parser.parse_args()
     if args.study.exists() or args.raw.exists():
         raise FileExistsError('new immutable study paths required')
@@ -227,6 +238,15 @@ def main():
     args.study.mkdir(parents=True)
     args.raw.mkdir(parents=True)
     try:
+        if args.failure_replay:
+            report['diagnostic_protocol'] = reference(
+                root / 'docs/optimization/GN_FAILURE_REPLAY_PROTOCOL.md')
+            source_failure = root / 'evidence/gn-trust-pilot-v1/gn-trust-1.json'
+            report['source_failure'] = reference(source_failure)
+            expected = json.loads(source_failure.read_text())
+            if (expected['status'] != 'error' or expected['counters']['attempts'] != 29
+                    or expected['counters']['failed_attempts'] != 1):
+                raise ValueError('expected frozen 29-proposal failure required')
         report['analytic_control'] = control()
         if not report['analytic_control']['pass']:
             raise ValueError('analytic constrained solver control failed')
@@ -275,6 +295,23 @@ def main():
         if not all(all(s['checks'].values()) for s in qualification_checks):
             raise ValueError('shared physical GN qualification failed')
         write_json_atomic(args.study/'summary.json', report)
+        if args.failure_replay:
+            output = args.study / 'gn-trust-1.json'
+            try:
+                run_arm(direct, ctx, x0, args.raw/'gn-trust-1', output, 1,
+                        record_permutation, limit=29)
+            except ValueError:
+                replay = json.loads(output.read_text())
+                same = len(replay['evaluations']) == len(expected['evaluations']) and all(
+                    r['status'] == s['status'] and r['x_sha256'] == s['x_sha256']
+                    and r.get('values') == s.get('values')
+                    for r, s in zip(replay['evaluations'], expected['evaluations'], strict=True))
+                reproduced = bool(same and 'failed_bundle' in replay)
+                report.update(status='diagnostic_complete', failure_reproduced=reproduced,
+                              arms=[reference(output)], qualification_pass=False)
+                print(json.dumps({'failure_reproduced': reproduced}))
+                return 0 if reproduced else 2
+            raise ValueError('expected identity failure did not recur within the fixed prefix')
         runs = []
         for repeat in (1, 2):
             output = args.study / f'gn-trust-{repeat}.json'

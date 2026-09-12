@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Bounded GN error replay prepared
+
+- Failure handler now retains complete failed x/value/Jacobian/z/Dz arrays,
+  numeric identity errors and serialized field without extra physics evaluation.
+  Adapter controls additionally check failed-array identity and error retention.
+- New diagnostic mode repeats only the first 29-proposal prefix and requires
+  exact complete-vector/status/hash agreement with the archived failure. It may
+  not start a second arm, extend the cap or relabel the pilot as qualified.
+- Both READMEs/status/plan still correctly describe diagnosis as the next step;
+  the new bounded protocol is indexed. No tolerance has changed.
+- Six updated adapter controls, Ruff, documentation and diff checks pass before
+  the bounded physical replay.
+
 ## 2026-09-12 — GN trust v1 retained as failed field/gradient identity qualification
 
 - e159155: analytic control and both shared native state/matrix checks pass.

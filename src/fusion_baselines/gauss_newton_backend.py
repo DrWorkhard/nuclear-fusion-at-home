@@ -11,9 +11,11 @@ class GaussNewtonBackend:
         self.last_x = self.last_hessian = None
         self.records = []
         self.spatial_attempts = 0
+        self.failed_bundle = self.failed_metrics = None
 
     def evaluate(self, x):
         self.last_x = self.last_hessian = None
+        self.failed_bundle = self.failed_metrics = None
         x = np.asarray(x, dtype=float).copy()
         values, jacobian, metrics = self.direct(x)
         self.spatial_attempts += 1
@@ -32,7 +34,11 @@ class GaussNewtonBackend:
         hessian = dz.T @ dz / self.flux_scale
         if (not np.all(np.isfinite(hessian)) or not np.isfinite(field_error)
                 or field_error > 1e-10 or gradient_error > 1e-10):
-            raise ValueError("GN field/gradient identity failed")
+            self.failed_bundle = dict(x=x.copy(), values=values.copy(),
+                                      jacobian=jacobian.copy(), z=z.copy(), dz=dz.copy())
+            self.failed_metrics = dict(field_relative_error=float(field_error),
+                                       gradient_normalized_error=gradient_error)
+            raise ValueError(f"GN field/gradient identity failed: {self.failed_metrics}")
         self.records.append({"field_relative_error": float(field_error),
                              "gradient_normalized_error": gradient_error})
         self.last_x, self.last_hessian = x.copy(), hessian.copy()

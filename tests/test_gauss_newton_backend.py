@@ -70,5 +70,8 @@ def test_reject_inconsistent_bundle_and_invalidate_old_hessian(mode):
         backend.spatial = lambda: (np.ones(3), np.full((3, 2), np.nan))
     with pytest.raises(ValueError):
         backend.evaluate(x)
+    if mode in ('value', 'gradient'):
+        np.testing.assert_array_equal(backend.failed_bundle['x'], x)
+        assert max(backend.failed_metrics.values()) > 1e-10
     with pytest.raises(ValueError, match='complete bundle'):
         backend.hessian_for(x)
