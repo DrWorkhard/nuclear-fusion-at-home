@@ -1,4 +1,21 @@
-# SLSQP mit zusammengesetztem Startgate: vorbereitete Ausführung
+# SLSQP mit zusammengesetztem Startgate: zweite Wiederholung läuft
+
+## Gespeicherter Zwischenstand, 2026-09-12
+
+Ausführung bei ede0ba8. Erster Arm vollständig mit2048 Bundles/6047 Anfragen/
+3998 Cachetreffern und einem Budgetcap gespeichert, null fehlgeschlagene
+Auswertungen. Anfangswerte und komplette qualifizierte Jacobimatrix reproduzieren
+exakt; der alte all-row-FD-Test bleibt negativ, das zusammengesetzte Gate besteht.
+Auswahl: Bundle1573, grober Roh-Flux8,191534720971661e-8,
+maximale interne Verletzung8,2836624e-9 (innerhalb der unveränderten1e-8-Auswahl-
+toleranz). Immer noch über der physikalischen Fluxgrenze1e-8.
+
+Zweite Wiederholung läuft. Noch kein vollständiger Wiederholungsvergleich,
+unabhängiger Studienaudit oder feiner Holdout; **kein neuer zulässiger Entwurf**.
+Laufende Berichte `evidence/slsqp-composite-v1/` bleiben bis zum Abschluss unstaged.
+Die folgende Vorbereitung beschreibt den festgelegten Prüfpfad, keinen Gesamtpass.
+
+## Aufbewahrte Vorbereitung
 
 2026-09-12, [Protokoll](SLSQP_COMPOSITE_PROTOCOL.md) bei0966da6 vorab
 registriert. Neuer Arm ist additiv, alte SLSQP-/Native-/Budgetkerne unverändert.

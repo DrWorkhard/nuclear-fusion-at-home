@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Complete frozen six-mesh drivers; full589-test regression and search checkpoint
+
+- Source/manifest hashes, all six fixed levels/four tags and closed committed
+  predecessor search+four holdouts are checked before mesh execution. Separate
+  workers have1200s hard caps; all terminal negatives/timeouts retained. File
+  auditor calls independent partition/witness verification, not collision search.
+- Four new small source/Meshio/predecessor controls pass. Full589-test suite
+  passes with69 known deprecations; Ruff/docs/diff pass. No real coil mesh
+  collision calculation yet, no engineering gate advanced.
+- Composite SLSQP at ede0ba8: first2048-bundle arm saved, second running.
+  Initial138 values/full Jacobian exact; first selected coarse flux8.191535e-8
+  still exceeds1e-8. No complete repeat/holdout statement. Mutable live evidence
+  left unstaged; detail/index and both READMEs/status/plan/readiness synchronized.
+
 ## 2026-09-12 — Qualify streamed nonlocal scan/audit including partial failures on small controls
 
 - Compressed pair witnesses plus complete partition certificates; distinguish
