@@ -64,3 +64,10 @@ local commits, without routine confirmation questions. This does not authorize
 publishing/pushing, contacting authors or modifying external repositories. Do not
 run heavy jobs concurrently with controlled wall-time experiments. Keep the root
 native benchmark environment intact; use a separate clone for core-only sync.
+
+Before large clones, installations or builds, estimate the selected checkout and
+build size and verify a disk reserve. Never materialize a benchmark's historical
+submission archive merely to obtain source code. Recheck space between phases;
+do not run heavy searches concurrently with resource-intensive installs/builds.
+On IO failure retain last successful checkpoints unchanged, record terminal
+failure separately, and distinguish console progress from persisted state.

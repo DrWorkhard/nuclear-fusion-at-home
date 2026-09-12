@@ -1,0 +1,134 @@
+{
+  "caches": "local Git objects, checksum-verified QI zip, locked uv download/wheel cache",
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_fresh_native_integration.py",
+      "sha256": "36a91f2e1f0e33f2fbd59563c0f3b2eae25a406f50255456e3c77dea7e8c9226"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bootstrap_macos.sh",
+      "sha256": "b3b78e2926ddbd78d59a4c4c773ee813bea6d1fad698db7cac06bb778ebd2d72"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bootstrap_vmecpp.sh",
+      "sha256": "35a480dc53b85d12ed0c465101fe196ed31b1bb09641b3ad1cdd1a5c94a5d724"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bootstrap_vmec2000.sh",
+      "sha256": "67efd2244686cf5b9b7e020eb4a72abaa51f57b81b9cfdc9369373300d287c93"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bootstrap_qi_data.sh",
+      "sha256": "9174850b1ba100774644a6611622a6dfb554e3bda6acfffd42ae09be53f47ec0"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_scientific_integration.py",
+      "sha256": "2989e3d79fe8f9bb93dc51e1f691cee67367882eaff9b99fa4c7004b6ebf0f6d"
+    }
+  ],
+  "controlled_environment": {
+    "FUSION_NO_SYSTEM_INSTALL": "1",
+    "FUSION_QI_ARCHIVE": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles.zip",
+    "HOMEBREW_NO_AUTO_UPDATE": "1",
+    "HOMEBREW_NO_INSTALL_FROM_API": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "copied_solver_outputs": false,
+  "fresh_checkout": "/private/tmp/fusion-native-clean-wbr4fsp3/repo",
+  "host": {
+    "captured_at": "2026-09-12T09:38:19.939253+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/validation/FRESH_NATIVE_INTEGRATION_PROTOCOL.md",
+    "sha256": "7388ed91208552f676d201802ba291c34b7fe4940ffd57d698f37f66734da4dc"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "db6abf5ebc2d06a7270569e982530df5a5844c6a",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "scratch": "/private/tmp/fusion-native-clean-wbr4fsp3",
+  "status": "running",
+  "steps": [
+    {
+      "command": [
+        "brew",
+        "list",
+        "--versions",
+        "gcc",
+        "open-mpi",
+        "netcdf",
+        "netcdf-fortran",
+        "lapack"
+      ],
+      "cwd": "/Users/sebastianwirkert/workspace/fusion",
+      "elapsed_seconds": 0.4133890419907402,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v1/01-prerequisites.log",
+        "sha256": "c9c97854cd5ef4040bf4ed11a434d7f77e312602b0aef71fb3571f574fe3c9b1"
+      },
+      "name": "prerequisites",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "/Users/sebastianwirkert/workspace/fusion",
+        "/private/tmp/fusion-native-clean-wbr4fsp3/repo"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-wbr4fsp3",
+      "elapsed_seconds": 1.39643100000103,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v1/02-clone-project.log",
+        "sha256": "2a4b03497cab9a69223f263c44da1798789e9b94e2cbaff6e616b23d19f00298"
+      },
+      "name": "clone-project",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "checkout",
+        "--detach",
+        "db6abf5ebc2d06a7270569e982530df5a5844c6a"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-wbr4fsp3/repo",
+      "elapsed_seconds": 0.09127129198168404,
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v1/03-pin-project.log",
+        "sha256": "56689b780bb6ff63cf4f1b28144aee2abe06c9b0668bb36f365f91871e23eb4d"
+      },
+      "name": "pin-project",
+      "returncode": 0,
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench",
+        "/private/tmp/fusion-native-clean-wbr4fsp3/repo/external/stellcoilbench"
+      ],
+      "cwd": "/private/tmp/fusion-native-clean-wbr4fsp3/repo",
+      "name": "clone-stellcoilbench",
+      "status": "running"
+    }
+  ],
+  "system_installation_permitted": false
+}

@@ -127,9 +127,12 @@ GN-Matrix und Grenzwerte bleiben unverändert. Auch die neuen
 untereinander exakt überein, verfehlen aber den verlangten historischen
 Präfixvergleich. Geometrie/nativ bestehen; der unabhängig verfeinerte Flux bleibt
 Faktor 12,7 über der Grenze. Beide begrenzten Versuche sind damit abgeschlossen.
-Der vorab festgelegte klassische AL-Versuch mit natürlichen Fluxresiduen läuft
-nach bestandener analytischer Kontrolle und vollständiger Start-Ableitungsprüfung;
-unabhängiger Stufenaudit und Abnahme folgen nach Abschluss.
+Der vorab festgelegte klassische AL-Versuch wurde durch Speicherplatzmangel
+unterbrochen: Ein 1033-Bundle-Arm ist gespeichert, vom zweiten nur 700 Bundles.
+Der gleichzeitig gestartete frische Clone scheiterte vor Installation/Build.
+Die [Fehleranalyse](validation/RESOURCE_INTERRUPTION.md) hält Originalberichte,
+gezielte Wiederherstellung und erforderliche Ressourcenprüfungen getrennt fest.
+Unabhängiger Stufenaudit, gesonderter Retry und Abnahme bleiben offen.
 Weiterhin kein neuer zulässiger Entwurf.
 
 Für Schritt1 zeigt die [neue Gauge-Prüfung](qi/QI_RADIAL_GAUGE_RESULTS.md): Alle84

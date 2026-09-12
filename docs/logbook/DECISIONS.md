@@ -1,5 +1,18 @@
 # Decision log
 
+## D-011 — Resource preflight and truthful interrupted-run provenance
+
+**Status:** accepted after disk-exhaustion incident
+**Date:** 2026-09-12
+
+Bound required source checkouts instead of materializing historical submissions.
+Estimate disk needs plus reserve before large work, recheck between phases, and
+separate heavy installation/build work from scientific searches. Retain original
+checkpoints even when their last flag is running; append a terminal incident
+record rather than inventing final state. Console progress is not persisted
+progress. Only precisely identified disposable copies created by our current
+workflow may be removed autonomously; never clear user caches or prior evidence.
+
 ## D-010 — Documentation is required after every completed work step
 
 **Status:** accepted; explicit user requirement

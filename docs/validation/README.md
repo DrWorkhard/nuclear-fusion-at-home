@@ -8,6 +8,8 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Speicherplatzfehler und Wiederherstellung](RESOURCE_INTERRUPTION.md) — Frischer Clone scheitert vor Installation; parallele AL-Wiederholung unterbrochen. Originalberichte bleiben erhalten, gezielte temporäre Bereinigung und Ressourcenprüfung folgen.
+
 - [Frische native Integration: Protokoll](FRESH_NATIVE_INTEGRATION_PROTOCOL.md) — Isolierter gesperrter Neuaufbau mit frisch gebautem VMEC8.52 und neuen W7-X-Ausgaben; kein Eingriff in qualifizierte Umgebung oder Systempakete.
 
 - [Strikte wissenschaftliche Regression](STRICT_SCIENTIFIC_INTEGRATION.md) — Fester Sechs-Test-Pfad ohne fehlende-Daten-Skips oder Umgebungssynchronisierung; keine Verwechslung mit frischem nativen Neuaufbau.

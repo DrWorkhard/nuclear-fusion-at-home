@@ -1,4 +1,4 @@
-# Natürliche Flux-AL — laufender Konstruktionspilot
+# Natürliche Flux-AL — durch Speicherplatzfehler unterbrochener Pilot
 
 Protokoll/Kern 891532b, 2026-09-12. Die reine Residuenidentität besteht sieben
 Kontrollen. Drei weitere Steuerungskontrollen bestätigen feste Stufenbudgets,
@@ -37,10 +37,23 @@ und zusätzlich inhaltlich geprüft werden. Vollsuite jetzt 314 bestanden,
 11 bekannte Warnungen, Ruff bestanden.
 
 Die physikalische Suche startete bei 80a1d88 nach Abschluss der beiden vorherigen
-Studien. Analytische Kontrolle und vollständige Start-Richtungsprüfung bestehen;
-erste Stufen laufen. Zwischenberichte sind veränderlich, noch kein Ergebnis.
+Studien. Analytische Kontrolle und vollständige Start-Richtungsprüfung bestehen.
 Keine Holdout-Zahlen wurden in Einstellungen oder Suchparameter übernommen.
 
-Noch offen: Abschluss der Wiederholungen, Anwendung des unabhängigen Audits und
-vollständige feine Abnahmen. Weder eine
+Die erste Wiederholung hat acht Stufen und 1033 Bundles abgeschlossen (1781
+Anfragen, 748 Cachetreffer, keine global verweigerte oder fehlerhafte Auswertung).
+Auswahl 1029: grober Flux 2,6986169559754677e-7, interne maximale Verletzung
+3,72556785421807e-9. Feld und benanntes Array sind gespeichert. 800,296 s sind
+keine kontrollierte Vergleichszeit. Allein der interne Geometrieschirm besteht;
+der Flux ist rund 27-mal zu groß, feine Abnahme noch offen.
+
+Der gleichzeitig gestartete isolierte Clone füllte die Platte. Die zweite
+Wiederholung scheiterte beim Checkpoint: 700 Bundles sind in JSON gesichert,
+725 wurden nur auf der Konsole gemeldet. Zweites Bestfeld/Bestarray fehlen.
+Die Originalberichte bleiben unverändert, ihre letzten `running`-Flags werden
+durch den [gesonderten Fehlerbericht](../validation/RESOURCE_INTERRUPTION.md)
+eingeordnet. Keine qualifizierte Zwei-Wiederholungs-Studie und keine Konvergenz.
+
+Noch offen: unabhängiger Audit des vollständig gesicherten Arms, neuer separat
+protokollierter Wiederholungsversuch und vollständige feine Abnahmen. Weder eine
 zulässige Konstruktion noch ein Methoden- oder SoTA-Vorteil ist nachgewiesen.

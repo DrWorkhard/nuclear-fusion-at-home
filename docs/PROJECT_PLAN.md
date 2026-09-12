@@ -29,8 +29,11 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    geforderten historischen Präfix. Die feine GN-Abnahme ist abgeschlossen:
    Geometrie/nativ bestehen, Flux abgelehnt. Auch SLSQP ist fein geprüft:
    Geometrie/nativ bestehen, Flux Faktor 12,665 zu hoch. Jetzt den
-   laufenden, vorab festgelegten natürlichen Flux-AL-Piloten abschließen; analytische
-   Kontrolle und Startprüfung bestehen. Keine nachträgliche Budgeterhöhung oder
+   durch Speicherplatzmangel unterbrochenen natürlichen Flux-AL-Piloten aufarbeiten;
+   erster Arm abgeschlossen, zweiter nur bis Bundle 700 gespeichert. Vor Retry
+   Platzreserve und begrenzten Quellcheckout absichern; keine parallelen schweren
+   Installationsarbeiten. Analytische Kontrolle und Startprüfung bestehen.
+   Keine nachträgliche Budgeterhöhung oder
    veränderte Annahmekriterien.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.

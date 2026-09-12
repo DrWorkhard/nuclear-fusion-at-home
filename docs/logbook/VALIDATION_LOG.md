@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-12 — Disk exhaustion interrupts fresh clone and second natural-AL arm
+
+- Fresh native attempt at db6abf5 checked out the full StellCoilBench archive;
+  new scratch copy reached 5.6 GB, including 4.6 GB submissions. Checkout and
+  final checkpoint failed (errno 28) before installation/build/solver execution.
+- Concurrent bundle-budgeted AL: first arm fully stored, 1033 bundles; second
+  last successful JSON contains 700, not the console-reported 725. No second
+  best field/array survived. Both processes exited 1. Original records and hashes
+  preserved; a separate incident record prevents stale running flags misleading.
+- Checked source StellCoilBench clean at original pin and no matching live jobs.
+  Precisely identified newly created scratch clone has no unique solver output;
+  removed only that disposable copy (return 0, absence checked), never caches,
+  root or old evidence. Afterwards df reports 6.9 GiB available, separately recorded.
+- Both READMEs, status, plan, readiness and detail indexes updated. D-011 and
+  persistent instructions require resource preflight and no heavy clone/search
+  overlap. Full suite 338 passed with 20 known warnings; Ruff/docs/diff pass.
+
 ## 2026-09-12 — Preregister isolated native rebuild and fresh W7-X integration
 
 - Native/VMEC++ bootstraps now require locked resolution; other behavior/pins

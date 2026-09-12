@@ -18,7 +18,11 @@ bounded result; missing author data is not the only remaining blocker.
 - [ ] Automated scientific integration suite from a fresh data bootstrap.
       Partial: strict QI numerical/metadata suite passes five non-skipping tests
       after cached-archive extraction in a fresh detached clone. A full native
-      W7-X/solver bootstrap and hosted execution remain unwitnessed.
+      W7-X/solver bootstrap and hosted execution remain unwitnessed. The strict
+      combined cached-data regression now passes all six tests with zero skips;
+      a missing-W7-X counterrun fails rather than skips. A fresh native attempt
+      failed during source checkout, before installation/build, through disk
+      exhaustion; see [resource incident](../validation/RESOURCE_INTERRUPTION.md).
 
 ## G2 — Method benchmark
 
@@ -54,6 +58,10 @@ bounded result; missing author data is not the only remaining blocker.
       256 bundles and passes geometry/native extras, but flux remains 23.308
       times the same limit. No converged or feasible baseline; G2 stays open
       (DIRECT_SLSQP_PILOT_RESULTS.md).
+      Subsequent GN/SLSQP-1024 fine holdouts pass geometry/native metrics but fail
+      flux by factors 24.7/12.7; SLSQP additionally fails its historical-prefix
+      criterion. Natural AL has one complete arm and an IO-interrupted repeat,
+      not a qualified two-repeat result. G2 remains open.
 
 ## G3 — W7-X regression
 
@@ -87,6 +95,10 @@ bounded result; missing author data is not the only remaining blocker.
       in the sampled domain; nfp3 beta2 remains mixed. A second tracer passes 84
       trace and 320 family comparisons, preserving the resolved signs. Full-domain,
       equilibrium-grid and gauge qualification remain open.
+      The new controlled gauge audit exactly reproduces all 84 old traces but
+      finds opposite radial sign classes in 25 nfp3 families under relabeling
+      alone. Independent chain-rule checks pass; this confirms an interpretation
+      limit, not a field improvement (QI_RADIAL_GAUGE_RESULTS.md).
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).

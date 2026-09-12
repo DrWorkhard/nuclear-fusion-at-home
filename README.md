@@ -38,8 +38,11 @@ repeats exactly within its new study, but fails the preregistered historical-pre
 comparison. Geometry and native-metric holdouts pass, but independently refined
 flux remains 12.7 times the limit. Both bounded construction studies are closed
 without an admissible design. A preregistered classical natural-flux AL follow-up
-is running after passing its analytic control and complete initial derivative
-screen; independent stage auditing and admission remain pending.
+passed its analytic control and initial derivative screen, but was interrupted
+by disk exhaustion during a concurrent fresh clone. One 1033-bundle repeat is
+saved; the second has only 700 persisted bundles. Independent auditing, a
+separate retry and admission remain pending. The fresh native rebuild failed
+before installation; see the [incident record](docs/validation/RESOURCE_INTERRUPTION.md).
 
 For QI qualification, the [radial-gauge audit](docs/qi/QI_RADIAL_GAUGE_RESULTS.md)
 reproduces all 84 old traces exactly but finds sign changes in 25 nfp3 well
