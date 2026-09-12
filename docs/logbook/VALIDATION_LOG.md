@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Prepare SLSQP polishing with explicit named-state transfer
+
+- Additive driver reuses unchanged budget-parametric SLSQP arm. Physical coil/
+  current-tree roles define a full DOF permutation; source array and complete
+  serialized field state checked. First counted bundle must replay138 values
+  before optimization. Guard tests confirm no hidden preliminary physical call.
+- Eight new tests pass, including mutated source/current topology and saved
+  values. Separate auditor checks all four finite-difference ledger pairs,
+ 2048 limit, work/selection/repeat identity and explicit1033+2048 hybrid cost.
+- No new search; QI study must close first. Detail/index and both READMEs/status/
+  plan reviewed. Ruff/docs/diff pass before implementation commit.
+
 ## 2026-09-12 — Register classical SLSQP polishing of fixed AL-selected candidate
 
 - Existing AL ledger has all eight inner-stage caps and nonzero stationarity

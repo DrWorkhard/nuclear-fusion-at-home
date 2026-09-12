@@ -9,6 +9,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 ## Dokumente
 
 - [SLSQP-Nachoptimierung: Protokoll](SLSQP_POLISH_PROTOCOL.md) — Separater hybrider Versuch vom durch das AL-Ledger festgelegten Kandidaten; zwei2048-Bundle-Arme, gesamte Vorarbeit bilanziert, unveränderte Abnahme.
+- [SLSQP-Nachoptimierung: Ergebnis](SLSQP_POLISH_RESULTS.md) — Startmapping, gezählter Quellwertschutz und unabhängiger2048-Bundle-Audit vorbereitet; noch keine neue Suche.
 
 - [Alternativer Start: Protokoll](UPSTREAM_START_PROTOCOL.md) — Erster vorab ausgewählter Archiveintrag, explizite feste Stromsumme, neue Qualifikation vor unverändertem klassischen Pilot.
 - [Alternativer Start: Ergebnis](UPSTREAM_START_RESULTS.md) — Startqualifikation, beide Suchpfade und alle feinen Abnahmen abgeschlossen; Geometrie/nativ bestehen, Flux8,955e-8 bleibt unzulässig. Keine Pareto-/SoTA-Behauptung.
