@@ -1,5 +1,12 @@
 # Validation log
 
+## 2026-09-12 — Keep live protocol hash unchanged; separate SLSQP audit commentary
+
+- Moved the purely descriptive auditor addendum from 577016e out of the active
+  SLSQP protocol into its separate interim results document. No criteria changed;
+  the protocol bytes match the run-start revision again. Git preserves both edits.
+  Index/docs/diff checked; no live search code touched.
+
 ## 2026-09-12 — SLSQP-1024 independent audit prepared; old-prefix discrepancy observed
 
 - Added explicit 1024 auditor mode with independent stored derivative-screen

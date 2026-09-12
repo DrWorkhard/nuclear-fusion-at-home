@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [SLSQP-1024: Zwischenstand](DIRECT_SLSQP_1024_RESULTS.md) — Laufender Vergleich; ab Vorschlag 62 kleine, aber für die verlangte exakte Reproduktion unzulässige historische Präfixabweichung. Ursachenklärung und Abnahme offen.
+
 - [Neuer SLSQP-1024-Lauf: Protokoll](DIRECT_SLSQP_1024_PROTOCOL.md) — Klassische Vergleichskonstruktion mit gleichem maximalem Bundlebudget wie GN, unverändertem Originalstart und Pflicht zur Reproduktion des alten 256-Vorschläge-Präfixes.
 - [Native Feldprojektion: Suchergebnis](GN_NATIVE_COVECTOR_RESULTS.md) — Beide 1024-Bundle-Suchen exakt wiederholt und unabhängig auditiert; grober Flux Faktor 24,7 über Grenze, feine Abnahme offen.
 - [Native Feldprojektion: korrigierter Pilot](GN_NATIVE_COVECTOR_PROTOCOL.md) — Konsistente Identitätsprüfung bei unveränderten Werten/Gradienten/H_GN; drei feste Zustandsprüfungen und Pflicht zur exakten Wiederholung des alten Suchpräfixes.
