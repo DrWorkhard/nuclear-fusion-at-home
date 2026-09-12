@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Users/sebastianwirkert/workspace/fusion/scripts/run_mesh_nonlocal.py", line 110, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/Users/sebastianwirkert/workspace/fusion/scripts/run_mesh_nonlocal.py", line 53, in main
+    source_path, source = frozen_inputs(root)
+                          ^^^^^^^^^^^^^^^^^^^
+  File "/Users/sebastianwirkert/workspace/fusion/scripts/mesh_nonlocal_inputs.py", line 38, in frozen_inputs
+    checked(ref)
+  File "/Users/sebastianwirkert/workspace/fusion/scripts/mesh_nonlocal_inputs.py", line 17, in checked
+    raise ValueError("frozen mesh source binding mismatch")
+ValueError: frozen mesh source binding mismatch

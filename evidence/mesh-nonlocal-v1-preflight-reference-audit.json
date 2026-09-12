@@ -1,0 +1,129 @@
+{
+  "all_pass": true,
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_evidence_references.py",
+      "sha256": "5af93c57c8aa1b6e8ff909b94e404e916a3697d7e644f654cc062d4093d2146f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/evidence_integrity.py",
+      "sha256": "65655c4a70458bfc8f29bade1bc7e0c4f3eb791da6b6199ee89066a3a179263d"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/mesh-integrity-2026-09-09.json",
+      "sha256": "6136fab85d4a03a5d9e805a4be1d3a3c081f7b70a1795772fb8c0a8b121277fe"
+    }
+  ],
+  "mapping": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/manifests/documentation-layout-v1.json",
+    "sha256": "00af4533a7374fdbd78438460b402279f4d908a376055e3a54800a575d13c850"
+  },
+  "records": [
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "git_path": "scripts/check_mesh_integrity.py",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/check_mesh_integrity.py",
+      "sha256": "c9b6c5c98c80db0bd91780d409b6cf2532f4339400d9039a3ab9ba6e88ee4a8f",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "historical_git"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/mesh_integrity.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/mesh_integrity.py",
+      "sha256": "66ea9f725f0b5e2d8d55971900e85cbb1eba44cde8e2d765bae3c0430b41b04e",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/structured_mesh_manifest.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/structured_mesh_manifest.json",
+      "sha256": "a068e77bbf573f1d91fe6f67702f1a8682ddede50d3ee65ce79dc85ac2114975",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/structured_mesh_manifest.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/structured_mesh_manifest.json",
+      "sha256": "59d91e9a09bdde90c22a8888b30542df7969e3700d014d58bc96765c6cdda72f",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_050/coils_structured.msh",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_050/coils_structured.msh",
+      "sha256": "d7ff8ef1f77d5328b9a2faf4dda67ceb367b2ef4e08198f6acb363c221abb02f",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_040/coils_structured.msh",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_040/coils_structured.msh",
+      "sha256": "bb08c7af2c97ce786029774f11c9bf4885ad2ba9ccd1c20dacee66db496c919e",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_030/coils_structured.msh",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_030/coils_structured.msh",
+      "sha256": "98d99f65995400b87b884d93bf26205354b596aa9083dd28d91bd732fcc92a21",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_020/coils_structured.msh",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured/res_0_020/coils_structured.msh",
+      "sha256": "51e09f7530c5e5b1436c959bcf73ab300e73b2dc0b78e6a2dd5b8c40074b3441",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/res_0_015/coils_structured.msh",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/res_0_015/coils_structured.msh",
+      "sha256": "438f47a286bd1635c769ec6cd24785c650d809602425934f9c30ed8f1585de91",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/res_0_010/coils_structured.msh",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/structural/lpqa-v1p1-structured-fine/res_0_010/coils_structured.msh",
+      "sha256": "d7b7bd0ab495ae5e5d7209851038e2327a27b5f0240a0bdd541f10a8886d8c6f",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/mesh-integrity-2026-09-09.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/MESH_INTEGRITY_PROTOCOL.md",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/docs/engineering/MESH_INTEGRITY_PROTOCOL.md",
+      "sha256": "4b1a72750c994d7721f2981b3d530f42cc7f33be1a3cd12fbf0b69169f15d574",
+      "source_revision": "9ee17964f4a4946432437d690fb1a8f18c1d6096",
+      "status": "relocated_identical"
+    }
+  ],
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "891e8a52d98765ece648fc97dce84cf01827e261",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "scientific_results_recomputed": false,
+  "scope": "explicit path/sha256 pairs in listed JSON inputs, not recursive linked reports",
+  "status_counts": {
+    "current": 9,
+    "historical_git": 1,
+    "relocated_identical": 1
+  },
+  "unique_reference_contexts": 11
+}

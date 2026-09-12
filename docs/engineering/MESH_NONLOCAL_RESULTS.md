@@ -1,5 +1,18 @@
 # Nichtlokale Netzüberschneidung: Streaming-Prüfpfad vorbereitet
 
+## Erster echter Start vor Netzrechnung gestoppt
+
+Bei891e8a5 sind SLSQP und alle Abnahmen geschlossen. Der Startversuch scheitert
+aber im historischen Quellhash-Check, bevor ein Netz gelesen oder ein Worker
+gestartet wird. Nur der Dokumentationspfad des alten intrinsischen Skripts
+hat sich geändert; exakte ursprüngliche Bytes sind an dessen gespeicherter
+Git-Revision vorhanden. Alle elf ursprünglichen Quellenverweise unabhängig
+aufgelöst, Netze und numerischer Kern unverändert. Der negative Treiberbericht
+bleibt erhalten; [getrennt festgelegter Retry](MESH_NONLOCAL_RETRY_PROTOCOL.md)
+soll die historische Provenienz explizit auflösen, ohne Physikchecks zu umgehen.
+
+## Aufbewahrte Implementierungsvorbereitung
+
 2026-09-12. [Protokoll](MESH_NONLOCAL_PROTOCOL.md) bei2a9e5b6 vorab registriert.
 Noch keine der sechs realen Spulenvernetzungen neu untersucht. Die Ausführung
 bleibt hinter der laufenden zusammengesetzten SLSQP-Suche und deren Abnahmen.

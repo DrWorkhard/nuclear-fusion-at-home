@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Preserve six-mesh preflight failure and register exact historical-code resolution
+
+- At891e8a5 the driver exits1 before study/raw directories or mesh workers:
+  old intrinsic script SHA differs. Read-only Git diff shows solely its protocol
+  path migration at2f07f95; numerical kernel/current meshes unchanged.
+- Explicit11-reference audit passes: nine current, one historical Git blob at
+  the original9ee1796 revision and one identically relocated protocol. Original
+  failure/log and reference audit retained, zero collision searches.
+- Register separate v2 retry requiring exact historical code resolution, with
+  no physical-file fallback or numerical/cap changes. Engineering detail/index
+  updated; both READMEs/status/plan reviewed, no scientific gate changed.
+  Existing evidence-reference tests and docs/diff checks pass before commit.
+
 ## 2026-09-12 — Close all four composite-SLSQP fine holdouts, retain physical rejection
 
 - At b7a9610, unchanged holdout/curvature/clearance/native drivers all complete,
