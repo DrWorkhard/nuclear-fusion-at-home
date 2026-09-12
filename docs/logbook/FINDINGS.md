@@ -1,5 +1,18 @@
 # Findings log
 
+## F-059 — Qualified GN curvature does not yield a feasible design within 1024 bundles
+
+**Class:** repeatable budget-limited construction; fine holdouts pending
+**Date:** 2026-09-12
+
+The corrected native-covector pilot repeats every proposal/value and the old
+failed-prefix exactly; independent accounting/selection audits pass. Selected
+proposal 1020 has coarse raw flux 2.4713685440167177e-7 and zero internal
+constraint violation. The flux remains 24.714 times the independent limit, so
+the useful local quadratic model has not yet produced an admissible design.
+Budget termination does not establish convergence. See
+[results](../optimization/GN_NATIVE_COVECTOR_RESULTS.md).
+
 ## F-058 — GN guard compared gradients built from differently rounded field projections
 
 **Class:** isolated failed-point numerical diagnosis, no construction result

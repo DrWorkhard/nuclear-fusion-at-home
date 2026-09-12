@@ -29,9 +29,11 @@ admission followed. Exact replay and an
 amplification of separately rounded field projections in the guard; native
 matrices and affine-current checks pass. The
 [native-projection retry](docs/optimization/GN_NATIVE_COVECTOR_RESULTS.md) now passes
-all three frozen-state qualifications and is running. Original objectives,
-gradients, GN matrices and tolerances are unchanged. Completion, independent
-ledger/prefix audits and physical holdouts remain pending.
+all three frozen-state qualifications and finishes two exactly repeated
+1024-bundle searches. Independent ledger/prefix audits pass, but the selected
+coarse flux is still 24.7 times the limit. Original objectives, gradients, GN
+matrices and tolerances are unchanged. A separately preregistered SLSQP-1024
+construction and both studies' physical holdouts are next.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

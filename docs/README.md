@@ -118,9 +118,12 @@ exakt reproduziert und vollständig erfasst. Die
 Verstärkung kleiner Rundungsunterschiede zweier Feldprojektionen im Prüfvergleich;
 native Matrizen und unabhängige Stromprüfungen stimmen überein. Die
 [korrigierte Wiederholung](optimization/GN_NATIVE_COVECTOR_RESULTS.md) besteht
-inzwischen alle drei Zustandsqualifikationen und läuft. Zielfunktion, Gradienten,
-GN-Matrix und Grenzwerte bleiben unverändert. Abschluss, unabhängiger Vergleich
-des Suchpräfixes und Abnahme stehen aus; weiterhin kein neuer zulässiger Entwurf.
+alle drei Zustandsqualifikationen; beide 1024-Bundle-Suchen sind exakt
+reproduziert und unabhängig im Auswertungsprotokoll geprüft. Der ausgewählte
+grobe Flux bleibt Faktor 24,7 über der Grenze. Zielfunktion, Gradienten,
+GN-Matrix und Grenzwerte bleiben unverändert. Als Nächstes der separat
+festgelegte SLSQP-1024-Lauf und die unabhängigen Abnahmen beider Studien;
+weiterhin kein neuer zulässiger Entwurf.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 

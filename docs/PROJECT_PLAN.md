@@ -21,10 +21,11 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
 4. Der [GN-Trust-Pilot](optimization/GN_TRUST_PILOT_RESULTS.md) stoppt am 29.
    Vorschlag durch die Feld-/Gradient-Schutzprüfung. Der begrenzte Fehlerreplay
    stimmt exakt überein. Die isolierte Feld-/Matrix-/Stromprüfung identifiziert
-   unterschiedliche Feldprojektionsrundung im Prüfvergleich. Als Nächstes die
-   konsistente native Projektion ist an drei festen Zuständen qualifiziert; der
-   korrigierte Pilot läuft. Als Nächstes beide Arme abschließen und unabhängig
-   prüfen. Danach den getrennt festgelegten SLSQP-1024-Lauf vom Originalstart
+   unterschiedliche Feldprojektionsrundung im Prüfvergleich. Die konsistente
+   native Projektion ist an drei festen Zuständen qualifiziert; beide korrigierten
+   1024-Bundle-Läufe und ihr unabhängiger Protokoll-Audit bestehen, der grobe Flux
+   bleibt Faktor 24,7 über der Grenze. Jetzt den getrennt festgelegten
+   SLSQP-1024-Lauf vom Originalstart
    ausführen, ohne die alten Versuche zu verändern oder Holdouts zurückzuspeisen.
    Keine nachträgliche Budgeterhöhung des abgeschlossenen SLSQP-Piloten.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine

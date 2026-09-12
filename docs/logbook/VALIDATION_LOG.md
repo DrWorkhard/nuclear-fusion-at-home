@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — GN-1024 construction and independent ledger audit completed
+
+- Both native-covector arms complete exactly 1024 bundles without failures;
+  complete histories, selected proposal 1020, work/counters and old prefix match.
+  Independent saved-array/named-field/accounting audit passes with no new physics.
+- Selected coarse raw flux 2.4713685440167177e-7 remains 24.714 times the limit;
+  zero internal inequality violation is not flux admission or convergence.
+  Fine holdouts remain pending. Next execute the already committed SLSQP-1024
+  protocol before holdout feedback; no parameters changed from e208ad9.
+- Separate core checkout at e208ad9: 279 passed, one expected missing-W7-X skip,
+  11 known warnings; Ruff and docs pass. This is a reused isolated core environment,
+  not a fresh native bootstrap. Root remains intact. Both READMEs, status, plan,
+  area index and finding F-059 updated; documentation/diff checks pass.
+
 ## 2026-09-12 — Separate SLSQP-1024 construction prepared while GN repetition runs
 
 - Old 256-bundle study remains immutable. New explicit runner mode retains the

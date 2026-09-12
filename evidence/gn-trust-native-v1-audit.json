@@ -1,0 +1,99 @@
+{
+  "additional_physics_calls": 0,
+  "all_pass": true,
+  "arms": [
+    {
+      "all_pass": true,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/gn-trust-native-v1/gn-trust-1.json",
+        "sha256": "366f67891bfbf5c148e0ae4aabf178ace907cc55d172d47b99f97c93681577aa"
+      },
+      "checks": {
+        "accepted_iterations_bound_to_evaluated_values": true,
+        "additional_gn_work": true,
+        "all_gn_identities": true,
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "hessian_requests_counted": true,
+        "independent_gradient_screen": true,
+        "ledger_counts": true,
+        "named_field_identity": true,
+        "native_work": true,
+        "no_unreported_target_stop": true,
+        "nonempty": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "status_partition": true
+      }
+    },
+    {
+      "all_pass": true,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/gn-trust-native-v1/gn-trust-2.json",
+        "sha256": "866459d508145dc72b669c076d09099a62d17fb6de936d0f9a03b19c1c8e020d"
+      },
+      "checks": {
+        "accepted_iterations_bound_to_evaluated_values": true,
+        "additional_gn_work": true,
+        "all_gn_identities": true,
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "hessian_requests_counted": true,
+        "independent_gradient_screen": true,
+        "ledger_counts": true,
+        "named_field_identity": true,
+        "native_work": true,
+        "no_unreported_target_stop": true,
+        "nonempty": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "status_partition": true
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_gn_trust_pilot.py",
+      "sha256": "214edce8605844deeb08c376c04878a8c380f72a2b18d00cff109cff56160e20"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/gn_pilot_audit.py",
+      "sha256": "9658fc9e85c3b4cb6af3d87ce20f0a3f78fd11dea1bfb782cba4a77c7b830e2b"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_audit.py",
+      "sha256": "15758f34cd372593f0870bc9f54008a9d2c16235ec4f57c703892207a91f5534"
+    }
+  ],
+  "original_prefix_matches": true,
+  "physical_feasibility_certified": false,
+  "repeat_histories_match": true,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "e208ad9d95774407454fed0735ceca13efcc2ca4",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/gn-trust-native-v1/summary.json",
+    "sha256": "4bd71d96d02bacd520ca328f0f06f7bdc22169f3d2ba6a4b3dc4128432390cc6"
+  }
+}

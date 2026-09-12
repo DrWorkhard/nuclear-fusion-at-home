@@ -23,7 +23,7 @@ und Verbesserungen daran zertifizieren.
 | QI bei endlichem Druck | 320 zugeordnete Potentialmulden-Familien in vier Fällen; Druckfall nfp2 durchgehend negative radiale Ableitungen im untersuchten Bereich, nfp3 gemischt | Unabhängige Quadratur und zweiter Feldlinienrechner; 319 aufgelöste Vorzeichen bestätigt, eines unaufgelöst. Keine globale maximum-J-Aussage |
 | Direkte Randbedingungen | 137 Ungleichungen qualifiziert; SLSQP-Pilot mit zwei exakt gleichen 256-Bundle-Läufen | Ausgewählte Felder bestehen Geometrie und zusätzliche native Metriken; Flux bleibt Faktor 23,3 über Grenze. Nicht konvergiert, nicht zulässig |
 | Lokales Fluxmodell | Quadratische Vorhersage an allen vier festen Testschritten richtig im Vorzeichen; Fehler mindestens 99,907% kleiner als linear | Vollständiger nativer Jacobianvergleich und unabhängiger Kern-Audit bestehen. Lokale Diagnose, noch kein neuer Optimierungserfolg |
-| Software | 280 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Separater Kern-Checkout zuletzt: 247 bestanden + ein erwarteter W7-X-Skip; Kern-Replay von zwei reellen und zwölf komplexen Abstandsauswertungen stimmt exakt überein. 11 bekannte NumPy-Warnungen; kein vollständiger nativer Neuaufbau |
+| Software | 280 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Separater Kern-Checkout bei e208ad9: 279 bestanden + ein erwarteter W7-X-Skip; Kern-Replay von zwei reellen und zwölf komplexen Abstandsauswertungen stimmt exakt überein. 11 bekannte NumPy-Warnungen; kein vollständiger nativer Neuaufbau |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [Ableitungen](optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md),
@@ -53,9 +53,11 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
 ## Offene Arbeit, nach Bedeutung
 
 1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
-   den korrigierten GN-Trust-Piloten abschließen und unabhängig prüfen: Die
-   korrigierte Feldprojektionskopplung besteht an drei festen Zuständen, die Suche
-   läuft. Getrennte Feldprojektionsrundung war Ursache der alten Schutzverletzung.
+   den separat festgelegten SLSQP-1024-Lauf ausführen und beide neuen Studien
+   unabhängig abnehmen: Der korrigierte GN-Trust-Pilot wiederholt alle 1024
+   Bundles exakt und besteht den unabhängigen Protokoll-Audit; der grobe Flux
+   bleibt Faktor 24,7 über der Grenze. Getrennte Feldprojektionsrundung war
+   Ursache der alten Schutzverletzung.
    Das quadratische Feldmodell besteht die Prüfung an vier eingefrorenen Proben,
    nicht automatisch an allen neuen Suchpunkten. Die zuvor fehlgeschlagene Abstand-Ableitungsprüfung ist
    unabhängig untersucht, der historische Fehlerstatus bleibt erhalten.
