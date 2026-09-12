@@ -18,7 +18,21 @@ Bericht hashgebunden. `control_completed` und `qualification_pass=false`
 unterscheiden die bestandene Kontrollrechnung von einer qualifizierten
 physikalischen Studie. Fünf reine Adapterkontrollen bestehen bereits.
 
-Noch offen: unabhängiger Studienprüfer für das neue explizite Methodenprofil,
-danach zwei physikalische Wiederholungen und alle feinen Abnahmen. Der
+Der separate analytische Audit berechnet Zielfunktion, Randbedingungen,
+Lagrangegradient, Multiplikatorvorzeichen und Komplementarität aus x und den
+gespeicherten Multiplikatoren neu, ohne den Solver zu importieren. Alle neun
+Prüfungen bestehen, einschließlich Quellhashes und Kontrollfall-Abgrenzung:
+`evidence/natural-auglag-jac-control-v1-audit.json`. Dies prüft den analytischen
+Endpunkt, nicht den gesamten inneren Solverpfad und keine Plasmaphysik.
+
+Der neue separate Studienprüfer übernimmt die unveränderte unabhängige
+Stufen-/Budget-/Auswahl-/Feldidentitätsrechnung und verlangt zusätzlich das
+registrierte Methodenprofil, alle effektiven Optionen, beide korrekten
+Wiederholungsnummern und unveränderte Quellen/Protokoll gegenüber der
+Kontrollrechnung. Der ursprüngliche Auditor bleibt bytegleich. 22 reine
+Kontrollen prüfen insbesondere die Ablehnung abweichender Optionen, Methoden,
+Threads, Koordinatenskalen und falscher analytischer Erfolgsflags.
+
+Noch offen: zwei physikalische Wiederholungen und alle feinen Abnahmen. Der
 unveränderte Recovery-Lauf und dessen Holdouts werden zuvor abgeschlossen und
 dokumentiert. Keine neue zulässige Baseline und kein Methodenfortschritt behauptet.

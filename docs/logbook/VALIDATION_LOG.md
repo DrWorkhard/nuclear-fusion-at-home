@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Independently audit scaled-control endpoint and preregistered profile
+
+- New pure checker recomputes closed-form objective/constraints, stationarity,
+  complementarity and multiplier signs, not trusting solver success. All nine
+  checks pass on saved control; no new physics. Hash-bound sources unchanged.
+- Separate scaled-study auditor retains all original per-arm arithmetic/work/
+  named-field checks and exact new repeats, adds explicit options/method/thread/
+  arm/profile checks and binds protocol/runner/solver sources to prior control.
+  Reviewed diff; old auditor and all mathematical kernels remain untouched.
+- 22 synthetic controls pass, including deliberately false success, wrong
+  options, labels, tolerances, threads and counters. Detail/index and both READMEs/
+  status/plan reviewed: no changed feasibility claim. Full suite393 passes with20
+  known warnings; Ruff/documentation/diff checks pass.
+
 ## 2026-09-12 — Jacobian-scaled analytical AL control passes
 
 - Preregistered runner at2061cee: exact same constrained quadratic and fixed
