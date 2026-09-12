@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-12 — Qualify full fixed-current workflow, independent audit and frozen holdouts
+
+- Added exact two-source/provenance checks, seven central field probes plus one
+  selected current minimizer, two full native bundles per successful case and
+  complete request/partial-failure retention. No physical source evaluated yet.
+- Separate field-weight/QR/serialization auditor checks all16 physical coil
+  transforms/current signs; eight-grid holdouts and separate raw-array arithmetic
+  audit preserve physical rejections. Synthetic mutation and failure tests pass.
+- Synthetic full workflow found a NumPy-bool JSON failure before real work;
+  explicit scalar conversion fixes reporting. Ruff line lengths and closure
+  bindings corrected before execution. Native imports isolated behind setup
+  functions so pure/mock controls do not require SIMSOPT installation.
+- Full regression634 passed with144 retained fixture deprecations; Ruff/docs/diff
+  pass. Detail/index and both READMEs/status/plan reviewed; software count and
+  plan grammar synchronized. No altered physics/protocol or ABI-freedom claim.
+  Next commit implementation, run two preregistered real states, independently
+  audit, then finish all frozen field holdouts and their separate arithmetic audit.
+
 ## 2026-09-12 — Close finest-mesh full coverage, exact2M prefix and independent spatial audit
 
 - At c04411d the unchanged finest mesh completes2,222,785 SAT calls in300.76s;

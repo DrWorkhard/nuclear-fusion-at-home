@@ -74,8 +74,8 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    fünf vollständige Nichtüberlappungspässe, feinster Test am Paarcap unvollständig,
    alle Zertifikate unabhängig bestätigt. Auch der registrierte QI-Koordinatentest
    ist geschlossen:4/16 neue Fidelitäts-/5/16 Vergleichsverfeinerungsschirme
-   bestehen, keine allgemeine Heilung durch Umparametrisierung. Als Nächstes den
-   separat registrierten feinsten Netzabschluss mit verpflichtendem2M-Präfix
+   bestehen, keine allgemeine Heilung durch Umparametrisierung. Der separat
+   registrierte feinste Netzabschluss mit verpflichtendem2M-Präfix ist ebenfalls
    ausgeführt und auditiert: vollständig, alle sechs Auflösungen bestehen jetzt
    den begrenzten Nichtüberlappungsschirm. Als nächster Optimierungsteil ist die
    exakte Stromminimierung an den zwei festen AL-/SLSQP-Geometrien registriert;

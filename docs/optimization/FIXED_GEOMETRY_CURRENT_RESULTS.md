@@ -36,3 +36,33 @@ mit Namen eines anderen Ordnung8-Laufs und wurde erwartungsgemäß abgelehnt.
 Die Kontrolle benutzt jetzt einen in sich konsistenten synthetischen207-DOF-
 Graphen; keine Produktionsdaten/-Namen wurden passend gemacht. Insgesamt zehn
 reine LS-/Stromgraphkontrollen bestanden, native Probes weiterhin noch nicht ausgeführt.
+
+## Vollständiger Ablauf und unabhängige Kontrollen vorbereitet
+
+Die beiden eingefrorenen Quellstudien müssen sämtliche vier ursprünglichen
+Holdoutphasen abgeschlossen haben. Der neue Treiber bilanziert je erfolgreichem
+Zustand zwei vollständige native138-Bundles und acht zusätzliche B-Gitteranfragen,
+einschließlich Cacheabfragen. Alle angefragten Strompunkte/Felder werden gespeichert;
+bei Fehlern bleiben auch der unvollständige Punkt und die tatsächliche Arbeit erhalten.
+
+Der separate Auditor rekonstruiert Gewichte, Stromspalten und QR-Lösung aus
+den gespeicherten kartesischen Feldern, ohne neue native Rechnung. Er prüft
+sämtliche16 transformierten Spulenkoeffizientensätze, Regularisierungen, Ströme,
+Quellzuordnung, Rechnungsbilanz und Zahlenklassifikation. Ein separater
+Feld-Holdouttreiber behält alle acht festgelegten Gitter, auch bei Fluxablehnung;
+dessen weiterer Array-Audit rechnet die Flux-/Feldstärkenwerte und Klassifikationen
+nach, ist aber keine zweite unabhängige Biot-Savart-Implementierung.
+
+Die synthetische Gesamtprobe entdeckte vor echter Ausführung einen NumPy-bool-
+Serialisierungsfehler im Berichtsschreiber. Explizite skalare Umwandlung korrigiert
+ihn; kein physikalisches Ergebnis überschrieben. Auch ursprüngliche Ruff-Zeilenlängen
+und eine ungebundene Schleifenclosure wurden vor Ausführung korrigiert.
+Kontrollen schließen manipulierte Geometriepunkte, Probes, NaNs, zu niedrige
+Arbeitszähler, falsche Fluxfreigabe und ausgelassene Holdoutgitter ein.
+Noch kein neues physikalisches Ergebnis; nächste Phase ist die vorab registrierte
+quellgebundene Ausführung nach Commit der Implementierung und Prüfungen.
+Alle sieben neuen Probe-/Treiber-/Holdout-/Fehlerkontrollen und die gesamte
+Regression mit634 Tests bestehen;144 bekannte Fixture-DeprecationWarnings.
+Ruff, Dokumentstruktur und Diffprüfung bestehen. Native Imports werden erst
+bei der wirklichen Ausführung geladen; synthetische Kontrollen benötigen keine
+SIMSOPT-Installation. Die separate strenge Importwarnungsprüfung bleibt offen.
