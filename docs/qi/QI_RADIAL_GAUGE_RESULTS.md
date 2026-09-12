@@ -20,6 +20,13 @@ Maximum-J-Definition in1.3. Die Gauge-Kettenregel wird als eigene elementare
 Herleitung behandelt, nicht als Zitat. Keine Änderungen der alten Pitchwerte,
 radialen Stencils oder Fehlerschranken.
 
-Noch offen: Runner mit exaktem c=0-Replay sämtlicher alter Tracearrays, neue
-Gauge-Traces, Muldenzuordnung, vollständige Stencils und unabhängiger Zahlenreplay.
+Der Runner ist vorbereitet und syntaktisch/Ruff-geprüft: alle 21 c=0-Traces je
+Fall werden frisch berechnet und gegen jedes gespeicherte Array exakt geprüft,
+bevor verschobene Traces entstehen. Drei identische s0-Traces werden je Fall
+zwischen Gauges geteilt; 61 tatsächlich neue Traces je Fall inklusive vier
+Alpha-Differenzproben. Alle Muldenlisten, Zuordnungen, Stencils und Fehler
+werden gespeichert. Die alten fünf Bstar-Werte bleiben unverändert.
+
+Noch offen: Ausführung, neue Gauge-Traces, Muldenzuordnung, vollständige Stencils
+und unabhängiger Zahlenreplay.
 Globale QI-/Maximum-J-Qualifikation und Schritt1 bleiben offen.

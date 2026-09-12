@@ -127,8 +127,9 @@ GN-Matrix und Grenzwerte bleiben unverändert. Auch die neuen
 untereinander exakt überein, verfehlen aber den verlangten historischen
 Präfixvergleich. Geometrie/nativ bestehen; der unabhängig verfeinerte Flux bleibt
 Faktor 12,7 über der Grenze. Beide begrenzten Versuche sind damit abgeschlossen.
-Als Nächstes ist ein klassischer AL-Versuch mit natürlichen Fluxresiduen vorab
-festgelegt, analytisch geprüft und mit unabhängigem Stufenprüfer vorbereitet.
+Der vorab festgelegte klassische AL-Versuch mit natürlichen Fluxresiduen läuft
+nach bestandener analytischer Kontrolle und vollständiger Start-Ableitungsprüfung;
+unabhängiger Stufenaudit und Abnahme folgen nach Abschluss.
 Weiterhin kein neuer zulässiger Entwurf.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).

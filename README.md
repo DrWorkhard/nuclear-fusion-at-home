@@ -37,8 +37,9 @@ matrices and tolerances are unchanged. The separate
 repeats exactly within its new study, but fails the preregistered historical-prefix
 comparison. Geometry and native-metric holdouts pass, but independently refined
 flux remains 12.7 times the limit. Both bounded construction studies are closed
-without an admissible design. A classical natural-flux AL follow-up is next;
-its protocol, analytic solver control and independent stage auditor are ready.
+without an admissible design. A preregistered classical natural-flux AL follow-up
+is running after passing its analytic control and complete initial derivative
+screen; independent stage auditing and admission remain pending.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

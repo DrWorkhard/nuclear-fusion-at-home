@@ -1,4 +1,4 @@
-# Natürliche Flux-AL — Vorbereitung, noch kein physikalischer Lauf
+# Natürliche Flux-AL — laufender Konstruktionspilot
 
 Protokoll/Kern 891532b, 2026-09-12. Die reine Residuenidentität besteht sieben
 Kontrollen. Drei weitere Steuerungskontrollen bestätigen feste Stufenbudgets,
@@ -36,6 +36,11 @@ einzelne Solver behält sein altes Verhalten; die Stufenlogik muss explizit gew�
 und zusätzlich inhaltlich geprüft werden. Vollsuite jetzt 314 bestanden,
 11 bekannte Warnungen, Ruff bestanden.
 
-Noch offen: physikalische Wiederholungen, Anwendung des unabhängigen Audits und
+Die physikalische Suche startete bei 80a1d88 nach Abschluss der beiden vorherigen
+Studien. Analytische Kontrolle und vollständige Start-Richtungsprüfung bestehen;
+erste Stufen laufen. Zwischenberichte sind veränderlich, noch kein Ergebnis.
+Keine Holdout-Zahlen wurden in Einstellungen oder Suchparameter übernommen.
+
+Noch offen: Abschluss der Wiederholungen, Anwendung des unabhängigen Audits und
 vollständige feine Abnahmen. Weder eine
 zulässige Konstruktion noch ein Methoden- oder SoTA-Vorteil ist nachgewiesen.

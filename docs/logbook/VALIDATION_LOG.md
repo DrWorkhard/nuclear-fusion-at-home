@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-12 — Gauge trace runner prepared; natural-AL search started
+
+- Gauge runner retains fixed cases/pitches, exact replay of every old c=0 array,
+  shared s0 traces, all well lists/matches/stencils and failure cells. Sixty-one
+  new traces per case are planned. Ruff and syntax checks pass before execution.
+  Independent arithmetic replay remains to be implemented/applied.
+- Natural-AL starts at80a1d88 after old studies close. Analytic and complete
+  native start-gradient screens pass, first stages running. No frozen new result
+  or holdout yet. Both READMEs/status/plan updated; docs/diff checks pass.
+
 ## 2026-09-12 — Optional alpha offset and analytic gauge controls pass
 
 - Added a finite optional alpha offset with unchanged zero-offset calculation.
