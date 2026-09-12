@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Register geometric model/descent diagnosis before further shape optimization
+
+- Exactly two closed current-minimized sources;204 shape parameters, fixed currents,
+  three immutable box radii and all137 true linearized inequalities. Six bounded
+  classical HiGHS dual-simplex models, separate scalar primal-dual certificates.
+- Primary SciPy1.18.0/HiGHS documentation and installed SciPy1.18.1 wrapper checked;
+  explicit marginal signs, fixed options and mathematical certificate definitions.
+- New directions require both fixed non-pair FD screens plus two complex pair
+  steps and independent real-chain-rule verification. At most32 full native
+  bundles; all trial outcomes retained, no fine admission or adaptive selection.
+- Protocol/index and both READMEs/status/plan reviewed; docs/diff pass. No new
+  LP, derivative or magnetic-field calculation yet. Next pure controls and driver.
+
 ## 2026-09-12 — Close all eight fixed-current field holdouts and independent arithmetic audit
 
 - At064175e all32/64/128-by200 and128-by800 grids complete for both fixed shapes;
