@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Independent decomposition excludes radial interpolation as sole QI error source
+
+- At fbaec49 all24 old grids and48 neighboring half-grid fields complete;
+  matrix-Fourier point replay<=4.883e-15 and residual decomposition<=4.506e-15.
+  Independent point-product auditor confirms all24 results, no new field calls.
+- Ten poloidal endpoint grids fail1e-3 already, max1.6114274786077657e-3;
+  largest product contribution3.6134085961941555e-6. Toroidal endpoints all pass.
+  Thus interpolation alone cannot explain the five old failures. No relaxed
+  threshold, rerouted source or absolute-drift claim. Min free6137118720Bytes.
+- F-067/detail/index/status/plan updated; both READMEs remain accurate about the
+  open drift screen. All21 relevant tests plus Ruff/docs/diff pass before commit.
+
 ## 2026-09-12 — Prepare endpoint matrix-Fourier diagnostics and independent product audit
 
 - Additive reader locates both half-grid indices from exact full/half meshes,

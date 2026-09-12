@@ -74,9 +74,10 @@ direkte Führungszentrum-Drift gegen Wirkungsableitung, mit identischer Phase un
 geprüften Strom-/Druckannahmen. Reine Algebra ersetzt diese Gegenrechnung nicht.
 Der erste separate [Flussnormierungstest](qi/QI_CLEBSCH_RESULTS.md) bestätigt
 die Feldorientierung, bleibt aber mit19/24 vollständigen Gitterpässen negativ.
-Als nächsten Teiltest die fünf poloidalen Restabweichungen auf ursprünglichen
-Halbflächen und unter radialer Produktinterpolation getrennt prüfen, ohne
-nachträgliche Grenzlockerung.
+Die getrennte Halbflächen-/Produktzerlegung bestätigt jetzt: radiale Interpolation
+allein erklärt die fünf Fehler nicht; zehn von48 Halbflächengittern scheitern
+bereits ohne sie. Nächster Teiltest: Spektraltrunkierung und Wout-Ausgabekonventionen
+an den unveränderten Daten klären, ohne nachträgliche Grenzlockerung.
 
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |

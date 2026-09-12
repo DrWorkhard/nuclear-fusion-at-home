@@ -37,7 +37,9 @@ Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 Zusätzlicher Schritt1-Teiltest: Die signierte QI-Flusskonvention stimmt in
 24 Feldvektor-/Betragsvergleichen; fünf poloidale Identitäten verfehlen aber
 die feste Grenze. Der unabhängige Audit bestätigt19/24 vollständige Gitterpässe,
-nicht die Freigabe absoluter Drift. [Ergebnis](qi/QI_CLEBSCH_RESULTS.md).
+nicht die Freigabe absoluter Drift. Eine getrennt auditierte Produktzerlegung
+schließt radiale Interpolation als alleinige Ursache aus: Fehler bestehen schon
+auf zehn ursprünglichen Halbflächengittern. [Ergebnis](qi/QI_CLEBSCH_RESULTS.md).
 
 ## Warum weiterhin keine zulässige Baseline vorliegt
 

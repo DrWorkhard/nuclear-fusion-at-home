@@ -1,0 +1,431 @@
+{
+  "absolute_drift_certified": false,
+  "all_pass": true,
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_clebsch_interpolation.py",
+    "sha256": "d427f384b59fb969079b6480e08ce1afb706e90ac19459f697df490a591a0770"
+  },
+  "grids": [
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp2-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-vacuum",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "all_pass": true,
+      "case": "nfp3-beta2",
+      "checks": {
+        "flux": true,
+        "point_replay": true,
+        "poloidal_records": true,
+        "poloidal_replay": true,
+        "poloidal_terms": true,
+        "toroidal_records": true,
+        "toroidal_replay": true,
+        "toroidal_terms": true,
+        "weight": true
+      },
+      "resolution": 32,
+      "surface": 0.75
+    }
+  ],
+  "new_field_evaluations": 0,
+  "physical_screen_reclassified": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "fbaec493a9775ab3e50adbf9d4b15141cabf9c03",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-clebsch-interpolation-v1.json",
+    "sha256": "0f9000ede53509d0b1a2db7fc734fef5911ff93679f1709335177cc2efd61f03"
+  }
+}

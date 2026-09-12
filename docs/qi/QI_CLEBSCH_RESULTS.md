@@ -41,7 +41,9 @@ Die Quelle der Restfehler ist noch nicht bestimmt. Eine mögliche Ursache ist,
 dass radiale Interpolation von Produkten nicht mit dem Produkt interpolierter
 Größen übereinstimmt; das ist derzeit eine Hypothese, keine gemessene Erklärung.
 
-Nächster abgegrenzter Test: ursprüngliche Halbflächen und interpolierte Werte
-getrennt untersuchen, Produktfehler algebraisch zerlegen, Spektralreste erhalten.
+Die anschließende [Produktzerlegung](QI_CLEBSCH_INTERPOLATION_RESULTS.md) ist
+abgeschlossen und unabhängig bestätigt: zehn von48 Halbflächengittern scheitern
+bereits ohne radiale Interpolation. Diese allein erklärt die fünf Fehler nicht;
+Spektraltrunkierung und Ausgabekonventionen bleiben zu untersuchen.
 Noch keine absolute Drift, keine neue Bewertung der320 Bouncefamilien und
 keine globale QI-/maximum-J-Zertifizierung.

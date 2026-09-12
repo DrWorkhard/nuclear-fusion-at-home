@@ -1,5 +1,18 @@
 # Findings log
 
+## F-067 — Radial product interpolation does not explain the QI poloidal residuals
+
+**Class:** independently audited exact residual decomposition, negative causal test
+**Date:** 2026-09-12
+
+All24 old grids reproduce through a separate matrix-Fourier endpoint path within
+4.883e-15; residual decomposition agrees within4.506e-15 and independent product
+replay passes. Ten of48 original half-grid poloidal identities already exceed1e-3,
+maximum1.6114e-3; largest pure interpolation term is3.6134e-6. All48 toroidal
+endpoint screens pass. Radial interpolation alone is excluded; spectral/output
+convention causes remain hypotheses. No healing of the original19/24 screen or
+absolute-drift gate. See [decomposition](../qi/QI_CLEBSCH_INTERPOLATION_RESULTS.md).
+
 ## F-066 — Signed QI flux convention supported, full representation screen remains negative
 
 **Class:** preregistered Wout representation check with independent point-array audit
