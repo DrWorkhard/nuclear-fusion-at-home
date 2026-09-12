@@ -77,6 +77,9 @@ bounded result; missing author data is not the only remaining blocker.
       The separate2048-bundle SLSQP polishing attempt stops after nine startup
       bundles at four clearance derivative rows, before its solver starts.
       Independent postmortem confirms records, not qualification; AL cost retained.
+      Complex-step and independent real-chain-rule qualification now pass all120
+      pair derivatives in two fixed directions. A new composite-gate search is
+      still required; neither old failure nor G2 is reclassified as passing.
       See [alternate start](../optimization/UPSTREAM_START_RESULTS.md) and
       [polishing](../optimization/SLSQP_POLISH_RESULTS.md). G2 remains open.
 

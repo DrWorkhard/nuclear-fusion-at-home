@@ -41,6 +41,9 @@ Abstandszeilen genau am unveränderten AL-Start, mit unabhängig rekonstruierten
 Fourierkurven und expliziter Quell-DOF-Richtung. Erst nach dieser Qualifikation
 über einen neuen, anders benannten zusammengesetzten Prüfpfad entscheiden.
 Grenzen, alte Suchkerne und gescheiterte Berichte bleiben unverändert.
+Die [separate Ableitungsqualifikation](POLISH_START_DERIVATIVE_RESULTS.md) ist
+inzwischen bestanden und unabhängig bestätigt. Sie stützt numerische Auslöschung
+als Erklärung, erklärt aber diesen alten Suchversuch nicht nachträglich für bestanden.
 
 ## Aufbewahrte Vorbereitung
 

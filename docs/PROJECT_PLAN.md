@@ -65,8 +65,11 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    ist jetzt geschlossen. Der ausgeführte Versuch stoppt nach neun Start-Bundles
    an vier Abstand-Ableitungen, vor dem Solver. Separater Postmortem bestätigt
    Quellen/Punkte/Arithmetik, nicht die Qualifikation. Jetzt eine unabhängige
-   komplexe-Schritt-Prüfung am festen Start registrieren; keine Grenzlockerung
-   oder Wahl der günstigsten realen Schrittweite. Keine Aussage gleicher Methodenbudgets.
+   komplexe-Schritt-Prüfung am festen Start abgeschlossen: beide Richtungen/
+   alle120 Paarzeilen bestehen, unabhängige reelle Kettenregel bestätigt.
+   Als Nächstes einen neuen SLSQP-Lauf mit zusammengesetztem Startgate registrieren;
+   keine Wahl der günstigsten realen Schrittweite oder gelockerte Physikgrenzen.
+   Keine Aussage gleicher Methodenbudgets.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

@@ -152,6 +152,9 @@ Die separat versuchte [SLSQP-Nachoptimierung](optimization/SLSQP_POLISH_RESULTS.
 stoppt bereits im Ableitungstest vor Solverstart. Der Postmortem bestätigt alle
 neun Startauswertungen; die vier auffälligen Abstand-Ableitungen werden separat
 untersucht, keine Umdeutung des Fehlschlags als zulässige Konstruktion.
+Diese separate Gegenprüfung besteht inzwischen: komplexe Schritte und unabhängige
+reelle Kettenregel bestätigen die Paarableitungen bis4,063e-11. Ein neuer Suchlauf
+mit entsprechend qualifiziertem Startgate bleibt der nächste Schritt.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der
 [frische native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md) besteht

@@ -1,5 +1,19 @@
 # Findings log
 
+## F-071 — Independent derivatives support cancellation at the failed polishing start
+
+**Class:** preregistered two-direction complex qualification plus independent real chain rule
+**Date:** 2026-09-12
+
+All120 pair rows at the original fixed AL start pass three complex steps and
+two source-basis directions. Native138-value replay is exact; maximal complex/
+native derivative error4.063e-11, step disagreement1.594e-14. Independent scalar
+JSON geometry and real Fourier/weighted-chain-rule audit passes35 checks, maximum
+real/native derivative difference4.063e-11. Supports cancellation explanation
+for the failed tiny real FD, not a global derivative guarantee. Original failed
+study remains failed; a separately registered composite-gate search may follow.
+See [qualification](../optimization/POLISH_START_DERIVATIVE_RESULTS.md).
+
 ## F-070 — Fresh QI angular refinement repairs sampled identities, not historical fidelity
 
 **Class:** preregistered16-cell equilibrium matrix with independent field/arithmetic audit

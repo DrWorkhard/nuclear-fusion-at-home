@@ -1,0 +1,102 @@
+{
+  "all_pass": true,
+  "checks": {
+    "analytic_0": true,
+    "analytic_1": true,
+    "anchors": true,
+    "bound_postmortem": true,
+    "current_columns": true,
+    "extra_work": true,
+    "fixed_source": true,
+    "independent_derivative_0": true,
+    "independent_derivative_1": true,
+    "independent_values": true,
+    "named_source": true,
+    "native_work": true,
+    "original_failed": true,
+    "original_nonpair": true,
+    "positions": true,
+    "producer_is_qualified": true,
+    "qualification_all_checks": true,
+    "reported_real_errors": true,
+    "required_producer_checks": true,
+    "same_names": true,
+    "same_problem": true,
+    "scale": true,
+    "seed_46": true,
+    "seed_47": true,
+    "serialized_coefficients": true,
+    "serialized_direction_46": true,
+    "serialized_direction_47": true,
+    "source_directional": true,
+    "source_values": true,
+    "step_0_0_arithmetic": true,
+    "step_0_1_arithmetic": true,
+    "step_0_2_arithmetic": true,
+    "step_1_0_arithmetic": true,
+    "step_1_1_arithmetic": true,
+    "step_1_2_arithmetic": true
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_polish_start.py",
+      "sha256": "33a1eda2a404499f7f372d7bd9422152ecef407478465f578b24b34bfd7e9471"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clearance_chain_rule.py",
+      "sha256": "8818af6a914f29f8d96f958a1594b225f09a53c5bb7a2b5a74b50887350479c1"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coil_coefficient_view.py",
+      "sha256": "c5bd4579ae26396db65c1b042c2aa67258543bce91689418fc3ceb362fab29a7"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    }
+  ],
+  "complex_value_calls": 0,
+  "new_native_calls": 0,
+  "own_work": {
+    "directional_distance_samples": 9600000,
+    "real_pair_sets": 120,
+    "squared_distance_samples": 4800000
+  },
+  "physical_feasibility_certified": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "42ca07e4cced3c26f3e0b366c3fc375c665a3541",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "results": {
+    "complex_value_error": 3.1086244689504383e-15,
+    "directions": [
+      {
+        "real_chain_complex_errors": [
+          2.8030078258467483e-11,
+          2.8036239996254153e-11,
+          2.8031077459189646e-11
+        ],
+        "real_chain_native_error": 4.062222780376601e-11,
+        "seed": 46
+      },
+      {
+        "real_chain_complex_errors": [
+          1.060713730422412e-12,
+          1.0611254981749057e-12,
+          1.06085098633991e-12
+        ],
+        "real_chain_native_error": 2.1240353232795395e-12,
+        "seed": 47
+      }
+    ],
+    "independent_position_error": 1.1102230246251565e-15,
+    "native_value_error": 4.440892098500626e-15
+  },
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/polish-start-derivatives-v1.json",
+    "sha256": "89cc3bb5b7076aa95f9dd869ec489c76fbf20bba4d14037b29cc5818e80d093b"
+  }
+}

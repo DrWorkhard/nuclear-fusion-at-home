@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Close independent derivative qualification at fixed failed polishing start
+
+- At42ca07e one native bundle replays138 values exactly, original analytic
+  direction<=1.066e-14. All120 pair rows/two directions/three complex steps pass;
+  maximal native difference4.063e-11, step difference1.594e-14. Old18 nonpair FD
+  errors remain<=2.752e-7, original all-row gate stays failed.
+- Separate35-check JSON-geometry/real-loop/weighted-chain-rule audit passes,
+  real/native difference<=4.063e-11, real/complex<=2.804e-11. Explicit native,
+  pair-value and auditor costs retained; no search/physical admission performed.
+- Full suite559 passes with69 known deprecations; Ruff/docs/diff pass. Detail,
+  F-071, index, both READMEs/status/plan/readiness updated. Next separately
+  register a composite-gate SLSQP retry; do not rewrite failed study or thresholds.
+
 ## 2026-09-12 — Implement independent polishing-start derivative qualification and real audit
 
 - Additive source-role mapping, one native-bundle replay, two source-basis

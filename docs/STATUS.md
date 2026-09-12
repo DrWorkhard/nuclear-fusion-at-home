@@ -26,7 +26,7 @@ und Verbesserungen daran zertifizieren.
 | Direkte Randbedingungen | 137 Ungleichungen qualifiziert; SLSQP-Pilot mit zwei exakt gleichen 256-Bundle-Läufen | Ausgewählte Felder bestehen Geometrie und zusätzliche native Metriken; Flux bleibt Faktor 23,3 über Grenze. Nicht konvergiert, nicht zulässig |
 | Lokales Fluxmodell | Quadratische Vorhersage an allen vier festen Testschritten richtig im Vorzeichen; Fehler mindestens 99,907% kleiner als linear | Vollständiger nativer Jacobianvergleich und unabhängiger Kern-Audit bestehen. Lokale Diagnose, noch kein neuer Optimierungserfolg |
 | QI-Gauge | Alle84 alten Traces exakt wiederholt; 25 nfp3-Familien wechseln bei unverändertem Feld die Vorzeichenklasse | Unabhängige Zuordnungs-/Kettenregelprüfung besteht; drei feste Gauge-Steigungen, kein global gauge-unabhängiger Maximum-J-Maßstab |
-| Software | 544 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte Datenregression nach frischem Neuaufbau bestanden;69 bekannte DeprecationWarnings. Ein separater strenger netCDF4-Importtest scheitert an einer dokumentierten Größenwarnung, keine behauptete Warnungs-/ABI-Freiheit; keine Hosted-CI-Ausführung |
+| Software | 559 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Strikte Datenregression nach frischem Neuaufbau bestanden;69 bekannte DeprecationWarnings. Ein separater strenger netCDF4-Importtest scheitert an einer dokumentierten Größenwarnung, keine behauptete Warnungs-/ABI-Freiheit; keine Hosted-CI-Ausführung |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [Ableitungen](optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md),
@@ -92,7 +92,9 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    bestehen, Flux8,955e-8 bleibt Faktor8,955 zu hoch. Die anschließende
    [SLSQP-Nachoptimierung](optimization/SLSQP_POLISH_RESULTS.md) stoppt vor
    Solverstart an vier Abstand-Ableitungen; neun Start-Bundles unabhängig
-   bestätigt, keine neue qualifizierte Konstruktion. Der begrenzte AL-Versuch ist
+   bestätigt, keine neue qualifizierte Konstruktion. Die separate komplexe/
+   reelle Gegenrechnung qualifiziert nun alle120 Paarableitungen an diesem
+   Start; neuer zusammengesetzter Such-Prüfpfad folgt. Der begrenzte AL-Versuch ist
    geschlossen; keine allgemeine Methodenrangfolge oder Pareto-Dominanz.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
    Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
