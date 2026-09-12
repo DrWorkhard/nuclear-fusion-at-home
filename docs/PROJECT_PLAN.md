@@ -36,6 +36,9 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    schweren Installationsarbeiten. Analytische Kontrolle und Startprüfung bestehen.
    Keine nachträgliche Budgeterhöhung oder
    veränderte Annahmekriterien.
+   Ein anschließender [Jacobispalten-Skalierungsversuch](optimization/NATURAL_AUGLAG_JAC_PROTOCOL.md)
+   ist getrennt vorab festgelegt: nur `x_scale=jac` statt1, keine geänderte Physik.
+   Erst nach vollständig geschlossener Recovery/Abnahme ausführen.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 

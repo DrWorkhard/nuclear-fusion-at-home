@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-12 — Preregister a separate classical Jacobian-column-scaled AL pilot
+
+- Saved natural-residual Jacobians have positive column-norm spreads about401
+  and149 at the two frozen states; this is not a matrix condition number or
+  proof of the convergence bottleneck. Official SciPy documentation supports
+  x_scale=jac as a conventional coordinate scaling.
+- New protocol changes only that inner TRF option; all physics, stage rules,
+  budgets, repeat/holdout criteria remain. No physical run until unchanged
+  recovery and all its holdouts are closed. Legacy kernels/runner stay untouched.
+- Five explicit non-mutating adapter controls pass. Reviewed the separate
+  runner diff: adapter import, effective options, label, protocol and provenance
+  only; shared stage/physics kernels and original runner are byte-unchanged.
+  Full suite371 passed/20 known warnings; Ruff/docs/diff pass. Both READMEs/status/
+  plan still correctly report recovery running and no feasible baseline. The
+  separately recorded analytic solver control follows after this preparation commit.
+
 ## 2026-09-12 — Fresh native retry completes all21 phases and six strict tests
 
 - At b32bc88: locked fresh environments, verified sparse sources, newly built
