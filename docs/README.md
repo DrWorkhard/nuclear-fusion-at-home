@@ -159,7 +159,9 @@ alten Traces reproduzieren exakt, aber bei nfp3 wechseln25 Muldenfamilien allein
 durch radiale Feldlinien-Neumarkierung ihre Vorzeichenklasse. Die unabhängige
 Kettenregelprüfung bestätigt die Ursache. Das begrenzt die bisherige Diagnose;
 es ist keine Verbesserung des Magnetfelds. nfp2 beta2 bleibt im getesteten
-Bereich unter allen drei Neumarkierungen negativ.
+Bereich unter allen drei Neumarkierungen negativ. Der anschließende begrenzte
+Flussnormierungstest bestätigt die Feldorientierung, bleibt aber mit19/24
+vollständigen Gitterpässen negativ; fünf poloidale Restabweichungen sind offen.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 

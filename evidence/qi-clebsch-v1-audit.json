@@ -1,0 +1,383 @@
+{
+  "absolute_drift_certified": false,
+  "all_pass": true,
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_qi_clebsch.py",
+    "sha256": "4a3de62a8b499694ebb9969ef8533df0a5c91b4a1d3af1116c00c365d1e05e42"
+  },
+  "grids": [
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-vacuum",
+      "errors": {
+        "cartesian": 0.00010365263581941275,
+        "magnitude": 6.158919709183472e-05,
+        "missing_2pi": 5.283185125479543,
+        "poloidal": 0.00047927652433488616,
+        "toroidal": 0.00011199716441185443,
+        "wrong_sign": 2.000000181700044
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-vacuum",
+      "errors": {
+        "cartesian": 0.00010365263581941275,
+        "magnitude": 6.364493730180795e-05,
+        "missing_2pi": 5.283185125479543,
+        "poloidal": 0.000510738894296031,
+        "toroidal": 0.00011966014714217796,
+        "wrong_sign": 2.000000181700044
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-vacuum",
+      "errors": {
+        "cartesian": 0.00012635547741321937,
+        "magnitude": 9.144837971685618e-05,
+        "missing_2pi": 5.2831851860348555,
+        "poloidal": 0.0004601248805954882,
+        "toroidal": 0.00011711439474332238,
+        "wrong_sign": 2.000000121144731
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-vacuum",
+      "errors": {
+        "cartesian": 0.00012635547741321937,
+        "magnitude": 9.144837971685618e-05,
+        "missing_2pi": 5.2831851860348555,
+        "poloidal": 0.0004850016650656853,
+        "toroidal": 0.0001274986339640941,
+        "wrong_sign": 2.000000121144731
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-vacuum",
+      "errors": {
+        "cartesian": 0.00024698897045806467,
+        "magnitude": 0.00014995238800935906,
+        "missing_2pi": 5.283185207397659,
+        "poloidal": 0.0010242431852818413,
+        "toroidal": 0.00022708530490755057,
+        "wrong_sign": 2.000000099781928
+      },
+      "independently_passed": false,
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-vacuum",
+      "errors": {
+        "cartesian": 0.0002469080811304715,
+        "magnitude": 0.0001499056213897935,
+        "missing_2pi": 5.283238961821843,
+        "poloidal": 0.0010242431852818413,
+        "toroidal": 0.00022695797494348035,
+        "wrong_sign": 1.9999463453577435
+      },
+      "independently_passed": false,
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-beta2",
+      "errors": {
+        "cartesian": 0.00010702781107705059,
+        "magnitude": 5.503596301785631e-05,
+        "missing_2pi": 5.2831853506436275,
+        "poloidal": 0.0004419292143489382,
+        "toroidal": 0.00011452651332859409,
+        "wrong_sign": 1.9999999565359587
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-beta2",
+      "errors": {
+        "cartesian": 0.00010702781107705059,
+        "magnitude": 5.606005699022248e-05,
+        "missing_2pi": 5.2831853506436275,
+        "poloidal": 0.0004723668607385479,
+        "toroidal": 0.0001198931604370695,
+        "wrong_sign": 1.9999999565359587
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-beta2",
+      "errors": {
+        "cartesian": 0.00013003084376567053,
+        "magnitude": 8.236404260903749e-05,
+        "missing_2pi": 5.283069532602317,
+        "poloidal": 0.00047837121670867044,
+        "toroidal": 0.00011971448989527159,
+        "wrong_sign": 2.000115774577269
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-beta2",
+      "errors": {
+        "cartesian": 0.00013003084376567053,
+        "magnitude": 8.236404260903749e-05,
+        "missing_2pi": 5.283284381660348,
+        "poloidal": 0.0004938113746572,
+        "toroidal": 0.00013112838091161025,
+        "wrong_sign": 1.9999009255192386
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-beta2",
+      "errors": {
+        "cartesian": 0.00022336313707282252,
+        "magnitude": 0.00013939471700130245,
+        "missing_2pi": 5.283111687723316,
+        "poloidal": 0.0008350201245699636,
+        "toroidal": 0.00025040689556274544,
+        "wrong_sign": 2.000073619456269
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp2-beta2",
+      "errors": {
+        "cartesian": 0.000223282152040841,
+        "magnitude": 0.00013934557446638294,
+        "missing_2pi": 5.283267684355069,
+        "poloidal": 0.0008350201245699636,
+        "toroidal": 0.00024822491628927575,
+        "wrong_sign": 1.9999176228245172
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-vacuum",
+      "errors": {
+        "cartesian": 0.0002514766812737305,
+        "magnitude": 0.00019541098132709654,
+        "missing_2pi": 5.283184764702687,
+        "poloidal": 0.0006134918858047183,
+        "toroidal": 0.00024247818500927333,
+        "wrong_sign": 2.0000005424768994
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-vacuum",
+      "errors": {
+        "cartesian": 0.0002514766812737305,
+        "magnitude": 0.00019541098132709654,
+        "missing_2pi": 5.283184519953188,
+        "poloidal": 0.0006134918858047183,
+        "toroidal": 0.00024210682697582147,
+        "wrong_sign": 2.0000007872263974
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-vacuum",
+      "errors": {
+        "cartesian": 0.0002938775723173507,
+        "magnitude": 0.0003591503435088666,
+        "missing_2pi": 5.283187445393798,
+        "poloidal": 0.00043502104935803085,
+        "toroidal": 0.00026041827342192513,
+        "wrong_sign": 1.9999978617857888
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-vacuum",
+      "errors": {
+        "cartesian": 0.0003072473634590979,
+        "magnitude": 0.0003591503435088666,
+        "missing_2pi": 5.283214168961341,
+        "poloidal": 0.00043502104935803085,
+        "toroidal": 0.00026585187621730867,
+        "wrong_sign": 1.999971138218246
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-vacuum",
+      "errors": {
+        "cartesian": 0.0004320949912411843,
+        "magnitude": 0.0005199264556964287,
+        "missing_2pi": 5.283190558124765,
+        "poloidal": 0.00047187266808828025,
+        "toroidal": 0.00036965379640978687,
+        "wrong_sign": 1.999994749054821
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-vacuum",
+      "errors": {
+        "cartesian": 0.0004320949912411843,
+        "magnitude": 0.0005199264556964287,
+        "missing_2pi": 5.283239124909723,
+        "poloidal": 0.0004932627045905106,
+        "toroidal": 0.0004290169612296929,
+        "wrong_sign": 1.999946182269864
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.75
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-beta2",
+      "errors": {
+        "cartesian": 0.00023203559832071706,
+        "magnitude": 0.00014941431733651568,
+        "missing_2pi": 5.2831718758961825,
+        "poloidal": 0.000634000576372866,
+        "toroidal": 0.00023901721164973193,
+        "wrong_sign": 2.000013431283403
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.25
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-beta2",
+      "errors": {
+        "cartesian": 0.00023196463676799955,
+        "magnitude": 0.00014936719487471884,
+        "missing_2pi": 5.283150810436334,
+        "poloidal": 0.000634000576372866,
+        "toroidal": 0.00023637258418164137,
+        "wrong_sign": 2.000034496743252
+      },
+      "independently_passed": true,
+      "resolution": 32,
+      "surface": 0.25
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-beta2",
+      "errors": {
+        "cartesian": 0.0003730261614199551,
+        "magnitude": 0.0003196356553879729,
+        "missing_2pi": 5.2831853102761634,
+        "poloidal": 0.0010569673660862317,
+        "toroidal": 0.0003188763914570708,
+        "wrong_sign": 1.9999999969034234
+      },
+      "independently_passed": false,
+      "resolution": 16,
+      "surface": 0.5
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-beta2",
+      "errors": {
+        "cartesian": 0.0003914198783946436,
+        "magnitude": 0.0003305958181852152,
+        "missing_2pi": 5.2831701193225875,
+        "poloidal": 0.0012189904682633579,
+        "toroidal": 0.0003163635266381047,
+        "wrong_sign": 2.000015187856998
+      },
+      "independently_passed": false,
+      "resolution": 32,
+      "surface": 0.5
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-beta2",
+      "errors": {
+        "cartesian": 0.000715199026214589,
+        "magnitude": 0.0005134380971334001,
+        "missing_2pi": 5.283113720835146,
+        "poloidal": 0.0009411172475766573,
+        "toroidal": 0.00044543232122001527,
+        "wrong_sign": 2.000071586344439
+      },
+      "independently_passed": true,
+      "resolution": 16,
+      "surface": 0.75
+    },
+    {
+      "arithmetic_and_grid_identity": true,
+      "case": "nfp3-beta2",
+      "errors": {
+        "cartesian": 0.000714954453137856,
+        "magnitude": 0.0005132039900405414,
+        "missing_2pi": 5.283240741492638,
+        "poloidal": 0.0016005472646979447,
+        "toroidal": 0.00044218075135718114,
+        "wrong_sign": 1.9999445656869472
+      },
+      "independently_passed": false,
+      "resolution": 32,
+      "surface": 0.75
+    }
+  ],
+  "new_field_evaluations": 0,
+  "physical_screen_pass": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "0dca1eca6d99adcada7b1c7ee7e0f76b72d85524",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-clebsch-v1.json",
+    "sha256": "dc18fadf67c1cb01b40ad97a58585259c386746987a2b24f1511d1760d209df1"
+  }
+}

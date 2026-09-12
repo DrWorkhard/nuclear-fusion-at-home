@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Signed-flux screen completes with five preserved poloidal failures
+
+- All24 registered QI grids complete at0dca1ec; field-vector/magnitude/toroidal
+  checks pass1e-3, but five poloidal checks fail, max1.6005472646979447e-3.
+  Wrong-sign/missing2pi controls are rejected on every grid. No tolerance changes.
+- Separate component-wise auditor exactly confirms all24 arrays/metrics/grids
+  and the19/24 full-screen result. Workerexit2 is regular diagnostic rejection,
+  not IO failure; free>=6134104064Bytes. No new equilibrium or drift frequency.
+- F-066/detail/index and both READMEs/status/plan updated. Product interpolation
+  is only a candidate explanation; separately test half-grid residuals next.
+  All17 relevant tests pass (19 known warnings); Ruff/docs/diff pass before commit.
+
 ## 2026-09-12 — Implement two-representation Clebsch screen and separate array replay
 
 - Additive symmetric-Wout sampler retains old linear interpolation/tracer code;

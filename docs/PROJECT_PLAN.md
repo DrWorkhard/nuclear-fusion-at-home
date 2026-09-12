@@ -72,6 +72,11 @@ Die [Koordinatenanalyse](qi/QI_DRIFT_COORDINATES.md) erklärt die Transformation
 des vollständigen Driftpaares. Nächster Physiktest: absolute Normalisierung und
 direkte Führungszentrum-Drift gegen Wirkungsableitung, mit identischer Phase und
 geprüften Strom-/Druckannahmen. Reine Algebra ersetzt diese Gegenrechnung nicht.
+Der erste separate [Flussnormierungstest](qi/QI_CLEBSCH_RESULTS.md) bestätigt
+die Feldorientierung, bleibt aber mit19/24 vollständigen Gitterpässen negativ.
+Als nächsten Teiltest die fünf poloidalen Restabweichungen auf ursprünglichen
+Halbflächen und unter radialer Produktinterpolation getrennt prüfen, ohne
+nachträgliche Grenzlockerung.
 
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |

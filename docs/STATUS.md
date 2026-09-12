@@ -34,6 +34,11 @@ Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [radiale Wirkung](qi/QI_RADIAL_ACTION_RESULTS.md) und
 [zweiter Feldlinienrechner](qi/QI_PRESSURE_TRACE_RESULTS.md).
 
+Zusätzlicher Schritt1-Teiltest: Die signierte QI-Flusskonvention stimmt in
+24 Feldvektor-/Betragsvergleichen; fünf poloidale Identitäten verfehlen aber
+die feste Grenze. Der unabhängige Audit bestätigt19/24 vollständige Gitterpässe,
+nicht die Freigabe absoluter Drift. [Ergebnis](qi/QI_CLEBSCH_RESULTS.md).
+
 ## Warum weiterhin keine zulässige Baseline vorliegt
 
 Die räumlichen Kandidaten erreichen im feineren Holdout einen Roh-Quadratic-Flux

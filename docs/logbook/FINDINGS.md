@@ -1,5 +1,18 @@
 # Findings log
 
+## F-066 — Signed QI flux convention supported, full representation screen remains negative
+
+**Class:** preregistered Wout representation check with independent point-array audit
+**Date:** 2026-09-12
+
+All24 grids of four fixed Goodman cases complete and independently replay exactly.
+Toroidal Clebsch identity, Cartesian vectors and |B| agree within1e-3; opposite
+sign/missing2pi controls fail strongly. Five poloidal identities exceed the fixed
+limit, maximum1.6005473e-3;19/24 grids pass all requirements. No threshold change,
+absolute drift qualification or independent equilibrium validation. Radial product
+interpolation is a hypothesis for residuals, not yet an established cause. See
+[bounded result](../qi/QI_CLEBSCH_RESULTS.md).
+
 ## F-065 — Five reported zero-flux archive fields fail the independent raw-flux gate
 
 **Class:** source-preserving static reconstruction with independent field replay
