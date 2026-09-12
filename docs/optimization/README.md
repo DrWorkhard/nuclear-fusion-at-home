@@ -9,6 +9,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 ## Dokumente
 
 - [Feste Geometrie, optimale Ströme: Protokoll](FIXED_GEOMETRY_CURRENT_PROTOCOL.md) — Zwei unveränderte AL-/SLSQP-Spulenformen, exaktes dreidimensionales Strom-LS-Teilproblem, unabhängiges QR/Provenienz-/Feld-Holdout; klassische Diagnose, noch nicht ausgeführt.
+- [Feste Geometrie, optimale Ströme: Vorbereitung](FIXED_GEOMETRY_CURRENT_RESULTS.md) — Acht analytische SVD-/separate-QR-/Rang-/Stromsummen-Kontrollen bestehen; native Probes/Studie noch nicht ausgeführt, kein neuer Entwurfsbefund.
 
 - [SLSQP mit zusammengesetztem Startgate: Protokoll](SLSQP_COMPOSITE_PROTOCOL.md) — Identischer AL-Start und Physik; neuer vollständiger Start-Jacobian-/alter9-Bundle-Replay, unabhängige Paarqualifikation plus unveränderte Nicht-Paar-FD-Grenze, zwei2048-Bundle-Suchen.
 - [SLSQP mit zusammengesetztem Startgate: Ergebnis](SLSQP_COMPOSITE_RESULTS.md) — Beide2048-Bundle-Arme exakt wiederholt/auditiert, alle feinen Abnahmen geschlossen; Geometrie/nativ bestehen, Flux8,191665e-8 bleibt unzulässig. Keine Pareto-Dominanz.

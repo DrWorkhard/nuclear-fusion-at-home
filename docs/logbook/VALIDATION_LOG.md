@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Qualify independent linear current fit kernels on analytic controls
+
+- Fixed three-column SVD with explicit rank/condition/normal-rest qualification;
+  independent QR with scalar-sum back substitution, separate total/scale helper.
+  Rank/conditioning failures return no alleged minimizer.
+- Eight analytical controls pass, including nonzero and exactly representable
+  zero residuals, nonorthogonal matrices, invalid inputs and fixed current sum.
+  Initial long-line Ruff failure corrected before physical work; Ruff/docs/diff pass.
+- Detail/index and both READMEs/status/plan reviewed, no physical source used or
+  new improvement measured. Finest mesh scan has completed; its prefix/spatial
+  audit is still running. Native current diagnostic follows only after closure.
+
 ## 2026-09-12 — Register bounded fixed-geometry current optimization before another shape search
 
 - Source review confirms the frozen objective is affine in three current DOFs
