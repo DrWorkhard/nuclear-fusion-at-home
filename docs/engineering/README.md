@@ -12,6 +12,7 @@ Aktueller Schluss: Alle sechs untersuchten Netze bestehen intrinsische Qualität
 - [Nichtlokale Netzüberschneidung: Protokoll](MESH_NONLOCAL_PROTOCOL.md) — Sechs unveränderte Netze, Paare ohne gemeinsame Vertexindizes, konservative Trenn-/Innenpunktnachweise und unabhängige vollständige Paarbilanz.
 - [Nichtlokale Netzüberschneidung: Ergebnis](MESH_NONLOCAL_RESULTS.md) — Fünf vollständige Pässe und ein korrekt unvollständiger Paarcap; alle3.358.644 Einzelpaar-Nachweise unabhängig bestätigt, keine vollständige Volumen-/Mechanikfreigabe.
 - [Nichtlokale Netzüberschneidung: Retry](MESH_NONLOCAL_RETRY_PROTOCOL.md) — Explizite historische Git-/SHA-Auflösung ausschließlich für alten Quellcode; gleiche Netze, numerische Kerne, Grenzen und vollständige Matrix unter neuen Pfaden.
+- [Feinster Netzfall: Abschlussprotokoll](MESH_FINE_COMPLETION_PROTOCOL.md) — Getrennte Wiederholung nur des unvollständigen h=0,010-Netzes, vier Millionen Aufrufe/1200s, exakter alter2M-Präfix und erneuter unabhängiger Gesamt-Audit; noch nicht ausgeführt.
 
 - [FREE_BOUNDARY_PROTOCOL ](FREE_BOUNDARY_PROTOCOL.md) — Protokoll: Unveränderlicher Vakuum-Holdout der Plasmareaktion; getrennt von Optimierung und ohne Rückschreiben.
 - [MESH_INTEGRITY_PROTOCOL ](MESH_INTEGRITY_PROTOCOL.md) — Protokoll: Prüfung aller sechs eingefrorenen Netze auf intrinsische Qualität, Orientierung und Randtopologie.

@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Register separate completion study for the single capped finest mesh
+
+- Original six-mesh v2 remains5/6 complete; new fixed4M-call/1200s single-mesh
+  study requires exact old2M witness prefix and all original BVH node/event
+  prefixes, plus independent complete spatial audit. No changed mesh/thresholds.
+- Budget motivated by closed274s/2M work, not an assertion of linear scaling;
+  all new calls counted separately. Old five complete meshes are referenced.
+  Execution strictly after current QI coordinate study/audit closes.
+- Protocol/index and both READMEs/status/plan reviewed; no new spatial result.
+  Documentation/diff checks pass before registration commit.
+
 ## 2026-09-12 — Qualify full QI coordinate study and independent audit on toy matrix
 
 - Exact12+48 source rows, old128-grid replay before any new coordinates, full
