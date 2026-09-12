@@ -18,12 +18,12 @@ SLSQP pilot passes the tested geometry and additional native checks, but its
 selected candidate's independently measured raw flux remains 23.3 times the limit;
 the budget-limited run does not establish convergence.
 
-The latest [bounded diagnostic](docs/optimization/DIRECT_DESCENT_COMPOSITE_RESULTS.md)
-finds that larger steps predicted to reduce flux by a linear model instead
-increase it. A separately qualified complex-step check supports the pair-clearance
-derivatives at the frozen states; the original failed finite-difference screen is
-retained. Next: preregister and test the quadratic spatial-field model against all
-four frozen probes before another search. These probes are not admitted designs.
+The [quadratic field-model diagnostic](docs/optimization/QUADRATIC_FIELD_MODEL_RESULTS.md)
+predicts the correct change sign on all four frozen probes and reduces prediction
+error by at least 99.907% versus the linear model. Full native Jacobian comparisons
+and a separate core audit pass. Earlier failed checks remain recorded. Next:
+preregister a constrained classical search using this Gauss-Newton curvature,
+then independently validate its output. The diagnostic probes are not admitted designs.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

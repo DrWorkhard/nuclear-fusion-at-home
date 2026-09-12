@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Quadratisches Feldmodell: Ergebnis](QUADRATIC_FIELD_MODEL_RESULTS.md) — Alle vier Vorzeichen stimmen, mindestens 99,907% geringerer Vorhersagefehler als linear; vollständiger nativer Matrixvergleich und unabhängiger Kern-Audit bestehen.
 - [Quadratisches Feldmodell: Protokoll](QUADRATIC_FIELD_MODEL_PROTOCOL.md) — Vorab festgelegte Qualifikation und Vorhersageprüfung an allen vier gespeicherten Testschritten; keine neue Optimierung.
 - [Lokale Proben mit unabhängiger Ableitungsprüfung](DIRECT_DESCENT_COMPOSITE_RESULTS.md) — Vier echte Wertprobes: der kleinste Schritt verbessert leicht, größere lineare Abstiege verschlechtern den Flux stark; motiviert quadratisches Feldmodell.
 - [Komplexe-Schritt-Abstandsprüfung: Ergebnis](COMPLEX_CLEARANCE_RESULTS.md) — Alle 120 Paar-Richtungsableitungen stimmen an beiden festen Zuständen bis rund 2,4e-12; der alte Differenzentest bleibt als Fehlschlag erhalten.

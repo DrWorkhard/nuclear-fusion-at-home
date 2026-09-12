@@ -1,5 +1,19 @@
 # Findings log
 
+## F-057 — Natural quadratic flux model predicts all four frozen probe changes
+
+**Class:** independently qualified local model, not a construction result
+**Date:** 2026-09-12
+
+At both original and selected119 states the complete batched spatial Jacobian
+matches native single-point reference rows within 8.882e-16. The GN model predicts
+all four actual change signs and reduces linear-model absolute error by at least
+99.907%, exceeding the predeclared 90% test. Missing nonlinear residual curvature
+is measured explicitly; this is not a full-Hessian or global-optimizer claim.
+A separate NumPy audit recomputes 23 checks without importing the model helper.
+Next qualify a classical constrained search using this curvature, then apply
+unchanged independent admission. See [results](../optimization/QUADRATIC_FIELD_MODEL_RESULTS.md).
+
 ## F-056 — Larger linear-model descents strongly increase the actual flux objective
 
 **Class:** bounded model/physical-value diagnostic with independent derivative gate

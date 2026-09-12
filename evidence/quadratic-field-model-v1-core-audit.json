@@ -1,0 +1,71 @@
+{
+  "all_pass": true,
+  "checks": {
+    "exact_state_and_probe_set": true,
+    "original/finest_directions": true,
+    "original/native_gradient": true,
+    "original/native_matrix": true,
+    "probe-0/raw_flux": true,
+    "probe-0/reported_numbers": true,
+    "probe-0/step": true,
+    "probe-0/usefulness_flag": true,
+    "probe-1/raw_flux": true,
+    "probe-1/reported_numbers": true,
+    "probe-1/step": true,
+    "probe-1/usefulness_flag": true,
+    "probe-2/raw_flux": true,
+    "probe-2/reported_numbers": true,
+    "probe-2/step": true,
+    "probe-2/usefulness_flag": true,
+    "probe-3/raw_flux": true,
+    "probe-3/reported_numbers": true,
+    "probe-3/step": true,
+    "probe-3/usefulness_flag": true,
+    "selected119/finest_directions": true,
+    "selected119/native_gradient": true,
+    "selected119/native_matrix": true
+  },
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_quadratic_field_model.py",
+    "sha256": "de15da0cc5cd4ecddc4d710ee66cd8c5438b3bb2de9f93a222855eec62edca76"
+  },
+  "input": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/quadratic-field-model-v1.json",
+    "sha256": "3109257cc8500e775ff14d0ddef74c32771b1da0721f9bbf1f8c4ad818379e9c"
+  },
+  "recomputed_probes": [
+    {
+      "quadratic_to_linear_error_ratio": 0.0009296729186669937,
+      "radius": 0.01,
+      "state": "original",
+      "usefulness_pass": true
+    },
+    {
+      "quadratic_to_linear_error_ratio": 1.516926547418391e-06,
+      "radius": 0.0001,
+      "state": "selected119",
+      "usefulness_pass": true
+    },
+    {
+      "quadratic_to_linear_error_ratio": 3.093787786690704e-05,
+      "radius": 0.001,
+      "state": "selected119",
+      "usefulness_pass": true
+    },
+    {
+      "quadratic_to_linear_error_ratio": 3.2450570098346084e-05,
+      "radius": 0.01,
+      "state": "selected119",
+      "usefulness_pass": true
+    }
+  ],
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "5eb5c7f01f18eeeb30f891189833fa07614418a2",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "scope": "core-only raw-array replay; no new native solves or candidate admission"
+}

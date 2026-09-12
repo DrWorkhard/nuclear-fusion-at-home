@@ -1,0 +1,975 @@
+{
+  "additional_work": {
+    "batched_coil_contractions": 32,
+    "batched_current_VJP_requests": 32,
+    "batched_geometry_derivative_requests": 64,
+    "full_grid_B_requests": 30,
+    "local_point_B_requests": 2048,
+    "local_point_VJP_requests": 2048
+  },
+  "checks": {
+    "both_state_qualifications": true,
+    "four_probe_replays": true
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/diagnose_quadratic_field_model.py",
+      "sha256": "7741e33aefbd9a1fd2f6ef33bf21f2085bdb1a47b032414d2137139718b3df6a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/quadratic_flux_model.py",
+      "sha256": "c9ace240da6d7e1a0c4e95959af1181c7551237965f2ad72c9fc7bf06d15cabd"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/evidence_integrity.py",
+      "sha256": "65655c4a70458bfc8f29bade1bc7e0c4f3eb791da6b6199ee89066a3a179263d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/batched_field_jacobian.py",
+      "sha256": "6e79e1f3643836a0a86b0fc19b683fbbddab3bc568617856c0d02cef1138446d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/local_field_jacobian.py",
+      "sha256": "b6787d4bcfa966d69594fc9d1742e7124c97fd6c7fe0fa7b9d83560485469595"
+    }
+  ],
+  "elapsed_seconds": 7.114877916988917,
+  "historical_batched_code_lineage": [
+    {
+      "git_path": "scripts/qualify_spatial_flux.py",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_spatial_flux.py",
+      "sha256": "121c114789e66127d56d274fda3919b64df3062c57ca995f0c5cb91093a0b702",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "historical_git"
+    },
+    {
+      "git_path": "scripts/qualify_optimization_oracle.py",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "sha256": "8eaaeb159e81254c87da60d3df4a1a50a8b7ae6b9cf0f9a6174ba4efc1c22bde",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "historical_git"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/budgeted_oracle.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/budgeted_oracle.py",
+      "sha256": "34949fa1f0a6a56e1406e5ea1bb763b1b2de6acefa12e7bbf958934bc1e18c3f",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "current"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/affine_coordinates.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/affine_coordinates.py",
+      "sha256": "6b0b1f77da24460b486d167fc745b3a8bbe3ba58e96814b97ea3c0d0d471040f",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "current"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "sha256": "e504e6a600aa0f8ff141d0589b31829f421dbd0ba4601889b646ac11b734a967",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "current"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "sha256": "30c294b717c8f4905730d2d3241a3c73db1196d0494a6811441cffc3d796446f",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "current"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "current"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/local_field_jacobian.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/local_field_jacobian.py",
+      "sha256": "b6787d4bcfa966d69594fc9d1742e7124c97fd6c7fe0fa7b9d83560485469595",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "current"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/batched_field_jacobian.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/batched_field_jacobian.py",
+      "sha256": "6e79e1f3643836a0a86b0fc19b683fbbddab3bc568617856c0d02cef1138446d",
+      "source_revision": "d6694f581d253dd0c737ef073af91515ae00138a",
+      "status": "current"
+    }
+  ],
+  "host": {
+    "captured_at": "2026-09-12T04:56:41.357765+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "model_usefulness_pass": true,
+  "native_backend_work": {
+    "B_grid_requests": 6,
+    "B_vjp_requests": 2,
+    "coil_pair_samples": 28800000,
+    "curvature_derivative_requests": 8,
+    "curvature_requests": 24,
+    "evaluations": 6,
+    "jacobian_evaluations": 2,
+    "native_gradient_requests": 24,
+    "native_metric_requests": 72,
+    "plasma_pair_samples": 19660800,
+    "position_derivative_requests": 32,
+    "position_requests": 96
+  },
+  "optimization_performed": false,
+  "physical_owner_map": {
+    "Current1": "Current5",
+    "Current2": "Current6",
+    "Current3": "Current7",
+    "Current4": "Current8",
+    "CurveXYZFourier5": "CurveXYZFourier9",
+    "CurveXYZFourier6": "CurveXYZFourier10",
+    "CurveXYZFourier7": "CurveXYZFourier11",
+    "CurveXYZFourier8": "CurveXYZFourier12"
+  },
+  "preparation": {
+    "case": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/cases/lpqa_engineering_v1p1_lbfgsb.yaml",
+      "sha256": "4a0bd130270fc887988ac33de974e04b6fac6da2da2faaa0e66a4f49535b64b9"
+    },
+    "constraint_terms": {
+      "3": "total_length",
+      "4": "coil_curvature",
+      "5": "coil_mean_squared_curvature",
+      "6": "coil_arclength_variation",
+      "7": "linking_number"
+    },
+    "degrees_of_freedom": [
+      "Current5:x0",
+      "Current6:x0",
+      "Current7:x0",
+      "CurveXYZFourier10:xc(0)",
+      "CurveXYZFourier10:xs(1)",
+      "CurveXYZFourier10:xc(1)",
+      "CurveXYZFourier10:xs(2)",
+      "CurveXYZFourier10:xc(2)",
+      "CurveXYZFourier10:xs(3)",
+      "CurveXYZFourier10:xc(3)",
+      "CurveXYZFourier10:xs(4)",
+      "CurveXYZFourier10:xc(4)",
+      "CurveXYZFourier10:xs(5)",
+      "CurveXYZFourier10:xc(5)",
+      "CurveXYZFourier10:xs(6)",
+      "CurveXYZFourier10:xc(6)",
+      "CurveXYZFourier10:xs(7)",
+      "CurveXYZFourier10:xc(7)",
+      "CurveXYZFourier10:xs(8)",
+      "CurveXYZFourier10:xc(8)",
+      "CurveXYZFourier10:yc(0)",
+      "CurveXYZFourier10:ys(1)",
+      "CurveXYZFourier10:yc(1)",
+      "CurveXYZFourier10:ys(2)",
+      "CurveXYZFourier10:yc(2)",
+      "CurveXYZFourier10:ys(3)",
+      "CurveXYZFourier10:yc(3)",
+      "CurveXYZFourier10:ys(4)",
+      "CurveXYZFourier10:yc(4)",
+      "CurveXYZFourier10:ys(5)",
+      "CurveXYZFourier10:yc(5)",
+      "CurveXYZFourier10:ys(6)",
+      "CurveXYZFourier10:yc(6)",
+      "CurveXYZFourier10:ys(7)",
+      "CurveXYZFourier10:yc(7)",
+      "CurveXYZFourier10:ys(8)",
+      "CurveXYZFourier10:yc(8)",
+      "CurveXYZFourier10:zc(0)",
+      "CurveXYZFourier10:zs(1)",
+      "CurveXYZFourier10:zc(1)",
+      "CurveXYZFourier10:zs(2)",
+      "CurveXYZFourier10:zc(2)",
+      "CurveXYZFourier10:zs(3)",
+      "CurveXYZFourier10:zc(3)",
+      "CurveXYZFourier10:zs(4)",
+      "CurveXYZFourier10:zc(4)",
+      "CurveXYZFourier10:zs(5)",
+      "CurveXYZFourier10:zc(5)",
+      "CurveXYZFourier10:zs(6)",
+      "CurveXYZFourier10:zc(6)",
+      "CurveXYZFourier10:zs(7)",
+      "CurveXYZFourier10:zc(7)",
+      "CurveXYZFourier10:zs(8)",
+      "CurveXYZFourier10:zc(8)",
+      "CurveXYZFourier11:xc(0)",
+      "CurveXYZFourier11:xs(1)",
+      "CurveXYZFourier11:xc(1)",
+      "CurveXYZFourier11:xs(2)",
+      "CurveXYZFourier11:xc(2)",
+      "CurveXYZFourier11:xs(3)",
+      "CurveXYZFourier11:xc(3)",
+      "CurveXYZFourier11:xs(4)",
+      "CurveXYZFourier11:xc(4)",
+      "CurveXYZFourier11:xs(5)",
+      "CurveXYZFourier11:xc(5)",
+      "CurveXYZFourier11:xs(6)",
+      "CurveXYZFourier11:xc(6)",
+      "CurveXYZFourier11:xs(7)",
+      "CurveXYZFourier11:xc(7)",
+      "CurveXYZFourier11:xs(8)",
+      "CurveXYZFourier11:xc(8)",
+      "CurveXYZFourier11:yc(0)",
+      "CurveXYZFourier11:ys(1)",
+      "CurveXYZFourier11:yc(1)",
+      "CurveXYZFourier11:ys(2)",
+      "CurveXYZFourier11:yc(2)",
+      "CurveXYZFourier11:ys(3)",
+      "CurveXYZFourier11:yc(3)",
+      "CurveXYZFourier11:ys(4)",
+      "CurveXYZFourier11:yc(4)",
+      "CurveXYZFourier11:ys(5)",
+      "CurveXYZFourier11:yc(5)",
+      "CurveXYZFourier11:ys(6)",
+      "CurveXYZFourier11:yc(6)",
+      "CurveXYZFourier11:ys(7)",
+      "CurveXYZFourier11:yc(7)",
+      "CurveXYZFourier11:ys(8)",
+      "CurveXYZFourier11:yc(8)",
+      "CurveXYZFourier11:zc(0)",
+      "CurveXYZFourier11:zs(1)",
+      "CurveXYZFourier11:zc(1)",
+      "CurveXYZFourier11:zs(2)",
+      "CurveXYZFourier11:zc(2)",
+      "CurveXYZFourier11:zs(3)",
+      "CurveXYZFourier11:zc(3)",
+      "CurveXYZFourier11:zs(4)",
+      "CurveXYZFourier11:zc(4)",
+      "CurveXYZFourier11:zs(5)",
+      "CurveXYZFourier11:zc(5)",
+      "CurveXYZFourier11:zs(6)",
+      "CurveXYZFourier11:zc(6)",
+      "CurveXYZFourier11:zs(7)",
+      "CurveXYZFourier11:zc(7)",
+      "CurveXYZFourier11:zs(8)",
+      "CurveXYZFourier11:zc(8)",
+      "CurveXYZFourier12:xc(0)",
+      "CurveXYZFourier12:xs(1)",
+      "CurveXYZFourier12:xc(1)",
+      "CurveXYZFourier12:xs(2)",
+      "CurveXYZFourier12:xc(2)",
+      "CurveXYZFourier12:xs(3)",
+      "CurveXYZFourier12:xc(3)",
+      "CurveXYZFourier12:xs(4)",
+      "CurveXYZFourier12:xc(4)",
+      "CurveXYZFourier12:xs(5)",
+      "CurveXYZFourier12:xc(5)",
+      "CurveXYZFourier12:xs(6)",
+      "CurveXYZFourier12:xc(6)",
+      "CurveXYZFourier12:xs(7)",
+      "CurveXYZFourier12:xc(7)",
+      "CurveXYZFourier12:xs(8)",
+      "CurveXYZFourier12:xc(8)",
+      "CurveXYZFourier12:yc(0)",
+      "CurveXYZFourier12:ys(1)",
+      "CurveXYZFourier12:yc(1)",
+      "CurveXYZFourier12:ys(2)",
+      "CurveXYZFourier12:yc(2)",
+      "CurveXYZFourier12:ys(3)",
+      "CurveXYZFourier12:yc(3)",
+      "CurveXYZFourier12:ys(4)",
+      "CurveXYZFourier12:yc(4)",
+      "CurveXYZFourier12:ys(5)",
+      "CurveXYZFourier12:yc(5)",
+      "CurveXYZFourier12:ys(6)",
+      "CurveXYZFourier12:yc(6)",
+      "CurveXYZFourier12:ys(7)",
+      "CurveXYZFourier12:yc(7)",
+      "CurveXYZFourier12:ys(8)",
+      "CurveXYZFourier12:yc(8)",
+      "CurveXYZFourier12:zc(0)",
+      "CurveXYZFourier12:zs(1)",
+      "CurveXYZFourier12:zc(1)",
+      "CurveXYZFourier12:zs(2)",
+      "CurveXYZFourier12:zc(2)",
+      "CurveXYZFourier12:zs(3)",
+      "CurveXYZFourier12:zc(3)",
+      "CurveXYZFourier12:zs(4)",
+      "CurveXYZFourier12:zc(4)",
+      "CurveXYZFourier12:zs(5)",
+      "CurveXYZFourier12:zc(5)",
+      "CurveXYZFourier12:zs(6)",
+      "CurveXYZFourier12:zc(6)",
+      "CurveXYZFourier12:zs(7)",
+      "CurveXYZFourier12:zc(7)",
+      "CurveXYZFourier12:zs(8)",
+      "CurveXYZFourier12:zc(8)",
+      "CurveXYZFourier9:xc(0)",
+      "CurveXYZFourier9:xs(1)",
+      "CurveXYZFourier9:xc(1)",
+      "CurveXYZFourier9:xs(2)",
+      "CurveXYZFourier9:xc(2)",
+      "CurveXYZFourier9:xs(3)",
+      "CurveXYZFourier9:xc(3)",
+      "CurveXYZFourier9:xs(4)",
+      "CurveXYZFourier9:xc(4)",
+      "CurveXYZFourier9:xs(5)",
+      "CurveXYZFourier9:xc(5)",
+      "CurveXYZFourier9:xs(6)",
+      "CurveXYZFourier9:xc(6)",
+      "CurveXYZFourier9:xs(7)",
+      "CurveXYZFourier9:xc(7)",
+      "CurveXYZFourier9:xs(8)",
+      "CurveXYZFourier9:xc(8)",
+      "CurveXYZFourier9:yc(0)",
+      "CurveXYZFourier9:ys(1)",
+      "CurveXYZFourier9:yc(1)",
+      "CurveXYZFourier9:ys(2)",
+      "CurveXYZFourier9:yc(2)",
+      "CurveXYZFourier9:ys(3)",
+      "CurveXYZFourier9:yc(3)",
+      "CurveXYZFourier9:ys(4)",
+      "CurveXYZFourier9:yc(4)",
+      "CurveXYZFourier9:ys(5)",
+      "CurveXYZFourier9:yc(5)",
+      "CurveXYZFourier9:ys(6)",
+      "CurveXYZFourier9:yc(6)",
+      "CurveXYZFourier9:ys(7)",
+      "CurveXYZFourier9:yc(7)",
+      "CurveXYZFourier9:ys(8)",
+      "CurveXYZFourier9:yc(8)",
+      "CurveXYZFourier9:zc(0)",
+      "CurveXYZFourier9:zs(1)",
+      "CurveXYZFourier9:zc(1)",
+      "CurveXYZFourier9:zs(2)",
+      "CurveXYZFourier9:zc(2)",
+      "CurveXYZFourier9:zs(3)",
+      "CurveXYZFourier9:zc(3)",
+      "CurveXYZFourier9:zs(4)",
+      "CurveXYZFourier9:zc(4)",
+      "CurveXYZFourier9:zs(5)",
+      "CurveXYZFourier9:zc(5)",
+      "CurveXYZFourier9:zs(6)",
+      "CurveXYZFourier9:zc(6)",
+      "CurveXYZFourier9:zs(7)",
+      "CurveXYZFourier9:zc(7)",
+      "CurveXYZFourier9:zs(8)",
+      "CurveXYZFourier9:zc(8)"
+    ],
+    "guarded_search_targets": {
+      "component_index": 4,
+      "curvature_resolution": 1600,
+      "curvature_target_reactor": 0.99,
+      "field_quadrature_unchanged": 200,
+      "flux_target": 8e-09,
+      "length_target_reactor": 219.9
+    },
+    "preparation_is_shared_and_outside_per_arm_budget": true,
+    "promotion": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/quadratic-field-model-v1/promotion.npz",
+      "sha256": "ca8d358c7a9071e93565226c58113d4971d480c8a67d4451cfa3ae50595003f4"
+    },
+    "promotion_relative_B_difference": 0.0,
+    "regularizations_preserved": true,
+    "scales": [
+      1.0,
+      0.980541270386891,
+      0.980541270386891,
+      0.9805412703868909,
+      1.0098736979848935,
+      1.0400835912590245,
+      0.961461182931938,
+      1.0
+    ],
+    "shared_preparation_seconds": 0.36965387500822544,
+    "source": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/fixtures/rejected-lpqa-warmstart/field.json",
+      "sha256": "ef38a96aa6820de08d187f6362645b5450f009034706b06b2722566da9631e8c"
+    },
+    "source_parent_sha256": "7ae1b1968b8ca34fa94cc0e67cfad41577219ed43bcd902b695c7b7cc04ecd2e",
+    "source_transformation": "one terminal LF appended to archived producer bytes",
+    "surface": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+      "sha256": "4c6ba4bc391a69b5b6a5e84ff82df9b0ce92e20c42f2a47f89a9283fd5bc3458"
+    },
+    "thresholds": {
+      "a0": 10.100286074838271,
+      "arclength_variation_threshold": 102.0157787935719,
+      "cc_threshold": 0.10890780635810987,
+      "coil_width": 0.039602838675676315,
+      "cs_threshold": 0.12870922569594803,
+      "curvature_threshold": 10.100286074838271,
+      "finite_build_width": 0.05,
+      "flux_threshold": 8e-09,
+      "force_threshold": 0.0,
+      "length_threshold": 21.771660561953055,
+      "major_radius": 1.0098736979848935,
+      "minor_radius": 0.16831206437162433,
+      "msc_threshold": 10.100286074838271,
+      "torque_threshold": 0.0,
+      "torsion_threshold": 10.100286074838271
+    }
+  },
+  "prior_batched_qualification": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/spatial-flux-batched-v1-retry1.json",
+    "sha256": "c87d2c23c588e8a669c7c72e8a66217e5ba03edaa2f598fa14097606b4ad46b6"
+  },
+  "probes": [
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/quadratic-field-model-v1/probe-2.npz",
+        "sha256": "939ddf360b66ac693c963fae735e94283145c7a8433ea807ca352f9ec4ee4a4b"
+      },
+      "checks": {
+        "linear_prediction_replay": true,
+        "matrix_identity": true,
+        "projected_raw_flux": true,
+        "remainder_identity": true,
+        "source_values": true
+      },
+      "prediction": {
+        "actual": 2.8401940928171987,
+        "actual_change": 1.7408298118919325,
+        "baseline": 1.0993642809252662,
+        "correct_change_sign": true,
+        "field_linearization_remainder_norm": 4.179416987220039e-06,
+        "gn_curvature_term": 1.8152969469963174,
+        "linear_absolute_error": 1.816986149813393,
+        "linear_change": -0.07615633792146043,
+        "matrix_identity_error": 1.5645180369939167e-16,
+        "quadratic_absolute_error": 0.001689202817075408,
+        "quadratic_change": 1.7391406090748571,
+        "quadratic_to_linear_error_ratio": 0.0009296729186674821,
+        "remainder_identity_error": 2.485096409689249e-16,
+        "usefulness_pass": true
+      },
+      "radius": 0.01,
+      "source_arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/original-probe-2.npz",
+        "sha256": "65cc226703d24eddd5e1554e08fbd7eca22519b99ed4b5cec67241bda02a2b93"
+      },
+      "state": "original"
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/quadratic-field-model-v1/probe-3.npz",
+        "sha256": "95a06c60d37b2a8d4be0043eb064e1604bfffb585f83321f3ec293f87bd375f7"
+      },
+      "checks": {
+        "linear_prediction_replay": true,
+        "matrix_identity": true,
+        "projected_raw_flux": true,
+        "remainder_identity": true,
+        "source_values": true
+      },
+      "prediction": {
+        "actual": 0.23302331168707482,
+        "actual_change": -7.006834814571317e-05,
+        "baseline": 0.23309338003522054,
+        "correct_change_sign": true,
+        "field_linearization_remainder_norm": 1.694753214422437e-10,
+        "gn_curvature_term": 0.000325599260842996,
+        "linear_absolute_error": 0.00032559876693361023,
+        "linear_change": -0.0003956671150793223,
+        "matrix_identity_error": 1.6653345369377348e-16,
+        "quadratic_absolute_error": 4.939095521461212e-10,
+        "quadratic_change": -7.006785423616102e-05,
+        "quadratic_to_linear_error_ratio": 1.5169269736418555e-06,
+        "remainder_identity_error": 1.0449500473922323e-16,
+        "usefulness_pass": true
+      },
+      "radius": 0.0001,
+      "source_arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-0.npz",
+        "sha256": "0447ac09ca3eb53f31298475b95c7c4905f716c2f90d940dcb10d7b19256b3e3"
+      },
+      "state": "selected119"
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/quadratic-field-model-v1/probe-4.npz",
+        "sha256": "7868f1e88f5ceb001e92a89bdb2e3ce351f1dff74c2c815a1ee0e10524f2dc64"
+      },
+      "checks": {
+        "linear_prediction_replay": true,
+        "matrix_identity": true,
+        "projected_raw_flux": true,
+        "remainder_identity": true,
+        "source_values": true
+      },
+      "prediction": {
+        "actual": 0.266875727555506,
+        "actual_change": 0.033782347520285444,
+        "baseline": 0.23309338003522054,
+        "correct_change_sign": true,
+        "field_linearization_remainder_norm": 1.6042027369419835e-08,
+        "gn_curvature_term": 0.03819382239059101,
+        "linear_absolute_error": 0.038192640791334914,
+        "linear_change": -0.004410293271049469,
+        "matrix_identity_error": 1.1102230246251565e-16,
+        "quadratic_absolute_error": 1.1815992562169697e-06,
+        "quadratic_change": 0.03378352911954166,
+        "quadratic_to_linear_error_ratio": 3.0937877866906994e-05,
+        "remainder_identity_error": 7.365163234612955e-17,
+        "usefulness_pass": true
+      },
+      "radius": 0.001,
+      "source_arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-1.npz",
+        "sha256": "710f0284b742a7fd4e2bde86aa7b4900c9a036f9178b40f743dc9167d9d68a30"
+      },
+      "state": "selected119"
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/quadratic-field-model-v1/probe-5.npz",
+        "sha256": "9a2f573c9c721ebaf78c7b380ccdb792b550ba0edbbb5eb13f6d529684a75566"
+      },
+      "checks": {
+        "linear_prediction_replay": true,
+        "matrix_identity": true,
+        "projected_raw_flux": true,
+        "remainder_identity": true,
+        "source_values": true
+      },
+      "prediction": {
+        "actual": 4.104351641244097,
+        "actual_change": 3.871258261208877,
+        "baseline": 0.23309338003522054,
+        "correct_change_sign": true,
+        "field_linearization_remainder_norm": 1.6363497492355514e-06,
+        "gn_curvature_term": 3.9157608401931348,
+        "linear_absolute_error": 3.915633775644819,
+        "linear_change": -0.04437551443594262,
+        "matrix_identity_error": 6.49177508300889e-16,
+        "quadratic_absolute_error": 0.0001270645483142374,
+        "quadratic_change": 3.871385325757191,
+        "quadratic_to_linear_error_ratio": 3.245057009789243e-05,
+        "remainder_identity_error": 1.8213115205885582e-16,
+        "usefulness_pass": true
+      },
+      "radius": 0.01,
+      "source_arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-2.npz",
+        "sha256": "23c42ff8d3b5a761090b83b668115b7c4af610c64e4a94be59321f0c45107ee2"
+      },
+      "state": "selected119"
+    }
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/QUADRATIC_FIELD_MODEL_PROTOCOL.md",
+    "sha256": "d82a7fd9c4df0872a30ead7d85ca7086e36dc1f2b622b0227f14f329e327a04b"
+  },
+  "qualification_pass": true,
+  "qualified_backend_code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_direct_constraints.py",
+      "sha256": "55619247f3bcfed650b5a12cc575c30ff1457501d23eeefe0282b6ca27a5192e"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "sha256": "6de1ecd5ad843bc67e87175e8597e94a74e016fab9b6651512bbff2c15c20fa0"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/direct_constraints.py",
+      "sha256": "92e898e0ee05be4ce8086972441714c94dc8750b2240621e72103c117b70f1fc"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/smooth_bounds.py",
+      "sha256": "6d5a5dbc1a40a134767f33e41a4fb78c98f5ecc5dc9044b8f1315035ce308476"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "sha256": "30c294b717c8f4905730d2d3241a3c73db1196d0494a6811441cffc3d796446f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py",
+      "sha256": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "sha256": "e504e6a600aa0f8ff141d0589b31829f421dbd0ba4601889b646ac11b734a967"
+    }
+  ],
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "5eb5c7f01f18eeeb30f891189833fa07614418a2",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "source_diagnostic": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-descent-diagnostic-v2-composite.json",
+    "sha256": "877c1f3dfbcfbffc6b908ec258ba81c224363f53bcb39b0f6988a1b0c624ed82"
+  },
+  "source_indices_in_target_order": [
+    0,
+    1,
+    2,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84,
+    85,
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96,
+    97,
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186,
+    187,
+    188,
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    198,
+    199,
+    200,
+    201,
+    202,
+    203,
+    204,
+    205,
+    206,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53
+  ],
+  "states": [
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/quadratic-field-model-v1/original.npz",
+        "sha256": "bd530eda2b04d77a0123e49dd2a16b2729aa8eba08a321840c2f2e2b08f9f899"
+      },
+      "batched_seconds": 0.33604100000229664,
+      "checks": {
+        "batch_flux_relative": true,
+        "field_points_unchanged": true,
+        "finest_directions": true,
+        "jacobian_replay": true,
+        "matrix_vs_native": true,
+        "projection": true,
+        "raw_flux_relative": true,
+        "scaled_flux_gradient": true,
+        "serialized_identity": true,
+        "value_replay": true
+      },
+      "directional_checks": [
+        {
+          "seed": 49,
+          "steps": [
+            {
+              "h": 0.0001,
+              "maximum_normalized_error": 7.12067613206635e-10
+            },
+            {
+              "h": 1e-05,
+              "maximum_normalized_error": 7.950640146248134e-12
+            },
+            {
+              "h": 1e-06,
+              "maximum_normalized_error": 3.866747894099021e-11
+            }
+          ]
+        },
+        {
+          "seed": 50,
+          "steps": [
+            {
+              "h": 0.0001,
+              "maximum_normalized_error": 8.207189441944429e-10
+            },
+            {
+              "h": 1e-05,
+              "maximum_normalized_error": 9.683677416796183e-12
+            },
+            {
+              "h": 1e-06,
+              "maximum_normalized_error": 3.618187520426641e-11
+            }
+          ]
+        }
+      ],
+      "errors": {
+        "batch_flux_relative": 2.5040444976614742e-15,
+        "jacobian_replay": 0.0,
+        "matrix_vs_native": 8.881784197001252e-16,
+        "projection": 5.0090140368830305e-17,
+        "raw_flux_relative": 0.0,
+        "scaled_flux_gradient": 3.88273363530206e-14,
+        "value_replay": 0.0
+      },
+      "local_vjp_seconds": 1.051059166988125,
+      "name": "original",
+      "source_arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/original.npz",
+        "sha256": "73c9311eb88202eba85c853247d3af9ff23571bb2b569531b0f5c9443af25f0e"
+      }
+    },
+    {
+      "arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/quadratic-field-model-v1/selected119.npz",
+        "sha256": "4068af5cf85e517468a98d4d3c1ace3857535a3201d08e8b0ae7fd7f74e3d034"
+      },
+      "batched_seconds": 0.3432173330220394,
+      "checks": {
+        "batch_flux_relative": true,
+        "field_points_unchanged": true,
+        "finest_directions": true,
+        "jacobian_replay": true,
+        "matrix_vs_native": true,
+        "projection": true,
+        "raw_flux_relative": true,
+        "scaled_flux_gradient": true,
+        "serialized_identity": true,
+        "value_replay": true
+      },
+      "directional_checks": [
+        {
+          "seed": 49,
+          "steps": [
+            {
+              "h": 0.0001,
+              "maximum_normalized_error": 7.766156016886239e-10
+            },
+            {
+              "h": 1e-05,
+              "maximum_normalized_error": 9.175084303425507e-12
+            },
+            {
+              "h": 1e-06,
+              "maximum_normalized_error": 3.656436264876106e-11
+            }
+          ]
+        },
+        {
+          "seed": 50,
+          "steps": [
+            {
+              "h": 0.0001,
+              "maximum_normalized_error": 8.307493486528483e-10
+            },
+            {
+              "h": 1e-05,
+              "maximum_normalized_error": 8.854712969796896e-12
+            },
+            {
+              "h": 1e-06,
+              "maximum_normalized_error": 3.523724367848757e-11
+            }
+          ]
+        }
+      ],
+      "errors": {
+        "batch_flux_relative": 1.9077860436933662e-14,
+        "jacobian_replay": 0.0,
+        "matrix_vs_native": 7.494005416219807e-16,
+        "projection": 4.9439619065339e-17,
+        "raw_flux_relative": 0.0,
+        "scaled_flux_gradient": 1.4927873864894623e-14,
+        "value_replay": 0.0
+      },
+      "local_vjp_seconds": 1.0519802499911748,
+      "name": "selected119",
+      "source_arrays": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119.npz",
+        "sha256": "27fc9e71ca5e1363f4aa0b7cf0b9581d309ac3838b40e6b087c8536496e5c7e8"
+      }
+    }
+  ],
+  "status": "completed",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": null
+  },
+  "versions": {
+    "numpy": "2.5.2",
+    "scipy": "1.18.1",
+    "simsopt": "0.1.dev5668+ga79006b0b"
+  }
+}

@@ -103,9 +103,14 @@ Nur der kleinste Schritt am ausgewählten Kandidaten verbessert ihn leicht.
 Die [unabhängige Abstand-Ableitungsprüfung](optimization/COMPLEX_CLEARANCE_RESULTS.md)
 stützt die verwendeten Ableitungen an den untersuchten Zuständen; der ursprüngliche
 fehlgeschlagene Differenzentest bleibt unverändert dokumentiert. Diese Diagnose
-ist kein neuer zulässiger Entwurf. Als Nächstes prüfen wir nach getrennter
-Vorabfestlegung das quadratische räumliche Feldmodell an allen vier gespeicherten
-Testschritten, bevor wir eine neue Optimierung beginnen.
+ist kein neuer zulässiger Entwurf.
+
+Der anschließende [quadratische Modelltest](optimization/QUADRATIC_FIELD_MODEL_RESULTS.md)
+sagt an allen vier Testschritten das richtige Änderungs-Vorzeichen voraus und
+verringert den Vorhersagefehler gegenüber dem linearen Modell um mindestens
+99,907%. Vollständige native Ableitungsmatrizen und ein separater Kern-Audit
+bestätigen die Rechnung. Als Nächstes folgt ein getrennt vorab festgelegter
+Optimierungsversuch mit dieser Krümmungsinformation und unabhängiger Abnahme.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 

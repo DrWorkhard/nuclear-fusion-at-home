@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-12 — Quadratic field-model qualification and independent raw-array audit
+
+- Physical run after 5eb5c7f: both state qualifications and all four frozen probe
+  replays pass. All 138 values/Jacobians replay exactly; native spatial matrix
+  discrepancies <=8.882e-16, finest new directional discrepancy <=3.867e-11.
+- All four prediction signs agree; quadratic/linear error ratio <=9.297e-4,
+  versus the unchanged 0.1 limit. Matrix and residual-remainder identities pass.
+  Model performance is kept separate from derivative/implementation qualification.
+- Independent core-only auditor uses stored native matrix rows, not the model
+  helper. All 23 replay checks pass; six analytic/adversarial audit tests pass.
+  One initial lint failure (101-character line) corrected before the audit ran.
+- Both READMEs, status, plan and optimization index now reflect the completed
+  model test. No new candidate or physical admission; next is a preregistered
+  curvature-informed classical search. Earlier failures remain immutable.
+- Full suite: 265 passed, 11 known fixture warnings; Ruff, documentation and diff
+  whitespace checks pass. No independent native rebuild is claimed by this run.
+
 ## 2026-09-12 — Quadratic diagnostic preflight failure retained and corrected
 
 - First invocation at c81fdbd exits 1 before setup: `input/code hash mismatch`
