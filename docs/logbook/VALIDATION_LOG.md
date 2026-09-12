@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Register classical SLSQP polishing of fixed AL-selected candidate
+
+- Existing AL ledger has all eight inner-stage caps and nonzero stationarity
+  residuals; no convergence claim. Register a separate hybrid construction from
+  its predetermined arm1 selected state, not a new holdout-ranked source.
+- Two2048-bundle unchanged SLSQP arms, first counted values must replay138 source
+  values<=1e-12, same named207-DOF physical problem/limits and all four holdouts.
+  Up to1033+2048=3081 construction bundles per hybrid path, not a fair1033-method
+  comparison; qualification/holdouts/repeat overhead separate. No run yet.
+- Start only after the active QI matrix/evaluation closes. Detail/index/plan and
+  both READMEs/status reviewed; docs/diff pass before registration commit.
+
 ## 2026-09-12 — Prepare fresh-QI matrix field reader and independent old-loop audit
 
 - Cold starts at dd8b15a are ongoing; first five saved solver summaries converge.

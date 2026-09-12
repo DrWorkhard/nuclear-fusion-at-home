@@ -59,6 +59,10 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    vollständig geschlossen: Geometrie/nativ bestehen, Flux8,955e-8 scheitert.
    Der nächste klassische Konstruktionsversuch benötigt ein getrenntes Protokoll;
    keine nachträgliche Verlängerung dieses abgeschlossenen Budgets.
+   Getrennt registriert ist jetzt eine klassische SLSQP-Nachoptimierung des
+   festgelegten AL-Kandidaten: zwei2048-Bundle-Pfade bei unveränderter Physik,
+   einschließlich der1033-Bundle-Vorarbeit bilanziert. Erst nach der laufenden
+   QI-Studie ausführen; keine Aussage gleicher Methodenbudgets.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 
