@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Qualify conservative broad phase on exhaustive small controls
+
+- Additive deterministic bounding-box hierarchy records each partition event and
+  accounts for every unordered element pair. Padding preserves near-contact;
+  partial traversal never marks coverage complete. No real coil mesh read/run.
+- Nine new tests:96 fixed random tetrahedra at four leaf sizes match an independent
+  exhaustive pair set exactly; no duplicate candidates, every node's box checked
+  against original vertices. Contact/duplicate geometry retained, invalid indices
+  and repeat traversal rejected. All19 spatial-geometry tests plus Ruff/docs/diff pass.
+- Engineering detail/index updated; overviews checked. No spatial/physical
+  winding-pack or mechanical admission. Next real-mesh study still needs registration.
+
 ## 2026-09-12 — Prepare one-sided spatial separation and independent interior-witness controls
 
 - Read primary Eberly separating-axis derivation and existing mesh/generator

@@ -41,9 +41,22 @@ entartete Eingaben.32 feste zufällige Tetraederpaare mit Seed624 vergleichen
 Achsenprüfung und LP unabhängig; die Kontrollen enthalten getrennte und sich
 überlappende Fälle. Ruff/Dokument-/Diffprüfung bestanden.
 
-Nächster Schritt: konservative räumliche Vorauswahl mit vollständiger
-Paarbuchhaltung gegen vollständige kleine Kontrollnetze prüfen. Erst danach
-separate Studie an allen sechs unveränderten Spulennetzen registrieren/runnen.
+Die konservative räumliche Vorauswahl ist inzwischen ebenfalls als additiver
+Kontrollkern vorhanden: eine deterministische Boxhierarchie zerlegt alle
+ungeordneten Elementpaare in getrennte Teilbäume und kleine Blattpaare.
+Trennungen brauchen ein positives gepolstertes Boxintervall; Kontakte werden
+behalten. Ein vollständiges Ereignisprotokoll und die Identität
+`geprüfte Kandidaten + getrennte Paare = N*(N-1)/2` gehören zur Bilanz.
+Unvollständig konsumierte Generatoren melden ausdrücklich keine vollständige
+Abdeckung. Das ist noch kein Nachweis für echte Spulennetze.
+
+Neun weitere Tests bestehen. Bei96 festen Zufallstetraedern stimmen die
+Kandidaten für vier Blattgrößen exakt mit einer unabhängigen vollständigen
+Paarprüfung überein; keine Duplikate, alle Knotenboxen gegen ursprüngliche
+Vertices nachgeprüft. Kontakte/doppelte Geometrie werden nicht verworfen,
+ungültige Indizes und wiederholte Traversierung abgelehnt. Insgesamt19
+Geometriekontrollen bestanden. Nächster Schritt: separate Studie an allen sechs
+unveränderten Spulennetzen registrieren und danach ausführen/auditieren.
 Nachbarpaare, getrennte Netzregionen, vier Grundspulen und spätere Symmetriekopien
 müssen explizite getrennte Gültigkeitsbereiche behalten. Noch kein realer
 Spulen-Nichtüberlappungsnachweis, keine qualifizierte Wickelpaketorientierung,
