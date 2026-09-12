@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-12 — Register independent derivative check at unchanged failed polishing start
+
+- Fixed physical-start hash, original source-name basis and seeds46/47; one new
+  native bundle must replay all138 values/directional derivatives<=1e-12.
+  All120 pairs, three complex steps, same1e-9/1e-10 limits as earlier methodology;
+  separate real Fourier/weighted-chain-rule audit required. Original nonpair FD
+  gate and four failed pair rows retained, no native search or step-size selection.
+- Protocol/index and affected detail next action documented. Both READMEs/status/
+  plan remain accurate; docs/diff pass. Implement and test before real evaluation.
+
 ## 2026-09-12 — Preserve polishing startup failure and independently audit all nine bundles
 
 - Run at438aef4; named physical source and138 initial values reproduce exactly.

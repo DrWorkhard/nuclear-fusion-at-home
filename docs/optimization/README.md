@@ -8,6 +8,8 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Nachoptimierungsstart: Ableitungsprotokoll](POLISH_START_DERIVATIVE_PROTOCOL.md) — Fester gescheiterter Startup-Zustand, zwei Quellbasis-Richtungen, drei komplexe Schrittweiten und unabhängige reelle Kettenregel; keine neue Suche.
+
 - [SLSQP-Nachoptimierung: Protokoll](SLSQP_POLISH_PROTOCOL.md) — Separater hybrider Versuch vom durch das AL-Ledger festgelegten Kandidaten; zwei2048-Bundle-Arme, gesamte Vorarbeit bilanziert, unveränderte Abnahme.
 - [SLSQP-Nachoptimierung: Ergebnis](SLSQP_POLISH_RESULTS.md) — Nach neun Startup-Bundles vor Solverstart an vier Abstand-Ableitungen gestoppt; separater Postmortem bestätigt Daten/negative Klassifikation, Ursachenprüfung folgt.
 
