@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/audit_current_holdouts.py",
+    "evidence/fixed-currents-v1-holdouts.json",
+    "evidence/fixed-currents-v1-holdouts-audit.json"
+  ],
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fixed-currents-v1-holdouts-audit-driver/command.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "minimum_observed_free_bytes": 4862099456,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "064175e15f29de55c2fa88cc226688acfe1e1447",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 0,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_guarded_command.py",
+    "sha256": "4da34bb00b8b21d437de79317ae9f3108512068feb011312215c124c06ecb442"
+  },
+  "status": "completed"
+}

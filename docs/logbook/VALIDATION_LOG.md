@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-12 — Close all eight fixed-current field holdouts and independent arithmetic audit
+
+- At064175e all32/64/128-by200 and128-by800 grids complete for both fixed shapes;
+  eight B-grid requests,75,776 points, no refitting. Exit2 is the expected physical
+  rejection, not an interrupted study. Independent28 row/four overall checks pass.
+- Fine flux8.95511949056e-8 (AL) and8.19166480121e-8 (SLSQP); both refinement
+  checks/construction replay pass, both1e-8 admissions fail. F-076: no meaningful
+  current-only room, gains at most0.0000166076%. Native and separate arithmetic
+  agree to final floating-point digits; no global form-optimality conclusion.
+- Original geometric holdouts inherited only through exact16-copy shape identity;
+  no current-dependent force/mechanical qualification. All source/protocol/code
+  and prior failed studies unchanged. One guessed read-only source filename did
+  not exist; then located actual modules with rg, no calculation affected.
+- Detail/index and both READMEs/status/plan synchronized. Seven workflow controls,
+  Ruff/docs/diff pass. This bounded diagnosis is closed; steps1/2 remain open.
+  Next preregister a geometric optimality/descent diagnosis before another search.
+
 ## 2026-09-12 — Execute and independently audit both fixed-geometry current minimizers
 
 - At1b78832 both original138-value bundles replay exactly; full-rank three-current

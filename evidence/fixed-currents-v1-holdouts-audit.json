@@ -1,0 +1,95 @@
+{
+  "all_pass": true,
+  "cases": [
+    {
+      "all_pass": true,
+      "checks": {
+        "Bmean_0": true,
+        "Bmean_1": true,
+        "Bmean_2": true,
+        "Bmean_3": true,
+        "classification": true,
+        "flux_0": true,
+        "flux_1": true,
+        "flux_2": true,
+        "flux_3": true,
+        "geometry_inheritance": true,
+        "no_engineering_admission": true,
+        "reported_ratio": true,
+        "source_field": true,
+        "source_grids": true
+      },
+      "fine_Bmean": 0.9461249571998436,
+      "fine_flux": 8.955119490561784e-08,
+      "fine_flux_ratio_to_source": 0.9999998339241635,
+      "physics": {
+        "coil_flux_refinement": true,
+        "construction_replay": true,
+        "flux_cut_in": false,
+        "surface_flux_refinement": true
+      }
+    },
+    {
+      "all_pass": true,
+      "checks": {
+        "Bmean_0": true,
+        "Bmean_1": true,
+        "Bmean_2": true,
+        "Bmean_3": true,
+        "classification": true,
+        "flux_0": true,
+        "flux_1": true,
+        "flux_2": true,
+        "flux_3": true,
+        "geometry_inheritance": true,
+        "no_engineering_admission": true,
+        "reported_ratio": true,
+        "source_field": true,
+        "source_grids": true
+      },
+      "fine_Bmean": 0.9461249355532164,
+      "fine_flux": 8.191664801213226e-08,
+      "fine_flux_ratio_to_source": 0.9999999315276076,
+      "physics": {
+        "coil_flux_refinement": true,
+        "construction_replay": true,
+        "flux_cut_in": false,
+        "surface_flux_refinement": true
+      }
+    }
+  ],
+  "checks": {
+    "case_audits": true,
+    "classification": true,
+    "no_engineering_admission": true,
+    "work": true
+  },
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_current_holdouts.py",
+      "sha256": "4a24a2ed8c6cc07773e84fd3a0d2af0690b87133d35e2119555bff3823904655"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/current_diagnostic_inputs.py",
+      "sha256": "2c2aff20a47b88e0b75f1cddcec6d5a6190e415a5338b746f0ba5fd95b9a3979"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/current_diagnostic_audit.py",
+      "sha256": "01ee1d7eb26817b430aee18b596dd910d90f5543c0a55866dce50e20c919faf5"
+    }
+  ],
+  "new_fits": 0,
+  "new_native_calls": 0,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "064175e15f29de55c2fa88cc226688acfe1e1447",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fixed-currents-v1-holdouts.json",
+    "sha256": "6f3fcfb6223946aea4cbb3fb9f0ef23a58d73610a45d6bf7e608777598c19f09"
+  },
+  "status": "completed"
+}

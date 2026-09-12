@@ -1,5 +1,20 @@
 # Findings log
 
+## F-076 — Exact current redistribution cannot close the fixed-shape feasibility gap
+
+**Class:** preregistered two-state affine minimization, independent QR/file audit and all fine holdouts
+**Date:** 2026-09-12
+
+Both AL/composite-SLSQP shapes have well-conditioned rank3 current subproblems;
+all native gates and114 independent qualification checks pass. All eight frozen
+field holdouts complete;28 row/four overall independent checks confirm arithmetic
+and negative classification. Fine flux8.95511949056e-8 and8.19166480121e-8 remain
+8–9 times above1e-8, despite exact optimum current redistribution. Relative gains
+only0.0000166076% and0.00000684724%, not meaningful design progress. All16 physical
+coil shapes unchanged; no global shape lower bound, mechanical or SoTA admission.
+Further constructive work must address shape optimization, not current-only tuning.
+See [complete diagnosis](../optimization/FIXED_GEOMETRY_CURRENT_RESULTS.md).
+
 ## F-075 — Separate finest-mesh completion closes the six-resolution nonlocal scope
 
 **Class:** preregistered single-mesh repeat, exact historical prefix and independent full audit

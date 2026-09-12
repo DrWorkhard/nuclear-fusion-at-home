@@ -2,14 +2,14 @@
 
 Zweck: reproduzierbare Optimierungsorakel, geprüfte Ableitungen und kontrollierte Suchversuche auf dem offenen LPQA-Fall.
 
-Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbudget den Magnetfeldfehler an einem Startpunkt um etwa Faktor 2,35. Direkte Ungleichungen sind qualifiziert; der wiederholte SLSQP-Pilot besteht Geometrie- und zusätzliche native Prüfungen, verfehlt aber die Fluxgrenze um Faktor 23,3. Noch keine zulässige Baseline.
+Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften Geometriebedingungen, verfehlt die Fluxgrenze aber noch um Faktor8,19. Exakte Stromumverteilung hilft bei unveränderter Form praktisch nicht. Frühere Vorteile räumlicher Residuen gelten nur am untersuchten Startpunkt; noch keine zulässige Baseline oder allgemeine Methodenrangfolge.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
 - [Feste Geometrie, optimale Ströme: Protokoll](FIXED_GEOMETRY_CURRENT_PROTOCOL.md) — Zwei unveränderte AL-/SLSQP-Spulenformen, exaktes dreidimensionales Strom-LS-Teilproblem, unabhängiges QR/Provenienz-/Feld-Holdout; klassische Diagnose ohne Neuheitsbehauptung.
-- [Feste Geometrie, optimale Ströme: Teilresultat](FIXED_GEOMETRY_CURRENT_RESULTS.md) — Beide echten linearen Teilprobleme und je57 unabhängige Checks bestehen; zusätzlicher grober Fluxgewinn höchstens0,000012813%, feine Feld-Holdouts noch offen.
+- [Feste Geometrie, optimale Ströme: abgeschlossen](FIXED_GEOMETRY_CURRENT_RESULTS.md) — Beide exakten Stromminima,114 unabhängige Checks und alle acht Feld-Holdouts mit separatem Audit abgeschlossen; feinster Gewinn höchstens0,000016608%, beide Formen bleiben unzulässig.
 
 - [SLSQP mit zusammengesetztem Startgate: Protokoll](SLSQP_COMPOSITE_PROTOCOL.md) — Identischer AL-Start und Physik; neuer vollständiger Start-Jacobian-/alter9-Bundle-Replay, unabhängige Paarqualifikation plus unveränderte Nicht-Paar-FD-Grenze, zwei2048-Bundle-Suchen.
 - [SLSQP mit zusammengesetztem Startgate: Ergebnis](SLSQP_COMPOSITE_RESULTS.md) — Beide2048-Bundle-Arme exakt wiederholt/auditiert, alle feinen Abnahmen geschlossen; Geometrie/nativ bestehen, Flux8,191665e-8 bleibt unzulässig. Keine Pareto-Dominanz.

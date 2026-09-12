@@ -1,9 +1,10 @@
-# Feste Geometrie, optimale Ströme: native Teilprobleme und Audit bestanden
+# Feste Geometrie, optimale Ströme: vollständig geprüft, kein nennenswerter Gewinn
 
 2026-09-12. [Protokoll](FIXED_GEOMETRY_CURRENT_PROTOCOL.md) bei ebc7e79 vorab
 registriert; Implementierung bei1b78832. Beide tatsächlichen Spulenformen sind
 jetzt neu ausgewertet und unabhängig auditiert. Der zusätzliche Stromgewinn ist
-äußerst klein; die festgelegten feinen Feld-Holdouts folgen noch. Die nachstehenden
+äußerst klein; alle festgelegten feinen Feld-Holdouts sind abgeschlossen und
+separat nachgerechnet. Beide Formen bleiben magnetisch unzulässig. Die nachstehenden
 Vorbereitungsabschnitte dokumentieren den Zustand vor dieser Ausführung.
 
 ## Native Ausführung und Datei-Audit
@@ -42,6 +43,41 @@ Rohdaten. Quellen und aktiver Code unverändert committed; der Berichtsstatus
 
 Evidenz: `evidence/fixed-currents-v1.json`, `...-audit.json`, beide zugehörigen
 Driver-Verzeichnisse und `artifacts/fixed-currents-v1/`.
+
+## Alle Feld-Holdouts abgeschlossen
+
+Ausführung bei064175e, alle acht Gitter gespeichert; regulärer Exit2 wegen
+Fluxablehnung, kein unterbrochener Lauf. Je14 weitere unabhängige Array-/Quellen-/
+Klassifikationschecks sowie vier Gesamtchecks bestehen, null neue native Felder
+oder Fits im Auditor. Der eigentliche Holdout verwendet acht B-Gitteranfragen
+mit insgesamt75.776 Punkten; keine Rückkopplung in den Stromfit.
+
+| Form | Flux32/200 | Flux64/200 | Flux128/200 | Flux128/800 |
+| --- | --- | --- | --- | --- |
+| AL | 8,95478137513e-8 | 8,95511938556e-8 | 8,95511949056e-8 | 8,95511949056e-8 |
+| SLSQP | 8,19153423575e-8 | 8,19166456331e-8 | 8,19166480121e-8 | 8,19166480121e-8 |
+
+Beide Oberflächen-/Spulenverfeinerungsschirme und der32/200-Quellreplay bestehen,
+die unveränderte1e-8-Grenze scheitert. Feinster nativer SLSQP-Wert exakt
+8,191664801213237e-8 (Faktor8,1917); AL8,955119490561782e-8 (Faktor8,9551).
+Die unabhängige Fluxarithmetik weicht erst in den letzten Gleitkommastellen ab.
+Gegenüber den jeweiligen abgeschlossenen Quellen sinkt der feinste Fehler nur
+um0,0000166076% (AL) beziehungsweise0,00000684724% (SLSQP).
+Solche winzigen Unterschiede sind kein praktisch relevanter Entwurfsfortschritt.
+
+Das gut konditionierte dreidimensionale Stromproblem ist damit an beiden festen
+Formen numerisch ausgeschöpft. Bloße Stromumverteilung erklärt beziehungsweise
+schließt den fehlenden Faktor8–9 nicht. Daraus folgt **keine** globale Untergrenze
+für andere Spulenformen oder andere zulässige Suchräume. Die nächsten konstruktiven
+Schritte müssen an der Formsuche ansetzen; ihre Wahl braucht ein eigenes Protokoll.
+Alle ursprünglichen geometrischen Abnahmen werden ausschließlich über exakte
+Identität aller16 serialisierten Spulenkopien übernommen. Elektromagnetische
+Kräfte würden sich mit Strömen ändern; keine Mechanik-/Ingenieurfreigabe geerbt.
+
+Evidenz zusätzlich: `evidence/fixed-currents-v1-holdouts.json`,
+`...-holdouts-audit.json`, beide Driver-Verzeichnisse und
+`artifacts/fixed-currents-v1-holdouts/`. Damit ist dieser begrenzte Versuch
+geschlossen, nicht Langfristiger Plan Schritt2.
 
 Additiver Drei-Spalten-SVD-Rechner mit den festen Rang-/Konditions-/Normalrest-
 Schirmen; getrennte QR-Zerlegung mit expliziter dreistufiger Rücksubstitution
