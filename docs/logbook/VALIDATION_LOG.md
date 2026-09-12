@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Quadratic field-model diagnostic prepared before physical evaluation
+
+- Added the prospective four-probe protocol, pure quadratic/residual-remainder
+  bookkeeping and a runner requiring full native-vs-batched matrix comparisons
+  at both frozen states, named physical replay and two new fixed directions.
+- Eleven analytic/adversarial kernel controls pass. The protocol distinguishes
+  implementation qualification from the all-four-probe prediction test; a
+  Gauss-Newton matrix is not relabelled as the full nonlinear Hessian.
+- Full working-environment suite: 259 passed, 11 existing fixture warnings;
+  Ruff, documentation layout/links and diff whitespace checks pass.
+- Both READMEs and the work plan still correctly identify this as the next
+  diagnostic, not an executed success. The new protocol is indexed. No new
+  physical evaluation or optimization has run at this preparation stage.
+
 ## 2026-09-12 CEST — README synchronization and per-step documentation rule
 
 - Updated both READMEs to the current direct SLSQP result, retained failed
