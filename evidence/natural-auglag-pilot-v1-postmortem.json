@@ -1,0 +1,99 @@
+{
+  "additional_physics_calls": 0,
+  "all_pass": false,
+  "arms": [
+    {
+      "all_pass": true,
+      "arm": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-pilot-v1/natural-auglag-1.json",
+        "sha256": "c35465904087e3cf91ad2e17b1b8943f1286ec3f691bd8d39f970a4cc49ec17e"
+      },
+      "checks": {
+        "all_coupled_identities": true,
+        "all_stored_metrics": true,
+        "best_physical_hash": true,
+        "best_values": true,
+        "consecutive_attempts": true,
+        "correct_stop": true,
+        "failure_count": true,
+        "fixed_limit": true,
+        "fixed_selection_tolerance": true,
+        "gradient_screen": true,
+        "independent_gradient_screen": true,
+        "ledger_counts": true,
+        "merit_identity": true,
+        "multiplier_sequence": true,
+        "named_field_identity": true,
+        "native_and_spatial_work": true,
+        "nine_qualification_bundles": true,
+        "nonempty": true,
+        "request_accounting": true,
+        "request_partition": true,
+        "selected_best": true,
+        "selected_key": true,
+        "selected_minimum": true,
+        "stage_count": true,
+        "stage_partition": true,
+        "status_partition": true,
+        "target_semantics": true,
+        "termination": true
+      }
+    }
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_natural_auglag_pilot.py",
+      "sha256": "cf641441407c46f6252f563135011f7278cde6cc2f741ae381e2b884f6c45449"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/natural_auglag_audit.py",
+      "sha256": "90f29095ebefd448f55039d6599ba2fcb9c6650f4065c53ced6231763fba8e97"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_audit.py",
+      "sha256": "70ae783c99a9c9c318a5117867db57fdae2be25668eb795e1980ac56125fd01d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/prefix_audit.py",
+      "sha256": "36f47c9457a2ddab92d6a84b35a0e659f95c8f2234248ba43e7f272f0767aa8a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    }
+  ],
+  "incident": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/resource-interruption-2026-09-12.json",
+    "sha256": "dfc21c102b8207c70bc18ed560a3579e16b2d70f0c1ea323c9fe1ed02d49c50e"
+  },
+  "partial_arm": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-pilot-v1/natural-auglag-2.json",
+    "sha256": "bfef9491a6896b49895e6af0531bfc41e9400255c6fabc4622aa4cdb71774178"
+  },
+  "partial_prefix": {
+    "all_pass": true,
+    "first_mismatch": null,
+    "max_absolute_value_difference": 0.0,
+    "max_normalized_value_difference": 0.0,
+    "mismatch_count": 0,
+    "required_length": 700,
+    "sufficient_records": true
+  },
+  "physical_feasibility_certified": false,
+  "postmortem_integrity_pass": true,
+  "repeated": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "b32bc88ab6fd23f059059910b21cea55dfcc50ac",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "scope": "postmortem_complete_arm_and_saved_prefix_only",
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/natural-auglag-pilot-v1/summary.json",
+    "sha256": "4d0c01cba51c96ebce3440da9a26ddcaf20e75b0471cc1765216cac4938cffe9"
+  },
+  "study_complete": false
+}

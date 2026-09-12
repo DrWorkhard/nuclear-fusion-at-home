@@ -28,14 +28,38 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("study", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument(
+        "--interrupted-v1",
+        action="store_true",
+        help="postmortem only: never qualify the incomplete original study",
+    )
     args = parser.parse_args()
     if args.output.exists():
         raise FileExistsError("new immutable audit output required")
     root = Path(__file__).resolve().parents[1]
     summary = args.study / "summary.json"
     study = json.loads(summary.read_text())
-    if study["status"] != "completed" or study["methods"] != ["natural-auglag"]:
+    incident = None
+    if args.interrupted_v1:
+        incident_path = root / "evidence/resource-interruption-2026-09-12.json"
+        incident = json.loads(incident_path.read_text())["natural_al_run"]
+        if (
+            summary.resolve() != (root / incident["report"]).resolve()
+            or sha256_file(summary) != incident["sha256"]
+            or study["status"] != "running"
+            or len(study["arms"]) != 1
+        ):
+            raise ValueError("only the hash-pinned interrupted v1 study is allowed")
+        for key, digest in (
+            ("completed_arm", "completed_arm_sha256"),
+            ("partial_arm", "partial_arm_sha256"),
+        ):
+            if sha256_file(root / incident[key]) != incident[digest]:
+                raise ValueError("interrupted evidence hash mismatch")
+    elif study["status"] != "completed":
         raise ValueError("completed staged natural-AL study required")
+    if study["methods"] != ["natural-auglag"]:
+        raise ValueError("natural-AL study required")
     arms, records = [], []
     for ref in study["arms"]:
         arm = json.loads(checked(ref).read_text())
@@ -134,8 +158,32 @@ def main():
             )
         ],
     )
+    if incident is not None:
+        partial = json.loads((root / incident["partial_arm"]).read_text())
+        length = incident["last_persisted_second_arm_bundles"]
+        prefix = audit_exact_prefix(arms[0]["evaluations"], partial["evaluations"], length=length)
+        result.update(
+            scope="postmortem_complete_arm_and_saved_prefix_only",
+            incident=reference(incident_path),
+            partial_arm=reference(root / incident["partial_arm"]),
+            partial_prefix=prefix,
+            postmortem_integrity_pass=bool(
+                len(records) == 1
+                and records[0]["all_pass"]
+                and prefix["all_pass"]
+                and partial["status"] == "running"
+                and len(partial["evaluations"]) == partial["counters"]["attempts"] == length
+                and "best" not in partial
+            ),
+            all_pass=False,
+            study_complete=False,
+        )
     write_json_atomic(args.output, result)
-    print(json.dumps({"all_pass": result["all_pass"]}))
+    print(
+        json.dumps({k: result[k] for k in ("all_pass", "postmortem_integrity_pass") if k in result})
+    )
+    if incident is not None:
+        return 0 if result["postmortem_integrity_pass"] else 2
     return 0 if result["all_pass"] else 2
 
 

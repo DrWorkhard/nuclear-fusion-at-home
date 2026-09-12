@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-12 — Preregister natural-AL IO-recovery and explicit postmortem audit
+
+- Original incomplete study remains immutable and cannot pass the normal auditor.
+  Explicit hash-bound postmortem mode rechecks the complete arm plus exactly the
+  700 stored repeat bundles, always retaining study all_pass=false.
+- New recovery study predeclared: original runner/options, two fresh1033-bundle
+  starts, exact full old first arm and old partial second prefix, same independent
+  holdouts. No physical search until the heavy native reconstruction finishes.
+- Fresh native retry has passed both environment-install stages and is building
+  VMEC8.52 from fresh sources. More than5 GiB remains free; no solver result yet.
+  Both READMEs/status/plan still correctly leave steps1/2 open.
+- Postmortem passes all29 complete-arm checks plus exact700 prefix; study pass
+  explicitly false. Normal auditor rejects incomplete study (exit1, no report).
+  Full suite348 passed/20 known warnings; Ruff/docs/diff pass. No new physics.
+
 ## 2026-09-12 — Preregister bounded native retry and resource guards
 
 - New retry protocol preserves all original scientific pins and checks. SCB

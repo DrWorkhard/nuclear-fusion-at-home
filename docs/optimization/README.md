@@ -8,7 +8,9 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
-- [Natürliche Flux-AL: unterbrochener Pilot](NATURAL_AUGLAG_RESULTS.md) — Erster 1033-Bundle-Arm gespeichert, zweiter nach 700 gespeicherten Bundles durch Platzmangel unterbrochen; Audit, Wiederholung und Abnahme offen.
+- [Natürliche AL: Wiederherstellungsprotokoll](NATURAL_AUGLAG_RECOVERY_PROTOCOL.md) — Expliziter Einzelarm-/Präfix-Postmortem und neuer unveränderter Zwei-Arm-Lauf; unterbrochene Originalstudie bleibt unqualifiziert.
+
+- [Natürliche Flux-AL: unterbrochener Pilot](NATURAL_AUGLAG_RESULTS.md) — Erster 1033-Bundle-Arm und gespeichertes 700-Bundle-Präfix unabhängig bestätigt; Studie bleibt unvollständig, Wiederholung und Abnahme offen.
 
 - [Natürliche Flux-AL: Protokoll](NATURAL_AUGLAG_PROTOCOL.md) — Klassische Least-Squares-AL mit rohem Flux, analytisch geprüftem Residuum und festem achtstufigem Budget; keine Gleichsetzung mit früherer quartischer Flux-Strafe.
 
