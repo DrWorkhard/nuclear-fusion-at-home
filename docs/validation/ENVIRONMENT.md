@@ -52,6 +52,8 @@ NEO-JAX 1.0.1 plus `booz-xform` 0.1.0 in
 # Strict QI data integration
 
 `bash scripts/run_qi_integration.sh` creates the locked core environment,
+and must therefore run in a separate core checkout, never the qualified native
+root environment. It
 downloads/verifies and extracts the pinned Goodman archive, and runs five
 real-data tests without permitting missing-data skips. For an existing download
 cache, set `FUSION_QI_ARCHIVE=/absolute/path/qifiles.zip`; its published checksum
@@ -64,3 +66,11 @@ v1 action values (relative tolerance 1e-3). They need neither the original
 machine's absolute artifact paths nor an installed legacy SciPy tracer. This is
 a bounded QI numerical regression, not a fresh VMEC solve or full scientific
 qualification. W7-X/native-solver integration remains a separate, expensive gate.
+
+## Strict combined cached-data regression
+
+`PYTHONPATH=src .venv/bin/python scripts/run_scientific_integration.py NEW_OUTPUT`
+requires all six existing QI/W7-X integration tests with zero skips and a verified
+exact JUnit test set. It never synchronizes or changes installed packages.
+See [scope and controls](STRICT_SCIENTIFIC_INTEGRATION.md). A cached-data pass
+does not close the fresh native solver/build gate.

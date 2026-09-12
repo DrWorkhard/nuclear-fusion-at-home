@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Fail-closed combined scientific integration prepared
+
+- Optional core fixture policy retained, but explicit W7-X integration now fails
+  on missing native fixtures instead of silently skipping. Dedicated runner fixes
+  both data requirements and independently checks all six JUnit identities.
+- Eight positive/adversarial controls pass; full suite 288 passed, 11 known
+  warnings; Ruff passes after three formatting fixes. Docs/diff checks pass.
+  Existing physical tests/thresholds unchanged. Root and missing-W7-X counter-run
+  are pending this preregistration commit. No environment synchronization.
+- Both READMEs/status/plan reviewed: scientific qualification remains incomplete;
+  only software test count changes in STATUS. Environment/index explain the new
+  bounded gate. Light checks ran during bundlebudgeted SLSQP, not a timed study.
+
 ## 2026-09-12 — GN-1024 construction and independent ledger audit completed
 
 - Both native-covector arms complete exactly 1024 bundles without failures;

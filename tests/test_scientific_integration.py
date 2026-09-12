@@ -1,7 +1,6 @@
 """Optional local raw-data regressions; core CI explicitly skips absent data."""
 
 import json
-import os
 import subprocess
 import sys
 from pathlib import Path
@@ -15,32 +14,30 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 @pytest.mark.parametrize("manifest_name", ["qi-goodman-2022.json", "qi-goodman-2022-nfp2.json"])
-def test_real_goodman_metadata(manifest_name):
+def test_real_goodman_metadata(manifest_name, scientific_files):
     manifest = load_manifest(ROOT / "manifests" / manifest_name)
-    if not all((ROOT / item["path"]).is_file() for item in manifest["files"]):
-        if os.environ.get("FUSION_REQUIRE_QI_DATA") == "1":
-            pytest.fail("required Goodman manifest files not bootstrapped")
-        pytest.skip("authoritative Goodman data not bootstrapped")
+    scientific_files(
+        [ROOT / item["path"] for item in manifest["files"]], "FUSION_REQUIRE_QI_DATA"
+    )
     result = summarize_equilibrium_manifest(manifest, ROOT)
     assert result["expected_metadata_matches"]
     assert result["vmec"]["free_boundary"] is False
 
 
-def test_w7x_corrected_tolerances_and_retained_failures(tmp_path):
+def test_w7x_corrected_tolerances_and_retained_failures(tmp_path, scientific_files):
     test = ROOT / "artifacts/vmecpp/w7x-stellcoilbench/wout.nc"
     reference = ROOT / "artifacts/vmec2000/w7x-v852-reference/wout_w7xbaseline.nc"
-    if not all(
-        path.is_file()
-        for path in (
+    scientific_files(
+        (
             test,
             reference,
             ROOT / "external/vmecpp-validation/src/tolerances.py",
             ROOT
             / "external/vmecpp/src/vmecpp/cpp/vmecpp/vmec/output_quantities/output_quantities.cc",
             ROOT / "external/stellopt-v251/VMEC2000/Sources/Initialization_Cleanup/profil1d.f",
-        )
-    ):
-        pytest.skip("version-matched W7-X raw outputs/source trees not bootstrapped")
+        ),
+        "FUSION_REQUIRE_W7X_DATA",
+    )
     strict = tmp_path / "comparison.json"
     audit = tmp_path / "audit.json"
     result = subprocess.run(

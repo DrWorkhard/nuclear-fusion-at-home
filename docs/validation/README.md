@@ -8,6 +8,8 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Strikte wissenschaftliche Regression](STRICT_SCIENTIFIC_INTEGRATION.md) — Fester Sechs-Test-Pfad ohne fehlende-Daten-Skips oder Umgebungssynchronisierung; keine Verwechslung mit frischem nativen Neuaufbau.
+
 - [AUDIT_2026-09-09 ](AUDIT_2026-09-09.md) — Dokument: Übergreifender Quellcode-/Evidenzaudit; Rücknahme der vollständigen Bereitschaft und geordnete Korrekturen.
 - [ENVIRONMENT ](ENVIRONMENT.md) — Dokument: Gepinnte native Umgebung, bekannte Plattformkorrekturen, Thread-Regeln und isolierte Integrationspfade.
 - [EVIDENCE_STANDARD ](EVIDENCE_STANDARD.md) — Dokument: Klassen von Aussagen, Mindestprovenienz, unabhängige Gegenprüfung und Umgang mit negativen Befunden.
@@ -20,4 +22,3 @@ Erhalt historischer Hashes und automatische Prüfungen.
 Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
 Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
 [Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
-

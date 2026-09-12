@@ -1,7 +1,6 @@
 """Real-data numerical regressions; the dedicated integration command forbids skips."""
 
 import json
-import os
 from pathlib import Path
 
 import numpy as np
@@ -15,12 +14,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 @pytest.mark.parametrize("case", ["nfp1", "nfp2", "nfp3"])
-def test_frozen_real_data_actions(case):
+def test_frozen_real_data_actions(case, scientific_files):
     wout = ROOT / f"external/data/qifiles-v1/Files/configurations/{case}/vacuum/wout_QI_{case}.nc"
-    if not wout.is_file():
-        if os.environ.get("FUSION_REQUIRE_QI_DATA") == "1":
-            pytest.fail(f"required scientific fixture missing: {wout}")
-        pytest.skip("QI data not bootstrapped; run scripts/run_qi_integration.sh")
+    scientific_files([wout], "FUSION_REQUIRE_QI_DATA")
     hashes = json.loads((ROOT / "references/goodman_qi_transfer_cases.json").read_text())
     assert sha256_file(wout) == hashes["cases"][case]["wout_sha256"]
     # Use tracked numerical values, never the old machine's absolute raw paths.
