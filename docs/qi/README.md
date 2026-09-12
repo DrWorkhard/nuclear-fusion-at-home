@@ -8,6 +8,8 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 
 ## Dokumente
 
+- [Radiale Gauge: Protokoll](QI_RADIAL_GAUGE_PROTOCOL.md) — Vorab festgelegte Kettenregel-/Vorzeichendiagnose unter radialer Feldlinien-Neumarkierung; unveränderte Fälle, Pitchwerte und Pflicht zum exakten Standard-Replay.
+
 - [QI_COVERAGE_TOPOLOGY_PROTOCOL ](QI_COVERAGE_TOPOLOGY_PROTOCOL.md) — Protokoll: Erweiterung auf fünf Radien/neun Pitch-Werte und Konturwindung; eine unzugängliche nfp1-Zelle bleibt fehlgeschlagen.
 - [QI_COVERAGE_TOPOLOGY_RESULTS ](QI_COVERAGE_TOPOLOGY_RESULTS.md) — Ergebnis: Erweiterung auf fünf Radien/neun Pitch-Werte und Konturwindung; eine unzugängliche nfp1-Zelle bleibt fehlgeschlagen.
 - [QI_FINITE_BETA_INVENTORY ](QI_FINITE_BETA_INVENTORY.md) — Dokument: Hash-Inventar von 31 Goodman-Druckgleichgewichten plus Eingaben; Grundlage für Arbeit ohne SQuID-C.
@@ -23,4 +25,3 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
 Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
 [Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
-

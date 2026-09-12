@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Preregister bounded radial-QI gauge diagnostic
+
+- Fixed four old cases/pitches/radii and c=-1,0,+1 radial alpha relabelings,
+  with exact old c=0 array replay and separate alpha-derivative chain-rule check.
+  Sign changes are possible findings, not automatically tool failures; failed
+  topology/coverage remains explicit. No global maximum-J/gauge certificate.
+- Primary physical definition checked against Goodman; chain-rule expression is
+  stated as our direct derivation. No new traces or tracer changes yet. Both
+  READMEs/status/plan already keep this qualification gap open. Index/docs/diff
+  checked; implementation and synthetic controls are next.
+
 ## 2026-09-12 — Independent staged-AL audit ready before physical execution
 
 - Added arithmetic replay of every stage merit, first-minimum selection,
