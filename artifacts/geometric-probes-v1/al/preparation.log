@@ -1,0 +1,73 @@
+Bmag at R =  1.0 , Z = 0:  [1.4659142  1.46314952 1.45170054 1.42715565 1.39219503 1.35359077
+ 1.31618578 1.28095317 1.24672472 1.21241157 1.17803703 1.14452708
+ 1.11297574 1.08407674 1.05797139 1.03440342 1.01297253 0.99333491
+ 0.97528894 0.9587594  0.94373492 0.93021376 0.91818294 0.90762078
+ 0.89849698 0.8907561  0.88429804 0.87898433 0.87468526 0.87134423
+ 0.86900898 0.8677943 ]
+toroidally averaged Bmag at R =  1.0 , Z = 0:  1.0905452732526784
+Bmag at R =  1.0 , Z = 0:  [1.46607238 1.45856228 1.40831498 1.33104348 1.25946433 1.1897284
+ 1.1224794  1.06495264 1.01806781 0.97902714 0.94636515 0.91990248
+ 0.89950918 0.88481412 0.87489891 0.86905205 0.86779924 0.87145828
+ 0.87932897 0.89149332 0.90896107 0.9323633  0.96191941 0.99770875
+ 1.04035293 1.09226984 1.15526473 1.22470004 1.29445316 1.36987055
+ 1.43987857 1.46513542 1.46513542 1.43987857 1.36987055 1.29445316
+ 1.22470004 1.15526473 1.09226984 1.04035293 0.99770875 0.96191941
+ 0.9323633  0.90896107 0.89149332 0.87932897 0.87145828 0.86779924
+ 0.86905205 0.87489891 0.88481412 0.89950918 0.91990248 0.94636515
+ 0.97902714 1.01806781 1.06495264 1.1224794  1.1897284  1.25946433
+ 1.33104348 1.40831498 1.45856228 1.46607238]
+toroidally averaged Bmag at R =  1.0 , Z = 0:  1.096412884319843
+Coils: 4 unique, 16 total (before optimization)
+
+============================================================
+OPTIMIZATION SETUP SUMMARY
+============================================================
+  Algorithm:          L-BFGS-B
+  Max iterations:     30
+  Surface:            R0=1.0099 m, a=0.1683 m
+  a0 (ARIES/a):       10.10
+  Coil width:         0.039603 m
+  Ncoils (unique):    4
+  Total current:      1250075.62 A
+  Target B:           5.7000 T
+
+  Thresholds (device scale):
+    flux_threshold:        8.00e-09
+    finite_build_width:    0.05 m
+    cc_threshold:          0.11 m
+    cs_threshold:          0.13 m
+    length_threshold:      22 m
+    curvature_threshold:   10 1/m
+    msc_threshold:         10 1/m²
+    force_threshold:       0 N/m
+    torque_threshold:      0 N·m
+    arclength_var_thresh:  1e+02 m²
+
+  Constraint list (8 entries):
+    [1] CC Distance           threshold=0.11  scaling=0.98
+    [2] CS Distance           threshold=0.13  scaling=0.98
+    [3] Length                threshold=22  scaling=0.98
+    [4] κ                     threshold=10  scaling=1
+    [5] MSC                   threshold=10  scaling=1
+    [6] Arclength Var         threshold=1e+02  scaling=0.96
+    [7] Link #                threshold=None  scaling=1
+    CC distance idx:  1
+    CS distance idx:  2
+
+  Initial coil geometry:
+    Coil 0: R=[7.61e-01, 2.06e+00] m, Z=[-8.61e-01, 9.77e-01] m, I=3.35e+05 A
+    Coil 1: R=[3.93e-01, 2.09e+00] m, Z=[-6.77e-01, 9.37e-01] m, I=4.24e+05 A
+    Coil 2: R=[2.67e-01, 1.77e+00] m, Z=[-4.94e-01, 7.16e-01] m, I=2.86e+05 A
+    Coil 3: R=[2.69e-01, 1.56e+00] m, Z=[-4.85e-01, 5.65e-01] m, I=2.05e+05 A
+
+  Initial objective values:
+    SquaredFlux (Jf):      1.00e-06
+    CC distance (Jccdist): 0.00e+00  (shortest=1.10e-01 m)
+    CS distance (Jcsdist): 0.00e+00  (shortest=3.05e-01 m)
+    LinkingNumber:         0.00e+00
+    Length[0]:             5.48e+00 m
+    Length[1]:             5.60e+00 m
+    Length[2]:             4.66e+00 m
+    Length[3]:             4.07e+00 m
+============================================================
+

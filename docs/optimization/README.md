@@ -9,7 +9,7 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 ## Dokumente
 
 - [Geometrischer Abstieg: Protokoll](GEOMETRIC_DESCENT_PROTOCOL.md) — Zwei unveränderte Stromminimierer, sechs feste Radius-LPs mit unabhängigem Primal-Dual-Zertifikat, geprüfte Richtungen und maximal32 native Kontrollbundles.
-- [Geometrischer Abstieg: Modellresultat](GEOMETRIC_DESCENT_RESULTS.md) — Alle sechs echten LPs und unabhängigen Zertifikats-/Dateiprüfungen bestehen; lineare Abstiegsrichtungen vorhanden, tatsächliche Ableitungs-/Schrittprüfungen noch offen.
+- [Geometrischer Abstieg: abgeschlossen](GEOMETRIC_DESCENT_RESULTS.md) — Sechs LPs sowie32 native Bundles und250 unabhängige Checks abgeschlossen; Ableitungen bestehen, alle sechs echten Schritte erhöhen den Flux und verletzen Konstruktionsbedingungen. Keine Zulassung.
 
 - [Feste Geometrie, optimale Ströme: Protokoll](FIXED_GEOMETRY_CURRENT_PROTOCOL.md) — Zwei unveränderte AL-/SLSQP-Spulenformen, exaktes dreidimensionales Strom-LS-Teilproblem, unabhängiges QR/Provenienz-/Feld-Holdout; klassische Diagnose ohne Neuheitsbehauptung.
 - [Feste Geometrie, optimale Ströme: abgeschlossen](FIXED_GEOMETRY_CURRENT_RESULTS.md) — Beide exakten Stromminima,114 unabhängige Checks und alle acht Feld-Holdouts mit separatem Audit abgeschlossen; feinster Gewinn höchstens0,000016608%, beide Formen bleiben unzulässig.

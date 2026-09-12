@@ -1,8 +1,9 @@
-# Geometrischer Abstieg: sechs lineare Modelle auditiert, echte Schritte offen
+# Geometrischer Abstieg: alle sechs echten Schritte negativ, unabhängig bestätigt
 
 2026-09-12, [Protokoll](GEOMETRIC_DESCENT_PROTOCOL.md) bei a56c9e1 registriert.
-Die sechs LPs aus tatsächlichen Spulendaten sind inzwischen ausgeführt und
-unabhängig auditiert. Noch keine neue native Formauswertung. Die späteren
+Die sechs LPs und sämtliche nativen Richtungs-/Schrittprüfungen sind inzwischen
+ausgeführt und unabhängig auditiert. Alle sechs echten Schritte verschlechtern
+den Flux und verletzen die Konstruktionsbedingungen. Die späteren
 Vorbereitungsabschnitte halten den vorherigen Implementierungsstand fest.
 
 ## Sechs lineare Teilprobleme abgeschlossen
@@ -38,6 +39,57 @@ registriertem Höchstbudget32, allen Radien und beiden Differenzenschritten.
 Evidenz: `evidence/geometric-models-v1.json`, `...-audit.json`, beide Driver-
 Verzeichnisse und `artifacts/geometric-models-v1/`. Quellen/alte Ergebnisse bleiben
 unverändert; weitere Formsuche wird nicht aus einer bloßen LP-Verbesserung freigegeben.
+
+## Native Prüfung vollständig abgeschlossen
+
+Ausführung bei7ba5523: alle32 vollständigen nativen Bundles abgeschlossen,
+Quellwerte und ganze Jacobimatrizen innerhalb1e-12 reproduziert. Alle sechs
+Richtungen bestehen **beide** festen Nicht-Paar-FD-Schirme (Maximum4,901e-7
+gegen1e-6), beide komplexen Paarprüfungen (Maximum1,146e-12 gegen1e-9) und die
+Schrittstabilität. Damit wurden alle sechs vorgesehenen Kontrollschritte
+ausgewertet und serialisiert, keine nachträgliche Radiusauswahl.
+
+| Quelle | Radius | Tatsächliche Fluxänderung | Roh-Flux danach | Größte Konstruktionsverletzung |
+| --- | --- | --- | --- | --- |
+| AL | 1e-6 | +1,73345106e-11 | 8,95651483e-8 | 3,16758844e-7 |
+| AL | 1e-5 | +1,50335624e-8 | 1,04581376e-7 | 5,51372207e-7 |
+| AL | 1e-4 | +1,54237630e-6 | 1,63192412e-6 | 5,34632131e-5 |
+| SLSQP | 1e-6 | +1,22253122e-10 | 8,20375955e-8 | 4,91899455e-8 |
+| SLSQP | 1e-5 | +1,24001897e-8 | 9,43155321e-8 | 4,88091171e-6 |
+| SLSQP | 1e-4 | +1,24622821e-6 | 1,32814355e-6 | 4,29005165e-4 |
+
+Die letzte Spalte ist der größte negative normierte direkte g-Wert. Alle
+überschreiten die unveränderte Auswahlgrenze1e-8. Das ist eine Verletzung der
+strengeren Konstruktionsbedingungen, nicht die Behauptung einer ausgeführten
+feinen Geometrieabnahme oder sechs neuer physikalisch vollständig qualifizierter
+Entwürfe. Ströme und Summenkonvention bleiben bei sämtlichen Schritten unverändert.
+
+Der unabhängige Audit besteht alle250 Einzelchecks (je32 auf Fallebene plus
+dreimal31 Richtungschecks). Aus JSON rekonstruierte16-Kopien-Geometrie,
+reelle Fouriersummen und gewichtete Paar-Kettenregel bestätigen die Ableitungen
+bis1,145e-12. Alle Vorhersage-/Istwerte, negativen Geometrie-/Fluxklassifikationen,
+FD-Probes und nativen Arbeitszähler stimmen. Kein zusätzlicher LP-, nativer
+oder komplexer Aufruf im Audit, zwei eigene reelle120-Paar-Läufe mit je drei
+Richtungen. Die Auditfreigabe bestätigt die negative Diagnose, keinen Entwurf.
+
+Arbeitsbilanz der nativen Phase:32 komplette Bundles/32 B-Anfragen/32 B-VJPs,
+zusätzlich32 einzelne native Kurvenpositionsanfragen, zwei unabhängige reelle
+und zwölf komplexe120-Paar-Wertläufe. Jede Anfrage einschließlich Cachelesezugriff
+gezählt; etwa4,1MiB neue Rohdaten. Keine Unterbrechung oder Umgebungsänderung.
+
+**Folgerung:** Das lineare Modell ist für diese festgelegten endlichen Schritte
+ungeeignet, obwohl die lokalen Ableitungen stimmen. Ein lokales oder globales
+Optimum ist damit weder bewiesen noch widerlegt. Die starke nichtlineare
+Krümmung ist eine plausible Ursache, die getrennt mit dem bereits geprüften
+quadratischen Fluxmodell an genau diesen Quellen und Probes untersucht werden
+sollte. Auch der Nutzen gekoppelter Stromanpassung bei Formänderungen folgt
+nicht aus dem zuvor winzigen statischen Stromgewinn. Keine Grenzlockerung oder
+nachträgliche Auswahl kleinerer Probes in diesem geschlossenen Versuch.
+
+Evidenz zusätzlich: `evidence/geometric-probes-v1.json`, `...-audit.json`, beide
+Driver-Verzeichnisse und `artifacts/geometric-probes-v1/`. Dieser begrenzte Versuch
+ist geschlossen, Schritt1/2 bleiben offen. Nächster Schritt ist eine separat
+registrierte Krümmungs-/Konditionierungsdiagnose vor einem weiteren Suchlauf.
 
 Der Modellbauer erhält alle Ungleichungen und benutzt unverändertb=g/r, ohne
 Addition einer Zulässigkeitstoleranz. Ein verschwindender Gradient wird separat

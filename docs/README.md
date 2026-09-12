@@ -163,6 +163,11 @@ Die getrennte [Stromminimierung bei fester Geometrie](optimization/FIXED_GEOMETR
 ist vollständig unabhängig geprüft, einschließlich aller acht Feld-Holdouts.
 Die zusätzliche feine Fluxsenkung beträgt höchstens0,000016608%; beide Formen
 bleiben unzulässig. Weitere konstruktive Arbeit muss an der Formsuche ansetzen.
+Die anschließende [geometrische Diagnose](optimization/GEOMETRIC_DESCENT_RESULTS.md)
+bestätigt sechs lineare Abstiegsmodelle und deren Ableitungen, aber alle sechs
+echten Schritte verschlechtern den Flux und verletzen Konstruktionsbedingungen.
+32 native Bundles und unabhängige Gegenprüfung abgeschlossen; Krümmungs- und
+Konditionierungsanalyse vor einem weiteren Suchlauf nötig.
 
 Ein Teil von Schritt1 ist neu abgeschlossen: Der
 [frische native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md) besteht

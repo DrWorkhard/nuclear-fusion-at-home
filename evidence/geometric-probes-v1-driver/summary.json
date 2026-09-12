@@ -1,0 +1,28 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/probe_geometric_descent.py",
+    "evidence/geometric-models-v1.json",
+    "evidence/geometric-models-v1-audit.json",
+    "evidence/geometric-probes-v1.json",
+    "artifacts/geometric-probes-v1"
+  ],
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/geometric-probes-v1-driver/command.log",
+    "sha256": "6bc650b3023ba21cf6c3cf7e91da69029d5d0ad281f83ddd5b6f6d76ba9a17fb"
+  },
+  "minimum_observed_free_bytes": 4887617536,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "7ba5523010441a126b63841f63bc94d5190de6df",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 0,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_guarded_command.py",
+    "sha256": "4da34bb00b8b21d437de79317ae9f3108512068feb011312215c124c06ecb442"
+  },
+  "status": "completed"
+}

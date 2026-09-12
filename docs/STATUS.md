@@ -108,6 +108,10 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
    senkt den feinen Flux nur um höchstens0,000016608%; unabhängige Checks und alle
    acht Feld-Holdouts abgeschlossen. Beide Formen weiterhin unzulässig; bloße
    Stromumverteilung schließt die verbleibende Lücke nicht.
+   Die anschließenden sechs geometrischen Modelle und32 nativen Kontrollbundles
+   sind unabhängig geprüft: Ableitungen bestehen, alle sechs endlichen Schritte
+   verschlechtern den Flux und verletzen Konstruktionsbedingungen. Das lineare
+   Modell reicht bei diesen Radien nicht; Krümmung/Konditionierung separat prüfen.
    Der begrenzte AL-Versuch ist
    geschlossen; keine allgemeine Methodenrangfolge oder Pareto-Dominanz.
    SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen

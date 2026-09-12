@@ -1,5 +1,20 @@
 # Findings log
 
+## F-077 — Certified linear descent models fail on all six finite geometric steps
+
+**Class:** preregistered six LPs,32 native bundles, composite derivative gates and independent real-chain-rule audit
+**Date:** 2026-09-12
+
+Both fixed current-minimized shapes have certified linearly descending proposals
+at radii1e-6/1e-5/1e-4. All six derivative gates pass at both fixed FD steps and
+both complex steps; independent real Fourier/chain-rule and250 file/data checks
+confirm results. Yet every actual step raises flux and violates the unchanged
+construction-selection tolerance. No fine geometry admission was attempted.
+The finite linearization is inadequate here, not evidence of global optimality
+or a faulty first derivative. Separate curvature/conditioning diagnosis is the
+next justified step; static current optimality does not rule out useful coupled
+current adjustments under shape changes. See [full results](../optimization/GEOMETRIC_DESCENT_RESULTS.md).
+
 ## F-076 — Exact current redistribution cannot close the fixed-shape feasibility gap
 
 **Class:** preregistered two-state affine minimization, independent QR/file audit and all fine holdouts

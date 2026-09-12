@@ -80,9 +80,11 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    den begrenzten Nichtüberlappungsschirm. Als nächster Optimierungsteil ist die
    exakte Stromminimierung an den zwei festen AL-/SLSQP-Geometrien bereits nativ
    und unabhängig qualifiziert; alle acht feinen Holdouts geschlossen, praktisch
-   kein zusätzlicher Gewinn. Als Nächstes geometrische Optimalität/Abstieg am
-   festen besten Zustand diagnostizieren und einen weiteren Konstruktionsversuch
-   für Schritt2 separat begründen/festlegen,
+   kein zusätzlicher Gewinn. Die nachfolgende geometrische Diagnose ist ebenfalls
+   geschlossen: sechs LPs/32 native Bundles unabhängig bestätigt, alle endlichen
+   Schritte trotz bestandener Ableitungen negativ. Als Nächstes Krümmung und
+   Konditionierung an denselben festgelegten Quellen/Probes separat diagnostizieren
+   und einen weiteren Konstruktionsversuch für Schritt2 begründen/festlegen,
    keine Wahl der günstigsten realen Schrittweite oder gelockerte Physikgrenzen.
    Keine Aussage gleicher Methodenbudgets.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine

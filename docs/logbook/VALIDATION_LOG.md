@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-12 — Close all32 real geometric probe bundles and independent250-check audit
+
+- At7ba5523 both full source values/Jacobians replay within1e-12; all six native
+  composite direction gates pass. Maximum non-pair FD4.901e-7 at both fixed eps,
+  complex-pair error<=1.146e-12, independent real-chain error<=1.145e-12.
+- All six actual finite steps increase raw flux and exceed1e-8 construction
+  violation tolerance, despite certified linear predictions of improvement.
+  No fine geometry admission or best-candidate selection. F-077 records this
+  negative model diagnosis without global-optimality/derivative-error claims.
+- Independent250 checks validate complete events, source/16-copy field geometry,
+  currents, all arithmetic/negative flags and work. Native phase32 bundles/32
+  B-VJPs plus32 extra individual position requests,2 real/12 complex pair calls;
+  separate audit2 real pair calls, zero native/LP/complex calls. Raw4.1MiB.
+- Six targeted controls/Ruff/docs/diff pass. Detail/index and both READMEs/status/
+  plan updated. Next separately register curvature/conditioning analysis on the
+  same fixed sources and probes, not a retrospective radius or tolerance change.
+
 ## 2026-09-12 — Qualify native geometric direction/trial workflow before real probes
 
 - Full source value/Jacobian replay, exactly six frozen LP directions, both fixed

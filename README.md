@@ -48,6 +48,10 @@ advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
   now passes native/independent checks and all eight field holdouts are complete.
   Additional fine flux reductions are at most0.000016608%; both forms still fail
   the flux limit. Further progress requires shape work, not current-only tuning.
+- [Geometric descent diagnosis](docs/optimization/GEOMETRIC_DESCENT_RESULTS.md)
+  completes six linear models and32 native bundles with independent checks:
+  derivatives pass, but every finite trial worsens flux and construction geometry.
+  Curvature/conditioning must be addressed before another search; no new design.
 - [QI gauge tests](docs/qi/QI_RADIAL_GAUGE_RESULTS.md) reproduce all84 old traces
   but find25 nfp3 families with sign changes under field-line relabeling alone.
   [The full drift/phase transformation](docs/qi/QI_DRIFT_COORDINATES.md) explains
