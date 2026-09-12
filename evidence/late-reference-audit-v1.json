@@ -1,0 +1,560 @@
+{
+  "all_pass": true,
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_evidence_references.py",
+      "sha256": "5af93c57c8aa1b6e8ff909b94e404e916a3697d7e644f654cc062d4093d2146f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/evidence_integrity.py",
+      "sha256": "65655c4a70458bfc8f29bade1bc7e0c4f3eb791da6b6199ee89066a3a179263d"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-descent-diagnostic-v1.json",
+      "sha256": "e38bfcc2b937e02ba238f2ec98967c223c694eb27ee474632131e7fb184f8f5d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/complex-clearance-qualification-v1.json",
+      "sha256": "47d7edc5a29f92d2da95b37471dfa7e4e037b446d5f9b933c7bd581eb32019df"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-descent-diagnostic-v2-composite.json",
+      "sha256": "877c1f3dfbcfbffc6b908ec258ba81c224363f53bcb39b0f6988a1b0c624ed82"
+    }
+  ],
+  "mapping": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/manifests/documentation-layout-v1.json",
+    "sha256": "00af4533a7374fdbd78438460b402279f4d908a376055e3a54800a575d13c850"
+  },
+  "records": [
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/slsqp-1.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/slsqp-1.json",
+      "sha256": "04ea61a0a8c54d2ec94989a09a96cb93368d86229dd4f2897f10781ea603a73f",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "git_path": "scripts/diagnose_direct_descent.py",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/diagnose_direct_descent.py",
+      "sha256": "3a0ff4eb0d4c8d10d1e4f7bb550ba1a4fec8f72a6cde16fdb8e97a08e6fa9e1f",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "historical_git"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/linear_descent.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/linear_descent.py",
+      "sha256": "3ee8b4a828cd417250d6611a7187ec56ff4708008637e8f84ac37bacbe77bd1e",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/cases/lpqa_engineering_v1p1_lbfgsb.yaml",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/cases/lpqa_engineering_v1p1_lbfgsb.yaml",
+      "sha256": "4a0bd130270fc887988ac33de974e04b6fac6da2da2faaa0e66a4f49535b64b9",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/promotion.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/promotion.npz",
+      "sha256": "ca8d358c7a9071e93565226c58113d4971d480c8a67d4451cfa3ae50595003f4",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/fixtures/rejected-lpqa-warmstart/field.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/fixtures/rejected-lpqa-warmstart/field.json",
+      "sha256": "ef38a96aa6820de08d187f6362645b5450f009034706b06b2722566da9631e8c",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+      "sha256": "4c6ba4bc391a69b5b6a5e84ff82df9b0ce92e20c42f2a47f89a9283fd5bc3458",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/DIRECT_DESCENT_DIAGNOSTIC_PROTOCOL.md",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/DIRECT_DESCENT_DIAGNOSTIC_PROTOCOL.md",
+      "sha256": "4cfd4166f6edc06c859844d9919447367ffef86304886edea77e718ae417e1cc",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_direct_constraints.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_direct_constraints.py",
+      "sha256": "55619247f3bcfed650b5a12cc575c30ff1457501d23eeefe0282b6ca27a5192e",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "sha256": "6de1ecd5ad843bc67e87175e8597e94a74e016fab9b6651512bbff2c15c20fa0",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/direct_constraints.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/direct_constraints.py",
+      "sha256": "92e898e0ee05be4ce8086972441714c94dc8750b2240621e72103c117b70f1fc",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/smooth_bounds.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/smooth_bounds.py",
+      "sha256": "6d5a5dbc1a40a134767f33e41a4fb78c98f5ecc5dc9044b8f1315035ce308476",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "sha256": "30c294b717c8f4905730d2d3241a3c73db1196d0494a6811441cffc3d796446f",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py",
+      "sha256": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "sha256": "e504e6a600aa0f8ff141d0589b31829f421dbd0ba4601889b646ac11b734a967",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_linprog_highs.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_linprog_highs.py",
+      "sha256": "32999bba42521a001d08bd9a1a02ca663b8b7eb93b6f799f37438e062484c89a",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_highs_wrapper.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_highs_wrapper.py",
+      "sha256": "c15a943a0985bf716d84b93719d0b2f572e698373655ab0258614b4b2ab67303",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_core.cpython-312-darwin.so",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_core.cpython-312-darwin.so",
+      "sha256": "83964acedc1180ffb9cdab9b45bf5c2dba9dcf388cfbaf83bb325b0a9dc82fb0",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/original.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/original.npz",
+      "sha256": "73c9311eb88202eba85c853247d3af9ff23571bb2b569531b0f5c9443af25f0e",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/selected119.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/selected119.npz",
+      "sha256": "27fc9e71ca5e1363f4aa0b7cf0b9581d309ac3838b40e6b087c8536496e5c7e8",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/summary.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/summary.json",
+      "sha256": "20f368bfd08afe63f6459675f24b2375e117d7f647c617b698ffec78bb6ac756",
+      "source_revision": "d0f0b8d4ed4a1cf62051c9da6c4569cd6a999b9d",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_complex_clearance.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_complex_clearance.py",
+      "sha256": "b7ae46cc847542fba5119ccb7582b5dbd52ab7164fbdcdb99d3c18e3c6aa2550",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/complex_clearance.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/complex_clearance.py",
+      "sha256": "1535d8f4ecab53880b050db2eb7020cf8d15cfc9665bb98284b5d8f1414bb9bc",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-descent-diagnostic-v1.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-descent-diagnostic-v1.json",
+      "sha256": "e38bfcc2b937e02ba238f2ec98967c223c694eb27ee474632131e7fb184f8f5d",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/COMPLEX_CLEARANCE_PROTOCOL.md",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/COMPLEX_CLEARANCE_PROTOCOL.md",
+      "sha256": "f2c23df514c87a3877046bf67f9cea0b4aacc325c824e66fea564555b9e5e864",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-slsqp-pilot-v1/slsqp-1/best_field.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-slsqp-pilot-v1/slsqp-1/best_field.json",
+      "sha256": "bc341f48e2769438db96717557c5f40df6e1d065bdff5c5d4caabb8978c9980d",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/complex-clearance-qualification-v1/original.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/complex-clearance-qualification-v1/original.npz",
+      "sha256": "543c7b864ec3f2665263be2cc4744f2045085478cb85c51f2cf6da1c3c381df6",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/original.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/original.npz",
+      "sha256": "73c9311eb88202eba85c853247d3af9ff23571bb2b569531b0f5c9443af25f0e",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/complex-clearance-qualification-v1/selected119.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/complex-clearance-qualification-v1/selected119.npz",
+      "sha256": "c1adcf0516720d6064b224d99e85bc19d71a6f02c90d17ce0b25c5c3bd281fab",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/complex-clearance-qualification-v1.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/selected119.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v1/selected119.npz",
+      "sha256": "27fc9e71ca5e1363f4aa0b7cf0b9581d309ac3838b40e6b087c8536496e5c7e8",
+      "source_revision": "c1ca108c64850f6f73b409a006f47be6810efb6f",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/slsqp-1.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/slsqp-1.json",
+      "sha256": "04ea61a0a8c54d2ec94989a09a96cb93368d86229dd4f2897f10781ea603a73f",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/complex-clearance-qualification-v1.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/evidence/complex-clearance-qualification-v1.json",
+      "sha256": "47d7edc5a29f92d2da95b37471dfa7e4e037b446d5f9b933c7bd581eb32019df",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/diagnose_direct_descent.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/scripts/diagnose_direct_descent.py",
+      "sha256": "f5ec9c9e6bb6e2c4c8f94312d4477dcda5a42ac71c57e146d95f59e6b3112e9d",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/linear_descent.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/linear_descent.py",
+      "sha256": "3ee8b4a828cd417250d6611a7187ec56ff4708008637e8f84ac37bacbe77bd1e",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/composite_gradient_gate.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/composite_gradient_gate.py",
+      "sha256": "cb1180b601f1eca9865e17d1057827738de9febdf7a455cb0a35b0705af9fa3e",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/COMPLEX_CLEARANCE_PROTOCOL.md",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/COMPLEX_CLEARANCE_PROTOCOL.md",
+      "sha256": "f2c23df514c87a3877046bf67f9cea0b4aacc325c824e66fea564555b9e5e864",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/original-probe-2.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/original-probe-2.npz",
+      "sha256": "65cc226703d24eddd5e1554e08fbd7eca22519b99ed4b5cec67241bda02a2b93",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-0.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-0.npz",
+      "sha256": "0447ac09ca3eb53f31298475b95c7c4905f716c2f90d940dcb10d7b19256b3e3",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-1.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-1.npz",
+      "sha256": "710f0284b742a7fd4e2bde86aa7b4900c9a036f9178b40f743dc9167d9d68a30",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-2.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119-probe-2.npz",
+      "sha256": "23c42ff8d3b5a761090b83b668115b7c4af610c64e4a94be59321f0c45107ee2",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/cases/lpqa_engineering_v1p1_lbfgsb.yaml",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/cases/lpqa_engineering_v1p1_lbfgsb.yaml",
+      "sha256": "4a0bd130270fc887988ac33de974e04b6fac6da2da2faaa0e66a4f49535b64b9",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/promotion.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/promotion.npz",
+      "sha256": "ca8d358c7a9071e93565226c58113d4971d480c8a67d4451cfa3ae50595003f4",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/fixtures/rejected-lpqa-warmstart/field.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/fixtures/rejected-lpqa-warmstart/field.json",
+      "sha256": "ef38a96aa6820de08d187f6362645b5450f009034706b06b2722566da9631e8c",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+      "sha256": "4c6ba4bc391a69b5b6a5e84ff82df9b0ce92e20c42f2a47f89a9283fd5bc3458",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-descent-diagnostic-v1.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-descent-diagnostic-v1.json",
+      "sha256": "e38bfcc2b937e02ba238f2ec98967c223c694eb27ee474632131e7fb184f8f5d",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/DIRECT_DESCENT_DIAGNOSTIC_PROTOCOL.md",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/DIRECT_DESCENT_DIAGNOSTIC_PROTOCOL.md",
+      "sha256": "4cfd4166f6edc06c859844d9919447367ffef86304886edea77e718ae417e1cc",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_direct_constraints.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_direct_constraints.py",
+      "sha256": "55619247f3bcfed650b5a12cc575c30ff1457501d23eeefe0282b6ca27a5192e",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_optimization_oracle.py",
+      "sha256": "6de1ecd5ad843bc67e87175e8597e94a74e016fab9b6651512bbff2c15c20fa0",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+      "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/direct_constraints.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/direct_constraints.py",
+      "sha256": "92e898e0ee05be4ce8086972441714c94dc8750b2240621e72103c117b70f1fc",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/smooth_bounds.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/smooth_bounds.py",
+      "sha256": "6d5a5dbc1a40a134767f33e41a4fb78c98f5ecc5dc9044b8f1315035ce308476",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "sha256": "30c294b717c8f4905730d2d3241a3c73db1196d0494a6811441cffc3d796446f",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py",
+      "sha256": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/refined_curvature.py",
+      "sha256": "e504e6a600aa0f8ff141d0589b31829f421dbd0ba4601889b646ac11b734a967",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_linprog_highs.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_linprog_highs.py",
+      "sha256": "32999bba42521a001d08bd9a1a02ca663b8b7eb93b6f799f37438e062484c89a",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_highs_wrapper.py",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_highs_wrapper.py",
+      "sha256": "c15a943a0985bf716d84b93719d0b2f572e698373655ab0258614b4b2ab67303",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_core.cpython-312-darwin.so",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_highspy/_core.cpython-312-darwin.so",
+      "sha256": "83964acedc1180ffb9cdab9b45bf5c2dba9dcf388cfbaf83bb325b0a9dc82fb0",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/original.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/original.npz",
+      "sha256": "73c9311eb88202eba85c853247d3af9ff23571bb2b569531b0f5c9443af25f0e",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119.npz",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-descent-diagnostic-v2-composite/selected119.npz",
+      "sha256": "27fc9e71ca5e1363f4aa0b7cf0b9581d309ac3838b40e6b087c8536496e5c7e8",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    },
+    {
+      "evidence": "evidence/direct-descent-diagnostic-v2-composite.json",
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/summary.json",
+      "resolved_path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-pilot-v1/summary.json",
+      "sha256": "20f368bfd08afe63f6459675f24b2375e117d7f647c617b698ffec78bb6ac756",
+      "source_revision": "f151b80f3650a0ffd37e88640f0e2acab267a3e0",
+      "status": "current"
+    }
+  ],
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "55246b1abc8aa93e214dcfb47c03ce15327bdb67",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "schema_version": 1,
+  "scientific_results_recomputed": false,
+  "scope": "explicit path/sha256 pairs in listed JSON inputs, not recursive linked reports",
+  "status_counts": {
+    "current": 63,
+    "historical_git": 1
+  },
+  "unique_reference_contexts": 64
+}

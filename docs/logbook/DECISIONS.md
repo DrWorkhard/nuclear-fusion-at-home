@@ -1,5 +1,20 @@
 # Decision log
 
+## D-010 — Documentation is required after every completed work step
+
+**Status:** accepted; explicit user requirement
+**Date:** 2026-09-12
+
+Update affected detail documentation and the validation log after each bounded
+step, including negative findings, checks and blockers, before proceeding.
+Check both repository/project READMEs, status, plan and the relevant folder index
+for changes in the assessment or next action; keep them concise and synchronized.
+Record material findings and durable decisions in the appropriate journals.
+Validate links/layout and the intended diff, run proportionate tests, then commit
+the scoped work. If committing is blocked, distinguish saved from committed work
+explicitly; do not bypass permissions or silently defer documentation to session
+end. The persistent checklist is in [AGENTS.md](../../AGENTS.md).
+
 ## D-009 — Keep documentation shallow, purpose-indexed and reviewer-readable
 
 **Status:** accepted; explicit user requirement

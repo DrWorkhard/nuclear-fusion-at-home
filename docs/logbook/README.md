@@ -8,11 +8,10 @@ Lesehinweis: Neuere ausdrücklich gekennzeichnete Korrekturen haben Vorrang vor 
 
 ## Dokumente
 
-- [DECISIONS ](DECISIONS.md) — Dokument: Grundsatzentscheidungen zu Baselines, Methodenneutralität, QI-Messung und unabhängiger Zulässigkeit.
+- [DECISIONS ](DECISIONS.md) — Dokument: Grundsatzentscheidungen zu Baselines, Methodenneutralität, QI-Messung, unabhängiger Zulässigkeit und verbindlicher Dokumentationspflege nach jedem Arbeitsschritt.
 - [FINDINGS ](FINDINGS.md) — Dokument: Wesentliche Befunde F-001 ff. mit Aussageklasse, Grenzen und dokumentierten Korrekturen.
 - [VALIDATION_LOG ](VALIDATION_LOG.md) — Dokument: Ausgeführte Tests, Versionen, Gegenprüfungen, Fehlversuche und genaue Grenzen des jeweiligen Prüfumfangs.
 
 Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
 Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
 [Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
-

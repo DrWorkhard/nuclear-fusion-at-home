@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 11. September 2026. [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
+Stand: 12. September 2026. [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 ## Nächstes entscheidendes Ergebnis
 
@@ -15,9 +15,10 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
 2. Erledigt: getrennt festgelegter SLSQP-Pilot mit zwei identischen 256-Bundle-Läufen;
    der ausgewählte Kandidat bleibt im Flux-Holdout unzulässig (Faktor 23,3).
 3. Erledigt für diesen Pilot: unabhängige feine Gitter, kontinuierliche
-   Geometrieschranken und zusätzliche native Bedingungen. Als Nächstes
-   Konvergenz/aktive Randbedingungen diagnostizieren; keine nachträgliche
-   Budgeterhöhung oder Grenzwertänderung des abgeschlossenen Versuchs.
+   Geometrieschranken und zusätzliche native Bedingungen. Lokale Probes zeigen
+   inzwischen starke Fehler des linearen Fluxmodells bei größeren Schritten.
+   Als Nächstes das quadratische räumliche Feldmodell an allen eingefrorenen
+   Probes prüfen; keine nachträgliche Budgeterhöhung des abgeschlossenen Versuchs.
 4. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine
    starke klassische Vergleichsbaseline unter gleichen Rechenbudgets.
 
@@ -63,5 +64,10 @@ sind dafür keine pauschale Vorbedingung.
 Neue Versuche vorab festlegen und committen; Ergebnisse, Gegenprüfungen und
 Fehlschläge danach getrennt dokumentieren und committen. Nutzeränderungen und
 historische Evidenz bleiben erhalten. Keine Publikation, Autorenkontakt oder
-externen Änderungen ohne entsprechenden Auftrag. Bei wesentlichen Befunden
-werden Ergebnisstand, dieser Plan und die jeweilige Bereichsübersicht aktualisiert.
+externen Änderungen ohne entsprechenden Auftrag. Nach jedem abgeschlossenen
+Arbeitsschritt werden die betroffene Detaildokumentation und das Prüfprotokoll
+ergänzt, auch bei negativen Ergebnissen oder Blockern. Beide READMEs, Ergebnisstand,
+dieser Plan und die jeweilige Bereichsübersicht werden dabei geprüft und bei
+inhaltlichen Änderungen aktualisiert. Dokumentationsprüfung, passende Tests und
+ein lokaler Commit gehören zum Abschluss; ein verhinderter Commit bleibt explizit
+offen. Die dauerhafte Abschlusscheckliste steht in [AGENTS.md](../AGENTS.md).

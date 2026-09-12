@@ -1,5 +1,66 @@
 # Validation log
 
+## 2026-09-12 CEST — README synchronization and per-step documentation rule
+
+- Updated both READMEs to the current direct SLSQP result, retained failed
+  difference screen, independent pair-derivative qualification and bounded
+  nonlinear probe diagnosis. The next quadratic-model check remains prospective;
+  no new scientific evaluations or admission claims were made in this step.
+- Added the user's mandatory per-step documentation checklist to AGENTS.md and
+  recorded D-010. Updated the work plan and journal overview; preserved the
+  existing long-term plasma/coil roadmap. Clarified the earlier core replay as
+  two real plus twelve complex evaluations, not fourteen complex evaluations.
+- Re-ran the full working-environment suite: 248 passed, 11 existing NumPy
+  deprecation warnings. Ruff, `scripts/check_docs.py` and `git diff --check` pass.
+  Reviewed summaries against the stored result documents; automated link/layout
+  checks do not themselves establish semantic freshness or physical validity.
+- Reviewed the earlier uncommitted composite-diagnostic report and late reference
+  audit for inclusion with this documentation update. Historical evidence and
+  failed records are unchanged. The two earlier commit-review timeouts remain
+  documented below; verify Git completion separately before reporting a commit.
+
+## 2026-09-12 CEST — Final core replay, reference audit and commit blocker
+
+- Core-only checkout `/private/tmp/fusion-radial-clean.DLF3QM/repo` at 55246b1:
+  `PYTHONPATH=src .venv/bin/pytest -q` reports 247 passed, one expected native
+  W7-X-data skip, 11 existing NumPy deprecation warnings. Ruff and documentation
+  checks pass. Its tracked worktree is clean; root native environment unchanged.
+- Replayed all saved independent complex-clearance arrays in that core-only
+  checkout (NumPy 2.5.2): two real evaluations plus twelve complex-step
+  evaluations, both seeds and all three steps at both states. Raw-file hashes
+  and anchors agree, maximum normalized numerical discrepancy is exactly 0.0.
+  The replay reads the root workspace's frozen NPZ inputs; it is not a fresh
+  native-solver/bootstrap or independently regenerated physical-state test.
+- `evidence/late-reference-audit-v1.json`: all 64 explicit reference contexts
+  resolve, 63 against current bytes and one against historical Git bytes;
+  zero unresolved. Scope is the original failed diagnostic, independent
+  complex-clearance qualification and new composite-gated diagnostic only.
+- Local result commit was attempted twice; both automatic permission reviews
+  timed out before execution. No Git write or commit occurred in either attempt.
+  Documentation migration and subsequent method code through f151b80 are already
+  committed. The latest results, this log and the late reference audit remain
+  saved but uncommitted. No permission bypass or further retry was attempted.
+- A separate user-side commit, 55246b1, added the long-term plasma/coil roadmap
+  during this work. It is preserved; pending plan changes only update the next
+  diagnostic step. Do not reset or replace that commit on resumption.
+- Next: when Git writes are available, inspect and commit the pending result
+  documents/evidence. Then separately preregister the quadratic spatial-field
+  model check on the four frozen probes before any new physical evaluations.
+  This is a permission-review blocker, not a scientific conclusion or usage cap.
+
+## 2026-09-11 — Composite-gated bounded descent diagnostic
+
+- f151b80: six additional adversarial composite-gate controls pass. Full suite
+  248 passed, 11 existing fixture warnings; Ruff and documentation checks pass.
+- v2 verifies both source arrays/Jacobians and recomputes the independent
+  complex-step record's numerical errors instead of trusting its summary flag.
+  Original full-row FD flag remains false; the declared composite gate passes.
+- Analytic LP control and all four successful physical-state model primals pass.
+  Two bounded original-state LPs are infeasible and have no nonlinear evaluation.
+- Four nonlinear probes retained: only the smallest selected-state step decreases
+  flux; larger steps reverse the predicted sign. No nonlinear design search or
+  independent candidate admission follows from these diagnostic samples.
+
 ## 2026-09-11 — Independent complex-clearance qualification passes
 
 - c1ca108 precedes all evaluations. Both states, all 120 pairs, seeds 47/48 and

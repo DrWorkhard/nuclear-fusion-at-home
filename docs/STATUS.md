@@ -1,6 +1,6 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 11. September 2026, nach direktem SLSQP-Pilot und unabhängigem Holdout.
+Stand: 12. September 2026, nach direktem SLSQP-Pilot, unabhängigem Holdout und lokaler Modelldiagnose.
 Dieses Dokument enthält die aktuelle Einschätzung; historische optimistischere
 Aussagen im Journal werden dadurch nicht wieder gültig.
 
@@ -22,7 +22,7 @@ und Verbesserungen daran zertifizieren.
 | W7-X | Ausgewählte physikalische Regression gegen versionspassendes VMEC 8.52 besteht | Erweiterter Vergleich 60/63; drei Ausgabedifferenzen bleiben, Auswahl teilweise retrospektiv |
 | QI bei endlichem Druck | 320 zugeordnete Potentialmulden-Familien in vier Fällen; Druckfall nfp2 durchgehend negative radiale Ableitungen im untersuchten Bereich, nfp3 gemischt | Unabhängige Quadratur und zweiter Feldlinienrechner; 319 aufgelöste Vorzeichen bestätigt, eines unaufgelöst. Keine globale maximum-J-Aussage |
 | Direkte Randbedingungen | 137 Ungleichungen qualifiziert; SLSQP-Pilot mit zwei exakt gleichen 256-Bundle-Läufen | Ausgewählte Felder bestehen Geometrie und zusätzliche native Metriken; Flux bleibt Faktor 23,3 über Grenze. Nicht konvergiert, nicht zulässig |
-| Software | 216 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Separater Kern-Checkout zuvor 207 bestanden + ein erwarteter W7-X-Skip; 11 bekannte NumPy-Warnungen. Kein vollständiger nativer Neuaufbau |
+| Software | 248 Tests bestanden, Ruff bestanden; Dokumentstruktur automatisch geprüft | Separater Kern-Checkout: 247 bestanden + ein erwarteter W7-X-Skip; Kern-Replay von zwei reellen und zwölf komplexen Abstandsauswertungen stimmt exakt überein. 11 bekannte NumPy-Warnungen; kein vollständiger nativer Neuaufbau |
 
 Details: [Zeitvergleich](optimization/TIMED_SPATIAL_PILOT_RESULTS.md),
 [Ableitungen](optimization/BATCHED_SPATIAL_JACOBIAN_RESULTS.md),
@@ -52,8 +52,10 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
 ## Offene Arbeit, nach Bedeutung
 
 1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
-   Konvergenz und aktive Randbedingungen des abgeschlossenen Piloten diagnostizieren,
-   dann einen getrennt festgelegten Folgelauf prüfen. Danach mehrere
+   das quadratische Feldmodell prüfen: lokale Proben zeigen starke Abweichungen
+   des linearen Modells. Die zuvor fehlgeschlagene Abstand-Ableitungsprüfung ist
+   unabhängig untersucht, der historische Fehlerstatus bleibt erhalten.
+   Danach einen getrennt festgelegten Folgelauf, mehrere
    Initialisierungen und fairer Methodenvergleich. Nicht nur mehr Rechenzeit auf
    denselben Strafansatz geben.
 2. **QI-Maßstab:** vollständiger relevanter Invariantenbereich, Mulden-Identität,

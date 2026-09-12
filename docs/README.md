@@ -1,6 +1,6 @@
 # Forschungsprojekt: belastbare Verbesserungen von Stellaratorspulen
 
-Leseeinstieg für die wissenschaftliche Betreuung. Stand: 11. September 2026.
+Leseeinstieg für die wissenschaftliche Betreuung. Stand: 12. September 2026.
 In etwa zehn Minuten: diese Seite, [Ergebnisstand](STATUS.md), dann
 [Arbeitsplan](PROJECT_PLAN.md). Messreihen und Protokolle liegen eine Ebene tiefer.
 
@@ -96,6 +96,17 @@ aktueller oder universeller Beweis, dass keine Daten existieren.
   Magnetfeldfehler bleibt jedoch Faktor 23,3 über der festen Grenze;
   eine zulässige Baseline ist weiterhin offen.
 
+Die [neueste lokale Diagnose](optimization/DIRECT_DESCENT_COMPOSITE_RESULTS.md)
+zeigt an vier festgelegten Testschritten: Größere Schritte verschlechtern den
+Magnetfeldfehler stark, obwohl das lineare Modell eine Verbesserung vorhersagt.
+Nur der kleinste Schritt am ausgewählten Kandidaten verbessert ihn leicht.
+Die [unabhängige Abstand-Ableitungsprüfung](optimization/COMPLEX_CLEARANCE_RESULTS.md)
+stützt die verwendeten Ableitungen an den untersuchten Zuständen; der ursprüngliche
+fehlgeschlagene Differenzentest bleibt unverändert dokumentiert. Diese Diagnose
+ist kein neuer zulässiger Entwurf. Als Nächstes prüfen wir nach getrennter
+Vorabfestlegung das quadratische räumliche Feldmodell an allen vier gespeicherten
+Testschritten, bevor wir eine neue Optimierung beginnen.
+
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 
 ## Wie Erfolg beurteilt wird
@@ -123,3 +134,7 @@ Dokumentationsregel: In `docs/` stehen nur diese Übersicht, Ergebnisstand und
 Arbeitsplan. Jeder Detailordner hat einen eigenen Zweck und eine gepflegte
 `README.md`; weitere Verschachtelung ist ausgeschlossen. Verbindliche Regeln für
 künftige Sitzungen stehen in [AGENTS.md](../AGENTS.md).
+Nach jedem abgeschlossenen Arbeitsschritt werden die betroffene Dokumentation
+und der Prüfvermerk ergänzt; beide READMEs, Ergebnisstand, Arbeitsplan und
+Bereichsübersicht werden auf nötige Aktualisierungen geprüft. Das gilt auch für
+negative Ergebnisse und Blocker, nicht erst am Sitzungsende.

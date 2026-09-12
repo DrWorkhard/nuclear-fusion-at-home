@@ -1,5 +1,19 @@
 # Findings log
 
+## F-056 — Larger linear-model descents strongly increase the actual flux objective
+
+**Class:** bounded model/physical-value diagnostic with independent derivative gate
+**Date:** 2026-09-11
+
+The separately qualified composite gate passes without changing the old failed
+FD flag. All four successful bounded LPs pass primal checks; two smaller original-
+state models are infeasible. At the selected point only rho=1e-4 gives a small
+actual decrease (-7.007e-5 in flux/1e-6); rho=1e-3/1e-2 instead increase it by
+0.03378/3.871 despite predicted decreases. Probes are not admitted designs or
+replacements for the fixed pilot candidate. Next test the natural quadratic
+spatial-field model against every frozen probe before another search. See
+[results](../optimization/DIRECT_DESCENT_COMPOSITE_RESULTS.md).
+
 ## F-055 — Independent complex steps distinguish an unreliable difference screen
 
 **Class:** retained failed diagnostic followed by independently qualified derivatives

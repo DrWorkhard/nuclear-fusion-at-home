@@ -26,6 +26,29 @@ changes, pinned external checkouts, failed runs and immutable evidence.
 - The migration manifest maps original paths to destinations and records original
   hashes/revision. Historical experiment code/protocols remain retrievable in Git.
 
+## After every completed work step (user requirement, 2026-09-12)
+
+Documentation is part of completing each bounded work step, not an end-of-session
+cleanup. Before starting the next step or handing off:
+
+1. Update the relevant detail document and `docs/logbook/VALIDATION_LOG.md` with
+   what changed or was learned, checks actually run and their outcomes, remaining
+   limits and the next step. Record negative results and blockers as well as
+   successes. Do not claim checks that were not performed.
+2. Add material findings to `docs/logbook/FINDINGS.md` and durable decisions to
+   `docs/logbook/DECISIONS.md` when applicable; keep the relevant folder overview
+   accurate and index every new document.
+3. Check `README.md`, `docs/README.md`, `docs/STATUS.md` and `docs/PROJECT_PLAN.md`
+   against the completed step. Update affected summaries, next actions and dates
+   before proceeding; do not duplicate detailed experiment logs at the top level.
+   A step that does not change the overall assessment still needs its detail/log
+   entry, but does not need a cosmetic rewrite of every overview.
+4. Run `python scripts/check_docs.py`, `git diff --check` and proportionate tests.
+   Record the results, review the intended diff and commit the scoped changes.
+   If a permission or other blocker prevents a commit, explicitly record and
+   report what is saved versus committed; never bypass the restriction or call
+   the step fully closed. Keep historical evidence and failed runs immutable.
+
 ## Research discipline and autonomy
 
 Preregister new numerical studies before running them. Keep construction and

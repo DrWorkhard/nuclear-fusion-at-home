@@ -8,6 +8,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 ## Dokumente
 
+- [Lokale Proben mit unabhängiger Ableitungsprüfung](DIRECT_DESCENT_COMPOSITE_RESULTS.md) — Vier echte Wertprobes: der kleinste Schritt verbessert leicht, größere lineare Abstiege verschlechtern den Flux stark; motiviert quadratisches Feldmodell.
 - [Komplexe-Schritt-Abstandsprüfung: Ergebnis](COMPLEX_CLEARANCE_RESULTS.md) — Alle 120 Paar-Richtungsableitungen stimmen an beiden festen Zuständen bis rund 2,4e-12; der alte Differenzentest bleibt als Fehlschlag erhalten.
 - [Komplexe-Schritt-Abstandsprüfung: Protokoll](COMPLEX_CLEARANCE_PROTOCOL.md) — Unabhängige Fourier-/Wertberechnung prüft alle 120 Abstandsbeschränkungen; soll Rundungsauslöschung von einem Ableitungsfehler unterscheiden.
 - [Lokale Diagnostik: gestoppt](DIRECT_DESCENT_DIAGNOSTIC_RESULTS.md) — Neue Richtungsprüfung verfehlt den festen Grenzwert; keine Abstiegsprobes. Rundungsauslöschung ist eine zu prüfende Vermutung.

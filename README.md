@@ -10,12 +10,24 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-11: qualified numerical methods and useful independent
+Current assessment, 2026-09-12: qualified numerical methods and useful independent
 checks, but no newly feasible optimization baseline, no demonstrated SoTA design
 advance, and no complete SQuID-C readiness. All four candidates from the latest
-equal-wall-time pilot fail independent acceptance.
+equal-wall-time pilot fail independent acceptance. The subsequent direct-constraint
+SLSQP pilot passes the tested geometry and additional native checks, but its
+selected candidate's independently measured raw flux remains 23.3 times the limit;
+the budget-limited run does not establish convergence.
+
+The latest [bounded diagnostic](docs/optimization/DIRECT_DESCENT_COMPOSITE_RESULTS.md)
+finds that larger steps predicted to reduce flux by a linear model instead
+increase it. A separately qualified complex-step check supports the pair-clearance
+derivatives at the frozen states; the original failed finite-difference screen is
+retained. Next: preregister and test the quadratic spatial-field model against all
+four frozen probes before another search. These probes are not admitted designs.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
+Documentation must be updated after every completed work step, including checking
+both READMEs, the current assessment and the work plan for affected summaries.
 Environment details: [validation overview](docs/validation/README.md).
 Documentation checks: `python scripts/check_docs.py`.
 
