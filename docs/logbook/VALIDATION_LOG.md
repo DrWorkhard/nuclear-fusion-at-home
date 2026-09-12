@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Restore concise reviewer-level overviews after accumulated study updates
+
+- Replaced the three root documents' growing chronological narratives by current
+  research question, evidence/limits and explicit open step1/2 deliverables.
+  Combined root overview length reduced from566 to273 lines; detailed results,
+  negative studies, protocols, raw data, hierarchy and Git history unchanged.
+- Repository README now gives current scientific headlines instead of replaying
+  older searches. Both READMEs/status/plan synchronized; no relaxed scientific
+  criterion or new completion claim. Existing long-term-plan anchor retained.
+- AGENTS explicitly requires replacing stale summaries rather than accumulating
+  experiment histories. Documentation tests, layout/link and diff checks pass.
+  Next scientific work is separate preregistration of the curvature diagnosis.
+
 ## 2026-09-12 — Close all32 real geometric probe bundles and independent250-check audit
 
 - At7ba5523 both full source values/Jacobians replay within1e-12; all six native

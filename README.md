@@ -10,72 +10,33 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-12: qualified numerical methods and useful independent
-checks, but no newly feasible optimization baseline, no demonstrated SoTA design
-advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
+Current assessment, 2026-09-12: no newly feasible optimization baseline,
+no demonstrated SoTA design advance, and no complete SQuID-C readiness.
+Long-term steps 1 and 2 remain open.
 
-- [Fresh native integration](docs/validation/FRESH_NATIVE_INTEGRATION_RESULTS.md)
-  now passes: locked new environments, newly built VMEC8.52, fresh W7-X outputs
-  from both solvers, and all six scientific tests with zero skips. The extended
-  W7-X comparison deliberately retains three failures out of 63 quantities.
-- [SLSQP-1024](docs/optimization/DIRECT_SLSQP_1024_RESULTS.md) passes tested
-  geometry/native metrics but its refined flux is 12.7 times the limit; its new
-  repeats agree internally but fail the historical-prefix requirement.
-  [GN-1024](docs/optimization/GN_NATIVE_COVECTOR_RESULTS.md) passes repeat/audit
-  checks but remains 24.7 times over the same flux limit. Neither is feasible.
-- [Natural-flux AL](docs/optimization/NATURAL_AUGLAG_RESULTS.md): the original
-  interrupted study's full first arm and saved 700-bundle second prefix are
-  independently verified. The [unchanged recovery](docs/optimization/NATURAL_AUGLAG_RECOVERY_RESULTS.md)
-  now passes both full repeats and independent historical-prefix audits;
-  all fine holdouts are complete: geometry/native checks pass, flux fails by
-  26.99 times. The separate Jacobian-scaling test is fully audited/validated:
-  fine flux is11.4% lower but still23.91 times the limit, curvature higher.
-  Five separately selected upstream fields now pass independent reconstruction
-  but all fail raw flux by about100 times, despite reported clipped zeros.
-  A separately qualified first-source start now completes both repeated searches
-  and all fine holdouts: geometry/native checks pass, flux still8.955 times too high.
-  Subsequent [SLSQP polishing](docs/optimization/SLSQP_POLISH_RESULTS.md) stops
-  before optimization at its derivative gate; the independent postmortem confirms
-  all nine startup bundles, not a qualified new construction.
-  Independent complex-step and real-chain-rule checks now qualify its pair
-  derivatives at the fixed start. The separately registered composite-gate retry
-  now completes both2048-bundle arms with exactly repeated paths and a passing
-  independent audit. All four fine holdouts now complete: geometry/native pass,
-  flux8.191665e-8 remains8.19 times the limit. Both searches stopped at their caps;
-  the trial is closed, feasibility and fair multi-start comparisons remain open.
-  The [disk incident](docs/validation/RESOURCE_INTERRUPTION.md) remains preserved.
-- [Fixed-geometry current minimization](docs/optimization/FIXED_GEOMETRY_CURRENT_RESULTS.md)
-  now passes native/independent checks and all eight field holdouts are complete.
-  Additional fine flux reductions are at most0.000016608%; both forms still fail
-  the flux limit. Further progress requires shape work, not current-only tuning.
-- [Geometric descent diagnosis](docs/optimization/GEOMETRIC_DESCENT_RESULTS.md)
-  completes six linear models and32 native bundles with independent checks:
-  derivatives pass, but every finite trial worsens flux and construction geometry.
-  Curvature/conditioning must be addressed before another search; no new design.
-- [QI gauge tests](docs/qi/QI_RADIAL_GAUGE_RESULTS.md) reproduce all84 old traces
-  but find25 nfp3 families with sign changes under field-line relabeling alone.
-  [The full drift/phase transformation](docs/qi/QI_DRIFT_COORDINATES.md) explains
-  the interpretation limit; absolute physical drift validation remains open.
-  A separate signed-flux check confirms the field orientation, but five poloidal
-  identities exceed the fixed tolerance:19/24 grids pass the full screen.
-  The [fresh16-cell resolution matrix](docs/qi/QI_FRESH_RESOLUTION_RESULTS.md)
-  is now independently audited: doubled solver angular resolution passes all
-  sampled identities, but evaluation-refinement and historical-fidelity failures
-  prevent overall qualification. No historical data replaced.
-  The separate [coordinate-aware comparison](docs/qi/QI_PEST_FIDELITY_RESULTS.md)
-  now passes independent point/root checks, but only4/16 new fidelity and5/16
-  comparison-refinement screens pass. Parametrization explains part, not all,
-  of the disagreement; original screens and open physical gates remain unchanged.
+- [Latest coil results](docs/optimization/README.md): best fine raw flux about
+  8.19e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.
+  Exact current redistribution offers negligible gain. Six subsequent geometric
+  trials all worsen flux despite verified derivatives and linearly descending
+  models. Curvature/conditioning diagnosis is next; no new feasible design.
+- [Fresh native integration](docs/validation/FRESH_NATIVE_INTEGRATION_RESULTS.md):
+  all 21 local phases and six scientific tests without skips pass. Extended W7-X
+  comparison deliberately retains three differences out of 63 quantities.
+- [QI evaluation](docs/qi/README.md): independently audited action, coordinate and
+  resolution diagnostics give useful partial results, not an absolute/global
+  drift or maximum-J qualification. Historical author data are unchanged.
+- [Finite coil geometry](docs/engineering/MESH_FINE_COMPLETION_RESULTS.md):
+  all six original meshes pass the scoped non-shared-vertex nonoverlap test,
+  with independent witnesses and exact historical prefix. Neighbor pairs, full
+  assemblies and valid mechanics remain open.
+- Software regression: 651 tests pass with 144 documented fixture warnings;
+  Ruff and documentation checks pass. The separate strict netCDF4 import warning
+  remains unresolved; this is not an ABI-freedom or hosted-CI claim.
 
-Earlier equal-time spatial-residual improvements remain limited to one start and
-infeasible fields. A [field-strength audit](docs/optimization/FIELD_STRENGTH_AUDIT.md)
-rules out simple mean-field weakening as their explanation; it does not establish SoTA.
-
-The [finest-mesh completion](docs/engineering/MESH_FINE_COMPLETION_RESULTS.md)
-now supplements the five earlier passes with full pair coverage and an exact
-old two-million-witness prefix: all six meshes pass the non-shared-vertex scope.
-The original capped study is preserved. Neighbor pairs, full assemblies and valid
-mechanics remain open, as do long-term steps1 and2.
+Prior searches, source reconstructions, negative trials and the disk incident
+remain preserved in the [research journal](docs/logbook/README.md) and linked
+detail reports. Earlier equal-time gains apply to one infeasible start and do
+not establish a general method ranking or better power-plant performance.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

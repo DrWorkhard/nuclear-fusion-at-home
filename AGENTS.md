@@ -20,6 +20,9 @@ changes, pinned external checkouts, failed runs and immutable evidence.
   do not create miscellaneous dumping grounds or date-based folder hierarchies.
 - Keep top-level status/plan concise and current when a material finding changes
   the project's assessment. Detailed evidence and chronology belong below.
+- Replace outdated overview summaries instead of appending successive experiment
+  histories. Keep each top-level overview readable in a few minutes; link to the
+  detail reports/journal for the complete chronology and preserved failures.
 - Use relative Markdown links for navigation. Run `python scripts/check_docs.py`
   and tests before committing structural changes. Update live script paths when
   moving protocols; do not rewrite archived evidence paths/hashes to look current.
