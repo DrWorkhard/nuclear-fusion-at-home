@@ -53,9 +53,10 @@ Wegen geänderter Zielformulierung ist dies kein isolierter Methodenvergleich.
 ## Offene Arbeit, nach Bedeutung
 
 1. **Zulässige klassische Baseline:** Mit den [qualifizierten direkten Ungleichungen](optimization/DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md)
-   den SLSQP-1024-Lauf unabhängig abnehmen: Er wiederholt
-   sich intern exakt, scheitert aber am historischen Präfixvergleich; grober
-   Flux Faktor 12,7 über Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024
+   den vorab festgelegten natürlichen Flux-AL-Piloten ausführen und unabhängig
+   prüfen. SLSQP-1024 wiederholt sich intern exakt, scheitert aber am historischen
+   Präfixvergleich; Geometrie/nativ bestehen, verfeinerter Flux Faktor 12,7 über
+   Grenze. Der korrigierte GN-Trust-Pilot wiederholt alle 1024
    Bundles exakt und besteht den unabhängigen Protokoll-Audit sowie Geometrie/
    native Zusatzmetriken; der verfeinerte Flux bleibt Faktor 24,7 über der Grenze.
    Getrennte Feldprojektionsrundung war

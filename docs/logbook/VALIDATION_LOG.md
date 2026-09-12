@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — SLSQP-1024 fine holdouts complete; flux still rejected
+
+- Both fields replay all required grids and continuous bounds identically.
+  Refined Phi=1.2665168944926633e-7 fails1e-8. Length219.900064480m,
+  curvature upper0.987921046/m, clearance lower1.089710989m and sampled
+  plasma distance3.000997362m pass. Native MSC/arc/linking/refinement pass.
+- Curvature200/400 unresolved, all levels from800 pass. Historical prefix failure
+  remains false; physical geometry checks cannot repair that protocol condition.
+- Both bounded construction studies now closed without feasible baseline. Both
+  READMEs/status/plan/index updated; docs/diff checks pass. Next run already fixed
+  natural-AL setup without holdout feedback. Steps1/2 remain scientifically open.
+
 ## 2026-09-12 — Preregister bounded radial-QI gauge diagnostic
 
 - Fixed four old cases/pitches/radii and c=-1,0,+1 radial alpha relabelings,

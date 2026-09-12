@@ -35,9 +35,10 @@ pass, but independently refined flux is still 24.7 times the limit. Original obj
 matrices and tolerances are unchanged. The separate
 [SLSQP-1024 construction](docs/optimization/DIRECT_SLSQP_1024_RESULTS.md) also
 repeats exactly within its new study, but fails the preregistered historical-prefix
-comparison. Its selected coarse flux remains 12.7 times the limit. Its
-independent physical holdouts are next; a classical natural-flux AL follow-up
-has been preregistered and its analytic solver control passes.
+comparison. Geometry and native-metric holdouts pass, but independently refined
+flux remains 12.7 times the limit. Both bounded construction studies are closed
+without an admissible design. A classical natural-flux AL follow-up is next;
+its protocol, analytic solver control and independent stage auditor are ready.
 
 Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
 Documentation must be updated after every completed work step, including checking

@@ -1,0 +1,1217 @@
+{
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_curvature.py",
+      "sha256": "fb87e1a1d0f29f1663a9417cd08ecbd027cf6179ba3d4483740177b4018afd18"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py",
+      "sha256": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128"
+    }
+  ],
+  "construction_protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/DIRECT_SLSQP_1024_PROTOCOL.md",
+    "sha256": "7ab2e3a94e87a9ddba593d932360813fbd8ff2b341681599f801973cb810c10b"
+  },
+  "directed_rounding": false,
+  "fields": [
+    {
+      "a0": 10.100286074838271,
+      "classification": "pass",
+      "elapsed_seconds": 0.044215832982445136,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/fixtures/rejected-lpqa-warmstart/field.json",
+        "sha256": "ef38a96aa6820de08d187f6362645b5450f009034706b06b2722566da9631e8c"
+      },
+      "levels": [
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.249830522545079,
+              "maximum_lower_bound_reactor": 0.4207633814582949,
+              "maximum_squared_interpolation_allowance": 0.7099319447911582,
+              "maximum_upper_bound": 4.315362794412937,
+              "maximum_upper_bound_reactor": 0.42725154143537813,
+              "minimum_speed_lower_bound": 3.0037209432431666,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.6025
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 6.127595438558091,
+              "maximum_lower_bound_reactor": 0.6066754340575653,
+              "maximum_squared_interpolation_allowance": 13.671635376835772,
+              "maximum_upper_bound": 7.156749348385319,
+              "maximum_upper_bound_reactor": 0.7085689747158884,
+              "minimum_speed_lower_bound": 1.2507611075542029,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.345
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.087667575296026,
+              "maximum_lower_bound_reactor": 0.8997435823065576,
+              "maximum_squared_interpolation_allowance": 10.06379956025036,
+              "maximum_upper_bound": 9.57158655514734,
+              "maximum_upper_bound_reactor": 0.9476549955344312,
+              "minimum_speed_lower_bound": 1.7903230448223555,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.1675
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.42806433250856,
+              "maximum_lower_bound_reactor": 0.4384097935146321,
+              "maximum_squared_interpolation_allowance": 4.377887439941924,
+              "maximum_upper_bound": 4.897513774645661,
+              "maximum_upper_bound_reactor": 0.48488861982298676,
+              "minimum_speed_lower_bound": 1.7647955396468338,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.26
+            }
+          ],
+          "resolution": 200
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.249830522545079,
+              "maximum_lower_bound_reactor": 0.4207633814582949,
+              "maximum_squared_interpolation_allowance": 0.12401469223160373,
+              "maximum_upper_bound": 4.263507348071843,
+              "maximum_upper_bound_reactor": 0.42211748424562434,
+              "minimum_speed_lower_bound": 3.042590870492081,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.6025
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 6.133090620732138,
+              "maximum_lower_bound_reactor": 0.6072194960903959,
+              "maximum_squared_interpolation_allowance": 1.9321784825411097,
+              "maximum_upper_bound": 6.283189669803773,
+              "maximum_upper_bound_reactor": 0.6220803671547869,
+              "minimum_speed_lower_bound": 1.2656169965731392,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.34375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.092586748318974,
+              "maximum_lower_bound_reactor": 0.9002306153456715,
+              "maximum_squared_interpolation_allowance": 1.5387809005813413,
+              "maximum_upper_bound": 9.1683782717658,
+              "maximum_upper_bound_reactor": 0.9077345140357924,
+              "minimum_speed_lower_bound": 1.8065354592029539,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.16875
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.42924953888044,
+              "maximum_lower_bound_reactor": 0.43852713735648946,
+              "maximum_squared_interpolation_allowance": 0.6865203680864362,
+              "maximum_upper_bound": 4.504754816597598,
+              "maximum_upper_bound_reactor": 0.44600269568797624,
+              "minimum_speed_lower_bound": 1.7864837108321203,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.25875
+            }
+          ],
+          "resolution": 400
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.250579181737512,
+              "maximum_lower_bound_reactor": 0.42083750403134734,
+              "maximum_squared_interpolation_allowance": 0.026202701289604398,
+              "maximum_upper_bound": 4.252715330025134,
+              "maximum_upper_bound_reactor": 0.4210489978714023,
+              "minimum_speed_lower_bound": 3.0608008378342704,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.601875
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 6.134719327748207,
+              "maximum_lower_bound_reactor": 0.6073807496434143,
+              "maximum_squared_interpolation_allowance": 0.37420758327804904,
+              "maximum_upper_bound": 6.163522381358258,
+              "maximum_upper_bound_reactor": 0.6102324563571285,
+              "minimum_speed_lower_bound": 1.2714124468332337,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.344375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.09347706012243,
+              "maximum_lower_bound_reactor": 0.9003187625324798,
+              "maximum_squared_interpolation_allowance": 0.3064829957156214,
+              "maximum_upper_bound": 9.108117255216436,
+              "maximum_upper_bound_reactor": 0.9017682457437007,
+              "minimum_speed_lower_bound": 1.8135151177950717,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.168125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.4304386785907,
+              "maximum_lower_bound_reactor": 0.43864487062676005,
+              "maximum_squared_interpolation_allowance": 0.1392076891322589,
+              "maximum_upper_bound": 4.444936351272535,
+              "maximum_upper_bound_reactor": 0.44008024310773874,
+              "minimum_speed_lower_bound": 1.795912690292967,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.259375
+            }
+          ],
+          "resolution": 800
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.250579181737512,
+              "maximum_lower_bound_reactor": 0.42083750403134734,
+              "maximum_squared_interpolation_allowance": 0.006038104869924658,
+              "maximum_upper_bound": 4.2512371891862175,
+              "maximum_upper_bound_reactor": 0.4209026514384435,
+              "minimum_speed_lower_bound": 3.069644961883623,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.601875
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 6.1349761902717725,
+              "maximum_lower_bound_reactor": 0.6074061808561207,
+              "maximum_squared_interpolation_allowance": 0.08268317241662246,
+              "maximum_upper_bound": 6.141416996098771,
+              "maximum_upper_bound_reactor": 0.6080438663413906,
+              "minimum_speed_lower_bound": 1.273867956033189,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.3440625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.093868649482708,
+              "maximum_lower_bound_reactor": 0.9003575326581353,
+              "maximum_squared_interpolation_allowance": 0.06865782268032042,
+              "maximum_upper_bound": 9.096994237557245,
+              "maximum_upper_bound_reactor": 0.9006669880588416,
+              "minimum_speed_lower_bound": 1.8168133363286056,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.1684375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.4304386785907,
+              "maximum_lower_bound_reactor": 0.43864487062676005,
+              "maximum_squared_interpolation_allowance": 0.031478840968391555,
+              "maximum_upper_bound": 4.433977155174123,
+              "maximum_upper_bound_reactor": 0.4389952049199875,
+              "minimum_speed_lower_bound": 1.800381761953376,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.259375
+            }
+          ],
+          "resolution": 1600
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.250592392262478,
+              "maximum_lower_bound_reactor": 0.4208388119670699,
+              "maximum_squared_interpolation_allowance": 0.0014501374228310516,
+              "maximum_upper_bound": 4.2507372114170545,
+              "maximum_upper_bound_reactor": 0.4208531500911095,
+              "minimum_speed_lower_bound": 3.0739754236102175,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.60203125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 6.135118485903818,
+              "maximum_lower_bound_reactor": 0.6074202691335211,
+              "maximum_squared_interpolation_allowance": 0.019451333865750875,
+              "maximum_upper_bound": 6.136555080652749,
+              "maximum_upper_bound_reactor": 0.6075625022087316,
+              "minimum_speed_lower_bound": 1.2749980029368178,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.34421875
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.093882189280004,
+              "maximum_lower_bound_reactor": 0.9003588731941553,
+              "maximum_squared_interpolation_allowance": 0.016267239348348395,
+              "maximum_upper_bound": 9.09469420195062,
+              "maximum_upper_bound_reactor": 0.900439268211148,
+              "minimum_speed_lower_bound": 1.8184239312746453,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.16828125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.430477961706963,
+              "maximum_lower_bound_reactor": 0.43864875993405017,
+              "maximum_squared_interpolation_allowance": 0.007491648587057925,
+              "maximum_upper_bound": 4.431280739875661,
+              "maximum_upper_bound_reactor": 0.43872824066981847,
+              "minimum_speed_lower_bound": 1.8025087023443613,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.25921875
+            }
+          ],
+          "resolution": 3200
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.2506025049160785,
+              "maximum_lower_bound_reactor": 0.42083981319154273,
+              "maximum_squared_interpolation_allowance": 0.0003553846123352417,
+              "maximum_upper_bound": 4.250631215089713,
+              "maximum_upper_bound_reactor": 0.42084265570247975,
+              "minimum_speed_lower_bound": 3.0761399491054453,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.601953125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 6.135118485903818,
+              "maximum_lower_bound_reactor": 0.6074202691335211,
+              "maximum_squared_interpolation_allowance": 0.0047190949145586225,
+              "maximum_upper_bound": 6.135500927534391,
+              "maximum_upper_bound_reactor": 0.6074581335690172,
+              "minimum_speed_lower_bound": 1.27552326188724,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.34421875
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.0939277380296,
+              "maximum_lower_bound_reactor": 0.9003633828436107,
+              "maximum_squared_interpolation_allowance": 0.003959978915636429,
+              "maximum_upper_bound": 9.094083695181904,
+              "maximum_upper_bound_reactor": 0.9003788237084682,
+              "minimum_speed_lower_bound": 1.8192108491104462,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.168359375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.430486236416248,
+              "maximum_lower_bound_reactor": 0.4386495791889924,
+              "maximum_squared_interpolation_allowance": 0.0018279165611321474,
+              "maximum_upper_bound": 4.430683580413197,
+              "maximum_upper_bound_reactor": 0.4386691176451794,
+              "minimum_speed_lower_bound": 1.8035543958719953,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.259296875
+            }
+          ],
+          "resolution": 6400
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.2506025049160785,
+              "maximum_lower_bound_reactor": 0.42083981319154273,
+              "maximum_squared_interpolation_allowance": 8.796944959395551e-05,
+              "maximum_upper_bound": 4.250612103589691,
+              "maximum_upper_bound_reactor": 0.42084076352834915,
+              "minimum_speed_lower_bound": 3.077217352267489,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.601953125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 6.135133447639768,
+              "maximum_lower_bound_reactor": 0.6074217504515589,
+              "maximum_squared_interpolation_allowance": 0.0011622959745302428,
+              "maximum_upper_bound": 6.135212659796919,
+              "maximum_upper_bound_reactor": 0.607429593017261,
+              "minimum_speed_lower_bound": 1.2757846563842832,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.3441796875
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.0939277380296,
+              "maximum_lower_bound_reactor": 0.9003633828436107,
+              "maximum_squared_interpolation_allowance": 0.0009769595697571825,
+              "maximum_upper_bound": 9.093977335037332,
+              "maximum_upper_bound_reactor": 0.9003682932993506,
+              "minimum_speed_lower_bound": 1.8196013753734221,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.168359375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 4.430489085698984,
+              "maximum_lower_bound_reactor": 0.43864986128820377,
+              "maximum_squared_interpolation_allowance": 0.0004514961385919661,
+              "maximum_upper_bound": 4.430536997437571,
+              "maximum_upper_bound_reactor": 0.4386546048903386,
+              "minimum_speed_lower_bound": 1.8040679141786697,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.2592578125
+            }
+          ],
+          "resolution": 12800
+        }
+      ],
+      "name": "rejected-warmstart",
+      "orthogonal_copies_verified": true
+    },
+    {
+      "a0": 10.100286074838271,
+      "classification": "pass",
+      "elapsed_seconds": 0.054603249998763204,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-slsqp-1024-v1/slsqp-1/best_field.json",
+        "sha256": "18a8587012e655146c57347529075379f0e0d44350dad75761994caf509edb0c"
+      },
+      "levels": [
+        {
+          "classification": "unresolved",
+          "curves": [
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 9.96886695067365,
+              "maximum_lower_bound_reactor": 0.9869885740670246,
+              "maximum_squared_interpolation_allowance": 101.93558685405037,
+              "maximum_upper_bound": 14.154114175804105,
+              "maximum_upper_bound_reactor": 1.401357750753683,
+              "minimum_speed_lower_bound": 1.7618126677046106,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.6175
+            },
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 9.906448131381005,
+              "maximum_lower_bound_reactor": 0.9808086679900926,
+              "maximum_squared_interpolation_allowance": 67.74452875523018,
+              "maximum_upper_bound": 12.879528071144623,
+              "maximum_upper_bound_reactor": 1.2751646810509627,
+              "minimum_speed_lower_bound": 2.1197451084448673,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.545
+            },
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 7.401294415993292,
+              "maximum_lower_bound_reactor": 0.7327806718694158,
+              "maximum_squared_interpolation_allowance": 98.91317786481594,
+              "maximum_upper_bound": 10.35953158560182,
+              "maximum_upper_bound_reactor": 1.0256671453504054,
+              "minimum_speed_lower_bound": 1.7320077181368958,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.635
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.909691983694461,
+              "maximum_lower_bound_reactor": 0.7831156390113547,
+              "maximum_squared_interpolation_allowance": 14.684127791514411,
+              "maximum_upper_bound": 8.76076272827307,
+              "maximum_upper_bound_reactor": 0.8673776825091907,
+              "minimum_speed_lower_bound": 2.8159538487343263,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.5725
+            }
+          ],
+          "resolution": 200
+        },
+        {
+          "classification": "unresolved",
+          "curves": [
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 9.972550022090834,
+              "maximum_lower_bound_reactor": 0.9873532242749389,
+              "maximum_squared_interpolation_allowance": 10.759320440507,
+              "maximum_upper_bound": 10.494647622529307,
+              "maximum_upper_bound_reactor": 1.0390445918827453,
+              "minimum_speed_lower_bound": 1.7930506034891767,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.61875
+            },
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 9.906448131381005,
+              "maximum_lower_bound_reactor": 0.9808086679900926,
+              "maximum_squared_interpolation_allowance": 7.727528551299079,
+              "maximum_upper_bound": 10.270458744657509,
+              "maximum_upper_bound_reactor": 1.016848301974651,
+              "minimum_speed_lower_bound": 2.1918649459328488,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.545
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.401294415993292,
+              "maximum_lower_bound_reactor": 0.7327806718694158,
+              "maximum_squared_interpolation_allowance": 6.455357250305238,
+              "maximum_upper_bound": 7.618305179926963,
+              "maximum_upper_bound_reactor": 0.7542662775567919,
+              "minimum_speed_lower_bound": 1.7845375750426888,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.635
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943556755713331,
+              "maximum_lower_bound_reactor": 0.7864684917689845,
+              "maximum_squared_interpolation_allowance": 1.75751610204926,
+              "maximum_upper_bound": 8.011615575307708,
+              "maximum_upper_bound_reactor": 0.7932067979011171,
+              "minimum_speed_lower_bound": 2.8585590092384416,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.57375
+            }
+          ],
+          "resolution": 400
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.977908749232045,
+              "maximum_lower_bound_reactor": 0.9878837762911398,
+              "maximum_squared_interpolation_allowance": 1.856200232049736,
+              "maximum_upper_bound": 10.06518525291292,
+              "maximum_upper_bound_reactor": 0.9965247695297668,
+              "minimum_speed_lower_bound": 1.8013527730103298,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.618125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 1.3579779234572027,
+              "maximum_upper_bound": 9.972502922041341,
+              "maximum_upper_bound_reactor": 0.9873485610357847,
+              "minimum_speed_lower_bound": 2.2193944463501047,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.404764664299462,
+              "maximum_lower_bound_reactor": 0.7331242510790001,
+              "maximum_squared_interpolation_allowance": 0.8548526484930018,
+              "maximum_upper_bound": 7.43972963569326,
+              "maximum_upper_bound_reactor": 0.7365860313825207,
+              "minimum_speed_lower_bound": 1.7982873185735402,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.634375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943556755713331,
+              "maximum_lower_bound_reactor": 0.7864684917689845,
+              "maximum_squared_interpolation_allowance": 0.31885112473545185,
+              "maximum_upper_bound": 7.961029378907911,
+              "maximum_upper_bound_reactor": 0.788198405463024,
+              "minimum_speed_lower_bound": 2.8766445431394088,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.57375
+            }
+          ],
+          "resolution": 800
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.977908749232045,
+              "maximum_lower_bound_reactor": 0.9878837762911398,
+              "maximum_squared_interpolation_allowance": 0.3904774104517938,
+              "maximum_upper_bound": 9.997456697518258,
+              "maximum_upper_bound_reactor": 0.9898191618971882,
+              "minimum_speed_lower_bound": 1.8036629706301133,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.618125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 0.28818970692486484,
+              "maximum_upper_bound": 9.931407704848821,
+              "maximum_upper_bound_reactor": 0.9832798428937416,
+              "minimum_speed_lower_bound": 2.232577097785784,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.404764664299462,
+              "maximum_lower_bound_reactor": 0.7331242510790001,
+              "maximum_squared_interpolation_allowance": 0.15636697880525627,
+              "maximum_upper_bound": 7.412792639190135,
+              "maximum_upper_bound_reactor": 0.7339190775652195,
+              "minimum_speed_lower_bound": 1.8030057041064576,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.634375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943556755713331,
+              "maximum_lower_bound_reactor": 0.7864684917689845,
+              "maximum_squared_interpolation_allowance": 0.06839833006179545,
+              "maximum_upper_bound": 7.947330330192203,
+              "maximum_upper_bound_reactor": 0.786842102422278,
+              "minimum_speed_lower_bound": 2.8848152197019306,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.57375
+            }
+          ],
+          "resolution": 1600
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.977908752102891,
+              "maximum_lower_bound_reactor": 0.987883776575374,
+              "maximum_squared_interpolation_allowance": 0.08983090925508865,
+              "maximum_upper_bound": 9.982405696270133,
+              "maximum_upper_bound_reactor": 0.988329005961346,
+              "minimum_speed_lower_bound": 1.8044546344084864,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.61828125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 0.06654127081554072,
+              "maximum_upper_bound": 9.920778587511773,
+              "maximum_upper_bound_reactor": 0.9822274848458317,
+              "minimum_speed_lower_bound": 2.238801099815738,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.404867453204996,
+              "maximum_lower_bound_reactor": 0.733134427910109,
+              "maximum_squared_interpolation_allowance": 0.03350884976198967,
+              "maximum_upper_bound": 7.406616738531869,
+              "maximum_upper_bound_reactor": 0.7333076195716036,
+              "minimum_speed_lower_bound": 1.8049820601198618,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.63453125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943556755713331,
+              "maximum_lower_bound_reactor": 0.7864684917689845,
+              "maximum_squared_interpolation_allowance": 0.015866187196196164,
+              "maximum_upper_bound": 7.944436894214935,
+              "maximum_upper_bound_reactor": 0.7865556317267126,
+              "minimum_speed_lower_bound": 2.888771230260709,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.57375
+            }
+          ],
+          "resolution": 3200
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.978021031867453,
+              "maximum_lower_bound_reactor": 0.9878948930688801,
+              "maximum_squared_interpolation_allowance": 0.021557592990739158,
+              "maximum_upper_bound": 9.978987620833566,
+              "maximum_upper_bound_reactor": 0.9879905922361067,
+              "minimum_speed_lower_bound": 1.8047830978854265,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.618203125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 0.015996536396415822,
+              "maximum_upper_bound": 9.918362155687735,
+              "maximum_upper_bound_reactor": 0.9819882409465863,
+              "minimum_speed_lower_bound": 2.2418215006429674,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.404897312296545,
+              "maximum_lower_bound_reactor": 0.733137384172073,
+              "maximum_squared_interpolation_allowance": 0.007763037418920176,
+              "maximum_upper_bound": 7.405314254072885,
+              "maximum_upper_bound_reactor": 0.7331786643668369,
+              "minimum_speed_lower_bound": 1.8058968109654767,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.634453125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943608602997407,
+              "maximum_lower_bound_reactor": 0.786473625018052,
+              "maximum_squared_interpolation_allowance": 0.0038223587736218433,
+              "maximum_upper_bound": 7.94376948375498,
+              "maximum_upper_bound_reactor": 0.7864895533547724,
+              "minimum_speed_lower_bound": 2.890713845494115,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.573671875
+            }
+          ],
+          "resolution": 6400
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.978021031867453,
+              "maximum_lower_bound_reactor": 0.9878948930688801,
+              "maximum_squared_interpolation_allowance": 0.0052812351981973826,
+              "maximum_upper_bound": 9.978285187651599,
+              "maximum_upper_bound_reactor": 0.9879210463661421,
+              "minimum_speed_lower_bound": 1.804921115128276,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.618203125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 0.00392218034503264,
+              "maximum_upper_bound": 9.917785846081328,
+              "maximum_upper_bound_reactor": 0.9819311822056619,
+              "minimum_speed_lower_bound": 2.2433207855820654,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.4049026766772705,
+              "maximum_lower_bound_reactor": 0.7331379152838342,
+              "maximum_squared_interpolation_allowance": 0.0018685727820708326,
+              "maximum_upper_bound": 7.405006625762791,
+              "maximum_upper_bound_reactor": 0.733148206980995,
+              "minimum_speed_lower_bound": 1.8063387108248872,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.6344921875
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943618797049653,
+              "maximum_lower_bound_reactor": 0.7864746343015684,
+              "maximum_squared_interpolation_allowance": 0.0009381626413699599,
+              "maximum_upper_bound": 7.94366100314346,
+              "maximum_upper_bound_reactor": 0.7864788130043788,
+              "minimum_speed_lower_bound": 2.8916756958848433,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.5737109375
+            }
+          ],
+          "resolution": 12800
+        }
+      ],
+      "name": "direct-r1",
+      "orthogonal_copies_verified": true
+    },
+    {
+      "a0": 10.100286074838271,
+      "classification": "pass",
+      "elapsed_seconds": 0.052688791998662055,
+      "field": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/direct-slsqp-1024-v1/slsqp-2/best_field.json",
+        "sha256": "18a8587012e655146c57347529075379f0e0d44350dad75761994caf509edb0c"
+      },
+      "levels": [
+        {
+          "classification": "unresolved",
+          "curves": [
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 9.96886695067365,
+              "maximum_lower_bound_reactor": 0.9869885740670246,
+              "maximum_squared_interpolation_allowance": 101.93558685405037,
+              "maximum_upper_bound": 14.154114175804105,
+              "maximum_upper_bound_reactor": 1.401357750753683,
+              "minimum_speed_lower_bound": 1.7618126677046106,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.6175
+            },
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 9.906448131381005,
+              "maximum_lower_bound_reactor": 0.9808086679900926,
+              "maximum_squared_interpolation_allowance": 67.74452875523018,
+              "maximum_upper_bound": 12.879528071144623,
+              "maximum_upper_bound_reactor": 1.2751646810509627,
+              "minimum_speed_lower_bound": 2.1197451084448673,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.545
+            },
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 7.401294415993292,
+              "maximum_lower_bound_reactor": 0.7327806718694158,
+              "maximum_squared_interpolation_allowance": 98.91317786481594,
+              "maximum_upper_bound": 10.35953158560182,
+              "maximum_upper_bound_reactor": 1.0256671453504054,
+              "minimum_speed_lower_bound": 1.7320077181368958,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.635
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.909691983694461,
+              "maximum_lower_bound_reactor": 0.7831156390113547,
+              "maximum_squared_interpolation_allowance": 14.684127791514411,
+              "maximum_upper_bound": 8.76076272827307,
+              "maximum_upper_bound_reactor": 0.8673776825091907,
+              "minimum_speed_lower_bound": 2.8159538487343263,
+              "regularity_resolved": true,
+              "resolution": 200,
+              "witness_parameter": 0.5725
+            }
+          ],
+          "resolution": 200
+        },
+        {
+          "classification": "unresolved",
+          "curves": [
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 9.972550022090834,
+              "maximum_lower_bound_reactor": 0.9873532242749389,
+              "maximum_squared_interpolation_allowance": 10.759320440507,
+              "maximum_upper_bound": 10.494647622529307,
+              "maximum_upper_bound_reactor": 1.0390445918827453,
+              "minimum_speed_lower_bound": 1.7930506034891767,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.61875
+            },
+            {
+              "classification": "unresolved",
+              "maximum_lower_bound": 9.906448131381005,
+              "maximum_lower_bound_reactor": 0.9808086679900926,
+              "maximum_squared_interpolation_allowance": 7.727528551299079,
+              "maximum_upper_bound": 10.270458744657509,
+              "maximum_upper_bound_reactor": 1.016848301974651,
+              "minimum_speed_lower_bound": 2.1918649459328488,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.545
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.401294415993292,
+              "maximum_lower_bound_reactor": 0.7327806718694158,
+              "maximum_squared_interpolation_allowance": 6.455357250305238,
+              "maximum_upper_bound": 7.618305179926963,
+              "maximum_upper_bound_reactor": 0.7542662775567919,
+              "minimum_speed_lower_bound": 1.7845375750426888,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.635
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943556755713331,
+              "maximum_lower_bound_reactor": 0.7864684917689845,
+              "maximum_squared_interpolation_allowance": 1.75751610204926,
+              "maximum_upper_bound": 8.011615575307708,
+              "maximum_upper_bound_reactor": 0.7932067979011171,
+              "minimum_speed_lower_bound": 2.8585590092384416,
+              "regularity_resolved": true,
+              "resolution": 400,
+              "witness_parameter": 0.57375
+            }
+          ],
+          "resolution": 400
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.977908749232045,
+              "maximum_lower_bound_reactor": 0.9878837762911398,
+              "maximum_squared_interpolation_allowance": 1.856200232049736,
+              "maximum_upper_bound": 10.06518525291292,
+              "maximum_upper_bound_reactor": 0.9965247695297668,
+              "minimum_speed_lower_bound": 1.8013527730103298,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.618125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 1.3579779234572027,
+              "maximum_upper_bound": 9.972502922041341,
+              "maximum_upper_bound_reactor": 0.9873485610357847,
+              "minimum_speed_lower_bound": 2.2193944463501047,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.404764664299462,
+              "maximum_lower_bound_reactor": 0.7331242510790001,
+              "maximum_squared_interpolation_allowance": 0.8548526484930018,
+              "maximum_upper_bound": 7.43972963569326,
+              "maximum_upper_bound_reactor": 0.7365860313825207,
+              "minimum_speed_lower_bound": 1.7982873185735402,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.634375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943556755713331,
+              "maximum_lower_bound_reactor": 0.7864684917689845,
+              "maximum_squared_interpolation_allowance": 0.31885112473545185,
+              "maximum_upper_bound": 7.961029378907911,
+              "maximum_upper_bound_reactor": 0.788198405463024,
+              "minimum_speed_lower_bound": 2.8766445431394088,
+              "regularity_resolved": true,
+              "resolution": 800,
+              "witness_parameter": 0.57375
+            }
+          ],
+          "resolution": 800
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.977908749232045,
+              "maximum_lower_bound_reactor": 0.9878837762911398,
+              "maximum_squared_interpolation_allowance": 0.3904774104517938,
+              "maximum_upper_bound": 9.997456697518258,
+              "maximum_upper_bound_reactor": 0.9898191618971882,
+              "minimum_speed_lower_bound": 1.8036629706301133,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.618125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 0.28818970692486484,
+              "maximum_upper_bound": 9.931407704848821,
+              "maximum_upper_bound_reactor": 0.9832798428937416,
+              "minimum_speed_lower_bound": 2.232577097785784,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.404764664299462,
+              "maximum_lower_bound_reactor": 0.7331242510790001,
+              "maximum_squared_interpolation_allowance": 0.15636697880525627,
+              "maximum_upper_bound": 7.412792639190135,
+              "maximum_upper_bound_reactor": 0.7339190775652195,
+              "minimum_speed_lower_bound": 1.8030057041064576,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.634375
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943556755713331,
+              "maximum_lower_bound_reactor": 0.7864684917689845,
+              "maximum_squared_interpolation_allowance": 0.06839833006179545,
+              "maximum_upper_bound": 7.947330330192203,
+              "maximum_upper_bound_reactor": 0.786842102422278,
+              "minimum_speed_lower_bound": 2.8848152197019306,
+              "regularity_resolved": true,
+              "resolution": 1600,
+              "witness_parameter": 0.57375
+            }
+          ],
+          "resolution": 1600
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.977908752102891,
+              "maximum_lower_bound_reactor": 0.987883776575374,
+              "maximum_squared_interpolation_allowance": 0.08983090925508865,
+              "maximum_upper_bound": 9.982405696270133,
+              "maximum_upper_bound_reactor": 0.988329005961346,
+              "minimum_speed_lower_bound": 1.8044546344084864,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.61828125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 0.06654127081554072,
+              "maximum_upper_bound": 9.920778587511773,
+              "maximum_upper_bound_reactor": 0.9822274848458317,
+              "minimum_speed_lower_bound": 2.238801099815738,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.404867453204996,
+              "maximum_lower_bound_reactor": 0.733134427910109,
+              "maximum_squared_interpolation_allowance": 0.03350884976198967,
+              "maximum_upper_bound": 7.406616738531869,
+              "maximum_upper_bound_reactor": 0.7333076195716036,
+              "minimum_speed_lower_bound": 1.8049820601198618,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.63453125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943556755713331,
+              "maximum_lower_bound_reactor": 0.7864684917689845,
+              "maximum_squared_interpolation_allowance": 0.015866187196196164,
+              "maximum_upper_bound": 7.944436894214935,
+              "maximum_upper_bound_reactor": 0.7865556317267126,
+              "minimum_speed_lower_bound": 2.888771230260709,
+              "regularity_resolved": true,
+              "resolution": 3200,
+              "witness_parameter": 0.57375
+            }
+          ],
+          "resolution": 3200
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.978021031867453,
+              "maximum_lower_bound_reactor": 0.9878948930688801,
+              "maximum_squared_interpolation_allowance": 0.021557592990739158,
+              "maximum_upper_bound": 9.978987620833566,
+              "maximum_upper_bound_reactor": 0.9879905922361067,
+              "minimum_speed_lower_bound": 1.8047830978854265,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.618203125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 0.015996536396415822,
+              "maximum_upper_bound": 9.918362155687735,
+              "maximum_upper_bound_reactor": 0.9819882409465863,
+              "minimum_speed_lower_bound": 2.2418215006429674,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.404897312296545,
+              "maximum_lower_bound_reactor": 0.733137384172073,
+              "maximum_squared_interpolation_allowance": 0.007763037418920176,
+              "maximum_upper_bound": 7.405314254072885,
+              "maximum_upper_bound_reactor": 0.7331786643668369,
+              "minimum_speed_lower_bound": 1.8058968109654767,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.634453125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943608602997407,
+              "maximum_lower_bound_reactor": 0.786473625018052,
+              "maximum_squared_interpolation_allowance": 0.0038223587736218433,
+              "maximum_upper_bound": 7.94376948375498,
+              "maximum_upper_bound_reactor": 0.7864895533547724,
+              "minimum_speed_lower_bound": 2.890713845494115,
+              "regularity_resolved": true,
+              "resolution": 6400,
+              "witness_parameter": 0.573671875
+            }
+          ],
+          "resolution": 6400
+        },
+        {
+          "classification": "pass",
+          "curves": [
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.978021031867453,
+              "maximum_lower_bound_reactor": 0.9878948930688801,
+              "maximum_squared_interpolation_allowance": 0.0052812351981973826,
+              "maximum_upper_bound": 9.978285187651599,
+              "maximum_upper_bound_reactor": 0.9879210463661421,
+              "minimum_speed_lower_bound": 1.804921115128276,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.618203125
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 9.91759881797877,
+              "maximum_lower_bound_reactor": 0.9819126650962284,
+              "maximum_squared_interpolation_allowance": 0.00392218034503264,
+              "maximum_upper_bound": 9.917785846081328,
+              "maximum_upper_bound_reactor": 0.9819311822056619,
+              "minimum_speed_lower_bound": 2.2433207855820654,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.545625
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.4049026766772705,
+              "maximum_lower_bound_reactor": 0.7331379152838342,
+              "maximum_squared_interpolation_allowance": 0.0018685727820708326,
+              "maximum_upper_bound": 7.405006625762791,
+              "maximum_upper_bound_reactor": 0.733148206980995,
+              "minimum_speed_lower_bound": 1.8063387108248872,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.6344921875
+            },
+            {
+              "classification": "pass",
+              "maximum_lower_bound": 7.943618797049653,
+              "maximum_lower_bound_reactor": 0.7864746343015684,
+              "maximum_squared_interpolation_allowance": 0.0009381626413699599,
+              "maximum_upper_bound": 7.94366100314346,
+              "maximum_upper_bound_reactor": 0.7864788130043788,
+              "minimum_speed_lower_bound": 2.8916756958848433,
+              "regularity_resolved": true,
+              "resolution": 12800,
+              "witness_parameter": 0.5737109375
+            }
+          ],
+          "resolution": 12800
+        }
+      ],
+      "name": "direct-r2",
+      "orthogonal_copies_verified": true
+    }
+  ],
+  "full_engineering_admission": false,
+  "input_records": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-1024-v1-holdout.json",
+      "sha256": "265ec7230b52bccdd12a8e75f5f596c3b8658a83d023335b76aeb23429d4ee7f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/direct-slsqp-1024-v1/summary.json",
+      "sha256": "b74cc52cd239602a02eb8e81fbd233f8d328ace5a1cab5813864f12feee4b1e6"
+    }
+  ],
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/geometry/CONTINUOUS_CURVATURE_PROTOCOL.md",
+    "sha256": "e11bc7355cfaf8956dd1bd99aac98b89dbbe7dac4303a4120e7fea99d4fb69cf"
+  },
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "ea567f5cf90a80730eb9a8b37f042a9e19df082f",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "retrospective": true,
+  "schema_version": 1,
+  "status": "completed"
+}

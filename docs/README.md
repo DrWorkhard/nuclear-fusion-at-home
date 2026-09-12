@@ -125,9 +125,10 @@ Zusatzmetriken bestehen; der unabhängig verfeinerte Flux bleibt Faktor 24,7
 GN-Matrix und Grenzwerte bleiben unverändert. Auch die neuen
 [SLSQP-1024-Wiederholungen](optimization/DIRECT_SLSQP_1024_RESULTS.md) stimmen
 untereinander exakt überein, verfehlen aber den verlangten historischen
-Präfixvergleich. Ihr grober Flux bleibt Faktor 12,7 über der Grenze. Jetzt ihre
-unabhängige Abnahme; anschließend ist ein klassischer
-AL-Versuch mit natürlichen Fluxresiduen vorab festgelegt und analytisch geprüft.
+Präfixvergleich. Geometrie/nativ bestehen; der unabhängig verfeinerte Flux bleibt
+Faktor 12,7 über der Grenze. Beide begrenzten Versuche sind damit abgeschlossen.
+Als Nächstes ist ein klassischer AL-Versuch mit natürlichen Fluxresiduen vorab
+festgelegt, analytisch geprüft und mit unabhängigem Stufenprüfer vorbereitet.
 Weiterhin kein neuer zulässiger Entwurf.
 
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).

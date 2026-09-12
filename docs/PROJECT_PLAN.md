@@ -27,7 +27,8 @@ verbessern, nicht bereits eine neue Optimierungsmethode als überlegen bezeichne
    bleibt Faktor 24,7 über der Grenze. Der getrennte SLSQP-1024-Lauf ist ebenfalls
    intern exakt reproduziert (grober Flux Faktor 12,7), scheitert aber am
    geforderten historischen Präfix. Die feine GN-Abnahme ist abgeschlossen:
-   Geometrie/nativ bestehen, Flux abgelehnt. Jetzt SLSQP fein abnehmen und danach den
+   Geometrie/nativ bestehen, Flux abgelehnt. Auch SLSQP ist fein geprüft:
+   Geometrie/nativ bestehen, Flux Faktor 12,665 zu hoch. Jetzt den
    vorab festgelegten natürlichen Flux-AL-Pilot; dessen analytische Kontrolle
    besteht. Keine nachträgliche Budgeterhöhung oder veränderte Annahmekriterien.
 5. Bei Zulässigkeit: Wiederholungen und mehrere Startpunkte, anschließend eine

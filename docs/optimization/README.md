@@ -12,7 +12,7 @@ Aktueller Schluss: Die räumliche Residuen-Darstellung senkt bei gleichem Zeitbu
 
 - [Natürliche Flux-AL: Protokoll](NATURAL_AUGLAG_PROTOCOL.md) — Klassische Least-Squares-AL mit rohem Flux, analytisch geprüftem Residuum und festem achtstufigem Budget; keine Gleichsetzung mit früherer quartischer Flux-Strafe.
 
-- [SLSQP-1024: Suchergebnis](DIRECT_SLSQP_1024_RESULTS.md) — Neue Wiederholungen exakt, historischer Präfix ab 62 abweichend und Audit daher fehlgeschlagen; grober Flux Faktor 12,7 über Grenze, feine Abnahme offen.
+- [SLSQP-1024: geprüftes Ergebnis](DIRECT_SLSQP_1024_RESULTS.md) — Neue Wiederholungen exakt, historischer Präfix/Audit fehlgeschlagen; unabhängige Geometrie/nativ bestehen, Flux Faktor 12,7 über Grenze abgelehnt.
 
 - [Neuer SLSQP-1024-Lauf: Protokoll](DIRECT_SLSQP_1024_PROTOCOL.md) — Klassische Vergleichskonstruktion mit gleichem maximalem Bundlebudget wie GN, unverändertem Originalstart und Pflicht zur Reproduktion des alten 256-Vorschläge-Präfixes.
 - [Native Feldprojektion: geprüftes Ergebnis](GN_NATIVE_COVECTOR_RESULTS.md) — Beide 1024-Bundle-Suchen exakt wiederholt und auditiert; feine Geometrie-/native Abnahme besteht, Flux Faktor 24,7 über Grenze abgelehnt.
