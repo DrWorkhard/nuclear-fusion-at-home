@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Register current-source quadratic curvature and conditioning diagnosis
+
+- Exactly the two closed sources and32 events/six trials from F-077; new field
+  replay, full batched versus1024-row native VJP matrices at both sources,
+  native-covector gradient check and both existing FD scales. No new proposals.
+- Same quadratic/remainder model and all-six correct-sign/90%-error-reduction
+  criterion. Separate local spectra/current-subspace projections; not actual
+  new-form current optimization or an exact variable-projection Jacobian claim.
+- Primary SciPy least-squares definition and installed/local kernels inspected.
+  Maximum32 B-grids plus2048 local B/VJP calls, no new full direct bundles/LPs;
+  independent audit uses native matrix and separate sums. No physical execution.
+- Protocol/index and both READMEs/status/plan reviewed; docs/diff pass. Next pure
+  spectral/projection controls, source-bound driver and independent audit.
+
 ## 2026-09-12 — Restore concise reviewer-level overviews after accumulated study updates
 
 - Replaced the three root documents' growing chronological narratives by current

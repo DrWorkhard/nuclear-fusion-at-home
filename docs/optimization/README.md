@@ -8,6 +8,8 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 
 ## Dokumente
 
+- [Krümmung der geometrischen Probes: Protokoll](GEOMETRIC_CURVATURE_PROTOCOL.md) — Dieselben zwei Quellen/32 Feldpunkte, vollständige gebündelte/native Matrizen, sechs quadratische Vorhersagen und lokale Spektral-/Stromraumdiagnose; noch nicht ausgeführt.
+
 - [Geometrischer Abstieg: Protokoll](GEOMETRIC_DESCENT_PROTOCOL.md) — Zwei unveränderte Stromminimierer, sechs feste Radius-LPs mit unabhängigem Primal-Dual-Zertifikat, geprüfte Richtungen und maximal32 native Kontrollbundles.
 - [Geometrischer Abstieg: abgeschlossen](GEOMETRIC_DESCENT_RESULTS.md) — Sechs LPs sowie32 native Bundles und250 unabhängige Checks abgeschlossen; Ableitungen bestehen, alle sechs echten Schritte erhöhen den Flux und verletzen Konstruktionsbedingungen. Keine Zulassung.
 
