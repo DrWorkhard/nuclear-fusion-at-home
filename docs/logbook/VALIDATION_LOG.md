@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-12 — Prepare spectral projection audit and retain native import-warning failure
+
+- Seven Fourier-mask/conjugation/Parseval controls plus direct-DFT mutation
+  control pass. First isolated audit import emits a netCDF ndarray-size warning;
+  strict isolated pytest fails there. Full suite498 still passes with20 known
+  deprecations, which is not a strict-warning pass.
+- Three fresh import probes reproduce NumPy-default-filter exit0, forced-visible
+  exit0 with warning, forced-strict exit1. Raw outputs/library hashes saved in
+  netcdf-import-warning-v1.json; upstream issue/local NumPy filter inspected.
+- New pure array auditor unnecessarily imported netCDF via a hash helper. Remove
+  only that new dependency, no warning suppression/environment change. All eight
+  spectral controls now pass with RuntimeWarnings as errors; native strict import
+  remains failed and separately documented. Old code/evidence untouched.
+- Spectral implementation and validation detail/index/status updated; both
+  READMEs/plan remain scientifically accurate. Ruff/docs/diff pass before new
+  physical spectral execution. No real spectral result yet.
+
 ## 2026-09-12 — Close all alternate-start holdouts with preserved negative flux result
 
 - At121dbaa both candidates complete all four phases, exit2/0/0/0. Fine flux
