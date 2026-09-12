@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-12 — Close complete real QI straight-field-coordinate matrix and scalar audit
+
+- At3ca9876 all60 original128-grid fields replay exactly before120 new grids;
+  all sampled coordinate gates pass, max root residual9.999779e-13, minD0.611053,
+  nested fields exactly equal.226MiB raw arrays; no resource interruption.
+- Independent61,440 scalar roots/fields and1116 row checks pass; theta absolute
+  difference<=1.154e-12, transformed-tangent norm error<=3.106e-13. Audit confirms
+  all old/new arithmetic and aggregate flags, not physical fidelity admission.
+- Only4/16 new fidelity and5/16 comparison-refinement screens pass. New refinement
+  is of fidelity errors, distinct from original Clebsch refinement. Old F-070
+  untouched; F-074 records partial parametrization explanation and remaining
+  iota/equilibrium differences. Both READMEs/status/plan/QI index/readiness updated.
+- Targeted coordinate/study tests/docs/diff pass. A read-only guessed backend
+  filename did not exist; actual paths then located with rg, no study affected.
+  Next separately registered finest-mesh completion, not a changed v2 budget.
+
 ## 2026-09-12 — Register separate completion study for the single capped finest mesh
 
 - Original six-mesh v2 remains5/6 complete; new fixed4M-call/1200s single-mesh

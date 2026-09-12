@@ -49,6 +49,12 @@ bestehen jedoch den Auswertungsverfeinerungs- und2/16 den historischen
 Fidelitätsschirm; keine Zelle besteht alles. Innere Gleichgewichtsauflösung und
 Produzentenunterschiede bleiben zu klären, keine absolute Driftfreigabe.
 
+Die [getrennte Koordinatendiagnose](qi/QI_PEST_FIDELITY_RESULTS.md) bestätigt
+sämtliche120 neuen Gitter gegen61.440 unabhängige skalare Punktinversionen.
+Nur4/16 neue Fidelitäts- und5/16 Vergleichsfehler-Verfeinerungsschirme bestehen.
+Parametrisierung trägt beim nfp2-Vakuumfall erheblich bei, erklärt jedoch nicht
+alles; alte QI-Ergebnisse unverändert, Gleichgewichts-/Driftqualifikation offen.
+
 ## Warum weiterhin keine zulässige Baseline vorliegt
 
 Die räumlichen Kandidaten erreichen im feineren Holdout einen Roh-Quadratic-Flux

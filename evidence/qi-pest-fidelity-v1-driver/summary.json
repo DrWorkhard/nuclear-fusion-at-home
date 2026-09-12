@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/evaluate_qi_pest.py",
+    "evidence/qi-pest-fidelity-v1.json",
+    "artifacts/qi-pest-fidelity-v1"
+  ],
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-pest-fidelity-v1-driver/command.log",
+    "sha256": "34bcb7090f0ad59e704083bbf7a76176dca8c5a8d863db4036d2e238e005f078"
+  },
+  "minimum_observed_free_bytes": 4935659520,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "3ca98764e19789aacaebbc8792bc9692035738c3",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 0,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_guarded_command.py",
+    "sha256": "4da34bb00b8b21d437de79317ae9f3108512068feb011312215c124c06ecb442"
+  },
+  "status": "completed"
+}

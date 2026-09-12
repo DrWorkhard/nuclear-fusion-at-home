@@ -1,4 +1,74 @@
-# Gemeinsamer Feldlinienwinkel: algebraischer Prüfpfad vorbereitet
+# Gemeinsamer Feldlinienwinkel: vollständig geprüft, Parametrisierung nur Teilursache
+
+## Echte60-Zeilen-Studie und unabhängiger Audit abgeschlossen
+
+2026-09-12, Ausführung bei3ca9876 nach vollständigem SLSQP-/Netzabschluss,
+Protokoll unverändert seit5b894e5. Alle zwölf historischen und48 frischen
+Datei-/Radiuspaare bleiben erhalten. Vor neuer Koordinatenrechnung reproduzieren
+sämtliche archivierten128er VMEC-Feldarrays **exakt**. Alle120 neuen64/128-
+Gitter sind gespeichert; sämtliche Inversionen bestehen bei maximalem Residuum
+9,9997788e-13 und minimalem D=0,6110529564. Gemeinsame Feldpunkte stimmen exakt.
+
+Der getrennte skalare Audit umfasst61.440 Punktinversionen an allen32x32-
+Untergittern und1116 Zeilenprüfungen. Maximale absolute Theta-Abweichung
+1,153744e-12, skalares Rootresiduum3,297363e-14; maximale normierte Abweichungen
+für R/Z<=1,916e-13,|B|<=1,308e-13, transformierte Tangenten<=3,106e-13.
+Alle gespeicherten alten/neuen Vergleichszahlen, Zeilen- und Aggregatklassen
+sind bestätigt. `all_pass=true` im Audit qualifiziert diese Gegenprüfung,
+**nicht** die als falsch bestätigten Gesamt-Fidelitäts-/Verfeinerungsflags.
+
+### Vollständige16-Zellen-Matrix
+
+Maxima über s=0,25/0,5/0,75 am128er Gitter. Tangentenfehler normiert durch den
+größten absoluten Referenzkomponentenwert; keine Vektornorm oder mechanische Größe.
+`F` verlangt alle neuen Feld-/Volumenkriterien<=1e-3 und iota absolut<=1e-3
+an beiden Gittern. `R` verlangt<=1e-5 Änderung der alten **und neuen
+Fidelitätsfehler** zwischen64/128, nicht den früheren Clebsch-Verfeinerungsschirm.
+
+| Fall | ns | Winkelauflösung | altes e_theta | neues e_u | neuer Betragsfehler | F | R |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| nfp2 Vakuum |201|1|0,00048379|0,00059804|0,000009422|ja|ja|
+| nfp2 Vakuum |401|1|0,00047646|0,00029623|0,000006035|ja|ja|
+| nfp2 Vakuum |201|2|0,00739168|0,00063014|0,000311593|ja|nein|
+| nfp2 Vakuum |401|2|0,00741061|0,00047422|0,000312566|ja|nein|
+| nfp2 beta2 |201|1|0,00256102|0,02520163|0,001789601|nein|ja|
+| nfp2 beta2 |401|1|0,00260312|0,02526463|0,001790273|nein|ja|
+| nfp2 beta2 |201|2|0,00883725|0,02501189|0,002034720|nein|nein|
+| nfp2 beta2 |401|2|0,00886029|0,02499310|0,002035724|nein|nein|
+| nfp3 Vakuum |201|1|0,00390962|0,00892701|0,000267302|nein|nein|
+| nfp3 Vakuum |401|1|0,00165242|0,00369061|0,000123767|nein|ja|
+| nfp3 Vakuum |201|2|0,00411662|0,00883096|0,000461056|nein|nein|
+| nfp3 Vakuum |401|2|0,00287718|0,00363678|0,000350458|nein|nein|
+| nfp3 beta2 |201|1|0,08397835|0,16249784|0,006109305|nein|nein|
+| nfp3 beta2 |401|1|0,03404126|0,07373928|0,002957249|nein|nein|
+| nfp3 beta2 |201|2|0,08263211|0,15919630|0,005959907|nein|nein|
+| nfp3 beta2 |401|2|0,04089195|0,08625659|0,003324516|nein|nein|
+
+Alle16 Koordinatenschirme bestehen, aber nur4/16 neue Fidelitäts- und5/16 neue
+Vergleichsfehler-Verfeinerungsschirme. Größte64/128-Differenz der Fidelitätsfehler:
+VMEC7,90755e-4, neue Winkel1,83037e-4, beide über1e-5. Alte F-070-Ergebnisse
+(2/16 ursprüngliche Fidelität,9/16 Clebsch-Auswertungsverfeinerung) bleiben exakt.
+
+### Wissenschaftliche Folgerung und Grenzen
+
+Bei nfp2 Vakuum/Winkel2 fällt der Tangentenvergleich deutlich besser aus,
+z.B. bei401 Radien von0,0074106 auf0,0004742. Das stützt einen wesentlichen
+Parametrisierungsbeitrag in **diesen** Fällen. In anderen Fällen steigt der
+Tangentenfehler; nfp3 beta2 erreicht im neuen Vergleich bis0,16250. Das ist kein
+16%-Fehler eines invarianten Magnetfelds, sondern der hier definierten
+Koordinatentangente. iota/Volumen ändern sich nicht; nfp2 beta2 hat weiterhin
+iota-Unterschiede um0,0017, die diese Winkeltransformation nicht erklären kann.
+Kein vollständig koordinateninvarianter Oberflächenabstand, keine generelle
+physikalische Gleichheit und keine absolute Drift-/Maximum-J-Freigabe.
+
+Evidenz: `evidence/qi-pest-fidelity-v1.json`,
+`evidence/qi-pest-fidelity-v1-audit.json`, beide Schutztreiber und226MiB
+Punktarrays unter `artifacts/qi-pest-fidelity-v1/`. Originale Daten/Protokolle
+unverändert. Dieser diagnostische Versuch ist geschlossen. Weitere Gleichgewichts-
+Moden-/Produzenten- und Driftprüfungen bleiben nötig; als nächster bereits
+registrierter Lauf folgt der separate Abschluss des feinsten Spulennetzes.
+
+## Aufbewahrte Vorbereitung vor echter Ausführung
 
 2026-09-12. Das [Protokoll](QI_PEST_FIDELITY_PROTOCOL.md) wurde bei5b894e5
 vorab registriert. Noch keine historische oder neue QI-Datei in diesen neuen

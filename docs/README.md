@@ -181,6 +181,12 @@ untersuchten Identitäten, doch Auswertungsverfeinerung und historische
 Feldübereinstimmung bestehen nicht durchgehend. Keine Gesamtfreigabe oder
 Ersetzung der Autorenreferenzen.
 
+Der anschließende [Vergleich im gemeinsamen Feldlinienwinkel](qi/QI_PEST_FIDELITY_RESULTS.md)
+ist ebenfalls unabhängig bestätigt: Parametrisierung erklärt einen Teil der
+Abweichungen beim nfp2-Vakuumfall, aber nur4/16 neue Fidelitäts- und5/16
+Vergleichsverfeinerungsschirme bestehen. Keine allgemeine Gleichwertigkeit der
+Gleichgewichte; die alten negativen Ergebnisse bleiben unverändert.
+
 Die Zahlen, Gegenprüfungen und Grenzen stehen im [Ergebnisstand](STATUS.md).
 
 Für Schritt1 ist jetzt auch die [sechs-Netze-Prüfung](engineering/MESH_NONLOCAL_RESULTS.md)

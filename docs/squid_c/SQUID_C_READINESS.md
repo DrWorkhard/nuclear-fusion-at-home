@@ -131,6 +131,10 @@ bounded result; missing author data is not the only remaining blocker.
       identities. Only9/16 cells pass evaluation refinement and2/16 historical
       fidelity; no cell passes all screens. G4 and absolute drift remain open. See
       [fresh resolution](../qi/QI_FRESH_RESOLUTION_RESULTS.md).
+      Separate straight-field-angle comparison now independently verifies120
+      grids and61,440 scalar roots:4/16 new fidelity and5/16 comparison-refinement
+      passes. Parametrization contributes for nfp2 vacuum but does not explain all
+      discrepancies; original failures retained, G4/absolute drift remain open.
 - [x] Fast-particle screening path exercised with pinned SIMPLE.
 - [x] Neoclassical solver path exercised locally (paper cross-check currently
       fails and is retained as a validation warning).

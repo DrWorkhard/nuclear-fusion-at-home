@@ -72,7 +72,10 @@ senken, nicht bereits eine neue Optimierungsmethode als überlegen bezeichnen.
    feinen Abnahmen geschlossen: Geometrie/nativ bestehen, Flux Faktor8,19 zu hoch.
    Die registrierte sechs-Netze-Prüfung für Schritt1 ist inzwischen geschlossen:
    fünf vollständige Nichtüberlappungspässe, feinster Test am Paarcap unvollständig,
-   alle Zertifikate unabhängig bestätigt. Jetzt den registrierten QI-Koordinatentest;
+   alle Zertifikate unabhängig bestätigt. Auch der registrierte QI-Koordinatentest
+   ist geschlossen:4/16 neue Fidelitäts-/5/16 Vergleichsverfeinerungsschirme
+   bestehen, keine allgemeine Heilung durch Umparametrisierung. Als Nächstes den
+   separat registrierten feinsten Netzabschluss mit verpflichtendem2M-Präfix;
    einen weiteren Konstruktionsversuch für Schritt2 separat begründen/festlegen,
    keine Wahl der günstigsten realen Schrittweite oder gelockerte Physikgrenzen.
    Keine Aussage gleicher Methodenbudgets.
@@ -111,6 +114,11 @@ untersuchten Feldidentitäten. Nur9/16 Zellen bestehen den Auswertungs-
 Verfeinerungs- und2/16 den historischen Fidelitätsschirm. Innere Gleichgewichts-
 auflösung/Modenbasis und Produzentenunterschiede weiter untersuchen; kein
 ungeprüfter Referenzaustausch oder Abschluss von Schritt1.
+
+Die zusätzliche PEST-artige Koordinatenprüfung bestätigt die gesamte Matrix
+unabhängig: reiner Parametrisierungsbeitrag bei nfp2 Vakuum, keine allgemeine
+Erklärung der verbleibenden historischen Unterschiede.4/16 neue Fidelitätspässe,
+5/16 neue Vergleichsverfeinerungspässe, alte Kriterien bleiben unverändert.
 
 | Paket | Noch zu lieferndes Ergebnis | Woran es beurteilt wird |
 | --- | --- | --- |

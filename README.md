@@ -54,6 +54,10 @@ advance, and no complete SQuID-C readiness. Long-term steps 1 and 2 remain open.
   is now independently audited: doubled solver angular resolution passes all
   sampled identities, but evaluation-refinement and historical-fidelity failures
   prevent overall qualification. No historical data replaced.
+  The separate [coordinate-aware comparison](docs/qi/QI_PEST_FIDELITY_RESULTS.md)
+  now passes independent point/root checks, but only4/16 new fidelity and5/16
+  comparison-refinement screens pass. Parametrization explains part, not all,
+  of the disagreement; original screens and open physical gates remain unchanged.
 
 Earlier equal-time spatial-residual improvements remain limited to one start and
 infeasible fields. A [field-strength audit](docs/optimization/FIELD_STRENGTH_AUDIT.md)

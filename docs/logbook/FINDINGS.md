@@ -1,5 +1,20 @@
 # Findings log
 
+## F-074 — Common straight-field coordinates explain part, not all, of historical QI differences
+
+**Class:** preregistered complete coordinate-diagnosis matrix and independent scalar audit
+**Date:** 2026-09-12
+
+All60 old128-grid fields reproduce exactly, all120 new coordinate grids pass
+root/nesting checks,61,440 independent scalar inversions/fields and1116 row
+checks pass. Absolute theta disagreement<=1.154e-12. Yet only4/16 new fidelity
+and5/16 comparison-refinement screens pass. nfp2 vacuum401/angular2 tangent error
+drops from0.0074106 to0.0004742, supporting a parametrization contribution there.
+Other tangent errors grow (nfp3 beta2 up to0.16250); these are coordinate-dependent
+components, not invariant magnetic-field errors. iota/volume unchanged. Original
+F-070 results retained; no source replacement or absolute drift/QI admission.
+See [full matrix](../qi/QI_PEST_FIDELITY_RESULTS.md).
+
 ## F-073 — Five original meshes pass bounded nonlocal nonoverlap; finest cap remains open
 
 **Class:** preregistered unchanged six-mesh scan and independent spatial certificate audit
