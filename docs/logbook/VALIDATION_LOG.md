@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Prepare fresh-QI matrix field reader and independent old-loop audit
+
+- Cold starts at dd8b15a are ongoing; first five saved solver summaries converge.
+  No complete16-cell result or field-consistency claim yet.
+- Additive matrix Fourier/columnwise radial interpolation is checked against the
+  unchanged old loop reader and analytic R/Z torus. Separate auditor checks old
+  loop32x32 samples of every new Wout, complete64/128 grids, saved arithmetic,
+  author inputs, boundary modes, residuals and all classifications. No new solver.
+-17 relevant tests pass with33 known fixture-creation DeprecationWarnings;
+  Ruff/docs/diff pass. Detail/index and both READMEs/status/plan reviewed; broad
+  scientific assessment unchanged. Mutable running evidence not staged for this commit.
+
 ## 2026-09-12 — Prepare immutable QI cold starts and independent input guards
 
 - Nine controls pass for the2x2 numerical matrix, preserved physical fields,

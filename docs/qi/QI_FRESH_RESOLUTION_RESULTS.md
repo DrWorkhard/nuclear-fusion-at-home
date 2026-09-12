@@ -15,5 +15,15 @@ durch äußeren Wächter,1800s-Zellgrenze im sequenziellen Treiber.
 Außerdem bestehen acht echte VMEC++-Parser-/Kontroll-Roundtrips für die vier
 Varianten von nfp2 Vakuum/nfp3 beta2, ohne Solveraufruf.
 
-Noch kein Ergebnis der neuen Gleichgewichte oder Feld-/Driftfreigabe. Nächster
-Schritt: alle16 Kaltstarts ausführen, neue Wouts separat auswerten/auditieren.
+Die Kaltstarts laufen bei dd8b15a. Die ersten fünf Zellen konvergieren laut
+gespeicherten Solverberichten; das ist ein Zwischenstand, kein vollständiges
+Matrixergebnis oder Konsistenznachweis. Fortlaufende Bilanz:
+`evidence/qi-fresh-resolution-v1.json`, Log im zugehörigen `-driver`-Ordner.
+
+Der neue Matrix-Fourier-/Radialinterpolations-Auswerter ist additiv implementiert.
+Ein separater Auditor verwendet den alten Schleifen-Fourierrechner an32x32
+gemeinsamen Punkten jedes neuen Wouts und prüft vollständige gespeicherte
+64/128-Winkelgitter, Fehlerarithmetik, Quellen, Randform und Klassifikation.
+17 relevante Tests bestehen,33 bekannte NumPy/netCDF-DeprecationWarnings in
+Testdaten-Erzeugung bleiben sichtbar. Keine Warnungs-/ABI-Freiheit behauptet.
+Nächster Schritt: alle16 Kaltstarts schließen, neue Wouts separat auswerten/auditieren.
