@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-12 — Qualify additive QI coordinate readers on synthetic Wout fixtures
+
+- Separate vectorized arbitrary-angle reader and independent radial-weight/
+  Fourier-loop/scalar-Brent auditor. Three fixed surfaces replay old fields;
+  toroidal mode, analytic positions/B and both transformed tangents agree.
+  Invalid symmetry/nonfinite data and failed Newton never produce a valid field.
+- Seven new tests,19 coordinate/reader tests total pass; fixture deprecations
+  retained. One initial toy assertion required an arbitrary0.01 change despite
+  the correct0.009136 result; replaced by nonidentity plus unchanged strict
+  analytic/independent comparisons. No physical tolerance changed.
+- Ruff/docs/diff pass; detail/index and both READMEs/status/plan reviewed.
+  No author/fresh QI files evaluated, no new physics claim. Six-mesh v2 continues
+  sequentially; new QI study driver and independent file audit remain next.
+
 ## 2026-09-12 — Implement explicit historical-code bindings for unchanged six-mesh retry
 
 - Only old intrinsic code uses exact recorded-revision SHA resolution; meshes,
