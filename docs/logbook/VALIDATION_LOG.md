@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-12 — Staged natural-AL adapter and analytic solver control
+
+- Implemented the preregistered eight-stage control, per-stage denied proposals,
+  exact shared physical memo, native spatial-bundle retention and full provenance.
+  Three staged controls pass; no unused allowance transfers between stages.
+- Actual analytic quadratic: maximum x error/violation 4.6651e-9 and updated
+  Lagrangian gradient <=2.221e-16, meeting fixed limits. Only 16 synthetic bundles,
+  no native physical evaluation. Machine-readable control replay is next.
+- Full suite 305 passed, 11 known warnings; Ruff/docs/diff checks pass. Explicit
+  binding fixes five loop-closure lint findings. Both READMEs/status/plan reviewed;
+  physical construction/qualification remains open, no live SLSQP code changed.
+
 ## 2026-09-12 — Natural-flux AL identity and prospective staged experiment
 
 - Added the classical inequality AL residual with native spatial flux, preserving
