@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-12 — Inspect finite Wout outputs and preregister spectral residual diagnosis
+
+- Current pinned wrout projects Jacobian/field components separately to finite
+  Nyquist modes and smooths lambda to half mesh. Existing files: max Nyquist m8/
+  m12, |n/nfp|12; geometric m4/m8, |n/nfp|10. No claim of exact historical producer.
+- Register unchanged24 half surfaces at64/128, old nested-grid replay, actual
+  stored-mode projection,1e-5 component/refinement screens and residual Parseval
+  decomposition. No original-field correction or reclassification authorized.
+- Detail/index and overviews reviewed; cause remains open. Docs/diff pass before
+  registration commit; no new spectral values measured.
+
 ## 2026-09-12 — Independent decomposition excludes radial interpolation as sole QI error source
 
 - At fbaec49 all24 old grids and48 neighboring half-grid fields complete;
