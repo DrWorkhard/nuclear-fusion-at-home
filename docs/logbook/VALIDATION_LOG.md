@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-12 — Full regression and explicit reused-kernel binding before new QI field evaluation
+
+- Full suite523 tests passes with53 known NumPy/netCDF fixture deprecations;
+  Ruff/docs/diff pass. Native strict-import warning remains independently failed.
+- New evaluation/audit now explicitly list reused old Clebsch/interpolation/
+  boundary sources as well as additive code, without changing any old kernel.
+  Solver matrix continues separately; no new field outcome observed yet.
+- Detail/status and both READMEs/plan/index checked. No scientific gate closed
+  from software-test counts. Mutable running solver reports left unstaged.
+
 ## 2026-09-12 — Prepare SLSQP polishing with explicit named-state transfer
 
 - Additive driver reuses unchanged budget-parametric SLSQP arm. Physical coil/

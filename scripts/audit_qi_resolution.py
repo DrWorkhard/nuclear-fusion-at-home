@@ -171,8 +171,12 @@ def main():
     passed = aggregates and replay_valid and all(r["pass_replay"] for r in old_checks) and all(
         all(r["checks"].values()) and all(all(g["checks"].values()) for g in r["grids"])
         for r in rows)
-    report = dict(repository=git_state(root), source=reference(args.source), code=reference(
-        Path(__file__)), all_pass=bool(passed), cells=rows, historical_loop_checks=old_checks,
+    report = dict(repository=git_state(root), source=reference(args.source),
+        code=[reference(root / p) for p in (
+            "scripts/audit_qi_resolution.py", "scripts/audit_qi_clebsch.py",
+            "src/fusion_baselines/clebsch_field.py", "src/fusion_baselines/vmec_trace.py",
+            "src/fusion_baselines/qi_resolution.py")],
+        all_pass=bool(passed), cells=rows, historical_loop_checks=old_checks,
         old24_replay_bookkeeping=bool(replay_valid), new_wout_loop_field_calls=new_calls,
         aggregate_classifications=bool(aggregates),
         historical_loop_field_calls=12, new_equilibria=0, absolute_drift_certified=False)

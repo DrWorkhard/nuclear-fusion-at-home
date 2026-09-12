@@ -41,7 +41,10 @@ def main():
                                            for r in study["cells"]] != expected:
         raise ValueError("all16 terminal matrix cells required, including failures")
     code = [root / p for p in ("scripts/evaluate_qi_resolution.py",
-                               "src/fusion_baselines/qi_field_grid.py")]
+                               "src/fusion_baselines/qi_field_grid.py",
+                               "src/fusion_baselines/clebsch_field.py",
+                               "src/fusion_baselines/vmec_trace.py",
+                               "src/fusion_baselines/qi_resolution.py")]
     for p in code:
         require_committed(root, p)
     for ref in [study["protocol"], *study["code"], *study["solver"]["sources"]]:

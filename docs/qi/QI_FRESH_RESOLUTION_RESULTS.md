@@ -27,3 +27,8 @@ gemeinsamen Punkten jedes neuen Wouts und prüft vollständige gespeicherte
 17 relevante Tests bestehen,33 bekannte NumPy/netCDF-DeprecationWarnings in
 Testdaten-Erzeugung bleiben sichtbar. Keine Warnungs-/ABI-Freiheit behauptet.
 Nächster Schritt: alle16 Kaltstarts schließen, neue Wouts separat auswerten/auditieren.
+
+Vor physikalischer Feldauswertung nochmals vollständige Regression:
+523 Tests bestanden,53 bekannte DeprecationWarnings, Ruff/Dokumentprüfung bestanden.
+Auch wiederverwendete alte Feld-/Interpolationskerne werden im neuen Bericht
+explizit hashgebunden, nicht nur durch den aktuellen Git-Stand implizit festgehalten.
