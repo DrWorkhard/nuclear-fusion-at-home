@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-12 — Qualify source-bound six-model driver and independent file certificate audit
+
+- Exact two current-minimum fields plus closed original/current/fine audits;
+  explicit three-current/204-geometry named partition and full138-by207 sources.
+- Three new workflow tests pass: complete six-model synthetic run and audit,
+  corrupted dual/radius/source/current-gradient data, deliberate LP interruption
+  retaining input arrays and attempted work. Eleven model controls total pass.
+- No actual coil LP or new field evaluation. Separate model/file-audit phase
+  precedes the already registered native direction checks; no radius/gate changes.
+  Detail/index and both READMEs/status/plan reviewed; Ruff/docs/diff pass.
+  Full regression645 passed with144 retained fixture deprecations; no strict
+  import/ABI qualification asserted. Software overview count synchronized.
+
 ## 2026-09-12 — Qualify fixed-radius model and independent scalar primal-dual certificates
 
 - Additive LP model keeps every true linearized inequality, no tolerance added

@@ -18,3 +18,23 @@ des linearen Werkzeuges, keine neue physikalische Optimalitätsaussage.
 
 Nächster Schritt: verbindliche Zwei-Quellen-/DOF-Zuordnung, sechs gespeicherte LPs,
 native Richtungs-/Schrittproben und deren separater Quellen-/Kettenregel-Audit.
+
+## Quellgebundener Modelllauf vorbereitet
+
+Der additive Treiber bindet genau die beiden abgeschlossenen Stromminimierer
+und sämtliche zugehörigen Qualifikations-/Holdoutaudits. Aus dem vollständigen
+serialisierten Stromgraphen werden drei Stromspalten identifiziert, alle204
+anderen Spalten bilden den unveränderten geometrischen Suchraum. Benannte
+Quellvektoren und exakt stromunabhängige137 Geometriezeilen werden geprüft.
+
+Sechs feste LPs speichern vollständige Eingaben, Solverausgaben/Marginalwerte,
+geometrische Schritte und lineare Vorhersagen. Separater Dateiaudit rekonstruiert
+die Matrix und prüft alle Primal-Dual-Nachweise ohne weitere LP-Lösung. Drei
+synthetische Ablaufkontrollen bestehen: kompletter Sechserlauf/Audit, manipulierter
+Dualwert/Radiusreihenfolge/Quellvektor/Stromableitung sowie erhaltener Eingabesatz
+bei absichtlich unterbrochenem Solver. Insgesamt elf neue Modellkontrollen bestanden.
+Noch keine echte Modell- oder Feldrechnung; nach Commit zunächst alle sechs
+Modelle und ihren Audit schließen, danach die bereits festgelegten nativen
+Ableitungs- und Kontrollschritte. Keine Anpassung der Radien aus LP-Ergebnissen.
+Gesamte Regression645 Tests bestanden,144 bekannte Fixture-DeprecationWarnings;
+Ruff/Dokumentstruktur/Diffprüfung bestanden. Strenge Importqualifikation weiterhin offen.
