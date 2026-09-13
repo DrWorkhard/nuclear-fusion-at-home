@@ -9,7 +9,7 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 ## Dokumente
 
 - [Vakuumdrift: nächstes Kontrollprotokoll](VACUUM_DRIFT_CONTROL_PROTOCOL.md) — Eigene nichtachsensymmetrische exakte Vakuumkonstruktion, beide Driftkomponenten, gleiche physikalische Phase und81 feste Zellen/243 skalare Zustände; vor Ausführung registriert.
-- [Vakuumdrift: Grundaufbau](VACUUM_DRIFT_CONTROL_RESULTS.md) — Neun reine kartesische, Root-, Gauge- und SI-Kontrollen bestehen; integrierte Drift und vollständige Matrix folgen.
+- [Vakuumdrift: Aufbau](VACUUM_DRIFT_CONTROL_RESULTS.md) — Neun Grund- und vier Workflow-/Audit-/Fehlerkontrollen bestehen; beide integrierten Driften im gesonderten Testfall geprüft, vollständige Matrix folgt.
 
 - [Absolute Drift: analytisches Kontrollprotokoll](ABSOLUTE_DRIFT_CONTROL_PROTOCOL.md) — Definierter stromtragender Spiegel, kartesische Drift gegen Wirkungsableitung, Einweg-/SI-Normierung,81 feste Zellen und separater skalarer Audit; keine QI-Gesamtfreigabe.
 - [Absolute Drift: abgeschlossen](ABSOLUTE_DRIFT_CONTROL_RESULTS.md) — Alle81 Zellen/27 Verfeinerungslinien,45 skalare Referenz-/FD-Läufe und absolute SI-Prüfungen bestehen; maximal1,552e-10 relative direkte/skalar-analytische Driftabweichung. Echter QI- und nichtverschwindender radialer Driftfall offen.

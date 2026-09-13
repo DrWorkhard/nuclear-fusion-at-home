@@ -16,5 +16,25 @@ aus lokalen Projektionen. Keine neue native Gleichgewichts-/Spulenrechnung.
 
 Ruff/Dokumentstruktur/Diff bestehen. Beide READMEs/Stand/Plan geprüft, Gesamturteil
 unverändert; volle Regression weiterhin zuletzt687 Tests, neun neue Kontrollen
-separat. Nächster Schritt: Matrixquadratur, beide Wirkungsableitungen und unabhängige
-skalare Gegenrechnung implementieren, kontrollieren und vor Matrixauswertung committen.
+separat.
+
+## Quadratur-/Auditvorbereitung
+
+Vier weitere Workflowkontrollen bestehen, zusammen13 mit den Grundtests.
+Die integrierte radiale und Winkelverschiebung des gesonderten Testfalls stimmen
+mit eigener skalarer Geometrie, adaptiver Quadratur und beiden FD-Stufen in
+beiden Koordinaten überein. Nichtverschwindende integrierte radiale Testdrift
+belegt; keine echte QI-Anwendung daraus abgeleitet.
+
+Der kleine Gesamtworkflow bewahrt alle64/128/256 Stufen und neun skalaren Grund-/
+FD-Zustände. Mutationen von radialem Vorzeichen, Faktor zwei, Phase/Gauge,
+SI-Einheiten, fehlender FD-Stufe, Jacobian und nichtendlichen Arrays werden
+abgelehnt. Mittelzellenfehler unterdrückt spätere Auflösungen nicht; ein
+abgebrochenes skalares Integral behält beide Roots und seinen tatsächlichen Aufruf.
+Quell-/Protokoll-/Arrayhashes, Versionen, Arbeit, Warnungen, getrennte Driftanteile
+und sämtliche Phasenprojektionen werden gespeichert; unabhängiger Auditor
+importiert keinen kartesischen Produzenten.
+
+Ruff/Dokumentstruktur/Diff bestehen. Noch keine vollständige registrierte Matrix.
+Nächster Schritt: kontrollierten Code committen, dann81 Zellen und243 skalare
+Zustände ausführen und unabhängig auswerten. Alte abgeschlossene Rechnungen bleiben unverändert.

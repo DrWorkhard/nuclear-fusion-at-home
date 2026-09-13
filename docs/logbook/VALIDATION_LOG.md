@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-13 — Qualify two-component vacuum quadrature and independent scalar workflow
+
+- Four workflow controls pass,13 with vacuum basics: nonzero integrated radial
+  drift and angle match independent scalar geometry/adaptive quadrature/both FD
+  scales for each coordinate. Small three-resolution/nine-scalar-state workflow
+  passes. Radial sign/factor2/phase/SI/Jacobian/missing-step/NaN mutations rejected.
+- Failed middle cell retains following level; failed scalar integral retains
+  both roots and actual calls. All projected phases, separate drift contributions,
+  versions, immutable source/array refs and work retained. No registered81-cell
+  matrix yet. Independent auditor has no Cartesian producer dependency.
+- Detail/index and both READMEs/status/plan reviewed; overall assessment unchanged.
+  Ruff/docs/diff pass. Next code commit, matrix/audit and full regression.
+
 ## 2026-09-13 — Close nine exact-vacuum field/root/coordinate/SI controls
 
 - Full Cartesian field/Jacobian/Clebsch gradients and analytic field lines agree
