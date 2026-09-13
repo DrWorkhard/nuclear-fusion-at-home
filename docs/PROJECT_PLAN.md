@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 12. September 2026. [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
+Stand: 13. September 2026. [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 ## Aktuelles Ziel
 
@@ -45,20 +45,19 @@ Aktueller Stand: beste fein geprüfte Form rund 8,19-mal über der Fluxgrenze.
 Die exakte Stromminimierung und die geometrische Abstiegsdiagnose sind vollständig
 geschlossen: statische Stromkorrekturen helfen praktisch nicht; alle sechs
 endlichen Formschritte verschlechtern den Flux trotz bestandener Ableitungen.
+Die anschließende unabhängige Krümmungsprüfung erklärt alle sechs Änderungen
+mit mindestens99,60% kleinerem Vorhersagefehler; keine neue Form konstruiert.
 
 Nächste Reihenfolge:
 
-1. **Registrierte [Krümmung/Konditionierungsprüfung](optimization/GEOMETRIC_CURVATURE_PROTOCOL.md) ausführen:** bereits bewährtes
-   quadratisches Fluxmodell an genau den zwei aktuellen Quellen und sechs
-   festgehaltenen Probes untersuchen. Keine neuen Radien aus den Ergebnissen wählen.
-2. **Nächsten klassischen Suchlauf begründen und vorab festlegen:** etwa ein
-   geeignet qualifiziertes krümmungsberücksichtigendes Verfahren oder eine
-   Konditionierungsänderung. Keine Behauptung, dass fehlender statischer
-   Stromspielraum gekoppelten Strom-/Formanpassungen jeden Nutzen nimmt.
-3. **Startqualifikation, begrenzte Suche, unabhängiger Audit:** alle physikalischen
+1. **Nächsten klassischen Suchlauf vorab festlegen:** Die abgeschlossene
+   [Krümmungsprüfung](optimization/GEOMETRIC_CURVATURE_RESULTS.md) begründet einen
+   neuen GN-/Trust-Region-Lauf vom bereits fixierten besten Stromminimum. Eigene
+   Startqualifikation; bisherige Suchläufe nicht verlängern oder umdeuten.
+2. **Startqualifikation, begrenzte Suche, unabhängiger Audit:** alle physikalischen
    DOFs explizit zuordnen, gesamte Rechen-/Ableitungsarbeit erfassen, keine
    parallelen schweren Installationen oder nachträgliche Budgeterhöhung.
-4. **Alle unabhängigen Abnahmen schließen, auch bei Ablehnung.** Erst eine
+3. **Alle unabhängigen Abnahmen schließen, auch bei Ablehnung.** Erst eine
    tatsächlich zulässige Konstruktion löst die mehrstartige Vergleichsphase aus.
 
 Die alten AL-, SLSQP-, GN-, Archiv- und Diagnoseläufe bleiben mit ihren

@@ -1,5 +1,22 @@
 # Findings log
 
+## F-078 — Quadratic field curvature explains all six failed finite geometric steps
+
+**Class:** preregistered32-field replay, two full independent native matrices and scalar/spectral audit
+**Date:** 2026-09-13
+
+All native qualification gates and independent audits pass. All six quadratic
+predictions have the correct worsening sign; minimum error reduction versus
+linear99.59975%. This supports curvature-informed search, not a new design gain.
+Both full field matrices have numerical rank203/207 at rcond1e-12; geometry and
+current-projected geometry200/204. Extreme condition ratios~1e16 are roundoff-
+sensitive and must not be read as accurate physical condition estimates.
+Currents remain rank3/well-conditioned; geometric tangent current-space fractions
+15.5–34.5%AL and~3.28%SLSQP show local coupling, not realized new-shape gains.
+Next separately register a classical GN search from the already frozen best
+source. No removed DOFs, new feasible baseline or SoTA/readiness claim.
+See [complete results](../optimization/GEOMETRIC_CURVATURE_RESULTS.md).
+
 ## F-077 — Certified linear descent models fail on all six finite geometric steps
 
 **Class:** preregistered six LPs,32 native bundles, composite derivative gates and independent real-chain-rule audit

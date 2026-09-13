@@ -33,7 +33,12 @@ unabhängige Checks. Alle sechs Richtungen bestehen die festgelegten
 Ableitungsprüfungen, aber jeder endliche Schritt erhöht den Flux und verletzt
 die Konstruktions-Auswahlgrenze. Keine feine Abnahme dieser Probes. Das lineare
 Modell ist bei diesen Radien unzureichend; weder globales Optimum noch falsche
-Ableitungen sind damit belegt. Krümmung/Konditionierung sind als Nächstes zu prüfen.
+Ableitungen sind damit belegt. Die nun abgeschlossene
+[Krümmungsprüfung](optimization/GEOMETRIC_CURVATURE_RESULTS.md) bestätigt alle
+sechs quadratischen Vorzeichen mit mindestens99,60% weniger Vorhersagefehler.
+Beide vollständigen Feldmatrizen sind unabhängig qualifiziert. Rang203/207 bei
+festem numerischen Cutoff deutet auf schwache/redundante Richtungen; deren Ursache
+ist nicht abschließend geklärt. Keine DOFs entfernt, kein neuer Entwurf gewonnen.
 
 Frühere Teilerfolge bleiben gültig, eng begrenzt: Die räumliche Residuen-Darstellung
 senkte bei gleichem300-s-Budget den Feldfehler an einem Startpunkt etwa 2,35-fach;

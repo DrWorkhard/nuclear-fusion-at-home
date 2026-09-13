@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-13 — Close32 real fields, both full matrices and independent curvature audit
+
+- At405c675 all32 frozen flux replays/twelve residual FD checks and two complete
+  native1024-by207 matrices qualify. Matrix deviation<=9.437e-16; native-covector
+  gradient<=1.576e-13. All six quadratic signs correct, error reduced>=99.59975%.
+- Independent99 case/40 spectral subchecks per source plus3 overall checks pass;
+  all work complete, no new direct bundles/LPs/holdouts. Full spectra and current-
+  space projections retained; rank203/207 and extreme condition sensitivity
+  reported without dropping directions. F-078 records local model—not design—gain.
+- Raw8.0MiB; producer32B grids/2048localB/2048VJP,2batched assemblies/64geometry
+  derivatives/32currentVJP. Conditioning8SVD/2QR/6projections; independent audit
+  same spectral counts but zero native calls. No resource interruption.
+- Four workflow controls/Ruff/docs/diff pass; full663/144-warning regression was
+  completed before execution. Detail/index and both READMEs/status/plan updated.
+  Next separately preregister curvature-informed search from the frozen best shape.
+
 ## 2026-09-13 — Qualify source-bound32-field curvature driver and separate native-matrix audit
 
 - Four new synthetic workflow/negative controls pass, including1024-by207 matrices,

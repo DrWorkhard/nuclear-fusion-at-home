@@ -1,6 +1,6 @@
 # Forschungsprojekt: belastbare Verbesserungen von Stellaratorspulen
 
-Leseeinstieg für die wissenschaftliche Betreuung. Stand: 12. September 2026.
+Leseeinstieg für die wissenschaftliche Betreuung. Stand: 13. September 2026.
 Diese Übersicht, [Ergebnisstand](STATUS.md) und [Arbeitsplan](PROJECT_PLAN.md)
 beschreiben Ziel, belegten Fortschritt und nächste Entscheidungen. Vollständige
 Messreihen, Fehlschläge und Prüfprotokolle liegen eine Ebene tiefer.
@@ -57,7 +57,9 @@ universelle Aussage, dass solche Daten nicht existieren.
 - [Sechs geometrische Kontrollschritte](optimization/GEOMETRIC_DESCENT_RESULTS.md)
   verschlechtern sämtlich den Flux und verletzen Konstruktionsbedingungen,
   obwohl lineare Modelle Abstieg vorhersagen und Ableitungen bestehen.
-  Nächste Frage: Wie müssen Krümmung und Konditionierung der Formsuche behandelt werden?
+  Das separat [geprüfte quadratische Modell](optimization/GEOMETRIC_CURVATURE_RESULTS.md)
+  erklärt alle sechs Verschlechterungen mit mindestens99,60% kleinerem
+  Vorhersagefehler. Nächster Schritt: neuer klassischer krümmungsberücksichtigender Suchlauf.
 - Der [frische lokale native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md)
   besteht alle 21 Phasen und sechs wissenschaftlichen Tests ohne Skip.
   Der erweiterte W7-X-Dateivergleich bleibt ausdrücklich 60/63.

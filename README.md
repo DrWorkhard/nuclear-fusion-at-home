@@ -18,7 +18,9 @@ Long-term steps 1 and 2 remain open.
   8.19e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.
   Exact current redistribution offers negligible gain. Six subsequent geometric
   trials all worsen flux despite verified derivatives and linearly descending
-  models. Curvature/conditioning diagnosis is next; no new feasible design.
+  models. The independently checked quadratic model explains all six failures
+  with at least99.60% less prediction error. A new curvature-informed search is
+  next; no new feasible design.
 - [Fresh native integration](docs/validation/FRESH_NATIVE_INTEGRATION_RESULTS.md):
   all 21 local phases and six scientific tests without skips pass. Extended W7-X
   comparison deliberately retains three differences out of 63 quantities.

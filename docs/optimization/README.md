@@ -8,8 +8,8 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 
 ## Dokumente
 
-- [Krümmung der geometrischen Probes: Protokoll](GEOMETRIC_CURVATURE_PROTOCOL.md) — Dieselben zwei Quellen/32 Feldpunkte, vollständige gebündelte/native Matrizen, sechs quadratische Vorhersagen und lokale Spektral-/Stromraumdiagnose; noch nicht ausgeführt.
-- [Krümmung der geometrischen Probes: Vorbereitung](GEOMETRIC_CURVATURE_RESULTS.md) — Spektral-, Zählungs- und vier vollständige Ablauf-/Fehlerkontrollen bestehen; Quellenbindung geprüft, keine neue reale Matrix- oder Formrechnung.
+- [Krümmung der geometrischen Probes: Protokoll](GEOMETRIC_CURVATURE_PROTOCOL.md) — Dieselben zwei Quellen/32 Feldpunkte, vollständige gebündelte/native Matrizen, sechs quadratische Vorhersagen und lokale Spektral-/Stromraumdiagnose.
+- [Krümmung der geometrischen Probes: abgeschlossen](GEOMETRIC_CURVATURE_RESULTS.md) — Alle32 Felder/beide Matrizen unabhängig qualifiziert, alle sechs quadratischen Vorzeichen korrekt und mindestens99,60% weniger Vorhersagefehler; lokale Spektren/Stromkopplung geprüft, kein neuer Entwurf.
 
 - [Geometrischer Abstieg: Protokoll](GEOMETRIC_DESCENT_PROTOCOL.md) — Zwei unveränderte Stromminimierer, sechs feste Radius-LPs mit unabhängigem Primal-Dual-Zertifikat, geprüfte Richtungen und maximal32 native Kontrollbundles.
 - [Geometrischer Abstieg: abgeschlossen](GEOMETRIC_DESCENT_RESULTS.md) — Sechs LPs sowie32 native Bundles und250 unabhängige Checks abgeschlossen; Ableitungen bestehen, alle sechs echten Schritte erhöhen den Flux und verletzen Konstruktionsbedingungen. Keine Zulassung.
