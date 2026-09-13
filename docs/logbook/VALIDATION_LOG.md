@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-13 — Register analytic absolute drift/action control before QI-field application
+
+- Derived a divergence-free Clebsch mirror with explicit Cartesian field/Jacobian,
+  local pressure force balance, one-way action/time and general gradient/curvature
+  drift. Primary action/GC references checked; SIMSOPT Cartesian vacuum RHS is
+  deliberately not used for this current-carrying example.
+- Fixed9flux/pitch x3angle x3quadrature cells, independent scalar adaptive action
+  and both fixed radial FD scales, SI/charge/energy/mass controls. No actual new
+  control matrix or native field evaluated. Full matrix deferred until GN ends.
+- Protocol/index and both READMEs/status/plan reviewed; no QI/global completion
+  claim. Docs/diff pass. Next small pure algebra/field controls during search.
+
 ## 2026-09-13 — Close locked netCDF4 declaration inventory without environment changes
 
 - At bffb529 all four source checks pass; installed pyx exactly matches locked
