@@ -1,5 +1,19 @@
 # Findings log
 
+## F-079 — Curvature-informed follow-up gives only0.754% gain and remains infeasible
+
+**Class:** preregistered two2048-bundle GN searches, independent ledger audit and all four holdout phases
+**Date:** 2026-09-13
+
+Complete paths, values, work and startup/GN identities repeat exactly;20 profile
+and49 checks per arm pass. Selected attempt2043 has no construction violation.
+Fine flux8.129882387125932e-8 improves0.75421072% versus the current-minimized
+source but remains8.13 times above1e-8. All geometric/native screens pass; all
+resolution levels retained, both physical repeats exact. Curvature/plasma spacing
+worsen while length/coil spacing improve: no full Pareto dominance. Both searches
+stop at budget, not proven converged; precursor work is not free. No feasible
+baseline, SoTA claim or step2 completion. See [results](../optimization/CURRENT_START_GN_RESULTS.md).
+
 ## F-078 — Quadratic field curvature explains all six failed finite geometric steps
 
 **Class:** preregistered32-field replay, two full independent native matrices and scalar/spectral audit

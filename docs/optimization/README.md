@@ -2,14 +2,14 @@
 
 Zweck: reproduzierbare Optimierungsorakel, geprüfte Ableitungen und kontrollierte Suchversuche auf dem offenen LPQA-Fall.
 
-Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften Geometriebedingungen, verfehlt die Fluxgrenze aber noch um Faktor8,19. Exakte Stromumverteilung hilft bei unveränderter Form praktisch nicht. Frühere Vorteile räumlicher Residuen gelten nur am untersuchten Startpunkt; noch keine zulässige Baseline oder allgemeine Methodenrangfolge.
+Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften Geometriebedingungen, verfehlt die Fluxgrenze aber noch um Faktor8,13. Der vollständig geprüfte GN-Folgelauf verbessert den feinen Flux um0,754%; exakte Stromumverteilung half zuvor praktisch nicht. Noch keine zulässige Baseline oder allgemeine Methodenrangfolge.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
-- [GN vom aktuellen Stromminimum: Protokoll](CURRENT_START_GN_PROTOCOL.md) — Separater klassischer Lauf vom fixierten besten Zustand,16-Bundle-Startreplay mit nativer Gramprüfung, zweimal2048 Versuche und vollständige unabhängige Abnahmen; noch nicht ausgeführt.
-- [GN vom aktuellen Stromminimum: Vorbereitung](CURRENT_START_GN_RESULTS.md) — Vier synthetische Gesamt-/Budget-/Fehlerkontrollen und Quellenprüfung bestehen; reale Suche und Abnahme folgen.
+- [GN vom aktuellen Stromminimum: Protokoll](CURRENT_START_GN_PROTOCOL.md) — Separater klassischer Lauf vom fixierten besten Zustand,16-Bundle-Startreplay mit nativer Gramprüfung, zweimal2048 Versuche und vollständige unabhängige Abnahmen.
+- [GN vom aktuellen Stromminimum: abgeschlossen](CURRENT_START_GN_RESULTS.md) — Zwei2048-Bundle-Pfade exakt wiederholt/auditiert, alle vier Abnahmephasen geschlossen. Feinster Flux8,129882e-8, Gewinn0,754%, weiterhin abgelehnt; Geometrie/nativ bestehen, keine Pareto-Dominanz.
 
 - [Krümmung der geometrischen Probes: Protokoll](GEOMETRIC_CURVATURE_PROTOCOL.md) — Dieselben zwei Quellen/32 Feldpunkte, vollständige gebündelte/native Matrizen, sechs quadratische Vorhersagen und lokale Spektral-/Stromraumdiagnose.
 - [Krümmung der geometrischen Probes: abgeschlossen](GEOMETRIC_CURVATURE_RESULTS.md) — Alle32 Felder/beide Matrizen unabhängig qualifiziert, alle sechs quadratischen Vorzeichen korrekt und mindestens99,60% weniger Vorhersagefehler; lokale Spektren/Stromkopplung geprüft, kein neuer Entwurf.

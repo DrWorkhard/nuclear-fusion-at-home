@@ -41,21 +41,23 @@ Initialisierungen und faire Vergleiche unter gleichen Anforderungen und bilanzie
 Budgets. Mehr Freiheitsgrade, andere Starts oder Solvervarianten sind getrennte
 Versuche, keine rückwirkende Umdeutung früherer Resultate.
 
-Aktueller Stand: beste fein geprüfte Form rund 8,19-mal über der Fluxgrenze.
+Aktueller Stand: beste fein geprüfte Form rund 8,13-mal über der Fluxgrenze.
 Die exakte Stromminimierung und die geometrische Abstiegsdiagnose sind vollständig
 geschlossen: statische Stromkorrekturen helfen praktisch nicht; alle sechs
 endlichen Formschritte verschlechtern den Flux trotz bestandener Ableitungen.
 Die anschließende unabhängige Krümmungsprüfung erklärt alle sechs Änderungen
-mit mindestens99,60% kleinerem Vorhersagefehler; keine neue Form konstruiert.
+mit mindestens99,60% kleinerem Vorhersagefehler. Der anschließende GN-Lauf ist
+mit zweimal2048 Bundles, separatem Audit und allen vier Abnahmephasen geschlossen:
+0,754% feiner Fluxgewinn, weiterhin unzulässig, keine nachgewiesene Konvergenz.
 
 Nächste Reihenfolge:
 
-1. **Registrierten [GN-Suchlauf](optimization/CURRENT_START_GN_PROTOCOL.md) ausführen:**
-   vom bereits fixierten besten Stromminimum, eigene16-Bundle-Startqualifikation,
-   zweimal2048 Versuche. Bisherige Suchläufe nicht verlängern oder umdeuten.
-2. **Startqualifikation, begrenzte Suche, unabhängiger Audit:** alle physikalischen
-   DOFs explizit zuordnen, gesamte Rechen-/Ableitungsarbeit erfassen, keine
-   parallelen schweren Installationen oder nachträgliche Budgeterhöhung.
+1. **Registrierten [analytischen Driftkontrollfall](qi/ABSOLUTE_DRIFT_CONTROL_PROTOCOL.md)
+   von Schritt1 schließen:** kartesische Drift gegen skalare Wirkung, feste81 Zellen,
+   unabhängiger Audit und absolute Einheiten. Keine globale QI-Freigabe daraus ableiten.
+2. **Nächsten Konstruktionsansatz separat begründen und registrieren:** die lokale
+   Folge bringt nur geringe Gewinne; Ursache/alternative Starts oder Koordinaten
+   prüfen, keine bloße nachträgliche Erweiterung der beendeten Budgets.
 3. **Alle unabhängigen Abnahmen schließen, auch bei Ablehnung.** Erst eine
    tatsächlich zulässige Konstruktion löst die mehrstartige Vergleichsphase aus.
 

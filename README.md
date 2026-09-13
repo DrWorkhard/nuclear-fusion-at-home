@@ -15,12 +15,10 @@ no demonstrated SoTA design advance, and no complete SQuID-C readiness.
 Long-term steps 1 and 2 remain open.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
-  8.19e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.
-  Exact current redistribution offers negligible gain. Six subsequent geometric
-  trials all worsen flux despite verified derivatives and linearly descending
-  models. The independently checked quadratic model explains all six failures
-  with at least99.60% less prediction error. A new curvature-informed search is
-  next; no new feasible design.
+  8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.
+  The completed curvature-informed follow-up improves fine flux by0.754%, with
+  exact two-run repetition, separate audit and all four independent holdout phases.
+  Both runs exhaust their fixed budgets; no convergence or feasible-design claim.
 - [Fresh native integration](docs/validation/FRESH_NATIVE_INTEGRATION_RESULTS.md):
   all 21 local phases and six scientific tests without skips pass. Extended W7-X
   comparison deliberately retains three differences out of 63 quantities.
@@ -31,7 +29,7 @@ Long-term steps 1 and 2 remain open.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Software regression: 667 tests pass with 144 documented fixture warnings;
+- Software regression: 679 tests pass with 144 documented fixture warnings;
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.
 

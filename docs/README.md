@@ -48,7 +48,7 @@ universelle Aussage, dass solche Daten nicht existieren.
 
 ## Aktuell entscheidende Befunde
 
-- Die beste fein geprüfte LPQA-Form erreicht etwa **8,19e-8 statt geforderter
+- Die beste fein geprüfte LPQA-Form erreicht etwa **8,13e-8 statt geforderter
   höchstens 1e-8**. Geprüfte Geometrie-/native Bedingungen bestehen; die
   Magnetfeldgrenze nicht. Wiederholte Suchläufe endeten am Budget, nicht bewiesen konvergiert.
 - [Exakte Stromoptimierung](optimization/FIXED_GEOMETRY_CURRENT_RESULTS.md)
@@ -59,7 +59,9 @@ universelle Aussage, dass solche Daten nicht existieren.
   obwohl lineare Modelle Abstieg vorhersagen und Ableitungen bestehen.
   Das separat [geprüfte quadratische Modell](optimization/GEOMETRIC_CURVATURE_RESULTS.md)
   erklärt alle sechs Verschlechterungen mit mindestens99,60% kleinerem
-  Vorhersagefehler. Nächster Schritt: neuer klassischer krümmungsberücksichtigender Suchlauf.
+  Vorhersagefehler. Der folgende [GN-Suchlauf](optimization/CURRENT_START_GN_RESULTS.md)
+  ist nun vollständig wiederholt, auditiert und fein geprüft:0,754% Fluxgewinn,
+  weiterhin unzulässig und nicht nachgewiesen konvergiert.
 - Der [frische lokale native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md)
   besteht alle 21 Phasen und sechs wissenschaftlichen Tests ohne Skip.
   Der erweiterte W7-X-Dateivergleich bleibt ausdrücklich 60/63.

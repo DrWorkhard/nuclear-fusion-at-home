@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-13 — Close current-start GN repetition, independent audit and all holdouts
+
+- Both2048-bundle searches complete, exact whole-path/work/identity/startup repeats;
+ 7159 requests/5110 cache hits/one denied/zero failed per arm. Separate20-profile/
+ 49-per-arm audit passes. Both budget-exhausted, selected attempt2043.
+- All four holdout phases completed with expected2/0/0/0 exits, every fixed
+  resolution retained. Fine flux8.129882387125932e-8,0.75421072% better but rejected;
+  geometry/native/linking pass. Independent read-only closure assertions verify
+  bound report/code/field hashes, ordered grids, construction replay, recomputed
+  threshold flags and exact physical repetition. No additional native calls in
+  this arithmetic/source review; not a second independent field recalculation.
+- F-079/detail/index and both READMEs/status/plan updated. No feasible baseline,
+  no Pareto dominance or convergence. New mirror code remains separately untracked
+  pending its own pre-execution qualification; no competing scientific job.
+- Full regression679 passed with144 known fixture warnings in49.33s; Ruff,
+  documentation structure and diff checks pass. Scoped evidence/docs commit
+  excludes the new unqualified quadrature/audit implementation.
+
 ## 2026-09-13 — Close nine pure analytic mirror geometry/drift/unit controls
 
 - Cartesian Jacobian, Clebsch field, pressure balance, general separate grad-B/
