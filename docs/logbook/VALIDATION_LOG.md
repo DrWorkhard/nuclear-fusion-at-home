@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-13 — Qualify source-bound32-field curvature driver and separate native-matrix audit
+
+- Four new synthetic workflow/negative controls pass, including1024-by207 matrices,
+  negative model usefulness, partial native VJP interruption and reversed physical
+  name mapping. Point/step/direction/gradient/current-column/A mutations rejected.
+- Pure real-source preflight binds two16-by207 point sets and six unchanged LP
+  steps; no new native B/D evaluated. Stored LP d retained; x+d must match archived
+  points exactly, rounded subtractive displacements separately archived.
+- Synthetic run caught NumPy-bool JSON failure before physical use; scalar error
+  conversion corrected. One formatting-context patch rejected atomically, reapplied
+  against inspected source. No scientific data changed.
+- Full regression663 passed/144 retained fixture warnings; Ruff/docs/diff pass.
+  Detail/index and both READMEs/status/plan reviewed; software/date synchronized.
+  Next commit then guarded real32-field/two-matrix execution and independent audit.
+
 ## 2026-09-13 — Qualify transparent native matrix request accounting
 
 - Three pure controls pass for unchanged local/batched-kernel wrappers, including

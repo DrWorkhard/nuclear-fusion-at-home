@@ -10,7 +10,7 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-12: no newly feasible optimization baseline,
+Current assessment, 2026-09-13: no newly feasible optimization baseline,
 no demonstrated SoTA design advance, and no complete SQuID-C readiness.
 Long-term steps 1 and 2 remain open.
 
@@ -29,7 +29,7 @@ Long-term steps 1 and 2 remain open.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Software regression: 651 tests pass with 144 documented fixture warnings;
+- Software regression: 663 tests pass with 144 documented fixture warnings;
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.
 
