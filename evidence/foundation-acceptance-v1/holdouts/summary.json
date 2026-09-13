@@ -1,0 +1,133 @@
+{
+  "all_four_phases_completed": true,
+  "audit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle-audit.json",
+    "sha256": "d7b5e49ea6bd50f55d9120601dff8c473d42484663b889398f9d7c1f19696f1d"
+  },
+  "code": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_coil_holdouts.py",
+    "sha256": "76a2a267718847fa6128c606549b3d433bf3026fa9fc751ec6faa22aba537a5a"
+  },
+  "disk_preflight": {
+    "free_bytes": 4711288832,
+    "path": "/Users/sebastianwirkert/workspace/fusion",
+    "required_bytes": 2147483648,
+    "sufficient": true
+  },
+  "full_engineering_admission": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "028c4cc1e0195c5515db74bd96a7b25f0cd3a2ca",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "status": "completed",
+  "steps": [
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/validate_normalized_candidates.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/holdout.json",
+        "--all-repeats"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/holdout.log",
+        "sha256": "0873239883d3cbf8bb88be36d024dd4e5403eea06c10d0fe8730eaae5060bd87"
+      },
+      "minimum_observed_free_bytes": 4710473728,
+      "name": "holdout",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/holdout.json",
+        "sha256": "74496d5a02b0a1d94975438aa3d409968f761ca841da82678927649eae1e2f17"
+      },
+      "returncode": 2,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_normalized_candidates.py",
+        "sha256": "c17aae2aeb69652f392b1e311de4f2dd1e587d6c84c170f6764b6443221fc341"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/bound_continuous_curvature.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/curvature.json",
+        "--holdout",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/holdout.json",
+        "--study",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle/summary.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/curvature.log",
+        "sha256": "ea9011096ea31120de27080f34f5badb3a13191fddcc49d97be0c5b4fb86dd07"
+      },
+      "minimum_observed_free_bytes": 4710440960,
+      "name": "curvature",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/curvature.json",
+        "sha256": "bb1dd0482549a422a278944a7601a027a8b9a60bc729f04a694988f3a2994fdf"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_curvature.py",
+        "sha256": "fb87e1a1d0f29f1663a9417cd08ecbd027cf6179ba3d4483740177b4018afd18"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/bound_continuous_coil_clearance.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/holdout.json",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/clearance.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/clearance.log",
+        "sha256": "f9638a144fc552a50400babd8a4958627cc8698a5ccf7f108e59220faa7a7671"
+      },
+      "minimum_observed_free_bytes": 4710068224,
+      "name": "clearance",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/clearance.json",
+        "sha256": "0276e40e08ff3984a3326d1ed56ce2f304779ff1d3b85a5229a96207c45d26d8"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_coil_clearance.py",
+        "sha256": "ed02d56beea8b6cffccacfd0a289492a0cbba686e7e6bdd0be263d6e81903db2"
+      },
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/validate_direct_native_constraints.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/holdout.json",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/native.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/native.log",
+        "sha256": "a48c46604be2b7887d969cd71cfa0f15a656ddbe7280bbdbd9a65efa0ec0d9c2"
+      },
+      "minimum_observed_free_bytes": 4710051840,
+      "name": "native",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/native.json",
+        "sha256": "afe4886d60f9c04b4f3fd9fc3d639b704da8d33186ae97f56e261ffaba7266d9"
+      },
+      "returncode": 0,
+      "source": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_direct_native_constraints.py",
+        "sha256": "60478504a0ea5d69f07be2e7398f2dc7fc2952d9fc711ba3c5cb27f4b9d96149"
+      },
+      "status": "completed"
+    }
+  ],
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle/summary.json",
+    "sha256": "e6e22e89a698625efec980b607a382837bd8270c2ab5beafbca40dc97da26026"
+  },
+  "used_for_optimizer_feedback": false
+}

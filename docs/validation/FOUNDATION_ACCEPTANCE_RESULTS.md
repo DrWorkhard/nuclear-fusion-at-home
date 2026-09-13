@@ -1,7 +1,8 @@
 # Basisabnahme und Bedienung
 
-Stand2026-09-13: Implementierung kontrolliert; echte konsolidierte Abnahme noch
-ausstehend. Maßgeblich ist das vorab committene
+Stand2026-09-13: Erster realer Ablauf vollständig ausgeführt; Gesamtaudit wegen
+Verweisschemafehler abgelehnt, korrigierte Gesamtabnahme noch ausstehend.
+Maßgeblich ist das vorab committene
 [Protokoll](FOUNDATION_ACCEPTANCE_PROTOCOL.md), nicht frühere breitere Etappenziele.
 
 ## Was wird abgenommen?
@@ -95,5 +96,29 @@ spätere Forschung erhalten, einschließlich aller negativen Ergebnisse.
 
 ## Tatsächliche Ausführung und Abschluss
 
-Noch ausstehend. Erst ein vollständiger bestandener Gesamtaudit erlaubt den
-Abschluss beider geschärfter Schritte; danach Dokumentation/Commit und Übergabe.
+`foundation-acceptance-v1` bei028c4cc:718 Tests mit144 bekannten Warnungen in51,48s,
+sechs Pflichtdatenidentitäten ohne Skip, Ruff/Dokumentprüfung und alte Import-
+Warnungsidentität bestanden. Beide24-Bundle-Pfade exakt,22 gemeinsame und52 Checks
+je Arm bestanden. Je49 Anforderungen/24 Cachetreffer/eine verweigerte25.Abfrage,
+keine fehlgeschlagenen Auswertungen; acht Solveriterationsberichte je Arm.
+Alle vier feinen Kandidatenprüfungen abgeschlossen. Beide Kandidaten korrekt an
+feinem Roh-Flux8,191663957639298e-8 gegenüber1e-8 abgelehnt; Geometrie/nativ bestehen.
+
+Der Gesamtaudit scheiterte fail-closed an einem Fehler der neuen Verwaltung:
+Archivverweis enthält zusätzlich `bytes`, der Vergleichsverweis nur Pfad/Hash.
+Beide verweisen auf exakt denselben Inhalt. Korrektur prüft Pfad/Hash und, wenn
+vorhanden, die tatsächliche Dateigröße statt vollständiger Wörterbuchgleichheit.
+Neue Negativkontrollen erhalten falsche Größe/Pfad/Hash als Fehler. Zusätzliche
+Gesamtauditkontrolle verwendet eine ausdrücklich synthetisch neu gebundene
+Manifestkopie und erhaltene Daten; kein neuer Physiklauf und keine Änderung
+des ursprünglichen negativen Audits. Alle übrigen Kandidaten-/Warnungs-/externen
+Bestandsprüfungen bestehen auch bei separater Nachrechnung.
+Alle20 Basis-Workflowkontrollen bestehen nach Korrektur in5,15s; Ruff,
+Dokumentstruktur und Diffprüfung ebenfalls. Übersichten bleiben korrekt auf
+ausstehender konsolidierter Abnahme, nicht auf erfolgreichem Entwurf.
+
+Originalberichte/Rohdaten bleiben unverändert gespeichert; ausführender Code ist
+bei028c4cc abrufbar. **v1 bleibt abgelehnt**, keine nachträglich geänderte Freigabe.
+Nach Korrektur und Commit folgt `foundation-acceptance-v2` mit demselben Protokoll,
+unveränderten Budgets/Physikgrenzen und vollständig neuer sequenzieller Ausführung.
+Erst deren vollständiger Gesamtaudit erlaubt den Abschluss beider Schritte.

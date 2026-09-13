@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-13 — First real foundation run complete; metadata audit failure preserved
+
+- At028c4cc all eight producer phases complete:718 tests/144 warnings, strict
+  six-data regression, same known import warning, exact two24-bundle native paths,
+  independent22+2x52 cycle checks and all four fine holdouts. Both candidates are
+  correctly rejected at fine flux8.191663957639298e-8 versus1e-8.
+- Final auditor rejects an archive-reference dictionary comparison: identical
+  path/hash but archival reference additionally has correct byte size. Not a
+  physical/source mismatch. Separate read-only arithmetic/holdout/source checks
+  and unchanged external-state verification pass; v1 final verdict remains error.
+- Correct comparison to checked path/hash plus verified optional size. Added
+  size/path/hash negative controls and full classifier test using a synthetic
+  manifest over retained data. No original report rewritten or native core changed.
+- Preserve v1 reports/raw data; document failure and commit fix before v2 with
+  unchanged protocol/budgets/thresholds.20 foundation controls pass in5.15s; Ruff,
+  docs and diff pass. Overviews reviewed; milestone closure remains pending.
+
 ## 2026-09-13 — Control bounded foundation workflow before native execution
 
 - Added two24-bundle cycle/independent audit wrappers without changing any old

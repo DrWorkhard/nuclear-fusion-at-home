@@ -104,6 +104,16 @@ def read_ref(ref):
     return json.loads(checked(ref).read_text())
 
 
+def same_source(record, expected):
+    """Identity is checked path/content; optional size metadata must also be correct."""
+    actual_path, expected_path = checked(record), checked(expected)
+    return (
+        actual_path.resolve() == expected_path.resolve()
+        and record["sha256"] == expected["sha256"]
+        and ("bytes" not in record or record["bytes"] == actual_path.stat().st_size)
+    )
+
+
 def native_checks(prior):
     native, archive, physics = (prior[k] for k in ("native", "archive", "physics"))
     for row in archive["files"]:
@@ -249,7 +259,7 @@ def main():
             raise ValueError("preserved native sources changed")
         prior = {k: read_ref(ref) for k, ref in run["prior_evidence"].items()}
         native = native_checks(prior)
-        if prior["archive"]["report"] != run["prior_evidence"]["native"]:
+        if not same_source(prior["archive"]["report"], run["prior_evidence"]["native"]):
             raise ValueError("archived native report mismatch")
         cycle_ref, audit_ref = (phases[key]["result"] for key in ("cycle", "cycle-audit"))
         cycle, cycle_audit = read_ref(cycle_ref), read_ref(audit_ref)

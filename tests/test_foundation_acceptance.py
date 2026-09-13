@@ -225,3 +225,33 @@ def test_overall_audit_records_incomplete_phase_rejection(tmp_path, monkeypatch)
     result = json.loads(output.read_text())
     assert result["status"] == "error" and not result["all_pass"]
     assert not result["step1_pass"] and not result["step2_pass"]
+
+
+def test_source_identity_with_verified_optional_size_metadata(tmp_path):
+    path = tmp_path / "source.json"
+    path.write_text("{}")
+    ref = reference(path)
+    assert acceptance.same_source({**ref, "bytes": 2}, ref)
+    assert not acceptance.same_source({**ref, "bytes": 3}, ref)
+    other = tmp_path / "other.json"
+    other.write_text("{}")
+    assert not acceptance.same_source(reference(other), ref)
+    with pytest.raises(ValueError, match="hash"):
+        acceptance.same_source({**ref, "sha256": "0" * 64}, ref)
+
+
+def test_overall_classifier_on_retained_data_with_synthetic_manifest(tmp_path, monkeypatch):
+    # Exercise the complete classifier without rerunning physics or altering evidence.
+    # Only this test fixture rebinds current wrapper code and relocates its manifest.
+    original = ROOT / "evidence/foundation-acceptance-v1/run.json"
+    run = json.loads(original.read_text())
+    run["code"] = [reference(ROOT / p) for p in runner.CODE]
+    commands = [(s["name"], s["command"], s["result"]) for s in run["steps"]]
+    monkeypatch.setattr(runner, "phase_commands", lambda *_: commands)
+    path, output = tmp_path / "synthetic-manifest.json", tmp_path / "audit.json"
+    path.write_text(json.dumps(run))
+    monkeypatch.setattr(sys, "argv", ["audit", str(path), str(output)])
+    assert acceptance.main() == 0
+    result = json.loads(output.read_text())
+    assert result["step1_pass"] and result["step2_pass"]
+    assert not any(c["bounded_candidate_pass"] for c in result["holdouts"]["candidates"])

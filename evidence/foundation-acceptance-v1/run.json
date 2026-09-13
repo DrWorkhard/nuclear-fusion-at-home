@@ -1,0 +1,447 @@
+{
+  "audit_command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/audit_foundation_acceptance.py",
+    "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/run.json",
+    "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/summary.json"
+  ],
+  "code": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/pyproject.toml",
+      "sha256": "0af21f7026e1802cbdcf8fda60b0aa2534f56c5c8dc7df54809bf24bad543fa7"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_current_start_gn.py",
+      "sha256": "0d398876720ca8f9f7adae69471a95aa78aa05c29c764b782f80de349e1e1766"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_foundation_acceptance.py",
+      "sha256": "400f7dc3b0378cb13cbaa4e50ac40fb0b87c59b9057845b0bbf4fc5964b04e06"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_foundation_cycle.py",
+      "sha256": "dec1f7c8e851dd872cb77e513e0338d9af45e1edd253f42b7657667aa6b18874"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_netcdf_import_warning.py",
+      "sha256": "15b7d84a2544da8c2cad7e025da2403c53859a18e309a453a2ae5f87723be9ce"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_coil_clearance.py",
+      "sha256": "ed02d56beea8b6cffccacfd0a289492a0cbba686e7e6bdd0be263d6e81903db2"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/bound_continuous_curvature.py",
+      "sha256": "fb87e1a1d0f29f1663a9417cd08ecbd027cf6179ba3d4483740177b4018afd18"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/check_docs.py",
+      "sha256": "6a098d7d81531902e6003ec3219f143498c2a8553006f87d970feb9818569123"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/current_gn_inputs.py",
+      "sha256": "6d3f43460c995f27d2f4ecb65390d0f4cf9f5ecb654e6a0585df59117acfeed7"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/geometric_curvature_inputs.py",
+      "sha256": "c9fcf84bbb8737025df67fa21d5a4f57d352f5787ad4d1d79abad1d2daad1a44"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/prepare_upstream_start.py",
+      "sha256": "07e00389215f716324e149fdc6e8fb58ec20035de08d4c7516329815d04046ea"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/qualify_fixed_currents.py",
+      "sha256": "ae4a18e74f6f7183f3a109358b89ca682a9a8f0829e2b38922e6009310fd02be"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_coil_holdouts.py",
+      "sha256": "76a2a267718847fa6128c606549b3d433bf3026fa9fc751ec6faa22aba537a5a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_current_gn_arm.py",
+      "sha256": "3317c2d8139fd6cbaf983cf330bd53222980772f983fd1827ca8181741aefd7e"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_current_start_gn.py",
+      "sha256": "1456a3162198d8146fc6d01a2ce9b50c8e613e319c924b1c645065de2022fa83"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_foundation_acceptance.py",
+      "sha256": "4ae686387ad41e736ea679b67e1dae94c9f012b873b51089770e9dd36edac654"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_foundation_cycle.py",
+      "sha256": "4356f607d95a3b76a8b389a413d057955768cf502c12246a678f2a437896eef5"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_scientific_integration.py",
+      "sha256": "2989e3d79fe8f9bb93dc51e1f691cee67367882eaff9b99fa4c7004b6ebf0f6d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_direct_native_constraints.py",
+      "sha256": "60478504a0ea5d69f07be2e7398f2dc7fc2952d9fc711ba3c5cb27f4b9d96149"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_normalized_candidates.py",
+      "sha256": "c17aae2aeb69652f392b1e311de4f2dd1e587d6c84c170f6764b6443221fc341"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/affine_coordinates.py",
+      "sha256": "6b0b1f77da24460b486d167fc745b3a8bbe3ba58e96814b97ea3c0d0d471040f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/batched_field_jacobian.py",
+      "sha256": "6e79e1f3643836a0a86b0fc19b683fbbddab3bc568617856c0d02cef1138446d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/counted_field_views.py",
+      "sha256": "e9b8bfde2f334b4b41d94d688828f5bbb658bb0f015f38a2b22c82c4316df34a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/direct_constraints.py",
+      "sha256": "92e898e0ee05be4ce8086972441714c94dc8750b2240621e72103c117b70f1fc"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/foundation_acceptance.py",
+      "sha256": "15272271b41322d5351a317b06cf75cb4ade5fbd813979d6556330fe94db2960"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/gauss_newton_backend.py",
+      "sha256": "94cd886adc46068c52599da45f4bac98efeed400f4619d6a2a01d5dbb6f66427"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_audit.py",
+      "sha256": "70ae783c99a9c9c318a5117867db57fdae2be25668eb795e1980ac56125fd01d"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/inequality_oracle.py",
+      "sha256": "5e7c154b8290339e224e629393f551e2c74fab7804ccda5a40d1fcac81b8c916"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/integration_audit.py",
+      "sha256": "e9609759f1fe448384b717398dc62a357bb6ab65f85f023575272bb1f6744dd9"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/selected_start.py",
+      "sha256": "63c36d5461a32c6289cd6548facd50314ea335b023e81918db8431f882948a34"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_dofs.py",
+      "sha256": "57d9e3323b5b772be79722c320fe59bc86aa666ad753db663713dbf5e171a158"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/serialized_field_state.py",
+      "sha256": "6b86dbe1cb89e3f46188c500591b56a23441c04cf7dab475b3c3844965ab9d0c"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/spatial_flux.py",
+      "sha256": "30c294b717c8f4905730d2d3241a3c73db1196d0494a6811441cffc3d796446f"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_foundation_acceptance.py",
+      "sha256": "0e30e07a1ae223129514d0ea240a775d5309b4878862497a533504bcd145dfb7"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/uv.lock",
+      "sha256": "366fda86aa2cc779a5acf95c9a6b4fffd7a6697f23a98b0a866849cb7e652be5"
+    }
+  ],
+  "controlled_environment": {
+    "MPLCONFIGDIR": "/private/tmp/fusion-mpl-cache",
+    "OMPI_MCA_btl": "self",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "PYTHONPATH": "/Users/sebastianwirkert/workspace/fusion/src",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "disk_preflight": {
+    "free_bytes": 4716838912,
+    "path": "/Users/sebastianwirkert/workspace/fusion",
+    "required_bytes": 3221225472,
+    "sufficient": true
+  },
+  "external_before": {
+    "simsopt": {
+      "repository": {
+        "available": true,
+        "branch": "auglag_coils",
+        "commit": "a79006b0bc1e6df8ab48de284e3457d39a49b995",
+        "dirty": false,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt"
+      },
+      "tracked_delta_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked": []
+    },
+    "stellcoilbench": {
+      "repository": {
+        "available": true,
+        "branch": "main",
+        "commit": "c7949edc4ea6378fc3be633304c69c288c3b79b5",
+        "dirty": false,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench"
+      },
+      "tracked_delta_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked": []
+    },
+    "stellopt-v251": {
+      "repository": {
+        "available": true,
+        "branch": "v251",
+        "commit": "e59affaec7713aee8da1f1bccdf05cc0612c12e3",
+        "dirty": true,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/stellopt-v251"
+      },
+      "tracked_delta_sha256": "a2fdf45bb885a5f283f6b97af727c8056ff777fb746c0c8dbc8460fa803196d8",
+      "untracked": []
+    },
+    "vmecpp": {
+      "repository": {
+        "available": true,
+        "branch": "",
+        "commit": "1d7e09941c89210be95b6b20f4d4d555f0a63096",
+        "dirty": false,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/vmecpp"
+      },
+      "tracked_delta_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked": []
+    },
+    "vmecpp-validation": {
+      "repository": {
+        "available": true,
+        "branch": "main",
+        "commit": "4017e53095c09e2ead20c6bb64c12796583520c5",
+        "dirty": false,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/vmecpp-validation"
+      },
+      "tracked_delta_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "untracked": []
+    }
+  },
+  "host": {
+    "captured_at": "2026-09-13T17:13:15.028034+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "preservation_before": {
+    "all_pass": true,
+    "allowed_modified": [
+      "AGENTS.md",
+      "README.md",
+      "docs/PROJECT_PLAN.md",
+      "docs/README.md",
+      "docs/STATUS.md",
+      "docs/logbook/DECISIONS.md",
+      "docs/logbook/VALIDATION_LOG.md",
+      "docs/validation/README.md"
+    ],
+    "base_commit": "5971fee84bfddf8489094278f98d64a6d8d39983",
+    "blocked_changes": [],
+    "historical_tracked_files": 1266,
+    "preservation_tag": "5971fee84bfddf8489094278f98d64a6d8d39983"
+  },
+  "prior_evidence": {
+    "archive": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2-archive.json",
+      "sha256": "ded4f2ef76cd7d4d6095719d9c2ae0bdb3de48b4810ee11368705efb730ae6ec"
+    },
+    "native": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2/summary.json",
+      "sha256": "b1e1c647eecd1a4ee4761205d8ef2536f6628bc7e7260ff174cd4fc967d75718"
+    },
+    "physics": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fresh-native-integration-v2-physics-audit.json",
+      "sha256": "b96ebb960170e32e324cf2805c1d26b0bc1be25618407e86cff1656fc83d8d96"
+    },
+    "warning": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/netcdf-import-warning-v1.json",
+      "sha256": "55cf89082a45e28d2c53836b9daba7aae842368bf57d63fcc9b05d0dacd57ae7"
+    }
+  },
+  "protocol": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/docs/validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md",
+    "sha256": "8d1e7c14c7f6865b1d563fe940ea0e1c4beefeaa5988131613a23740b1304933"
+  },
+  "raw_directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/foundation-acceptance-v1",
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "028c4cc1e0195c5515db74bd96a7b25f0cd3a2ca",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "status": "completed",
+  "steps": [
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "-m",
+        "pytest",
+        "-q",
+        "--junitxml=/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/tests.xml"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/regression.log",
+        "sha256": "84297e8ab88954d35ff0fa1dc7cdd67464060554b2e059c32cefa0d8fdf4ba95"
+      },
+      "minimum_observed_free_bytes": 4640505856,
+      "name": "regression",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/tests.xml",
+        "sha256": "cff7050ce9243831d069fa83d5f0e28a965ced9e31126812b8f18571d6f5fd86"
+      },
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/ruff",
+        "check",
+        "."
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/ruff.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      "minimum_observed_free_bytes": 4715724800,
+      "name": "ruff",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/ruff.log",
+        "sha256": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+      },
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/check_docs.py"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/docs.log",
+        "sha256": "8c37fbffde6150d6481b56dc5fd452f162d71ac06294abcc17ad553336832a8c"
+      },
+      "minimum_observed_free_bytes": 4715720704,
+      "name": "docs",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/docs.log",
+        "sha256": "8c37fbffde6150d6481b56dc5fd452f162d71ac06294abcc17ad553336832a8c"
+      },
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/run_scientific_integration.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/scientific"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/scientific.log",
+        "sha256": "ba198d36f34ba3d32629901c7e1dd8c2b76c5bb8c8f24f627e730b86c7bf52e3"
+      },
+      "minimum_observed_free_bytes": 4715556864,
+      "name": "scientific",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/scientific/summary.json",
+        "sha256": "2178030268a08c0a9669d0b68b76aaa359e16107f1957d481f46753d5ae4282f"
+      },
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/audit_netcdf_import_warning.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/warning.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/warning.log",
+        "sha256": "bbd48fcec9f4ba6fcfd312e52255992d05e98c962624c0974d075966c4681a9c"
+      },
+      "minimum_observed_free_bytes": 4715921408,
+      "name": "warning",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/warning.json",
+        "sha256": "2205c7b2d4d879129b6815a9a139999788e78d02090899d8f42167e038586ccc"
+      },
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/run_foundation_cycle.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle",
+        "/Users/sebastianwirkert/workspace/fusion/artifacts/foundation-acceptance-v1"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle.log",
+        "sha256": "ef21040563b76a59554e97acc4c9eaa521708cde854a40a2c0ffb08d219538fa"
+      },
+      "minimum_observed_free_bytes": 4711460864,
+      "name": "cycle",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle/summary.json",
+        "sha256": "e6e22e89a698625efec980b607a382837bd8270c2ab5beafbca40dc97da26026"
+      },
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/audit_foundation_cycle.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle-audit.json"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle-audit.log",
+        "sha256": "a48c46604be2b7887d969cd71cfa0f15a656ddbe7280bbdbd9a65efa0ec0d9c2"
+      },
+      "minimum_observed_free_bytes": 4711297024,
+      "name": "cycle-audit",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle-audit.json",
+        "sha256": "d7b5e49ea6bd50f55d9120601dff8c473d42484663b889398f9d7c1f19696f1d"
+      },
+      "returncode": 0,
+      "status": "completed"
+    },
+    {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "scripts/run_coil_holdouts.py",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/cycle-audit.json",
+        "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts"
+      ],
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts.log",
+        "sha256": "6822cfc27255d5b8e2f241f09abf2c9d9cbb3f52d9bc7b31ad75d141597c9567"
+      },
+      "minimum_observed_free_bytes": 4710051840,
+      "name": "holdouts",
+      "result": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/foundation-acceptance-v1/holdouts/summary.json",
+        "sha256": "b8cf1904bd0a062acb7f88f1446d92e8f200ab01a50492d7f98322b09efe02fa"
+      },
+      "returncode": 0,
+      "status": "completed"
+    }
+  ],
+  "unsupported_capabilities": {
+    "finite_particle_orbits": false,
+    "full_engineering": false,
+    "global_qi": false,
+    "hosted_ci": false,
+    "independent_hardware": false,
+    "native_abi_certified": false,
+    "sota_advance": false,
+    "squid_c": false
+  }
+}
