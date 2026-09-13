@@ -52,7 +52,7 @@ mit zweimal2048 Bundles, separatem Audit und allen vier Abnahmephasen geschlosse
 
 Nächste Reihenfolge:
 
-1. **Nächste Driftkontrolle von Schritt1 festlegen:** die
+1. **Registrierte [Vakuumdriftkontrolle](qi/VACUUM_DRIFT_CONTROL_PROTOCOL.md) ausführen:** die
    [analytische81-Zellen-Normierung](qi/ABSOLUTE_DRIFT_CONTROL_RESULTS.md) ist geschlossen;
    nichtverschwindende radiale Drift und Koordinatenkovarianz vor echter QI-Freigabe
    kontrollieren. Grenzen der Gleichgewichtsauflösung bleiben getrennt offen.

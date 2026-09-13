@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-13 — Register non-axisymmetric exact-vacuum two-component drift control
+
+- Analytically derived curl/div-free linear vacuum field, explicit Clebsch
+  coordinates and field lines, unique convex well with fixed two-root brackets.
+  Unlike a generic imposed non-MHD mirror, this needs no unverified pressure balance.
+- Fixed81 cells/27 lines,243 independent scalar base/FD states, both drift
+  derivatives, all resolutions, SI scalings and same-phase gauge contraction.
+  Primary Hamilton/GC references reread; own field derivation clearly labelled.
+  No new control fields or numerical matrix evaluated before registration.
+- Protocol/index and both READMEs/status/plan reviewed; next task now concrete,
+  overall step1/2 assessment unchanged. Docs/diff pass; commit before pure controls.
+
 ## 2026-09-13 — Close81-cell absolute drift/action matrix and independent scalar audit
 
 - At eb64490 all81 cells/27 refinement lines pass;12096 Cartesian points/603
