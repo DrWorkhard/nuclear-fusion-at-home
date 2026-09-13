@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-13 — Register new GN search from already fixed best current-minimized source
+
+- F-078 supplies the independently qualified curvature model; unchanged207-DOF
+  LPQA problem, native-covector GN and historical trust-constr options/0.01scale.
+  New initial gate replays all16 frozen source events plus full sourceJ/nativeGram.
+- Two2048-bundle caps include startup; exact full repetition, separate work and
+  all four independent holdout phases required. No eliminated directions or
+  relaxed gates. Hybrid precursor construction/diagnostic work explicitly paid.
+- Protocol/index and both READMEs/status/plan reviewed; overall assessment unchanged.
+  Docs/diff pass. Next implement/control/audit before any new actual field/search.
+
 ## 2026-09-13 — Close32 real fields, both full matrices and independent curvature audit
 
 - At405c675 all32 frozen flux replays/twelve residual FD checks and two complete

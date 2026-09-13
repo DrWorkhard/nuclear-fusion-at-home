@@ -8,6 +8,8 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 
 ## Dokumente
 
+- [GN vom aktuellen Stromminimum: Protokoll](CURRENT_START_GN_PROTOCOL.md) — Separater klassischer Lauf vom fixierten besten Zustand,16-Bundle-Startreplay mit nativer Gramprüfung, zweimal2048 Versuche und vollständige unabhängige Abnahmen; noch nicht ausgeführt.
+
 - [Krümmung der geometrischen Probes: Protokoll](GEOMETRIC_CURVATURE_PROTOCOL.md) — Dieselben zwei Quellen/32 Feldpunkte, vollständige gebündelte/native Matrizen, sechs quadratische Vorhersagen und lokale Spektral-/Stromraumdiagnose.
 - [Krümmung der geometrischen Probes: abgeschlossen](GEOMETRIC_CURVATURE_RESULTS.md) — Alle32 Felder/beide Matrizen unabhängig qualifiziert, alle sechs quadratischen Vorzeichen korrekt und mindestens99,60% weniger Vorhersagefehler; lokale Spektren/Stromkopplung geprüft, kein neuer Entwurf.
 
