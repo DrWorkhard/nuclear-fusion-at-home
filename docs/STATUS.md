@@ -52,10 +52,11 @@ Nullmeldungen sind keine Zulassung. Details und alle erhaltenen Fehlschläge:
 | W7-X / native Reproduktion | Ausgewählte physikalische Regression und frischer lokaler 21-Phasen-Aufbau bestehen; sechs wissenschaftliche Tests ohne Skip | Erweiterter W7-X-Dateivergleich 60/63; gleicher Rechner/erlaubte Caches, keine unabhängige Hardware oder Hosted-CI |
 | Feld und Geometrie | Unabhängige Biot-Savart-/Ableitungsprüfungen; kontinuierliche Krümmungs-/Abstandsschranken finden übersehene Gitterverletzungen | Gleitkommapolster statt gerichteter Intervallarithmetik; keine vollständige endliche Baugruppe |
 | QI / radiale Wirkung | Unabhängige Traces/Quadratur und überprüfte Gauge-Kettenregel | Bei 25 nfp3-Muldenfamilien ändert reine radiale Feldlinien-Neumarkierung die Vorzeichenklasse; kein global gauge-unabhängiger Maßstab |
+| Absolute Drift / analytische Kontrolle | Alle81 Spiegelzellen,45 unabhängige skalare Referenz-/FD-Läufe und SI-Normierung bestehen | Radiale Drift dort symmetriebedingt null; keine absolute Qualifikation echter QI-Felder oder umfassender Invariantendomäne |
 | QI / Gleichgewichte | Frische 16-Zellen-Studie vollständig auditiert; doppelte Solver-Winkelauflösung besteht untersuchte Feldidentitäten | Ursprünglich nur 9/16 Auswertungsverfeinerungen und 2/16 historische Feld-Fidelitätspässe; keine Zelle besteht alle ursprünglichen Schirme |
 | QI / gemeinsamer Winkel | 120 neue Gitter und 61.440 unabhängige skalare Inversionen bestätigen die Koordinatenrechnung | Nur 4/16 neue Fidelitäts- und 5/16 Vergleichsverfeinerungspässe; Parametrisierung erklärt nicht sämtliche Unterschiede |
 | Endliche Spulennetze | Alle sechs Auflösungen bestehen den nicht-gemeinsame-Vertexindizes-Teiltest; feinster Lauf mit 2.222.785 Paarprüfungen und exakt altem 2M-Präfix auditiert | Nachbarpaare, vollständige Baugruppen, reale Wicklungspakete und gültige Mechanik offen; alte große Verformung verletzt lineare Modellannahmen |
-| Software | 679 Tests, Ruff und Dokumentstrukturprüfung bestanden | 144 dokumentierte Fixture-Warnungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
+| Software | 687 Tests, Ruff und Dokumentstrukturprüfung bestanden | 144 dokumentierte Fixture-Warnungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
 
 Die beiden QI-Verfeinerungsmaße unterscheiden sich: ursprüngliche
 Clebsch-Identitätsverfeinerung und spätere Verfeinerung des historischen

@@ -1,0 +1,26 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "scripts/audit_absolute_drift_control.py",
+    "evidence/absolute-drift-control-v1.json",
+    "evidence/absolute-drift-control-v1-audit.json"
+  ],
+  "log": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/absolute-drift-control-v1-audit-driver/command.log",
+    "sha256": "00f664100a771cc1275c6004ff1eb638f471ef1fc4b827433047e69110bbed20"
+  },
+  "minimum_observed_free_bytes": 4625776640,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "eb644901dd7897a03336e5429a29dfe9d8483bc3",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "returncode": 0,
+  "source": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_guarded_command.py",
+    "sha256": "4da34bb00b8b21d437de79317ae9f3108512068feb011312215c124c06ecb442"
+  },
+  "status": "completed"
+}

@@ -2,14 +2,14 @@
 
 Zweck: eine numerisch belastbare QI-relevante Messung aus offenen Goodman-Gleichgewichten aufbauen.
 
-Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale Wirkungsableitungen sind unabhängig gegengeprüft. Der nfp2-Druckfall bleibt im begrenzten Gauge-Test negativ. Bei nfp3 wechseln25 Familien allein durch Feldlinien-Neumarkierung das Vorzeichen; die Kettenregel ist unabhängig bestätigt. Invariantenbereich, globale Topologie, physikalischer Gauge-/Präzessionsmaßstab und Gleichgewichtsauflösung bleiben offen; kein vollständiges QI-/maximum-J-Zertifikat.
+Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale Wirkungsableitungen sind unabhängig gegengeprüft. Absolute Einweg-/Driftnormierung besteht nun im analytischen Spiegel mit81 Zellen und separatem Audit, noch nicht an echten QI-Feldern. Der nfp2-Druckfall bleibt im begrenzten Gauge-Test negativ. Bei nfp3 wechseln25 Familien allein durch Neumarkierung das Vorzeichen; die Kettenregel besteht. Invariantenbereich, globale Topologie, physikalischer QI-Driftmaßstab und Gleichgewichtsauflösung bleiben offen.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
-- [Absolute Drift: analytisches Kontrollprotokoll](ABSOLUTE_DRIFT_CONTROL_PROTOCOL.md) — Definierter stromtragender Spiegel, kartesische Drift gegen Wirkungsableitung, Einweg-/SI-Normierung,81 feste Zellen und separater skalarer Audit; keine QI-Gesamtfreigabe, noch nicht ausgeführt.
-- [Absolute Drift: Aufbau](ABSOLUTE_DRIFT_CONTROL_RESULTS.md) — Neun Grund- und acht Quadratur-/Audit-/Fehlerkontrollen bestehen; vollständige Matrix und unabhängiger skalarer Audit folgen.
+- [Absolute Drift: analytisches Kontrollprotokoll](ABSOLUTE_DRIFT_CONTROL_PROTOCOL.md) — Definierter stromtragender Spiegel, kartesische Drift gegen Wirkungsableitung, Einweg-/SI-Normierung,81 feste Zellen und separater skalarer Audit; keine QI-Gesamtfreigabe.
+- [Absolute Drift: abgeschlossen](ABSOLUTE_DRIFT_CONTROL_RESULTS.md) — Alle81 Zellen/27 Verfeinerungslinien,45 skalare Referenz-/FD-Läufe und absolute SI-Prüfungen bestehen; maximal1,552e-10 relative direkte/skalar-analytische Driftabweichung. Echter QI- und nichtverschwindender radialer Driftfall offen.
 
 - [Gemeinsamer Feldlinienwinkel: Protokoll](QI_PEST_FIDELITY_PROTOCOL.md) — Neue Diagnose eines möglichen Parametrisierungsbeitrags zu den16 frischen/historischen Feldunterschieden; feste Inversion/Kettenregel/Brent-Gegenprüfung, alte Ergebnisse unverändert.
 - [Gemeinsamer Feldlinienwinkel: Ergebnis](QI_PEST_FIDELITY_RESULTS.md) — Alle120 Gitter/61.440 unabhängigen Roots bestätigt; Parametrisierung erklärt einen Teil der Abweichung, aber nur4/16 neue Fidelitäts- und5/16 Vergleichsverfeinerungsschirme bestehen. Keine Gesamt-QI-Freigabe.

@@ -66,8 +66,9 @@ universelle Aussage, dass solche Daten nicht existieren.
   besteht alle 21 Phasen und sechs wissenschaftlichen Tests ohne Skip.
   Der erweiterte W7-X-Dateivergleich bleibt ausdrücklich 60/63.
 - [QI-Koordinaten- und Auflösungsprüfungen](qi/README.md) erklären einen Teil
-  historischer Unterschiede, nicht alle. Absolute physikalische Drift und
-  verlässliche umfassendere QI-Bewertung sind weiterhin offen.
+  historischer Unterschiede, nicht alle. Absolute Drift-/Einheitennormierung
+  besteht inzwischen im81-Zellen-Spiegelkontrollfall; echte QI-Felder und
+  verlässliche umfassendere QI-Bewertung bleiben offen.
 - [Alle sechs Spulennetze](engineering/MESH_FINE_COMPLETION_RESULTS.md)
   bestehen einen unabhängig geprüften, eingeschränkten Nichtüberlappungstest.
   Nachbarpaare, vollständige Baugruppen und gültige Mechanik bleiben offen.

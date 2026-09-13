@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-13 — Close81-cell absolute drift/action matrix and independent scalar audit
+
+- At eb64490 all81 cells/27 refinement lines pass;12096 Cartesian points/603
+  root calls. Independent45 scalar base/FD runs,135 integrals,309 roots and
+  10395 integrand calls. Zero warnings/failures; all fixed scales/resolutions kept.
+- Largest direct/scalar derivative relative error1.552e-10; both FD errors
+  <=2.555e-9/1.471e-8; refinement<=1.424e-10 and field identities<=3.719e-16.
+  Absolute SI/one-way/particle and all saved-array/source checks pass. No native
+  QI field or actual-device admission. Raw3MiB, independent result and logs kept.
+- F-080/detail/index and both READMEs/status/plan updated. Next nonzero radial
+  drift/coordinate control needs its own registration; step1 remains open.
+- Full regression687 passed/144 known fixture warnings in47.47s. Ruff/docs/diff
+  pass; immutable matrix, scalar audit, raw arrays and updated summaries committed.
+
 ## 2026-09-13 — Qualify analytic mirror quadrature matrix and independent scalar audit
 
 - Eight new controls pass,17 with prior pure mirror tests. Own scalar geometry/

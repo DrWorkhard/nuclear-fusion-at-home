@@ -1,5 +1,19 @@
 # Findings log
 
+## F-080 — Absolute one-way drift/action normalization passes analytic mirror control
+
+**Class:** preregistered81-cell Cartesian matrix, independent45-run scalar adaptive/FD audit and SI controls
+**Date:** 2026-09-13
+
+All81 cells/27 refinement lines pass without warnings/failures. Direct drift
+versus independent analytic action derivative differs<=1.552e-10 relative;
+both fixed radial FD scales pass (worst1.471e-8). SI one-way action/time/drift
+and charge/energy/mass scalings agree. Grad-B and curvature contributions are
+both material; vacuum-only simplification is invalid for this pressure-carrying
+mirror. This qualifies the analytic normalization path, not toroidal/QI physics:
+radial drift is symmetry-zero, nonzero radial/phase/domain/real-equilibrium checks
+remain open. See [complete result](../qi/ABSOLUTE_DRIFT_CONTROL_RESULTS.md).
+
 ## F-079 — Curvature-informed follow-up gives only0.754% gain and remains infeasible
 
 **Class:** preregistered two2048-bundle GN searches, independent ledger audit and all four holdout phases
