@@ -2,14 +2,14 @@
 
 Zweck: eine numerisch belastbare QI-relevante Messung aus offenen Goodman-Gleichgewichten aufbauen.
 
-Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale Wirkungsableitungen sind unabhängig gegengeprüft. Absolute Einweg-/Driftnormierung besteht nun im analytischen Spiegel mit81 Zellen und separatem Audit, noch nicht an echten QI-Feldern. Der nfp2-Druckfall bleibt im begrenzten Gauge-Test negativ. Bei nfp3 wechseln25 Familien allein durch Neumarkierung das Vorzeichen; die Kettenregel besteht. Invariantenbereich, globale Topologie, physikalischer QI-Driftmaßstab und Gleichgewichtsauflösung bleiben offen.
+Aktueller Schluss: Bouncewirkung, Teilbereiche der Topologie und Wirkungsableitungen sind unabhängig gegengeprüft. Beide analytischen81-Zellen-Driftkontrollen bestehen, nun einschließlich nichtverschwindender radialer Drift und gleicher Phase. Die absoluten Testparameter sichern jedoch keine kleine endliche Bahnabweichung. Echte QI-Felder, Invariantenbereich, globale Topologie und Gleichgewichtsauflösung bleiben offen. Historische nfp3-Vorzeichenwechsel unter Neumarkierung bleiben erhalten und sind kein Beleg geänderter Einschlussphysik.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
-- [Vakuumdrift: nächstes Kontrollprotokoll](VACUUM_DRIFT_CONTROL_PROTOCOL.md) — Eigene nichtachsensymmetrische exakte Vakuumkonstruktion, beide Driftkomponenten, gleiche physikalische Phase und81 feste Zellen/243 skalare Zustände; vor Ausführung registriert.
-- [Vakuumdrift: Aufbau](VACUUM_DRIFT_CONTROL_RESULTS.md) — Neun Grund- und vier Workflow-/Audit-/Fehlerkontrollen bestehen; beide integrierten Driften im gesonderten Testfall geprüft, vollständige Matrix folgt.
+- [Vakuumdrift: Protokoll](VACUUM_DRIFT_CONTROL_PROTOCOL.md) — Eigene nichtachsensymmetrische exakte Vakuumkonstruktion, beide Driftkomponenten, gleiche physikalische Phase und81 feste Zellen/243 skalare Zustände.
+- [Vakuumdrift: abgeschlossen](VACUUM_DRIFT_CONTROL_RESULTS.md) — Alle81 Zellen/243 skalaren Zustände bestehen; beide Driften und Phasenkovarianz qualifiziert. Bis74% relativer Flusslabelhub bei10keV verhindert Interpretation als bereits validierte endliche Bahn.
 
 - [Absolute Drift: analytisches Kontrollprotokoll](ABSOLUTE_DRIFT_CONTROL_PROTOCOL.md) — Definierter stromtragender Spiegel, kartesische Drift gegen Wirkungsableitung, Einweg-/SI-Normierung,81 feste Zellen und separater skalarer Audit; keine QI-Gesamtfreigabe.
 - [Absolute Drift: abgeschlossen](ABSOLUTE_DRIFT_CONTROL_RESULTS.md) — Alle81 Zellen/27 Verfeinerungslinien,45 skalare Referenz-/FD-Läufe und absolute SI-Prüfungen bestehen; maximal1,552e-10 relative direkte/skalar-analytische Driftabweichung. Echter QI- und nichtverschwindender radialer Driftfall offen.

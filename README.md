@@ -24,13 +24,14 @@ Long-term steps 1 and 2 remain open.
   comparison deliberately retains three differences out of 63 quantities.
 - [QI evaluation](docs/qi/README.md): independently audited action, coordinate and
   resolution diagnostics give useful partial results. Absolute drift/action/SI
-  normalization now passes81 analytic mirror cells and a separate scalar audit;
-  real QI-field/global qualification remains open. Author data are unchanged.
+  normalization passes two81-cell analytic controls and independent scalar audits,
+  including nonzero radial drift and phase covariance. Finite particle-orbit and
+  real QI-field/global qualification remain open. Author data are unchanged.
 - [Finite coil geometry](docs/engineering/MESH_FINE_COMPLETION_RESULTS.md):
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Software regression: 687 tests pass with 144 documented fixture warnings;
+- Software regression: 700 tests pass with 144 documented fixture warnings;
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.
 

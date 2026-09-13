@@ -1,5 +1,20 @@
 # Findings log
 
+## F-081 — Nonzero radial drift and phase covariance pass; finite-orbit validity not established
+
+**Class:** preregistered81-cell exact-vacuum matrix and243 independent scalar/FD states
+**Date:** 2026-09-13
+
+Both drift components, all three coordinate labels, same physical phase, SI and
+all refinements pass. Independent scalar differences<=3.109e-10; worst fixed FD
+error1.228e-8. Radial drift nonzero throughout. In the documented example the
+angle component changes sign under relabelling while physical phase is unchanged.
+Additional diagnostic from saved10keV SI values: relative one-way flux-label step
+reaches0.7361, so small departure from the frozen field line is not secured.
+These are qualified leading-order identities, not validated finite-energy particle
+orbits. No posthoc energy replacement, no actual QI/global/step1 admission.
+See [results and limitations](../qi/VACUUM_DRIFT_CONTROL_RESULTS.md).
+
 ## F-080 — Absolute one-way drift/action normalization passes analytic mirror control
 
 **Class:** preregistered81-cell Cartesian matrix, independent45-run scalar adaptive/FD audit and SI controls

@@ -17,7 +17,7 @@ bleibt unverändert.
 | Lokale Reproduzierbarkeit | Frischer gesperrter Daten-/Solveraufbau, alle 21 Phasen und sechs wissenschaftliche Nicht-Skip-Tests bestehen | Bestehende Regression sichern; strenge Importwarnung getrennt klären. Unabhängige Hardware/Hosted-CI als separate Ausführungsgrenze erhalten |
 | W7-X-Referenz | Ausgewählte physikalische Regression besteht | 60/63 nicht zu vollständiger Dateigleichheit umdeuten; verbleibende Ausgabedifferenzen getrennt halten |
 | Magnetfeld/Spulengeometrie | Quellen, benannte DOFs, unabhängige Felder und konservative Geometrieprüfungen qualifiziert | Neue Suchzustände weiterhin unabhängig qualifizieren; Filament-/Gleitkommagrenzen explizit halten |
-| QI-Maßstab | Tracer/Quadratur, Gauge-Algebra, Feld-/Auflösungsdiagnosen und absolute81-Zellen-Spiegelkontrolle auditiert | Nichtverschwindende radiale Drift, echte QI-Felder gegen Wirkungsableitung, feste Invarianten-/Mulden-Domäne, Auflösungs- und Produzentenfragen; Autorenreferenzen erhalten |
+| QI-Maßstab | Tracer/Quadratur, Feld-/Auflösungsdiagnosen und beide81-Zellen-Driftkontrollen einschließlich radialer Komponente/gleicher Phase auditiert | Endliche-Bahn-/Kleinparameter-Kontrolle, echte QI-Felder, feste Invarianten-/Mulden-Domäne, Auflösungs-/Produzentenfragen; Autorenreferenzen erhalten |
 | Ingenieurmodelle | Sechs unveränderte Netze bestehen den abgegrenzten Nichtüberlappungstest | Nachbarpaare, vollständige Baugruppe/reale Wicklungspakete, belegte Materialien/Lagerung und Mechanik im gültigen Modellbereich |
 
 Nächste QI-Frage: Welche verbleibenden Feldunterschiede stammen aus innerer
@@ -52,10 +52,11 @@ mit zweimal2048 Bundles, separatem Audit und allen vier Abnahmephasen geschlosse
 
 Nächste Reihenfolge:
 
-1. **Registrierte [Vakuumdriftkontrolle](qi/VACUUM_DRIFT_CONTROL_PROTOCOL.md) ausführen:** die
-   [analytische81-Zellen-Normierung](qi/ABSOLUTE_DRIFT_CONTROL_RESULTS.md) ist geschlossen;
-   nichtverschwindende radiale Drift und Koordinatenkovarianz vor echter QI-Freigabe
-   kontrollieren. Grenzen der Gleichgewichtsauflösung bleiben getrennt offen.
+1. **Endliche-Bahn-/Kleinparameter-Grenze separat prüfen:** beide analytischen
+   Driftkontrollen sind geschlossen, einschließlich [radialer Drift/gleicher Phase](qi/VACUUM_DRIFT_CONTROL_RESULTS.md).
+   Die10keV-Testparameter sichern keine kleine Bahnabweichung. Unabhängige
+   Bahnkonvergenz vor Übertragung auf echte QI-Felder registrieren und kontrollieren;
+   Grenzen der Gleichgewichtsauflösung bleiben getrennt offen.
 2. **Nächsten Konstruktionsansatz separat begründen und registrieren:** die lokale
    Folge bringt nur geringe Gewinne; Ursache/alternative Starts oder Koordinaten
    prüfen, keine bloße nachträgliche Erweiterung der beendeten Budgets.

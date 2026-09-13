@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-13 — Close full vacuum two-component matrix and independent243-state audit
+
+- At fccd525 all81 cells/27 refinements/243 scalar states pass, no warnings or
+  failures.12096 Cartesian points/162 roots;486 scalar roots/972 integrals and
+  159516 integrand calls. Independent90 checks per cell plus overall/refinement
+  checks pass; max scalar drift error3.109e-10, all four fixed FD errors<=1.228e-8.
+- All three gauges preserve fixed phase; radial drift nonzero throughout. From
+  saved SI data, additional diagnostic max abs(Delta_psi)/psi=.7361 at10keV.
+  This is not a preregistered orbit gate or validated trajectory; frozen-line
+  first-order identities pass, finite-orbit asymptotic validity remains open.
+- F-081/detail/index and both READMEs/status/plan updated. Raw5.7MiB and all
+  failed/previous studies retained. Next separate orbit/small-parameter protocol;
+  no real QI-field or overall step1/2 completion claim.
+- Full regression700 passed with144 known fixture warnings in47.89s. Ruff,
+  documentation and diff checks pass; study/audit/raw data and summaries locally committed.
+
 ## 2026-09-13 — Qualify two-component vacuum quadrature and independent scalar workflow
 
 - Four workflow controls pass,13 with vacuum basics: nonzero integrated radial
