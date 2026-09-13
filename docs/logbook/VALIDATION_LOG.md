@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-13 — Qualify analytic mirror quadrature matrix and independent scalar audit
+
+- Eight new controls pass,17 with prior pure mirror tests. Own scalar geometry/
+  z-root/adaptive action and both FD scales agree with Cartesian drift on the
+  separate0.02/1.4 test case. Mutated sign/factor2/SI/missing scales rejected;
+  failed cells retain later levels, failed integrals/fields retain actual counts.
+- Registered81-cell run not yet executed. All code/protocol/arrays bound;45 scalar
+  base/FD runs explicitly reuse axisymmetry across angles, not81 independent fields.
+  Initial Ruff loop-binding/import/format findings corrected before production.
+- Detail/index and both READMEs/status/plan reviewed; overall assessment unchanged.
+  Ruff/docs/diff pass. Next scoped code commit, fixed matrix and separate audit;
+  native search/holdouts already closed, no controlled heavy job running.
+
 ## 2026-09-13 — Close current-start GN repetition, independent audit and all holdouts
 
 - Both2048-bundle searches complete, exact whole-path/work/identity/startup repeats;

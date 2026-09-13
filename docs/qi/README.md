@@ -9,7 +9,7 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Konturtopologie und radiale W
 ## Dokumente
 
 - [Absolute Drift: analytisches Kontrollprotokoll](ABSOLUTE_DRIFT_CONTROL_PROTOCOL.md) — Definierter stromtragender Spiegel, kartesische Drift gegen Wirkungsableitung, Einweg-/SI-Normierung,81 feste Zellen und separater skalarer Audit; keine QI-Gesamtfreigabe, noch nicht ausgeführt.
-- [Absolute Drift: Aufbau](ABSOLUTE_DRIFT_CONTROL_RESULTS.md) — Neun reine Feld-/Ableitungs-/SI-Kontrollen bestehen; vollständige Matrix und unabhängiger skalarer Audit folgen.
+- [Absolute Drift: Aufbau](ABSOLUTE_DRIFT_CONTROL_RESULTS.md) — Neun Grund- und acht Quadratur-/Audit-/Fehlerkontrollen bestehen; vollständige Matrix und unabhängiger skalarer Audit folgen.
 
 - [Gemeinsamer Feldlinienwinkel: Protokoll](QI_PEST_FIDELITY_PROTOCOL.md) — Neue Diagnose eines möglichen Parametrisierungsbeitrags zu den16 frischen/historischen Feldunterschieden; feste Inversion/Kettenregel/Brent-Gegenprüfung, alte Ergebnisse unverändert.
 - [Gemeinsamer Feldlinienwinkel: Ergebnis](QI_PEST_FIDELITY_RESULTS.md) — Alle120 Gitter/61.440 unabhängigen Roots bestätigt; Parametrisierung erklärt einen Teil der Abweichung, aber nur4/16 neue Fidelitäts- und5/16 Vergleichsverfeinerungsschirme bestehen. Keine Gesamt-QI-Freigabe.
