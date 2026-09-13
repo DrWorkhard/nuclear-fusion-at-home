@@ -10,13 +10,15 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-13: no newly feasible optimization baseline,
-no demonstrated SoTA design advance, and no complete SQuID-C readiness.
-Steps 1 and 2 now mean a bounded reliable local foundation and reproducible
-iteration capability, not a better/feasible design. Their consolidated acceptance
-is pending under the [new protocol](docs/validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md).
-All earlier studies are retained at revision `5971fee`; broader QI, engineering
-and design-performance work is deferred, not declared passed.
+Current assessment, 2026-09-13: **sharpened steps 1 and 2 are complete** for the
+bounded local W7-X/Goodman regression and LPQA fixed-surface filament workflow.
+The [consolidated acceptance and runbook](docs/validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
+record 720 tests, six mandatory scientific regressions without skips, exact two-run
+24-bundle iteration, independent audits and all four candidate holdout phases.
+This qualifies the workflow, not a better/feasible design or SQuID-C readiness.
+All earlier studies are preserved at tag `foundation-pre-scope-2026-09-13`
+(`5971fee`). Broader QI, engineering and performance research remains deferred.
+No further research starts automatically after this handoff.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
   8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.
@@ -35,7 +37,7 @@ and design-performance work is deferred, not declared passed.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Software regression: 700 tests pass with 144 documented fixture warnings;
+- Software regression: 720 tests pass with 144 documented fixture warnings;
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.
 
@@ -51,6 +53,18 @@ Environment details: [validation overview](docs/validation/README.md).
 Documentation checks: `python scripts/check_docs.py`.
 
 ## Canonical commands
+
+Recheck the bounded foundation in the existing pinned environment, using new
+output names (do not sync or install anything for this check):
+
+```bash
+PYTHONPATH=src .venv/bin/python scripts/run_foundation_acceptance.py \
+  evidence/my-foundation-check artifacts/my-foundation-check
+```
+
+`summary.json` separates the two milestone results from physical candidate
+acceptance. The demonstrated candidates remain rejected at the unchanged flux
+limit. The runbook also documents the standalone iteration/audit/holdout cycle.
 
 Run bootstraps only in the intended environment. Keep the qualified native root
 environment intact; run core-only synchronization in a separate clone.

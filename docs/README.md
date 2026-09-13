@@ -21,15 +21,15 @@ belegt weder bessere Einschlussphysik noch bessere Kraftwerksleistung.
 
 | Schritt | Angestrebtes Ergebnis | Stand |
 | --- | --- | --- |
-| 1. Begrenzte Rechen- und Prüfbasis absichern | Lokale W7-X-/Goodman-Regression und geprüfte LPQA-Festoberflächen-/Filamentwerkzeuge | Bestehende Teilnachweise werden zur abgegrenzten Basisabnahme zusammengeführt |
-| 2. Prinzipiell iterieren können | Referenz laden, Parameter optimieren, Kandidaten speichern und unabhängig bewerten; reproduzierbar | Abnahme eines kurzen realen Zweiarmzyklus ausstehend; keine neue zulässige Lösung erforderlich |
+| 1. Begrenzte Rechen- und Prüfbasis absichern | Lokale W7-X-/Goodman-Regression und geprüfte LPQA-Festoberflächen-/Filamentwerkzeuge | Abgeschlossen: alle acht Basisgates bestehen |
+| 2. Prinzipiell iterieren können | Referenz laden, Parameter optimieren, Kandidaten speichern und unabhängig bewerten; reproduzierbar | Abgeschlossen: zwei echte24-Bundle-Pfade exakt wiederholt, separat auditiert und fein bewertet |
 | 3. Eigene QI-Plasmakonfigurationen entwickeln | Plasmaoberfläche variieren und zugehöriges Gleichgewicht auf günstigen Einschluss optimieren | Geplant; derzeit vorhandene Referenzkonfigurationen |
 | 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Langfristig geplant |
 | 5. Verbesserungen belastbar nachweisen | Unabhängig geprüfter Vorteil gegenüber reproduzierten Referenzen unter gleichen Anforderungen | Offen |
 
-**Wir schließen jetzt ausschließlich Schritt 1 und 2 im geschärften Umfang ab.**
-Das sind Befähigungsziele, keine SoTA- oder Entwurfsleistungsziele. Nach ihrer
-Abnahme übergeben wir; weitere Forschung startet nicht automatisch.
+**Schritt 1 und 2 sind im geschärften Umfang abgeschlossen.** Das sind
+Befähigungsziele, keine SoTA- oder Entwurfsleistungsziele. Wir übergeben die
+geprüfte Basis; weitere Forschung startet nicht automatisch.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.
 
@@ -51,6 +51,10 @@ universelle Aussage, dass solche Daten nicht existieren.
 Die [Basisabnahme](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md) trennt
 Werkzeugfunktion von physischer Entwurfszulässigkeit. Frühere Studien bleiben
 erhalten; globale QI- und Mechanikqualifikation sind separate spätere Aufgaben.
+Der [Abschluss mit Bedienanleitung](validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
+belegt720 Tests, sechs strikte Datenregressionen ohne Skip, beide kurzen Suchpfade
+und sämtliche vier unabhängigen Kandidatenprüfungen. Bekannte Warnungen und
+physikalisch abgelehnte Formen bleiben ausdrücklich sichtbar.
 
 ## Erhaltene Forschungsbefunde
 

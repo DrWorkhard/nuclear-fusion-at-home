@@ -2,6 +2,11 @@
 
 Zweck: eine numerisch belastbare QI-relevante Messung aus offenen Goodman-Gleichgewichten aufbauen.
 
+Für die abgeschlossene [begrenzte Basisabnahme](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
+sind die vorhandenen Daten-/eingefrorenen Wirkungsregressionen qualifiziert.
+Die weitergehenden Studien hier bleiben erhaltene spätere Forschung; globale
+QI-/Drift-/Orbitfähigkeit wird durch Schritt1/2 nicht freigegeben.
+
 Aktueller Schluss: Bouncewirkung, Teilbereiche der Topologie und Wirkungsableitungen sind unabhängig gegengeprüft. Beide analytischen81-Zellen-Driftkontrollen bestehen, nun einschließlich nichtverschwindender radialer Drift und gleicher Phase. Die absoluten Testparameter sichern jedoch keine kleine endliche Bahnabweichung. Echte QI-Felder, Invariantenbereich, globale Topologie und Gleichgewichtsauflösung bleiben offen. Historische nfp3-Vorzeichenwechsel unter Neumarkierung bleiben erhalten und sind kein Beleg geänderter Einschlussphysik.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)

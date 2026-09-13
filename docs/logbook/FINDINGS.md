@@ -1,5 +1,24 @@
 # Findings log
 
+## F-082 — Sharpened foundation and iteration milestones pass, without design admission
+
+**Class:** preregistered bounded capability acceptance, not a performance advance
+**Date:** 2026-09-13
+
+At1aa28b6 the complete v2 acceptance passes all eight step1 and three step2 gates:
+720 tests, strict six-data regression, unchanged known netCDF exception, exact
+two24-bundle native cycles, independent source/ledger audits and all four holdouts.
+Both physical candidates correctly fail flux at8.191663957639298e-8 against1e-8.
+Selected point is startup replay12; subsequent real solver iterations occurred,
+but no solver improvement or convergence claimed. Each candidate's61 closure
+checks pass; tested geometry/native conditions pass independently of flux failure.
+1266 historical tracked files preserved subject to explicit overview/journal edits;
+external source state unchanged. v1 metadata-comparison failure/raw data retained,
+fix controlled before the entirely new v2 run. No historical physical threshold
+or scientific failure reclassified. GlobalQI/orbits/mechanics/SoTA/SQuID-C remain
+unqualified future work. Current task ends with documented/committed handoff.
+See [acceptance and runbook](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md).
+
 ## F-081 — Nonzero radial drift and phase covariance pass; finite-orbit validity not established
 
 **Class:** preregistered81-cell exact-vacuum matrix and243 independent scalar/FD states

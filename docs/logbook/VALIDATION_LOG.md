@@ -1,5 +1,29 @@
 # Validation log
 
+## 2026-09-13 — Close sharpened foundation and iteration milestones
+
+- At1aa28b6 complete fresh foundation-acceptance-v2 passes all eight step1/three
+  step2 gates.720 tests/144 known warnings in53.33s, exact six scientific cases
+  without skips, Ruff/docs pass. Known netCDF0/0/1 exception retained, no ABI claim.
+- Both real24-bundle cycles exactly repeat complete parameters/values/work;22
+  shared plus52 checks per arm pass. Each49 requests/24 cache hits/one denied
+  attempt,0 evaluation failures. Solver actually varies points after16 startup
+  replays; eight iteration reports, budget stop not convergence.
+- All four holdout phases and both61-check classification/source audits pass.
+  Both candidates correctly rejected at fine flux8.191663957639298e-8; source of
+  selected point is startup replay12, not a new solver gain. Old best unchanged.
+- Old1266 tracked files preserved except authorized overview/journal/rules edits;
+  existing external states unchanged. Both v1 failed audit and v2 raw/report data
+  retained. No older numerical kernel, source protocol or evidence changed.
+- F-082/detail/indices/README/status/plan updated. Steps1/2 closed only for the
+  stated local reference/LPQA-filament scope. No new research branch follows;
+  final docs/diff/Ruff checks pass. Standalone confirmation initially rejects a
+  relative run path (absolute recorded-command comparison); error retained and
+  CLI boundary documented. Same auditor with absolute input confirms both passes,
+  no new field calls or original report changes. Main runner already normalizes
+  paths automatically. Final20 workflow controls pass again in4.58s; docs and diff
+  checks pass after overview edits. Local commit precedes handoff.
+
 ## 2026-09-13 — First real foundation run complete; metadata audit failure preserved
 
 - At028c4cc all eight producer phases complete:718 tests/144 warnings, strict

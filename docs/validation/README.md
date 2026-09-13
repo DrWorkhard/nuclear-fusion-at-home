@@ -2,15 +2,19 @@
 
 Zweck: Regeln für belastbare Aussagen, reproduzierbare Umgebung und unabhängige Regressionen festhalten.
 
+Geschärfte Basisabnahme abgeschlossen: Schritt1/2 für den lokalen Referenz-/LPQA-
+Filamentpfad bestanden.720 Tests, sechs Pflichtdatenidentitäten ohne Skip, echte
+wiederholte Iteration und sämtliche Kandidatenabnahmen. Kein Entwurfs-/SoTA-Pass.
+
 Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte Dateivergleich bleibt bei 60/63. Kernsoftwaretests ersetzen weder einen vollständigen nativen Neuaufbau noch wissenschaftliche Zulässigkeit. Der Audit vom 9. September korrigiert frühere Bereitschaftsaussagen.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
-- [Basisabnahme: Ergebnisse und Bedienung](FOUNDATION_ACCEPTANCE_RESULTS.md) — Konsolidierter Abnahmebefehl, einzelner reproduzierbarer Iterationszyklus, Schutzprüfungen und bewusst begrenzter Gültigkeitsbereich; echte Gesamtabnahme noch ausstehend.
+- [Basisabnahme: Ergebnisse und Bedienung](FOUNDATION_ACCEPTANCE_RESULTS.md) — Beide geschärften Schritte bestanden;720 Tests, zwei24-Bundle-Pfade, separate Audits und alle vier Holdouts. Erster Metadatenfehler erhalten, Korrektur/frische Wiederholung dokumentiert, Befehle und Grenzen festgehalten.
 
-- [Basisabnahme: geschärftes Protokoll](FOUNDATION_ACCEPTANCE_PROTOCOL.md) — Explizite Nutzerkorrektur: begrenzte verlässliche Rechenbasis und reproduzierbarer24-Bundle-Iterationszyklus; getrennte Kandidatenzulässigkeit, Altbestand erhalten, noch nicht abgenommen.
+- [Basisabnahme: geschärftes Protokoll](FOUNDATION_ACCEPTANCE_PROTOCOL.md) — Vorab registrierte Nutzerkorrektur: begrenzte Rechenbasis und reproduzierbarer24-Bundle-Iterationszyklus; getrennte Kandidatenzulässigkeit, unveränderte Grenzen und Altbestand.
 
 - [netCDF4-Importwarnung](NETCDF_IMPORT_WARNING.md) — Drei Prozessvarianten zeigen NumPys Standardfilter und den weiterhin fehlgeschlagenen strengen nativen Import; keine Umgebungsänderung oder behauptete ABI-Heilung.
 

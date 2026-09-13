@@ -2,6 +2,10 @@
 
 Zweck: das Ziel über ideale Filamentspulen hinaus um Fertigungsfehler, Volumennetze, mechanische Modelle und freie Plasmagrenzen erweitern.
 
+Erhaltene spätere Forschung, nicht Voraussetzung der abgeschlossenen
+[LPQA-Filamentbasis-/Iterationsabnahme](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md).
+Schritt1/2 geben keine vollständigen Wicklungspakete oder Mechanik frei.
+
 Aktueller Schluss: Alle sechs untersuchten Netze bestehen intrinsische Qualitätsprüfungen und inzwischen den unabhängig auditierten Nichtüberlappungsschirm ohne gemeinsame Vertexindizes. Der separat wiederholte feinste Fall reproduziert sein altes2M-Präfix exakt und vervollständigt die Serie. Nachbarpaare, reale Baugruppen und eine physikalisch gültige Mechanik sind weiter offen; große Verformungen machen die absoluten linearen Spannungsprognosen ungültig.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)

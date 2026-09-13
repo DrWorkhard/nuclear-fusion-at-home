@@ -1,16 +1,16 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 13. September 2026, nach Schärfung der Basisziele durch den Nutzer.
+Stand: 13. September 2026, nach bestandener geschärfter Basisabnahme.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
 
-**Schritt1 und2 werden als Basis- und Iterationsfähigkeit abgenommen, nicht als
-Entwurfserfolg.** Die konsolidierte Abnahme nach dem
-[neuen festen Protokoll](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md) steht noch
-aus. Bestehende Teilqualifikationen und vollständige Such-/Prüfzyklen liefern
-umfangreiche Vorarbeit; fehlende neue Zulässigkeit oder SoTA-Leistung verhindern
-nicht den Abschluss dieser begrenzten Schritte.
+**Schritt1 und2 sind als begrenzte Basis- und Iterationsfähigkeit abgeschlossen.**
+Die [konsolidierte Abnahme](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) besteht:
+720 Tests mit144 bekannten Warnungen, sechs strikte W7-X-/Goodman-Datenregressionen
+ohne Skip, zwei exakt wiederholte24-Bundle-Solverpfade, separate Audits und alle
+vier unabhängigen Kandidatenabnahmen. Alle acht Schritt1- und drei Schritt2-Gates
+stehen auf Pass. Ein korrekt abgelehnter Entwurf verhindert diesen Basisabschluss nicht.
 
 Unverändert: keine neue zulässige Optimierungsbaseline, kein SoTA-/Kraftwerksvorteil,
 keine vollständige SQuID-C-Qualifikation. Globale QI-/Orbit-/Mechanikarbeit bleibt
@@ -62,7 +62,7 @@ Nullmeldungen sind keine Zulassung. Details und alle erhaltenen Fehlschläge:
 | QI / Gleichgewichte | Frische 16-Zellen-Studie vollständig auditiert; doppelte Solver-Winkelauflösung besteht untersuchte Feldidentitäten | Ursprünglich nur 9/16 Auswertungsverfeinerungen und 2/16 historische Feld-Fidelitätspässe; keine Zelle besteht alle ursprünglichen Schirme |
 | QI / gemeinsamer Winkel | 120 neue Gitter und 61.440 unabhängige skalare Inversionen bestätigen die Koordinatenrechnung | Nur 4/16 neue Fidelitäts- und 5/16 Vergleichsverfeinerungspässe; Parametrisierung erklärt nicht sämtliche Unterschiede |
 | Endliche Spulennetze | Alle sechs Auflösungen bestehen den nicht-gemeinsame-Vertexindizes-Teiltest; feinster Lauf mit 2.222.785 Paarprüfungen und exakt altem 2M-Präfix auditiert | Nachbarpaare, vollständige Baugruppen, reale Wicklungspakete und gültige Mechanik offen; alte große Verformung verletzt lineare Modellannahmen |
-| Software | 700 Tests, Ruff und Dokumentstrukturprüfung bestanden | 144 dokumentierte Fixture-Warnungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
+| Software | 720 Tests, Ruff und Dokumentstrukturprüfung bestanden | 144 dokumentierte Fixture-Warnungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
 
 Die beiden QI-Verfeinerungsmaße unterscheiden sich: ursprüngliche
 Clebsch-Identitätsverfeinerung und spätere Verfeinerung des historischen
@@ -76,12 +76,18 @@ Belege: [native Integration](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md),
 [Netzabschluss](engineering/MESH_FINE_COMPLETION_RESULTS.md),
 [strenge Importwarnung](validation/NETCDF_IMPORT_WARNING.md).
 
-## Jetzt abzuschließen
+## Abschluss und Übergabe
 
-1. Konsolidierte lokale Basisabnahme einschließlich Quellen, Pflichtdaten,
-   aktueller Tests und negativer Freigabekontrollen.
-2. Kurzen realen Zweiarm-Iterationszyklus samt unabhängigem Audit und allen vier
-   Kandidatenprüfungen demonstrieren, dokumentieren und übergeben.
+`foundation-acceptance-v2` ist vollständig bestanden; der erste Lauf bleibt samt
+fehlerhaftem Metadatenvergleich und negativem Gesamtaudit erhalten. Die Korrektur
+änderte keine numerischen Kriterien. Beide Demonstrationskandidaten bleiben mit
+8,191664e-8 gegenüber1e-8 unzulässig; der kurze Zyklus ist kein Leistungsexperiment.
+Der frühere bessere Forschungsentwurf wird dadurch nicht ersetzt.
+
+Altbestand bei5971fee lokal getaggt; keine alten numerischen Kerne/Evidenz verändert,
+externe Quellen einschließlich bestehender STELLOPT-Anpassungen unverändert.
+Bedienung und Grenzen stehen im [Abschlussbericht](validation/FOUNDATION_ACCEPTANCE_RESULTS.md).
+Damit endet die aktuelle Basisarbeit; keine weitere Suche oder Physikbranche automatisch.
 
 ## Später zu qualifizieren — keine Voraussetzungen für Schritt1/2
 

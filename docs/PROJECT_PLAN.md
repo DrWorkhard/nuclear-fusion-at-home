@@ -3,7 +3,13 @@
 Stand: 13. September 2026, nach ausdrücklicher Schärfung durch den Nutzer.
 [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
-## Jetzt: Basis abschließen, prinzipiell iterieren können
+**Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
+[Abschluss und Bedienung](validation/FOUNDATION_ACCEPTANCE_RESULTS.md), Lauf
+`foundation-acceptance-v2` bei1aa28b6: alle zugeordneten Gates bestanden.
+Die folgende Abgrenzung bleibt verbindlich; nächster Zustand ist Übergabe,
+nicht automatischer Start späterer Forschung.
+
+## Abgeschlossene Etappe: Basis und prinzipielle Iterationsfähigkeit
 
 Schritt1 und2 sind **Befähigungsziele**, keine Neuheits- oder Leistungsziele.
 Der Nutzer hat den bisherigen zu breiten Umfang korrigiert. Eine neue zulässige
@@ -45,14 +51,14 @@ Keine Pflicht zu neuem Bestwert, erfüllter Fluxgrenze, Konvergenz oder fünf St
 trotzdem bestehen.** Solver, Parameter, Budget und Rohdaten bleiben zugänglich,
 sodass später gezielt weitere Experimente registriert werden können.
 
-## Aktuelle Reihenfolge und Stoppregel
+## Abgearbeitete Reihenfolge und Stoppregel
 
-1. Plan-/Umfangskorrektur und unveränderten Altbestand sichern.
-2. Bestehende Qualifikationen zusammenführen, Schutz gegen falsche Freigaben testen.
-3. Aktuelle Regressionen, kurzen realen Zweiarmzyklus und alle unabhängigen
-   Abnahmen ausführen; Ergebnisse separat auditieren und dokumentieren.
-4. Beide geschärften Schritte nur bei bestandenen zugeordneten Gates schließen.
-   **Dann an den Nutzer übergeben, keine weitere Forschung automatisch starten.**
+1. Plan-/Umfangskorrektur registriert und Altbestand durch lokalen Tag gesichert.
+2. Qualifikationen zusammengeführt;20 neue Schutz-/Workflowkontrollen bestanden.
+3. Aktuelle Regressionen, realen Zweiarmzyklus und alle unabhängigen Abnahmen
+   ausgeführt. Ersten Verwaltungsfehler erhalten/korrigiert, frische Wiederholung bestanden.
+4. Beide geschärften Schritte anhand bestandener Gates geschlossen; Abschluss
+   dokumentiert. **An den Nutzer übergeben, keine weitere Forschung automatisch starten.**
 
 Kein erneuter langer Optimierungslauf und kein neuer Physikzweig, sofern er nicht
 eine konkrete Lücke dieser Basisabnahme schließt. Tests allein ersetzen keine

@@ -2,6 +2,11 @@
 
 Zweck: reproduzierbare Optimierungsorakel, geprüfte Ableitungen und kontrollierte Suchversuche auf dem offenen LPQA-Fall.
 
+Die [geschärfte Basis-/Iterationsabnahme](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
+ist abgeschlossen. Nachfolgende Studien bleiben als Vorarbeit für spätere
+Leistungsverbesserung erhalten; eine neue zulässige Form ist kein offenes Gate
+der nun abgeschlossenen Schritte1/2.
+
 Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften Geometriebedingungen, verfehlt die Fluxgrenze aber noch um Faktor8,13. Der vollständig geprüfte GN-Folgelauf verbessert den feinen Flux um0,754%; exakte Stromumverteilung half zuvor praktisch nicht. Noch keine zulässige Baseline oder allgemeine Methodenrangfolge.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)

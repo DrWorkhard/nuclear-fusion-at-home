@@ -66,6 +66,9 @@ research at5971fee and its artifacts; QI-global/orbit/mechanics extensions remai
 separate, unqualified future work. Do not start another long search or physics
 branch unless it closes a specific active foundation gate. Once both sharpened
 steps pass, document/commit and hand off rather than continuing into later research.
+The canonical foundation runner normalizes paths. Its standalone overall auditor
+currently requires an absolute run.json path for strict recorded-command matching;
+use a fresh output path and retain any failed invocation as evidence.
 
 Preregister new numerical studies before running them. Keep construction and
 independent acceptance separate; retain negative results and all predeclared
