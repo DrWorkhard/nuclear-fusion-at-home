@@ -31,7 +31,7 @@ Long-term steps 1 and 2 remain open.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Software regression: 663 tests pass with 144 documented fixture warnings;
+- Software regression: 667 tests pass with 144 documented fixture warnings;
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.
 

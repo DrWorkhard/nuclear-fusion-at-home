@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-13 — Qualify new current-start GN workflow and independent ledger audit
+
+- Four tests pass: analytic constrained quadratic/two-repeat complete workflow,
+  exact20-bundle toy budget boundary and mutations, deliberate first startup gate
+  failure, third matrix assembly failure retaining full direct bundle/point and
+  completed versus attempted work. New numerical kernels remain untouched.
+- Pure real-source preflight binds fixed SLSQP16-by207 points/native1024-by207
+  matrix; no actual new B/solver search. Native physical setup is only mocked in
+  tests, never counted as a qualified real baseline.
+- Full regression667 passed/144 known fixture warnings; Ruff/docs/diff pass.
+  Detail/index and both READMEs/status/plan reviewed, counts/next action updated.
+  Next commit then guarded registered two-arm native search, audit and all holdouts.
+
 ## 2026-09-13 — Register new GN search from already fixed best current-minimized source
 
 - F-078 supplies the independently qualified curvature model; unchanged207-DOF

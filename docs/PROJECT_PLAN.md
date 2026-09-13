@@ -50,10 +50,9 @@ mit mindestens99,60% kleinerem Vorhersagefehler; keine neue Form konstruiert.
 
 Nächste Reihenfolge:
 
-1. **Nächsten klassischen Suchlauf vorab festlegen:** Die abgeschlossene
-   [Krümmungsprüfung](optimization/GEOMETRIC_CURVATURE_RESULTS.md) begründet einen
-   neuen GN-/Trust-Region-Lauf vom bereits fixierten besten Stromminimum. Eigene
-   Startqualifikation; bisherige Suchläufe nicht verlängern oder umdeuten.
+1. **Registrierten [GN-Suchlauf](optimization/CURRENT_START_GN_PROTOCOL.md) ausführen:**
+   vom bereits fixierten besten Stromminimum, eigene16-Bundle-Startqualifikation,
+   zweimal2048 Versuche. Bisherige Suchläufe nicht verlängern oder umdeuten.
 2. **Startqualifikation, begrenzte Suche, unabhängiger Audit:** alle physikalischen
    DOFs explizit zuordnen, gesamte Rechen-/Ableitungsarbeit erfassen, keine
    parallelen schweren Installationen oder nachträgliche Budgeterhöhung.
