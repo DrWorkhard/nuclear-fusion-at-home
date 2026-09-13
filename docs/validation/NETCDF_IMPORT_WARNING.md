@@ -31,3 +31,31 @@ Fehlerfilter. Der native Import selbst bleibt unter diesem Filter fehlgeschlagen
 Keine Paketinstallation, kein Versionswechsel, keine Änderung älterer Prüfer oder
 der bereits qualifizierten wissenschaftlichen Umgebung. Ein etwaiger sauberer
 Source-Build wäre ein eigener isolierter Umgebungsversuch mit erneutem Physikvergleich.
+
+## Quellenursache eingegrenzt, 2026-09-13
+
+Eine rein lesende Prüfung des bereits in `uv.lock` festgelegten öffentlichen
+netCDF4-1.7.4-Quellarchivs bestätigt dessen SHA256
+`cdbfdc92d6f4d7192ca8506c9b3d4c1d9892969ff28d8e8e1fc97ca08bf12164`
+und838.352Bytes. `include/netCDF4.pxi` Zeile376 deklariert `numpy.ndarray`
+erneut ohne ausdrückliche `check_size`-Regel. `setup.py` Zeile397 setzt zugleich
+`NPY_NO_DEPRECATED_API=NPY_1_7_API_VERSION`. Der lokale NumPy-Header macht damit
+`PyArrayObject` zu einem absichtlich verkürzten Kopf-Typ; NumPys eigene Cython-
+Deklaration setzt dagegen ausdrücklich `check_size ignore`.
+
+Laut [Cython-Primärdokumentation](https://docs.cython.org/en/latest/src/userguide/extension_types.html#name-specification-clause)
+ist ohne Angabe `warn` die Voreinstellung: Ein größerer Laufzeittyp ist dann
+erlaubt, erzeugt aber eine Warnung. Das liefert eine konkrete, quellengestützte
+Erklärung für die beobachtete16/96-Warnung. **Noch kein experimentell bewiesener
+Build-Patch und kein allgemeines ABI-Zertifikat.** Aktuelle Upstream-master-Dateien
+sind nicht mit dem installierten1.7.4-Build gleichzusetzen; für lokale Aussagen
+wird deshalb das gehashte Releasearchiv verwendet. Mehrere Web-Raw-Aufrufe waren
+nicht verfügbar; die0,84-MB-Releasequelle wurde ohne Installation im Speicher
+hashgeprüft und gelesen.
+
+Ein neuer reiner Quelleninventar-Treiber soll Archiv, ausgewählte Quellhashes,
+installierte Python-/Header-/Binärhashes und exakte Deklarationszeilen sichern.
+Drei Kontrollen bestehen: gesperrter Hash, eindeutige normale Archivmitglieder,
+Abweisung von Duplikaten/Links. Keine Archivpfade werden in das Dateisystem
+extrahiert. Ruff/Dokument-/Diffprüfung bestehen. Keine Änderung an Paketen,
+Warnungsfiltern, nativer Umgebung oder laufendem GN-Suchprozess.

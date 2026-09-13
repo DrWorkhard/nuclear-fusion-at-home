@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-13 — Isolate netCDF4 warning declaration path during running GN search
+
+- Read-only locked838352-byte1.7.4 archive SHA verified. Manual ndarray declaration
+  lacks check_size while setup selects NumPy's opaque struct; installed NumPy's
+  own declaration explicitly ignores compatible larger sizes. Cython primary docs
+  identify default warn semantics. Concrete source hypothesis, no ABI/build repair.
+- Three pure archive inventory controls pass, including duplicates/symlinks/hash
+  mutation. Initial Ruff length violations fixed before use; no numerical data
+  changed. No native evaluation, installation or competing heavy job.
+- Detail and both READMEs/status/plan/index reviewed; strict import remains open.
+  Ruff/docs/diff pass. Next commit then archive source/hash inventory; any later
+  compilation must be separate/isolated and after controlled search completes.
+
 ## 2026-09-13 — Qualify new current-start GN workflow and independent ledger audit
 
 - Four tests pass: analytic constrained quadratic/two-repeat complete workflow,
