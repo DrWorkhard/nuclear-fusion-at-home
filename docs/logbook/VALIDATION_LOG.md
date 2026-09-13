@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-13 — Close nine exact-vacuum field/root/coordinate/SI controls
+
+- Full Cartesian field/Jacobian/Clebsch gradients and analytic field lines agree
+  with independent FD at both steps. Two asymmetric roots qualify; general and
+  vacuum drift agree, radial local projection nonzero, same-phase three-gauge
+  projections and SI scalings pass. Invalid domains/brackets reject with counts.
+- Nine controls pass on separate0.02/1.4/0.4 input. Full registered matrix and
+  integrated two-component drift not evaluated. Detail/index and both READMEs/
+  status/plan reviewed, no overall gate change. Ruff/docs/diff pass; next bounded
+  step is independently controlled quadrature/audit implementation before physics.
+
 ## 2026-09-13 — Register non-axisymmetric exact-vacuum two-component drift control
 
 - Analytically derived curl/div-free linear vacuum field, explicit Clebsch
