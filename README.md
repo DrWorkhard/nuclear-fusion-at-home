@@ -18,7 +18,9 @@ record 720 tests, six mandatory scientific regressions without skips, exact two-
 This qualifies the workflow, not a better/feasible design or SQuID-C readiness.
 All earlier studies are preserved at tag `foundation-pre-scope-2026-09-13`
 (`5971fee`). Broader QI, engineering and performance research remains deferred.
-No further research starts automatically after this handoff.
+After that handoff the user explicitly requested step3. The new
+[plasma-boundary optimization protocol](docs/qi/PLASMA_OPTIMIZATION_PROTOCOL.md)
+is active; an independently validated changed QI-like equilibrium is still pending.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
   8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.

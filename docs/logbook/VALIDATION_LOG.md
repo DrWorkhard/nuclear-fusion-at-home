@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-13 — Register explicitly requested step3 plasma optimization
+
+- Reviewed root plans, QI index/measurement/topology/native-resolution evidence,
+  source code and current primary literature. Clean Git atd47219f; no matching
+  running Fusion experiments found; around10GiB free, pinned environments intact.
+- nfp2 angular-factor2 cells already pass both physical/arithmetic field screens;
+  old author/fresh-solver discrepancies are retained, not silently repaired.
+- Registered four-mode vacuum boundary search, at most20 cold solves including
+  replay/refinement, branch-resolved action variance and independent broadened
+  holdouts. No core install or external checkout changes. Existing legacy QI
+  residual remains unqualified and is not reused as a passed target.
+- Updated plans/rules/overviews for new explicit authority after prior handoff.
+  No new numerical study yet; docs/diff checks and plan commit precede controlled
+  additive implementation. Step3 remains open until its actual gates pass.
+
 ## 2026-09-13 — Close sharpened foundation and iteration milestones
 
 - At1aa28b6 complete fresh foundation-acceptance-v2 passes all eight step1/three

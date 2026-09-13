@@ -54,6 +54,17 @@ cleanup. Before starting the next step or handing off:
 
 ## Research discipline and autonomy
 
+### Step3 explicitly authorized after foundation handoff
+
+The user's subsequent request authorizes step3: actual boundary/equilibrium
+optimization for an own QI-like vacuum configuration. The earlier automatic stop
+has been honored and does not block this new task. Follow
+`docs/qi/PLASMA_OPTIMIZATION_PROTOCOL.md`; capability alone or a negative search
+does not close this milestone. Require the registered independently confirmed
+physical-domain improvement; do not substitute coil work or silently claim global
+QI/orbit/engineering/SoTA. Keep earlier foundation and research evidence immutable.
+After step3 passes, document/commit/hand off; do not automatically start steps4/5.
+
 ### Sharpened foundation milestone (explicit user correction, 2026-09-13)
 
 Steps1/2 now mean a bounded reliable local reference/LPQA-filament toolchain and

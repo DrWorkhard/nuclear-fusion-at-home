@@ -1,5 +1,18 @@
 # Decision log
 
+## D-013 — Explicit step3 authorization: optimize plasma, not another coil-only study
+
+**Status:** accepted; new explicit user request after foundation handoff
+**Date:** 2026-09-13
+
+Step3 now active under the [plasma protocol](../qi/PLASMA_OPTIMIZATION_PROTOCOL.md).
+Develop a changed nfp2 vacuum boundary with a numerically resolved improvement
+in a bounded, independently checked QI-relevant domain. Earlier foundation
+closure is retained, not expanded into global physics certification. No SoTA
+requirement; nevertheless a runnable/negative search alone cannot close step3.
+Use existing pinned solvers and source data, add code without replacing older
+kernels/evidence, preregister all search/holdout gates. Do not start steps4/5.
+
 ## D-012 — Separate foundation capability from design performance
 
 **Status:** accepted; explicit user correction

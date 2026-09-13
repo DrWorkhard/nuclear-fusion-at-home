@@ -2,6 +2,9 @@
 
 Zweck: eine numerisch belastbare QI-relevante Messung aus offenen Goodman-Gleichgewichten aufbauen.
 
+Neu beauftragt: Schritt3, tatsächliche Fourier-Rand-/Gleichgewichtsoptimierung
+am nfp2-Vakuumfall. Vorab registriert; unabhängig geprüfter neuer Entwurf noch offen.
+
 Für die abgeschlossene [begrenzte Basisabnahme](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
 sind die vorhandenen Daten-/eingefrorenen Wirkungsregressionen qualifiziert.
 Die weitergehenden Studien hier bleiben erhaltene spätere Forschung; globale
@@ -12,6 +15,8 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Topologie und Wirkungsableitu
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
+
+- [Eigene Plasmaoberfläche: Protokoll](PLASMA_OPTIMIZATION_PROTOCOL.md) — Vier benannte Randmoden, begrenzte klassische Suche, periodenzugeordnete Wirkung, feinere unabhängige Domäne und feste Abschlussgates; kein bloßer Ablauf- oder SoTA-Pass.
 
 - [Vakuumdrift: Protokoll](VACUUM_DRIFT_CONTROL_PROTOCOL.md) — Eigene nichtachsensymmetrische exakte Vakuumkonstruktion, beide Driftkomponenten, gleiche physikalische Phase und81 feste Zellen/243 skalare Zustände.
 - [Vakuumdrift: abgeschlossen](VACUUM_DRIFT_CONTROL_RESULTS.md) — Alle81 Zellen/243 skalaren Zustände bestehen; beide Driften und Phasenkovarianz qualifiziert. Bis74% relativer Flusslabelhub bei10keV verhindert Interpretation als bereits validierte endliche Bahn.

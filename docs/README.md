@@ -23,13 +23,14 @@ belegt weder bessere Einschlussphysik noch bessere Kraftwerksleistung.
 | --- | --- | --- |
 | 1. Begrenzte Rechen- und Prüfbasis absichern | Lokale W7-X-/Goodman-Regression und geprüfte LPQA-Festoberflächen-/Filamentwerkzeuge | Abgeschlossen: alle acht Basisgates bestehen |
 | 2. Prinzipiell iterieren können | Referenz laden, Parameter optimieren, Kandidaten speichern und unabhängig bewerten; reproduzierbar | Abgeschlossen: zwei echte24-Bundle-Pfade exakt wiederholt, separat auditiert und fein bewertet |
-| 3. Eigene QI-Plasmakonfigurationen entwickeln | Plasmaoberfläche variieren und zugehöriges Gleichgewicht auf günstigen Einschluss optimieren | Geplant; derzeit vorhandene Referenzkonfigurationen |
+| 3. Eigene QI-Plasmakonfigurationen entwickeln | Plasmaoberfläche variieren und zugehöriges Gleichgewicht auf günstigen Einschluss optimieren | Jetzt ausdrücklich beauftragt; begrenzte nfp2-Vakuumoptimierung vorab registriert, noch kein neuer Entwurfsnachweis |
 | 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Langfristig geplant |
 | 5. Verbesserungen belastbar nachweisen | Unabhängig geprüfter Vorteil gegenüber reproduzierten Referenzen unter gleichen Anforderungen | Offen |
 
 **Schritt 1 und 2 sind im geschärften Umfang abgeschlossen.** Das sind
 Befähigungsziele, keine SoTA- oder Entwurfsleistungsziele. Wir übergeben die
-geprüfte Basis; weitere Forschung startet nicht automatisch.
+geprüfte Basis. Danach hat der Nutzer ausdrücklich Schritt3 beauftragt; dessen
+[Plasmaoptimierungsabnahme](qi/PLASMA_OPTIMIZATION_PROTOCOL.md) ist jetzt aktiv.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.
 

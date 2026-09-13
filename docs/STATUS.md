@@ -5,6 +5,11 @@ Stand: 13. September 2026, nach bestandener geschärfter Basisabnahme.
 
 ## Gesamturteil
 
+**Jetzt aktiv: Schritt3 nach neuem ausdrücklichem Nutzerauftrag.** Geplant ist
+eine echte kleine QI-nahe Oberflächen-/Gleichgewichtsoptimierung mit unabhängiger
+Abnahme nach [festem Protokoll](qi/PLASMA_OPTIMIZATION_PROTOCOL.md). Noch keine
+neue Plasmaform oder bessere Einschlusskennzahl nachgewiesen. Schritt1/2 bleiben abgeschlossen.
+
 **Schritt1 und2 sind als begrenzte Basis- und Iterationsfähigkeit abgeschlossen.**
 Die [konsolidierte Abnahme](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) besteht:
 720 Tests mit144 bekannten Warnungen, sechs strikte W7-X-/Goodman-Datenregressionen
@@ -87,7 +92,8 @@ Der frühere bessere Forschungsentwurf wird dadurch nicht ersetzt.
 Altbestand bei5971fee lokal getaggt; keine alten numerischen Kerne/Evidenz verändert,
 externe Quellen einschließlich bestehender STELLOPT-Anpassungen unverändert.
 Bedienung und Grenzen stehen im [Abschlussbericht](validation/FOUNDATION_ACCEPTANCE_RESULTS.md).
-Damit endet die aktuelle Basisarbeit; keine weitere Suche oder Physikbranche automatisch.
+Damit endete die Basisarbeit. Die danach ausdrücklich beauftragte Schritt3-Arbeit
+ist getrennt registriert; keine automatische Ausweitung auf Schritte4/5.
 
 ## Später zu qualifizieren — keine Voraussetzungen für Schritt1/2
 
