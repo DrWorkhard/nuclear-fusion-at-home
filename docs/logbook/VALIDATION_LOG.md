@@ -1,5 +1,15 @@
 # Validation log
 
+## 2026-09-13 — Close nine pure analytic mirror geometry/drift/unit controls
+
+- Cartesian Jacobian, Clebsch field, pressure balance, general separate grad-B/
+  curvature drift and one-way SI conversion implemented. Nine tests pass,
+  including two FD scales, invalid inputs, charge/energy/mass scalings and a
+  negative vacuum-simplification control. No81-cell matrix/native physics run.
+- Detail/index and both READMEs/status/plan reviewed; overall status unchanged.
+  Ruff/docs/diff pass. Next implement and independently control matrix/auditor,
+  commit before evaluation; ongoing coil holdouts remain separate.
+
 ## 2026-09-13 — Register analytic absolute drift/action control before QI-field application
 
 - Derived a divergence-free Clebsch mirror with explicit Cartesian field/Jacobian,
