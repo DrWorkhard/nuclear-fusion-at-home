@@ -54,6 +54,19 @@ cleanup. Before starting the next step or handing off:
 
 ## Research discipline and autonomy
 
+### Sharpened foundation milestone (explicit user correction, 2026-09-13)
+
+Steps1/2 now mean a bounded reliable local reference/LPQA-filament toolchain and
+the ability to run reproducible design iterations, not a new feasible optimum,
+five-start comparison, SoTA advance or SQuID-C readiness. Follow the active
+`docs/validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md` and `docs/PROJECT_PLAN.md`.
+Keep process qualification distinct from physical candidate acceptance. Never
+relax historical physical thresholds or rewrite failures. Preserve all earlier
+research at5971fee and its artifacts; QI-global/orbit/mechanics extensions remain
+separate, unqualified future work. Do not start another long search or physics
+branch unless it closes a specific active foundation gate. Once both sharpened
+steps pass, document/commit and hand off rather than continuing into later research.
+
 Preregister new numerical studies before running them. Keep construction and
 independent acceptance separate; retain negative results and all predeclared
 resolution levels. Never relax limits after looking at outcomes. A test-suite

@@ -1,18 +1,24 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 13. September 2026, nach vollständiger GN-Suche und unabhängigen Abnahmen.
+Stand: 13. September 2026, nach Schärfung der Basisziele durch den Nutzer.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
 
-**Langfristiger Plan Schritt 1 und 2 sind nicht abgeschlossen.** Unsere Werkzeuge
-sind substanziell weiter; der entscheidende Entwurfserfolg fehlt. Keine neue
-zulässige Optimierungsbaseline, kein SoTA-/Kraftwerksfortschritt, keine vollständige
-SQuID-C-Qualifikation. Ein abgeschlossener negativer Versuch schließt nicht das
-zugehörige Forschungspaket. Frühere optimistischere Journaltexte gelten nicht
-als aktueller Stand.
+**Schritt1 und2 werden als Basis- und Iterationsfähigkeit abgenommen, nicht als
+Entwurfserfolg.** Die konsolidierte Abnahme nach dem
+[neuen festen Protokoll](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md) steht noch
+aus. Bestehende Teilqualifikationen und vollständige Such-/Prüfzyklen liefern
+umfangreiche Vorarbeit; fehlende neue Zulässigkeit oder SoTA-Leistung verhindern
+nicht den Abschluss dieser begrenzten Schritte.
 
-## Spulenoptimierung: aktueller Engpass
+Unverändert: keine neue zulässige Optimierungsbaseline, kein SoTA-/Kraftwerksvorteil,
+keine vollständige SQuID-C-Qualifikation. Globale QI-/Orbit-/Mechanikarbeit bleibt
+erhalten und offen, ist aber nicht Teil der jetzigen LPQA-Filamentabnahme.
+Historische umfassendere Abschlussformulierungen sind durch die ausdrückliche
+Planänderung ersetzt; ihre numerischen Befunde werden nicht umetikettiert.
+
+## Erhaltene Spulenforschung: spätere Leistungsbaseline
 
 Die beste fein geprüfte LPQA-Form stammt aus dem klassischen
 [GN-Folgelauf vom fixierten Stromminimum](optimization/CURRENT_START_GN_RESULTS.md).
@@ -70,7 +76,14 @@ Belege: [native Integration](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md),
 [Netzabschluss](engineering/MESH_FINE_COMPLETION_RESULTS.md),
 [strenge Importwarnung](validation/NETCDF_IMPORT_WARNING.md).
 
-## Noch zu schließen
+## Jetzt abzuschließen
+
+1. Konsolidierte lokale Basisabnahme einschließlich Quellen, Pflichtdaten,
+   aktueller Tests und negativer Freigabekontrollen.
+2. Kurzen realen Zweiarm-Iterationszyklus samt unabhängigem Audit und allen vier
+   Kandidatenprüfungen demonstrieren, dokumentieren und übergeben.
+
+## Später zu qualifizieren — keine Voraussetzungen für Schritt1/2
 
 1. Eine tatsächlich zulässige klassische Spulenbaseline, danach unabhängige
    Wiederholungen und fairer mehrstartiger Vergleich.

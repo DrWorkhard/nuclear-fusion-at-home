@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-13 — Register user-sharpened foundation and iteration acceptance
+
+- User explicitly narrows steps1/2 to reliable bounded basics and ability to
+  iterate. Updated plan/persistent rules; no feasibility/SoTA requirement silently
+  imposed. Existing physical thresholds, rejected candidates and history unchanged.
+- New contract binds current tests, strict six-data regression, preserved fresh
+  W7-X evidence, two24-bundle native smoke runs and all independent holdouts/audits.
+  Orbit/global-QI/full-engineering research deferred, not passed or deleted.
+- Prior snapshot5971fee retained. This is plan registration, not milestone
+  completion. No new physics run. Overviews/index reviewed; documentation structure
+  and diff checks pass. Plan-only change; numerical tests deferred to implementation.
+  Local preservation tag and scoped commit precede workflow implementation.
+
 ## 2026-09-13 — Close full vacuum two-component matrix and independent243-state audit
 
 - At fccd525 all81 cells/27 refinements/243 scalar states pass, no warnings or

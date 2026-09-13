@@ -21,13 +21,15 @@ belegt weder bessere Einschlussphysik noch bessere Kraftwerksleistung.
 
 | Schritt | Angestrebtes Ergebnis | Stand |
 | --- | --- | --- |
-| 1. Rechen- und Prüfwerkzeuge absichern | Gleichgewichte, Magnetfelder, QI-Eigenschaften und Spulengeometrie an bekannten Referenzen unabhängig prüfen | In Arbeit; wichtige Teilprüfungen bestehen, QI-/Ingenieurqualifikation offen |
-| 2. Spulen für eine vorgegebene Plasmaoberfläche entwickeln | Zulässige starke klassische Vergleichslösung, anschließend faire Methodenvergleiche | Aktueller Optimierungsschwerpunkt LPQA; noch keine neue zulässige Lösung |
+| 1. Begrenzte Rechen- und Prüfbasis absichern | Lokale W7-X-/Goodman-Regression und geprüfte LPQA-Festoberflächen-/Filamentwerkzeuge | Bestehende Teilnachweise werden zur abgegrenzten Basisabnahme zusammengeführt |
+| 2. Prinzipiell iterieren können | Referenz laden, Parameter optimieren, Kandidaten speichern und unabhängig bewerten; reproduzierbar | Abnahme eines kurzen realen Zweiarmzyklus ausstehend; keine neue zulässige Lösung erforderlich |
 | 3. Eigene QI-Plasmakonfigurationen entwickeln | Plasmaoberfläche variieren und zugehöriges Gleichgewicht auf günstigen Einschluss optimieren | Geplant; derzeit vorhandene Referenzkonfigurationen |
 | 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Langfristig geplant |
 | 5. Verbesserungen belastbar nachweisen | Unabhängig geprüfter Vorteil gegenüber reproduzierten Referenzen unter gleichen Anforderungen | Offen |
 
-**Wir arbeiten an Schritt 1 und 2.** Die Schritte dürfen sich überlappen.
+**Wir schließen jetzt ausschließlich Schritt 1 und 2 im geschärften Umfang ab.**
+Das sind Befähigungsziele, keine SoTA- oder Entwurfsleistungsziele. Nach ihrer
+Abnahme übergeben wir; weitere Forschung startet nicht automatisch.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.
 
@@ -46,7 +48,11 @@ dafür ist ein eindeutig zugeordnetes maschinenlesbares Autorenpaket nötig.
 Die dokumentierten Verfügbarkeitssuchen vom August sind keine aktuelle oder
 universelle Aussage, dass solche Daten nicht existieren.
 
-## Aktuell entscheidende Befunde
+Die [Basisabnahme](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md) trennt
+Werkzeugfunktion von physischer Entwurfszulässigkeit. Frühere Studien bleiben
+erhalten; globale QI- und Mechanikqualifikation sind separate spätere Aufgaben.
+
+## Erhaltene Forschungsbefunde
 
 - Die beste fein geprüfte LPQA-Form erreicht etwa **8,13e-8 statt geforderter
   höchstens 1e-8**. Geprüfte Geometrie-/native Bedingungen bestehen; die
@@ -81,7 +87,8 @@ Die vollständige Chronologie bleibt im [Forschungsjournal](logbook/README.md).
 
 Klassische Optimierung, globale Suche, robuste Verfahren und lernende Modelle
 müssen denselben unabhängigen Bewertungsweg bestehen. AI ist weder Zielgröße noch
-Qualitätsnachweis. Neue Versuche, Budgets und Grenzwerte werden vorab festgelegt;
+Qualitätsnachweis. Schritt1/2 verlangen einen zuverlässig prüfbaren Ablauf,
+nicht bereits einen Entwurfsfortschritt. Neue Versuche, Budgets und Grenzwerte werden vorab festgelegt;
 negative Resultate bleiben erhalten. Eine zulässige klassische Baseline geht dem
 fairen mehrstartigen Vergleich und einer behaupteten robusten Paretoverbesserung voraus.
 

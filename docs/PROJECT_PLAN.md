@@ -1,98 +1,85 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 13. September 2026. [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
+Stand: 13. September 2026, nach ausdrücklicher Schärfung durch den Nutzer.
+[Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
-## Aktuelles Ziel
+## Jetzt: Basis abschließen, prinzipiell iterieren können
 
-Langfristiger Plan **Schritt 1 und 2 wirklich abschließen**, nicht lediglich
-Versuchslisten abarbeiten. Unabhängige Prüfung begleitet die gesamte Arbeit;
-ein negativer Pilot ist kein Abschluss des Forschungspakets. Beide Schritte
-sind noch offen. Die [Entwicklungsrichtung](README.md#langfristiger-plan-und-aktueller-schwerpunkt)
-bleibt unverändert.
+Schritt1 und2 sind **Befähigungsziele**, keine Neuheits- oder Leistungsziele.
+Der Nutzer hat den bisherigen zu breiten Umfang korrigiert. Eine neue zulässige
+Spulenform, ein SoTA-Vorteil oder vollständige SQuID-C-Qualifikation sind keine
+Voraussetzung für ihren Abschluss. Physikalische Zulässigkeitsgrenzen bleiben
+unverändert; ein funktionierender Ablauf darf einen Entwurf weiterhin ablehnen.
 
-## Schritt 1: Rechen- und Prüfwerkzeuge absichern
+Die abgegrenzte erste Basis ist lokale Festoberflächen-/Filamentspulenarbeit am
+bekannten LPQA-Fall, ergänzt um W7-X-Gleichgewichtsregression und grundlegende
+Goodman-Daten-/Wirkungsregressionen. Das ist ausdrücklich **keine universelle
+Stellarator-, QI- oder Ingenieurqualifikation**.
 
-| Arbeitspaket | Bereits belegt | Für den Abschluss noch erforderlich |
-| --- | --- | --- |
-| Lokale Reproduzierbarkeit | Frischer gesperrter Daten-/Solveraufbau, alle 21 Phasen und sechs wissenschaftliche Nicht-Skip-Tests bestehen | Bestehende Regression sichern; strenge Importwarnung getrennt klären. Unabhängige Hardware/Hosted-CI als separate Ausführungsgrenze erhalten |
-| W7-X-Referenz | Ausgewählte physikalische Regression besteht | 60/63 nicht zu vollständiger Dateigleichheit umdeuten; verbleibende Ausgabedifferenzen getrennt halten |
-| Magnetfeld/Spulengeometrie | Quellen, benannte DOFs, unabhängige Felder und konservative Geometrieprüfungen qualifiziert | Neue Suchzustände weiterhin unabhängig qualifizieren; Filament-/Gleitkommagrenzen explizit halten |
-| QI-Maßstab | Tracer/Quadratur, Feld-/Auflösungsdiagnosen und beide81-Zellen-Driftkontrollen einschließlich radialer Komponente/gleicher Phase auditiert | Endliche-Bahn-/Kleinparameter-Kontrolle, echte QI-Felder, feste Invarianten-/Mulden-Domäne, Auflösungs-/Produzentenfragen; Autorenreferenzen erhalten |
-| Ingenieurmodelle | Sechs unveränderte Netze bestehen den abgegrenzten Nichtüberlappungstest | Nachbarpaare, vollständige Baugruppe/reale Wicklungspakete, belegte Materialien/Lagerung und Mechanik im gültigen Modellbereich |
+## Schritt 1: Verlässliche Rechen- und Prüfbasis
 
-Nächste QI-Frage: Welche verbleibenden Feldunterschiede stammen aus innerer
-Moden-/Gleichgewichtsauflösung oder Produzentenkonventionen? Die 16-Zellen- und
-gemeinsame-Winkel-Studie sind abgeschlossen, aber insgesamt negativ.
-Die [Drift-Koordinateneinordnung](qi/QI_DRIFT_COORDINATES.md) verlangt, das ganze
-Driftpaar und dieselbe physikalische Phase zu vergleichen; reine Algebra ersetzt
-keine absolute physikalische Gegenrechnung.
+Abnahme anhand des [festen Basisprotokolls](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md):
 
-Nächste Ingenieurfrage: Was fehlt nach dem geschlossenen Nicht-Nachbar-Paartest
-für eine gültige endliche Spulenbaugruppe? Geometrische Teilnachweise erlauben
-keine Übernahme der bisherigen mechanischen Spannungszahlen: Die große berechnete
-Verformung liegt außerhalb der linearen Modellannahmen.
+| Notwendige Fähigkeit | Abnahme |
+| --- | --- |
+| Reproduzierbare lokale Umgebung und Daten | Gesperrte Quellen/Versionen, erhaltene frische Aufbau-Evidenz, aktuelle Tests ohne fehlende Pflichtdaten |
+| Bekannte Gleichgewichte/Daten lesen und vergleichen | Sechs strikte W7-X-/Goodman-Regressionsidentitäten ohne Skip; bestehende W7-X-Physikprüfung und bekannte60/63-Grenze erhalten |
+| LPQA-Feld und Filamentgeometrie auswerten | Qualifizierte Werte/Ableitungen/benannte Parameter, unabhängige Feld-/Geometrieabnahme und Verfeinerung |
+| Zutreffend akzeptieren oder ablehnen | Prozessstatus, Werkzeugqualifikation und Entwurfszulässigkeit getrennt; Manipulationen/fehlende Daten dürfen keinen Pass erzeugen |
+| Nachvollziehbarkeit und praktische Nutzung | Ein dokumentierter Abnahmebefehl, gebundene Rohdaten/Berichte, Gültigkeitsbereich und offene Erweiterungen explizit |
 
-## Schritt 2: Spulen für eine feste Plasmaoberfläche entwickeln
+Die bekannte netCDF-Größenwarnung wird sichtbar nachgeprüft und als verbleibende
+Umgebungsgrenze dokumentiert. Kein neuer Filter, kein behaupteter ABI-Nachweis.
+Warnungsfreie strenge Imports sind nicht mit funktionierender gesperrter
+Datenregression gleichzusetzen. Unbekannte neue Fehler führen zur Ablehnung.
 
-Abschlusskriterium: eine starke klassische Lösung des unveränderten physischen
-LPQA-Problems, die unabhängige Feld-, kontinuierliche Geometrie- und zusätzliche
-native Abnahmen besteht. Danach Wiederholungen, mindestens fünf dokumentierte
-Initialisierungen und faire Vergleiche unter gleichen Anforderungen und bilanzierten
-Budgets. Mehr Freiheitsgrade, andere Starts oder Solvervarianten sind getrennte
-Versuche, keine rückwirkende Umdeutung früherer Resultate.
+## Schritt 2: Reproduzierbarer Iterationszyklus
 
-Aktueller Stand: beste fein geprüfte Form rund 8,13-mal über der Fluxgrenze.
-Die exakte Stromminimierung und die geometrische Abstiegsdiagnose sind vollständig
-geschlossen: statische Stromkorrekturen helfen praktisch nicht; alle sechs
-endlichen Formschritte verschlechtern den Flux trotz bestandener Ableitungen.
-Die anschließende unabhängige Krümmungsprüfung erklärt alle sechs Änderungen
-mit mindestens99,60% kleinerem Vorhersagefehler. Der anschließende GN-Lauf ist
-mit zweimal2048 Bundles, separatem Audit und allen vier Abnahmephasen geschlossen:
-0,754% feiner Fluxgewinn, weiterhin unzulässig, keine nachgewiesene Konvergenz.
+Abschluss heißt: Referenz laden → Parameter variieren/klassisch optimieren →
+Kandidat speichern → unabhängig bewerten → Ergebnis und nächste Entscheidung
+nachvollziehen. Ein kleiner realer Zweiarm-Smoke-Lauf demonstriert diesen Weg;
+vollständige frühere Suchläufe liefern zusätzlich erhaltene Langlauf-Evidenz.
 
-Nächste Reihenfolge:
+Keine Pflicht zu neuem Bestwert, erfüllter Fluxgrenze, Konvergenz oder fünf Starts.
+**Eine abgelehnte Form bleibt abgelehnt; der funktionsfähige Iterationszyklus kann
+trotzdem bestehen.** Solver, Parameter, Budget und Rohdaten bleiben zugänglich,
+sodass später gezielt weitere Experimente registriert werden können.
 
-1. **Endliche-Bahn-/Kleinparameter-Grenze separat prüfen:** beide analytischen
-   Driftkontrollen sind geschlossen, einschließlich [radialer Drift/gleicher Phase](qi/VACUUM_DRIFT_CONTROL_RESULTS.md).
-   Die10keV-Testparameter sichern keine kleine Bahnabweichung. Unabhängige
-   Bahnkonvergenz vor Übertragung auf echte QI-Felder registrieren und kontrollieren;
-   Grenzen der Gleichgewichtsauflösung bleiben getrennt offen.
-2. **Nächsten Konstruktionsansatz separat begründen und registrieren:** die lokale
-   Folge bringt nur geringe Gewinne; Ursache/alternative Starts oder Koordinaten
-   prüfen, keine bloße nachträgliche Erweiterung der beendeten Budgets.
-3. **Alle unabhängigen Abnahmen schließen, auch bei Ablehnung.** Erst eine
-   tatsächlich zulässige Konstruktion löst die mehrstartige Vergleichsphase aus.
+## Aktuelle Reihenfolge und Stoppregel
 
-Die alten AL-, SLSQP-, GN-, Archiv- und Diagnoseläufe bleiben mit ihren
-Fehlschlägen unverändert im [Optimierungsbereich](optimization/README.md)
-und [Journal](logbook/README.md). Es wird kein günstigerer Differenzenschritt
-nachträglich zum ursprünglichen Bestehenskriterium gemacht.
+1. Plan-/Umfangskorrektur und unveränderten Altbestand sichern.
+2. Bestehende Qualifikationen zusammenführen, Schutz gegen falsche Freigaben testen.
+3. Aktuelle Regressionen, kurzen realen Zweiarmzyklus und alle unabhängigen
+   Abnahmen ausführen; Ergebnisse separat auditieren und dokumentieren.
+4. Beide geschärften Schritte nur bei bestandenen zugeordneten Gates schließen.
+   **Dann an den Nutzer übergeben, keine weitere Forschung automatisch starten.**
 
-## Danach: QI-Plasma und Spulen gemeinsam entwickeln
+Kein erneuter langer Optimierungslauf und kein neuer Physikzweig, sofern er nicht
+eine konkrete Lücke dieser Basisabnahme schließt. Tests allein ersetzen keine
+physikalische Teilqualifikation; vorhandene negative Evidenz wird nicht umetikettiert.
 
-In Schritt 3 wird die Plasmaoberfläche selbst zum Entwurfsparameter; die
-Einschlussphysik muss am zugehörigen Gleichgewicht geprüft werden. Schritt 4
-verknüpft Plasma, endlichen Druck, Spulen, Baubarkeit und Robustheit. Schritt 5
-belegt einen Vorteil gegenüber reproduzierten Referenzen unter gleichen
-Anforderungen. Lernende Modelle, globale Suche und hybride Methoden werden
-eingesetzt, wenn ihr messbarer Nutzen gegenüber starken klassischen Verfahren
-gezeigt werden kann — nicht weil AI am Projekt beteiligt ist.
+## Erhaltene spätere Forschung
 
-SQuID-C benötigt autoritative Daten und eine qualifizierte Reproduktion.
-Das ist keine pauschale Vorbedingung für die derzeitige Arbeit, aber fehlende
-Daten sind auch nicht die einzige offene Bereitschaftsprüfung.
-Die vollständige [Prüfliste](squid_c/SQUID_C_READINESS.md) bleibt maßgeblich.
+| Thema | Einordnung nach Abschluss der Basis |
+| --- | --- |
+| Zulässige starke klassische Lösung, Mehrstarts, faire Methodenvergleiche | Spätere Leistungsbaseline; aktueller feinster Flux8,129882e-8 bleibt über1e-8 |
+| Eigene QI-Plasmaoberflächen | Langfristiger Schritt3; neue Gleichgewichts-/QI-Abnahme vor Optimierung nötig |
+| Gemeinsame Plasma-/Spulenoptimierung | Langfristiger Schritt4; getrennte Daten-/Physikvoraussetzungen |
+| Globale QI-/maximum-J-Messung, endliche Teilchenbahnen | Offene Qualifikationen, nicht für den begrenzten LPQA-Filamentzyklus freigegeben |
+| Endliche Wicklungspakete, vollständige Netze, Materialien/Lagerung/Mechanik | Vor Ingenieuraussagen zu qualifizieren; alte lineare Verformungszahlen nicht zulässig |
+| SoTA-/Paretofortschritt, SQuID-C-Reproduktion | Langfristiger Schritt5 beziehungsweise gesonderte Zielbaseline; keine heutige Behauptung |
+
+Protokolle, Daten, Fehlschläge und Ableitungs-/Driftdiagnosen bleiben in den
+[Detailbereichen](README.md#detailbereiche) und im [Journal](logbook/README.md)
+erhalten. Der Zustand vor dieser Umfangskorrektur ist Git-Commit5971fee; die
+Abnahme dokumentiert seinen Erhalt. Historische Abschlussformulierungen beziehen
+sich auf den damaligen breiteren Plan und werden nicht rückwirkend geändert.
 
 ## Verbindliche Arbeitsweise
 
-Neue Studien vorab registrieren und committen. Nach jedem abgeschlossenen
-Arbeitsschritt Detailbericht und Prüfprotokoll ergänzen, materialisierte Befunde/
-Entscheidungen ins Journal aufnehmen und beide READMEs, Stand, Plan und Bereichsindex
-prüfen. Passende Tests, Dokumentprüfung, Diffreview und lokaler Commit gehören
-zum Abschluss. Negative Resultate und unterbrochene Läufe bleiben erhalten.
-
-Keine Veröffentlichungen, Pushes, Autorenkontakte oder Änderungen externer
-Repositories ohne passenden Auftrag. Ressourcenvorabprüfung, laufende Reserven
-und Schutz der qualifizierten Umgebungen einhalten. Ein verhinderter Commit
-oder fehlende neue Autorität bleibt explizit offen.
-Dauerhafte Regeln: [AGENTS.md](../AGENTS.md).
+Neue numerische Versuche vorab registrieren und committen. Nach jedem Arbeitsschritt
+Detailbericht/Prüfprotokoll ergänzen, betroffene Übersichten aktualisieren, passende
+Tests/Dokument-/Diffprüfung durchführen und lokal committen. Keine Pushes,
+Autorenkontakte, externen Quelländerungen oder Eingriffe in die qualifizierte
+Umgebung. Ressourcenreserve und Schutz vorhandener Daten bleiben verbindlich.
+[Dauerhafte Regeln](../AGENTS.md) · [Entscheidung D-012](logbook/DECISIONS.md)

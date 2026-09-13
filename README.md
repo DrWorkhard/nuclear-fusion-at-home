@@ -12,7 +12,11 @@ Detailed protocols, results and the research journal are indexed one level below
 
 Current assessment, 2026-09-13: no newly feasible optimization baseline,
 no demonstrated SoTA design advance, and no complete SQuID-C readiness.
-Long-term steps 1 and 2 remain open.
+Steps 1 and 2 now mean a bounded reliable local foundation and reproducible
+iteration capability, not a better/feasible design. Their consolidated acceptance
+is pending under the [new protocol](docs/validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md).
+All earlier studies are retained at revision `5971fee`; broader QI, engineering
+and design-performance work is deferred, not declared passed.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
   8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.

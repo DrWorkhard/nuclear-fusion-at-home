@@ -1,5 +1,20 @@
 # Decision log
 
+## D-012 — Separate foundation capability from design performance
+
+**Status:** accepted; explicit user correction
+**Date:** 2026-09-13
+
+Steps1/2 are now bounded reference-tool qualification and practical reproducible
+iteration on fixed LPQA filament coils. They do not require a feasible new optimum,
+five starts, SoTA improvement or SQuID-C qualification. Old candidate failures and
+limits remain unchanged. Known W7-X/output/netCDF limitations remain explicit.
+Global QI/orbit/full-engineering qualification is deferred, not declared passed.
+All previous work at5971fee remains preserved for later research. New24-bundle
+smoke repeats and independent phase/audit aggregation qualify capability only.
+After both refined milestones pass, hand off; do not automatically start later
+research. Active contract: [foundation acceptance](../validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md).
+
 ## D-011 — Resource preflight and truthful interrupted-run provenance
 
 **Status:** accepted after disk-exhaustion incident
