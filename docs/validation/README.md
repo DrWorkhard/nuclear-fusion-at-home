@@ -8,6 +8,8 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Basisabnahme: Ergebnisse und Bedienung](FOUNDATION_ACCEPTANCE_RESULTS.md) — Konsolidierter Abnahmebefehl, einzelner reproduzierbarer Iterationszyklus, Schutzprüfungen und bewusst begrenzter Gültigkeitsbereich; echte Gesamtabnahme noch ausstehend.
+
 - [Basisabnahme: geschärftes Protokoll](FOUNDATION_ACCEPTANCE_PROTOCOL.md) — Explizite Nutzerkorrektur: begrenzte verlässliche Rechenbasis und reproduzierbarer24-Bundle-Iterationszyklus; getrennte Kandidatenzulässigkeit, Altbestand erhalten, noch nicht abgenommen.
 
 - [netCDF4-Importwarnung](NETCDF_IMPORT_WARNING.md) — Drei Prozessvarianten zeigen NumPys Standardfilter und den weiterhin fehlgeschlagenen strengen nativen Import; keine Umgebungsänderung oder behauptete ABI-Heilung.

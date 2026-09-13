@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-13 — Control bounded foundation workflow before native execution
+
+- Added two24-bundle cycle/independent audit wrappers without changing any old
+  numeric core or study. Canonical physical problem, named mappings and all work
+  remain checked; consolidated runner executes sequential tests/data/holdouts.
+- Independent report arithmetic retains physical rejection, exact resolution
+  sets and separate excluded capabilities. Sources, old tracked files and external
+  checkout state checked; failed subprocess records survive and cannot overwrite.
+- 18 new controls pass;22 with prior GN workflow in4.29s. Ruff, documentation and
+  diff checks pass. Historical candidate checks recomputed without new field calls.
+- Added runbook/detail index. Both READMEs/status/plan reviewed: genuine bounded
+  acceptance still pending; no design/SoTA/ABI claim. Commit implementation before
+  fresh native execution. Next: one sequential foundation-acceptance-v1 run.
+
 ## 2026-09-13 — Register user-sharpened foundation and iteration acceptance
 
 - User explicitly narrows steps1/2 to reliable bounded basics and ability to
