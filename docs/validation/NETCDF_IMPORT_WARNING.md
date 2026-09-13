@@ -59,3 +59,15 @@ Drei Kontrollen bestehen: gesperrter Hash, eindeutige normale Archivmitglieder,
 Abweisung von Duplikaten/Links. Keine Archivpfade werden in das Dateisystem
 extrahiert. Ruff/Dokument-/Diffprüfung bestehen. Keine Änderung an Paketen,
 Warnungsfiltern, nativer Umgebung oder laufendem GN-Suchprozess.
+
+Quelleninventar bei bffb529 abgeschlossen:
+`evidence/netcdf-source-declarations-v1.json`, Archiv unter
+`artifacts/netcdf-source-declarations-v1/netcdf4-1.7.4.tar.gz`.
+Alle vier Quellprüfungen bestehen; insbesondere ist die im Wheel installierte
+`_netCDF4.pyx` bytegleich zur Releasequelle. Separate Shell-SHA256-Rechnung
+bestätigt das gesamte Archiv, lesendes `tar` dieselbe manuelle Deklaration und
+JSON-Vergleich die unveränderte Binärdatei aus dem ursprünglichen Warnungstest.
+Keine Reparatur ausgeführt. Ein späterer isolierter Minimalreproduzierer muss
+die deklarationsbedingte Warnung von tatsächlicher C-API-/Dateninkompatibilität
+trennen; allein eine abgeschaltete Größenwarnung wäre kein wissenschaftlicher
+Nachweis. Das bisherige strenge Importgate bleibt unverändert negativ.

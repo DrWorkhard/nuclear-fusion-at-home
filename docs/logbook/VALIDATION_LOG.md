@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-13 — Close locked netCDF4 declaration inventory without environment changes
+
+- At bffb529 all four source checks pass; installed pyx exactly matches locked
+  release. Archive and source/local-header/wheel/binary hashes retained. Separate
+  shell SHA256/tar readers confirm archive/declaration; original warning-test
+  binary hash remains identical. No new native physics or compilation.
+- Source hypothesis now reproducibly archived, not an ABI repair. Strict import
+  remains failed; later isolated controls/build need their own qualification.
+  Detail and all overviews reviewed, no overall status change; docs/diff pass.
+  Main registered GN study continues independently with its original code/budget.
+
 ## 2026-09-13 — Isolate netCDF4 warning declaration path during running GN search
 
 - Read-only locked838352-byte1.7.4 archive SHA verified. Manual ndarray declaration
