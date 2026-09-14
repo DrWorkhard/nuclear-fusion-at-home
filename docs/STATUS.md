@@ -1,14 +1,16 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 13. September 2026, nach bestandener geschärfter Basisabnahme.
+Stand: 14. September 2026, nach erster eigener Plasma-Suchentscheidung.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
 
-**Jetzt aktiv: Schritt3 nach neuem ausdrücklichem Nutzerauftrag.** Geplant ist
-eine echte kleine QI-nahe Oberflächen-/Gleichgewichtsoptimierung mit unabhängiger
-Abnahme nach [festem Protokoll](qi/PLASMA_OPTIMIZATION_PROTOCOL.md). Noch keine
-neue Plasmaform oder bessere Einschlusskennzahl nachgewiesen. Schritt1/2 bleiben abgeschlossen.
+**Jetzt aktiv: Schritt3 nach neuem ausdrücklichem Nutzerauftrag.** Die
+[registrierte Plasmaoptimierung](qi/PLASMA_OPTIMIZATION_RESULTS.md) hat eine um
+0,4mm in zbs(1,1) veränderte nfp2-Vakuumform ausgewählt:14,35% kleinerer
+Trainings-S-Wert nach16 neuen Suchgleichgewichten. Die feinere unabhängige
+Domänen-/Physik-/Vorteilsabnahme steht noch aus. Kein bestätigter Einschlussvorteil
+oder Schritt3-Abschluss. Schritt1/2 bleiben abgeschlossen.
 
 **Schritt1 und2 sind als begrenzte Basis- und Iterationsfähigkeit abgeschlossen.**
 Die [konsolidierte Abnahme](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) besteht:

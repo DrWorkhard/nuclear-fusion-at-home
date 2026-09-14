@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-14 — Document completed plasma selection while cold fine endpoints continue
+
+- v2 search at90cdc57 completed both registered rounds:17 requests/16 unique
+  solves/one cache hit, selected indices3 then11, all producer construction gates
+  pass. x=(0,0.0004,0,0)m, training S9.889668968130651e-6 versus1.1546244999075371e-5.
+  Repeat201 reports same score; actual independent array audit not yet performed.
+-401 endpoints still running; active summary is not committed as final evidence.
+  No heavy concurrent job. Doc-only intermediate commit preserves findings without
+  modifying bound code/protocol. Disk around10GiB free. Read-only Git comparison
+  against5971fee shows only additive numeric scripts/modules/tests, no old edits.
+- Detail/F-083/folder index and all four root summaries updated with provisional
+  selection versus pending admission. Docs/diff checks pass; no numeric changes
+  since27 passing focused tests, so no concurrent heavy test suite. Next: finish
+  cold endpoints, freeze complete summary, then execute all independent holdouts.
+
 ## 2026-09-14 — Preserve zero-solve plasma preflight failure and correct raw-source binding
 
 - First invocation atc9801ba stopped before directory creation or any new solve:

@@ -1,9 +1,9 @@
 # Eigene QI-nahe Plasmaoberfläche: Arbeitsstand und Bedienung
 
 Stand: 14. September2026. [Festes Protokoll](PLASMA_OPTIMIZATION_PROTOCOL.md).
-**Schritt3 noch offen.** Neue additive Such-/Prüfwerkzeuge sind implementiert;
-erster Start vor jeder Rechnung wegen Herkunfts-Metadatenprüfung gestoppt.
-Noch kein neuer Gleichgewichts- oder Entwurfsbefund. Die früheren Schritte1/2
+**Schritt3 noch offen.** Die registrierte Suche hat eine eigene veränderte
+Oberfläche mit14,35% besserem Trainingswert ausgewählt. Wiederholung und feinere
+unabhängige Abnahme sind noch nicht vollständig auditiert. Die früheren Schritte1/2
 und sämtliche alten negativen Forschungsdaten bleiben unverändert.
 
 ## Implementierung vor erster Rechnung
@@ -33,6 +33,28 @@ Gesamtsuite vor der letzten zusätzlichen Quellenkontrolle:745 Tests/144 bekannt
 Warnungen in68,54s. Danach26 gezielte Tests in0,27s. Ruff besteht. Bekannte
 netCDF-/NumPy-Grenzen werden nicht als behoben ausgegeben. Dokument-/Diffprüfung
 und lokaler Implementierungscommit erfolgen vor dem ersten neuen Solve.
+
+## Abgeschlossene Auswahl, noch keine physische Zulassung
+
+Lauf `plasma-design-v2` bei90cdc57:17 Anfragen,16 neue201er Suchgleichgewichte,
+ein exakter Cachetreffer. Alle16 erfüllen laut gespeicherten Produzentenberichten
+die numerischen/Domänen-/Konstruktionswächter. Jede Runde wertet alle acht
+Richtungen aus; gewählte Indizes3 und11. Keine behauptete Suchkonvergenz.
+
+| Größe | Frische Referenz | Ausgewählter Entwurf |
+| --- | ---: | ---: |
+| Änderung zbs(1,1) gegenüber Autoreninput |0m|+0,0004m|
+| Übrige drei registrierte Änderungen |0m|0m|
+| Trainings-S |1,1546244999075371e-5|9,889668968130651e-6|
+| Relativer Trainingsvorteil |—|14,347314%|
+
+Der separate201er Kaltstart liefert denselben S-Wert; vollständiger unabhängiger
+Array-/Arbeits-/Quellenaudit bleibt ausstehend. Die401er Endpunkte laufen noch.
+Auswahlergebnisse bleiben danach eingefroren; feinere Abnahme kann ablehnen,
+aber keine andere Form nachträglich zum ausgewählten Kandidaten machen.
+Aktives Journal: `evidence/plasma-design-v2/summary.json`, Rohdaten in
+`artifacts/plasma-design-v2/`. Es ist während der Endpunkte noch kein finaler Bericht.
+Es gibt weiterhin keinen bestätigten Vorteil auf der erweiterten Domäne.
 
 ## Erhaltener erster Startfehler
 

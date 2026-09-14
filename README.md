@@ -10,7 +10,7 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-13: **sharpened steps 1 and 2 are complete** for the
+Current assessment, 2026-09-14: **sharpened steps 1 and 2 are complete** for the
 bounded local W7-X/Goodman regression and LPQA fixed-surface filament workflow.
 The [consolidated acceptance and runbook](docs/validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
 record 720 tests, six mandatory scientific regressions without skips, exact two-run
@@ -20,7 +20,9 @@ All earlier studies are preserved at tag `foundation-pre-scope-2026-09-13`
 (`5971fee`). Broader QI, engineering and performance research remains deferred.
 After that handoff the user explicitly requested step3. The new
 [plasma-boundary optimization protocol](docs/qi/PLASMA_OPTIMIZATION_PROTOCOL.md)
-is active; an independently validated changed QI-like equilibrium is still pending.
+is active. Its16-solve search selected a changed boundary with14.35% lower training
+action variance; independent finer physical/domain acceptance is still pending.
+See the [plasma results and runbook](docs/qi/PLASMA_OPTIMIZATION_RESULTS.md).
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
   8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.
