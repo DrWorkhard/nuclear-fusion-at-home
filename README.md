@@ -31,7 +31,10 @@ the follow-up construction; finer independent admission is not blind generalizat
 After handoff, the user explicitly authorized step4. Its
 [options and three independent agent reviews](docs/optimization/COUPLED_DESIGN_OPTIONS.md)
 prioritize paired actual-coil realization before coupled plasma/coil iterations.
-No step4 result yet; pressure, realized-field physics, finite geometry and
+The paired pilot is preregistered; additive construction and independent audit
+tools pass synthetic integration (959 total tests,193 new). Actual target
+qualification is next.
+No step4 design result yet; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about

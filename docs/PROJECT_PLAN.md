@@ -20,7 +20,9 @@ bleiben im Methodenportfolio. Vor jeder neuen Studie Protokoll und Budget fixier
 Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemeinsame
 Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
-oder SoTA-Anspruch. Aktuell Methodenreview abgeschlossen, noch keine neue Rechnung.
+oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
+abgeschlossen:959 Tests bestehen. Als Nächstes acht reale
+Startqualifikationen und nur bei deren Pass die registrierten Suchläufe.
 
 ## Abgeschlossen: Schritt3 — eigene QI-nahe Plasmaoberfläche
 

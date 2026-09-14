@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "scope": "additive implementation and synthetic integration before project-target evaluation",
+  "tests": 959,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "known_fixture_warnings": 144,
+  "new_coupled_tests": 193,
+  "pytest_elapsed_seconds": 67.55,
+  "junit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/implementation-regression.xml",
+    "sha256": "baf30d75bafb295dba694a2fe3edfe2ab0e67e4ecfba27806e991cdf199d2876"
+  },
+  "ruff": "passed",
+  "docs_structure": "passed",
+  "project_target_evaluations": 0,
+  "new_equilibrium_solves": 0,
+  "transfer_pass": false,
+  "step4_pass": false
+}

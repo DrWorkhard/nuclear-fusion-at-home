@@ -1,5 +1,38 @@
 # Validation log
 
+## 2026-09-14 — Qualify additive coil pilot implementation before real target work
+
+- User explicitly requested autonomous continuation through full step4. Three
+  scoped agents implemented independent audit/validation and source integration;
+  root implemented guarded runner and reviewed integration. No project-target
+  evaluations, new equilibrium solves, installations or external-source changes.
+- New named nfp2 coils, analytically eliminated physical current and raw B/A
+  derivatives agree with independent Fourier/field reconstruction. Both classes
+  and objectives, shifted/full-torus surfaces and all four active geometric
+  penalties pass synthetic checks, including two directions/two FD step sizes.
+  A too-small synthetic curvature fixture initially missed its intended branch;
+  fixture amplitude corrected before data, no scientific criterion changed.
+- Full synthetic native qualification exercises10 persisted bundles,18 extra
+  Stokes B/A calls and independent overall admission. True archived targets are
+  bound to the accepted step3 final audit, both401 endpoints and all12 accepted
+  field archives; no target-field reevaluation during this implementation phase.
+- Read-only runner red-team prompted exact certificate booleans/source/phase/case,
+  live-parent/thread/source worker checks and inner deadline guards in addition
+  to parent600s/.5s/5s policy. Late states retain raw files but cannot enter the
+  completed-candidate pool. Duplicate/failed attempts count; extra value calls
+  and monotonic clock markers are recorded. Synthetic negative controls pass.
+- Uncertifiable geometry is independently reproduced as an open physical gate,
+  not a successful certificate or automatically an arithmetic failure. Unknown
+  errors remain failures. Fine diagnostics preserve the selected original
+  snapshot/current/B2 and all registered levels. transfer/step4 alwaysfalse.
+- Full regression959 passed, zero failures/errors/skips,144 known fixturewarnings
+  in67.55s;193 new controls. JUnit hash bound by the new implementation-regression
+  evidence. Ruff, documentation structure and tracked diff checks pass. Staged
+  files are checked separately before commit. Existing tracked numeric/source/
+  evidence files unchanged fromd429783; new work is additive. All four root
+  overviews/detail checked and updated. Next commit code, then real8-cell start
+  qualification and independent audits before any search.
+
 ## 2026-09-14 — Preregister paired flux-normalized coil fitting before implementation
 
 - Draft8-cell matrix: two archived401 targets,6/order5 and8/order7 coil classes,

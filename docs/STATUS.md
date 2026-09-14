@@ -9,7 +9,9 @@ Stand: 14. September 2026, Schritt4 nach Methodenreview begonnen.
 [Drei unabhängige Agentenreviews](optimization/COUPLED_DESIGN_OPTIONS.md) empfehlen
 gepaarte reale Spulenfits für Referenz und neuen Plasmaentwurf, danach begrenzte
 gemeinsame Iterationen. Alte LPQA-Export-/Normierungsannahmen sind nicht übertragbar.
-Noch keine neue Schritt4-Rechnung oder Zulassung; Druck, physischer Transfer und
+Neue Konstruktion und unabhängige Abnahme bestehen die synthetische Integration;
+959 Tests einschließlich193 neuer Kontrollen bestehen. Noch keine neue Schritt4-Studienrechnung
+oder Zulassung; Druck, physischer Transfer und
 Robustheit bleiben ausdrücklich notwendige separate Teilpakete.
 
 **Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der
@@ -85,7 +87,7 @@ Nullmeldungen sind keine Zulassung. Details und alle erhaltenen Fehlschläge:
 | QI / Gleichgewichte | Frische 16-Zellen-Studie vollständig auditiert; doppelte Solver-Winkelauflösung besteht untersuchte Feldidentitäten | Ursprünglich nur 9/16 Auswertungsverfeinerungen und 2/16 historische Feld-Fidelitätspässe; keine Zelle besteht alle ursprünglichen Schirme |
 | QI / gemeinsamer Winkel | 120 neue Gitter und 61.440 unabhängige skalare Inversionen bestätigen die Koordinatenrechnung | Nur 4/16 neue Fidelitäts- und 5/16 Vergleichsverfeinerungspässe; Parametrisierung erklärt nicht sämtliche Unterschiede |
 | Endliche Spulennetze | Alle sechs Auflösungen bestehen den nicht-gemeinsame-Vertexindizes-Teiltest; feinster Lauf mit 2.222.785 Paarprüfungen und exakt altem 2M-Präfix auditiert | Nachbarpaare, vollständige Baugruppen, reale Wicklungspakete und gültige Mechanik offen; alte große Verformung verletzt lineare Modellannahmen |
-| Software | 766 Tests, Ruff und Dokumentstrukturprüfung bestanden | 144 dokumentierte Fixture-Warnungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
+| Software | 959 Tests, Ruff und Dokumentstrukturprüfung bestanden | 144 dokumentierte Fixture-Warnungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
 
 Die beiden QI-Verfeinerungsmaße unterscheiden sich: ursprüngliche
 Clebsch-Identitätsverfeinerung und spätere Verfeinerung des historischen
