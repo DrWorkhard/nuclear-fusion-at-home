@@ -9,9 +9,12 @@ Stand: 14. September 2026, Schritt4 nach Methodenreview begonnen.
 [Drei unabhängige Agentenreviews](optimization/COUPLED_DESIGN_OPTIONS.md) empfehlen
 gepaarte reale Spulenfits für Referenz und neuen Plasmaentwurf, danach begrenzte
 gemeinsame Iterationen. Alte LPQA-Export-/Normierungsannahmen sind nicht übertragbar.
-Neue Konstruktion und unabhängige Abnahme bestehen die synthetische Integration;
-959 Tests einschließlich193 neuer Kontrollen bestehen. Noch keine neue Schritt4-Studienrechnung
-oder Zulassung; Druck, physischer Transfer und
+Neue Konstruktion und unabhängige Abnahme bestehen959 Tests. Von acht realen
+[Startqualifikationen](optimization/COUPLED_COIL_PILOT_RESULTS.md) bestehen sechs;
+die zwei Referenzfälle mit acht Grundspulen verfehlen eine Ableitungsgrenze und
+werden nicht optimiert. Alle Startformen liegen noch weit außerhalb der physischen
+Eintrittsgrenzen; gespeicherte Querschnitte belegen zudem Schnitte mehrerer
+Achtspulen-Startkreise mit dem Plasma. Keine neue Zulassung. Druck, physischer Transfer und
 Robustheit bleiben ausdrücklich notwendige separate Teilpakete.
 
 **Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der

@@ -1,5 +1,30 @@
 # Findings log
 
+## F-085 — Real paired-coil start qualification passes six of eight cells
+
+**Class:** independently audited numerical start qualification, not design admission
+**Date:** 2026-09-14
+
+Atb5c5a4d all80 registered bundles and all eight repeats complete. Independent
+field/potential, named geometry, source-target identity and Stokes checks pass;
+max directrelativeerror1.1592e-13 and fluxerror6.6262e-16. Both reference n8 starts
+fail the fixed10µm sine-direction FD test (2.2857e-4/2.2869e-4 versus2e-4).
+Independent composite values confirm the discrepancy; halved steps reduce it
+roughly fourfold. Consistent with truncation, not grounds to waive the failed gate.
+Only six cells may search. The missing reference-n8 counterpart prevents a full
+paired comparison for that architecture in this pilot.
+
+All physical seeds remain poor: normal RMS0.429–0.482 and sampled plasma
+clearance2.372–6.074mm versus80mm. A subsequent read-only agent/root analysis of
+saved n8 boundary sections additionally provides continuity-based crossing
+witnesses for basecoils1–6 on both targets: exact circle coefficients, section
+plane residual≤1.11e-16m and inside/outside sign margins≥87.276/5.657mm. Not a
+formal interval audit. Enlarging the same fixed-center circles to enclose the
+outermost saved point with80mm clearance requires length≥4.13928m>3.5m; this
+does not exclude shifted/shaped coils or target realizability. Initialization
+is a priority for a later registered study after this pilot. Qualification is not
+physical acceptance or step4 completion. [Details](../optimization/COUPLED_COIL_PILOT_RESULTS.md).
+
 ## F-084 — Own vacuum plasma boundary passes the registered step3 design admission
 
 **Class:** preregistered bounded numerical design improvement, independently audited

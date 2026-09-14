@@ -1,0 +1,967 @@
+{
+  "all_pass": false,
+  "arithmetic_and_source_pass": true,
+  "auditor": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coupled_coil_pilot.py",
+    "sha256": "210b42b804ae7b6faa9309a2f487f3ee47a1f75bd111fa1ab0702c9b3564b01b"
+  },
+  "case": {
+    "label": "reference-n8-N",
+    "method": "N",
+    "nbase": 8,
+    "order": 7,
+    "target": "reference"
+  },
+  "derivative": {
+    "exact_repeat": true,
+    "passed": false,
+    "rows": [
+      {
+        "absolute_error": 0.0008166067478936334,
+        "analytic": -3.572633109615424,
+        "direction": 0,
+        "finite_difference": -3.5718165028675304,
+        "objective": "recorded",
+        "passed": false,
+        "relative_error": 0.0002285727985042206,
+        "step": 1e-05
+      },
+      {
+        "absolute_error": 0.0008166067423425183,
+        "analytic": -3.572633109615424,
+        "direction": 0,
+        "finite_difference": -3.5718165028730815,
+        "objective": "independent",
+        "passed": false,
+        "relative_error": 0.00022857279695043242,
+        "step": 1e-05
+      },
+      {
+        "absolute_error": 0.00020414606572360938,
+        "analytic": -3.572633109615424,
+        "direction": 0,
+        "finite_difference": -3.5724289635497004,
+        "objective": "recorded",
+        "passed": true,
+        "relative_error": 5.714162620677965e-05,
+        "step": 5e-06
+      },
+      {
+        "absolute_error": 0.00020414606017249426,
+        "analytic": -3.572633109615424,
+        "direction": 0,
+        "finite_difference": -3.5724289635552515,
+        "objective": "independent",
+        "passed": true,
+        "relative_error": 5.714162465299146e-05,
+        "step": 5e-06
+      },
+      {
+        "absolute_error": 0.000669102458498827,
+        "analytic": -27.721644837329023,
+        "direction": 1,
+        "finite_difference": -27.722313939787522,
+        "objective": "recorded",
+        "passed": true,
+        "relative_error": 2.4135880574475427e-05,
+        "step": 1e-05
+      },
+      {
+        "absolute_error": 0.0006691024668263879,
+        "analytic": -27.721644837329023,
+        "direction": 1,
+        "finite_difference": -27.72231393979585,
+        "objective": "independent",
+        "passed": true,
+        "relative_error": 2.413588087486016e-05,
+        "step": 1e-05
+      },
+      {
+        "absolute_error": 0.0001672884348309367,
+        "analytic": -27.721644837329023,
+        "direction": 1,
+        "finite_difference": -27.721812125763854,
+        "objective": "recorded",
+        "passed": true,
+        "relative_error": 6.034541828362787e-06,
+        "step": 5e-06
+      },
+      {
+        "absolute_error": 0.0001672884348309367,
+        "analytic": -27.721644837329023,
+        "direction": 1,
+        "finite_difference": -27.721812125763854,
+        "objective": "independent",
+        "passed": true,
+        "relative_error": 6.034541828362787e-06,
+        "step": 5e-06
+      }
+    ]
+  },
+  "entry_pass": false,
+  "field_rows": [
+    {
+      "J": 0.46749472546865933,
+      "JN": 0.31980707268269565,
+      "JV": 0.2449608258157702,
+      "direct_errors": {
+        "boundary_A": 4.2073983877425687e-16,
+        "boundary_B": 3.8450252293936542e-16,
+        "inner_A": 4.0312973403676213e-16,
+        "inner_B": 6.353207931830067e-16,
+        "loop_A": 6.810190477040947e-16,
+        "loop_B": 9.581047878897603e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.00014768765278596365,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.14768765278596366
+      },
+      "mean_B": 1.1046809766133652,
+      "normal_max": 0.8167398283919882,
+      "normal_rms": 0.42933847247384754,
+      "raw_bn_max": 23.809465860730544,
+      "raw_bn_rms": 1.0208712362729022,
+      "vector_rms": 0.6999440346424423
+    },
+    {
+      "J": 0.4674563491336533,
+      "JN": 0.31976663301109315,
+      "JV": 0.24496117943429624,
+      "direct_errors": {
+        "boundary_A": 5.60986248610877e-16,
+        "boundary_B": 1.235247633863251e-15,
+        "inner_A": 5.758980956247972e-16,
+        "inner_B": 4.764917098582184e-16,
+        "loop_A": 6.810197182633494e-16,
+        "loop_B": 9.581053168933253e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.00014768971612256018,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.14768971612256018
+      },
+      "mean_B": 1.1046257653440592,
+      "normal_max": 0.8167398280997802,
+      "normal_rms": 0.4293292549728448,
+      "raw_bn_max": 23.80915685310873,
+      "raw_bn_rms": 1.0208066895410828,
+      "vector_rms": 0.6999445398519746
+    },
+    {
+      "J": 0.46752778546371077,
+      "JN": 0.3198421979225456,
+      "JV": 0.24496047228629153,
+      "direct_errors": {
+        "boundary_A": 5.609866611385747e-16,
+        "boundary_B": 1.1535583169743907e-15,
+        "inner_A": 5.759011441310404e-16,
+        "inner_B": 6.35319306384258e-16,
+        "loop_A": 5.10763782938418e-16,
+        "loop_B": 6.387361725902001e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.0001476855875411652,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.1476855875411652
+      },
+      "mean_B": 1.1047362370162228,
+      "normal_max": 0.8167398287201809,
+      "normal_rms": 0.4293484475889657,
+      "raw_bn_max": 23.80937810310449,
+      "raw_bn_rms": 1.0209272972007915,
+      "vector_rms": 0.699943529559766
+    },
+    {
+      "J": 0.4674761987798865,
+      "JN": 0.31978751408714107,
+      "JV": 0.24496100261390177,
+      "direct_errors": {
+        "boundary_A": 5.609863493610402e-16,
+        "boundary_B": 1.794305642299319e-15,
+        "inner_A": 4.607190863058435e-16,
+        "inner_B": 7.941519206479151e-16,
+        "loop_A": 6.810193829704244e-16,
+        "loop_B": 9.581050523916549e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.00014768868469274544,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.14768868469274543
+      },
+      "mean_B": 1.104653364602589,
+      "normal_max": 0.8167398282413861,
+      "normal_rms": 0.4293337688579922,
+      "raw_bn_max": 23.80936075101522,
+      "raw_bn_rms": 1.020840018838051,
+      "vector_rms": 0.6999442872313507
+    },
+    {
+      "J": 0.46751192306952205,
+      "JN": 0.3198253026673906,
+      "JV": 0.2449606490399005,
+      "direct_errors": {
+        "boundary_A": 7.012331945310457e-16,
+        "boundary_B": 1.0253626147582432e-15,
+        "inner_A": 4.607203057083448e-16,
+        "inner_B": 6.50502098743722e-16,
+        "loop_A": 1.0215280686965419e-15,
+        "loop_B": 9.581045233876422e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.00014768662040213145,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.14768662040213146
+      },
+      "mean_B": 1.1047086009079536,
+      "normal_max": 0.8167398285515867,
+      "normal_rms": 0.42934336549015917,
+      "raw_bn_max": 23.809471779250533,
+      "raw_bn_rms": 1.0209003322551313,
+      "vector_rms": 0.6999437820852479
+    },
+    {
+      "J": 0.46721285025403564,
+      "JN": 0.31952670242280645,
+      "JV": 0.2449598916003052,
+      "direct_errors": {
+        "boundary_A": 7.012540903479593e-16,
+        "boundary_B": 7.6901107730991e-16,
+        "inner_A": 4.607234803579451e-16,
+        "inner_B": 7.941546841666193e-16,
+        "loop_A": 5.10764050882761e-16,
+        "loop_B": 9.58104736052843e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.0001476861478312292,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.1476861478312292
+      },
+      "mean_B": 1.104769618247138,
+      "normal_max": 0.8167400361727032,
+      "normal_rms": 0.4293296648493026,
+      "raw_bn_max": 23.79105820027445,
+      "raw_bn_rms": 1.0204236465892194,
+      "vector_rms": 0.6999426999409383
+    },
+    {
+      "J": 0.46776729653283156,
+      "JN": 0.32007814065061974,
+      "JV": 0.2449617601191799,
+      "direct_errors": {
+        "boundary_A": 5.609696301414454e-16,
+        "boundary_B": 8.971655277724494e-16,
+        "inner_A": 4.607159115037294e-16,
+        "inner_B": 6.353178388832686e-16,
+        "loop_A": 5.107645207699934e-16,
+        "loop_B": 7.984206997767615e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.0001476891558822118,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.1476891558822118
+      },
+      "mean_B": 1.1045930013302863,
+      "normal_max": 0.8167396206600565,
+      "normal_rms": 0.42934845688764384,
+      "raw_bn_max": 23.8272374833385,
+      "raw_bn_rms": 1.021303789055465,
+      "vector_rms": 0.6999453694670462
+    },
+    {
+      "J": 0.46735495337969524,
+      "JN": 0.3196680528388025,
+      "JV": 0.24496035869704613,
+      "direct_errors": {
+        "boundary_A": 8.414922931664407e-16,
+        "boundary_B": 5.126720402830732e-15,
+        "inner_A": 3.45541191170829e-16,
+        "inner_B": 7.94152837846041e-16,
+        "loop_A": 6.810188910911194e-16,
+        "loop_B": 7.984206349755183e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.00014768690054089276,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.14768690054089276
+      },
+      "mean_B": 1.1047252144907183,
+      "normal_max": 0.8167399322762479,
+      "normal_rms": 0.4293339223142753,
+      "raw_bn_max": 23.800341791168723,
+      "raw_bn_rms": 1.0206493262548784,
+      "vector_rms": 0.6999433672763049
+    },
+    {
+      "J": 0.4676321715009529,
+      "JN": 0.3199437669345398,
+      "JV": 0.24496129295648048,
+      "direct_errors": {
+        "boundary_A": 9.817115718243866e-16,
+        "boundary_B": 5.3830142357054175e-15,
+        "inner_A": 4.607178038006676e-16,
+        "inner_B": 6.353193160518184e-16,
+        "loop_A": 5.107644032619554e-16,
+        "loop_B": 7.984206781752152e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.00014768840456641307,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.14768840456641308
+      },
+      "mean_B": 1.104636905325488,
+      "normal_max": 0.8167397245199243,
+      "normal_rms": 0.4293433168377781,
+      "raw_bn_max": 23.818430920569437,
+      "raw_bn_rms": 1.0210893870478608,
+      "vector_rms": 0.6999447020393547
+    },
+    {
+      "J": 0.46749472546865933,
+      "JN": 0.31980707268269565,
+      "JV": 0.2449608258157702,
+      "direct_errors": {
+        "boundary_A": 4.2073983877425687e-16,
+        "boundary_B": 3.8450252293936542e-16,
+        "inner_A": 4.0312973403676213e-16,
+        "inner_B": 6.353207931830067e-16,
+        "loop_A": 6.810190477040947e-16,
+        "loop_B": 9.581047878897603e-16
+      },
+      "geometry": {
+        "cc": 0.0,
+        "cs": 0.00014768765278596365,
+        "curvature": 0.0,
+        "length": 0.0,
+        "total": 0.14768765278596366
+      },
+      "mean_B": 1.1046809766133652,
+      "normal_max": 0.8167398283919882,
+      "normal_rms": 0.42933847247384754,
+      "raw_bn_max": 23.809465860730544,
+      "raw_bn_rms": 1.0208712362729022,
+      "vector_rms": 0.6999440346424423
+    }
+  ],
+  "flux": {
+    "checks": [
+      {
+        "angular_error": 6.626155586382327e-16,
+        "area": -0.03141592653589792,
+        "line": -0.031415926535897934,
+        "nrho": 16,
+        "ntheta": 256,
+        "relative_error": 2.2087185287941092e-16,
+        "stokes_error": 4.4174370575882185e-16
+      },
+      {
+        "angular_error": 2.2087185287941092e-16,
+        "area": -0.031415926535897934,
+        "line": -0.031415926535897934,
+        "nrho": 16,
+        "ntheta": 512,
+        "relative_error": 2.2087185287941092e-16,
+        "stokes_error": 0.0
+      },
+      {
+        "angular_error": 2.2087185287941092e-16,
+        "area": -0.031415926535897934,
+        "line": -0.031415926535897934,
+        "nrho": 16,
+        "ntheta": 1024,
+        "relative_error": 2.2087185287941092e-16,
+        "stokes_error": 0.0
+      },
+      {
+        "angular_error": 6.626155586382327e-16,
+        "area": -0.03141592653589792,
+        "line": -0.031415926535897934,
+        "nrho": 32,
+        "ntheta": 256,
+        "relative_error": 2.2087185287941092e-16,
+        "stokes_error": 4.4174370575882185e-16
+      },
+      {
+        "angular_error": 2.2087185287941092e-16,
+        "area": -0.031415926535897934,
+        "line": -0.031415926535897934,
+        "nrho": 32,
+        "ntheta": 512,
+        "relative_error": 2.2087185287941092e-16,
+        "stokes_error": 0.0
+      },
+      {
+        "angular_error": 0.0,
+        "area": -0.03141592653589794,
+        "line": -0.031415926535897934,
+        "nrho": 32,
+        "ntheta": 1024,
+        "relative_error": 4.4174370575882185e-16,
+        "stokes_error": 2.2087185287941092e-16
+      }
+    ],
+    "direct_errors": [
+      1.2774730505196803e-15,
+      2.553821428890355e-15,
+      1.1178536192278219e-15,
+      3.235688300949161e-15,
+      1.1178956612074598e-15,
+      3.065911011849929e-15,
+      1.2784422233684667e-15,
+      2.049910360121578e-15,
+      1.2784422233684667e-15,
+      2.049910360121578e-15,
+      1.2782807177730496e-15,
+      2.048735429074243e-15,
+      1.1186753441910763e-15,
+      3.246411542848436e-15,
+      1.1183147094028847e-15,
+      2.047367893763733e-15,
+      1.1181728236514694e-15,
+      2.7282540377885903e-15
+    ],
+    "passed": true
+  },
+  "full_bundles": 10,
+  "phase": "qualification",
+  "qualification": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/qualification-reference-n8-N/run.json",
+    "sha256": "b9d2fc92781d90fece480c89b4db327eaad48ab53f8d31c279cdee9deaeef170"
+  },
+  "qualification_pass": false,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "b5c5a4d11ca2db48572740da2607e93b986ea8d9",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "run": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/qualification-reference-n8-N/run.json",
+    "sha256": "b9d2fc92781d90fece480c89b4db327eaad48ab53f8d31c279cdee9deaeef170"
+  },
+  "search_pass": false,
+  "source": {
+    "code": [
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coils.py",
+        "sha256": "2298bb67c8d9db55700ca4d617e924db714387b046a1ebe7f81445e11d88e6a6"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coil_audit.py",
+        "sha256": "0f713e3a6c60a94bf98f6c1ca28936fb2ac358161b96c62fd5186d59fd0f4b3f"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coil_workflow.py",
+        "sha256": "851d73cee53f221b1657e5cc5f15ebfdfe6e873a2a54c1075cb321e71fb8c917"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/coupled_coil_inputs.py",
+        "sha256": "ec425dff7ef39031f9a8a74183120446c1b4a2f99f491385b7a37f067ca7026b"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_coupled_coil_pilot.py",
+        "sha256": "a367cbff5821eb604fc2f044821b9fddcf9a3534b1fdf0e5675cbc88ea61c426"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coupled_coil_pilot.py",
+        "sha256": "210b42b804ae7b6faa9309a2f487f3ee47a1f75bd111fa1ab0702c9b3564b01b"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_coupled_coil_pilot.py",
+        "sha256": "bf84a74442c07eccb164ea99423e31c90d864ae3adadaecd61b79a72f20cef24"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_coupled_coils.py",
+        "sha256": "8fa7c78eae8f1bef313ed4fbafed726c6d2fa87b0c6acc952709d44fdea17e98"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_coupled_coil_audit.py",
+        "sha256": "ddfe916a69494397f77e8ef390f0c462c4b052d68f359c4f6997b06a108214d3"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_coupled_coil_workflow.py",
+        "sha256": "da5b32d276fe2efcb96c48db47145c943f11c03b96e9991b3f5d36298501a9d1"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_coupled_coil_overall_audit.py",
+        "sha256": "b75116a045b78ccefa0eb38e1128c7cd688e81df4954c7f516f1348c6c559c2d"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_coupled_coil_validation.py",
+        "sha256": "601e6b77eade9b29847440055394d1deab7fa5dd1ac9f0499888c61551ddf999"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_coupled_coil_integration.py",
+        "sha256": "90c43afd4c82430eb9b6b1a7b6ed9fb40cb20deb553873cd14145a63483cc132"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_coupled_coil_runner.py",
+        "sha256": "d153f71e2271cc514a28806eac01c161e071d279e4ea26d88682fe90db652e8d"
+      }
+    ],
+    "endpoints": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-balanced-v1/endpoints.json",
+      "sha256": "8d56b74541d8e4c14c15bc61edd83985fa0b47354176e63e64be778b93bd1afb"
+    },
+    "matrix": [
+      {
+        "label": "reference-n6-N",
+        "method": "N",
+        "nbase": 6,
+        "order": 5,
+        "target": "reference"
+      },
+      {
+        "label": "reference-n6-V",
+        "method": "V",
+        "nbase": 6,
+        "order": 5,
+        "target": "reference"
+      },
+      {
+        "label": "reference-n8-N",
+        "method": "N",
+        "nbase": 8,
+        "order": 7,
+        "target": "reference"
+      },
+      {
+        "label": "reference-n8-V",
+        "method": "V",
+        "nbase": 8,
+        "order": 7,
+        "target": "reference"
+      },
+      {
+        "label": "selected-n6-N",
+        "method": "N",
+        "nbase": 6,
+        "order": 5,
+        "target": "selected"
+      },
+      {
+        "label": "selected-n6-V",
+        "method": "V",
+        "nbase": 6,
+        "order": 5,
+        "target": "selected"
+      },
+      {
+        "label": "selected-n8-N",
+        "method": "N",
+        "nbase": 8,
+        "order": 7,
+        "target": "selected"
+      },
+      {
+        "label": "selected-n8-V",
+        "method": "V",
+        "nbase": 8,
+        "order": 7,
+        "target": "selected"
+      }
+    ],
+    "native": [
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsoptpp.cpython-312-darwin.so",
+        "sha256": "af5823c4e5ec68490a8f7b4678a90266b054b87e18b52726cc34a6d61b6a22cc"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/field/biotsavart.py",
+        "sha256": "538a68bec673966b92a2af1c97d2604288812df0a7e0b02f7b98f3fcc8a19364"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/field/coil.py",
+        "sha256": "36b93c2aae050dfcfd84099697d0215e8993edb0f2796b0547cb43d0120fe356"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/geo/curve.py",
+        "sha256": "3191f3f9f5c7b7f1fae368a8e81bcf7eac8e61b4d4d257a245874a450553886a"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/geo/curvexyzfourier.py",
+        "sha256": "c3c9e0cdcc6420b408dd39dcd815fc8860a4c78dd3302491fa24cc6fdacdc10c"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/geo/curveobjectives.py",
+        "sha256": "f6395ccb7977b84b6fe8cf5df96ff6d7debe7fdbf9190b4cd7441a4bcdcae51d"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/geo/surfacerzfourier.py",
+        "sha256": "52a3b16e991d808cd3c0ab42904f7cdf9b5eae043d620ed224dffd0cde903ec3"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/objectives/utilities.py",
+        "sha256": "25fe4c83fdb4054eb1bc764f9ff500a84a968962435bf12c4c168f183df2b944"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/src/simsopt/_core/derivative.py",
+        "sha256": "a49392e34ff916cba3c3240e989480657d7e2bfeea2875bbd9118d3e5bac8bf5"
+      }
+    ],
+    "plasma": {
+      "audit": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2-audit.json",
+        "sha256": "0e856dbec74850ef4cd230242d37d23f75b9f73a98ebb0f9d0b36e23d4d98e6e"
+      },
+      "code": [
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/balanced_plasma.py",
+          "sha256": "047f88f892f6dd6a5d8966b8c61043063fc4d33ab58d9f5be37b12040253b5bd"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/balanced_plasma_inputs.py",
+          "sha256": "10063750815f5709a8a1e252b83edff7bb4a456ee72fefafef979fa834274e8d"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_balanced_plasma.py",
+          "sha256": "cc449dbc4f608739b29e10310a9e6257a7b2b2ed829df9883e78abf771ebe070"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_balanced_plasma.py",
+          "sha256": "b29786d2e9a01788dc46eb16701fd4d3c588470596a693d7e8e9c5b65dbb25cb"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_balanced_plasma.py",
+          "sha256": "35dc7f91f1d9d3e6d64d52f87a30bbfe61289c17b6e18bc8017f6de8e5065e9f"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_balanced_plasma.py",
+          "sha256": "0a90d35e9605c193a7a096bd541c5d10badaeca05e12a2a2ede1b66ad5a31c63"
+        }
+      ],
+      "holdout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2-holdout.json",
+        "sha256": "7872d34e52a768a5cb9758beb5a3cedb37b67941d807086e364edf1a0f4fc9bd"
+      },
+      "legacy": {
+        "analysis_lock": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/uv.lock",
+          "sha256": "366fda86aa2cc779a5acf95c9a6b4fffd7a6697f23a98b0a866849cb7e652be5"
+        },
+        "author_input": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+          "sha256": "a15d0134a362727976a6c22b59b12a7f3a6c740576ef5a28f5727721ed700209"
+        },
+        "code": [
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_inputs.py",
+            "sha256": "558886cf8c7858c2107c3cae1a337d4bcc1d5f37c575d2d5151fc7c95aab8ded"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_equilibrium_worker.py",
+            "sha256": "5a641795bbf00acf87b7ab25d51f93be557742c28e4b16ba2b466fe93cbc2d62"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_measurement.py",
+            "sha256": "1f6444b154e3177e3177b86f8186d8ef3aefac2c05cd9550f784202a9d190e1e"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_plasma_search.py",
+            "sha256": "f7f15767a1d455b52c778611b4471a1fda3650564dab34ed9c84c2919f82e46a"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_plasma_design.py",
+            "sha256": "2a2f747abf03ad1573d5071033d7739ad6bef679740d6ca1e00a0c7f6b208b71"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_plasma_design.py",
+            "sha256": "31bb143251272b6cd77627b4896d485f4375622b4b5fcc9140cdaaeade8146a0"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/plasma_design.py",
+            "sha256": "8bff3a9e048d98b84091dfed38bf6c2dbe02267e3c8e9b6a187286b0f6464453"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/plasma_action_audit.py",
+            "sha256": "5323fe60f07170fab4c09f51ac279781f4aad4951b5d721b7cac0bb03e294dc0"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/vmec_trace.py",
+            "sha256": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/bounce_action.py",
+            "sha256": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_resolution.py",
+            "sha256": "3d2c9448add0622b17d01c5527aacd0c5d5fd2f29e987a1375f41b2d7669825b"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_field_grid.py",
+            "sha256": "fc2827312a394468aaa07e4b23094479af8b82c15df8d5babf9d39fefe2a58e9"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clebsch_field.py",
+            "sha256": "392fd2470c95bbdb850bf278d95d74291c5dc28f5f827e09a20e5ef347022240"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/contour_topology.py",
+            "sha256": "421f7afe022514f989ad0caa3ee6af806bb2e32c7d4cdf663ae1111cc45ee9d0"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/scripts/evaluate_published_maximum_j.py",
+            "sha256": "4ffa7fe64eff91a9359b5f732649642e3c3db49b4827ee8eab4f570a00b27959"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/resource_guard.py",
+            "sha256": "85558ec13d446b822a7601c741767bc44435dd95d278ae752d829409143dc2db"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_qi_clebsch.py",
+            "sha256": "4a3de62a8b499694ebb9969ef8533df0a5c91b4a1d3af1116c00c365d1e05e42"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_plasma_design.py",
+            "sha256": "e700b2f647d19ceda9f943a494831af4b5831f0c315216eb46a3f4e27e2e3d0a"
+          }
+        ],
+        "lock": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/uv.lock",
+          "sha256": "34cf6b801280f26a66a517e1061169026edbde02494e0fc3b527fd4cb2be2af8"
+        },
+        "original": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2/original_input.json",
+          "sha256": "a11bbeb1c16b63c826333dec3f60aa226670d889422c949c0871f2a5357daf55"
+        },
+        "protocol": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/docs/qi/PLASMA_OPTIMIZATION_PROTOCOL.md",
+          "sha256": "022d2020d9662b6adf2ba6e835dc448295b6b260d1bd7ca472f71d47d7f42190"
+        },
+        "published_tracer": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/plots/plot_elephants/PltElephants.py",
+          "sha256": "0c193dd1921a5300c8e9defe8e76387e2ed447055e1d99e6f316eb77bb6dbf5f"
+        },
+        "reports": [
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1.json",
+            "sha256": "00a24ab7f16e186100ff0e2f95ba40bcd81662914dd051294a124fb013e0eb00"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1-evaluation.json",
+            "sha256": "a5adbe8f99fc24a006094f4c0941b8ed6a86162a9650ab90770c8e331afeed73"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1-evaluation-audit.json",
+            "sha256": "8b5c1ac0999996f3abbbac135ee60a9cf9a1596277cd5112abf95bf76842da83"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-producer-inventory-v1.json",
+            "sha256": "f0ade5988fe2bfeb3cfb758d23b97373b2439dd5d9e5d94ac4b8cd3f8805cc7b"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp2.json",
+            "sha256": "50809d6b3a53bd39a89da3b41be25b282740e3de36173d7d4ac3b53e5a5c8e86"
+          }
+        ],
+        "solver": {
+          "iteration_styles": [
+            "vmec_8_52",
+            "parvmec"
+          ],
+          "sources": [
+            {
+              "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/__init__.py",
+              "sha256": "877d12115ad4f2d4706919b7fc4cca2d9e98504b4a054c80ec81c48d4ccd433a"
+            },
+            {
+              "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/cpp/_vmecpp.cpython-312-darwin.so",
+              "sha256": "8f0acaf63d878e17e9f1b1779c9695a21e1a45b690639dbf76886f7a7799684f"
+            }
+          ],
+          "version": "0.7.3"
+        }
+      },
+      "protocol": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/docs/qi/PLASMA_BALANCED_PROTOCOL.md",
+        "sha256": "6457f49c487b5d1a84c0540e8fd81994aae03f93b1ffcbe086b4efde67760ac7"
+      },
+      "study": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2/summary.json",
+        "sha256": "f166cbcbfeafa009423cc1d5d078fc3f30b47b1934a2bfdc8688d12fe7f779e3"
+      }
+    },
+    "predecessor": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-balanced-v1/final-audit.json",
+      "sha256": "20c6ba5d0eac39e1b362dfbb1c61886e97640e0dae3f16f6bc5a59ea8cc7b6c1"
+    },
+    "protocol": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/COUPLED_COIL_PILOT_PROTOCOL.md",
+      "sha256": "dba6db0255fddd5e1f4b297712569908be279fa6d530471352e438288f87a231"
+    },
+    "target_archives": {
+      "reference": {
+        "fields": [
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.25-n64.npz",
+              "sha256": "be41c29cb3e84cf1ad46cf2f700a3aba73bc0f441c084a04407d20ff6e085e63"
+            },
+            "n": 64,
+            "s": 0.25
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.25-n128.npz",
+              "sha256": "62409aa9a787b650e70e1beffaade09b3e6a9cfd7751e23cc2b35b75aa20f4d2"
+            },
+            "n": 128,
+            "s": 0.25
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.5-n64.npz",
+              "sha256": "d5b1fe25c7914ad0d19e62b622330d98cc07f8f24b83d5f4fc3bda685bf0197f"
+            },
+            "n": 64,
+            "s": 0.5
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.5-n128.npz",
+              "sha256": "9f4372d89e15c3ac77a403d19f601e31b4ab70f05bba1b44f50332c10e3ec445"
+            },
+            "n": 128,
+            "s": 0.5
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.75-n64.npz",
+              "sha256": "5ba97772ee4f9a4f8f3eeecd2b9573f2c3a3d9ca0d5df2cdfe3068b42f80dd6d"
+            },
+            "n": 64,
+            "s": 0.75
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.75-n128.npz",
+              "sha256": "2eecf30ed1a0a00094f90c68835e853446d73e30464539ccf9974c1919347f6d"
+            },
+            "n": 128,
+            "s": 0.75
+          }
+        ],
+        "label": "reference-401",
+        "wout": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+          "sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e"
+        }
+      },
+      "selected": {
+        "fields": [
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.25-n64.npz",
+              "sha256": "35b967c43f8357c53fb5ecac1d299d6a5afcb984e718f38e605fc36dd350cc1f"
+            },
+            "n": 64,
+            "s": 0.25
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.25-n128.npz",
+              "sha256": "3a0a776b9993b6ad384e057dc9641acc5b5973bbeed71846cd74b6aceb9bb690"
+            },
+            "n": 128,
+            "s": 0.25
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.5-n64.npz",
+              "sha256": "a686d71d503878c6f4cb4797ca89baff9a8c08c53054b7851ca8a360acd23f97"
+            },
+            "n": 64,
+            "s": 0.5
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.5-n128.npz",
+              "sha256": "3df8c82f1b21f14afd1ce610cc42529709e103239290abacdb2c994d2d5c9aff"
+            },
+            "n": 128,
+            "s": 0.5
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.75-n64.npz",
+              "sha256": "7bff92edd03225effbf420b9e8af7fa6d2b4c7b6fd1cf2221dd2fab5bf2fb8ad"
+            },
+            "n": 64,
+            "s": 0.75
+          },
+          {
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.75-n128.npz",
+              "sha256": "fb4bbc6fa814236d59f9d58ba8298643aca2ead8441effa50708548457a108da"
+            },
+            "n": 128,
+            "s": 0.75
+          }
+        ],
+        "label": "selected-401",
+        "wout": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+          "sha256": "8cd6bebfc29963f80645acf25e1a3db194e4db381365b17a89b9844554f51b52"
+        }
+      }
+    },
+    "targets": {
+      "reference": {
+        "input": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2/reference-input-401.json",
+          "sha256": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f"
+        },
+        "wout": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+          "sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e"
+        }
+      },
+      "selected": {
+        "input": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-balanced-v1/selected-input-401.json",
+          "sha256": "6bec3483eaced499bafe7ee94b16aa960d219ec1fec86cc0690012f8ebdb033e"
+        },
+        "wout": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+          "sha256": "8cd6bebfc29963f80645acf25e1a3db194e4db381365b17a89b9844554f51b52"
+        }
+      }
+    },
+    "validation": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-balanced-v1/validation.json",
+      "sha256": "84eff962b74ca5124147e12b4e30927a29b44f31c849333b0ae17c79a382d50c"
+    },
+    "versions": {
+      "jax": "0.11.1",
+      "jaxlib": "0.11.1",
+      "netCDF4": "1.7.4",
+      "numpy": "2.5.2",
+      "scipy": "1.18.1",
+      "simsopt": "0.1.dev5668+ga79006b0b"
+    }
+  },
+  "status": "completed",
+  "step4_pass": false,
+  "transfer_pass": false,
+  "validation_complete": false
+}

@@ -1,5 +1,35 @@
 # Validation log
 
+## 2026-09-14 — Complete all eight real paired-coil start qualifications
+
+- Atb5c5a4d no other project solver/test running; serial native qualification
+  and independent audit for all8 cells. Exactly80 full bundles, all exact seed
+  repeats, all24 line/48 signed fan grids; no missing calls/execution failures.
+  Source/Cartesian targets, B/A64-point checks, normalized flux and independent
+  geometry arithmetic all pass. Peak directrelativeerror1.1592e-13, signed flux
+  error6.6262e-16. Work and raw NPZ/JSON/checkpoints retained in the eight run dirs.
+- Six qualification passes. Both reference-n8 methods fail only the10µm sine FD
+  gate: relative2.28573e-4(N)/2.28686e-4(V), fixedlimit2e-4. Independent values
+  reproduce it; half-step error roughlyfourfoldsmaller, compatible with truncation.
+  Original negative gate retained. No search or extra probe for these two cells.
+- Initial normalRMS.429–.482 and sampled plasma clearance2.372–6.074mm are far
+  outside entry conditions. No physical start admission, full geometry certificate,
+  design gain or general architecture ranking. The admitted six searches are
+  the next phase; reference-n8 paired comparison remains unavailable.
+- Eight independent audit reports saved for commit, binding raw local artifacts.
+  A follow-up read-only agent/root reconstruction from saved n8 sections proves
+  six seed-circle crossing witnesses per target by continuity (exact circle
+  coefficients, plane residual≤1.11e-16m, robust inside/outside margins). Merely
+  enlarging these fixed-center circles to enclose the saved surface with80mm
+  clearance would exceed3.5m length. No extra field/gradient calls; not formal
+  interval certification. Target-adapted clear starts are a later-study priority,
+  not a change to this pilot or proof of target impossibility.
+  Detail, F-085 and all root overviews updated; no numeric/protocol edits.
+  Documentation/diff checks pass; nine documentation tests pass in0.39s.
+  Previous full959-test pass
+  remains applicable to unchanged code. Disk minimum during native phases
+  9818165248Bytes, above reserve. Commit this phase before any optimization.
+
 ## 2026-09-14 — Qualify additive coil pilot implementation before real target work
 
 - User explicitly requested autonomous continuation through full step4. Three
