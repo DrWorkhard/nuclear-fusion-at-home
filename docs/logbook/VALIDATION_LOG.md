@@ -1,5 +1,27 @@
 # Validation log
 
+## 2026-09-14 — Qualify additive typed recovery before reopening saved fine audits
+
+- At39951e3 all native jobs finished; process check finds no running experiment.
+  Added a separate output adapter, leaving every source-bound numerical file and
+  raw run unchanged. Restricted to the six failure-manifest hashes, committed
+  adapter/test sources and fresh outputs. No new numerical target evaluation.
+- Exact finite scalar conversion is followed by the original admission function
+  on normalized data; any changed gate/overall decision fails closed. Only fully
+  completed negative validation with false transfer/step4 flags is eligible.
+- Independent read-only reviewer reproduced the real synthetic NumPy-is-False
+  false negative and adapter rejection of changed admission. Review-driven
+  hardening rejects contradictory flags and nonconvertible extended scalars;
+  new tests exercise the real aggregator, not just a mock. Initial16 output
+  controls and218 combined coil/docs controls passed before these additions.
+- This adapter does not repair or qualify general positive legacy geometry
+  admission. The original six write failures remain recorded. Detail and four
+  overview summaries checked; corrected a stale766-test bullet in repository
+  README to the already recorded959-test full pass. Overall assessment unchanged.
+  Final225 coil/docs tests pass in16.40s (23 recovery controls); Ruff passes.
+  Documentation structure and unstaged/staged whitespace checked before the
+  prerequisite local commit and real output recovery.
+
 ## 2026-09-14 — Preserve completed fine diagnostics and failed audit serialization
 
 - Ate98339a all six native no-feedback validations complete:42 field states,

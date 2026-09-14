@@ -161,7 +161,22 @@ Der Quellreview identifiziert zusätzlich ein mögliches Falsch-Negativ: Die Pr�
 `is False` erkennt einen NumPy-Falsewert nicht als Python-False. Ein sonst gültiger
 Geometriebericht könnte deshalb fälschlich abgelehnt werden. Das muss bei der
 Ausgabekorrektur explizit gegengeprüft werden; kein bloßer Schreibfehler-Pass.
-Nächster Schritt: Fehlversuch committen, dann einen additiven, streng typisierten
-Ausgabeadapter samt Negativtests erstellen. Alte Kerne, Kriterien und Evidenz
-bleiben unverändert; ein Adapter darf keine veränderte Klassifikation stillschweigend
-übernehmen. Keine neuen Such-/Gradientenbundles oder Gleichgewichtssolves nötig.
+Der Fehlversuch ist bei`39951e3` committed. Ein neuer, getrennter Adapter
+`scripts/serialize_coupled_coil_audit.py` führt den unveränderten Gesamtauditor
+auf genau den sechs gebundenen Altberichten erneut aus. Er normalisiert skalare
+NumPy-Typen verlustfrei, protokolliert jede Konvertierung und berechnet die
+Eintrittsgates nochmals auf normalen Python-Typen. Jede Klassifikationsänderung,
+nichtfinite/unsupported Ausgabe, unvollständige Prüfung oder positive
+Eintritts-/Transfer-/Schritt4-Behauptung führt zur Ablehnung. Neue Ausgabepfade,
+gebundener Fehlbericht und committed Adapter/Testquellen sind Pflicht.
+
+Ein unabhängiger lesender Agentenreview bestätigt mit dem tatsächlichen Gate
+den synthetischen Falsch-Negativ-Fall; die Recovery verweigert dessen Umdeutung.
+Mit einer zusätzlichen echten Abstandsverletzung bleibt die Ablehnung bestehen.
+Die Reviewhinweise führten vor Anwendung zu strikten Status-/Scopeflags und
+sauberer Ablehnung von NumPy-Skalaren ohne verlustfreie Python-Konvertierung.
+Alte Kerne, Kriterien und Evidenz bleiben unverändert. Diese Ausgabe-Recovery
+qualifiziert insbesondere keinen allgemein reparierten positiven Geometriepfad.
+Nächster Schritt: Adapter/Testqualifikation committen, dann alle sechs
+Originalaudits mit frischen Ausgabedateien wiederholen; keine neuen Such-/
+Gradientenbundles oder Gleichgewichtssolves.
