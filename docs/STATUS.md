@@ -1,9 +1,16 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 14. September 2026, nach bestandener Schritt3-Vakuumabnahme.
+Stand: 14. September 2026, Schritt4 nach Methodenreview begonnen.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
+
+**Aktiv ist jetzt Schritt4 nach ausdrücklichem Nutzerauftrag.**
+[Drei unabhängige Agentenreviews](optimization/COUPLED_DESIGN_OPTIONS.md) empfehlen
+gepaarte reale Spulenfits für Referenz und neuen Plasmaentwurf, danach begrenzte
+gemeinsame Iterationen. Alte LPQA-Export-/Normierungsannahmen sind nicht übertragbar.
+Noch keine neue Schritt4-Rechnung oder Zulassung; Druck, physischer Transfer und
+Robustheit bleiben ausdrücklich notwendige separate Teilpakete.
 
 **Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der
 [neue nfp2-Plasmaentwurf](qi/PLASMA_BALANCED_RESULTS.md) verändert vier benannte
@@ -106,7 +113,8 @@ Bedienung und Grenzen stehen im [Abschlussbericht](validation/FOUNDATION_ACCEPTA
 Damit endete die Basisarbeit. Die danach ausdrücklich beauftragte Schritt3-Arbeit
 ist jetzt ebenfalls getrennt abgenommen. Eingabe, Ergebnisse, Grenzen und
 Wiederholungsbefehle stehen im [Plasmaabschluss](qi/PLASMA_BALANCED_RESULTS.md).
-Übergabe; keine automatische Ausweitung auf Schritte4/5.
+Die damalige Übergabe ist erfolgt; Schritt4 ist danach ausdrücklich beauftragt,
+Schritt5 bleibt getrennt.
 
 ## Später zu qualifizieren — keine Voraussetzungen für Schritt1/2
 

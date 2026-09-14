@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 14. September 2026, nach bestandener Schritt3-Vakuumabnahme.
+Stand: 14. September 2026, Schritt4 nach neuem Nutzerauftrag begonnen.
 [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 **Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
@@ -8,6 +8,19 @@ Stand: 14. September 2026, nach bestandener Schritt3-Vakuumabnahme.
 `foundation-acceptance-v2` bei1aa28b6: alle zugeordneten Gates bestanden.
 Diese Abgrenzung bleibt verbindlich. Der Nutzer hat danach ausdrücklich
 Schritt3 beauftragt; die bisherige automatische Stoppregel ist erfüllt.
+
+## Aktiv: Schritt4 — gekoppelte Plasma-/Spulenentwicklung
+
+Der Nutzer hat Schritt4 einschließlich unabhängiger Agentenreviews und Iteration
+ausdrücklich beauftragt. Die [Optionen und drei Reviews](optimization/COUPLED_DESIGN_OPTIONS.md)
+priorisieren gepaarte tatsächliche Spulenrealisierung vor kleinen gemeinsamen
+Rand-/Spulenschritten. Alternative reduzierte Richtungen und direkte Flächen
+bleiben im Methodenportfolio. Vor jeder neuen Studie Protokoll und Budget fixieren.
+
+Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemeinsame
+Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
+Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
+oder SoTA-Anspruch. Aktuell Methodenreview abgeschlossen, noch keine neue Rechnung.
 
 ## Abgeschlossen: Schritt3 — eigene QI-nahe Plasmaoberfläche
 
@@ -27,8 +40,8 @@ beiden Domänen waren bei der Konstruktion bekannt; feinere unabhängige Abnahme
 belegt keine blinde Generalisierung. Globale QI-/Orbit-/Druck-/Stabilitäts-/
 Kraftwerksqualifikation bleibt offen, SoTA weiterhin Schritt5.
 
-**Jetzt Übergabe der abgeschlossenen Schritte1/2/3 in ihrem jeweiligen Umfang.**
-Keine weitere Suche und kein automatischer Schritt4/5. Die erhaltene Form ist
+**Schritte1/2/3 wurden in ihrem jeweiligen Umfang übergeben.**
+Die anschließende ausdrückliche Beauftragung aktiviert nun Schritt4. Die erhaltene Form ist
 ein Ausgangspunkt für später separat beauftragte und registrierte Arbeit, nicht
 bereits ein spulenrealisierter oder umfassend physikalisch qualifizierter Entwurf.
 
@@ -93,7 +106,7 @@ physikalische Teilqualifikation; vorhandene negative Evidenz wird nicht umetiket
 | --- | --- |
 | Zulässige starke klassische Lösung, Mehrstarts, faire Methodenvergleiche | Spätere Leistungsbaseline; aktueller feinster Flux8,129882e-8 bleibt über1e-8 |
 | Eigene QI-Plasmaoberflächen | Schritt3 im registrierten nfp2-Vakuumumfang abgeschlossen; breitere Domänen und weitere Fälle separat zu qualifizieren |
-| Gemeinsame Plasma-/Spulenoptimierung | Langfristiger Schritt4; getrennte Daten-/Physikvoraussetzungen |
+| Gemeinsame Plasma-/Spulenoptimierung | Schritt4 aktiv; Optionen unabhängig geprüft, Realisierung/Transfer vor gemeinsamer Iteration |
 | Globale QI-/maximum-J-Messung, endliche Teilchenbahnen | Offene Qualifikationen, nicht für den begrenzten LPQA-Filamentzyklus freigegeben |
 | Endliche Wicklungspakete, vollständige Netze, Materialien/Lagerung/Mechanik | Vor Ingenieuraussagen zu qualifizieren; alte lineare Verformungszahlen nicht zulässig |
 | SoTA-/Paretofortschritt, SQuID-C-Reproduktion | Langfristiger Schritt5 beziehungsweise gesonderte Zielbaseline; keine heutige Behauptung |

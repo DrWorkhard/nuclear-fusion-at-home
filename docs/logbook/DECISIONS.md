@@ -1,5 +1,19 @@
 # Decision log
 
+## D-015 — Explicit step4 authorization; independent review before coupled studies
+
+**Status:** accepted; new user request after step3 handoff
+**Date:** 2026-09-14
+
+Start step4 with an independently reviewed methods portfolio and bounded actual
+experiments. Three read-only agents separately reviewed physics, methods/literature
+and local implementation. Prioritize paired reference/new-plasma coil realization,
+then small genuine coupled updates. Do not reduce full step4 to vacuum normal-field
+fitting: realized-field physics, pressure, finite geometry and robustness remain
+explicit subpackages. New generic source-bound adapters must preserve exact target
+modes/flux; old LPQA assumptions are not transferable. All old research and step3
+atd429783 retained. [Options/reviews](../optimization/COUPLED_DESIGN_OPTIONS.md).
+
 ## D-014 — Close step3 only in its preregistered vacuum domain and hand off
 
 **Status:** accepted implementation of D-013 and its fixed completion rule

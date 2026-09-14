@@ -28,7 +28,11 @@ The first design remains [rejected and preserved](docs/qi/PLASMA_OPTIMIZATION_RE
 This is a bounded numerical design improvement, not measured confinement, global
 QI, a feasible coil design, SoTA or power-plant performance. Both domains informed
 the follow-up construction; finer independent admission is not blind generalization.
-Handoff now; steps4/5 are not started automatically.
+After handoff, the user explicitly authorized step4. Its
+[options and three independent agent reviews](docs/optimization/COUPLED_DESIGN_OPTIONS.md)
+prioritize paired actual-coil realization before coupled plasma/coil iterations.
+No step4 result yet; pressure, realized-field physics, finite geometry and
+robustness remain required subpackages. No automatic step5 or SoTA claim.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
   8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.

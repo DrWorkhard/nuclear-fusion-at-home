@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-14 — Independent options review and explicit step4 activation
+
+- Clean Git atd429783; read startup overviews, relevant optimization/QI/engineering
+  protocols and recent journal. Read-only escalated process check found no active
+  project experiment; around9.1GiB free. No new numeric study/install/build.
+- Three user-requested independent agents reviewed physics, literature/methods
+  and local capabilities. Main agent checked primary papers and local APIs.
+  Reuse traps: old free-boundary mode/flux truncation, fixed-boundary metadata gate,
+  native low-value Flux-VJP clipping, and parameter-space rather than generally
+  arclength GP correlation. These are new integration cautions, no old gate reversal.
+- Added options/review record, D-015 and durable new authorization. Updated both
+  READMEs/status/plan/index: step4 active, not passed; vacuum fit not full scope.
+  Next preregister paired real-coil comparison and qualify additive field/flux
+  mapping before optimization. Nine documentation tests pass in0.36s;
+  documentation-structure and diff checks pass before the scoped local commit.
+
 ## 2026-09-14 — Complete independent physical admission and close bounded step3
 
 - Atf285fbd final diagnostics completed all16 trace grids/560 s-q evaluations,

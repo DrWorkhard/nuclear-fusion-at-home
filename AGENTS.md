@@ -54,6 +54,20 @@ cleanup. Before starting the next step or handing off:
 
 ## Research discipline and autonomy
 
+### Step4 explicitly authorized, including independent agents (2026-09-14)
+
+After step3 handoff the user explicitly requests step4, an options assessment,
+independent agent review and bounded iteration over promising methods. This new
+request authorizes that work and scoped parallel agents; it does not authorize
+step5 claims, external writes or unbounded builds. Follow
+`docs/optimization/COUPLED_DESIGN_OPTIONS.md` and each newly registered protocol.
+Start with paired actual-coil realization before coupled updates. A vacuum coil
+fit is not full step4: pressure, realized-field physics, finite geometry and
+robustness remain explicit subpackages. Preserve all step1/2/3 evidence atd429783.
+Use additive generic named coil/target adapters; old LPQA exporters truncate the
+new target and must not be relabelled. Independent agent review is not external
+peer review. Never change scientific thresholds after outcomes are observed.
+
 ### Step3 completed in its registered vacuum scope (2026-09-14)
 
 The user's subsequent request authorizes step3: actual boundary/equilibrium

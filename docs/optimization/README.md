@@ -13,6 +13,8 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 
 ## Dokumente
 
+- [Schritt4: Optionen und unabhängige Reviews](COUPLED_DESIGN_OPTIONS.md) — Vergleich von Filament-Co-Design, reduzierten Richtungen, REGCOIL und direkten Flächen; drei Agentenreviews, Integrationsfallen und getrennte Teilpakete für Realisierung, gemeinsame Iteration, Druck und Robustheit.
+
 - [GN vom aktuellen Stromminimum: Protokoll](CURRENT_START_GN_PROTOCOL.md) — Separater klassischer Lauf vom fixierten besten Zustand,16-Bundle-Startreplay mit nativer Gramprüfung, zweimal2048 Versuche und vollständige unabhängige Abnahmen.
 - [GN vom aktuellen Stromminimum: abgeschlossen](CURRENT_START_GN_RESULTS.md) — Zwei2048-Bundle-Pfade exakt wiederholt/auditiert, alle vier Abnahmephasen geschlossen. Feinster Flux8,129882e-8, Gewinn0,754%, weiterhin abgelehnt; Geometrie/nativ bestehen, keine Pareto-Dominanz.
 
