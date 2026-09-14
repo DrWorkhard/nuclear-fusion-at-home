@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-14 — Qualify separate two-domain implementation before new measurements
+
+- Added immutable archive/propose/endpoint phases, explicit diagnostic adapter and
+  separate source/selection/finite-difference/LP-certificate/physical auditor. Old
+  numeric kernels, data and environments remain unchanged. No new physical work yet.
+-19 new controls /46 combined plasma tests pass in0.73s. Full suite766 passes with
+  144 known warnings in54.05s. First control run found tuple-versus-JSON-list LP
+  bounds, fixed before execution. False primal/dual certificates, incompatible
+  domain improvements, local guard violations and excess conditional work rejected.
+- LP linear model has independent stationarity/duality/complementarity checks;
+  real solver and broad action gates still mandatory. Thread-option forwarding
+  warning is retained in model metadata. No derivative or physics admitted by LP.
+- Added runbook/index; checked all root summaries and updated current software
+  count, kept first design rejection/step3-open status. Ruff/docs/diff pass.
+  Commit additive implementation before archive-only Phase A; no additional cold
+  solve unless the preregistered phase condition is actually met.
+
 ## 2026-09-14 — Preregister bounded two-domain follow-up after preserved rejection
 
 - First negative study fully committed at43be667. No remaining experiments from
