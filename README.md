@@ -24,6 +24,9 @@ is active. Its first boundary improves training action variance by14.35% but is
 independently rejected:15.53% worse on the expanded domain and20 local action
 violations. All source/field/refinement checks pass; step3 is not complete.
 See the [plasma results and runbook](docs/qi/PLASMA_OPTIMIZATION_RESULTS.md).
+The [bounded two-domain follow-up](docs/qi/PLASMA_BALANCED_RESULTS.md) now selects
+a different candidate with4.85% narrow/11.16% broad construction gains and passing
+local guards. Proposal/selection audits pass; independent finer admission is pending.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
   8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.

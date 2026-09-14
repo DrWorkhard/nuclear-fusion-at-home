@@ -26,6 +26,9 @@ Jetzt [separat registrierter Folgeversuch](qi/PLASMA_BALANCED_PROTOCOL.md): beid
 Domänen und lokale Wirkungswächter bereits in der Konstruktion, gegebenenfalls
 ein kleines gemeinsames Vorschlagsmodell. Maximal13 neue Solves;
 [erhaltener negativer Befund](qi/PLASMA_OPTIMIZATION_RESULTS.md).
+Archivprüfung, acht Differenzen und drei reale Probes sind auditiert. Ein
+gemeinsamer Kandidat besteht die Konstruktionsgrenzen; jetzt zwei Kaltendpunkte
+und vollständige feinere unabhängige Abnahme, ohne Auswahlfeedback.
 Schritt3 ist noch offen; nach bestandenem Abschluss Übergabe, kein automatischer Schritt4.
 
 ## Abgeschlossene Etappe: Basis und prinzipielle Iterationsfähigkeit

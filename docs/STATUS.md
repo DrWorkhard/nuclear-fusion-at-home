@@ -14,6 +14,12 @@ erweiterter S-Wert und20 lokale Wirkungsverletzungen. Quellen, Wiederholung,
 Felder, Konturen, Tracer und alle Verfeinerungen bestehen. Der Entwurf wird
 abgelehnt; Schritt3 bleibt offen. Schritt1/2 bleiben abgeschlossen.
 
+Der [separat registrierte Folgeversuch](qi/PLASMA_BALANCED_RESULTS.md) hat jetzt
+einen anderen Kandidaten ausgewählt:4,85% enger und11,16% breiter Vorteil auf
+dem Konstruktionsraster, lokale Wirkungsgrenzen dort eingehalten. Quellen,
+Vorschlagsmodell und Auswahl separat auditiert; Kaltendpunkte und feine Abnahme
+stehen noch aus. Keine vorgezogene Zulassung oder Umdeutung des ersten Fehlschlags.
+
 **Schritt1 und2 sind als begrenzte Basis- und Iterationsfähigkeit abgeschlossen.**
 Die [konsolidierte Abnahme](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) besteht:
 720 Tests mit144 bekannten Warnungen, sechs strikte W7-X-/Goodman-Datenregressionen

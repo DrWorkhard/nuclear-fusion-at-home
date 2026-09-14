@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-14 — Independently qualify actual two-domain proposal selection
+
+- Phase B atf700b57 completed all eight10µm central differences and three fixed
+  scaled real proposals,11 new cold solves, no missing domains/solver failures.
+  All three pass construction; selected row8/Probe0 atx=(-1e-4,5.12303771890279e-5,
+  -1e-4,1e-4)m. Actual narrow/broad gains4.85063%/11.15680%; max mean change1.01866%.
+- Independent archive+proposal audit passes native inputs, actual coordinates,
+  Gaussian actions/statistics, central-difference matrix, LP primal/dual certificate,
+  all local selection guards and stable minimum. Largest certificate residual
+  1.0409e-17. Model predicts9.4484% common gain, not claimed as actual narrow gain.
+- Detail/index/all four root summaries updated to actual provisional common
+  candidate versus pending final admission.46 controls/docs/diff pass again.
+  Commit immutable phase/audit before exactly two endpoint solves and complete
+  fine diagnostics; original failed design and all source-bound code preserved.
+
 ## 2026-09-14 — Complete and audit broad archive phase without new equilibria
 
 - At8693339 all16 existing201 states evaluated on all35 broad construction cells,

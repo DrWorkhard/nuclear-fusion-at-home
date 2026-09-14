@@ -1,7 +1,7 @@
 # Zwei Wirkungsdomänen: Arbeitsstand und Bedienung
 
 14. September2026. [Registriertes Folgeprotokoll](PLASMA_BALANCED_PROTOCOL.md).
-**Phase A abgeschlossen, noch kein zulässiger Entwurf oder Schritt3-Abschluss.** Die erste Form bleibt
+**Gemeinsamer Kandidat ausgewählt, feinere Abnahme noch offen.** Die erste Form bleibt
 [unabhängig abgelehnt](PLASMA_OPTIMIZATION_RESULTS.md). Jetzt beide Domänen und
 lokale Wirkungsgrenzen schon bei der Konstruktion berücksichtigen.
 
@@ -48,6 +48,35 @@ bleibt unverändert: Schritt3 offen. Damit ist die vorab festgelegte Bedingung
 für Phase B erfüllt: acht kleine neue Differenzsolves, anschließend höchstens
 drei reale gemeinsame Vorschläge, ohne weitere Suche in diesem Experiment.
 
+## Phase B: gemeinsamer tatsächlicher Vorteil auf dem Konstruktionsraster
+
+Bei f700b57 acht vollständige +/-10µm-Differenzsolves und alle drei tatsächlichen
+Vorschläge abgeschlossen. Keine fehlenden Domänenzellen oder Solverfehler. Alle
+drei Probes erfüllen die festgelegten Konstruktionsschirme; ausgewählt wird
+Probe0/Index8 als kleinster breiter S-Wert. Die Delta-Koeffizienten in Metern:
+
+| rbc(1,1) | zbs(1,1) | rbc(2,0) | zbs(2,0) |
+| ---: | ---: | ---: | ---: |
+|-1e-4|+5,12303771890279e-5|-1e-4|+1e-4|
+
+Enge Zielgröße1,0986179404311691e-5:4,85063% besser als die Referenz. Breite
+Konstruktionszielgröße2,1138442410077716e-4:11,15680% besser. Größte Änderung
+mittlerer A1,01866%, unter2%; alle Enveloppe-/Geometriegrenzen bestehen dort.
+Das sind echte neue Gleichgewichtsrechnungen, noch keine feinere Endabnahme.
+
+Separater Phasenaudit bestätigt sämtliche Quellen, tatsächlichen Differenz-
+und Probezustände, Aktionsquadratur, Gradienten-/Matrixarithmetik, alle
+Konstruktionsklassifikationen und die Auswahl. Primal-/Dual-/Komplementaritäts-
+fehler höchstens1,0409e-17 versus1e-8. Modellprognose für gemeinsamen relativen
+Abstieg9,4484%; die kleinere tatsächliche enge Verbesserung zeigt ausdrücklich
+die Grenze des lokalen Modells. Es wird nicht als qualifizierte exakte Ableitung
+oder physisches Optimum bezeichnet.
+
+Berichte `propose.json` und `propose-audit.json` im Evidenzordner.11 neue Solves
+verbraucht, genau zwei für Kaltwiederholung und401er Kandidat verbleiben. Auswahl
+ist eingefroren.46 gezielte Tests, Dokument-/Diffprüfung bestehen vor diesem
+Zwischencommit erneut; keine numerischen Dateien während des Experiments verändert.
+
 ## Phasen ausführen und getrennt bewerten
 
 Der Umgebungspräfix aus dem [ersten Runbook](PLASMA_OPTIMIZATION_RESULTS.md)
@@ -78,5 +107,5 @@ Ein Phasenaudit-Pass ist ausdrücklich kein Schritt3-Pass. Nur das positive fina
 Ergebnis mit allen unveränderten physischen Gates erlaubt den registrierten
 Vakuumabschluss. SQuID-C, globale QI-/Orbitphysik und SoTA bleiben getrennt.
 
-Nächster Schritt: abgeschlossene Phase A samt Audit committen, dann bedingte
-Phase B ausführen. Noch keine neuen Gleichgewichtssolves in diesem Folgeversuch.
+Nächster Schritt: abgeschlossene Phase B samt Audit committen, dann genau zwei
+Kaltendpunkte und alle feineren unabhängigen Abnahmen. Schritt3 noch offen.
