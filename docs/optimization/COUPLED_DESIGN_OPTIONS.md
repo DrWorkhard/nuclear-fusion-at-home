@@ -104,4 +104,3 @@ Fourierabbildung und unabhängiges Biot–Savart zu qualifizieren.
 Keine alten Protokolle, Kerne, Quellen oder Fehlschläge überschreiben. Kein
 Push, Autorenkontakt oder Ressourcenaufbau ohne belegten Bedarf. Aktueller
 Platz vor Einstieg rund9,1GiB; mindestens3GiB vor/2GiB während Rechnungen erhalten.
-

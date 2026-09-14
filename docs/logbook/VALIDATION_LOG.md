@@ -14,7 +14,10 @@
   READMEs/status/plan/index: step4 active, not passed; vacuum fit not full scope.
   Next preregister paired real-coil comparison and qualify additive field/flux
   mapping before optimization. Nine documentation tests pass in0.36s;
-  documentation-structure and diff checks pass before the scoped local commit.
+  documentation-structure and tracked diff checks pass. The staged new options
+  file then exposed an extra blank EOF line; a command group masked that check's
+  nonzero status before a1d6675. Whitespace corrected in a separate follow-up,
+  with each check exit inspected individually; no scientific content affected.
 
 ## 2026-09-14 — Complete independent physical admission and close bounded step3
 
