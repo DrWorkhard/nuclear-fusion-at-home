@@ -14,7 +14,10 @@ Neue Konstruktion und unabhängige Abnahme bestehen959 Tests. Von acht realen
 die zwei Referenzfälle mit acht Grundspulen verfehlen eine Ableitungsgrenze und
 werden nicht optimiert. Alle Startformen liegen noch weit außerhalb der physischen
 Eintrittsgrenzen; gespeicherte Querschnitte belegen zudem Schnitte mehrerer
-Achtspulen-Startkreise mit dem Plasma. Keine neue Zulassung. Druck, physischer Transfer und
+Achtspulen-Startkreise mit dem Plasma. Die sechs erlaubten Suchen sind jetzt
+unabhängig auditiert, jeweils am128-Aufrufbudget; Feldfehler sinken, aber alle
+Kandidaten verfehlen bereits Konstruktionsschirme. Feine Abnahme folgt, keine neue
+Zulassung. Druck, physischer Transfer und
 Robustheit bleiben ausdrücklich notwendige separate Teilpakete.
 
 **Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der

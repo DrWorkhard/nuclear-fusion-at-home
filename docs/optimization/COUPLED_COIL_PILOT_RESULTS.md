@@ -5,7 +5,8 @@
 
 Alle acht realen Startqualifikationen sind bei`b5c5a4d` ausgeführt und unabhängig
 auditiert: sechs bestehen, beide Referenzstarts mit acht Grundspulen nicht.
-Noch keine Suchrechnung oder zulässige Form. Die registrierte Matrix vergleicht
+Die sechs freigegebenen Suchläufe sind bei`3e803c3` abgeschlossen und auditiert;
+ihre feine physische Abnahme steht noch aus. Keine zulässige Form. Die Matrix vergleicht
 Referenz/neue Plasmaform, zwei Spulenklassen und zwei Zielfunktionen.
 
 Der physikalische Protokollreview hat vor Ausführung eine wichtige Lücke gefunden:
@@ -108,7 +109,36 @@ verschiedener Zielfunktionen kein direkter Methodenvergleich.
 
 Evidenz: acht`evidence/coupled-coil-pilot-v1/qualification-*-audit.json`, darin
 gebundene Rohdaten unter`artifacts/coupled-coil-pilot-v1/qualification-*`.
-Nächster Schritt: diesen Befund committen, dann genau die sechs freigegebenen
-Suchzellen und deren unabhängige feine Prüfungen ausführen. Der achtspulige
+Die sechs freigegebenen Suchzellen sind inzwischen ausgeführt, siehe unten. Der achtspulige
 Referenzvergleich bleibt in diesem Pilot unvollständig; keine allgemeine Rangfolge.
 Numerische Quellen des abgeschlossenen Schritt3 bleiben unverändert.
+
+## Begrenzte Suchphase: alle sechs am festen Budget beendet
+
+Genau768 Suchversuche, alle vollständig; sechs zusätzliche frische Kandidaten-
+Replays exakt. Alle unabhängigen Suchaudits bestehen Quellen, alle gespeicherten
+Zielfunktionen, Auswahl, Zeit-/Aufrufzählung und Wiederholung. Auswahl jeweils
+Aufruf127, außer neuer Entwurf/n6/N mit126 (nullbasiert). Keine Auswahl aus
+Qualifikationsprobes oder ungespeicherten Zuständen. Suchzeit16,07–27,27s pro Zelle,
+alle am128-Aufrufbudget, keine behauptete Konvergenz.
+
+| Plasma / Klasse / Methode | Konstruktions-RMS Normalfeld | Innerer Vektor-RMS | Gesampelter Plasmaabstand | Max. gesampelte Krümmung |
+| --- | --- | --- | --- | --- |
+| Referenz /6 /N | 0,195211 | 0,714244 | 45,944mm | 16,773/m |
+| Referenz /6 /V | 0,102345 | 0,503960 | 46,666mm | 15,449/m |
+| Neuer Entwurf /6 /N | 0,132932 | 0,738202 | 51,778mm | 12,724/m |
+| Neuer Entwurf /6 /V | 0,101789 | 0,484707 | 52,384mm | 15,830/m |
+| Neuer Entwurf /8 /N | 0,282875 | 0,807754 | 38,568mm | 25,336/m |
+| Neuer Entwurf /8 /V | 0,234517 | 0,646938 | 34,708mm | 23,016/m |
+
+Das sind Konstruktionswerte, keine feine Abnahme. Gegenüber den Kreisen sinken
+Normalfeldfehler und Abstandsstrafen, aber sämtliche Kandidaten verfehlen schon
+gesampelte Plasmaabstands-/Krümmungsgrenzen und liegen weit über den Feldfehler-
+schirmen. V verbessert den inneren Vektorfehler und den relativen Normalfeld-RMS
+gegenüber N in allen drei vorhandenen Methodenpaaren, aber nicht sämtliche
+Geometriegrößen. Kein zulässiger Gewinner, keine Pareto- oder allgemeine Rangfolge.
+
+Sechs`search-*-audit.json` binden sämtliche lokalen Such-/Replay-Rohdaten.
+Nächster Schritt: Suchphase committen, dann alle sieben feinen Feldzustände und
+neun Flussgitter je ausgewähltem Kandidaten sowie kontinuierliche Geometrieschranken
+unverändert ausführen. Erst danach einen Folgestudienentscheid registrieren.

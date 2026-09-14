@@ -1,5 +1,27 @@
 # Validation log
 
+## 2026-09-14 — Freeze six independently audited actual coil search endpoints
+
+- At3e803c3 ran only six qualified cells, serial/single-thread, exactly128
+  attempted/completed bundles each (768 total). Two rejected reference-n8 starts
+  never optimized. Every run ends evaluation_budget after16.07–27.27s counted
+  search time; no convergence claim or automatic extension.
+- Six fresh-object selected candidate replays exact for J/full gradient/metrics,
+  physical snapshot and all raw fields. Independent search audits pass all768
+  objective/geometry recomputations, named source mapping, counters/clocks,
+  selection and direct selected-field checks. Index127 selected except new-n6-N
+  index126; no qualifier FD probes in candidate pool.
+- Construction RMSnormal.10179–.28287 and vectorRMS.48471–.80775; all sampled
+  plasma clearances34.708–52.384mm<80mm, all sampled maxcurvatures12.724–25.336/m
+  exceed12/m. Thus no admitted candidate, despite major objective reduction.
+  V improves relative normal and vector RMS over N for the three available
+  method pairs but not all geometry; no feasible/Pareto/general ranking claim.
+- Saved six search audits binding all raw endpoints and exact replays; root
+  overviews/detail updated. No code/protocol/old evidence changes. Minimum native
+  phase free space9597890560Bytes. Fine seven-grid/nine-flux validation for each
+  selected candidate is next. Documentation structure/diff checks pass; nine
+  documentation tests pass in0.40s. Commit before that next phase.
+
 ## 2026-09-14 — Complete all eight real paired-coil start qualifications
 
 - Atb5c5a4d no other project solver/test running; serial native qualification

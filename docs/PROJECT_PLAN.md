@@ -22,8 +22,9 @@ Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
 oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
 abgeschlossen:959 Tests bestehen. Alle acht realen Startqualifikationen auditiert,
-sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Als Nächstes die sechs
-freigegebenen Suchläufe samt feiner Abnahme; keine nachträgliche Freigabe der zwei
+sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
+freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
+Als Nächstes ihre vollständige feine Abnahme; keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
 
 ## Abgeschlossen: Schritt3 — eigene QI-nahe Plasmaoberfläche

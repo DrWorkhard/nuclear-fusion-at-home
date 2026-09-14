@@ -34,7 +34,9 @@ prioritize paired actual-coil realization before coupled plasma/coil iterations.
 The paired pilot is preregistered; additive construction and independent audit
 tools pass synthetic integration (959 total tests,193 new). All eight actual
 start qualifications are audited: six pass; two reference eight-coil starts fail
-one derivative screen and will not be optimized. The six admitted searches are next.
+one derivative screen and are not optimized. The six admitted128-call searches
+are independently audited; construction metrics remain inadmissible. Fine
+validation of every selected candidate is next.
 No step4 design result yet; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 
