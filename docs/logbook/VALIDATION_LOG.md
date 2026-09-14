@@ -1,5 +1,24 @@
 # Validation log
 
+## 2026-09-14 — Qualify additive plasma design implementation before first cold solve
+
+- Implemented named four-mode inputs, bounded two-round search, all-cell failure
+  retention, cold replay/fine endpoints, no-feedback trace/field/topology/tracer
+  holdouts and separate Gaussian/source/selection/admission auditor. No old kernel,
+  numerical evidence, environment or external checkout changed; no new solve yet.
+- First new test run24/25: independent integrator lacked explicit phi endpoint
+  checks. Fixed before physics, all25 pass; added real retained-Wout scalar source
+  and tampered-field rejection, now26 pass in0.27s. VMEC++ candidate input roundtrip
+  passes without a solve. Full preceding suite745 pass/144 known warnings in68.54s;
+  latest extra source check separately passed. Ruff passes; docs/diff checks below.
+- Clarified identical-alpha action matching versus shifted-alpha score stability
+  before execution, with unchanged physical thresholds. Bound original published
+  tracer hash, solver binary/wrapper, both locks, code/protocol and thread/version
+  provenance. Around11GiB free, no competing Fusion experiment found.
+- New results/runbook indexed. Both READMEs, status and plan reviewed: step3 remains
+  active and unproved; no material design result to add yet. Local implementation
+  commit precedes registered plasma-design-v1 search; all subsequent failures kept.
+
 ## 2026-09-13 — Register explicitly requested step3 plasma optimization
 
 - Reviewed root plans, QI index/measurement/topology/native-resolution evidence,

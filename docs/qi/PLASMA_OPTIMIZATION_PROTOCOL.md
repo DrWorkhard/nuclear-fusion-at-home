@@ -85,6 +85,10 @@ und Fehler erhalten. Pro s/q stets beide Periodenfamilien/alle Linien gültig.
   und verschobener-alpha-Prüfung sein. Keine garantierte mathematische Fehlerschranke.
 - Bei jeder Verfeinerung zugeordnetes A innerhalb1e-3 relativ; erweiterte
   S-Werte innerhalb5% bzw.1e-12 absolut. Periodenidentität bleibt erhalten.
+  Vor erster Ausführung präzisiert: zugeordnetes A nur auf identischen alpha
+  (bei32->64 jede zweite Linie); das verschobene Raster hat andere Feldlinien
+  und prüft deshalb S-Stabilität, nicht punktweise A-Gleichheit. Radialprüfung
+  auf allen vier Tracegittern, Unsicherheitssumme am feinsten unverschobenen.
 - Jede feinste s/q/j-Zelle: relative Wirkungs-Enveloppe nicht schlechter als
   max(1.1*Referenz,Referenz+0.002); mittlere Wirkung ändert sich höchstens2%.
   Kein Ausblenden schlechter Zellen durch den Gesamtmittelwert.
