@@ -1,5 +1,26 @@
 # Validation log
 
+## 2026-09-14 — Preregister paired flux-normalized coil fitting before implementation
+
+- Draft8-cell matrix: two archived401 targets,6/order5 and8/order7 coil classes,
+  normal-field versus interior-vector-assisted objective. Exact target modes,
+  shared physical flux/amplitude, new canonical named coil mapping and counted
+  budgets; no old LPQA thresholds or exporters reused as QI admission.
+- Independent physical draft review identified shared angular bias in line/area
+  flux and potential fine-grid renormalization. Fixed before any execution:
+  256/512/1024 angular checks, fixed selected physical current across validation,
+  fixed dimensionless target-field scale. New protocol remains a fit/entry-screen
+  study, not realized-QI or full step4 acceptance. No new physical data generated.
+- Added protocol/results/index; all root overviews checked, overall step4-active
+  assessment unchanged. Documentation validation initially caught missing index
+  while adding the new draft; index added before final checks/commit.
+- Methods/code reviewers also required explicit candidate-pool/call accounting,
+  refinement pairs, native penalty names/scope, analytic loop tangents and signed
+  fan-area geometry. Clarified all before protocol freeze, including parent
+  wall-cap handling. No reviewer blocker remains for this bounded entry screen.
+- Nine documentation controls pass in0.35s; structure and diff checks pass.
+  Freeze protocol locally before implementation and synthetic qualification.
+
 ## 2026-09-14 — Independent options review and explicit step4 activation
 
 - Clean Git atd429783; read startup overviews, relevant optimization/QI/engineering
