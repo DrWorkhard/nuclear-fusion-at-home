@@ -19,9 +19,11 @@ erzielen. Keine Spulenoptimierung als Ersatz. Das
 feinere Domänen-/Kontur-/Feld-/Aktionsprüfungen und reproduzierbaren Entwurf.
 Nur Ablauf oder negativer Versuch reicht diesmal nicht; SoTA gehört weiterhin
 zu Schritt5. Globale Orbit-/Druck-/Stabilitäts-/Kraftwerksqualifikation bleibt getrennt.
-Auswahl abgeschlossen:16 neue Suchgleichgewichte, eine veränderte Randmode,
-14,35% Trainingsvorteil. Jetzt eingefrorene Form wiederholen und auf feineren,
-erweiterten Gittern unabhängig abnehmen; [Arbeitsstand](qi/PLASMA_OPTIMIZATION_RESULTS.md).
+Erster Versuch vollständig abgeschlossen und Entwurf abgelehnt:14,35%
+Trainingsgewinn, aber15,53% schlechter auf erweiterter Domäne und20 lokale
+Wirkungsverletzungen. Die numerischen/Quellenprüfungen bestehen.
+Jetzt gezielten Folgeversuch mit beiden Domänen und lokalen Wirkungswächtern
+vor der Konstruktion registrieren; [Befund](qi/PLASMA_OPTIMIZATION_RESULTS.md).
 Schritt3 ist noch offen; nach bestandenem Abschluss Übergabe, kein automatischer Schritt4.
 
 ## Abgeschlossene Etappe: Basis und prinzipielle Iterationsfähigkeit

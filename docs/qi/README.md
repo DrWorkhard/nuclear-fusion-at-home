@@ -3,8 +3,8 @@
 Zweck: eine numerisch belastbare QI-relevante Messung aus offenen Goodman-Gleichgewichten aufbauen.
 
 Neu beauftragt: Schritt3, tatsächliche Fourier-Rand-/Gleichgewichtsoptimierung
-am nfp2-Vakuumfall. Eigene Form mit14,35% besserem Trainingswert ausgewählt;
-feinere unabhängige Abnahme noch offen, keine physische Gesamtzulassung.
+am nfp2-Vakuumfall. Erster Entwurf trotz14,35% Trainingsgewinn unabhängig
+abgelehnt:15,53% schlechter auf erweiterter Domäne,20 lokale Wirkungsverletzungen.
 
 Für die abgeschlossene [begrenzte Basisabnahme](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
 sind die vorhandenen Daten-/eingefrorenen Wirkungsregressionen qualifiziert.
@@ -18,7 +18,7 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Topologie und Wirkungsableitu
 ## Dokumente
 
 - [Eigene Plasmaoberfläche: Protokoll](PLASMA_OPTIMIZATION_PROTOCOL.md) — Vier benannte Randmoden, begrenzte klassische Suche, periodenzugeordnete Wirkung, feinere unabhängige Domäne und feste Abschlussgates; kein bloßer Ablauf- oder SoTA-Pass.
-- [Eigene Plasmaoberfläche: Arbeitsstand/Bedienung](PLASMA_OPTIMIZATION_RESULTS.md) — 27 Kontrollen, erhaltener Fehlstart, abgeschlossene16-Solve-Auswahl mit14,35% Trainingsvorteil; feinere Abnahme noch offen.
+- [Eigene Plasmaoberfläche: Ergebnis/Bedienung](PLASMA_OPTIMIZATION_RESULTS.md) — 19 Kaltstarts, vollständige separate Abnahme und erhaltene Ablehnung trotz Trainingsgewinn; alle Quellen-/Feld-/Verfeinerungsprüfungen bestehen, der Entwurf nicht.
 
 - [Vakuumdrift: Protokoll](VACUUM_DRIFT_CONTROL_PROTOCOL.md) — Eigene nichtachsensymmetrische exakte Vakuumkonstruktion, beide Driftkomponenten, gleiche physikalische Phase und81 feste Zellen/243 skalare Zustände.
 - [Vakuumdrift: abgeschlossen](VACUUM_DRIFT_CONTROL_RESULTS.md) — Alle81 Zellen/243 skalaren Zustände bestehen; beide Driften und Phasenkovarianz qualifiziert. Bis74% relativer Flusslabelhub bei10keV verhindert Interpretation als bereits validierte endliche Bahn.

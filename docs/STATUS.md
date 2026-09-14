@@ -1,6 +1,6 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 14. September 2026, nach erster eigener Plasma-Suchentscheidung.
+Stand: 14. September 2026, nach unabhängiger Ablehnung des ersten Plasmaentwurfs.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
@@ -8,9 +8,11 @@ Stand: 14. September 2026, nach erster eigener Plasma-Suchentscheidung.
 **Jetzt aktiv: Schritt3 nach neuem ausdrücklichem Nutzerauftrag.** Die
 [registrierte Plasmaoptimierung](qi/PLASMA_OPTIMIZATION_RESULTS.md) hat eine um
 0,4mm in zbs(1,1) veränderte nfp2-Vakuumform ausgewählt:14,35% kleinerer
-Trainings-S-Wert nach16 neuen Suchgleichgewichten. Die feinere unabhängige
-Domänen-/Physik-/Vorteilsabnahme steht noch aus. Kein bestätigter Einschlussvorteil
-oder Schritt3-Abschluss. Schritt1/2 bleiben abgeschlossen.
+Trainings-S-Wert nach16 neuen Suchgleichgewichten. Alle19 Kaltstarts und die
+feinere unabhängige Abnahme sind jetzt abgeschlossen:15,53% schlechterer
+erweiterter S-Wert und20 lokale Wirkungsverletzungen. Quellen, Wiederholung,
+Felder, Konturen, Tracer und alle Verfeinerungen bestehen. Der Entwurf wird
+abgelehnt; Schritt3 bleibt offen. Schritt1/2 bleiben abgeschlossen.
 
 **Schritt1 und2 sind als begrenzte Basis- und Iterationsfähigkeit abgeschlossen.**
 Die [konsolidierte Abnahme](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) besteht:

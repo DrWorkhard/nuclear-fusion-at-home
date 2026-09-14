@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-14 — Fully audit and reject first own plasma boundary
+
+- Four-state holdout completed every16 trace/40 contour/24 field grids and two
+  published-tracer phases.280 contour cells pass; all20 refinements pass. Source
+  syntax warning on historical `\\p` literal surfaced twice; source left unchanged.
+- Separate auditor completed normally with scientific exit2: arithmetic/source,
+  replay, geometry, physics, tracer and refinement pass. Holdout S worsens15.5286%,
+  local guard fails20/70 mean-action cells and4 envelopes. Max mean change34.9135%
+  vs2%; max recorded holdout Gaussian error1.6944e-9. No missing cells or new solves.
+- Saved post-audit arithmetic diagnosis with exact source hashes: q=.03 dominates
+  baseline expanded S (95.8%). Numerical uncertainty sum7.6543e-7 is48.5 times
+  smaller than the deterioration. Narrow training cost was not sufficient.
+-27 focused tests pass in0.28s, Ruff/docs/diff pass. All overviews, detail/index
+  and F-083 now state actual rejection, not pending acceptance or step3 closure.
+  Preserve and commit all results before registering a genuinely separate,
+  bounded follow-up; no thresholds changed and no current study budget extended.
+
 ## 2026-09-14 — Complete and freeze plasma search/cold endpoints before holdout
 
 - All19 solves at90cdc57 completed within the unchanged20-solve/1800s caps;

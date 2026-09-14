@@ -1,8 +1,8 @@
 # Findings log
 
-## F-083 — Own plasma boundary selected; training gain is not yet independent admission
+## F-083 — First own plasma boundary fails expanded physical admission despite training gain
 
-**Class:** preregistered search result, physical holdout pending
+**Class:** completed preregistered negative design result, independently audited
 **Date:** 2026-09-14
 
 At90cdc57, two complete coordinate rounds request17 points and solve16 unique
@@ -11,7 +11,12 @@ checks. Selected x=(0,0.0004,0,0)m changes only zbs(1,1); training action varian
 falls from1.1546244999075371e-5 to9.889668968130651e-6 (14.347314%). Separate201
 cold repeat has13 exactly matching archived arrays. Poll selection and all bound
 hashes separately checked; all19 cold solves including401 endpoints complete.
-Expanded-domain physical acceptance remains pending. No convergence, global QI, confinement, coil, SoTA or
+All16 expanded grids,280 contours,24 field grids, two tracer crosschecks and20
+refinement comparisons complete/pass. Separate raw Gaussian/source/action audit
+passes, but expanded S worsens15.5286% and20 of70 local mean-action guards fail
+(four also fail envelope). Maximum mean change34.9135% versus2%. q=.03 contributes
+95.8% of baseline expanded S and was excluded from training. Deterioration is48.5
+times the observed numerical uncertainty sum; no step3 admission. No convergence, global QI, confinement, coil, SoTA or
 SQuID-C claim. Selection stays fixed through later validation. Earlier baseline
 and all negative probes remain preserved. [Detail](../qi/PLASMA_OPTIMIZATION_RESULTS.md).
 

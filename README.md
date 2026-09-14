@@ -20,8 +20,9 @@ All earlier studies are preserved at tag `foundation-pre-scope-2026-09-13`
 (`5971fee`). Broader QI, engineering and performance research remains deferred.
 After that handoff the user explicitly requested step3. The new
 [plasma-boundary optimization protocol](docs/qi/PLASMA_OPTIMIZATION_PROTOCOL.md)
-is active. Its16-solve search selected a changed boundary with14.35% lower training
-action variance; independent finer physical/domain acceptance is still pending.
+is active. Its first boundary improves training action variance by14.35% but is
+independently rejected:15.53% worse on the expanded domain and20 local action
+violations. All source/field/refinement checks pass; step3 is not complete.
 See the [plasma results and runbook](docs/qi/PLASMA_OPTIMIZATION_RESULTS.md).
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
