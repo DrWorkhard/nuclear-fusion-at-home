@@ -1,0 +1,25 @@
+{
+  "status": "audit_output_failed",
+  "revision": "e98339a",
+  "producer_runs_completed": 6,
+  "field_diagnostic_states_completed": 42,
+  "line_flux_grids_completed": 18,
+  "area_flux_grids_completed": 36,
+  "legacy_audit_exit_codes": [1, 1, 1, 1, 1, 1],
+  "legacy_audit_reports_written": 0,
+  "exception": "TypeError: Object of type bool is not JSON serializable",
+  "failure_stage": "final write_json_atomic / json.dumps after audit returned",
+  "original_stderr_retention": "Tool transcript only; not separately redirected to disk in the first six attempts.",
+  "raw_runs": [
+    {"path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/validation-reference-n6-N/run.json", "sha256": "0bad7b9503fce6a9961e91193f1c1a22cffc26ad5da01a3c617c43269a2b59cf"},
+    {"path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/validation-reference-n6-V/run.json", "sha256": "4d9849c38882ac5bb8d0beba6710bf44619b883cbe8dd8656956c2a43d81404a"},
+    {"path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/validation-selected-n6-N/run.json", "sha256": "b34ddff35af6cb54a771b18bd5bfe28fdc31e4f104303c45da848f81511eb5d8"},
+    {"path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/validation-selected-n6-V/run.json", "sha256": "35739a6b07f7c2fef4de826bdfcc10b73528223b33eedf305ce466053e1bcabc"},
+    {"path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/validation-selected-n8-N/run.json", "sha256": "394cc84988be5fb02289e82456b9f23e44e71d2af988e3f62ffec85a04a251fe"},
+    {"path": "/Users/sebastianwirkert/workspace/fusion/artifacts/coupled-coil-pilot-v1/validation-selected-n8-V/run.json", "sha256": "1133061f8a100e2b7754af84d91d8e70a5ef0c87469559529c1e05d34d331d32"}
+  ],
+  "new_equilibrium_solves": 0,
+  "new_full_gradient_bundles": 0,
+  "transfer_pass": false,
+  "step4_pass": false
+}

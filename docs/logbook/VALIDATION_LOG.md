@@ -1,5 +1,26 @@
 # Validation log
 
+## 2026-09-14 — Preserve completed fine diagnostics and failed audit serialization
+
+- Ate98339a all six native no-feedback validations complete:42 field states,
+  18line/36fan grids and six geometric certificates. No new solves or gradient
+  bundles; frozen selected current/B2 retained. Producer reports and all raw
+  arrays intact. Last recorded disk reserve9509310464Bytes.
+- All six overall CLI audits exit1 at finalwrite_json_atomic/json.dumps:
+  TypeError ObjectoftypeboolnotJSONserializable. No finalauditJSON saved. Original
+  stderr is retained in tool transcript only, not separate disklogs. Added an
+  explicit failure record binding all six completed producer run hashes.
+- Source diagnosis identifies NumPy bool from nearest_other<=NumPy-floatingpad
+  at geometry.self_nearness[*].exact_repeated_node. Independent reviewer confirms
+  this also interacts with `is False` in geometry aggregation, potentially causing
+  a false negative for otherwise-valid geometry. Do not hide or waive that issue.
+  Next add serialization-only adapter with explicit normalized-decision equality
+  check and regression controls, preserving legacy files and all real runs.
+- Detail and all four root overviews updated; no numerical/protocol changes.
+  Documentation/diff checks pass; nine documentation tests pass in0.64s. Local
+  commit precedes the additive repair. Final
+  scientific admission remains unpersisted, not silently called complete.
+
 ## 2026-09-14 — Freeze six independently audited actual coil search endpoints
 
 - At3e803c3 ran only six qualified cells, serial/single-thread, exactly128

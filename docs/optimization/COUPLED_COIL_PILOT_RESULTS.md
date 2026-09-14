@@ -6,7 +6,9 @@
 Alle acht realen Startqualifikationen sind bei`b5c5a4d` ausgeführt und unabhängig
 auditiert: sechs bestehen, beide Referenzstarts mit acht Grundspulen nicht.
 Die sechs freigegebenen Suchläufe sind bei`3e803c3` abgeschlossen und auditiert;
-ihre feine physische Abnahme steht noch aus. Keine zulässige Form. Die Matrix vergleicht
+alle feinen Diagnostikläufe sind ebenfalls fertig. Die abschließenden Auditberichte
+scheiterten jedoch beim JSON-Schreiben; ihre Ausgabe wird getrennt korrigiert.
+Keine zulässige Form. Die Matrix vergleicht
 Referenz/neue Plasmaform, zwei Spulenklassen und zwei Zielfunktionen.
 
 Der physikalische Protokollreview hat vor Ausführung eine wichtige Lücke gefunden:
@@ -139,6 +141,27 @@ gegenüber N in allen drei vorhandenen Methodenpaaren, aber nicht sämtliche
 Geometriegrößen. Kein zulässiger Gewinner, keine Pareto- oder allgemeine Rangfolge.
 
 Sechs`search-*-audit.json` binden sämtliche lokalen Such-/Replay-Rohdaten.
-Nächster Schritt: Suchphase committen, dann alle sieben feinen Feldzustände und
-neun Flussgitter je ausgewähltem Kandidaten sowie kontinuierliche Geometrieschranken
-unverändert ausführen. Erst danach einen Folgestudienentscheid registrieren.
+Die Suchphase ist committed; sämtliche feinen Diagnostiken sind inzwischen
+ausgeführt. Vor einem Folgestudienentscheid muss das nachstehende Ausgabeproblem
+des Gesamtaudits geschlossen werden.
+
+## Feine Diagnostik vollständig, Audit-Ausgabe zunächst gescheitert
+
+Bei`e98339a` alle42 feinen Feldzustände,18 Linien-/36 Flächenflussgitter und sechs
+Geometriezertifikatsrechnungen ausgeführt, keine Produzentenausfälle. Die sechs
+Gesamtauditor-Aufrufe scheitern erst beim JSON-Schreiben: NumPy-Wahrheitswerte
+unter`geometry.self_nearness[*].exact_repeated_node` sind nicht direkt
+serialisierbar. Kein finaler Auditbericht wurde dabei gespeichert. Rohdaten und
+Quellbindungen bleiben unverändert; der Fehlervermerk bindet sämtliche sechs
+Produzentenberichte:`evidence/coupled-coil-pilot-v1/validation-output-failure.json`.
+Die ursprünglichen sechs Tracebacks stehen im Toolverlauf, nicht in separat
+umgeleiteten Logdateien; diese Einschränkung wird nicht rückwirkend verschleiert.
+
+Der Quellreview identifiziert zusätzlich ein mögliches Falsch-Negativ: Die Prüfung
+`is False` erkennt einen NumPy-Falsewert nicht als Python-False. Ein sonst gültiger
+Geometriebericht könnte deshalb fälschlich abgelehnt werden. Das muss bei der
+Ausgabekorrektur explizit gegengeprüft werden; kein bloßer Schreibfehler-Pass.
+Nächster Schritt: Fehlversuch committen, dann einen additiven, streng typisierten
+Ausgabeadapter samt Negativtests erstellen. Alte Kerne, Kriterien und Evidenz
+bleiben unverändert; ein Adapter darf keine veränderte Klassifikation stillschweigend
+übernehmen. Keine neuen Such-/Gradientenbundles oder Gleichgewichtssolves nötig.

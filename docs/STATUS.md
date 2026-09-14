@@ -16,7 +16,9 @@ werden nicht optimiert. Alle Startformen liegen noch weit außerhalb der physisc
 Eintrittsgrenzen; gespeicherte Querschnitte belegen zudem Schnitte mehrerer
 Achtspulen-Startkreise mit dem Plasma. Die sechs erlaubten Suchen sind jetzt
 unabhängig auditiert, jeweils am128-Aufrufbudget; Feldfehler sinken, aber alle
-Kandidaten verfehlen bereits Konstruktionsschirme. Feine Abnahme folgt, keine neue
+Kandidaten verfehlen bereits Konstruktionsschirme. Alle feinen Diagnostiken sind
+fertig; die finalen Auditberichte scheiterten beim Schreiben an einem NumPy-
+Wahrheitswert. Rohdaten erhalten, getrennte Ausgabekorrektur folgt. Keine neue
 Zulassung. Druck, physischer Transfer und
 Robustheit bleiben ausdrücklich notwendige separate Teilpakete.
 

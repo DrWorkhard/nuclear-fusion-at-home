@@ -24,7 +24,9 @@ oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
 abgeschlossen:959 Tests bestehen. Alle acht realen Startqualifikationen auditiert,
 sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
 freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
-Als Nächstes ihre vollständige feine Abnahme; keine nachträgliche Freigabe der zwei
+Ihre feinen Diagnostiken sind vollständig, die finale Audit-Ausgabe scheitert an
+einem Datentypfehler. Als Nächstes additive Ausgabekorrektur und abgeschlossene
+Abnahme; keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
 
 ## Abgeschlossen: Schritt3 — eigene QI-nahe Plasmaoberfläche
