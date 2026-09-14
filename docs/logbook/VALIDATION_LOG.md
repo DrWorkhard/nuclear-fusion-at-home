@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-14 — Complete and audit broad archive phase without new equilibria
+
+- At8693339 all16 existing201 states evaluated on all35 broad construction cells,
+  zero domain failures, zero new solves. Independent source/native/action/Gauss/
+  statistic/selection audit passes; selected index correctly null.
+- Only index10 meets both score-gain thresholds, but fails local mean-action
+  guard. No threshold relaxed to admit it. The registered condition for Phase B
+  is therefore met; no extra phase inferred without this actual result.
+-46 focused tests pass again in0.66s, docs/diff pass. Detail/index updated; both
+  READMEs/status/plan reviewed: still no admitted design or step3 closure.
+  Commit archive phase/audit before eight tiny finite differences and at most
+  three real common-descent proposals. Bound code/protocol unchanged.
+
 ## 2026-09-14 — Qualify separate two-domain implementation before new measurements
 
 - Added immutable archive/propose/endpoint phases, explicit diagnostic adapter and

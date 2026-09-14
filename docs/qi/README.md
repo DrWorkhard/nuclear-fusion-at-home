@@ -18,7 +18,7 @@ Aktueller Schluss: Bouncewirkung, Teilbereiche der Topologie und Wirkungsableitu
 ## Dokumente
 
 - [Beide Wirkungsdomänen: Folgeprotokoll](PLASMA_BALANCED_PROTOCOL.md) — Erhaltene16 Formen breit auswerten; nötigenfalls acht kleine Differenzprobes und gemeinsames lineares Vorschlagsmodell. Maximal13 neue Solves, unveränderte physische Abschlussgrenzen.
-- [Beide Wirkungsdomänen: Arbeitsstand/Bedienung](PLASMA_BALANCED_RESULTS.md) — Additive Phasen, unabhängiges Modell-/Auswahlzertifikat,46 Plasmakontrollen und Ausführung; neue Rechnungen noch ausstehend.
+- [Beide Wirkungsdomänen: Arbeitsstand/Bedienung](PLASMA_BALANCED_RESULTS.md) — Alle16 Archivformen breit gemessen und unabhängig geprüft, keine auswählbar; bedingte kleine Vorschlagssuche folgt, physische Abschlussgates unverändert.
 
 - [Eigene Plasmaoberfläche: Protokoll](PLASMA_OPTIMIZATION_PROTOCOL.md) — Vier benannte Randmoden, begrenzte klassische Suche, periodenzugeordnete Wirkung, feinere unabhängige Domäne und feste Abschlussgates; kein bloßer Ablauf- oder SoTA-Pass.
 - [Eigene Plasmaoberfläche: Ergebnis/Bedienung](PLASMA_OPTIMIZATION_RESULTS.md) — 19 Kaltstarts, vollständige separate Abnahme und erhaltene Ablehnung trotz Trainingsgewinn; alle Quellen-/Feld-/Verfeinerungsprüfungen bestehen, der Entwurf nicht.

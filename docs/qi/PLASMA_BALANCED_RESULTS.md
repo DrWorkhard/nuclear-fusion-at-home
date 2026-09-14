@@ -1,7 +1,7 @@
 # Zwei Wirkungsdomänen: Arbeitsstand und Bedienung
 
 14. September2026. [Registriertes Folgeprotokoll](PLASMA_BALANCED_PROTOCOL.md).
-**Noch kein neuer Befund oder Schritt3-Abschluss.** Die erste Form bleibt
+**Phase A abgeschlossen, noch kein zulässiger Entwurf oder Schritt3-Abschluss.** Die erste Form bleibt
 [unabhängig abgelehnt](PLASMA_OPTIMIZATION_RESULTS.md). Jetzt beide Domänen und
 lokale Wirkungsgrenzen schon bei der Konstruktion berücksichtigen.
 
@@ -30,6 +30,23 @@ der LP-Bounds; vor jeder neuen Rechnung vereinheitlicht. Die LP-Threadoption wir
 von SciPy mit einem Weiterleitungswarnhinweis an HiGHS gegeben; Warntext wird im
 Modellbericht gespeichert, nicht als physische Fehlermeldung oder Warnungsfreiheit
 umgedeutet. Keine Installation, kein externer Quelleneingriff.
+
+## Phase A: keine auswählbare Archivform
+
+Bei8693339 alle16 vorhandenen Formen auf sämtlichen35 breiten Zellen gemessen,
+ohne einen neuen Gleichgewichtssolve. Keine fehlenden Domänenzellen. Der separate
+Audit bestätigt Quellen, alte native Datensätze, alle neuen Aktionen durch
+Gaussquadratur, Zellstatistik, Konstruktionsklassifikation und Auswahl: kein Index
+zulässig. Einzige Form mit beiden erforderlichen Kostenvorteilen ist Index10;
+sie verletzt die lokale Mittelwirkungsgrenze. Kein Ausblenden dieser Grenze,
+kein nachträgliches Absenken des Auswahlschirms.
+
+Phase/Audit in `evidence/plasma-balanced-v1/archive.json` und `archive-audit.json`,
+Rohtraces unter `artifacts/plasma-balanced-v1/archive`.46 gezielte Kontrollen
+bestehen danach erneut in0,66s; Dokument-/Diffprüfung bestanden. Gesamtaussage
+bleibt unverändert: Schritt3 offen. Damit ist die vorab festgelegte Bedingung
+für Phase B erfüllt: acht kleine neue Differenzsolves, anschließend höchstens
+drei reale gemeinsame Vorschläge, ohne weitere Suche in diesem Experiment.
 
 ## Phasen ausführen und getrennt bewerten
 
@@ -61,5 +78,5 @@ Ein Phasenaudit-Pass ist ausdrücklich kein Schritt3-Pass. Nur das positive fina
 Ergebnis mit allen unveränderten physischen Gates erlaubt den registrierten
 Vakuumabschluss. SQuID-C, globale QI-/Orbitphysik und SoTA bleiben getrennt.
 
-Nächster Schritt: Code/Dokumentation committen, dann ausschließlich Phase A
-ausführen und unabhängig prüfen. Noch keine neue Archivauswertung oder Solves.
+Nächster Schritt: abgeschlossene Phase A samt Audit committen, dann bedingte
+Phase B ausführen. Noch keine neuen Gleichgewichtssolves in diesem Folgeversuch.
