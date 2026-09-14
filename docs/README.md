@@ -12,8 +12,11 @@ Baubarkeit und Robustheit konstruieren und den Vorteil unabhängig am Computer
 nachweisen? Langfristig wollen wir eigene QI-Plasmakonfigurationen samt passenden
 Spulen entwickeln, mit Proxima Fusion und SQuID-C als wissenschaftlicher Orientierung.
 
-Bisher entstanden reproduzierbare Versuchs- und Prüfwerkzeuge sowie methodische
-Teilergebnisse. **Noch kein neuer zulässiger Spulenentwurf, kein SoTA-Nachweis und
+Bisher entstanden reproduzierbare Versuchs- und Prüfwerkzeuge sowie ein
+[eigener QI-naher Vakuumentwurf](qi/PLASMA_BALANCED_RESULTS.md):11,1700% geringere
+relative Bouncewirkungsvarianz auf der feinsten registrierten Prüfdomäne,
+mit allen lokalen Schutz- und numerischen Abnahmegrenzen eingehalten.
+**Noch kein neuer zulässiger Spulenentwurf, kein SoTA-Nachweis und
 keine vollständige SQuID-C-Bereitschaft.** Ein niedrigerer Optimierungswert allein
 belegt weder bessere Einschlussphysik noch bessere Kraftwerksleistung.
 
@@ -23,14 +26,19 @@ belegt weder bessere Einschlussphysik noch bessere Kraftwerksleistung.
 | --- | --- | --- |
 | 1. Begrenzte Rechen- und Prüfbasis absichern | Lokale W7-X-/Goodman-Regression und geprüfte LPQA-Festoberflächen-/Filamentwerkzeuge | Abgeschlossen: alle acht Basisgates bestehen |
 | 2. Prinzipiell iterieren können | Referenz laden, Parameter optimieren, Kandidaten speichern und unabhängig bewerten; reproduzierbar | Abgeschlossen: zwei echte24-Bundle-Pfade exakt wiederholt, separat auditiert und fein bewertet |
-| 3. Eigene QI-Plasmakonfigurationen entwickeln | Plasmaoberfläche variieren und zugehöriges Gleichgewicht auf günstigen Einschluss optimieren | Erster Entwurf abgelehnt; Folgekandidat verbessert beide Konstruktionsziele und besteht lokale Grenzen, feinere Abnahme offen |
+| 3. Eigene QI-Plasmakonfigurationen entwickeln | Eigene Oberfläche/Gleichgewichte mit numerisch bestätigter QI-relevanter Verbesserung | Im registrierten nfp2-Vakuumumfang abgeschlossen:11,17% geringere Wirkungsvarianz, alle zehn Abnahmegates bestehen |
 | 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Langfristig geplant |
 | 5. Verbesserungen belastbar nachweisen | Unabhängig geprüfter Vorteil gegenüber reproduzierten Referenzen unter gleichen Anforderungen | Offen |
 
 **Schritt 1 und 2 sind im geschärften Umfang abgeschlossen.** Das sind
-Befähigungsziele, keine SoTA- oder Entwurfsleistungsziele. Wir übergeben die
-geprüfte Basis. Danach hat der Nutzer ausdrücklich Schritt3 beauftragt; dessen
-[Plasmaoptimierungsabnahme](qi/PLASMA_OPTIMIZATION_PROTOCOL.md) ist jetzt aktiv.
+Befähigungsziele, keine SoTA- oder Entwurfsleistungsziele. Der danach ausdrücklich
+beauftragte Schritt3 ist nun ebenfalls in seinem
+[vorab festgelegten Vakuumumfang](qi/PLASMA_BALANCED_PROTOCOL.md) abgeschlossen.
+Erforderlich war ein tatsächlicher numerischer Entwurfsgewinn, nicht nur ein Ablauf.
+Unabhängige feinere Prüfung ist hier kein blinder Generalisierungstest: beide
+Wirkungsdomänen wurden bereits in der Konstruktion verwendet. Globale QI,
+Teilcheneinschluss und Druck-/Stabilitätsphysik bleiben offen. Jetzt Übergabe;
+kein automatischer Beginn von Schritt4/5.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.
 

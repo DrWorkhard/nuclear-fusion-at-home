@@ -1,5 +1,31 @@
 # Findings log
 
+## F-084 — Own vacuum plasma boundary passes the registered step3 design admission
+
+**Class:** preregistered bounded numerical design improvement, independently audited
+**Date:** 2026-09-14
+
+After preserving F-083 unchanged, the separately registered two-domain follow-up
+evaluates all16 old shapes, then eight tiny central differences and three real
+LP proposals. All three proposals meet construction guards; Probe0 is selected.
+Exactly13 new cold solves include selected201 repeat and401 fine endpoint.
+Final audit atf285fbd passes source/arithmetic and all ten physical-domain gates:
+fine broad S2.3894265674165413e-4 →2.122527071486505e-4 (11.170023% lower), narrow
+gain4.850630%; maximum mean-action change1.018339% under2%, all70 local guards pass.
+Numerical gain47.3762times empirical uncertainty sum (required>5); all20 refinements,
+16 trace grids,280 contour cells,24 field grids and both tracer comparisons pass.
+Thirteen Wout/solver quantities and narrow actions repeat exactly; broad actions
+also checked exact. No failed or omitted domain cells. Final766-test regression
+passes with144 known warnings. Historical1266-file preservation and all five
+external states match the foundation record.
+
+This closes step3 only in its registered nfp2 vacuum scope, not global QI,
+improved measured confinement, fusion power, stability, feasible coils, SoTA or
+SQuID-C. Both action domains informed construction; independent finer admission
+is not blind generalization. No old physical threshold relaxed;32 total solves
+including the first failed study, whose apparent narrow gain remains rejected.
+Hand off rather than start steps4/5. [Full result/input/runbook](../qi/PLASMA_BALANCED_RESULTS.md).
+
 ## F-083 — First own plasma boundary fails expanded physical admission despite training gain
 
 **Class:** completed preregistered negative design result, independently audited

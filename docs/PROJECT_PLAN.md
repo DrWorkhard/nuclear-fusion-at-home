@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 14. September 2026, nach erster eigener Plasma-Suchentscheidung.
+Stand: 14. September 2026, nach bestandener Schritt3-Vakuumabnahme.
 [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 **Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
@@ -9,27 +9,28 @@ Stand: 14. September 2026, nach erster eigener Plasma-Suchentscheidung.
 Diese Abgrenzung bleibt verbindlich. Der Nutzer hat danach ausdrücklich
 Schritt3 beauftragt; die bisherige automatische Stoppregel ist erfüllt.
 
-## Jetzt: Schritt3 — eigene QI-nahe Plasmaoberfläche
+## Abgeschlossen: Schritt3 — eigene QI-nahe Plasmaoberfläche
 
-Aktiv nach neuem Nutzerauftrag. Vier benannte Fourierkoeffizienten eines offenen
-Goodman-nfp2-Vakuumfalls variieren, jedes zugehörige Gleichgewicht neu lösen und
-eine auf registrierter Domäne numerisch bestätigte QI-relevante Verbesserung
-erzielen. Keine Spulenoptimierung als Ersatz. Das
-[vorab festgelegte Protokoll](qi/PLASMA_OPTIMIZATION_PROTOCOL.md) verlangt unabhängige
-feinere Domänen-/Kontur-/Feld-/Aktionsprüfungen und reproduzierbaren Entwurf.
-Nur Ablauf oder negativer Versuch reicht diesmal nicht; SoTA gehört weiterhin
-zu Schritt5. Globale Orbit-/Druck-/Stabilitäts-/Kraftwerksqualifikation bleibt getrennt.
-Erster Versuch vollständig abgeschlossen und Entwurf abgelehnt:14,35%
-Trainingsgewinn, aber15,53% schlechter auf erweiterter Domäne und20 lokale
-Wirkungsverletzungen. Die numerischen/Quellenprüfungen bestehen.
-Jetzt [separat registrierter Folgeversuch](qi/PLASMA_BALANCED_PROTOCOL.md): beide
-Domänen und lokale Wirkungswächter bereits in der Konstruktion, gegebenenfalls
-ein kleines gemeinsames Vorschlagsmodell. Maximal13 neue Solves;
-[erhaltener negativer Befund](qi/PLASMA_OPTIMIZATION_RESULTS.md).
-Archivprüfung, acht Differenzen und drei reale Probes sind auditiert. Ein
-gemeinsamer Kandidat besteht die Konstruktionsgrenzen; jetzt zwei Kaltendpunkte
-und vollständige feinere unabhängige Abnahme, ohne Auswahlfeedback.
-Schritt3 ist noch offen; nach bestandenem Abschluss Übergabe, kein automatischer Schritt4.
+Vier benannte Fourierkoeffizienten des offenen Goodman-nfp2-Vakuumfalls verändert,
+zugehörige Gleichgewichte frisch gelöst und eine tatsächliche QI-relevante
+Verbesserung auf registrierter Domäne unabhängig numerisch bestätigt.
+Der [Abschlussbericht mit Eingabe und Bedienung](qi/PLASMA_BALANCED_RESULTS.md)
+belegt11,1700% geringere feinste relative Wirkungsvarianz,4,8506% engen Vorteil
+und alle zehn Gates des [vorab festgelegten Umfangs](qi/PLASMA_OPTIMIZATION_PROTOCOL.md).
+Kein bloßer Ablaufpass: Quellen, lokale Grenzen, Felder, Konturen, Tracer,
+Wiederholung und sämtliche Verfeinerungen bestehen neben dem Entwurfsgewinn.
+
+Der [erste Versuch](qi/PLASMA_OPTIMIZATION_RESULTS.md) bleibt abgelehnt und
+unverändert erhalten. Der [getrennte Folgeversuch](qi/PLASMA_BALANCED_PROTOCOL.md)
+hat sein13-Solve-Budget eingehalten, ohne physische Grenzen zu lockern. Seine
+beiden Domänen waren bei der Konstruktion bekannt; feinere unabhängige Abnahme
+belegt keine blinde Generalisierung. Globale QI-/Orbit-/Druck-/Stabilitäts-/
+Kraftwerksqualifikation bleibt offen, SoTA weiterhin Schritt5.
+
+**Jetzt Übergabe der abgeschlossenen Schritte1/2/3 in ihrem jeweiligen Umfang.**
+Keine weitere Suche und kein automatischer Schritt4/5. Die erhaltene Form ist
+ein Ausgangspunkt für später separat beauftragte und registrierte Arbeit, nicht
+bereits ein spulenrealisierter oder umfassend physikalisch qualifizierter Entwurf.
 
 ## Abgeschlossene Etappe: Basis und prinzipielle Iterationsfähigkeit
 
@@ -91,7 +92,7 @@ physikalische Teilqualifikation; vorhandene negative Evidenz wird nicht umetiket
 | Thema | Einordnung nach Abschluss der Basis |
 | --- | --- |
 | Zulässige starke klassische Lösung, Mehrstarts, faire Methodenvergleiche | Spätere Leistungsbaseline; aktueller feinster Flux8,129882e-8 bleibt über1e-8 |
-| Eigene QI-Plasmaoberflächen | Langfristiger Schritt3; neue Gleichgewichts-/QI-Abnahme vor Optimierung nötig |
+| Eigene QI-Plasmaoberflächen | Schritt3 im registrierten nfp2-Vakuumumfang abgeschlossen; breitere Domänen und weitere Fälle separat zu qualifizieren |
 | Gemeinsame Plasma-/Spulenoptimierung | Langfristiger Schritt4; getrennte Daten-/Physikvoraussetzungen |
 | Globale QI-/maximum-J-Messung, endliche Teilchenbahnen | Offene Qualifikationen, nicht für den begrenzten LPQA-Filamentzyklus freigegeben |
 | Endliche Wicklungspakete, vollständige Netze, Materialien/Lagerung/Mechanik | Vor Ingenieuraussagen zu qualifizieren; alte lineare Verformungszahlen nicht zulässig |

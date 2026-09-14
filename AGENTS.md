@@ -54,7 +54,7 @@ cleanup. Before starting the next step or handing off:
 
 ## Research discipline and autonomy
 
-### Step3 explicitly authorized after foundation handoff
+### Step3 completed in its registered vacuum scope (2026-09-14)
 
 The user's subsequent request authorizes step3: actual boundary/equilibrium
 optimization for an own QI-like vacuum configuration. The earlier automatic stop
@@ -69,6 +69,15 @@ numerical screens passed. The separately registered follow-up is
 `docs/qi/PLASMA_BALANCED_PROTOCOL.md`: both existing action domains and local
 action guards during construction, same physical final gates, at most13 new
 cold solves. Previously seen domains are not a blind generalization holdout.
+That follow-up now passes all ten final gates:11.1700% lower fine relative action
+variance and4.8506% narrow gain;13 new cold solves, exact repeat, complete finer
+independent diagnostics and source audit. Authoritative closure:
+`docs/qi/PLASMA_BALANCED_RESULTS.md` and
+`evidence/plasma-balanced-v1/final-audit.json` (`step3_pass:true`). Steps1/2/3
+are handed off in their respective bounded scopes. Do not rerun searches or
+start steps4/5 without a new task. Preserve the rejected first design, all old
+evidence and source-bound protocols/code. This is not global QI, better measured
+confinement, finite-pressure/stability/coil/engineering/SoTA or SQuID-C readiness.
 
 ### Sharpened foundation milestone (explicit user correction, 2026-09-13)
 

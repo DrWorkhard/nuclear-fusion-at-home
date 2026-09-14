@@ -1,5 +1,20 @@
 # Decision log
 
+## D-014 — Close step3 only in its preregistered vacuum domain and hand off
+
+**Status:** accepted implementation of D-013 and its fixed completion rule
+**Date:** 2026-09-14
+
+The [two-domain follow-up](../qi/PLASMA_BALANCED_RESULTS.md) passes all ten final
+gates with an actual new boundary and numerically resolved improvement. Close
+step3 in the registered Goodman-nfp2 vacuum scope. Do not keep it open merely
+because later SoTA/global-physics goals remain unqualified; equally, do not
+promote this local action-variance result into better measured confinement or
+power-plant performance. The known construction domains are not blind holdouts.
+Preserve the rejected first design, all source-bound code/protocols and both
+studies' resource/evidence records. Hand off steps1/2/3; no new search or automatic
+steps4/5 without a new task. Existing foundation and coil failures are unchanged.
+
 ## D-013 — Explicit step3 authorization: optimize plasma, not another coil-only study
 
 **Status:** accepted; new explicit user request after foundation handoff

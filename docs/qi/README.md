@@ -2,23 +2,31 @@
 
 Zweck: eine numerisch belastbare QI-relevante Messung aus offenen Goodman-Gleichgewichten aufbauen.
 
-Neu beauftragt: Schritt3, tatsächliche Fourier-Rand-/Gleichgewichtsoptimierung
-am nfp2-Vakuumfall. Erster Entwurf trotz14,35% Trainingsgewinn unabhängig
-abgelehnt:15,53% schlechter auf erweiterter Domäne,20 lokale Wirkungsverletzungen.
+Schritt3 ist im registrierten nfp2-Vakuumumfang abgeschlossen: neue Fourier-
+Randform mit11,1700% geringerer feinster relativer Wirkungsvarianz und allen zehn
+Abnahmegates bestanden. Erster Entwurf bleibt trotz14,35% Trainingsgewinn
+abgelehnt; keine Schwellen gelockert. Der Folgeentwurf wurde auf beiden bekannten
+Domänen konstruiert, daher keine blinde Generalisierung oder globale QI-Zulassung.
 
 Für die abgeschlossene [begrenzte Basisabnahme](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
 sind die vorhandenen Daten-/eingefrorenen Wirkungsregressionen qualifiziert.
 Die weitergehenden Studien hier bleiben erhaltene spätere Forschung; globale
 QI-/Drift-/Orbitfähigkeit wird durch Schritt1/2 nicht freigegeben.
 
-Aktueller Schluss: Bouncewirkung, Teilbereiche der Topologie und Wirkungsableitungen sind unabhängig gegengeprüft. Beide analytischen81-Zellen-Driftkontrollen bestehen, nun einschließlich nichtverschwindender radialer Drift und gleicher Phase. Die absoluten Testparameter sichern jedoch keine kleine endliche Bahnabweichung. Echte QI-Felder, Invariantenbereich, globale Topologie und Gleichgewichtsauflösung bleiben offen. Historische nfp3-Vorzeichenwechsel unter Neumarkierung bleiben erhalten und sind kein Beleg geänderter Einschlussphysik.
+Aktueller Schluss: Bouncewirkung und begrenzte Kontur-/Auflösungsprüfungen tragen
+nun eine tatsächliche lokale Plasmaoptimierung. Beide analytischen81-Zellen-
+Driftkontrollen bestehen einschließlich nichtverschwindender radialer Drift und
+gleicher Phase; die absoluten Testparameter sichern aber keine kleine endliche
+Bahnabweichung. Globale QI/Topologie, umfassende Invariantenabdeckung und echte
+Teilchenbahnen bleiben offen. Historische nfp3-Vorzeichenwechsel unter Neumarkierung
+bleiben erhalten und sind kein Beleg geänderter Einschlussphysik.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
 - [Beide Wirkungsdomänen: Folgeprotokoll](PLASMA_BALANCED_PROTOCOL.md) — Erhaltene16 Formen breit auswerten; nötigenfalls acht kleine Differenzprobes und gemeinsames lineares Vorschlagsmodell. Maximal13 neue Solves, unveränderte physische Abschlussgrenzen.
-- [Beide Wirkungsdomänen: Arbeitsstand/Bedienung](PLASMA_BALANCED_RESULTS.md) — Archivprüfung und11 neue Differenz-/Probesolves auditiert; gemeinsamer Kandidat mit4,85%/11,16% Konstruktionsgewinn ausgewählt, feinere Abnahme offen.
+- [Beide Wirkungsdomänen: Abschluss/Bedienung](PLASMA_BALANCED_RESULTS.md) —13 neue Solves,4,85% enger und11,17% feinster breiter Vorteil, alle zehn Abnahmegates bestanden; Eingabe, Prüfergebnisse und Grenzen des Schritt3-Abschlusses.
 
 - [Eigene Plasmaoberfläche: Protokoll](PLASMA_OPTIMIZATION_PROTOCOL.md) — Vier benannte Randmoden, begrenzte klassische Suche, periodenzugeordnete Wirkung, feinere unabhängige Domäne und feste Abschlussgates; kein bloßer Ablauf- oder SoTA-Pass.
 - [Eigene Plasmaoberfläche: Ergebnis/Bedienung](PLASMA_OPTIMIZATION_RESULTS.md) — 19 Kaltstarts, vollständige separate Abnahme und erhaltene Ablehnung trotz Trainingsgewinn; alle Quellen-/Feld-/Verfeinerungsprüfungen bestehen, der Entwurf nicht.

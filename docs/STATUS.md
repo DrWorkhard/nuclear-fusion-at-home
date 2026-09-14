@@ -1,24 +1,25 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 14. September 2026, nach unabhängiger Ablehnung des ersten Plasmaentwurfs.
+Stand: 14. September 2026, nach bestandener Schritt3-Vakuumabnahme.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
 
-**Jetzt aktiv: Schritt3 nach neuem ausdrücklichem Nutzerauftrag.** Die
-[registrierte Plasmaoptimierung](qi/PLASMA_OPTIMIZATION_RESULTS.md) hat eine um
-0,4mm in zbs(1,1) veränderte nfp2-Vakuumform ausgewählt:14,35% kleinerer
-Trainings-S-Wert nach16 neuen Suchgleichgewichten. Alle19 Kaltstarts und die
-feinere unabhängige Abnahme sind jetzt abgeschlossen:15,53% schlechterer
-erweiterter S-Wert und20 lokale Wirkungsverletzungen. Quellen, Wiederholung,
-Felder, Konturen, Tracer und alle Verfeinerungen bestehen. Der Entwurf wird
-abgelehnt; Schritt3 bleibt offen. Schritt1/2 bleiben abgeschlossen.
+**Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der
+[neue nfp2-Plasmaentwurf](qi/PLASMA_BALANCED_RESULTS.md) verändert vier benannte
+Randkoeffizienten, mit frisch gelösten Gleichgewichten. Auf dem feinsten Raster
+sinkt die relative Bouncewirkungsvarianz von2,3894265674e-4 auf2,1225270715e-4:
+**11,1700% Verbesserung**, zusätzlich4,8506% auf dem engeren Konstruktionsziel.
+Alle zehn finalen Gates bestehen. Der Vorteil beträgt47,38mal die beobachtete
+numerische Unsicherheitssumme (gefordert>5mal); alle70 lokalen Wirkungswächter,
+20 Verfeinerungen, Feld-/Kontur-/Tracerprüfungen und exakte Kaltwiederholung bestehen.
 
-Der [separat registrierte Folgeversuch](qi/PLASMA_BALANCED_RESULTS.md) hat jetzt
-einen anderen Kandidaten ausgewählt:4,85% enger und11,16% breiter Vorteil auf
-dem Konstruktionsraster, lokale Wirkungsgrenzen dort eingehalten. Quellen,
-Vorschlagsmodell und Auswahl separat auditiert; Kaltendpunkte und feine Abnahme
-stehen noch aus. Keine vorgezogene Zulassung oder Umdeutung des ersten Fehlschlags.
+Das ist ein unabhängig numerisch bestätigter Vorteil dieser Zielgröße, kein
+Nachweis besseren Teilcheneinschlusses oder globaler QI. Beide Domänen gingen
+in die Konstruktion ein, daher kein blinder Generalisierungstest. Der
+[erste Entwurf](qi/PLASMA_OPTIMIZATION_RESULTS.md) bleibt vollständig abgelehnt:
+15,53% schlechter auf breiter Domäne trotz Trainingsgewinn. Keine alten Grenzen
+gelockert;13 neue Kaltstarts im Folgeversuch,32 insgesamt einschließlich Fehlschlag.
 
 **Schritt1 und2 sind als begrenzte Basis- und Iterationsfähigkeit abgeschlossen.**
 Die [konsolidierte Abnahme](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) besteht:
@@ -27,7 +28,7 @@ ohne Skip, zwei exakt wiederholte24-Bundle-Solverpfade, separate Audits und alle
 vier unabhängigen Kandidatenabnahmen. Alle acht Schritt1- und drei Schritt2-Gates
 stehen auf Pass. Ein korrekt abgelehnter Entwurf verhindert diesen Basisabschluss nicht.
 
-Unverändert: keine neue zulässige Optimierungsbaseline, kein SoTA-/Kraftwerksvorteil,
+Unverändert: keine neue zulässige Spulenoptimierungsbaseline, kein SoTA-/Kraftwerksvorteil,
 keine vollständige SQuID-C-Qualifikation. Globale QI-/Orbit-/Mechanikarbeit bleibt
 erhalten und offen, ist aber nicht Teil der jetzigen LPQA-Filamentabnahme.
 Historische umfassendere Abschlussformulierungen sind durch die ausdrückliche
@@ -103,7 +104,9 @@ Altbestand bei5971fee lokal getaggt; keine alten numerischen Kerne/Evidenz verä
 externe Quellen einschließlich bestehender STELLOPT-Anpassungen unverändert.
 Bedienung und Grenzen stehen im [Abschlussbericht](validation/FOUNDATION_ACCEPTANCE_RESULTS.md).
 Damit endete die Basisarbeit. Die danach ausdrücklich beauftragte Schritt3-Arbeit
-ist getrennt registriert; keine automatische Ausweitung auf Schritte4/5.
+ist jetzt ebenfalls getrennt abgenommen. Eingabe, Ergebnisse, Grenzen und
+Wiederholungsbefehle stehen im [Plasmaabschluss](qi/PLASMA_BALANCED_RESULTS.md).
+Übergabe; keine automatische Ausweitung auf Schritte4/5.
 
 ## Später zu qualifizieren — keine Voraussetzungen für Schritt1/2
 

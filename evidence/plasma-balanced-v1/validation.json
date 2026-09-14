@@ -1,0 +1,5498 @@
+{
+  "all_phases_completed": true,
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "f285fbdf0eb21cea060a2f34c391da901a8dad35",
+    "dirty": true,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "source": {
+    "analysis_lock": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/uv.lock",
+      "sha256": "366fda86aa2cc779a5acf95c9a6b4fffd7a6697f23a98b0a866849cb7e652be5"
+    },
+    "author_input": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+      "sha256": "a15d0134a362727976a6c22b59b12a7f3a6c740576ef5a28f5727721ed700209"
+    },
+    "code": [
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_inputs.py",
+        "sha256": "558886cf8c7858c2107c3cae1a337d4bcc1d5f37c575d2d5151fc7c95aab8ded"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_equilibrium_worker.py",
+        "sha256": "5a641795bbf00acf87b7ab25d51f93be557742c28e4b16ba2b466fe93cbc2d62"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_measurement.py",
+        "sha256": "1f6444b154e3177e3177b86f8186d8ef3aefac2c05cd9550f784202a9d190e1e"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_plasma_search.py",
+        "sha256": "f7f15767a1d455b52c778611b4471a1fda3650564dab34ed9c84c2919f82e46a"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_plasma_design.py",
+        "sha256": "2a2f747abf03ad1573d5071033d7739ad6bef679740d6ca1e00a0c7f6b208b71"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_plasma_design.py",
+        "sha256": "31bb143251272b6cd77627b4896d485f4375622b4b5fcc9140cdaaeade8146a0"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/plasma_design.py",
+        "sha256": "8bff3a9e048d98b84091dfed38bf6c2dbe02267e3c8e9b6a187286b0f6464453"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/plasma_action_audit.py",
+        "sha256": "5323fe60f07170fab4c09f51ac279781f4aad4951b5d721b7cac0bb03e294dc0"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/vmec_trace.py",
+        "sha256": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/bounce_action.py",
+        "sha256": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_resolution.py",
+        "sha256": "3d2c9448add0622b17d01c5527aacd0c5d5fd2f29e987a1375f41b2d7669825b"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_field_grid.py",
+        "sha256": "fc2827312a394468aaa07e4b23094479af8b82c15df8d5babf9d39fefe2a58e9"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clebsch_field.py",
+        "sha256": "392fd2470c95bbdb850bf278d95d74291c5dc28f5f827e09a20e5ef347022240"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/contour_topology.py",
+        "sha256": "421f7afe022514f989ad0caa3ee6af806bb2e32c7d4cdf663ae1111cc45ee9d0"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/evaluate_published_maximum_j.py",
+        "sha256": "4ffa7fe64eff91a9359b5f732649642e3c3db49b4827ee8eab4f570a00b27959"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/resource_guard.py",
+        "sha256": "85558ec13d446b822a7601c741767bc44435dd95d278ae752d829409143dc2db"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_qi_clebsch.py",
+        "sha256": "4a3de62a8b499694ebb9969ef8533df0a5c91b4a1d3af1116c00c365d1e05e42"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_plasma_design.py",
+        "sha256": "e700b2f647d19ceda9f943a494831af4b5831f0c315216eb46a3f4e27e2e3d0a"
+      }
+    ],
+    "lock": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/uv.lock",
+      "sha256": "34cf6b801280f26a66a517e1061169026edbde02494e0fc3b527fd4cb2be2af8"
+    },
+    "original": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2/original_input.json",
+      "sha256": "a11bbeb1c16b63c826333dec3f60aa226670d889422c949c0871f2a5357daf55"
+    },
+    "protocol": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/qi/PLASMA_OPTIMIZATION_PROTOCOL.md",
+      "sha256": "022d2020d9662b6adf2ba6e835dc448295b6b260d1bd7ca472f71d47d7f42190"
+    },
+    "published_tracer": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/plots/plot_elephants/PltElephants.py",
+      "sha256": "0c193dd1921a5300c8e9defe8e76387e2ed447055e1d99e6f316eb77bb6dbf5f"
+    },
+    "reports": [
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1.json",
+        "sha256": "00a24ab7f16e186100ff0e2f95ba40bcd81662914dd051294a124fb013e0eb00"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1-evaluation.json",
+        "sha256": "a5adbe8f99fc24a006094f4c0941b8ed6a86162a9650ab90770c8e331afeed73"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1-evaluation-audit.json",
+        "sha256": "8b5c1ac0999996f3abbbac135ee60a9cf9a1596277cd5112abf95bf76842da83"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-producer-inventory-v1.json",
+        "sha256": "f0ade5988fe2bfeb3cfb758d23b97373b2439dd5d9e5d94ac4b8cd3f8805cc7b"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp2.json",
+        "sha256": "50809d6b3a53bd39a89da3b41be25b282740e3de36173d7d4ac3b53e5a5c8e86"
+      }
+    ],
+    "solver": {
+      "iteration_styles": [
+        "vmec_8_52",
+        "parvmec"
+      ],
+      "sources": [
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/__init__.py",
+          "sha256": "877d12115ad4f2d4706919b7fc4cca2d9e98504b4a054c80ec81c48d4ccd433a"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/cpp/_vmecpp.cpython-312-darwin.so",
+          "sha256": "8f0acaf63d878e17e9f1b1779c9695a21e1a45b690639dbf76886f7a7799684f"
+        }
+      ],
+      "version": "0.7.3"
+    }
+  },
+  "states": [
+    {
+      "contours": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.1-n256.npz",
+            "sha256": "3c3ae5c9d04ab9e323beb4c536547260bd3cc6636363b8a1a401c61853be52ba"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004627828346795315,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.247720170688374e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004528171238958656,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4832270712429173e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003307063327342874,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.780218335536763e-07,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002648807168055267,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.020607744544973e-06,
+              "winding_roundoff_max": 8.481479150569378e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0027759256993240555,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.1588811346347565e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002717705616297028,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.5001647955306357e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0023569394765177165,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.070768091596265e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.1
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.25-n256.npz",
+            "sha256": "b18e1a0ae1bbb2857fbdf38bb072602fc0a6b5246d0a03cd97e80036abd8809b"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00709904808060946,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.5000217740790417e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00765008154598279,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.1512335710784493e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005531698082891445,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.5674341252691314e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0044276973879342485,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.1479807712760898e-05,
+              "winding_roundoff_max": 7.774689221355263e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004627159415228288,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.8438731573443186e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004380617741122528,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.076132296202415e-06,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0037656096418743346,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 9.875912672476568e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.5-n256.npz",
+            "sha256": "69916c714a5202e60ba7f73c1a7e7ac4c614ba332daa71a7962bdb52b5758d9a"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.011729628099897749,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.107502093339791e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.011439579659237253,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.7707104819153563e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.008360820701146299,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.5769469302545818e-06,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0068587853093928786,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.2770715505547565e-05,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0070305849333811565,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.661317682267037e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006267768356405856,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2557042135631205e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005343600898205736,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.829097660214587e-07,
+              "winding_roundoff_max": 0.0
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.75-n256.npz",
+            "sha256": "aee5669ac635fdcb5b8e74f2692732343e5dcb7bf4f884978211b0b50c47f8ca"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.019573440482143045,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.3814507607100064e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.01590995397605699,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.5393131319446773e-06,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010868926553306402,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.50118037986121e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009214363189610886,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4275799430583365e-05,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009188738244712447,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.898912130723186e-06,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007709368418599816,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.3255480682281658e-07,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006990808380608282,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.597464202830716e-06,
+              "winding_roundoff_max": 4.947529504498804e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.9-n256.npz",
+            "sha256": "507a1a7ba5e8cb1791bed6cef2298101ab96cdac7b0e5507165bb69dab4f4825"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.024101979935422513,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.5303457093000492e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.018727119660506553,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2035435718306554e-08,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012347949303402217,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.3190059906066917e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010678761085789912,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2102776352040184e-05,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010439345757386143,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.599328734068006e-06,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.008433195922241676,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.562095071149309e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007879170472487207,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.431984439849265e-07,
+              "winding_roundoff_max": 7.067899292141149e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.9
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.1-n512.npz",
+            "sha256": "db172dbd0eaad48548e0ee53e4e4e4ccb2c543f539c085249aa862969297380a"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002308951062240272,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.247716228240681e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0022583349376947837,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4832252707352265e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0016481322502031048,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.780207677121105e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013238777729673856,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.1888419126733837e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013865554042773454,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.1588785139422395e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013568164057042864,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.500161760549661e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.001170147330642024,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.683481983443201e-07,
+              "winding_roundoff_max": 1.2722218725854067e-15
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.1
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.25-n512.npz",
+            "sha256": "cb3d93c0f8b58fc8dbd8499b187cdf38c7a2da1442136b245a9340262b69c13f"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003545574739048263,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.960462182317739e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038264207890508217,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.1512335710784493e-07,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002760845267060219,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.0598890259076514e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0022136390969054176,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2061055051898382e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0023125318728887123,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.0494554002471855e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002185525493081375,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.6511503508548793e-06,
+              "winding_roundoff_max": 1.0601848938211723e-15
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.001871722895011807,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.758138157329028e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.5-n512.npz",
+            "sha256": "03db4a07184a8d0159d59e91339d6ce1fca49d7d4698772c1f1550a19914672d"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005866424000832815,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.107498295048515e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0057236361051291595,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.296529347968845e-08,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004181276387607902,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.0636787015529168e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003429045174774714,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.18665197541437e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003517395244439392,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.661312295742909e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0031270546063022486,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.22306706036204e-07,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0026621971815661283,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.82909216934711e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.75-n512.npz",
+            "sha256": "b7333c674d6ad69666ad6efd9af4f9b35df95ae3488d122544eab657f256e3ed"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009777614173917648,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4266212356415423e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007971086187760434,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.5393131319446773e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005432370368895878,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 9.132275438940712e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004607942223131545,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.6821491102211285e-07,
+              "winding_roundoff_max": 7.067899292141149e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004596406860605029,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.1184052171983945e-06,
+              "winding_roundoff_max": 9.188269079783492e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038532578264143247,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.3255480682281658e-07,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003490612785233882,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.6117252705134325e-08,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/contour-s0.9-n512.npz",
+            "sha256": "64edd17f2b7ae6b66413507626df3a921c831d1f35d07914f2deacf2e050d493"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012069359861648365,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.530344848709337e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00937615670603087,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2035428950172964e-08,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0061742496492565024,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.14610025864717e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005339519138034099,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.713097068036639e-08,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005221530410432607,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.508636957676165e-07,
+              "winding_roundoff_max": 8.481479150569378e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004214496016173186,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.902658107471789e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003942063251650474,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.431981385169967e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.9
+        }
+      ],
+      "errors": [],
+      "fields": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/field-s0.25-n64.npz",
+            "sha256": "85c6a43351508ef4676abf57c7f2d161e96c26eba02224f9a39bd50acee8df70"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.821903322161895e-07,
+            "magnitude": 6.514197621814354e-07,
+            "missing_2pi": 5.283185145775496,
+            "poloidal": 2.0766070203287748e-06,
+            "toroidal": 3.8802307806645513e-07,
+            "wrong_sign": 2.0000001614040905
+          },
+          "n": 64,
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/field-s0.25-n128.npz",
+            "sha256": "eff3449963a21fdb155a2528b0e31a1e5dbb79fbe868e8c549481e48e113812a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.841877656983811e-07,
+            "magnitude": 6.563485541898293e-07,
+            "missing_2pi": 5.2831851497020805,
+            "poloidal": 2.076602889893722e-06,
+            "toroidal": 3.9134976908978346e-07,
+            "wrong_sign": 2.0000001574775057
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 1.9974334821916076e-09,
+            "magnitude": 4.928792008393875e-09,
+            "poloidal": 4.1304350525855666e-12,
+            "toroidal": 3.3266910233283244e-09
+          },
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/field-s0.5-n64.npz",
+            "sha256": "e056e95b2b3addb99bf9557865b2fe4c7822ada2fc7ec482b82dbda0ffba822e"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.815016342458049e-07,
+            "magnitude": 3.2322024671678464e-07,
+            "missing_2pi": 5.283185199814038,
+            "poloidal": 1.3742518904101324e-06,
+            "toroidal": 2.5365321374532404e-07,
+            "wrong_sign": 2.0000001073655493
+          },
+          "n": 64,
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/field-s0.5-n128.npz",
+            "sha256": "e58822c4897345321017eeca71321033b443a4f65aaaed6f07447bb8cce818c4"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.8153702113317347e-07,
+            "magnitude": 3.288478046873424e-07,
+            "missing_2pi": 5.283185199814038,
+            "poloidal": 1.3740431869778536e-06,
+            "toroidal": 2.5573111393637374e-07,
+            "wrong_sign": 2.0000001073655493
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 3.5386887368587325e-11,
+            "magnitude": 5.627557970557784e-09,
+            "poloidal": 2.0870343227874496e-10,
+            "toroidal": 2.0779001910496925e-09
+          },
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/field-s0.75-n64.npz",
+            "sha256": "990ac3261a96e8cb8c22f24a8845f6c286ec877789ba4917377b17adfb91128a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.773730935460462e-07,
+            "magnitude": 2.172761043363904e-07,
+            "missing_2pi": 5.283185226633847,
+            "poloidal": 1.0877784890117382e-06,
+            "toroidal": 2.0902192795192088e-07,
+            "wrong_sign": 2.0000000805457403
+          },
+          "n": 64,
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/field-s0.75-n128.npz",
+            "sha256": "5a15c3df18e45671a6b93288f84f0bbf5b01006baf8fe6a66a8582ee0620d4e2"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.7737296747124124e-07,
+            "magnitude": 2.1812182118495725e-07,
+            "missing_2pi": 5.283185226633847,
+            "poloidal": 1.1516907309034944e-06,
+            "toroidal": 2.096216875945851e-07,
+            "wrong_sign": 2.0000000805457403
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 1.260748049541911e-13,
+            "magnitude": 8.45716848566853e-10,
+            "poloidal": 6.391224189175626e-08,
+            "toroidal": 5.997596426642173e-10
+          },
+          "s": 0.75
+        }
+      ],
+      "label": "reference-201",
+      "measurements": [
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/level-0/measurement.json",
+          "sha256": "95aca2d5b60f75649414ca1214350bef5f4d59f3b3d1818b99de05a4ecb065a6"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/level-1/measurement.json",
+          "sha256": "56f1efacb33730be3f2d362687743ac81fcd7087f593c588aa31d5f339dfa7dc"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/level-2/measurement.json",
+          "sha256": "3b72e9f0a0ab33b73b3003893ec23e8fb3fb21a384df9d1222e1dcd37e914499"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-201/level-3/measurement.json",
+          "sha256": "5bc491c0e9614beac1dbbc8af8a23f49af13279d42154833f26a84f6167c2196"
+        }
+      ],
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/search-0/wout.nc",
+        "sha256": "906f0a939f87e7643fd62fe0c918f056d6dbbd1013798a8e80d4dfd4f26a7a97"
+      }
+    },
+    {
+      "contours": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.1-n256.npz",
+            "sha256": "b86c8eb92f5432cf473947362933cb0aeb8b5dfbf0b897789947901779efbb18"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004765542980102566,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.656733992479199e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004578380525941839,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.459709944730419e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003271886612785657,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.587491506493377e-06,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002634425349776315,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.345098535321455e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0027425156984750565,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.8362888451459135e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0027032189271860574,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.3897539581897778e-06,
+              "winding_roundoff_max": 8.481479150569378e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002396389558657397,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.539291000361777e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.1
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.25-n256.npz",
+            "sha256": "54fb86a182e750623c291cafb93f6b12c213664fc1901d4e588d88abb663fcd0"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007281697952422839,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.1144006184340544e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007797097347590487,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.76275545658921e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005494911738419539,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.370532478698757e-07,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004406280566079168,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.303084861345461e-06,
+              "winding_roundoff_max": 7.067899292141149e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004582405728264405,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.9479696663995847e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0043531523988855625,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.4158772542629557e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038270421708013203,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.476138893724899e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.5-n256.npz",
+            "sha256": "999046cb5641448db3d7b78eb28ed8637acea13370a7575f4490fa6129b19a89"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012095488047052072,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.5783570090244117e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.011521532431054027,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.880750810980496e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.008320151296896228,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.871220095347227e-06,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006825800063086085,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.0300262684566945e-05,
+              "winding_roundoff_max": 9.895059008997609e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006972871272202585,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.633222105123263e-06,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006244964650543139,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.9338772138274466e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0052553522052045665,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.8874063937539793e-06,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.75-n256.npz",
+            "sha256": "c474ad5de2d00c8ff245f288745a637b8e4b0afa0e98775fc501919965ff8210"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.01986557386308263,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.478927696159992e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.01595484099281208,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.9690942190815123e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010798124586584024,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.5857065665879849e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009172869058542865,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.819620875697556e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009118318860735108,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.883452113486856e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007716762297150126,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.246979727150118e-06,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006543495124833321,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.5571137135869284e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.9-n256.npz",
+            "sha256": "7dc2b8d32054d754d1cf1f57f7e859be1dd0ce128be158df03f20b8cb24a448a"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.024158231010327214,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.7288220366110538e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.018703871769539582,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.093503266613007e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012273789587923467,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.125971089075746e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010631328072764568,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.433009383284613e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010375075198505002,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.234549922151196e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.008467784697013148,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.551279363827285e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0073808836710496095,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.993642221583803e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.9
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.1-n512.npz",
+            "sha256": "304f97b2a26fa532f713f4da91e24294609f7cfde0e6e66ab6ec60d2f13b0c93"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0023729839311168455,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.656733992479199e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002287917588072119,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.459709944730419e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0016343813291399556,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4930249784807995e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013166772208137445,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.3367845269032805e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013688282117021444,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.8362888451459135e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013489163910826996,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.869933155615712e-07,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0011909631454947167,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.67049983573761e-08,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.1
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.25-n512.npz",
+            "sha256": "e1756f940864084fa0a3f7b514fe31eec75da5d87b0a139538b9238ae4c5da34"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0036351630706561444,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.750379583449159e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038915608534439983,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.2276158425483912e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0027411958711507367,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.370532478698757e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002202951535558384,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.842873819830194e-07,
+              "winding_roundoff_max": 7.774689221355263e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002287949609385276,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.9038081417055415e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002172077231874514,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.4158772542629557e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0019115097264057468,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.476138893724899e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.5-n512.npz",
+            "sha256": "f48bd1705c7155d72e7c32f159db576c8a1ec9da4b7acd986efa53bf4383e95c"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0060506591914673,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.5783570090244117e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005763670365336537,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.880750810980496e-07,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0041595269196612605,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.540217711679793e-07,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0034136874731056643,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.3314714899530936e-06,
+              "winding_roundoff_max": 7.774689221355263e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003484718912342366,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.0824829068896666e-06,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0031155237621560694,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2855150285444814e-06,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002620686603520106,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.8450378462442197e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.75-n512.npz",
+            "sha256": "61297a3e799ce4f42487a60cbe3becd70e78c823b875f73a84dfc762c34d63b1"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009928625419045822,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.478925626379735e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007986197000064976,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.1590530065504115e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005398291543331268,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.688777698572648e-08,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0045866161965459895,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.481357356013791e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004562369158385593,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.2284920399851272e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038522538022984776,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.174938245236127e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003256549662654429,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.433230994546611e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/contour-s0.9-n512.npz",
+            "sha256": "f599d7b54bb6e2c18deea88650858c0011ac075b7e99d86c888f87276052ce89"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012109388446131852,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.122617624979197e-07,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009364182049455216,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.4958689040680816e-07,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006137779745370331,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.125969556368207e-07,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005316118122853375,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 9.019090587382371e-07,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005187225827564923,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.578568553736938e-06,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0042291043725462,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.429165366524922e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003684471600736927,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.948718780565462e-07,
+              "winding_roundoff_max": 5.654319433712919e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.9
+        }
+      ],
+      "errors": [],
+      "fields": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/field-s0.25-n64.npz",
+            "sha256": "de9d580d6e6264ea70eaae18e780daa41c8d66e711aa2062105cde8dbcfdcf12"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.835634430833551e-07,
+            "magnitude": 6.491948045554595e-07,
+            "missing_2pi": 5.2831851459447705,
+            "poloidal": 2.0812859982599545e-06,
+            "toroidal": 3.915079693789471e-07,
+            "wrong_sign": 2.0000001612348166
+          },
+          "n": 64,
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/field-s0.25-n128.npz",
+            "sha256": "9d45d956c5f0782e433204cab6981502bb6874036cc8eaa5e6537c5b5cd0113d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 2.837687301193049e-07,
+            "magnitude": 6.518640078884678e-07,
+            "missing_2pi": 5.283185149735053,
+            "poloidal": 2.0723412669598743e-06,
+            "toroidal": 3.939050512374897e-07,
+            "wrong_sign": 2.0000001574445325
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 2.052870359498018e-10,
+            "magnitude": 2.669203333008334e-09,
+            "poloidal": 8.94473130008025e-09,
+            "toroidal": 2.3970818585425576e-09
+          },
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/field-s0.5-n64.npz",
+            "sha256": "dd0584d33a5c4a1d8bf4592d142228aa682bce30442d5ef7e015e3a60bb39495"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.8541774612204493e-07,
+            "magnitude": 3.2232294222910136e-07,
+            "missing_2pi": 5.283185200955009,
+            "poloidal": 1.3606243932654705e-06,
+            "toroidal": 2.5622924012217043e-07,
+            "wrong_sign": 2.000000106224578
+          },
+          "n": 64,
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/field-s0.5-n128.npz",
+            "sha256": "3945dbb4dac1b59f31c9d09859659704d37ef7dd1a64f04bd41a21a66c640714"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.856730943938814e-07,
+            "magnitude": 3.2773836535586643e-07,
+            "missing_2pi": 5.283185200955009,
+            "poloidal": 1.3606243932654705e-06,
+            "toroidal": 2.568207185082718e-07,
+            "wrong_sign": 2.000000106224578
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 2.553482718364736e-10,
+            "magnitude": 5.41542312676507e-09,
+            "poloidal": 0.0,
+            "toroidal": 5.914783861013826e-10
+          },
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/field-s0.75-n64.npz",
+            "sha256": "f807d3d72ae3be59c2e4d7098fdf002d1a55491a43caccbe144cbd5b00bc2a8c"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.9198149119156064e-07,
+            "magnitude": 2.2173366732590959e-07,
+            "missing_2pi": 5.283185224209672,
+            "poloidal": 1.088004569717467e-06,
+            "toroidal": 2.1129690437749226e-07,
+            "wrong_sign": 2.000000082969915
+          },
+          "n": 64,
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/field-s0.75-n128.npz",
+            "sha256": "042afd351db9775dca1136727d3c619d541fbaf3ebaa7059a4c1511e7984d74a"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.9198146802943017e-07,
+            "magnitude": 2.2214869201922305e-07,
+            "missing_2pi": 5.283185224209672,
+            "poloidal": 1.150140419986111e-06,
+            "toroidal": 2.1185105005216527e-07,
+            "wrong_sign": 2.000000082969915
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 2.3162130474577844e-14,
+            "magnitude": 4.150246933134627e-10,
+            "poloidal": 6.213585026864416e-08,
+            "toroidal": 5.541456746730081e-10
+          },
+          "s": 0.75
+        }
+      ],
+      "label": "selected-201",
+      "measurements": [
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/level-0/measurement.json",
+          "sha256": "45145ca35b275d7806b8781017ccb343a5795ce713f1ccea06b3ce33a1211576"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/level-1/measurement.json",
+          "sha256": "84e22263a9aad6c843fcc22e47a515e5079b2348e46f481cdee964e18f022847"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/level-2/measurement.json",
+          "sha256": "188c0448b50c57d49c707fae223dd458477a9c61ba957583ed951b2bc8454e9d"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-201/level-3/measurement.json",
+          "sha256": "4ad46ba075b95356699ee21a3355478a50d08ab7dede3e5ea55177ddc3e1d7f1"
+        }
+      ],
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native/wout.nc",
+        "sha256": "6249ac581d2d31f9bfc9fcba3140e767279cd24289c6d60bfb475a657f76fe2f"
+      }
+    },
+    {
+      "contours": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.1-n256.npz",
+            "sha256": "4679f8155e2befce61a47a2cd961b417c89c779cc2bec45258f94d64e13a9c7b"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004633456320522367,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.031873650117607e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00453093214383582,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.011653700382831e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003304318969625797,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.1128504042424586e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0026499588136879026,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.313176511652117e-06,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002777478219898377,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.965654510030569e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0027177251997487772,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.9549498123853235e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0023610443032513473,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.5129123285505955e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.1
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.25-n256.npz",
+            "sha256": "8842bdd22a8894c70276d74689e042327324b24960fd881a746a242e6af1c472"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007076435217990618,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4425374990282576e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007649653575149351,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.413441420131305e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005528932776683426,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.6601101235327325e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004427788499425489,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.6933991236403575e-05,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004627195500770398,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.102275020541805e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004378465785078056,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.5810048124887585e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0037680229917338437,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.1874083400772401e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.5-n256.npz",
+            "sha256": "99076ec17a95e7dcddc86baaadb53680d24d0f4c357cae4a838a5e0cdfb38041"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.011726385105095272,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.388913384676726e-09,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.011435962664889665,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.982156173271749e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.008361620396104108,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.500675096248051e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006858646829438264,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.2761550811101e-05,
+              "winding_roundoff_max": 8.481479150569378e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007030600984362145,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.873007979740573e-07,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006267915979329963,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.2702788042839636e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005340061284954345,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.88089946179911e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.75-n256.npz",
+            "sha256": "63d98030c4b3eddfb3de3cb9f5bcdee3c2205c68737d3e34fb31649efe1f05bd"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.019572141728992243,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 9.422309764031232e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.01590557240081747,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.0400716012349633e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010869522076363047,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.972276576812279e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009214716107908139,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2689089776582762e-05,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009189543884271956,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.617853332685956e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0077099693581956785,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.4506112462794887e-07,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006990071599994874,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.6744366574892524e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.9-n256.npz",
+            "sha256": "f48e369f72225a708d06bd46907bbf964dfa2d3e300cdecb26b65a34ff9b1584"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.02409858955230515,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.0211868392986042e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.018723022736987893,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.111860567378318e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012347818456039938,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.1093105929099074e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010678555814064516,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4459625393462841e-05,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010439629604953815,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.193919024926347e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.008431948032927572,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.457799865372559e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007878644608511287,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.766005688858075e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.9
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.1-n512.npz",
+            "sha256": "6d563a7d58363581f0865b066e5fb32c83260d150b4bbd41827f377b430be81b"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002309134673446067,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.031862956253985e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0022604378279322823,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.011641516498944e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0016467485718347774,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.850235746368636e-07,
+              "winding_roundoff_max": 9.188269079783492e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013244739586522059,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 9.883044192648492e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.001386986400179424,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.6842354729326365e-06,
+              "winding_roundoff_max": 7.067899292141149e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013569135529554188,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.0874117851099457e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0011726753723726446,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.4489430427840963e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.1
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.25-n512.npz",
+            "sha256": "49475c1ac0d2d8743983ee943689da37598a4d0d64abb09f7e4562bebf476b5f"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0035318011836102947,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.619392420773807e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038261588489576503,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.413441420131305e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002759882706285577,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.5100823540037307e-07,
+              "winding_roundoff_max": 9.895059008997609e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002213671154866148,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2462251298329436e-06,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002312642547820154,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.9039700636539625e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002184346189632258,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.092465668096313e-07,
+              "winding_roundoff_max": 9.188269079783492e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0018728983567095625,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.9953414525851146e-08,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.5-n512.npz",
+            "sha256": "2bfe93a44dbd98d01b6ffc249c8d0b3088044b20a0438339b654946db5acfa70"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005864854872664971,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.388907731748557e-09,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005721825238397038,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.161778936651774e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004181636281175294,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.500670887926802e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0034289770797366614,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.420641201650212e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003517353237083576,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.873001956453214e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00312707322125938,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.061681782420791e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00266042548439005,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.740683269748268e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.75-n512.npz",
+            "sha256": "aa52f0bd21b927c7601708f4c2ce1c8d47059762823db3a84ca4cbf961f4fefe"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009776915569635669,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.0974498252053635e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007968850778754977,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.0400716012349633e-07,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005432663028344109,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.9974807388867115e-06,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00460807060438384,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.6532236881766966e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004596720235606533,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.1880075422693776e-07,
+              "winding_roundoff_max": 8.481479150569378e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038533906566899923,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.3653163944010691e-08,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0034901413339030185,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.486721571755846e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/contour-s0.9-n512.npz",
+            "sha256": "182f871d548aec92f86e61073700564e2dd55bf7c177292709f8054c2b606e00"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012067324037182026,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2023524459231717e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009374193919837737,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.1508622210529304e-08,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006174228191206943,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.818431339121409e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005339472100590825,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2131988043834042e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0052217312768343405,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.0567154693725884e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004213843463964473,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.4377094592732007e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003941770796670241,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.562379423508375e-08,
+              "winding_roundoff_max": 7.067899292141149e-17
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.9
+        }
+      ],
+      "crosscheck": {
+        "all_pass": true,
+        "rows": [
+          {
+            "action_relative_errors": [
+              4.4625590872593435e-06,
+              5.3935713080210945e-06,
+              4.753676118962602e-06,
+              4.2073602850578595e-06,
+              3.6680391274357405e-06
+            ],
+            "all_pass": true,
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/published-s0.25.npz",
+              "sha256": "31cd772b36533bdbfe1f6de2760e8d6d3ffdbb1e2e98c6c2494ec6dd3fe0d7ff"
+            },
+            "field_relative_error": 1.4063195052926858e-12,
+            "length_normalized_error": 1.8988372890003502e-06,
+            "s": 0.25,
+            "stdout": "",
+            "warnings": []
+          },
+          {
+            "action_relative_errors": [
+              5.3981492726951075e-06,
+              6.726725675032519e-06,
+              6.0122526396311216e-06,
+              5.399052437349283e-06,
+              4.776572055553707e-06
+            ],
+            "all_pass": true,
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/published-s0.5.npz",
+              "sha256": "486503c3b426fe943a41e23063850ea8cd9900ebab7fa6159da42f04b33954e2"
+            },
+            "field_relative_error": 1.9165780074104077e-12,
+            "length_normalized_error": 2.243335571907406e-06,
+            "s": 0.5,
+            "stdout": "",
+            "warnings": []
+          },
+          {
+            "action_relative_errors": [
+              6.297967805157789e-06,
+              7.888890301788187e-06,
+              7.10393859337799e-06,
+              6.427980026146862e-06,
+              5.724041286514492e-06
+            ],
+            "all_pass": true,
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/published-s0.75.npz",
+              "sha256": "caa8b4a973a88a1ab95abe9cd8af7ffe9d88d66120b01cf01864d3cf2a9578ca"
+            },
+            "field_relative_error": 2.135402965564026e-12,
+            "length_normalized_error": 2.5331556894044127e-06,
+            "s": 0.75,
+            "stdout": "",
+            "warnings": []
+          }
+        ],
+        "source": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/plots/plot_elephants/PltElephants.py",
+          "sha256": "0c193dd1921a5300c8e9defe8e76387e2ed447055e1d99e6f316eb77bb6dbf5f"
+        }
+      },
+      "errors": [],
+      "fields": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.25-n64.npz",
+            "sha256": "be41c29cb3e84cf1ad46cf2f700a3aba73bc0f441c084a04407d20ff6e085e63"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 7.515972603002264e-08,
+            "magnitude": 1.655432654831039e-07,
+            "missing_2pi": 5.283185264552206,
+            "poloidal": 5.063125128553615e-07,
+            "toroidal": 9.785859692569456e-08,
+            "wrong_sign": 2.0000000426273803
+          },
+          "n": 64,
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.25-n128.npz",
+            "sha256": "62409aa9a787b650e70e1beffaade09b3e6a9cfd7751e23cc2b35b75aa20f4d2"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 7.533944357055569e-08,
+            "magnitude": 1.70650103613768e-07,
+            "missing_2pi": 5.283185265888092,
+            "poloidal": 5.061881259728528e-07,
+            "toroidal": 1.0048258325626218e-07,
+            "wrong_sign": 2.0000000412914956
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 1.797175405330543e-10,
+            "magnitude": 5.106838130664112e-09,
+            "poloidal": 1.2438688250865142e-10,
+            "toroidal": 2.6239863305676173e-09
+          },
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.5-n64.npz",
+            "sha256": "d5b1fe25c7914ad0d19e62b622330d98cc07f8f24b83d5f4fc3bda685bf0197f"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 6.456528705469062e-08,
+            "magnitude": 1.1743548401591441e-07,
+            "missing_2pi": 5.283185279582838,
+            "poloidal": 3.492995118722323e-07,
+            "toroidal": 6.440740123951886e-08,
+            "wrong_sign": 2.000000027596747
+          },
+          "n": 64,
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.5-n128.npz",
+            "sha256": "9f4372d89e15c3ac77a403d19f601e31b4ab70f05bba1b44f50332c10e3ec445"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 6.50369306672361e-08,
+            "magnitude": 1.1770098499527112e-07,
+            "missing_2pi": 5.283185279582838,
+            "poloidal": 3.518872958930127e-07,
+            "toroidal": 6.565712217578109e-08,
+            "wrong_sign": 2.000000027596747
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 4.716436125454759e-10,
+            "magnitude": 2.6550097935670886e-10,
+            "poloidal": 2.5877840207803986e-09,
+            "toroidal": 1.2497209362622348e-09
+          },
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.75-n64.npz",
+            "sha256": "5ba97772ee4f9a4f8f3eeecd2b9573f2c3a3d9ca0d5df2cdfe3068b42f80dd6d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.0723534253019125e-07,
+            "magnitude": 8.732248348633361e-08,
+            "missing_2pi": 5.283185292228911,
+            "poloidal": 4.760594970471699e-07,
+            "toroidal": 9.13428485959365e-08,
+            "wrong_sign": 2.000000014950675
+          },
+          "n": 64,
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/field-s0.75-n128.npz",
+            "sha256": "2eecf30ed1a0a00094f90c68835e853446d73e30464539ccf9974c1919347f6d"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.0723529850189907e-07,
+            "magnitude": 8.732244773698167e-08,
+            "missing_2pi": 5.283185292228911,
+            "poloidal": 4.760594970471699e-07,
+            "toroidal": 9.445490943785891e-08,
+            "wrong_sign": 2.000000014950675
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 4.402829218501365e-14,
+            "magnitude": 3.5749351937720014e-14,
+            "poloidal": 0.0,
+            "toroidal": 3.1120608419224014e-09
+          },
+          "s": 0.75
+        }
+      ],
+      "label": "reference-401",
+      "measurements": [
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/level-0/measurement.json",
+          "sha256": "dad756e6b3771c3c4b2ecdc2eaf9aab4167c4978fbc535f266934f7f0dff9a29"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/level-1/measurement.json",
+          "sha256": "fed4685360d2ca59d9920d0a1b03a8f60bd647db0e64bb37e2a56a4117b6a026"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/level-2/measurement.json",
+          "sha256": "f58576a6eed3fdd3c5e968a0c8b15cc4b5c16c0914e33b6a0762a99ee63cee15"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/reference-401/level-3/measurement.json",
+          "sha256": "e201aead9645fc3ad3a4015ce5e1f2657a35df6b454f533ea0d80d463813d131"
+        }
+      ],
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+        "sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e"
+      }
+    },
+    {
+      "contours": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.1-n256.npz",
+            "sha256": "993670be2a8f0b1385aaae6acd0df7ccc15ad0fdb02b8e522da0951a6ede719c"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004763426606282373,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4632667646019387e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004581111264638782,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.873403849756488e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0032691551198160695,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.8894568062683198e-06,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00263550222961495,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.9665920205195733e-05,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0027445245547532693,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.3669333667065754e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002702358688873474,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.057195922998895e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002401242665479586,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.014160529942888e-07,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.1
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.25-n256.npz",
+            "sha256": "335746f0c7c92ac642ba86ce1c971f4e359795f671eb4efa78c83add622820fe"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007267429867316544,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 8.174599816067443e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00779723880744676,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.28031840148239e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0054925472697755495,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.718527747776348e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004406038423075742,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.1022884660811543e-05,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004583116975004131,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.806077753559695e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004350658060037205,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.397252482109491e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038274644906630684,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.274248478012955e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.5-n256.npz",
+            "sha256": "347e1e80d795147b65d801891aaa2b40cc7c87261009be38a7ff3f346339bde1"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012094384083277898,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.350332721742347e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.011517534465784962,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2338826260588536e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.008321090370905893,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.1360516418808545e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006825161509419253,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 9.05885427765224e-06,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006973218607921439,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.537963818683106e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006245096695217445,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.928261359247376e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005256153416783427,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.190795698266373e-07,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.75-n256.npz",
+            "sha256": "a7ff5d623dab898b6aed102e5348e0a1be7c92186bc85d97e3d7c8354f5c815c"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.01986467353205601,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.054668594461884e-09,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.015952457143040277,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.117494531372486e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.01079921165912534,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.9438202626348453e-07,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009172996310727655,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.847823452327284e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009119181453721481,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.5735686638963075e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007718315636553008,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.711745129937186e-06,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006543404572791012,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.893498897145066e-06,
+              "winding_roundoff_max": 6.361109362927033e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.9-n256.npz",
+            "sha256": "a9247fb834a8dc601b2ced3f27f19f848a3b8a5d7680af1340e823f342131305"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.02416048870384202,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.1263555192851837e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.018703541814307556,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.278190427468618e-06,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012274270496165585,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.627145896348375e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010631258559528511,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.901908597662394e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.010375684867345747,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.264478456943826e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00846838704958941,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.263269265830478e-06,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007381753971881011,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.501061034204205e-08,
+              "winding_roundoff_max": 2.1203697876423444e-16
+            }
+          ],
+          "resolution": [
+            256,
+            512
+          ],
+          "s": 0.9
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.1-n512.npz",
+            "sha256": "5a010e5b2260cbc1caa55e6405869fe159c8580857688d75d221db0b44824484"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002375411328717547,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4632664366168581e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0022892799681679676,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.8330852864000834e-09,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0016329772623553396,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.8894563827545368e-06,
+              "winding_roundoff_max": 9.895059008997609e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013172231567359916,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.091703627665476e-07,
+              "winding_roundoff_max": 1.5549378442710527e-15
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013698159676209798,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.366932836168433e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0013491182628158072,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.654969911270043e-07,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0011932127734741726,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.976677136373967e-07,
+              "winding_roundoff_max": 4.947529504498804e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.1
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.25-n512.npz",
+            "sha256": "fcb0158e5432aa9791cc7731d2e6b5dceaf8db0c250b898cbdf3647c19473c2a"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0036279671082963816,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.8231486758804177e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038916685267151863,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.490336514887195e-08,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.002739994585592598,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.718527747776348e-06,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0022028112535776856,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 9.111709564196444e-07,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0022882822483727416,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.0798647564944708e-08,
+              "winding_roundoff_max": 8.481479150569378e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0021706530425493753,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.397252482109491e-07,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0019127440829782572,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.274248478012955e-06,
+              "winding_roundoff_max": 6.361109362927033e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.5-n512.npz",
+            "sha256": "6218b6226ebb2b11f50d1fe42baea7eecde04b09fdec02a7c06f6dd062bf8d9d"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006049981700305906,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 7.350332721742347e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0057617251672006375,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.2338826260588536e-06,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0041599662465499065,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.449485989449533e-07,
+              "winding_roundoff_max": 0.0
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.003413368912354109,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.290773436197746e-06,
+              "winding_roundoff_max": 1.4135798584282297e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00348488981692352,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.9729752115147457e-06,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0031155297633946866,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.68441614518237e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0026212401811913644,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.2335020012866857e-07,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.75-n512.npz",
+            "sha256": "84a2631db4b824ef65fd9cb22fe30273e26be77177ef2b85ee1f63180f1985ab"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.00992839854739902,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 6.0546635002190645e-09,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.007985121551597807,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.704671788935585e-07,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005398980475550097,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.732437435427662e-08,
+              "winding_roundoff_max": 1.1308638867425838e-15
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004586654499161291,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 2.5459224303537104e-08,
+              "winding_roundoff_max": 7.067899292141149e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0045627775839087725,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 3.734229342170291e-07,
+              "winding_roundoff_max": 7.774689221355263e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0038529646795462114,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.6949060603517233e-07,
+              "winding_roundoff_max": 5.654319433712919e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0032562389107093637,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.089476067985098e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/contour-s0.9-n512.npz",
+            "sha256": "732d729babd357e197ae2b737be63efc32bc03c601c8e6892db3e4ccdcf7eccc"
+          },
+          "cells": [
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.012110471130358569,
+              "pass": true,
+              "q": 0.03,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.126355023730943e-06,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.009364011613481438,
+              "pass": true,
+              "q": 0.1,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.824959232067377e-07,
+              "winding_roundoff_max": 4.240739575284689e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.006138007987939176,
+              "pass": true,
+              "q": 0.3,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 5.627143420614947e-07,
+              "winding_roundoff_max": 6.361109362927033e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.005316088326715374,
+              "pass": true,
+              "q": 0.5,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.0071670597389872e-06,
+              "winding_roundoff_max": 2.8271597168564594e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0051875314816616225,
+              "pass": true,
+              "q": 0.7,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.0971340910790243e-06,
+              "winding_roundoff_max": 7.067899292141149e-17
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.004229412111918851,
+              "pass": true,
+              "q": 0.9,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 1.4457414572241026e-06,
+              "winding_roundoff_max": 4.947529504498804e-16
+            },
+            {
+              "classification": "two_poloidal_graphs",
+              "maximum_branch_step": 0.0036849001614056576,
+              "pass": true,
+              "q": 0.97,
+              "root_count_max": 2,
+              "root_count_min": 2,
+              "toroidal_period_winding": [
+                0,
+                0
+              ],
+              "vertex_margin_normalized": 4.501059053905938e-08,
+              "winding_roundoff_max": 3.5339496460705744e-16
+            }
+          ],
+          "resolution": [
+            512,
+            1024
+          ],
+          "s": 0.9
+        }
+      ],
+      "crosscheck": {
+        "all_pass": true,
+        "rows": [
+          {
+            "action_relative_errors": [
+              4.475858984109848e-06,
+              5.367154730206991e-06,
+              4.728663754116624e-06,
+              4.1858577600750735e-06,
+              3.6536774361550783e-06
+            ],
+            "all_pass": true,
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/published-s0.25.npz",
+              "sha256": "b719e23ab64075bd2132fe638af48544c31ec88011ba9ed55e58af828f5baaac"
+            },
+            "field_relative_error": 1.440181307543753e-12,
+            "length_normalized_error": 1.8850425863743956e-06,
+            "s": 0.25,
+            "stdout": "",
+            "warnings": []
+          },
+          {
+            "action_relative_errors": [
+              5.4151561464932385e-06,
+              6.694986237176792e-06,
+              5.9817010129581405e-06,
+              5.372591923569203e-06,
+              4.758743375687935e-06
+            ],
+            "all_pass": true,
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/published-s0.5.npz",
+              "sha256": "1372bbb6aceb81d0250b63aa6a84f11b3cc70ec850dbb1d4b8feca2386622899"
+            },
+            "field_relative_error": 1.9449997168408117e-12,
+            "length_normalized_error": 2.228082518222428e-06,
+            "s": 0.5,
+            "stdout": "",
+            "warnings": []
+          },
+          {
+            "action_relative_errors": [
+              6.314739311341633e-06,
+              7.851064632191651e-06,
+              7.067307634223141e-06,
+              6.3961131790968295e-06,
+              5.702534888518684e-06
+            ],
+            "all_pass": true,
+            "arrays": {
+              "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/published-s0.75.npz",
+              "sha256": "3cd64972609e451a83c2b19cc87094a432aa6344329cf515fdb9441f8c999c85"
+            },
+            "field_relative_error": 1.8181012251261564e-12,
+            "length_normalized_error": 2.515945708557067e-06,
+            "s": 0.75,
+            "stdout": "",
+            "warnings": []
+          }
+        ],
+        "source": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/plots/plot_elephants/PltElephants.py",
+          "sha256": "0c193dd1921a5300c8e9defe8e76387e2ed447055e1d99e6f316eb77bb6dbf5f"
+        }
+      },
+      "errors": [],
+      "fields": [
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.25-n64.npz",
+            "sha256": "35b967c43f8357c53fb5ecac1d299d6a5afcb984e718f38e605fc36dd350cc1f"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 7.362084102322435e-08,
+            "magnitude": 1.633451479541471e-07,
+            "missing_2pi": 5.283185266114838,
+            "poloidal": 5.071797571746098e-07,
+            "toroidal": 9.781356538183831e-08,
+            "wrong_sign": 2.000000041064749
+          },
+          "n": 64,
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.25-n128.npz",
+            "sha256": "3a0a776b9993b6ad384e057dc9641acc5b5973bbeed71846cd74b6aceb9bb690"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 7.381514561068479e-08,
+            "magnitude": 1.6797892225423218e-07,
+            "missing_2pi": 5.28318526728962,
+            "poloidal": 5.049366510847514e-07,
+            "toroidal": 1.0034402185303108e-07,
+            "wrong_sign": 2.0000000398899664
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 1.9430458746044097e-10,
+            "magnitude": 4.633774300085073e-09,
+            "poloidal": 2.243106089858486e-09,
+            "toroidal": 2.5304564711927652e-09
+          },
+          "s": 0.25
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.5-n64.npz",
+            "sha256": "a686d71d503878c6f4cb4797ca89baff9a8c08c53054b7851ca8a360acd23f97"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 6.815884888525115e-08,
+            "magnitude": 1.1701582501068423e-07,
+            "missing_2pi": 5.283185281568937,
+            "poloidal": 3.460008669761333e-07,
+            "toroidal": 6.465425437511002e-08,
+            "wrong_sign": 2.00000002561065
+          },
+          "n": 64,
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.5-n128.npz",
+            "sha256": "3df8c82f1b21f14afd1ce610cc42529709e103239290abacdb2c994d2d5c9aff"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 6.85028313460788e-08,
+            "magnitude": 1.170128062512693e-07,
+            "missing_2pi": 5.283185281568937,
+            "poloidal": 3.5975240929429327e-07,
+            "toroidal": 6.493536527879659e-08,
+            "wrong_sign": 2.00000002561065
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 3.439824608276468e-10,
+            "magnitude": 3.0187594149352702e-12,
+            "poloidal": 1.3751542318159984e-08,
+            "toroidal": 2.811109036865636e-10
+          },
+          "s": 0.5
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.75-n64.npz",
+            "sha256": "7bff92edd03225effbf420b9e8af7fa6d2b4c7b6fd1cf2221dd2fab5bf2fb8ad"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.0584442282423876e-07,
+            "magnitude": 9.02084981315725e-08,
+            "missing_2pi": 5.28318529065901,
+            "poloidal": 4.71483361465827e-07,
+            "toroidal": 1.0077358387348141e-07,
+            "wrong_sign": 2.000000016520576
+          },
+          "n": 64,
+          "s": 0.75
+        },
+        {
+          "arrays": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/field-s0.75-n128.npz",
+            "sha256": "fb4bbc6fa814236d59f9d58ba8298643aca2ead8441effa50708548457a108da"
+          },
+          "checks": {
+            "cartesian": true,
+            "magnitude": true,
+            "missing_2pi": true,
+            "poloidal": true,
+            "toroidal": true,
+            "wrong_sign": true
+          },
+          "errors": {
+            "cartesian": 1.0991602946791749e-07,
+            "magnitude": 9.02084981315725e-08,
+            "missing_2pi": 5.28318529065901,
+            "poloidal": 4.71483361465827e-07,
+            "toroidal": 1.0449263831778824e-07,
+            "wrong_sign": 2.000000016520576
+          },
+          "n": 128,
+          "refinement": {
+            "cartesian": 4.071606643678732e-09,
+            "magnitude": 0.0,
+            "poloidal": 0.0,
+            "toroidal": 3.7190544443068236e-09
+          },
+          "s": 0.75
+        }
+      ],
+      "label": "selected-401",
+      "measurements": [
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/level-0/measurement.json",
+          "sha256": "d1d0f60b1b5468742096bbaf2725b46e2ec3a6a8be0066e9087a1bd2869ed890"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/level-1/measurement.json",
+          "sha256": "8746871c7f454b2658850f889c4997685d1a97ea02607af87c8b02d2d98fc5e4"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/level-2/measurement.json",
+          "sha256": "ee7f311b94af172e49826ba2084a341df6054ee7b54de2b64218a88394ce16b9"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/validation/selected-401/level-3/measurement.json",
+          "sha256": "3196e7f70e25e52614f7248ec0f52bd63018adc24e19cb15b395c2359da49abf"
+        }
+      ],
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+        "sha256": "8cd6bebfc29963f80645acf25e1a3db194e4db381365b17a89b9844554f51b52"
+      }
+    }
+  ],
+  "status": "completed",
+  "step3_pass": false,
+  "study": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-balanced-v1/diagnostic-adapter/summary.json",
+    "sha256": "07d7b05be856ddc6f87bbdeba0fe44f3d6eac05d0a49093e0f15808764b2b745"
+  },
+  "used_for_selection": false
+}

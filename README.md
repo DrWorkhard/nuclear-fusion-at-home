@@ -10,23 +10,25 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-14: **sharpened steps 1 and 2 are complete** for the
-bounded local W7-X/Goodman regression and LPQA fixed-surface filament workflow.
+Current assessment, 2026-09-14: **steps 1, 2 and the registered vacuum scope of
+step 3 are complete.** Steps 1/2 qualify the bounded local W7-X/Goodman regression
+and LPQA fixed-surface filament workflow.
 The [consolidated acceptance and runbook](docs/validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
 record 720 tests, six mandatory scientific regressions without skips, exact two-run
 24-bundle iteration, independent audits and all four candidate holdout phases.
 This qualifies the workflow, not a better/feasible design or SQuID-C readiness.
 All earlier studies are preserved at tag `foundation-pre-scope-2026-09-13`
 (`5971fee`). Broader QI, engineering and performance research remains deferred.
-After that handoff the user explicitly requested step3. The new
-[plasma-boundary optimization protocol](docs/qi/PLASMA_OPTIMIZATION_PROTOCOL.md)
-is active. Its first boundary improves training action variance by14.35% but is
-independently rejected:15.53% worse on the expanded domain and20 local action
-violations. All source/field/refinement checks pass; step3 is not complete.
-See the [plasma results and runbook](docs/qi/PLASMA_OPTIMIZATION_RESULTS.md).
-The [bounded two-domain follow-up](docs/qi/PLASMA_BALANCED_RESULTS.md) now selects
-a different candidate with4.85% narrow/11.16% broad construction gains and passing
-local guards. Proposal/selection audits pass; independent finer admission is pending.
+The subsequently authorized [plasma-boundary optimization](docs/qi/PLASMA_BALANCED_RESULTS.md)
+now delivers a changed Goodman-nfp2 vacuum boundary: **11.1700% lower relative
+bounce-action variance on the finest registered domain**, plus4.8506% narrow
+training gain. All ten final gates pass, including local action guards, exact cold
+repeat, source/action audit, field/contour/tracer checks and all20 refinements.
+The first design remains [rejected and preserved](docs/qi/PLASMA_OPTIMIZATION_RESULTS.md).
+This is a bounded numerical design improvement, not measured confinement, global
+QI, a feasible coil design, SoTA or power-plant performance. Both domains informed
+the follow-up construction; finer independent admission is not blind generalization.
+Handoff now; steps4/5 are not started automatically.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about
   8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.

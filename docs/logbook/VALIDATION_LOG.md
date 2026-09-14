@@ -1,5 +1,34 @@
 # Validation log
 
+## 2026-09-14 — Complete independent physical admission and close bounded step3
+
+- Atf285fbd final diagnostics completed all16 trace grids/560 s-q evaluations,
+  40 contour grids/280 classifications,24 field grids and both published-tracer
+  phases without missing cells or execution failures. No new equilibrium solves.
+  Final independent archive/model/selection/source/action/physics audit exits0:
+  arithmetic/source and all ten step3 gates pass. No numerical or protocol edits.
+- Fine broad S2.3894265674165413e-4 →2.122527071486505e-4, gain11.170023%; narrow
+  gain4.850630%. Maximum mean-action change1.018339%; envelope/limit≤0.976693.
+  Gain47.3762times observed uncertainty sum5.6336157065e-7, required>5times.
+  All20 refinements pass (matched A max3.0222e-4); raw Gaussian delta≤1.29894e-9.
+  Exact repeat and all fixed sources/physical guards confirmed independently.
+- Full regression after audit:766 passed/144 known fixture warnings in55.38s,
+  JUnit saved atartifacts/plasma-balanced-v1/closure-regression.xml. Ruff/docs/diff
+  pass. Read-only preservation audit confirms1266 historical files, no prohibited
+  modifications, exact tag5971fee; all five external states equal foundation
+  external_before, including pre-existing STELLOPT changes. Process inspection
+  needed read-only escalation after sandbox denied ps; no concurrent project
+  solver remained when final audit ran. Disk reserve around9.3GiB at closure.
+- Saved post-admission closure-checks.json binds final/negative audits and raw
+  JUnit; parsed766 tests, zero failures/errors/skips. Both exported401 inputs
+  compared byte-for-byte with actual source-bound native inputs. Preservation
+  and exact external-state comparison repeated after overview edits, all pass.
+- Detail/index, both READMEs, status, plan, F-084/D-014 and durable rules updated
+  to bounded step3 completion/handoff. Preserve first negative study unchanged;
+  domains seen during construction are not blind generalization. Global QI,
+  actual confinement/pressure/stability/coils/SoTA/SQuID-C remain unqualified.
+  Commit final evidence and documentation, then hand off; no automatic steps4/5.
+
 ## 2026-09-14 — Freeze both selected cold endpoints within13-solve follow-up cap
 
 - At83deca6 selected-repeat201 and selected-fine401 completed, total13 new cold
