@@ -21,6 +21,7 @@ from fusion_baselines.qi_resolution import effective_input
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import audit_plasma_design as audit
+import plasma_inputs as inputs
 import plasma_measurement as measurement
 import run_plasma_search as runner
 from current_diagnostic_inputs import reference
@@ -251,6 +252,15 @@ def test_refinement_matches_nested_alpha_but_not_shifted_lines():
 def test_retained_source_binding_readonly():
     source, binding = sources(ROOT, committed=False)
     assert source["nfp"] == 2 and binding["solver"]["version"] == "0.7.3"
+    audit.bind_tree(binding)
+
+
+def test_raw_artifact_is_hash_bound_through_committed_report(monkeypatch):
+    checked_paths = []
+    monkeypatch.setattr(inputs, "require_committed", lambda root, path: checked_paths.append(path))
+    _, binding = sources(ROOT)
+    assert ROOT / "evidence/qi-fresh-resolution-v1.json" in checked_paths
+    assert Path(binding["original"]["path"]) not in checked_paths
     audit.bind_tree(binding)
 
 

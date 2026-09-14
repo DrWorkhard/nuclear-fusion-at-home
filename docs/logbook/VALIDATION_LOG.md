@@ -1,5 +1,17 @@
 # Validation log
 
+## 2026-09-14 — Preserve zero-solve plasma preflight failure and correct raw-source binding
+
+- First invocation atc9801ba stopped before directory creation or any new solve:
+  require_committed incorrectly demanded a Git blob for historically ignored raw
+  original_input.json. Its hash remains bound by the committed original study.
+- Preserved observed terminal failure as explicitly manual evidence, no fabricated
+  solver output. Removed only the redundant raw Git-entry requirement; committed
+  reports/code/protocol and exact raw SHA checks remain. Added regression control.
+-27 focused tests pass after this correction; docs/diff/Ruff pass. Results/index
+  updated, root overviews reviewed: no new physics result, step3 remains open.
+  Commit correction before fresh v2 invocation, unchanged experiment thresholds.
+
 ## 2026-09-14 — Qualify additive plasma design implementation before first cold solve
 
 - Implemented named four-mode inputs, bounded two-round search, all-cell failure

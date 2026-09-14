@@ -64,7 +64,9 @@ def sources(root, *, committed=True):
     for ref in inventory["vmecpp"]["sources"]:
         checked(ref)
     if committed:
-        for p in [*paths, checked(cell["original"]), root / PROTOCOL, *(root / p for p in CODE)]:
+        # Historical raw artifacts are intentionally ignored. Their exact bytes are
+        # bound by the committed study report checked above, not a raw Git entry.
+        for p in [*paths, root / PROTOCOL, *(root / p for p in CODE)]:
             require_committed(root, p)
     return original, dict(
         reports=[reference(p) for p in paths],
