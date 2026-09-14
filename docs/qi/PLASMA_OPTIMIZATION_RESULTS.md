@@ -48,13 +48,23 @@ Richtungen aus; gewählte Indizes3 und11. Keine behauptete Suchkonvergenz.
 | Trainings-S |1,1546244999075371e-5|9,889668968130651e-6|
 | Relativer Trainingsvorteil |—|14,347314%|
 
-Der separate201er Kaltstart liefert denselben S-Wert; vollständiger unabhängiger
-Array-/Arbeits-/Quellenaudit bleibt ausstehend. Die401er Endpunkte laufen noch.
+Der separate201er Kaltstart liefert denselben S-Wert; direkter unabhängiger
+Vergleich aller13 registrierten Gleichgewichts-/Solverarrays ist exakt. Die
+gesamte Poll-/Cache-/Auswahlfolge und alle referenzierten Dateihashes sind separat
+nachgerechnet/geprüft. Alle19 Kaltstarts einschließlich beider401er Endpunkte sind
+abgeschlossen; längster Zellaufwand206,96s, kleinste beobachtete Reserve
+11054202880Bytes. Auf401 Flächen lauten die Trainingswerte1,1566931154823263e-5
+und9,913012143094501e-6. Die erweiterte unabhängige Domänenabnahme fehlt noch.
 Auswahlergebnisse bleiben danach eingefroren; feinere Abnahme kann ablehnen,
 aber keine andere Form nachträglich zum ausgewählten Kandidaten machen.
 Aktives Journal: `evidence/plasma-design-v2/summary.json`, Rohdaten in
-`artifacts/plasma-design-v2/`. Es ist während der Endpunkte noch kein finaler Bericht.
-Es gibt weiterhin keinen bestätigten Vorteil auf der erweiterten Domäne.
+`artifacts/plasma-design-v2/`. Der Suchbericht ist jetzt final und wird unverändert
+committet. Die vollständigen401er Eingaben für
+[Referenz](../../evidence/plasma-design-v2/reference-input-401.json) und
+[ausgewählte Form](../../evidence/plasma-design-v2/selected-input-401.json) werden
+zusätzlich bytegleich in Git gehalten; beide Kopien mit `cmp` geprüft. Große
+Rohdateien bleiben lokal erhalten und über den Bericht hashgebunden. Es gibt
+weiterhin keinen bestätigten Vorteil auf der erweiterten Domäne.
 
 ## Erhaltener erster Startfehler
 

@@ -9,8 +9,9 @@ At90cdc57, two complete coordinate rounds request17 points and solve16 unique
 201-surface equilibria, with one exact cache hit. All16 satisfy producer construction
 checks. Selected x=(0,0.0004,0,0)m changes only zbs(1,1); training action variance
 falls from1.1546244999075371e-5 to9.889668968130651e-6 (14.347314%). Separate201
-cold repeat reports the same score; exact array audit and401/expanded-domain
-acceptance remain pending. No convergence, global QI, confinement, coil, SoTA or
+cold repeat has13 exactly matching archived arrays. Poll selection and all bound
+hashes separately checked; all19 cold solves including401 endpoints complete.
+Expanded-domain physical acceptance remains pending. No convergence, global QI, confinement, coil, SoTA or
 SQuID-C claim. Selection stays fixed through later validation. Earlier baseline
 and all negative probes remain preserved. [Detail](../qi/PLASMA_OPTIMIZATION_RESULTS.md).
 

@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-14 — Complete and freeze plasma search/cold endpoints before holdout
+
+- All19 solves at90cdc57 completed within the unchanged20-solve/1800s caps;
+  longest cell206.96s, minimum observed free bytes11054202880. No failed cold
+  solves or dropped search points. All raw inputs/Wouts/logs/traces retained.
+- Independent read-only13-array comparison of selected201/repeat is exact;
+  independent search replay confirms index11 and all recorded hashes check.
+  Full Gaussian/domain/physical admission remains pending, not inferred from this.
+- Exported complete401 reference/selected input JSONs into evidence for Git;
+  both cmp-identical to raw solver input. Final summary is now immutable.
+ 27 focused controls pass in0.37s; docs/diff checks pass. Detail/F-083 updated,
+  all root summaries reviewed: same provisional selection, no step3 closure yet.
+- Commit complete search and inputs before four-state no-feedback validation.
+
 ## 2026-09-14 — Document completed plasma selection while cold fine endpoints continue
 
 - v2 search at90cdc57 completed both registered rounds:17 requests/16 unique
