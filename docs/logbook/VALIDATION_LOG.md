@@ -1,5 +1,29 @@
 # Validation log
 
+## 2026-09-14 — Close all six negative fine coil admissions with unchanged gates
+
+- At10a636b ran the committed additive adapter serially on all six preserved
+  validations, to fresh output/log paths. All completed with source/arithmetic
+  pass and physical entryfail(exit2). Original JSON TypeError reproduced in
+  memory;160 NumPy booleans normalized. Every normalized gate exactly equals
+  its legacy counterpart. Original kernels, snapshots/current/B2,42 raw states,
+  failed writes and two disallowed reference-n8 searches remain unchanged.
+- Independent read-only agent checked run hashes/case mapping and recalculated
+  all30 refinement decisions:17 pass,15/18 boundary and2/12 interior. All six
+  candidates fail normal RMS/max, vector, geometry and overall refinement;
+  source/direct B/A/current/flux pass. Direct field maxrelativeerror1.43624e-14;
+  maxfluxerror4.61671e-11. All six real fine sampled clearance/curvature violations
+  alone justify geometry rejection, independent of the prior boolean bug.
+- New F-086 documents1.812–6.663mm fine plasma minima, coarse-to-fine interior
+  method-rank reversal and missing refinement. No N/V winner, target
+  impossibility, topology or step4 claim. All four root overviews and detail
+  index updated; next preregister target-adapted clear seeds and resolved
+  construction instead of extending the old search budget.
+- Full regression982 passed, zero failures/errors/skips,144 known warnings in
+  78.89s. Fresh JUnit artifact bound in closure-regression evidence. Ruff,
+  documentation structure and unstaged/staged diff checks before local commit.
+  No external writes, installations or new equilibrium solves.
+
 ## 2026-09-14 — Qualify additive typed recovery before reopening saved fine audits
 
 - At39951e3 all native jobs finished; process check finds no running experiment.

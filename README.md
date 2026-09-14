@@ -32,12 +32,15 @@ After handoff, the user explicitly authorized step4. Its
 [options and three independent agent reviews](docs/optimization/COUPLED_DESIGN_OPTIONS.md)
 prioritize paired actual-coil realization before coupled plasma/coil iterations.
 The paired pilot is preregistered; additive construction and independent audit
-tools pass synthetic integration (959 total tests,193 new). All eight actual
+tools pass synthetic integration. All eight actual
 start qualifications are audited: six pass; two reference eight-coil starts fail
 one derivative screen and are not optimized. The six admitted128-call searches
-are independently audited; construction metrics remain inadmissible. All fine
-diagnostics completed, but final audit JSON output failed on a NumPy boolean;
-raw evidence is intact and a separate output adapter is next.
+and all fine diagnostics are independently audited: all six designs rejected.
+A separately qualified typed-output adapter preserves the original write failures
+and confirms unchanged negative decisions. Fine sampling exposes1.8–6.7mm plasma
+clearance against80mm required; only17/30 refinement pairs pass. The
+[completed negative pilot](docs/optimization/COUPLED_COIL_PILOT_RESULTS.md)
+motivates target-adapted clear initialization and better-resolved construction.
 No step4 design result yet; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 
@@ -58,7 +61,7 @@ robustness remain required subpackages. No automatic step5 or SoTA claim.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Latest complete software regression: 959 tests pass with 144 documented fixture warnings;
+- Latest complete software regression: 982 tests pass with 144 documented fixture warnings;
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.
 

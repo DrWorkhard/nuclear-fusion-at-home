@@ -1,5 +1,28 @@
 # Findings log
 
+## F-086 — Fine coil admission rejects all six; coarse clearance and method ranking mislead
+
+**Class:** completed independently audited negative pilot, not step4 completion
+**Date:** 2026-09-14
+
+All six128-bundle searches and42 fine diagnostic states independently audited.
+Six original JSON-write failures preserved; additive output recovery at10a636b
+normalizes24/32 NumPy booleans and explicitly reproduces identical negative gates.
+No bound kernel or criterion changed. All field arithmetic/source/flux/current
+checks pass; all candidates fail normal/vector/geometry/refinement admission.
+Only17/30 refinement pairs pass. Fine normal RMS0.1134–0.2877 versus1e-4;
+finest vector RMS0.7325–1.0853 versus0.01, not convergence-qualified values.
+
+Fine sampled plasma minima1.812–6.663mm versus coarse34.708–52.384mm and required
+80mm. These actual point-pair violations do not depend on conservative covering
+bounds. All fine sampled maximum curvatures12.747–25.342/m exceed12/m. The
+three coarse V-over-N interior-error rankings all reverse at finest resolution;
+failed refinements prevent any robust opposite method ranking. Target-adapted
+clear initialization and better-resolved construction are the next hypothesis,
+not an unregistered extension or proof the plasma is unrealizable. Physical
+transfer, co-design, finite pressure/confinement and robustness remain open.
+[Details](../optimization/COUPLED_COIL_PILOT_RESULTS.md).
+
 ## F-085 — Real paired-coil start qualification passes six of eight cells
 
 **Class:** independently audited numerical start qualification, not design admission

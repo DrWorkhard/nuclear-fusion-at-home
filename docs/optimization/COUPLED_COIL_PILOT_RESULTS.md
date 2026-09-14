@@ -1,4 +1,4 @@
-# Flussnormierte reale Spulen: Arbeitsstand
+# Flussnormierte reale Spulen: abgeschlossener negativer Pilot
 
 14. September 2026. [Protokoll](COUPLED_COIL_PILOT_PROTOCOL.md) ·
 [Methodenentscheidung und Reviews](COUPLED_DESIGN_OPTIONS.md).
@@ -6,9 +6,10 @@
 Alle acht realen Startqualifikationen sind bei`b5c5a4d` ausgeführt und unabhängig
 auditiert: sechs bestehen, beide Referenzstarts mit acht Grundspulen nicht.
 Die sechs freigegebenen Suchläufe sind bei`3e803c3` abgeschlossen und auditiert;
-alle feinen Diagnostikläufe sind ebenfalls fertig. Die abschließenden Auditberichte
-scheiterten jedoch beim JSON-Schreiben; ihre Ausgabe wird getrennt korrigiert.
-Keine zulässige Form. Die Matrix vergleicht
+alle feinen Diagnostikläufe und unabhängigen Abnahmen sind ebenfalls fertig.
+Die zunächst gescheiterten Audit-Ausgaben sind durch einen getrennten typisierten
+Adapter erhalten; alle sechs negativen Entscheidungen bleiben identisch.
+Keine zulässige Form und kein Schritt4-Abschluss. Die Matrix vergleicht
 Referenz/neue Plasmaform, zwei Spulenklassen und zwei Zielfunktionen.
 
 Der physikalische Protokollreview hat vor Ausführung eine wichtige Lücke gefunden:
@@ -177,6 +178,61 @@ Die Reviewhinweise führten vor Anwendung zu strikten Status-/Scopeflags und
 sauberer Ablehnung von NumPy-Skalaren ohne verlustfreie Python-Konvertierung.
 Alte Kerne, Kriterien und Evidenz bleiben unverändert. Diese Ausgabe-Recovery
 qualifiziert insbesondere keinen allgemein reparierten positiven Geometriepfad.
-Nächster Schritt: Adapter/Testqualifikation committen, dann alle sechs
-Originalaudits mit frischen Ausgabedateien wiederholen; keine neuen Such-/
+Adapter/Testqualifikation bei`10a636b` committed,225 Spulen-/Dokumenttests
+einschließlich23 neuer Adapterkontrollen bestanden. Danach alle sechs
+Originalaudits mit frischen Ausgabedateien wiederholt; keine neuen nativen Such-/
 Gradientenbundles oder Gleichgewichtssolves.
+
+## Feine Abnahme: vollständig, alle sechs physisch abgelehnt
+
+Alle sechs Berichte haben`status=completed`,`arithmetic_and_source_pass=true`
+und`entry_pass=false`. Je24 beziehungsweise32 nicht JSON-fähige Wahrheitswerte
+konvertiert, ursprünglichen Schreibfehler erneut im Speicher reproduziert und
+jedes Gate nach Typnormalisierung identisch bestätigt. Quellen, unabhängige
+Feld-/Potentialrechnung, Fluss und Stromschirme bestehen; Normal-RMS/-Maximum,
+innerer Vektorfehler, Geometrie und mindestens eine Verfeinerung scheitern überall.
+Größter feiner Fluss-/Stokesfehler4,61671e-11 gegenüber Grenze1e-6.
+
+| Plasma / Klasse / Methode | Normal-RMS128²/512 | Vektor-RMS64²/512 | Fein gesampelter kleinster Plasmaabstand | Fein gesampelte max. Krümmung | Bestandene Verfeinerungen |
+| --- | --- | --- | --- | --- | --- |
+| Referenz /6 /N | 0,190969 | 0,732457 | 6,663mm | 16,773/m | 4/5 |
+| Referenz /6 /V | 0,117985 | 1,024779 | 2,343mm | 16,044/m | 2/5 |
+| Neuer Entwurf /6 /N | 0,137968 | 0,758615 | 2,933mm | 12,747/m | 4/5 |
+| Neuer Entwurf /6 /V | 0,113431 | 1,085297 | 2,036mm | 16,058/m | 2/5 |
+| Neuer Entwurf /8 /N | 0,287680 | 0,825477 | 2,270mm | 25,342/m | 3/5 |
+| Neuer Entwurf /8 /V | 0,247554 | 0,853250 | 1,812mm | 23,253/m | 2/5 |
+
+Feldwerte sind ausgewählte feinste unverschobene Raster, keine als konvergiert
+bezeichneten Grenzwerte. Sämtliche42 Raster bleiben im Audit;17/30
+Verfeinerungspaare bestehen. Das feinste Innenfeld kehrt die grobe N/V-Rangfolge
+in allen drei vorhandenen Paaren um. Wegen fehlender Verfeinerungsstabilität
+belegt das weder einen belastbaren V-Nachteil noch einen N-Sieg.
+
+Die feinere Geometrie ist der zentrale Diagnosebefund:1024 Kurvenpunkte und256²
+Volltoruspunkte finden nur1,812–6,663mm statt grob34,708–52,384mm Mindestabstand.
+Bereits diese tatsächlichen Punktpaare widerlegen80mm Abstand; das hängt nicht
+von einer möglicherweise zu konservativen Zwischenpunktschranke ab. Alle
+gesampelten Krümmungen überschreiten12/m. Kontinuierliche konservative
+Coilabstands-Untergrenzen39,587–53,583mm verfehlen60mm; Plasma-Untergrenze0 bei
+allen sechs. Die zum Teil sehr großen oberen Krümmungsschranken sind keine
+Behauptung entsprechend großer tatsächlicher Krümmung. Selbstschnittfreiheit
+oder ein Schnitt des optimierten Filaments wird hier nicht umfassend bewiesen.
+
+Evidenz: sechs`validation-*-audit-serialized.json` in
+`evidence/coupled-coil-pilot-v1/`, darin die ursprünglichen Läufe, Adapterquellen
+und Konvertierungs-/Gatevergleiche. Neue Konsolenlogs liegen jeweils unter dem
+unveränderten Rohdatenlauf als`typed-audit-console.log`. Alte Schreibfehler und
+beide verweigerten Startqualifikationen bleiben erhalten. Vollständige Arbeit:
+80 Qualifikationsbundles,768 Suchbundles, sechs exakte Kandidatenreplays und42
+wertebasierte feine Diagnostikzustände; keine neuen Gleichgewichte.
+
+## Folgerung und nächster begrenzter Versuch
+
+Der Pilot ist abgeschlossen, Schritt4 bleibt offen. Vor einer längeren Suche
+eine **zielangepasste, außenliegende und unabhängig geometrisch geprüfte
+Initialisierung** entwickeln. Grundsätzlich gleicher physischer Eintrittsschirm;
+neuer Start-/Parameterbereich und feinere Konstruktionsgeometrie müssen als
+neue Studie registriert werden. Bloßes Verlängern des alten Budgets, Weglassen
+gescheiterter Raster oder Übertragen grober Methodenrangfolgen wäre unbegründet.
+Auch danach bleiben reale Feld-/Wirkungsübertragung, gemeinsame Verbesserung,
+Druck/Einschluss und endliche Geometrie/Robustheit notwendige Teilpakete.

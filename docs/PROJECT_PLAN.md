@@ -21,12 +21,15 @@ Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemei
 Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
 oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
-abgeschlossen:959 Tests bestehen. Alle acht realen Startqualifikationen auditiert,
+abgeschlossen:982 Tests bestehen. Alle acht realen Startqualifikationen auditiert,
 sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
 freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
-Ihre feinen Diagnostiken sind vollständig, die finale Audit-Ausgabe scheitert an
-einem Datentypfehler. Als Nächstes additive Ausgabekorrektur und abgeschlossene
-Abnahme; keine nachträgliche Freigabe der zwei
+Ihre feinen Diagnostiken und unabhängigen Abnahmen sind vollständig: alle sechs
+abgelehnt, nur17/30 Verfeinerungen bestehen; tatsächliche feine Plasmaabstände
+viel kleiner als grob gemessen. Additive Ausgabe-Recovery wahrt alle negativen
+Gates und Originalfehler. Als Nächstes eine getrennte Studie zu zielangepassten,
+außenliegenden Startformen und besser aufgelöster Konstruktion registrieren;
+keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
 
 ## Abgeschlossen: Schritt3 — eigene QI-nahe Plasmaoberfläche
