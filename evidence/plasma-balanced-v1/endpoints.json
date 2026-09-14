@@ -1,0 +1,461 @@
+{
+  "archive": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-balanced-v1/archive.json",
+    "sha256": "d576a6e8c43eba30bc4ffe3e511bb482ca0a7aa3041755a463e9c5b7a44472aa"
+  },
+  "host": {
+    "captured_at": "2026-09-14T01:13:56.057059+00:00",
+    "logical_cpu_count": 8,
+    "machine": "arm64",
+    "platform": "macOS-15.7.4-arm64-arm-64bit",
+    "processor": "arm",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+  },
+  "new_solves": 2,
+  "phase": "endpoints",
+  "repository": {
+    "available": true,
+    "branch": "main",
+    "commit": "83deca6d009a8eb38c8708d86f741259f65f3d9b",
+    "dirty": false,
+    "path": "/Users/sebastianwirkert/workspace/fusion"
+  },
+  "rows": [
+    {
+      "construction": {
+        "envelope": true,
+        "finite": true,
+        "geometry": true,
+        "mean": true,
+        "narrow": true,
+        "wide": true
+      },
+      "label": "selected-repeat",
+      "native": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "scripts/plasma_equilibrium_worker.py",
+          "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/native"
+        ],
+        "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/native",
+        "elapsed_seconds": 49.37748470800034,
+        "eligible": true,
+        "input": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/native/input.json",
+          "sha256": "c0ca89b704fc7717d656326f53c36821b34586c3f686962303e7511d978591f9"
+        },
+        "log": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/native/solver.log",
+          "sha256": "a00f9f885e359aa8107ac0a16151834b277fb06ad14d13d0b34e33bc1efc0e5f"
+        },
+        "measurement": {
+          "report": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/native/training/measurement.json",
+            "sha256": "2846b0e19d56e1de695e5bc20bd2800d48afcdd6202b5c5de7dbed8708cfe6ef"
+          },
+          "score": 1.0986179404311691e-05
+        },
+        "metadata": {
+          "boundary_errors": {
+            "rbc": 6.938893903907228e-18,
+            "zbs": 3.469446951953614e-18
+          },
+          "edge_flux": 0.031415926535897955,
+          "iota": [
+            -0.567913751009541,
+            -0.5449778816091226,
+            -0.5229415016386127
+          ],
+          "nfp": 2,
+          "ns": 201,
+          "volume": 0.19005381803251942
+        },
+        "minimum_observed_free_bytes": 10373214208,
+        "ns": 201,
+        "request": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/native/request.json",
+          "sha256": "a20479bb62926c85f87109e8f3514d3cad8d57ba63c83285ed937cd9db5a1ce8"
+        },
+        "returncode": 0,
+        "solver": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/native/solver.json",
+          "sha256": "ec1b48b4b2162ca4daa48707bf39c2dc63295f7f076e591a4a618bf96ab2c221"
+        },
+        "status": "completed",
+        "wout": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/native/wout.nc",
+          "sha256": "6249ac581d2d31f9bfc9fcba3140e767279cd24289c6d60bfb475a657f76fe2f"
+        },
+        "x": [
+          -0.0001,
+          5.12303771890279e-05,
+          -0.0001,
+          0.0001
+        ]
+      },
+      "wide": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-repeat/wide/measurement.json",
+        "sha256": "b580102c28aaeeadf84b45bc7fae1b30b2e08c48de52829e28d2bb620670954e"
+      },
+      "wide_score": 0.00021138442410077716
+    },
+    {
+      "construction": {
+        "envelope": true,
+        "finite": true,
+        "geometry": true,
+        "mean": true,
+        "narrow": true,
+        "wide": true
+      },
+      "label": "selected-fine",
+      "native": {
+        "command": [
+          "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+          "scripts/plasma_equilibrium_worker.py",
+          "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native"
+        ],
+        "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native",
+        "elapsed_seconds": 187.9780780000001,
+        "eligible": true,
+        "input": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/input.json",
+          "sha256": "6bec3483eaced499bafe7ee94b16aa960d219ec1fec86cc0690012f8ebdb033e"
+        },
+        "log": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/solver.log",
+          "sha256": "10b56463b1dab810a0a361f41284a839e71119e139d7e08ec8e54230d7aa4a22"
+        },
+        "measurement": {
+          "report": {
+            "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/training/measurement.json",
+            "sha256": "ee930102c77ff4b904e204b16bf96bd23e7e8f27effdf386412d68d5f5076fea"
+          },
+          "score": 1.100894343118703e-05
+        },
+        "metadata": {
+          "boundary_errors": {
+            "rbc": 6.938893903907228e-18,
+            "zbs": 3.469446951953614e-18
+          },
+          "edge_flux": 0.03141592653589761,
+          "iota": [
+            -0.5678708416482245,
+            -0.5449740479043603,
+            -0.5229429256248299
+          ],
+          "nfp": 2,
+          "ns": 401,
+          "volume": 0.19005381803251942
+        },
+        "minimum_observed_free_bytes": 10340872192,
+        "ns": 401,
+        "request": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/request.json",
+          "sha256": "ec064ff428aad526d297937b1f16442e42cd2ee459e406b4bcf79d03314af4b7"
+        },
+        "returncode": 0,
+        "solver": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/solver.json",
+          "sha256": "8a6bd4874b1d49cef523680fae101ae50031369c5fd4ce0d714918109d85b7d2"
+        },
+        "status": "completed",
+        "wout": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+          "sha256": "8cd6bebfc29963f80645acf25e1a3db194e4db381365b17a89b9844554f51b52"
+        },
+        "x": [
+          -0.0001,
+          5.12303771890279e-05,
+          -0.0001,
+          0.0001
+        ]
+      },
+      "wide": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/wide/measurement.json",
+        "sha256": "fd05c6f4bd5ab713e9334b07f2d526a02f76b74099d8f35ad618489a25d348cd"
+      },
+      "wide_score": 0.0002116352700615963
+    }
+  ],
+  "selected": {
+    "construction": {
+      "envelope": true,
+      "finite": true,
+      "geometry": true,
+      "mean": true,
+      "narrow": true,
+      "wide": true
+    },
+    "label": "probe-0",
+    "native": {
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/bin/python",
+        "scripts/plasma_equilibrium_worker.py",
+        "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native"
+      ],
+      "directory": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native",
+      "elapsed_seconds": 49.51541941600044,
+      "eligible": true,
+      "input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native/input.json",
+        "sha256": "c0ca89b704fc7717d656326f53c36821b34586c3f686962303e7511d978591f9"
+      },
+      "log": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native/solver.log",
+        "sha256": "a00f9f885e359aa8107ac0a16151834b277fb06ad14d13d0b34e33bc1efc0e5f"
+      },
+      "measurement": {
+        "report": {
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native/training/measurement.json",
+          "sha256": "34c475db034f0ebd0e9e725e966681ea89840474dcda68d9c2b99358f6532076"
+        },
+        "score": 1.0986179404311691e-05
+      },
+      "metadata": {
+        "boundary_errors": {
+          "rbc": 6.938893903907228e-18,
+          "zbs": 3.469446951953614e-18
+        },
+        "edge_flux": 0.031415926535897955,
+        "iota": [
+          -0.567913751009541,
+          -0.5449778816091226,
+          -0.5229415016386127
+        ],
+        "nfp": 2,
+        "ns": 201,
+        "volume": 0.19005381803251942
+      },
+      "minimum_observed_free_bytes": 10411274240,
+      "ns": 201,
+      "request": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native/request.json",
+        "sha256": "7c4d92bf51395745368ef4603e3ef0819ce9b03e54d266886711ba7b80fb9b70"
+      },
+      "returncode": 0,
+      "solver": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native/solver.json",
+        "sha256": "8a56da4904963a7d2552fa388fdec4b9ea2ed447b12d8025a61acea92aded144"
+      },
+      "status": "completed",
+      "wout": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/native/wout.nc",
+        "sha256": "6249ac581d2d31f9bfc9fcba3140e767279cd24289c6d60bfb475a657f76fe2f"
+      },
+      "x": [
+        -0.0001,
+        5.12303771890279e-05,
+        -0.0001,
+        0.0001
+      ]
+    },
+    "wide": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/propose/probe-0/wide/measurement.json",
+      "sha256": "97538e9aea7dc1b23a69ffd95527d36acf6afb426c7d34edd40d6901f85981d2"
+    },
+    "wide_score": 0.00021138442410077716
+  },
+  "selected_index": 8,
+  "selection": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-balanced-v1/propose.json",
+    "sha256": "c8a2d198af2bd31001640f4167b28592b5457b187567a2613855e0fc82169b28"
+  },
+  "source": {
+    "audit": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2-audit.json",
+      "sha256": "0e856dbec74850ef4cd230242d37d23f75b9f73a98ebb0f9d0b36e23d4d98e6e"
+    },
+    "code": [
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/balanced_plasma.py",
+        "sha256": "047f88f892f6dd6a5d8966b8c61043063fc4d33ab58d9f5be37b12040253b5bd"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/balanced_plasma_inputs.py",
+        "sha256": "10063750815f5709a8a1e252b83edff7bb4a456ee72fefafef979fa834274e8d"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_balanced_plasma.py",
+        "sha256": "cc449dbc4f608739b29e10310a9e6257a7b2b2ed829df9883e78abf771ebe070"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_balanced_plasma.py",
+        "sha256": "b29786d2e9a01788dc46eb16701fd4d3c588470596a693d7e8e9c5b65dbb25cb"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_balanced_plasma.py",
+        "sha256": "35dc7f91f1d9d3e6d64d52f87a30bbfe61289c17b6e18bc8017f6de8e5065e9f"
+      },
+      {
+        "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_balanced_plasma.py",
+        "sha256": "0a90d35e9605c193a7a096bd541c5d10badaeca05e12a2a2ede1b66ad5a31c63"
+      }
+    ],
+    "holdout": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2-holdout.json",
+      "sha256": "7872d34e52a768a5cb9758beb5a3cedb37b67941d807086e364edf1a0f4fc9bd"
+    },
+    "legacy": {
+      "analysis_lock": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/uv.lock",
+        "sha256": "366fda86aa2cc779a5acf95c9a6b4fffd7a6697f23a98b0a866849cb7e652be5"
+      },
+      "author_input": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/configurations/nfp2/vacuum/input.QI_nfp2",
+        "sha256": "a15d0134a362727976a6c22b59b12a7f3a6c740576ef5a28f5727721ed700209"
+      },
+      "code": [
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_inputs.py",
+          "sha256": "558886cf8c7858c2107c3cae1a337d4bcc1d5f37c575d2d5151fc7c95aab8ded"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_equilibrium_worker.py",
+          "sha256": "5a641795bbf00acf87b7ab25d51f93be557742c28e4b16ba2b466fe93cbc2d62"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/plasma_measurement.py",
+          "sha256": "1f6444b154e3177e3177b86f8186d8ef3aefac2c05cd9550f784202a9d190e1e"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_plasma_search.py",
+          "sha256": "f7f15767a1d455b52c778611b4471a1fda3650564dab34ed9c84c2919f82e46a"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/validate_plasma_design.py",
+          "sha256": "2a2f747abf03ad1573d5071033d7739ad6bef679740d6ca1e00a0c7f6b208b71"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_plasma_design.py",
+          "sha256": "31bb143251272b6cd77627b4896d485f4375622b4b5fcc9140cdaaeade8146a0"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/plasma_design.py",
+          "sha256": "8bff3a9e048d98b84091dfed38bf6c2dbe02267e3c8e9b6a187286b0f6464453"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/plasma_action_audit.py",
+          "sha256": "5323fe60f07170fab4c09f51ac279781f4aad4951b5d721b7cac0bb03e294dc0"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/vmec_trace.py",
+          "sha256": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/bounce_action.py",
+          "sha256": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_resolution.py",
+          "sha256": "3d2c9448add0622b17d01c5527aacd0c5d5fd2f29e987a1375f41b2d7669825b"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/qi_field_grid.py",
+          "sha256": "fc2827312a394468aaa07e4b23094479af8b82c15df8d5babf9d39fefe2a58e9"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clebsch_field.py",
+          "sha256": "392fd2470c95bbdb850bf278d95d74291c5dc28f5f827e09a20e5ef347022240"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/contour_topology.py",
+          "sha256": "421f7afe022514f989ad0caa3ee6af806bb2e32c7d4cdf663ae1111cc45ee9d0"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/evaluate_published_maximum_j.py",
+          "sha256": "4ffa7fe64eff91a9359b5f732649642e3c3db49b4827ee8eab4f570a00b27959"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/resource_guard.py",
+          "sha256": "85558ec13d446b822a7601c741767bc44435dd95d278ae752d829409143dc2db"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_qi_clebsch.py",
+          "sha256": "4a3de62a8b499694ebb9969ef8533df0a5c91b4a1d3af1116c00c365d1e05e42"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_plasma_design.py",
+          "sha256": "e700b2f647d19ceda9f943a494831af4b5831f0c315216eb46a3f4e27e2e3d0a"
+        }
+      ],
+      "lock": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/uv.lock",
+        "sha256": "34cf6b801280f26a66a517e1061169026edbde02494e0fc3b527fd4cb2be2af8"
+      },
+      "original": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/qi-fresh-resolution-v1/nfp2-vacuum-s201-a2/original_input.json",
+        "sha256": "a11bbeb1c16b63c826333dec3f60aa226670d889422c949c0871f2a5357daf55"
+      },
+      "protocol": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/docs/qi/PLASMA_OPTIMIZATION_PROTOCOL.md",
+        "sha256": "022d2020d9662b6adf2ba6e835dc448295b6b260d1bd7ca472f71d47d7f42190"
+      },
+      "published_tracer": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/data/qifiles-v1/Files/plots/plot_elephants/PltElephants.py",
+        "sha256": "0c193dd1921a5300c8e9defe8e76387e2ed447055e1d99e6f316eb77bb6dbf5f"
+      },
+      "reports": [
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1.json",
+          "sha256": "00a24ab7f16e186100ff0e2f95ba40bcd81662914dd051294a124fb013e0eb00"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1-evaluation.json",
+          "sha256": "a5adbe8f99fc24a006094f4c0941b8ed6a86162a9650ab90770c8e331afeed73"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-fresh-resolution-v1-evaluation-audit.json",
+          "sha256": "8b5c1ac0999996f3abbbac135ee60a9cf9a1596277cd5112abf95bf76842da83"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-producer-inventory-v1.json",
+          "sha256": "f0ade5988fe2bfeb3cfb758d23b97373b2439dd5d9e5d94ac4b8cd3f8805cc7b"
+        },
+        {
+          "path": "/Users/sebastianwirkert/workspace/fusion/evidence/qi-measurement-v1/nfp2.json",
+          "sha256": "50809d6b3a53bd39a89da3b41be25b282740e3de36173d7d4ac3b53e5a5c8e86"
+        }
+      ],
+      "solver": {
+        "iteration_styles": [
+          "vmec_8_52",
+          "parvmec"
+        ],
+        "sources": [
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/__init__.py",
+            "sha256": "877d12115ad4f2d4706919b7fc4cca2d9e98504b4a054c80ec81c48d4ccd433a"
+          },
+          {
+            "path": "/Users/sebastianwirkert/workspace/fusion/environments/vmecpp/.venv/lib/python3.12/site-packages/vmecpp/cpp/_vmecpp.cpython-312-darwin.so",
+            "sha256": "8f0acaf63d878e17e9f1b1779c9695a21e1a45b690639dbf76886f7a7799684f"
+          }
+        ],
+        "version": "0.7.3"
+      }
+    },
+    "protocol": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/qi/PLASMA_BALANCED_PROTOCOL.md",
+      "sha256": "6457f49c487b5d1a84c0540e8fd81994aae03f93b1ffcbe086b4efde67760ac7"
+    },
+    "study": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2/summary.json",
+      "sha256": "f166cbcbfeafa009423cc1d5d078fc3f30b47b1934a2bfdc8688d12fe7f779e3"
+    }
+  },
+  "status": "completed",
+  "step3_pass": false,
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "total_new_solves": 13,
+  "versions": {
+    "netCDF4": "1.7.4",
+    "numpy": "2.5.2",
+    "scipy": "1.18.1"
+  }
+}

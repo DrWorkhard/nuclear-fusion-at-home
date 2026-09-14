@@ -77,6 +77,23 @@ verbraucht, genau zwei für Kaltwiederholung und401er Kandidat verbleiben. Auswa
 ist eingefroren.46 gezielte Tests, Dokument-/Diffprüfung bestehen vor diesem
 Zwischencommit erneut; keine numerischen Dateien während des Experiments verändert.
 
+## Kaltendpunkte abgeschlossen; endgültige Diagnose steht noch aus
+
+Bei83deca6 genau zwei weitere Kaltstarts beendet, damit13 neue Solves insgesamt.
+Wiederholung stimmt in allen13 registrierten Wout-/Solvergrößen und zusätzlich
+allen breiten Aktionsarrays exakt überein. Keine Endpointfehler. Auf401 Flächen
+beträgt der enge Trainingswert1,100894343118703e-5, der breite801/16-Wert
+2,116352700615963e-4. Noch kein Ersatz für die weiter verfeinerten Diagnosen.
+Letzte Zelle187,98s, Reserve mindestens10340872192Bytes.
+
+Die [vollständige neue401er Eingabe](../../evidence/plasma-balanced-v1/selected-input-401.json)
+ist zusätzlich bytegleich in Git exportiert, mit `cmp` gegen die tatsächlich
+gerechnete Eingabe geprüft. Die unveränderte
+[401er Referenzeingabe](../../evidence/plasma-design-v2/reference-input-401.json)
+bleibt getrennt. Endpointbericht in `endpoints.json`;46 Kontrollen bestehen
+erneut in0,89s, Dokument-/Diffprüfung ebenfalls. Danach kompletter Vier-Zustands-
+Auswerter und unabhängiger Gesamtaudit, ohne weitere Auswahl oder Solves.
+
 ## Phasen ausführen und getrennt bewerten
 
 Der Umgebungspräfix aus dem [ersten Runbook](PLASMA_OPTIMIZATION_RESULTS.md)
@@ -107,5 +124,5 @@ Ein Phasenaudit-Pass ist ausdrücklich kein Schritt3-Pass. Nur das positive fina
 Ergebnis mit allen unveränderten physischen Gates erlaubt den registrierten
 Vakuumabschluss. SQuID-C, globale QI-/Orbitphysik und SoTA bleiben getrennt.
 
-Nächster Schritt: abgeschlossene Phase B samt Audit committen, dann genau zwei
-Kaltendpunkte und alle feineren unabhängigen Abnahmen. Schritt3 noch offen.
+Nächster Schritt: abgeschlossene Kaltendpunkte committen, dann alle feineren
+unabhängigen Abnahmen und Gesamtaudit. Schritt3 noch offen.

@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-14 — Freeze both selected cold endpoints within13-solve follow-up cap
+
+- At83deca6 selected-repeat201 and selected-fine401 completed, total13 new cold
+  solves. No errors. Direct read-only repeat comparison: all13 registered Wout/
+  solver arrays and all35 broad-cell action arrays exact. No new reference solve
+  claimed; known audited reference endpoints are explicitly reused.
+- Fine candidate narrow S1.100894343118703e-5, broad801/16 S2.116352700615963e-4;
+  final expanded/refined admission still pending. Last cell187.98s; lowest endpoint
+  reserve10340872192Bytes. Selected401 input exported into Git, cmp-identical.
+-46 focused controls pass in0.89s, docs/diff pass. Detail updated and all root
+  summaries reviewed: existing provisional candidate assessment unchanged.
+  Commit endpoint evidence before final no-feedback diagnostics and overall audit.
+
 ## 2026-09-14 — Independently qualify actual two-domain proposal selection
 
 - Phase B atf700b57 completed all eight10µm central differences and three fixed
