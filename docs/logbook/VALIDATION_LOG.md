@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-14 — Preregister bounded two-domain follow-up after preserved rejection
+
+- First negative study fully committed at43be667. No remaining experiments from
+  it, around10GiB free. Register archival16-form broad evaluation, followed only
+  if needed by eight1e-5m central differences, bounded common-descent LP and three
+  fixed scaled real proposals. At most13 new solves including repeat/fine candidate.
+- No old physical gate relaxed: retain both0.5% final gains,5x uncertainty, all
+  cell/domain/field/contour/tracer/refinement and exact-repeat checks. Add stricter
+  construction guards. Existing domains are explicitly no longer blind transfer
+  holdouts; independent numerical admission remains separate from selection.
+- Rule/index/plan updated; numerical files unchanged, no new computation yet.
+  Docs/diff pass, protocol commit precedes additive code/testing and execution.
+
 ## 2026-09-14 — Fully audit and reject first own plasma boundary
 
 - Four-state holdout completed every16 trace/40 contour/24 field grids and two

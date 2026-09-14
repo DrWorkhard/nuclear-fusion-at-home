@@ -22,8 +22,10 @@ zu Schritt5. Globale Orbit-/Druck-/Stabilitäts-/Kraftwerksqualifikation bleibt 
 Erster Versuch vollständig abgeschlossen und Entwurf abgelehnt:14,35%
 Trainingsgewinn, aber15,53% schlechter auf erweiterter Domäne und20 lokale
 Wirkungsverletzungen. Die numerischen/Quellenprüfungen bestehen.
-Jetzt gezielten Folgeversuch mit beiden Domänen und lokalen Wirkungswächtern
-vor der Konstruktion registrieren; [Befund](qi/PLASMA_OPTIMIZATION_RESULTS.md).
+Jetzt [separat registrierter Folgeversuch](qi/PLASMA_BALANCED_PROTOCOL.md): beide
+Domänen und lokale Wirkungswächter bereits in der Konstruktion, gegebenenfalls
+ein kleines gemeinsames Vorschlagsmodell. Maximal13 neue Solves;
+[erhaltener negativer Befund](qi/PLASMA_OPTIMIZATION_RESULTS.md).
 Schritt3 ist noch offen; nach bestandenem Abschluss Übergabe, kein automatischer Schritt4.
 
 ## Abgeschlossene Etappe: Basis und prinzipielle Iterationsfähigkeit

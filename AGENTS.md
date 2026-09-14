@@ -64,6 +64,11 @@ does not close this milestone. Require the registered independently confirmed
 physical-domain improvement; do not substitute coil work or silently claim global
 QI/orbit/engineering/SoTA. Keep earlier foundation and research evidence immutable.
 After step3 passes, document/commit/hand off; do not automatically start steps4/5.
+The first actual design (plasma-design-v2) was independently rejected, with all
+numerical screens passed. The separately registered follow-up is
+`docs/qi/PLASMA_BALANCED_PROTOCOL.md`: both existing action domains and local
+action guards during construction, same physical final gates, at most13 new
+cold solves. Previously seen domains are not a blind generalization holdout.
 
 ### Sharpened foundation milestone (explicit user correction, 2026-09-13)
 
