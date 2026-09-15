@@ -8,6 +8,9 @@ Aktueller Schluss: Grobe Gitter können reale Krümmungsverletzungen übersehen.
 
 ## Dokumente
 
+- [Außenliegende Startspulen: Protokoll](CLEAR_COIL_INITIALIZATION_PROTOCOL.md) — Gemeinsames3D-Plasmaenvelope, Kreis-/konvexe Fourier-LPs und unveränderte unabhängige Geometriegrenzen vor einem neuen Feldfit.
+- [Außenliegende Startspulen: Arbeitsstand](CLEAR_COIL_INITIALIZATION_RESULTS.md) — Methodenreview und spätere komplette Variantenmatrix; reine Startgeometrie, keine Feld-/Schritt4-Zulassung.
+
 - [CONTINUOUS_COIL_CLEARANCE_CHECK ](CONTINUOUS_COIL_CLEARANCE_CHECK.md) — Dokument: Retrospektive, zwischen allen Stützstellen gültige Abstandsuntergrenze aus Fourier-Ableitungsschranken.
 - [CONTINUOUS_CURVATURE_PROTOCOL ](CONTINUOUS_CURVATURE_PROTOCOL.md) — Protokoll: Kontinuierliche Krümmungseinschließung; analytische Kontrollen und Prüfung eingefrorener Felder.
 - [CONTINUOUS_CURVATURE_RESULTS ](CONTINUOUS_CURVATURE_RESULTS.md) — Ergebnis: Kontinuierliche Krümmungseinschließung; analytische Kontrollen und Prüfung eingefrorener Felder.
@@ -17,4 +20,3 @@ Aktueller Schluss: Grobe Gitter können reale Krümmungsverletzungen übersehen.
 Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
 Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
 [Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
-

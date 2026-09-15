@@ -10,7 +10,7 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-14: **steps 1, 2 and the registered vacuum scope of
+Current assessment, 2026-09-15: **steps 1, 2 and the registered vacuum scope of
 step 3 are complete.** Steps 1/2 qualify the bounded local W7-X/Goodman regression
 and LPQA fixed-surface filament workflow.
 The [consolidated acceptance and runbook](docs/validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
@@ -40,7 +40,9 @@ A separately qualified typed-output adapter preserves the original write failure
 and confirms unchanged negative decisions. Fine sampling exposes1.8–6.7mm plasma
 clearance against80mm required; only17/30 refinement pairs pass. The
 [completed negative pilot](docs/optimization/COUPLED_COIL_PILOT_RESULTS.md)
-motivates target-adapted clear initialization and better-resolved construction.
+motivates the separate [clear-initialization study](docs/geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md):
+target-adapted circles/convex contours with continuous3D clearance protection,
+before a newly registered better-resolved field fit.
 No step4 design result yet; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 

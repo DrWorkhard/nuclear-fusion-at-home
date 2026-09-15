@@ -1,6 +1,6 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 14. September 2026, Schritt4 nach Methodenreview begonnen.
+Stand: 15. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
@@ -20,8 +20,9 @@ Kandidaten werden nun auch fein unabhängig abgelehnt. Die gescheiterte
 Audit-Ausgabe wurde separat typisiert, alle negativen Gates bleiben identisch.
 Das feine Raster findet nur1,8–6,7mm Plasmaabstand gegenüber80mm Mindestforderung;
 17/30 Verfeinerungen bestehen. Der scheinbare grobe Innenfeld-Methodenvorteil
-ist nicht stabil. Nächste Studie: zielangepasste außenliegende Startgeometrie
-und besser aufgelöste Konstruktion. Keine neue Zulassung. Druck, physischer Transfer und
+ist nicht stabil. Nächste [Studie](geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md):
+zielangepasste außenliegende Startgeometrie mit kontinuierlichen3D-
+Schutzschranken; erst danach besser aufgelöster Feldfit. Keine neue Zulassung. Druck, physischer Transfer und
 Robustheit bleiben ausdrücklich notwendige separate Teilpakete.
 
 **Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der

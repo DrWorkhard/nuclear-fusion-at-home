@@ -1,5 +1,27 @@
 # Validation log
 
+## 2026-09-15 — Preregister geometry-only clear-start study after the negative coil pilot
+
+- Pilot closed at4f3c2fa before choosing the follow-up. No new target-field or
+  geometry evaluations yet; no solver/install/external-source work. Root checked
+  the pinned native circle convention and primary support-function literature.
+- Fixed12-set matrix: shared reference/selected3D envelopes, two coil classes,
+  translated-circle versus shaped-support LP and three fixed clearances. Exactly
+  84 LPs plus84 unchanged repeats maximum, separately admitted by continuous
+  containment/curvature, primal-dual checks and all three fulltorus distance grids.
+  Physical L/curvature/CC/CP limits unchanged; explicitly new seed/domain study.
+- Two independent read-only reviewers examine mathematical/integration gates.
+  Integration review completed without a remaining protocol blocker; the second
+  detailed mathematical review remains pending and must close before target data.
+  Incorporated clockwise native orientation, exact Fourierorder mapping,
+  opposite-branch exclusion proof, actual-coefficient continuous checks and
+  geometry-only snapshots without invented magnetic normalization. No native
+  CoupledCoils construction in this purely geometric phase.
+- Added purpose-indexed geometry protocol/results and synchronized four root
+  overviews. Initial documentation/diff checks pass; nine documentation tests
+  pass in0.47s. First protocol freeze before implementation; any review-driven
+  refinement must also be committed before target runs. Staged diff checked.
+
 ## 2026-09-14 — Close all six negative fine coil admissions with unchanged gates
 
 - At10a636b ran the committed additive adapter serially on all six preserved

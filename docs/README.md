@@ -1,6 +1,6 @@
 # Forschungsprojekt: belastbare Verbesserungen von Stellaratorspulen
 
-Leseeinstieg für die wissenschaftliche Betreuung. Stand: 14. September 2026.
+Leseeinstieg für die wissenschaftliche Betreuung. Stand: 15. September 2026.
 Diese Übersicht, [Ergebnisstand](STATUS.md) und [Arbeitsplan](PROJECT_PLAN.md)
 beschreiben Ziel, belegten Fortschritt und nächste Entscheidungen. Vollständige
 Messreihen, Fehlschläge und Prüfprotokolle liegen eine Ebene tiefer.
@@ -27,7 +27,7 @@ belegt weder bessere Einschlussphysik noch bessere Kraftwerksleistung.
 | 1. Begrenzte Rechen- und Prüfbasis absichern | Lokale W7-X-/Goodman-Regression und geprüfte LPQA-Festoberflächen-/Filamentwerkzeuge | Abgeschlossen: alle acht Basisgates bestehen |
 | 2. Prinzipiell iterieren können | Referenz laden, Parameter optimieren, Kandidaten speichern und unabhängig bewerten; reproduzierbar | Abgeschlossen: zwei echte24-Bundle-Pfade exakt wiederholt, separat auditiert und fein bewertet |
 | 3. Eigene QI-Plasmakonfigurationen entwickeln | Eigene Oberfläche/Gleichgewichte mit numerisch bestätigter QI-relevanter Verbesserung | Im registrierten nfp2-Vakuumumfang abgeschlossen:11,17% geringere Wirkungsvarianz, alle zehn Abnahmegates bestehen |
-| 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Aktiv: erster Spulenpilot vollständig negativ abgenommen; als Nächstes zielangepasste, außenliegende Startgeometrie |
+| 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Aktiv: erster Spulenpilot vollständig negativ abgenommen; geometrische Folgestudie zu außenliegenden Starts registriert |
 | 5. Verbesserungen belastbar nachweisen | Unabhängig geprüfter Vorteil gegenüber reproduzierten Referenzen unter gleichen Anforderungen | Offen |
 
 **Schritt 1 und 2 sind im geschärften Umfang abgeschlossen.** Das sind

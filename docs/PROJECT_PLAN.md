@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 14. September 2026, Schritt4 nach neuem Nutzerauftrag begonnen.
+Stand: 15. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
 [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 **Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
@@ -27,9 +27,10 @@ freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
 Ihre feinen Diagnostiken und unabhängigen Abnahmen sind vollständig: alle sechs
 abgelehnt, nur17/30 Verfeinerungen bestehen; tatsächliche feine Plasmaabstände
 viel kleiner als grob gemessen. Additive Ausgabe-Recovery wahrt alle negativen
-Gates und Originalfehler. Als Nächstes eine getrennte Studie zu zielangepassten,
-außenliegenden Startformen und besser aufgelöster Konstruktion registrieren;
-keine nachträgliche Freigabe der zwei
+Gates und Originalfehler. Die getrennte [geometrische Folgestudie](geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md)
+vergleicht zielangepasste Kreise/konvexe Starts mit kontinuierlichen3D-
+Schutzschranken; erst danach separat registrierter fein aufgelöster Feldfit.
+Keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
 
 ## Abgeschlossen: Schritt3 — eigene QI-nahe Plasmaoberfläche
