@@ -94,6 +94,10 @@ LP-Hilfsvariablen für L_h/L_rho einsetzen und alle kontinuierlichen
 Schranken direkt prüfen; ein zulässiger LP-Rest allein ist kein Geometriepass.
 
 Minimiere2πh0 mit SciPy-HiGHS,dual-simplex, primal/dual feasibility_tolerance1e-10.
+HiGHS selbst erhält explizit`threads=1,parallel=False`, zusätzlich zu den drei
+Thread-Umgebungsvariablen. Die SciPy-Weiterleitungswarnung dieser Optionen wird
+im jeweiligen Ergebnis gespeichert und sichtbar erneut ausgegeben; zusätzliche
+unerwartete Solverwarnungen sind vor Freigabe zu klären.
 Grenzen h0∈[0;1,5]m;
 alle a/b∈[−0,5;+0,5]m, alle u/v∈[0;0,5]m. Dies sind neue begrenzte
 Konstruktionsvariablen, keine physische Zulassung. Länge wird absichtlich erst
@@ -106,8 +110,15 @@ ist ein nicht gelöstes LP ein ungeklärter/negativer Versuch.
 
 Genau84 Grundspulen-LPs pro kompletter Matrix, höchstens eine unveränderte
 Wiederholung jedes LPs(168 Solveraufrufe insgesamt). Jeder Versuch zählt auch
-bei Fehler; keine adaptive Reparatur. Ein HiGHS-Aufruf höchstens30s, zusätzlich
-Elternprozesswächter für den gesamten Produzenten1800s mit0,5s Takt/5s Frist.
+bei Fehler; keine adaptive Reparatur. Ein HiGHS-Aufruf höchstens30s, sowohl
+native time_limit als auch äußerer Elternwächter anhand des vorab persistierten
+Aufrufbeginns. Zusätzlich Elternprozesswächter für den gesamten Produzenten1800s;
+beide mit0,5s Takt/5s Terminierungsfrist. Nach Rückkehr muss der Worker das
+30s-Budget nochmals vor Abschluss-Speicherung prüfen. Verspätete Rohdaten bleiben
+erhalten, zählen aber nicht als rechtzeitig abgeschlossener Versuch.
+Auch fehlgeschlagene Aufrufe benötigen eine gebundene Fehlerdatei und rechtzeitige
+Endmarke. Ein vollständiges Workerprotokoll allein genügt nicht: Produzent und
+Auditor verlangen zusätzlich den tatsächlichen Prozessrückgabecode exakt0.
 Ein Thread, seriell; keine parallelen schweren Experimente. Keine nativen
 Magnetfeld-/Gradientenaufrufe und keine neuen Gleichgewichtssolves.
 
@@ -139,8 +150,36 @@ rho>0 und positiver R-Schranke hat keinen Selbstschnitt; diese zusätzliche
 mathematische Aussage gilt nicht für spätere frei nichtplanare Optimierung.
 Keine gerichtete Intervallarithmetik oder endliche Wicklungspaketqualifikation.
 
+Vor Targetdaten präzisierte Exportübertragung: Die höchstens5e-12 große
+Rekonstruktionsabweichung ist nicht automatisch ein physisches Fehlerbudget.
+Aus tatsächlichen Snapshotkoeffizienten minus unabhängigem idealem Export,
+mit zusätzlichem Gleitkommapolster, globale Fehler E0/E1/E2 von Position und
+ersten beiden t-Ableitungen einschließen. Für den idealen Stützfunktionsbogen
+v_min=2π*rho_lower, v_max=2π*rho_upper,
+a_max=(2π)²*sqrt(rho_upper²+L_rho²). Nur bei E1<v_min gilt
+
+- tatsächliche Längenobergrenze = ideale Längenobergrenze+E1;
+- Crossproduktfehler C=E1*a_max+v_max*E2+E1*E2;
+- tatsächliche Krümmungsobergrenze
+  =κ_ideal*(v_min/(v_min−E1))³+C/(v_min−E1)³;
+- Radial-/Umschließungsmargen vermindern um E0; analytischen Paarabstand
+  um2*max(E0) vermindern, einschließlich möglicher kleiner Nichtplanarität.
+- Aus idealem Plasmaschutz mindestensd folgt tatsächlicher Schutz mindestens
+  d−E0; dieser muss separat≥0,08m sein. Keine unverminderte d-Garantie für
+  einen nur näherungsweise planaren Snapshot behaupten.
+
+Für den Selbstschnittschirm zusätzlich(2π)³*rho_lower²>C verlangen. Mit
+regulärer Homotopie und unveränderter Umlaufzahl1 bleibt die Ebenenprojektion
+strikt konvex und damit auch die räumliche Kontur selbstschnittfrei. Alle direkt
+an den gespeicherten Konturen gesampelten Längen-/Krümmungsverletzungen haben
+zusätzlich Vetorecht. Diese Übertragung verschärft die Umsetzung der vorhandenen
+physikalischen Gates; sie lockert weder Rohdaten- noch Geometrieschwellen.
+
 Auswahl pro Klasse nur unter vollständig geometrisch angenommenen Sätzen:
 kleinste Summe Grundspulenlängen; Gleichstand d aufsteigend, Kreis vor Form.
+Rankinggröße bleibt die analytische Summe2π*h0 der idealen Stützfunktionskurven;
+Exportübertragung und tatsächliche Samples dienen der physischen Abnahme,
+nicht einer nachträglich geänderten Rangfolge.
 Alle übrigen bleiben sichtbar. Kein ausreichender Satz ist ein negativer
 Geometrieversuch, kein Beweis unmöglicher nichtplanarer Spulen oder QI-Physik.
 Ein Startpass darf lediglich einen **neu zu registrierenden** fein aufgelösten

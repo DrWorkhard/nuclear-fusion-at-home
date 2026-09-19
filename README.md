@@ -10,7 +10,7 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-15: **steps 1, 2 and the registered vacuum scope of
+Current assessment, 2026-09-19: **steps 1, 2 and the registered vacuum scope of
 step 3 are complete.** Steps 1/2 qualify the bounded local W7-X/Goodman regression
 and LPQA fixed-surface filament workflow.
 The [consolidated acceptance and runbook](docs/validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
@@ -42,7 +42,9 @@ clearance against80mm required; only17/30 refinement pairs pass. The
 [completed negative pilot](docs/optimization/COUPLED_COIL_PILOT_RESULTS.md)
 motivates the separate [clear-initialization study](docs/geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md):
 target-adapted circles/convex contours with continuous3D clearance protection,
-before a newly registered better-resolved field fit.
+before a newly registered better-resolved field fit. Independent pre-data review,
+the complete synthetic producer-to-auditor run and final software regression pass;
+the registered twelve-set real geometry study is next.
 No step4 design result yet; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 
@@ -63,7 +65,8 @@ robustness remain required subpackages. No automatic step5 or SoTA claim.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Latest complete software regression: 982 tests pass with 144 documented fixture warnings;
+- Latest complete software regression: 1,172 tests pass with 334 documented warnings
+  (144 fixture warnings and 190 explicitly retained solver-option forwarding notices);
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.
 

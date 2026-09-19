@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "phase": "pre_target_software_qualification",
+  "parent_revision": "129d835796a4c860b14a24154777930eed7cc28c",
+  "implementation_state": "New implementation and protocol precision committed together with this record; source hashes identify tested files.",
+  "sources": [
+    {
+      "path": "src/fusion_baselines/clear_coil_geometry.py",
+      "sha256": "c3824b84ae2599b829648b4b8ad91b1bd22e5bb0a05eb2078d37f57491af4431"
+    },
+    {
+      "path": "src/fusion_baselines/clear_coil_geometry_audit.py",
+      "sha256": "ae61f2efcbdb5ccdd0ee03e54d65a7dbf7364677694fbc26f0d719c7f49cfa36"
+    },
+    {
+      "path": "scripts/clear_coil_initialization_inputs.py",
+      "sha256": "c51408502fb07307ce1418fb0c927c2884e57ece986c59d3258d52ca04dbf8ee"
+    },
+    {
+      "path": "scripts/run_clear_coil_initialization.py",
+      "sha256": "2a2ecc84c4d56c6184da3a2a0fa6e194ce5facbd9cb6ce512231ffbec7505caf"
+    },
+    {
+      "path": "scripts/audit_clear_coil_initialization.py",
+      "sha256": "ecaefa1afa423a4348b42c03d6e2df45575be4b7e95c6d8cfacbdcb29691031f"
+    },
+    {
+      "path": "tests/test_clear_coil_geometry.py",
+      "sha256": "ad28dc01bbf80eab5057b57b0a11133d7997a283a521e98716e9efc3afca2b98"
+    },
+    {
+      "path": "tests/test_clear_coil_geometry_audit.py",
+      "sha256": "d098e42f0d14aa43fce1c4fdd04f6cb95c530ce0fb9777a59c98efa8cc80aace"
+    },
+    {
+      "path": "tests/test_clear_coil_initialization_workflow.py",
+      "sha256": "c8ccacff5722d8b233b586df51452ee6486dca5144a9d37d9a5d72b596f02dd5"
+    },
+    {
+      "path": "tests/test_clear_coil_initialization_audit.py",
+      "sha256": "26c09becebb485cd9ea9aea33fdfc0853e708312850e2323070a8d6ce1a19853"
+    },
+    {
+      "path": "docs/geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md",
+      "sha256": "ff2e5bd9d0cac5f28350241013a16df7688cd3ac1146866dac4a5e6190e1ff7e"
+    }
+  ],
+  "command": "PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python -m pytest -q --junitxml=artifacts/clear-coil-initialization-v1-qualification/regression.xml",
+  "junit": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1-qualification/regression.xml",
+    "sha256": "cbf6c35cf5cdaf6d8073e7b42697f8f628acf4614fab0abc3ac0d7ebab77580f"
+  },
+  "tests": 1172,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "warnings": 334,
+  "warning_groups": {
+    "known_fixtures": 144,
+    "recorded_and_reemitted_highs_options": 190
+  },
+  "console_seconds": 153.53,
+  "scope": "190 new geometry/construction/workflow/audit controls, including all12 synthetic sets/168 real LPs/72 independent distance grids. No real project target evaluation in the new study; no field, physical transfer or step4 admission."
+}

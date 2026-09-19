@@ -1,5 +1,34 @@
 # Validation log
 
+## 2026-09-19 — Qualify complete exterior-coil geometry implementation before target data
+
+- Separate native/support construction, independent trig/LP/geometry audit and
+  parent-guarded persistence added; all old numerical kernels/evidence unchanged.
+  Three scoped agents cover implementation, independent audit and read-only
+  review. No new project target geometry/field evaluations or equilibrium solves.
+- Review closes native HiGHS threading, invalid finite/symmetry inputs, late
+  exception accounting and nonzero worker exit after completed output. Partial
+  attempts/error files remain visible; exact returncode0 and bound end times
+  required by both producer and auditor. No physical gate relaxed.
+- Last geometric review finds raw5e-12 coefficient tolerance was larger than
+  the ideal length rounding pad. Add conservative E0/E1/E2 transfer to actual
+  snapshot length/curvature/radial/pair/plasma bounds, simple convex projection
+  and all direct sample vetoes. Two within-tolerance threshold-crossing controls
+  correctly reject. This is ordinary padded floating arithmetic, not intervals.
+- Intermediate112-pass/eight-options-mismatch and69-pass/one-overstrict float
+  assertion retained in detail. Final independent87 controls and integration56
+  controls pass; complete native synthetic12-set/168-real-LP worker→saved-data→CLI
+  admission passes all72 direct grids. Synthetic worker is inline; separate
+  parent/kill/exit tests do not masquerade as a real synthetic subprocess run.
+- Full regression1172 passed, no failures/errors/skips,334 warnings in153.53s:
+  144 known fixtures +190 retained/reemitted solver-option notices. JUnit and
+  exact tested code/protocol hashes bound in qualification evidence. Repository
+  Ruff, documentation structure and unstaged diff pass; staged diff reviewed
+  before local commit. Four root overviews and geometry index synchronized.
+- Next, after committing this prerequisite: fixed real12-set/168-LP geometry
+  matrix and independent audit, then document/commit its outcome. No field-fit
+  or step4 completion inferred from software or geometry-only acceptance.
+
 ## 2026-09-19 — Resume and close the remaining pre-data mathematical review
 
 - Resumed atbda5d4a after the interrupted implementation. Only the root-owned

@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 15. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
+Stand: 19. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
 [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 **Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
@@ -21,7 +21,8 @@ Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemei
 Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
 oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
-abgeschlossen:982 Tests bestehen. Alle acht realen Startqualifikationen auditiert,
+abgeschlossen; einschließlich neuer Geometriewerkzeuge1172 Tests bestanden.
+Alle acht realen Startqualifikationen auditiert,
 sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
 freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
 Ihre feinen Diagnostiken und unabhängigen Abnahmen sind vollständig: alle sechs
@@ -29,7 +30,10 @@ abgelehnt, nur17/30 Verfeinerungen bestehen; tatsächliche feine Plasmaabstände
 viel kleiner als grob gemessen. Additive Ausgabe-Recovery wahrt alle negativen
 Gates und Originalfehler. Die getrennte [geometrische Folgestudie](geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md)
 vergleicht zielangepasste Kreise/konvexe Starts mit kontinuierlichen3D-
-Schutzschranken; erst danach separat registrierter fein aufgelöster Feldfit.
+Schutzschranken. Neue Konstruktion/Prüfung vollständig synthetisch qualifiziert;
+nach dem Code-Commit genau die registrierten zwölf geometrischen Varianten
+rechnen und unabhängig abnehmen; erst anschließend separat registrierter
+fein aufgelöster Feldfit.
 Keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
 

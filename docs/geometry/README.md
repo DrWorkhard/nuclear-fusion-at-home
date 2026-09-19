@@ -3,6 +3,9 @@
 Zweck: Krümmung und Abstände unabhängig von den Optimierungsstützstellen beurteilen.
 
 Aktueller Schluss: Grobe Gitter können reale Krümmungsverletzungen übersehen. Positionszeugen und kontinuierliche Fourier-Schranken sind geprüft. Die Schranken verwenden gewöhnliche Gleitkommaarithmetik mit Polster; vollständige Wicklungspaket- und Selbstüberschneidungsprüfungen fehlen.
+Die neue außenliegende Startkonstruktion ist vor realen Daten synthetisch
+qualifiziert, einschließlich unabhängiger Snapshot-Fehlerübertragung und
+vollständiger Variantenmatrix; noch kein echter Geometrie- oder Feldpass.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 

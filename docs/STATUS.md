@@ -1,6 +1,6 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 15. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
+Stand: 19. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
@@ -9,7 +9,7 @@ Stand: 15. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
 [Drei unabhängige Agentenreviews](optimization/COUPLED_DESIGN_OPTIONS.md) empfehlen
 gepaarte reale Spulenfits für Referenz und neuen Plasmaentwurf, danach begrenzte
 gemeinsame Iterationen. Alte LPQA-Export-/Normierungsannahmen sind nicht übertragbar.
-Neue Konstruktion und unabhängige Abnahme bestehen982 Tests. Von acht realen
+Konstruktion, unabhängige Abnahme und Regression bestehen1172 Tests. Von acht realen
 [Startqualifikationen](optimization/COUPLED_COIL_PILOT_RESULTS.md) bestehen sechs;
 die zwei Referenzfälle mit acht Grundspulen verfehlen eine Ableitungsgrenze und
 werden nicht optimiert. Alle Startformen liegen noch weit außerhalb der physischen
@@ -22,7 +22,10 @@ Das feine Raster findet nur1,8–6,7mm Plasmaabstand gegenüber80mm Mindestforde
 17/30 Verfeinerungen bestehen. Der scheinbare grobe Innenfeld-Methodenvorteil
 ist nicht stabil. Nächste [Studie](geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md):
 zielangepasste außenliegende Startgeometrie mit kontinuierlichen3D-
-Schutzschranken; erst danach besser aufgelöster Feldfit. Keine neue Zulassung. Druck, physischer Transfer und
+Schutzschranken. Vollständige synthetische Konstruktion und unabhängige Abnahme
+samt abschließender Softwarequalifikation bestehen; nun folgt die registrierte
+reale Zwölf-Varianten-Studie. Erst danach besser aufgelöster Feldfit.
+Keine neue Zulassung. Druck, physischer Transfer und
 Robustheit bleiben ausdrücklich notwendige separate Teilpakete.
 
 **Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der
@@ -98,7 +101,7 @@ Nullmeldungen sind keine Zulassung. Details und alle erhaltenen Fehlschläge:
 | QI / Gleichgewichte | Frische 16-Zellen-Studie vollständig auditiert; doppelte Solver-Winkelauflösung besteht untersuchte Feldidentitäten | Ursprünglich nur 9/16 Auswertungsverfeinerungen und 2/16 historische Feld-Fidelitätspässe; keine Zelle besteht alle ursprünglichen Schirme |
 | QI / gemeinsamer Winkel | 120 neue Gitter und 61.440 unabhängige skalare Inversionen bestätigen die Koordinatenrechnung | Nur 4/16 neue Fidelitäts- und 5/16 Vergleichsverfeinerungspässe; Parametrisierung erklärt nicht sämtliche Unterschiede |
 | Endliche Spulennetze | Alle sechs Auflösungen bestehen den nicht-gemeinsame-Vertexindizes-Teiltest; feinster Lauf mit 2.222.785 Paarprüfungen und exakt altem 2M-Präfix auditiert | Nachbarpaare, vollständige Baugruppen, reale Wicklungspakete und gültige Mechanik offen; alte große Verformung verletzt lineare Modellannahmen |
-| Software | 982 Tests, Ruff und Dokumentstrukturprüfung bestanden | 144 dokumentierte Fixture-Warnungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
+| Software | 1172 Tests, Ruff und Dokumentstrukturprüfung bestanden | 334 dokumentierte Warnungen:144 alte Fixture- und190 sichtbare Solveroptionsmeldungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
 
 Die beiden QI-Verfeinerungsmaße unterscheiden sich: ursprüngliche
 Clebsch-Identitätsverfeinerung und spätere Verfeinerung des historischen
