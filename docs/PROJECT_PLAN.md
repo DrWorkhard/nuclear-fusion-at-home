@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 19. September 2026, Schritt4 mit geometrisch angenommenen Starts aktiv.
+Stand: 19. September 2026, Schritt4 mit numerisch qualifizierten Feldstarts aktiv.
 [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 **Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
@@ -33,17 +33,16 @@ vergleicht zielangepasste Kreise/konvexe Starts mit kontinuierlichen3D-
 Schutzschranken. Konstruktion/Prüfung synthetisch qualifiziert und reale Matrix
 abgeschlossen: alle zwölf Varianten geometrisch angenommen,84 exakte LP-
 Wiederholungen und72 direkte Prüfungen. Ausgewählt sind die beiden Formstarts
-mit100mm Konstruktionsabstand. Nun separat registrierte
-[Feldstartqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md):
-acht N/V-Ableitungskontrollen, sechs Auflösungszustände je vier physischer Zellen,
-konstante Strom-/B²-Normierung und vollständige Flussprüfungen. Die separate
-[blockweise native Referenz](optimization/BLOCK_NATIVE_REFERENCE_RESULTS.md)
-besteht vier volle Ressourcenfälle,336 Gegenvergleiche und32 FD-Kontrollen bei
-unveränderten Grenzen. Drei alte dichte RAM-Fehler bleiben negativ, alle vier
-alten Sparse-Pässe sind erneut bestätigt. Gesamtworkflow mit170 neuen Kontrollen
-qualifiziert; nun die vier physischen Startupzellen ausführen und unabhängig abnehmen;
-neue Suche erst nach deren dokumentiertem Abschluss und separatem Protokoll.
-Kein Magnetfeld- oder Schritt4-Pass aus dem geometrischen Ergebnis.
+mit100mm Konstruktionsabstand. Die separate
+[Feldstartqualifikation](optimization/CLEAR_COIL_FIELD_START_RESULTS.md)
+ist ebenfalls abgeschlossen: acht N/V-Ableitungsschirme, alle sechs Zustände
+je Zelle,20 Verfeinerungen und252 Flussgates bestanden. Alle vier Zellen
+numerisch angenommen; Geometrie/Strom bestehen, physische Feldfehlergrenzen nicht.
+Keine neuen Suchen/Gleichgewichte. Neue Ressourcenreferenz separat qualifiziert;
+alte drei dichte RAM-Fehler bleiben negativ. Jetzt begrenzten Feldfit einschließlich
+Behandlung der Geometriesicherheit auswählen, unabhängig reviewen und separat
+registrieren; erst nach Implementierungsqualifikation echte neue Suche.
+Kein Transfer- oder Schritt4-Pass aus diesem numerischen Startabschluss.
 Keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
 

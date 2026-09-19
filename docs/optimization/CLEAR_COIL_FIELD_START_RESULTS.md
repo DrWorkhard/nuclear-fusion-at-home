@@ -1,28 +1,112 @@
-# Feldstarts aus geometrisch angenommenen Konturen: Arbeitsstand
+# Feldstarts aus geometrisch angenommenen Konturen: numerischer Abschluss
 
 19. September2026. [Protokoll](CLEAR_COIL_FIELD_START_PROTOCOL.md).
 
-Geometriestudie bei323cfdd vollständig geschlossen: alle zwölf Varianten
-angenommen, n6/n8-shape-d100mm ausgewählt. Jetzt getrennte numerische
-Feldstart-/Auflösungsqualifikation vor jeder weiteren Suche. Noch keine neuen
-Target-Feldwerte, keine optimierten Kandidaten und kein Schritt4-Abschluss.
-Die vollständige synthetische Ressourcenmatrix ist jetzt ausgeführt: mathematisch
-bestanden, als Gesamtqualifikation an drei dichten Speicherüberschreitungen
-abgelehnt. Die neue Sparse-Implementierung besteht alle vier Einzelprüfungen.
-Der separat registrierte [block-native Folgeversuch](BLOCK_NATIVE_REFERENCE_RESULTS.md)
-besteht inzwischen alle vier Vollgrößenfälle unter denselben Grenzen und sämtliche
-336 unabhängigen Gegenvergleiche. Die ursprüngliche negative Entscheidung bleibt
-erhalten. Der vollständige Feldstartworkflow ist nun qualifiziert:170 neue
-Kontrollen,1640 Gesamttests bestanden. Als Nächstes die vier registrierten
-Startupzellen und deren unabhängige Abnahme; noch kein Projekt-Feldnachweis.
+**Alle vier tatsächlichen Feldstarts bestehen die vollständige unabhängige
+numerische Abnahme; keine der vier Startformen besteht die physische Zulassung.**
+Der saubere Codecommit7b1a501 rechnet beide Plasmaformen mit den exakt ausgewählten
+n6/n8-shape-d100mm-Geometrien. Acht N/V-Ableitungsschirme, alle20 Verfeinerungen,
+768 direkte Einzel-B/A-Vergleiche und252 Flussgates bestehen. Geometrie und Strom
+bleiben zulässig, Normal-/Innenfeldfehler viel zu groß. Keine Suche, kein neues
+Gleichgewicht, keine Transfer- oder Schritt4-Annahme. Als Nächstes einen eigenen
+begrenzten Feldfit mit Schutz der jetzt sicheren Geometrie registrieren.
 
-## Gesamtworkflow: Implementierung vor neuen Projektfeldern
+Die vorherige Geometrieabnahme bei323cfdd und separate positive
+[block-native Ressourcenqualifikation](BLOCK_NATIVE_REFERENCE_RESULTS.md)
+bleiben Quellen. Die drei ursprünglichen dichten Speicherfehler bleiben negativ.
+Implementierung vor Feldsichtung:1640 Gesamttests,334 bekannte Warnungen.
+
+## Vier reale Zellen und unabhängige Abnahme
+
+Alle vier frischen Worker schließen mit exaktem Exit0 ab; Quellen vor/nach
+identisch bei sauberem7b1a501. Elternzeiten30,064/35,139/30,040/34,657s gegenüber
+1800s je Zelle. Kleinste beobachtete Plattenreserve9.083.727.872Bytes,
+Rohdaten167.519.469Bytes. Ein Thread, keine schweren parallelen Projektjobs.
+Keine allgemeine Leistungsrangfolge aus diesen Einzelmessungen.
+
+Je Zelle zehn tatsächlich initialisierte Modelle,44 gespeicherte Operationen,
+262 vollständige native Requests mit524 Attempt-/Completed-Ereignissen.
+Gesamt80 Vollbundles,24 Diagnosen,72 Flussraster,40 Initialisierungen,
+**1048 Requests =808 Werte +240 VJPs**. Auch Zusatzpotentiale/Initialisierungen
+und wiederholte Punkte zählen, ohne Cachegutschriften. Producerstatus ist nur
+vollständig/pending; numerische und physische Entscheidung stammen vom Auditor.
+
+Der getrennte CLI-Auditor bindet2434 Referenzdateien und rekonstruiert96 B/A-Paare
+je Zelle auf jeweils64 Punkten (384 Paare/768 Einzelvergleiche insgesamt).
+Maximaler relativer Komponentenfehler5,2942e-15 gegenüber5e-10. Alle32
+Richtungs-/Schrittweitenchecks bestehen sowohl mit aufgezeichneten als auch
+eigenständig rekonstruierten J-Werten (64 numerische Vergleiche): maximal
+2,5941e-11 absolut/1,4486e-9 relativ. Alle acht Startwiederholungen exakt;
+N/V-Felder, physische Ströme und B² jeweils identisch.
+
+Alle20 vorab festgelegten Rasterverfeinerungen bestehen; größter relativer
+Unterschied0,019508% gegenüber1%, absolut7,0533e-5 beim inneren Vektor-RMS.
+Alle252 Flussgates bestehen (216 blockinterne plus36 Spulenrastervergleiche),
+maximaler relativer Fehler8,8349e-16 gegenüber1e-6. Signierte Linien-/Fanflächen,
+Radial- und alle drei Winkelpaare eingeschlossen. Auf keiner feinen Stufe neu
+normiert; unveränderter Strom aus dem ursprünglichen N0-Snapshot.
+
+| Ziel / Grundspulen | Normal-RMS, Stufe3 | Normal-Max, Stufe3 | Innenvektor-RMS, Stufe5 | Strom (kA) |
+| --- | ---: | ---: | ---: | ---: |
+| Referenz /6 |0,2760512695|0,5980210929|0,3712379826|294,9665|
+| Referenz /8 |0,2691494984|0,6014775212|0,3615001893|216,6287|
+| Schritt3-Entwurf /6 |0,2761091852|0,5979237991|0,3722297176|295,6837|
+| Schritt3-Entwurf /8 |0,2692089667|0,6016319166|0,3623789334|217,1572|
+| Unveränderte Grenze |0,0001|0,001|0,01|500|
+
+Stufe3:128² Rand,512 Spulenpunkte, halbe Zelle versetzt; Stufe5:64² innere
+Targets bei512 Spulenpunkten. Physische Entscheidung prüft trotzdem **alle sechs**
+Stufen, nicht nur diese Tabelle. Alle vier Formen verfehlen ausschließlich
+die drei Feldfehlerkriterien; Strom, Längen, Krümmung, Spulen-/Plasmaabstand und
+numerischer Startup bestehen. Die Gitterminima im Plasmaabstand liegen bei
+130,350–130,542mm; die unveränderten strengeren kontinuierlichen Seed-Zertifikate
+garantieren mindestens98,214mm. Gitterminimum ist nicht kontinuierliche Untergrenze.
+
+Das schließt die numerische Startstudie, nicht Schritt4A. Fehlerfaktor beim
+Normal-RMS rund2691–2761, beim inneren Vektor36,15–37,22. Die etwas günstigeren
+n8-Werte sind nur Startdiagnostik: kein fairer Optimierungssieg, keine neue
+zulässige Baseline und kein Gegenbeweis zur Realisierbarkeit der Plasmen.
+Alle Such-/Transfer-/Schritt4-Flags bleiben ausdrücklich false. Nach diesem
+Ergebniscommit erst über einen neuen begrenzten Suchversuch entscheiden.
+
+Belege: [bytegleicher vollständiger Laufspiegel](../../evidence/clear-coil-field-start-v1-run.json),
+SHA256`e4949a9be9518c9acaa727c3f6de238703028e9baca16bf89ec15bb145cb9714`;
+[eigenständiger Gesamtaudit](../../evidence/clear-coil-field-start-v1-audit.json),
+SHA256`e6fa7cda853cc2576f9660501043fc6f8c0d7121c1ce0a819df47544fd262fd8`.
+Die Rohdateien bleiben unter`artifacts/clear-coil-field-start-v1` unverändert.
+
+Zusätzlicher unabhängiger lesender Agent prüft ausschließlich mit Standardbibliothek
+alle2434 Referenzen/385.333.037Bytes, Codebytes gegen Git7b1a501, Quellenzeiten,
+sämtliche Modell-/Operations-/Feldpräfixe und eingefrorene feine Normierung.
+Alle oben genannten Arbeitszahlen und exakten N/V-/Startwiederholungen bestätigt;
+sechs alte negative Coilaudits bytegleich zu4f3c2fa, drei alte RAM-Fehler erhalten.
+Keine neue Feld-/Geometrierechnung für diesen Buchhaltungs-/Provenienzreview;
+er ergänzt die getrennte wissenschaftliche CLI-Abnahme, ersetzt sie nicht.
+Erneuter gespeicherter CLI-Audit nach reinen Dokumentänderungen reproduziert
+alle Berichtsfelder exakt bis auf den aktuellen Git-Metadatensatz des Auditors.
+Replay unter`artifacts/clear-coil-field-start-v1-reaudit.json`, SHA256
+`612026341222cae4d009af020530fe124c43341fc997acf41abf754ce72472e6`.
+Neun Dokumenttests, Repository-Ruff, Struktur- und Diffprüfung erneut bestanden.
+Keine numerischen Codeänderungen seit dem1640-Test-Stand; Ergebnis lokal sichern.
+
+**Dokumentarisches Erratum, keine nachträgliche Laufänderung:** Im historischen
+[Softwarequalifikationsbeleg](../../evidence/clear-coil-field-start-v1-workflow.json)
+steht unter`saved_predecessor_replay.reference_and_selected_target_flux` versehentlich
+−0,031415926535897934Wb (−Python-π/100). Beide gebundenen Inputs und sämtliche
+tatsächlichen N0-Snapshots enthalten korrekt−0,03141592653589793Wb. Differenz
+−6,938893903907228e-18Wb, exakt eine ULP. Das zusammenfassende Metadatum wird
+nirgends als Recheneingabe benutzt; quellgebundene Laufnormierung und Abnahme
+sind unverändert richtig. Unabhängiger lesender Review bestätigt dies; der
+historische Beleg bleibt mit diesem additiven Erratum erhalten.
+
+## Erhaltene Implementierungsgeschichte vor neuen Projektfeldern
 
 Nach positivem Ressourcenabschluss bei1b6f6b1 folgt der additive Quellenbinder,
 begrenzte Ausführungslauf und eigenständige Gesamtauditor. Zwei getrennte Agenten
 implementieren Ausführung beziehungsweise Abnahme; ein weiterer lesender Review
 prüft die Integration. Keine alten Rechenkerne oder quellengebundenen Protokolle
-ändern. Es gibt weiterhin noch keine neuen Feldwerte aus diesen Starts.
+ändern. Zu diesem Implementierungszeitpunkt gab es noch keine neuen Feldwerte;
+der inzwischen ausgeführte Versuch steht oben.
 
 Vor Codefreeze und erster neuer Feldsichtung wird die im Protokoll geforderte
 Winkelprüfung explizit festgelegt: **alle drei Paare256→512,512→1024,256→1024**

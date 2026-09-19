@@ -38,19 +38,17 @@ The subsequent [clear-initialization study](docs/geometry/CLEAR_COIL_INITIALIZAT
 now passes independent geometry admission for **all twelve actual coil sets**:
 168 LP calls,84 exact repeats,72 direct clearance checks. The selected shaped
 starts for both six/eight-base-coil classes retain at least98.2mm certified plasma
-clearance, with length/curvature/pair-distance limits unchanged. This is a
-geometry-only result; no magnetic fields were evaluated. The separately registered
-[field-start qualification](docs/optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
-checks fixed normalization, derivatives and six resolution levels before any new search.
-Full-size synthetic native/Sparse arithmetic agrees; three original dense reference
-runs exceed the memory cap and remain negative. A separately registered
-[block-native follow-up](docs/optimization/BLOCK_NATIVE_REFERENCE_RESULTS.md)
-passes all four full-size cases and336 independent comparisons, within unchanged
-120s/1.5GiB limits. The complete field-start workflow now passes170 new controls
-and the full1,640-test regression. Next: execute the four registered physical
-startup cells and independently audit them; software qualification alone does
-not admit a magnetic design.
-No field-qualified coil design or completed step4; pressure, realized-field physics, finite geometry and
+clearance, with length/curvature/pair-distance limits unchanged. The subsequent
+[real field-start qualification](docs/optimization/CLEAR_COIL_FIELD_START_RESULTS.md)
+now passes numerical admission for all four target/coil-class cells: eight N/V
+derivative qualifications,20 refinements,768 direct field comparisons and252
+flux checks. All1,048 native requests are accounted for. Geometry/current pass,
+but all four seeds fail physical field-quality limits by large factors; fine
+normal RMS0.269–0.276 versus1e-4. Next: separately register a bounded field fit
+that explicitly addresses geometric safety. The earlier three dense memory
+failures remain negative; a separately qualified block-native reference passed
+the unchanged resource gates. No search or new equilibrium in the startup study.
+No physically admitted coil design or completed step4; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about

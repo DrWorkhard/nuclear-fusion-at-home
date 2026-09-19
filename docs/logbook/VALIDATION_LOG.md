@@ -1,5 +1,37 @@
 # Validation log
 
+## 2026-09-19 — All four real clear-coil starts independently pass numerical admission
+
+- Clean7b1a501 executes4 fresh serial workers, exact source-before/after identity,
+  all exit0. Parent30.0643/35.1395/30.0398/34.6573s versus1800s; minfree
+  9,083,727,872Bytes, raw167,519,469Bytes. No parallel heavy project jobs.
+- All40 models/176 operations/1048 requests persisted;808 values/240 VJPs,
+  2096 attempted/completed events,80 bundles/24 diagnostics/72 flux rasters.
+  Independent CLI binds2434 files:8 N/V qualifications and exact repeats,
+  64 derivative comparisons using both native/independent J,768 direct field
+  comparisons,20 refinements and252 signed-flux gates pass. Maxdirect5.2942e-15,
+  FDabs2.5941e-11, FDrel1.4486e-9, refinement0.019508%, fluxrel8.8349e-16.
+- All4startup_pass=true but all4physical_seed_pass=false: geometry/current
+  pass, normalRMS/max and inner-vector errors fail unchanged thresholds by
+  large factors. No search/solve/transfer/step4 admission. Byte-identical
+  full run mirror and independent audit preserved; F-090/detail/index/root
+  summaries updated. Numerical sources unchanged from1640-test qualification.
+- Additive erratum: qualification metadata used -math.pi/100 instead of exact
+  stored phiedge, differing by1ULP=-6.938893903907228e-18Wb. Both inputs/all
+  actual N0 snapshots and runtime audits use correct -0.03141592653589793Wb;
+  that descriptive metadata is not an input. Independent read-only review
+  confirms; preserve original qualification bytes. No tolerance relaxation.
+- Separate stdlib-only agent verifies2434 file hashes/385,333,037Bytes and
+  code versus Git7b1a501, reconstructs all native/operation/model prefixes,
+  serial clocks/frozen sources and exact repeats. Confirms all six old negative
+  coil audits match4f3c2fa and all three old dense resource failures remain false.
+  No independent field work hidden in this provenance/work review.
+- Saved-data CLI re-audit after docs-only changes exactly reproduces every
+  report field except current auditor Git metadata; replay hash in results.
+  Nine documentation tests, repository Ruff, structure and diff pass. Staged
+  diff reviewed before local outcome commit. Next: separately register bounded
+  fitting with explicit geometry treatment; scientific gates stay open.
+
 ## 2026-09-19 — Qualify complete clear-coil field-start workflow before project fields
 
 - Add source binder, guarded four-cell producer and independent NumPy/SciPy

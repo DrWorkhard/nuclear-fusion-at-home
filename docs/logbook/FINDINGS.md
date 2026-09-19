@@ -1,5 +1,27 @@
 # Findings log
 
+## F-090 — All four clear-coil starts are numerically qualified, physically infeasible
+
+**Class:** completed preregistered numerical startup, negative physical seed admission
+**Date:** 2026-09-19
+
+Clean7b1a501 completes reference/selected×n6/n8 with exact registered geometry,
+archived targets, B2 and frozen fine current. All1048 native requests counted:
+808 values/240 VJPs,40 initializations,80 bundles,24 diagnostics,72 flux grids.
+Independent2434-reference audit passes all8 N/V derivative qualifications,
+8 exact repeats,768 direct B/A comparisons,20 refinements and252 flux checks.
+Max directrelative5.2942e-15; FD2.5941e-11 absolute/1.4486e-9 relative;
+max refinement0.019508% and fluxrelative8.8349e-16.
+
+All four seeds retain accepted geometry/current but fail all three field limits:
+fine normalRMS0.26915–0.27611 versus1e-4, max0.59792–0.60164 versus1e-3,
+inner-vectorRMS0.36150–0.37223 versus0.01. This establishes a reproducible safe
+starting geometry with resolved arithmetic, not a feasible coil baseline.
+No searches/equilibria, no realized-field/QI transfer or fullstep4 completion.
+Next: separately register a bounded field fit that protects geometric safety;
+do not relabel original failed pilot or infer impossibility from these seeds.
+[Full results, evidence and one-ULP metadata erratum](../optimization/CLEAR_COIL_FIELD_START_RESULTS.md).
+
 ## F-089 — Full-grid block-native reference closes separate bounded-resource gate
 
 **Class:** positive preregistered mathematical/resource qualification, not field admission

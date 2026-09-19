@@ -16,10 +16,10 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 ## Dokumente
 
 - [Blockweise native Referenz: Protokoll](BLOCK_NATIVE_REFERENCE_PROTOCOL.md) — Vier neue volle Ressourcenläufe, native Formel in64 Flächenblöcken,336 Vergleiche mit erhaltenen Backends; alte Speicherfehler bleiben negativ.
-- [Blockweise native Referenz: Abschluss](BLOCK_NATIVE_REFERENCE_RESULTS.md) — Alle vier realen Vollgrößenfälle und336 unabhängige Gegenvergleiche bestanden, maximal0,427GiB/38,2s; alte drei RAM-Fehler bleiben negativ. Gesamtworkflow der Feldstartprüfung folgt.
+- [Blockweise native Referenz: Abschluss](BLOCK_NATIVE_REFERENCE_RESULTS.md) — Alle vier realen Vollgrößenfälle und336 unabhängige Gegenvergleiche bestanden, maximal0,427GiB/38,2s; alte drei RAM-Fehler bleiben negativ. Ressourcenbasis für die separat abgeschlossene Feldstartprüfung.
 
 - [Angenommene Geometrie → Feldstart: Protokoll](CLEAR_COIL_FIELD_START_PROTOCOL.md) — Frische benannte Seeds, feste Normierung, N/V-Ableitungen und sechs Auflösungszustände je vier physischer Zellen; keine Suche.
-- [Angenommene Geometrie → Feldstart: Arbeitsstand](CLEAR_COIL_FIELD_START_RESULTS.md) — Gesamtworkflow mit44 Binder-/32 Runner-/94 Auditorprüfungen und1640 Gesamttests qualifiziert. Exakte Archivtargets, feste Normierung und vollständige Arbeitszählung; als Nächstes vier reale Startupzellen, noch kein Feldnachweis.
+- [Angenommene Geometrie → Feldstart: Abschluss](CLEAR_COIL_FIELD_START_RESULTS.md) — Alle vier realen Startzellen numerisch unabhängig angenommen:1048 native Requests,768 direkte B/A-Vergleiche,20 Verfeinerungen,252 Flussgates. Geometrie/Strom bestehen; alle vier Formen an großen Feldfehlern physisch abgelehnt. Neuer geschützter Feldfit separat zu registrieren.
 
 - [Schritt4: Optionen und unabhängige Reviews](COUPLED_DESIGN_OPTIONS.md) — Vergleich von Filament-Co-Design, reduzierten Richtungen, REGCOIL und direkten Flächen; drei Agentenreviews, Integrationsfallen und getrennte Teilpakete für Realisierung, gemeinsame Iteration, Druck und Robustheit.
 - [Gepaarte reale Spulen: Pilotprotokoll](COUPLED_COIL_PILOT_PROTOCOL.md) — Zwei Plasmaformen, zwei Spulenklassen und Normalfeld-/Innenvektor-Methoden; explizite Flussableitung, feste Budgets und unabhängige feinere Eintrittsschirme.

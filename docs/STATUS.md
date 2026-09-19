@@ -1,6 +1,6 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 19. September 2026, Schritt4 mit geometrisch angenommenen Starts aktiv.
+Stand: 19. September 2026, Schritt4 mit numerisch qualifizierten Feldstarts aktiv.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
@@ -15,16 +15,16 @@ nimmt alle zwölf Spulensätze unabhängig an:168 LP-Aufrufe,84 exakte Wiederhol
 bestanden. Ausgewählte Formstarts mit sechs/acht Grundspulen halten mindestens
 98,414/98,214mm kontinuierlichen Plasmaabstand, gefordert80mm; größte
 Spulenlänge1,938/1,936m gegenüber3,5m, Krümmungsobergrenze≤10/m gegenüber12/m.
-Diese für beide Plasmaziele gemeinsamen Starts haben **noch keinen Feldnachweis**.
-Als Nächstes [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
-mit fester Normierung vor einem neuen Suchlauf. Software:
-1640 Tests bestanden. Die [blockweise native Referenz](optimization/BLOCK_NATIVE_REFERENCE_RESULTS.md)
-besteht separat alle vier Vollgrößenfälle und336 Gegenvergleiche:16,3–38,2s,
-0,379–0,427GiB gegenüber unverändert120s/1,5GiB. Drei ursprüngliche dichte
-Speicherfehler bleiben negativ; alle vier alten Sparse-Fälle bestehen weiter.
-Gesamtworkflow mit170 neuen Kontrollen qualifiziert; nun vier Projekt-Feldstarts
-mit gesonderter unabhängiger Abnahme. Noch kein numerischer oder physischer Startup-Pass.
-Druck, physischer Transfer und Robustheit weiterhin offen.
+Die nachfolgende [reale Feldstartqualifikation](optimization/CLEAR_COIL_FIELD_START_RESULTS.md)
+ist nun **numerisch vollständig bestanden**: vier Zellen, acht N/V-Ableitungs-
+qualifikationen,20 Verfeinerungen,768 direkte B/A-Vergleiche und252 Flussgates.
+Alle1048 nativen Requests erfasst; unveränderte Strom-/Archivnormierung.
+**Physisch bleiben alle vier Startformen unzulässig:** Normal-RMS0,269–0,276
+gegenüber1e-4, Innenvektor-RMS0,3615–0,3723 gegenüber0,01. Geometrie und Strom
+bestehen. Noch keine Optimierung aus diesen Starts. Nächster Schritt: separaten
+begrenzten Feldfit mit expliziter Geometriesicherheit registrieren.
+Software1640 Tests bestanden; separate blockweise Referenz qualifiziert, drei
+alte dichte RAM-Fehler unverändert negativ. Druck, Transfer und Robustheit offen.
 
 Der [erste Feldfit-Pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) bleibt negativ:
 zwei der acht Starts verfehlen den Ableitungsschirm; alle sechs erlaubten
