@@ -44,9 +44,11 @@ Schritt4 ist noch offen, Schritt5 nicht begonnen.
 Die [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_RESULTS.md)
 der geometrisch angenommenen Konturen ist nun abgeschlossen: alle vier realen
 Zellen numerisch angenommen, alle20 Verfeinerungen und252 Flussgates bestanden.
-Geometrie und Strom sind zulässig, die Magnetfeldfehler nicht. Als Nächstes
-einen begrenzten Feldfit mit ausdrücklicher Behandlung der Geometriesicherheit
-registrieren; noch keine neue Suche oder physische Feldzulassung.1640 Softwaretests
+Geometrie und Strom sind zulässig, die Magnetfeldfehler nicht. Nach zwei
+[Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) zuerst
+eine [kumulative Geometrieschranke](geometry/COIL_PERTURBATION_PROTOCOL.md)
+feldfrei qualifizieren, danach begrenzten Feldfit separat registrieren.
+Noch keine neue Suche oder physische Feldzulassung.1640 Softwaretests
 bestanden; ursprüngliche negative Versuche bleiben unverändert erhalten.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.

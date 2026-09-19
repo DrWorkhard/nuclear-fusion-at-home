@@ -39,9 +39,12 @@ ist ebenfalls abgeschlossen: acht N/V-Ableitungsschirme, alle sechs Zustände
 je Zelle,20 Verfeinerungen und252 Flussgates bestanden. Alle vier Zellen
 numerisch angenommen; Geometrie/Strom bestehen, physische Feldfehlergrenzen nicht.
 Keine neuen Suchen/Gleichgewichte. Neue Ressourcenreferenz separat qualifiziert;
-alte drei dichte RAM-Fehler bleiben negativ. Jetzt begrenzten Feldfit einschließlich
-Behandlung der Geometriesicherheit auswählen, unabhängig reviewen und separat
-registrieren; erst nach Implementierungsqualifikation echte neue Suche.
+alte drei dichte RAM-Fehler bleiben negativ. Die neuen
+[zwei Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
+sind abgeschlossen: zuerst [kumulative Geometriesicherung](geometry/COIL_PERTURBATION_PROTOCOL.md)
+feldfrei implementieren/qualifizieren und unabhängig schließen. Danach den
+kleinen sicheren Formfit mit eigenem Such-/Auswahl-/Abnahmeprotokoll registrieren.
+Freier L-BFGS-B-Vergleich, Supportfamilie und freie Ströme bleiben getrennte Optionen.
 Kein Transfer- oder Schritt4-Pass aus diesem numerischen Startabschluss.
 Keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.

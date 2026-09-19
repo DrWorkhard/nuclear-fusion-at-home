@@ -15,6 +15,8 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 
 ## Dokumente
 
+- [Nächster Feldfit: Geometriesicherheit und Methodenreview](GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) — Zwei unterschiedliche unabhängige Empfehlungen; zunächst kumulativen harten Geometrieschirm qualifizieren, freies L-BFGS-B/Supportfamilie/freie Ströme als getrennte Optionen erhalten. Noch keine neue Suche.
+
 - [Blockweise native Referenz: Protokoll](BLOCK_NATIVE_REFERENCE_PROTOCOL.md) — Vier neue volle Ressourcenläufe, native Formel in64 Flächenblöcken,336 Vergleiche mit erhaltenen Backends; alte Speicherfehler bleiben negativ.
 - [Blockweise native Referenz: Abschluss](BLOCK_NATIVE_REFERENCE_RESULTS.md) — Alle vier realen Vollgrößenfälle und336 unabhängige Gegenvergleiche bestanden, maximal0,427GiB/38,2s; alte drei RAM-Fehler bleiben negativ. Ressourcenbasis für die separat abgeschlossene Feldstartprüfung.
 

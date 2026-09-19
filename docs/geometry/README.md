@@ -6,10 +6,15 @@ Aktueller Schluss: Grobe Gitter können reale Krümmungsverletzungen übersehen.
 Die neue außenliegende Startkonstruktion besteht auch real für alle zwölf
 Varianten: unabhängige Snapshot-Fehlerübertragung, kontinuierliche Schranken
 und alle72 direkten Prüfungen. Nur Filament-Startgeometrie, kein Feldpass.
+Der nachfolgende Feldstart ist numerisch qualifiziert, physisch weiterhin
+unzulässig. Vor neuen Suchschritten wird eine kumulative Sicherheitsschranke
+für veränderte Kurven separat qualifiziert; kein vererbter Seedpass.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
+
+- [Spulenänderungen: kumulatives Perturbationsprotokoll](COIL_PERTURBATION_PROTOCOL.md) — Neue D0/D1/D2-Schranken für Abstand/Länge/Krümmung und einfache Projektion gegen unveränderliche Seeds; analytische Kontrollen und feste feldfreie52-Zustandsmatrix vor späterer Suche.
 
 - [Außenliegende Startspulen: Protokoll](CLEAR_COIL_INITIALIZATION_PROTOCOL.md) — Gemeinsames3D-Plasmaenvelope, Kreis-/konvexe Fourier-LPs und unveränderte unabhängige Geometriegrenzen vor einem neuen Feldfit.
 - [Außenliegende Startspulen: Ergebnisse](CLEAR_COIL_INITIALIZATION_RESULTS.md) — Alle zwölf realen Varianten geometrisch angenommen, beide Formstarts ausgewählt; vollständiger Review-/Prüfverlauf, keine Feld-/Schritt4-Zulassung.

@@ -1,5 +1,31 @@
 # Validation log
 
+## 2026-09-19 — Review and preregister cumulative geometry protection before new fitting
+
+- Closed numerical startup3334f1e before choosing follow-up. Two independent
+  read-only method reviews compare free L-BFGS-B, hard cumulative certificates,
+  reduced smooth/support families and separate relative-current architectures.
+  Preserve their disagreement; root selects hard protection first, D-016.
+- Additional source/mathematics review identifies actual export_transfer bounds,
+  exact seed snapshots, matrix.T physical mapping and positive+e_phi normal.
+  R/Z winding is-1, not+1; simplicity follows from the bound seed proof and
+  regular positive-projection homotopy, not cross-product positivity alone.
+- New field-free protocol fixes two26-state matrices,104 certificate calls,
+  four direct curve grids/all physical copies/pairs/both targets, unchanged
+  physical bounds and explicit resource/work limits. All12 smallest signed
+  probes and both seeds must certify; other rejections are legitimate results.
+  No implementation, new geometry matrix, fields, solves or searches yet.
+- Pre-freeze review clarifies outward padding on absolute coefficient changes
+  (not signed delta+p), S=n·(gamma-prime cross gamma-second), preserved tangent
+  turning index rather than arbitrary point winding, all original analytic
+  distance gates, undefined-curvature handling and bounded complete KDTree work.
+  104 certificate calls and208 direct grids explicitly distinct; no hidden
+  repeat raster work. No new fields/geometric numerical study for these reviews.
+- Old kernels/protocols/evidence remain immutable. Options/protocol indexed,
+  affected root next actions synchronized. Documentation/Ruff/diff controls
+  run before local preregistration commit; actual search needs its own later
+  protocol after this safety oracle is qualified.
+
 ## 2026-09-19 — All four real clear-coil starts independently pass numerical admission
 
 - Clean7b1a501 executes4 fresh serial workers, exact source-before/after identity,

@@ -1,5 +1,27 @@
 # Decision log
 
+## D-016 — Qualify cumulative geometry protection before the next field fit
+
+**Status:** accepted bounded step4A method choice; no search authorization by qualification alone
+**Date:** 2026-09-19
+
+After all four numerical startups pass at3334f1e, physical field quality remains
+poor while safe geometry is finally established. Two independent read-only
+reviews disagree on immediate priority: one free8×128 L-BFGS-B control to isolate
+new starts/resolution, versus a short continuously certified local fit.
+Choose the latter first, retaining the former as an explicit later control.
+Reason: soft geometry penalties are zero initially and the conservative seed
+CP reserve is only about18mm, not the50mm suggested by sampled distances.
+
+First preregister/qualify a field-free cumulative D0/D1/D2 certificate against
+the fixed actual seed, including curvature, projection winding and all original
+distance gates. Do not repurpose rounding-only export_certificate, reset
+allowances after each step, or inherit planar simplicity for arbitrary3D coils.
+An overly tight certificate is a method limitation, not physical impossibility.
+Only after its independently documented closure preregister the actual field
+search/budgets/selection/refinement. No scope reduction of step4 or altered
+physical thresholds. [Options/reviews](../optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md).
+
 ## D-015 — Explicit step4 authorization; independent review before coupled studies
 
 **Status:** accepted; new user request after step3 handoff

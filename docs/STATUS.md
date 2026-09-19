@@ -21,8 +21,10 @@ qualifikationen,20 Verfeinerungen,768 direkte B/A-Vergleiche und252 Flussgates.
 Alle1048 nativen Requests erfasst; unveränderte Strom-/Archivnormierung.
 **Physisch bleiben alle vier Startformen unzulässig:** Normal-RMS0,269–0,276
 gegenüber1e-4, Innenvektor-RMS0,3615–0,3723 gegenüber0,01. Geometrie und Strom
-bestehen. Noch keine Optimierung aus diesen Starts. Nächster Schritt: separaten
-begrenzten Feldfit mit expliziter Geometriesicherheit registrieren.
+bestehen. Noch keine Optimierung aus diesen Starts. Nächster Schritt nach zwei
+[Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md):
+[kumulativen Geometrieschirm](geometry/COIL_PERTURBATION_PROTOCOL.md) feldfrei
+qualifizieren, anschließend erst einen begrenzten sicheren Feldfit registrieren.
 Software1640 Tests bestanden; separate blockweise Referenz qualifiziert, drei
 alte dichte RAM-Fehler unverändert negativ. Druck, Transfer und Robustheit offen.
 

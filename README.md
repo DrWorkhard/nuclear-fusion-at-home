@@ -44,8 +44,9 @@ now passes numerical admission for all four target/coil-class cells: eight N/V
 derivative qualifications,20 refinements,768 direct field comparisons and252
 flux checks. All1,048 native requests are accounted for. Geometry/current pass,
 but all four seeds fail physical field-quality limits by large factors; fine
-normal RMS0.269–0.276 versus1e-4. Next: separately register a bounded field fit
-that explicitly addresses geometric safety. The earlier three dense memory
+normal RMS0.269–0.276 versus1e-4. Two [method reviews](docs/optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
+lead first to a [field-free cumulative geometry certificate](docs/geometry/COIL_PERTURBATION_PROTOCOL.md),
+then a separately registered bounded field fit. The earlier three dense memory
 failures remain negative; a separately qualified block-native reference passed
 the unchanged resource gates. No search or new equilibrium in the startup study.
 No physically admitted coil design or completed step4; pressure, realized-field physics, finite geometry and
