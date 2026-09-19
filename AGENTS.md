@@ -54,6 +54,21 @@ cleanup. Before starting the next step or handing off:
 
 ## Research discipline and autonomy
 
+### Shared CLI entry points (user request, 2026-09-19)
+
+Use `python -m fusion_baselines profiles --json` to discover supported operations
+or `python fusion.py profiles --json` from the root without PYTHONPATH; use
+`evaluate`/`audit --dry-run` to inspect invocation plans. The old installed intake
+CLI and pyproject remain frozen; extend only the additive workflow CLI. Onboarding and exact
+scope live in `docs/validation/PROJECT_ENTRYPOINTS.md`. The initial profile wraps
+the fixed clear-coil field-start matrix, not arbitrary candidate designs.
+Extend the explicit profile registry with tests/documentation only after the
+corresponding scientific workflow is qualified; never bypass source/budget gates,
+silently change frozen backends, or equate exit0 with physical admission.
+Discovery/planning must stay lightweight, no installs or numerical/native imports.
+After this interface task, resume the pending cumulative geometry workflow and
+its registered52-state matrix; pure primitives alone do not close that study.
+
 ### Step4 explicitly authorized, including independent agents (2026-09-14)
 
 After step3 handoff the user explicitly requests step4, an options assessment,

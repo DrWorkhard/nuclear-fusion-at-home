@@ -10,7 +10,7 @@ Start with [the project overview](docs/README.md), [current assessment](docs/STA
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
 
-Current assessment, 2026-09-19: **steps 1, 2 and the registered vacuum scope of
+Current assessment, 2026-09-20: **steps 1, 2 and the registered vacuum scope of
 step 3 are complete.** Steps 1/2 qualify the bounded local W7-X/Goodman regression
 and LPQA fixed-surface filament workflow.
 The [consolidated acceptance and runbook](docs/validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
@@ -47,9 +47,10 @@ but all four seeds fail physical field-quality limits by large factors; fine
 normal RMS0.269–0.276 versus1e-4. Two [method reviews](docs/optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
 lead first to a [field-free cumulative geometry certificate](docs/geometry/COIL_PERTURBATION_PROTOCOL.md).
 Its mathematical primitives now pass200 new tests and independent review;
-the complete workflow and52-state real matrix remain open. At the user's request,
-add a thin common evaluation/audit CLI first, then resume that qualification
-before a separately registered bounded field fit. The earlier three dense memory
+the complete workflow and52-state real matrix remain open. The requested thin
+[evaluation/audit CLI](docs/validation/PROJECT_ENTRYPOINTS.md) now passes64 new
+controls, preserving all historical code; next re-audit retained data through it,
+then resume geometry qualification before a bounded field fit. The earlier three dense memory
 failures remain negative; a separately qualified block-native reference passed
 the unchanged resource gates. No search or new equilibrium in the startup study.
 No physically admitted coil design or completed step4; pressure, realized-field physics, finite geometry and
@@ -72,7 +73,7 @@ robustness remain required subpackages. No automatic step5 or SoTA claim.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Latest complete software regression: 1,840 tests pass with 334 documented warnings
+- Latest complete software regression: 1,904 tests pass with 334 documented warnings
   (144 fixture warnings and 190 explicitly retained solver-option forwarding notices);
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.
@@ -89,6 +90,27 @@ Environment details: [validation overview](docs/validation/README.md).
 Documentation checks: `python scripts/check_docs.py`.
 
 ## Canonical commands
+
+For a shared human/agent entry point, see the
+[CLI quickstart and profile contract](docs/validation/PROJECT_ENTRYPOINTS.md):
+
+```bash
+PYTHONPATH=src .venv/bin/python -m fusion_baselines profiles --json
+.venv/bin/python fusion.py profiles --json
+PYTHONPATH=src .venv/bin/python -m fusion_baselines evaluate \
+  --profile clear-coil-field-start-v1 --output artifacts/my-field-start --dry-run
+PYTHONPATH=src .venv/bin/python -m fusion_baselines audit \
+  --profile clear-coil-field-start-v1 \
+  --run artifacts/clear-coil-field-start-v1/run.json \
+  --output artifacts/my-field-start-audit.json --dry-run
+```
+
+Version1 wraps a fixed four-cell study, **not arbitrary single designs**. Discovery
+and dry runs do no scientific work. Actual execution needs the qualified checkout,
+environment and locally retained raw data; a wheel or Git clone alone is not enough.
+Exit0 from an audit means numerical startup admission, not physical feasibility.
+The old installed `fusion-baselines` intake command remains unchanged; use the
+new module entry point or root launcher above for these research commands.
 
 Recheck the bounded foundation in the existing pinned environment, using new
 output names (do not sync or install anything for this check):

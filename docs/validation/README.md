@@ -12,6 +12,8 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Gemeinsamer CLI-Einstieg](PROJECT_ENTRYPOINTS.md) — Profile entdecken, Aufrufe ohne Rechnung planen, feste Feldstartstudie ausführen und gespeicherte Läufe unabhängig auditieren. 64 neue/1904 Gesamttests bestanden; erste Erhaltungsfehler bewahrt, alte CLI unverändert. Daten-Replay folgt separat.
+
 - [Basisabnahme: Ergebnisse und Bedienung](FOUNDATION_ACCEPTANCE_RESULTS.md) — Beide geschärften Schritte bestanden;720 Tests, zwei24-Bundle-Pfade, separate Audits und alle vier Holdouts. Erster Metadatenfehler erhalten, Korrektur/frische Wiederholung dokumentiert, Befehle und Grenzen festgehalten.
 
 - [Basisabnahme: geschärftes Protokoll](FOUNDATION_ACCEPTANCE_PROTOCOL.md) — Vorab registrierte Nutzerkorrektur: begrenzte Rechenbasis und reproduzierbarer24-Bundle-Iterationszyklus; getrennte Kandidatenzulässigkeit, unveränderte Grenzen und Altbestand.

@@ -1,5 +1,55 @@
 # Validation log
 
+## 2026-09-20 — Qualify additive common research CLI
+
+- Corrected full regression1904 passed,334 known warnings,0 failures/errors/skips
+  in208.42s. Includes64 independent CLI controls; historical cli.py/pyproject
+  byte checks and unchanged foundation preservation all pass. First3-failure
+  JUnit remains immutable; qualification JSON binds both runs and four new sources.
+- Stdlib-only discovery/help/module and root launcher verified, dry-run creates
+  no raw output. Final read-only review reports no remaining blockers after
+  temporary-sibling/output-parent protection and explicit signal/exit semantics.
+- Four root summaries, onboarding/index, D-017 and persistent agent guidance
+  aligned. Full Ruff, structure/whitespace and9 documentation controls pass.
+  No new project fields/solves; next run only the existing saved-data audit
+  through this committed interface, then resume the registered geometric study.
+
+## 2026-09-20 — Retain frozen CLI after preservation regression catches direct extension
+
+- Initial full interface regression:1897 pass/3 failures/334 known warnings,
+  195.14s. All three failures trace to the foundation's historical preservation
+  gate: modifying src/fusion_baselines/cli.py is forbidden, even for UI changes.
+  Full failing JUnit retained at artifacts/project-entrypoints-v1-qualification/regression.xml.
+- Restore exactly our own uncommitted cli.py changes using apply_patch. Old
+  cli.py and pyproject.toml match HEAD/5971fee; no historical test/gate changed.
+  New parser/main now lives entirely in additive workflow_cli.py, reached by
+  python -m fusion_baselines or root fusion.py. Old installed intake command
+  remains unchanged. Preservation check now passes with zero blocked changes.
+- Expanded independent tests64 pass,0 warnings; root entry works from outside
+  checkout without PYTHONPATH, and two explicit frozen-byte controls added.
+  Full corrected regression pending; do not replace negative first attempt.
+
+## 2026-09-19 — Implement thin common research entry points
+
+- User asks for human/agent-friendly shared evaluation/audit entry points, then
+  continuation of interrupted geometry work. Pending pure primitive closure
+  saved separately at20e9b10 before interface edits.
+- Independent read-only scope review selects exactly one qualified existing
+  profile: clear-coil-field-start-v1. Fixed4-cell evaluation and saved-run audit;
+  arbitrary candidates, search/physics changes and pending perturbation matrix
+  are explicitly unsupported. No misleading universal evaluator or hidden retry.
+- Add lightweight profiles/JSON discovery, evaluate/audit dispatch, dry-run
+  command plans and python-module entry point. Explicit checkout validation,
+  fresh outputs, caller-relative paths, shell-free commands, child checkout/src
+  imports and three one-thread limits. Native intake import deferred so help
+  and discovery do not require numerical libraries.
+- Initial Ruff catches one overlong description; fixed before tests. New
+  independent review catches existing audit .tmp sibling overwrite risk and
+  unusable output-parent paths. Add preflight rejections without changing the
+  historical writer; normalize signal exits to128+N and distinguish dry-run0.
+  Command tests in progress, no real backend execution.
+  Onboarding/index/root entry link and persistent AGENTS guidance added.
+
 ## 2026-09-19 — Close pure perturbation primitives before CLI and real-matrix work
 
 - Complete regression1840 passed,334 known warnings,0 failures/errors/skips,

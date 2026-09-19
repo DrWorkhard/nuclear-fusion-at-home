@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 19. September 2026, Schritt4 mit numerisch qualifizierten Feldstarts aktiv.
+Stand: 20. September 2026, Schritt4 mit numerisch qualifizierten Feldstarts aktiv.
 [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 **Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
@@ -21,7 +21,7 @@ Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemei
 Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
 oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
-abgeschlossen; einschließlich kumulativer Geometriegrundbausteine1840 Tests bestanden.
+abgeschlossen; einschließlich Geometriegrundbausteinen/gemeinsamer CLI1904 Tests bestanden.
 Alle acht realen Startqualifikationen auditiert,
 sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
 freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
@@ -44,9 +44,11 @@ alte drei dichte RAM-Fehler bleiben negativ. Die neuen
 sind abgeschlossen: zuerst [kumulative Geometriesicherung](geometry/COIL_PERTURBATION_PROTOCOL.md)
 feldfrei qualifizieren und unabhängig schließen. Ihre reinen Grundbausteine
 bestehen200 neue Kontrollen und zusätzlichen Review; vollständiger Runner/Auditor
-und reale52-Zustandsmatrix stehen aus. Davor auf ausdrücklichen Nutzerwunsch
-dünne gemeinsame evaluate/audit-Einstiegsschicht mit dokumentierten Profilen
-ergänzen; keine neuen physikalischen Zulassungen dadurch. Danach hier fortsetzen.
+und reale52-Zustandsmatrix stehen aus. Die auf Nutzerwunsch ergänzte dünne
+[evaluate/audit-Einstiegsschicht](validation/PROJECT_ENTRYPOINTS.md) ist mit64
+neuen Tests qualifiziert, ohne alte Quellen zu ändern. Zunächst vorhandenen
+Feldstart darüber auditieren, danach hier fortsetzen. Keine neue physische
+Zulassung oder Unterstützung beliebiger Kandidaten durch die Oberfläche.
 Nach Abschluss der geometrischen Qualifikation den
 kleinen sicheren Formfit mit eigenem Such-/Auswahl-/Abnahmeprotokoll registrieren.
 Freier L-BFGS-B-Vergleich, Supportfamilie und freie Ströme bleiben getrennte Optionen.

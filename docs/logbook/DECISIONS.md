@@ -1,5 +1,24 @@
 # Decision log
 
+## D-017 — Common entry points are additive, explicit and profile-scoped
+
+**Status:** accepted interface scope; no new scientific admission
+**Date:** 2026-09-20
+
+On user request, provide shared profiles/evaluate/audit commands through
+`python -m fusion_baselines` and root `fusion.py`. Keep the historical installed
+intake CLI and package configuration byte-identical: an initial direct extension
+correctly failed three preservation regressions and is not the accepted approach.
+
+Version1 dispatches exactly the qualified clear-coil-field-start-v1 study and
+its independent saved-run auditor. It does not accept arbitrary candidate designs,
+retarget a profile, change scientific budgets or expose unqualified perturbation
+work. Discovery/dry-run stay standard-library-only and do not trigger computation.
+Exit0 retains its profile-specific meaning, never a universal physical pass.
+Fresh outputs include protection of the historical audit writer's .tmp sibling.
+Future candidate profiles need their own qualified source-bound workflows, not
+just a new command alias. [Runbook](../validation/PROJECT_ENTRYPOINTS.md).
+
 ## D-016 — Qualify cumulative geometry protection before the next field fit
 
 **Status:** accepted bounded step4A method choice; no search authorization by qualification alone
