@@ -15,6 +15,9 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 
 ## Dokumente
 
+- [Blockweise native Referenz: Protokoll](BLOCK_NATIVE_REFERENCE_PROTOCOL.md) — Vier neue volle Ressourcenläufe, native Formel in64 Flächenblöcken,336 Vergleiche mit erhaltenen Backends; alte Speicherfehler bleiben negativ.
+- [Blockweise native Referenz: Arbeitsstand](BLOCK_NATIVE_REFERENCE_RESULTS.md) — Zwei unabhängige algebraische/Ausführungsreviews, festgelegte Nicht-Cache-Buchhaltung und offene Implementierungsqualifikation.
+
 - [Angenommene Geometrie → Feldstart: Protokoll](CLEAR_COIL_FIELD_START_PROTOCOL.md) — Frische benannte Seeds, feste Normierung, N/V-Ableitungen und sechs Auflösungszustände je vier physischer Zellen; keine Suche.
 - [Angenommene Geometrie → Feldstart: Arbeitsstand](CLEAR_COIL_FIELD_START_RESULTS.md) — 163 neue Bausteinkontrollen; volle native/Sparse-Gegenrechnung besteht, Ressourcen-Gesamtgate an drei dichten Speicherüberschreitungen abgelehnt. Alle vier Sparse-Fälle bestehen; keine Projekt-Feldfreigabe.
 

@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-19 — Preregister block-native follow-up without relaxing resource gates
+
+- Negative outcome97d75b8 closed before this new method choice. Two independent
+  read-only agents confirm full-grid weighted native-kernel accumulation and
+  conditional reuse of all four unchanged Sparse passes. They identify kernel
+  synchronization, double-normalization, minimum-distance and ledger pitfalls.
+- Register exactly4 fresh block-native workers,64 consecutive256-surface-node
+  blocks, all physical copies and unchanged128²/256/512 grids. No kernel cache
+  credits; explicit requested/attempted/completed/reserved work separates hard
+  interruption bounds from successful exact counts. No gradient work on J probes.
+- All336 new comparisons to BOTH preserved native/Sparse states,32 new FD,
+  repeat/restore/source/counter checks plus unchanged120s/1.5GiB/disk gates.
+  New bounded_reference_pass distinct from old all_pass=false; no project fields
+  or production startup permission. No implementation/new numerical calls yet.
+- Protocol/results and directory index added; root next-action links updated.
+  Documentation structure, nine documentation tests and diff checks run before
+  local preregistration commit. Next: additive implementation and synthetic gates.
+
 ## 2026-09-19 — Complete full-size distance resource study; preserve three dense failures
 
 - Clean a5a007c runs all8 fresh serial workers; all13 states each persisted and

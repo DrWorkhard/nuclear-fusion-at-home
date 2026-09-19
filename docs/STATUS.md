@@ -21,6 +21,8 @@ mit fester Normierung vor einem neuen Suchlauf. Software:
 1335 Tests bestanden; volle synthetische Feldbaustein-Gegenrechnung besteht,
 Ressourcen-Gesamtgate scheitert an drei dichten Speicherüberschreitungen.
 Alle vier Sparse-Fälle bestehen; keine neuen Projekt-Feldwerte freigegeben.
+Eine [blockweise native Referenz](optimization/BLOCK_NATIVE_REFERENCE_PROTOCOL.md)
+ist als separater Folgeversuch mit unveränderten Grenzen registriert.
 Druck, physischer Transfer und Robustheit weiterhin offen.
 
 Der [erste Feldfit-Pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) bleibt negativ:

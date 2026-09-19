@@ -38,8 +38,9 @@ mit100mm Konstruktionsabstand. Nun separat registrierte
 acht N/V-Ableitungskontrollen, sechs Auflösungszustände je vier physischer Zellen,
 konstante Strom-/B²-Normierung und vollständige Flussprüfungen. Die volle
 synthetische Gegenrechnung besteht, aber drei dichte Referenzläufe überschreiten
-den Speicherschirm; alle vier Sparse-Läufe bestehen. Zuerst blockweise native
-Referenz als getrennten Folgeversuch registrieren/qualifizieren, ohne historische
+den Speicherschirm; alle vier Sparse-Läufe bestehen. Zuerst die separat registrierte
+[blockweise native Referenz](optimization/BLOCK_NATIVE_REFERENCE_PROTOCOL.md)
+implementieren/qualifizieren, ohne historische
 Gates zu lockern. Danach Gesamtworkflow implementieren/prüfen und Startupmatrix;
 neue Suche erst nach deren dokumentiertem Abschluss und separatem Protokoll.
 Kein Magnetfeld- oder Schritt4-Pass aus dem geometrischen Ergebnis.
