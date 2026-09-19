@@ -18,11 +18,11 @@ Spulenlänge1,938/1,936m gegenüber3,5m, Krümmungsobergrenze≤10/m gegenüber1
 Diese für beide Plasmaziele gemeinsamen Starts haben **noch keinen Feldnachweis**.
 Als Nächstes [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
 mit fester Normierung vor einem neuen Suchlauf. Software:
-1470 Tests bestanden; volle synthetische Feldbaustein-Gegenrechnung besteht,
-Ressourcen-Gesamtgate scheitert an drei dichten Speicherüberschreitungen.
-Alle vier Sparse-Fälle bestehen; keine neuen Projekt-Feldwerte freigegeben.
-Eine [blockweise native Referenz](optimization/BLOCK_NATIVE_REFERENCE_PROTOCOL.md)
-ist als separater Folgeversuch mit unveränderten Grenzen registriert.
+1470 Tests bestanden. Die [blockweise native Referenz](optimization/BLOCK_NATIVE_REFERENCE_RESULTS.md)
+besteht separat alle vier Vollgrößenfälle und336 Gegenvergleiche:16,3–38,2s,
+0,379–0,427GiB gegenüber unverändert120s/1,5GiB. Drei ursprüngliche dichte
+Speicherfehler bleiben negativ; alle vier alten Sparse-Fälle bestehen weiter.
+Nun Gesamtworkflow implementieren/qualifizieren, erst danach Projekt-Feldstarts.
 Druck, physischer Transfer und Robustheit weiterhin offen.
 
 Der [erste Feldfit-Pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) bleibt negativ:

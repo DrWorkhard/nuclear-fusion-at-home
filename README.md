@@ -42,9 +42,12 @@ clearance, with length/curvature/pair-distance limits unchanged. This is a
 geometry-only result; no magnetic fields were evaluated. The separately registered
 [field-start qualification](docs/optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
 checks fixed normalization, derivatives and six resolution levels before any new search.
-Full-size synthetic native/Sparse arithmetic agrees, but three dense reference
-runs exceed the registered memory cap. All four Sparse cases pass; the overall
-resource gate remains negative and new project-field evaluation stays blocked.
+Full-size synthetic native/Sparse arithmetic agrees; three original dense reference
+runs exceed the memory cap and remain negative. A separately registered
+[block-native follow-up](docs/optimization/BLOCK_NATIVE_REFERENCE_RESULTS.md)
+passes all four full-size cases and336 independent comparisons, within unchanged
+120s/1.5GiB limits. Next: qualify the complete field-start workflow before project
+field evaluations; the resource result alone does not admit a magnetic design.
 No field-qualified coil design or completed step4; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 

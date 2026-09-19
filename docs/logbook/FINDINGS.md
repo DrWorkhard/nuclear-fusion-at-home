@@ -1,5 +1,28 @@
 # Findings log
 
+## F-089 — Full-grid block-native reference closes separate bounded-resource gate
+
+**Class:** positive preregistered mathematical/resource qualification, not field admission
+**Date:** 2026-09-19
+
+Clean3349ce5 completes four fresh serial workers at unchanged128² surface,
+24/32 physical curves and256/512 coil nodes. All52 states,336 comparisons to
+BOTH original backends,32 FD checks and12 exact repeat/restore pairs pass the
+independent659-reference audit. Maximum CP value/gradient differences are
+4.2284e-18/6.5053e-19; CC and minimum distances agree exactly.
+
+Whole-worker time16.287–38.186s and peakRSS0.379–0.427GiB meet unchanged
+120s/1.5GiB gates. Same native formula and all original data,64 weighted blocks,
+no gradient work hidden in values or cache credits. Exact completed CP kernel
+counts93,184 values,35,840 per covector,21,504 minimum blocks,560 per curve VJP.
+Single measurements, not an isolated-kernel or repeated performance benchmark.
+
+Separate bounded_reference_pass=true; original dense3-RAM-failure decision remains
+false and all four old Sparse passes are explicitly rechecked. This closes the
+resource prerequisite, not startup, physical seed, search, transfer or step4.
+Next: qualify complete field-start execution/source/admission workflow before
+new project fields. [Full evidence and table](../optimization/BLOCK_NATIVE_REFERENCE_RESULTS.md).
+
 ## F-088 — Full-size sparse distance arithmetic agrees; dense reference exceeds resource gate
 
 **Class:** bounded synthetic mathematical/resource qualification, overall negative

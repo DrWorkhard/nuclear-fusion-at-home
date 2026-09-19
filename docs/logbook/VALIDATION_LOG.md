@@ -1,5 +1,33 @@
 # Validation log
 
+## 2026-09-19 — Full-grid block-native reference passes independent bounded-resource admission
+
+- Clean3349ce5 completes four fresh serial workers;52 states,104 public values,
+  40 gradients,24 minima. Exact unchanged source snapshots, all exits0, no
+  timeouts. Parent16.2870/26.4611/21.3985/38.1855s; peakRSS408633344/448626688/
+  406470656/458391552Bytes, all below unchanged120s/1.5GiB. No heavy project
+  jobs in parallel; unrelated editor/services are not terminated or modified.
+- Separate CLI auditor:659 reference files,336 comparisons to both old backends,
+  32 FD,12 exact repeat/restore pairs, independent surfaces/curves, complete
+  attempt/progress/source/resource checks pass. CP maxvalue4.2284e-18,
+  maxgradient6.5053e-19; maxFD1.7141e-11 absolute/4.8206e-8 relative.
+  Exact native CP kernel totals93,184/35,840/35,840/21,504 and560 VJP pairs.
+- bounded_reference_pass=true, legacy_all_pass=false; all eight old mathematical
+  checks/four old Sparse resource passes and exact three old dense failures
+  retained. Producer admission flags remain pending/false by design. No targets,
+  magnetic fields, new equilibrium solves or search/transfer/step4 admission.
+- Raw28,701,721Bytes, minfree9,269,567,488Bytes. Byte-identical run mirror and
+  independent audit preserved. F-089, detail results/index and all four root
+  overviews synchronized; numerical code/protocols unchanged from1470-test
+  qualification. Documentation tests, Ruff, structure and staged-diff checks
+  are repeated before local outcome commit. Next: complete field-start workflow.
+- Additional independent read-only agent recomputes659 hashes,336 comparisons,
+  32 FD,12 repeats,2352 reservations/4704 events, exact counters and unchanged
+  old failures without project imports/native work: no findings. A second CLI
+  saved-data audit after docs-only edits exactly reproduces all report fields
+  except current auditor Git metadata. Fresh replay retained with hash in report.
+  Nine docs tests, repository Ruff, structure and diff pass again.
+
 ## 2026-09-19 — Qualify complete block-native implementation before full-size execution
 
 - Add unchanged native cs_distance_pure in64 full surface blocks, synchronous

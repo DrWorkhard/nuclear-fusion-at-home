@@ -9,6 +9,11 @@ Target-Feldwerte, keine optimierten Kandidaten und kein Schritt4-Abschluss.
 Die vollständige synthetische Ressourcenmatrix ist jetzt ausgeführt: mathematisch
 bestanden, als Gesamtqualifikation an drei dichten Speicherüberschreitungen
 abgelehnt. Die neue Sparse-Implementierung besteht alle vier Einzelprüfungen.
+Der separat registrierte [block-native Folgeversuch](BLOCK_NATIVE_REFERENCE_RESULTS.md)
+besteht inzwischen alle vier Vollgrößenfälle unter denselben Grenzen und sämtliche
+336 unabhängigen Gegenvergleiche. Die ursprüngliche negative Entscheidung bleibt
+erhalten. Als Nächstes ist der vollständige Feldstartworkflow zu qualifizieren;
+noch keine neue Feldrechnung oder Suche aus dem Ressourcenpass allein.
 
 Zwei getrennte lesende Agentenreviews identifizieren dieselben Integrationsfallen:
 der alte Konstruktor legt Startkoeffizienten und Flussorientierung bereits an
@@ -137,11 +142,12 @@ ist bytegleich mit dem rohen`run.json` (SHA256`5c77723ee9f77de7a4b176de3a69f06cc
 mathematischen Gegenrechnungen berechtigen nicht, die ausdrücklich strengere
 Gesamtanforderung stillschweigend aufzuheben oder Projekt-Feldwerte zu starten.
 
-Nächste methodische Option: die gleiche native Referenzformel blockweise über
-sämtliche Oberflächenpunkte auswerten, ohne Punkte, Spulen, Ableitungen oder
-Grenzen zu reduzieren. Vor Ausführung braucht das ein neues separates Protokoll,
-synthetische Implementierungsprüfung und Vergleich mit beiden hier vollständig
-gespeicherten Backends. Die drei dichten Speicherfehlschläge bleiben erhalten.
+Als nächste methodische Option wurde die gleiche native Referenzformel blockweise
+über sämtliche Oberflächenpunkte gewählt, ohne Punkte, Spulen, Ableitungen oder
+Grenzen zu reduzieren. Das separate Protokoll, die synthetische Prüfung und
+der Vergleich mit beiden erhaltenen Backends sind inzwischen
+[positiv abgeschlossen](BLOCK_NATIVE_REFERENCE_RESULTS.md). Die drei dichten
+Speicherfehlschläge bleiben erhalten; der Feldstart-Gesamtworkflow folgt noch.
 
 Eine zusätzliche unabhängige lesende Nachrechnung bestätigt435 eindeutige
 Referenzhashes/Dateigrößen, alle104 Zustände und Arbeitspräfixe,64 FD-Prüfungen,
