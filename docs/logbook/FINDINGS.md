@@ -1,5 +1,27 @@
 # Findings log
 
+## F-088 — Full-size sparse distance arithmetic agrees; dense reference exceeds resource gate
+
+**Class:** bounded synthetic mathematical/resource qualification, overall negative
+**Date:** 2026-09-19
+
+Clean a5a007c completes all8 fresh processes,104 states,208 J/80 gradient/48
+minimum-distance requests. All64 FD,24 exact repeat/restore pairs and168 paired
+native/Sparse checks pass at full128² surface and24/32 physical coils with256/512
+nodes. Largest CP-value/gradient differences5.3669e-18/4.3369e-19.
+
+All four Sparse workers remain within120s/1.5GiB (0.393–0.474GiB peaks).
+Three dense native workers exceed unchanged memory cap: n6/5122.1945GiB,
+n8/2561.5237GiB,n8/5121.8765GiB. All timings meet120s. Whole-worker measured
+peaks include native CC/JAX/imports; this is not isolated CP or a repeated
+performance benchmark. Old dense failures and overall false decision retained;
+no automatic exemption or project-field permission despite sparse passes.
+
+Next method to preregister: full-grid native reference accumulation in bounded
+blocks, same formula/data/gates, comparing every stored state to both original
+backends. No field, equilibrium, candidate, SoTA or step4 claim.
+[Full table and limits](../optimization/CLEAR_COIL_FIELD_START_RESULTS.md).
+
 ## F-087 — Target-adapted exterior starts pass all twelve independent geometry admissions
 
 **Class:** preregistered geometry-only construction, not magnetic/step4 admission

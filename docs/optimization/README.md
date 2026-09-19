@@ -16,7 +16,7 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 ## Dokumente
 
 - [Angenommene Geometrie → Feldstart: Protokoll](CLEAR_COIL_FIELD_START_PROTOCOL.md) — Frische benannte Seeds, feste Normierung, N/V-Ableitungen und sechs Auflösungszustände je vier physischer Zellen; keine Suche.
-- [Angenommene Geometrie → Feldstart: Arbeitsstand](CLEAR_COIL_FIELD_START_RESULTS.md) — Unabhängige Reviews,163 neue Bausteinkontrollen, korrigierte Snapshot-Quellenkopie; vollständige Ressourcenprüfung und Gesamtworkflow vor Target-Feldwerten noch offen.
+- [Angenommene Geometrie → Feldstart: Arbeitsstand](CLEAR_COIL_FIELD_START_RESULTS.md) — 163 neue Bausteinkontrollen; volle native/Sparse-Gegenrechnung besteht, Ressourcen-Gesamtgate an drei dichten Speicherüberschreitungen abgelehnt. Alle vier Sparse-Fälle bestehen; keine Projekt-Feldfreigabe.
 
 - [Schritt4: Optionen und unabhängige Reviews](COUPLED_DESIGN_OPTIONS.md) — Vergleich von Filament-Co-Design, reduzierten Richtungen, REGCOIL und direkten Flächen; drei Agentenreviews, Integrationsfallen und getrennte Teilpakete für Realisierung, gemeinsame Iteration, Druck und Robustheit.
 - [Gepaarte reale Spulen: Pilotprotokoll](COUPLED_COIL_PILOT_PROTOCOL.md) — Zwei Plasmaformen, zwei Spulenklassen und Normalfeld-/Innenvektor-Methoden; explizite Flussableitung, feste Budgets und unabhängige feinere Eintrittsschirme.

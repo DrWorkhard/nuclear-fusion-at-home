@@ -18,7 +18,9 @@ Spulenlänge1,938/1,936m gegenüber3,5m, Krümmungsobergrenze≤10/m gegenüber1
 Diese für beide Plasmaziele gemeinsamen Starts haben **noch keinen Feldnachweis**.
 Als Nächstes [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
 mit fester Normierung vor einem neuen Suchlauf. Software:
-1335 Tests bestanden; aktive Vollgrößen-Ressourcenprüfung noch offen.
+1335 Tests bestanden; volle synthetische Feldbaustein-Gegenrechnung besteht,
+Ressourcen-Gesamtgate scheitert an drei dichten Speicherüberschreitungen.
+Alle vier Sparse-Fälle bestehen; keine neuen Projekt-Feldwerte freigegeben.
 Druck, physischer Transfer und Robustheit weiterhin offen.
 
 Der [erste Feldfit-Pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) bleibt negativ:

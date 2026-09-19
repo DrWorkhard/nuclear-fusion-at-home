@@ -6,6 +6,9 @@ Geometriestudie bei323cfdd vollständig geschlossen: alle zwölf Varianten
 angenommen, n6/n8-shape-d100mm ausgewählt. Jetzt getrennte numerische
 Feldstart-/Auflösungsqualifikation vor jeder weiteren Suche. Noch keine neuen
 Target-Feldwerte, keine optimierten Kandidaten und kein Schritt4-Abschluss.
+Die vollständige synthetische Ressourcenmatrix ist jetzt ausgeführt: mathematisch
+bestanden, als Gesamtqualifikation an drei dichten Speicherüberschreitungen
+abgelehnt. Die neue Sparse-Implementierung besteht alle vier Einzelprüfungen.
 
 Zwei getrennte lesende Agentenreviews identifizieren dieselben Integrationsfallen:
 der alte Konstruktor legt Startkoeffizienten und Flussorientierung bereits an
@@ -81,7 +84,8 @@ Ruff im gesamten Repository, Dokumentstruktur und Diffprüfung bestehen.
 Quellenhashes und beide JUnit-Berichte stehen im
 [Qualifikationsbeleg](../../evidence/clear-coil-field-start-v1-primitives.json).
 
-Nächster separater Ausführungsschritt nach diesem Code-/Dokumentationscommit:
+Danach bei sauberem Codecommit`a5a007c` separat ausgeführter Befehl
+(hier mit Platzhalter für einen frischen absoluten Ausgabeordner):
 
 ```bash
 PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self \
@@ -90,8 +94,8 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
   --raw /ABSOLUTER/FRISCHER/RESSOURCENORDNER
 ```
 
-Diese Matrix ist noch ausstehend; weder die Testzahl noch die lesenden Reviews
-ersetzen sie. Keine neuen Projekt-Feldwerte oder VMEC-Aufrufe in dieser Phase.
+Ergebnisse dieser Matrix stehen unten; weder die Testzahl noch die lesenden
+Reviews ersetzen sie. Keine neuen Projekt-Feldwerte oder VMEC-Aufrufe in dieser Phase.
 
 Der Gesamtworkflow ist noch **nicht** implementiert oder qualifiziert. Sein
 separater Entwurf zählt zehn Modelle je physischer Zelle: zwei Qualifikationen,
@@ -102,3 +106,49 @@ Diagnosen und Flussblöcke verwenden unverändert den ersten N-Seed-Snapshot.
 Radial-, Winkel- und Spulenverfeinerung sind direkte Paarprüfungen, nicht nur
 Vergleiche aller Ergebnisse mit einem einzigen feinsten Wert. Diese Präzisierung
 ist eine Implementierungsanforderung vor ersten Projekt-Feldwerten, kein Pass.
+
+## Vollständige Ressourcenmatrix: mathematischer Pass, Gesamtgate negativ
+
+Alle acht frischen Prozesse schließen mit Exit0 und unveränderten Quellen ab;
+alle104 Zustände,208 J-Anfragen,80 vollständigen Gradienten und48 Mindestabstände
+sind erhalten. Alle64 FD-Prüfungen,24 exakten Wiederholungs-/Wiederherstellungspaare,
+acht Symmetrie-/Cachekontrollen und168 direkten Backendvergleiche bestehen.
+Größte absolute Differenz beim CP-Wert5,3669e-18, beim CP-Gradienten4,3369e-19;
+größter FD-Absolutfehler1,7141e-11. Dies sind diskrete synthetische Tests,
+keine neue geometrische oder magnetische Entwurfsannahme.
+
+| Grundspulen / Quadratur | Native Zeit (s) | Sparse Zeit (s) | Native Peak (GiB) | Sparse Peak (GiB) | Unverändertes Ressourcenpaar |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 6 /256 |18,340|9,693|1,4233|0,4742|bestanden|
+| 6 /512 |40,252|18,341|2,1945|0,3926|**abgelehnt: native RAM**|
+| 8 /256 |23,934|13,262|1,5237|0,4014|**abgelehnt: native RAM**|
+| 8 /512 |50,442|27,523|1,8765|0,4070|**abgelehnt: native RAM**|
+
+Zeit ist beobachtete Elternprozess-Wandzeit, Peak der gesamte jeweilige Worker
+einschließlich Imports/JAX/CC, nicht isolierter CP-Speicher. Ein Durchlauf je Zelle
+belegt keine statistisch abgesicherte allgemeine Leistungsrangfolge. Alle Zeiten
+liegen unter120s; drei native Peaks überschreiten1,5GiB. Der Schirm war eine
+nachträglich gemessene Qualifikationsgrenze, kein hartes OS-Speicherlimit.
+Kleinste beobachtete Plattenreserve8.765.624.320Bytes; neue Rohdaten rund42MiB.
+
+Der [vollständige Ergebnisbeleg](../../evidence/clear-coil-field-start-v1-resource.json)
+ist bytegleich mit dem rohen`run.json` (SHA256`5c77723ee9f77de7a4b176de3a69f06ccc6af6d22ad7a4572c2c631ea013acdf`).
+**`all_pass:false` bleibt unverändert.** Die vier Sparse-Ressourcenpässe und alle
+mathematischen Gegenrechnungen berechtigen nicht, die ausdrücklich strengere
+Gesamtanforderung stillschweigend aufzuheben oder Projekt-Feldwerte zu starten.
+
+Nächste methodische Option: die gleiche native Referenzformel blockweise über
+sämtliche Oberflächenpunkte auswerten, ohne Punkte, Spulen, Ableitungen oder
+Grenzen zu reduzieren. Vor Ausführung braucht das ein neues separates Protokoll,
+synthetische Implementierungsprüfung und Vergleich mit beiden hier vollständig
+gespeicherten Backends. Die drei dichten Speicherfehlschläge bleiben erhalten.
+
+Eine zusätzliche unabhängige lesende Nachrechnung bestätigt435 eindeutige
+Referenzhashes/Dateigrößen, alle104 Zustände und Arbeitspräfixe,64 FD-Prüfungen,
+24 Wiederholungspaare sowie168 Backendvergleiche. Größter relativer FD-Fehler
+4,9101e-8; alle Prozesscodes und Zeiten korrekt. Die negative Gesamtklasse folgt
+ausschließlich aus den drei genannten Speicherüberschreitungen. Kein neuer
+nativer Aufruf für diesen Review; unabhängige Agentenprüfung, keine externe
+wissenschaftliche Peer-Review. Nach Dokumentation erneut neun Dokumenttests,
+Repository-Ruff, Struktur- und Diffprüfung bestanden; Code unverändert zur
+1335-Test-Qualifikation. Der getestete Stand wird lokal committed.

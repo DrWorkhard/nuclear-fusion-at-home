@@ -1,5 +1,30 @@
 # Validation log
 
+## 2026-09-19 — Complete full-size distance resource study; preserve three dense failures
+
+- Clean a5a007c runs all8 fresh serial workers; all13 states each persisted and
+  all exact integer process exits0. Source snapshots before/after identical.
+  Total208 J requests,80 complete gradients,48 minima; no project fields,
+  target reads or equilibrium solves. ~42MiB raw data; minfree8,765,624,320Bytes.
+- All64 FD checks,24 exact repeat/restore pairs and168 native/Sparse comparison
+  gates pass; maxCP-value5.3669e-18, maxCP-gradient4.3369e-19, maxFD1.7141e-11.
+  All wall times<=50.443s against120s. All4Sparse peaks0.393–0.474GiB pass.
+- Native n6/512,n8/256,n8/512 exceed1.5GiB at2.1945/1.5237/1.8765GiB; old
+  aggregate remains false. No threshold changed, reference-cost exemption,
+  skipped cell or automatic project-field/startup admission. All code/protocols
+  frozen and failed whole-worker memory measurements kept.
+- Byte-identical full run summary copied into committed-evidence location;
+  F-088, detail/index and all four root overviews updated. Next bounded option:
+  separately preregister a full-grid blockwise native reference, not rerun the
+  same oversized implementation or waive its failure. Full workflow still open.
+- Independent read-only reviewer hashes435 unique references/45,491,711 bytes,
+  reconstructs all state/work prefixes,FD/repeat/pair checks and confirms that
+  exactly three native RSS gates cause the negative aggregate. MaxFDrelative
+  4.9101e-8. No new numerical calls for this review; no external peer-review claim.
+- Nine documentation tests, repository Ruff, structure/unstaged-diff checks
+  pass; staged diff checked before local outcome commit. All numerical code,
+  tests and original protocol remain unchanged to the1335-test qualification.
+
 ## 2026-09-19 — Qualify clear-seed field primitives before full resource execution
 
 - Add native-equivalent pointwise/KDTree CP, fresh named-field initialization

@@ -36,9 +36,11 @@ Wiederholungen und72 direkte Prüfungen. Ausgewählt sind die beiden Formstarts
 mit100mm Konstruktionsabstand. Nun separat registrierte
 [Feldstartqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md):
 acht N/V-Ableitungskontrollen, sechs Auflösungszustände je vier physischer Zellen,
-konstante Strom-/B²-Normierung und vollständige Flussprüfungen. Zuerst
-aktive Vollgrößen-Ressourcenprüfung der qualifizierten Bausteine, anschließend
-Gesamtworkflow implementieren/prüfen und erst danach Startupmatrix;
+konstante Strom-/B²-Normierung und vollständige Flussprüfungen. Die volle
+synthetische Gegenrechnung besteht, aber drei dichte Referenzläufe überschreiten
+den Speicherschirm; alle vier Sparse-Läufe bestehen. Zuerst blockweise native
+Referenz als getrennten Folgeversuch registrieren/qualifizieren, ohne historische
+Gates zu lockern. Danach Gesamtworkflow implementieren/prüfen und Startupmatrix;
 neue Suche erst nach deren dokumentiertem Abschluss und separatem Protokoll.
 Kein Magnetfeld- oder Schritt4-Pass aus dem geometrischen Ergebnis.
 Keine nachträgliche Freigabe der zwei

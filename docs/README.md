@@ -43,6 +43,8 @@ trennen den ersten Vakuumpiloten von Druck, tatsächlicher Feldphysik und Robust
 Schritt4 ist noch offen, Schritt5 nicht begonnen.
 Nächste registrierte Studie: [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
 der geometrisch angenommenen Konturen, noch keine neue Suche.
+Ihre synthetische Gegenrechnung besteht, das Ressourcen-Gesamtgate wegen dreier
+dichter Speicherüberschreitungen noch nicht; keine neue Feldfreigabe daraus.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.
 
