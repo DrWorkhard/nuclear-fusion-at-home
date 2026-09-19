@@ -1,11 +1,86 @@
-# Außenliegende Spulenstarts: Arbeitsstand
+# Außenliegende Spulenstarts: Ergebnis und Prüfverlauf
 
 19. September2026. [Protokoll](CLEAR_COIL_INITIALIZATION_PROTOCOL.md).
+
+**Alle zwölf registrierten Spulensätze bestehen die unabhängige geometrische
+Abnahme.** Ausgewählt: `n6-shape-d100mm` und `n8-shape-d100mm`. Gemeinsame
+Startgeometrien für beide Plasmaformen; keine Magnetfeld-, QI-Transfer- oder
+Schritt4-Zulassung. Diese positive geometrische Studie ersetzt nicht den
+vollständig negativen ersten Feldfit.
+
+## Reale Studie: vollständiger, separat geprüfter Abschluss
+
+Code und endgültiges Protokoll bei `727dec8` vor Targetdaten eingefroren.
+Sauberer Git-Zustand, beide ursprünglichen401er Plasmaeingaben unverändert.
+Alle84 LPs und84 unveränderten Wiederholungen abgeschlossen;84 exakte
+Primal-/Dualwiederholungen und alle168 unabhängigen LP-Zertifikate bestehen.
+Produzent11,2183s, längster einschließlich Speicherung gezählter LP0,0341s;
+regulärer Prozessrückgabecode0. Kein Aufrufbudget überschritten. Rund60MiB
+Rohartefakte, kleinste beobachtete freie Platte9.531.940.864Bytes. Keine
+Magnetfeld-/Gradientenaufrufe und keine Gleichgewichtssolves.
+
+Der [unabhängige Gesamtaudit](../../evidence/clear-coil-initialization-v1-audit.json)
+bindet Quellen, Protokoll, Code, Solver, Inputs und Rohdaten. Alle sechs
+Volltorus-Flächenraster,84 Diskhüllen/LPs/Exporte, zwölf vollständigen24-/32-
+Spulenabbilder und72 direkten Abstandszertifikate geprüft. Analytische
+Schranken einschließlich tatsächlicher Exportabweichung **und** sämtliche
+direkten Cover-Gates bestehen jeweils separat. Keine Probe ausgelassen.
+
+| Klasse / Form / d [mm] | Summe Grundspulenlängen [m] | größte Längenobergrenze [m] | größte Krümmungsobergrenze [1/m] | kleinste Spulenabstandsuntergrenze [mm] | kleinste Plasmaabstandsuntergrenze [mm] |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| n6 / Kreis /100 |12,823694|2,207845|3,063018|157,218|99,213|
+| n6 / Kreis /140 |14,490583|2,459744|2,674321|138,924|139,085|
+| n6 / Kreis /180 |16,179204|2,735744|2,372885|119,374|178,926|
+| n6 / Form /100 — gewählt |10,805686|1,937858|10,000000|156,628|98,414|
+| n6 / Form /140 |12,489334|2,261455|10,000000|143,718|138,337|
+| n6 / Form /180 |14,184471|2,581950|7,083006|131,555|178,091|
+| n8 / Kreis /100 |17,095658|2,211392|3,070293|114,118|99,185|
+| n8 / Kreis /140 |19,317475|2,462872|2,682028|100,488|139,035|
+| n8 / Kreis /180 |21,570281|2,742879|2,379512|85,850|178,777|
+| n8 / Form /100 — gewählt |14,327675|1,935109|10,000000|113,887|98,214|
+| n8 / Form /140 |16,567386|2,255557|10,000000|104,455|137,932|
+| n8 / Form /180 |18,819088|2,574779|8,212213|95,181|177,696|
+
+Abstandsminima jeweils über beide Targets und alle drei registrierten Raster,
+nicht nur das günstigste Gitter. Unverändert gefordert: pro SpuleL≤3,5m und
+κ≤12/m, Paarabstand≥60mm, Plasmaabstand≥80mm. Ober-/Untergrenzen sind
+konservative gewöhnliche Gleitkommaschranken, keine Intervallbeweise. Die
+analytische Längensumme dient der vorab fixierten Auswahl; tatsächliche
+exportierte Konturen werden separat durch Schranken/Samples abgesichert.
+
+Größter LP-Primalrest4,9081e-13 gegenüber1e-10; größter Stationaritätsrest
+4,2500e-13, Komplementaritätsrest1,1991e-13 und Primal-Dual-Abstand1,8652e-14
+jeweils gegenüber1e-8. Alle Dualvorzeichen bestehen. Kleinstes übertragenes
+Umschließungspolster9,9804e-10m bleibt positiv; größte berücksichtigte
+Positionsunsicherheit1,8318e-12m. Keine nachträglichen Schwellenänderungen.
+
+Ein zusätzlicher lesender Agentenreview bestätigt986 referenzierte Dateihashes,
+alle84 vollständigen Original-/Repeat-JSONs bitgleich, Auswahl/Gateaggregation
+und die Rechnung sämtlicher27.792 Spulenpaar- sowie2.016 Plasmauntergrenzen.
+Seine erneute LP-Matrixauswertung liefert maximal1,9540e-14 statt1,8652e-14
+Primal-Dual-Abstand bei anderem Summationsweg; beide liegen weit unter dem
+unveränderten1e-8-Schirm. Keine behauptete bitgenaue Identität unterschiedlicher
+Rechenreihenfolgen und kein externer institutioneller Peer-Review.
+
+Die gewählten Formstarts haben innerhalb dieser beschränkten LP-Familie
+15,7366% beziehungsweise16,1911% weniger analytische Grundspulen-Gesamtlänge
+als die entsprechenden100mm-Kreisstarts. Das ist keine Magnetfeld-, Material-
+kosten-, Pareto- oder SoTA-Aussage. Einzelspulen können später nichtplanar
+werden; der hier geprüfte Projektions-/Konvexitätsnachweis überträgt sich
+nicht ungeprüft auf freie Optimierung oder endliche Wicklungspakete.
+
+Nächster Schritt: getrennt registrierter, besser aufgelöster tatsächlicher
+Feldfit von diesen geometrisch geprüften Starts; gleicher gepaarter Bezug auf
+Referenz und Schritt3-Entwurf. Physischer Transfer, gemeinsame Verbesserung,
+Druck/Einschluss und endliche Baubarkeit/Robustheit bleiben offen.
+
+## Erhaltener Vorbereitungs- und Implementierungsverlauf
 
 Der vorherige [vollständig negative Spulenpilot](../optimization/COUPLED_COIL_PILOT_RESULTS.md)
 motiviert eine getrennte geometrische Studie: gleiche physische Grenzen, aber
 Spulen um den tatsächlich wechselnden Plasmaquerschnitt statt feste Kreise umR=1.
-Noch keine neue Target-Auswertung und keine Freigabe zur Magnetfeldoptimierung.
+Die folgenden Zwischenstände stammen aus der Vorbereitung vor Targetdaten;
+maßgeblicher aktueller Abschluss ist die oben ausgewiesene reale Abnahme.
 
 Entwurf: gemeinsames3D-Sicherheitsenvelope beider Plasmaränder, verschobene Kreise
 und konvexe Fourierkonturen über eine bekannte Stützfunktionsdarstellung.

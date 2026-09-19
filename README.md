@@ -31,21 +31,17 @@ the follow-up construction; finer independent admission is not blind generalizat
 After handoff, the user explicitly authorized step4. Its
 [options and three independent agent reviews](docs/optimization/COUPLED_DESIGN_OPTIONS.md)
 prioritize paired actual-coil realization before coupled plasma/coil iterations.
-The paired pilot is preregistered; additive construction and independent audit
-tools pass synthetic integration. All eight actual
-start qualifications are audited: six pass; two reference eight-coil starts fail
-one derivative screen and are not optimized. The six admitted128-call searches
-and all fine diagnostics are independently audited: all six designs rejected.
-A separately qualified typed-output adapter preserves the original write failures
-and confirms unchanged negative decisions. Fine sampling exposes1.8–6.7mm plasma
-clearance against80mm required; only17/30 refinement pairs pass. The
-[completed negative pilot](docs/optimization/COUPLED_COIL_PILOT_RESULTS.md)
-motivates the separate [clear-initialization study](docs/geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md):
-target-adapted circles/convex contours with continuous3D clearance protection,
-before a newly registered better-resolved field fit. Independent pre-data review,
-the complete synthetic producer-to-auditor run and final software regression pass;
-the registered twelve-set real geometry study is next.
-No step4 design result yet; pressure, realized-field physics, finite geometry and
+The [completed first coil pilot](docs/optimization/COUPLED_COIL_PILOT_RESULTS.md)
+remains negative: all six admitted128-call searches fail fine physical admission,
+with1.8–6.7mm plasma clearance against80mm required and only17/30 refinements passing.
+The subsequent [clear-initialization study](docs/geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md)
+now passes independent geometry admission for **all twelve actual coil sets**:
+168 LP calls,84 exact repeats,72 direct clearance checks. The selected shaped
+starts for both six/eight-base-coil classes retain at least98.2mm certified plasma
+clearance, with length/curvature/pair-distance limits unchanged. This is a
+geometry-only result; no magnetic fields were evaluated. Next is a separately
+registered, better-resolved field fit from the accepted starts.
+No field-qualified coil design or completed step4; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 
 - [Latest coil results](docs/optimization/README.md): best fine raw flux about

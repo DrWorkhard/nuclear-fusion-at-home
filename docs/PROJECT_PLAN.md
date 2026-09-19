@@ -1,6 +1,6 @@
 # Arbeitsplan und Erfolgskriterien
 
-Stand: 19. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
+Stand: 19. September 2026, Schritt4 mit geometrisch angenommenen Starts aktiv.
 [Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
 
 **Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
@@ -30,10 +30,11 @@ abgelehnt, nur17/30 Verfeinerungen bestehen; tatsächliche feine Plasmaabstände
 viel kleiner als grob gemessen. Additive Ausgabe-Recovery wahrt alle negativen
 Gates und Originalfehler. Die getrennte [geometrische Folgestudie](geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md)
 vergleicht zielangepasste Kreise/konvexe Starts mit kontinuierlichen3D-
-Schutzschranken. Neue Konstruktion/Prüfung vollständig synthetisch qualifiziert;
-nach dem Code-Commit genau die registrierten zwölf geometrischen Varianten
-rechnen und unabhängig abnehmen; erst anschließend separat registrierter
-fein aufgelöster Feldfit.
+Schutzschranken. Konstruktion/Prüfung synthetisch qualifiziert und reale Matrix
+abgeschlossen: alle zwölf Varianten geometrisch angenommen,84 exakte LP-
+Wiederholungen und72 direkte Prüfungen. Ausgewählt sind die beiden Formstarts
+mit100mm Konstruktionsabstand. Nun separat registrierter fein aufgelöster Feldfit;
+kein Magnetfeld- oder Schritt4-Pass aus dem geometrischen Ergebnis.
 Keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
 

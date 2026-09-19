@@ -1,5 +1,29 @@
 # Findings log
 
+## F-087 — Target-adapted exterior starts pass all twelve independent geometry admissions
+
+**Class:** preregistered geometry-only construction, not magnetic/step4 admission
+**Date:** 2026-09-19
+
+After the unchanged negative pilot, commit727dec8 freezes shared reference/new-
+plasma support-function starts. All12 sets,168 LPs,84 exact original/repeat pairs
+and72 fulltorus direct clearance certificates complete/pass. Independent original
+LP/source/export and continuous geometry screens pass; maxprimal4.9081e-13,
+maxgap1.8652e-14. Actual exported-curve rounding errors explicitly propagated.
+
+Registered minimum-length selection chooses n6-shape-d100mm/n8-shape-d100mm:
+maxcoil lengthupper1.937858/1.935110m (<3.5), curvatureupper<10/m (<12),
+worst direct coil lower156.628/113.887mm (>60), plasma lower98.414/98.214mm (>80).
+Their analytic base-length sums are15.7366%/16.1911% below matching100mm circles
+within this bounded geometric family, not a field/engineering/Pareto advantage.
+The former fixed-center initialization defect is avoidable under unchanged
+geometric requirements. It did not demonstrate unrealizability of the target.
+
+Zero magnetic/gradient/equilibrium calls. No field quality, QI transfer, pressure,
+finite winding-pack or fullstep4 qualification. Next preregister better-resolved
+field fitting from these accepted geometry-only snapshots; do not relabel old
+failed fits. [Complete matrix and audit](../geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md).
+
 ## F-086 — Fine coil admission rejects all six; coarse clearance and method ranking mislead
 
 **Class:** completed independently audited negative pilot, not step4 completion

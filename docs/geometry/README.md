@@ -3,16 +3,16 @@
 Zweck: Krümmung und Abstände unabhängig von den Optimierungsstützstellen beurteilen.
 
 Aktueller Schluss: Grobe Gitter können reale Krümmungsverletzungen übersehen. Positionszeugen und kontinuierliche Fourier-Schranken sind geprüft. Die Schranken verwenden gewöhnliche Gleitkommaarithmetik mit Polster; vollständige Wicklungspaket- und Selbstüberschneidungsprüfungen fehlen.
-Die neue außenliegende Startkonstruktion ist vor realen Daten synthetisch
-qualifiziert, einschließlich unabhängiger Snapshot-Fehlerübertragung und
-vollständiger Variantenmatrix; noch kein echter Geometrie- oder Feldpass.
+Die neue außenliegende Startkonstruktion besteht auch real für alle zwölf
+Varianten: unabhängige Snapshot-Fehlerübertragung, kontinuierliche Schranken
+und alle72 direkten Prüfungen. Nur Filament-Startgeometrie, kein Feldpass.
 
 [Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
 
 ## Dokumente
 
 - [Außenliegende Startspulen: Protokoll](CLEAR_COIL_INITIALIZATION_PROTOCOL.md) — Gemeinsames3D-Plasmaenvelope, Kreis-/konvexe Fourier-LPs und unveränderte unabhängige Geometriegrenzen vor einem neuen Feldfit.
-- [Außenliegende Startspulen: Arbeitsstand](CLEAR_COIL_INITIALIZATION_RESULTS.md) — Methodenreview und spätere komplette Variantenmatrix; reine Startgeometrie, keine Feld-/Schritt4-Zulassung.
+- [Außenliegende Startspulen: Ergebnisse](CLEAR_COIL_INITIALIZATION_RESULTS.md) — Alle zwölf realen Varianten geometrisch angenommen, beide Formstarts ausgewählt; vollständiger Review-/Prüfverlauf, keine Feld-/Schritt4-Zulassung.
 
 - [CONTINUOUS_COIL_CLEARANCE_CHECK ](CONTINUOUS_COIL_CLEARANCE_CHECK.md) — Dokument: Retrospektive, zwischen allen Stützstellen gültige Abstandsuntergrenze aus Fourier-Ableitungsschranken.
 - [CONTINUOUS_CURVATURE_PROTOCOL ](CONTINUOUS_CURVATURE_PROTOCOL.md) — Protokoll: Kontinuierliche Krümmungseinschließung; analytische Kontrollen und Prüfung eingefrorener Felder.

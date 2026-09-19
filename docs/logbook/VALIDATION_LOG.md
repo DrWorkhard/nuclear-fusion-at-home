@@ -1,5 +1,31 @@
 # Validation log
 
+## 2026-09-19 — Complete all twelve actual exterior starts with independent geometry pass
+
+- Clean committed727dec8 executed serially/single-thread on unchanged reference
+  and selected401 inputs. Parent-guarded11.2183s,168/168 completed LP attempts,
+  largest recorded LP0.0341s, exit0; minimum observed disk9,531,940,864Bytes.
+  All six surface grids and twelve24/32-physical-coil snapshots retained (~60MiB).
+- Separate frozen auditor completes all12 sets/84 original-repeat pairs/168
+  primal-dual certificates/72 direct grids. Source/raw reconstruction/analytic
+  export-error transfer and every direct geometry gate pass. Selected fixed-rule
+  n6/n8 shaped100mm starts; no omission, new calls or post-outcome tolerance change.
+- Maxprimal4.9081e-13, maxstationarity4.2500e-13, maxgap1.8652e-14; all84 exact
+  repeats. Selected maxlengthupper1.937858/1.935110m, maxcurvatureupper<10/m;
+  worst plasma lower98.414/98.214mm, coil lower156.628/113.887mm. All unchanged
+  L/curvature/CC/CP limits pass. Field/gradient/equilibrium work zero, all physics
+  and step4 flags false. Geometry admission is not the missing magnetic baseline.
+- F-087, full12-row result table, geometry index and four root overviews updated.
+  Separate read-only result review confirms986 referenced-file hashes, full
+  exact84 JSON repeats, all12 gate aggregations, all72 grids and27,792 CC/2,016
+  CP lower-bound arithmetic checks. Independent LP summation gives at most
+  1.9540e-14 dual gap (stored audit1.8652e-14); both well below the fixed1e-8,
+  not a claim of bit-identical differently ordered arithmetic.
+- All ten qualification-bound new code/test/protocol hashes remain unchanged.
+  Nine documentation controls pass in1.03s; whole-repository Ruff, documentation
+  structure and unstaged diff pass. Staged diff reviewed before local closure
+  commit. No numerical source/protocol changes or old evidence rewrites.
+
 ## 2026-09-19 — Qualify complete exterior-coil geometry implementation before target data
 
 - Separate native/support construction, independent trig/LP/geometry audit and

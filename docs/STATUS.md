@@ -1,6 +1,6 @@
 # Ergebnisstand und wissenschaftliche Bewertung
 
-Stand: 19. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
+Stand: 19. September 2026, Schritt4 mit geometrisch angenommenen Starts aktiv.
 [Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
 
 ## Gesamturteil
@@ -9,24 +9,21 @@ Stand: 19. September 2026, Schritt4 nach negativem Spulenpiloten aktiv.
 [Drei unabhängige Agentenreviews](optimization/COUPLED_DESIGN_OPTIONS.md) empfehlen
 gepaarte reale Spulenfits für Referenz und neuen Plasmaentwurf, danach begrenzte
 gemeinsame Iterationen. Alte LPQA-Export-/Normierungsannahmen sind nicht übertragbar.
-Konstruktion, unabhängige Abnahme und Regression bestehen1172 Tests. Von acht realen
-[Startqualifikationen](optimization/COUPLED_COIL_PILOT_RESULTS.md) bestehen sechs;
-die zwei Referenzfälle mit acht Grundspulen verfehlen eine Ableitungsgrenze und
-werden nicht optimiert. Alle Startformen liegen noch weit außerhalb der physischen
-Eintrittsgrenzen; gespeicherte Querschnitte belegen zudem Schnitte mehrerer
-Achtspulen-Startkreise mit dem Plasma. Die sechs erlaubten Suchen sind jetzt
-unabhängig auditiert, jeweils am128-Aufrufbudget; Feldfehler sinken, aber alle
-Kandidaten werden nun auch fein unabhängig abgelehnt. Die gescheiterte
-Audit-Ausgabe wurde separat typisiert, alle negativen Gates bleiben identisch.
-Das feine Raster findet nur1,8–6,7mm Plasmaabstand gegenüber80mm Mindestforderung;
-17/30 Verfeinerungen bestehen. Der scheinbare grobe Innenfeld-Methodenvorteil
-ist nicht stabil. Nächste [Studie](geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md):
-zielangepasste außenliegende Startgeometrie mit kontinuierlichen3D-
-Schutzschranken. Vollständige synthetische Konstruktion und unabhängige Abnahme
-samt abschließender Softwarequalifikation bestehen; nun folgt die registrierte
-reale Zwölf-Varianten-Studie. Erst danach besser aufgelöster Feldfit.
-Keine neue Zulassung. Druck, physischer Transfer und
-Robustheit bleiben ausdrücklich notwendige separate Teilpakete.
+Die neue [reale Geometriestudie](geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md)
+nimmt alle zwölf Spulensätze unabhängig an:168 LP-Aufrufe,84 exakte Wiederholungen,
+72 direkte Abstandszertifikate, sämtliche analytischen und verfeinerten Gates
+bestanden. Ausgewählte Formstarts mit sechs/acht Grundspulen halten mindestens
+98,414/98,214mm kontinuierlichen Plasmaabstand, gefordert80mm; größte
+Spulenlänge1,938/1,936m gegenüber3,5m, Krümmungsobergrenze≤10/m gegenüber12/m.
+Diese für beide Plasmaziele gemeinsamen Starts haben **noch keinen Feldnachweis**.
+Als Nächstes separat registrierter, besser aufgelöster Feldfit. Software:
+1172 Tests bestanden; Druck, physischer Transfer und Robustheit weiterhin offen.
+
+Der [erste Feldfit-Pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) bleibt negativ:
+zwei der acht Starts verfehlen den Ableitungsschirm; alle sechs erlaubten
+128-Aufruf-Suchen werden fein abgelehnt. Nur1,8–6,7mm Plasmaabstand und17/30
+bestandene Verfeinerungen; grober Methodenvorteil nicht stabil. Alte Gates,
+Fehlläufe und additive Ausgabe-Recovery bleiben unverändert erhalten.
 
 **Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der
 [neue nfp2-Plasmaentwurf](qi/PLASMA_BALANCED_RESULTS.md) verändert vier benannte
