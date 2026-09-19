@@ -25,7 +25,10 @@ bestehen. Noch keine Optimierung aus diesen Starts. Nächster Schritt nach zwei
 [Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md):
 [kumulativen Geometrieschirm](geometry/COIL_PERTURBATION_PROTOCOL.md) feldfrei
 qualifizieren, anschließend erst einen begrenzten sicheren Feldfit registrieren.
-Software1640 Tests bestanden; separate blockweise Referenz qualifiziert, drei
+Grundbausteine des Schirms mit200 neuen Kontrollen und zusätzlichem Review
+qualifiziert; reale52-Zustandsmatrix/Gesamtworkflow offen. Nutzerwunsch zunächst:
+dünne gemeinsame Auswertungs-/Audit-CLI, dann hier fortfahren.
+Software1840 Tests bestanden; separate blockweise Referenz qualifiziert, drei
 alte dichte RAM-Fehler unverändert negativ. Druck, Transfer und Robustheit offen.
 
 Der [erste Feldfit-Pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) bleibt negativ:
@@ -107,7 +110,7 @@ Nullmeldungen sind keine Zulassung. Details und alle erhaltenen Fehlschläge:
 | QI / Gleichgewichte | Frische 16-Zellen-Studie vollständig auditiert; doppelte Solver-Winkelauflösung besteht untersuchte Feldidentitäten | Ursprünglich nur 9/16 Auswertungsverfeinerungen und 2/16 historische Feld-Fidelitätspässe; keine Zelle besteht alle ursprünglichen Schirme |
 | QI / gemeinsamer Winkel | 120 neue Gitter und 61.440 unabhängige skalare Inversionen bestätigen die Koordinatenrechnung | Nur 4/16 neue Fidelitäts- und 5/16 Vergleichsverfeinerungspässe; Parametrisierung erklärt nicht sämtliche Unterschiede |
 | Endliche Spulennetze | Alle sechs Auflösungen bestehen den nicht-gemeinsame-Vertexindizes-Teiltest; feinster Lauf mit 2.222.785 Paarprüfungen und exakt altem 2M-Präfix auditiert | Nachbarpaare, vollständige Baugruppen, reale Wicklungspakete und gültige Mechanik offen; alte große Verformung verletzt lineare Modellannahmen |
-| Software | 1640 Tests, Ruff und Dokumentstrukturprüfung bestanden | 334 dokumentierte Warnungen:144 alte Fixture- und190 sichtbare Solveroptionsmeldungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
+| Software | 1840 Tests, Ruff und Dokumentstrukturprüfung bestanden | 334 dokumentierte Warnungen:144 alte Fixture- und190 sichtbare Solveroptionsmeldungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
 
 Die beiden QI-Verfeinerungsmaße unterscheiden sich: ursprüngliche
 Clebsch-Identitätsverfeinerung und spätere Verfeinerung des historischen

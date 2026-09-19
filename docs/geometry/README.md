@@ -15,6 +15,7 @@ für veränderte Kurven separat qualifiziert; kein vererbter Seedpass.
 ## Dokumente
 
 - [Spulenänderungen: kumulatives Perturbationsprotokoll](COIL_PERTURBATION_PROTOCOL.md) — Neue D0/D1/D2-Schranken für Abstand/Länge/Krümmung und einfache Projektion gegen unveränderliche Seeds; analytische Kontrollen und feste feldfreie52-Zustandsmatrix vor späterer Suche.
+- [Spulenänderungen: Grundbausteine qualifiziert](COIL_PERTURBATION_RESULTS.md) — 200 neue Kontrollen und1840 Gesamttests bestanden; getrennte mathematische Konstruktion/Abnahme, Quellenbinder und zusätzlicher Review. Reale Matrix/Gesamtworkflow noch offen.
 
 - [Außenliegende Startspulen: Protokoll](CLEAR_COIL_INITIALIZATION_PROTOCOL.md) — Gemeinsames3D-Plasmaenvelope, Kreis-/konvexe Fourier-LPs und unveränderte unabhängige Geometriegrenzen vor einem neuen Feldfit.
 - [Außenliegende Startspulen: Ergebnisse](CLEAR_COIL_INITIALIZATION_RESULTS.md) — Alle zwölf realen Varianten geometrisch angenommen, beide Formstarts ausgewählt; vollständiger Review-/Prüfverlauf, keine Feld-/Schritt4-Zulassung.

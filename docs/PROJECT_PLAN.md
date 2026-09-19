@@ -21,7 +21,7 @@ Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemei
 Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
 oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
-abgeschlossen; einschließlich neuem Feldstart-Gesamtworkflow1640 Tests bestanden.
+abgeschlossen; einschließlich kumulativer Geometriegrundbausteine1840 Tests bestanden.
 Alle acht realen Startqualifikationen auditiert,
 sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
 freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
@@ -42,7 +42,12 @@ Keine neuen Suchen/Gleichgewichte. Neue Ressourcenreferenz separat qualifiziert;
 alte drei dichte RAM-Fehler bleiben negativ. Die neuen
 [zwei Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
 sind abgeschlossen: zuerst [kumulative Geometriesicherung](geometry/COIL_PERTURBATION_PROTOCOL.md)
-feldfrei implementieren/qualifizieren und unabhängig schließen. Danach den
+feldfrei qualifizieren und unabhängig schließen. Ihre reinen Grundbausteine
+bestehen200 neue Kontrollen und zusätzlichen Review; vollständiger Runner/Auditor
+und reale52-Zustandsmatrix stehen aus. Davor auf ausdrücklichen Nutzerwunsch
+dünne gemeinsame evaluate/audit-Einstiegsschicht mit dokumentierten Profilen
+ergänzen; keine neuen physikalischen Zulassungen dadurch. Danach hier fortsetzen.
+Nach Abschluss der geometrischen Qualifikation den
 kleinen sicheren Formfit mit eigenem Such-/Auswahl-/Abnahmeprotokoll registrieren.
 Freier L-BFGS-B-Vergleich, Supportfamilie und freie Ströme bleiben getrennte Optionen.
 Kein Transfer- oder Schritt4-Pass aus diesem numerischen Startabschluss.

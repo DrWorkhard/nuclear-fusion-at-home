@@ -48,7 +48,10 @@ Geometrie und Strom sind zulässig, die Magnetfeldfehler nicht. Nach zwei
 [Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) zuerst
 eine [kumulative Geometrieschranke](geometry/COIL_PERTURBATION_PROTOCOL.md)
 feldfrei qualifizieren, danach begrenzten Feldfit separat registrieren.
-Noch keine neue Suche oder physische Feldzulassung.1640 Softwaretests
+Die mathematischen Grundbausteine bestehen200 neue Tests und zusätzlichen Review;
+Gesamtworkflow und reale52-Zustandsmatrix noch offen. Auf Nutzerwunsch zunächst
+gemeinsame Auswertungs-/Audit-CLI ergänzen, danach diese Qualifikation fortsetzen.
+Noch keine neue Suche oder physische Feldzulassung.1840 Softwaretests
 bestanden; ursprüngliche negative Versuche bleiben unverändert erhalten.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.

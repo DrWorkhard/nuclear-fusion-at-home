@@ -1,5 +1,42 @@
 # Validation log
 
+## 2026-09-19 — Close pure perturbation primitives before CLI and real-matrix work
+
+- Complete regression1840 passed,334 known warnings,0 failures/errors/skips,
+  201.57s; preserved JUnit hash275cad352bd79ccf4c162142e9e846f244f5ba905d1965f10bd95375b23f7a00.
+  New tests55 producer/108 independent auditor/37 source binder include12 full
+  synthetic cross-comparisons. All six implementation/test hashes unchanged
+  after regression and interruption; qualification records their exact bytes.
+- Additional independent read-only review finds no blocker in Fourier bounds,
+  cumulative homotopy/simple projection, curvature monotonicity or Q/Q* handling.
+  Historical seed-proof helpers remain shared; no external peer review or
+  formal interval-arithmetic claim. Exact provenance still requires binder.
+- No real52-state matrix, fields, solves or searches. Whole runner/auditor
+  remains open. User requests a thin common evaluate/audit CLI and onboarding
+  documentation, then continuation here; do not expose an unqualified new
+  physics workflow as if it were admitted.
+- Detail/index and all four root summaries updated. Repository Ruff, docs
+  structure and whitespace checks passed; nine documentation tests repeated
+  before scoped commit. Initial invocation used a nonexistent test filename,
+  exited4 without tests; corrected to tests/test_documentation.py, all9 pass.
+  Qualification hashes rechecked; no historical source/protocol/evidence rewritten.
+
+## 2026-09-19 — Implement cumulative geometry primitives and immutable source admission
+
+- Ongoing implementation after protocolafb9307: separate mathematical producer
+  and auditor, additive source binder. Binder37 pure tests pass; exact actual
+  predecessor replay passes without perturbed geometry or magnetic work.
+  Ruff initially reports only line lengths; formatting resolves them, Ruff/diff
+  then pass. All four original physical rejections retained independently of
+  positive numerical startup; current raw graphs transitively bound.
+- Pre-data symmetry precision distinguishes storedQ=matrix.T from exact signed
+  diagonalQ* atnfp2. Coefficient bounds include both candidate movement and
+  Q−Q* seed roundoff; proof normals/derivative reference useQ*. No changed
+  historical proof/code/protocol or new geometric matrix.
+- Detail report/index added. Full primitive/workflow qualification and actual
+  registered52-state matrix remain open; root assessment remains numerical
+  field-start pass, physically infeasible seeds, no new search/step4 closure.
+
 ## 2026-09-19 — Review and preregister cumulative geometry protection before new fitting
 
 - Closed numerical startup3334f1e before choosing follow-up. Two independent
