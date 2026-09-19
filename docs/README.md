@@ -41,6 +41,8 @@ Teilcheneinschluss und Druck-/Stabilitätsphysik bleiben offen. Nach dieser Übe
 hat der Nutzer Schritt4 ausdrücklich beauftragt. [Methodenoptionen und Reviews](optimization/COUPLED_DESIGN_OPTIONS.md)
 trennen den ersten Vakuumpiloten von Druck, tatsächlicher Feldphysik und Robustheit;
 Schritt4 ist noch offen, Schritt5 nicht begonnen.
+Nächste registrierte Studie: [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
+der geometrisch angenommenen Konturen, noch keine neue Suche.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.
 

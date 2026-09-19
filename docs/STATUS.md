@@ -16,7 +16,8 @@ bestanden. Ausgewählte Formstarts mit sechs/acht Grundspulen halten mindestens
 98,414/98,214mm kontinuierlichen Plasmaabstand, gefordert80mm; größte
 Spulenlänge1,938/1,936m gegenüber3,5m, Krümmungsobergrenze≤10/m gegenüber12/m.
 Diese für beide Plasmaziele gemeinsamen Starts haben **noch keinen Feldnachweis**.
-Als Nächstes separat registrierter, besser aufgelöster Feldfit. Software:
+Als Nächstes [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
+mit fester Normierung vor einem neuen Suchlauf. Software:
 1172 Tests bestanden; Druck, physischer Transfer und Robustheit weiterhin offen.
 
 Der [erste Feldfit-Pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) bleibt negativ:

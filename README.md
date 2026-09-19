@@ -39,8 +39,9 @@ now passes independent geometry admission for **all twelve actual coil sets**:
 168 LP calls,84 exact repeats,72 direct clearance checks. The selected shaped
 starts for both six/eight-base-coil classes retain at least98.2mm certified plasma
 clearance, with length/curvature/pair-distance limits unchanged. This is a
-geometry-only result; no magnetic fields were evaluated. Next is a separately
-registered, better-resolved field fit from the accepted starts.
+geometry-only result; no magnetic fields were evaluated. The separately registered
+[field-start qualification](docs/optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
+checks fixed normalization, derivatives and six resolution levels before any new search.
 No field-qualified coil design or completed step4; pressure, realized-field physics, finite geometry and
 robustness remain required subpackages. No automatic step5 or SoTA claim.
 

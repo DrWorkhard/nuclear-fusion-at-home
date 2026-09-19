@@ -1,5 +1,25 @@
 # Validation log
 
+## 2026-09-19 — Preregister bounded clear-seed field startup before another search
+
+- Geometry closure323cfdd precedes this next choice. Two independent read-only
+  reviews distinguish seed identity/constructor orientation, hardcoded old grids,
+  new B2 normalization and physical versus method-specific work. No new field,
+  derivative or VMEC calls. Old numerical files/protocols remain frozen.
+- Register four physical reference/selected×n6/n8 cells,8×10 N/V FD bundles,
+  six fixed diagnostic levels per physical cell and two full9-grid flux blocks
+  each. Archived64 target B2 and construction current stay fixed. No search,
+  adaptive grid rescue, new128 target qualification or step4 closure.
+- Native CP active path forms dense pair arrays. Register mathematically
+  identical pointwise/KDTree CP adapter and full-size active native/VJP/FD/peak-
+  memory controls before project fields. Separate algebra review confirms both
+  covectors and native unnormalized area/symmetry normalization. Fresh initializer
+  must set clear geometry before any A; code qualification remains pending.
+- New optimization protocol/result index entries added. Four top-level
+  summaries to reflect startup study next rather than an immediate field search;
+  documentation structure and whitespace checks pass; nine documentation controls
+  checked before prerequisite commit. No project field or search evaluations.
+
 ## 2026-09-19 — Complete all twelve actual exterior starts with independent geometry pass
 
 - Clean committed727dec8 executed serially/single-thread on unchanged reference

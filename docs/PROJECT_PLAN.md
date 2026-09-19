@@ -33,8 +33,13 @@ vergleicht zielangepasste Kreise/konvexe Starts mit kontinuierlichen3D-
 Schutzschranken. Konstruktion/Prüfung synthetisch qualifiziert und reale Matrix
 abgeschlossen: alle zwölf Varianten geometrisch angenommen,84 exakte LP-
 Wiederholungen und72 direkte Prüfungen. Ausgewählt sind die beiden Formstarts
-mit100mm Konstruktionsabstand. Nun separat registrierter fein aufgelöster Feldfit;
-kein Magnetfeld- oder Schritt4-Pass aus dem geometrischen Ergebnis.
+mit100mm Konstruktionsabstand. Nun separat registrierte
+[Feldstartqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md):
+acht N/V-Ableitungskontrollen, sechs Auflösungszustände je vier physischer Zellen,
+konstante Strom-/B²-Normierung und vollständige Flussprüfungen. Zuerst additive
+Implementierung/synthetische aktive Geometriekontrollen, danach Startupmatrix;
+neue Suche erst nach deren dokumentiertem Abschluss und separatem Protokoll.
+Kein Magnetfeld- oder Schritt4-Pass aus dem geometrischen Ergebnis.
 Keine nachträgliche Freigabe der zwei
 gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
 
