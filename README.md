@@ -62,7 +62,7 @@ robustness remain required subpackages. No automatic step5 or SoTA claim.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Latest complete software regression: 1,172 tests pass with 334 documented warnings
+- Latest complete software regression: 1,335 tests pass with 334 documented warnings
   (144 fixture warnings and 190 explicitly retained solver-option forwarding notices);
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.

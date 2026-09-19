@@ -1,5 +1,30 @@
 # Validation log
 
+## 2026-09-19 — Qualify clear-seed field primitives before full resource execution
+
+- Add native-equivalent pointwise/KDTree CP, fresh named-field initialization
+  before first A, fixed B2 and explicit attempted/completed native-call logging.
+  Independent archive/field-metric/geometry/FD/refinement primitives are separate
+  from production code; no full startup runner or total auditor yet.
+- Three scoped agents cover initialization, independent mathematics and resource
+  orchestration/read-only redteam. The latter finds mutable inherited snapshot
+  source dictionaries; additive deep copy plus mutation control fixes this before
+  use. Old numerical files and source-bound geometry/pilot evidence unchanged.
+- Initial1334-pass regression retained. Final full suite after correction:
+  1335 passed,334 known warnings,0 failures/errors/skips,164.25s. New163 controls
+  comprise15 sparse,41 initializer,64 independent,43 resource accounting tests.
+  Peak-memory/time matrix is deliberately separate and has NOT yet run.
+- Protocol clarifies canonical64 B2 arithmetic and exact13-state resource work
+  before first execution. Strict process integer exit, finite clocks/RSS,
+  per-cell3GiB startup/live2GiB reserves and late-output preservation tested.
+- Full-repository Ruff, docs structure and unstaged diff pass; staged diff reviewed
+  before commit. Qualification evidence binds code/protocol and both JUnit files.
+  A mistyped `tests/test_docs.py` recheck exits4 without running tests; rerun uses
+  the existing `tests/test_documentation.py`, preserving the original full suite.
+  Four root summaries checked; affected test counts/next steps updated. Next:
+  eight fresh resource workers serially, then saved-data review/document/commit.
+  No new project fields, searches, equilibrium solves or magnetic/step4 admission.
+
 ## 2026-09-19 — Preregister bounded clear-seed field startup before another search
 
 - Geometry closure323cfdd precedes this next choice. Two independent read-only

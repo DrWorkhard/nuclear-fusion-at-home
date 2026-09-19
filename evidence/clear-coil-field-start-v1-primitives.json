@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "phase": "pre_project_field_primitives_qualification",
+  "parent_revision": "8f699bdfecc0ed2116fe7d8165329386be1367cf",
+  "sources": [
+    {
+      "path": "src/fusion_baselines/sparse_coil_surface.py",
+      "sha256": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe"
+    },
+    {
+      "path": "src/fusion_baselines/clear_coil_field.py",
+      "sha256": "5da4fb41dfccbbb71aeef161bb0625cf64f011560f4b8e34beafe154c3bd33d2"
+    },
+    {
+      "path": "src/fusion_baselines/clear_coil_field_audit.py",
+      "sha256": "3e13e2c22ec517fbac38fb6462e6c8aa69ca39688f15f0c29b3090e966d6b482"
+    },
+    {
+      "path": "scripts/qualify_sparse_coil_surface.py",
+      "sha256": "d1382238f20a5c231b096473e7a58beb58e643a89a17c7e7d8d9d1580d36663e"
+    },
+    {
+      "path": "tests/test_sparse_coil_surface.py",
+      "sha256": "b1e6ecb14676d1bbf2d8874ca40d663ed2bdcc69bb597981d2e767a9d5f0d724"
+    },
+    {
+      "path": "tests/test_clear_coil_field.py",
+      "sha256": "a31a9847d8ac3584665e669bf2e6360a5759cf395747ef6a16be77455dcdf988"
+    },
+    {
+      "path": "tests/test_clear_coil_field_audit.py",
+      "sha256": "ca2d153132ed11484be4c4e0f5ef99623af8e40aeea167be1e355650d8a3e042"
+    },
+    {
+      "path": "tests/test_sparse_coil_surface_resource.py",
+      "sha256": "2e0a2e7dcbf54924441699f99d6cbc7b9e0d967c397a69a88451cef18e8fa4dc"
+    },
+    {
+      "path": "docs/optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md",
+      "sha256": "6eaab97a58285954964aad4cc08698008613e71aa7141348a44a621a6fe64147"
+    }
+  ],
+  "command": "PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python -m pytest -q --junitxml=artifacts/clear-coil-field-start-v1-primitives-final/regression.xml",
+  "junit": {
+    "path": "artifacts/clear-coil-field-start-v1-primitives-final/regression.xml",
+    "sha256": "fb9806e876649ee7e80cfa7cc16ce243996b6fec6a54539e757d1ef5b93eef0e"
+  },
+  "tests": 1335,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "warnings": 334,
+  "console_seconds": 164.25,
+  "warning_groups": {
+    "known_fixtures": 144,
+    "recorded_and_reemitted_highs_options": 190
+  },
+  "new_tests": {
+    "sparse": 15,
+    "initializer": 41,
+    "independent": 64,
+    "resource_accounting": 43
+  },
+  "preserved_intermediate": {
+    "tests": 1334,
+    "console_seconds": 163.11,
+    "junit": {
+      "path": "artifacts/clear-coil-field-start-v1-primitives/regression.xml",
+      "sha256": "ab5e75350772f0698ea479de0fd6d009f537969f3cd348c96d503d3a72bd34db"
+    },
+    "limit": "Before additive inherited snapshot-sources alias correction and its new mutation test."
+  },
+  "scope": {
+    "full_resource_matrix_executed": false,
+    "production_startup_workflow_qualified": false,
+    "new_project_field_calls": 0,
+    "new_equilibrium_solves": 0,
+    "physical_seed_pass": false,
+    "search_allowed": false,
+    "step4_pass": false
+  },
+  "checks": {
+    "repository_ruff": true,
+    "docs_structure": true,
+    "diff_whitespace": true
+  }
+}

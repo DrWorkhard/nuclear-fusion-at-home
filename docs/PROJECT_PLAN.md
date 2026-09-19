@@ -21,7 +21,7 @@ Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemei
 Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
 oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
-abgeschlossen; einschließlich neuer Geometriewerkzeuge1172 Tests bestanden.
+abgeschlossen; einschließlich neuer Geometrie-/Feldbausteine1335 Tests bestanden.
 Alle acht realen Startqualifikationen auditiert,
 sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
 freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
@@ -36,8 +36,9 @@ Wiederholungen und72 direkte Prüfungen. Ausgewählt sind die beiden Formstarts
 mit100mm Konstruktionsabstand. Nun separat registrierte
 [Feldstartqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md):
 acht N/V-Ableitungskontrollen, sechs Auflösungszustände je vier physischer Zellen,
-konstante Strom-/B²-Normierung und vollständige Flussprüfungen. Zuerst additive
-Implementierung/synthetische aktive Geometriekontrollen, danach Startupmatrix;
+konstante Strom-/B²-Normierung und vollständige Flussprüfungen. Zuerst
+aktive Vollgrößen-Ressourcenprüfung der qualifizierten Bausteine, anschließend
+Gesamtworkflow implementieren/prüfen und erst danach Startupmatrix;
 neue Suche erst nach deren dokumentiertem Abschluss und separatem Protokoll.
 Kein Magnetfeld- oder Schritt4-Pass aus dem geometrischen Ergebnis.
 Keine nachträgliche Freigabe der zwei

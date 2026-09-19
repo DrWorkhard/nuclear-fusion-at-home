@@ -45,6 +45,9 @@ Gemeinsamer B²-Maßstab pro Target aus dessen bereits unabhängig qualifizierte
 archiviertem64²-Innenfeld auf s=0,25/0,5/0,75. Diesen positiven Zahlenwert
 quellgebunden einmal festlegen und in sämtlichen Klassen, Methoden, Probes und
 feineren Diagnosen unverändert benutzen. Keine neue Normierung je Innenraster.
+Kanonische Zahlenrechnung: Mittel der quadrierten Norm von(bt*et+bp*ep) über
+die drei vollen archivierten64²-Gitter;`native`dagegen prüfen, nicht als numerisch
+anders summierte alternative Normierungsquelle verwenden.
 
 Konstruktionsraster:64² Rand pro voller Feldperiode,256 Punkte je Spule,
 32² je Innenradius. Separate128²-Volltorusfläche für die Abstandsstrafe.
@@ -83,6 +86,13 @@ Je maximal120s, eigener frischer Prozess, Peak-RSS≤1,5GiB als Qualifikationssc
 Bei Fehler kein echter Lauf; keinen durch Skip oder kleinere Testdaten ersetzen.
 RAM-Schirm ist gemessener Peak nach Ausführung, kein behauptetes hartes Betriebssystemlimit.
 Keine parallelen schweren Tests/Rechnungen.
+Native und Sparse in getrennten frischen Prozessen: acht Ressourcenläufe
+insgesamt. Je Backend/Klasse/Spulenauflösung13 feste Zustände: seed, acht
+zentrale Wertprobes, seed-repeat, xc(0) von Grundspule0 um0,002m verändern,
+changed-repeat, wiederhergestellter seed. Für CP und CC jeweils13 Werte und
+volle benannte Gradienten an den fünf Nicht-Probe-Zuständen; drei vollständige
+Mindestabstände an seed/changed/restored. Alle Aufrufe/Repeats zählen.
+Diese Vor-Code-Freeze-Präzisierung erfolgt vor der ersten Ressourcenmatrix.
 
 ## Startup und unveränderte Ableitungsschirme
 

@@ -41,3 +41,64 @@ Nullstrafe. Keine fehlenden Flächenableitungen als Co-Designgradient ausgeben.
 
 Nächster Schritt nach Protokoll-Commit: additive Implementierung und synthetische
 Qualifikation. Noch kein neuer Start numerisch angenommen oder Feldfit gestartet.
+
+## Implementierung vor Targetdaten
+
+Erste15 synthetische Sparse-CP-Kontrollen bestehen in2,09s: aktive native
+Werte/VJPs, beide zentralen Schrittweiten, Symmetriekopien, verschiedene
+Spulenquadraturgrößen, Cacheinvalidierung bei Basisänderung, feste unnormierte
+Flächengewichte, echter Mindestabstand bei Nullstrafe sowie ungültige/degenerierte
+und cutoff-nahe Daten. Ruff besteht. Das ersetzt noch nicht die vollständige
+128²-Ressourcenmatrix und keinen magnetischen Startupnachweis.
+
+Vor deren erster Ausführung präzisiert: acht frische Prozesse, native und Sparse
+getrennt für beide Klassen/Spulenauflösungen. Je13 festgelegte Zustände inklusive
+voller Gradienten an fünf Kontrollzuständen, acht zentraler Wertprobes und
+Cache-/Wiederherstellungskontrollen. Kanonischer B²-Zahlenweg explizit auf
+rekonstruiertes(bt*et+bp*ep) der gebundenen64²-Archive festgelegt; keine strikte
+Gleichheit unterschiedlicher Summationswege voraussetzen. Diese Präzisierungen
+liegen vor der Ressourcenmatrix und vor neuen Projekt-Feldwerten.
+
+Die übrigen Bausteine sind separat implementiert: frischer benannter Feldadapter
+(40 erste Kontrollen), unabhängige Archiv-/Geometrie-/Zielfunktions-/FD- und
+Auflösungsrechnung (64 Kontrollen) sowie Ressourcen-Elternwächter und genaue
+Arbeitsbuchhaltung (43 leichte Kontrollen). Die erste gesamte Regression besteht
+mit1334 Tests,334 unveränderten Warnungen in163,11s. Sie ersetzt ausdrücklich
+nicht die acht separaten großformatigen Ressourcenläufe. Deren Aufrufe werden
+nicht versteckt als gewöhnliche Unit-Tests oder übersprungene Pflichtprüfungen
+behandelt.
+
+Ein zusätzlicher unabhängiger lesender Review findet einen echten
+Provenienz-Alias: der geerbte magnetische Snapshot teilt seine `sources` mit dem
+internen Target. Die additive Klasse isoliert diese Rückgabe nun; ein eigener
+Mutationstest belegt unveränderte Modell-/Seedquellen ohne zusätzliche native
+Aufrufe. Alle41 Adaptertests bestehen nach der Korrektur in8,99s. Alte numerische
+Klassen bleiben unverändert. Der erste1334-Testbericht bleibt als Zwischenstand
+erhalten. Die abschließende gesamte Regression nach der Korrektur besteht:
+**1335 Tests,334 Warnungen, keine Fehler oder Skips,164,25s.** Gegenüber dem
+Geometrieabschluss sind163 Bausteinkontrollen hinzugekommen (15/41/64/43).
+Ruff im gesamten Repository, Dokumentstruktur und Diffprüfung bestehen.
+Quellenhashes und beide JUnit-Berichte stehen im
+[Qualifikationsbeleg](../../evidence/clear-coil-field-start-v1-primitives.json).
+
+Nächster separater Ausführungsschritt nach diesem Code-/Dokumentationscommit:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self \
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
+.venv/bin/python scripts/qualify_sparse_coil_surface.py \
+  --raw /ABSOLUTER/FRISCHER/RESSOURCENORDNER
+```
+
+Diese Matrix ist noch ausstehend; weder die Testzahl noch die lesenden Reviews
+ersetzen sie. Keine neuen Projekt-Feldwerte oder VMEC-Aufrufe in dieser Phase.
+
+Der Gesamtworkflow ist noch **nicht** implementiert oder qualifiziert. Sein
+separater Entwurf zählt zehn Modelle je physischer Zelle: zwei Qualifikationen,
+sechs Diagnosen, zwei Flussmodelle. Vollständig ergibt das262 native Requests
+je Zelle (202 Werte einschließlich zehn Initialisierungs-A,60 VJPs),1048 für
+die ganze Matrix. Jedes rohe Ergebnis und jeder begonnene Aufruf wird gebunden;
+Diagnosen und Flussblöcke verwenden unverändert den ersten N-Seed-Snapshot.
+Radial-, Winkel- und Spulenverfeinerung sind direkte Paarprüfungen, nicht nur
+Vergleiche aller Ergebnisse mit einem einzigen feinsten Wert. Diese Präzisierung
+ist eine Implementierungsanforderung vor ersten Projekt-Feldwerten, kein Pass.
