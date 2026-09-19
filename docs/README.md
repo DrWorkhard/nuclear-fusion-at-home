@@ -46,7 +46,8 @@ der geometrisch angenommenen Konturen, noch keine neue Suche.
 Die separate [blockweise Referenz](optimization/BLOCK_NATIVE_REFERENCE_RESULTS.md)
 besteht nun alle vier vollen Ressourcenfälle und336 unabhängige Gegenvergleiche.
 Drei ursprüngliche dichte Speicherfehler bleiben negativ. Der Gesamtworkflow
-der Feldstartprüfung ist als Nächstes zu qualifizieren; noch kein Feldnachweis.
+der Feldstartprüfung ist mit170 neuen Kontrollen und1640 Gesamttests qualifiziert.
+Als Nächstes vier reale Startupzellen und unabhängige Abnahme; noch kein Feldnachweis.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
 Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.
 

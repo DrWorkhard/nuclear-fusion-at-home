@@ -1,5 +1,34 @@
 # Validation log
 
+## 2026-09-19 — Qualify complete clear-coil field-start workflow before project fields
+
+- Add source binder, guarded four-cell producer and independent NumPy/SciPy
+  auditor; old numerical sources/protocols unchanged.44/32/94 new controls.
+  Pre-data angular pairs fixed256→512,512→1024,256→1024;262 native requests
+  per cell, including every initialization/extra value/VJP.384 independent
+  direct B/A-pair reconstructions planned separately, not hidden native work.
+- Binder review catches missing transitive raw JSON→NPZ checks. Current raw
+  graphs now fully bound; historical source metadata retains qualified version
+  boundaries instead of incorrectly requiring old code at today's paths.
+  Read-only replay confirms986 geometry/660 block references, including56 new
+  raw NPZs; eight installed native Python files match bound checkout sources.
+- Producer/CLI mock integration catches historical two-key reference handling,
+  scope metadata and independent-only metric schema mismatch. CountedField
+  fake backend exercises actual worker files/ledger/whole audit; expensive
+  physics and prerequisite ancestry are explicitly replaced only in wiring tests.
+- Before new project fields, independent reviews find Wout reconstruction is
+  not exact archive subsampling. Additive runner now installs independent
+  archived64-derived32/64 arrays after the sole initial loop-A request and before
+  any inner field. Exact full64 B2/signs and5e-12 Wout replay checked first;
+  no extra field calls. Auditor demands array_equal and rejects1e-14 mutations.
+  Full64 sign test includes nodes skipped by32 subsampling. Final read-only
+  review finds no remaining issue; not external peer review.
+- Complete regression:1640 passed,334 known warnings,0 failures/errors/skips,
+  191.33s. Ruff/docs/diff pass; qualification JSON binds all new sources and
+  JUnit. Detail/index and all four root overviews updated. No project field
+  calls or equilibrium solves in this phase. Local implementation commit before
+  four actual serial startup cells; all numerical/physical admission still open.
+
 ## 2026-09-19 — Full-grid block-native reference passes independent bounded-resource admission
 
 - Clean3349ce5 completes four fresh serial workers;52 states,104 public values,

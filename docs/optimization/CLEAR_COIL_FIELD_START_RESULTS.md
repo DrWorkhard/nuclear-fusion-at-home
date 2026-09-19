@@ -12,8 +12,133 @@ abgelehnt. Die neue Sparse-Implementierung besteht alle vier Einzelprüfungen.
 Der separat registrierte [block-native Folgeversuch](BLOCK_NATIVE_REFERENCE_RESULTS.md)
 besteht inzwischen alle vier Vollgrößenfälle unter denselben Grenzen und sämtliche
 336 unabhängigen Gegenvergleiche. Die ursprüngliche negative Entscheidung bleibt
-erhalten. Als Nächstes ist der vollständige Feldstartworkflow zu qualifizieren;
-noch keine neue Feldrechnung oder Suche aus dem Ressourcenpass allein.
+erhalten. Der vollständige Feldstartworkflow ist nun qualifiziert:170 neue
+Kontrollen,1640 Gesamttests bestanden. Als Nächstes die vier registrierten
+Startupzellen und deren unabhängige Abnahme; noch kein Projekt-Feldnachweis.
+
+## Gesamtworkflow: Implementierung vor neuen Projektfeldern
+
+Nach positivem Ressourcenabschluss bei1b6f6b1 folgt der additive Quellenbinder,
+begrenzte Ausführungslauf und eigenständige Gesamtauditor. Zwei getrennte Agenten
+implementieren Ausführung beziehungsweise Abnahme; ein weiterer lesender Review
+prüft die Integration. Keine alten Rechenkerne oder quellengebundenen Protokolle
+ändern. Es gibt weiterhin noch keine neuen Feldwerte aus diesen Starts.
+
+Vor Codefreeze und erster neuer Feldsichtung wird die im Protokoll geforderte
+Winkelprüfung explizit festgelegt: **alle drei Paare256→512,512→1024,256→1024**
+für die Randlinie sowie jede der beiden radialen Fanreihen. Dazu je Spulenraster
+drei Radial16→32-Paare, neun Zielflussfehler, sechs Stokes-Vergleiche und zwischen
+Spulen256/512 neun korrespondierende Flüsse. Grenze überall unverändert1e-6.
+Die ursprünglichen Protokollbytes und alten negativen Ergebnisse bleiben erhalten.
+
+API-Vorabreview bestätigt die vollständige native Arbeit je physischer Zelle:
+zwei Qualifikationsmodelle mit je1+10×9=91 Requests, sechs Diagnosemodelle mit
+je1+6=7 und zwei Flussmodelle mit je1+18=19; insgesamt262, davon202 Werte und
+60 VJPs, einschließlich zehn initialen A-Aufrufen. Vier Zellen also1048 native
+Requests. Zusätzliche unabhängige direkte B/A-Paarrekonstruktionen96 je Zelle
+sind gesonderte Prüfarbeit, keine nativen Produceraufrufe. Kein Cachebonus.
+
+Wichtige Integrationsschutzregeln: Diagnosearrays explizit mit dem eingefrorenen
+Strom aus N0 und festem B² abrufen; kein späterer neu normierter Snapshot.
+Direkte B/A-Prüfung streng relativ≤5e-10 mit positivem Nenner, kein absoluter
+Toleranzausweg. Alter Flusswrapper erzeugt eine ungezählte BiotSavart-Instanz und
+falsche128/512-Raster; deshalb ausschließlich seinen reinen signierten
+Geometriehelper übernehmen. Elternwächter muss1800s selbst erzwingen, auch über
+Imports/Quellenbinder/Konstruktoren. Persistierte Modellversuche vor erstem Feldaufruf.
+
+Quellenbinder zunächst41 reine Kontrollen bestanden. Lesender realer
+Vorgänger-Smoke bindet beide exakten ausgewählten Snapshots, alle zwölf positiven
+Geometriesätze/168 LPs und die separate Blockreferenz samt drei alten RAM-Fehlern.
+Acht tatsächlich installierte native Python-Dateien stimmen bytegleich mit den
+gebundenen Checkoutquellen überein; kein universeller transitiver ABI-Nachweis.
+Kanonisches archiviertes B²: Referenz1,6293829620247962T²,
+Entwurf1,6313464444829588T². Keine neue Feldrechnung dafür; vollständiger
+Workflowtest und Codecommit bleiben vor realem Startup erforderlich.
+
+Nach Quellenreview44 Binderkontrollen: drei zusätzliche Tests sichern verknüpfte
+JSON→Rohdaten, einmalige Graphausweitung und historische Versionsgrenzen.
+Die zunächst nur flache Referenzprüfung hätte beschädigte neue Block-Workerdateien
+übersehen. Vollständige aktuelle Rohgraphen sind nun gebunden. Ein zuerst zu weit
+reichender Replay beliebiger historischer Quellberichte verlangte dagegen eine
+alte Version von`measure_radial_action.py` am heutigen Pfad und wurde abgelehnt.
+Korrekte Grenze: eingebettete Quellreferenzen weiter hashen, vergangene
+Metadataberichte ihren bereits qualifizierten Quellenbindern überlassen, aktuelle
+Raw-JSON-Ketten vollständig öffnen. Kein Ausnahmehash für eine geänderte Datei.
+Der reale lesende Vorgängercheck besteht danach. Separat bestätigt der neue
+Auditor aus beiden vorhandenen Archiven die obigen B²-Werte und Zielfluss−π/100Wb.
+Kein neuer Feld- oder Gleichgewichtsaufruf für diese Nachprüfungen.
+
+Lesender Nachreview bestätigt die geschlossene Rohdatenlücke:986 Referenzen im
+Geometriegraph,660 im Blockgraph einschließlich aller56 neuen NPZ-Dateien.
+Auch der neue Auditor bindet zusammen1648 Dateien und bestätigt beide Targets
+ohne neue Feldrechnung. Überschneidungen der Graphen werden dabei berücksichtigt;
+die genannten Zählungen haben unterschiedliche Einstiegspunkte.
+
+Producer/Workflowtests zunächst19 Pass in1,48s mit einem bekannten netCDF-
+Importhinweis. Zehn Konstruktoren,44 Operationen und262 Feldrequests über echte
+CountedField-Ereignisse an einem Fake-Backend vollständig durchlaufen; falsche
+Aufrufreihenfolge, Zusatzrequests, Elternverlust, verspätete Ausgabe und Fehler
+werden gezielt geprüft. Ein Review korrigiert die Verwendung des alten starren
+Drei-Feld-Referenzschemas für historische Zwei-Feld-Inputreferenzen, bevor ein
+Projektfeld versucht wurde. Lokale/gesamte Arbeitslimits nun vor Dispatch, nicht
+nur nachträglich kontrolliert. Anfangs fehlender Testimport ergänzt; Ruff/Syntax/
+Diff danach bestanden. Producer-Dateien eingefroren, Gesamtabnahme noch in Prüfung.
+
+Echte Mock-Producerdateien gehen anschließend durch den unabhängigen Ledger- und
+Prozessauditor. Dabei Scope-/Flussmetadaten vereinheitlicht; zusätzliche unabhängige
+Feldkennzahlen werden im Auditor erhalten, aber nicht irrtümlich vom Producer-
+Schema verlangt. Vollständige Zellen-/Gesamtworkflow-/CLI-Kontrollen folgen vor
+gemeinsamer Regression und Freigabe. Ein bestandener Mockworkflow ist kein
+Projektfeld-Startup oder physischer Entwurfspass.
+
+Die erste komplette Auditorrunde besteht90 Tests in8,21s (ein bekannter
+Importhinweis), einschließlich tatsächlichem Vier-Zellen-Mockproducer bis CLI
+und unverändert negativem physischen Seed. Teure innere Feldmathematik und
+historische Vorbedingungen sind in diesem reinen Wiringtest ausdrücklich
+kontrolliert ersetzt; ihre mathematischen Prüfungen laufen separat.
+
+**Vor erster neuer Feldrechnung gefundene Protokollabweichung:** Die eingefrorene
+Klasse rekonstruiert innere Zielwerte aus dem Wout; nahe Übereinstimmung innerhalb
+5e-12 ist nicht das verlangte exakte Archiv-Subsampling. Zwei lesende Reviews
+bestätigen die Korrektur im additiven Runner: unmittelbar nach dem einzigen
+Konstruktor-Loop-A-Aufruf und vor jedem inneren Feldaufruf archivierte64²-Werte
+eigenständig rekonstruieren/subsamplen, Wout-Replay vergleichen und unabhängige
+aktive Kopien einsetzen. B² und Zielflussvorzeichen bleiben unverändert.
+Der Gesamtauditor verlangt anschließend exakte Gleichheit der gespeicherten
+Innenpunkte/Zielfelder mit seiner eigenen Archivrechnung. Alte Klasse/Protokolle
+bleiben eingefroren. Abschließende Teilqualifikation:44 Binder-,32 Runner- und
+94 Auditorprüfungen bestanden. Positive32/64-Fälle bestätigen exakte unabhängige
+C-Kopien ohne zusätzliche Feldrequests; negative Fälle sichern falsche Quellen,
+Vorzeichen, B², vorhandene Caches und fehlerhafte Initialisierung. Insbesondere
+wird auch ein falsches Vorzeichen an einem im32er Subsampling ausgelassenen
+64er Knoten erkannt. Der Auditor weist selbst1e-14-Abweichungen an inneren
+Punkten/Zielfeldern ab. Letzter unabhängiger lesender Review bestätigt den Fix
+ohne weitere Befunde. Gesamte Regression: **1640 Pass,334 bekannte Warnungen,
+keine Fehler/Skips,191,33s**. Ruff, Dokumentstruktur und Diffprüfung bestanden.
+[Qualifikationsbeleg](../../evidence/clear-coil-field-start-v1-workflow.json)
+bindet alle sechs neuen Code-/Testdateien, unverändertes Protokoll und JUnit.
+Vor dem echten Lauf folgt der lokale Codecommit; keinerlei neue native
+Projekt-Feldaufrufe oder Gleichgewichte in dieser Implementierungsphase.
+
+Nach sauberem Commit ausführen, mit jeweils frischer absoluter Ausgabe:
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self \
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
+.venv/bin/python scripts/run_clear_coil_field_start.py --raw /ABSOLUTER/NEUER/RAWORDNER
+
+PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self \
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
+.venv/bin/python scripts/audit_clear_coil_field_start.py \
+  --run /ABSOLUTER/NEUER/RAWORDNER/run.json --output /ABSOLUTER/NEUER/AUDIT.json
+```
+
+Während des kontrollierten Laufs weder Quellen noch Gitstand ändern und keine
+schweren parallelen Projektjobs starten. Der Auditor trennt vollständige
+Arithmetik-/Quellenprüfung, numerischen Startup und physische Seedannahme.
+Keine Suche oder Schritt4-Freigabe durch diese Studie.
+
+## Erhaltene Vorabreviews und Bausteinqualifikation
 
 Zwei getrennte lesende Agentenreviews identifizieren dieselben Integrationsfallen:
 der alte Konstruktor legt Startkoeffizienten und Flussorientierung bereits an
@@ -102,8 +227,8 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
 Ergebnisse dieser Matrix stehen unten; weder die Testzahl noch die lesenden
 Reviews ersetzen sie. Keine neuen Projekt-Feldwerte oder VMEC-Aufrufe in dieser Phase.
 
-Der Gesamtworkflow ist noch **nicht** implementiert oder qualifiziert. Sein
-separater Entwurf zählt zehn Modelle je physischer Zelle: zwei Qualifikationen,
+Zum damaligen Bausteinabschluss war der Gesamtworkflow noch **nicht** implementiert
+oder qualifiziert (aktueller Stand oben). Sein separater Entwurf zählt zehn Modelle je physischer Zelle: zwei Qualifikationen,
 sechs Diagnosen, zwei Flussmodelle. Vollständig ergibt das262 native Requests
 je Zelle (202 Werte einschließlich zehn Initialisierungs-A,60 VJPs),1048 für
 die ganze Matrix. Jedes rohe Ergebnis und jeder begonnene Aufruf wird gebunden;
@@ -147,7 +272,7 @@ Als nächste methodische Option wurde die gleiche native Referenzformel blockwei
 Grenzen zu reduzieren. Das separate Protokoll, die synthetische Prüfung und
 der Vergleich mit beiden erhaltenen Backends sind inzwischen
 [positiv abgeschlossen](BLOCK_NATIVE_REFERENCE_RESULTS.md). Die drei dichten
-Speicherfehlschläge bleiben erhalten; der Feldstart-Gesamtworkflow folgt noch.
+Speicherfehlschläge bleiben erhalten; die Feldstart-Gesamtqualifikation steht oben.
 
 Eine zusätzliche unabhängige lesende Nachrechnung bestätigt435 eindeutige
 Referenzhashes/Dateigrößen, alle104 Zustände und Arbeitspräfixe,64 FD-Prüfungen,

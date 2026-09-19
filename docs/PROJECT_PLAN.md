@@ -21,7 +21,7 @@ Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemei
 Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
 oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
-abgeschlossen; einschließlich neuer Geometrie-/Feldbausteine1470 Tests bestanden.
+abgeschlossen; einschließlich neuem Feldstart-Gesamtworkflow1640 Tests bestanden.
 Alle acht realen Startqualifikationen auditiert,
 sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
 freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
@@ -40,8 +40,8 @@ konstante Strom-/B²-Normierung und vollständige Flussprüfungen. Die separate
 [blockweise native Referenz](optimization/BLOCK_NATIVE_REFERENCE_RESULTS.md)
 besteht vier volle Ressourcenfälle,336 Gegenvergleiche und32 FD-Kontrollen bei
 unveränderten Grenzen. Drei alte dichte RAM-Fehler bleiben negativ, alle vier
-alten Sparse-Pässe sind erneut bestätigt. Nun Gesamtworkflow implementieren/prüfen
-und anschließend die vier physischen Startupzellen ausführen;
+alten Sparse-Pässe sind erneut bestätigt. Gesamtworkflow mit170 neuen Kontrollen
+qualifiziert; nun die vier physischen Startupzellen ausführen und unabhängig abnehmen;
 neue Suche erst nach deren dokumentiertem Abschluss und separatem Protokoll.
 Kein Magnetfeld- oder Schritt4-Pass aus dem geometrischen Ergebnis.
 Keine nachträgliche Freigabe der zwei

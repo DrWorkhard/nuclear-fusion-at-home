@@ -19,7 +19,7 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 - [Blockweise native Referenz: Abschluss](BLOCK_NATIVE_REFERENCE_RESULTS.md) — Alle vier realen Vollgrößenfälle und336 unabhängige Gegenvergleiche bestanden, maximal0,427GiB/38,2s; alte drei RAM-Fehler bleiben negativ. Gesamtworkflow der Feldstartprüfung folgt.
 
 - [Angenommene Geometrie → Feldstart: Protokoll](CLEAR_COIL_FIELD_START_PROTOCOL.md) — Frische benannte Seeds, feste Normierung, N/V-Ableitungen und sechs Auflösungszustände je vier physischer Zellen; keine Suche.
-- [Angenommene Geometrie → Feldstart: Arbeitsstand](CLEAR_COIL_FIELD_START_RESULTS.md) — 163 neue Bausteinkontrollen; volle native/Sparse-Gegenrechnung besteht, Ressourcen-Gesamtgate an drei dichten Speicherüberschreitungen abgelehnt. Alle vier Sparse-Fälle bestehen; keine Projekt-Feldfreigabe.
+- [Angenommene Geometrie → Feldstart: Arbeitsstand](CLEAR_COIL_FIELD_START_RESULTS.md) — Gesamtworkflow mit44 Binder-/32 Runner-/94 Auditorprüfungen und1640 Gesamttests qualifiziert. Exakte Archivtargets, feste Normierung und vollständige Arbeitszählung; als Nächstes vier reale Startupzellen, noch kein Feldnachweis.
 
 - [Schritt4: Optionen und unabhängige Reviews](COUPLED_DESIGN_OPTIONS.md) — Vergleich von Filament-Co-Design, reduzierten Richtungen, REGCOIL und direkten Flächen; drei Agentenreviews, Integrationsfallen und getrennte Teilpakete für Realisierung, gemeinsame Iteration, Druck und Robustheit.
 - [Gepaarte reale Spulen: Pilotprotokoll](COUPLED_COIL_PILOT_PROTOCOL.md) — Zwei Plasmaformen, zwei Spulenklassen und Normalfeld-/Innenvektor-Methoden; explizite Flussableitung, feste Budgets und unabhängige feinere Eintrittsschirme.

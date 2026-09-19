@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "phase": "clear_coil_field_start_workflow_qualification",
+  "parent_revision": "1b6f6b1f7d3a8113d667ce9ee6d021124771442c",
+  "sources": [
+    {"path": "scripts/clear_coil_field_start_inputs.py", "sha256": "139cd0595f5ecf14f541cd8a7d0faecc2ac166095a00669aeebc5c4267806f98"},
+    {"path": "scripts/run_clear_coil_field_start.py", "sha256": "15f974ac49e6db84cfeb47a146030e032c245b2983b97ed9907084df0871e266"},
+    {"path": "scripts/audit_clear_coil_field_start.py", "sha256": "ae564d5a2812a15a31101d387551f4c123cd138482726b28fdb9f0b470faf841"},
+    {"path": "tests/test_clear_coil_field_start_inputs.py", "sha256": "955aa44982cdfb19b415a7342baadabfe58eb13798d3d2582f633960483bd1d7"},
+    {"path": "tests/test_clear_coil_field_start_workflow.py", "sha256": "3f85da1445d601d9c4a61b13ed835ea9bfa7c97869b8e0953145e5850141c3ce"},
+    {"path": "tests/test_clear_coil_field_start_audit.py", "sha256": "30710dd210bb8b9658fa0e1f5845568d623713476ff8aa0f5ec094c1045c2944"},
+    {"path": "docs/optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md", "sha256": "6eaab97a58285954964aad4cc08698008613e71aa7141348a44a621a6fe64147"}
+  ],
+  "command": "PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python -m pytest -q --junitxml=artifacts/clear-coil-field-start-v1-workflow-qualification/regression.xml",
+  "junit": {
+    "path": "artifacts/clear-coil-field-start-v1-workflow-qualification/regression.xml",
+    "sha256": "2b73968de689ba3c0e6b6cb3531c1a56391b972e8cf31a02378b8bd83093f614"
+  },
+  "tests": 1640,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "warnings": 334,
+  "console_seconds": 191.33,
+  "warning_groups": {"known_fixtures": 144, "recorded_and_reemitted_highs_options": 190},
+  "new_tests": {"source_binder": 44, "guarded_runner": 32, "independent_auditor": 94},
+  "pre_data_contract": {
+    "angular_pairs": [[256, 512], [512, 1024], [256, 1024]],
+    "native_requests_per_cell": 262,
+    "native_values_per_cell": 202,
+    "native_vjps_per_cell": 60,
+    "model_initializations_per_cell": 10,
+    "direct_BA_pair_reconstructions_per_cell": 96,
+    "inner_targets_exact_archived64_subsampling": true,
+    "Wout_replay_absolute_limit": 5e-12,
+    "archive_binding_additional_field_requests": 0
+  },
+  "saved_predecessor_replay": {
+    "reference_B2_scale": 1.6293829620247962,
+    "selected_B2_scale": 1.6313464444829588,
+    "reference_and_selected_target_flux": -0.031415926535897934,
+    "geometry_graph_references": 986,
+    "block_graph_references": 660,
+    "block_raw_npz_files": 56,
+    "installed_native_python_sources_verified": 8
+  },
+  "scope": {
+    "production_startup_workflow_qualified": true,
+    "new_project_field_calls": 0,
+    "new_equilibrium_solves": 0,
+    "startup_pass": false,
+    "physical_seed_pass": false,
+    "search_allowed": false,
+    "step4_pass": false
+  },
+  "limits": [
+    "Mock worker-to-CLI wiring is not physical admission; expensive field arithmetic and historical prerequisites are replaced there and checked separately.",
+    "The known strict netCDF import warning remains unresolved.",
+    "Independent agent reviews are not external scientific peer review."
+  ],
+  "checks": {"repository_ruff": true, "docs_structure": true, "diff_whitespace": true}
+}
