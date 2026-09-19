@@ -1,5 +1,29 @@
 # Validation log
 
+## 2026-09-19 — Qualify complete block-native implementation before full-size execution
+
+- Add unchanged native cs_distance_pure in64 full surface blocks, synchronous
+  host copies, uncached actual kernel work, complete blocked minima and native
+  curve VJPs. Public attempts plus per-curve reservations/completions distinguish
+  hard-interruption bounds from exact completed counters. No old code edits.
+- Source binder14 controls plus real read-only435-reference prerequisite replay;
+  native class33, guarded runner24, independent overall auditor64 controls.
+  Audit fixture preserves full production dimensions for8 old/4 new workers,
+  with336 new comparisons/32 FD checks and negative source/time/RSS/counter cases.
+  Saved original104 geometry states and8 surfaces independently match to at most
+  1.7764e-15, with exactly the original three dense resource failures retained.
+- Crossreview closes live-parent loss and attempt/event time-prefix checks.
+  Producer flags cannot substitute for independent admission. Re-audit permits
+  later root Git metadata changes only; all numerical source hashes stay fixed.
+  Earlier obsolete JAX test-context API failure fixed without numerical changes.
+- Full suite1470 passed,334 known warnings,0 failures/errors/skips,177.31s.
+  Repository Ruff/docs/diff pass; qualification record binds all new code/tests,
+  unchanged protocol and JUnit. Root summaries checked and affected counts/next
+  action updated. Staged diff reviewed before local implementation commit.
+- No new full resource execution, project fields or equilibrium solves in this
+  phase. Next only after commit: four fresh serial resource workers, independent
+  saved-data audit, documentation and local outcome commit. Old negative stands.
+
 ## 2026-09-19 — Preregister block-native follow-up without relaxing resource gates
 
 - Negative outcome97d75b8 closed before this new method choice. Two independent

@@ -1,0 +1,90 @@
+{
+  "schema_version": 1,
+  "phase": "block_native_reference_implementation_qualification",
+  "parent_revision": "afbb9bc7f2ba7065ea65bd90748ac16c12976109",
+  "sources": [
+    {
+      "path": "src/fusion_baselines/block_native_coil_surface.py",
+      "sha256": "bb82124d2a54de22caf7427b08d1897624d0df8214497111aa5ad543096725c3"
+    },
+    {
+      "path": "scripts/block_native_reference_inputs.py",
+      "sha256": "343ef9e52c65eeb93c60ded4ea340078b2c6977d9d6ab448fd3ae1537a1fa1b9"
+    },
+    {
+      "path": "scripts/qualify_block_native_reference.py",
+      "sha256": "a9935c0d60b90050635ab93123b08ac9cbe99fda33021050029b078f4d258820"
+    },
+    {
+      "path": "scripts/audit_block_native_reference.py",
+      "sha256": "0906fbd84da333d0cb45ddd6877a39705a6b6a7fe8b47730a7b640728d7b5ba1"
+    },
+    {
+      "path": "tests/test_block_native_coil_surface.py",
+      "sha256": "a421bb1acaafd2389ef8c55f36f441144a7a1e2f77a9b2cfc641d073290c18d7"
+    },
+    {
+      "path": "tests/test_block_native_reference_inputs.py",
+      "sha256": "d1387c0509cbf38168bfc04909a53ec78fb8f128be9276bdf5974fbc4c567c10"
+    },
+    {
+      "path": "tests/test_block_native_reference_workflow.py",
+      "sha256": "c60797514ef68ccdace3db6156e32782a359b0cd09fba032719c4c35d502f373"
+    },
+    {
+      "path": "tests/test_block_native_reference_audit.py",
+      "sha256": "58ff0c29a0cc49249ef556f407d9f94e08aa2195cfc16a90aa1e4b86c3e07914"
+    },
+    {
+      "path": "docs/optimization/BLOCK_NATIVE_REFERENCE_PROTOCOL.md",
+      "sha256": "ebf1f7c34b32943195da80c6e0f6ef6e62572d84a13b402a65583a71d06fb5c0"
+    }
+  ],
+  "command": "PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 .venv/bin/python -m pytest -q --junitxml=artifacts/block-native-reference-v1-qualification/regression.xml",
+  "junit": {
+    "path": "artifacts/block-native-reference-v1-qualification/regression.xml",
+    "sha256": "4ef64293a5199a2254ef12b882220cbad680853171ab8e84b4060fbfdb9bccca"
+  },
+  "tests": 1470,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "warnings": 334,
+  "console_seconds": 177.31,
+  "warning_groups": {
+    "known_fixtures": 144,
+    "recorded_and_reemitted_highs_options": 190
+  },
+  "new_tests": {
+    "native_block_class": 33,
+    "source_binder": 14,
+    "guarded_runner": 24,
+    "independent_auditor": 64
+  },
+  "saved_predecessor_replay": {
+    "references": 435,
+    "workers": 8,
+    "states": 104,
+    "paired_comparisons": 4,
+    "old_dense_resource_failures": 3,
+    "old_all_pass": false,
+    "max_surface_absolute_difference": 1.7763568394002505e-15,
+    "max_gamma_absolute_difference": 4.440892098500626e-16,
+    "max_gammadash_absolute_difference": 8.881784197001252e-16
+  },
+  "scope": {
+    "new_full_resource_matrix_executed": false,
+    "bounded_reference_pass": false,
+    "production_startup_workflow_qualified": false,
+    "new_project_field_calls": 0,
+    "new_equilibrium_solves": 0,
+    "physical_seed_pass": false,
+    "search_allowed": false,
+    "step4_pass": false
+  },
+  "checks": {
+    "repository_ruff": true,
+    "docs_structure": true,
+    "diff_whitespace": true
+  }
+}

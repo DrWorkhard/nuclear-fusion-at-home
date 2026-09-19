@@ -18,7 +18,7 @@ Spulenlänge1,938/1,936m gegenüber3,5m, Krümmungsobergrenze≤10/m gegenüber1
 Diese für beide Plasmaziele gemeinsamen Starts haben **noch keinen Feldnachweis**.
 Als Nächstes [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
 mit fester Normierung vor einem neuen Suchlauf. Software:
-1335 Tests bestanden; volle synthetische Feldbaustein-Gegenrechnung besteht,
+1470 Tests bestanden; volle synthetische Feldbaustein-Gegenrechnung besteht,
 Ressourcen-Gesamtgate scheitert an drei dichten Speicherüberschreitungen.
 Alle vier Sparse-Fälle bestehen; keine neuen Projekt-Feldwerte freigegeben.
 Eine [blockweise native Referenz](optimization/BLOCK_NATIVE_REFERENCE_PROTOCOL.md)
@@ -104,7 +104,7 @@ Nullmeldungen sind keine Zulassung. Details und alle erhaltenen Fehlschläge:
 | QI / Gleichgewichte | Frische 16-Zellen-Studie vollständig auditiert; doppelte Solver-Winkelauflösung besteht untersuchte Feldidentitäten | Ursprünglich nur 9/16 Auswertungsverfeinerungen und 2/16 historische Feld-Fidelitätspässe; keine Zelle besteht alle ursprünglichen Schirme |
 | QI / gemeinsamer Winkel | 120 neue Gitter und 61.440 unabhängige skalare Inversionen bestätigen die Koordinatenrechnung | Nur 4/16 neue Fidelitäts- und 5/16 Vergleichsverfeinerungspässe; Parametrisierung erklärt nicht sämtliche Unterschiede |
 | Endliche Spulennetze | Alle sechs Auflösungen bestehen den nicht-gemeinsame-Vertexindizes-Teiltest; feinster Lauf mit 2.222.785 Paarprüfungen und exakt altem 2M-Präfix auditiert | Nachbarpaare, vollständige Baugruppen, reale Wicklungspakete und gültige Mechanik offen; alte große Verformung verletzt lineare Modellannahmen |
-| Software | 1335 Tests, Ruff und Dokumentstrukturprüfung bestanden | 334 dokumentierte Warnungen:144 alte Fixture- und190 sichtbare Solveroptionsmeldungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
+| Software | 1470 Tests, Ruff und Dokumentstrukturprüfung bestanden | 334 dokumentierte Warnungen:144 alte Fixture- und190 sichtbare Solveroptionsmeldungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
 
 Die beiden QI-Verfeinerungsmaße unterscheiden sich: ursprüngliche
 Clebsch-Identitätsverfeinerung und spätere Verfeinerung des historischen
