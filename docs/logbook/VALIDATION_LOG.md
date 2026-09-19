@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-19 — Resume and close the remaining pre-data mathematical review
+
+- Resumed atbda5d4a after the interrupted implementation. Only the root-owned
+  untracked construction draft existed; no runner/auditor files or target outputs.
+  Startup overviews/detail/log read and process check finds no running experiment.
+  Original step1/2/3 and closed pilot evidence remain unchanged.
+- Second independent review confirms support/rho/perimeter/radial-pair formulas
+  and84+84 LP budget; identifies near-tangent sphere-section cancellation as a
+  remaining construction risk. Before any target evaluation, specify outward
+  eta padding, conservative retention/discard and factored square difference.
+  Explicit frequency weights and unscaled dual certificate clarified.
+- Retain the strict5e-12 representation screen, including near tangency: a failure
+  is unresolved arithmetic, not proven physical inadmissibility. Both analytical
+  and every direct-grid clearance gate must independently pass; no post-outcome
+  max-of-certificates rescue. New protocol precision is committed before data.
+- Relevant detail updated; four root overviews checked, unchanged overall
+  assessment/next action. Synthetic implementation and independent audit/runner
+  work continue separately; no physical targets, magnetic bundles or VMEC solves.
+  Nine documentation controls pass in0.54s; structure/whitespace checks pass.
+  The still-uncommitted producer draft separately passes28 synthetic primitive
+  tests in15.97s and Ruff; this is not complete workflow qualification. Commit
+  this protocol clarification separately before completing implementation.
+
 ## 2026-09-15 — Preregister geometry-only clear-start study after the negative coil pilot
 
 - Pilot closed at4f3c2fa before choosing the follow-up. No new target-field or

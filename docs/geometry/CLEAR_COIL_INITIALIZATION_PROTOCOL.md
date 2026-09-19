@@ -1,6 +1,7 @@
 # Außenliegende Spulenstarts: geometrischer Folgeversuch
 
-Vor Implementierung/Target-Auswertung registriert,15. September2026.
+Erstfassung vor Implementierung registriert,15. September2026; mathematische
+Reviewpräzisierung19. September2026 vor jeglicher Target-Auswertung.
 [Negativer Pilot](../optimization/COUPLED_COIL_PILOT_RESULTS.md) ·
 [Gesamtumfang Schritt4](../optimization/COUPLED_DESIGN_OPTIONS.md).
 Dieser Versuch qualifiziert ausschließlich Startgeometrie. Keine Magnetfeld-
@@ -39,9 +40,14 @@ Die Vereinigung der Kugeln mit RadiusE=d+epsilon um sämtliche Randgitterpunkte
 überdeckt den gesamten d-Nahbereich des jeweiligen kontinuierlichen Randes.
 
 In jeder Spulenebene e_R(phi_i),e_Z gilt für einen Randpunkt p:
-offplane=p·e_phi, proj=(p·e_R,p_z). Nur Kugeln mit|offplane|≤E schneiden die
-Ebene; ihre Schnittdisk hat Mittelpunkt proj und Radius sqrt(E²−offplane²).
-Verwerfen nur, wenn proj_R+E<R_floor, denn jeder spätere Spulenpunkt muss
+offplane=p·e_phi, proj=(p·e_R,p_z). In exakter Arithmetik schneiden nur Kugeln
+mit|offplane|≤E die Ebene, mit Diskradius sqrt(E²−offplane²). Nahe Tangentialität
+ist dies schlecht konditioniert. Vor Daten festgelegtes Außenpolster je Ziel/Ebene:
+eta=1e-12*max(1m,max||p||,E,||c||), als Meterzahl konsistent ausgewertet.
+Behalten falls|offplane|≤E+eta, Diskradius
+sqrt(max((E+eta)²−max(|offplane|−eta,0)²,0))+eta; Differenz der Quadrate
+als Produkt aus Summe und Differenz auswerten. Mittelpunkt bleibt proj.
+Verwerfen nur, wenn proj_R+E+2eta<R_floor, denn jeder spätere Spulenpunkt muss
 R≥R_floor erfüllen. Das verwirft den entfernten gegenüberliegenden Toruszweig
 mit einer expliziten Distanzbegründung, nicht anhand eines willkürlichen
 Vorzeichens. Keine andere Winkel-/Nachbarschaftsauswahl.
@@ -71,7 +77,7 @@ Diese bekannte Stützfunktionsdarstellung ist keine Neuheitsbehauptung.
 1024 gleichmäßige Normalenwinkel, delta=π/1024. Diskhülle
 S(α)=max_j[(proj_j−c)·n(α)+radius_j]. Ihr Lipschitzwert ist höchstens
 L_S=max_j||proj_j−c||. Hilfsvariablen u_m≥|a_m|,v_m≥|b_m| liefern
-L_h=Σm(u_m+v_m), L_rho=Σm|1−m²|(u_m+v_m).
+L_h=Σ_{m=1}^K m(u_m+v_m), L_rho=Σ_{m=1}^K m|1−m²|(u_m+v_m).
 Jede LP-Zeile fordert
 
 - h(α_j)−delta*L_h ≥ S(α_j)+delta*L_S+1e-9m;
@@ -111,8 +117,13 @@ Diskmitgliedschaft/IDs und Matrixdimensionen exakt; Koordinaten, Supportwerte,
 Matrizen und exportierte Fourierkoeffizienten maximal5e-12 absolute Abweichung
 in ihren aufgezeichneten SI-/Matrixeinheiten. Alle Werte endlich. Diese
 Rekonstruktionsgrenze ersetzt keines der kontinuierlichen geometrischen Gates.
-dual/stationarity/complementarity/primal-dual-gap absolut≤1e-8 bei protokollierter
-Skalierung. Abweichende oder fehlende Rohdaten führen zur Ablehnung. Exakte
+Der5e-12-Rohschirm bleibt auch für fast tangentiale Disks bestehen. Eine dort
+rein konditionierungsbedingte Abweichung wäre ein offener Repräsentations-/
+Arithmetiknachweis, keine bewiesene physische Unzulässigkeit. Keine automatische
+Lockerung dieses Schirms; auch dessen Fehler bleibt mit sämtlichen Daten erhalten.
+dual/stationarity/complementarity/primal-dual-gap absolut≤1e-8 auf der
+unskalierten Originalmatrix mit den aufgezeichneten Variablen/SI-Einheiten.
+Abweichende oder fehlende Rohdaten führen zur Ablehnung. Exakte
 Wiederholung von Primal-/Dualarray und ausgewählter Geometrie verlangen;
 Solvertimer und andere zwangsläufig variable Verwaltungsfelder ausgenommen.
 
@@ -121,7 +132,9 @@ Länge/rho-Schirme und geometrische Gleitkommapolster; alle physischen Kopien
 explizit. Volltorus-Punktabstände mit konservativen Fourier-Coverradien auf
 1024Kurvenpunkten und256² sowie512² Plasmapunkten, zusätzlich letztere um
 halbe Zellen verschoben. Beide Plasmaziele, alle drei Abstandsauflösungen.
-Alle geometrischen Gates müssen bestehen. Konvexer planarer Einzelbogen mit
+Analytische und sämtliche direkten Cover-Abstandsgates müssen jeweils separat
+bestehen: kein nachträgliches Maximum beider Schranken zur Freigabe eines
+gescheiterten Gitters. Alle geometrischen Gates müssen bestehen. Konvexer planarer Einzelbogen mit
 rho>0 und positiver R-Schranke hat keinen Selbstschnitt; diese zusätzliche
 mathematische Aussage gilt nicht für spätere frei nichtplanare Optimierung.
 Keine gerichtete Intervallarithmetik oder endliche Wicklungspaketqualifikation.

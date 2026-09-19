@@ -1,6 +1,6 @@
 # Außenliegende Spulenstarts: Arbeitsstand
 
-15. September2026. [Protokoll](CLEAR_COIL_INITIALIZATION_PROTOCOL.md).
+19. September2026. [Protokoll](CLEAR_COIL_INITIALIZATION_PROTOCOL.md).
 
 Der vorherige [vollständig negative Spulenpilot](../optimization/COUPLED_COIL_PILOT_RESULTS.md)
 motiviert eine getrennte geometrische Studie: gleiche physische Grenzen, aber
@@ -15,6 +15,18 @@ planare Spulenlösbarkeit, Feldqualität oder Schritt4-Behauptung.
 
 Der unabhängige Integrationsreview findet nach Aufnahme der Orientierung und
 kontinuierlichen Schutzschranken keinen Blocker für diesen begrenzten Versuch.
-Ein zweiter mathematischer Detailreview läuft noch; er muss vor Target-Auswertung
-abgeschlossen sein. Der erste Protokollstand wird vor Implementierung committed;
-eventuelle Präzisierungen erhalten ebenfalls einen Commit vor echten Daten.
+Der mathematische Detailreview bestätigt die Stützfunktions-/Krümmungs-/
+Längen-/Paarabstandsformeln und das84+84-LP-Budget. Er verlangt zusätzlich
+ein äußeres Rundungspolster für fast tangentiale Kugel-Ebenen-Schnitte.
+Dieses ist am19. September vor realen Daten im Protokoll konkretisiert, ebenso
+der explizite Frequenzfaktor in der rho-Lipschitzschranke, die unskalierte
+LP-Dualabnahme und die Pflicht zu jeweils bestandenen analytischen **und** allen
+direkten Abstandsschirmen. Keine geometrischen Grenzen oder Ergebnisse geändert.
+
+Erste Protokollfassung bei`bda5d4a` committed. Die unterbrochene Implementierung
+hat nur einen unqualifizierten Konstruktionsmodul-Entwurf hinterlassen;
+kein realer Versuch lief im Hintergrund weiter. Fortsetzung mit synthetischen
+Kontrollen, getrennter unabhängiger Prüfrechnung und geschützter Ausführung.
+Eine konditionierungsbedingte Abweichung am strikten Rohdatenvergleich wäre
+ein offener Arithmetiknachweis, keine physische Ablehnung oder Anlass zur
+nachträglichen Grenzänderung. Noch keine neue Startfreigabe oder Feldsuche.
