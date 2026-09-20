@@ -46,8 +46,8 @@ feldfrei qualifizieren und unabhängig schließen. Ihre reinen Grundbausteine
 bestehen200 neue Kontrollen und zusätzlichen Review; vollständiger Runner/Auditor
 und reale52-Zustandsmatrix stehen aus. Die auf Nutzerwunsch ergänzte dünne
 [evaluate/audit-Einstiegsschicht](validation/PROJECT_ENTRYPOINTS.md) ist mit64
-neuen Tests qualifiziert, ohne alte Quellen zu ändern. Zunächst vorhandenen
-Feldstart darüber auditieren, danach hier fortsetzen. Keine neue physische
+neuen Tests qualifiziert, ohne alte Quellen zu ändern. Der vorhandene Feldstart
+wurde darüber exakt erneut auditiert; CLI-Aufgabe abgeschlossen, nun hier fortsetzen. Keine neue physische
 Zulassung oder Unterstützung beliebiger Kandidaten durch die Oberfläche.
 Nach Abschluss der geometrischen Qualifikation den
 kleinen sicheren Formfit mit eigenem Such-/Auswahl-/Abnahmeprotokoll registrieren.

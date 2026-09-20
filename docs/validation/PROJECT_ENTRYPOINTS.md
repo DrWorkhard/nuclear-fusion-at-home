@@ -163,5 +163,14 @@ Warnungen,0 Fehler/Skips in208,42s. JUnit unter
 hält beide Versuche fest. Repository-Ruff, Dokumentstruktur/Diff und zusätzliche
 neun Dokumenttests bestanden. Abschließender lesender Review findet keine
 weiteren Blocker; keine externe wissenschaftliche Begutachtung.
-Ein tatsächlicher gespeicherter Feldstartaudit über die CLI folgt nach dem
-Implementierungscommit. Noch keine neue physische Studie für diese Oberfläche.
+Nach Implementierungscommit `caa1333` wurde der vorhandene Feldstart über den
+Rootlauncher tatsächlich neu auditiert. Exit0,2434 gebundene Referenzen;
+**sämtliche Ergebnisfelder exakt wie im ursprünglichen Audit**, ausgenommen
+die erwartbar neue Git-Metadatenzeile `auditor_repository`.
+Alle vier numerischen Pässe und physischen Ablehnungen bleiben erhalten.
+[Replaybeleg](../../evidence/project-entrypoints-v1-replay.json), Ausgabe unter
+`artifacts/project-entrypoints-v1-replay/audit.json`, SHA256
+`8e0af0395d3ddc7e561c786ea99984ac6f79a185894ae2a942f389bb398c7936`.
+Keine neue native Feldstudie, Optimierung oder Gleichgewichtsrechnung;
+unabhängige Rekonstruktion vorhandener Rohdaten. CLI-Aufgabe damit abgeschlossen,
+Fortsetzung bei der noch offenen kumulativen Geometriestudie.

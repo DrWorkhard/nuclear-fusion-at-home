@@ -28,8 +28,8 @@ qualifizieren, anschließend erst einen begrenzten sicheren Feldfit registrieren
 Grundbausteine des Schirms mit200 neuen Kontrollen und zusätzlichem Review
 qualifiziert; reale52-Zustandsmatrix/Gesamtworkflow offen. Die angefragte
 [dünne Auswertungs-/Audit-CLI](validation/PROJECT_ENTRYPOINTS.md) besteht64 neue
-Tests, alter CLI-Code bleibt unverändert. Gespeicherten Daten-Replay darüber
-prüfen, anschließend die Geometriequalifikation fortsetzen.
+Tests, alter CLI-Code bleibt unverändert. Echter gespeicherter Daten-Replay
+reproduziert die ursprüngliche Abnahme exakt; Geometriequalifikation fortsetzen.
 Software1904 Tests bestanden; separate blockweise Referenz qualifiziert, drei
 alte dichte RAM-Fehler unverändert negativ. Druck, Transfer und Robustheit offen.
 

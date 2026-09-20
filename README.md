@@ -49,8 +49,9 @@ lead first to a [field-free cumulative geometry certificate](docs/geometry/COIL_
 Its mathematical primitives now pass200 new tests and independent review;
 the complete workflow and52-state real matrix remain open. The requested thin
 [evaluation/audit CLI](docs/validation/PROJECT_ENTRYPOINTS.md) now passes64 new
-controls, preserving all historical code; next re-audit retained data through it,
-then resume geometry qualification before a bounded field fit. The earlier three dense memory
+controls, preserving all historical code. A real saved-data audit through it
+exactly reproduces the prior scientific report; resume geometry qualification
+before a bounded field fit. The earlier three dense memory
 failures remain negative; a separately qualified block-native reference passed
 the unchanged resource gates. No search or new equilibrium in the startup study.
 No physically admitted coil design or completed step4; pressure, realized-field physics, finite geometry and

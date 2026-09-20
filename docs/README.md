@@ -51,8 +51,9 @@ eine [kumulative Geometrieschranke](geometry/COIL_PERTURBATION_PROTOCOL.md)
 feldfrei qualifizieren, danach begrenzten Feldfit separat registrieren.
 Die mathematischen Grundbausteine bestehen200 neue Tests und zusätzlichen Review;
 Gesamtworkflow und reale52-Zustandsmatrix noch offen. Die angefragte gemeinsame
-Auswertungs-/Audit-CLI besteht64 neue Kontrollen; nach gespeichertem Daten-Replay
-die Geometriequalifikation fortsetzen. Keine beliebige Einzelentwurfsbewertung
+Auswertungs-/Audit-CLI besteht64 neue Kontrollen und reproduziert im echten
+gespeicherten Audit alle bisherigen Ergebnisse. Nun die Geometriequalifikation
+fortsetzen. Keine beliebige Einzelentwurfsbewertung
 durch diese dünne Oberfläche. Noch keine neue Suche oder physische Feldzulassung.1904 Softwaretests
 bestanden; ursprüngliche negative Versuche bleiben unverändert erhalten.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.

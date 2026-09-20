@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-20 — Real saved-data audit through the committed common entry point
+
+- Cleancaa1333 executes `.venv/bin/python fusion.py audit --profile
+  clear-coil-field-start-v1 --run artifacts/clear-coil-field-start-v1/run.json
+  --output artifacts/project-entrypoints-v1-replay/audit.json`; exit0.
+- All2434 source references checked; every report field exactly matches the
+  original independent audit except current auditor_repository. All4 numerical
+  passes and4 physical rejections retained; no new native fields/solves/searches.
+  Additive replay evidence binds output/hash3520-byte CLI qualification and
+  original audit. Existing numerical source/protocol/evidence files unchanged.
+- Onboarding/index and affected root next actions updated;9 documentation tests,
+  repository Ruff, structure and whitespace checks pass. Shared interface task
+  closed; resume registered cumulative geometry workflow/matrix qualification.
+
 ## 2026-09-20 — Qualify additive common research CLI
 
 - Corrected full regression1904 passed,334 known warnings,0 failures/errors/skips

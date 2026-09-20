@@ -65,9 +65,10 @@ Exportabweichung. Die Protokollbytes und physikalischen Grenzen bleiben unverän
 
 Mathematische Routinen und synthetische Gegenprüfung sind abgeschlossen;
 begrenzter realer Runner und vollständiger unabhängiger Matrixauditor fehlen.
-Vor deren Implementierung wird auf Nutzerwunsch eine dünne gemeinsame CLI
-für vorhandene Auswertungs-/Auditprofile ergänzt; sie darf die ausstehende
-Qualifikation nicht umgehen. Danach den Gesamtworkflow qualifizieren und committen.
+Die auf Nutzerwunsch dazwischengeschobene [gemeinsame CLI](../validation/PROJECT_ENTRYPOINTS.md)
+ist inzwischen mit64 neuen Tests und echtem gespeicherten Audit abgeschlossen;
+sie umgeht diese ausstehende Qualifikation nicht. Nun den Gesamtworkflow
+implementieren, qualifizieren und vor der realen Matrix committen.
 Vor einer
 Suchfreigabe muss die gesamte hier registrierte feldfreie Studie abgeschlossen
 sein. Selbst ihr Pass wäre weder ein Feldgewinn noch ein Schritt4-Abschluss;
