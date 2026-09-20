@@ -66,8 +66,14 @@ Extend the explicit profile registry with tests/documentation only after the
 corresponding scientific workflow is qualified; never bypass source/budget gates,
 silently change frozen backends, or equate exit0 with physical admission.
 Discovery/planning must stay lightweight, no installs or numerical/native imports.
-After this interface task, resume the pending cumulative geometry workflow and
-its registered52-state matrix; pure primitives alone do not close that study.
+The interface task is closed and the resumed cumulative geometry workflow now
+passes its real52-state matrix (implementation930580e). Authoritative result:
+`docs/geometry/COIL_PERTURBATION_RESULTS.md` and
+`evidence/coil-perturbation-v1-audit.json`. All required small probes certify;
+18 larger probes remain conservatively uncertified, not physically disproved.
+Do not rerun this closed qualification as a smoke test. Next separately register
+the bounded geometry-protected field fit; qualification alone is not a field,
+search, transfer or step4 pass. Old physical field rejections remain unchanged.
 
 ### Step4 explicitly authorized, including independent agents (2026-09-14)
 

@@ -1,5 +1,38 @@
 # Findings log
 
+## F-091 — Cumulative geometry certificate passes its complete real qualification
+
+**Class:** preregistered field-free mathematical/geometry qualification, not field improvement
+**Date:** 2026-09-20
+
+Clean930580e completes both registered26-state classes,104 certificate calls,
+208 direct grids and exactly2 shared full-torus surfaces. Independent numerical
+audit passes all formulas, repeat/source/work checks and available strict
+enclosures. Both seeds/repeats and all12 required smallest signed probes certify.
+34/52 states certified overall (18 n6,16 n8);18 larger probes are explicitly
+uncertified, not omitted or proved physically infeasible.
+
+Both smooth prescribed directions certify through the tested1mm radius in both
+classes. The single highest z-sine mode certifies only through0.1mm for n6 and
+0.01mm for n8. These are discrete registered observations, not maximum admissible
+radii or a universal method ranking. The n8 high mode at0.1mm is rejected solely
+by the conservative curvature bound12.98898/m versus12/m. Four extreme high-mode
+states correctly retain unavailable curvature bounds where speed lower bounds
+are nonpositive; every available quantity still checked.
+
+Independent reconstruction explicitly adds624 Fourier/416 CP/80,288 CC calls
+and two surfaces; no fields, field gradients, equilibrium solves, LPs or searches.
+All strict enclosure tolerances are0; numerical cross-code tolerance remains
+separate. Additional stdlib-only provenance review confirms1371 bound references,
+17 source files versus Git, complete counters and immutable checkpoint graphs.
+2064 software tests pass; an earlier passing-but-insufficient suite and corrected
+mutable-checkpoint-reference defect remain documented. No external peer review.
+
+This closes the safety-oracle prerequisite. Next separately register a bounded
+geometry-protected field fit, initially considering smooth directions. No new
+magnetically feasible coil design, realized-field transfer, fullstep4 or SoTA.
+[Full result and immutable evidence](../geometry/COIL_PERTURBATION_RESULTS.md).
+
 ## F-090 — All four clear-coil starts are numerically qualified, physically infeasible
 
 **Class:** completed preregistered numerical startup, negative physical seed admission

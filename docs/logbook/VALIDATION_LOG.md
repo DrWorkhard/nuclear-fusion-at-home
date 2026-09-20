@@ -1,5 +1,34 @@
 # Validation log
 
+## 2026-09-20 — Real cumulative geometry matrix independently qualifies
+
+- Clean930580e executes two serial fresh workers, both exit0 and exact source
+  before/after identity. Parent73.38653/98.38487s, minfree8,844,005,376Bytes,
+  raw1177 files/280,504,950Bytes. All52 states/104 certificates/208 direct grids
+  persisted; exactly2 shared surfaces, no second-worker rebuild.
+- Independent numerical CLI exits0, qualification_pass=true. All104 recorded
+  certificates match52 independent calculations, exact repeats and all208
+  direct grids pass. All12 required smallest probes and4 seed/repeats certify;
+  n6=18/26,n8=16/26.18 larger probes remain explicitly uncertified and complete.
+  Strict bound-enclosure tolerance0; no observed violation. Four extreme
+  high-mode probes correctly retain unavailable curvature for16 physical curves.
+- Direct work per producer/auditor path:624 Fourier calls/12,300,288 points,
+  416 CP calls/8,200,192 points,80,288 CC calls/56,522,752 querypoints. Auditor
+  separately reconstructs2 surfaces; no native fields/VJPs, solves, LPs or search.
+  Canonical audit SHA2569f8fd9a0c4ca1f93baa3b8896f803e1f1a3a6ae8cd409517abe5a24fda98c7e8;
+  raw run SHA256ce895f482e49d36d323c7c08bd2e004356cc2626005bc1cb0f85e44875e6afe6.
+- Additional independent stdlib-only reviewer hashes1371 references/369,900,527Bytes,
+  verifies17 source/protocol files against930580e, all52 immutable state markers,
+  worker/parent checkpoints and identical Seed-repeat array bytes. Confirms
+  stored margins and explicit unknown curvature, not a new geometry computation.
+  All four original physical field failures and higher-scope false flags retained.
+- F-091, result/index, four root overviews, onboarding continuation and persistent
+  working instructions updated. No numerical sources changed after qualification.
+  Final73 documentation/CLI controls pass in0.92s; repository Ruff, documentation
+  structure and whitespace checks pass. Canonical audit/run hashes retained.
+  Next separately preregister bounded protected field fitting; no automatic
+  search budget or step4 admission from this pass.
+
 ## 2026-09-20 — Complete field-free workflow qualifies before real geometry
 
 - Corrected complete regression2064 passed,334 known warnings,0 failures,

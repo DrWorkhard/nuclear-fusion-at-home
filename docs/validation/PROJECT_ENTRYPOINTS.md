@@ -137,7 +137,9 @@ Die Pythonmethoden `evaluate(x)`/`snapshot(x)` bleiben für die Konstruktion
 erhalten; der neue CLI-Befehl `evaluate` ist kein identischer universeller
 Einzelpunktaufruf. Ein beliebiger neuer Snapshot benötigt künftig ein eigenes
 versioniertes Eingabe-/Prüfprofil mit Quellenbindung und qualifiziertem Ablauf.
-Die ausstehende52-Zustands-Perturbationsstudie wird durch diese CLI nicht freigegeben.
+Die inzwischen [abgeschlossene52-Zustands-Perturbationsstudie](../geometry/COIL_PERTURBATION_RESULTS.md)
+hat eigene spezialisierte Start-/Auditprogramme; sie wird durch Version1 dieser
+CLI weder gestartet noch als universelles Einzelentwurfsprofil angeboten.
 
 Erweiterungen an der expliziten Registry vornehmen, bestehende Backends/Protokolle
 unverändert lassen, Annahmeumfang und Exitsemantik dokumentieren und Dispatch-/
@@ -173,4 +175,5 @@ Alle vier numerischen Pässe und physischen Ablehnungen bleiben erhalten.
 `8e0af0395d3ddc7e561c786ea99984ac6f79a185894ae2a942f389bb398c7936`.
 Keine neue native Feldstudie, Optimierung oder Gleichgewichtsrechnung;
 unabhängige Rekonstruktion vorhandener Rohdaten. CLI-Aufgabe damit abgeschlossen,
-Fortsetzung bei der noch offenen kumulativen Geometriestudie.
+Danach wurde die kumulative Geometriestudie fortgesetzt und separat geschlossen;
+deren Qualifikation erweitert den hier dokumentierten CLI-Umfang nicht automatisch.

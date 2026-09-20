@@ -21,16 +21,19 @@ qualifikationen,20 Verfeinerungen,768 direkte B/A-Vergleiche und252 Flussgates.
 Alle1048 nativen Requests erfasst; unveränderte Strom-/Archivnormierung.
 **Physisch bleiben alle vier Startformen unzulässig:** Normal-RMS0,269–0,276
 gegenüber1e-4, Innenvektor-RMS0,3615–0,3723 gegenüber0,01. Geometrie und Strom
-bestehen. Noch keine Optimierung aus diesen Starts. Nächster Schritt nach zwei
-[Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md):
-[kumulativen Geometrieschirm](geometry/COIL_PERTURBATION_PROTOCOL.md) feldfrei
-qualifizieren, anschließend erst einen begrenzten sicheren Feldfit registrieren.
+bestehen. Noch keine Optimierung aus diesen Starts. Nach zwei
+[Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) ist der
+[kumulative Geometrieschirm](geometry/COIL_PERTURBATION_RESULTS.md) nun feldfrei
+qualifiziert. Als nächstes einen begrenzten sicheren Feldfit registrieren.
 Grundbausteine und vollständiger Workflow mit360 neuen Kontrollen und Review
 softwarequalifiziert; strikte Einschließungen und transitive Checkpointerhaltung
-gesichert, reale52-Zustandsmatrix noch offen. Die angefragte
+gesichert. Auch die reale52-Zustandsmatrix besteht vollständig: alle Pflichtprobes
+zertifiziert,18 größere Probes konservativ unzertifiziert; kein neuer Feldpass.
+Die angefragte
 [dünne Auswertungs-/Audit-CLI](validation/PROJECT_ENTRYPOINTS.md) besteht64 neue
 Tests, alter CLI-Code bleibt unverändert. Echter gespeicherter Daten-Replay
-reproduziert die ursprüngliche Abnahme exakt; Geometriequalifikation fortsetzen.
+reproduziert die ursprüngliche Abnahme exakt. Weiterhin nur ein festes Profil,
+kein universeller Einzelentwurfsprüfer.
 Software2064 Tests bestanden; separate blockweise Referenz qualifiziert, drei
 alte dichte RAM-Fehler unverändert negativ. Druck, Transfer und Robustheit offen.
 

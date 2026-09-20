@@ -48,11 +48,14 @@ normal RMS0.269–0.276 versus1e-4. Two [method reviews](docs/optimization/GEOME
 lead first to a [field-free cumulative geometry certificate](docs/geometry/COIL_PERTURBATION_PROTOCOL.md).
 Its mathematical primitives and complete workflow now pass360 new tests and
 independent review, including transitive checkpoint recovery after failures;
-the52-state real matrix is next. The requested thin
+the [52-state real matrix](docs/geometry/COIL_PERTURBATION_RESULTS.md) also passes
+independent qualification. All required smallest changes certify;18 larger
+probes remain conservatively uncertified. Next register the bounded field fit.
+The requested thin
 [evaluation/audit CLI](docs/validation/PROJECT_ENTRYPOINTS.md) now passes64 new
 controls, preserving all historical code. A real saved-data audit through it
-exactly reproduces the prior scientific report; resume geometry qualification
-before a bounded field fit. The earlier three dense memory
+exactly reproduces the prior scientific report; this interface still exposes
+only the fixed field-start profile, not arbitrary designs. The earlier three dense memory
 failures remain negative; a separately qualified block-native reference passed
 the unchanged resource gates. No search or new equilibrium in the startup study.
 No physically admitted coil design or completed step4; pressure, realized-field physics, finite geometry and

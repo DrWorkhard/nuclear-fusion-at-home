@@ -1,9 +1,13 @@
-# Kumulative Spulengeometrieschranke: qualifizierte Software
+# Kumulative Spulengeometrieschranke: reale Qualifikation bestanden
 
 20. September2026. [Festes Protokoll](COIL_PERTURBATION_PROTOCOL.md) beiafb9307,
 [Methodenentscheidung mit zwei Reviews](../optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md).
-Die reale52-Zustandsmatrix ist noch nicht ausgeführt. Keine neuen Felder,
-Gleichgewichte, LPs oder Suchaufrufe. Feldstartabschluss3334f1e unverändert.
+Die reale52-Zustandsmatrix ist abgeschlossen und unabhängig angenommen.
+Alle zwölf kleinsten signierten Probes und beide Seeds samt Repeats sind
+zertifiziert; alle104 mathematischen Berichte und208 direkten Raster bestehen
+die vorgesehenen Prüfungen. Größere Probes dürfen unzertifiziert bleiben.
+Keine neuen Felder, Gleichgewichte, LPs oder Suchaufrufe; Feldstartabschluss
+3334f1e und dessen vier physische Ablehnungen unverändert.
 
 ## Implementierung vor der realen Perturbationsmatrix
 
@@ -61,22 +65,20 @@ Rundungsverbrauch ist konservativ; kein stilles Gleichsetzen einer float-Matrix
 mit perfekter Orthogonalität und keine doppelte Wiederverwendung der alten
 Exportabweichung. Die Protokollbytes und physikalischen Grenzen bleiben unverändert.
 
-## Offene Abnahme
+## Quellenbindung und abgegrenzter Abschluss
 
 Mathematische Routinen und synthetische Gegenprüfung sind abgeschlossen;
 begrenzter realer Runner und vollständiger unabhängiger Matrixauditor sind
 nun ebenfalls softwarequalifiziert. Neuer additiver Quellenbinder besteht32 reine Tests und
 bindet die primitive Qualifikation bei20e9b10 samt tatsächlicher JUnit-Datei,
 alle sechs damaligen Programm-/Testdateien und das unveränderte Protokoll.
-Die zehn neuen Workflowdateien werden vor realer Rechnung committet.
+Die zehn neuen Workflowdateien sind vor realer Rechnung bei930580e committet.
 Die auf Nutzerwunsch dazwischengeschobene [gemeinsame CLI](../validation/PROJECT_ENTRYPOINTS.md)
 ist inzwischen mit64 neuen Tests und echtem gespeicherten Audit abgeschlossen;
-sie umgeht die ausstehende reale Qualifikation nicht. Nun nach dem
-Implementierungscommit die feste reale Matrix ausführen und unabhängig abnehmen.
-Vor einer
-Suchfreigabe muss die gesamte hier registrierte feldfreie Studie abgeschlossen
-sein. Selbst ihr Pass wäre weder ein Feldgewinn noch ein Schritt4-Abschluss;
-ein echter Feldfit erhält danach ein separates Protokoll.
+sie ersetzt die getrennte reale Qualifikation nicht. Diese wurde anschließend
+ausgeführt und ist nun bestanden. Ihr Pass ist weder ein Feldgewinn noch ein
+Schritt4-Abschluss; ein echter Feldfit benötigt als nächstes ein separates
+Such-/Auswahl-/Abnahmeprotokoll.
 
 ## Workflowpräzisierung vor der realen Matrix, 20. September
 
@@ -158,9 +160,93 @@ mathematischen Routinen oder Schwellen. Ruff, Struktur- und Diffprüfung bestand
 bewahrt auch die erste Regression mit ihren damaligen Quellhashes und der
 danach erkannten Lücke. Wiederanlaufregel zusätzlich dauerhaft als
 [D-018](../logbook/DECISIONS.md#d-018--preserve-the-complete-checkpoint-reference-graph-not-only-its-bytes)
-und in den Arbeitsanweisungen verankert. Reale52-Zustandsabnahme noch offen.
+und in den Arbeitsanweisungen verankert. Die damals noch offene reale
+52-Zustandsabnahme folgt im nächsten Abschnitt.
 
-## Bedienung des softwarequalifizierten Gesamtworkflows
+## Reale52-Zustandsmatrix und unabhängige Abnahme
+
+Sauberer Implementierungscommit `930580eba53a30a974e53faa31b0b0c2557ea4f2`;
+Quellen vor/nach beiden seriellen Workern exakt identisch. Alle52 Zustände,
+104 Zertifikatsaufrufe und208 direkten Raster vollständig gespeichert.
+Je Zustand zwei bytegleiche Zertifikate, am Ende jeder Klasse bitgleiche
+Seedkoeffizienten, Zertifikate und direkte Roharrays. Alle mathematischen
+Vergleiche und sämtliche verfügbaren direkten Einschließungen bestehen.
+
+| Klasse | Zertifizierte Zustände inklusive Seed/Repeat | Unzertifiziert, vollständig geprüft | Workerzeit / Elternzeit |
+| --- | --- | --- | --- |
+| n6, Fourierordnung5 | 18 von26 | 8 | 73,223 /73,387s |
+| n8, Fourierordnung7 | 16 von26 | 10 | 98,225 /98,385s |
+
+Beide Seeds, beide Seed-Repeats und sämtliche zwölf signierten1e-5-Probes
+bestehen die vorab vorgeschriebene Zertifizierung. Insgesamt30 von48 veränderten
+Probes zertifiziert. Die18 übrigen sind legitime negative Schrankenentscheidungen,
+nicht ausgelassene Zustände oder nachgewiesene physische Unzulässigkeit.
+
+Für beide Vorzeichen ergeben die **fest vorgegebenen Stichprobenradien**:
+
+| Richtung | Größter geprüfter zertifizierter Radius n6 | n8 |
+| --- | --- | --- |
+| Gedämpfte sin(k+1)-Richtung | 1mm | 1mm |
+| Gedämpfte cos(k+1)-Richtung | 1mm | 1mm |
+| Einzelne z-sin(M)-Mode an Grundspule0 | 0,1mm | 0,01mm |
+
+Das sind keine optimierten maximalen Radien und kein allgemeiner Methodenvergleich.
+Die n8-Hochmode bei0,1mm scheitert allein am Krümmungszertifikat:
+Obergrenze12,98898/m gegenüber12/m. Daraus folgt nicht, dass die reale Kurve
+diese Grenze verletzt. Bei den vier extremen30mm-Hochmodezuständen ist
+v_lower≤0 an insgesamt16 physischen Kurven; ihre κ-Obergrenze bleibt wie
+registriert `not_available`. Alle sonst wohldefinierten Größen werden dennoch
+geprüft. Weder fehlende Divisionen als Null noch schwache Schranken als
+Unmöglichkeitsbeweis behandeln. Niedrige/glatt gedämpfte Richtungen sind damit
+ein begründeter Startpunkt für den nächsten begrenzten Feldfit, kein bewiesenes
+Optimum oder übertragener Magnetfeldgewinn.
+
+Der Produzent erzeugt genau zwei gemeinsame256²-Torusflächen im ersten Worker;
+der zweite liest dieselben Dateien. Direkte Arbeit pro vollständigem Gesamtweg:
+624 Fourierauswertungen mit12.300.288 Kurvenpunkt-Auswertungen,
+416 volle CP-Abfragen mit8.200.192 Punktabständen,
+80.288 CC-Paarabfragen mit56.522.752 Querypunkten. Der unabhängige Auditor
+rekonstruiert beide Flächen,52 Zertifikate und208 Raster separat und zählt
+seine identische direkte Stichprobenarbeit ausdrücklich zusätzlich.
+104 gespeicherte Zertifikatsberichte werden gegen52 unabhängige Rechnungen geprüft.
+Sein eigener Referenzcache bindet1371 Dateien; die historischen Vorgängergraphen
+werden zusätzlich durch den vorgeschalteten Quellenbinder geprüft.
+
+Alle Einschließungen verwenden **null zusätzliche Vergleichstoleranz**.
+Kleinste beobachtete Restmargen der Änderungsnormen D0/D1/D2:
+2,4603e-13m /3,4464e-12m pro t /7,5683e-11m pro t².
+Keine beobachtete Schrankenverletzung. Diese Stichproben ersetzen nicht die
+mathematische kontinuierliche Beweiskette oder gerichtete Intervallarithmetik.
+Rohdatenvergleichstoleranzen bleiben ausschließlich für die getrennten
+Implementierungsvergleiche; physische Grenzen unverändert.
+
+1177 Rohdateien,280.504.950Bytes insgesamt gegenüber geschätzten≤0,5GiB.
+Kleinste beobachtete freie Reserve8.844.005.376Bytes; beide Klassen unter1800s,
+keine schweren parallelen Projektjobs. Keine Felder/VJPs, Gleichgewichte, LPs
+oder Optimierungsaufrufe. `qualification_pass=true`, aber `search_allowed`,
+`field_pass`, `transfer_pass` und `step4_pass` bleiben false.
+
+Originaler Lauf: `artifacts/coil-perturbation-v1/run.json`, SHA256
+`ce895f482e49d36d323c7c08bd2e004356cc2626005bc1cb0f85e44875e6afe6`.
+[Vollständiger unabhängiger Audit](../../evidence/coil-perturbation-v1-audit.json),
+SHA256 `9f8fd9a0c4ca1f93baa3b8896f803e1f1a3a6ae8cd409517abe5a24fda98c7e8`.
+Die großen gebundenen Roharrays bleiben im lokalen Artefaktverzeichnis;
+ein Git-Checkout allein enthält sie nicht.
+
+Ein zusätzlicher unabhängiger, ausschließlich lesender Standardbibliotheksreview
+bestätigt1371 Referenzen/369.900.527Bytes, alle17 gebundenen Programm-/Test-/
+Protokolldateien gegen Git930580e, sämtliche Arbeitspräfixe, alle52 unveränderlichen
+Zustandsmarker, beide finalen Worker-/Parentcheckpoints und bytegleiche
+Seed-Replay-Arrayinhalte. Die beiden nicht separat referenzierten Quellen-
+Spiegeldateien stimmen exakt mit den eingebetteten Originalpayloads überein.
+Auch alle vier historischen Feldablehnungen unverändert. Das ist ein zusätzlicher
+Quellen-/Buchhaltungsreview, keine weitere Geometrienachrechnung oder externe
+wissenschaftliche Begutachtung.
+Nach der Ergebnisdokumentation bestehen zusätzlich73 Dokument-/CLI-Kontrollen
+in0,92s sowie Repository-Ruff, Struktur- und Diffprüfung; numerische Quellen
+und die beiden kanonischen Ergebnisdateien unverändert.
+
+## Bedienung des qualifizierten Gesamtworkflows
 
 Additive Programme `scripts/run_coil_perturbation.py` und
 `scripts/audit_coil_perturbation.py`; Quellenbinder
@@ -179,3 +265,22 @@ Erst der separate Auditor kann `qualification_pass=true` vergeben. Auch dann
 bleiben `search_allowed`, `field_pass`, `transfer_pass` und `step4_pass` false.
 Ein größerer Probe ohne Zertifikat ist kein Ausführungsfehler und kein Beweis
 einer realen Grenzverletzung; seine Daten und alle vier Raster bleiben erhalten.
+
+Ausgeführte Befehle (Pfade stehen exemplarisch für den bestehenden Forschungscheckout):
+
+```bash
+PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self \
+  OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
+  .venv/bin/python scripts/run_coil_perturbation.py \
+  --raw /Users/sebastianwirkert/workspace/fusion/artifacts/coil-perturbation-v1
+
+PYTHONPATH=src MPLCONFIGDIR=/private/tmp/fusion-mpl-cache OMPI_MCA_btl=self \
+  OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
+  .venv/bin/python scripts/audit_coil_perturbation.py \
+  --run /Users/sebastianwirkert/workspace/fusion/artifacts/coil-perturbation-v1/run.json \
+  --output /Users/sebastianwirkert/workspace/fusion/evidence/coil-perturbation-v1-audit.json
+```
+
+Beide Exit0. Vorhandene Ausgabepfade nicht wiederverwenden. Keine erneute
+Matrix für einen Bedienungstest; ein späterer gespeicherter Audit braucht
+lediglich einen neuen Ausgabepfad und unveränderte gebundene Quellen.

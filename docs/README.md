@@ -28,7 +28,7 @@ belegt weder bessere Einschlussphysik noch bessere Kraftwerksleistung.
 | 1. Begrenzte Rechen- und Prüfbasis absichern | Lokale W7-X-/Goodman-Regression und geprüfte LPQA-Festoberflächen-/Filamentwerkzeuge | Abgeschlossen: alle acht Basisgates bestehen |
 | 2. Prinzipiell iterieren können | Referenz laden, Parameter optimieren, Kandidaten speichern und unabhängig bewerten; reproduzierbar | Abgeschlossen: zwei echte24-Bundle-Pfade exakt wiederholt, separat auditiert und fein bewertet |
 | 3. Eigene QI-Plasmakonfigurationen entwickeln | Eigene Oberfläche/Gleichgewichte mit numerisch bestätigter QI-relevanter Verbesserung | Im registrierten nfp2-Vakuumumfang abgeschlossen:11,17% geringere Wirkungsvarianz, alle zehn Abnahmegates bestehen |
-| 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Aktiv: neue Geometrien und vier Feldstarts numerisch angenommen; Feldqualität noch unzulässig, Transfer/weitere Physik offen |
+| 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Aktiv: Feldstarts und kumulative Geometrieschranke qualifiziert; Feldqualität noch unzulässig, Transfer/weitere Physik offen |
 | 5. Verbesserungen belastbar nachweisen | Unabhängig geprüfter Vorteil gegenüber reproduzierten Referenzen unter gleichen Anforderungen | Offen |
 
 **Schritt 1 und 2 sind im geschärften Umfang abgeschlossen.** Das sind
@@ -46,15 +46,16 @@ Die [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_RE
 der geometrisch angenommenen Konturen ist nun abgeschlossen: alle vier realen
 Zellen numerisch angenommen, alle20 Verfeinerungen und252 Flussgates bestanden.
 Geometrie und Strom sind zulässig, die Magnetfeldfehler nicht. Nach zwei
-[Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) zuerst
-eine [kumulative Geometrieschranke](geometry/COIL_PERTURBATION_PROTOCOL.md)
-feldfrei qualifizieren, danach begrenzten Feldfit separat registrieren.
+[Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) wurde zunächst
+eine [kumulative Geometrieschranke](geometry/COIL_PERTURBATION_RESULTS.md)
+feldfrei qualifiziert; als nächstes begrenzten Feldfit separat registrieren.
 Mathematische Grundbausteine und Gesamtworkflow bestehen360 neue Tests und
 zusätzlichen Review; strikte Einschließungen und transitive Checkpointerhaltung
-sind gesichert. Nun die reale52-Zustandsmatrix ausführen. Die angefragte gemeinsame
+sind gesichert. Auch die reale52-Zustandsmatrix besteht: alle Pflichtprobes
+zertifiziert,18 größere Probes konservativ unzertifiziert. Keine Feldrechnung
+oder neue Suche in dieser Qualifikation. Die angefragte gemeinsame
 Auswertungs-/Audit-CLI besteht64 neue Kontrollen und reproduziert im echten
-gespeicherten Audit alle bisherigen Ergebnisse. Nun die Geometriequalifikation
-fortsetzen. Keine beliebige Einzelentwurfsbewertung
+gespeicherten Audit alle bisherigen Ergebnisse. Keine beliebige Einzelentwurfsbewertung
 durch diese dünne Oberfläche. Noch keine neue Suche oder physische Feldzulassung.2064 Softwaretests
 bestanden; ursprüngliche negative Versuche bleiben unverändert erhalten.
 Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.

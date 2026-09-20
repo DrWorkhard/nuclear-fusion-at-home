@@ -41,17 +41,21 @@ numerisch angenommen; Geometrie/Strom bestehen, physische Feldfehlergrenzen nich
 Keine neuen Suchen/Gleichgewichte. Neue Ressourcenreferenz separat qualifiziert;
 alte drei dichte RAM-Fehler bleiben negativ. Die neuen
 [zwei Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
-sind abgeschlossen: zuerst [kumulative Geometriesicherung](geometry/COIL_PERTURBATION_PROTOCOL.md)
-feldfrei qualifizieren und unabhängig schließen. Grundbausteine und vollständiger
+sind abgeschlossen: die [kumulative Geometriesicherung](geometry/COIL_PERTURBATION_RESULTS.md)
+ist nun feldfrei qualifiziert und unabhängig geschlossen. Grundbausteine und vollständiger
 Runner/Auditor bestehen360 neue Kontrollen und zusätzlichen Review; auch
-transitive Checkpointerhaltung und strikte Einschließungen geprüft. Nach dem
-Implementierungscommit folgt die noch offene reale52-Zustandsmatrix. Die auf Nutzerwunsch ergänzte dünne
+transitive Checkpointerhaltung und strikte Einschließungen geprüft. Die reale
+52-Zustandsmatrix besteht ebenfalls: alle Pflichtprobes zertifiziert,18 größere
+Probes konservativ unzertifiziert. Keine Wiederholung oder Grenzlockerung nötig.
+Die auf Nutzerwunsch ergänzte dünne
 [evaluate/audit-Einstiegsschicht](validation/PROJECT_ENTRYPOINTS.md) ist mit64
 neuen Tests qualifiziert, ohne alte Quellen zu ändern. Der vorhandene Feldstart
-wurde darüber exakt erneut auditiert; CLI-Aufgabe abgeschlossen, nun hier fortsetzen. Keine neue physische
+wurde darüber exakt erneut auditiert; CLI-Aufgabe abgeschlossen. Keine neue physische
 Zulassung oder Unterstützung beliebiger Kandidaten durch die Oberfläche.
-Nach Abschluss der geometrischen Qualifikation den
-kleinen sicheren Formfit mit eigenem Such-/Auswahl-/Abnahmeprotokoll registrieren.
+**Nächste Entscheidung:** den kleinen sicheren Formfit mit eigenem
+Such-/Auswahl-/Abnahmeprotokoll registrieren; für den Einstieg sind glatt
+gedämpfte Richtungen durch diese feste Stichprobe besser abgesichert als die
+höchste einzelne Fouriermode. Noch keine neue Suche ausgeführt.
 Freier L-BFGS-B-Vergleich, Supportfamilie und freie Ströme bleiben getrennte Optionen.
 Kein Transfer- oder Schritt4-Pass aus diesem numerischen Startabschluss.
 Keine nachträgliche Freigabe der zwei
