@@ -46,8 +46,9 @@ flux checks. All1,048 native requests are accounted for. Geometry/current pass,
 but all four seeds fail physical field-quality limits by large factors; fine
 normal RMS0.269–0.276 versus1e-4. Two [method reviews](docs/optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
 lead first to a [field-free cumulative geometry certificate](docs/geometry/COIL_PERTURBATION_PROTOCOL.md).
-Its mathematical primitives now pass200 new tests and independent review;
-the complete workflow and52-state real matrix remain open. The requested thin
+Its mathematical primitives and complete workflow now pass360 new tests and
+independent review, including transitive checkpoint recovery after failures;
+the52-state real matrix is next. The requested thin
 [evaluation/audit CLI](docs/validation/PROJECT_ENTRYPOINTS.md) now passes64 new
 controls, preserving all historical code. A real saved-data audit through it
 exactly reproduces the prior scientific report; resume geometry qualification
@@ -74,7 +75,7 @@ robustness remain required subpackages. No automatic step5 or SoTA claim.
   all six original meshes pass the scoped non-shared-vertex nonoverlap test,
   with independent witnesses and exact historical prefix. Neighbor pairs, full
   assemblies and valid mechanics remain open.
-- Latest complete software regression: 1,904 tests pass with 334 documented warnings
+- Latest complete software regression: 2,064 tests pass with 334 documented warnings
   (144 fixture warnings and 190 explicitly retained solver-option forwarding notices);
   Ruff and documentation checks pass. The separate strict netCDF4 import warning
   remains unresolved; this is not an ABI-freedom or hosted-CI claim.

@@ -144,3 +144,8 @@ submission archive merely to obtain source code. Recheck space between phases;
 do not run heavy searches concurrently with resource-intensive installs/builds.
 On IO failure retain last successful checkpoints unchanged, record terminal
 failure separately, and distinguish console progress from persisted state.
+Checkpoint preservation includes the entire referenced file/hash graph, not
+just checkpoint JSON bytes. Bind immutable per-checkpoint markers/attempts;
+never bind an overwritten live-status file as a recoverable checkpoint source.
+Test reference traversal after later computation and checkpoint-publication
+failures, and audit stable checkpoint prefixes separately from live markers.

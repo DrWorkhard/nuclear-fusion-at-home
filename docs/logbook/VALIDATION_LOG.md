@@ -1,5 +1,89 @@
 # Validation log
 
+## 2026-09-20 — Complete field-free workflow qualifies before real geometry
+
+- Corrected complete regression2064 passed,334 known warnings,0 failures,
+  errors or skips in205.19s. All ten source hashes unchanged across execution;
+  JUnit SHA256eb08470da78644933774dfa680f4a309ef77b0ab4c5a15095399367b4f5e9a78.
+  Qualification JSON binds final sources, fixed protocol, primitive qualification
+  and both complete regressions, including initial passing-but-insufficient suite.
+- D-018 and AGENTS now require immutable transitive checkpoint graphs; direct
+  mathematics unchanged. Repository Ruff, documentation and whitespace checks
+  pass. Detail/index and affected four root summaries updated before commit.
+- This closes software qualification only. Next from committed clean sources:
+  execute exactly the registered52 states/104 certificates/208 grids, then
+  independent numerical/source/work admission. No new field/solve/search.
+
+## 2026-09-20 — Immutable checkpoint markers pass transitive failure-path controls
+
+- Producer writes state-NN/checkpoint-inflight.json before publishing that
+  state's checkpoint; live inflight.json remains separate. Auditor checks
+  immutable marker location/hash/content against final ordered operation,
+  independently binds live marker, and retains exact other checkpoint fields.
+- 160 targeted controls now pass:32 binder,30 workflow,22 sampler,48 overall
+  audit,28 direct audit. Implementers' final52/76 tests pass3.96/2.91s with no
+  warnings. Full reference traversal and byte checks pass after subsequent
+  certificate IO/timeout, marker-write failure and checkpoint-publication failure.
+- Only producer/overall auditor and their tests changed; direct mathematics,
+  original source binding, protocol and thresholds unchanged. All ten source
+  hashes frozen again; fresh complete regression running at
+  artifacts/coil-perturbation-v2-workflow-qualification/regression.xml.
+  No actual project geometry; no scientific admission from unit tests.
+
+## 2026-09-20 — Full regression passes, but checkpoint-reference review blocks qualification
+
+- Initial full workflow regression2055 passed,334 known warnings,0 failures,
+  errors or skips in203.66s. Ten code/test hashes unchanged across execution.
+  Original JUnit preserved at artifacts/coil-perturbation-v1-workflow-qualification/regression.xml,
+  SHA25645149b6c9801945bed71273c19c9792cf2cedc622b3d908ab78987091fff0953.
+- Root's final source review finds a gap not covered by existing tests: a saved
+  successful checkpoint includes the hash of mutable inflight.json. The next
+  attempt overwrites that marker. A subsequent IO/timeout failure preserves
+  checkpoint bytes but invalidates its transitive reference. All three agents
+  confirm read-only; successful complete runs are not affected.
+- No code edited during the full regression. After its completion, add an
+  immutable marker per successful state checkpoint, retain separate live marker,
+  and test complete checkpoint-reference traversal after subsequent failures.
+  Independent auditor must check immutable marker path/content and unchanged
+  stable prefix fields. Full corrected regression still required, fresh path.
+- No real52-state geometry, field, equilibrium, LP or search. Do not qualify
+  a workflow merely because its current tests pass.
+
+## 2026-09-20 — Freeze complete field-free workflow for full regression
+
+- Additive bounded producer/direct sampler, independent complete auditor and
+  workflow binder now pass151 targeted controls:32 binder,50 producer/sampler,
+  41 whole-audit and28 direct-audit. Agents report final50/69 checks3.67/2.73s,
+  no warnings; root repeats32 binder checks in0.45s. Ruff/diff/docs pass.
+- Independent read-only review tightens clock identity, stored plans and final
+  checkpoint prefixes. CP enclosure work now uses independently reconstructed
+  source surfaces, not merely close producer points; explicit differing-point
+  test prevents regression. Strict enclosure bounds have zero added tolerance;
+  scalar cross-code comparison retains protocol5e-12 relative OR1e-12 absolute.
+- An initial direct-test wiring error (runner.arrays) yielded25 pass/1 fail;
+  corrected to the actual storage helper, no mathematical or gate change.
+  Complete synthetic producer-to-audit wiring explicitly mocks inner physics;
+  separate analytic controls test mathematical/direct geometry.
+- Ten implementation/test hashes frozen. Full project regression now running
+  at artifacts/coil-perturbation-v1-workflow-qualification/regression.xml.
+  No real52-state matrix yet; commit must precede its execution.
+
+## 2026-09-20 — Resume complete field-free perturbation workflow implementation
+
+- After CLI closure01780d7, separate agents implement bounded producer/direct
+  observations and independent complete numerical/source/work auditor. Old
+  pure primitives at20e9b10 remain unchanged. Root's additive workflow binder
+  passes32 pure controls, including actual JUnit hash admission and refusal to
+  promote primitive qualification into a matrix/field/step4 pass.
+- Before any real geometry, clarify exactly2 shared full256² surface builds
+  inside first worker's existing1800s budget; second reads same bound arrays,
+  no parent time extension or implicit rebuild. Independent reconstruction
+  counted separately. Direct grids retain CP vectors/indices, all CC minimum
+  witnesses, derivative/curvature/projection arrays and explicit work counts.
+- No real52-state matrix, fields, solves, LPs or searches. Construction and
+  whole-matrix audit still require synthetic qualification/full regression,
+  review and implementation commit before actual execution.
+
 ## 2026-09-20 — Real saved-data audit through the committed common entry point
 
 - Cleancaa1333 executes `.venv/bin/python fusion.py audit --profile

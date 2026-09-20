@@ -21,7 +21,7 @@ Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemei
 Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
 Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
 oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
-abgeschlossen; einschließlich Geometriegrundbausteinen/gemeinsamer CLI1904 Tests bestanden.
+abgeschlossen; einschließlich Geometrieworkflow/gemeinsamer CLI2064 Tests bestanden.
 Alle acht realen Startqualifikationen auditiert,
 sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
 freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
@@ -42,9 +42,10 @@ Keine neuen Suchen/Gleichgewichte. Neue Ressourcenreferenz separat qualifiziert;
 alte drei dichte RAM-Fehler bleiben negativ. Die neuen
 [zwei Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
 sind abgeschlossen: zuerst [kumulative Geometriesicherung](geometry/COIL_PERTURBATION_PROTOCOL.md)
-feldfrei qualifizieren und unabhängig schließen. Ihre reinen Grundbausteine
-bestehen200 neue Kontrollen und zusätzlichen Review; vollständiger Runner/Auditor
-und reale52-Zustandsmatrix stehen aus. Die auf Nutzerwunsch ergänzte dünne
+feldfrei qualifizieren und unabhängig schließen. Grundbausteine und vollständiger
+Runner/Auditor bestehen360 neue Kontrollen und zusätzlichen Review; auch
+transitive Checkpointerhaltung und strikte Einschließungen geprüft. Nach dem
+Implementierungscommit folgt die noch offene reale52-Zustandsmatrix. Die auf Nutzerwunsch ergänzte dünne
 [evaluate/audit-Einstiegsschicht](validation/PROJECT_ENTRYPOINTS.md) ist mit64
 neuen Tests qualifiziert, ohne alte Quellen zu ändern. Der vorhandene Feldstart
 wurde darüber exakt erneut auditiert; CLI-Aufgabe abgeschlossen, nun hier fortsetzen. Keine neue physische

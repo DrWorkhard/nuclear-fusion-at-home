@@ -1,5 +1,23 @@
 # Decision log
 
+## D-018 — Preserve the complete checkpoint reference graph, not only its bytes
+
+**Status:** accepted failure-provenance requirement; no scientific threshold change
+**Date:** 2026-09-20
+
+Pre-data source review finds a gap despite2055 passing tests: the new geometry
+workflow's successful checkpoint binds an overwritten live inflight.json.
+A later failed attempt leaves unchanged checkpoint bytes with an invalid hash
+reference. Retain the first regression; do not equate a passing suite with a
+fully qualified workflow. No project matrix was executed with that version.
+
+Use an immutable marker per successful checkpoint and keep live status separate.
+Independent audit checks marker path/hash/content and exact complete prefix;
+failure tests traverse every retained reference after later IO/timeout and
+checkpoint-publication errors. Never repair old checkpoint bytes after a failure
+to hide the inconsistency. Applies to future workflows; historical evidence and
+frozen kernels remain unchanged. [Qualification](../geometry/COIL_PERTURBATION_RESULTS.md).
+
 ## D-017 — Common entry points are additive, explicit and profile-scoped
 
 **Status:** accepted interface scope; no new scientific admission
