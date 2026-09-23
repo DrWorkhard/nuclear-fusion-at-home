@@ -11,6 +11,14 @@ Schritt3 beauftragt; die bisherige automatische Stoppregel ist erfüllt.
 
 ## Aktiv: Schritt4 — gekoppelte Plasma-/Spulenentwicklung
 
+**Vorgeschalteter öffentlicher Meilenstein,23.September2026:**
+[Portable Mitwirkungsbasis](validation/PUBLIC_RELEASE.md) fertigstellen: frischer
+Checkout, kleiner echter Referenzfall, Kandidat auswerten, Bericht nachrechnen,
+offene Beiträge ohne verpflichtende Rechenkostenangabe. Kein Abschluss von4A–4D
+und keine Veröffentlichung durch lokale Vorbereitung. Geschützter Feldfit bleibt
+bis dahin ungeprüfter, erhaltener Entwurf. Unverlangte relevante Arbeit ausdrücklich
+berücksichtigen; öffentliche Arbeitshinweise sind nicht bindend.
+
 Der Nutzer hat Schritt4 einschließlich unabhängiger Agentenreviews und Iteration
 ausdrücklich beauftragt. Die [Optionen und drei Reviews](optimization/COUPLED_DESIGN_OPTIONS.md)
 priorisieren gepaarte tatsächliche Spulenrealisierung vor kleinen gemeinsamen

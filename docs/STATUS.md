@@ -5,6 +5,13 @@ Stand: 20. September 2026, Schritt4 mit numerisch qualifizierten Feldstarts akti
 
 ## Gesamturteil
 
+**Priorität seit23.September2026: öffentliche, portable Mitwirkungsbasis.**
+Der [Veröffentlichungsplan](validation/PUBLIC_RELEASE.md) ergänzt die bestehende
+Forschung um einen selbstständig nutzbaren Referenzfall und offene Beitragswege.
+Noch nicht implementiert oder veröffentlicht. Der begonnene geschützte Feldfit
+bleibt als unqualifizierter Protokoll-/Solverentwurf erhalten; keine neue Suche.
+Kostenangaben sind freiwillig; Forschungshinweise keine Zugangsbeschränkung.
+
 **Aktiv ist jetzt Schritt4 nach ausdrücklichem Nutzerauftrag.**
 [Drei unabhängige Agentenreviews](optimization/COUPLED_DESIGN_OPTIONS.md) empfehlen
 gepaarte reale Spulenfits für Referenz und neuen Plasmaentwurf, danach begrenzte

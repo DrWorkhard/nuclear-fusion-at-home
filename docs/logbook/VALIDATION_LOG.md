@@ -1,5 +1,26 @@
 # Validation log
 
+## 2026-09-23 — Public collaboration scope registered; interrupted work retained
+
+- User explicitly prioritizes a portable public human/agent contribution route.
+  D-019 makes cost disclosure optional and unsolicited relevant work welcome;
+  suggested research directions are invitations, not eligibility gates.
+- Preserve the two interrupted files: protected-fit protocol now clearly marked
+  unregistered/unqualified draft, and309-line pure solver without completed tests,
+  runner or independent auditor. Prior agents stopped on usage/transport limits;
+  no new protected-fit native field/search work was executed. Do not promote the
+  earlier partial method review into completed two-agent qualification.
+- Read-only process inspection finds no running research job. Disk3.5GiB:
+  public layer planned <50MiB, no installation, heavy search or external edits.
+  Existing source-bound profile requires ignored artifacts/absolute local paths.
+- Register the first portable scope and fixed arithmetic tests before calculation:
+  actual n6/M5 seed, fixed signed current,64 points per existing group,256/512
+  quadrature, original native B/A tolerance5e-10. No physical design admission
+  or independent-implementation claim for same-evaluator report replay.
+-73 documentation/legacy-entry controls pass in2.79s; documentation structure,
+  preserved solver draft Ruff and whitespace checks pass. These tests do not
+  qualify the interrupted solver. Public numerical implementation remains pending.
+
 ## 2026-09-20 — Real cumulative geometry matrix independently qualifies
 
 - Clean930580e executes two serial fresh workers, both exit0 and exact source

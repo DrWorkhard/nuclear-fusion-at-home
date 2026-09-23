@@ -12,6 +12,8 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Public collaboration and portable release](PUBLIC_RELEASE.md) — English implementation/acceptance plan for a dependency-free real-coil starter, open unsolicited contributions, optional cost disclosure and protected review; no automatic physical admission or publication.
+
 - [Gemeinsamer CLI-Einstieg](PROJECT_ENTRYPOINTS.md) — Profile entdecken, Aufrufe ohne Rechnung planen, feste Feldstartstudie ausführen und gespeicherte Läufe unabhängig auditieren. 64 neue/1904 Gesamttests und echter gespeicherter2434-Referenzen-Audit bestanden; alte CLI/Fehlschläge bewahrt, physische Ablehnungen unverändert.
 
 - [Basisabnahme: Ergebnisse und Bedienung](FOUNDATION_ACCEPTANCE_RESULTS.md) — Beide geschärften Schritte bestanden;720 Tests, zwei24-Bundle-Pfade, separate Audits und alle vier Holdouts. Erster Metadatenfehler erhalten, Korrektur/frische Wiederholung dokumentiert, Befehle und Grenzen festgehalten.

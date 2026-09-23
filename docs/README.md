@@ -6,6 +6,12 @@ beschreiben Ziel, belegten Fortschritt und nächste Entscheidungen. Vollständig
 Messreihen, Fehlschläge und Prüfprotokolle liegen eine Ebene tiefer.
 Praktischer Einstieg für Menschen und Agenten: [gemeinsame CLI und Profile](validation/PROJECT_ENTRYPOINTS.md).
 
+**Neuer Schwerpunkt,23.September2026:** Die [öffentliche Mitwirkungsbasis](validation/PUBLIC_RELEASE.md)
+für Nuclear Fusion @ Home wird vorbereitet. Ziele und bisherige Nachweise bleiben;
+zuerst portabler Einstieg und nachvollziehbarer Beitrags-/Prüfweg statt weiterer
+lokaler Suche. Nicht angefragte relevante Beiträge sind ausdrücklich willkommen,
+Rechenkostenangaben freiwillig. Der vollständige Schritt4 bleibt offen.
+
 ## Forschungsfrage und bisheriger Beitrag
 
 Können wir Stellaratorspulen mit einem besseren Kompromiss aus Magnetfeldqualität,

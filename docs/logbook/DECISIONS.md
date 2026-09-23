@@ -1,5 +1,24 @@
 # Decision log
 
+## D-019 — Open collaboration, optional costs, additive portable publication
+
+**Status:** accepted explicit user correction
+**Date:** 2026-09-23
+
+Prepare Nuclear Fusion @ Home as a public human/agent research repository.
+Contributions need relevance and reviewable evidence, not a requested issue or
+a declared spending budget. Publish nonexclusive research hints; assess novel,
+unsolicited and negative work on its merits. Budget/cost reporting is optional;
+equal-budget efficiency claims still require supporting measurements. Our CI
+limits and frozen historical experiment budgets are separate and remain intact.
+
+Prioritize a portable small real-coil starter, accessible English overview and
+safe review workflow before further Step4 searches. Preserve absolute-path
+historical evidence; portable exports are explicitly new derived artifacts.
+Initial sparse fixed-current field diagnostics are not full design admission.
+Preparing local files does not authorize publication or hosted merge privileges.
+[Release plan and qualification gates](../validation/PUBLIC_RELEASE.md).
+
 ## D-018 — Preserve the complete checkpoint reference graph, not only its bytes
 
 **Status:** accepted failure-provenance requirement; no scientific threshold change

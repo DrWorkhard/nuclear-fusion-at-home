@@ -6,6 +6,12 @@ StellCoilBench/LPQA the method benchmark, and open Goodman configurations the QI
 
 ## Research overview
 
+**2026-09-23: preparing Nuclear Fusion @ Home for public collaboration.**
+The [portable-release plan](docs/validation/PUBLIC_RELEASE.md) adds an accessible
+reference/candidate/review route without changing old evidence. Unsolicited useful
+contributions are welcome; compute-cost disclosure is optional. Preparation is
+in progress, not a published release or completed step4.
+
 Start with [the project overview](docs/README.md), [current assessment](docs/STATUS.md)
 and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
 Detailed protocols, results and the research journal are indexed one level below.
