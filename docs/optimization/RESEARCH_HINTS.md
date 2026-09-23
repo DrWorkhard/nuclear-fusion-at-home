@@ -1,6 +1,6 @@
 # Research hints — invitations, not requirements
 
-Coordinator's snapshot,2026-09-23. Our research goal is unchanged: useful,
+Coordinator's snapshot, 2026-09-23. Our research goal is unchanged: useful,
 independently checkable improvements to stellarator plasma/coil design. These
 are promising directions, not a closed list. **Unsolicited ideas and results are
 welcome. Compute cost disclosure is optional.** A contribution need not produce

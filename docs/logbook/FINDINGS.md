@@ -1,5 +1,33 @@
 # Findings log
 
+## F-092 — Dependency-free public coil starter passes local copied-tree qualification
+
+**Class:** portable software/arithmetic/interface qualification, not physical improvement
+**Date:** 2026-09-23
+
+Clean `02bc42a` completes all eight registered local release operations in a
+copied tree without Git, native dependencies, historical artifacts or site packages.
+The 36 public controls pass with zero skips. Actual 256-node fields/vector potential
+match the six archived native sample arrays with maximum relative difference
+9.5879976e-16 against the fixed 5e-10 gate; the largest 256/512 difference is
+1.8491317e-15. The reference and the fixed 1-micrometre input variation both replay.
+Forged physical admission and overwriting old output are rejected; contribution
+metadata without compute or an approved topic is accepted.
+
+All 14 copied files match the recorded Git revision/current source, and all 16
+software-qualification source/data digests are unchanged. Operation logs and
+environment are committed with the reference result; raw reports are hash-bound.
+Earlier JSON-depth and frozen-CI regression failures remain documented, not erased.
+The corrected full historical suite has 2,064 passes and 334 retained warnings.
+
+This makes a real calculation accessible to outside contributors; it is not a new
+accepted design. Public samples are fixed-current, sparse and exposed. Same-code
+report replay is not an independent implementation; the original-native comparison
+applies only to the unchanged seed. No hosted CI, independent machine, OS sandbox,
+full native portability, automatic merge, Step 4 or SoTA claim. Whole-history
+publication review and hosting configuration remain before launch.
+[Full release record](../validation/PUBLIC_RELEASE_RESULTS.md).
+
 ## F-091 — Cumulative geometry certificate passes its complete real qualification
 
 **Class:** preregistered field-free mathematical/geometry qualification, not field improvement

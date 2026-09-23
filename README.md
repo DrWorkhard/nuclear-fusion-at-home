@@ -32,8 +32,9 @@ for each run; existing evidence is not overwritten.
 The demo computes **real filament-coil fields**, compares the unchanged reference
 against saved native calculations, and replays its report. It deliberately reports
 `physical_admission: false`: sparse field checks are not full design acceptance.
-The committed-source reference qualification is being completed; do not infer
-hosted CI success from the presence of workflow files.
+The committed-source starter passes its [local copied-tree qualification](docs/validation/PUBLIC_RELEASE_RESULTS.md),
+including a changed candidate and tamper rejection. Hosted CI and independent-
+machine reproduction have not yet been verified.
 
 [Full quickstart and candidate format](docs/validation/PUBLIC_QUICKSTART.md) ·
 [Reference data and attribution](examples/clear-coil-samples-v1/README.md)
@@ -68,7 +69,7 @@ Compute/cost information is optional; measured efficiency claims still need evid
 | Research foundation | Reproduced bounded local W7-X/Goodman checks and a repeatable coil-optimization/evaluation workflow | Not the complete W7-X device or a universal physics qualification |
 | Own plasma target | 11.17% lower fine-grid relative bounce-action variance in a registered vacuum study | A specific numerical proxy, not demonstrated confinement, global QI or power output |
 | Coil realization | Geometrically acceptable starting coils and independently checked field calculations | Their magnetic errors still fail the research acceptance limits |
-| Public access | Small self-contained real-coil dataset, plain JSON candidates and dependency-free evaluation/replay | Not the full historical native workflow or physical admission; release checks are tracked separately |
+| Public access | Dependency-free real-coil starter; 36 public tests and all eight copied-tree checks pass | Locally verified, not yet hosted or independently reproduced; not full physics acceptance |
 
 See [the evidence-based status](docs/STATUS.md) for sources and failure modes.
 Construction, numerical correctness and physical acceptance are different things.

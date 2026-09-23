@@ -84,6 +84,15 @@ run it in this research workspace, or let a candidate amend its own evaluator.
 Changes to evaluation rules need separate review/versioning and revalidation.
 Do not present configured workflow files as successfully executed hosted CI.
 
+The first portable layer is qualified locally at02bc42a:36 public unit/analytic
+tests, all eight copied-tree reference/candidate/replay/rejection checks, and
+2064 historical regression tests pass (334 known warnings remain). See
+`docs/validation/PUBLIC_QUICKSTART.md`, `PUBLIC_RELEASE_RESULTS.md` in that folder,
+and `evidence/public-layer-v1-portability.json`. Public `audit` is same-evaluator
+replay, not independent numerical implementation or physical admission. Do not
+confuse this bounded success with full research portability, hosted CI, public
+launch, completed Step4 or permission to resume the paused field-fit search.
+
 ### Shared CLI entry points (user request, 2026-09-19)
 
 Use `python -m fusion_baselines profiles --json` to discover supported operations

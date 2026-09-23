@@ -1,5 +1,38 @@
 # Validation log
 
+## 2026-09-23 — Committed-source portable release passes actual local reproduction
+
+- Clean `02bc42a25b45cf6df558188b0d8e816a175789ed` runs
+  `.venv/bin/python -I -S scripts/verify_public_release.py --output artifacts/public-portability-v1`.
+  Exit 0, all eight operations pass. Fresh copied tree contains no Git/native
+  packages/external checkouts/historical artifacts; CLI workers disable site
+  packages and reject Python socket audit events. No claim of an OS sandbox.
+- Copied public tests: 36 pass, zero skips, unittest time 0.299 s (whole subprocess
+  0.361 s). Real reference: all six archived native B/A comparisons pass the fixed
+  5e-10 limit; maximum relative difference 9.5879976e-16. Maximum reported 256/512
+  difference 1.8491317e-15. Reference demo, including same-code audit, takes 2.548 s.
+- The preregistered basecoil0/xc(0) +1-micrometre variation changes identity and
+  fields; evaluate/replay succeed. Tampered physical-admission flag is rejected
+  with exit 2 and no success output. Optional-cost metadata passes; repeated demo
+  output is rejected. No optimization, candidate selection or improvement claim.
+- Combined eight-command time 6.775 s, a single local observation, not a benchmark.
+  Retain 37 files / 623,553 bytes. Committed portability evidence contains full
+  qualification/logs and binds raw reports. Raw qualification SHA256:
+  ad7993f68dcd531741113b11771d107a8039faffccede213fa809908413a78fc.
+  All 14 copied files match clean source and Git; all 16 previous software source/
+  data digests remain unchanged. Preserve the earlier software-freeze record as-is.
+- F-092, detail/index, English overviews and persistent instructions record bounded
+  closure. Local release preparation is complete; hosted CI, independent-machine
+  reproduction, whole-history rights/privacy review and actual hosting/merge
+  configuration remain outstanding. No protected-fit search or Step 4 admission.
+- Final closure checks: 36 public tests pass in 0.365 s; 93 foundation/legacy-CLI/
+  documentation controls pass in 8.75 s. Repository Ruff, documentation structure
+  and whitespace checks pass. Read-only evidence check verifies exact qualification
+  equality and all 27 distinct bound files (1,122,546 bytes), including both retained
+  historical JUnit results and all raw public reports; 14 source/Git matches and
+  16 unchanged software records confirmed. No new native regression/search rerun
+  after documentation-only closure edits.
+
 ## 2026-09-23 — Portable code and public documentation; preservation regression retained
 
 - Add an explicitly separate public namespace, fixed-current six-coil JSON schema,

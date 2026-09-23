@@ -11,7 +11,7 @@ not an allowlist. Code without an AI agent is equally welcome.
 
 1. Read the [project overview](README.md) and [scientific status](docs/STATUS.md).
 2. Run the [portable quickstart](docs/validation/PUBLIC_QUICKSTART.md). It needs
-   only Python3.12+, not our private workspace, large datasets or an API key.
+   only Python 3.12+, not our private workspace, large datasets or an API key.
 3. Make a small, coherent change on your branch. Run `python scripts/test_public.py`
    for the public layer, and relevant additional tests for the changed subsystem.
 4. Open a pull request explaining the contribution, evidence and limitations.

@@ -1,0 +1,265 @@
+{
+  "schema_version": 1,
+  "kind": "public-layer-portability-evidence",
+  "date": "2026-09-23",
+  "source_revision": "02bc42a25b45cf6df558188b0d8e816a175789ed",
+  "source_copied_and_git_hashes_match": true,
+  "software_qualification_sources_unchanged": true,
+  "software_qualification": {
+    "path": "evidence/public-layer-v1-software.json",
+    "sha256": "903291df194680f55b3cb3d4e45cd888f1125989c9e61a78468558a091a9d401",
+    "bytes": 3674
+  },
+  "runner": {
+    "path": "scripts/verify_public_release.py",
+    "sha256": "0233288cfbaf80ec48bd25e10c47da523e6110f9310047215fa7927b9c87106b",
+    "bytes": 5646
+  },
+  "command": ".venv/bin/python -I -S scripts/verify_public_release.py --output artifacts/public-portability-v1",
+  "environment": {
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+    "implementation": "CPython",
+    "system": "Darwin",
+    "release": "24.6.0",
+    "machine": "arm64",
+    "site_packages_disabled": true
+  },
+  "raw_qualification": {
+    "path": "artifacts/public-portability-v1/qualification.json",
+    "sha256": "ad7993f68dcd531741113b11771d107a8039faffccede213fa809908413a78fc",
+    "bytes": 11983
+  },
+  "raw_reports": [
+    {
+      "path": "artifacts/public-portability-v1/checkout with spaces/results/changed-audit.json",
+      "sha256": "778584c5fce66cdc84f4f63d4e40f6a1fab588a0240047059c27960ae5e5bb0f",
+      "bytes": 483
+    },
+    {
+      "path": "artifacts/public-portability-v1/checkout with spaces/results/changed-candidate.json",
+      "sha256": "d1ae526cbdf76990e9a16463ac3a9bc280fec497472a49635db2cd3c32a6108d",
+      "bytes": 10675
+    },
+    {
+      "path": "artifacts/public-portability-v1/checkout with spaces/results/changed-report.json",
+      "sha256": "3a5b28d24081edda6af5e1373010b221e7520ab1dfc546800686cf5fb1a00cc2",
+      "bytes": 117190
+    },
+    {
+      "path": "artifacts/public-portability-v1/checkout with spaces/results/reference/audit.json",
+      "sha256": "dfdc338642d4f900f27960eeeb4bc7d08c0fff73c3294f31ca796bc2c2178335",
+      "bytes": 483
+    },
+    {
+      "path": "artifacts/public-portability-v1/checkout with spaces/results/reference/candidate.json",
+      "sha256": "a4d242dd0eab58226d3f435becb819e1cf0fb6b457bb942e293e70c7592c2a1e",
+      "bytes": 10675
+    },
+    {
+      "path": "artifacts/public-portability-v1/checkout with spaces/results/reference/report.json",
+      "sha256": "ab7d5918c24c1e721096bd7dd6479be405b98be4e68430df3300a8b390170967",
+      "bytes": 117579
+    },
+    {
+      "path": "artifacts/public-portability-v1/checkout with spaces/results/tampered-report.json",
+      "sha256": "46d50669503a44701948d905358d13b4e94514329988c38e9b8820ab7458e0d5",
+      "bytes": 117189
+    }
+  ],
+  "qualification": {
+    "complete": true,
+    "copied_files": {
+      "examples/clear-coil-samples-v1/README.md": "e767b1f36b1119349a6f92edc73641a4f4e998a243ec087824765f286e64cf3d",
+      "examples/clear-coil-samples-v1/candidate.json": "a4d242dd0eab58226d3f435becb819e1cf0fb6b457bb942e293e70c7592c2a1e",
+      "examples/clear-coil-samples-v1/case.json": "6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd",
+      "examples/clear-coil-samples-v1/manifest.json": "9e949f1247574e3f33e8a45d7a6c639fbb67018560ab3fcc58cf2f2dd2fba23c",
+      "examples/contribution.json": "e53c3507a1307a25eb4f435daa91e9cd98fbc0ac13dd0fd1cc1a931460e444c0",
+      "fusion.py": "bce40897e2558a951ca6be56eccf210b97351691bfab9a7c188d9627e4e00186",
+      "public_tests/test_portable.py": "e5a73f9f3b9c4b6e76b5f3ced524581977e8b1b26d2b59bfc179cbef9f335c39",
+      "scripts/test_public.py": "ced85fbfe9aaeafa732789b4acfab937615dc1ba49bde46ac77b039fb1c9eab2",
+      "src/fusion_public/__init__.py": "1696997fcc914653281c0a32b437d4ae499e5bc19cf5d5f27f0e3f75de10bbf8",
+      "src/fusion_public/cli.py": "c680d6c0261400821eaa6fa21be3869be1929d533c1cd04d2378858463139858",
+      "src/fusion_public/data.py": "c9491881b0e0ebe9a2676b100542233da2261a8440b5781feb367f936e981e93",
+      "src/fusion_public/field.py": "2f7623d92bf33fffa3c79e53118928a67cde60c67a37de54da90dd06279ba690",
+      "src/fusion_public/report.py": "b27b310c5bebb6dd3ded09b3dc0dc7c5d95cc56146376b0b121ea6deb07b0b00",
+      "src/fusion_public/submission.py": "9f878d2f08a44b9a1e2b4f195cb39b2dc74a8cb59b5f3eca0ec38a086a1ef8a5"
+    },
+    "hosted_ci_verified": false,
+    "kind": "public-release-local-qualification",
+    "operations": [
+      {
+        "argv": [
+          "scripts/test_public.py"
+        ],
+        "elapsed_seconds": 0.3611639160080813,
+        "expected_returncode": 0,
+        "label": "public-unit-tests",
+        "output": "test_circle_field_matches_analytic_axis (test_portable.AnalyticTests.test_circle_field_matches_analytic_axis) ... ok\ntest_current_linearity_and_sign (test_portable.AnalyticTests.test_current_linearity_and_sign) ... ok\ntest_curve_tangent_units_and_orientation (test_portable.AnalyticTests.test_curve_tangent_units_and_orientation) ... ok\ntest_physical_mapping_is_right_row_matrix (test_portable.AnalyticTests.test_physical_mapping_is_right_row_matrix) ... ok\ntest_singular_node_is_rejected (test_portable.AnalyticTests.test_singular_node_is_rejected) ... ok\ntest_stationary_curve_and_bad_node_counts_rejected (test_portable.AnalyticTests.test_stationary_curve_and_bad_node_counts_rejected) ... ok\ntest_translation_covariance (test_portable.AnalyticTests.test_translation_covariance) ... ok\ntest_contribution_cli_without_cost (test_portable.CliTests.test_contribution_cli_without_cost) ... ok\ntest_discovery_without_environment_or_repository_cwd (test_portable.CliTests.test_discovery_without_environment_or_repository_cwd) ... ok\ntest_help_without_dependencies (test_portable.CliTests.test_help_without_dependencies) ... ok\ntest_init_and_overwrite_protection (test_portable.CliTests.test_init_and_overwrite_protection) ... ok\ntest_invalid_input_rejected_without_numerical_work (test_portable.CliTests.test_invalid_input_rejected_without_numerical_work) ... ok\ntest_root_help_explains_public_and_research_routes (test_portable.CliTests.test_root_help_explains_public_and_research_routes) ... ok\ntest_candidate_errors_are_rejected (test_portable.ContractTests.test_candidate_errors_are_rejected) ... ok\ntest_comparator_accepts_declared_float_tolerance_not_string_coercion (test_portable.ContractTests.test_comparator_accepts_declared_float_tolerance_not_string_coercion) ... ok\ntest_dangling_symlink_not_followed (test_portable.ContractTests.test_dangling_symlink_not_followed) ... ok\ntest_data_mutation_cannot_keep_manifest_digest (test_portable.ContractTests.test_data_mutation_cannot_keep_manifest_digest) ... ok\ntest_existing_file_not_overwritten (test_portable.ContractTests.test_existing_file_not_overwritten) ... ok\ntest_export_has_no_private_machine_paths (test_portable.ContractTests.test_export_has_no_private_machine_paths) ... ok\ntest_huge_and_deep_json (test_portable.ContractTests.test_huge_and_deep_json) ... ok\ntest_invalid_coefficients_fail_closed (test_portable.ContractTests.test_invalid_coefficients_fail_closed) ... ok\ntest_manifest_paths_are_not_executed_or_followed (test_portable.ContractTests.test_manifest_paths_are_not_executed_or_followed) ... ok\ntest_new_candidate_is_permitted_without_preapproved_hint (test_portable.ContractTests.test_new_candidate_is_permitted_without_preapproved_hint) ... ok\ntest_nonfinite_and_duplicate_json (test_portable.ContractTests.test_nonfinite_and_duplicate_json) ... ok\ntest_reference_packet_has_all_named_dofs_and_physical_copies (test_portable.ContractTests.test_reference_packet_has_all_named_dofs_and_physical_copies) ... ok\ntest_reference_provenance_retains_negative_scope (test_portable.ContractTests.test_reference_provenance_retains_negative_scope) ... ok\ntest_scientific_report_comparator_rejects_changed_values_and_flags (test_portable.ContractTests.test_scientific_report_comparator_rejects_changed_values_and_flags) ... ok\ntest_unknown_fields_cannot_change_fixed_current_or_code (test_portable.ContractTests.test_unknown_fields_cannot_change_fixed_current_or_code) ... ok\ntest_wrong_candidate_digest_rejected_before_computation (test_portable.ContractTests.test_wrong_candidate_digest_rejected_before_computation) ... ok\ntest_wrong_evaluator_rejected_before_computation (test_portable.ContractTests.test_wrong_evaluator_rejected_before_computation) ... ok\ntest_wrong_report_source_rejected_before_computation (test_portable.ContractTests.test_wrong_report_source_rejected_before_computation) ... ok\ntest_invalid_required_metadata_is_rejected (test_portable.ContributionTests.test_invalid_required_metadata_is_rejected) ... ok\ntest_no_budget_or_hint_is_needed (test_portable.ContributionTests.test_no_budget_or_hint_is_needed) ... ok\ntest_prose_is_never_executed (test_portable.ContributionTests.test_prose_is_never_executed) ... ok\ntest_structure_pass_is_not_scientific_acceptance (test_portable.ContributionTests.test_structure_pass_is_not_scientific_acceptance) ... ok\ntest_unsolicited_and_high_cost_are_not_rejection_reasons (test_portable.ContributionTests.test_unsolicited_and_high_cost_are_not_rejection_reasons) ... ok\n\n----------------------------------------------------------------------\nRan 36 tests in 0.299s\n\nOK\n",
+        "passed": true,
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "fusion.py",
+          "public",
+          "cases"
+        ],
+        "elapsed_seconds": 0.03136525000445545,
+        "expected_returncode": 0,
+        "label": "discovery",
+        "output": "{\n  \"schema_version\": 1,\n  \"cases\": [\n    {\n      \"id\": \"clear-coil-samples-v1\",\n      \"data_sha256\": \"6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd\",\n      \"accepts_candidate\": true,\n      \"requirements\": \"Python3.12+ standard library; no network or native solver\",\n      \"physical_admission\": false,\n      \"scope\": \"64 boundary,64 inner,64 loop points; fixed-current filament B/A\"\n    }\n  ]\n}\n",
+        "passed": true,
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "fusion.py",
+          "public",
+          "demo",
+          "--output",
+          "results/reference"
+        ],
+        "elapsed_seconds": 2.5477507920004427,
+        "expected_returncode": 0,
+        "label": "reference-demo",
+        "output": "{\n  \"output\": \"results/reference\",\n  \"reference_reproduced\": true,\n  \"physical_admission\": false,\n  \"step4_pass\": false\n}\n",
+        "passed": true,
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "fusion.py",
+          "public",
+          "evaluate",
+          "--candidate",
+          "results/changed-candidate.json",
+          "--output",
+          "results/changed-report.json"
+        ],
+        "elapsed_seconds": 1.250020083039999,
+        "expected_returncode": 0,
+        "label": "changed-candidate",
+        "output": "{\n  \"output\": \"results/changed-report.json\",\n  \"physical_admission\": false,\n  \"sampled_metrics_512\": {\n    \"sampled_normal_rms\": 0.30420716817649873,\n    \"sampled_normal_max\": 0.576617336636077,\n    \"sampled_inner_vector_rms\": 0.38043481935549567,\n    \"max_abs_current_A\": 294966.46632221737\n  }\n}\n",
+        "passed": true,
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "fusion.py",
+          "public",
+          "audit",
+          "--report",
+          "results/changed-report.json",
+          "--output",
+          "results/changed-audit.json"
+        ],
+        "elapsed_seconds": 1.2632583749946207,
+        "expected_returncode": 0,
+        "label": "changed-replay",
+        "output": "{\n  \"schema_version\": 1,\n  \"kind\": \"public-report-replay\",\n  \"report_sha256\": \"4b8645172a0adbea7d460e665cc9759f3c4186b6c6b45742cee353075ee4266a\",\n  \"case_sha256\": \"6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd\",\n  \"candidate_sha256\": \"4269c7656a0d03298aeed4e8bb02809bc2860e9fe85a647ce13461bd7a16177d\",\n  \"report_replay_pass\": true,\n  \"independent_implementation\": false,\n  \"seed_native_reference_pass\": null,\n  \"physical_admission\": false,\n  \"step4_pass\": false\n}\n",
+        "passed": true,
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "fusion.py",
+          "public",
+          "audit",
+          "--report",
+          "results/tampered-report.json",
+          "--output",
+          "results/should-not-exist.json"
+        ],
+        "elapsed_seconds": 1.257472749974113,
+        "expected_returncode": 2,
+        "label": "reject-false-admission",
+        "output": "ERROR: Mismatch at report.scope.physical_admission\n",
+        "passed": true,
+        "returncode": 2
+      },
+      {
+        "argv": [
+          "fusion.py",
+          "public",
+          "check-submission",
+          "--file",
+          "examples/contribution.json"
+        ],
+        "elapsed_seconds": 0.031074625032488257,
+        "expected_returncode": 0,
+        "label": "optional-cost",
+        "output": "{\n  \"schema_version\": 1,\n  \"contribution_record_valid\": true,\n  \"compute_disclosed\": false,\n  \"requested_topic_required\": false,\n  \"scientific_acceptance\": false\n}\n",
+        "passed": true,
+        "returncode": 0
+      },
+      {
+        "argv": [
+          "fusion.py",
+          "public",
+          "demo",
+          "--output",
+          "results/reference"
+        ],
+        "elapsed_seconds": 0.03335800004424527,
+        "expected_returncode": 2,
+        "label": "reject-overwrite",
+        "output": "ERROR: Output already exists; choose a fresh path: results/reference\n",
+        "passed": true,
+        "returncode": 2
+      }
+    ],
+    "physical_admission": false,
+    "python_socket_audit_guard": true,
+    "qualification_type": "local copied tree, not an OS security sandbox",
+    "reference": {
+      "reference_check": {
+        "passed": true,
+        "relative_errors": {
+          "boundary": {
+            "A_Tm": 5.527808853476058e-16,
+            "B_T": 8.061439928464242e-16
+          },
+          "inner": {
+            "A_Tm": 7.191067767231985e-16,
+            "B_T": 9.587997613578574e-16
+          },
+          "loop": {
+            "A_Tm": 4.878548940765712e-16,
+            "B_T": 6.556256070578645e-16
+          }
+        },
+        "tolerance": 5e-10
+      },
+      "report_sha256": "d6179bd58c453a7c15c68bc38cfd7c23bc5eadd5865c21cba4339898f94d519e",
+      "resolution_differences": {
+        "boundary": {
+          "A_Tm": 1.2437569920321135e-15,
+          "B_T": 1.451059187123564e-15
+        },
+        "inner": {
+          "A_Tm": 1.849131711573939e-15,
+          "B_T": 1.4381996420367862e-15
+        },
+        "loop": {
+          "A_Tm": 1.1708517457837702e-15,
+          "B_T": 1.1473448123512624e-15
+        }
+      },
+      "sampled_metrics_512": {
+        "max_abs_current_A": 294966.46632221737,
+        "sampled_inner_vector_rms": 0.3804347184410837,
+        "sampled_normal_max": 0.5766173462426617,
+        "sampled_normal_rms": 0.3042070280768691
+      }
+    },
+    "schema_version": 1,
+    "step4_pass": false
+  },
+  "limitations": [
+    "Local same-host copied-tree reproduction, not independent hardware or hosted CI.",
+    "Python socket audit hook, not an OS sandbox or control of malicious foreign code.",
+    "Report audit uses the same public implementation; unchanged reference additionally matches archived native fields.",
+    "Fixed one-micrometre input variation is an interface check, not optimization or a demonstrated improvement.",
+    "Fixed-current sparse fields do not qualify full-surface, flux normalization, geometry, QI, pressure, robustness, or physical admission."
+  ]
+}

@@ -27,7 +27,7 @@ this is an independent project without claimed affiliation or endorsement.
 | --- | --- | --- |
 | 1. Reliable bounded reference tools | Complete locally | W7-X/Goodman regression and specified LPQA filament tools |
 | 2. Reproducible design iteration | Complete locally | Real optimization paths can be saved, replayed and separately evaluated |
-| 3. Own QI-like plasma target | Complete in registered vacuum scope | An actual boundary change lowers the specified fine action-variance metric by11.17% |
+| 3. Own QI-like plasma target | Complete in registered vacuum scope | An actual boundary change lowers the specified fine action-variance metric by 11.17% |
 | 4. Coupled plasma and coil development | Open | Geometry-qualified starts exist; field-quality admission and broader physics remain unresolved |
 | 5. Independently demonstrated performance advance | Open | No state-of-the-art or power-plant claim |
 
@@ -55,8 +55,10 @@ Our first portable layer includes a small real-coil reference, explicitly named
 JSON candidates and sampled fixed-current B/A calculations. It needs no native
 installation or maintainer-specific data. It is deliberately **not** the full
 historical acceptance pipeline. Read [the quickstart's limits](validation/PUBLIC_QUICKSTART.md)
-before interpreting a score. Complete-source real-reference release verification
-is the next local check; hosted and independent-machine verification remain separate.
+before interpreting a score. The committed-source reference and candidate paths
+pass all eight [local copied-tree release checks](validation/PUBLIC_RELEASE_RESULTS.md),
+without native packages or downloads. Hosted and independent-machine verification
+remain separate, outstanding work.
 
 A contributor should be able to discover a question, reproduce a reference,
 propose a change, understand its result and submit reviewable evidence without

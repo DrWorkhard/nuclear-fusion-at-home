@@ -13,13 +13,14 @@ replay the report and submit useful work without our local artifacts or chat his
 | Release task | Completion criterion | Current state |
 | --- | --- | --- |
 | Preserve prior work | Original evidence intact; interrupted work explicitly unqualified | Done; protected-fit drafts saved, no new search |
-| Portable entry | Bundled attributed data, no native install, named candidate schema, explicit scope | Implemented; unit/analytic controls pass |
-| Reproduction and adversarial checks | Committed-source clean-copy reference/candidate/replay and rejection of forged results | Next local verification |
+| Portable entry | Bundled attributed data, no native install, named candidate schema, explicit scope | Complete in the starter scope; 36 public tests pass |
+| Reproduction and adversarial checks | Committed-source clean-copy reference/candidate/replay and rejection of forged results | All eight local checks pass; no independent-machine claim |
 | Public understanding and contribution | Clear English overview, status, quickstart, open contribution/review route | Prepared |
 | Hosted operation | Verified CI, reviewer identities, branch protection, privacy/rights review and safe permissions | Not configured or verified here; separate launch work |
 
-The [release specification](validation/PUBLIC_RELEASE.md) records exact scope and
-checks. Public quickstart success is not full historical reproducibility or
+The [release specification](validation/PUBLIC_RELEASE.md) and
+[verification record](validation/PUBLIC_RELEASE_RESULTS.md) record exact scope
+and observed checks. Public quickstart success is not full historical reproducibility or
 physical admission. No automatic PR monitor, merge bot, push or publication has
 been enabled.
 
@@ -40,14 +41,14 @@ measurements.
 | 4. Coupled plasma and coils | The four subpackages below, not merely a favorable vacuum coil-fit score | Open |
 | 5. Demonstrated performance advance | Fair, reproducible reference comparisons with independently verified meaningful advantage | Open; no automatic claim from Step4 |
 
-Steps1/2 are capability milestones: they did not require a new feasible optimum,
+Steps 1/2 are capability milestones: they did not require a new feasible optimum,
 novel method or SoTA result. Their [acceptance protocol](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md)
 and [result](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) remain authoritative.
-Step3 did require a real improvement, established in the
+Step 3 did require a real improvement, established in the
 [registered vacuum study](qi/PLASMA_BALANCED_RESULTS.md). Broader physics was not
 silently included in its acceptance.
 
-## Step4: coupled plasma/coil development
+## Step 4: coupled plasma/coil development
 
 - **4A — Realization and transfer:** realize both reference and selected plasma
   targets with actual coils, pass the appropriate numerical/geometry/field gates,
@@ -65,7 +66,7 @@ silently included in its acceptance.
 context. The [geometry-protected field-fit draft](optimization/PROTECTED_COIL_FIT_PROTOCOL.md)
 is preserved but not qualified; it is one possible next experiment, not a required
 method or an exclusive work allocation. The public contribution foundation takes
-priority before resuming local searches. No vacuum-only result closes all Step4.
+priority before resuming local searches. No vacuum-only result closes all of Step 4.
 
 ## Research and review discipline
 
@@ -87,8 +88,8 @@ belong in the indexed child directories. [Persistent rules](../AGENTS.md).
 
 ## Preservation and future scope
 
-Research before the clarified foundation milestones is preserved at5971fee
-(`foundation-pre-scope-2026-09-13`); Step3 evidence remains atd429783.
+Research before the clarified foundation milestones is preserved at `5971fee`
+(`foundation-pre-scope-2026-09-13`); Step 3 evidence remains at `d429783`.
 Current negative results are retained rather than relabelled as successes.
 The public layer is additive and uses its own portable artifact identities.
 

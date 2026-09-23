@@ -1,6 +1,6 @@
 # Review and coordination policy
 
-Preparing for public hosting,2026-09-23. No bot, scheduler, merge permission,
+Preparing for public hosting, 2026-09-23. No bot, scheduler, merge permission,
 branch protection or GitHub setting has been enabled by these local files.
 
 ## Open intake, clear decisions
@@ -72,7 +72,7 @@ the public starter's check or silently rewrite the historical file.
 Hosted runs are not claimed until actually observed. GitHub's
 [secure-use guidance](https://docs.github.com/en/actions/reference/security/secure-use)
 and [privileged-trigger guidance](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target)
-support these execution boundaries (checked2026-09-23).
+support these execution boundaries (checked 2026-09-23).
 
 ## Launch checklist — requires actual hosting work
 
