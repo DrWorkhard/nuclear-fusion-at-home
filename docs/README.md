@@ -5,7 +5,7 @@ For contributors and scientific reviewers. Updated 23 September 2026.
 
 ## Research question
 
-Our end goal is to contribute to nuclear fusion for humanity by finding the best
+Our end goal (MSX) is to contribute to nuclear fusion for humanity by finding the best
 reactor design current technology can achieve. We use “best” as a research aim
 under explicit performance, buildability, robustness, safety and cost constraints,
 not as a claim that a global optimum has been proved.
@@ -28,13 +28,15 @@ this is an independent project without claimed affiliation or endorsement.
 
 ## Evidence and current position
 
-| Milestone | Status | What it establishes |
+| Step / milestone | Status | What it establishes |
 | --- | --- | --- |
 | 1. Reliable bounded reference tools | Complete locally | W7-X/Goodman regression and specified LPQA filament tools |
 | 2. Reproducible design iteration | Complete locally | Real optimization paths can be saved, replayed and separately evaluated |
 | 3. Own QI-like plasma target | Complete in registered vacuum scope | An actual boundary change lowers the specified fine action-variance metric by 11.17% |
 | 4. Coupled plasma and coil development | Open | Geometry-qualified starts exist; field-quality admission and broader physics remain unresolved |
 | 5. Independently demonstrated performance advance | Open | No state-of-the-art or power-plant claim |
+| MS1. Evidence-backed Proxima Fusion outreach | Not reached | Contact Proxima as soon as strong, independently checked evidence supports a meaningful design advantage over the design they are pursuing |
+| MSX. Best reactor design current technology can achieve | Long-term goal, not achieved | Contribute to nuclear fusion for humanity; extends beyond MS1 and is not a present global-optimality claim |
 
 **MS1 — Proxima Fusion outreach:** as soon as strong, reproducible and independently
 checked evidence supports that our design is better than the design Proxima is

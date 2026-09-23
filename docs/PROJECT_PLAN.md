@@ -3,13 +3,15 @@
 Updated 23 September 2026.
 [Overview](README.md) · [Evidence-based status](STATUS.md) · [Contribution guide](../CONTRIBUTING.md)
 
-## End goal
+## MSX: our end goal
 
 Contribute to nuclear fusion for humanity by finding the best reactor design
 current technology can achieve. Pursue reproducible, useful design advances under
 explicit performance, engineering, robustness, safety and cost constraints.
 “Best” is the ambition, not a claim of global optimality or present plant readiness.
 Stellarator plasma/coil optimization is our current route toward that wider goal.
+**MSX is not achieved.** It extends beyond MS1: expert scrutiny and practical
+follow-on work should turn verified design advances into useful fusion progress.
 
 ## Immediate priority: public collaboration
 
@@ -42,13 +44,15 @@ measurements.
 
 ## Scientific roadmap — unchanged goals
 
-| Step | Actual completion requirement | State |
+| Step / milestone | Actual completion requirement | State |
 | --- | --- | --- |
 | 1. Reliable bounded foundation | Specified local reference/software/physics checks, source and environment identity, honest admission | Complete in the registered scope |
 | 2. Reproducible iteration | Load reference → change/optimize → save → independently evaluate → repeat | Complete in the registered scope |
 | 3. Own QI-like plasma target | Actual boundary/equilibrium change with registered independently confirmed improvement | Complete for the nfp2 vacuum action-metric study |
 | 4. Coupled plasma and coils | The four subpackages below, not merely a favorable vacuum coil-fit score | Open |
 | 5. Demonstrated performance advance | Fair, reproducible reference comparisons with independently verified meaningful advantage; target MS1 for the Proxima comparison | Open; no automatic claim from Step 4 |
+| MS1. Evidence-backed Proxima Fusion outreach | As soon as strong, reproducible and independently checked evidence supports that our design is better than the design Proxima is pursuing, contact them with the evidence | Not reached; targeted Step 5 outcome |
+| MSX. End goal | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve | Long-term goal, not achieved; extends beyond MS1 |
 
 Steps 1/2 are capability milestones: they did not require a new feasible optimum,
 novel method or SoTA result. Their [acceptance protocol](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md)
@@ -63,7 +67,7 @@ As soon as strong, reproducible and independently checked evidence shows that a
 design we found is better than the design Proxima Fusion is pursuing, we will
 contact Proxima Fusion with the design and evidence for technical discussion.
 **MS1 is not reached.** It is a targeted outcome of Step 5, not another name for
-Step 1, completion of the public starter, or the project's ultimate goal.
+Step 1, completion of the public starter, or the project's ultimate goal (MSX).
 
 Use an authoritative, versioned reference confirmed relevant at comparison time;
 qualify its reproduction and compare under matched operating/technology constraints.

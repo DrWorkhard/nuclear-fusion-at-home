@@ -2,7 +2,7 @@
 
 Open, reproducible stellarator research — contributed by people and their agents.
 
-Our end goal is to **contribute to nuclear fusion for humanity by finding the best
+Our end goal (MSX) is to **contribute to nuclear fusion for humanity by finding the best
 reactor design current technology can achieve**. We pursue that goal through open,
 reproducible research that others can test, challenge and build on.
 
@@ -21,6 +21,37 @@ plasma-design result, but **no newly accepted feasible coil design, demonstrated
 state-of-the-art advance, or power-plant breakthrough**. We are not affiliated
 with Proxima Fusion or the Max Planck Institute; their work and open research
 provide important scientific context.
+
+## Project plan and progress
+
+These are the steps and milestones guiding our work. Steps 1–5 are the research
+work packages referenced throughout the documents; MS1 is our first external-impact
+milestone, and MSX is our end goal. “Complete” always means complete within the
+stated scope, not a finished reactor.
+
+| Step / milestone | Purpose | What is done / current status |
+| --- | --- | --- |
+| **1. Establish a reliable foundation** | Reproduce open references and qualify the calculations we will use. | **Complete in the bounded local scope:** specified W7-X/Goodman checks and reference coil tools pass. |
+| **2. Make design iteration reproducible** | Load a reference, change or optimize it, save the result, independently evaluate it and repeat. | **Complete in the registered scope:** real optimization paths replay and candidate checks run; rejected candidates remain rejected. |
+| **3. Improve our own plasma target** | Find and verify a better quasi-isodynamic-like target magnetic configuration. | **Complete for one vacuum study:** 11.17% lower fine-grid relative bounce-action variance, not full QI or demonstrated confinement. |
+| **4. Develop plasma and coils together** | Turn target fields into realizable coils, preserve their physics, and address pressure, finite coil geometry and robustness. | **In progress:** acceptable starting geometry and checked field calculations exist; magnetic errors still fail acceptance. No new physically accepted coil design yet. |
+| **5. Demonstrate a meaningful design advantage** | Compare accepted designs fairly with relevant leading references and independently verify the advantage. | **Not achieved:** no demonstrated advantage over Proxima Fusion's design and no state-of-the-art or power-plant claim. |
+| **MS1. Contact Proxima Fusion with strong evidence** | As soon as strong, reproducible and independently checked evidence shows that a design we found is better than the design Proxima Fusion is pursuing, contact them to share the evidence and invite technical scrutiny. | **Not reached.** A targeted outcome of Step 5; no outreach or affiliation implied. |
+| **MSX. Our end goal** | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve. | **Long-term goal, not achieved.** Continue beyond MS1 through expert scrutiny, further improvement and practical follow-on work. |
+
+MS1 requires a correctly identified, versioned reference, like-for-like assumptions
+and realistic technology constraints, with uncertainties and trade-offs explicit.
+A better sparse-field score or improvement over our own starting point is not
+enough. [MS1 evidence framework](docs/squid_c/MS1_PROXIMA_COMPARISON.md).
+Neither MS1 nor completion of a work package proves global optimality or achieves MSX.
+
+Our immediate priority is letting outside contributors work productively on these
+questions. The public starter is an entry point, not a restriction on the research.
+The full historical workflow needs additional native dependencies and local
+artifacts beyond the quickstart.
+
+[Scientific overview](docs/README.md) · [Current status](docs/STATUS.md) ·
+[Detailed roadmap](docs/PROJECT_PLAN.md) · [Historical research entry points](docs/validation/PROJECT_ENTRYPOINTS.md)
 
 ## Start in three commands
 
@@ -83,47 +114,6 @@ See [the evidence-based status](docs/STATUS.md) for sources and failure modes.
 Construction, numerical correctness and physical acceptance are different things.
 A merged contribution or green test run does not automatically establish a
 scientific improvement.
-
-## Project plan and progress
-
-These are the numbered steps referenced throughout the research documents.
-“Complete” always means complete within the stated scope, not a finished reactor.
-
-| Step | Purpose | What is done / current status |
-| --- | --- | --- |
-| **1. Establish a reliable foundation** | Reproduce open references and qualify the calculations we will use. | **Complete in the bounded local scope:** specified W7-X/Goodman checks and reference coil tools pass. |
-| **2. Make design iteration reproducible** | Load a reference, change or optimize it, save the result, independently evaluate it and repeat. | **Complete in the registered scope:** real optimization paths replay and candidate checks run; rejected candidates remain rejected. |
-| **3. Improve our own plasma target** | Find and verify a better quasi-isodynamic-like target magnetic configuration. | **Complete for one vacuum study:** the 11.17% diagnostic improvement above, not full QI or demonstrated confinement. |
-| **4. Develop plasma and coils together** | Turn target fields into realizable coils, preserve their physics, and address pressure, finite coil geometry and robustness. | **In progress:** acceptable starting geometry and checked field calculations exist; magnetic errors still fail acceptance. No new physically accepted coil design yet. |
-| **5. Demonstrate a meaningful design advantage** | Compare accepted designs fairly with relevant leading references and independently verify the advantage; work toward MS1 below. | **Not achieved:** no demonstrated advantage over Proxima Fusion's design and no state-of-the-art or power-plant claim. |
-
-Our immediate priority is letting outside contributors work productively on those
-questions. The public starter is an entry point, not a restriction on the research.
-The much larger historical research suite remains available with additional
-native dependencies and local artifact requirements; it is not installed by the
-quickstart.
-
-[Scientific overview](docs/README.md) · [Current status](docs/STATUS.md) ·
-[Roadmap](docs/PROJECT_PLAN.md) · [Historical research entry points](docs/validation/PROJECT_ENTRYPOINTS.md)
-
-## MS1 — Evidence strong enough to contact Proxima Fusion
-
-**As soon as we have strong, reproducible and independently checked evidence that
-a design we found is better than the design Proxima Fusion is pursuing, we will
-contact Proxima Fusion to share the evidence and invite technical scrutiny.**
-This is **MS1**, our first external-impact milestone. **MS1 has not been reached.**
-
-The comparison must identify the actual reference design and its version, use
-like-for-like operating assumptions and realistic technology constraints, and
-show a meaningful design-level advantage with uncertainties and trade-offs made
-explicit. A lower sparse-field score, improvement over our own starting point,
-or an outdated/mismatched reference is not sufficient. The
-[MS1 evidence framework](docs/squid_c/MS1_PROXIMA_COMPARISON.md) explains the bar.
-
-MS1 is a targeted outcome of Step 5, not the end goal and not proof that we have
-found the globally best reactor. After reaching it, the aim is to subject the
-design to expert review, improve it further and help turn useful findings into
-practical fusion progress. No outreach or affiliation is implied by this plan.
 
 ## Licensing, credit and project operation
 

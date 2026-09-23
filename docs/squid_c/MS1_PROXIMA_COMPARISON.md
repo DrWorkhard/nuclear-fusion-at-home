@@ -6,7 +6,7 @@ study protocol, a result, or an assertion about which design Proxima currently p
 
 ## Purpose and trigger
 
-The end goal is to contribute to nuclear fusion for humanity by finding the best
+The end goal (MSX) is to contribute to nuclear fusion for humanity by finding the best
 reactor design current technology can achieve. MS1 is an intermediate milestone:
 as soon as strong, reproducible and independently checked evidence supports that
 a design we found is better than the design Proxima Fusion is pursuing, we will
@@ -68,5 +68,5 @@ sent” are different facts. This documentation update sends no message and impl
 no affiliation. Existing draft data requests remain unsent historical preparation.
 
 After MS1, use expert feedback to challenge and improve the design and enable
-practical follow-on work. The public-benefit goal is larger than outperforming one
+practical follow-on work toward MSX. The public-benefit goal is larger than outperforming one
 reference or securing one organization's recognition.

@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-23 — Put MS1 and MSX in the plan before the quickstart
+
+- User requests the project plan before “Start in three commands”, with MS1 in
+  the plan and the end goal named MSX. Move the README plan, add explicit milestone
+  rows and remove the separate late MS1 section. Correct the moved Step 3 wording
+  so it no longer refers to a result “above” that is now below it.
+- Align the detailed roadmap, overview/status, MS1 framework/index, D-021 and
+  persistent instructions. MS1 and MSX remain unachieved; research Steps 1–3 retain
+  their bounded completion states and Step 4 stays open. No scope/gate changes.
+- Start from clean 5f73beb; process inspection identifies existing fusion Python
+  processes as editor services. No experiments interrupted or started; no code,
+  numerical data, historical evidence, public evaluator or hosting changed.
+- Checks: 93 documentation/foundation/legacy-CLI tests pass in 8.23 s. Documentation
+  structure, repository Ruff and whitespace checks pass. Heading/table review
+  confirms the plan is immediately before the quickstart and includes both MS1
+  and MSX. Reviewed the scoped diff; no numerical or full-suite rerun claimed.
+
 ## 2026-09-23 — Continue public release preparation with read-only history inventory
 
 - After the README/MS1 commit `fae6c87`, inventory source tree and all four local

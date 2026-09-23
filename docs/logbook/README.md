@@ -8,7 +8,7 @@ Lesehinweis: Neuere ausdrücklich gekennzeichnete Korrekturen haben Vorrang vor 
 
 ## Dokumente
 
-- [DECISIONS ](DECISIONS.md) — Dokument: Grundsatzentscheidungen zu Baselines, Methodenneutralität, QI-Messung, unabhängiger Zulässigkeit, Checkpointintegrität, Dokumentationspflege, offener Mitarbeit und öffentlichem Projektziel/MS1.
+- [DECISIONS ](DECISIONS.md) — Dokument: Grundsatzentscheidungen zu Baselines, Methodenneutralität, QI-Messung, unabhängiger Zulässigkeit, Checkpointintegrität, Dokumentationspflege, offener Mitarbeit und öffentlichem Projektplan mit MS1/MSX vor dem Einstieg.
 - [FINDINGS ](FINDINGS.md) — Dokument: Wesentliche Befunde F-001 ff. mit Aussageklasse, Grenzen und dokumentierten Korrekturen.
 - [VALIDATION_LOG ](VALIDATION_LOG.md) — Dokument: Ausgeführte Tests, Versionen, Gegenprüfungen, Fehlversuche und genaue Grenzen des jeweiligen Prüfumfangs.
 

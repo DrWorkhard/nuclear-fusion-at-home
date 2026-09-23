@@ -16,6 +16,10 @@ is a planned milestone, not an action already taken. Our existing plasma result
 is against an open research reference, not a Proxima design comparison.
 [MS1 evidence framework](squid_c/MS1_PROXIMA_COMPARISON.md).
 
+**MSX remains our long-term goal, not an achieved result:** contribute to nuclear
+fusion for humanity by finding the best reactor design current technology can
+achieve. MS1 is an intermediate milestone on that path.
+
 The portable public contribution layer now passes its scoped local release checks.
 It is not a new physical result and does not reopen or expand the completed
 foundation milestones. Public hosting and operational safeguards remain separate work.

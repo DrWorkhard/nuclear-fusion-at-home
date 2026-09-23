@@ -1,5 +1,19 @@
 # Decision log
 
+## D-021 — Show the plan before onboarding, with MS1 and MSX inside it
+
+**Status:** accepted explicit user presentation/naming requirement
+**Date:** 2026-09-23
+
+Move the README project plan immediately before “Start in three commands”, so
+readers understand the purpose and route before setup. Include MS1 directly in
+the plan rather than as a separate late section. Name the end goal MSX: contribute
+to nuclear fusion for humanity by finding the best reactor design current
+technology can achieve. Show both milestones alongside the five work steps in
+the README and detailed roadmap. Neither is reached; MS1 remains an intermediate
+evidence-backed outreach milestone, not completion of MSX or a physics result.
+Preserve existing scoped completions, scientific gates and historical evidence.
+
 ## D-020 — Public-benefit end goal, self-contained roadmap and MS1
 
 **Status:** accepted explicit user clarification; no new scientific result

@@ -54,11 +54,14 @@ cleanup. Before starting the next step or handing off:
 
 ## Research discipline and autonomy
 
-### Public purpose, roadmap and MS1 (user clarification, 2026-09-23)
+### Public purpose, roadmap, MS1 and MSX (user clarification, 2026-09-23)
 
-The end goal is contributing to nuclear fusion for humanity by finding the best
+The end goal (MSX) is contributing to nuclear fusion for humanity by finding the best
 reactor design current technology can achieve. Keep the numbered steps and scoped
 completion states understandable in the root README, not only internal reports.
+Put the project plan immediately before “Start in three commands”. Include MS1
+and MSX as explicit entries in that plan, alongside the five research work steps.
+MSX is the long-term end goal, not achieved; reaching MS1 does not close MSX.
 “Best” is an ambition under explicit technological/engineering constraints, never
 an unsupported global-optimality claim.
 
