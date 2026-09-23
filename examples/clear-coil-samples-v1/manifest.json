@@ -1,0 +1,9 @@
+{
+  "case_id": "clear-coil-samples-v1",
+  "description": "Real n6/M5 seed: fixed-current sampled filament fields, not design admission",
+  "files": {
+    "candidate.json": "a4d242dd0eab58226d3f435becb819e1cf0fb6b457bb942e293e70c7592c2a1e",
+    "case.json": "6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd"
+  },
+  "schema_version": 1
+}

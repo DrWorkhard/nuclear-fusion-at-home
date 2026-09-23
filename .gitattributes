@@ -1,0 +1,8 @@
+# Portable case/source digests must survive checkouts on Windows unchanged.
+# Historical scientific evidence is deliberately not renormalized.
+/examples/** text eol=lf
+/src/fusion_public/** text eol=lf
+/public_tests/** text eol=lf
+/fusion.py text eol=lf
+/scripts/test_public.py text eol=lf
+/scripts/verify_public_release.py text eol=lf

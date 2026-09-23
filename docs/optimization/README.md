@@ -15,6 +15,8 @@ Aktueller Schluss: Die bisher beste klassische Spulenform besteht die geprüften
 
 ## Dokumente
 
+- [Research hints](RESEARCH_HINTS.md) — English, nonexclusive invitations for public contributors: reproduction, kernels, counterexamples, geometry-preserving improvement and broader physics. Unsolicited useful work remains welcome; costs optional.
+
 - [Geschützter Feldfit: pausierter Entwurf](PROTECTED_COIL_FIT_PROTOCOL.md) — Geplanter Acht-Zellen-Niedermodenpilot; reiner Solverentwurf erhalten, Softwarequalifikation/zweites Review/Runner/Auditor fehlen. Keine Feldrechnung, nicht registriert oder zugelassen; öffentliche Mitwirkungsbasis hat Vorrang.
 
 - [Nächster Feldfit: Geometriesicherheit und Methodenreview](GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) — Zwei unterschiedliche unabhängige Empfehlungen; zunächst kumulativen harten Geometrieschirm qualifizieren, freies L-BFGS-B/Supportfamilie/freie Ströme als getrennte Optionen erhalten. Noch keine neue Suche.

@@ -1,5 +1,11 @@
 # Gemeinsamer Einstieg für Menschen und AI-Agenten
 
+**Öffentlicher Einstieg seit23.September2026:** Für einen frischen Checkout zuerst
+den getrennten [portablen Quickstart](PUBLIC_QUICKSTART.md) verwenden:
+`python fusion.py public --help`. Die folgende Seite beschreibt weiterhin den
+ursprünglichen, lokal quellgebundenen Forschungsworkflow. Das neue sparse
+Feldprofil ersetzt oder erweitert seine wissenschaftliche Abnahme nicht.
+
 20. September 2026. Dünne gemeinsame CLI über unveränderten wissenschaftlichen
 Programmen. Sie vereinheitlicht Aufruf, Profilentdeckung und Pfadbehandlung,
 nicht die Physikmodelle. **Version1 unterstützt genau ein festes Studienprofil,

@@ -1,170 +1,89 @@
-# Ergebnisstand und wissenschaftliche Bewertung
+# Scientific status and evidence
 
-Stand: 20. September 2026, Schritt4 mit numerisch qualifizierten Feldstarts aktiv.
-[Projektübersicht](README.md) · [Arbeitsplan](PROJECT_PLAN.md)
+Updated 23 September 2026.
+[Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Public quickstart](validation/PUBLIC_QUICKSTART.md)
 
-## Gesamturteil
+## Bottom line
 
-**Priorität seit23.September2026: öffentliche, portable Mitwirkungsbasis.**
-Der [Veröffentlichungsplan](validation/PUBLIC_RELEASE.md) ergänzt die bestehende
-Forschung um einen selbstständig nutzbaren Referenzfall und offene Beitragswege.
-Noch nicht implementiert oder veröffentlicht. Der begonnene geschützte Feldfit
-bleibt als unqualifizierter Protokoll-/Solverentwurf erhalten; keine neue Suche.
-Kostenangaben sind freiwillig; Forschungshinweise keine Zugangsbeschränkung.
+**We have a bounded local research foundation, a numerically improved vacuum
+plasma target, and useful coil-validation tools. We do not yet have a new
+physically accepted coil design, a completed Step 4, a state-of-the-art advance,
+or full SQuID-C readiness.**
 
-**Aktiv ist jetzt Schritt4 nach ausdrücklichem Nutzerauftrag.**
-[Drei unabhängige Agentenreviews](optimization/COUPLED_DESIGN_OPTIONS.md) empfehlen
-gepaarte reale Spulenfits für Referenz und neuen Plasmaentwurf, danach begrenzte
-gemeinsame Iterationen. Alte LPQA-Export-/Normierungsannahmen sind nicht übertragbar.
-Die neue [reale Geometriestudie](geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md)
-nimmt alle zwölf Spulensätze unabhängig an:168 LP-Aufrufe,84 exakte Wiederholungen,
-72 direkte Abstandszertifikate, sämtliche analytischen und verfeinerten Gates
-bestanden. Ausgewählte Formstarts mit sechs/acht Grundspulen halten mindestens
-98,414/98,214mm kontinuierlichen Plasmaabstand, gefordert80mm; größte
-Spulenlänge1,938/1,936m gegenüber3,5m, Krümmungsobergrenze≤10/m gegenüber12/m.
-Die nachfolgende [reale Feldstartqualifikation](optimization/CLEAR_COIL_FIELD_START_RESULTS.md)
-ist nun **numerisch vollständig bestanden**: vier Zellen, acht N/V-Ableitungs-
-qualifikationen,20 Verfeinerungen,768 direkte B/A-Vergleiche und252 Flussgates.
-Alle1048 nativen Requests erfasst; unveränderte Strom-/Archivnormierung.
-**Physisch bleiben alle vier Startformen unzulässig:** Normal-RMS0,269–0,276
-gegenüber1e-4, Innenvektor-RMS0,3615–0,3723 gegenüber0,01. Geometrie und Strom
-bestehen. Noch keine Optimierung aus diesen Starts. Nach zwei
-[Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) ist der
-[kumulative Geometrieschirm](geometry/COIL_PERTURBATION_RESULTS.md) nun feldfrei
-qualifiziert. Als nächstes einen begrenzten sicheren Feldfit registrieren.
-Grundbausteine und vollständiger Workflow mit360 neuen Kontrollen und Review
-softwarequalifiziert; strikte Einschließungen und transitive Checkpointerhaltung
-gesichert. Auch die reale52-Zustandsmatrix besteht vollständig: alle Pflichtprobes
-zertifiziert,18 größere Probes konservativ unzertifiziert; kein neuer Feldpass.
-Die angefragte
-[dünne Auswertungs-/Audit-CLI](validation/PROJECT_ENTRYPOINTS.md) besteht64 neue
-Tests, alter CLI-Code bleibt unverändert. Echter gespeicherter Daten-Replay
-reproduziert die ursprüngliche Abnahme exakt. Weiterhin nur ein festes Profil,
-kein universeller Einzelentwurfsprüfer.
-Software2064 Tests bestanden; separate blockweise Referenz qualifiziert, drei
-alte dichte RAM-Fehler unverändert negativ. Druck, Transfer und Robustheit offen.
+The immediate work is a portable public contribution layer. It is not a new
+physical result and does not reopen or expand the completed foundation milestones.
+The interrupted protected-fit proposal/solver are preserved as unqualified drafts;
+no new protected-fit search was executed.
 
-Der [erste Feldfit-Pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) bleibt negativ:
-zwei der acht Starts verfehlen den Ableitungsschirm; alle sechs erlaubten
-128-Aufruf-Suchen werden fein abgelehnt. Nur1,8–6,7mm Plasmaabstand und17/30
-bestandene Verfeinerungen; grober Methodenvorteil nicht stabil. Alte Gates,
-Fehlläufe und additive Ausgabe-Recovery bleiben unverändert erhalten.
+## Established results and their limits
 
-**Schritt3 ist im registrierten QI-nahen Vakuumumfang abgeschlossen.** Der
-[neue nfp2-Plasmaentwurf](qi/PLASMA_BALANCED_RESULTS.md) verändert vier benannte
-Randkoeffizienten, mit frisch gelösten Gleichgewichten. Auf dem feinsten Raster
-sinkt die relative Bouncewirkungsvarianz von2,3894265674e-4 auf2,1225270715e-4:
-**11,1700% Verbesserung**, zusätzlich4,8506% auf dem engeren Konstruktionsziel.
-Alle zehn finalen Gates bestehen. Der Vorteil beträgt47,38mal die beobachtete
-numerische Unsicherheitssumme (gefordert>5mal); alle70 lokalen Wirkungswächter,
-20 Verfeinerungen, Feld-/Kontur-/Tracerprüfungen und exakte Kaltwiederholung bestehen.
-
-Das ist ein unabhängig numerisch bestätigter Vorteil dieser Zielgröße, kein
-Nachweis besseren Teilcheneinschlusses oder globaler QI. Beide Domänen gingen
-in die Konstruktion ein, daher kein blinder Generalisierungstest. Der
-[erste Entwurf](qi/PLASMA_OPTIMIZATION_RESULTS.md) bleibt vollständig abgelehnt:
-15,53% schlechter auf breiter Domäne trotz Trainingsgewinn. Keine alten Grenzen
-gelockert;13 neue Kaltstarts im Folgeversuch,32 insgesamt einschließlich Fehlschlag.
-
-**Schritt1 und2 sind als begrenzte Basis- und Iterationsfähigkeit abgeschlossen.**
-Die [konsolidierte Abnahme](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) besteht:
-720 Tests mit144 bekannten Warnungen, sechs strikte W7-X-/Goodman-Datenregressionen
-ohne Skip, zwei exakt wiederholte24-Bundle-Solverpfade, separate Audits und alle
-vier unabhängigen Kandidatenabnahmen. Alle acht Schritt1- und drei Schritt2-Gates
-stehen auf Pass. Ein korrekt abgelehnter Entwurf verhindert diesen Basisabschluss nicht.
-
-Unverändert: keine neue zulässige Spulenoptimierungsbaseline, kein SoTA-/Kraftwerksvorteil,
-keine vollständige SQuID-C-Qualifikation. Globale QI-/Orbit-/Mechanikarbeit bleibt
-erhalten und offen, ist aber nicht Teil der jetzigen LPQA-Filamentabnahme.
-Historische umfassendere Abschlussformulierungen sind durch die ausdrückliche
-Planänderung ersetzt; ihre numerischen Befunde werden nicht umetikettiert.
-
-## Erhaltene Spulenforschung: spätere Leistungsbaseline
-
-Die beste fein geprüfte LPQA-Form stammt aus dem klassischen
-[GN-Folgelauf vom fixierten Stromminimum](optimization/CURRENT_START_GN_RESULTS.md).
-Beide2048-Bundle-Pfade exakt wiederholt und unabhängig auditiert; alle vier
-Abnahmephasen abgeschlossen. Feiner Roh-Flux8,129882387125932e-8, erforderlich
-höchstens1e-8: weiterhin Faktor8,13 zu hoch. Gegenüber dem Stromminimum sinkt der
-Flux um0,754%. Geometrie und zusätzliche native Prüfungen bestehen, aber keine
-vollständige Pareto-Dominanz. Beide Läufe enden am Budget; keine nachgewiesene
-Konvergenz oder allgemeine Methodenrangfolge. Vorherige exakte Stromminimierung
-half bei festgehaltener Geometrie praktisch nicht.
-
-Die anschließende [geometrische Diagnose](optimization/GEOMETRIC_DESCENT_RESULTS.md)
-umfasst sechs zertifizierte lineare Modelle,32 komplette native Bundles und 250
-unabhängige Checks. Alle sechs Richtungen bestehen die festgelegten
-Ableitungsprüfungen, aber jeder endliche Schritt erhöht den Flux und verletzt
-die Konstruktions-Auswahlgrenze. Keine feine Abnahme dieser Probes. Das lineare
-Modell ist bei diesen Radien unzureichend; weder globales Optimum noch falsche
-Ableitungen sind damit belegt. Die nun abgeschlossene
-[Krümmungsprüfung](optimization/GEOMETRIC_CURVATURE_RESULTS.md) bestätigt alle
-sechs quadratischen Vorzeichen mit mindestens99,60% weniger Vorhersagefehler.
-Beide vollständigen Feldmatrizen sind unabhängig qualifiziert. Rang203/207 bei
-festem numerischen Cutoff deutet auf schwache/redundante Richtungen; deren Ursache
-ist nicht abschließend geklärt. Keine DOFs entfernt; die Diagnose selbst ist kein
-Entwurfsgewinn. Der spätere GN-Folgelauf ist oben separat bewertet.
-
-Frühere Teilerfolge bleiben gültig, eng begrenzt: Die räumliche Residuen-Darstellung
-senkte bei gleichem300-s-Budget den Feldfehler an einem Startpunkt etwa 2,35-fach;
-trotzdem waren alle Entwürfe unzulässig. Fünf separat rekonstruierte Archivfelder
-lagen mit tatsächlichem Roh-Flux nahe 1e-6 rund 100-mal über der Grenze. Geschwellte
-Nullmeldungen sind keine Zulassung. Details und alle erhaltenen Fehlschläge:
-[Optimierungsübersicht](optimization/README.md).
-
-## Prüfwerkzeuge: was besteht, was nicht?
-
-| Bereich | Belegter Teilfortschritt | Offene Grenze |
+| Work package | Evidence-backed result | What remains unproven |
 | --- | --- | --- |
-| W7-X / native Reproduktion | Ausgewählte physikalische Regression und frischer lokaler 21-Phasen-Aufbau bestehen; sechs wissenschaftliche Tests ohne Skip | Erweiterter W7-X-Dateivergleich 60/63; gleicher Rechner/erlaubte Caches, keine unabhängige Hardware oder Hosted-CI |
-| Feld und Geometrie | Unabhängige Biot-Savart-/Ableitungsprüfungen; kontinuierliche Krümmungs-/Abstandsschranken finden übersehene Gitterverletzungen | Gleitkommapolster statt gerichteter Intervallarithmetik; keine vollständige endliche Baugruppe |
-| QI / radiale Wirkung | Unabhängige Traces/Quadratur und überprüfte Gauge-Kettenregel | Bei 25 nfp3-Muldenfamilien ändert reine radiale Feldlinien-Neumarkierung die Vorzeichenklasse; kein global gauge-unabhängiger Maßstab |
-| Absolute Drift / analytische Kontrolle | Zwei81-Zellen-Kontrollen samt45/243 unabhängigen skalaren Zuständen bestehen; nichtverschwindende radiale Drift und gleiche Phase geprüft | Erste Ordnung auf eingefrorener Feldlinie; bis74% relativer Flusslabelhub bei10keV, keine validierte endliche Bahn oder echte QI-Gesamtqualifikation |
-| QI / Gleichgewichte | Frische 16-Zellen-Studie vollständig auditiert; doppelte Solver-Winkelauflösung besteht untersuchte Feldidentitäten | Ursprünglich nur 9/16 Auswertungsverfeinerungen und 2/16 historische Feld-Fidelitätspässe; keine Zelle besteht alle ursprünglichen Schirme |
-| QI / gemeinsamer Winkel | 120 neue Gitter und 61.440 unabhängige skalare Inversionen bestätigen die Koordinatenrechnung | Nur 4/16 neue Fidelitäts- und 5/16 Vergleichsverfeinerungspässe; Parametrisierung erklärt nicht sämtliche Unterschiede |
-| Endliche Spulennetze | Alle sechs Auflösungen bestehen den nicht-gemeinsame-Vertexindizes-Teiltest; feinster Lauf mit 2.222.785 Paarprüfungen und exakt altem 2M-Präfix auditiert | Nachbarpaare, vollständige Baugruppen, reale Wicklungspakete und gültige Mechanik offen; alte große Verformung verletzt lineare Modellannahmen |
-| Software | 2064 Tests, Ruff und Dokumentstrukturprüfung bestanden | 334 dokumentierte Warnungen:144 alte Fixture- und190 sichtbare Solveroptionsmeldungen; separater strenger netCDF4-Importtest scheitert an Größenwarnung. Keine behauptete ABI-/Warnungsfreiheit |
+| Steps1/2: bounded foundation and iteration | Eight foundation gates, six mandatory scientific regressions, two exactly repeated24-bundle paths and four independent candidate checks | Universal QI/engineering validity; those candidates remain physically rejected |
+| Step3: own nfp2 vacuum plasma target | Relative bounce-action variance decreases from2.3894265674e-4 to2.1225270715e-4 (11.1700%); narrower-domain gain4.8506%; all ten final gates pass | Global QI, improved measured confinement, finite pressure, practical coils or plant performance |
+| Step4 coil initialization | All12 constructed starting sets pass scoped geometry admission; selected six/eight-base-coil forms retain at least98.2mm certified plasma clearance, required80mm | Magnetic-field quality or full finite-build engineering |
+| Step4 field starts | Four cells, eight N/V derivative checks,20 refinements,768 direct B/A comparisons and252 flux gates pass numerical qualification | All four fail physical field limits: normal RMS0.269–0.276 versus1e-4; inner-vector RMS0.3615–0.3723 versus0.01 |
+| Cumulative geometry bounds | The52-state qualification passes all required small probes and independent direct checks;18 larger probes remain uncertified | Uncertified does not mean physically impossible; no field improvement follows from this alone |
 
-Die beiden QI-Verfeinerungsmaße unterscheiden sich: ursprüngliche
-Clebsch-Identitätsverfeinerung und spätere Verfeinerung des historischen
-Vergleichsfehlers sind nicht derselbe Test. Autorenreferenzen wurden nicht ersetzt.
-Der Netznachweis gilt für die ursprünglichen vier Grundspulen, nicht für eine
-vollständige 16-Spulen-Baugruppe oder den neuesten optimierten Entwurf.
+Sources: [foundation acceptance](validation/FOUNDATION_ACCEPTANCE_RESULTS.md),
+[plasma result](qi/PLASMA_BALANCED_RESULTS.md),
+[coil initialization](geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md),
+[field qualification](optimization/CLEAR_COIL_FIELD_START_RESULTS.md),
+[cumulative geometry](geometry/COIL_PERTURBATION_RESULTS.md).
 
-Belege: [native Integration](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md),
-[QI-Auflösung](qi/QI_FRESH_RESOLUTION_RESULTS.md),
-[QI-Koordinatenvergleich](qi/QI_PEST_FIDELITY_RESULTS.md),
-[Netzabschluss](engineering/MESH_FINE_COMPLETION_RESULTS.md),
-[strenge Importwarnung](validation/NETCDF_IMPORT_WARNING.md).
+The plasma comparison used both action domains during construction: it is not a
+blind holdout. The reported improvement exceeds the registered numerical-uncertainty
+test, but remains a metric-specific result. “Independent” in these reports refers
+to the specified numerical/source checks, not external peer review.
 
-## Abschluss und Übergabe
+## Failures we retain
 
-`foundation-acceptance-v2` ist vollständig bestanden; der erste Lauf bleibt samt
-fehlerhaftem Metadatenvergleich und negativem Gesamtaudit erhalten. Die Korrektur
-änderte keine numerischen Kriterien. Beide Demonstrationskandidaten bleiben mit
-8,191664e-8 gegenüber1e-8 unzulässig; der kurze Zyklus ist kein Leistungsexperiment.
-Der frühere bessere Forschungsentwurf wird dadurch nicht ersetzt.
+- The [first plasma design](qi/PLASMA_OPTIMIZATION_RESULTS.md) worsened the wider
+  action metric despite improvement on the construction objective.
+- The [first actual-coil pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) has
+  six completed searches and six physical rejections: fine plasma clearance only
+  1.8–6.7mm against80mm required; only17/30 refinements pass.
+- The best preserved [LPQA coil search](optimization/CURRENT_START_GN_RESULTS.md)
+  reaches raw fine flux8.129882e-8, still above its1e-8 threshold. Its0.754% gain
+  is real within that comparison, not a feasible-design or convergence claim.
+- The extended W7-X file comparison remains60/63. The selected physics regression
+  does not erase the other three differences.
+- End-to-end QI/orbit qualification and valid complete mechanics remain open.
+  Earlier finite-mesh checks do not certify neighboring elements/full assemblies;
+  large linear-deformation outputs were outside the model's valid scope.
 
-Altbestand bei5971fee lokal getaggt; keine alten numerischen Kerne/Evidenz verändert,
-externe Quellen einschließlich bestehender STELLOPT-Anpassungen unverändert.
-Bedienung und Grenzen stehen im [Abschlussbericht](validation/FOUNDATION_ACCEPTANCE_RESULTS.md).
-Damit endete die Basisarbeit. Die danach ausdrücklich beauftragte Schritt3-Arbeit
-ist jetzt ebenfalls getrennt abgenommen. Eingabe, Ergebnisse, Grenzen und
-Wiederholungsbefehle stehen im [Plasmaabschluss](qi/PLASMA_BALANCED_RESULTS.md).
-Die damalige Übergabe ist erfolgt; Schritt4 ist danach ausdrücklich beauftragt,
-Schritt5 bleibt getrennt.
+Detail: [validation](validation/README.md), [QI](qi/README.md),
+[engineering](engineering/README.md), [research log](logbook/README.md).
+Older optimistic journal conclusions do not supersede this current assessment.
 
-## Später zu qualifizieren — keine Voraussetzungen für Schritt1/2
+## Public usability — a separate deliverable
 
-1. Eine tatsächlich zulässige klassische Spulenbaseline, danach unabhängige
-   Wiederholungen und fairer mehrstartiger Vergleich.
-2. Physikalisch qualifizierter QI-/Wirkungs-/Driftmaßstab mit festgelegter
-   Domänenabdeckung, Mulden-Identität, Gauge- und Gleichgewichtsauflösung.
-3. Gültige endliche Spulengeometrie und Mechanik einschließlich belastbarer
-   Material-, Lagerungs- und Modellannahmen.
-4. Getrennt: unabhängige Ausführung sowie autoritative SQuID-C-Daten und
-   Reproduktion der publizierten Zielgrößen. Fehlende Daten sind nicht das einzige Hindernis.
+The additive public code has dependency-free unit/analytic controls,
+a small attributed real-coil packet and a candidate/report interface. Its first
+committed-source copied-tree reference run is pending. Hosted CI and independent
+hardware reproduction have not been verified.
 
-Die [SQuID-C-Prüfliste](squid_c/SQUID_C_READINESS.md) enthält weitere Einzelgates.
-Ein fachlicher Review sollte besonders Entwurfszulässigkeit, QI-Zielgröße und
-Gültigkeitsbereich der Ingenieurmodelle hinterfragen.
+The public profile evaluates192 fixed sample points with frozen physical currents.
+It reports sparse normal/vector errors and256/512 filament-resolution differences;
+it does not compute the original full-surface, flux-normalized acceptance.
+Report replay uses the same public implementation. An unchanged-seed comparison
+against archived native B/A is a separate arithmetic check. Public reports never
+set physical admission or Step4 to true.
+
+The complete historical research workflow still requires additional native
+dependencies, large local artifacts and qualified source-bound adapters. Its
+last completed full suite had2064 passing tests with334 documented warnings;
+this is distinct from the new public tests. The strict netCDF4 import warning
+remains unresolved, with no claimed ABI-freedom or hosted-CI pass.
+
+## Next required evidence
+
+First close the [portable release checks](validation/PUBLIC_RELEASE.md), including
+fresh-copy use without site packages and explicit tampering rejection. Before an
+actual public launch, complete [hosting/security checks](validation/REVIEW_POLICY.md).
+Then contributors can tackle the nonexclusive [research hints](optimization/RESEARCH_HINTS.md).
+
+Scientifically, Step4 still needs actual-coil field/QI transfer, genuine coupled
+improvement, finite-pressure/confinement work and finite-geometry/robustness.
+[SQuID-C readiness](squid_c/SQUID_C_READINESS.md) has additional gates; missing
+author data is not the only remaining obstacle.

@@ -12,6 +12,10 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Public quickstart](PUBLIC_QUICKSTART.md) — English dependency-free reference/candidate/report commands, exact numerical scope, interpretation and troubleshooting; public reference qualification tracked separately.
+- [Portable release verification](PUBLIC_RELEASE_RESULTS.md) — Source-bound public/software qualification, retained JSON-depth/CI-preservation failures and separate real copied-tree replay; not physical or hosted-CI admission.
+- [Review and coordination policy](REVIEW_POLICY.md) — Open intake without mandatory cost disclosure, separate software/scientific decisions, trusted evaluator, safe PR execution and outstanding hosting checklist.
+
 - [Public collaboration and portable release](PUBLIC_RELEASE.md) — English implementation/acceptance plan for a dependency-free real-coil starter, open unsolicited contributions, optional cost disclosure and protected review; no automatic physical admission or publication.
 
 - [Gemeinsamer CLI-Einstieg](PROJECT_ENTRYPOINTS.md) — Profile entdecken, Aufrufe ohne Rechnung planen, feste Feldstartstudie ausführen und gespeicherte Läufe unabhängig auditieren. 64 neue/1904 Gesamttests und echter gespeicherter2434-Referenzen-Audit bestanden; alte CLI/Fehlschläge bewahrt, physische Ablehnungen unverändert.

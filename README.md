@@ -1,154 +1,108 @@
-# Fusion Baselines
+# Nuclear Fusion @ Home
 
-Reproducible research on stellarator coil optimization, independent physical
-validation and a future SQuID-C baseline. W7-X is the physics/software regression,
-StellCoilBench/LPQA the method benchmark, and open Goodman configurations the QI bridge.
+Open, reproducible stellarator research — contributed by people and their agents.
 
-## Research overview
+We want to find better combinations of **magnetic-field quality, buildable coils
+and robustness**, and verify improvements computationally. We start with
+stellarators: fusion devices whose external coils create a twisted magnetic field
+intended to confine hot plasma. Our work is simulation and software, not a home
+reactor construction project.
 
-**2026-09-23: preparing Nuclear Fusion @ Home for public collaboration.**
-The [portable-release plan](docs/validation/PUBLIC_RELEASE.md) adds an accessible
-reference/candidate/review route without changing old evidence. Unsolicited useful
-contributions are welcome; compute-cost disclosure is optional. Preparation is
-in progress, not a published release or completed step4.
+**Research preview, 23 September 2026.** We have useful tested tools and a bounded
+plasma-design result, but **no newly accepted feasible coil design, demonstrated
+state-of-the-art advance, or power-plant breakthrough**. We are not affiliated
+with Proxima Fusion or the Max Planck Institute; their work and open research
+provide important scientific context.
 
-Start with [the project overview](docs/README.md), [current assessment](docs/STATUS.md)
-and [work plan](docs/PROJECT_PLAN.md). They are written for scientific review.
-Detailed protocols, results and the research journal are indexed one level below.
+## Start in three commands
 
-Current assessment, 2026-09-20: **steps 1, 2 and the registered vacuum scope of
-step 3 are complete.** Steps 1/2 qualify the bounded local W7-X/Goodman regression
-and LPQA fixed-surface filament workflow.
-The [consolidated acceptance and runbook](docs/validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
-record 720 tests, six mandatory scientific regressions without skips, exact two-run
-24-bundle iteration, independent audits and all four candidate holdout phases.
-This qualifies the workflow, not a better/feasible design or SQuID-C readiness.
-All earlier studies are preserved at tag `foundation-pre-scope-2026-09-13`
-(`5971fee`). Broader QI, engineering and performance research remains deferred.
-The subsequently authorized [plasma-boundary optimization](docs/qi/PLASMA_BALANCED_RESULTS.md)
-now delivers a changed Goodman-nfp2 vacuum boundary: **11.1700% lower relative
-bounce-action variance on the finest registered domain**, plus4.8506% narrow
-training gain. All ten final gates pass, including local action guards, exact cold
-repeat, source/action audit, field/contour/tracer checks and all20 refinements.
-The first design remains [rejected and preserved](docs/qi/PLASMA_OPTIMIZATION_RESULTS.md).
-This is a bounded numerical design improvement, not measured confinement, global
-QI, a feasible coil design, SoTA or power-plant performance. Both domains informed
-the follow-up construction; finer independent admission is not blind generalization.
-After handoff, the user explicitly authorized step4. Its
-[options and three independent agent reviews](docs/optimization/COUPLED_DESIGN_OPTIONS.md)
-prioritize paired actual-coil realization before coupled plasma/coil iterations.
-The [completed first coil pilot](docs/optimization/COUPLED_COIL_PILOT_RESULTS.md)
-remains negative: all six admitted128-call searches fail fine physical admission,
-with1.8–6.7mm plasma clearance against80mm required and only17/30 refinements passing.
-The subsequent [clear-initialization study](docs/geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md)
-now passes independent geometry admission for **all twelve actual coil sets**:
-168 LP calls,84 exact repeats,72 direct clearance checks. The selected shaped
-starts for both six/eight-base-coil classes retain at least98.2mm certified plasma
-clearance, with length/curvature/pair-distance limits unchanged. The subsequent
-[real field-start qualification](docs/optimization/CLEAR_COIL_FIELD_START_RESULTS.md)
-now passes numerical admission for all four target/coil-class cells: eight N/V
-derivative qualifications,20 refinements,768 direct field comparisons and252
-flux checks. All1,048 native requests are accounted for. Geometry/current pass,
-but all four seeds fail physical field-quality limits by large factors; fine
-normal RMS0.269–0.276 versus1e-4. Two [method reviews](docs/optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
-lead first to a [field-free cumulative geometry certificate](docs/geometry/COIL_PERTURBATION_PROTOCOL.md).
-Its mathematical primitives and complete workflow now pass360 new tests and
-independent review, including transitive checkpoint recovery after failures;
-the [52-state real matrix](docs/geometry/COIL_PERTURBATION_RESULTS.md) also passes
-independent qualification. All required smallest changes certify;18 larger
-probes remain conservatively uncertified. Next register the bounded field fit.
-The requested thin
-[evaluation/audit CLI](docs/validation/PROJECT_ENTRYPOINTS.md) now passes64 new
-controls, preserving all historical code. A real saved-data audit through it
-exactly reproduces the prior scientific report; this interface still exposes
-only the fixed field-start profile, not arbitrary designs. The earlier three dense memory
-failures remain negative; a separately qualified block-native reference passed
-the unchanged resource gates. No search or new equilibrium in the startup study.
-No physically admitted coil design or completed step4; pressure, realized-field physics, finite geometry and
-robustness remain required subpackages. No automatic step5 or SoTA claim.
-
-- [Latest coil results](docs/optimization/README.md): best fine raw flux about
-  8.13e-8 versus the unchanged 1e-8 limit; tested geometry/native constraints pass.
-  The completed curvature-informed follow-up improves fine flux by0.754%, with
-  exact two-run repetition, separate audit and all four independent holdout phases.
-  Both runs exhaust their fixed budgets; no convergence or feasible-design claim.
-- [Fresh native integration](docs/validation/FRESH_NATIVE_INTEGRATION_RESULTS.md):
-  all 21 local phases and six scientific tests without skips pass. Extended W7-X
-  comparison deliberately retains three differences out of 63 quantities.
-- [QI evaluation](docs/qi/README.md): independently audited action, coordinate and
-  resolution diagnostics give useful partial results. Absolute drift/action/SI
-  normalization passes two81-cell analytic controls and independent scalar audits,
-  including nonzero radial drift and phase covariance. Finite particle-orbit and
-  real QI-field/global qualification remain open. Author data are unchanged.
-- [Finite coil geometry](docs/engineering/MESH_FINE_COMPLETION_RESULTS.md):
-  all six original meshes pass the scoped non-shared-vertex nonoverlap test,
-  with independent witnesses and exact historical prefix. Neighbor pairs, full
-  assemblies and valid mechanics remain open.
-- Latest complete software regression: 2,064 tests pass with 334 documented warnings
-  (144 fixture warnings and 190 explicitly retained solver-option forwarding notices);
-  Ruff and documentation checks pass. The separate strict netCDF4 import warning
-  remains unresolved; this is not an ABI-freedom or hosted-CI claim.
-
-Prior searches, source reconstructions, negative trials and the disk incident
-remain preserved in the [research journal](docs/logbook/README.md) and linked
-detail reports. Earlier equal-time gains apply to one infeasible start and do
-not establish a general method ranking or better power-plant performance.
-
-Persistent working and documentation rules: [AGENTS.md](AGENTS.md).
-Documentation must be updated after every completed work step, including checking
-both READMEs, the current assessment and the work plan for affected summaries.
-Environment details: [validation overview](docs/validation/README.md).
-Documentation checks: `python scripts/check_docs.py`.
-
-## Canonical commands
-
-For a shared human/agent entry point, see the
-[CLI quickstart and profile contract](docs/validation/PROJECT_ENTRYPOINTS.md):
+From a checkout or source ZIP, with **Python 3.12+**:
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m fusion_baselines profiles --json
-.venv/bin/python fusion.py profiles --json
-PYTHONPATH=src .venv/bin/python -m fusion_baselines evaluate \
-  --profile clear-coil-field-start-v1 --output artifacts/my-field-start --dry-run
-PYTHONPATH=src .venv/bin/python -m fusion_baselines audit \
-  --profile clear-coil-field-start-v1 \
-  --run artifacts/clear-coil-field-start-v1/run.json \
-  --output artifacts/my-field-start-audit.json --dry-run
+python fusion.py public cases
+python fusion.py public demo --output results/my-first-demo
+python scripts/test_public.py
 ```
 
-Version1 wraps a fixed four-cell study, **not arbitrary single designs**. Discovery
-and dry runs do no scientific work. Actual execution needs the qualified checkout,
-environment and locally retained raw data; a wheel or Git clone alone is not enough.
-Exit0 from an audit means numerical startup admission, not physical feasibility.
-The old installed `fusion-baselines` intake command remains unchanged; use the
-new module entry point or root launcher above for these research commands.
+Use `python3` instead of `python` if that is your system's command.
+No package installation, API key, GPU, native compiler or large download is needed
+for this portable starter. All starter data is included. Use a fresh output name
+for each run; existing evidence is not overwritten.
 
-Recheck the bounded foundation in the existing pinned environment, using new
-output names (do not sync or install anything for this check):
+The demo computes **real filament-coil fields**, compares the unchanged reference
+against saved native calculations, and replays its report. It deliberately reports
+`physical_admission: false`: sparse field checks are not full design acceptance.
+The committed-source reference qualification is being completed; do not infer
+hosted CI success from the presence of workflow files.
+
+[Full quickstart and candidate format](docs/validation/PUBLIC_QUICKSTART.md) ·
+[Reference data and attribution](examples/clear-coil-samples-v1/README.md)
+
+## Contribute something useful
+
+Bring your own agent, write code yourself, challenge an assumption, reproduce a
+result or propose a new approach. **No prior issue, requested task, specified model
+or declared compute budget is required.** Negative results and unsolicited ideas
+are welcome. Our [research hints](docs/optimization/RESEARCH_HINTS.md) explain what
+currently seems promising; they are not an allowlist.
 
 ```bash
-PYTHONPATH=src .venv/bin/python scripts/run_foundation_acceptance.py \
-  evidence/my-foundation-check artifacts/my-foundation-check
+python fusion.py public init --output results/my-candidate.json
+# Edit the named Fourier coefficients in my-candidate.json, then:
+python fusion.py public evaluate --candidate results/my-candidate.json --output results/my-report.json
+python fusion.py public audit --report results/my-report.json --output results/my-audit.json
 ```
 
-`summary.json` separates the two milestone results from physical candidate
-acceptance. The demonstrated candidates remain rejected at the unchanged flux
-limit. The runbook also documents the standalone iteration/audit/holdout cycle.
+This first candidate interface has a narrow fixed-current, sampled-field scope.
+Work beyond that format is still welcome through ordinary proposals and PRs.
+Explain what changed, show evidence, state limitations and credit sources.
+Compute/cost information is optional; measured efficiency claims still need evidence.
 
-Run bootstraps only in the intended environment. Keep the qualified native root
-environment intact; run core-only synchronization in a separate clone.
+[Contribution guide](CONTRIBUTING.md) · [Review policy](docs/validation/REVIEW_POLICY.md) ·
+[Security](SECURITY.md)
 
-```bash
-./scripts/bootstrap_macos.sh
-uv run python scripts/run_stellcoilbench_case.py \
-  external/stellcoilbench/cases/basic_LandremanPaulQA.yaml \
-  artifacts/runs/lpqa-baseline
-./scripts/bootstrap_vmecpp.sh
-./scripts/bootstrap_qi_data.sh
-./scripts/bootstrap_simple.sh
-./scripts/bootstrap_neo_jax.sh
-uv run fusion-baselines summarize-equilibrium \
-  manifests/qi-goodman-2022.json --data-root .
-uv run python scripts/audit_squid_c_availability.py \
-  evidence/squid-c-availability-$(date +%F).json
-```
+## What is actually established?
+
+| Area | Established result | Important limit |
+| --- | --- | --- |
+| Research foundation | Reproduced bounded local W7-X/Goodman checks and a repeatable coil-optimization/evaluation workflow | Not the complete W7-X device or a universal physics qualification |
+| Own plasma target | 11.17% lower fine-grid relative bounce-action variance in a registered vacuum study | A specific numerical proxy, not demonstrated confinement, global QI or power output |
+| Coil realization | Geometrically acceptable starting coils and independently checked field calculations | Their magnetic errors still fail the research acceptance limits |
+| Public access | Small self-contained real-coil dataset, plain JSON candidates and dependency-free evaluation/replay | Not the full historical native workflow or physical admission; release checks are tracked separately |
+
+See [the evidence-based status](docs/STATUS.md) for sources and failure modes.
+Construction, numerical correctness and physical acceptance are different things.
+A merged contribution or green test run does not automatically establish a
+scientific improvement.
+
+## Where we are going
+
+The scientific roadmap remains: reliable foundation → reproducible iteration →
+own plasma targets → coupled plasma/coil development → independently demonstrated
+improvements. **Step 4 remains open**, including realized-field/QI transfer,
+finite pressure, finite coil geometry and robustness.
+
+Our immediate priority is letting outside contributors work productively on those
+questions. The public starter is an entry point, not a restriction on the research.
+The much larger historical research suite remains available with additional
+native dependencies and local artifact requirements; it is not installed by the
+quickstart.
+
+[Scientific overview](docs/README.md) · [Current status](docs/STATUS.md) ·
+[Roadmap](docs/PROJECT_PLAN.md) · [Historical research entry points](docs/validation/PROJECT_ENTRYPOINTS.md)
+
+## Licensing, credit and project operation
+
+Project code: [MIT](LICENSE), with [source/data notices](NOTICE.md).
+The bundled derived Goodman reference data has
+[separate CC BY 4.0 attribution](examples/clear-coil-samples-v1/README.md); do not
+assume the code license covers every upstream dataset. Cite the exact revision
+and upstream sources used: [CITATION.cff](CITATION.cff).
+
+The repository is being prepared locally for public hosting. No automatic PR
+monitoring, merging, publication or hosted CI success is implied.
+[Launch checklist](docs/validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
+
+Historical evidence and failures remain preserved. Maintainer/agent working
+instructions: [AGENTS.md](AGENTS.md). Documentation structure check:
+`python scripts/check_docs.py`.

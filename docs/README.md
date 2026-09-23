@@ -1,146 +1,94 @@
-# Forschungsprojekt: belastbare Verbesserungen von Stellaratorspulen
+# Nuclear Fusion @ Home: scientific overview
 
-Leseeinstieg für die wissenschaftliche Betreuung. Stand: 20. September 2026.
-Diese Übersicht, [Ergebnisstand](STATUS.md) und [Arbeitsplan](PROJECT_PLAN.md)
-beschreiben Ziel, belegten Fortschritt und nächste Entscheidungen. Vollständige
-Messreihen, Fehlschläge und Prüfprotokolle liegen eine Ebene tiefer.
-Praktischer Einstieg für Menschen und Agenten: [gemeinsame CLI und Profile](validation/PROJECT_ENTRYPOINTS.md).
+For contributors and scientific reviewers. Updated 23 September 2026.
+[Quickstart](validation/PUBLIC_QUICKSTART.md) · [Status](STATUS.md) · [Roadmap](PROJECT_PLAN.md)
 
-**Neuer Schwerpunkt,23.September2026:** Die [öffentliche Mitwirkungsbasis](validation/PUBLIC_RELEASE.md)
-für Nuclear Fusion @ Home wird vorbereitet. Ziele und bisherige Nachweise bleiben;
-zuerst portabler Einstieg und nachvollziehbarer Beitrags-/Prüfweg statt weiterer
-lokaler Suche. Nicht angefragte relevante Beiträge sind ausdrücklich willkommen,
-Rechenkostenangaben freiwillig. Der vollständige Schritt4 bleibt offen.
+## Research question
 
-## Forschungsfrage und bisheriger Beitrag
+Can we computationally identify and independently verify improvements to
+stellarator designs that balance magnetic-field quality, coil buildability and
+robustness? We begin with open reference cases and aim eventually to develop our
+own quasi-isodynamic plasma configurations together with realizable coils.
 
-Können wir Stellaratorspulen mit einem besseren Kompromiss aus Magnetfeldqualität,
-Baubarkeit und Robustheit konstruieren und den Vorteil unabhängig am Computer
-nachweisen? Langfristig wollen wir eigene QI-Plasmakonfigurationen samt passenden
-Spulen entwickeln, mit Proxima Fusion und SQuID-C als wissenschaftlicher Orientierung.
+A stellarator uses shaped external coils to create its confining magnetic field.
+A favorable plasma target does not automatically have practical coils; a coil
+system that approximates a target does not automatically preserve its confinement.
+This is why we separate optimization, numerical checks and physical acceptance.
 
-Bisher entstanden reproduzierbare Versuchs- und Prüfwerkzeuge sowie ein
-[eigener QI-naher Vakuumentwurf](qi/PLASMA_BALANCED_RESULTS.md):11,1700% geringere
-relative Bouncewirkungsvarianz auf der feinsten registrierten Prüfdomäne,
-mit allen lokalen Schutz- und numerischen Abnahmegrenzen eingehalten.
-**Noch kein neuer zulässiger Spulenentwurf, kein SoTA-Nachweis und
-keine vollständige SQuID-C-Bereitschaft.** Ein niedrigerer Optimierungswert allein
-belegt weder bessere Einschlussphysik noch bessere Kraftwerksleistung.
+“Quasi-isodynamic” (QI) describes a magnetic-field property relevant to reducing
+particle drifts. Our present plasma result concerns a specific bounce-action
+diagnostic. It is not a demonstration of full QI, better measured confinement or
+net energy production. Proxima Fusion/SQuID-C motivate our longer-term direction;
+this is an independent project without claimed affiliation or endorsement.
 
-## Langfristiger Plan und aktueller Schwerpunkt
+## Evidence and current position
 
-| Schritt | Angestrebtes Ergebnis | Stand |
+| Milestone | Status | What it establishes |
 | --- | --- | --- |
-| 1. Begrenzte Rechen- und Prüfbasis absichern | Lokale W7-X-/Goodman-Regression und geprüfte LPQA-Festoberflächen-/Filamentwerkzeuge | Abgeschlossen: alle acht Basisgates bestehen |
-| 2. Prinzipiell iterieren können | Referenz laden, Parameter optimieren, Kandidaten speichern und unabhängig bewerten; reproduzierbar | Abgeschlossen: zwei echte24-Bundle-Pfade exakt wiederholt, separat auditiert und fein bewertet |
-| 3. Eigene QI-Plasmakonfigurationen entwickeln | Eigene Oberfläche/Gleichgewichte mit numerisch bestätigter QI-relevanter Verbesserung | Im registrierten nfp2-Vakuumumfang abgeschlossen:11,17% geringere Wirkungsvarianz, alle zehn Abnahmegates bestehen |
-| 4. Plasma und Spulen gemeinsam weiterentwickeln | Einschluss, endlichen Druck, Baubarkeit und Robustheit gemeinsam berücksichtigen | Aktiv: Feldstarts und kumulative Geometrieschranke qualifiziert; Feldqualität noch unzulässig, Transfer/weitere Physik offen |
-| 5. Verbesserungen belastbar nachweisen | Unabhängig geprüfter Vorteil gegenüber reproduzierten Referenzen unter gleichen Anforderungen | Offen |
+| 1. Reliable bounded reference tools | Complete locally | W7-X/Goodman regression and specified LPQA filament tools |
+| 2. Reproducible design iteration | Complete locally | Real optimization paths can be saved, replayed and separately evaluated |
+| 3. Own QI-like plasma target | Complete in registered vacuum scope | An actual boundary change lowers the specified fine action-variance metric by11.17% |
+| 4. Coupled plasma and coil development | Open | Geometry-qualified starts exist; field-quality admission and broader physics remain unresolved |
+| 5. Independently demonstrated performance advance | Open | No state-of-the-art or power-plant claim |
 
-**Schritt 1 und 2 sind im geschärften Umfang abgeschlossen.** Das sind
-Befähigungsziele, keine SoTA- oder Entwurfsleistungsziele. Der danach ausdrücklich
-beauftragte Schritt3 ist nun ebenfalls in seinem
-[vorab festgelegten Vakuumumfang](qi/PLASMA_BALANCED_PROTOCOL.md) abgeschlossen.
-Erforderlich war ein tatsächlicher numerischer Entwurfsgewinn, nicht nur ein Ablauf.
-Unabhängige feinere Prüfung ist hier kein blinder Generalisierungstest: beide
-Wirkungsdomänen wurden bereits in der Konstruktion verwendet. Globale QI,
-Teilcheneinschluss und Druck-/Stabilitätsphysik bleiben offen. Nach dieser Übergabe
-hat der Nutzer Schritt4 ausdrücklich beauftragt. [Methodenoptionen und Reviews](optimization/COUPLED_DESIGN_OPTIONS.md)
-trennen den ersten Vakuumpiloten von Druck, tatsächlicher Feldphysik und Robustheit;
-Schritt4 ist noch offen, Schritt5 nicht begonnen.
-Die [Feldstart-/Auflösungsqualifikation](optimization/CLEAR_COIL_FIELD_START_RESULTS.md)
-der geometrisch angenommenen Konturen ist nun abgeschlossen: alle vier realen
-Zellen numerisch angenommen, alle20 Verfeinerungen und252 Flussgates bestanden.
-Geometrie und Strom sind zulässig, die Magnetfeldfehler nicht. Nach zwei
-[Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md) wurde zunächst
-eine [kumulative Geometrieschranke](geometry/COIL_PERTURBATION_RESULTS.md)
-feldfrei qualifiziert; als nächstes begrenzten Feldfit separat registrieren.
-Mathematische Grundbausteine und Gesamtworkflow bestehen360 neue Tests und
-zusätzlichen Review; strikte Einschließungen und transitive Checkpointerhaltung
-sind gesichert. Auch die reale52-Zustandsmatrix besteht: alle Pflichtprobes
-zertifiziert,18 größere Probes konservativ unzertifiziert. Keine Feldrechnung
-oder neue Suche in dieser Qualifikation. Die angefragte gemeinsame
-Auswertungs-/Audit-CLI besteht64 neue Kontrollen und reproduziert im echten
-gespeicherten Audit alle bisherigen Ergebnisse. Keine beliebige Einzelentwurfsbewertung
-durch diese dünne Oberfläche. Noch keine neue Suche oder physische Feldzulassung.2064 Softwaretests
-bestanden; ursprüngliche negative Versuche bleiben unverändert erhalten.
-Spulenoptimierung an einer festen Oberfläche ersetzt keine QI-Plasmaoptimierung.
-Umgekehrt beweist eine günstige Plasmaoberfläche noch keine baubaren Spulen.
+The [plasma result](qi/PLASMA_BALANCED_RESULTS.md) includes independently computed
+diagnostics and an exact cold repeat. Both action domains were used during
+construction, so this is not a blind generalization test. The first plasma design
+was rejected and remains visible. Our [first actual-coil pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md)
+also failed physical acceptance. Subsequent work produced valid starting geometry
+and [numerically qualified field evaluations](optimization/CLEAR_COIL_FIELD_START_RESULTS.md),
+but the magnetic errors remain far too high. No new feasible coil baseline exists.
 
-## Warum drei Referenzfälle?
+The [status page](STATUS.md) links the numerical evidence and important unresolved
+model limitations. Independent internal calculations and agent reviews are not
+external peer review. Test counts are software evidence, not physical admission.
 
-| Referenz | Zweck | Begrenzung |
-| --- | --- | --- |
-| W7-X-Modellfall | Gleichgewichtsberechnung gegen etablierte Referenzrechnung prüfen | Kein Vergleich mit dem vollständigen gebauten Gerät oder experimentellen Messungen |
-| Landreman-Paul QA / StellCoilBench | Spulen für eine feste magnetische Oberfläche unter festen Geometriegrenzen optimieren | QA-Methodenerfolg ist kein nachgewiesener QI-/SQuID-C-Vorteil |
-| Offene Goodman-QI-Fälle | Bouncewirkung und QI-relevante Einschlussdiagnostik an vorhandenen Konfigurationen prüfen | Noch kein global qualifizierter maximum-J-/Driftmaßstab |
+## Public collaboration
 
-Spulenoptimierung und QI-Auswertung können an ihren jeweiligen offenen Daten
-entwickelt werden. Für einen späteren QI-Spulenentwurf müssen Feld-, Gleichgewichts-,
-QI- und Ingenieurprüfungen zusammenkommen. SQuID-C ist eine spätere Zielbaseline;
-dafür ist ein eindeutig zugeordnetes maschinenlesbares Autorenpaket nötig.
-Die dokumentierten Verfügbarkeitssuchen vom August sind keine aktuelle oder
-universelle Aussage, dass solche Daten nicht existieren.
+Nuclear Fusion @ Home is collaborative computational research, not initially a
+distributed-compute scheduler. Anyone may contribute with or without an agent.
+Useful unsolicited work, alternative approaches, replications, documentation,
+counterexamples and negative results are welcome. Compute spending disclosure is
+optional; research hints are suggestions, never a gate for participation.
 
-Die [Basisabnahme](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md) trennt
-Werkzeugfunktion von physischer Entwurfszulässigkeit. Frühere Studien bleiben
-erhalten; globale QI- und Mechanikqualifikation sind separate spätere Aufgaben.
-Der [Abschluss mit Bedienanleitung](validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
-belegt720 Tests, sechs strikte Datenregressionen ohne Skip, beide kurzen Suchpfade
-und sämtliche vier unabhängigen Kandidatenprüfungen. Bekannte Warnungen und
-physikalisch abgelehnte Formen bleiben ausdrücklich sichtbar.
+Our first portable layer includes a small real-coil reference, explicitly named
+JSON candidates and sampled fixed-current B/A calculations. It needs no native
+installation or maintainer-specific data. It is deliberately **not** the full
+historical acceptance pipeline. Read [the quickstart's limits](validation/PUBLIC_QUICKSTART.md)
+before interpreting a score. Complete-source real-reference release verification
+is the next local check; hosted and independent-machine verification remain separate.
 
-## Erhaltene Forschungsbefunde
+A contributor should be able to discover a question, reproduce a reference,
+propose a change, understand its result and submit reviewable evidence without
+reading our conversation history. [Contributing](../CONTRIBUTING.md) explains the
+open route; [review policy](validation/REVIEW_POLICY.md) separates software merges
+from scientific acceptance.
 
-- Die beste fein geprüfte LPQA-Form erreicht etwa **8,13e-8 statt geforderter
-  höchstens 1e-8**. Geprüfte Geometrie-/native Bedingungen bestehen; die
-  Magnetfeldgrenze nicht. Wiederholte Suchläufe endeten am Budget, nicht bewiesen konvergiert.
-- [Exakte Stromoptimierung](optimization/FIXED_GEOMETRY_CURRENT_RESULTS.md)
-  bringt bei den zwei festgehaltenen Formen praktisch nichts. Alle acht
-  Feld-Holdouts und unabhängigen Gegenprüfungen sind abgeschlossen.
-- [Sechs geometrische Kontrollschritte](optimization/GEOMETRIC_DESCENT_RESULTS.md)
-  verschlechtern sämtlich den Flux und verletzen Konstruktionsbedingungen,
-  obwohl lineare Modelle Abstieg vorhersagen und Ableitungen bestehen.
-  Das separat [geprüfte quadratische Modell](optimization/GEOMETRIC_CURVATURE_RESULTS.md)
-  erklärt alle sechs Verschlechterungen mit mindestens99,60% kleinerem
-  Vorhersagefehler. Der folgende [GN-Suchlauf](optimization/CURRENT_START_GN_RESULTS.md)
-  ist nun vollständig wiederholt, auditiert und fein geprüft:0,754% Fluxgewinn,
-  weiterhin unzulässig und nicht nachgewiesen konvergiert.
-- Der [frische lokale native Aufbau](validation/FRESH_NATIVE_INTEGRATION_RESULTS.md)
-  besteht alle 21 Phasen und sechs wissenschaftlichen Tests ohne Skip.
-  Der erweiterte W7-X-Dateivergleich bleibt ausdrücklich 60/63.
-- [QI-Koordinaten- und Auflösungsprüfungen](qi/README.md) erklären einen Teil
-  historischer Unterschiede, nicht alle. Absolute Drift-/Einheitennormierung
-  besteht inzwischen in zwei81-Zellen-Kontrollen, auch für nichtverschwindende
-  radiale Drift und dieselbe Phase. Endliche Teilchenbahnen, echte QI-Felder
-  und verlässliche umfassendere QI-Bewertung bleiben offen.
-- [Alle sechs Spulennetze](engineering/MESH_FINE_COMPLETION_RESULTS.md)
-  bestehen einen unabhängig geprüften, eingeschränkten Nichtüberlappungstest.
-  Nachbarpaare, vollständige Baugruppen und gültige Mechanik bleiben offen.
+## Why these references?
 
-Zahlen, Prüfgrenzen und wissenschaftliche Einordnung: [Ergebnisstand](STATUS.md).
-Die vollständige Chronologie bleibt im [Forschungsjournal](logbook/README.md).
+- **W7-X:** a known equilibrium/software regression case, not a model of every
+  aspect of the actual machine or a comparison to measured device performance.
+- **Landreman–Paul QA / StellCoilBench:** a fixed-surface coil-method reference.
+  QA method success would not establish QI or SQuID-C performance.
+- **Goodman open QI cases:** the plasma-physics bridge and source of our current
+  nfp2 vacuum target. Their reference data is attributed separately.
+- **SQuID-C:** a later target baseline requiring a properly matched author dataset
+  and more physics qualification. Old availability searches are not a current
+  assertion that no public data exists.
 
-## Wie Erfolg beurteilt wird
+## Detailed evidence and methods
 
-Klassische Optimierung, globale Suche, robuste Verfahren und lernende Modelle
-müssen denselben unabhängigen Bewertungsweg bestehen. AI ist weder Zielgröße noch
-Qualitätsnachweis. Schritt1/2 verlangen einen zuverlässig prüfbaren Ablauf,
-nicht bereits einen Entwurfsfortschritt. Neue Versuche, Budgets und Grenzwerte werden vorab festgelegt;
-negative Resultate bleiben erhalten. Eine zulässige klassische Baseline geht dem
-fairen mehrstartigen Vergleich und einer behaupteten robusten Paretoverbesserung voraus.
+Most historical reports are in German; newer public entry documentation is in
+English. Each purpose-specific folder has its own index and limits. No hidden
+conversation context is required to follow the evidence.
 
-## Detailbereiche
+- [Optimization](optimization/README.md): algorithms, attempts, negative results and [open research hints](optimization/RESEARCH_HINTS.md).
+- [Geometry](geometry/README.md): curvature, clearance, continuous bounds and discretization checks.
+- [QI physics](qi/README.md): equilibria, action diagnostics, field lines and coordinate issues.
+- [Engineering](engineering/README.md): perturbations, meshes, loads and model limitations.
+- [Validation](validation/README.md): portable entry points, scientific evidence, environment and review.
+- [SQuID-C](squid_c/README.md): future intake, requirements and readiness limits.
+- [Research log](logbook/README.md): decisions, findings, actual checks and preserved failures.
 
-- [Optimierung](optimization/README.md): Orakel, Ableitungen, Suchversuche und Diagnosen.
-- [Geometrie](geometry/README.md): Diskretisierung, Krümmung und kontinuierliche Abstandsgrenzen.
-- [QI-Physik](qi/README.md): Daten, Bouncewirkung, Feldlinien, Druck und Koordinaten.
-- [Ingenieurmodelle](engineering/README.md): Fertigungsfehler, Netze, Mechanik und freie Plasmagrenze.
-- [Validierung](validation/README.md): Evidenz, Umgebung, W7-X und übergreifende Audits.
-- [SQuID-C](squid_c/README.md): Datenanforderung, Aufnahme und Bereitschaftsprüfungen.
-- [Forschungsjournal](logbook/README.md): Befunde, Entscheidungen und chronologische Prüfprotokolle.
-
-Verbindliche Arbeitsregeln: [AGENTS.md](../AGENTS.md). Nach jedem abgeschlossenen
-Arbeitsschritt Detailbericht und Prüfvermerk ergänzen, beide READMEs/Stand/Plan
-prüfen, relevante Tests ausführen und lokal committen. Die Dokumenthierarchie
-bleibt flach: drei Übersichtsseiten und sieben zweckgebundene Detailordner.
+Persistent working instructions: [AGENTS.md](../AGENTS.md). Historical evidence is
+immutable; new portable derivatives have their own schemas and provenance.

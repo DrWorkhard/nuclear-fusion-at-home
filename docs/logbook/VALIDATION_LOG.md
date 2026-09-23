@@ -1,5 +1,43 @@
 # Validation log
 
+## 2026-09-23 — Portable code and public documentation; preservation regression retained
+
+- Add an explicitly separate public namespace, fixed-current six-coil JSON schema,
+  standard-library B/A implementation,256/512 quadrature, report replay and optional
+  contribution metadata. Derived packet116,178JSON bytes; all parent artifacts
+  hash-checked during export, no new native calls or old-file modifications.
+- Public unit/analytic suite now36 passes in0.319s. Includes analytic circular-axis
+  fields, translation/current/sign/mapping, strict JSON, file/hash and scope checks,
+  no mandatory cost/hint, plus root help. Initial35-test run found JSON parser depth
+  was not reliably limited by Python's own recursion limit; explicit32-depth and
+  100000-node limits fix the gap. No real public seed/candidate calculation yet.
+- Initial complete regression retains3 failures/2061passes/334known warnings in
+  210.51s at artifacts/public-layer-v1-software/regression.xml. All three failures
+  correctly identify an attempted edit to frozen .github/workflows/ci.yml.
+  Restore that file byte-for-byte; add independent public-ci.yml instead. Do not
+  alter preservation rules or relabel the failed run.93 focused old controls now
+  pass in7.65s. Corrected full regression2064pass/334known warnings in213.23s,
+  zero failures/errors/skips, freshv2 JUnit. Both JUnit hashes and final portable
+  source/data hashes bound in evidence/public-layer-v1-software.json.
+- English root overview/status/plan replace internal-only summaries; add public
+  quickstart, contributor guide, open research hints, review/security policy,
+  citation/notices and PR/issue templates. Hosting, branch protection, whole-history
+  publication review and independent-machine tests remain explicitly unperformed.
+- Web page access to Zenodo failed, but the small official record API was retrieved
+  read-only: original creator Alan Goodman, version1.0, CC-BY-4.0, original archive
+  digest matches the existing manifest. No1GB archive download. Selected metadata
+  and attribution retained. GitHub security/action-pin references checked against
+  official pages. No external writes, account setup, merge service or publication.
+- Repository Ruff, docs structure and whitespace checks pass. Read-only static
+  public-CI checks confirm3OS matrix, read-only permissions, full action pins,
+  nonpersisted checkout credentials and no privileged trigger/secrets. Limited
+  private-key/token-pattern scan of new public files finds no matches; this is
+  not a whole-history security review. Next commit these sources, then execute
+  the fixed copied-tree qualification serially, without further code edits.
+- Final36-control repeat passes in0.266s. Exporter additionally verifies the
+  original equilibrium input/output bytes, not just inherited digest strings;
+  determinism is checked before the first real public calculation.
+
 ## 2026-09-23 — Public collaboration scope registered; interrupted work retained
 
 - User explicitly prioritizes a portable public human/agent contribution route.

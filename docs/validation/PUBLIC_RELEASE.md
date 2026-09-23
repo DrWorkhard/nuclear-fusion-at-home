@@ -1,6 +1,6 @@
 # Public collaboration and portable release
 
-Status: implementation plan, 2026-09-23. This is a new publication layer, not a
+Specification and pre-execution implementation record,2026-09-23. This is a new publication layer, not a
 change to the historical scientific acceptance rules. No hosting, publication,
 merge automation or new coil search is authorized by preparing these files.
 
@@ -76,6 +76,10 @@ evaluator and data as its own authority.
    a fresh exported checkout with no `.git`, `.venv`, `external/`, `artifacts/`,
    network or site packages. Test both reference replay and candidate/report
    mutation rejection. A local clean-copy pass is not a hosted-CI pass.
+   The candidate smoke test changes only basecoil0/xc(0) by+1micrometre, with
+   no optimization/selection or improvement claim; perform exactly one evaluation
+   and replay, then test rejection of a forged physical-admission flag. This
+   additional interface check is fixed before any real public-field calculation.
 5. Run appropriate old tests, docs checks and whitespace/lint checks; record
    exact outcomes and commit. No full native reinstall on the current low-disk
    host. Recheck reserve; planned new data/output <50MiB, no new dependencies.
@@ -111,7 +115,23 @@ read2026-09-23. Hosting configuration is still pending, not silently enabled.
 ## Checks and findings
 
 Initial inspection: no running research experiment; two untracked interrupted
-drafts preserved.3.5GiB free, so no installations, large clones or new heavy
-searches. Existing public workflow is laptop-bound and fixed-study-only; the
-new starter must not silently replace its scientific scope. Implementation and
-fresh-checkout checks are pending; see the validation log for completed steps.
+drafts preserved at4916e79.3.5GiB free, so no installations, large clones or new
+heavy searches. The original research profile remains local/fixed-study-only.
+
+At the software freeze, implementation has36 passing public unit/analytic controls. A depth-control
+test initially failed and led to explicit32-level/100000-node JSON limits. The
+first full historical regression failed3 preservation controls because its old
+CI file was edited. That file is restored; the new public CI is additive. The
+failed JUnit remains intact,93 focused controls pass, and the corrected full suite
+has2064passes/334known warnings/zero failures in213.23s. Actual public reference/
+candidate qualification had not yet run at this freeze; subsequent results are
+recorded separately in [the release report](PUBLIC_RELEASE_RESULTS.md).
+Data export reads only archived evidence and does no field calculation.
+
+Portable packet:116,178JSON bytes, original snapshot/input/output/array/audit
+digests retained, no machine-specific paths. Original Zenodo license/creator and
+archive digest verified read-only through its official record API; see
+[metadata receipt](../../references/public-data-sources.json) and
+[attribution](../../examples/clear-coil-samples-v1/README.md). Whole-history privacy/
+rights review is not implied. Software qualification/source hashes are retained
+in [the software record](../../evidence/public-layer-v1-software.json).

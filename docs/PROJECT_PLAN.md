@@ -1,174 +1,98 @@
-# Arbeitsplan und Erfolgskriterien
+# Roadmap and completion criteria
 
-Stand: 20. September 2026, Schritt4 mit numerisch qualifizierten Feldstarts aktiv.
-[Projektfrage](README.md) · [Ergebnisstand](STATUS.md)
+Updated 23 September 2026.
+[Overview](README.md) · [Evidence-based status](STATUS.md) · [Contribution guide](../CONTRIBUTING.md)
 
-**Abnahme abgeschlossen: Schritt1 PASS, Schritt2 PASS.**
-[Abschluss und Bedienung](validation/FOUNDATION_ACCEPTANCE_RESULTS.md), Lauf
-`foundation-acceptance-v2` bei1aa28b6: alle zugeordneten Gates bestanden.
-Diese Abgrenzung bleibt verbindlich. Der Nutzer hat danach ausdrücklich
-Schritt3 beauftragt; die bisherige automatische Stoppregel ist erfüllt.
+## Immediate priority: public collaboration
 
-## Aktiv: Schritt4 — gekoppelte Plasma-/Spulenentwicklung
+Build a useful public foundation for Nuclear Fusion @ Home without claiming that
+the scientific design problem is solved. Success means an outside contributor can
+start from a fresh checkout, reproduce a small reference, evaluate a candidate,
+replay the report and submit useful work without our local artifacts or chat history.
 
-**Vorgeschalteter öffentlicher Meilenstein,23.September2026:**
-[Portable Mitwirkungsbasis](validation/PUBLIC_RELEASE.md) fertigstellen: frischer
-Checkout, kleiner echter Referenzfall, Kandidat auswerten, Bericht nachrechnen,
-offene Beiträge ohne verpflichtende Rechenkostenangabe. Kein Abschluss von4A–4D
-und keine Veröffentlichung durch lokale Vorbereitung. Geschützter Feldfit bleibt
-bis dahin ungeprüfter, erhaltener Entwurf. Unverlangte relevante Arbeit ausdrücklich
-berücksichtigen; öffentliche Arbeitshinweise sind nicht bindend.
+| Release task | Completion criterion | Current state |
+| --- | --- | --- |
+| Preserve prior work | Original evidence intact; interrupted work explicitly unqualified | Done; protected-fit drafts saved, no new search |
+| Portable entry | Bundled attributed data, no native install, named candidate schema, explicit scope | Implemented; unit/analytic controls pass |
+| Reproduction and adversarial checks | Committed-source clean-copy reference/candidate/replay and rejection of forged results | Next local verification |
+| Public understanding and contribution | Clear English overview, status, quickstart, open contribution/review route | Prepared |
+| Hosted operation | Verified CI, reviewer identities, branch protection, privacy/rights review and safe permissions | Not configured or verified here; separate launch work |
 
-Der Nutzer hat Schritt4 einschließlich unabhängiger Agentenreviews und Iteration
-ausdrücklich beauftragt. Die [Optionen und drei Reviews](optimization/COUPLED_DESIGN_OPTIONS.md)
-priorisieren gepaarte tatsächliche Spulenrealisierung vor kleinen gemeinsamen
-Rand-/Spulenschritten. Alternative reduzierte Richtungen und direkte Flächen
-bleiben im Methodenportfolio. Vor jeder neuen Studie Protokoll und Budget fixieren.
+The [release specification](validation/PUBLIC_RELEASE.md) records exact scope and
+checks. Public quickstart success is not full historical reproducibility or
+physical admission. No automatic PR monitor, merge bot, push or publication has
+been enabled.
 
-Teilpakete:4A Spulenrealisierung samt physischem Transfer;4B tatsächliche gemeinsame
-Verbesserung;4C endlicher Druck/Einschluss;4D endliche Baubarkeit/Robustheit.
-Ein reiner Vakuum-Spulenfit schließt Schritt4 nicht. Kein automatischer Schritt5
-oder SoTA-Anspruch. Methoden-/Protokollreview und synthetische Integration
-abgeschlossen; einschließlich Geometrieworkflow/gemeinsamer CLI2064 Tests bestanden.
-Alle acht realen Startqualifikationen auditiert,
-sechs Pass und zwei negative Referenz-n8-Ableitungsschirme. Die sechs
-freigegebenen Suchläufe sind mit je128 Versuchen abgeschlossen und auditiert.
-Ihre feinen Diagnostiken und unabhängigen Abnahmen sind vollständig: alle sechs
-abgelehnt, nur17/30 Verfeinerungen bestehen; tatsächliche feine Plasmaabstände
-viel kleiner als grob gemessen. Additive Ausgabe-Recovery wahrt alle negativen
-Gates und Originalfehler. Die getrennte [geometrische Folgestudie](geometry/CLEAR_COIL_INITIALIZATION_PROTOCOL.md)
-vergleicht zielangepasste Kreise/konvexe Starts mit kontinuierlichen3D-
-Schutzschranken. Konstruktion/Prüfung synthetisch qualifiziert und reale Matrix
-abgeschlossen: alle zwölf Varianten geometrisch angenommen,84 exakte LP-
-Wiederholungen und72 direkte Prüfungen. Ausgewählt sind die beiden Formstarts
-mit100mm Konstruktionsabstand. Die separate
-[Feldstartqualifikation](optimization/CLEAR_COIL_FIELD_START_RESULTS.md)
-ist ebenfalls abgeschlossen: acht N/V-Ableitungsschirme, alle sechs Zustände
-je Zelle,20 Verfeinerungen und252 Flussgates bestanden. Alle vier Zellen
-numerisch angenommen; Geometrie/Strom bestehen, physische Feldfehlergrenzen nicht.
-Keine neuen Suchen/Gleichgewichte. Neue Ressourcenreferenz separat qualifiziert;
-alte drei dichte RAM-Fehler bleiben negativ. Die neuen
-[zwei Methodenreviews](optimization/GEOMETRY_PRESERVING_SEARCH_OPTIONS.md)
-sind abgeschlossen: die [kumulative Geometriesicherung](geometry/COIL_PERTURBATION_RESULTS.md)
-ist nun feldfrei qualifiziert und unabhängig geschlossen. Grundbausteine und vollständiger
-Runner/Auditor bestehen360 neue Kontrollen und zusätzlichen Review; auch
-transitive Checkpointerhaltung und strikte Einschließungen geprüft. Die reale
-52-Zustandsmatrix besteht ebenfalls: alle Pflichtprobes zertifiziert,18 größere
-Probes konservativ unzertifiziert. Keine Wiederholung oder Grenzlockerung nötig.
-Die auf Nutzerwunsch ergänzte dünne
-[evaluate/audit-Einstiegsschicht](validation/PROJECT_ENTRYPOINTS.md) ist mit64
-neuen Tests qualifiziert, ohne alte Quellen zu ändern. Der vorhandene Feldstart
-wurde darüber exakt erneut auditiert; CLI-Aufgabe abgeschlossen. Keine neue physische
-Zulassung oder Unterstützung beliebiger Kandidaten durch die Oberfläche.
-**Nächste Entscheidung:** den kleinen sicheren Formfit mit eigenem
-Such-/Auswahl-/Abnahmeprotokoll registrieren; für den Einstieg sind glatt
-gedämpfte Richtungen durch diese feste Stichprobe besser abgesichert als die
-höchste einzelne Fouriermode. Noch keine neue Suche ausgeführt.
-Freier L-BFGS-B-Vergleich, Supportfamilie und freie Ströme bleiben getrennte Optionen.
-Kein Transfer- oder Schritt4-Pass aus diesem numerischen Startabschluss.
-Keine nachträgliche Freigabe der zwei
-gescheiterten Starts oder Ergänzung ihres fehlenden Paarvergleichs.
+**Participation rule:** compute budget/cost disclosure is optional. Useful work
+does not need to match a requested task. [Research hints](optimization/RESEARCH_HINTS.md)
+are nonexclusive invitations. Review unexpected ideas and negative findings on
+their merits. Our execution limits protect our infrastructure; they are not a
+ceiling on others' research spending. Efficiency claims still require appropriate
+measurements.
 
-## Abgeschlossen: Schritt3 — eigene QI-nahe Plasmaoberfläche
+## Scientific roadmap — unchanged goals
 
-Vier benannte Fourierkoeffizienten des offenen Goodman-nfp2-Vakuumfalls verändert,
-zugehörige Gleichgewichte frisch gelöst und eine tatsächliche QI-relevante
-Verbesserung auf registrierter Domäne unabhängig numerisch bestätigt.
-Der [Abschlussbericht mit Eingabe und Bedienung](qi/PLASMA_BALANCED_RESULTS.md)
-belegt11,1700% geringere feinste relative Wirkungsvarianz,4,8506% engen Vorteil
-und alle zehn Gates des [vorab festgelegten Umfangs](qi/PLASMA_OPTIMIZATION_PROTOCOL.md).
-Kein bloßer Ablaufpass: Quellen, lokale Grenzen, Felder, Konturen, Tracer,
-Wiederholung und sämtliche Verfeinerungen bestehen neben dem Entwurfsgewinn.
+| Step | Actual completion requirement | State |
+| --- | --- | --- |
+| 1. Reliable bounded foundation | Specified local reference/software/physics checks, source and environment identity, honest admission | Complete in the registered scope |
+| 2. Reproducible iteration | Load reference → change/optimize → save → independently evaluate → repeat | Complete in the registered scope |
+| 3. Own QI-like plasma target | Actual boundary/equilibrium change with registered independently confirmed improvement | Complete for the nfp2 vacuum action-metric study |
+| 4. Coupled plasma and coils | The four subpackages below, not merely a favorable vacuum coil-fit score | Open |
+| 5. Demonstrated performance advance | Fair, reproducible reference comparisons with independently verified meaningful advantage | Open; no automatic claim from Step4 |
 
-Der [erste Versuch](qi/PLASMA_OPTIMIZATION_RESULTS.md) bleibt abgelehnt und
-unverändert erhalten. Der [getrennte Folgeversuch](qi/PLASMA_BALANCED_PROTOCOL.md)
-hat sein13-Solve-Budget eingehalten, ohne physische Grenzen zu lockern. Seine
-beiden Domänen waren bei der Konstruktion bekannt; feinere unabhängige Abnahme
-belegt keine blinde Generalisierung. Globale QI-/Orbit-/Druck-/Stabilitäts-/
-Kraftwerksqualifikation bleibt offen, SoTA weiterhin Schritt5.
+Steps1/2 are capability milestones: they did not require a new feasible optimum,
+novel method or SoTA result. Their [acceptance protocol](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md)
+and [result](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) remain authoritative.
+Step3 did require a real improvement, established in the
+[registered vacuum study](qi/PLASMA_BALANCED_RESULTS.md). Broader physics was not
+silently included in its acceptance.
 
-**Schritte1/2/3 wurden in ihrem jeweiligen Umfang übergeben.**
-Die anschließende ausdrückliche Beauftragung aktiviert nun Schritt4. Die erhaltene Form ist
-ein Ausgangspunkt für später separat beauftragte und registrierte Arbeit, nicht
-bereits ein spulenrealisierter oder umfassend physikalisch qualifizierter Entwurf.
+## Step4: coupled plasma/coil development
 
-## Abgeschlossene Etappe: Basis und prinzipielle Iterationsfähigkeit
+- **4A — Realization and transfer:** realize both reference and selected plasma
+  targets with actual coils, pass the appropriate numerical/geometry/field gates,
+  then check field surfaces/topology and retention of the relevant plasma benefit.
+- **4B — Coupled improvement:** compare coil-only controls with genuine coupled
+  plasma/coil changes and independently admit an actual improvement. A proposed
+  optimizer or predicted gain is insufficient.
+- **4C — Pressure and confinement:** qualify finite-pressure/plasma-current and
+  realized-field assumptions, with appropriate response/refinement and confinement
+  diagnostics. Existing vacuum targets and first-order drift tests are insufficient.
+- **4D — Finite geometry and robustness:** qualify winding/build/load assumptions
+  and actual manufacturing/perturbation responses; retain absolute physical gates.
 
-Schritt1 und2 sind **Befähigungsziele**, keine Neuheits- oder Leistungsziele.
-Der Nutzer hat den bisherigen zu breiten Umfang korrigiert. Eine neue zulässige
-Spulenform, ein SoTA-Vorteil oder vollständige SQuID-C-Qualifikation sind keine
-Voraussetzung für ihren Abschluss. Physikalische Zulässigkeitsgrenzen bleiben
-unverändert; ein funktionierender Ablauf darf einen Entwurf weiterhin ablehnen.
+[Options and prior reviews](optimization/COUPLED_DESIGN_OPTIONS.md) give the methods
+context. The [geometry-protected field-fit draft](optimization/PROTECTED_COIL_FIT_PROTOCOL.md)
+is preserved but not qualified; it is one possible next experiment, not a required
+method or an exclusive work allocation. The public contribution foundation takes
+priority before resuming local searches. No vacuum-only result closes all Step4.
 
-Die abgegrenzte erste Basis ist lokale Festoberflächen-/Filamentspulenarbeit am
-bekannten LPQA-Fall, ergänzt um W7-X-Gleichgewichtsregression und grundlegende
-Goodman-Daten-/Wirkungsregressionen. Das ist ausdrücklich **keine universelle
-Stellarator-, QI- oder Ingenieurqualifikation**.
+## Research and review discipline
 
-## Schritt 1: Verlässliche Rechen- und Prüfbasis
+Define confirmatory studies before running them; separate construction from
+acceptance and preserve all predeclared resolution levels, failures and source
+records. Existing experiment budgets/thresholds do not change retroactively.
+External exploratory work is welcome without prior permission or retrospective
+preregistration; label it honestly and agree independent checks for its claims.
 
-Abnahme anhand des [festen Basisprotokolls](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md):
+Do not let a candidate change its own verifier. Improvements to physics models,
+tests and criteria are valuable contributions, but require separate versioning,
+review and revalidation. Source/dataset hashes are evidence of identity, not
+proof of scientific correctness or trust in an unknown fork.
 
-| Notwendige Fähigkeit | Abnahme |
-| --- | --- |
-| Reproduzierbare lokale Umgebung und Daten | Gesperrte Quellen/Versionen, erhaltene frische Aufbau-Evidenz, aktuelle Tests ohne fehlende Pflichtdaten |
-| Bekannte Gleichgewichte/Daten lesen und vergleichen | Sechs strikte W7-X-/Goodman-Regressionsidentitäten ohne Skip; bestehende W7-X-Physikprüfung und bekannte60/63-Grenze erhalten |
-| LPQA-Feld und Filamentgeometrie auswerten | Qualifizierte Werte/Ableitungen/benannte Parameter, unabhängige Feld-/Geometrieabnahme und Verfeinerung |
-| Zutreffend akzeptieren oder ablehnen | Prozessstatus, Werkzeugqualifikation und Entwurfszulässigkeit getrennt; Manipulationen/fehlende Daten dürfen keinen Pass erzeugen |
-| Nachvollziehbarkeit und praktische Nutzung | Ein dokumentierter Abnahmebefehl, gebundene Rohdaten/Berichte, Gültigkeitsbereich und offene Erweiterungen explizit |
+After each completed work step, update the relevant detail/log and affected
+overviews, run appropriate tests/docs checks, review the diff and commit locally.
+Do not replace these summaries with accumulating experiment histories; details
+belong in the indexed child directories. [Persistent rules](../AGENTS.md).
 
-Die bekannte netCDF-Größenwarnung wird sichtbar nachgeprüft und als verbleibende
-Umgebungsgrenze dokumentiert. Kein neuer Filter, kein behaupteter ABI-Nachweis.
-Warnungsfreie strenge Imports sind nicht mit funktionierender gesperrter
-Datenregression gleichzusetzen. Unbekannte neue Fehler führen zur Ablehnung.
+## Preservation and future scope
 
-## Schritt 2: Reproduzierbarer Iterationszyklus
+Research before the clarified foundation milestones is preserved at5971fee
+(`foundation-pre-scope-2026-09-13`); Step3 evidence remains atd429783.
+Current negative results are retained rather than relabelled as successes.
+The public layer is additive and uses its own portable artifact identities.
 
-Abschluss heißt: Referenz laden → Parameter variieren/klassisch optimieren →
-Kandidat speichern → unabhängig bewerten → Ergebnis und nächste Entscheidung
-nachvollziehen. Ein kleiner realer Zweiarm-Smoke-Lauf demonstriert diesen Weg;
-vollständige frühere Suchläufe liefern zusätzlich erhaltene Langlauf-Evidenz.
-
-Keine Pflicht zu neuem Bestwert, erfüllter Fluxgrenze, Konvergenz oder fünf Starts.
-**Eine abgelehnte Form bleibt abgelehnt; der funktionsfähige Iterationszyklus kann
-trotzdem bestehen.** Solver, Parameter, Budget und Rohdaten bleiben zugänglich,
-sodass später gezielt weitere Experimente registriert werden können.
-
-## Abgearbeitete Reihenfolge und Stoppregel
-
-1. Plan-/Umfangskorrektur registriert und Altbestand durch lokalen Tag gesichert.
-2. Qualifikationen zusammengeführt;20 neue Schutz-/Workflowkontrollen bestanden.
-3. Aktuelle Regressionen, realen Zweiarmzyklus und alle unabhängigen Abnahmen
-   ausgeführt. Ersten Verwaltungsfehler erhalten/korrigiert, frische Wiederholung bestanden.
-4. Beide geschärften Schritte anhand bestandener Gates geschlossen; Abschluss
-   dokumentiert. **An den Nutzer übergeben, keine weitere Forschung automatisch starten.**
-
-Die damalige Begrenzung weiterer Forschung galt bis zur neuen ausdrücklichen
-Beauftragung von Schritt3. Tests allein ersetzen weiterhin keine
-physikalische Teilqualifikation; vorhandene negative Evidenz wird nicht umetikettiert.
-
-## Erhaltene spätere Forschung
-
-| Thema | Einordnung nach Abschluss der Basis |
-| --- | --- |
-| Zulässige starke klassische Lösung, Mehrstarts, faire Methodenvergleiche | Spätere Leistungsbaseline; aktueller feinster Flux8,129882e-8 bleibt über1e-8 |
-| Eigene QI-Plasmaoberflächen | Schritt3 im registrierten nfp2-Vakuumumfang abgeschlossen; breitere Domänen und weitere Fälle separat zu qualifizieren |
-| Gemeinsame Plasma-/Spulenoptimierung | Schritt4 aktiv; Optionen unabhängig geprüft, Realisierung/Transfer vor gemeinsamer Iteration |
-| Globale QI-/maximum-J-Messung, endliche Teilchenbahnen | Offene Qualifikationen, nicht für den begrenzten LPQA-Filamentzyklus freigegeben |
-| Endliche Wicklungspakete, vollständige Netze, Materialien/Lagerung/Mechanik | Vor Ingenieuraussagen zu qualifizieren; alte lineare Verformungszahlen nicht zulässig |
-| SoTA-/Paretofortschritt, SQuID-C-Reproduktion | Langfristiger Schritt5 beziehungsweise gesonderte Zielbaseline; keine heutige Behauptung |
-
-Protokolle, Daten, Fehlschläge und Ableitungs-/Driftdiagnosen bleiben in den
-[Detailbereichen](README.md#detailbereiche) und im [Journal](logbook/README.md)
-erhalten. Der Zustand vor dieser Umfangskorrektur ist Git-Commit5971fee; die
-Abnahme dokumentiert seinen Erhalt. Historische Abschlussformulierungen beziehen
-sich auf den damaligen breiteren Plan und werden nicht rückwirkend geändert.
-
-## Verbindliche Arbeitsweise
-
-Neue numerische Versuche vorab registrieren und committen. Nach jedem Arbeitsschritt
-Detailbericht/Prüfprotokoll ergänzen, betroffene Übersichten aktualisieren, passende
-Tests/Dokument-/Diffprüfung durchführen und lokal committen. Keine Pushes,
-Autorenkontakte, externen Quelländerungen oder Eingriffe in die qualifizierte
-Umgebung. Ressourcenreserve und Schutz vorhandener Daten bleiben verbindlich.
-[Dauerhafte Regeln](../AGENTS.md) · [Entscheidung D-012](logbook/DECISIONS.md)
+SQuID-C is a later baseline, not a prerequisite for contributing now. Source
+availability must be checked when needed; old unsuccessful searches are not a
+current proof of unavailability. Full SQuID-C qualification and SoTA comparisons
+remain distinct from making this repository easy to use.

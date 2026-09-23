@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "Cite the exact project revision and the upstream sources used by your study."
+title: "Nuclear Fusion @ Home: reproducible stellarator research"
+type: software
+authors:
+  - family-names: Wirkert
+    given-names: Sebastian
+license: MIT
+abstract: >-
+  Research tools and a portable public contribution starter for stellarator
+  field and coil studies. Project code is MIT; bundled derived reference data
+  has separate CC-BY-4.0 attribution. No feasible reactor or SoTA claim.

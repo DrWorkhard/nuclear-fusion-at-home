@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "title": "Reproduce the public reference on a fresh machine",
+  "contribution": "A reproducibility check, not a new design or efficiency claim.",
+  "evidence": "Attach the public demo report/audit and describe the actual checks you ran.",
+  "limitations": "The public starter checks sampled fixed-current fields, not physical admission.",
+  "reproduction": "python fusion.py public demo --output results/my-reference"
+}
