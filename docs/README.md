@@ -5,6 +5,11 @@ For contributors and scientific reviewers. Updated 23 September 2026.
 
 ## Research question
 
+Our end goal is to contribute to nuclear fusion for humanity by finding the best
+reactor design current technology can achieve. We use “best” as a research aim
+under explicit performance, buildability, robustness, safety and cost constraints,
+not as a claim that a global optimum has been proved.
+
 Can we computationally identify and independently verify improvements to
 stellarator designs that balance magnetic-field quality, coil buildability and
 robustness? We begin with open reference cases and aim eventually to develop our
@@ -30,6 +35,13 @@ this is an independent project without claimed affiliation or endorsement.
 | 3. Own QI-like plasma target | Complete in registered vacuum scope | An actual boundary change lowers the specified fine action-variance metric by 11.17% |
 | 4. Coupled plasma and coil development | Open | Geometry-qualified starts exist; field-quality admission and broader physics remain unresolved |
 | 5. Independently demonstrated performance advance | Open | No state-of-the-art or power-plant claim |
+
+**MS1 — Proxima Fusion outreach:** as soon as strong, reproducible and independently
+checked evidence supports that our design is better than the design Proxima is
+pursuing, we will contact them with the evidence. This targeted Step 5 outcome is
+**not reached** and is distinct from the ultimate goal. It requires a correctly
+identified reference, meaningful design-level comparison and explicit uncertainty/
+trade-offs; see the [MS1 framework](squid_c/MS1_PROXIMA_COMPARISON.md).
 
 The [plasma result](qi/PLASMA_BALANCED_RESULTS.md) includes independently computed
 diagnostics and an exact cold repeat. Both action domains were used during
@@ -89,7 +101,7 @@ conversation context is required to follow the evidence.
 - [QI physics](qi/README.md): equilibria, action diagnostics, field lines and coordinate issues.
 - [Engineering](engineering/README.md): perturbations, meshes, loads and model limitations.
 - [Validation](validation/README.md): portable entry points, scientific evidence, environment and review.
-- [SQuID-C](squid_c/README.md): future intake, requirements and readiness limits.
+- [SQuID-C / Proxima comparison](squid_c/README.md): future intake, readiness limits and the MS1 evidence framework.
 - [Research log](logbook/README.md): decisions, findings, actual checks and preserved failures.
 
 Persistent working instructions: [AGENTS.md](../AGENTS.md). Historical evidence is

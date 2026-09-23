@@ -54,6 +54,25 @@ cleanup. Before starting the next step or handing off:
 
 ## Research discipline and autonomy
 
+### Public purpose, roadmap and MS1 (user clarification, 2026-09-23)
+
+The end goal is contributing to nuclear fusion for humanity by finding the best
+reactor design current technology can achieve. Keep the numbered steps and scoped
+completion states understandable in the root README, not only internal reports.
+“Best” is an ambition under explicit technological/engineering constraints, never
+an unsupported global-optimality claim.
+
+MS1 means: as soon as strong, reproducible and independently checked evidence
+supports that our design is better than the design Proxima Fusion is pursuing,
+we will contact them with the evidence. It is a targeted Step 5 outcome, not Step 1
+or public-release completion. MS1 is NOT reached. Follow
+`docs/squid_c/MS1_PROXIMA_COMPARISON.md`; verify the relevant versioned reference
+at comparison time, use matched conditions, show meaningful design-level benefit,
+and disclose uncertainty/trade-offs. Same-code replay, proxy improvement or a
+comparison with our own seed is insufficient. No outreach is performed by this
+documentation update; retain the external-action boundary and record actual
+contact separately from evidence readiness.
+
 ### Public collaboration takes priority (user request, 2026-09-23)
 
 Prepare Nuclear Fusion @ Home for public human/agent contributions. First make

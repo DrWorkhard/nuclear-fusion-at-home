@@ -1,5 +1,31 @@
 # Decision log
 
+## D-020 — Public-benefit end goal, self-contained roadmap and MS1
+
+**Status:** accepted explicit user clarification; no new scientific result
+**Date:** 2026-09-23
+
+State the end goal plainly: contribute to nuclear fusion for humanity by finding
+the best reactor design current technology can achieve. “Best” remains a research
+ambition under explicit constraints, not a current global-optimality claim.
+The root README must explain all five research steps and what is actually done,
+so references to Step 4 do not require reading prior conversations or detail logs.
+
+MS1 is evidence-backed outreach: as soon as strong, reproducible and independently
+checked evidence supports that our design is better than the design Proxima Fusion
+is pursuing, we will contact them with the evidence. This is a targeted Step 5
+outcome, distinct from the end goal and from completed bounded Steps 1/2/3.
+MS1 is not reached; no Proxima comparison or contact has been performed here.
+
+Require an authoritative, relevant versioned reference and matched technology/
+operating assumptions, meaningful design-level advantage, credible uncertainties,
+independent checks and disclosed trade-offs. An old publication is not automatically
+the design Proxima currently pursues; our own-seed or sparse-proxy improvements do
+not meet this bar. The framework fixes no numerical threshold or changed historical
+gate. Public collaboration remains open, with optional cost disclosure. Preserve
+past evidence and continue public-release preparation without restarting searches.
+[MS1 framework](../squid_c/MS1_PROXIMA_COMPARISON.md).
+
 ## D-019 — Open collaboration, optional costs, additive portable publication
 
 **Status:** accepted explicit user correction

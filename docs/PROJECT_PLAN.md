@@ -3,6 +3,14 @@
 Updated 23 September 2026.
 [Overview](README.md) · [Evidence-based status](STATUS.md) · [Contribution guide](../CONTRIBUTING.md)
 
+## End goal
+
+Contribute to nuclear fusion for humanity by finding the best reactor design
+current technology can achieve. Pursue reproducible, useful design advances under
+explicit performance, engineering, robustness, safety and cost constraints.
+“Best” is the ambition, not a claim of global optimality or present plant readiness.
+Stellarator plasma/coil optimization is our current route toward that wider goal.
+
 ## Immediate priority: public collaboration
 
 Build a useful public foundation for Nuclear Fusion @ Home without claiming that
@@ -39,7 +47,7 @@ measurements.
 | 2. Reproducible iteration | Load reference → change/optimize → save → independently evaluate → repeat | Complete in the registered scope |
 | 3. Own QI-like plasma target | Actual boundary/equilibrium change with registered independently confirmed improvement | Complete for the nfp2 vacuum action-metric study |
 | 4. Coupled plasma and coils | The four subpackages below, not merely a favorable vacuum coil-fit score | Open |
-| 5. Demonstrated performance advance | Fair, reproducible reference comparisons with independently verified meaningful advantage | Open; no automatic claim from Step4 |
+| 5. Demonstrated performance advance | Fair, reproducible reference comparisons with independently verified meaningful advantage; target MS1 for the Proxima comparison | Open; no automatic claim from Step 4 |
 
 Steps 1/2 are capability milestones: they did not require a new feasible optimum,
 novel method or SoTA result. Their [acceptance protocol](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md)
@@ -47,6 +55,24 @@ and [result](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) remain authoritative.
 Step 3 did require a real improvement, established in the
 [registered vacuum study](qi/PLASMA_BALANCED_RESULTS.md). Broader physics was not
 silently included in its acceptance.
+
+## MS1: evidence-backed outreach to Proxima Fusion
+
+As soon as strong, reproducible and independently checked evidence shows that a
+design we found is better than the design Proxima Fusion is pursuing, we will
+contact Proxima Fusion with the design and evidence for technical discussion.
+**MS1 is not reached.** It is a targeted outcome of Step 5, not another name for
+Step 1, completion of the public starter, or the project's ultimate goal.
+
+Use an authoritative, versioned reference confirmed relevant at comparison time;
+qualify its reproduction and compare under matched operating/technology constraints.
+Define meaningful design objectives, feasibility gates and uncertainty checks
+before confirmatory evaluation. Report trade-offs and limits; neither a single
+favorable proxy nor an unmatched/obsolete baseline establishes design superiority.
+The [MS1 evidence framework](squid_c/MS1_PROXIMA_COMPARISON.md) guides the later
+numerical protocol without changing any existing study's acceptance thresholds.
+No contact is being made by this planning update. MS1 leads to expert scrutiny
+and further work, not a claim that the best possible reactor has been found.
 
 ## Step 4: coupled plasma/coil development
 

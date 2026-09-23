@@ -10,6 +10,12 @@ plasma target, and useful coil-validation tools. We do not yet have a new
 physically accepted coil design, a completed Step 4, a state-of-the-art advance,
 or full SQuID-C readiness.**
 
+**MS1 is not reached:** we do not have strong evidence that our design is better
+than the design Proxima Fusion is pursuing. Contacting Proxima with such evidence
+is a planned milestone, not an action already taken. Our existing plasma result
+is against an open research reference, not a Proxima design comparison.
+[MS1 evidence framework](squid_c/MS1_PROXIMA_COMPARISON.md).
+
 The portable public contribution layer now passes its scoped local release checks.
 It is not a new physical result and does not reopen or expand the completed
 foundation milestones. Public hosting and operational safeguards remain separate work.

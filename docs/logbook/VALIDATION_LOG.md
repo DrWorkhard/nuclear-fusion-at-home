@@ -1,5 +1,30 @@
 # Validation log
 
+## 2026-09-23 — Public roadmap, end goal and MS1 made explicit
+
+- User asks for a self-contained README roadmap/status, the public-benefit reactor
+  design goal and MS1 as strong-evidence-triggered contact with Proxima Fusion.
+  Add a numbered five-step README table showing scoped completions and open work;
+  preserve all scientific limits. Preserve concurrent user README changes to
+  “We work on” and formatting of the existing results table.
+- Add the MS1 evidence framework in the existing SQuID-C purpose directory;
+  update its index, root overview/status/plan, D-020 and persistent instructions.
+  Relevant versioned baseline, matched assumptions, uncertainty, trade-offs and
+  independent confirmation are explicit. MS1 is not reached; no new numerical
+  threshold, claim of global optimality, current-design fact or outreach is asserted.
+- Start from clean cc4645a, with the concurrent README edit observed before applying
+  changes. Read-only process check finds only editor formatter/import-sorter
+  services using the fusion Python environment, no active research calculation.
+  Preserve them unchanged. No solver, dataset, source-bound protocol, evidence,
+  public evaluator or CI file changed; no numerical study rerun.
+- Continue the public-repository preparation priority. Historical searches stay
+  paused; hosting, independent-machine CI/reproduction and whole-history publication
+  review remain separate open work.
+- Checks: 93 documentation/foundation/legacy-CLI controls pass in 6.66 s; all 36
+  public tests pass in 0.345 s. Documentation structure, repository Ruff and
+  whitespace checks pass. Reviewed intended documentation diff; no full native
+  suite rerun or new numerical qualification is claimed for this wording change.
+
 ## 2026-09-23 — Committed-source portable release passes actual local reproduction
 
 - Clean `02bc42a25b45cf6df558188b0d8e816a175789ed` runs
