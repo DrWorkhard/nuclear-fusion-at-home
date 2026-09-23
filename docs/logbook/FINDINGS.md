@@ -1,5 +1,30 @@
 # Findings log
 
+## F-094 — Release-review fixes pass fresh core and three-Python local qualification
+
+**Class:** operational/UI/portability qualification, not a new physical design
+**Date:** 2026-09-24
+
+At clean `be916fb`, the exact core runner succeeds in a fresh locked dev-only clone
+without SciPy/meshio/JAX: Ruff, docs, 44 public tests and 14 selected pytest tests.
+All 44 public tests and eight actual reference/candidate/replay/rejection operations
+also pass on Python 3.11.4, 3.12.13 and 3.14.3. Full native regression: 2,072 pass,
+334 existing warnings, no failures/skips in 222.70 s. Whole-tree cp1252-default
+simulation passes; actual Python 3.9.6 fails early with useful version guidance.
+
+The UI now explains reference scores and signed changes; named editing checks all
+198 positions. English indexes, unified roadmap and scoped public-agent guidance
+remove onboarding ambiguities. Original numerical code/data/evidence are preserved.
+Two frozen operational files have exact-hash maintenance exceptions, not blanket
+permission to edit science. The full historical preservation check remains active.
+
+An extra cross-version byte-equality assumption failed: two Python 3.11 seed metrics
+differ by less than 1.12e-16 while every B/A array is identical. Existing replay
+tolerances pass; Python 3.12/3.14 reports are byte-identical and direct old-report
+replay succeeds. No scientific tolerance changed. Hosted/independent-machine
+execution and publication clearance remain open; Step 4 is still In progress.
+[Detailed record](../validation/PUBLIC_REVIEW_FIXES.md).
+
 ## F-093 — Portable starter success does not clear the historical repository for publication
 
 **Class:** bounded repository inventory / publication-readiness finding, not physics

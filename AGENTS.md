@@ -35,6 +35,10 @@ runner and UTF-8 documentation reads. See
 [review resolution](docs/validation/PUBLIC_REVIEW_FIXES.md). The preservation audit
 checks both original and approved replacement hashes; scientific files and past
 source-bound results remain unchanged. Do not extend this exception implicitly.
+The follow-up at `be916fb` passes fresh local dev-only core CI, 44 public tests
+and eight real release checks on each of Python 3.11/3.12/3.14, plus 2,072 native
+tests (334 existing warnings). Cross-version seed metric roundoff is documented;
+hosted CI, independent hardware and publication clearance remain outstanding.
 
 ### Start each session
 

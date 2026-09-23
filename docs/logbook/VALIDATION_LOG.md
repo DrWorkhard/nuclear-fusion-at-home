@@ -1,5 +1,37 @@
 # Validation log
 
+## 2026-09-24 — Close local validation of the public review fixes
+
+- Implementation source `be916fb`, clean tree during all source-bound runs. A
+  fresh clone and isolated uv cache avoid syncing the native environment. Default
+  cache access and hardlink clone were denied; no-hardlink copy/fresh cache succeed.
+  About 604 MiB total temporary checkout/cache; disk reserve remains about 4.1 GiB.
+- Exact dev-only core script passes: Ruff, 44 public tests, docs and 14 selected
+  tests; SciPy/meshio/JAX absent, clone clean afterward. Read-only elevated process
+  inspection confirms only editor services before regression. Root environment
+  unchanged; full native suite: **2,072 passed, 334 warnings, zero skips/errors/
+  failures, 222.70 s**. JUnit retained under `artifacts/public-review-v2`.
+- All 44 public tests and eight real copied-tree operations pass on each local
+  Python 3.11.4/3.12.13/3.14.3. Each copied file matches the implementation commit.
+  Demo/evaluate display correct signed/percentage changes; the fixed 1-micrometre
+  variation worsens both scores and is not represented as an optimization.
+- Extra exact cross-version byte assertion fails for the 3.11 seed report/replay:
+  two 256-node metrics differ by -1.1102230246251565e-16 and +5.551115123125783e-17.
+  All B/A arrays match exactly; changed-candidate reports match exactly. Python
+  3.12/3.14 seed reports also match. Existing replay tolerances pass unchanged;
+  direct old-report audits on 3.11/3.12 reproduce the prior audit bytes. Retain
+  failed extra assertion separately; no scientific acceptance gate relaxed.
+- All 1,266 historical paths accounted for with exactly two operational exceptions.
+  Whole-tree cp1252 simulation, actual 3.9.6 exit-2 version message, four public
+  anchors and unchanged evaluator/data/workflow/evidence checks pass. F-094 and
+  current overview/status/roadmap updated; all seven folder indexes and historical
+  CLI guide now English. Source/artifact hashes in `evidence/public-review-v2.json`.
+- Hosted matrix and independent-machine execution, privacy/rights clearance and
+  launch remain separate outstanding work. No push, contact, new design search or
+  Step 4 closure. Final checks: 98 targeted tests pass in 7.33 s; docs, Ruff and
+  whitespace pass. All 32 new source/artifact references match their hashes/sizes;
+  software is unchanged since full validation. Reviewed the final scoped diff.
+
 ## 2026-09-23 — Implement the eight-point public release review
 
 - Start from clean `31c4b81`; earlier process inspection found only editor services.

@@ -10,7 +10,7 @@ confine hot plasma. This is computational research, not a home reactor-building 
 “Best” means balancing performance, buildability, robustness, safety and practical
 cost. We want improvements that others can reproduce and challenge.
 
-**Research preview · 23 September 2026.** Our tools reproduce selected open
+**Research preview · 24 September 2026.** Our tools reproduce selected open
 references, and one plasma-target study improved its chosen metric by **11.17%**.
 The current challenge is turning targets into good coils: their full-grid normal
 field error is **about 0.27 against a 0.0001 limit**. A feasible new coil design and

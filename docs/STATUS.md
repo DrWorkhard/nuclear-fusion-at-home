@@ -1,6 +1,6 @@
 # Scientific status and evidence
 
-Updated 23 September 2026.
+Updated 24 September 2026.
 [Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Public quickstart](validation/PUBLIC_QUICKSTART.md)
 
 ## Bottom line
@@ -73,17 +73,20 @@ Older optimistic journal conclusions do not supersede this current assessment.
 ## Public usability — a separate deliverable
 
 The public layer now has 44 passing dependency-free unit/analytic tests on local
-Python 3.11 and 3.12, including named edits and score interpretation. The
+Python 3.11/3.12/3.14, including named edits and score interpretation. The
 [release review fixes](validation/PUBLIC_REVIEW_FIXES.md) add explicit dev-only
-CI scope, UTF-8 reads, an early version guard and English navigation; fresh core
-and full-native verification are pending closure of this operational step.
-The original release supplied
-a small attributed real-coil packet and a candidate/report interface. All eight
-committed-source copied-tree checks pass: reference, changed candidate, replay,
+CI scope, UTF-8 reads, an early version guard and English navigation. The exact
+core script passes in a fresh local dev-only clone (44 public + 14 selected tests).
+The starter supplies a small attributed real-coil packet and candidate/report
+interface. All eight committed-source copied-tree checks pass on each Python:
+reference, changed candidate, replay,
 tamper/overwrite rejection and contribution metadata without cost disclosure.
 The largest reference/native relative field difference is 9.59e-16 against the
 registered 5e-10 limit. [Release evidence](validation/PUBLIC_RELEASE_RESULTS.md).
 Hosted CI and independent hardware reproduction have not been verified.
+All B/A arrays match the earlier release exactly. Python 3.12/3.14 reports are
+byte-identical; Python 3.11 has two seed metrics differing by less than 1.12e-16.
+The existing tolerance and old-report replay pass without evaluator changes.
 
 The [initial publication inventory](validation/PUBLICATION_INVENTORY.md) finds
 about 325 MB of tracked content and 365 tracked files with home-path indicators
@@ -101,8 +104,9 @@ set physical admission or Step 4 to true.
 
 The complete historical research workflow still requires additional native
 dependencies, large local artifacts and qualified source-bound adapters. Its
-previous recorded full release suite had 2,064 passing tests with 334 documented warnings;
-this is distinct from the new public tests. The strict netCDF4 import warning
+latest full regression at `be916fb` has **2,072 passing tests**, no failures/skips,
+and **334 documented warnings** in 222.70 seconds; this is distinct from the
+44 public tests. The strict netCDF4 import warning
 remains unresolved, with no claimed ABI-freedom or hosted-CI pass.
 
 ## Next required evidence

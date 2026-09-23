@@ -8,8 +8,9 @@ if necessary; the macOS system `python3` may be too old. On Windows substitute
 `py -3.12` for `python`. The launcher explains unsupported versions before import.
 The separate historical native workflow still requires Python 3.12+.
 
-The original release verified 36 public tests and all eight committed-source copied-tree
-checks pass, including the real reference, changed candidate and tamper rejection.
+Current local verification: **44 public tests and eight copied-tree release checks
+pass on each of Python 3.11.4, 3.12.13 and 3.14.3**, including the real reference,
+changed candidate and tamper rejection. The fresh dev-only core runner also passes.
 See the [original verification](PUBLIC_RELEASE_RESULTS.md) and
 [current review fixes and tests](PUBLIC_REVIEW_FIXES.md). Hosted CI and independent
 hardware reproduction have not yet been verified.
@@ -82,6 +83,10 @@ print both reference/candidate values and signed absolute/percentage changes:
 negative means lower; report any trade-off rather than hiding a worsened metric.
 Reference scores are calculated from the bundled native 256-node fields;
 candidate scores use 512 nodes. Roundoff-level differences are not improvements.
+Cross-version reproduction can differ at rounding level: Python 3.11's reference
+report has two 256-node metrics differing by less than 1.12e-16 from Python 3.12,
+with identical B/A arrays. Existing replay tolerances cover this; report hashes
+need not be identical across Python versions.
 
 **Lower sampled-score PRs are welcome as exploratory results**, even before full
 research acceptance. Provide the candidate, commands, baseline comparison and

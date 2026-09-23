@@ -1,6 +1,6 @@
 # Nuclear Fusion @ Home: scientific overview
 
-For contributors and scientific reviewers. Updated 23 September 2026.
+For contributors and scientific reviewers. Updated 24 September 2026.
 [Quickstart](validation/PUBLIC_QUICKSTART.md) · [Status](STATUS.md) · [Roadmap](PROJECT_PLAN.md)
 
 ## Research question
@@ -75,7 +75,9 @@ without native packages or downloads. Hosted and independent-machine verificatio
 remain separate, outstanding work.
 The [release review follow-up](validation/PUBLIC_REVIEW_FIXES.md) adds reference
 score comparisons, named edits, Python 3.11+ support, English folder indexes and
-an explicit lightweight core-CI scope. Its final clean-environment checks are pending.
+an explicit lightweight core-CI scope. The fresh-clone core runner, 44 public tests
+and eight real release checks on each of Python 3.11/3.12/3.14 pass locally;
+the full native regression passes 2,072 tests with 334 existing warnings.
 An initial [publication inventory](validation/PUBLICATION_INVENTORY.md) also finds
 historical home-path indicators; it is not full security/rights clearance.
 

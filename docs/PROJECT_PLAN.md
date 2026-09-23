@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 23 September 2026.
+Updated 24 September 2026.
 [Overview](README.md) · [Evidence-based status](STATUS.md) · [Contribution guide](../CONTRIBUTING.md)
 
 ## MSX: our end goal
@@ -23,16 +23,18 @@ replay the report and submit useful work without our local artifacts or chat his
 | Release task | Completion criterion | Current state |
 | --- | --- | --- |
 | Preserve prior work | Original evidence intact; interrupted work explicitly unqualified | Done; protected-fit drafts saved, no new search |
-| Portable entry | Bundled attributed data, no native install, named candidate schema, explicit scope | Complete in the starter scope; 44 public tests pass on local Python 3.11/3.12 |
-| Reproduction and adversarial checks | Committed-source clean-copy reference/candidate/replay and rejection of forged results | All eight local checks pass; no independent-machine claim |
-| Public understanding and contribution | English entry/index pages, target scores, named edits, open contribution/review route | Review fixes implemented; final clean-environment checks pending |
+| Portable entry | Bundled attributed data, no native install, named candidate schema, explicit scope | Complete in the starter scope; 44 public tests pass on local Python 3.11/3.12/3.14 |
+| Reproduction and adversarial checks | Committed-source clean-copy reference/candidate/replay and rejection of forged results | Eight local checks pass on each supported CI Python; fresh dev-only core runner also passes |
+| Public understanding and contribution | English entry/index pages, target scores, named edits, open contribution/review route | Eight-point review addressed and locally verified; hosted verification remains separate |
 | Publication review | Inventory history/content, adjudicate privacy/rights, review exact release | Initial bounded inventory complete; home-path indicators found, clearance remains open |
 | Hosted operation | Verified CI, reviewer identities, branch protection and safe permissions | Not configured or verified here; separate launch work |
 
 The [release specification](validation/PUBLIC_RELEASE.md) and
 [verification record](validation/PUBLIC_RELEASE_RESULTS.md) record exact scope
-and observed checks. Public quickstart success is not full historical reproducibility or
-physical admission. No automatic PR monitor, merge bot, push or publication has
+and observed checks. The [review follow-up](validation/PUBLIC_REVIEW_FIXES.md)
+records the expanded local compatibility/CI verification. Public quickstart
+success is not full historical reproducibility or physical admission.
+No automatic PR monitor, merge bot, push or publication has
 been enabled.
 
 **Participation rule:** compute budget/cost disclosure is optional. Useful work
