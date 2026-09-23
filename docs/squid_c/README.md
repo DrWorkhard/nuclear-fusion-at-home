@@ -9,15 +9,14 @@ and a qualified authoritative comparison dataset remain outstanding. SQuID-C mus
 not be assumed to represent Proxima's current design without verification at the
 time of comparison. The historical data request is an unsent draft.
 
-[Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
+[Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
 
-## Dokumente
+## Documents
 
-- [MS1: comparison and outreach](MS1_PROXIMA_COMPARISON.md) — English framework for strong, reproducible design-level evidence before contacting Proxima, on the path to end goal MSX; reference identity, matched constraints, uncertainty, independent checks and explicit current gaps. No numerical study or outreach performed.
-- [SQUID_C_ACCEPTANCE ](SQUID_C_ACCEPTANCE.md) — Dokument: Provisorischer Reproduktionsvertrag: kanonischer Zustand, Datenrollen, Herkunft und noch offene wissenschaftliche Auswertung.
-- [SQUID_C_DATA_REQUEST ](SQUID_C_DATA_REQUEST.md) — Dokument: Konkreter Entwurf einer Autorenanfrage zu Gleichgewichten, Profilen, Spulen, Strömen, Skalierung und Auswertung.
-- [SQUID_C_READINESS ](SQUID_C_READINESS.md) — Dokument: Detaillierte Gates G1–G6 mit Teilerfolgen und verbleibenden internen sowie externen Voraussetzungen.
+- [MS1: comparison and outreach](MS1_PROXIMA_COMPARISON.md). English framework for strong, reproducible design-level evidence before contacting Proxima on the path to MSX: reference identity, matched constraints, uncertainty, independent checks and current gaps. No outreach performed.
+- [SQuID-C acceptance](SQUID_C_ACCEPTANCE.md). Historical German draft reproduction contract: canonical state, data roles, provenance and outstanding scientific evaluation.
+- [Data request draft](SQUID_C_DATA_REQUEST.md). Historical German draft request for equilibria, profiles, coils, currents, scaling and diagnostics; unsent.
+- [Readiness assessment](SQUID_C_READINESS.md). Detailed German account of gates G1–G6, partial successes and outstanding internal/external requirements.
 
-Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
-Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
-[Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
+Historical content and hashes remain unchanged. Resolve old filenames with the
+[migration manifest](../../manifests/documentation-layout-v1.json).

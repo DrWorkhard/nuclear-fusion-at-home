@@ -1,33 +1,29 @@
-# Geometrische Zulässigkeit
+# Geometry checks
 
-Zweck: Krümmung und Abstände unabhängig von den Optimierungsstützstellen beurteilen.
+Purpose: assess coil curvature and clearance independently of optimization sample points.
 
-Aktueller Schluss: Grobe Gitter können reale Krümmungsverletzungen übersehen. Positionszeugen und kontinuierliche Fourier-Schranken sind geprüft. Die Schranken verwenden gewöhnliche Gleitkommaarithmetik mit Polster; vollständige Wicklungspaket- und Selbstüberschneidungsprüfungen fehlen.
-Die neue außenliegende Startkonstruktion besteht auch real für alle zwölf
-Varianten: unabhängige Snapshot-Fehlerübertragung, kontinuierliche Schranken
-und alle72 direkten Prüfungen. Nur Filament-Startgeometrie, kein Feldpass.
-Der nachfolgende Feldstart ist numerisch qualifiziert, physisch weiterhin
-unzulässig. Die kumulative Sicherheitsschranke für veränderte Kurven besteht
-nun auch ihre reale52-Zustandsmatrix: alle vorgeschriebenen kleinsten Probes
-zertifiziert,18 größere Zustände konservativ unzertifiziert. Kein vererbter
-Seedpass, Feldgewinn oder neuer Suchlauf.
+Current conclusion: coarse grids can miss real curvature violations. Position
+witnesses and continuous Fourier bounds have been checked, using ordinary
+floating-point arithmetic with safety margins. Full winding-pack and
+self-intersection checks remain open. All twelve new outside-plasma starting
+geometries pass the specified filament checks, including all 72 direct tests.
+Their subsequent field calculations pass numerical checks but fail field-quality
+limits. The 52-state cumulative-perturbation study certifies every required small
+probe; 18 larger states remain conservatively uncertified, rather than proved
+impossible. Geometry success alone establishes no field improvement.
 
-[Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
+[Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
 
-## Dokumente
+## Documents
 
-- [Spulenänderungen: kumulatives Perturbationsprotokoll](COIL_PERTURBATION_PROTOCOL.md) — Neue D0/D1/D2-Schranken für Abstand/Länge/Krümmung und einfache Projektion gegen unveränderliche Seeds; analytische Kontrollen und feste feldfreie52-Zustandsmatrix vor späterer Suche.
-- [Spulenänderungen: reale Qualifikation bestanden](COIL_PERTURBATION_RESULTS.md) — 2064 Gesamttests und reale52-Zustandsmatrix mit104 Zertifikatsaufrufen/208 direkten Rastern bestanden. Alle Pflichtprobes zertifiziert,18 größere konservativ abgelehnt; hohe Einzelmoden früher begrenzt. Getrennte Abnahme/Quellenbindung und transitive Checkpointerhaltung, ursprüngliche Testlücke erhalten/korrigiert.
+Historical detailed reports below remain in German; this index gives their scope
+and conclusions in English.
 
-- [Außenliegende Startspulen: Protokoll](CLEAR_COIL_INITIALIZATION_PROTOCOL.md) — Gemeinsames3D-Plasmaenvelope, Kreis-/konvexe Fourier-LPs und unveränderte unabhängige Geometriegrenzen vor einem neuen Feldfit.
-- [Außenliegende Startspulen: Ergebnisse](CLEAR_COIL_INITIALIZATION_RESULTS.md) — Alle zwölf realen Varianten geometrisch angenommen, beide Formstarts ausgewählt; vollständiger Review-/Prüfverlauf, keine Feld-/Schritt4-Zulassung.
+- Coil perturbations: [protocol](COIL_PERTURBATION_PROTOCOL.md) and [results](COIL_PERTURBATION_RESULTS.md). Cumulative position/first-/second-derivative bounds protect distance, length and curvature relative to immutable seeds. Real 52-state matrix: 104 certificate calls, 208 direct grids; required small probes pass, 18 larger states remain uncertified. Includes checkpoint-reference preservation and the corrected test gap.
+- Outside-plasma starting coils: [protocol](CLEAR_COIL_INITIALIZATION_PROTOCOL.md) and [results](CLEAR_COIL_INITIALIZATION_RESULTS.md). Shared 3D plasma envelope, circles and convex Fourier linear programs. All twelve geometries pass; both start families selected. No field or Step 4 completion claim.
+- [Continuous coil clearance](CONTINUOUS_COIL_CLEARANCE_CHECK.md). Retrospective distance lower bounds valid between all sample points, from Fourier derivative bounds.
+- Continuous curvature: [protocol](CONTINUOUS_CURVATURE_PROTOCOL.md) and [results](CONTINUOUS_CURVATURE_RESULTS.md). Analytic controls and bounds for the frozen curves.
+- Curvature aliasing: [audit](CURVATURE_ALIASING_AUDIT.md) and [results](CURVATURE_ALIASING_RESULTS.md). Independent position/curvature witnesses confirm violations missed by coarse optimization grids.
 
-- [CONTINUOUS_COIL_CLEARANCE_CHECK ](CONTINUOUS_COIL_CLEARANCE_CHECK.md) — Dokument: Retrospektive, zwischen allen Stützstellen gültige Abstandsuntergrenze aus Fourier-Ableitungsschranken.
-- [CONTINUOUS_CURVATURE_PROTOCOL ](CONTINUOUS_CURVATURE_PROTOCOL.md) — Protokoll: Kontinuierliche Krümmungseinschließung; analytische Kontrollen und Prüfung eingefrorener Felder.
-- [CONTINUOUS_CURVATURE_RESULTS ](CONTINUOUS_CURVATURE_RESULTS.md) — Ergebnis: Kontinuierliche Krümmungseinschließung; analytische Kontrollen und Prüfung eingefrorener Felder.
-- [CURVATURE_ALIASING_AUDIT ](CURVATURE_ALIASING_AUDIT.md) — Dokument: Unabhängige Positions-/Krümmungszeugen bestätigen von groben Optimierungsgittern übersehene Verletzungen.
-- [CURVATURE_ALIASING_RESULTS ](CURVATURE_ALIASING_RESULTS.md) — Ergebnis: Unabhängige Positions-/Krümmungszeugen bestätigen von groben Optimierungsgittern übersehene Verletzungen.
-
-Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
-Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
-[Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
+Historical content and hashes remain unchanged. Resolve old filenames with the
+[migration manifest](../../manifests/documentation-layout-v1.json).

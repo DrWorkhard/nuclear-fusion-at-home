@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-23 — Implement the eight-point public release review
+
+- Start from clean `31c4b81`; earlier process inspection found only editor services.
+  Later sandboxed `ps` was denied; no new research jobs were started or stopped.
+  Work is operational/UI/documentation, not a numerical search.
+- Fix dev-only core test selection, both UTF-8 reads, early Python version checks,
+  3.11/3.12/3.14 portable matrix, contributor-agent scope, reference score/change
+  output, all-198-position named editing and contextual errors. Translate all
+  seven indexes and the historical CLI guide; simplify README and unify roadmap.
+- D-022 records exact old/new-byte exceptions for two frozen operational files.
+  Scientific thresholds, data, the four public evaluator sources and old evidence
+  remain unchanged; the historical workflow itself is byte-identical.
+- First validation: 44 public tests pass on Python 3.11.4 (0.608 s); docs pass.
+  Ruff finds four line-length errors, corrected. A targeted pytest invocation
+  guessed two nonexistent test filenames and exited 4 with no tests; corrected
+  to discovered files. Final targeted set: 98 pass in 7.41 s. Public tests also
+  pass on Python 3.12.13 (44 in 0.582 s); Ruff/docs/whitespace pass.
+- Actual `/usr/bin/python3` (3.9.6) prints the intended version/upgrade message,
+  not the old zip error. Tests cover all 198 mappings, cp1252-default Markdown
+  and Python parsing, preservation rejection, roadmap consistency and PR-safe
+  editing. Fresh core clone, full native regression and real copied-tree replay
+  are the next validation step; no hosted success or final closure claimed yet.
+
 ## 2026-09-23 — Put MS1 and MSX in the plan before the quickstart
 
 - User requests the project plan before “Start in three commands”, with MS1 in

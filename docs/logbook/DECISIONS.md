@@ -1,5 +1,28 @@
 # Decision log
 
+## D-022 — Public review fixes and exact operational preservation exceptions
+
+**Status:** accepted user-requested release maintenance, not a physics-gate change
+**Date:** 2026-09-23
+
+Fix first-push CI in the repository, rather than relying on later disabling of
+Actions. Keep the historical workflow bytes; explicitly limit its runner to
+the dev-only public/documentation/operational profile. Full native regression
+remains a separate requirement. Add UTF-8 reads to the documentation checker.
+Both old operational files were incidentally covered by the foundation tree
+freeze: permit only their exact original/replacement hash pairs, version 1,
+with rejection controls. Do not grant path-wide exemptions, change scientific
+kernels/thresholds, rewrite source-bound evidence, or reinterpret old failures.
+
+Public commands support Python 3.11+; native research remains 3.12+. Preserve
+the four hashed evaluator sources while adding UI comparisons, named editing
+and contextual errors. Welcome lower-score exploratory PRs without calling
+sparse feedback full-grid acceptance. Canonical roadmap names/statuses and
+English indexes are maintained at public entry points; historical detail reports
+remain preserved. Contributor-agent rules are the default; the owner's historic
+autonomy, shared-log and commit duties are explicitly maintainer-only.
+[Implementation and checks](../validation/PUBLIC_REVIEW_FIXES.md).
+
 ## D-021 — Show the plan before onboarding, with MS1 and MSX inside it
 
 **Status:** accepted explicit user presentation/naming requirement

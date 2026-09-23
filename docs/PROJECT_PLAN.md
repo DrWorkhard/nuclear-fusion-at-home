@@ -23,9 +23,9 @@ replay the report and submit useful work without our local artifacts or chat his
 | Release task | Completion criterion | Current state |
 | --- | --- | --- |
 | Preserve prior work | Original evidence intact; interrupted work explicitly unqualified | Done; protected-fit drafts saved, no new search |
-| Portable entry | Bundled attributed data, no native install, named candidate schema, explicit scope | Complete in the starter scope; 36 public tests pass |
+| Portable entry | Bundled attributed data, no native install, named candidate schema, explicit scope | Complete in the starter scope; 44 public tests pass on local Python 3.11/3.12 |
 | Reproduction and adversarial checks | Committed-source clean-copy reference/candidate/replay and rejection of forged results | All eight local checks pass; no independent-machine claim |
-| Public understanding and contribution | Clear English overview, status, quickstart, open contribution/review route | Prepared |
+| Public understanding and contribution | English entry/index pages, target scores, named edits, open contribution/review route | Review fixes implemented; final clean-environment checks pending |
 | Publication review | Inventory history/content, adjudicate privacy/rights, review exact release | Initial bounded inventory complete; home-path indicators found, clearance remains open |
 | Hosted operation | Verified CI, reviewer identities, branch protection and safe permissions | Not configured or verified here; separate launch work |
 
@@ -46,13 +46,13 @@ measurements.
 
 | Step / milestone | Actual completion requirement | State |
 | --- | --- | --- |
-| 1. Reliable bounded foundation | Specified local reference/software/physics checks, source and environment identity, honest admission | Complete in the registered scope |
-| 2. Reproducible iteration | Load reference → change/optimize → save → independently evaluate → repeat | Complete in the registered scope |
-| 3. Own QI-like plasma target | Actual boundary/equilibrium change with registered independently confirmed improvement | Complete for the nfp2 vacuum action-metric study |
-| 4. Coupled plasma and coils | The four subpackages below, not merely a favorable vacuum coil-fit score | Open |
-| 5. Demonstrated performance advance | Fair, reproducible reference comparisons with independently verified meaningful advantage; target MS1 for the Proxima comparison | Open; no automatic claim from Step 4 |
-| MS1. Evidence-backed Proxima Fusion outreach | As soon as strong, reproducible and independently checked evidence supports that our design is better than the design Proxima is pursuing, contact them with the evidence | Not reached; targeted Step 5 outcome |
-| MSX. End goal | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve | Long-term goal, not achieved; extends beyond MS1 |
+| 1. Establish a reliable foundation | Specified local reference/software/physics checks, source and environment identity, honest admission | Complete (local reference tools) |
+| 2. Make design iteration reproducible | Load reference → change/optimize → save → independently evaluate → repeat | Complete (iteration workflow) |
+| 3. Improve our own plasma target | Actual boundary/equilibrium change with registered independently confirmed improvement | Complete (vacuum study) |
+| 4. Develop plasma and coils together | The four subpackages below, not merely a favorable vacuum coil-fit score | In progress |
+| 5. Demonstrate a meaningful design advantage | Fair, reproducible reference comparisons with independently verified meaningful advantage; target MS1 for the Proxima comparison | Not achieved |
+| MS1. Contact Proxima Fusion with strong evidence | As soon as strong, reproducible and independently checked evidence supports that our design is better than the design Proxima is pursuing, contact them with the evidence | Not reached |
+| MSX. Our end goal | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve | Long-term goal |
 
 Steps 1/2 are capability milestones: they did not require a new feasible optimum,
 novel method or SoTA result. Their [acceptance protocol](validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md)
@@ -79,7 +79,7 @@ numerical protocol without changing any existing study's acceptance thresholds.
 No contact is being made by this planning update. MS1 leads to expert scrutiny
 and further work, not a claim that the best possible reactor has been found.
 
-## Step 4: coupled plasma/coil development
+## Step 4: Develop plasma and coils together
 
 - **4A — Realization and transfer:** realize both reference and selected plasma
   targets with actual coils, pass the appropriate numerical/geometry/field gates,
@@ -112,10 +112,12 @@ tests and criteria are valuable contributions, but require separate versioning,
 review and revalidation. Source/dataset hashes are evidence of identity, not
 proof of scientific correctness or trust in an unknown fork.
 
-After each completed work step, update the relevant detail/log and affected
+For maintainer research sessions: after each completed work step, update the relevant detail/log and affected
 overviews, run appropriate tests/docs checks, review the diff and commit locally.
 Do not replace these summaries with accumulating experiment histories; details
-belong in the indexed child directories. [Persistent rules](../AGENTS.md).
+belong in the indexed child directories. Outside contributors document their
+scoped change and checks in their PR; maintainers integrate the shared logs/status.
+[Agent guide and maintainer-only rules](../AGENTS.md).
 
 ## Preservation and future scope
 

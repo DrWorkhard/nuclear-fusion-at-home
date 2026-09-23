@@ -11,7 +11,7 @@ not an allowlist. Code without an AI agent is equally welcome.
 
 1. Read the [project overview](README.md) and [scientific status](docs/STATUS.md).
 2. Run the [portable quickstart](docs/validation/PUBLIC_QUICKSTART.md). It needs
-   only Python 3.12+, not our private workspace, large datasets or an API key.
+   only Python 3.11+, not our private workspace, large datasets or an API key.
 3. Make a small, coherent change on your branch. Run `python scripts/test_public.py`
    for the public layer, and relevant additional tests for the changed subsystem.
 4. Open a pull request explaining the contribution, evidence and limitations.
@@ -50,6 +50,9 @@ score. Other designs, novel physics or different methods remain welcome through
 ordinary PRs/proposals; the initial file format is not the project's scientific
 boundary. Explain what a suitable independent check would require.
 
+Exploratory PRs that lower the starter's sampled errors are explicitly welcome.
+Aim below reference normal RMS 0.304207 and inner-vector RMS 0.380435; report both
+and disclose trade-offs. See [score interpretation](docs/validation/PUBLIC_QUICKSTART.md#what-the-report-means).
 The starter has public sparse samples and frozen currents. A lower score is
 not a full-surface/geometry/QI pass. Label exploratory work honestly. Before a
 confirmatory project study, agree a versioned evaluation protocol; we do not
@@ -63,6 +66,13 @@ provenance/license and a size justification. Do not reformat historical evidence
 or rewrite its old absolute paths. New portable exports have their own identity.
 
 ## Review, credit and conduct
+
+Keep PR documentation local to your change: usage text, a focused report, or the
+PR description with actual checks and limitations. Maintainers integrate shared
+validation logs, decisions, status and roadmap; contributors do not need to edit
+those files or commit after every small step. The default contributor section of
+[AGENTS.md](AGENTS.md) takes precedence over its maintainer-only historical notes
+for outside agents.
 
 Review checks usefulness, correctness, reproducibility, scope, security and
 maintainability. Being unsolicited is not a negative criterion. Where evaluation

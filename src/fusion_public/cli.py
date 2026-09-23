@@ -8,6 +8,7 @@ from pathlib import Path
 from .data import CASE_ID, load, load_case, save_new
 from .report import audit, evaluate
 from .submission import validate
+from .usability import score_comparison, set_coefficient, validate_for_cli
 
 
 def parser():
@@ -18,6 +19,11 @@ def parser():
     commands.add_parser("cases", help="List portable cases and their scientific limits")
     init = commands.add_parser("init", help="Write a candidate template to a new file")
     init.add_argument("--output", type=Path, required=True)
+    edit = commands.add_parser("set-coefficient", help="Change one named coefficient (metres)")
+    edit.add_argument("--candidate", type=Path, required=True)
+    edit.add_argument("--name", required=True)
+    edit.add_argument("--value", type=float, required=True)
+    edit.add_argument("--output", type=Path, required=True, help="Fresh JSON file")
     demo = commands.add_parser("demo", help="Reproduce the starter and replay its report")
     demo.add_argument("--output", type=Path, required=True, help="Fresh directory")
     ev = commands.add_parser("evaluate", help="Compute sampled fields for a candidate")
@@ -47,13 +53,19 @@ def main(argv=None):
             print(json.dumps(dict(
                 schema_version=1, cases=[dict(
                     id=CASE_ID, data_sha256=digest, accepts_candidate=True,
-                    requirements="Python3.12+ standard library; no network or native solver",
+                    requirements="Python3.11+ standard library; no network or native solver",
                     physical_admission=False,
                     scope="64 boundary,64 inner,64 loop points; fixed-current filament B/A",
                 )],
             ), indent=2))
             return 0
         fresh(args.output)
+        if args.command == "set-coefficient":
+            candidate = set_coefficient(load(args.candidate), args.name, args.value)
+            save_new(args.output, candidate)
+            print(f"Set {args.name} = {args.value} m; saved {args.output}. "
+                  "Evaluate this candidate next.")
+            return 0
         if args.command == "init":
             save_new(args.output, case["seed"])
             print(f"Candidate written to {args.output}; this is not a feasible design.")
@@ -67,12 +79,14 @@ def main(argv=None):
             save_new(args.output / "audit.json", replay)
             passed = replay["report_replay_pass"] and replay["seed_native_reference_pass"] is True
             print(json.dumps(dict(output=str(args.output), reference_reproduced=passed,
+                                  comparison=score_comparison(report, case),
                                   physical_admission=False, step4_pass=False), indent=2))
             return 0 if passed else 2
         if args.command == "evaluate":
-            report = evaluate(load(args.candidate), case, digest)
+            report = evaluate(validate_for_cli(load(args.candidate)), case, digest)
             save_new(args.output, report)
             print(json.dumps(dict(output=str(args.output), physical_admission=False,
+                                  comparison=score_comparison(report, case),
                                   sampled_metrics_512=report["levels"][1]["metrics"]), indent=2))
             return 0
         if args.command == "audit":

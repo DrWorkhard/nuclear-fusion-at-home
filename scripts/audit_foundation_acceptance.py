@@ -17,6 +17,7 @@ from fusion_baselines.foundation_acceptance import (
     audit_test_xml,
 )
 from fusion_baselines.integration_audit import audit_integration_xml
+from fusion_baselines.operational_preservation import approved_change
 from fusion_baselines.provenance import git_state, write_json_atomic
 
 BASE = "5971fee"
@@ -50,8 +51,11 @@ def preservation(root):
         ["git", "diff", "--no-renames", "--name-status", BASE, "--"], cwd=root, text=True
     )
     changes = [row.split("\t", 1) for row in delta.splitlines()]
+    operational = [row[1] for row in changes if row[0] == "M"
+                   and approved_change(root, BASE, row[1])]
     blocked = [
-        row for row in changes if row[0] != "A" and not (row[0] == "M" and row[1] in allowed)
+        row for row in changes if row[0] != "A"
+        and not (row[0] == "M" and (row[1] in allowed or row[1] in operational))
     ]
     revision = subprocess.check_output(["git", "rev-parse", BASE], cwd=root, text=True).strip()
     tag = subprocess.check_output(
@@ -64,6 +68,8 @@ def preservation(root):
         base_commit=revision,
         preservation_tag=tag,
         historical_tracked_files=len(files),
+        operational_maintenance_version=1,
+        approved_operational_changes=operational,
         allowed_modified=[row[1] for row in changes if row[0] == "M" and row not in blocked],
         blocked_changes=blocked,
         all_pass=not blocked and revision == tag,

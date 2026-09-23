@@ -14,6 +14,7 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-24.04, macos-14, windows-2022]
+        python: ["3.11", "3.12", "3.14"]
     runs-on: ${{ matrix.os }}
     timeout-minutes: 10
     steps:
@@ -22,7 +23,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python }}
       - name: Public standard-library tests
         run: python -I -S scripts/test_public.py
       - name: Documentation structure

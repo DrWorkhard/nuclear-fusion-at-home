@@ -1,13 +1,17 @@
 # Public quickstart
 
-For people and coding agents. Python 3.12+ and a checkout or source ZIP are enough
+For people and coding agents. Python 3.11+ and a checkout or source ZIP are enough
 for this starter. No package installation, account, API key, GPU, native compiler,
 network access during evaluation, or historical local artifacts are needed.
-On systems where the command is `python3`, substitute it for `python` below.
+Check `python --version` first. Use `python3.11` or `python3.12` on macOS/Linux
+if necessary; the macOS system `python3` may be too old. On Windows substitute
+`py -3.12` for `python`. The launcher explains unsupported versions before import.
+The separate historical native workflow still requires Python 3.12+.
 
-Verified locally: 36 public tests and all eight committed-source copied-tree
+The original release verified 36 public tests and all eight committed-source copied-tree
 checks pass, including the real reference, changed candidate and tamper rejection.
-See the [verification record](PUBLIC_RELEASE_RESULTS.md). Hosted CI and independent
+See the [original verification](PUBLIC_RELEASE_RESULTS.md) and
+[current review fixes and tests](PUBLIC_REVIEW_FIXES.md). Hosted CI and independent
 hardware reproduction have not yet been verified.
 
 ## Reproduce a real reference
@@ -38,7 +42,26 @@ keep the partial directory for diagnosis and choose a fresh path, not a silent r
 python fusion.py public init --output results/my-candidate.json
 ```
 
-Edit `base_coefficients` in that JSON file. Keep the declared names, metre units,
+Edit `base_coefficients` in that JSON file, or use the named helper:
+
+```bash
+python fusion.py public set-coefficient --candidate results/my-candidate.json --name 'coil[0]/xc(0)' --value 1.2 --output results/changed-candidate.json
+```
+
+This sets an **absolute value in metres**, not an increment. The value above is
+an editing example, not an optimized or safe coil change. Evaluate the resulting
+`results/changed-candidate.json` to check it. Existing output files are protected.
+
+For direct JSON edits, the exact zero-based mapping is:
+
+```text
+parameter_names[33*i + 11*axis + k] labels base_coefficients[i][axis][k]
+i = 0..5; axis = 0:x, 1:y, 2:z; k = 0..10
+component order = c(0), s(1), c(1), s(2), c(2), ..., s(5), c(5)
+example: parameter_names[49] = coil[1]/ys(3) -> base_coefficients[1][1][5]
+```
+
+Keep the declared names, metre units,
 shape and case ID. The format stores six Cartesian Fourier curves and preserves
 the case's fixed symmetry and signed currents. Then:
 
@@ -52,6 +75,26 @@ No result is automatically submitted or merged. For a PR, follow
 is also welcome; explain its value and proposed verification separately.
 
 ## What the report means
+
+Aim to **lower both** `sampled_normal_rms` (reference **0.3042070281**) and
+`sampled_inner_vector_rms` (reference **0.3804347184**). `demo` and `evaluate`
+print both reference/candidate values and signed absolute/percentage changes:
+negative means lower; report any trade-off rather than hiding a worsened metric.
+Reference scores are calculated from the bundled native 256-node fields;
+candidate scores use 512 nodes. Roundoff-level differences are not improvements.
+
+**Lower sampled-score PRs are welcome as exploratory results**, even before full
+research acceptance. Provide the candidate, commands, baseline comparison and
+limitations. Numerical counterexamples and useful negative results also count.
+For a stronger claim, check finer/unseen spatial samples, continuous geometry and
+the relevant physical constraints in a separate, agreed evaluation profile.
+
+For context, the research field limits are normal RMS **1e-4** and inner-vector
+RMS **0.01**. Those are full-grid, flux-normalized measures, not thresholds for
+this sparse fixed-current profile. Historical starts scored about **0.27** and
+**0.36–0.37** respectively under that full-grid profile, far from the limits.
+Do not compare public scores to those limits as an acceptance ratio or infer
+geometry, QI or reactor performance from a public improvement.
 
 | Field | Meaning | Not established |
 | --- | --- | --- |
@@ -76,7 +119,7 @@ python scripts/test_public.py
 python fusion.py public check-submission --file examples/contribution.json
 ```
 
-The 36 public unit/analytic checks are separate from the historical native suite.
+The public unit/analytic checks are separate from the historical native suite.
 They include an analytic circular-coil control, schema/mapping checks, file/hash
 protection and rejection of forged scope flags. Cost, budget, hardware and a
 related hint are optional in contribution metadata. Plain Markdown PRs also work.

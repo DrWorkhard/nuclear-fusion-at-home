@@ -64,11 +64,15 @@ review. Error recovery must not grant broader permissions.
 
 The existing full research suite stays a separate local/native path; a small
 portable green check must never be described as a full native regression pass.
-The historical `.github/workflows/ci.yml` is also byte-preserved by the foundation
-audit. The new jobs live in `.github/workflows/public-ci.yml`. Before hosting,
-decide explicitly whether the old workflow should be disabled in repository
-settings until its full clean-run environment is qualified; do not treat it as
-the public starter's check or silently rewrite the historical file.
+The historical `.github/workflows/ci.yml` remains byte-preserved. Its runner now
+has an explicit **dev-only** scope: Ruff, dependency-free public tests, docs checks
+and selected documentation/operational tests. It no longer collects the entire
+native suite with missing scientific dependencies. This is a reviewed, exact-hash
+operational exception, documented in [the review resolution](PUBLIC_REVIEW_FIXES.md),
+not a relaxed physics test or a need to disable Actions before the first push.
+Run this sync-based profile only in a disposable checkout, never the qualified
+research environment. Portable CI separately tests Python 3.11/3.12/3.14 on
+Linux/macOS/Windows through `.github/workflows/public-ci.yml`.
 Hosted runs are not claimed until actually observed. GitHub's
 [secure-use guidance](https://docs.github.com/en/actions/reference/security/secure-use)
 and [privileged-trigger guidance](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target)

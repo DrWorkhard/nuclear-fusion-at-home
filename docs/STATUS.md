@@ -23,6 +23,9 @@ achieve. MS1 is an intermediate milestone on that path.
 The portable public contribution layer now passes its scoped local release checks.
 It is not a new physical result and does not reopen or expand the completed
 foundation milestones. Public hosting and operational safeguards remain separate work.
+Roadmap status: Steps 1–3 **Complete** in their stated scopes; Step 4,
+**Develop plasma and coils together**, **In progress**; Step 5 **Not achieved**;
+MS1 **Not reached**; MSX **Long-term goal**. [Canonical plan](PROJECT_PLAN.md).
 The interrupted protected-fit proposal/solver are preserved as unqualified drafts;
 no new protected-fit search was executed.
 
@@ -69,7 +72,12 @@ Older optimistic journal conclusions do not supersede this current assessment.
 
 ## Public usability — a separate deliverable
 
-The additive public code has 36 passing dependency-free unit/analytic tests,
+The public layer now has 44 passing dependency-free unit/analytic tests on local
+Python 3.11 and 3.12, including named edits and score interpretation. The
+[release review fixes](validation/PUBLIC_REVIEW_FIXES.md) add explicit dev-only
+CI scope, UTF-8 reads, an early version guard and English navigation; fresh core
+and full-native verification are pending closure of this operational step.
+The original release supplied
 a small attributed real-coil packet and a candidate/report interface. All eight
 committed-source copied-tree checks pass: reference, changed candidate, replay,
 tamper/overwrite rejection and contribution metadata without cost disclosure.
@@ -93,7 +101,7 @@ set physical admission or Step 4 to true.
 
 The complete historical research workflow still requires additional native
 dependencies, large local artifacts and qualified source-bound adapters. Its
-last completed full suite had 2,064 passing tests with 334 documented warnings;
+previous recorded full release suite had 2,064 passing tests with 334 documented warnings;
 this is distinct from the new public tests. The strict netCDF4 import warning
 remains unresolved, with no claimed ABI-freedom or hosted-CI pass.
 

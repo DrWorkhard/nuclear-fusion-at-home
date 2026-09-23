@@ -1,19 +1,18 @@
-# Gemeinsamer Einstieg für Menschen und AI-Agenten
+# Historical research entry points
 
-**Öffentlicher Einstieg seit23.September2026:** Für einen frischen Checkout zuerst
-den getrennten [portablen Quickstart](PUBLIC_QUICKSTART.md) verwenden:
-`python fusion.py public --help`. Die folgende Seite beschreibt weiterhin den
-ursprünglichen, lokal quellgebundenen Forschungsworkflow. Das neue sparse
-Feldprofil ersetzt oder erweitert seine wissenschaftliche Abnahme nicht.
+For a fresh checkout, start with the separate [portable quickstart](PUBLIC_QUICKSTART.md):
+`python fusion.py public --help`. This page describes the original, source-bound
+local research workflow, which needs Python 3.12+, native dependencies and
+historical artifacts. The public sampled-field profile does not replace its
+scientific acceptance.
 
-20. September 2026. Dünne gemeinsame CLI über unveränderten wissenschaftlichen
-Programmen. Sie vereinheitlicht Aufruf, Profilentdeckung und Pfadbehandlung,
-nicht die Physikmodelle. **Version1 unterstützt genau ein festes Studienprofil,
-keine beliebigen neuen Entwurfsdateien.**
+The thin CLI introduced on 20 September 2026 standardizes invocation, discovery
+and paths, not physics models. **Version 1 supports one fixed study profile, not
+arbitrary new design files.**
 
-## Ohne Rechnung beginnen
+## Start without computation
 
-Im Forschungscheckout mit der vorhandenen Pythonumgebung:
+In the research checkout with its existing environment:
 
 ```bash
 PYTHONPATH=src .venv/bin/python -m fusion_baselines --help
@@ -22,44 +21,38 @@ PYTHONPATH=src .venv/bin/python -m fusion_baselines profiles --json
 .venv/bin/python fusion.py profiles --json
 ```
 
-`fusion.py` ist der Einstieg direkt im Projektroot, ohne gesetztes `PYTHONPATH`.
-Der historisch installierte Befehl `.venv/bin/fusion-baselines` bleibt dagegen
-unverändert für Datenaufnahme/Umgebungsprüfung; er erhält diese neuen Unterbefehle
-nicht. Seine Implementierung und die Paketkonfiguration gehören zur eingefrorenen
-Basisabnahme. Keine Installation/Synchronisierung erforderlich oder automatisch ausgelöst.
-Discovery und Hilfe laden keine NumPy-/SciPy-/netCDF-/nativen Rechenbibliotheken.
-Für die Forschung weiterhin zuerst [Projektstand](../STATUS.md),
-[Arbeitsplan](../PROJECT_PLAN.md) und [Arbeitsregeln](../../AGENTS.md) lesen.
+The root `fusion.py` launcher needs no PYTHONPATH. The historical installed
+`.venv/bin/fusion-baselines` command remains unchanged for intake/environment
+checks; its code and package configuration are frozen. Nothing installs or syncs
+automatically. Help and discovery do not import numerical/native libraries.
+Read [status](../STATUS.md), [roadmap](../PROJECT_PLAN.md) and
+[agent/maintainer rules](../../AGENTS.md) before running research.
 
-Maschinenlesbare Entdeckung liefert Schema, Profil-ID, unterstützte Operationen,
-Eingaben, Ausgaben, Voraussetzungen, Ressourcen und Bedeutung der Exitcodes.
-`supports_candidate_input: false` ist verbindlich, nicht nur eine Beschreibung.
-Es gibt kein `--design`, keinen freien Backendpfad und keine stillschweigende
-Auswahl eines anderen Modells.
+Machine-readable discovery describes schema, profile ID, operations, inputs,
+outputs, requirements, resources and exit codes. `supports_candidate_input:false`
+is enforced. There is no arbitrary `--design`, executable backend path or silent
+choice of another physics model.
 
-## Profil clear-coil-field-start-v1
+## Profile: clear-coil-field-start-v1
 
-Der vorhandene [Feldstartablauf](../optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md)
-rechnet dieselben vier festgelegten Zellen: Referenz-/eigener Plasmaentwurf,
-jeweils sechs/acht Grundspulen. Er erzeugt tatsächliche Feld-/Ableitungsdaten,
-optimiert aber keine neue Spulenform. `audit` rekonstruiert und prüft den
-gespeicherten vollständigen Lauf unabhängig. Grenzwerte, Raster, Normierung,
-Quellenbinder und Ressourcenwächter bleiben in den bestehenden Backends.
+The [field-start study](../optimization/CLEAR_COIL_FIELD_START_PROTOCOL.md) evaluates
+four fixed cells: reference/own plasma targets, each with six/eight base coils.
+It computes actual fields and derivatives but does not optimize a new coil shape.
+`audit` independently reconstructs and checks a saved complete run. The existing
+backends retain their thresholds, grids, normalization, source and resource checks.
 
-| Operation | Unveränderter Backend | Ausgabe |
+| Operation | Unchanged backend | Output |
 | --- | --- | --- |
-| evaluate | scripts/run_clear_coil_field_start.py | Neuer Ordner mit run.json, Workerprotokollen und Roharrays |
-| audit | scripts/audit_clear_coil_field_start.py | Neue JSON-Datei mit numerischer und physischer Entscheidung |
+| evaluate | scripts/run_clear_coil_field_start.py | Fresh directory: run.json, worker logs, raw arrays |
+| audit | scripts/audit_clear_coil_field_start.py | Fresh JSON: separate numerical and physical decisions |
 
-**Voraussetzungen:** Forschungscheckout einschließlich `scripts/`, bestehende
-qualifizierte native Umgebung, gepinnte externe Quellen, Vorgängerevidenz und
-alle referenzierten lokalen Rohdaten. Ein installiertes Wheel oder ein Git-Clone
-allein enthält die benötigten ignorierten Artefakte nicht. Historische absolute
-Pfade/Hashes dürfen zur Portierung nicht einfach umgeschrieben werden; ein neuer
-Rechner benötigt separat reproduzierte und qualifizierte Daten.
-[Umgebung und Grenzen](ENVIRONMENT.md).
+Requirements: research checkout including scripts, qualified native environment,
+pinned external sources, preceding evidence and all referenced local raw data.
+A wheel or Git clone alone lacks ignored historical artifacts. Do not rewrite
+old absolute paths/hashes for portability; another machine needs separately
+reproduced and checked data. [Environment and limits](ENVIRONMENT.md).
 
-## Geplanten Aufruf zuerst ansehen
+## Inspect the planned invocation
 
 ```bash
 PYTHONPATH=src .venv/bin/python -m fusion_baselines evaluate \
@@ -68,20 +61,18 @@ PYTHONPATH=src .venv/bin/python -m fusion_baselines evaluate \
   --dry-run
 ```
 
-Das schreibt keine Dateien und startet keinen Unterprozess. Das JSON zeigt
-den genauen Backendbefehl, Checkout, normalisierte Pfade und Änderungen der
-Unterprozessumgebung. Es prüft nur Checkout-/Dateipfade, **nicht** vollständige
-Quellenverfügbarkeit, Physik, Bibliothekskompatibilität oder freien Speicher.
-Diese eigentliche Zulassung erledigt erst das Backend beim echten Aufruf.
+This writes nothing and starts no subprocess. JSON shows the exact command,
+checkout, normalized paths and subprocess environment changes. It checks paths,
+not complete source availability, physics, library compatibility or disk reserve.
+Those checks belong to the backend during actual execution.
 
-Relative Eingabe-/Ausgabepfade beziehen sich auf das aktuelle Aufrufverzeichnis,
-nicht auf einen später gewechselten Checkout. Außerhalb des Checkouts kann man
-`--project-root /absoluter/pfad/fusion` angeben. Der Unterprozess läuft mit dem
-aufrufenden Pythoninterpreter, Checkout als Arbeitsverzeichnis und dessen `src/`
-als explizitem `PYTHONPATH`; keine Shellauswertung. Die drei numerischen
-Threadgrenzen werden nur für diesen Unterprozess auf1 gesetzt.
+Relative paths resolve from the invoking working directory. Outside the checkout,
+use `--project-root /absolute/path/fusion`. The subprocess uses the invoking
+interpreter, checkout working directory and explicit checkout src PYTHONPATH,
+without shell evaluation. Three numerical thread limits are set to 1 for that
+subprocess only.
 
-## Vorhandenen Lauf nachprüfen — empfohlener erster echter Aufruf
+## Audit an existing run first
 
 ```bash
 PYTHONPATH=src .venv/bin/python -m fusion_baselines audit \
@@ -90,15 +81,14 @@ PYTHONPATH=src .venv/bin/python -m fusion_baselines audit \
   --output artifacts/my-field-start-audit.json
 ```
 
-Der Lauf muss samt allen referenzierten Dateien lokal vorhanden sein. Auch
-`audit` unterstützt `--dry-run`. Neue Ausgabe verwenden; existierende Dateien,
-Ordner und symbolische Links werden nicht überschrieben. Ein Audit ist eine
-echte unabhängige Nachrechnung gespeicherter Daten, kein neuer nativer Feldlauf
-und kein Optimierungslauf.
+All referenced files must exist locally. Audit also supports `--dry-run`.
+Use new output paths: existing files, directories and symlinks are protected.
+This independently recomputes from saved data; it is neither a fresh native-field
+study nor an optimization.
 
-## Registrierte Studie erneut ausführen
+## Repeat the registered study
 
-Bewusst ohne parallele schwere Jobs und mit ausreichenden Ressourcen:
+Run deliberately with sufficient resources and no concurrent heavy job:
 
 ```bash
 PYTHONPATH=src .venv/bin/python -m fusion_baselines evaluate \
@@ -111,75 +101,63 @@ PYTHONPATH=src .venv/bin/python -m fusion_baselines audit \
   --output artifacts/my-field-start-audit-after-evaluation.json
 ```
 
-Vier serielle Worker, jeweils maximal1800s inklusive Import/Quellenbinder;
-mindestens3GiB Reserve vor jeder Zelle und2GiB währenddessen. Jede vollständige
-Zelle zählt262 native Requests. Kein automatischer Audit, Retry, Suchlauf,
-Gleichgewichtssolve oder Budgetoverride. Fehler-/Teilresultate bleiben erhalten;
-ein Neustart verlangt einen neuen Ausgabepfad. Nicht bloß für einen CLI-Smoke-Test
-eine gesamte neue Studie rechnen.
+Four serial workers, each limited to 1,800 seconds including imports/source
+checks; at least 3 GiB reserve before each cell and 2 GiB during execution.
+Each complete cell uses 262 native requests. There is no automatic audit, retry,
+search, equilibrium solve or budget override. Preserve partial/failed output;
+restarting needs a fresh path. Do not run this whole study just for a CLI smoke test.
 
-## Ergebnisse richtig lesen
+## Interpret results
 
-Die CLI gibt die regulären Backend-Exitcodes unverändert weiter:
-
-| Aufruf | Exit0 bedeutet | Andere Ausgänge |
+| Invocation | Exit 0 means | Other outcomes |
 | --- | --- | --- |
-| profiles / --dry-run | Entdeckung beziehungsweise Aufrufplanung erfolgreich | Keine Rechen-/Physikentscheidung |
-| evaluate | Producer vollständig; unabhängige Abnahme steht aus |1 bei Fehler/unvollständiger Produktion |
-| audit | Numerischer startup_pass |2 bei numerischer Ablehnung oder Auditfehler; JSON-status unterscheiden |
+| profiles / --dry-run | Successful discovery/planning | No numerical/physical decision |
+| evaluate | Producer completed; independent acceptance still pending | 1 on failed/incomplete production |
+| audit | Numerical startup_pass | 2 on numerical rejection or audit error; inspect JSON status |
 
-Dispatcher-/Checkout-/Dateifehler geben1 zurück, argparse-Nutzungsfehler2.
-SignalabbruchN wird als128+N ausgegeben, Unterbrechung als130. Der bestehende
-Auditwriter verwendet einen festen `.tmp`-Geschwisterpfad; auch dieser muss neu
-sein, damit erhaltene Zwischenstände oder Links nicht überschrieben werden.
-Ausgaben/Fehlermeldungen der Backends bleiben sichtbar. **Exit0, `all_pass` oder
-`startup_pass` sind hier keine physische Entwurfszulassung.** Insbesondere der
-bereits abgeschlossene Feldstart besteht numerisch, während
-`physical_seed_pass=false` und `step4_pass=false` bleiben.
+Dispatcher/checkout/path errors return 1, argparse usage errors 2, signal N as
+128+N, interruption as 130. The existing audit writer uses a fixed sibling
+`.tmp` path, which must also be fresh. Backend output remains visible.
+**Exit 0, all_pass and startup_pass do not mean physical design acceptance.**
+The completed field-start study passes numerically while
+`physical_seed_pass:false` and `step4_pass:false`.
 
-## Weitere Profile und neue Entwürfe
+## Other profiles and new designs
 
-Die Pythonmethoden `evaluate(x)`/`snapshot(x)` bleiben für die Konstruktion
-erhalten; der neue CLI-Befehl `evaluate` ist kein identischer universeller
-Einzelpunktaufruf. Ein beliebiger neuer Snapshot benötigt künftig ein eigenes
-versioniertes Eingabe-/Prüfprofil mit Quellenbindung und qualifiziertem Ablauf.
-Die inzwischen [abgeschlossene52-Zustands-Perturbationsstudie](../geometry/COIL_PERTURBATION_RESULTS.md)
-hat eigene spezialisierte Start-/Auditprogramme; sie wird durch Version1 dieser
-CLI weder gestartet noch als universelles Einzelentwurfsprofil angeboten.
+Construction APIs `evaluate(x)`/`snapshot(x)` remain separate from this fixed
+study command. An arbitrary snapshot needs its own versioned input/evaluation
+profile, source binding and qualified workflow. The completed
+[52-state perturbation study](../geometry/COIL_PERTURBATION_RESULTS.md) uses separate
+specialized runners/auditors and is not offered by version 1 of this CLI.
 
-Erweiterungen an der expliziten Registry vornehmen, bestehende Backends/Protokolle
-unverändert lassen, Annahmeumfang und Exitsemantik dokumentieren und Dispatch-/
-Negativtests ergänzen. Keine dynamischen Pythonimporte oder ausführbaren Befehle
-aus einer vom Entwurf mitgelieferten JSON-Datei übernehmen. Keine alten
-LPQA-/Plasma-/Ingenieurprüfungen als austauschbare Profile umetikettieren.
+Extend the explicit registry with tests and documented acceptance/exit semantics.
+Keep existing backends/protocols unchanged. Never import code or execute commands
+provided by a candidate JSON, or relabel LPQA/plasma/engineering checks as
+interchangeable profiles.
 
-## Implementierungsprüfung
+## Historical verification record
 
-64 unabhängige Dispatch-/Negativtests bestehen: leichte Discovery ohne native
-Imports, Pfad-/Umgebungs-/Exitcodekontrollen, Rootlauncher ohne PYTHONPATH und
-expliziter Byteerhalt der alten CLI/Paketkonfiguration. Erste Gesamtregression:
-1897 bestanden,3 Erhaltungsprüfungen gescheitert,334 bekannte Warnungen,195,14s.
-Ursache war der zunächst versuchte direkte Ausbau der eingefrorenen alten CLI.
-Ihre Bytes sind wieder exakt hergestellt; neue Parser/Startpunkte sind rein
-additiv. Keine alte Prüfbedingung geändert. Fehlgeschlagenes JUnit unter
-`artifacts/project-entrypoints-v1-qualification/regression.xml` bleibt erhalten.
-Die vollständige korrigierte Regression besteht **1904 Tests**,334 bekannte
-Warnungen,0 Fehler/Skips in208,42s. JUnit unter
-`artifacts/project-entrypoints-v2-qualification/regression.xml`, Hash
-`a9b85b88aa95f0141e9632d3652572931d7a92774c10e994b0564e656d1f91d1`.
-[Quellgebundene Softwarequalifikation](../../evidence/project-entrypoints-v1-qualification.json)
-hält beide Versuche fest. Repository-Ruff, Dokumentstruktur/Diff und zusätzliche
-neun Dokumenttests bestanden. Abschließender lesender Review findet keine
-weiteren Blocker; keine externe wissenschaftliche Begutachtung.
-Nach Implementierungscommit `caa1333` wurde der vorhandene Feldstart über den
-Rootlauncher tatsächlich neu auditiert. Exit0,2434 gebundene Referenzen;
-**sämtliche Ergebnisfelder exakt wie im ursprünglichen Audit**, ausgenommen
-die erwartbar neue Git-Metadatenzeile `auditor_repository`.
-Alle vier numerischen Pässe und physischen Ablehnungen bleiben erhalten.
-[Replaybeleg](../../evidence/project-entrypoints-v1-replay.json), Ausgabe unter
-`artifacts/project-entrypoints-v1-replay/audit.json`, SHA256
+The original 64 dispatch/negative controls passed: lightweight discovery, paths,
+environment, exit codes, root launcher and unchanged old CLI/package bytes.
+Initial full regression: 1,897 passed, three preservation failures, 334 known
+warnings in 195.14 seconds. Extending the frozen old CLI caused the failures;
+its exact bytes were restored and the new entry layer made additive.
+Preserved failed JUnit: `artifacts/project-entrypoints-v1-qualification/regression.xml`.
+
+Corrected full regression: **1,904 passed**, 334 known warnings, no errors/skips
+in 208.42 seconds. JUnit: `artifacts/project-entrypoints-v2-qualification/regression.xml`,
+SHA256 `a9b85b88aa95f0141e9632d3652572931d7a92774c10e994b0564e656d1f91d1`.
+[Source-bound qualification](../../evidence/project-entrypoints-v1-qualification.json)
+records both attempts. Ruff, documentation/whitespace and nine additional document
+tests passed. Internal review is not external scientific peer review.
+
+After implementation commit `caa1333`, the root launcher audited the existing run:
+exit 0, 2,434 bound references; every result field matched the original except
+expected Git metadata `auditor_repository`. All four numerical passes and physical
+rejections remain. [Replay evidence](../../evidence/project-entrypoints-v1-replay.json);
+output `artifacts/project-entrypoints-v1-replay/audit.json`, SHA256
 `8e0af0395d3ddc7e561c786ea99984ac6f79a185894ae2a942f389bb398c7936`.
-Keine neue native Feldstudie, Optimierung oder Gleichgewichtsrechnung;
-unabhängige Rekonstruktion vorhandener Rohdaten. CLI-Aufgabe damit abgeschlossen,
-Danach wurde die kumulative Geometriestudie fortgesetzt und separat geschlossen;
-deren Qualifikation erweitert den hier dokumentierten CLI-Umfang nicht automatisch.
+
+No new native-field study, search or equilibrium solve was performed by that
+audit. Later geometry qualification is separate. The English navigation update
+changes none of those historical artifacts or results.

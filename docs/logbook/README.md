@@ -1,17 +1,22 @@
-# Forschungsjournal
+# Research log
 
-Zweck: Entscheidungen, wesentliche Befunde und tatsächlich ausgeführte Prüfungen chronologisch nachvollziehbar halten.
+Purpose: retain decisions, significant findings and checks actually performed,
+including failed attempts.
 
-Lesehinweis: Neuere ausdrücklich gekennzeichnete Korrekturen haben Vorrang vor historischem Text. Insbesondere Aussagen vor dem Audit vom 9. September sind teilweise zurückgenommen. Der aktuelle Gesamtstand steht eine Ebene höher; das Journal ist kein Ersatz dafür.
+Read the [current status](../STATUS.md) before interpreting old entries. Explicit
+later corrections supersede earlier conclusions; some claims preceding the
+9 September audit were withdrawn. The chronology is evidence, not the current
+project assessment. Much of the historical log remains in German.
 
-[Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
+[Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
 
-## Dokumente
+## Documents
 
-- [DECISIONS ](DECISIONS.md) — Dokument: Grundsatzentscheidungen zu Baselines, Methodenneutralität, QI-Messung, unabhängiger Zulässigkeit, Checkpointintegrität, Dokumentationspflege, offener Mitarbeit und öffentlichem Projektplan mit MS1/MSX vor dem Einstieg.
-- [FINDINGS ](FINDINGS.md) — Dokument: Wesentliche Befunde F-001 ff. mit Aussageklasse, Grenzen und dokumentierten Korrekturen.
-- [VALIDATION_LOG ](VALIDATION_LOG.md) — Dokument: Ausgeführte Tests, Versionen, Gegenprüfungen, Fehlversuche und genaue Grenzen des jeweiligen Prüfumfangs.
+- [Decisions](DECISIONS.md). Baselines, method neutrality, QI measurement, independent acceptance, checkpoint integrity, documentation, open contributions, MS1/MSX and operational maintenance policy.
+- [Findings](FINDINGS.md). Significant findings F-001 onward, with claim classes, limitations and explicit corrections.
+- [Validation log](VALIDATION_LOG.md). Actual tests, versions, cross-checks, failed attempts and the exact scope of each verification.
 
-Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
-Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
-[Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
+Maintainers integrate shared logs; contributors normally put their evidence in a
+focused PR or detail report. See [the agent guide](../../AGENTS.md).
+Historical content remains unchanged; the
+[migration manifest](../../manifests/documentation-layout-v1.json) resolves old paths.

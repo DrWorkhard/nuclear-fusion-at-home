@@ -6,7 +6,7 @@ filaments, frozen signed currents, and192 field-evaluation points. This is the
 Its field quality fails the full research acceptance limits. It is a useful
 reference and a starting point for contributions, **not a reactor design**.
 
-Run from the repository root with Python3.12 or newer, no installation:
+Run from the repository root with Python3.11 or newer, no installation:
 
 ```bash
 python fusion.py public demo --output results/first-demo
@@ -24,6 +24,9 @@ evaluator, so is not an independent implementation or physical acceptance.
 - `candidate.json`: an editable copy of the original six-coil coefficients.
   `parameter_names` defines the exact order; metres, `c0,s1,c1,...,s5,c5` per
   Cartesian axis, with parameter t∈[0,1]. Do not reorder unlabeled arrays.
+  Exactly: `parameter_names[33*i + 11*axis + k]` labels
+  `base_coefficients[i][axis][k]`, with zero-based coil `i`, axis `0=x,1=y,2=z`
+  and component `k=0..10`. Use `public set-coefficient --help` for named edits.
 - `case.json`: authoritative fixed data for this version: seed, symmetry
   matrices, signed currents in amperes, target B² and three groups of64 points.
   B is in tesla, A in tesla-metres, coordinates in metres at the reference's

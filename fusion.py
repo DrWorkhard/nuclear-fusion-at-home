@@ -5,11 +5,23 @@ from pathlib import Path
 
 
 def main():
+    public = len(sys.argv) == 1 or sys.argv[1] in ("public", "--help", "-h")
+    minimum = (3, 11) if public else (3, 12)
+    if sys.version_info[:2] < minimum:
+        required = ".".join(map(str, minimum))
+        detected = ".".join(map(str, sys.version_info[:3]))
+        print(
+            f"ERROR: This command requires Python {required}+; found {detected}. "
+            "Use python3.12 fusion.py ... on macOS/Linux, or "
+            "py -3.12 fusion.py ... on Windows. The macOS system python3 may be too old.",
+            file=sys.stderr,
+        )
+        return 2
     sys.path.insert(0, str(Path(__file__).resolve().parent / "src"))
     if len(sys.argv) == 1 or sys.argv[1:] in (["--help"], ["-h"]):
         print(
             "Nuclear Fusion @ Home\n\n"
-            "Public, portable starter (Python3.12+, no installation):\n"
+            "Public, portable starter (Python3.11+, no installation):\n"
             "  python fusion.py public --help\n"
             "  python fusion.py public demo --output results/my-first-demo\n\n"
             "Historical research workflows (native environment/local artifacts required):\n"

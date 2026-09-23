@@ -10,7 +10,7 @@ ROOT_DOCUMENTS = {"README.md", "STATUS.md", "PROJECT_PLAN.md"}
 
 def local_links(path: Path) -> set[Path]:
     """Resolve inline local Markdown file links; fragments are not validated."""
-    text = re.sub(r"```.*?```", "", path.read_text(), flags=re.DOTALL)
+    text = re.sub(r"```.*?```", "", path.read_text(encoding="utf-8"), flags=re.DOTALL)
     targets = re.findall(r"\[[^\]\n]*\]\(([^)\n]+)\)", text)
     links = set()
     for target in targets:
@@ -59,7 +59,7 @@ def check_documentation(root: Path) -> list[str]:
                 errors.append(f"broken local link in {path.relative_to(root)}: {target}")
     for folder in (root / "scripts", root / "src"):
         for path in sorted(folder.rglob("*.py")):
-            tree = ast.parse(path.read_text(), filename=str(path))
+            tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
             for node in ast.walk(tree):
                 if isinstance(node, ast.Constant) and isinstance(node.value, str):
                     value = node.value

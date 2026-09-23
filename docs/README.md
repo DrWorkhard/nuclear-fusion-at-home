@@ -30,13 +30,13 @@ this is an independent project without claimed affiliation or endorsement.
 
 | Step / milestone | Status | What it establishes |
 | --- | --- | --- |
-| 1. Reliable bounded reference tools | Complete locally | W7-X/Goodman regression and specified LPQA filament tools |
-| 2. Reproducible design iteration | Complete locally | Real optimization paths can be saved, replayed and separately evaluated |
-| 3. Own QI-like plasma target | Complete in registered vacuum scope | An actual boundary change lowers the specified fine action-variance metric by 11.17% |
-| 4. Coupled plasma and coil development | Open | Geometry-qualified starts exist; field-quality admission and broader physics remain unresolved |
-| 5. Independently demonstrated performance advance | Open | No state-of-the-art or power-plant claim |
-| MS1. Evidence-backed Proxima Fusion outreach | Not reached | Contact Proxima as soon as strong, independently checked evidence supports a meaningful design advantage over the design they are pursuing |
-| MSX. Best reactor design current technology can achieve | Long-term goal, not achieved | Contribute to nuclear fusion for humanity; extends beyond MS1 and is not a present global-optimality claim |
+| 1. Establish a reliable foundation | Complete (local reference tools) | W7-X/Goodman regression and specified LPQA filament tools |
+| 2. Make design iteration reproducible | Complete (iteration workflow) | Real optimization paths can be saved, replayed and separately evaluated |
+| 3. Improve our own plasma target | Complete (vacuum study) | An actual boundary change lowers the specified fine action-variance metric by 11.17% |
+| 4. Develop plasma and coils together | In progress | Geometry-qualified starts exist; field-quality admission and broader physics remain unresolved |
+| 5. Demonstrate a meaningful design advantage | Not achieved | No state-of-the-art or power-plant claim |
+| MS1. Contact Proxima Fusion with strong evidence | Not reached | Contact Proxima as soon as strong, independently checked evidence supports a meaningful design advantage over the design they are pursuing |
+| MSX. Our end goal | Long-term goal | Contribute to nuclear fusion for humanity; extends beyond MS1 and is not a present global-optimality claim |
 
 **MS1 — Proxima Fusion outreach:** as soon as strong, reproducible and independently
 checked evidence supports that our design is better than the design Proxima is
@@ -73,6 +73,9 @@ before interpreting a score. The committed-source reference and candidate paths
 pass all eight [local copied-tree release checks](validation/PUBLIC_RELEASE_RESULTS.md),
 without native packages or downloads. Hosted and independent-machine verification
 remain separate, outstanding work.
+The [release review follow-up](validation/PUBLIC_REVIEW_FIXES.md) adds reference
+score comparisons, named edits, Python 3.11+ support, English folder indexes and
+an explicit lightweight core-CI scope. Its final clean-environment checks are pending.
 An initial [publication inventory](validation/PUBLICATION_INVENTORY.md) also finds
 historical home-path indicators; it is not full security/rights clearance.
 

@@ -1,76 +1,46 @@
-# QI-Physik und Teilchenwirkung
+# QI physics and particle action
 
-Zweck: eine numerisch belastbare QI-relevante Messung aus offenen Goodman-Gleichgewichten aufbauen.
+Purpose: develop reliable quasi-isodynamic (QI) diagnostics from open Goodman equilibria.
 
-Schritt3 ist im registrierten nfp2-Vakuumumfang abgeschlossen: neue Fourier-
-Randform mit11,1700% geringerer feinster relativer Wirkungsvarianz und allen zehn
-Abnahmegates bestanden. Erster Entwurf bleibt trotz14,35% Trainingsgewinn
-abgelehnt; keine Schwellen gelockert. Der Folgeentwurf wurde auf beiden bekannten
-Domänen konstruiert, daher keine blinde Generalisierung oder globale QI-Zulassung.
+Step 3 is complete for the specified nfp2 vacuum study: a changed Fourier boundary
+lowers the finest relative action variance by **11.1700%**, passing all ten final
+checks. The first design remains rejected despite a 14.35% training gain. The
+follow-up used both known domains, so it is not a blind generalization result
+or full QI qualification. The [foundation](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
+covers specified data/frozen-action regressions, not global drift/orbit models.
 
-Für die abgeschlossene [begrenzte Basisabnahme](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
-sind die vorhandenen Daten-/eingefrorenen Wirkungsregressionen qualifiziert.
-Die weitergehenden Studien hier bleiben erhaltene spätere Forschung; globale
-QI-/Drift-/Orbitfähigkeit wird durch Schritt1/2 nicht freigegeben.
+Current conclusion: bounce-action and limited contour/resolution checks support
+actual local plasma optimization. Both analytic 81-cell drift controls pass,
+including nonzero radial drift and matching physical phase. Their absolute
+parameters do not establish small finite-orbit excursions. Global topology, wider
+invariant coverage and real particle orbits remain open. Historical nfp3 sign
+changes under relabeling do not demonstrate changed confinement.
 
-Aktueller Schluss: Bouncewirkung und begrenzte Kontur-/Auflösungsprüfungen tragen
-nun eine tatsächliche lokale Plasmaoptimierung. Beide analytischen81-Zellen-
-Driftkontrollen bestehen einschließlich nichtverschwindender radialer Drift und
-gleicher Phase; die absoluten Testparameter sichern aber keine kleine endliche
-Bahnabweichung. Globale QI/Topologie, umfassende Invariantenabdeckung und echte
-Teilchenbahnen bleiben offen. Historische nfp3-Vorzeichenwechsel unter Neumarkierung
-bleiben erhalten und sind kein Beleg geänderter Einschlussphysik.
+[Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
 
-[Projektübersicht](../README.md) · [Aktueller Stand](../STATUS.md) · [Arbeitsplan](../PROJECT_PLAN.md)
+## Documents
 
-## Dokumente
+Detailed historical reports remain in German. Protocols specify the tests;
+results preserve their actual outcomes and limitations.
 
-- [Beide Wirkungsdomänen: Folgeprotokoll](PLASMA_BALANCED_PROTOCOL.md) — Erhaltene16 Formen breit auswerten; nötigenfalls acht kleine Differenzprobes und gemeinsames lineares Vorschlagsmodell. Maximal13 neue Solves, unveränderte physische Abschlussgrenzen.
-- [Beide Wirkungsdomänen: Abschluss/Bedienung](PLASMA_BALANCED_RESULTS.md) —13 neue Solves,4,85% enger und11,17% feinster breiter Vorteil, alle zehn Abnahmegates bestanden; Eingabe, Prüfergebnisse und Grenzen des Schritt3-Abschlusses.
+- Balanced plasma design: [protocol](PLASMA_BALANCED_PROTOCOL.md), [results and usage](PLASMA_BALANCED_RESULTS.md). Evaluate 16 retained shapes and, if needed, eight derivative probes; at most 13 new cold solves. Actual result: 4.85% narrow-domain and 11.17% finest wider-domain gain, all ten final gates pass. Authoritative Step 3 closure.
+- First own plasma surface: [protocol](PLASMA_OPTIMIZATION_PROTOCOL.md), [results and usage](PLASMA_OPTIMIZATION_RESULTS.md). Four named boundary modes, limited classical search and finer independent domain. Nineteen cold starts; numerical checks pass, physical candidate rejected despite training gain.
+- Vacuum drift: [protocol](VACUUM_DRIFT_CONTROL_PROTOCOL.md), [results](VACUUM_DRIFT_CONTROL_RESULTS.md). Nonaxisymmetric exact vacuum construction, both drift components and matching physical phase. All 81 cells/243 scalar states pass; up to 74% relative flux-label excursion at 10 keV prevents finite-orbit validation.
+- Absolute drift: [analytic protocol](ABSOLUTE_DRIFT_CONTROL_PROTOCOL.md), [results](ABSOLUTE_DRIFT_CONTROL_RESULTS.md). Current-carrying mirror, Cartesian drift versus action derivative and SI normalization. All 81 cells/27 refinement lines and 45 scalar reference/difference runs pass; maximum relative discrepancy 1.552e-10. Actual QI/nonzero radial drift are outside this control's scope.
+- Shared field-line angle: [protocol](QI_PEST_FIDELITY_PROTOCOL.md), [results](QI_PEST_FIDELITY_RESULTS.md). Parameterization diagnosis for 16 fresh/historical differences, with inversion/chain-rule/Brent checks. All 120 grids/61,440 roots verified, but only 4/16 fidelity and 5/16 comparison-refinement screens pass.
+- [Producer inventory](QI_PRODUCER_INVENTORY.md). Four version-9.0 equilibrium files and inputs bound to sources. Strict flux bit-identity fails at rounding scale; a VMEC++ iteration setting does not establish historical producer identity.
+- Fresh QI resolution: [protocol](QI_FRESH_RESOLUTION_PROTOCOL.md), [results](QI_FRESH_RESOLUTION_RESULTS.md). Four cases with 2×2 radial/angular refinement. Sixteen cold solves/96 field grids checked; finer angles pass identities, but only 9/16 diagnostic-refinement and 2/16 historical-fidelity screens pass.
+- Clebsch spectrum: [protocol](QI_CLEBSCH_SPECTRAL_PROTOCOL.md), [results](QI_CLEBSCH_SPECTRAL_RESULTS.md). Frozen half surfaces, 64/128 grids, saved mode mask and Parseval controls. All 48 endpoint grids checked; stable projections still miss 1e-5, so simple field-mode truncation alone does not explain the discrepancy.
+- Clebsch interpolation: [protocol](QI_CLEBSCH_INTERPOLATION_PROTOCOL.md), [results](QI_CLEBSCH_INTERPOLATION_RESULTS.md). Algebraic decomposition of 24 residual fields. All decompositions verified; 10/48 half-surface grids fail even without interpolation, ruling out radial product interpolation alone.
+- Clebsch normalization: [protocol](QI_CLEBSCH_PROTOCOL.md), [results](QI_CLEBSCH_RESULTS.md). Signed flux and 2π factor across four cases with independent Fourier representations. All 24 calculations verified; 19 grids pass and five poloidal identities fail. No absolute-drift qualification follows.
+- [Drift and coordinates](QI_DRIFT_COORDINATES.md). Primary-source/chain-rule treatment: transform both drift components at the same physical phase. Algebraic control, not absolute-frequency validation.
+- Radial gauge: [protocol](QI_RADIAL_GAUGE_PROTOCOL.md), [results](QI_RADIAL_GAUGE_RESULTS.md). Exact replay of all 84 traces; 25 nfp3 families change sign under relabeling. Independent mapping/chain-rule checks pass.
+- Coverage and topology: [protocol](QI_COVERAGE_TOPOLOGY_PROTOCOL.md), [results](QI_COVERAGE_TOPOLOGY_RESULTS.md). Five radii, nine pitch values and contour winding; one inaccessible nfp1 cell remains failed.
+- [Finite-pressure inventory](QI_FINITE_BETA_INVENTORY.md). Hashed inventory of 31 Goodman pressure equilibria and inputs, supporting work before SQuID-C intake.
+- Initial QI measurement: [protocol](QI_MEASUREMENT_PROTOCOL.md), [results](QI_MEASUREMENT_RESULTS_V1.md). Bounce-action definition and initial checks on three vacuum cases, with independent quadrature.
+- Pressure traces: [protocol](QI_PRESSURE_TRACE_PROTOCOL.md), [results](QI_PRESSURE_TRACE_RESULTS.md). Second field-line/length calculator; 84 trace and 320 family comparisons.
+- Radial action: [protocol](QI_RADIAL_ACTION_PROTOCOL.md), [results](QI_RADIAL_ACTION_RESULTS.md). Four frozen vacuum/pressure cases, fixed invariants and 320 well families; no global maximum-J claim.
+- Trace cross-check: [protocol](QI_TRACE_CROSSCHECK_PROTOCOL.md), [results](QI_TRACE_CROSSCHECK_RESULTS.md). Independent VMEC Fourier reconstruction and field-line inversion for the first vacuum pilot.
 
-- [Eigene Plasmaoberfläche: Protokoll](PLASMA_OPTIMIZATION_PROTOCOL.md) — Vier benannte Randmoden, begrenzte klassische Suche, periodenzugeordnete Wirkung, feinere unabhängige Domäne und feste Abschlussgates; kein bloßer Ablauf- oder SoTA-Pass.
-- [Eigene Plasmaoberfläche: Ergebnis/Bedienung](PLASMA_OPTIMIZATION_RESULTS.md) — 19 Kaltstarts, vollständige separate Abnahme und erhaltene Ablehnung trotz Trainingsgewinn; alle Quellen-/Feld-/Verfeinerungsprüfungen bestehen, der Entwurf nicht.
-
-- [Vakuumdrift: Protokoll](VACUUM_DRIFT_CONTROL_PROTOCOL.md) — Eigene nichtachsensymmetrische exakte Vakuumkonstruktion, beide Driftkomponenten, gleiche physikalische Phase und81 feste Zellen/243 skalare Zustände.
-- [Vakuumdrift: abgeschlossen](VACUUM_DRIFT_CONTROL_RESULTS.md) — Alle81 Zellen/243 skalaren Zustände bestehen; beide Driften und Phasenkovarianz qualifiziert. Bis74% relativer Flusslabelhub bei10keV verhindert Interpretation als bereits validierte endliche Bahn.
-
-- [Absolute Drift: analytisches Kontrollprotokoll](ABSOLUTE_DRIFT_CONTROL_PROTOCOL.md) — Definierter stromtragender Spiegel, kartesische Drift gegen Wirkungsableitung, Einweg-/SI-Normierung,81 feste Zellen und separater skalarer Audit; keine QI-Gesamtfreigabe.
-- [Absolute Drift: abgeschlossen](ABSOLUTE_DRIFT_CONTROL_RESULTS.md) — Alle81 Zellen/27 Verfeinerungslinien,45 skalare Referenz-/FD-Läufe und absolute SI-Prüfungen bestehen; maximal1,552e-10 relative direkte/skalar-analytische Driftabweichung. Echter QI- und nichtverschwindender radialer Driftfall offen.
-
-- [Gemeinsamer Feldlinienwinkel: Protokoll](QI_PEST_FIDELITY_PROTOCOL.md) — Neue Diagnose eines möglichen Parametrisierungsbeitrags zu den16 frischen/historischen Feldunterschieden; feste Inversion/Kettenregel/Brent-Gegenprüfung, alte Ergebnisse unverändert.
-- [Gemeinsamer Feldlinienwinkel: Ergebnis](QI_PEST_FIDELITY_RESULTS.md) — Alle120 Gitter/61.440 unabhängigen Roots bestätigt; Parametrisierung erklärt einen Teil der Abweichung, aber nur4/16 neue Fidelitäts- und5/16 Vergleichsverfeinerungsschirme bestehen. Keine Gesamt-QI-Freigabe.
-
-- [Autoren/Produzenten](QI_PRODUCER_INVENTORY.md) — Vier9.0-Wouts und Eingaben gebunden; strenge Fluss-Bitgleichheit scheitert auf Rundungsniveau. VMEC++-Iterationsoption ist keine historische Produzentenidentität.
-- [Frische QI-Auflösung: Protokoll](QI_FRESH_RESOLUTION_PROTOCOL.md) — Vier Fälle mit je2x2 radialer/Winkel-Verfeinerung; feste Solvergrenzen, Quellen-/Feldgegenprüfung und unveränderte alte Ergebnisse.
-- [Frische QI-Auflösung: Ergebnis](QI_FRESH_RESOLUTION_RESULTS.md) — Alle16 Kaltstarts und96 Feldgitter unabhängig geprüft; feinere Winkelauflösung besteht die Identitäten, aber nur9/16 Zellen den Auswertungsverfeinerungs- und2/16 den historischen Fidelitätsschirm. Keine Gesamtfreigabe.
-
-- [Clebsch-Spektrum: Protokoll](QI_CLEBSCH_SPECTRAL_PROTOCOL.md) — Unveränderte Halbflächen,64/128-Gitter, exakte gespeicherte Modenmaske, Projektions- und Parseval-Gegenrechnung.
-- [Clebsch-Spektrum: Ergebnis](QI_CLEBSCH_SPECTRAL_RESULTS.md) —48 Endpunktgitter unabhängig geprüft; stabile Projektionen, aber alle verfehlen1e-5. Einfache Feldmoden-Trunkierung allein erklärt die Darstellungsabweichung nicht.
-
-- [Clebsch-Interpolation: Protokoll](QI_CLEBSCH_INTERPOLATION_PROTOCOL.md) — Algebraische Trennung aller24 Restfelder in Halbflächen- und Interpolationsbeiträge; unveränderte Grenzwerte.
-- [Clebsch-Interpolation: Ergebnis](QI_CLEBSCH_INTERPOLATION_RESULTS.md) — Alle24 Zerlegungen unabhängig bestätigt; zehn von48 Halbflächengittern scheitern bereits ohne Interpolation. Radiale Produktinterpolation allein als Erklärung ausgeschlossen.
-
-- [Clebsch-Normierung: Protokoll](QI_CLEBSCH_PROTOCOL.md) — Vier feste Wout-Fälle, signierter Fluss samt2pi-Faktor, unabhängige Fourierdarstellungen und Negativkontrollen; keine absolute Driftfreigabe.
-- [Clebsch-Normierung: Ergebnis](QI_CLEBSCH_RESULTS.md) — Alle24 Feld-/Fehlerrechnungen unabhängig bestätigt;19 Gitter bestehen, fünf poloidale Identitäten verfehlen die feste Grenze. Keine absolute Driftfreigabe.
-
-- [Drift und Koordinaten](QI_DRIFT_COORDINATES.md) — Primärquellen-/Kettenregeleinordnung: beide Driftkomponenten und dieselbe physikalische Phase transformieren; reine algebraische Kontrolle, noch keine absolute Frequenzvalidierung.
-
-- [Radiale Gauge: Ergebnis](QI_RADIAL_GAUGE_RESULTS.md) — Alle84 alten Traces exakt wiederholt; 25 nfp3-Familien wechseln unter Neumarkierung das Vorzeichen, unabhängige Zuordnungs-/Kettenregelprüfung besteht.
-
-- [Radiale Gauge: Protokoll](QI_RADIAL_GAUGE_PROTOCOL.md) — Vorab festgelegte Kettenregel-/Vorzeichendiagnose unter radialer Feldlinien-Neumarkierung; unveränderte Fälle, Pitchwerte und Pflicht zum exakten Standard-Replay.
-
-- [QI_COVERAGE_TOPOLOGY_PROTOCOL ](QI_COVERAGE_TOPOLOGY_PROTOCOL.md) — Protokoll: Erweiterung auf fünf Radien/neun Pitch-Werte und Konturwindung; eine unzugängliche nfp1-Zelle bleibt fehlgeschlagen.
-- [QI_COVERAGE_TOPOLOGY_RESULTS ](QI_COVERAGE_TOPOLOGY_RESULTS.md) — Ergebnis: Erweiterung auf fünf Radien/neun Pitch-Werte und Konturwindung; eine unzugängliche nfp1-Zelle bleibt fehlgeschlagen.
-- [QI_FINITE_BETA_INVENTORY ](QI_FINITE_BETA_INVENTORY.md) — Dokument: Hash-Inventar von 31 Goodman-Druckgleichgewichten plus Eingaben; Grundlage für Arbeit ohne SQuID-C.
-- [QI_MEASUREMENT_PROTOCOL ](QI_MEASUREMENT_PROTOCOL.md) — Protokoll: Definition und erste Qualifikation der Bouncewirkung an drei Vakuumfällen, mit unabhängiger Quadratur.
-- [QI_MEASUREMENT_RESULTS_V1 ](QI_MEASUREMENT_RESULTS_V1.md) — Ergebnis: Definition und erste Qualifikation der Bouncewirkung an drei Vakuumfällen, mit unabhängiger Quadratur.
-- [QI_PRESSURE_TRACE_PROTOCOL ](QI_PRESSURE_TRACE_PROTOCOL.md) — Protokoll: Zweiter Feldlinien-/Längenrechner für den Druck-Pilot; 84 Trace- und 320 Familienvergleiche.
-- [QI_PRESSURE_TRACE_RESULTS ](QI_PRESSURE_TRACE_RESULTS.md) — Ergebnis: Zweiter Feldlinien-/Längenrechner für den Druck-Pilot; 84 Trace- und 320 Familienvergleiche.
-- [QI_RADIAL_ACTION_PROTOCOL ](QI_RADIAL_ACTION_PROTOCOL.md) — Protokoll: Vier eingefrorene Vakuum-/Druckfälle, feste Invarianten und 320 Muldenfamilien; keine globale maximum-J-Aussage.
-- [QI_RADIAL_ACTION_RESULTS ](QI_RADIAL_ACTION_RESULTS.md) — Ergebnis: Vier eingefrorene Vakuum-/Druckfälle, feste Invarianten und 320 Muldenfamilien; keine globale maximum-J-Aussage.
-- [QI_TRACE_CROSSCHECK_PROTOCOL ](QI_TRACE_CROSSCHECK_PROTOCOL.md) — Protokoll: Unabhängige VMEC-Fourierrekonstruktion, Feldlinieninversion und Gegenprüfung des ersten Vakuum-Piloten.
-- [QI_TRACE_CROSSCHECK_RESULTS ](QI_TRACE_CROSSCHECK_RESULTS.md) — Ergebnis: Unabhängige VMEC-Fourierrekonstruktion, Feldlinieninversion und Gegenprüfung des ersten Vakuum-Piloten.
-
-Historische Protokolle wurden bei der Ordnerumstellung nicht fachlich verändert.
-Darin genannte bloße Dateinamen lassen sich über diese Übersicht bzw. die
-[Migrationsliste](../../manifests/documentation-layout-v1.json) auflösen.
+Historical content and hashes remain unchanged. Resolve old filenames with the
+[migration manifest](../../manifests/documentation-layout-v1.json).
