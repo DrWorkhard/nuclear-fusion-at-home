@@ -93,6 +93,9 @@ work is the [hosting/security checklist](REVIEW_POLICY.md#launch-checklist--requ
 especially whole-history rights/privacy review, real reviewer/protection settings,
 hosted CI and independent-machine reproduction. Full historical physics/data
 portability is a separate, valuable research-infrastructure contribution.
+The subsequent [publication inventory](PUBLICATION_INVENTORY.md) checks repository
+size and selected history/privacy indicators; it does not change this local
+starter qualification or establish publication clearance.
 
 This is a portability/arithmetic/interface check, not an optimization study,
 independent-hardware reproduction, OS sandbox proof or physical design admission.

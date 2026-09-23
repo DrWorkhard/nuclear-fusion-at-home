@@ -73,6 +73,13 @@ The largest reference/native relative field difference is 9.59e-16 against the
 registered 5e-10 limit. [Release evidence](validation/PUBLIC_RELEASE_RESULTS.md).
 Hosted CI and independent hardware reproduction have not been verified.
 
+The [initial publication inventory](validation/PUBLICATION_INVENTORY.md) finds
+about 325 MB of tracked content and 365 tracked files with home-path indicators
+at its recorded revision. Five limited credential/key-shaped patterns have no
+matches across reachable blobs. This is not a complete security or rights review;
+privacy indicators, intended release scope and later commits still need review.
+No historical evidence or Git history was sanitized or published.
+
 The public profile evaluates 192 fixed sample points with frozen physical currents.
 It reports sparse normal/vector errors and 256/512 filament-resolution differences;
 it does not compute the original full-surface, flux-normalized acceptance.

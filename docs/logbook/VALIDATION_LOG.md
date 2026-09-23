@@ -1,5 +1,35 @@
 # Validation log
 
+## 2026-09-23 — Continue public release preparation with read-only history inventory
+
+- After the README/MS1 commit `fae6c87`, inventory source tree and all four local
+  refs before any publication. 1,541 HEAD files / 325,093,781 bytes; reachable
+  285 commits / 1,655 trees / 2,611 unique blobs, 356,848,583 blob bytes scanned.
+  Largest blob 26,032,560 bytes; six exceed 10 MiB, none 50 MiB. About 4.4 GB free;
+  no checkout/archive/install or search started.
+- Five limited credential/key-shaped regexes find no matches. Unix home-directory
+  patterns identify 366 historical blobs / 365 HEAD files (362 evidence, one
+  fixture, two documents); Windows patterns find none. Record one distinct commit
+  email identity without printing values. Indicators are not individual privacy
+  adjudications; zero selected matches is not a security or rights clearance.
+- Preserve a standard-library, read-only maintainer checker. The first saved wrapper
+  has six lint issues, corrected before closure. Initial order-sensitive JSON-string
+  comparison fails; final key-order-independent comparison exactly matches the
+  inline inventory and final JSON output uses sorted keys. No scanned data changed.
+- Seven positive and seven negative synthetic pattern checks pass. Three temporary-
+  repository tests pass in 3.19 s, covering deleted credentials retained in history,
+  all selected patterns without matched values, excluded untracked content and
+  unchanged working trees. The source-bound evidence records exact rules and limits.
+- F-093, detail/index and affected four overview documents record this additional
+  publication-readiness finding. Untracked/ignored, unreachable, encoded payloads,
+  commit-message contents and later commits are not covered; publication remains
+  unapproved. No history rewrite, original evidence edits, external contact or push.
+- Closure: 96 inventory/documentation/foundation/legacy-CLI tests pass in 6.82 s;
+  36 public controls pass in 0.313 s. Repository Ruff, documentation structure and
+  whitespace checks pass. Both inventory source digests and all 16 prior portable
+  software/data hashes remain identical. Persistent instructions note the review
+  boundary. No new full native suite or physical improvement claim.
+
 ## 2026-09-23 — Public roadmap, end goal and MS1 made explicit
 
 - User asks for a self-contained README roadmap/status, the public-benefit reactor

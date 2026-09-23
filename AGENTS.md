@@ -112,6 +112,13 @@ replay, not independent numerical implementation or physical admission. Do not
 confuse this bounded success with full research portability, hosted CI, public
 launch, completed Step4 or permission to resume the paused field-fit search.
 
+Publication review is still open. The bounded inventory at fae6c87 finds about
+325 MB tracked content and 365 HEAD files with home-path indicators; no matches
+for five selected credential patterns is NOT full security/rights clearance.
+See `docs/validation/PUBLICATION_INVENTORY.md`. Review the exact intended release
+and its history/identity metadata; preserve scientific evidence and never silently
+sanitize its paths/hashes or rewrite history as part of publication preparation.
+
 ### Shared CLI entry points (user request, 2026-09-19)
 
 Use `python -m fusion_baselines profiles --json` to discover supported operations

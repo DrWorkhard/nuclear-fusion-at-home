@@ -135,6 +135,8 @@ and upstream sources used: [CITATION.cff](CITATION.cff).
 
 The repository is being prepared locally for public hosting. No automatic PR
 monitoring, merging, publication or hosted CI success is implied.
+The [publication inventory](docs/validation/PUBLICATION_INVENTORY.md) identifies
+historical machine-path indicators that still need review before release.
 [Launch checklist](docs/validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
 
 Historical evidence and failures remain preserved. Maintainer/agent working

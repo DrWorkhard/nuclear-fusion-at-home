@@ -1,5 +1,27 @@
 # Findings log
 
+## F-093 — Portable starter success does not clear the historical repository for publication
+
+**Class:** bounded repository inventory / publication-readiness finding, not physics
+**Date:** 2026-09-23
+
+At `fae6c87`, HEAD contains 1,541 tracked files / 325,093,781 bytes. All four local
+refs reach 285 commits and 2,611 unique blobs / 356,848,583 bytes. A read-only scan
+of every reachable blob finds zero matches for five selected credential/key-shaped
+patterns, but home-directory indicators occur in 366 historical blobs and 365
+HEAD files (362 evidence, one fixture, two documents). No matched values disclosed.
+
+The final saved script agrees with the inline inventory under structured comparison;
+seven positive/seven negative pattern controls and three temporary-repository
+history/scope/non-disclosure tests pass. Neither a clean regex result nor the
+portable starter is a complete secrets/privacy/rights review. Commit messages,
+encoded payloads, unreachable/untracked content and later revisions are outside
+scope. Individual path indicators are not yet adjudicated as sensitive disclosures.
+
+Decide the release scope and complete its review without mutating historical
+evidence or silently rewriting Git history. No publication, deletion or external
+contact performed. [Inventory, evidence and remaining checks](../validation/PUBLICATION_INVENTORY.md).
+
 ## F-092 — Dependency-free public coil starter passes local copied-tree qualification
 
 **Class:** portable software/arithmetic/interface qualification, not physical improvement

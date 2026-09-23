@@ -24,7 +24,8 @@ replay the report and submit useful work without our local artifacts or chat his
 | Portable entry | Bundled attributed data, no native install, named candidate schema, explicit scope | Complete in the starter scope; 36 public tests pass |
 | Reproduction and adversarial checks | Committed-source clean-copy reference/candidate/replay and rejection of forged results | All eight local checks pass; no independent-machine claim |
 | Public understanding and contribution | Clear English overview, status, quickstart, open contribution/review route | Prepared |
-| Hosted operation | Verified CI, reviewer identities, branch protection, privacy/rights review and safe permissions | Not configured or verified here; separate launch work |
+| Publication review | Inventory history/content, adjudicate privacy/rights, review exact release | Initial bounded inventory complete; home-path indicators found, clearance remains open |
+| Hosted operation | Verified CI, reviewer identities, branch protection and safe permissions | Not configured or verified here; separate launch work |
 
 The [release specification](validation/PUBLIC_RELEASE.md) and
 [verification record](validation/PUBLIC_RELEASE_RESULTS.md) record exact scope

@@ -76,6 +76,10 @@ support these execution boundaries (checked 2026-09-23).
 
 ## Launch checklist — requires actual hosting work
 
+The [initial publication inventory](PUBLICATION_INVENTORY.md) is complete in its
+limited scope: it identifies historical home-path indicators and substantial
+tracked evidence, but does not clear security, privacy, rights or later revisions.
+
 - Review intended public contents **and Git history** for secrets/personal material,
   oversized artifacts and rights/attribution. The small starter does not certify
   every historical file as publication-ready.

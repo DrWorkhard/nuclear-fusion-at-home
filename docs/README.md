@@ -71,6 +71,8 @@ before interpreting a score. The committed-source reference and candidate paths
 pass all eight [local copied-tree release checks](validation/PUBLIC_RELEASE_RESULTS.md),
 without native packages or downloads. Hosted and independent-machine verification
 remain separate, outstanding work.
+An initial [publication inventory](validation/PUBLICATION_INVENTORY.md) also finds
+historical home-path indicators; it is not full security/rights clearance.
 
 A contributor should be able to discover a question, reproduce a reference,
 propose a change, understand its result and submit reviewable evidence without

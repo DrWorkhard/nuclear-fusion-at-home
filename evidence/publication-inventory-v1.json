@@ -1,0 +1,89 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-23",
+  "kind": "publication-inventory-evidence",
+  "command": ".venv/bin/python -I -S scripts/publication_inventory.py",
+  "sources": [
+    {
+      "path": "scripts/publication_inventory.py",
+      "sha256": "545b44bb6517a029097f9182ddc1f2e8d5b3bdd0ed31e893f9e2807f44406c7f",
+      "bytes": 6333
+    },
+    {
+      "path": "tests/test_publication_inventory.py",
+      "sha256": "8f1fabf90a5857b2bb9f157f99adb49fc22689398d3eb093471f80370b7de63f",
+      "bytes": 4238
+    }
+  ],
+  "inline_to_script_structured_repeat_equal": true,
+  "inventory": {
+    "blob_count_over_10MiB": 6,
+    "blob_count_over_50MiB": 0,
+    "commit_messages_scanned_for_credentials": false,
+    "credential_shape_locations": {},
+    "distinct_commit_author_or_committer_emails": 1,
+    "encoded_or_compressed_payloads_decoded": false,
+    "head_home_path_counts_by_directory": {
+      "docs": 2,
+      "evidence": 362,
+      "fixtures": 1
+    },
+    "head_tracked_blob_bytes": 325093781,
+    "head_tracked_files": 1541,
+    "ignored_or_untracked_files_scanned": false,
+    "kind": "bounded-publication-inventory",
+    "largest_blob_bytes": 26032560,
+    "license_rights_clearance": false,
+    "matched_head_file_counts": {
+      "aws_access_id_shape": 0,
+      "credential_url_shape": 0,
+      "github_credential_shape": 0,
+      "openai_credential_shape": 0,
+      "private_key_banner": 0,
+      "unix_home_path": 365,
+      "windows_home_path": 0
+    },
+    "matched_reachable_blob_counts": {
+      "aws_access_id_shape": 0,
+      "credential_url_shape": 0,
+      "github_credential_shape": 0,
+      "openai_credential_shape": 0,
+      "private_key_banner": 0,
+      "unix_home_path": 366,
+      "windows_home_path": 0
+    },
+    "matched_values_disclosed": false,
+    "patterns": {
+      "aws_access_id_shape": "\\b(?:AKIA|ASIA)[A-Z0-9]{16}\\b",
+      "credential_url_shape": "https?://[^\\s/@:]+:[^/@\\s]{8,}@",
+      "github_credential_shape": "\\b(?:gh[pousr]_[A-Za-z0-9]{36,}|github_pat_[A-Za-z0-9_]{70,})\\b",
+      "openai_credential_shape": "\\bsk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{20,}\\b",
+      "private_key_banner": "-----BEGIN (?:RSA |EC |DSA |OPENSSH |PGP )?PRIVATE KEY(?: BLOCK)?-----",
+      "unix_home_path": "/(?:Users|home)/[A-Za-z0-9._-]+/",
+      "windows_home_path": "[A-Za-z]:\\\\+Users\\\\+[^\\\\\\r\\n\\x22]+\\\\+"
+    },
+    "provider_exhaustive_secret_scan": false,
+    "publication_approved": false,
+    "reachable_blob_bytes_scanned": 356848583,
+    "reachable_object_counts": {
+      "blob": 2611,
+      "commit": 285,
+      "tree": 1655
+    },
+    "reference_manifest_sha256": "3aa198504e8c7117750b4ae0323b28386df07ce866db088b8db668abe3cdd5ab",
+    "regex_selftests": {
+      "negative": 7,
+      "passed": true,
+      "positive": 7
+    },
+    "schema_version": 1,
+    "scope": "HEAD tracked files and unique blobs reachable from all local refs",
+    "source_revision": "fae6c87fd3dcfdeee7df4d7dfd2674b5561bf1dc"
+  },
+  "limits": [
+    "Snapshot of source revision and all local refs at scan time, not future commits or remote refs.",
+    "Limited raw-blob regex scan; zero credential-shape matches is not proof that there are no secrets.",
+    "Home-path indicators include potential placeholders and are not individually adjudicated disclosures.",
+    "No rights/privacy approval, encoded-payload analysis, arbitrary-secret detection, or public-hosting approval."
+  ]
+}

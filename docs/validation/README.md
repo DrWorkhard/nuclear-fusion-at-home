@@ -12,6 +12,7 @@ Aktueller Schluss: Der ausgewählte W7-X-Physikvergleich besteht, der erweiterte
 
 ## Dokumente
 
+- [Publication inventory](PUBLICATION_INVENTORY.md) — Read-only size/history and limited credential/privacy-pattern check: about 325 MB tracked content and 365 HEAD files with home-path indicators; no selected credential matches, no security/rights/publication clearance.
 - [Public quickstart](PUBLIC_QUICKSTART.md) — English dependency-free reference/candidate/report commands, exact numerical scope, interpretation and troubleshooting; 36 tests and eight local copied-tree checks pass.
 - [Portable release verification](PUBLIC_RELEASE_RESULTS.md) — Source-bound public/software qualification, retained JSON-depth/CI-preservation failures and passed real copied-tree reference/candidate replay; not physical or hosted-CI admission.
 - [Review and coordination policy](REVIEW_POLICY.md) — Open intake without mandatory cost disclosure, separate software/scientific decisions, trusted evaluator, safe PR execution and outstanding hosting checklist.
