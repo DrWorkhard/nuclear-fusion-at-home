@@ -168,6 +168,7 @@ def search(seed, initial, certify, evaluate, record):
         record(_json(dict(event=kind, **payload)))
 
     def finish(reason):
+        nonlocal stage
         result = _json(
             dict(
                 initial=initial,
@@ -179,6 +180,7 @@ def search(seed, initial, certify, evaluate, record):
                 counters=counters,
             )
         )
+        stage = "completion-publication"
         emit("search_complete", result=result)
         return result
 
@@ -237,8 +239,9 @@ def search(seed, initial, certify, evaluate, record):
                 counters["geometry_attempted"] += 1
                 stage = "certificate"
                 certificate_result = certify(seed.copy(), x.copy())
-                counters["geometry_completed"] += 1
                 pending["certificate"] = _certificate(certificate_result)
+                counters["geometry_completed"] += 1
+                stage = "certificate-publication"
                 emit(
                     "certificate_result",
                     index=pending["index"],
@@ -260,8 +263,8 @@ def search(seed, initial, certify, evaluate, record):
                     counters["field_attempted"] += 1
                     stage = "field"
                     evaluated = evaluate(x.copy())
-                    counters["field_completed"] += 1
                     evaluation = _state(evaluated, x)
+                    counters["field_completed"] += 1
                     pending["evaluation"] = evaluation
                     pending["current_pass"] = (
                         abs(_scalar(evaluation["metrics"]["current"])) <= CURRENT_LIMIT

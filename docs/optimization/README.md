@@ -17,7 +17,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
-- [Protected-search software qualification](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md). Fixed synthetic controller/auditor checks before native execution: budgets, cumulative geometry callbacks, immutable records and independent trajectory reconstruction. No new field fit or physical claim.
+- Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). 108 synthetic controller/auditor tests pass, including coherent trace corruption; full regression pending. No new field fit or physical claim.
 
 - [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations: reproduction, kernels, counterexamples, geometry-preserving improvement and broader physics. Unsolicited useful work welcome; costs optional.
 - [Protected field-fit draft](PROTECTED_COIL_FIT_PROTOCOL.md). Preserved eight-cell low-mode proposal; pure controller qualification is resumed separately. Method review, native runner and physical auditor remain open; no field run or physical acceptance.

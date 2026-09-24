@@ -1,5 +1,25 @@
 # Validation log
 
+## 2026-09-24 — Implement the protected controller and trajectory checks
+
+- Follow protocol registered at `252f6f0`; use synthetic callbacks only. Initial
+  33-test run has 29 passes/four failures: malformed returns incorrectly completed
+  and two recording failures mislabelled. Fix only bookkeeping/publication stages;
+  no numerical policy, budget or physical threshold changes. Retain the JUnit failure.
+- Add scalar completed-trajectory reconstruction without producer/NumPy imports,
+  explicit unverified-physics flags and coherent corruption tests. Both classes,
+  general gradients, all five stops and budget-priority collisions covered.
+- Expanded run has 104 passes/three failures: the independent hand-built test
+  fixture rounded an exact machine Armijo bound. Correct that fixture and add a
+  rejection test; do not change the auditor or its tolerance. Retain this JUnit too.
+- After three lint corrections, targeted suite: **108 passed in 4.61 s**; repository
+  Ruff passes. Public suite: 44 pass in 0.537 s; docs and whitespace checks pass.
+  Artifact directory is 48 KiB. Full regression and source/evidence binding
+  remain pending, so software qualification is not yet
+  closed. No new field search, independent agent review or physical gain claimed.
+- Add the indexed detail report. Existing public/scientific roadmap states remain
+  accurate; preserve the user's README edits outside this scoped implementation commit.
+
 ## 2026-09-24 — Register the next Step 4A software gate
 
 - Read current overview/status/plan, optimizer index, paused draft, controller,
