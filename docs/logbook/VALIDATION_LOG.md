@@ -1,5 +1,25 @@
 # Validation log
 
+## 2026-09-24 — Condense the agent instructions
+
+- Replace dated requests, milestone narratives and accumulated test counts in
+  `AGENTS.md` with a concise operational guide and links to authoritative docs.
+  Retain contribution/candidate guidance, scope boundaries, scientific integrity,
+  resource/evidence protection, shallow docs layout and maintainer completion duties.
+- D-023 records the durable rule against using the guide as a journal. Existing
+  reports/logs and the full previous file at `b0f2ca0` preserve the history; no
+  duplicate archive document or new directory needed. Align CONTRIBUTING wording.
+- Start at `b0f2ca0` with user edits in README; preserve those edits and exclude
+  them from the scoped commit. Process inspection finds editor services only.
+  Check current overview/status/plan; scientific and release assessments unchanged,
+  so no overview rewrite or numerical run is needed.
+- Guide reduced from 265 lines / 2,265 words to 68 lines / 462 words. Checks:
+  34 documentation/release-maintenance/foundation tests pass in 6.69 s; 44 public
+  tests pass in 0.597 s. Documentation structure, repository Ruff and whitespace
+  checks pass. README's SHA256 matches its starting value; only the five intended
+  instruction/contribution/logbook files are committed. No full native rerun needed
+  or claimed for this documentation-only change.
+
 ## 2026-09-24 — Close local validation of the public review fixes
 
 - Implementation source `be916fb`, clean tree during all source-bound runs. A

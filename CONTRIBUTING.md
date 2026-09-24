@@ -70,9 +70,9 @@ or rewrite its old absolute paths. New portable exports have their own identity.
 Keep PR documentation local to your change: usage text, a focused report, or the
 PR description with actual checks and limitations. Maintainers integrate shared
 validation logs, decisions, status and roadmap; contributors do not need to edit
-those files or commit after every small step. The default contributor section of
-[AGENTS.md](AGENTS.md) takes precedence over its maintainer-only historical notes
-for outside agents.
+those files or commit after every small step. The general instructions in
+[AGENTS.md](AGENTS.md) apply to outside agents; its maintainer completion duties
+apply only to repository-owner sessions.
 
 Review checks usefulness, correctness, reproducibility, scope, security and
 maintainability. Being unsolicited is not a negative criterion. Where evaluation

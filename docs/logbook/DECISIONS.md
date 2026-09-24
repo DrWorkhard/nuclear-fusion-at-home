@@ -1,5 +1,23 @@
 # Decision log
 
+## D-023 — Keep AGENTS.md a concise instruction guide
+
+**Status:** accepted; durable instructions rather than session history
+**Date:** 2026-09-24
+
+Keep `AGENTS.md` short and action-oriented: scope, contribution rules, scientific
+integrity, safe execution, documentation layout and completion checks. Link to
+the current plan/status, candidate guide and review policy instead of duplicating
+milestone narratives, historical requests, test counts or experiment instructions.
+The previous complete guide remains in Git at `b0f2ca0`; existing detail reports
+and logs retain the research history. Future task-specific knowledge belongs there.
+
+Retain the distinction between contributor PR documentation and maintainer-owned
+shared logs/status/local commits. Historical permissions are not reusable grants
+of authority. Preserve open contribution rules, evidence/threshold protection,
+native-environment isolation and the requirement to document each completed
+maintainer work step. This cleanup changes no scientific or release assessment.
+
 ## D-022 — Public review fixes and exact operational preservation exceptions
 
 **Status:** accepted user-requested release maintenance, not a physics-gate change
