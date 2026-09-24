@@ -26,9 +26,10 @@ foundation milestones. Public hosting and operational safeguards remain separate
 Roadmap status: Steps 1–3 **Complete** in their stated scopes; Step 4,
 **Develop plasma and coils together**, **In progress**; Step 5 **Not achieved**;
 MS1 **Not reached**; MSX **Long-term goal**. [Canonical plan](PROJECT_PLAN.md).
-The preserved protected-fit draft is now undergoing
-[pure controller qualification](optimization/PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md).
-Its native execution gates remain open; no new protected-fit search was executed.
+The [protected controller qualification](optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md)
+is complete in its synthetic scope: 108 controller/auditor tests pass. Native
+runner, method-review and physical-verification gates remain open; no new
+protected-fit search was executed.
 
 ## Established results and their limits
 
@@ -105,8 +106,8 @@ set physical admission or Step 4 to true.
 
 The complete historical research workflow still requires additional native
 dependencies, large local artifacts and qualified source-bound adapters. Its
-latest full regression at `be916fb` has **2,072 passing tests**, no failures/skips,
-and **334 documented warnings** in 222.70 seconds; this is distinct from the
+latest full regression at `32dc632` has **2,180 passing tests**, no failures/skips,
+and **334 documented warnings** in 222.05 seconds; this is distinct from the
 44 public tests. The strict netCDF4 import warning
 remains unresolved, with no claimed ABI-freedom or hosted-CI pass.
 

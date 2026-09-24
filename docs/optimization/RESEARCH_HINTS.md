@@ -1,6 +1,6 @@
 # Research hints — invitations, not requirements
 
-Coordinator's snapshot, 2026-09-23. Our research goal is unchanged: useful,
+Coordinator's snapshot, 2026-09-24. Our research goal is unchanged: useful,
 independently checkable improvements to stellarator plasma/coil design. These
 are promising directions, not a closed list. **Unsolicited ideas and results are
 welcome. Compute cost disclosure is optional.** A contribution need not produce
@@ -25,7 +25,9 @@ Start with the [public quickstart](../validation/PUBLIC_QUICKSTART.md) and
   geometry limits but have large magnetic errors. Explore useful shape directions,
   tighter justified continuous bounds, or different parameterizations. Our paused
   [protected-fit draft](PROTECTED_COIL_FIT_PROTOCOL.md) is one unqualified proposal,
-  not the only permitted approach. Do not promote its draft solver into a baseline.
+  not the only permitted approach. Its [controller tests](PROTECTED_SEARCH_SOFTWARE_RESULTS.md)
+  now pass; native runner and physical checks remain open. Software qualification
+  does not make it a new design baseline.
 - **Portable full-physics evaluation.** Replace local-only data access with
   source-bound portable equilibrium/field packages and replay the original gates.
   Do not rewrite historical paths/hashes or drop difficult resolution levels.

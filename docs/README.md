@@ -52,6 +52,9 @@ was rejected and remains visible. Our [first actual-coil pilot](optimization/COU
 also failed physical acceptance. Subsequent work produced valid starting geometry
 and [numerically qualified field evaluations](optimization/CLEAR_COIL_FIELD_START_RESULTS.md),
 but the magnetic errors remain far too high. No new feasible coil baseline exists.
+The next protected-search controller now passes its
+[bounded software qualification](optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md);
+native execution and physical-result verification remain separate work.
 
 The [status page](STATUS.md) links the numerical evidence and important unresolved
 model limitations. Independent internal calculations and agent reviews are not
@@ -77,7 +80,7 @@ The [release review follow-up](validation/PUBLIC_REVIEW_FIXES.md) adds reference
 score comparisons, named edits, Python 3.11+ support, English folder indexes and
 an explicit lightweight core-CI scope. The fresh-clone core runner, 44 public tests
 and eight real release checks on each of Python 3.11/3.12/3.14 pass locally;
-the full native regression passes 2,072 tests with 334 existing warnings.
+the latest full native regression passes 2,180 tests with 334 existing warnings.
 An initial [publication inventory](validation/PUBLICATION_INVENTORY.md) also finds
 historical home-path indicators; it is not full security/rights clearance.
 

@@ -17,10 +17,10 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
-- Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). 108 synthetic controller/auditor tests pass, including coherent trace corruption; full regression pending. No new field fit or physical claim.
+- Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). Complete in its synthetic scope: 108 controller/auditor tests and 2,180 full regression tests pass. Runner, method review and physical recomputation remain; no new field fit or physical claim.
 
 - [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations: reproduction, kernels, counterexamples, geometry-preserving improvement and broader physics. Unsolicited useful work welcome; costs optional.
-- [Protected field-fit draft](PROTECTED_COIL_FIT_PROTOCOL.md). Preserved eight-cell low-mode proposal; pure controller qualification is resumed separately. Method review, native runner and physical auditor remain open; no field run or physical acceptance.
+- [Protected field-fit draft](PROTECTED_COIL_FIT_PROTOCOL.md). Preserved eight-cell low-mode proposal; controller qualification is now complete separately. Method review, native runner and physical auditor remain open; no field run or physical acceptance.
 - [Geometry-preserving search options](GEOMETRY_PRESERVING_SEARCH_OPTIONS.md). Two independent recommendations; qualify cumulative geometry bounds first. Free L-BFGS-B, support families and free currents remain separate options.
 - [Coupled-design options and reviews](COUPLED_DESIGN_OPTIONS.md). Filament co-design, reduced directions, REGCOIL and direct surfaces; three internal agent reviews, integration traps and separate realization/coupling/pressure/robustness work packages.
 - Paired actual-coil pilot: [protocol](COUPLED_COIL_PILOT_PROTOCOL.md), [negative results](COUPLED_COIL_PILOT_RESULTS.md). Two plasma targets, two coil classes and normal/interior-vector methods. Eight startup checks, six searches, all finer acceptance checks; no physical pass. Coarse grids missed very small plasma clearances.

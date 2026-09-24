@@ -6,8 +6,9 @@ Updated 24 September 2026. [Registered scope](PROTECTED_SEARCH_SOFTWARE_PROTOCOL
 ## Assessment
 
 The pure controller and separate trajectory auditor pass **108 synthetic tests**.
-Full native regression and final evidence binding are pending; this software gate
-is not yet closed. No new native field fit or equilibrium optimization was run.
+Full research regression: **2,180 passed, 334 existing warnings**, no failures,
+errors or skips, in 222.05 s. **This bounded software gate is complete.**
+No new native field fit or equilibrium optimization was run.
 The search policy, physical limits and earlier scientific evidence are unchanged.
 
 This work makes the next geometry-protected coil search more auditable. It does
@@ -74,14 +75,42 @@ control-flow audit; the test verifies that this never becomes physical verificat
    Public tests: **44 passed in 0.537 s**; documentation and whitespace checks pass.
 
 JUnit files are retained in `artifacts/protected-search-software-v1/`:
-`initial-tests.xml`, `auditor-first-tests.xml`, `corrected-tests.xml`.
-The corrected implementation/test sources will be bound to the regression record;
-these local artifacts do not purport to be portable physical evidence.
+`initial-tests.xml`, `auditor-first-tests.xml`, `corrected-tests.xml` and
+`full-regression.xml`. The [machine-readable record](../../evidence/protected-search-software-v1.json)
+binds all four artifacts and five protocol/source/test files by hash and size.
+They remain local ignored artifacts, not a bundled portable physical evidence packet.
+
+Registration: `252f6f0`; implementation and full regression: `32dc632`.
+The initial failing producer remains retrievable at the registration commit; the
+initial test file was uncommitted, and its exact original bytes were not separately
+archived. The failed JUnit retains the failing assertions. Do not imply a stronger
+source binding for that first run than was actually recorded.
+
+Regression used Python 3.12.13 and the existing native environment, with OMP,
+OpenBLAS and MKL each limited to one thread. No packages were installed or synced;
+process inspection found only editor services before the run. Full regression
+includes the prior 2,072 tests and the 108 new tests. Existing HiGHS-option and
+NumPy/netCDF deprecation warnings persist; this is not an ABI-cleanliness claim.
+The worktree was not globally clean: the user's unrelated README edits were
+preserved. All five bound source files match `32dc632`; no scientific source
+changed during regression. No hosted or independent-machine run is claimed.
+Final evidence verification matches all nine hashes/sizes, the five committed
+sources and all four JUnit summaries. After summary updates, 34 documentation,
+release-maintenance and foundation tests pass in 5.50 s; docs, Ruff and whitespace
+checks also pass. No scientific code changed after the full regression.
 
 ## Remaining work
 
-Complete full native regression, then bind the
-source/test outcomes and close only this software gate. Before the native pilot:
-second internal method review, a source-bound durable runner, independent physical
-recomputation and finer-grid acceptance still need qualification. Preserve the
-original draft and its unqualified status until these prerequisites are met.
+Before the native pilot, second internal method review, a source-bound durable
+runner, independent physical recomputation and finer-grid acceptance still need
+qualification. Preserve the original draft and its unqualified status until these
+prerequisites are met. The next implementation work is the runner's persistence,
+budget and source-binding layer, first with synthetic fault-injection tests.
+
+Existing startup code is a reference, not a drop-in runner: its operation ledger
+assumes a fixed startup matrix. The protected pilot instead needs 10 startup
+bundles + one search seed + at most 20 field trials + one fresh-model replay,
+with independent geometry accounting (at most 128 certificates). Two model
+initializations and 32 nine-request bundles give the draft's 290 native-request
+cap per cell. These are still planned limits, not work already executed. Adapt
+the ledger explicitly; do not reuse or silently expand startup budgets.

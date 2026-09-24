@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-24 — Close the bounded protected-controller software qualification
+
+- Committed implementation/tests at `32dc632`. Before regression, process inspection
+  finds editor services only and disk reserve is about 3.9 GiB. No installations,
+  environment sync, external writes or new field-fit study.
+- Full one-thread research suite: **2,180 passed, 334 warnings, no failures/errors/
+  skips, 222.05 s**. Preserve full JUnit alongside both failing preliminary runs and
+  the corrected 108-test run; artifact directory is about 340 KiB. Initial failed
+  test source was uncommitted, so its exact original bytes are not claimed archived.
+- Bind five source/protocol/test files and four JUnit files by hashes/sizes in
+  `evidence/protected-search-software-v1.json`; record environment, command, dirty
+  README scope and explicit non-physical verdict. Same maintainer wrote both
+  implementations; separate numerical code is not independent authorship/peer review.
+- F-095, detail/index and affected top-level summaries now close only the synthetic
+  controller gate and point to durable runner/budget/source binding, second method
+  review and physical/fine-grid checks. All scientific milestone states unchanged.
+  Root README reviewed: no affected counts or claims; user's edits remain untouched.
+- Final verification: all nine recorded hashes/sizes, five committed source files,
+  four JUnit summaries, original producer hash and preserved README hash match.
+  After documentation updates, 34 documentation/release/foundation tests pass in
+  5.50 s; documentation structure, repository Ruff and whitespace checks pass.
+  Reviewed the scoped diff; research software is unchanged since full regression.
+
 ## 2026-09-24 — Implement the protected controller and trajectory checks
 
 - Follow protocol registered at `252f6f0`; use synthetic callbacks only. Initial

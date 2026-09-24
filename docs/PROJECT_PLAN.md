@@ -99,10 +99,12 @@ and further work, not a claim that the best possible reactor has been found.
 context. The [geometry-protected field-fit draft](optimization/PROTECTED_COIL_FIT_PROTOCOL.md)
 is preserved but not qualified; it is one possible next experiment, not a required
 method or an exclusive work allocation. The public contribution foundation takes
-priority before resuming local searches. Its local release checks are complete;
-while hosting/publication clearance remains separate, resume the
-[pure controller qualification](optimization/PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md)
-for Step 4A. Native search still requires its remaining preflight gates.
+priority before resuming local searches. Its local release checks and the
+[pure controller qualification](optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md)
+are complete. Hosting/publication clearance remains separate. Next for Step 4A:
+qualify the source-bound runner's persistence and budget handling with synthetic
+faults; complete the second method review and physical auditor before native
+execution. Finer-grid acceptance remains a separate required phase.
 No vacuum-only result closes all of Step 4.
 
 ## Research and review discipline

@@ -1,5 +1,26 @@
 # Findings log
 
+## F-095 — Protected-search controller passes its synthetic software gate
+
+**Class:** bounded software qualification, not a coil-design improvement
+**Date:** 2026-09-24
+
+At `32dc632`, 108 new tests verify fixed low-mode descent, both coil classes,
+immutable seed/high modes, failure accounting and a separate scalar completed-trace
+auditor. Four draft bookkeeping/publication defects are fixed without changing
+search policy. Deliberately inconsistent traces fail; internally consistent invented
+physics remains unverified, explicitly, rather than being labelled physical admission.
+
+Full research regression: 2,180 pass, 334 existing warnings, no failures/errors/
+skips in 222.05 s. Public tests: 44 pass. Protocol/source/test hashes and the four
+JUnit artifacts (including two failing runs) are recorded. The first failing test
+source was uncommitted; its exact initial bytes are not separately archived. Source
+identity claims are limited accordingly. User README edits remain untouched.
+
+This closes only the synthetic controller gate. Native runner, second internal
+method review, independent physical calculations and fine-grid acceptance remain.
+No new field search or Step 4/MS1 claim. [Detailed results](../optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md).
+
 ## F-094 — Release-review fixes pass fresh core and three-Python local qualification
 
 **Class:** operational/UI/portability qualification, not a new physical design
