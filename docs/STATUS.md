@@ -26,8 +26,9 @@ foundation milestones. Public hosting and operational safeguards remain separate
 Roadmap status: Steps 1–3 **Complete** in their stated scopes; Step 4,
 **Develop plasma and coils together**, **In progress**; Step 5 **Not achieved**;
 MS1 **Not reached**; MSX **Long-term goal**. [Canonical plan](PROJECT_PLAN.md).
-The interrupted protected-fit proposal/solver are preserved as unqualified drafts;
-no new protected-fit search was executed.
+The preserved protected-fit draft is now undergoing
+[pure controller qualification](optimization/PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md).
+Its native execution gates remain open; no new protected-fit search was executed.
 
 ## Established results and their limits
 

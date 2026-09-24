@@ -1,5 +1,22 @@
 # Validation log
 
+## 2026-09-24 — Register the next Step 4A software gate
+
+- Read current overview/status/plan, optimizer index, paused draft, controller,
+  prior methods assessment and geometry qualification. Only editor services are
+  running; preserve user README edits and all earlier evidence. Disk reserve is
+  about 3.6 GiB; no installs, clones or new physical calculations are planned here.
+- D-024 resumes local scientific software work after public local qualification.
+  Register synthetic controls and independent completed-trajectory reconstruction
+  before tests. Keep the paused native pilot unqualified; second method review,
+  runner, physical recomputation and fine-grid acceptance still remain.
+- Review of the draft identifies counter/recording semantics requiring explicit
+  tests; no new test outcome or optimizer gain is claimed at registration.
+- A rejected multi-file patch left the new protocol absent; documentation checks
+  caught three dangling links (13 tests passed, one failed). Added the missing
+  protocol/index before proceeding. Corrected 14-test set and docs/whitespace
+  checks pass. No scientific code, thresholds or experiment output changed.
+
 ## 2026-09-24 — Condense the agent instructions
 
 - Replace dated requests, milestone narratives and accumulated test counts in

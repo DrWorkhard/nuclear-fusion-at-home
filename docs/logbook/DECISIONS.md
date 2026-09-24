@@ -1,5 +1,19 @@
 # Decision log
 
+## D-024 — Resume Step 4A at the protected-controller software gate
+
+**Status:** active local work; native execution and external actions remain gated
+**Date:** 2026-09-24
+
+The public contribution layer passes its local checks. The user's continuation
+request authorizes advancing the plan; start with synthetic qualification of the
+preserved protected-search controller and a separate trajectory auditor. Do not
+interpret outstanding hosting/privacy work as permission to publish, or controller
+tests as qualification of the native pilot. Preserve the original draft and its
+remaining method-review/source/field/fine-geometry gates. The new
+[software protocol](../optimization/PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md) fixes
+semantics before tests, including full-index FD directions and completed-call counts.
+
 ## D-023 — Keep AGENTS.md a concise instruction guide
 
 **Status:** accepted; durable instructions rather than session history
