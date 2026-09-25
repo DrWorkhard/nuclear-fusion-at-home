@@ -46,6 +46,10 @@
   current; history belongs in the logbook, not this file.
 - Keep step names/statuses consistent. The root README's plan includes MS1/MSX
   immediately before “Start in three commands”.
+- Give each topic one home and link to it instead of repeating it: goal and
+  onboarding in the root README, step/milestone requirements and next actions in
+  `PROJECT_PLAN.md`, evidence in `STATUS.md`, scientific reasoning and navigation
+  in `docs/README.md`. The roadmap table appears only in the README and the plan.
 
 ## Verification and completion
 

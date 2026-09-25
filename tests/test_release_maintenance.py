@@ -63,19 +63,21 @@ def test_operational_exception_refuses_symlink_before_reading(tmp_path):
 
 def test_roadmap_names_statuses_and_readme_order():
     root = Path(__file__).resolve().parents[1]
-    tables = []
-    for name in ("README.md", "docs/README.md", "docs/PROJECT_PLAN.md"):
+    tables = {}
+    for name in ("README.md", "docs/README.md", "docs/STATUS.md", "docs/PROJECT_PLAN.md"):
         content = (root / name).read_text(encoding="utf-8")
         rows = []
         for line in content.splitlines():
             cells = [cell.strip().replace("**", "") for cell in line.split("|")]
             if len(cells) == 5 and cells[1].startswith(("1.", "2.", "3.", "4.",
                                                       "5.", "MS1.", "MSX.")):
-                rows.append((cells[1], cells[2] if name == "docs/README.md" else cells[3]))
-        tables.append(rows)
-    assert len(tables[0]) == 7
-    assert tables[0] == tables[1] == tables[2]
-    assert tables[0][3] == ("4. Develop plasma and coils together", "In progress")
+                rows.append((cells[1], cells[3]))
+        tables[name] = rows
+    # D-026: the roadmap table lives only in the front page and the roadmap.
+    assert len(tables["README.md"]) == 7
+    assert tables["README.md"] == tables["docs/PROJECT_PLAN.md"]
+    assert tables["docs/README.md"] == tables["docs/STATUS.md"] == []
+    assert tables["README.md"][3] == ("4. Develop plasma and coils together", "In progress")
     content = (root / "README.md").read_text(encoding="utf-8")
     headings = [line for line in content.splitlines() if line.startswith("## ")]
     index = headings.index("## Project plan and progress")

@@ -12,7 +12,7 @@ project assessment. Much of the historical log remains in German.
 
 ## Documents
 
-- [Decisions](DECISIONS.md). Baselines, method neutrality, QI measurement, independent acceptance, checkpoint integrity, documentation, open contributions, MS1/MSX, operational maintenance, the concise agent-guide policy and the review folder.
+- [Decisions](DECISIONS.md). Baselines, method neutrality, QI measurement, independent acceptance, checkpoint integrity, documentation, open contributions, MS1/MSX, operational maintenance, the concise agent-guide policy, the review folder and one home per overview topic.
 - [Findings](FINDINGS.md). Significant findings F-001 onward, with claim classes, limitations and explicit corrections.
 - [Validation log](VALIDATION_LOG.md). Actual tests, versions, cross-checks, failed attempts and the exact scope of each verification.
 

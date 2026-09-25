@@ -1,6 +1,6 @@
 # Scientific status and evidence
 
-Updated 24 September 2026.
+Updated 25 September 2026.
 [Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Public quickstart](validation/PUBLIC_QUICKSTART.md)
 
 ## Bottom line
@@ -10,26 +10,10 @@ plasma target, and useful coil-validation tools. We do not yet have a new
 physically accepted coil design, a completed Step 4, a state-of-the-art advance,
 or full SQuID-C readiness.**
 
-**MS1 is not reached:** we do not have strong evidence that our design is better
-than the design Proxima Fusion is pursuing. Contacting Proxima with such evidence
-is a planned milestone, not an action already taken. Our existing plasma result
-is against an open research reference, not a Proxima design comparison.
-[MS1 evidence framework](squid_c/MS1_PROXIMA_COMPARISON.md).
-
-**MSX remains our long-term goal, not an achieved result:** contribute to nuclear
-fusion for humanity by finding the best reactor design current technology can
-achieve. MS1 is an intermediate milestone on that path.
-
-The portable public contribution layer now passes its scoped local release checks.
-It is not a new physical result and does not reopen or expand the completed
-foundation milestones. Public hosting and operational safeguards remain separate work.
-Roadmap status: Steps 1–3 **Complete** in their stated scopes; Step 4,
-**Develop plasma and coils together**, **In progress**; Step 5 **Not achieved**;
-MS1 **Not reached**; MSX **Long-term goal**. [Canonical plan](PROJECT_PLAN.md).
-The [protected controller qualification](optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md)
-is complete in its synthetic scope: 108 controller/auditor tests pass. Native
-runner, method-review and physical-verification gates remain open; no new
-protected-fit search was executed.
+Step and milestone statuses, including MS1 and MSX, are kept in the
+[roadmap](PROJECT_PLAN.md); this page gives the evidence behind them. Full
+[SQuID-C readiness](squid_c/SQUID_C_READINESS.md) has further gates; missing
+author data is not the only obstacle.
 
 ## Established results and their limits
 
@@ -40,12 +24,14 @@ protected-fit search was executed.
 | Step 4 coil initialization | All 12 constructed starting sets pass scoped geometry admission; selected six/eight-base-coil forms retain at least 98.2 mm certified plasma clearance, required 80 mm | Magnetic-field quality or full finite-build engineering |
 | Step 4 field starts | Four cells, eight normal/vector derivative checks, 20 refinements, 768 direct B/A comparisons and 252 flux gates pass numerical qualification | All four fail physical field limits: normal RMS 0.269–0.276 versus 1e-4; inner-vector RMS 0.3615–0.3723 versus 0.01 |
 | Cumulative geometry bounds | The 52-state qualification passes all required small probes and independent direct checks; 18 larger probes remain uncertified | Uncertified does not mean physically impossible; no field improvement follows from this alone |
+| Step 4A protected-search controller | Synthetic qualification complete: 108 controller/auditor tests pass | Native runner, second method review and physical verification; no new protected-fit search has run |
 
 Sources: [foundation acceptance](validation/FOUNDATION_ACCEPTANCE_RESULTS.md),
 [plasma result](qi/PLASMA_BALANCED_RESULTS.md),
 [coil initialization](geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md),
 [field qualification](optimization/CLEAR_COIL_FIELD_START_RESULTS.md),
-[cumulative geometry](geometry/COIL_PERTURBATION_RESULTS.md).
+[cumulative geometry](geometry/COIL_PERTURBATION_RESULTS.md),
+[controller qualification](optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md).
 
 The plasma comparison used both action domains during construction: it is not a
 blind holdout. The reported improvement exceeds the registered numerical-uncertainty
@@ -72,55 +58,19 @@ Detail: [validation](validation/README.md), [QI](qi/README.md),
 [engineering](engineering/README.md), [research log](logbook/README.md).
 Older optimistic journal conclusions do not supersede this current assessment.
 
-## Public usability — a separate deliverable
+## Software and release evidence
 
-The public layer now has 44 passing dependency-free unit/analytic tests on local
-Python 3.11/3.12/3.14, including named edits and score interpretation. The
-[release review fixes](validation/PUBLIC_REVIEW_FIXES.md) add explicit dev-only
-CI scope, UTF-8 reads, an early version guard and English navigation. The exact
-core script passes in a fresh local dev-only clone (44 public + 14 selected tests).
-The starter supplies a small attributed real-coil packet and candidate/report
-interface. All eight committed-source copied-tree checks pass on each Python:
-reference, changed candidate, replay,
-tamper/overwrite rejection and contribution metadata without cost disclosure.
-The largest reference/native relative field difference is 9.59e-16 against the
-registered 5e-10 limit. [Release evidence](validation/PUBLIC_RELEASE_RESULTS.md).
-Hosted CI and independent hardware reproduction have not been verified.
-All B/A arrays match the earlier release exactly. Python 3.12/3.14 reports are
-byte-identical; Python 3.11 has two seed metrics differing by less than 1.12e-16.
-The existing tolerance and old-report replay pass without evaluator changes.
+These checks show that the tools work as specified; they are not physical acceptance.
 
-The [initial publication inventory](validation/PUBLICATION_INVENTORY.md) finds
-about 325 MB of tracked content and 365 tracked files with home-path indicators
-at its recorded revision. Five limited credential/key-shaped patterns have no
-matches across reachable blobs. This is not a complete security or rights review;
-privacy indicators, intended release scope and later commits still need review.
-No historical evidence or Git history was sanitized or published.
+| Area | Evidence | Not established |
+| --- | --- | --- |
+| Public starter | 44 public tests and eight copied-tree release checks pass on local Python 3.11/3.12/3.14; the unchanged reference matches archived native fields within 9.59e-16 (limit 5e-10) | Hosted CI, independent machines, full-surface or physical acceptance; public reports never set physical admission or Step 4 to true |
+| Historical research suite | 2,180 tests pass with 334 documented warnings at `32dc632`, in the native research environment | A hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
+| Publication inventory | About 325 MB of tracked content; 365 tracked files with home-path indicators; no matches for five credential/key patterns | A complete security, privacy or rights review; no history was sanitized or published |
 
-The public profile evaluates 192 fixed sample points with frozen physical currents.
-It reports sparse normal/vector errors and 256/512 filament-resolution differences;
-it does not compute the original full-surface, flux-normalized acceptance.
-Report replay uses the same public implementation. An unchanged-seed comparison
-against archived native B/A is a separate arithmetic check. Public reports never
-set physical admission or Step 4 to true.
-
-The complete historical research workflow still requires additional native
-dependencies, large local artifacts and qualified source-bound adapters. Its
-latest full regression at `32dc632` has **2,180 passing tests**, no failures/skips,
-and **334 documented warnings** in 222.05 seconds; this is distinct from the
-44 public tests. The strict netCDF4 import warning
-remains unresolved, with no claimed ABI-freedom or hosted-CI pass.
-
-## Next required evidence
-
-The [local portable release checks](validation/PUBLIC_RELEASE_RESULTS.md) are complete.
-Before an actual public launch, complete the [hosting/security checklist](validation/REVIEW_POLICY.md),
-including whole-history publication review, protected review settings and hosted
-and independent-machine execution. Contributors can use the starter and tackle
-the nonexclusive [research hints](optimization/RESEARCH_HINTS.md); those hints do
-not restrict unsolicited contributions.
-
-Scientifically, Step 4 still needs actual-coil field/QI transfer, genuine coupled
-improvement, finite-pressure/confinement work and finite-geometry/robustness.
-[SQuID-C readiness](squid_c/SQUID_C_READINESS.md) has additional gates; missing
-author data is not the only remaining obstacle.
+Details: [release evidence](validation/PUBLIC_RELEASE_RESULTS.md),
+[review fixes](validation/PUBLIC_REVIEW_FIXES.md),
+[what public scores mean](validation/PUBLIC_QUICKSTART.md#what-the-report-means),
+[publication inventory](validation/PUBLICATION_INVENTORY.md),
+[netCDF4 warning](validation/NETCDF_IMPORT_WARNING.md).
+Next launch and research steps are in the [roadmap](PROJECT_PLAN.md).

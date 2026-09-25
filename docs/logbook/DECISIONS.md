@@ -1,5 +1,27 @@
 # Decision log
 
+## D-026 — One home per topic in the overview documents
+
+**Status:** accepted at the maintainer's request; narrows the three-document
+roadmap check from the [public review fixes](../validation/PUBLIC_REVIEW_FIXES.md) to two documents
+**Date:** 2026-09-25
+
+The documentation overview repeated about half of the root README, and the goal,
+MS1 and roadmap statuses were restated in up to five places. Each topic now has
+one home, and the other overviews link to it:
+
+- root `README.md`: goal (MSX), front-page summary, roadmap summary and onboarding;
+- `docs/PROJECT_PLAN.md`: step/milestone requirements, release tasks and next actions;
+- `docs/STATUS.md`: evidence, limits and retained failures;
+- `docs/README.md`: research question, scientific reasoning, references and navigation;
+- specialist documents keep their topics: the MS1 framework, CONTRIBUTING, the
+  review policy and `AGENTS.md`.
+
+The roadmap table appears only in the root README and the plan (D-021). The test
+checks that both match and that the overview and status pages do not repeat it.
+Removed text was repeated elsewhere; every removed number or finding remains in a
+linked detail document. No scientific status, threshold or evidence changed.
+
 ## D-025 — Keep documentation and usability reviews in `docs/review`
 
 **Status:** accepted at the maintainer's request

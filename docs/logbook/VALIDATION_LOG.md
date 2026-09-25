@@ -1,5 +1,32 @@
 # Validation log
 
+## 2026-09-25 — Remove repetition between the overview documents
+
+- Maintainer confirmed that `docs/README.md` repeated the root README and asked to
+  remove all redundancy (D-026). Gave each topic one home and replaced repeats with
+  links. The overview keeps the research question, reasoning, references and
+  navigation (1,046 → 418 words). Status drops the MS1/MSX/roadmap prose and
+  condenses public/software evidence into one linked table (1,061 → 708 words).
+  The plan drops the MSX section and the participation/discipline rules repeated
+  from CONTRIBUTING, the review policy and AGENTS; MS1 is condensed to a link
+  (1,302 → 851 words). The controller qualification moved into the status
+  results table; the plan gained a launch-checklist link.
+- Root `README.md` untouched (canonical front page with the maintainer's uncommitted
+  edits). Every removed number/finding was confirmed in a linked detail document
+  first (release results, review fixes, quickstart, inventory, controller results,
+  netCDF4 note, MS1 framework, decisions).
+- The roadmap test now checks README ↔ plan equality and that the overview and
+  status contain no roadmap table. `evidence/public-review-v2.json` still binds
+  the earlier test bytes as a historical record; no test reads that hash.
+- Near-duplicate sentence scan across the four overview documents: only the seven
+  intended roadmap-table rows remain shared between README and plan.
+- Concurrent uncommitted work by another session (`fusion.py`, `src/fusion_public/`,
+  `submissions/`) was left untouched and is not part of this commit.
+- Checks: documentation structure passes; 14 documentation/release tests pass;
+  Ruff and whitespace checks pass on the changed files; both section anchors in the
+  rewritten pages resolve; public tests report OK (run with the other session's
+  uncommitted public-layer edits present). Reviewed the scoped diff.
+
 ## 2026-09-25 — Record the root README review in a new review folder
 
 - Maintainer asked to keep the 24 September README review in a review folder. Added
