@@ -1,5 +1,24 @@
 # Decision log
 
+## D-027 — One English results page per roadmap step; a lean roadmap
+
+**Status:** accepted at the maintainer's request; extends D-026
+**Date:** 2026-09-25
+
+Step results were spread over many detailed, mostly German reports, and the
+roadmap repeated requirements, results and rules found elsewhere. Add `steps` as a
+documentation folder with one English page per step (currently Steps 1–4). Each
+states what the step had to show, the result with key numbers, what it does not
+show, failures kept on record and links to the authoritative detailed reports and
+evidence. The step pages summarize; they do not replace or reinterpret the
+registered protocols, reports or audits.
+
+The roadmap now holds only the step/milestone table (requirement, status and a
+link to each step's results) and the next actions. Step 4's work packages 4A–4D
+moved to the Step 4 page; MS1 details stay in the MS1 framework; participation
+and study rules stay in CONTRIBUTING, the review policy and `AGENTS.md`. The
+roadmap table still appears in the README and the plan only (D-021, D-026).
+
 ## D-026 — One home per topic in the overview documents
 
 **Status:** accepted at the maintainer's request; narrows the three-document

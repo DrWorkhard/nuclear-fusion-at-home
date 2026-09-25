@@ -69,7 +69,7 @@ def test_roadmap_names_statuses_and_readme_order():
         rows = []
         for line in content.splitlines():
             cells = [cell.strip().replace("**", "") for cell in line.split("|")]
-            if len(cells) == 5 and cells[1].startswith(("1.", "2.", "3.", "4.",
+            if len(cells) >= 5 and cells[1].startswith(("1.", "2.", "3.", "4.",
                                                       "5.", "MS1.", "MSX.")):
                 rows.append((cells[1], cells[3]))
         tables[name] = rows

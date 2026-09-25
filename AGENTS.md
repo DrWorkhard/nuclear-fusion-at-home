@@ -40,7 +40,8 @@
 
 - Keep only `README.md`, `STATUS.md` and `PROJECT_PLAN.md` at the `docs/` root.
 - Place details one level below, in `optimization`, `geometry`, `qi`,
-  `engineering`, `validation`, `squid_c`, `logbook` or `review`; no deeper hierarchy.
+  `engineering`, `validation`, `squid_c`, `logbook`, `review` or `steps`; no deeper
+  hierarchy.
   Each folder's README explains its purpose, conclusions and every contained document.
 - Use English entry documentation and relative links. Keep overviews concise and
   current; history belongs in the logbook, not this file.
@@ -48,8 +49,10 @@
   immediately before “Start in three commands”.
 - Give each topic one home and link to it instead of repeating it: goal and
   onboarding in the root README, step/milestone requirements and next actions in
-  `PROJECT_PLAN.md`, evidence in `STATUS.md`, scientific reasoning and navigation
-  in `docs/README.md`. The roadmap table appears only in the README and the plan.
+  `PROJECT_PLAN.md`, each step's results in `docs/steps/`, the evidence summary in
+  `STATUS.md`, scientific reasoning and navigation in `docs/README.md`. The roadmap
+  table appears only in the README and the plan. When a step's result changes,
+  update its step page.
 
 ## Verification and completion
 

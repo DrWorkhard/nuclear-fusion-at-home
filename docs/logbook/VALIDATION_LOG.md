@@ -1,5 +1,32 @@
 # Validation log
 
+## 2026-09-25 — Per-step result pages and a lean roadmap
+
+- Maintainer asked to remove the remaining roadmap redundancy and to add linked,
+  detailed results for each step (D-027). Added `docs/steps/` with an index and
+  English pages for Steps 1–4, written from the German protocols/reports and
+  their stated numbers; each names the authoritative report and evidence files.
+  Step 5 has no results; its row links the MS1 framework.
+  The Step 4 page and roadmap also record the other session's event-storage
+  result (`fc831f3`) as implemented, with qualification still pending.
+- The roadmap now holds only the step/milestone table (with a results link per
+  row) and next actions (852 → 451 words). 4A–4D moved to the Step 4 page; the
+  release task table, capability-milestone and MS1 paragraphs, and rules were
+  repeats of the status page, step pages, launch checklist, MS1 framework,
+  CONTRIBUTING, review policy and `AGENTS.md`. Preservation commits `5971fee` and
+  `d429783` now sit on the Step 1 and Step 3 pages.
+- Status rows link to the step pages; the list of German sources, the Step 3
+  caveat and the two pilot/first-design failure details were replaced by links
+  (719 → 673 words). Overview and `AGENTS.md` list the new folder; the roadmap
+  test accepts the plan's extra Results column.
+- Checks: documentation structure passes; 129 links and anchors in the changed
+  pages resolve; 14 documentation/release tests, Ruff on the changed test and
+  whitespace checks pass; public tests report OK (another session's uncommitted
+  public-layer/runner files present). Duplicate-sentence scan: only the intended
+  README/plan table rows and the step pages' shared header wording remain.
+- Root `README.md` (uncommitted edits by the user/other session) and the other
+  session's runner-storage work and log entry are untouched and not in this commit.
+
 ## 2026-09-25 — Implement synchronous protected-search event storage
 
 - Follow registration `7a210ac`. Add exclusive, hash-linked numbered event files,

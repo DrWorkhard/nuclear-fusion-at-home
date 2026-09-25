@@ -5,8 +5,9 @@ and a map of the evidence. Updated 25 September 2026.
 [Front page](../README.md) · [Status](STATUS.md) · [Roadmap](PROJECT_PLAN.md)
 
 The goal, how to start and a progress summary are on the [front page](../README.md).
-The [roadmap](PROJECT_PLAN.md) defines what each step and milestone requires; the
-[status page](STATUS.md) gives the current evidence, its limits and retained
+The [roadmap](PROJECT_PLAN.md) defines what each step and milestone requires, the
+[step results](steps/README.md) explain what each step achieved, and the
+[status page](STATUS.md) summarizes the current evidence, its limits and retained
 failures. Despite the name, the project is collaborative research, not (initially)
 a volunteer-computing client.
 
@@ -42,6 +43,7 @@ diagnostic, not full QI.
 Most historical reports are in German; entry documentation and folder indexes are
 in English. Each folder index states its purpose, current conclusion and limits.
 
+- [Step results](steps/README.md): one English page per roadmap step with its result, limits, failures and evidence.
 - [Optimization](optimization/README.md): algorithms, attempts, negative results and [open research hints](optimization/RESEARCH_HINTS.md).
 - [Geometry](geometry/README.md): curvature, clearance, continuous bounds and discretization checks.
 - [QI physics](qi/README.md): equilibria, action diagnostics, field lines and coordinate issues.

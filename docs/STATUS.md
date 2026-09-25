@@ -1,7 +1,7 @@
 # Scientific status and evidence
 
 Updated 25 September 2026.
-[Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Public quickstart](validation/PUBLIC_QUICKSTART.md)
+[Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Step results](steps/README.md) · [Public quickstart](validation/PUBLIC_QUICKSTART.md)
 
 ## Bottom line
 
@@ -19,32 +19,22 @@ author data is not the only obstacle.
 
 | Work package | Evidence-backed result | What remains unproven |
 | --- | --- | --- |
-| Steps 1/2: bounded foundation and iteration | Eight foundation gates, six mandatory scientific regressions, two exactly repeated 24-bundle paths and four independent candidate checks | Universal QI/engineering validity; those candidates remain physically rejected |
-| Step 3: own nfp2 vacuum plasma target | Relative bounce-action variance decreases from 2.3894265674e-4 to 2.1225270715e-4 (11.1700%); narrower-domain gain 4.8506%; all ten final gates pass | Global QI, improved measured confinement, finite pressure, practical coils or plant performance |
-| Step 4 coil initialization | All 12 constructed starting sets pass scoped geometry admission; selected six/eight-base-coil forms retain at least 98.2 mm certified plasma clearance, required 80 mm | Magnetic-field quality or full finite-build engineering |
-| Step 4 field starts | Four cells, eight normal/vector derivative checks, 20 refinements, 768 direct B/A comparisons and 252 flux gates pass numerical qualification | All four fail physical field limits: normal RMS 0.269–0.276 versus 1e-4; inner-vector RMS 0.3615–0.3723 versus 0.01 |
-| Cumulative geometry bounds | The 52-state qualification passes all required small probes and independent direct checks; 18 larger probes remain uncertified | Uncertified does not mean physically impossible; no field improvement follows from this alone |
-| Step 4A protected-search controller | Synthetic qualification complete: 108 controller/auditor tests pass | Native runner, second method review and physical verification; no new protected-fit search has run |
+| Steps [1](steps/STEP_1_FOUNDATION.md) and [2](steps/STEP_2_ITERATION.md): bounded foundation and iteration | Eight foundation gates, six mandatory scientific regressions, two exactly repeated 24-bundle paths and four independent candidate checks | Universal QI/engineering validity; those candidates remain physically rejected |
+| [Step 3](steps/STEP_3_PLASMA_TARGET.md): own nfp2 vacuum plasma target | Relative bounce-action variance decreases from 2.3894265674e-4 to 2.1225270715e-4 (11.1700%); narrower-domain gain 4.8506%; all ten final gates pass | Global QI, improved measured confinement, finite pressure, practical coils or plant performance |
+| [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) coil initialization | All 12 constructed starting sets pass scoped geometry admission; selected six/eight-base-coil forms retain at least 98.2 mm certified plasma clearance, required 80 mm | Magnetic-field quality or full finite-build engineering |
+| [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) field starts | Four cells, eight normal/vector derivative checks, 20 refinements, 768 direct B/A comparisons and 252 flux gates pass numerical qualification | All four fail physical field limits: normal RMS 0.269–0.276 versus 1e-4; inner-vector RMS 0.3615–0.3723 versus 0.01 |
+| [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) cumulative geometry bounds | The 52-state qualification passes all required small probes and independent direct checks; 18 larger probes remain uncertified | Uncertified does not mean physically impossible; no field improvement follows from this alone |
+| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) protected-search controller | Synthetic qualification complete: 108 controller/auditor tests pass | Native runner, second method review and physical verification; no new protected-fit search has run |
 
-Sources: [foundation acceptance](validation/FOUNDATION_ACCEPTANCE_RESULTS.md),
-[plasma result](qi/PLASMA_BALANCED_RESULTS.md),
-[coil initialization](geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md),
-[field qualification](optimization/CLEAR_COIL_FIELD_START_RESULTS.md),
-[cumulative geometry](geometry/COIL_PERTURBATION_RESULTS.md),
-[controller qualification](optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md).
-
-The plasma comparison used both action domains during construction: it is not a
-blind holdout. The reported improvement exceeds the registered numerical-uncertainty
-test, but remains a metric-specific result. “Independent” in these reports refers
-to the specified numerical/source checks, not external peer review.
+Each linked step page gives the method, full limits, detailed reports and evidence.
+“Independent” in these reports refers to the specified numerical/source checks,
+not external peer review.
 
 ## Failures we retain
 
-- The [first plasma design](qi/PLASMA_OPTIMIZATION_RESULTS.md) worsened the wider
-  action metric despite improvement on the construction objective.
-- The [first actual-coil pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) has
-  six completed searches and six physical rejections: fine plasma clearance only
-  1.8–6.7 mm against 80 mm required; only 17/30 refinements pass.
+- The first plasma design and the first actual-coil pilot were rejected; see
+  [Step 3](steps/STEP_3_PLASMA_TARGET.md#failures-kept-on-record) and
+  [Step 4](steps/STEP_4_PLASMA_AND_COILS.md#1-first-actual-coil-pilot--all-six-designs-rejected-14-september).
 - The best preserved [LPQA coil search](optimization/CURRENT_START_GN_RESULTS.md)
   reaches raw fine flux 8.129882e-8, still above its 1e-8 threshold. Its 0.754% gain
   is real within that comparison, not a feasible-design or convergence claim.
