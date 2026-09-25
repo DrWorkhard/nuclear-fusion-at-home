@@ -115,6 +115,7 @@ conversation context is required to follow the evidence.
 - [Validation](validation/README.md): portable entry points, scientific evidence, environment and review.
 - [SQuID-C / Proxima comparison](squid_c/README.md): future intake, readiness limits and the MS1 evidence framework.
 - [Research log](logbook/README.md): decisions, findings, actual checks and preserved failures.
+- [Reviews](review/README.md): documentation and usability reviews with the exact reviewed version and open recommendations.
 
 Persistent working instructions: [AGENTS.md](../AGENTS.md). Historical evidence is
 immutable; new portable derivatives have their own schemas and provenance.

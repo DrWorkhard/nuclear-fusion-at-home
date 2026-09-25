@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-25 — Record the root README review in a new review folder
+
+- Maintainer asked to keep the 24 September README review in a review folder. Added
+  `docs/review/` with an index and `ROOT_README_REVIEW.md` (D-025); linked it from
+  the documentation overview, the agent guide's folder list and the roadmap's
+  public-understanding row. No code, evidence, thresholds or milestone states changed.
+- The review covers README blob `bae5c81` (commit `7a0b2ed` plus the maintainer's
+  uncommitted edits). Checks run on 24 September, macOS arm64: every README command
+  verbatim in a fresh clone (CPython 3.12.13; 44 public tests pass; demo reproduces
+  the reference in 2.3 s; evaluation 1.2 s), the Python 3.9.6 version message and a
+  Python 3.11.4 demo, printed scores against the README, all 21 links and 3 anchors,
+  and cross-document step/status consistency. Result: 27 open recommendations.
+  Windows/Linux, hosted CI and GitHub rendering were not checked.
+- The maintainer's uncommitted `README.md` edits were left untouched and are not
+  part of this commit.
+
 ## 2026-09-24 — Close the bounded protected-controller software qualification
 
 - Committed implementation/tests at `32dc632`. Before regression, process inspection

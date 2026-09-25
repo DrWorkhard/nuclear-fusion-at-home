@@ -40,7 +40,7 @@
 
 - Keep only `README.md`, `STATUS.md` and `PROJECT_PLAN.md` at the `docs/` root.
 - Place details one level below, in `optimization`, `geometry`, `qi`,
-  `engineering`, `validation`, `squid_c` or `logbook`; no deeper hierarchy.
+  `engineering`, `validation`, `squid_c`, `logbook` or `review`; no deeper hierarchy.
   Each folder's README explains its purpose, conclusions and every contained document.
 - Use English entry documentation and relative links. Keep overviews concise and
   current; history belongs in the logbook, not this file.

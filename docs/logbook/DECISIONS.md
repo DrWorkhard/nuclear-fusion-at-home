@@ -1,5 +1,19 @@
 # Decision log
 
+## D-025 — Keep documentation and usability reviews in `docs/review`
+
+**Status:** accepted at the maintainer's request
+**Date:** 2026-09-25
+
+Add `review` as an eighth documentation folder for reviews of the public
+documentation, consistency and newcomer experience. Such reviews span several
+purposes, so they do not belong in one research folder. Each review names the
+exact reviewed version, the checks actually run and its open recommendations;
+it changes nothing by itself. Implemented changes are recorded where they are made
+and the resolution is noted in the review index. The first eight-point release
+review stays in `validation/PUBLIC_REVIEW_FIXES.md` together with its resolution.
+AI or maintainer reviews are internal, not external peer review.
+
 ## D-024 — Resume Step 4A at the protected-controller software gate
 
 **Status:** active local work; native execution and external actions remain gated
