@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-25 — Register protected-runner event storage
+
+- Resume Step 4 after locally verifying the README review fixes. Register the
+  immutable, synchronous event-journal contract before implementation/tests:
+  exclusive numbered records, hash-linked receipts, file/directory fsync, poisoned
+  writers after failure, strict bounded reader and controller integration controls.
+- This is a POSIX software subcomponent, not source/native-budget orchestration
+  or physical qualification. No field fit or new equilibrium study; unchanged
+  native budgets and physics gates. Existing user README edits remain out of scope.
+- Free space recovered externally to about 55 GiB; no research jobs running after
+  regression. The full native pilot remains gated by its other preflight components
+  and outstanding second method review. No agent delegation without the requested
+  permission; documentation/code work can proceed independently.
+
 ## 2026-09-25 — Verify the README review fixes and resume Step 4 preparation
 
 - Committed source `0d9abcf`: 47 public tests and all eight copied-tree operations
