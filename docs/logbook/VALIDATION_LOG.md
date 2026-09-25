@@ -1,5 +1,30 @@
 # Validation log
 
+## 2026-09-25 — Implement synchronous protected-search event storage
+
+- Follow registration `7a210ac`. Add exclusive, hash-linked numbered event files,
+  bounded canonical JSON, externally bound receipts and file/close/directory sync
+  before acknowledgement. All writer failures poison later calls; previous bytes
+  and failed tails remain. Reader rejects altered or incomplete supplied receipts.
+- Initial 38 tests pass in 0.39 s; expanded **154 pass in 6.68 s** (46 storage plus
+  108 prior controller/auditor tests). Inject open/short-write/flush/close/fsync and
+  interrupt failures; test exact no-overwrite, strict reader and no dispatch after
+  reservation failure. Both synthetic coil classes retain 82 events and pass the
+  separate trajectory audit without physical admission. Repository Ruff passes.
+- Add indexed results with single-writer/POSIX/power-loss/provenance limits. Full
+  regression and source binding remain pending; no native runner or field gain
+  claimed. JUnit retained in `artifacts/protected-runner-storage-v1/`.
+- Concurrent README/roadmap/step-page edits belong to the user/other session and
+  remain outside this implementation commit; no attempt to overwrite that work.
+- Tighten reader enumeration to stop at the supplied count plus one, then add a
+  control proving it does not traverse an unbounded extra directory. Final focused
+  set: **155 pass in 5.05 s** (47 storage + 108 prior controls). Separate public
+  tests: 47 pass in 3.726 s. All three small JUnit runs are retained.
+- Documentation checker repeatedly reports one concurrent-work issue: `steps`
+  not indexed from the root overview. Do not change or commit the other session's
+  in-progress roadmap/step pages. Full regression/qualification remain pending;
+  this commit is a tested implementation checkpoint, not closure of the gate.
+
 ## 2026-09-25 — Register protected-runner event storage
 
 - Resume Step 4 after locally verifying the README review fixes. Register the
