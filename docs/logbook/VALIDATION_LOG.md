@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-25 — Resume local Step 4 and register execution-layer qualification
+
+- User explicitly authorizes delegation and continuing Step 4 as far as possible.
+  Local research can proceed independently of publication, subject to unchanged
+  scientific gates; no publishing, external contact or merge authorization inferred.
+- Clean starting worktree at `228b78d`; read-only process inspection finds no native
+  research or pytest jobs; about 54 GiB free. Existing environment left intact.
+- Register exact native/certificate/bundle budgets, immutable snapshots, source
+  admission and synthetic orchestration controls before implementation. Delegate
+  bounded read-only second method review and integration mapping while preparing
+  the missing execution layer. No native field calculation has started.
+- Preserve the concurrent documentation consolidation: reuse the current per-step
+  result structure and update only scoped links/next actions, not README layouts.
+- Registration checks: 47 public tests pass (3.959 s), 14 documentation/release
+  tests pass (0.56 s), documentation structure and whitespace pass.
+
 ## 2026-09-25 — Close the protected-runner event-storage qualification
 
 - Registration `7a210ac`, implementation `fc831f3`: full JUnit records **2,229

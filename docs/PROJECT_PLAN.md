@@ -23,7 +23,7 @@ Stellarator plasma/coil optimization is our current route toward the end goal (M
 
 ## Next actions
 
-**Public release first.** Goal: an outside contributor can start from a fresh
+**Public release, alongside local research.** Goal: an outside contributor can start from a fresh
 checkout, reproduce a small reference, evaluate a candidate, replay the report and
 submit useful work without our local artifacts or chat history
 ([release specification](validation/PUBLIC_RELEASE.md)). The portable starter and
@@ -32,12 +32,13 @@ the full history, the real clone URL, hosted CI, reviewer identities and branch
 protection — see the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
 and the [publication inventory](validation/PUBLICATION_INVENTORY.md).
 
-**Step 4A, without resuming searches before the release.** The
+**Step 4A: local research resumed with the user's authorization.** Publication
+remains separate; all scientific preflight gates still apply. The
 [geometry-protected field-fit draft](optimization/PROTECTED_COIL_FIT_PROTOCOL.md)
 is one possible next experiment, not a required method or an exclusive work
 allocation. Its controller is qualified and its
 [event storage](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) is qualified.
-Next: implement and qualify source admission, raw-array snapshots and exact native/
-certificate budget orchestration with synthetic faults; then complete the second
+Next: implement and qualify [source admission, raw-array snapshots and exact native/
+certificate budget orchestration](optimization/PROTECTED_RUNNER_PROTOCOL.md) with synthetic faults; then complete the second
 method review and the physical auditor before any native run.
 Finer-grid acceptance remains a separate required phase.
