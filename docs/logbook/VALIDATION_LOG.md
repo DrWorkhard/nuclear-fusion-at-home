@@ -1,5 +1,29 @@
 # Validation log
 
+## 2026-09-25 — Verify the README review fixes and resume Step 4 preparation
+
+- Committed source `0d9abcf`: 47 public tests and all eight copied-tree operations
+  pass on each local Python 3.11.4/3.12.13/3.14.3. All 16 copied files match the
+  commit; both unchanged-seed displayed deltas are exactly zero. Actual demos
+  take 3.84–4.08 s and evaluations 2.58–2.75 s, indicative only.
+- Space increased externally to about 55 GiB; no files deleted by this session.
+  After checking processes again (editor services only), full one-thread native
+  regression: **2,182 passed, 334 warnings, zero failures/errors/skips, 244.42 s**.
+  Keep the prior two foundation reserve failures unchanged, not replaced or hidden.
+- Bind 12 code/test sources and 30 result/log artifacts in
+  `evidence/readme-review-v1.json`. Preserve new concurrent user README edits;
+  all implementation code stays at the recorded commit. No native environment sync.
+- F-096 and the point-by-point resolution close 26 recommendations. Real hosting
+  URL remains unavailable (#2), with a template and launch action recorded. No
+  publishing, external contact, hosted-CI or Step 4 completion claim.
+- Resume Step 4 at durable runner recording, initially synthetic. The native
+  pilot still needs its second independent method review and physical auditor.
+  An asynchronous question requests permission for that bounded agent review;
+  no review agent has been launched while that permission remains unanswered.
+- Final review: all 42 source/artifact hashes/sizes and 12 committed-source
+  identities match; 14 documentation/release tests pass in 0.59 s after summaries
+  change. Docs, Ruff and whitespace pass. Root README user edits excluded.
+
 ## 2026-09-25 — Implement the 27-point root README review
 
 - Read the review, current instructions, entry docs and research status. Only

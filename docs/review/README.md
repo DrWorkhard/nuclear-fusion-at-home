@@ -6,8 +6,9 @@ actually run. Reviews recommend changes; they do not change code, evidence,
 thresholds or scientific status. When a recommendation is implemented, record the
 change where it is made and note the resolution here.
 
-Current conclusion: the 27-point README follow-up is implemented and undergoing
-verification. The actual public clone URL remains a hosting prerequisite; a
+Current conclusion: 26 of the 27 README recommendations are implemented and locally
+verified; 47 public tests and eight real checks pass on three local Python versions.
+The actual public clone URL remains a hosting prerequisite; a
 clearly labelled template and ZIP route are provided meanwhile. These are internal
 reviews by the maintainer or an AI agent, not external peer review.
 

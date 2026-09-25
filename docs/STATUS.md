@@ -64,12 +64,13 @@ These checks show that the tools work as specified; they are not physical accept
 
 | Area | Evidence | Not established |
 | --- | --- | --- |
-| Public starter | 44 public tests and eight copied-tree release checks pass on local Python 3.11/3.12/3.14; the unchanged reference matches archived native fields within 9.59e-16 (limit 5e-10) | Hosted CI, independent machines, full-surface or physical acceptance; public reports never set physical admission or Step 4 to true |
-| Historical research suite | 2,180 tests pass with 334 documented warnings at `32dc632`, in the native research environment | A hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
+| Public starter | 47 public tests and eight copied-tree release checks pass on local Python 3.11/3.12/3.14 at `0d9abcf`; displayed reference/candidate comparisons now use matching 512-node resolution; the unchanged 256-node native check retains its 5e-10 limit | Hosted CI, independent machines, full-surface or physical acceptance; public reports never set physical admission or Step 4 to true |
+| Historical research suite | 2,182 tests pass with 334 documented warnings at `0d9abcf`, in the native research environment | A hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
 | Publication inventory | About 325 MB of tracked content; 365 tracked files with home-path indicators; no matches for five credential/key patterns | A complete security, privacy or rights review; no history was sanitized or published |
 
 Details: [release evidence](validation/PUBLIC_RELEASE_RESULTS.md),
 [review fixes](validation/PUBLIC_REVIEW_FIXES.md),
+[README review resolution](review/ROOT_README_RESOLUTION.md),
 [what public scores mean](validation/PUBLIC_QUICKSTART.md#what-the-report-means),
 [publication inventory](validation/PUBLICATION_INVENTORY.md),
 [netCDF4 warning](validation/NETCDF_IMPORT_WARNING.md).

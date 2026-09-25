@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "kind": "readme-review-local-qualification",
+  "date": "2026-09-25",
+  "implementation_commit": "0d9abcf95db1c89cc13b887ae98708cd7ec5611b",
+  "implemented_recommendations": [
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "pending_recommendations": {
+    "2": "Real public clone URL unavailable; clearly labelled template and ZIP instructions provided. No remote configured."
+  },
+  "sources": [
+    {
+      "path": "fusion.py",
+      "sha256": "16b32f5146ddee0ad4c1834aaae8fc121685acee3bc4def03936481be7761d8c",
+      "bytes": 1808
+    },
+    {
+      "path": "src/fusion_public/cli.py",
+      "sha256": "1b30c9b086673061082e12a339e72320d20cd3c9d55c47a826f2473d6a192733",
+      "bytes": 5420
+    },
+    {
+      "path": "src/fusion_public/usability.py",
+      "sha256": "79fb3e29d5800f74b2e2a559ef27b55af4332a390238e75a18424f86d827210d",
+      "bytes": 3757
+    },
+    {
+      "path": "public_tests/test_usability.py",
+      "sha256": "16c82585da5606784c47f77eb057b3cd9dfbf704dffd578c63368d9953b037da",
+      "bytes": 7427
+    },
+    {
+      "path": "tests/test_readme_workflow.py",
+      "sha256": "ecdb1cb4c3b6e96fb6f7680493c61a591bf5e480dcd417c0f88fa1ce0411aa57",
+      "bytes": 2844
+    },
+    {
+      "path": "scripts/verify_public_release.py",
+      "sha256": "0233288cfbaf80ec48bd25e10c47da523e6110f9310047215fa7927b9c87106b",
+      "bytes": 5646
+    },
+    {
+      "path": "scripts/test_public.py",
+      "sha256": "ced85fbfe9aaeafa732789b4acfab937615dc1ba49bde46ac77b039fb1c9eab2",
+      "bytes": 447
+    },
+    {
+      "path": "public_tests/test_portable.py",
+      "sha256": "e5a73f9f3b9c4b6e76b5f3ced524581977e8b1b26d2b59bfc179cbef9f335c39",
+      "bytes": 14034
+    },
+    {
+      "path": "src/fusion_public/__init__.py",
+      "sha256": "1696997fcc914653281c0a32b437d4ae499e5bc19cf5d5f27f0e3f75de10bbf8",
+      "bytes": 71
+    },
+    {
+      "path": "src/fusion_public/data.py",
+      "sha256": "c9491881b0e0ebe9a2676b100542233da2261a8440b5781feb367f936e981e93",
+      "bytes": 6758
+    },
+    {
+      "path": "src/fusion_public/field.py",
+      "sha256": "2f7623d92bf33fffa3c79e53118928a67cde60c67a37de54da90dd06279ba690",
+      "bytes": 4383
+    },
+    {
+      "path": "src/fusion_public/report.py",
+      "sha256": "b27b310c5bebb6dd3ded09b3dc0dc7c5d95cc56146376b0b121ea6deb07b0b00",
+      "bytes": 4798
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/readme-review-v1/workflow-tests.xml",
+      "sha256": "a2f7599bcb78afc46d689235999f4013f7b9228861945c2cd37826a658f8f440",
+      "bytes": 9661
+    },
+    {
+      "path": "artifacts/readme-review-v1/public-doc-tests.xml",
+      "sha256": "5ac605cb0c7dc3baf3e6ce86e170cfd209d44cd352792972e5b13d65f42861bd",
+      "bytes": 2311
+    },
+    {
+      "path": "artifacts/readme-review-v1/full-regression.xml",
+      "sha256": "d840a8d8528198f08b0462072d9708205ac88d7a56e27ce221a86d5615d45e3c",
+      "bytes": 298619
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/00-public-unit-tests.json",
+      "sha256": "cd7385ff5ef8d5b25e6d959def5d1089bf1727cbed481aef205359b1d20419cd",
+      "bytes": 6291
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/01-discovery.json",
+      "sha256": "694a9183929eb4a914919b0d8ce0091afae05b0f8e055ae0d9090d9d6e94c389",
+      "bytes": 665
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/02-reference-demo.json",
+      "sha256": "b268ad4dabde3a7c6ed86d335a01e20fa8918add6e94be037d4e4a1af47b57e2",
+      "bytes": 1397
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/03-changed-candidate.json",
+      "sha256": "608e09a303075287cb8ddd30b8ef018ebfb6026515de684576bd6ff0cc592541",
+      "bytes": 1736
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/04-changed-replay.json",
+      "sha256": "d89b6769eac84b1b1daf182cb76d37efa5f3a1058ae018ccf18af5400de3fee4",
+      "bytes": 838
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/05-reject-false-admission.json",
+      "sha256": "73d27fd72fec60f4ffac209109854ba7fb3c80f2be581f5dc037ccf770e1b723",
+      "bytes": 378
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/06-optional-cost.json",
+      "sha256": "a2d9e918cc606edbf1f2eb931dfcf68a565406c3c95e6893a51043667d058e63",
+      "bytes": 454
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/07-reject-overwrite.json",
+      "sha256": "5165199c73251d07fed43eb3837c634de93f4f9f6e7def17f49aefcbfc7c2d53",
+      "bytes": 328
+    },
+    {
+      "path": "artifacts/readme-review-v1/python311/qualification.json",
+      "sha256": "c16edddff06d4f25ef3a9340e99338694a7a756e4e491cafa5963d1e78ad4095",
+      "bytes": 15741
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/00-public-unit-tests.json",
+      "sha256": "37bca4e3358c879480c0be671a76f3f1bf3a473a388fa0f3278eedf32e200768",
+      "bytes": 6290
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/01-discovery.json",
+      "sha256": "6b832613e0ce81cb25b3556dbd09cb91b22669eb133586a51a6a91b1140690a3",
+      "bytes": 665
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/02-reference-demo.json",
+      "sha256": "83b2d696661a95ce32f411732a21b3001711c18b0f848d317e5e45a941ee122a",
+      "bytes": 1397
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/03-changed-candidate.json",
+      "sha256": "e7d28bbcac53cefbd09defa797b28c09591174565ddf1757e4d5c964ed2b2246",
+      "bytes": 1736
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/04-changed-replay.json",
+      "sha256": "6da3cb048562ba428f80fa21694b69d53b812dfeb78fc238b1e489f01b1efeb6",
+      "bytes": 838
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/05-reject-false-admission.json",
+      "sha256": "c02844730aefb4223fbc3743cb384e7ea9cd8fbe260f6488d4618e414635dd81",
+      "bytes": 379
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/06-optional-cost.json",
+      "sha256": "7435adb206bedbbd66a7a56b69782abe75f38edae4ffeb72cf556793dd5a650e",
+      "bytes": 454
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/07-reject-overwrite.json",
+      "sha256": "5491b8cffbc8ac8cc3004e871bf1a50ef7e6136f7cf142563eff5904475e4791",
+      "bytes": 327
+    },
+    {
+      "path": "artifacts/readme-review-v1/python312/qualification.json",
+      "sha256": "6ba34200d5790001b7e09f3b7e9e2aeaaec0d8f2765c78bc1fcaa0542212de8b",
+      "bytes": 15740
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/00-public-unit-tests.json",
+      "sha256": "5e025bd9bdab843b980102c0ef4beb75125123cb9aef5af351cee0f69beeff4a",
+      "bytes": 6290
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/01-discovery.json",
+      "sha256": "ff14102d52a55f4c99a9a2d1182bf1eda4bccdca25fa206d0d0f136129b2ee74",
+      "bytes": 664
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/02-reference-demo.json",
+      "sha256": "574eb328cff30da774040d4e949c7053c61dbef6e7080b71b82748d6d283337a",
+      "bytes": 1397
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/03-changed-candidate.json",
+      "sha256": "c9b79953f12d641ab8eb5c177ad9b4981803f59944c855f93baf444dbef95565",
+      "bytes": 1735
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/04-changed-replay.json",
+      "sha256": "f2dc524e1d817cecb21ea83f27adbd825af2bf67ec7f7663225d22def01bd517",
+      "bytes": 838
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/05-reject-false-admission.json",
+      "sha256": "206bf900851060f6d27c48ba994935490084b1be93239688b728c1ff15f7f77e",
+      "bytes": 379
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/06-optional-cost.json",
+      "sha256": "2db4460ef4026ee915ed12321c160dc2ed0c0b33cfa7159871edf900b820848a",
+      "bytes": 455
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/07-reject-overwrite.json",
+      "sha256": "ab56f3736b12ca763e12221ba1cd24c1fefb46e061b2d71ddf76662880b4732c",
+      "bytes": 328
+    },
+    {
+      "path": "artifacts/readme-review-v1/python314/qualification.json",
+      "sha256": "722d880eba210cddf1282f7315d14abd1a3e752d89711f9bfff35df1429cd1bc",
+      "bytes": 15740
+    }
+  ],
+  "artifact_availability": "Local ignored artifacts retained; not a portable physical-evidence packet.",
+  "portable_runs": [
+    {
+      "python": "python311",
+      "checks": 8,
+      "public_tests": 47,
+      "all_copied_files_match_commit": true,
+      "copied_files": 16,
+      "zero_seed_change": true,
+      "demo_seconds": 4.075575749971904,
+      "evaluation_seconds": 2.7504587920266204
+    },
+    {
+      "python": "python312",
+      "checks": 8,
+      "public_tests": 47,
+      "all_copied_files_match_commit": true,
+      "copied_files": 16,
+      "zero_seed_change": true,
+      "demo_seconds": 3.835995791014284,
+      "evaluation_seconds": 2.5808783330139704
+    },
+    {
+      "python": "python314",
+      "checks": 8,
+      "public_tests": 47,
+      "all_copied_files_match_commit": true,
+      "copied_files": 16,
+      "zero_seed_change": true,
+      "demo_seconds": 4.081992875027936,
+      "evaluation_seconds": 2.615497166989371
+    }
+  ],
+  "junit_summaries": {
+    "workflow-tests.xml": {
+      "errors": "0",
+      "failures": "2",
+      "skipped": "0",
+      "tests": "36",
+      "time": "18.871"
+    },
+    "public-doc-tests.xml": {
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "16",
+      "time": "14.937"
+    },
+    "full-regression.xml": {
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "2182",
+      "time": "244.372"
+    }
+  },
+  "full_regression": {
+    "passed": 2182,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "warnings_from_console": 334,
+    "console_seconds": 244.42,
+    "threads": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1"
+    }
+  },
+  "resource_history": "Initial 1.1 GiB, then about 2.83 GiB and two retained foundation guard failures. Subsequently 55 GiB became available without cleanup by this session; full regression passed with original guards unchanged.",
+  "unrelated_readme_edits_observed_during_validation": true,
+  "workspace_readme_at_record": {
+    "path": "README.md",
+    "sha256": "21d7775db920251dd001e7057a9c8724f64aab803a395fd8ebe01907906e1a6d",
+    "bytes": 11508
+  },
+  "unchanged_evaluator_and_case_bytes": true,
+  "hosted_ci_verified": false,
+  "windows_linux_execution_verified": false,
+  "new_native_search_executed": false,
+  "physical_admission": false,
+  "step4_pass": false
+}

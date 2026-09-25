@@ -14,6 +14,7 @@ separate from portable CI. The September 9 audit withdrew earlier readiness clai
 
 ## Public entry and release
 
+- [README review resolution](../review/ROOT_README_RESOLUTION.md). Clear candidate-to-PR route, matched-resolution UI, Python loop and source-bound local verification of 26 recommendations; real clone URL remains a hosting prerequisite.
 - [Public review fixes](PUBLIC_REVIEW_FIXES.md). Eight-point release review resolution: CI scope, UTF-8, Python support, contributor-agent rules, score guidance, English navigation and consistent roadmap; exact operational preservation exceptions and validation record.
 - [Public quickstart](PUBLIC_QUICKSTART.md). Dependency-free reference/candidate/report commands, named coefficient editing, score interpretation and troubleshooting.
 - [Portable release verification](PUBLIC_RELEASE_RESULTS.md). Original source-bound qualification, retained JSON-depth/CI-preservation failures and eight successful local reference/candidate/replay checks; historical counts apply to that revision.

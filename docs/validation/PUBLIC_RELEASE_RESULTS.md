@@ -1,5 +1,11 @@
 # Portable public layer: verification record
 
+Latest local follow-up (25 September): [README review resolution](../review/ROOT_README_RESOLUTION.md).
+At `0d9abcf`, 47 public tests and eight copied-tree checks pass on local macOS
+Python 3.11/3.12/3.14; full research regression: 2,182 pass, 334 warnings. Hosted
+verification and a real clone URL remain separate. The original record below
+retains its own revisions, counts and failures unchanged.
+
 23 September 2026. The [release specification](PUBLIC_RELEASE.md) fixes the scope
 and numerical checks. This report records implementation outcomes separately.
 No new optimization or change to historical scientific acceptance is claimed.

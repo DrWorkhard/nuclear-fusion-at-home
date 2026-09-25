@@ -12,8 +12,7 @@ and scientific thresholds are unchanged. The original README working-copy edits
 are in scope because the review explicitly requests revising that wording/layout.
 The concurrent overview deduplication at `a1a23ea` is preserved.
 
-Initial local checks pass for the public layer and README workflow; committed-source
-copied-tree verification is next. Recommendation 2 has a clearly labelled clone template
+**26 recommendations are implemented and locally verified.** Recommendation 2 has a clearly labelled clone template
 and ZIP route, but the **real hosted clone URL remains unavailable**: no remote is
 configured. Publication/hosting cannot be asserted or enabled by editing prose.
 
@@ -63,13 +62,32 @@ lower that guard to relabel this selection as green.
 One CLI help line initially failed Ruff's length check; corrected. Repository Ruff,
 documentation structure and whitespace pass. The narrower documentation/workflow
 suite passes all 16 tests in 14.95 s. Original review, examples and all four hashed
-evaluator sources match `a1a23ea`. Committed-source real copied-tree qualification
-on all three locally installed supported Python versions remains before closing
-the implementable review items.
+evaluator sources match `a1a23ea`. Committed-source qualification follows below.
+
+### Committed-source closure
+
+Implementation `0d9abcf`: **47 public tests and all eight real copied-tree checks
+pass on each of Python 3.11.4, 3.12.13 and 3.14.3**, on macOS. All 16 files in each
+copy match that commit. The unchanged reference displays exactly zero change for
+both scores. Demo timings were 3.84–4.08 s and evaluations 2.58–2.75 s; these are
+indicative local observations, not controlled performance comparisons.
+
+After disk space rose to approximately 55 GiB without any cleanup by this session,
+the **full research regression passed: 2,182 tests, 334 existing warnings, zero
+failures/errors/skips, 244.42 s**. The original disk guards and earlier two failures
+remain intact. No package installation or environment sync was needed.
+
+The [qualification record](../../evidence/readme-review-v1.json) binds 12 code/test
+sources and 30 retained result/log artifacts, including all three copied-tree
+operation histories and both the failed and successful test selections.
+Unrelated new README edits appeared during validation; code/data stayed bound to
+the implementation commit and those user edits are left out of the closure commit.
+Final checks: all 42 source/artifact hashes and sizes match; all 12 source files
+match the implementation commit. After documentation updates, 14 documentation/
+release tests pass in 0.59 s; docs, Ruff and whitespace pass.
 
 Disk reserve at start was only about 1.1 GiB, later about 2.8 GiB without any cleanup
-by this session. No installation, large clone or full
-native regression is planned under this constraint. Step 4 native work needs the
-unchanged 3 GiB starting / 2 GiB running reserve; that work is not authorized to
-bypass its guard. This UI/documentation work does not complete Step 4 or qualify
+by this session; it subsequently rose to approximately 55 GiB, clearing the resource
+blocker before the successful full regression. Step 4 native work still needs the
+unchanged 3 GiB starting / 2 GiB running reserve. This UI/documentation work does not complete Step 4 or qualify
 a new physical design. No hosting, external contact, PR automation or merge enabled.

@@ -1,5 +1,24 @@
 # Findings log
 
+## F-096 — README contribution route and like-for-like score feedback verified
+
+**Class:** public usability/software qualification, not a new scientific design
+**Date:** 2026-09-25
+
+At `0d9abcf`, the 27-point README follow-up implements and locally verifies 26
+recommendations. The real clone URL remains unavailable; a labelled template and
+ZIP route are supplied without pretending hosting exists. Candidate PRs now have
+a Git-tracked `submissions/` path, a complete edit/evaluate/audit example and a
+callable Python loop. Tests execute those commands and stage the actual candidate.
+
+Displayed reference and candidate scores both use 512 nodes, making unchanged-seed
+deltas exactly zero. The four hashed evaluator sources, original native-reference
+comparison, case data and scientific limits remain unchanged. All 47 public tests
+and eight copied-tree checks pass on Python 3.11/3.12/3.14 on macOS. Full native
+regression: 2,182 pass, 334 warnings. Two earlier disk-guard failures are retained;
+space recovered externally before the successful rerun, with no guard modification.
+Step 4 remains unfinished. [Point-by-point record](../review/ROOT_README_RESOLUTION.md).
+
 ## F-095 — Protected-search controller passes its synthetic software gate
 
 **Class:** bounded software qualification, not a coil-design improvement
