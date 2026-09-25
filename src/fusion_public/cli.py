@@ -19,10 +19,16 @@ def parser():
     commands.add_parser("cases", help="List portable cases and their scientific limits")
     init = commands.add_parser("init", help="Write a candidate template to a new file")
     init.add_argument("--output", type=Path, required=True)
-    edit = commands.add_parser("set-coefficient", help="Change one named coefficient (metres)")
+    edit = commands.add_parser(
+        "set-coefficient", help="Set one named coefficient to an absolute value in metres",
+        description="Set an absolute Fourier coefficient, not an increment. "
+        'Example name: "coil[0]/xc(0)". Use double quotes in your shell.',
+    )
     edit.add_argument("--candidate", type=Path, required=True)
-    edit.add_argument("--name", required=True)
-    edit.add_argument("--value", type=float, required=True)
+    edit.add_argument("--name", required=True,
+                      help='Exact parameter_names entry, e.g. "coil[0]/xc(0)"')
+    edit.add_argument("--value", type=float, required=True,
+                      help="Absolute value in metres, not a delta")
     edit.add_argument("--output", type=Path, required=True, help="Fresh JSON file")
     demo = commands.add_parser("demo", help="Reproduce the starter and replay its report")
     demo.add_argument("--output", type=Path, required=True, help="Fresh directory")
@@ -53,9 +59,9 @@ def main(argv=None):
             print(json.dumps(dict(
                 schema_version=1, cases=[dict(
                     id=CASE_ID, data_sha256=digest, accepts_candidate=True,
-                    requirements="Python3.11+ standard library; no network or native solver",
+                    requirements="Python 3.11+ standard library; no network or native solver",
                     physical_admission=False,
-                    scope="64 boundary,64 inner,64 loop points; fixed-current filament B/A",
+                    scope="64 boundary, 64 inner, 64 loop points; fixed-current filament B/A",
                 )],
             ), indent=2))
             return 0

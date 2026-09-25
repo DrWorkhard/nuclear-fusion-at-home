@@ -21,7 +21,7 @@ def main():
     if len(sys.argv) == 1 or sys.argv[1:] in (["--help"], ["-h"]):
         print(
             "Nuclear Fusion @ Home\n\n"
-            "Public, portable starter (Python3.11+, no installation):\n"
+            "Public, portable starter (Python 3.11+, no installation):\n"
             "  python fusion.py public --help\n"
             "  python fusion.py public demo --output results/my-first-demo\n\n"
             "Historical research workflows (native environment/local artifacts required):\n"

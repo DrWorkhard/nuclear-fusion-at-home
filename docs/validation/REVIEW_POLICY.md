@@ -87,6 +87,10 @@ tracked evidence, but does not clear security, privacy, rights or later revision
 - Review intended public contents **and Git history** for secrets/personal material,
   oversized artifacts and rights/attribution. The small starter does not certify
   every historical file as publication-ready.
+- Set the real public clone URL in the root README once hosting exists; replace
+  the clearly labelled clone template. Verify it in a fresh checkout. Remove
+  obsolete launch-only statements, and update dated verification coverage from
+  actual hosted/machine results rather than assuming a push proves them.
 - Configure named maintainers/CODEOWNERS, required review/checks and branch/ruleset
   protection. Repository owner is not yet supplied; no fictitious handles installed.
 - Verify the configured Linux/macOS/Windows jobs, and obtain an independent fresh-

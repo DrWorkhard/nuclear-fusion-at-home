@@ -13,6 +13,7 @@ from pathlib import Path
 from unittest.mock import patch
 
 from fusion_public.data import ROOT, load_case, parameter_names, save_new
+from fusion_public.report import evaluate
 from fusion_public.usability import score_comparison, set_coefficient, validate_for_cli
 
 
@@ -76,6 +77,38 @@ class UsabilityTests(unittest.TestCase):
         self.assertLess(normal["change"], 0)
         self.assertGreater(inner["change"], 0)
         self.assertIn("not a public pass/fail", result["interpretation"])
+        self.assertIn("Reference and candidate", result["reference_scope"])
+        self.assertIn("512 nodes", result["reference_scope"])
+
+    def test_unchanged_reference_has_exactly_zero_matched_resolution_change(self):
+        case, digest = load_case()
+        report = evaluate(case["seed"], case, digest)
+        before = copy.deepcopy(report)
+        comparison = score_comparison(report, case)
+        for score in comparison["scores"].values():
+            self.assertEqual(score["reference"], score["candidate"])
+            self.assertEqual(score["change"], 0.0)
+            self.assertEqual(score["change_percent"], 0.0)
+        self.assertEqual(report, before)
+        self.assertTrue(report["seed_native_reference"]["passed"])
+        self.assertFalse(report["scope"]["physical_admission"])
+
+    def test_help_explains_absolute_metres_and_quoted_name(self):
+        result = subprocess.run([sys.executable, "-I", "-S", str(ROOT / "fusion.py"),
+                                 "public", "set-coefficient", "--help"],
+                                capture_output=True, text=True, check=True)
+        self.assertIn('"coil[0]/xc(0)"', result.stdout)
+        self.assertIn("Absolute value in metres, not a delta", result.stdout)
+        self.assertIn("double quotes", result.stdout)
+
+    def test_discovery_and_root_help_have_readable_spacing(self):
+        for args in (("--help",), ("public", "cases")):
+            result = subprocess.run([sys.executable, "-I", "-S", str(ROOT / "fusion.py"),
+                                     *args], capture_output=True, text=True, check=True)
+            self.assertIn("Python 3.11+", result.stdout)
+            self.assertNotIn("Python3", result.stdout)
+            self.assertNotIn("boundary,64", result.stdout)
+        self.assertIn("64 boundary, 64 inner, 64 loop", result.stdout)
 
     def test_cli_set_by_name_and_existing_output_protection(self):
         with tempfile.TemporaryDirectory() as directory:

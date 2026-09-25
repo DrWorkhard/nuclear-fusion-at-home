@@ -3,7 +3,7 @@
 from copy import deepcopy
 
 from .data import number, parameter_names, validate_candidate
-from .field import metrics
+from .field import field, metrics, physical_curves
 
 
 def validate_for_cli(candidate):
@@ -45,11 +45,20 @@ def set_coefficient(candidate, name, value):
     return validate_for_cli(result)
 
 
+def reference_metrics(case):
+    """Score the reference with the same 512-node public arithmetic as candidates.
+
+    This is a small public field calculation, not an independent native check.
+    Search callers may compute it once; no mutable global case cache is retained.
+    """
+    coils = physical_curves(case["seed"], case, 512)
+    return metrics({name: field(group["points_m"], coils)
+                    for name, group in case["groups"].items()}, case)
+
+
 def score_comparison(report, case):
-    """Compare public scores to bundled native reference fields, without a new solve."""
-    reference = metrics({
-        name: {"B_T": group["native_B_T"]} for name, group in case["groups"].items()
-    }, case)
+    """Like-for-like UI comparison; saved reports/native-reference checks are unchanged."""
+    reference = reference_metrics(case)
     candidate = report["levels"][1]["metrics"]
     scores = {}
     for name in ("sampled_normal_rms", "sampled_inner_vector_rms"):
@@ -59,7 +68,7 @@ def score_comparison(report, case):
     return dict(
         scores=scores,
         direction="Lower is better for both; negative change is improvement. Report trade-offs.",
-        reference_scope="Bundled seed/native fields at 256 nodes; candidate at 512 nodes.",
+        reference_scope="Reference and candidate use the public evaluator at 512 nodes.",
         research_limits=dict(full_grid_normal_rms=1e-4, full_grid_inner_vector_rms=0.01),
         interpretation="Research limits belong to a different full-grid, flux-normalized "
         "profile, not a public pass/fail test. Tiny changes may be numerical noise. "

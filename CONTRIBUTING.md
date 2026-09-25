@@ -65,6 +65,14 @@ for necessary artifacts. A tiny derived fixture can be committed with clear
 provenance/license and a size justification. Do not reformat historical evidence
 or rewrite its old absolute paths. New portable exports have their own identity.
 
+For a public candidate PR, use `submissions/<unique-study-name>/candidate.json`
+and a short `README.md` beside it. Commit the candidate (about 10 KB), your exact
+reference/evaluator revision, reproduction commands, both scores and limitations.
+Keep generated reports/audits in ignored `results/`; put the audit outcome in the
+summary rather than force-adding the larger report. See the
+[submission layout and git add example](submissions/README.md). Other kinds of
+contribution need not use the candidate folder or this format.
+
 ## Review, credit and conduct
 
 Keep PR documentation local to your change: usage text, a focused report, or the

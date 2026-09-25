@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-25 — Implement the 27-point root README review
+
+- Read the review, current instructions, entry docs and research status. Only
+  editor services are running. Preserve the concurrent overview deduplication at
+  `a1a23ea`; the root README working copy is explicitly in scope of this review.
+- Implement reader-facing goals/glossary, explicit candidate edit/evaluate/audit
+  commands, tracked submissions layout, callable Python loop, version/help/spacing
+  fixes and same-512-node displayed comparisons. Keep all four hashed evaluator
+  files, data and scientific limits unchanged. Original review remains immutable;
+  a new indexed resolution maps every recommendation.
+- No Git remote exists: supply a labelled clone template/ZIP route and leave the
+  real URL as an explicit launch prerequisite, not a fabricated completed item.
+- Public tests: 47 pass on Python 3.11.4 in 3.992 s. Expanded selection: 34 pass /
+  two failures in 18.89 s, both existing foundation disk guards. New exact README
+  command/Git-staging and Python-loop tests pass. Preserve failed JUnit; no changed
+  guard or green full-regression claim. One overlong help line corrected; Ruff/docs pass.
+- Disk available fluctuates from 1.1 to about 2.8 GiB, below the native 3 GiB
+  starting reserve; no cleanup, native study, installation or large clone attempted.
+  Committed-source public qualification is next. Step 4 remains unfinished.
+- Narrow public/documentation selection: 16 pass in 14.95 s; repository Ruff,
+  docs and whitespace pass. The original review, examples and all four hashed
+  evaluator files are byte-unchanged from `a1a23ea`; reviewed the scoped diff.
+
 ## 2026-09-25 — Remove repetition between the overview documents
 
 - Maintainer confirmed that `docs/README.md` repeated the root README and asked to

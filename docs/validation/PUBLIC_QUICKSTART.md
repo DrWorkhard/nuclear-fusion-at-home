@@ -3,15 +3,17 @@
 For people and coding agents. Python 3.11+ and a checkout or source ZIP are enough
 for this starter. No package installation, account, API key, GPU, native compiler,
 network access during evaluation, or historical local artifacts are needed.
-Check `python --version` first. Use `python3.11` or `python3.12` on macOS/Linux
-if necessary; the macOS system `python3` may be too old. On Windows substitute
-`py -3.12` for `python`. The launcher explains unsupported versions before import.
+Check `python --version` first. On macOS/Linux, `python3` works if it is 3.11 or
+newer; some system Pythons are older. On Windows try `py -3` and check its version,
+or select an installed version such as `py -3.12`. The launcher rejects old versions
+before import. No additional download is needed after obtaining the repository.
 The separate historical native workflow still requires Python 3.12+.
 
-Current local verification: **44 public tests and eight copied-tree release checks
+Previous local verification (24 September, macOS): **44 public tests and eight copied-tree release checks
 pass on each of Python 3.11.4, 3.12.13 and 3.14.3**, including the real reference,
 changed candidate and tamper rejection. The fresh dev-only core runner also passes.
-See the [original verification](PUBLIC_RELEASE_RESULTS.md) and
+For subsequent changes and current counts, see the [original verification](PUBLIC_RELEASE_RESULTS.md),
+[README-review follow-up](../review/ROOT_README_RESOLUTION.md) and
 [current review fixes and tests](PUBLIC_REVIEW_FIXES.md). Hosted CI and independent
 hardware reproduction have not yet been verified.
 
@@ -40,18 +42,21 @@ keep the partial directory for diagnosis and choose a fresh path, not a silent r
 ## Evaluate your own candidate
 
 ```bash
-python fusion.py public init --output results/my-candidate.json
+python fusion.py public init --output results/my-reference.json
 ```
 
 Edit `base_coefficients` in that JSON file, or use the named helper:
 
 ```bash
-python fusion.py public set-coefficient --candidate results/my-candidate.json --name 'coil[0]/xc(0)' --value 1.2 --output results/changed-candidate.json
+python fusion.py public set-coefficient --candidate results/my-reference.json --name "coil[0]/xc(0)" --value 0.9609191138350243 --output submissions/my-coil-study/candidate.json
 ```
 
 This sets an **absolute value in metres**, not an increment. The value above is
-an editing example, not an optimized or safe coil change. Evaluate the resulting
-`results/changed-candidate.json` to check it. Existing output files are protected.
+an editing example, not an optimized or safe coil change: +0.1 mm from the reference's
+0.9608191138350243 m coefficient. Start exploratory perturbations around 0.01–0.1 mm
+(`1e-5`–`1e-4` m), comparing both scores; there is no universally safe step size.
+Double-quote names in bash/zsh, cmd.exe and PowerShell. Evaluate the resulting
+`submissions/my-coil-study/candidate.json`. Existing outputs are protected.
 
 For direct JSON edits, the exact zero-based mapping is:
 
@@ -67,13 +72,56 @@ shape and case ID. The format stores six Cartesian Fourier curves and preserves
 the case's fixed symmetry and signed currents. Then:
 
 ```bash
-python fusion.py public evaluate --candidate results/my-candidate.json --output results/my-report.json
+python fusion.py public evaluate --candidate submissions/my-coil-study/candidate.json --output results/my-report.json
 python fusion.py public audit --report results/my-report.json --output results/my-audit.json
 ```
 
-No result is automatically submitted or merged. For a PR, follow
+The audit is optional but recommended: it re-evaluates the saved candidate and
+compares the report within its recorded numerical tolerance, using the same code.
+It is not independent physical validation. Include the outcome in your PR. A demo
+or evaluation takes a few seconds on the review Mac; this is indicative, not a
+runtime limit or a cross-machine speed claim.
+
+Commit the small candidate and a nearby summary in the tracked
+[submissions directory](../../submissions/README.md), not the larger generated
+report/audit under ignored `results/`. No result is automatically submitted or merged.
+For a PR, follow
 [CONTRIBUTING](../../CONTRIBUTING.md). Work outside this first candidate format
 is also welcome; explain its value and proposed verification separately.
+
+### Calling the evaluator in a Python loop
+
+Run this from the repository root, or save it as a script there. It uses the same
+public functions as the CLI, without a subprocess or package installation. This
+three-point exploration is a tutorial, not a registered improvement study or a
+recommendation to select on one metric alone. Each call costs roughly seconds;
+larger searches should preserve their candidates, settings and failed trials.
+
+```python
+import sys
+sys.path.insert(0, "src")
+from fusion_public.data import load_case
+from fusion_public.report import evaluate
+from fusion_public.usability import set_coefficient
+
+case, digest = load_case()
+seed = case["seed"]
+reference = evaluate(seed, case, digest)["levels"][1]["metrics"]
+origin = seed["base_coefficients"][0][0][0]
+names = ("sampled_normal_rms", "sampled_inner_vector_rms")
+for delta in (-1e-4, 0.0, 1e-4):
+    candidate = set_coefficient(seed, "coil[0]/xc(0)", origin + delta)
+    report = evaluate(candidate, case, digest)
+    scores = report["levels"][1]["metrics"]
+    print({"delta_m": delta, "scores": {k: scores[k] for k in names},
+           "changes": {k: scores[k] - reference[k] for k in names}})
+```
+
+`evaluate` returns a fresh report dictionary; `set_coefficient` leaves the seed
+unchanged. To retain a chosen candidate, use `fusion_public.data.save_new(path,
+candidate)`, then evaluate/audit it as above. `fusion_public.report.audit(report)`
+provides the same replay check in-process. Do not change the data or evaluator
+inside a candidate search.
 
 ## What the report means
 
@@ -81,8 +129,14 @@ Aim to **lower both** `sampled_normal_rms` (reference **0.3042070281**) and
 `sampled_inner_vector_rms` (reference **0.3804347184**). `demo` and `evaluate`
 print both reference/candidate values and signed absolute/percentage changes:
 negative means lower; report any trade-off rather than hiding a worsened metric.
-Reference scores are calculated from the bundled native 256-node fields;
-candidate scores use 512 nodes. Roundoff-level differences are not improvements.
+Reference and candidate comparisons now both use the public evaluator at **512
+nodes**, so an unchanged reference gives exactly zero change in the same process.
+The separate saved-native comparison remains at 256 nodes and is unchanged.
+The previous mixed-resolution UI could show about `5.6e-17` for an unchanged seed;
+this was rounding/resolution arithmetic, not improvement. Matched resolution removes
+that artifact, not all numerical uncertainty: inspect `resolution_differences` and
+verify gains on finer/unseen spatial samples. There is no universal significance
+threshold that turns a sampled-score change into a physical gain.
 Cross-version reproduction can differ at rounding level: Python 3.11's reference
 report has two 256-node metrics differing by less than 1.12e-16 from Python 3.12,
 with identical B/A arrays. Existing replay tolerances cover this; report hashes

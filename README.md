@@ -2,46 +2,70 @@
 
 Open stellarator research — contributed by people and their agents.
 
-Our end goal (**MSX**) is to **contribute to nuclear fusion for humanity by finding
-the best reactor design current technology can achieve**. We work on stellarators:
+Our end goal is to **contribute to nuclear fusion for humanity by finding the
+best reactor design current technology can achieve**. We work on stellarators:
 fusion devices whose shaped external coils create a twisted magnetic field to
 confine hot plasma. This is computational research, not a home reactor-building project.
 
-“Best” means balancing performance, buildability, robustness, safety and practical
-cost. We want improvements that others can reproduce and challenge.
+By “best” we mean a design that balances performance, buildability, robustness,
+safety and practical cost — not just the top score on one metric. We want
+improvements that others can reproduce and challenge.
 
-**Research preview · 24 September 2026.** Our tools reproduce selected open
-references, and one plasma-target study improved its chosen metric by **11.17%**.
-The current challenge is turning targets into good coils: their full-grid normal
-field error is **about 0.27 against a 0.0001 limit**. A feasible new coil design and
-a state-of-the-art advance remain ahead of us. We are independent of Proxima Fusion
-and the Max Planck Institute.
+**Research preview · 25 September 2026.** Our tools reproduce selected open
+references. One plasma-target study improved its preregistered metric
+(bounce-action variance, a particle-motion diagnostic) by **11.17%**.
+Our current starting coil sets have a full-grid normal field error of
+**about 0.27; the acceptance limit is 1e-4**. A feasible new coil design and
+a state-of-the-art advance remain ahead of us. We are independent of, and not
+endorsed by, Proxima Fusion or the Max Planck Institute.
+
+## A few terms
+
+- **Reference (seed):** the saved starting design used for comparison.
+- **RMS:** root-mean-square error; a measure of typical mismatch.
+- **Filament:** a coil model represented by a thin current-carrying curve.
+- **Native research tools:** the larger workflow with compiled scientific libraries;
+  the public starter below uses only Python's standard library.
+- **Full-grid / flux-normalized:** the research calculation uses dense spatial
+  grids and adjusts current to match a specified magnetic flux. The starter uses
+  sparse samples and holds current fixed; these are different checks.
 
 ## Project plan and progress
 
-These names and statuses are shared with the [scientific overview](docs/README.md)
-and [detailed roadmap](docs/PROJECT_PLAN.md). “Complete” applies to the stated study,
-not to an entire reactor.
+We move from reproducible calculations to improved plasma and coil designs, then
+to fair comparisons and expert scrutiny. “Complete” means the stated scope passed
+on the maintainer's machine, not that a reactor or universal toolchain is complete.
+[Scientific overview](docs/README.md) · [Detailed roadmap](docs/PROJECT_PLAN.md)
 
-| Step / milestone | Purpose and progress | Status |
+| Step / milestone | Goal | Status |
 | --- | --- | --- |
-| **1. Establish a reliable foundation** | Reproduce selected W7-X/Goodman checks and reference coil calculations. | **Complete (local reference tools)** |
-| **2. Make design iteration reproducible** | Change or optimize a design, save it, evaluate it separately and repeat. | **Complete (iteration workflow)** |
-| **3. Improve our own plasma target** | One vacuum study achieved 11.17% lower relative bounce-action variance, a particle-motion diagnostic. | **Complete (vacuum study)** |
-| **4. Develop plasma and coils together** | Starting coils pass geometry checks; their magnetic errors still exceed limits. Next: improve fields, preserve plasma benefits, test pressure and robustness. | **In progress** |
+| **1. Establish a reliable foundation** | Reproduce selected checks for W7-X (the Wendelstein 7-X experiment), Goodman et al.'s open quasi-isodynamic (QI) dataset, and reference coil calculations. | **Complete (local reference tools)** |
+| **2. Make design iteration reproducible** | Change a design, save it, evaluate it separately and repeat. | **Complete (iteration workflow)** |
+| **3. Improve our own plasma target** | Reduce the preregistered particle-motion diagnostic by changing the vacuum plasma target. | **Complete (vacuum study)** |
+| **4. Develop plasma and coils together** | Find coils that realize the plasma benefit, then demonstrate coupled improvement, pressure/confinement validity and finite-coil robustness. | **In progress** |
 | **5. Demonstrate a meaningful design advantage** | Compare feasible designs fairly with leading references and independently verify the benefit. | **Not achieved** |
 | **MS1. Contact Proxima Fusion with strong evidence** | Contact Proxima as soon as strong, reproducible, independently checked evidence shows our design is better than the design they are pursuing. | **Not reached** |
 | **MSX. Our end goal** | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve. | **Long-term goal** |
 
 MS1 requires a relevant, versioned Proxima reference, matched conditions and
-explicit uncertainty and trade-offs. Improving our own seed or a sparse score
+explicit uncertainty and trade-offs. Improving our reference or a sparse score
 alone cannot establish that advantage. [MS1 evidence framework](docs/squid_c/MS1_PROXIMA_COMPARISON.md).
-MSX extends beyond MS1 through expert scrutiny and practical follow-on work;
-“best” is an ambition, not a proven global optimum.
+MSX names our final milestone: expert scrutiny and practical follow-on work extend
+beyond MS1; “best” is an ambition, not a proven global optimum.
 
 ## Start in three commands
 
-From a checkout or source ZIP, with **Python 3.11+**:
+First get a checkout or source ZIP and open its directory. On a hosted repository,
+use its **Code → HTTPS** clone URL or **Download ZIP**. Replace the placeholder
+below with that actual URL before running it; if hosting is unavailable, obtain
+a checkout/source ZIP from the maintainer:
+
+```bash
+git clone <repository-url> fusion
+cd fusion
+```
+
+With **Python 3.11+**, run:
 
 ```bash
 python fusion.py public cases
@@ -49,80 +73,103 @@ python fusion.py public demo --output results/my-first-demo
 python scripts/test_public.py
 ```
 
-Check `python --version`. On macOS/Linux use `python3.11` or `python3.12` if
-`python` is missing or too old; the macOS system `python3` may be 3.9.
-On Windows use `py -3.12` instead of `python`. The historical native workflow
-requires Python 3.12+ and additional dependencies; the public starter needs
-**no installation, API key, GPU, compiler or download**.
+Check `python --version`. On macOS/Linux, `python3` is also fine **if it is 3.11
+or newer**; some system Pythons are older. On Windows, try `py -3` and check its
+version, or select an installed supported version, such as `py -3.12`.
+The public starter needs **no package installation, API key, GPU, compiler or
+additional download** after obtaining the repository. The native research workflow
+requires Python 3.12+ and additional dependencies.
 
-The demo calculates real filament-coil fields, compares the seed with saved native
-calculations and replays its report. Use a fresh output name on each run.
+Expected: the demo prints `"reference_reproduced": true` and
+`"physical_admission": false`; the test run ends in `OK`. A demo/evaluation
+takes a few seconds on the review Mac; timing varies by machine. The demo
+compares the unchanged reference with saved native fields and replays its report.
+Use a fresh output name on each run.
 [Full quickstart](docs/validation/PUBLIC_QUICKSTART.md) ·
 [Data and attribution](examples/clear-coil-samples-v1/README.md)
 
 ## What should I try?
 
-Try a small coil-shape change that lowers the two sampled errors:
+The starter lets you explore **Step 4's current bottleneck: coil shapes whose
+field matches the target**. Try a small coefficient change, initially around
+0.01–0.1 mm (`1e-5`–`1e-4` metres), and compare both errors. That is a starting
+scale for exploration, not a guarantee of improvement or safe geometry.
 
 | Public metric (dimensionless; lower is better) | Reference score |
 | --- | --- |
 | `sampled_normal_rms` — field leaking across the target boundary | **0.304207** |
 | `sampled_inner_vector_rms` — mismatch with the target field inside | **0.380435** |
 
-`demo` and `evaluate` print reference and candidate scores, absolute change and
-percentage change. Negative change is improvement; report both metrics and any
-trade-off. Very small changes can be numerical noise.
+`demo` and `evaluate` compare reference and candidate at the same 512-node coil
+resolution and print signed/percentage changes. An unchanged reference gives zero
+change; negative is better. Report both metrics and any trade-off. Tiny changes
+still need resolution and wider-sample checks, not just more printed digits.
 
-**Exploratory PRs with lower sampled scores are welcome.** Include the candidate,
-reference/reproduction commands and limitations. Counterexamples, negative results,
-better tests and alternative approaches are equally useful.
+The same reference coils score about **0.27 in the full research check** and
+**0.304 on the public samples**. The research limits, **1e-4 normal RMS and
+0.01 inner-vector RMS**, apply to the different full-grid, flux-normalized workflow.
+The sparse scores are feedback, not that acceptance test.
+[Score interpretation](docs/validation/PUBLIC_QUICKSTART.md#what-the-report-means).
 
-The research limits are **1e-4 normal RMS and 0.01 inner-vector RMS**, measured by
-a *different full-grid, flux-normalized workflow*. The sparse public scores above
-are search feedback, not that acceptance test. Good samples can hide poor geometry
-or field quality elsewhere; a promising candidate needs wider checks before any
-physical-design claim. [Score interpretation](docs/validation/PUBLIC_QUICKSTART.md#what-the-report-means).
+This example changes `coil[0]/xc(0)` from about 0.960819 m by +0.1 mm.
+It demonstrates editing, not a known improvement:
 
 ```bash
-python fusion.py public init --output results/my-candidate.json
-# Change coefficients, then:
-python fusion.py public evaluate --candidate results/my-candidate.json --output results/my-report.json
+python fusion.py public init --output results/my-reference.json
+python fusion.py public set-coefficient --candidate results/my-reference.json --name "coil[0]/xc(0)" --value 0.9609191138350243 --output submissions/my-coil-study/candidate.json
+python fusion.py public evaluate --candidate submissions/my-coil-study/candidate.json --output results/my-report.json
 python fusion.py public audit --report results/my-report.json --output results/my-audit.json
 ```
 
-Use `public set-coefficient --help` to edit by name without indexing arrays.
-For direct edits, `parameter_names[33*i + 11*axis + k]` labels
-`base_coefficients[i][axis][k]`: coil `i=0..5`, axis `0=x,1=y,2=z`,
-component `k=0..10`, in metres.
-[Named-edit example and Fourier ordering](docs/validation/PUBLIC_QUICKSTART.md#evaluate-your-own-candidate).
+`--value` is **absolute, in metres**, not a delta. Double-quote the name for
+bash, zsh, Windows cmd.exe and PowerShell. See
+`python fusion.py public set-coefficient --help`. The last command is optional
+but recommended: `audit` recomputes the report with the same evaluator and checks
+agreement within its numerical tolerance. Include that outcome in your PR;
+it is not independent physical validation.
+
+For direct array edits, the name-to-index mapping and a callable Python search-loop
+example are in the [quickstart](docs/validation/PUBLIC_QUICKSTART.md#evaluate-your-own-candidate).
+An evaluation takes a few seconds; budget longer loops accordingly.
 
 ## Contribute something useful
 
-Bring an agent, write code yourself, reproduce a result or challenge an assumption.
-**No listed issue, prior permission, particular model or compute-budget disclosure
-is required.** [Research hints](docs/optimization/RESEARCH_HINTS.md) are invitations,
-not an allowlist. Work beyond the starter's fixed-current format is welcome.
+**Exploratory PRs with lower sampled scores are welcome.** Commit the small
+`submissions/my-coil-study/candidate.json` (about 10 KB) and a brief
+`README.md` beside it with the reference revision, commands, both scores,
+checks and limitations. Keep generated reports/audits in ignored `results/`;
+do not force-add the much larger report. [Submission layout](submissions/README.md).
+
+Counterexamples, negative results, better tests and alternative approaches are
+equally useful. Bring an agent or write code yourself. **No listed issue, prior
+permission, particular model or compute-budget disclosure is required.**
+[Research hints](docs/optimization/RESEARCH_HINTS.md) are invitations, not an allowlist;
+work beyond the starter's fixed-current format is welcome.
 
 [Contribution guide](CONTRIBUTING.md) · [Review policy](docs/validation/REVIEW_POLICY.md) ·
 [Agent guide](AGENTS.md) · [Security](SECURITY.md)
 
 ## How to read our evidence
 
-- **Reference / baseline:** the saved starting case used for comparison.
-- **RMS:** root-mean-square error; a measure of typical mismatch.
-- **Bounce-action variance:** variation in a trapped-particle motion diagnostic;
-  the 11.17% improvement concerns this metric, not measured confinement or power.
-- **Physical acceptance (`physical_admission`):** all specified physics and
-  engineering checks pass. Public reports keep this false: they test only samples.
-- **Replay / audit:** recompute a saved report. Public replay uses the same
-  implementation; independent implementations and external peer review are
-  stronger, separate checks.
+Reports call physical acceptance **admission** (`physical_admission`): all checks
+specified by that evaluation profile must pass. Public reports keep this false
+because they test only sparse fields, not the full physics and engineering.
+The plasma study's bounce-action improvement is not measured confinement or power.
 
-The starter and historical research have [documented local tests](docs/validation/PUBLIC_REVIEW_FIXES.md).
-Hosted CI and independent-machine verification are still outstanding.
-See [current scientific status](docs/STATUS.md) for the evidence and retained
-failures; [historical research entry points](docs/validation/PROJECT_ENTRYPOINTS.md)
-explain the larger native workflow.
+Recorded public checks pass locally on macOS with Python **3.11, 3.12 and 3.14**.
+These are not Windows/Linux or hosted-CI results; see the
+[verification record](docs/validation/PUBLIC_RELEASE_RESULTS.md) and
+[current status](docs/STATUS.md) for dated coverage and retained failures.
+[Historical research entry points](docs/validation/PROJECT_ENTRYPOINTS.md) describe
+the larger native workflow.
+
+## Repository map
+
+- `src/fusion_public/`: dependency-free starter and candidate helpers.
+- `src/fusion_baselines/`: historical and ongoing research code.
+- `examples/`: attributed reference data; `submissions/`: small contributed candidates.
+- `docs/`: project status, methods, results and reviews.
+- `evidence/`: recorded research evidence; large local runs stay outside Git.
 
 ## Licensing and project operation
 
@@ -130,7 +177,7 @@ Project code: [MIT](LICENSE), with [source/data notices](NOTICE.md).
 Bundled derived Goodman data has [CC BY 4.0 attribution](examples/clear-coil-samples-v1/README.md).
 Credit exact revisions and upstream sources: [CITATION.cff](CITATION.cff).
 
-Public hosting is being prepared locally. PR monitoring and automatic merging are
-not active. The [publication inventory](docs/validation/PUBLICATION_INVENTORY.md)
-identifies historical machine paths requiring review.
-[Launch checklist](docs/validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
+Publication and any PR automation require the
+[launch and operating checklist](docs/validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
+The [review policy](docs/validation/REVIEW_POLICY.md) separates accepting a useful
+contribution from accepting its scientific claims.
