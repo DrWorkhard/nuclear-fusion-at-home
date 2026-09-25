@@ -2,7 +2,7 @@
 
 Open stellarator research — contributed by people and their agents.
 
-Our end goal is to **contribute to nuclear fusion for humanity by finding the
+Our end goal is to **contribute to nuclear fusion by finding the
 best reactor design current technology can achieve**. We work on stellarators:
 fusion devices whose shaped external coils create a twisted magnetic field to
 confine hot plasma. This is computational research, not a home reactor-building project.
@@ -37,15 +37,15 @@ to fair comparisons and expert scrutiny. “Complete” means the stated scope p
 on the maintainer's machine, not that a reactor or universal toolchain is complete.
 [Scientific overview](docs/README.md) · [Detailed roadmap](docs/PROJECT_PLAN.md)
 
-| Step / milestone | Goal | Status |
-| --- | --- | --- |
-| **1. Establish a reliable foundation** | Reproduce selected checks for W7-X (the Wendelstein 7-X experiment), Goodman et al.'s open quasi-isodynamic (QI) dataset, and reference coil calculations. | **Complete (local reference tools)** |
-| **2. Make design iteration reproducible** | Change a design, save it, evaluate it separately and repeat. | **Complete (iteration workflow)** |
-| **3. Improve our own plasma target** | Reduce the preregistered particle-motion diagnostic by changing the vacuum plasma target. | **Complete (vacuum study)** |
-| **4. Develop plasma and coils together** | Find coils that realize the plasma benefit, then demonstrate coupled improvement, pressure/confinement validity and finite-coil robustness. | **In progress** |
-| **5. Demonstrate a meaningful design advantage** | Compare feasible designs fairly with leading references and independently verify the benefit. | **Not achieved** |
-| **MS1. Contact Proxima Fusion with strong evidence** | Contact Proxima as soon as strong, reproducible, independently checked evidence shows our design is better than the design they are pursuing. | **Not reached** |
-| **MSX. Our end goal** | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve. | **Long-term goal** |
+| Step / milestone                                     | Goal                                                                                                                                                       | Status                               |
+| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
+| **1. Establish a reliable foundation**               | Reproduce selected checks for W7-X (the Wendelstein 7-X experiment), Goodman et al.'s open quasi-isodynamic (QI) dataset, and reference coil calculations. | **Complete (local reference tools)** |
+| **2. Make design iteration reproducible**            | Change a design, save it, evaluate it separately and repeat.                                                                                               | **Complete (iteration workflow)**    |
+| **3. Improve our own plasma target**                 | Reduce the preregistered particle-motion diagnostic by changing the vacuum plasma target.                                                                  | **Complete (vacuum study)**          |
+| **4. Develop plasma and coils together**             | Find coils that realize the plasma benefit, then demonstrate coupled improvement, pressure/confinement validity and finite-coil robustness.                | **In progress**                      |
+| **5. Demonstrate a meaningful design advantage**     | Compare feasible designs fairly with leading references and independently verify the benefit.                                                              | **Not achieved**                     |
+| **MS1. Contact Proxima Fusion with strong evidence** | Contact Proxima as soon as strong, reproducible, independently checked evidence shows our design is better than the design they are pursuing.              | **Not reached**                      |
+| **MSX. Our end goal**                                | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve.                                               | **Long-term goal**                   |
 
 MS1 requires a relevant, versioned Proxima reference, matched conditions and
 explicit uncertainty and trade-offs. Improving our reference or a sparse score
@@ -95,10 +95,10 @@ field matches the target**. Try a small coefficient change, initially around
 0.01–0.1 mm (`1e-5`–`1e-4` metres), and compare both errors. That is a starting
 scale for exploration, not a guarantee of improvement or safe geometry.
 
-| Public metric (dimensionless; lower is better) | Reference score |
-| --- | --- |
-| `sampled_normal_rms` — field leaking across the target boundary | **0.304207** |
-| `sampled_inner_vector_rms` — mismatch with the target field inside | **0.380435** |
+| Public metric (dimensionless; lower is better)                     | Reference score |
+| ------------------------------------------------------------------ | --------------- |
+| `sampled_normal_rms` — field leaking across the target boundary    | **0.304207**    |
+| `sampled_inner_vector_rms` — mismatch with the target field inside | **0.380435**    |
 
 `demo` and `evaluate` compare reference and candidate at the same 512-node coil
 resolution and print signed/percentage changes. An unchanged reference gives zero
