@@ -36,9 +36,8 @@ and the [publication inventory](validation/PUBLICATION_INVENTORY.md).
 [geometry-protected field-fit draft](optimization/PROTECTED_COIL_FIT_PROTOCOL.md)
 is one possible next experiment, not a required method or an exclusive work
 allocation. Its controller is qualified and its
-[event storage](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) is implemented.
-Next: finish qualifying the source-bound runner's persistence and budget handling
-with synthetic faults (full regression and source binding of the storage are
-pending); then complete the second method review and the physical auditor before
-any native run.
+[event storage](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) is qualified.
+Next: implement and qualify source admission, raw-array snapshots and exact native/
+certificate budget orchestration with synthetic faults; then complete the second
+method review and the physical auditor before any native run.
 Finer-grid acceptance remains a separate required phase.

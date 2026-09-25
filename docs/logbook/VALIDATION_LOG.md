@@ -1,5 +1,27 @@
 # Validation log
 
+## 2026-09-25 — Close the protected-runner event-storage qualification
+
+- Registration `7a210ac`, implementation `fc831f3`: full JUnit records **2,229
+  passes, zero failures/errors/skips, 248.079 s**. Final console/exit status was
+  unavailable after process-session expiry; no warning count inferred. The XML
+  parses completely and a read-only process check finds no remaining pytest job.
+- Bind eight exact source identities and four retained JUnit files, including
+  initial/expanded/final component controls. 47 storage tests plus 108 existing
+  controller/auditor tests pass. No numerical source or threshold change.
+- Concurrent step-page/index work was completed separately at `c3faa29` before
+  pytest's recorded start, clearing the initial documentation failure; 14 docs/
+  release tests then passed. User README-only `4374b5e` arrived during regression.
+  Storage/controller/auditor sources and tests remain byte-identical to `fc831f3`;
+  this is not a claim that the entire checkout stayed frozen throughout.
+- Record F-097, evidence, results, index, Step 4 results, status and next actions.
+  Root README and scientific overview reviewed: no physical/roadmap status change
+  needed. The public-release-before-search sequencing remains intact pending the
+  user's direction; no agent delegation or new native search performed.
+- Closure checks: eight committed sources, four artifact hashes/sizes and all
+  JUnit summaries match. Post-documentation selection: **169 pass in 5.81 s**;
+  public suite: **47 pass in 3.849 s**. Docs, repository Ruff and whitespace pass.
+
 ## 2026-09-25 — Per-step result pages and a lean roadmap
 
 - Maintainer asked to remove the remaining roadmap redundancy and to add linked,

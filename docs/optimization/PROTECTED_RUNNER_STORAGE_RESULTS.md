@@ -7,8 +7,11 @@
 
 The new `protected_search_journal` component passes 47 focused tests; combined
 with the unchanged controller and scalar trajectory auditor, **155 tests pass**.
-Full regression and final source binding are pending. This is synchronous event
-storage, not the complete native runner, a new field fit or Step 4 completion.
+The completed full-regression report records **2,229 passes, zero failures/errors/
+skips**. Source and artifact identities are bound in the
+[qualification record](../../evidence/protected-runner-storage-v1.json).
+This qualifies synchronous event storage, not the complete native runner, a new
+field fit or Step 4 completion.
 
 ## Interface and guarantees
 
@@ -55,21 +58,40 @@ and trusted checkpoint binding must remain separate.
   it does not endorse that claim.
 - Repository Ruff passes. No native field calculation, new equilibrium, installation
   or cleanup was performed for these component tests.
-- The 47 separate public tests pass in 3.726 s. The docs checker currently fails
-  because a concurrently created `docs/steps/` folder is not yet indexed from the
-  root overview. The separate roadmap edit is also in progress. Those user/other-
-  session changes are preserved rather than silently repaired or committed here;
-  the full regression gate remains pending, not passed.
+- The 47 separate public tests pass in 3.726 s. The docs checker initially failed
+  because concurrently created `docs/steps/` pages were not yet indexed. The other
+  session completed those changes at `c3faa29`; documentation and 14 documentation/
+  release tests then passed. The initial failure remains in the validation log.
 
 Initial/expanded JUnit are retained under
 `artifacts/protected-runner-storage-v1/initial-tests.xml`, `targeted-tests.xml`
-and `bounded-reader-tests.xml`.
+and `bounded-reader-tests.xml`. Their JUnit durations are 0.376, 4.970 and 5.044 s;
+earlier quoted times are console observations, not a timing comparison.
 No new numerical failure was observed in this component phase.
+
+## Committed-source qualification
+
+Registration `7a210ac`; implementation `fc831f3`. The completed full regression's
+JUnit records 2,229 passes in 248.079 s, starting at 23:16:26 +02:00. The final
+console/exit status was not recovered after the process session expired, so no
+warning total is inferred from the previous regression. The XML is complete and
+no pytest process remains. This is local native-environment evidence, not hosted CI.
+
+All eight listed sources match their named commits, and all four retained JUnit
+files are size/hash bound. The code/tests for storage, controller and auditor
+remain identical to `fc831f3`. The full suite also includes the roadmap-test update
+at `c3faa29`, committed before the recorded pytest start. A user README-only commit
+`4374b5e` arrived during the run; this was not a frozen whole-checkout test. No
+scientific source, limit, dependency or original evidence was changed for it.
+
+Closure checks: all eight committed source identities, four artifact hashes/sizes
+and four JUnit summaries match. After these documentation updates, 169 focused
+storage/controller/auditor/documentation tests pass in 5.81 s; 47 public tests pass
+in 3.849 s. Documentation structure, repository Ruff and whitespace checks pass.
 
 ## Remaining runner work
 
-Complete full regression and source-bound qualification of this storage component.
-Then implement the exact per-cell native/certificate budget ledger, immutable
+Implement the exact per-cell native/certificate budget ledger, immutable
 raw-array snapshots, source admission and orchestration; preserve the draft's
 32-bundle / 290-native-request / 128-certificate caps. The second internal method
 review, independent physical reconstruction and all fine-grid gates still precede

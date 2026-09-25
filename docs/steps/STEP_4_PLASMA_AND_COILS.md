@@ -93,13 +93,16 @@ not run a search or improve a field.
 [Report](../optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md) (English) ·
 [evidence](../../evidence/protected-search-software-v1.json)
 
-### 6. Durable event storage for the search runner — implemented (25 September)
+### 6. Durable event storage for the search runner — software qualified (25 September)
 
 A fail-closed, hash-linked event journal records every controller event before it
 is acknowledged; 155 focused tests pass together with the controller and auditor.
-Full regression and source binding are still pending, so this component is not yet
-qualified. [Report](../optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) (English) ·
-[protocol](../optimization/PROTECTED_RUNNER_STORAGE_PROTOCOL.md)
+The full-regression report records 2,229 passes with no failures/errors/skips;
+source and artifact identities are bound. This qualifies single-writer POSIX
+storage, not the remaining native-budget/source orchestration or physical audit.
+[Report](../optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) (English) ·
+[protocol](../optimization/PROTECTED_RUNNER_STORAGE_PROTOCOL.md) ·
+[evidence](../../evidence/protected-runner-storage-v1.json)
 
 ## What is not shown yet
 

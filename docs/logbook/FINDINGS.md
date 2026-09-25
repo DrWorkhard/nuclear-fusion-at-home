@@ -1,5 +1,24 @@
 # Findings log
 
+## F-097 — Event storage passes its scoped software qualification
+
+**Class:** bounded software qualification, not a coil-design improvement
+**Date:** 2026-09-25
+
+Registration `7a210ac`, implementation `fc831f3`: exclusive, hash-linked event
+files and externally bound receipts survive the specified injected I/O/interrupt
+failures without acknowledging incomplete writes or overwriting prior evidence.
+47 storage tests and 108 controller/auditor controls pass; completed full-suite
+JUnit records 2,229 passes and no failures/errors/skips. Eight source identities
+and four local JUnit artifacts are bound. The final full-suite console was not
+recovered; warning count and whole-checkout immutability are not claimed.
+
+Scope is a single-writer POSIX workspace, not an adversarial filesystem or a proof
+of authorship/physical truth. Native budget/source orchestration, second method
+review, independent physical reconstruction and fine-grid acceptance remain.
+No field search or design improvement follows from storage qualification.
+[Detailed results](../optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md).
+
 ## F-096 — README contribution route and like-for-like score feedback verified
 
 **Class:** public usability/software qualification, not a new scientific design

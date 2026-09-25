@@ -17,7 +17,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
-- Protected runner storage: [protocol](PROTECTED_RUNNER_STORAGE_PROTOCOL.md), [results](PROTECTED_RUNNER_STORAGE_RESULTS.md). 47 event-journal checks and 108 controller/auditor checks pass; full regression pending during concurrent documentation changes. Source/native-budget orchestration and physical verification remain separate prerequisites.
+- Protected runner storage: [protocol](PROTECTED_RUNNER_STORAGE_PROTOCOL.md), [results](PROTECTED_RUNNER_STORAGE_RESULTS.md). Qualified in its single-writer POSIX scope: 47 event-journal checks, 108 controller/auditor checks and a 2,229-pass full-regression report, with source/artifact identities bound. Source/native-budget orchestration and physical verification remain separate prerequisites.
 - Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). Complete in its synthetic scope: 108 controller/auditor tests and 2,180 full regression tests pass. Runner, method review and physical recomputation remain; no new field fit or physical claim.
 
 - [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations: reproduction, kernels, counterexamples, geometry-preserving improvement and broader physics. Unsolicited useful work welcome; costs optional.

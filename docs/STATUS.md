@@ -25,6 +25,7 @@ author data is not the only obstacle.
 | [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) field starts | Four cells, eight normal/vector derivative checks, 20 refinements, 768 direct B/A comparisons and 252 flux gates pass numerical qualification | All four fail physical field limits: normal RMS 0.269–0.276 versus 1e-4; inner-vector RMS 0.3615–0.3723 versus 0.01 |
 | [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) cumulative geometry bounds | The 52-state qualification passes all required small probes and independent direct checks; 18 larger probes remain uncertified | Uncertified does not mean physically impossible; no field improvement follows from this alone |
 | [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) protected-search controller | Synthetic qualification complete: 108 controller/auditor tests pass | Native runner, second method review and physical verification; no new protected-fit search has run |
+| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) event storage | Single-writer POSIX qualification complete: 47 storage tests, 155 with controller/auditor; exact source/artifact identities recorded | Full native source/budget orchestration, physical audit and hardware power-loss guarantees |
 
 Each linked step page gives the method, full limits, detailed reports and evidence.
 “Independent” in these reports refers to the specified numerical/source checks,
@@ -55,10 +56,11 @@ These checks show that the tools work as specified; they are not physical accept
 | Area | Evidence | Not established |
 | --- | --- | --- |
 | Public starter | 47 public tests and eight copied-tree release checks pass on local Python 3.11/3.12/3.14 at `0d9abcf`; displayed reference/candidate comparisons now use matching 512-node resolution; the unchanged 256-node native check retains its 5e-10 limit | Hosted CI, independent machines, full-surface or physical acceptance; public reports never set physical admission or Step 4 to true |
-| Historical research suite | 2,182 tests pass with 334 documented warnings at `0d9abcf`, in the native research environment | A hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
+| Historical research suite | Latest completed JUnit records 2,229 passes, zero failures/errors/skips, with storage implementation `fc831f3` and integration `c3faa29`; the earlier `0d9abcf` run recorded 2,182 passes and 334 warnings | A hosted or fresh native rebuild; latest console warning count unavailable; the strict netCDF4 import warning remains unresolved |
 | Publication inventory | About 325 MB of tracked content; 365 tracked files with home-path indicators; no matches for five credential/key patterns | A complete security, privacy or rights review; no history was sanitized or published |
 
 Details: [release evidence](validation/PUBLIC_RELEASE_RESULTS.md),
+[storage qualification](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md),
 [review fixes](validation/PUBLIC_REVIEW_FIXES.md),
 [README review resolution](review/ROOT_README_RESOLUTION.md),
 [what public scores mean](validation/PUBLIC_QUICKSTART.md#what-the-report-means),
