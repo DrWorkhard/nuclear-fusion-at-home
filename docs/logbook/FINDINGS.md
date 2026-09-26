@@ -1,5 +1,29 @@
 # Findings log
 
+## F-099 — The complete synthetic search chain passes its integration gate
+
+**Class:** bounded software/recorded-data qualification, not a better coil design
+**Date:** 2026-09-26
+
+At `c17123a`, the original-seed startup, fresh search seed, fixed-budget controller
+and fresh-model selected replay form one tested cell with complete snapshots/raw
+arrays and separate native/controller journals. A read-only graph auditor checks
+all operation links, reconstructed counters and checkpoint prefixes. 299 focused
+tests and all 2,918 full-regression tests pass; 334 existing warnings remain.
+
+Independent review corrected fixed-target substitution, stale/incorrect live
+model state, ineffective cache invalidation, post-completion guard failure and
+malformed-archive reporting. Large full certificates stay in immutable manifests;
+compact decision references avoid overflowing the unchanged journal size limit.
+Negative searches and every failed development test remain recorded. Read-only
+schema checks accept eight historical seeds, not a newly optimized design.
+
+Nineteen source files and 22 artifacts are bound. A found result-shaped file is
+not proof that execution returned successfully; external acknowledgement remains
+the native supervisor's responsibility. Physical reconstruction, native process
+limits, fine acceptance and the rest of Step 4 remain open.
+[Detailed results](../optimization/PROTECTED_CELL_RESULTS.md).
+
 ## F-098 — Execution components qualify after adversarial failures are corrected
 
 **Class:** bounded software/source qualification, not a coil-design improvement

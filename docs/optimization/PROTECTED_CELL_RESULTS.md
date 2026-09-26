@@ -8,9 +8,9 @@
 The complete injected startup → search → selected-design replay workflow is
 implemented and **299 focused synthetic checks pass** (179 contract, 54 cell,
 66 saved-graph audit). Independent internal review
-has exposed and helped correct integration defects. Committed-source full
-regression and final source/artifact binding are pending; this report does not
-yet close the integration qualification.
+has exposed and helped correct integration defects. **Synthetic integration
+qualification is complete:** committed implementation `c17123a` passes the full
+2,918-test regression, and source/artifact identities are bound below.
 
 No native field search was performed. Existing source files, numerical limits,
 controller policy and qualified storage/ledger implementations remain unchanged.
@@ -104,9 +104,26 @@ The initial shell check used unavailable `python`; rerunning with `python3`
 succeeded. A documentation-test command named a nonexistent test file and collected
 zero tests; its JUnit remains, followed by the corrected explicit test selection.
 
+## Committed-source qualification
+
+Registration `88fd4d6`, implementation `c17123a`: **2,918 passed, 334 existing
+warnings, zero failures/errors/skips**, exit zero. Console time 260.63 s; JUnit
+time 259.701 s. Both complete outputs are retained. The native environment was
+not changed, and the checkout was clean before and after the full one-thread run.
+This is a local regression, not hosted CI or an independent-machine reproduction.
+
+The [qualification record](../../evidence/protected-cell-synthetic-v1.json) binds
+19 source files and 22 artifacts, including the failed development controls,
+eight-context compatibility probes and full regression. The separately authored
+final review rerun passes all 299 tests (20.034 s JUnit); all three reviewed source
+hashes match the committed implementation. Source hashes match their Git versions.
+The certificate representation clarification was written before the first
+integration execution but committed with implementation, not in a separate
+pre-execution commit; both the original and effective protocol identities remain.
+
 ## Remaining gates
 
-After synthetic integration qualification: a source-bound native adapter and
+Next: a source-bound native adapter and
 process/resource supervisor, independent physical reconstruction and runtime
 derivative checks, then the registered diagnostic search and separate fine-grid
 acceptance. The method review's limits on claiming fine-resolved improvement

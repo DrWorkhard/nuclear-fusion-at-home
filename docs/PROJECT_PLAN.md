@@ -40,9 +40,9 @@ allocation. Its controller is qualified and its
 [event storage](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) is qualified.
 The [source admission, raw snapshots, budget ledger and startup helpers](optimization/PROTECTED_RUNNER_RESULTS.md)
 are now qualified separately. Their [integrated synthetic worker and graph audit](optimization/PROTECTED_CELL_RESULTS.md)
-are implemented; close committed-source full regression and final qualification
-next, then add native source/resource orchestration and independent physical
-reconstruction. The
+are now qualified in their synthetic scope. Next: add the source-bound native
+adapter, isolated process/resource orchestration and independent physical
+reconstruction before running the registered diagnostic pilot. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) supports a bounded
 diagnostic pilot conditionally; its replay and claim-scope clarifications apply
 before any native run.

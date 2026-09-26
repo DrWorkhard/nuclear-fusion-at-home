@@ -111,18 +111,20 @@ helpers pass 390 synthetic tests after independent internal review found and
 helped correct budget reentry, storage-allocation and startup-check defects.
 Component qualification is complete: full regression passes 2,619 tests and the
 new source-admission check passes against all eight saved seed bundles. The
-integrated worker and physical audit remain pending.
+integrated native worker and physical audit remain pending.
 The second method review conditionally supports a bounded diagnostic pilot; it
 does not approve native execution yet. [Results](../optimization/PROTECTED_RUNNER_RESULTS.md) ·
 [Method review](../optimization/PROTECTED_METHOD_REVIEW.md).
 
-### 8. Integrated protected cell — synthetic verification in progress (26 September)
+### 8. Integrated protected cell — synthetic qualification complete (26 September)
 
 The startup/search/replay chain now has complete numerical boundaries and a
 separate saved-graph/accounting auditor. Focused tests and independent internal
 review cover rejection, both budgets, exact replay and injected failures.
 Read-only schema checks accept all eight historical seeds; no new native coil
-search ran. Full regression and final qualification remain pending.
+search ran. All 299 focused tests and the 2,918-test full regression pass;
+19 source files and 22 artifacts are hash-bound. Native process/resource
+supervision and independent physical reconstruction remain separate gates.
 [Results and retained defects](../optimization/PROTECTED_CELL_RESULTS.md).
 
 ## What is not shown yet

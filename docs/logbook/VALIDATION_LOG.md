@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-26 — Qualify the integrated synthetic protected cell
+
+- Implementation `c17123a`: full one-thread native-environment suite **2,918 pass,
+  334 existing warnings, zero failures/errors/skips**, exit zero; 260.63 s console /
+  259.701 s JUnit. Both complete outputs retained; clean checkout before/after.
+- Final independently authored review rerun: 299 tests pass (20.034 s JUnit).
+  All three reviewed source hashes match their committed versions. Qualification
+  evidence binds 19 sources and 22 artifacts, including the retained red tests,
+  all eight historical seed checks and final regression. Record F-099.
+- Source-binding compatibility is 28 individually checked references, not a new
+  full graph admission. No new native search, physical acceptance, Step 4 completion
+  or MS1 advantage. Native adapter/process guards and physical reconstruction
+  remain next. Documentation fits the existing per-step structure; no root README
+  layout/public-result changes or concurrent-edit interference.
+- Closure checks: all 41 source/artifact hashes and sizes, 19 committed source
+  identities and original registration identity match. Documentation/release tests
+  14 pass (1.46 s console), public tests 47 pass (3.782 s); docs/Ruff/whitespace pass.
+
 ## 2026-09-26 — Implement and review synthetic protected-cell integration
 
 - Follow registration `88fd4d6`; add complete context/bundle boundaries, injected
