@@ -1,5 +1,30 @@
 # Validation log
 
+## 2026-09-26 — Independently audit fine raw graphs and replay old initializer fluxes
+
+- Add complete saved-graph and field-maths composition: 75 and 147 new tests.
+  Reciprocal internal reviews each run 222 passing tests; root rerun 10.339 s
+  JUnit / 10.53 s console. No blocking scoped finding remains. Retain six test
+  artifacts, including an initial import-path collection error and a failing
+  error-message regex, in `evidence/protected-fine-audits-v1.json`.
+- Require every one of 225 journal records / 32 operation groups, all 28 new raw
+  archives, original initializer callbacks and fixed source/selection links.
+  Numerical audit retains eight initializer checks, six diagnostic rows, eighteen
+  flux grids, five refinements and 63 flux gates. Accurate threshold failures
+  complete as negative results; malformed or inconsistent evidence cannot pass.
+- Actual saved-data qualification: eight EXISTING original-seed scalars at
+  256 coil/loop nodes, signed 100 kA, independently reconstructed in 16.506 s.
+  Maximum relative error 6.514978995388055e-16 against 5e-10; zero absolute slack.
+  Source-before/after identical. No native calls, new selected-candidate or
+  512-node initialization work; no fresh environment admission inferred.
+- Main reviewed the replay helper and all eight results and rehashed twelve
+  directly referenced files. Fine numerical/physical acceptance remains unrun;
+  source-gate/worker/launcher integration, full regression and execution
+  checkpoint still required. Root README/roadmap scientific conclusions unchanged.
+- Detail/index/status updated. Closure: 47 public tests pass (3.395 s), 16
+  documentation/release/README tests pass (15.48 s), scoped Ruff, documentation
+  structure and whitespace pass; all eleven direct review references rehash.
+
 ## 2026-09-26 — Integrate original-seed fine bridges and preserve coarse ancestry
 
 - Independently reviewed archived intake (130 new tests), numerical bridge (73),

@@ -1,0 +1,150 @@
+{
+  "schema_version": 1,
+  "kind": "protected-fine-audits-scoped-review",
+  "date": "2026-09-26",
+  "status": "completed",
+  "registration": {
+    "path": "docs/optimization/PROTECTED_FINE_PROTOCOL.md",
+    "commit": "95ec585"
+  },
+  "sources": [
+    {
+      "path": "scripts/audit_protected_fine_fields.py",
+      "sha256": "cab9edb441545c3be36c40023d82040a192fac18a0550ebea45111d407b8694f",
+      "bytes": 16600
+    },
+    {
+      "path": "tests/test_protected_fine_fields.py",
+      "sha256": "8a15ce23825e0bb80876ffd0289ea597292daf133af969ad4ebcf082e1d9abb1",
+      "bytes": 30367
+    },
+    {
+      "path": "src/fusion_baselines/protected_fine_graph.py",
+      "sha256": "2ecae6368158f60ee8ccb8c434880e029679ebb13befc9098e1a0893e5ad7f1e",
+      "bytes": 12873
+    },
+    {
+      "path": "tests/test_protected_fine_graph.py",
+      "sha256": "169da11cebbe238c2ae2a1e91e152d0ffdfc2347edc066d64f3d97ebd6866768",
+      "bytes": 9663
+    }
+  ],
+  "artifacts": [
+    {
+      "reference": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/protected-fine-v1/fields-initial.xml",
+        "sha256": "53cb2d4a60dac9100a82aecc644e701f3a349d1863b72c1f8045bebee5e4a38b",
+        "bytes": 1024
+      },
+      "counts": {
+        "tests": "1",
+        "failures": "0",
+        "errors": "1",
+        "skipped": "0",
+        "time": "0.093"
+      }
+    },
+    {
+      "reference": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/protected-fine-v1/fields-first-run.xml",
+        "sha256": "dd0d614139cd91835f4564195cee1dfca9814103328421efb6f1e89803cffe01",
+        "bytes": 18823
+      },
+      "counts": {
+        "tests": "137",
+        "failures": "1",
+        "errors": "0",
+        "skipped": "0",
+        "time": "3.754"
+      }
+    },
+    {
+      "reference": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/protected-fine-v1/fields-expanded.xml",
+        "sha256": "b7d33e1f3d62cfde81255bbfbd26d22db57784c30b443e41ac32bd9e4908c585",
+        "bytes": 19252
+      },
+      "counts": {
+        "tests": "146",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "3.824"
+      }
+    },
+    {
+      "reference": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/protected-fine-v1/graph-initial.xml",
+        "sha256": "b050b16c4cf8ae6f1667e765439a1d39e9bacc3063e8f2e1cdf224e300c18f85",
+        "bytes": 10017
+      },
+      "counts": {
+        "tests": "75",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "6.654"
+      }
+    },
+    {
+      "reference": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/protected-fine-v1/fields-graph-independent.xml",
+        "sha256": "b1962c82c69f95241e7438e527c637835a42b582a232a31a898e470e84184984",
+        "bytes": 29146
+      },
+      "counts": {
+        "tests": "222",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "10.399"
+      }
+    },
+    {
+      "reference": {
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/protected-fine-v1/fields-graph-root-review.xml",
+        "sha256": "7e60ac6d861c4192abaaffc9c45a8e9444b6bdf176191c8b2c480e43cd156457",
+        "bytes": 29146
+      },
+      "counts": {
+        "tests": "222",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0",
+        "time": "10.339"
+      }
+    }
+  ],
+  "original_initializer_replay": {
+    "reference": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/protected-fine-v1/original-initializers-qualification/result.json",
+      "sha256": "66d488eef2207f051408062fe4427f7e1f7cd544b49208e33c07f49e098c525c",
+      "bytes": 3535
+    },
+    "original_saved_scalars": 8,
+    "ncoil": 256,
+    "loop_points": 256,
+    "relative_tolerance": 5e-10,
+    "absolute_tolerance": 0,
+    "maximum_relative_error": 6.514978995388055e-16,
+    "selected_candidate_evaluations": 0,
+    "fine_512_initializer_evaluations": 0,
+    "native_requests": 0
+  },
+  "independent_internal_review": {
+    "fields": "root reviewed agent-authored source/tests and reran 222 field/graph tests",
+    "graph": "protected_budget_impl reviewed root-authored source/tests and reran 222 field/graph tests",
+    "blocking_findings_remaining": false
+  },
+  "limits": {
+    "full_integrated_fine_qualification": false,
+    "fine_native_execution_authorized": false,
+    "actual_selected_candidate_arithmetic_consistency": false,
+    "fine_numerical_qualification": false,
+    "absolute_field_geometry_pass": false,
+    "step4_pass": false,
+    "sota_advance": false,
+    "ms1_reached": false,
+    "external_peer_review": false
+  }
+}

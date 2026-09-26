@@ -68,10 +68,27 @@ mask decoding. Cell-only geometry fixtures test accounting, not those maths.
 
 ## Remaining integration and scientific work
 
-Complete the saved-field and full-graph audit, closed execution-source gate,
-worker and study launcher. Require independent review, complete regression,
-committed qualification and a committed execution checkpoint before any fine
-native call. An archived-input check alone is never a substitute for that gate.
+The saved-field and full-graph components now also pass reciprocal internal
+review: 147 field-audit tests and 75 graph-audit tests, **222 passing** in each
+independent rerun. The graph audit checks all 225 journal records, exact work
+ordering and all 28 new raw archives. The numerical audit reconstructs eight
+initializer scalars, six metric rows and eighteen flux grids; all five refinement
+comparisons and 63 flux checks remain mandatory. Threshold failures are complete
+negative results; inconsistent data raises an error. Tests include a deliberately
+nonphysical real core/graph/field-interface composition and preserve failed test
+setup/assertion attempts. See the [audit review record](../../evidence/protected-fine-audits-v1.json).
+
+An additional **actual saved-data** replay reconstructs all eight previously
+recorded original-seed initializer fluxes at 256 coil and 256 loop nodes. The
+largest relative discrepancy is **6.514979e-16**, below the unchanged 5e-10 limit
+with zero absolute slack. It confirms the signed 100 kA convention using the
+independent direct kernel. It performs no native request, new selected-candidate
+evaluation or 512-node fine initialization; it is not fine acceptance.
+
+Complete and review the closed execution-source gate, worker and study launcher.
+Require complete regression, committed qualification and a committed execution
+checkpoint before any fine native call. An archived-input check or saved-seed
+replay alone is never a substitute for that gate.
 
 Then execute every registered diagnostic, flux and geometry check for all eight
 fixed states. A correctly reconstructed threshold failure is a valid negative
