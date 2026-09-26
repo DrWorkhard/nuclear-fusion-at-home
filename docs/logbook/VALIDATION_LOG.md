@@ -1,5 +1,24 @@
 # Validation log
 
+## 2026-09-26 — Review the complete fixed-candidate study integration
+
+- Closed source gate, worker and serial launcher implemented; independent
+  gate/worker and launcher/pipeline runs pass 76 and 66 tests. Main separately
+  reads the implementation and launcher fixtures/tests and runs all 142: pass,
+  19.58 s console / 19.294 s JUnit. Nonphysical real subprocess test includes
+  parent, worker, native-adapter orchestration, cell, journal and graph audit.
+- Preserve the two failing terminal worker callback poison controls and passing
+  fixes, plus import-path setup failures. Bind seven source/test files and thirteen
+  reports in `evidence/protected-fine-execution-review-v1.json`. Review agents hit
+  usage limits after recorded reviews/runs; no unreceived final approval claimed.
+- Require actual retained JUnit counts, immutable registered protocol, committed
+  implementation bytes and a clean separate current-fine provenance layer.
+  Qualification/checkpoint files intentionally absent until full regression.
+- Update detail/index/status/Step 4 result page; overview and root README remain
+  accurate. No native fine calculation or new physical result. Closure: 47 public
+  tests pass (3.469 s), 16 documentation/release/README tests pass (15.46 s),
+  scoped Ruff, documentation structure and whitespace checks pass.
+
 ## 2026-09-26 — Independently audit fine raw graphs and replay old initializer fluxes
 
 - Add complete saved-graph and field-maths composition: 75 and 147 new tests.

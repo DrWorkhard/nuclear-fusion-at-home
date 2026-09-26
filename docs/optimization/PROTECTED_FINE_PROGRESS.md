@@ -66,7 +66,7 @@ on synthetic geometry: both 256-square full-torus surfaces, every physical pair,
 all four grids, complete witnesses, the original-seed certificate and lossless
 mask decoding. Cell-only geometry fixtures test accounting, not those maths.
 
-## Remaining integration and scientific work
+## Reviewed saved-data audits
 
 The saved-field and full-graph components now also pass reciprocal internal
 review: 147 field-audit tests and 75 graph-audit tests, **222 passing** in each
@@ -85,10 +85,33 @@ with zero absolute slack. It confirms the signed 100 kA convention using the
 independent direct kernel. It performs no native request, new selected-candidate
 evaluation or 512-node fine initialization; it is not fine acceptance.
 
-Complete and review the closed execution-source gate, worker and study launcher.
-Require complete regression, committed qualification and a committed execution
-checkpoint before any fine native call. An archived-input check or saved-seed
-replay alone is never a substitute for that gate.
+## Reviewed study integration
+
+The execution-source gate, worker and serial eight-case launcher now pass **142
+focused tests** (19.58 s console / 19.294 s JUnit). Independent internal reviewers
+read the components and ran 76 gate/worker and 66 launcher/pipeline tests. The
+main agent separately reviewed the implementation and launcher tests and reran
+all 142. A real subprocess test connects the parent, worker, adapter, cell,
+storage and graph audit with explicitly synthetic physics and admission.
+[Source hashes and retained test reports](../../evidence/protected-fine-execution-review-v1.json).
+
+Review exposed a swallowed error in the worker's final resource callback, after
+its control frame was sent. Health checks on both sides of that callback now
+prevent a successful return; the parent still requires exit zero. Two reproduced
+failing controls and corrected runs are retained, as are import-path test setup
+failures. The gate checks actual JUnit cases and outcomes against its declared
+counts, not merely a report saying tests passed. Historical coarse sources stay
+unchanged; fresh fine provenance must match the current clean commit.
+
+The two review-agent sessions ended at their usage limits after producing their
+reported reviews/test artifacts. We claim those checks, not an unreceived final
+approval or external peer review.
+
+## Remaining qualification and scientific work
+
+Require a clean committed complete regression, committed qualification and a
+committed execution checkpoint before any fine native call. An archived-input
+check or saved-seed replay alone is never a substitute for that gate.
 
 Then execute every registered diagnostic, flux and geometry check for all eight
 fixed states. A correctly reconstructed threshold failure is a valid negative
