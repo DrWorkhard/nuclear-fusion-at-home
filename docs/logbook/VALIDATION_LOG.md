@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-26 — Qualify the complete fine implementation at clean 80dddb8
+
+- Run the entire committed research suite with no excluded paths: **4,883 passed,
+  334 warnings, zero failures/errors/skips**, exit zero; 402.46 s console /
+  401.692 s JUnit / 403.378 s wrapper. Before/after commit and clean status match
+  `80dddb84e530340742918cff29e343fe5b947165`. No competing heavy study or environment sync.
+- Retain exact command, interpreter, source commit, helper, console and JUnit.
+  Complete repository Ruff passes. Existing netCDF4 warning is not repaired by
+  this success. A fresh real archived-source check passes, without native work.
+- Qualification binds all thirty registered protocol/code/test sources, scoped
+  reviews and retained failures plus full-suite evidence. Validate its ordered
+  source graph and actual JUnit counts with the production gate before writing.
+- Update progress/index/status/roadmap/Step 4 page; root README remains accurate.
+  Native execution still needs the separate committed checkpoint and runtime
+  source admission. This is software qualification, not physical acceptance.
+- Closure: all 117 qualification source/artifact references rehash; 47 public
+  tests pass (3.354 s), documentation structure and whitespace checks pass.
+
 ## 2026-09-26 — Review the complete fixed-candidate study integration
 
 - Closed source gate, worker and serial launcher implemented; independent

@@ -173,14 +173,15 @@ discrepancy 1.804e-15. Required fine acceptance is still unrun; normal RMS remai
 0.26794–0.27478 against 1e-4. No resolved fine gain, physical baseline or Step 4
 completion follows. [Results](../optimization/PROTECTED_COIL_FIT_RESULTS.md).
 
-### 13. Fixed-candidate fine pipeline — scoped software reviews complete (26 September)
+### 13. Fixed-candidate fine pipeline — software qualified (26 September)
 
 The separate fine schedule, original-seed numerical/geometry bridges, saved-data
 audits and serial study runner are implemented and internally reviewed. Final
 integration has 142 passing tests, including one real subprocess with synthetic
 physics. Independent replay reproduces eight old initializer fluxes within
-6.515e-16 relative error. The complete committed regression and execution
-checkpoint are still required before the eight actual fine evaluations.
+6.515e-16 relative error. At clean `80dddb8`, the complete regression passes
+4,883 tests with 334 existing warnings and no failures/errors/skips. The execution
+checkpoint is still required before the eight actual fine evaluations.
 No fine acceptance or new physical design follows from these software checks.
 [Progress and retained failures](../optimization/PROTECTED_FINE_PROGRESS.md).
 

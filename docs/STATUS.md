@@ -32,7 +32,7 @@ author data is not the only obstacle.
 | [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) independent saved physics | Qualification complete at `2ac95db`: 130 focused tests, all eight actual saved seeds, two original certificates against four proofs and tracked regression pass; sampled B/A discrepancy ≤1.316e-15 | New native startup/search and fine acceptance; confirms previous field failures, not an improved design |
 | [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) diagnostic launcher | Qualification complete at `6bb1e45`: 124 focused tests, one real nonphysical subprocess integration and full regression pass; separate execution checkpoint binds sources and evidence | Runtime source admission, eight-case native construction and fine acceptance; no new design result |
 | [Step 4A protected pilot](optimization/PROTECTED_COIL_FIT_RESULTS.md) | All eight native constructions and independent coarse audits complete at `2015ac5`: normal RMS decreases 0.4463–0.4857%, inner-vector RMS 1.1881–2.1916%; all eight stop at the conservative curvature certificate | Fine validation; normal RMS remains 0.26794–0.27478 versus 1e-4, so no feasible baseline, realized-field transfer or Step 4 completion |
-| [Step 4A fine validation](optimization/PROTECTED_FINE_PROGRESS.md) | All components and study integration pass scoped reviews; 142 final integration tests; eight old initializer fluxes reproduced within 6.515e-16 relative error | Clean complete regression, execution checkpoint and all eight fine evaluations; no fine acceptance yet |
+| [Step 4A fine validation](optimization/PROTECTED_FINE_PROGRESS.md) | Complete implementation qualified at clean `80dddb8`: all 4,883 regression tests pass; scoped independent reviews and eight old initializer fluxes reproduced within 6.515e-16 relative error | Execution checkpoint and all eight fine evaluations; no fine acceptance yet |
 
 Each linked step page gives the method, full limits, detailed reports and evidence.
 Tool-qualification rows describe their own scope; later native results are separate.
@@ -64,7 +64,7 @@ These checks show that the tools work as specified; they are not physical accept
 | Area | Evidence | Not established |
 | --- | --- | --- |
 | Public starter | 47 public tests and eight copied-tree release checks pass on local Python 3.11/3.12/3.14 at `0d9abcf`; displayed reference/candidate comparisons now use matching 512-node resolution; the unchanged 256-node native check retains its 5e-10 limit | Hosted CI, independent machines, full-surface or physical acceptance; public reports never set physical admission or Step 4 to true |
-| Historical research suite | 3,487 tests pass, 334 warnings, zero failures/errors/skips at clean `6bb1e45`; full suite with no excluded paths, console and JUnit retained | Hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
+| Historical and current research suite | 4,883 tests pass, 334 warnings, zero failures/errors/skips at clean `80dddb8`; full suite with no excluded paths, console and JUnit retained | Hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
 | Publication inventory | About 325 MB of tracked content; 365 tracked files with home-path indicators; no matches for five credential/key patterns | A complete security, privacy or rights review; no history was sanitized or published |
 
 Details: [release evidence](validation/PUBLIC_RELEASE_RESULTS.md),

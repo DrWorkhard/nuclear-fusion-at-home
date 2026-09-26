@@ -107,11 +107,25 @@ The two review-agent sessions ended at their usage limits after producing their
 reported reviews/test artifacts. We claim those checks, not an unreceived final
 approval or external peer review.
 
-## Remaining qualification and scientific work
+## Complete implementation qualification
 
-Require a clean committed complete regression, committed qualification and a
-committed execution checkpoint before any fine native call. An archived-input
-check or saved-seed replay alone is never a substitute for that gate.
+At clean commit `80dddb84e530340742918cff29e343fe5b947165`, the **entire research
+suite passes: 4,883 tests, 334 warnings, no failures/errors/skips**, 402.46 s console
+/ 401.692 s JUnit. No paths were excluded; the repository remained clean and
+unchanged before/after. Repository-wide Ruff passes. The previously documented
+netCDF4 warning remains unresolved.
+
+The [qualification record](../../evidence/protected-fine-qualification-v1.json)
+binds the registered protocol, all 29 implementation/test files, four scoped
+review records and their retained artifacts, the actual full-suite JUnit/log and
+the unchanged eight-case coarse anchors. A fresh read-only archived-input check
+also passes while constructing this record; no new field was calculated.
+
+## Remaining execution and scientific work
+
+A committed execution checkpoint and fresh clean-source admission are still
+required before any fine native call. An archived-input check or saved-seed
+replay alone is never a substitute for that gate.
 
 Then execute every registered diagnostic, flux and geometry check for all eight
 fixed states. A correctly reconstructed threshold failure is a valid negative
