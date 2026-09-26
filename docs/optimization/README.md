@@ -19,7 +19,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Protected pilot execution connection](PROTECTED_PILOT_EXECUTION_PROTOCOL.md). Registered launcher/source/acknowledgement/audit wiring for the original eight-case diagnostic experiment. Native launch remains gated on completed physical-auditor and launcher qualification; all original budgets and fine-phase requirements remain.
 
-- [Independent saved-physics qualification](PROTECTED_PHYSICS_PROTOCOL.md). Registered next component: reconstruct every saved metric, sampled B/A, cumulative certificate and protected startup derivative without new native calculations; full pilot execution and physical acceptance remain separate.
+- Independent saved physics: [registration](PROTECTED_PHYSICS_PROTOCOL.md), [results](PROTECTED_PHYSICS_RESULTS.md). Auditor and historical driver implemented; 130 synthetic tests pass after independent review. Actual saved-seed reconstruction/full regression remain; full pilot execution and physical acceptance are separate.
 
 - Native plumbing: [registration](PROTECTED_NATIVE_PLUMBING_PROTOCOL.md), [results](PROTECTED_NATIVE_PLUMBING_RESULTS.md). Qualification complete: 315 focused and 3,233 full-suite tests pass; all eight real saved contexts/source-bound adapters validate read-only. No native pilot or physical acceptance follows from this software gate.
 - Protected cell integration: [registration](PROTECTED_CELL_PROTOCOL.md), [results](PROTECTED_CELL_RESULTS.md). Synthetic qualification complete: 299 focused tests, 2,918 full-suite passes and eight historical schema comparisons, with reviewed fixes and source/artifact binding. Native launching and physical acceptance remain separate.

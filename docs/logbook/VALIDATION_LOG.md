@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-26 — Implement and review independent saved-physics reconstruction
+
+- Follow reviewed registration `721774b`; add only the separate auditor and
+  historical qualification driver with tests. Existing numerical/certificate,
+  cell and execution sources remain unchanged. No new native calculation.
+- Core 69 tests and driver 61 pass. Independent combined rerun: 130 pass,
+  zero failures/errors/skips, 15.139 s JUnit; all four source hashes unchanged.
+  All rejected proposal/bundle evidence remains checked and claims narrowly scoped.
+- Retain/fix driver red runs: four swallowed-store failures and one final disk-
+  minimum accounting failure. Actual eight historical bundles and two original
+  certificate computations against four recorded proofs await the source checkpoint.
+- The inactive next-launcher prototype is separately registered at `908f43c` and
+  remains untracked/in progress during this checkpoint; it is not imported by
+  the physical qualifier. Do not claim a clean whole checkout for that forthcoming
+  read-only physical run; qualified scientific sources are committed unchanged.
+
 ## 2026-09-26 — Register the diagnostic pilot's execution connection
 
 - Before launcher implementation, specify source-bound native dependency wiring,
