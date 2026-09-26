@@ -1,5 +1,29 @@
 # Validation log
 
+## 2026-09-26 — Fixed field probe: focused implementation qualification
+
+- Implement strict four-state intake, original-seed value-only bridge, independent
+  numerical composition, fixed work/resource controls and source-bound runner.
+  All seven source/test components are new; historical evidence and evaluator
+  implementations remain unchanged. No proposal fields, gradients or new bounds.
+- Independent reviews reproduce and close coarse-construction/frozen-flux,
+  cross-call timestamp, mismatched paired-source, empty-result envelope, write
+  acknowledgement/byte-account and process-descendant gaps. Failed controls and
+  reviewer records remain under the two linked study artifact directories.
+- Clarify prospectively: complete finite flux/refinement misses retain all saved
+  rows/deltas with ineligible gain labels; malformed/inconsistent evidence or
+  resource/source/native failures stop the affected phase. No numerical threshold,
+  state selection, grid or native budget changes.
+- Actual metadata-only intake validates four states/112 copies and 301 references
+  with scientific imports blocked. Reconstruct exact predecessor updates/RHS.
+- Retained combined run: 544 focused tests pass in 78.38 s, 47 public tests in
+  3.243 s, 16 documentation/release tests in 15.26 s. Whole-repository Ruff,
+  documentation structure and whitespace pass. Keep the known import warning.
+- Update detail/index, Step 4 next action and roadmap. Root README, docs overview
+  and status still correctly state unmeasured proposal fields and open Step 4;
+  their last full-regression claim remains the earlier clean 5,110-pass study.
+  Full current regression and separate qualification/execution commits remain.
+
 ## 2026-09-26 — Register a four-state field usefulness comparison
 
 - Freeze reference-N selections and their exact rejected successors, ordered

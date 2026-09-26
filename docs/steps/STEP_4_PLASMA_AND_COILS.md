@@ -206,8 +206,11 @@ no field.
 
 ## What is not shown yet
 
-Next: a separately registered fixed field comparison of those proposals
-with their reference-N predecessors, before deciding on search integration.
+Next: the [registered fixed field comparison](../optimization/FIXED_FIELD_PROBE_PROTOCOL.md)
+of those proposals with their reference-N predecessors, before deciding on search
+integration. Its [implementation](../optimization/FIXED_FIELD_PROBE_PROGRESS.md) now
+passes 544 focused tests; clean full regression and a separate execution checkpoint
+still precede new fields.
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives
 in a coil-produced field, and no coupled, finite-pressure, confinement or
