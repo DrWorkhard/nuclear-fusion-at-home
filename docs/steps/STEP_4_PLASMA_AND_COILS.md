@@ -127,6 +127,15 @@ search ran. All 299 focused tests and the 2,918-test full regression pass;
 supervision and independent physical reconstruction remain separate gates.
 [Results and retained defects](../optimization/PROTECTED_CELL_RESULTS.md).
 
+### 9. Native plumbing — qualification in progress (26 September)
+
+The source-bound native bridge and isolated parent/worker connection are now
+implemented. All eight synthetic cases pass the complete subprocess and graph
+audit path; injected source/thread changes and a nonzero exit after return cannot
+produce a parent acknowledgement. Independent review has corrected control and
+adapter defects. Committed-source full regression and real source admission are
+pending; no new native search has run. [Report](../optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md).
+
 ## What is not shown yet
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives

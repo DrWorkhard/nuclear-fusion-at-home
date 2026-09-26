@@ -1,5 +1,34 @@
 # Validation log
 
+## 2026-09-26 — Register independent saved-physics reconstruction
+
+- Register the next component before implementation: reconstruct all saved
+  objective/metric values, sampled direct B/A and cumulative certificates,
+  including negative proposals, then the exact protected startup stencil.
+- Permit only synthetic tests and independent NumPy/SciPy reconstruction of
+  historical data. No new native search/model, producer certificate or target.
+  Core reconstruction cannot claim source admission or execution acknowledgement;
+  a separate source-bound launch/checkpoint layer must establish those facts.
+- Preserve old helpers/thresholds and narrow claims: sampled fields and two
+  derivative directions are not complete field/gradient verification or physical
+  admission. Review, actual-data checks and committed-source qualification follow.
+
+## 2026-09-26 — Implement and review protected native plumbing
+
+- Follow registration `7adeaee`; add source-bound native adapter, bounded control
+  pipe, injected worker and owned-process parent supervision. Older qualified
+  sources/evidence and numerical/physical limits stay unchanged.
+- Control 46 pass; worker 26 pass; source/adapter 131 pass; real subprocess
+  pipeline 11 pass. All fields/models are synthetic or stubbed. Retain red runs
+  for three clock/FIFO checks, four thread-drift checks and seven adapter checks.
+- Eight complete synthetic subprocesses return graph-checked results. Source and
+  thread drift, and nonzero exit after return, never become parent acknowledgements.
+  Independent parent-supervision review is still finishing; full committed-source
+  regression and actual eight-context source preflight remain pending.
+- No native study, installation, historical source change or physical improvement.
+  Documentation uses the existing one-level topic/result structure. Root README,
+  overview and roadmap physical conclusions remain current; Step 4 stays open.
+
 ## 2026-09-26 — Register native plumbing without starting a field experiment
 
 - After qualification `ef23278`, record the next source/adapter and parent/worker

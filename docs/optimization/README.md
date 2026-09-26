@@ -17,7 +17,9 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
-- [Native plumbing qualification](PROTECTED_NATIVE_PLUMBING_PROTOCOL.md). Next registered source/adapter and process-supervision stage: synthetic subprocesses and read-only saved data only, with fixed cell/search deadlines and parent-bound completion; no native pilot authorized by this software gate.
+- [Independent saved-physics qualification](PROTECTED_PHYSICS_PROTOCOL.md). Registered next component: reconstruct every saved metric, sampled B/A, cumulative certificate and protected startup derivative without new native calculations; full pilot execution and physical acceptance remain separate.
+
+- Native plumbing: [registration](PROTECTED_NATIVE_PLUMBING_PROTOCOL.md), [results](PROTECTED_NATIVE_PLUMBING_RESULTS.md). Source/adapter and process supervision implemented; qualification in progress using synthetic subprocesses and read-only saved data only. Eight real isolated synthetic paths pass; no native pilot authorized by this software gate.
 - Protected cell integration: [registration](PROTECTED_CELL_PROTOCOL.md), [results](PROTECTED_CELL_RESULTS.md). Synthetic qualification complete: 299 focused tests, 2,918 full-suite passes and eight historical schema comparisons, with reviewed fixes and source/artifact binding. Native launching and physical acceptance remain separate.
 - Protected runner execution components: [registration](PROTECTED_RUNNER_PROTOCOL.md), [results](PROTECTED_RUNNER_RESULTS.md). Scoped qualification complete: 390 synthetic tests, 2,619 full-suite passes and successful real-data source preflight after independently reviewed fixes. Integrated orchestration and physical acceptance remain separate.
 - [Second protected-fit method review](PROTECTED_METHOD_REVIEW.md). Independently authored internal support for a bounded diagnostic pilot, conditional on remaining execution/physical gates; seed-only historical replay, exact two-model schedule and no unresolved fine-improvement claim.
