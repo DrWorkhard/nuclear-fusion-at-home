@@ -1,5 +1,25 @@
 # Findings log
 
+## F-105 — Newly certified proposals yield small resolved normal-field gains
+
+**Class:** independently reconstructed fixed-state diagnostic improvement
+**Date:** 2026-09-26
+
+At clean `4f13685`, four fixed states and six grids each complete 168 requests,
+24 initializer/metric checks, 144 sampled B/A statistics, 20 refinements and
+24 diagnostic flux checks. Both proposals reduce normal RMS beyond the preset
+empirical margin: 0.057038% /0.065190%. The six-coil interior-vector gain also
+resolves; the eight-coil gain does not. Both currents decrease (1,375.70/864.31 A)
+and original strict counterfactual Armijo decisions pass. Old search decisions
+remain unchanged. The intermediate verbal sign error is corrected in the results.
+
+This demonstrates useful movement for these two previously blocked steps, not
+a general method advantage. Normal RMS remains about 0.27 versus 1e-4; every
+absolute field-error gate fails. No energy-efficiency, full flux/topology,
+engineering, Step 4 completion or MS1 claim. Next: a small registered continuation
+and saved-field diagnosis, not extrapolation to feasibility.
+[Results](../optimization/FIXED_FIELD_PROBE_RESULTS.md).
+
 ## F-104 — A tighter path-wide bound certifies two formerly blocked proposals
 
 **Class:** independently checked geometry component, not field improvement

@@ -1,6 +1,7 @@
 # Fixed field comparison: implementation and qualification
 
-26 September 2026. Software qualification passes; **no new proposal fields measured**.
+26 September 2026. Software qualification passes; the subsequent
+[fixed field experiment is complete](FIXED_FIELD_PROBE_RESULTS.md).
 [Scientific protocol](FIXED_FIELD_PROBE_PROTOCOL.md) ·
 [Input/method review](FIXED_FIELD_PROBE_REVIEW.md) · [Index](README.md)
 

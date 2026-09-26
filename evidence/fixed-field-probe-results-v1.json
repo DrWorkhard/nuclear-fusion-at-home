@@ -1,0 +1,1498 @@
+{
+  "schema_version": 1,
+  "kind": "fixed-field-probe-completed-results",
+  "status": "completed",
+  "execution_commit": "4f13685453037afdf24263665d3a9fa1009e82f1",
+  "sources_unchanged": true,
+  "elapsed_seconds": 347.3813420830993,
+  "references": {
+    "registration": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fixed-field-probe-registration-v1.json",
+      "bytes": 1986,
+      "sha256": "17d22988b1025ecb0959ed97dd08cb23974e4872c4d6aa5a9cf437a533b078f7"
+    },
+    "qualification": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fixed-field-probe-qualification-v1.json",
+      "bytes": 107104,
+      "sha256": "b43d4355a9d7138cf40c6951eb96348ba4c6a357278a3c2a94c7b2626743863e"
+    },
+    "checkpoint": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fixed-field-probe-execution-v1.json",
+      "bytes": 96973,
+      "sha256": "e5d86941c101e935c117689ffaab2e066a2aa1225648a5e7130474aed1dca83a"
+    },
+    "inputs": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fixed-field-probe-inputs-v1.json",
+      "bytes": 378385,
+      "sha256": "4997daf18d1ec5d94e1e6fd73f74e2a9ca8a83d269986241fdf64fb80c456699"
+    },
+    "execution": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/result.json",
+      "bytes": 1459,
+      "sha256": "5540dd5d92ca689b51cc078ff270d938059fa388d20507e241dd066b2b87b80d"
+    },
+    "execution_before": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/before.json",
+      "bytes": 1247,
+      "sha256": "7aaa47a7a658dc93f50edd988fe6a50ba7361994c952f91b83f3d48294e59224"
+    },
+    "wrapper": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/run_study.py",
+      "bytes": 3028,
+      "sha256": "800832e373bd6c24196cf4053299f1453417cdb1c5195e76102cfcd2e6ae443b"
+    },
+    "same_code_parent_replay": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/saved-parent-replay.json",
+      "bytes": 27848,
+      "sha256": "c2a0c1581f24271527f796ea0c89685c4af33820f1bdb2883c194b64bb64666d"
+    },
+    "corrected_summary": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/corrected-summary.json",
+      "bytes": 28685,
+      "sha256": "13d33e05bcee51379e1cd9120d09cf94e278c1322d33bdf6a37608e10cc26cb7"
+    },
+    "initial_summary_failure": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/summary-initial-failure.json",
+      "bytes": 566,
+      "sha256": "d8cc6eadfd386afee9157d547a3cb003ccd16a47672efbb77b3909a42d47d0a2"
+    },
+    "independent_saved_review": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/independent-saved-results-review.json",
+      "bytes": 423728,
+      "sha256": "bf0a6989ce95bd2e68dd6a8a2c59fbea54735ff27d151afb30ab738c3e72a27e"
+    },
+    "independent_review_script": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/saved_results_review.py",
+      "bytes": 37787,
+      "sha256": "eac0d372a0afac2657f67293e710b9cf63a2f50c7e3a37ec58e844dc3adaafea"
+    },
+    "record_builder": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/make_results.py",
+      "bytes": 4239,
+      "sha256": "ef24427c93faa0cc7943400eed79cb855b499660139b8067546da0201518f588"
+    },
+    "study": {
+      "bytes": 195362,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/index/study.json",
+      "sha256": "7d881cb3a7cc2f58feca4020e9f32f3430fffba0f7eb0cf285c7a0f5f4f906c2"
+    },
+    "protocol": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/FIXED_FIELD_PROBE_PROTOCOL.md",
+      "bytes": 10514,
+      "sha256": "fbcfc9200f15450bde796c3dc5f8a4f2e4e53ff70db3044e6ee05fdeb11dc298"
+    }
+  },
+  "totals": {
+    "diagnostic_flux_checks": 24,
+    "direct_scalar_components": 27648,
+    "direct_statistics": 144,
+    "direct_vectors": 9216,
+    "initializer_scalar_checks": 24,
+    "metric_reconstructions": 24,
+    "models": 24,
+    "native_points": 804864,
+    "native_requests": 168,
+    "refinement_checks": 20
+  },
+  "states": [
+    {
+      "label": "reference-n6-N",
+      "levels": [
+        {
+          "J": 0.03574024765187971,
+          "JN": 0.03574024765187971,
+          "JV": 0.06598847713223069,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 283050.4585156271,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589792,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 0,
+            "ncoil": 256,
+            "ninner": 32,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5964486271706961,
+          "normal_rms": 0.27472163747576217,
+          "scale": 2.830504585156271,
+          "vector_rms": 0.3632863254575671
+        },
+        {
+          "J": 0.035740203622295304,
+          "JN": 0.035740203622295304,
+          "JV": 0.06598847713223069,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 283050.4585156271,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589792,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 1,
+            "ncoil": 256,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0
+          },
+          "normal_max": 0.5964486271706961,
+          "normal_rms": 0.27472164315291886,
+          "scale": 2.830504585156271,
+          "vector_rms": 0.3632863254575671
+        },
+        {
+          "J": 0.035740203622295304,
+          "JN": 0.035740203622295304,
+          "JV": 0.06598847713223069,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 283050.4585156271,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 2,
+            "ncoil": 512,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0
+          },
+          "normal_max": 0.5964486271706965,
+          "normal_rms": 0.27472164315291886,
+          "scale": 2.830504585156271,
+          "vector_rms": 0.3632863254575671
+        },
+        {
+          "J": 0.03574020362201781,
+          "JN": 0.03574020362201781,
+          "JV": 0.06598847713223069,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 283050.4585156271,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 3,
+            "ncoil": 512,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0.5
+          },
+          "normal_max": 0.5967418405420082,
+          "normal_rms": 0.27472164315159403,
+          "scale": 2.830504585156271,
+          "vector_rms": 0.3632863254575671
+        },
+        {
+          "J": 0.03574024765187971,
+          "JN": 0.03574024765187971,
+          "JV": 0.06601061186284368,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 283050.4585156271,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589792,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 4,
+            "ncoil": 256,
+            "ninner": 64,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5964486271706961,
+          "normal_rms": 0.27472163747576217,
+          "scale": 2.830504585156271,
+          "vector_rms": 0.36334724950890623
+        },
+        {
+          "J": 0.03574024765187971,
+          "JN": 0.03574024765187971,
+          "JV": 0.06601061186284368,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 283050.4585156271,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 5,
+            "ncoil": 512,
+            "ninner": 64,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5964486271706965,
+          "normal_rms": 0.27472163747576217,
+          "scale": 2.830504585156271,
+          "vector_rms": 0.36334724950890623
+        }
+      ],
+      "numerical_pass": true,
+      "reference": {
+        "bytes": 223458,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-0/audit/records/s0-audit.json",
+        "sha256": "c85f8374f6c517a4d958054eeee1d1e9c5efae66604a9459e0eecf6d8d0ebfd1"
+      },
+      "refinements": {
+        "checks": [
+          {
+            "absolute_error": 5.677156689198881e-09,
+            "coarse": 0.27472163747576217,
+            "coarse_level": 0,
+            "fine": 0.27472164315291886,
+            "fine_level": 1,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 0.0,
+            "coarse": 0.27472164315291886,
+            "coarse_level": 1,
+            "fine": 0.27472164315291886,
+            "fine_level": 2,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 1.3248291352851993e-12,
+            "coarse": 0.27472164315291886,
+            "coarse_level": 2,
+            "fine": 0.27472164315159403,
+            "fine_level": 3,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 6.092405133911738e-05,
+            "coarse": 0.3632863254575671,
+            "coarse_level": 0,
+            "fine": 0.36334724950890623,
+            "fine_level": 4,
+            "metric": "vector_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 0.0,
+            "coarse": 0.36334724950890623,
+            "coarse_level": 4,
+            "fine": 0.36334724950890623,
+            "fine_level": 5,
+            "metric": "vector_rms",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "search_allowed": false,
+        "step4_pass": false,
+        "transfer_pass": false
+      },
+      "role": "coarse-selection",
+      "state_sha256": "4f53ae26dbc1ce4948ddc52bbcfc05ad0aef597bdf0fa820b25c872866897d1b",
+      "work": {
+        "diagnostic_flux_checks": 6,
+        "direct_scalar_components": 6912,
+        "direct_statistics": 36,
+        "direct_vectors": 2304,
+        "initializer_scalar_checks": 6,
+        "metric_reconstructions": 6
+      }
+    },
+    {
+      "label": "rejected-n6",
+      "levels": [
+        {
+          "J": 0.03533745124199699,
+          "JN": 0.03533745124199699,
+          "JV": 0.06577118747407396,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 281674.75605263637,
+          "diagnostic_flux": {
+            "flux": -0.031415926535897934,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 0,
+            "ncoil": 256,
+            "ninner": 32,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5963113052564053,
+          "normal_rms": 0.27456494024207195,
+          "scale": 2.816747560526364,
+          "vector_rms": 0.362687709949135
+        },
+        {
+          "J": 0.03533740996174225,
+          "JN": 0.03533740996174225,
+          "JV": 0.06577118747407396,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 281674.75605263637,
+          "diagnostic_flux": {
+            "flux": -0.031415926535897934,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 1,
+            "ncoil": 256,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0
+          },
+          "normal_max": 0.5963113052564053,
+          "normal_rms": 0.27456494733193143,
+          "scale": 2.816747560526364,
+          "vector_rms": 0.362687709949135
+        },
+        {
+          "J": 0.03533740996174225,
+          "JN": 0.03533740996174225,
+          "JV": 0.06577118747407396,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 281674.75605263637,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589794,
+            "passed": true,
+            "relative_error": 4.4174370575882185e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 2,
+            "ncoil": 512,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0
+          },
+          "normal_max": 0.5963113052564056,
+          "normal_rms": 0.27456494733193143,
+          "scale": 2.816747560526364,
+          "vector_rms": 0.362687709949135
+        },
+        {
+          "J": 0.03533740996147489,
+          "JN": 0.03533740996147489,
+          "JV": 0.06577118747407396,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 281674.75605263637,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589794,
+            "passed": true,
+            "relative_error": 4.4174370575882185e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 3,
+            "ncoil": 512,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0.5
+          },
+          "normal_max": 0.5965885971086292,
+          "normal_rms": 0.2745649473306071,
+          "scale": 2.816747560526364,
+          "vector_rms": 0.362687709949135
+        },
+        {
+          "J": 0.03533745124199699,
+          "JN": 0.03533745124199699,
+          "JV": 0.06579344605656953,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 281674.75605263637,
+          "diagnostic_flux": {
+            "flux": -0.031415926535897934,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 4,
+            "ncoil": 256,
+            "ninner": 64,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5963113052564053,
+          "normal_rms": 0.27456494024207195,
+          "scale": 2.816747560526364,
+          "vector_rms": 0.3627490759645558
+        },
+        {
+          "J": 0.035337451241996984,
+          "JN": 0.035337451241996984,
+          "JV": 0.06579344605656953,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 281674.75605263637,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589794,
+            "passed": true,
+            "relative_error": 4.4174370575882185e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 5,
+            "ncoil": 512,
+            "ninner": 64,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5963113052564056,
+          "normal_rms": 0.27456494024207195,
+          "scale": 2.816747560526364,
+          "vector_rms": 0.3627490759645558
+        }
+      ],
+      "numerical_pass": true,
+      "reference": {
+        "bytes": 220327,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-0/audit/records/s1-audit.json",
+        "sha256": "d2befee16fb771b2e521053586030a23f8c329aaef64cbb88ece2c8194d68461"
+      },
+      "refinements": {
+        "checks": [
+          {
+            "absolute_error": 7.0898594772828005e-09,
+            "coarse": 0.27456494024207195,
+            "coarse_level": 0,
+            "fine": 0.27456494733193143,
+            "fine_level": 1,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 0.0,
+            "coarse": 0.27456494733193143,
+            "coarse_level": 1,
+            "fine": 0.27456494733193143,
+            "fine_level": 2,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 1.324329534924118e-12,
+            "coarse": 0.27456494733193143,
+            "coarse_level": 2,
+            "fine": 0.2745649473306071,
+            "fine_level": 3,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 6.13660154207829e-05,
+            "coarse": 0.362687709949135,
+            "coarse_level": 0,
+            "fine": 0.3627490759645558,
+            "fine_level": 4,
+            "metric": "vector_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 0.0,
+            "coarse": 0.3627490759645558,
+            "coarse_level": 4,
+            "fine": 0.3627490759645558,
+            "fine_level": 5,
+            "metric": "vector_rms",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "search_allowed": false,
+        "step4_pass": false,
+        "transfer_pass": false
+      },
+      "role": "curvature-only-rejection",
+      "state_sha256": "316d4fabc6625f465f50916079ad58b2c6f31dcfb4bea00f428ee6bc5c5fb895",
+      "work": {
+        "diagnostic_flux_checks": 6,
+        "direct_scalar_components": 6912,
+        "direct_statistics": 36,
+        "direct_vectors": 2304,
+        "initializer_scalar_checks": 6,
+        "metric_reconstructions": 6
+      }
+    },
+    {
+      "label": "reference-n8-N",
+      "levels": [
+        {
+          "J": 0.03304825635918269,
+          "JN": 0.03304825635918269,
+          "JV": 0.06382262057716417,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 210475.10536337874,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 0,
+            "ncoil": 256,
+            "ninner": 32,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5935811656319125,
+          "normal_rms": 0.26794631577636446,
+          "scale": 2.1047510536337874,
+          "vector_rms": 0.3572747418364869
+        },
+        {
+          "J": 0.03304826709762774,
+          "JN": 0.03304826709762774,
+          "JV": 0.06382262057716417,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 210475.10536337874,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 1,
+            "ncoil": 256,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0
+          },
+          "normal_max": 0.6013722204619169,
+          "normal_rms": 0.26794632072792374,
+          "scale": 2.1047510536337874,
+          "vector_rms": 0.3572747418364869
+        },
+        {
+          "J": 0.033048267097627725,
+          "JN": 0.033048267097627725,
+          "JV": 0.06382262057716416,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 210475.10536337874,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589792,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 2,
+            "ncoil": 512,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0
+          },
+          "normal_max": 0.6013722204619167,
+          "normal_rms": 0.26794632072792374,
+          "scale": 2.1047510536337874,
+          "vector_rms": 0.35727474183648683
+        },
+        {
+          "J": 0.033048267097544375,
+          "JN": 0.033048267097544375,
+          "JV": 0.06382262057716416,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 210475.10536337874,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589792,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 3,
+            "ncoil": 512,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0.5
+          },
+          "normal_max": 0.6000964508660933,
+          "normal_rms": 0.2679463207270481,
+          "scale": 2.1047510536337874,
+          "vector_rms": 0.35727474183648683
+        },
+        {
+          "J": 0.03304825635918269,
+          "JN": 0.03304825635918269,
+          "JV": 0.06379805178098673,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 210475.10536337874,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 4,
+            "ncoil": 256,
+            "ninner": 64,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5935811656319125,
+          "normal_rms": 0.26794631577636446,
+          "scale": 2.1047510536337874,
+          "vector_rms": 0.3572059679820222
+        },
+        {
+          "J": 0.03304825635918268,
+          "JN": 0.03304825635918268,
+          "JV": 0.06379805178098673,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 210475.10536337874,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589792,
+            "passed": true,
+            "relative_error": 2.2087185287941092e-16,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 5,
+            "ncoil": 512,
+            "ninner": 64,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5935811656319128,
+          "normal_rms": 0.26794631577636446,
+          "scale": 2.1047510536337874,
+          "vector_rms": 0.3572059679820222
+        }
+      ],
+      "numerical_pass": true,
+      "reference": {
+        "bytes": 348185,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-1/audit/records/s2-audit.json",
+        "sha256": "398236288f93cffcaa27a33279b70f02199d3b265c2bc50d460f02ef4bf6794d"
+      },
+      "refinements": {
+        "checks": [
+          {
+            "absolute_error": 4.951559273713713e-09,
+            "coarse": 0.26794631577636446,
+            "coarse_level": 0,
+            "fine": 0.26794632072792374,
+            "fine_level": 1,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 0.0,
+            "coarse": 0.26794632072792374,
+            "coarse_level": 1,
+            "fine": 0.26794632072792374,
+            "fine_level": 2,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 8.75632899521861e-13,
+            "coarse": 0.26794632072792374,
+            "coarse_level": 2,
+            "fine": 0.2679463207270481,
+            "fine_level": 3,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 6.877385446468764e-05,
+            "coarse": 0.3572747418364869,
+            "coarse_level": 0,
+            "fine": 0.3572059679820222,
+            "fine_level": 4,
+            "metric": "vector_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 0.0,
+            "coarse": 0.3572059679820222,
+            "coarse_level": 4,
+            "fine": 0.3572059679820222,
+            "fine_level": 5,
+            "metric": "vector_rms",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "search_allowed": false,
+        "step4_pass": false,
+        "transfer_pass": false
+      },
+      "role": "coarse-selection",
+      "state_sha256": "425825e6255f59ee254ec67d47effaad1e6351b83af6f01afb2829bc13dec8c3",
+      "work": {
+        "diagnostic_flux_checks": 6,
+        "direct_scalar_components": 6912,
+        "direct_statistics": 36,
+        "direct_vectors": 2304,
+        "initializer_scalar_checks": 6,
+        "metric_reconstructions": 6
+      }
+    },
+    {
+      "label": "rejected-n8",
+      "levels": [
+        {
+          "J": 0.03271955708277579,
+          "JN": 0.03271955708277579,
+          "JV": 0.06367400671458025,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 209610.79288576686,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 0,
+            "ncoil": 256,
+            "ninner": 32,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.593370063995864,
+          "normal_rms": 0.2677716416191918,
+          "scale": 2.0961079288576685,
+          "vector_rms": 0.3568585341969006
+        },
+        {
+          "J": 0.03271956724365144,
+          "JN": 0.03271956724365144,
+          "JV": 0.06367400671458025,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 209610.79288576686,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 1,
+            "ncoil": 256,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0
+          },
+          "normal_max": 0.6011761355215395,
+          "normal_rms": 0.26777164647757684,
+          "scale": 2.0961079288576685,
+          "vector_rms": 0.3568585341969006
+        },
+        {
+          "J": 0.03271956724365143,
+          "JN": 0.03271956724365143,
+          "JV": 0.06367400671458025,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 209610.79288576686,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 2,
+            "ncoil": 512,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0
+          },
+          "normal_max": 0.6011761355215396,
+          "normal_rms": 0.26777164647757684,
+          "scale": 2.0961079288576685,
+          "vector_rms": 0.3568585341969006
+        },
+        {
+          "J": 0.03271956724356327,
+          "JN": 0.03271956724356327,
+          "JV": 0.06367400671458025,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 209610.79288576686,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 3,
+            "ncoil": 512,
+            "ninner": 32,
+            "nphi": 128,
+            "ntheta": 128,
+            "offset": 0.5
+          },
+          "normal_max": 0.5998934560217507,
+          "normal_rms": 0.2677716464766939,
+          "scale": 2.0961079288576685,
+          "vector_rms": 0.3568585341969006
+        },
+        {
+          "J": 0.03271955708277579,
+          "JN": 0.03271955708277579,
+          "JV": 0.06364955109200783,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 209610.79288576686,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 4,
+            "ncoil": 256,
+            "ninner": 64,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.593370063995864,
+          "normal_rms": 0.2677716416191918,
+          "scale": 2.0961079288576685,
+          "vector_rms": 0.35678999731496913
+        },
+        {
+          "J": 0.03271955708277579,
+          "JN": 0.03271955708277579,
+          "JV": 0.06364955109200783,
+          "absolute_gates": {
+            "current": true,
+            "normal_max": false,
+            "normal_rms": false,
+            "vector_rms": false
+          },
+          "current": 209610.79288576686,
+          "diagnostic_flux": {
+            "flux": -0.03141592653589793,
+            "passed": true,
+            "relative_error": 0.0,
+            "relative_limit": 1e-06,
+            "target_flux": -0.03141592653589793
+          },
+          "geometry_penalty": 0.0,
+          "level": {
+            "index": 5,
+            "ncoil": 512,
+            "ninner": 64,
+            "nphi": 64,
+            "ntheta": 64,
+            "offset": 0
+          },
+          "normal_max": 0.5933700639958639,
+          "normal_rms": 0.2677716416191918,
+          "scale": 2.0961079288576685,
+          "vector_rms": 0.35678999731496913
+        }
+      ],
+      "numerical_pass": true,
+      "reference": {
+        "bytes": 343820,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-1/audit/records/s3-audit.json",
+        "sha256": "38c9433be6a9b85461f1ebf125a858346660586af4f9f0d438908fbcc59cbd85"
+      },
+      "refinements": {
+        "checks": [
+          {
+            "absolute_error": 4.8583850276173735e-09,
+            "coarse": 0.2677716416191918,
+            "coarse_level": 0,
+            "fine": 0.26777164647757684,
+            "fine_level": 1,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 0.0,
+            "coarse": 0.26777164647757684,
+            "coarse_level": 1,
+            "fine": 0.26777164647757684,
+            "fine_level": 2,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 8.82960371484387e-13,
+            "coarse": 0.26777164647757684,
+            "coarse_level": 2,
+            "fine": 0.2677716464766939,
+            "fine_level": 3,
+            "metric": "normal_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 6.853688193148022e-05,
+            "coarse": 0.3568585341969006,
+            "coarse_level": 0,
+            "fine": 0.35678999731496913,
+            "fine_level": 4,
+            "metric": "vector_rms",
+            "passed": true
+          },
+          {
+            "absolute_error": 0.0,
+            "coarse": 0.35678999731496913,
+            "coarse_level": 4,
+            "fine": 0.35678999731496913,
+            "fine_level": 5,
+            "metric": "vector_rms",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "search_allowed": false,
+        "step4_pass": false,
+        "transfer_pass": false
+      },
+      "role": "curvature-only-rejection",
+      "state_sha256": "61d36df64b10d0919cbcc630d1d09a00cf1a0e6ffeed6702e36eb026fe44ed5b",
+      "work": {
+        "diagnostic_flux_checks": 6,
+        "direct_scalar_components": 6912,
+        "direct_statistics": 36,
+        "direct_vectors": 2304,
+        "initializer_scalar_checks": 6,
+        "metric_reconstructions": 6
+      }
+    }
+  ],
+  "comparisons": [
+    {
+      "armijo": {
+        "counterfactual_armijo_pass": true,
+        "current_pass": true,
+        "independent_armijo_pass": true,
+        "independent_proposal_objective": 0.03533745124199699,
+        "proposal_objective": 0.03533745124199698,
+        "saved_rhs": 0.03574020711548009
+      },
+      "case": {
+        "label": "reference-n6-N",
+        "method": "N",
+        "nbase": 6,
+        "order": 5,
+        "seed_label": "n6-shape-d100mm",
+        "target": "reference"
+      },
+      "ms1_reached": false,
+      "normal_rms": {
+        "both_states_numerically_qualified": true,
+        "control_sensitivity": 5.677156689198881e-09,
+        "deltas": [
+          0.00015669723369021726,
+          0.00015669582098742918,
+          0.00015669582098742918,
+          0.00015669582098692958
+        ],
+        "levels": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "margin": 1.5106806466592672e-07,
+        "metric": "normal_rms",
+        "proposal_sensitivity": 7.0898594772828005e-09,
+        "resolved_diagnostic_gain": true,
+        "rigorous_error_bound": false
+      },
+      "physical_admission": false,
+      "reference": {
+        "bytes": 7426,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-0/audit/records/comparison.json",
+        "sha256": "5934b48ffc9f0df7498e1a14104cca0e477a713343899d47ce6198b1935c0b3d"
+      },
+      "sota_advance": false,
+      "step4_pass": false,
+      "tradeoffs": [
+        {
+          "current_delta": -1375.70246299071,
+          "level": 0,
+          "normal_max_delta": 0.0001373219142908333
+        },
+        {
+          "current_delta": -1375.70246299071,
+          "level": 1,
+          "normal_max_delta": 0.0001373219142908333
+        },
+        {
+          "current_delta": -1375.70246299071,
+          "level": 2,
+          "normal_max_delta": 0.0001373219142908333
+        },
+        {
+          "current_delta": -1375.70246299071,
+          "level": 3,
+          "normal_max_delta": 0.00015324343337896895
+        },
+        {
+          "current_delta": -1375.70246299071,
+          "level": 4,
+          "normal_max_delta": 0.0001373219142908333
+        },
+        {
+          "current_delta": -1375.70246299071,
+          "level": 5,
+          "normal_max_delta": 0.0001373219142908333
+        }
+      ],
+      "vector_rms": {
+        "both_states_numerically_qualified": true,
+        "control_sensitivity": 6.092405133911738e-05,
+        "deltas": [
+          0.0005986155084320988,
+          0.0005981735443504332,
+          0.0005981735443504332
+        ],
+        "levels": [
+          0,
+          4,
+          5
+        ],
+        "margin": 0.0004892602670396011,
+        "metric": "vector_rms",
+        "proposal_sensitivity": 6.13660154207829e-05,
+        "resolved_diagnostic_gain": true,
+        "rigorous_error_bound": false
+      }
+    },
+    {
+      "armijo": {
+        "counterfactual_armijo_pass": true,
+        "current_pass": true,
+        "independent_armijo_pass": true,
+        "independent_proposal_objective": 0.03271955708277579,
+        "proposal_objective": 0.032719557082775776,
+        "saved_rhs": 0.03304822327847573
+      },
+      "case": {
+        "label": "reference-n8-N",
+        "method": "N",
+        "nbase": 8,
+        "order": 7,
+        "seed_label": "n8-shape-d100mm",
+        "target": "reference"
+      },
+      "ms1_reached": false,
+      "normal_rms": {
+        "both_states_numerically_qualified": true,
+        "control_sensitivity": 4.951559273713713e-09,
+        "deltas": [
+          0.00017467415717264956,
+          0.00017467425034689565,
+          0.00017467425034689565,
+          0.00017467425035422313
+        ],
+        "levels": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "margin": 1.3923977720532434e-07,
+        "metric": "normal_rms",
+        "proposal_sensitivity": 4.8583850276173735e-09,
+        "resolved_diagnostic_gain": true,
+        "rigorous_error_bound": false
+      },
+      "physical_admission": false,
+      "reference": {
+        "bytes": 9849,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-1/audit/records/comparison.json",
+        "sha256": "636e1364789fbc41d4b700e4878d90183b6b7d04d5049671cdb8e4b3866eb4ef"
+      },
+      "sota_advance": false,
+      "step4_pass": false,
+      "tradeoffs": [
+        {
+          "current_delta": -864.3124776118784,
+          "level": 0,
+          "normal_max_delta": 0.0002111016360485385
+        },
+        {
+          "current_delta": -864.3124776118784,
+          "level": 1,
+          "normal_max_delta": 0.00019608494037737234
+        },
+        {
+          "current_delta": -864.3124776118784,
+          "level": 2,
+          "normal_max_delta": 0.0001960849403771503
+        },
+        {
+          "current_delta": -864.3124776118784,
+          "level": 3,
+          "normal_max_delta": 0.00020299484434260773
+        },
+        {
+          "current_delta": -864.3124776118784,
+          "level": 4,
+          "normal_max_delta": 0.0002111016360485385
+        },
+        {
+          "current_delta": -864.3124776118784,
+          "level": 5,
+          "normal_max_delta": 0.00021110163604887155
+        }
+      ],
+      "vector_rms": {
+        "both_states_numerically_qualified": true,
+        "control_sensitivity": 6.877385446468764e-05,
+        "deltas": [
+          0.0004162076395862746,
+          0.0004159706670530672,
+          0.0004159706670530672
+        ],
+        "levels": [
+          0,
+          4,
+          5
+        ],
+        "margin": 0.0005493429455846714,
+        "metric": "vector_rms",
+        "proposal_sensitivity": 6.853688193148022e-05,
+        "resolved_diagnostic_gain": false,
+        "rigorous_error_bound": false
+      }
+    }
+  ],
+  "worst": {
+    "diagnostic_flux_relative_error": 4.4174370575882185e-16,
+    "direct_relative_error": 1.4787768169345062e-15,
+    "initializer_relative_error": 6.514978995388055e-16,
+    "refinement_relative_error": 0.0001924957082361093
+  },
+  "phases": [
+    {
+      "acknowledgement": {
+        "bytes": 67128,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-0/producer-parent/acknowledgement.json",
+        "sha256": "4d8f48498e84c735084985925561a6002af26cb05fd36b3ada13b50f848e8fa1"
+      },
+      "group_cleanup": {
+        "deferred_signal_error": "[Errno 1] Operation not permitted",
+        "reaped": true,
+        "retired": true,
+        "signalled_before_reap": false
+      },
+      "observed_seconds": 75.83919099997729,
+      "pair_index": 0,
+      "parent_return_replay": true,
+      "phase": "producer",
+      "result": {
+        "bytes": 208852,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-0/producer/records/result.json",
+        "sha256": "5e11efddd021fa10a465e16b55903b30477d8fe3b6a7d656a891c62960a2683e"
+      }
+    },
+    {
+      "acknowledgement": {
+        "bytes": 12586,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-0/audit-parent/acknowledgement.json",
+        "sha256": "14822fc3e735236be0d11d9b7c6d95c8792c3742671f58963e25d32277dfbee9"
+      },
+      "group_cleanup": {
+        "deferred_signal_error": "[Errno 1] Operation not permitted",
+        "reaped": true,
+        "retired": true,
+        "signalled_before_reap": false
+      },
+      "observed_seconds": 60.492124416981824,
+      "pair_index": 0,
+      "parent_return_replay": true,
+      "phase": "audit",
+      "result": {
+        "bytes": 202184,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-0/audit/records/result.json",
+        "sha256": "3780a175261550a88d44c69c87f79c195dc3b192fcb37a2482b1acbd77ccbb63"
+      }
+    },
+    {
+      "acknowledgement": {
+        "bytes": 67134,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-1/producer-parent/acknowledgement.json",
+        "sha256": "2360ed799a5b354b8c2778173e9e2187cda20fa432462dd0624f502c8a7c54bf"
+      },
+      "group_cleanup": {
+        "deferred_signal_error": "[Errno 1] Operation not permitted",
+        "reaped": true,
+        "retired": true,
+        "signalled_before_reap": false
+      },
+      "observed_seconds": 79.94273208302911,
+      "pair_index": 1,
+      "parent_return_replay": true,
+      "phase": "producer",
+      "result": {
+        "bytes": 208852,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-1/producer/records/result.json",
+        "sha256": "8cd3b92cc6b899c60eca252cf061199eed67e8a510e27e2ca27a30f74315cba4"
+      }
+    },
+    {
+      "acknowledgement": {
+        "bytes": 12588,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-1/audit-parent/acknowledgement.json",
+        "sha256": "0bd28f38aa4f4cb7cce80ec1ec36bc9ccf00d8540c274405d596eaeeea414a1e"
+      },
+      "group_cleanup": {
+        "deferred_signal_error": "[Errno 1] Operation not permitted",
+        "reaped": true,
+        "retired": true,
+        "signalled_before_reap": false
+      },
+      "observed_seconds": 66.07166333403438,
+      "pair_index": 1,
+      "parent_return_replay": true,
+      "phase": "audit",
+      "result": {
+        "bytes": 202184,
+        "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/fixed-field-probe-v1/execution/study/pair-1/audit/records/result.json",
+        "sha256": "bad006e1db68a0bd2ee7dd45cb685c4ad201bb4d96c3a7787d351e6a98b90948"
+      }
+    }
+  ],
+  "final_payload_charged_bytes": {
+    "0": 28004655,
+    "1": 30594524
+  },
+  "resolved_normal_gains": 2,
+  "resolved_vector_gains": 1,
+  "all_absolute_field_gates_fail": true,
+  "independent_saved_review": {
+    "passed": true,
+    "new_execution_files": 449,
+    "reference_identities": 1554,
+    "distinct_paths": 1551,
+    "unique_identity_bytes": 184293441,
+    "expanded_json_documents": 428,
+    "opaque_historical_json_leaves": 370,
+    "current_sources": 540,
+    "runtime_files": 25,
+    "new_native_requests": 0,
+    "new_BA_recomputations": 0,
+    "new_geometry_bounds": 0,
+    "external_peer_review": false
+  },
+  "caveats": [
+    "Empirical diagnostic margins are not rigorous error bounds.",
+    "Historical opaque references are hashed, not recursively scientifically replayed.",
+    "Supervisor elapsed intervals precede final parent replay/publication.",
+    "All four cleanup records retain deferred EPERM; leader reaped and group absent.",
+    "Same-code saved-parent replay is not independent physical recomputation.",
+    "Intermediate verbal current-sign error corrected: both currents decrease.",
+    "Display-only refinement denominator corrected; maximum and decisions unchanged.",
+    "No historical search decision or physical threshold changed."
+  ],
+  "field_pass": false,
+  "physical_admission": false,
+  "step4_pass": false,
+  "ms1_reached": false,
+  "sota_advance": false,
+  "pareto_dominance": false,
+  "full_flux_qualification": false
+}

@@ -1,5 +1,35 @@
 # Validation log
 
+## 2026-09-26 — Fixed proposal fields: complete, small diagnostic improvement
+
+- Execute the registered study once at clean `4f13685`; before/after source and
+  clean status match, exit zero in 347.381 s. All 24 models /168 requests /804,864
+  points complete; no retry, raised cap, optimization or environment change.
+- All initializer/metric checks, 144 direct B/A statistics /9,216 vectors,
+  20 refinements and 24 diagnostic loop-flux checks pass. Both normal gains clear
+  preset empirical margins; only n6's vector gain clears its separate margin.
+  Both original strict Armijo decisions and current limits pass. All 24 rows
+  fail all three absolute field-error gates. No full flux/physical acceptance.
+- Replay all four saved parent returns using their original control frames.
+  Independent internal review rehashes 449 new execution files, 1,554 reference
+  identities, 540 current sources and 25 runtime files; work and own scalar
+  decisions reconcile. Its 370 hashed opaque historical JSON leaves are not
+  recursively replayed. No new field or bound in either post-run review.
+- Retain all four macOS deferred EPERM records: leader reaped/group absent,
+  not successful pre-reap signalling. Recorded supervisor intervals precede
+  final parent validation/publication; complete flags include the deadline gate.
+- Retain the summary helper's initial canonical-reader mismatch and separate
+  display-denominator correction (worst value and decisions unchanged). Correct
+  the intermediate verbal current-sign error: both currents decrease. The saved
+  numerical evidence always used the correct sign and refinement predicate.
+- Update result evidence/detail, F-105, root README, roadmap/status/overview,
+  Step 4 and optimization index. Keep original scientific graphs/protocols intact.
+  Initial documentation check caught the new result link before its evidence
+  file was added; the completed evidence record now supplies that target.
+- Closure: 47 public tests and 16 documentation/release tests pass; repository
+  Ruff, documentation structure and whitespace checks pass. Exact commands,
+  timings, logs and JUnit are retained in `fixed-field-probe-v1/results-checks/`.
+
 ## 2026-09-26 — Separate fixed field execution checkpoint
 
 - After qualification commit `eafe387`, bind its exact record and all 540 source

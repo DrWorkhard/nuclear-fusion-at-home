@@ -17,7 +17,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
-- Newly certified fixed proposals: [field-comparison protocol](FIXED_FIELD_PROBE_PROTOCOL.md), [method/input review](FIXED_FIELD_PROBE_REVIEW.md), [implementation qualification](FIXED_FIELD_PROBE_PROGRESS.md). Four fixed states and six grids, 168 value-only requests; 544 focused and 5,654 clean full-regression tests pass. A separate checkpoint binds the intended execution; runtime source admission remains. Proposal fields remain unmeasured.
+- Newly certified fixed proposals: [field-comparison protocol](FIXED_FIELD_PROBE_PROTOCOL.md), [method/input review](FIXED_FIELD_PROBE_REVIEW.md), [implementation qualification](FIXED_FIELD_PROBE_PROGRESS.md), [complete results](FIXED_FIELD_PROBE_RESULTS.md). All 168 requests and numerical checks pass. Normal gains of 0.057%/0.065% resolve; only the six-coil interior gain resolves. Both currents decrease, but all field limits still fail. Full software qualification: 5,654 tests.
 
 - [Protected coil-fit results](PROTECTED_COIL_FIT_RESULTS.md). Eight native searches and independent coarse audits complete at `2015ac5`; normal RMS improves 0.4463–0.4857%, interior RMS 1.1881–2.1916%. All stop at the curvature certificate; subsequent fine results below retain the field failures.
 

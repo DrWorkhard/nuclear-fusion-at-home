@@ -21,7 +21,10 @@ coarse normal-field error by 0.45–0.49%. Its [fine validation](docs/optimizati
 now passes numerical and geometry checks for all eight candidates; all still
 fail the field-quality limits.
 A [tighter curvature check](docs/geometry/LOCAL_CURVATURE_RESULTS.md) now certifies
-two previously blocked proposals under the same limits; their field benefit is untested.
+two previously blocked proposals under the same limits. Their
+[matched field comparison](docs/optimization/FIXED_FIELD_PROBE_RESULTS.md) confirms
+small further normal-error reductions (0.057% and 0.065%), with less current;
+both remain far above the field limits.
 A feasible new coil design and
 a state-of-the-art advance remain ahead of us. We are independent of, and not
 endorsed by, Proxima Fusion or the Max Planck Institute.

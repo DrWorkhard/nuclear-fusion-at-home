@@ -1,7 +1,7 @@
 # Nuclear Fusion @ Home: scientific overview
 
 For scientific reviewers and contributors who want the reasoning behind the work
-and a map of the evidence. Updated 25 September 2026.
+and a map of the evidence. Updated 26 September 2026.
 [Front page](../README.md) · [Status](STATUS.md) · [Roadmap](PROJECT_PLAN.md)
 
 The goal, how to start and a progress summary are on the [front page](../README.md).

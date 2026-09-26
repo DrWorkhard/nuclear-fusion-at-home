@@ -204,13 +204,21 @@ the old curvature bound rejected. The separate checker reconstructs all 285,528
 bounds, with no relaxed limit. This changes no historical decision and measures
 no field.
 
+### 16. Fixed proposal fields — small resolved normal gains (26 September)
+
+The [matched field comparison](../optimization/FIXED_FIELD_PROBE_RESULTS.md)
+completes all 168 requests and numerical checks at clean `4f13685`. Both newly
+certified proposals reduce normal RMS beyond preset empirical margins
+(0.057%/0.065%); only the six-coil interior gain clears its separate margin.
+Both currents decrease. Every absolute field-error gate still fails; this is
+useful local movement, not a generally successful search or an accepted design.
+
 ## What is not shown yet
 
-Next: the [registered fixed field comparison](../optimization/FIXED_FIELD_PROBE_PROTOCOL.md)
-of those proposals with their reference-N predecessors, before deciding on search
-integration. Its [implementation](../optimization/FIXED_FIELD_PROBE_PROGRESS.md) now
-passes 544 focused and 5,654 clean full-regression tests; a separate checkpoint
-binds the intended execution, conditional on runtime native/source admission.
+Next: separately register a gradient-screened one-step continuation and diagnose
+the large residual from saved fields. Keep the original geometry origin and
+independent numerical checks; the tighter curvature bound does not remove
+conservative clearance limits.
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives
 in a coil-produced field, and no coupled, finite-pressure, confinement or

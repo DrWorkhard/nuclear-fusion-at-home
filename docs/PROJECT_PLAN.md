@@ -32,7 +32,7 @@ the full history, the real clone URL, hosted CI, reviewer identities and branch
 protection — see the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
 and the [publication inventory](validation/PUBLICATION_INVENTORY.md).
 
-**Step 4A: measure whether newly certified movement improves fields.** Publication remains
+**Step 4A: continue useful movement and diagnose the large field mismatch.** Publication remains
 separate. The [eight-case native pilot](optimization/PROTECTED_COIL_FIT_RESULTS.md) completes
 construction and independent coarse verification at `2015ac5`. Every case makes
 small field-error reductions, then stops at the cumulative curvature bound.
@@ -43,13 +43,16 @@ tests. The separate [local homotopy curvature study](geometry/LOCAL_CURVATURE_RE
 now certifies all twelve fixed states, including two previously rejected proposals,
 with independent checking and unchanged limits. Its full regression passes 5,110
 tests. The [matched-grid field comparison](optimization/FIXED_FIELD_PROBE_PROTOCOL.md)
-now has a reviewed four-state registration: 168 value-only requests, unchanged
-limits and separate empirical RMS margins. Its [implementation and independent
-reviews](optimization/FIXED_FIELD_PROBE_PROGRESS.md) now pass 544 focused and 5,654
-full-regression tests at clean `b10c47f`. Next: execute with a separate checkpoint. No
-optimization is needed for this first usefulness test. Then investigate geometry-aware directions or
-extended search under a separately registered method, using actual field results
-to decide whether the added movement is useful. The
+now [completes all 168 requests](optimization/FIXED_FIELD_PROBE_RESULTS.md) at clean
+`4f13685`. Both normal gains resolve under preset empirical margins; only the
+six-coil interior gain resolves. Currents decrease, but all absolute field limits
+still fail. Its [implementation and independent
+reviews](optimization/FIXED_FIELD_PROBE_PROGRESS.md) pass 544 focused and 5,654
+full-regression tests at clean `b10c47f`. Next: a separately registered one-step
+normal-objective continuation with geometry protection and gradient checks,
+alongside saved-field diagnosis of the roughly 2,700-fold normal-error gap.
+Do not extrapolate tiny local gains to feasibility or reset the geometry origin.
+The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting
 limits: small coarse gains do not establish resolved fine-grid improvement.
 Other useful approaches remain welcome; this pilot is not an exclusive work allocation.
