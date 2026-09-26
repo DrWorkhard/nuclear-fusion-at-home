@@ -123,8 +123,8 @@ pre-execution commit; both the original and effective protocol identities remain
 
 ## Remaining gates
 
-Next: a source-bound native adapter and
-process/resource supervisor, independent physical reconstruction and runtime
+Next: the [registered native-plumbing qualification](PROTECTED_NATIVE_PLUMBING_PROTOCOL.md)
+for a source-bound adapter and process/resource supervisor, independent physical reconstruction and runtime
 derivative checks, then the registered diagnostic search and separate fine-grid
 acceptance. The method review's limits on claiming fine-resolved improvement
 remain. No later 4A transfer, 4B coupling, 4C pressure/confinement or 4D engineering

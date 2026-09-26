@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-26 — Register native plumbing without starting a field experiment
+
+- After qualification `ef23278`, record the next source/adapter and parent/worker
+  qualification before implementation. Independently mapped architecture reuses
+  frozen native factory/executor interfaces and old checked-array loading.
+- Preserve 1,800-second cell and 600-second search limits, disk reserves and serial
+  process groups. Use bounded ordered control messages and parent-bound returned
+  references; neither a phase JSON file nor a discovered result acknowledges work.
+  Search timing explicitly includes final search bookkeeping through replay entry.
+- This stage permits only synthetic subprocesses and read-only saved-data contexts.
+  Independent physical reconstruction, native numerical execution and fine-grid
+  acceptance remain later gates. No code or scientific data changed in this step.
+- Registration checks: 14 documentation/release tests pass (0.55 s), 47 public
+  tests pass (3.755 s); documentation structure, repository Ruff and whitespace pass.
+
 ## 2026-09-26 — Qualify the integrated synthetic protected cell
 
 - Implementation `c17123a`: full one-thread native-environment suite **2,918 pass,
