@@ -28,6 +28,13 @@
 - No native study, installation, historical source change or physical improvement.
   Documentation uses the existing one-level topic/result structure. Root README,
   overview and roadmap physical conclusions remain current; Step 4 stays open.
+- Parent supervision now passes 101 tests after retained six-, three- and one-
+  failure review controls; details distinguish two genuine publication defects
+  from a message-regex mismatch. Independently rechecked first selection: 214 pass.
+  Total new focused selection is 315 tests. Full source-frozen regression follows.
+- Precommit public suite 47 pass (3.936 s), Ruff/docs/whitespace pass. Initial
+  documentation-test command used a nonexistent filename and ran zero tests;
+  corrected selection uses `test_release_maintenance.py`.
 
 ## 2026-09-26 — Register native plumbing without starting a field experiment
 

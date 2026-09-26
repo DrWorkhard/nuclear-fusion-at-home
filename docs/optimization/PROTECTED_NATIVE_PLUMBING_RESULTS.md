@@ -59,14 +59,26 @@ preempted operations. Thread-environment checks do not measure runtime thread po
 - End-to-end pipeline: 11 tests pass (11.72 s): eight registered cases and source
   drift, thread drift and nonzero exit after a worker return. The latter leaves
   complete result files but never a parent acknowledgement.
-- Parent-supervision review and final integrated/source-frozen qualification are
-  still in progress. Development JUnit files remain under
+- Parent supervision: 101 tests pass (2.88 s). Review retained six failures for
+  swallowed reentry, return-clock ordering and stale process-group cleanup, then
+  three publication-test failures (two real terminal-publication defects and one
+  error-message mismatch), and one cleanup-retirement failure. Permanent failure
+  state and retirement of disappeared process groups now cover these boundaries.
+  Cleanup addresses descendants even after the leader exits; all waits are bounded.
+- Independently rechecked control/worker/adapter/pipeline selection: 214 tests
+  pass (13.36 s). Final combined review and source-frozen qualification follow.
+  Development JUnit files remain under
   `artifacts/protected-native-plumbing-v1/`; failed attempts are retained.
 
 The implementation roles are `protected_runner_map` (source/adapter),
 `protected_budget_impl` (parent supervision) and maintainer (control/worker/pipeline),
 with independently authored internal review by `cell_integration_review`.
 These are internal checks, not external peer review or independent hardware tests.
+
+Precommit checks: 47 public tests pass (3.936 s); repository Ruff, documentation
+structure and whitespace pass. An initial documentation-test command named a
+nonexistent file and ran no tests; the correct release-maintenance test selection
+is used for the subsequent check. The failed command is not qualification evidence.
 
 ## Next scientific gate
 
