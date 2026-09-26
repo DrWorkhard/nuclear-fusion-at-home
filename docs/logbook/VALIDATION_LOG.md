@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-26 — Register saved residual diagnosis before longer continuation
+
+- Two independent internal planning reviews recommend a small one-step native
+  continuation but identify it as scientifically incremental. Keep their exact
+  ignored notes; do not treat them as execution checkpoints. The proposed full
+  gradient/geometry/replay envelope is 155 requests per case, not the value-only
+  field-probe schedule, and retains the original geometry origin.
+- Register first an eight-pair saved-array residual diagnosis, with both cases,
+  all four boundary grids and signed rN/rJ residuals. Fix weighting, projection
+  origins, degeneracy rule and numerator/denominator decomposition before array
+  inspection. Zero new fields/gradients/bounds; no extrapolated physical candidate.
+- Plan independent scalar arithmetic and synthetic controls, 60 s work/65 s hard
+  timeout and 8 MiB output. Bind completed study/result hashes, leave old sources
+  unchanged and retain all outcomes. Update index and roadmap; scientific
+  status/root README/overview remain accurate and Step 4 remains open.
+- Independent pre-array review of protocol `ac615306...` finds no blocker;
+  clarify delta signs and explicit energy/Pythagoras identities before commit.
+  Review: `local-curvature-v1/FIELD_RESIDUAL_PROTOCOL_REVIEW.json`, SHA-256
+  `04f697bf0e40fbfb7670702a741222add3cbd55c9832486e97c11844d9aa0372`.
+- Closure: 47 public tests and 16 documentation/release tests pass; Ruff,
+  documentation structure and whitespace pass. Retain exact logs under
+  `field-residual-v1/registration-checks/`. No saved field arrays analyzed.
+
 ## 2026-09-26 — Fixed proposal fields: complete, small diagnostic improvement
 
 - Execute the registered study once at clean `4f13685`; before/after source and

@@ -48,9 +48,11 @@ now [completes all 168 requests](optimization/FIXED_FIELD_PROBE_RESULTS.md) at c
 six-coil interior gain resolves. Currents decrease, but all absolute field limits
 still fail. Its [implementation and independent
 reviews](optimization/FIXED_FIELD_PROBE_PROGRESS.md) pass 544 focused and 5,654
-full-regression tests at clean `b10c47f`. Next: a separately registered one-step
-normal-objective continuation with geometry protection and gradient checks,
-alongside saved-field diagnosis of the roughly 2,700-fold normal-error gap.
+full-regression tests at clean `b10c47f`. Next: the [saved-field residual
+diagnosis](optimization/FIELD_RESIDUAL_PROTOCOL.md) of the roughly 2,700-fold
+normal-error gap; use it to prioritize the next construction method. A reviewed
+one-step normal-objective continuation with geometry protection and actual-
+direction gradient checks is available as a planning proposal, not yet executed.
 Do not extrapolate tiny local gains to feasibility or reset the geometry origin.
 The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting
