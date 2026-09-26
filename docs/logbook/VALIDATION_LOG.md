@@ -1,5 +1,34 @@
 # Validation log
 
+## 2026-09-26 — Implement and independently review the pilot launch connection
+
+- Follow registration `908f43c`; explicit native dependency wiring, eight-case
+  ordering, qualified parent return and separate saved-physics report linkage.
+  Conservative stop-on-any-error policy retains failed prefixes without retries.
+- 124 synthetic tests pass, including one real qualified parent/worker/graph case
+  with nonphysical fields and deliberate second-case stop. Independent final
+  rerun: 124 pass (1.522 s JUnit); four source hashes unchanged. No native work.
+- Add machine-enforced committed execution/launcher-qualification gate and clean
+  repository admission. Dirty acceptance was independently reproduced before its
+  fix, not recorded as a pre-fix JUnit. Initial seven Ruff findings fixed; final
+  source tests/Ruff/whitespace pass. Qualification artifacts retained.
+- Actual saved-physics evidence is pinned at `c223784`; missing execution
+  checkpoint still blocks native launch. Full committed-source regression follows.
+  Fine-phase design notes are planning only, not scientific execution.
+- Precommit closure: 47 public tests pass (3.759 s), 14 documentation/release
+  tests pass (0.67 s); repository Ruff, documentation structure and whitespace pass.
+
+## 2026-09-26 — Map candidate-aware fine acceptance without executing it
+
+- Independent internal read-only mapping identifies exact 80-request/eight-model
+  fine schedule, unchanged grids/flux/direct-geometry gates and reuse boundaries.
+- Important integration traps: flux execution does not assign candidate x;
+  construction contracts/whole old audits assume seed-only coarse data; no-search
+  validation must not fabricate search events. Geometry boolean masks require an
+  explicit separately tested lossless encoding, not a frozen-storage change.
+- Record these as design notes, not implementation/qualification/registration.
+  No tests, native fields or geometry calculations performed by this mapping task.
+
 ## 2026-09-26 — Qualify independent physics on real saved seeds
 
 - Committed implementation `2ac95db`: reconstruct all eight saved native bundles,
