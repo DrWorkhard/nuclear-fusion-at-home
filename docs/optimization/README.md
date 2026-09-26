@@ -17,6 +17,8 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
+- Newly certified fixed proposals: [field-comparison protocol](FIXED_FIELD_PROBE_PROTOCOL.md), [method/input review](FIXED_FIELD_PROBE_REVIEW.md). Four fixed states and six grids, 168 value-only requests; independent planning/input checks complete. Registration precedes implementation and a separate qualified execution checkpoint. Proposal fields remain unmeasured.
+
 - [Protected coil-fit results](PROTECTED_COIL_FIT_RESULTS.md). Eight native searches and independent coarse audits complete at `2015ac5`; normal RMS improves 0.4463–0.4857%, interior RMS 1.1881–2.1916%. All stop at the curvature certificate; subsequent fine results below retain the field failures.
 
 - [Fine acceptance registration](PROTECTED_FINE_PROTOCOL.md). Fixed eight-model/80-request schedule per selected case, original-seed/current identity, complete flux/refinement/geometry checks, explicit lossless mask codec and separate no-search supervision. Independently reviewed before implementation; native execution requires separate qualification/checkpoint.

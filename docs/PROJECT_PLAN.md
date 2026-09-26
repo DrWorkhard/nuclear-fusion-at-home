@@ -42,9 +42,11 @@ still fails field-quality limits. Its software has 4,883 passing full-regression
 tests. The separate [local homotopy curvature study](geometry/LOCAL_CURVATURE_RESULTS.md)
 now certifies all twelve fixed states, including two previously rejected proposals,
 with independent checking and unchanged limits. Its full regression passes 5,110
-tests. Next: register and execute a small matched-grid field comparison of those
-two proposals and their own reference-N selections; no optimization is needed
-for this first usefulness test. Then investigate geometry-aware directions or
+tests. The [matched-grid field comparison](optimization/FIXED_FIELD_PROBE_PROTOCOL.md)
+now has a reviewed four-state registration: 168 value-only requests, unchanged
+limits and separate empirical RMS margins. Next: implement and qualify its thin
+driver and independent checker, then execute with a separate checkpoint. No
+optimization is needed for this first usefulness test. Then investigate geometry-aware directions or
 extended search under a separately registered method, using actual field results
 to decide whether the added movement is useful. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting

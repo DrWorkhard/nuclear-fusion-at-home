@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "fixed-field-probe-registration",
+  "status": "registered-for-implementation",
+  "references": {
+    "protocol": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/FIXED_FIELD_PROBE_PROTOCOL.md",
+      "bytes": 10514,
+      "sha256": "fbcfc9200f15450bde796c3dc5f8a4f2e4e53ff70db3044e6ee05fdeb11dc298"
+    },
+    "review": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/optimization/FIXED_FIELD_PROBE_REVIEW.md",
+      "bytes": 4166,
+      "sha256": "3931442d6dad74f6c78559f95313e6c1bb91527bb746db37e98f31bcc676d1a6"
+    },
+    "inputs": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/fixed-field-probe-inputs-v1.json",
+      "bytes": 378385,
+      "sha256": "4997daf18d1ec5d94e1e6fd73f74e2a9ca8a83d269986241fdf64fb80c456699"
+    },
+    "selector": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/local-curvature-v1/select_field_probe_inputs.py",
+      "bytes": 21969,
+      "sha256": "1d95a6c7a02bf264f1566f0c4b1709703bf1ea685deaa71f5b818746d1a687ba"
+    },
+    "selector_checks": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/local-curvature-v1/FIELD_PROBE_INPUT_CHECKS.json",
+      "bytes": 3720,
+      "sha256": "1f6cfe9b6d497253f11b77abb68b29f22530c47a94f70476b28d01c81dacbf7f"
+    },
+    "independent_method_review": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/local-curvature-v1/FIELD_PROBE_REVIEW.md",
+      "bytes": 21147,
+      "sha256": "0702a520501c50fc15e6254b2064ed5f4c380281b99e81442ddfe14f635549c9"
+    },
+    "main_input_review": {
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/local-curvature-v1/field-probe-main-input-review.json",
+      "bytes": 1322,
+      "sha256": "8284d57227cee3493ecbbdf370117a27a84e251cda3cacb2bd84ae9c8abbb0a3"
+    }
+  },
+  "execution_allowed": false,
+  "new_field_evaluations": 0,
+  "physical_admission": false,
+  "step4_pass": false,
+  "ms1_reached": false
+}

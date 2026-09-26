@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-26 — Register a four-state field usefulness comparison
+
+- Freeze reference-N selections and their exact rejected successors, ordered
+  local-curvature indices 2,10,4,11. Selector rehashes 294 files / 48,375,383 bytes,
+  binds all four geometry-check chains and preserves unknown proposal fields.
+  Repeat is byte-identical; five tampering controls reject. Retain initial
+  row-versus-whole-report selector failure and correction; no scientific imports.
+- Main independently rehashes those references and reconstructs canonical hashes,
+  predecessor 93→94 /49→50, original direction, exact coordinate update and saved
+  Armijo RHS. Tracked manifest is byte-identical: 378,385 bytes, SHA-256 `4997daf1...`.
+- Independent method/API review confirms 24 models /168 calls /804,864 points;
+  independent scientific review adds matched diagnostic flux to gain eligibility.
+  Fix cache/sampling ambiguity, exact Armijo decision and complete numerical
+  prerequisites. Margins are empirical, not rigorous error bounds or Pareto claims.
+- Protocol keeps six grids, original-seed initialization, coarse-only normalization,
+  all negative results, 600 s per pair/phase and bounded shared storage. No native
+  calls, new fields or gradients. Implementation, full qualification and separate
+  committed execution checkpoint remain. Update index/roadmap; scientific
+  summaries remain accurate about unmeasured proposal fields and open Step 4.
+- Closure: 47 public tests (3.408 s), 16 documentation/release tests (14.88 s),
+  documentation structure and whitespace pass. Bind seven registration references;
+  review scoped diff and confirm the tracked manifest matches its frozen output.
+
 ## 2026-09-26 — Complete all twelve registered local-curvature states
 
 - Clean execution checkpoint `c7562cafc1cb2d228d64c9e624343f25649c9b16`, exit zero
