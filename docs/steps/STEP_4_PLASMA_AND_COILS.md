@@ -198,6 +198,10 @@ normal maximum and interior-vector RMS limits. Fine normal RMS remains
 
 ## What is not shown yet
 
+Next method: a separately registered [local homotopy curvature qualification](../geometry/LOCAL_CURVATURE_PROTOCOL.md)
+on twelve saved states. Internal method/input review passes; implementation and
+actual calculations remain. This changes no historical acceptance decision.
+
 No coil set whose field meets the limits, no check that the Step 3 benefit survives
 in a coil-produced field, and no coupled, finite-pressure, confinement or
 robustness result. Numerical qualification means the calculations are

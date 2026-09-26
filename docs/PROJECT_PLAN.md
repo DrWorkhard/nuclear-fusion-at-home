@@ -39,9 +39,10 @@ small field-error reductions, then stops at the cumulative curvature bound.
 The [complete fine study](optimization/PROTECTED_FINE_RESULTS.md) now passes
 numerical and geometry checks for all eight fixed selections; every candidate
 still fails field-quality limits. Its software has 4,883 passing full-regression
-tests. Next: finalize and register a separate local homotopy curvature-bound
-qualification on fixed saved states, with independent arithmetic/coverage checks
-and all other gates unchanged. Then investigate geometry-aware directions or
+tests. The separate [local homotopy curvature protocol](geometry/LOCAL_CURVATURE_PROTOCOL.md)
+and twelve fixed inputs have passed internal method/input review. Next: implement
+and qualify independent arithmetic/coverage checks, then run that geometry-only
+study with all other gates unchanged. Then investigate geometry-aware directions or
 extended search under a separately registered method, using actual field results
 to decide whether the added movement is useful. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting

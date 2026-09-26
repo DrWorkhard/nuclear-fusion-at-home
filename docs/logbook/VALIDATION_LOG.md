@@ -1,5 +1,26 @@
 # Validation log
 
+## 2026-09-26 — Register independently reviewed local-curvature qualification
+
+- Fine pilot results committed at `bdbbace`. Freeze twelve subsequent geometry
+  inputs before applying a new bound: two seeds, eight selections, two ordered
+  curvature-only rejections. Metadata selector binds 53 references; no new bound
+  or field calculation. Final manifest SHA-256 `ca9c3bac...`, 39,784 bytes.
+- Independent method/input reviewer checks all twelve named hashes, coordinate
+  bits, mappings and original gates; 83 unique files / 15,832,331 bytes with all
+  terminal-trial certificates. Exact selector repeat matches the final manifest.
+- Final method and supplemental API/deadline review find no remaining blocker.
+  Incorporate fixed physical-copy order, parent-owned deadlines, complete
+  frontiers and failure-only grace publication. Padded analytical bounds are not
+  rigorous intervals; 12/m and seven other gates stay unchanged.
+- Add protocol/review/index, update plan and Step 4. Root README, scientific
+  overview and status remain accurate: no new physical result. Software and
+  actual geometry-only execution are separate gates. Closure: 47 public tests
+  (3.280 s), 16 documentation/release tests (14.77 s), documentation structure
+  and whitespace pass. Main rehashes all 53 input references and three
+  registration references; 12 states / 336 physical-curve instances agree.
+  Review scoped diff; no historical code, thresholds or evidence rewritten.
+
 ## 2026-09-26 — Complete all eight fixed fine evaluations and independent audits
 
 - Clean source checkpoint `e0ac3f775a375255ee6d2355137b19d733fa1498`; runtime

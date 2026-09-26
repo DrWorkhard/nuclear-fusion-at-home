@@ -19,6 +19,8 @@ impossible. Geometry success alone establishes no field improvement.
 Historical detailed reports below remain in German; this index gives their scope
 and conclusions in English.
 
+- Local homotopy curvature: [protocol](LOCAL_CURVATURE_PROTOCOL.md), [method/input review](LOCAL_CURVATURE_REVIEW.md). Twelve fixed saved states and unchanged 12/m limit; complete seed-to-candidate coverage, exact budgets and separate arithmetic checker. Independently reviewed registration only; no new curvature calculation or changed historical decision yet.
+
 - [Local curvature-bound options](LOCAL_CURVATURE_BOUND_OPTIONS.md). Prospective interval/subdivision inequality motivated by the protected pilot's conservative curvature bottleneck. Preserve the original-seed homotopy guarantee, all other gates and the 12/m limit; no implementation, calculation or new candidate pass.
 - Coil perturbations: [protocol](COIL_PERTURBATION_PROTOCOL.md) and [results](COIL_PERTURBATION_RESULTS.md). Cumulative position/first-/second-derivative bounds protect distance, length and curvature relative to immutable seeds. Real 52-state matrix: 104 certificate calls, 208 direct grids; required small probes pass, 18 larger states remain uncertified. Includes checkpoint-reference preservation and the corrected test gap.
 - Outside-plasma starting coils: [protocol](CLEAR_COIL_INITIALIZATION_PROTOCOL.md) and [results](CLEAR_COIL_INITIALIZATION_RESULTS.md). Shared 3D plasma envelope, circles and convex Fourier linear programs. All twelve geometries pass; both start families selected. No field or Step 4 completion claim.
