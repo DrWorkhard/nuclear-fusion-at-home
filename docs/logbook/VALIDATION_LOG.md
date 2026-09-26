@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-26 — Review fixed fine work and no-search execution components
+
+- Implement exact typed eight-model/80-request/552,960-point plan, lossless
+  curvature-mask codec, fixed selected-state dispatch ledger and separate
+  single-return fine supervisor. No frozen construction source or scientific
+  threshold changed; no native fine calculation.
+- Independent internal review: 726 scoped synthetic tests pass, zero failures,
+  errors or skips, 6.983 s JUnit. Includes 670 new tests and 56 storage controls;
+  retain source hashes and 13 initial/adversarial/final JUnit artifacts in
+  `evidence/protected-fine-components-v1.json`.
+- Retain six failing plan/codec controls, two failing thread-hook controls and
+  two terminal-write deadline controls, followed by passing fixes. A persisted
+  acknowledgement file is not success when the final clock check fails.
+- This closes only reviewed components. Source intake, native/geometry bridges,
+  integrated saved-data audit and launcher qualification remain; no execution
+  checkpoint, fine acceptance, resolved improvement, Step 4 or MS1 claim.
+- README and overview scientific summaries remain accurate; update scoped
+  progress, optimization index, status and roadmap. Closure: 47 public tests
+  pass (3.274 s), 16 documentation/release/README tests pass (14.80 s), scoped
+  Ruff, documentation structure and whitespace pass. An initial closure command
+  used two nonexistent test filenames and collected nothing; the corrected
+  explicit three-module command passes. No full regression claimed at this step.
+
 ## 2026-09-26 — Register candidate-aware fine acceptance before implementation
 
 - After completed coarse evidence at `3b31695`, register all eight fixed selections,
