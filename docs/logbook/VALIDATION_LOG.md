@@ -1,5 +1,33 @@
 # Validation log
 
+## 2026-09-26 — Complete all eight fixed fine evaluations and independent audits
+
+- Clean source checkpoint `e0ac3f775a375255ee6d2355137b19d733fa1498`; runtime
+  source admission/canonical round-trip passes in 17.945 s. Serial CLI exits zero
+  with an explicit complete summary after 1,360.380 s; source-before/after identical,
+  344,230 bytes. No tracked edits, environment sync, competing heavy job or retry.
+- Complete 640 native requests / 4,423,680 points, 64 initializer scalars, 48
+  metric rows, 144 flux grids, 576 B/A statistics / 36,864 vectors. Maximum
+  B/A discrepancy 5.6120411358009874e-15; initializer error <=6.514979e-16.
+- All 40 refinements pass (largest relative change 0.0192551439%), all 504 flux
+  gates pass (maximum 8.834875e-16), all eight original-seed certificates and 32
+  direct geometry grids pass, with zero enclosure slack and 12,352 pair/grid checks.
+- All eight fail normal RMS, normal max and interior-vector RMS physical gates;
+  no accepted coil design. Complete the pilot, not Step 4A–4D. Record F-103.
+- Main's separately retained post-run review rehashes 707 direct references /
+  377,039,908 bytes and reconciles all counts. It does not repeat physics or
+  recursively expand prior source envelopes. Independent internal traversal
+  confirms explicit returns, eight execution chains, 1,800 journal rows and
+  exact schedules; rehashes 2,933 files / 429,116,251 bytes, including all 224
+  new raw archives, plus three historical Git objects. No mismatches; no new
+  physics computation. Retain its initial historical-edge traversal correction.
+- Update root README, progress/results/index/status/plan/Step 4 and findings;
+  scientific overview remains accurate. Prospective curvature review/draft stay
+  separate and unregistered; no new method or search executed. Closure: 47 public
+  tests (3.471 s), 16 documentation/release tests (15.60 s), documentation
+  structure and whitespace pass. Main checks all nine top-level evidence
+  references and reviews the scoped diff; no scientific code changes.
+
 ## 2026-09-26 — Prepare the separate fixed fine execution checkpoint
 
 - Qualification committed at `8ac4128`; bind its exact 47,132-byte record, SHA-256

@@ -17,7 +17,9 @@ references. One plasma-target study improved its preregistered metric
 Our current starting coil sets have a full-grid normal field error of
 **about 0.27; the acceptance limit is 1e-4**. A new
 [geometry-protected pilot](docs/optimization/PROTECTED_COIL_FIT_RESULTS.md) lowers
-coarse normal-field error by 0.45–0.49%; fine validation is pending.
+coarse normal-field error by 0.45–0.49%. Its [fine validation](docs/optimization/PROTECTED_FINE_RESULTS.md)
+now passes numerical and geometry checks for all eight candidates; all still
+fail the field-quality limits.
 A feasible new coil design and
 a state-of-the-art advance remain ahead of us. We are independent of, and not
 endorsed by, Proxima Fusion or the Max Planck Institute.

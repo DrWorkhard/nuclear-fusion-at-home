@@ -1,5 +1,30 @@
 # Findings log
 
+## F-103 — Fine validation confirms geometry and persistent field mismatch
+
+**Class:** independently reconstructed fixed-candidate negative result
+**Date:** 2026-09-26
+
+All eight selected protected-search states complete the registered fine phase at
+clean `e0ac3f7`. All 40 refinements, 504 flux checks and 32 direct geometry grids
+pass, alongside eight cumulative certificates and 576 sampled B/A statistics.
+Largest B/A discrepancy 5.612042e-15; largest relative refinement change 0.019256%.
+Every candidate fails only the three field-error gates, with fine normal RMS
+0.26794–0.27478 versus 1e-4 and interior-vector RMS 0.35720–0.36411 versus .01.
+
+This rules out failure of these prescribed numerical checks as the explanation
+for the large field mismatch; it does not prove global numerical convergence or
+physical impossibility. The source graph and all selected coarse currents remain
+unchanged. 640 fine requests bring construction-plus-fine work to 2,573, below
+2,960. No optimization or equilibrium solve during acceptance.
+
+The pilot's mandatory fine phase is closed. Realization/transfer, coupling,
+pressure/confinement and robustness remain open. Small coarse gains do not gain
+a resolved fine-grid-improvement claim from these checks alone. Investigate
+local homotopy curvature bounds separately, preserving all other constraints;
+clearance and actual field improvements remain independent questions.
+[Results](../optimization/PROTECTED_FINE_RESULTS.md).
+
 ## F-102 — Protected descent improves coarse fields, then hits the curvature certificate
 
 **Class:** independently reconstructed coarse experiment, not physical acceptance

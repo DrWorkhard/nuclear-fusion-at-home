@@ -32,17 +32,18 @@ the full history, the real clone URL, hosted CI, reviewer identities and branch
 protection — see the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
 and the [publication inventory](validation/PUBLICATION_INVENTORY.md).
 
-**Step 4A: finish fine validation, then improve the search.** Publication remains
+**Step 4A: improve the search after completed fine validation.** Publication remains
 separate. The [eight-case native pilot](optimization/PROTECTED_COIL_FIT_RESULTS.md) completes
 construction and independent coarse verification at `2015ac5`. Every case makes
 small field-error reductions, then stops at the cumulative curvature bound.
-The complete fine implementation is now qualified at `80dddb8` with 4,883 passing
-regression tests, with separate qualification/execution records. Next: pass runtime
-source admission and execute the [registered fine phase](optimization/PROTECTED_FINE_PROTOCOL.md)
-for all eight fixed selections. Its reviewed schedule preserves 80 native requests
-per case and all original field, flux, refinement and geometry gates.
-Only afterward investigate tighter continuous bounds or geometry-aware directions,
-under unchanged physical limits and separately registered methods. The
+The [complete fine study](optimization/PROTECTED_FINE_RESULTS.md) now passes
+numerical and geometry checks for all eight fixed selections; every candidate
+still fails field-quality limits. Its software has 4,883 passing full-regression
+tests. Next: finalize and register a separate local homotopy curvature-bound
+qualification on fixed saved states, with independent arithmetic/coverage checks
+and all other gates unchanged. Then investigate geometry-aware directions or
+extended search under a separately registered method, using actual field results
+to decide whether the added movement is useful. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting
 limits: small coarse gains do not establish resolved fine-grid improvement.
 Other useful approaches remain welcome; this pilot is not an exclusive work allocation.

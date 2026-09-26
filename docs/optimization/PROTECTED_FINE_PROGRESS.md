@@ -3,9 +3,10 @@
 26 September 2026. [Registration](PROTECTED_FINE_PROTOCOL.md) ·
 [Coarse results](PROTECTED_COIL_FIT_RESULTS.md) · [Index](README.md)
 
-The eight coarse selections remain unchanged. **Fine native execution has not
-started.** This page separates completed software work from the still-required
-numerical and physical checks. Step 4 remains In progress.
+The eight coarse selections remain unchanged. **Fine native execution has now
+completed:** all eight pass numerical and geometry checks, but fail field limits.
+See the separate [scientific results](PROTECTED_FINE_RESULTS.md). This page retains
+the preceding software qualification and its limits. Step 4 remains In progress.
 
 ## Reviewed components
 
@@ -121,7 +122,7 @@ review records and their retained artifacts, the actual full-suite JUnit/log and
 the unchanged eight-case coarse anchors. A fresh read-only archived-input check
 also passes while constructing this record; no new field was calculated.
 
-## Remaining execution and scientific work
+## Execution checkpoint and subsequent completion
 
 The separate [execution checkpoint](../../evidence/protected-fine-execution-v1.json)
 binds qualification commit `8ac4128`, the exact implementation/protocol and the
@@ -129,8 +130,8 @@ unchanged coarse anchors. Fresh clean-source admission and canonical manifest
 round-trip are required before launch. No native fine call has run at this
 checkpoint; a saved-seed replay is never a substitute for actual fine validation.
 
-Then execute every registered diagnostic, flux and geometry check for all eight
-fixed states. A correctly reconstructed threshold failure is a valid negative
-result, not a reason to omit later checks. Only that evidence can determine fine
-numerical qualification and absolute field/geometry acceptance. Neither outcome
-alone establishes resolved improvement, realized plasma benefit, Step 4 or MS1.
+Subsequently, clean checkpoint `e0ac3f7` passes runtime admission and the entire
+registered eight-case study. Every diagnostic, flux and geometry check completes;
+the field-limit failures are valid negative results, not skipped work. The
+[scientific report](PROTECTED_FINE_RESULTS.md) contains the actual numbers and
+evidence. No resolved improvement, realized plasma benefit, Step 4 or MS1 follows.

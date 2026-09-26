@@ -186,6 +186,16 @@ all eight actual fine evaluations remain.
 No fine acceptance or new physical design follows from these software checks.
 [Progress and retained failures](../optimization/PROTECTED_FINE_PROGRESS.md).
 
+### 14. Complete fine validation — all eight remain physically rejected (26 September)
+
+The required fine phase completes at clean `e0ac3f7`: all 640 native requests,
+64 initializer checks, 576 B/A comparisons, 40 refinements, 504 flux checks and
+32 geometry grids. Numerical and geometry checks pass for every candidate;
+maximum sampled B/A discrepancy is 5.612042e-15. All candidates fail normal RMS,
+normal maximum and interior-vector RMS limits. Fine normal RMS remains
+0.26794–0.27478 versus 1e-4. This closes the pilot, not any of packages 4A–4D.
+[Complete results and evidence](../optimization/PROTECTED_FINE_RESULTS.md).
+
 ## What is not shown yet
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives

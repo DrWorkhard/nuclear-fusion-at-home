@@ -84,6 +84,11 @@ reviews are not external peer review.
 
 ## Required next work
 
+**Update:** the mandatory fixed-candidate fine study has now completed at
+`e0ac3f7`; all eight pass numerical and geometry checks, all fail field limits.
+See the separate [fine results](PROTECTED_FINE_RESULTS.md). The following records
+the required follow-up at the coarse checkpoint; no coarse data or selection changed.
+
 Run the original separate fine phase for **all eight fixed selections**: six
 field/interior grids, two complete flux blocks, four direct geometry grids,
 sampled B/A and original-seed certificates, with selected coarse currents frozen.
