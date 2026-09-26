@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-26 — Qualify local curvature software at clean 8b519dc
+
+- Full research regression, no excluded paths: **5,110 passed, 334 warnings,
+  zero failures/errors/skips**, exit zero; 387.32 s console / 387.164 s JUnit /
+  388.046 s wrapper. Clean before/after commit matches
+  `8b519dc6266b8df5bcf3f8b09da01a5ae814029c`. No competing heavy run or environment sync.
+- Qualification binds 12 required sources and 24 retained artifacts; all direct
+  references rehash and implementation bytes match committed Git objects. Preserve
+  actual command, Python identity, helper, console and full JUnit. Prior warning
+  limitations remain; no new fixed-state bound or field calculation.
+- Update progress/index/status/roadmap/Step 4. Root README and scientific overview
+  remain accurate. Actual geometry work still needs a separate committed checkpoint.
+- Closure: 47 public tests pass; documentation structure and whitespace pass.
+  Review scoped documentation/qualification diff; no implementation bytes change.
+
 ## 2026-09-26 — Implement and review local whole-homotopy curvature checks
 
 - Add separately authored producer/checker and a serial source-bound runner.

@@ -5,8 +5,8 @@
 
 ## Current scope
 
-Implementation and internal review are complete after registration at `111d992`;
-full regression and the separate execution checkpoint remain required. **The twelve
+Implementation, internal review and full regression are complete at clean
+`8b519dc`; the separate execution checkpoint remains required. **The twelve
 fixed project states have not been evaluated with the new bound.** No old
 certificate, evaluator or acceptance threshold has changed. Step 4 remains open.
 
@@ -36,6 +36,14 @@ documentation structure, source-only intake and whitespace checks pass. The
 binds 12 sources and 19 artifacts, including failing controls. Main separately
 confirms that all six independently reviewed intake/gate function ASTs remain
 unchanged by the final publication fixes.
+
+The entire research regression then passes **5,110 tests**, with 334 existing
+warnings and zero failures/errors/skips (387.32 s console, 388.046 s wrapper).
+Before/after commit and clean status match `8b519dc6266b8df5bcf3f8b09da01a5ae814029c`.
+No excluded paths, competing heavy calculation or environment synchronization.
+The [qualification](../../evidence/local-curvature-qualification-v1.json) binds all
+12 required sources and 24 artifacts, including the complete JUnit and console.
+Software qualification does not resolve the documented netCDF4 warning.
 
 ## Retained corrections
 
@@ -79,9 +87,8 @@ point requiring the retained artifacts, not part of the dependency-free starter:
 .venv/bin/python scripts/run_local_curvature.py --intake
 ```
 
-Before actual execution: finish combined focused/public/docs checks and a clean
-full regression; commit implementation qualification and a
-separate execution checkpoint. Then run the twelve states serially in fresh
+Before actual execution: commit the separate execution checkpoint, then
+run the twelve states serially in fresh
 outputs, with all negative and resource-limited outcomes retained. A tighter
 geometric bound would still need a separately registered optimization experiment
 to demonstrate useful field improvement.

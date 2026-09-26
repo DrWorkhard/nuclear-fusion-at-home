@@ -41,8 +41,8 @@ numerical and geometry checks for all eight fixed selections; every candidate
 still fails field-quality limits. Its software has 4,883 passing full-regression
 tests. The separate [local homotopy curvature protocol](geometry/LOCAL_CURVATURE_PROTOCOL.md)
 and twelve fixed inputs have passed internal method/input review. The independent
-arithmetic/coverage implementations and runner now pass scoped internal review.
-Next: complete full regression and a separate checkpoint, then run that geometry-only
+arithmetic/coverage implementations and runner now pass internal review and the
+5,110-test full regression. Next: commit a separate checkpoint, then run that geometry-only
 study with all other gates unchanged. Then investigate geometry-aware directions or
 extended search under a separately registered method, using actual field results
 to decide whether the added movement is useful. The
