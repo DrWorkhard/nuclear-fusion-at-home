@@ -1,5 +1,28 @@
 # Findings log
 
+## F-098 — Execution components qualify after adversarial failures are corrected
+
+**Class:** bounded software/source qualification, not a coil-design improvement
+**Date:** 2026-09-26
+
+At `47544d0`, 390 new tests qualify source admission, exact work accounting,
+immutable snapshots and low-mode startup/replay helpers. Full native-environment
+regression: 2,619 pass, 334 warnings, no failures/errors/skips. The read-only source
+preflight admits all eight saved seeds and the unchanged 52-state geometry evidence.
+
+Independent internal review found actual failure modes: reentry overspent a 116-
+certificate cap, swallowed callback errors could allow completion, large-coordinate
+FD probes could collapse unnoticed, seed-flux equality coerced booleans/arrays,
+and parsers allocated metadata before enforcing limits (including a ZIP64 override).
+Corrections and red tests are retained; follow-up reviews verify their bounded
+fixes. The second method review conditionally supports a diagnostic pilot with
+seed-only historical replay and explicit limits on physical-improvement claims.
+
+Thirteen sources and 23 artifacts are hash/size bound. Integrated worker,
+independent physical reconstruction, fine acceptance and later 4B–4D work remain;
+no new native field fit or design advantage is claimed.
+[Detailed results](../optimization/PROTECTED_RUNNER_RESULTS.md).
+
 ## F-097 — Event storage passes its scoped software qualification
 
 **Class:** bounded software qualification, not a coil-design improvement

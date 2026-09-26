@@ -104,12 +104,14 @@ storage, not the remaining native-budget/source orchestration or physical audit.
 [protocol](../optimization/PROTECTED_RUNNER_STORAGE_PROTOCOL.md) ·
 [evidence](../../evidence/protected-runner-storage-v1.json)
 
-### 7. Execution components and second method review — implemented (26 September)
+### 7. Execution components and second method review — software qualified (26 September)
 
 Source admission, exact work accounting, immutable raw snapshots and startup/replay
 helpers pass 390 synthetic tests after independent internal review found and
 helped correct budget reentry, storage-allocation and startup-check defects.
-Full component qualification and integrated worker/physical audit remain pending.
+Component qualification is complete: full regression passes 2,619 tests and the
+new source-admission check passes against all eight saved seed bundles. The
+integrated worker and physical audit remain pending.
 The second method review conditionally supports a bounded diagnostic pilot; it
 does not approve native execution yet. [Results](../optimization/PROTECTED_RUNNER_RESULTS.md) ·
 [Method review](../optimization/PROTECTED_METHOD_REVIEW.md).

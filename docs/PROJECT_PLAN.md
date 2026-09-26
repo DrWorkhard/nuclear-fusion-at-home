@@ -38,9 +38,9 @@ remains separate; all scientific preflight gates still apply. The
 is one possible next experiment, not a required method or an exclusive work
 allocation. Its controller is qualified and its
 [event storage](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) is qualified.
-Next: finish qualifying the implemented [source admission, raw snapshots, budget
-ledger and startup helpers](optimization/PROTECTED_RUNNER_RESULTS.md), then test
-their integrated worker and independent physical auditor. The
+The [source admission, raw snapshots, budget ledger and startup helpers](optimization/PROTECTED_RUNNER_RESULTS.md)
+are now qualified separately. Next: assemble and test their integrated worker and
+independent physical auditor. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) supports a bounded
 diagnostic pilot conditionally; its replay and claim-scope clarifications apply
 before any native run.

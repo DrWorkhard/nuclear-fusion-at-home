@@ -1,5 +1,26 @@
 # Validation log
 
+## 2026-09-26 — Qualify execution components and real source admission
+
+- Committed implementation `47544d0`: full one-thread native-environment suite
+  **2,619 pass, 334 warnings, no failures/errors/skips**, process exit zero,
+  241.99 s console / 241.862 s JUnit. Both outputs retained. Clean source tree
+  stayed unchanged throughout regression; no environment sync or native study.
+- New committed binder `sources(root)` passes against the real local evidence in
+  24.439 s: eight original seed bundles, both target archives, full accepted
+  52-state geometry graph and retained physical rejections. Persist the complete
+  binding (266,350 bytes) and summary with the newly tested immutable store.
+- Qualification evidence binds 13 source files and 23 result/log artifacts. All
+  36 hashes/sizes, 13 commit identities and four independently reviewed source
+  hashes match. Record F-098 and update existing results/Step 4/status/next actions
+  without changing the documentation structure or the front-page physical claims.
+- Only these components are qualified. No integrated worker, separate physical
+  audit, protected native search, fine-grid acceptance or Step 4 completion is
+  claimed. Public launch remains a separate authorized-work boundary.
+- Final documentation closure: 14 documentation/release tests pass (0.64 s),
+  47 public tests pass (3.731 s), docs/Ruff/whitespace pass. Numerical sources
+  remain identical to the fully tested implementation commit.
+
 ## 2026-09-26 — Implement and adversarially review protected-runner components
 
 - Follow registration `7602404`; preserve all historical sources/evidence and

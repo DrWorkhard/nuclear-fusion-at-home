@@ -6,9 +6,10 @@
 ## Current assessment
 
 Four new execution components pass **390 focused synthetic tests** after adversarial
-review and corrections. Full regression, committed-source binding and the new
-real-data source preflight remain pending. These are not yet a qualified integrated
-native runner. No new field search, equilibrium calculation or physical design
+review and corrections. **Component qualification is complete:** full regression
+passes 2,619 tests, committed source/artifact identities match, and the new source
+binder passes against the real saved data. These components are not yet a qualified
+integrated native runner. No new field search, equilibrium study or physical design
 improvement has been performed.
 
 | Component | Interface and checked scope | Focused tests |
@@ -75,18 +76,41 @@ Initial line-length/import-format checks also failed and were corrected. All
 current changed-source Ruff checks pass. Raw and corrected JUnit histories are
 retained under `artifacts/protected-runner-v1/`; first-development sources were
 uncommitted, so their exact initial bytes are not claimed to be independently
-archived. The final committed qualification will bind current sources separately.
+archived. The final committed qualification below binds current sources separately.
 Implementation checkpoint checks: 47 public tests pass in 3.863 s; 14 documentation/
 release tests pass in 0.56 s. Documentation, repository Ruff and whitespace pass.
+
+## Committed-source qualification
+
+Implementation `47544d0`, registration `7602404`: full one-thread regression
+**2,619 passes, 334 existing warnings, no failures/errors/skips**, exit code zero,
+241.99 s console / 241.862 s JUnit. Both console and JUnit are retained. The
+worktree and source files remained unchanged during this regression; no dependency
+installation/sync or historical-source edits were made. This is local native-
+environment evidence, not hosted CI or an independent-machine reproduction.
+
+The [qualification record](../../evidence/protected-runner-components-v1.json)
+binds 13 sources and 23 artifacts, including all red JUnit runs, the final regression
+and source preflight. All 36 hashes/sizes, 13 committed identities and four reviewed
+component-source hashes match. Initial development test sources were not separately
+archived; final-source identity does not retroactively identify those earlier bytes.
+
+The new source admission passes in 24.439 s, exposing all eight ordered historical
+seed bundles and preserving the accepted geometry audit and its full reference
+graph. Both target scales remain exactly 1.6293829620247962 and 1.6313464444829588.
+The complete 266,350-byte binding and a result record are retained locally. This
+read-only operation performed no new native field or equilibrium calculations.
+After the final documentation updates, 14 documentation/release tests pass in
+0.64 s and 47 public tests pass in 3.731 s; docs, Ruff and whitespace pass.
 
 ## Source availability and remaining work
 
 The existing predecessor binder passed a read-only check in 18.462 s: both geometry
 seeds, both 401-surface target files and archived64 normalization are available.
-This was not execution of the new binder or a native field calculation. The new
-binder's real-data call follows its implementation commit.
+This earlier check was not execution of the new binder; its later committed-source
+preflight is reported above.
 
-Next: finish component qualification, then assemble a source-bound worker with
+Next: assemble a source-bound worker with
 immutable raw manifests and separate controller/native journal receipts. Test the
 whole ten-startup → search → fresh-selected-replay sequence with synthetic models,
 including failure prefixes. Independently reconstruct physical fields, objectives,
