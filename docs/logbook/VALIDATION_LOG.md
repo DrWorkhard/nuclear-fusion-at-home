@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-26 — Register protected-cell synthetic integration
+
+- Component qualification closed at `d130fff`; now register the integrated
+  ten-startup → fresh search seed → unchanged controller → fresh-model replay
+  sequence before implementation. Require full sixteen-array/snapshot boundaries,
+  stable coordinate identities, immutable operation manifests and distinct journals.
+- Fault tests will cover whole-cell failure as well as component poisoning. The
+  native adapter/process supervisor and independent physical audit remain future
+  gates; no new project field calculation or parameter tuning is authorized by this
+  software registration. Preserve the current documentation hierarchy and links.
+
 ## 2026-09-26 — Qualify execution components and real source admission
 
 - Committed implementation `47544d0`: full one-thread native-environment suite
