@@ -1,5 +1,35 @@
 # Validation log
 
+## 2026-09-26 — Implement and adversarially review protected-runner components
+
+- Follow registration `7602404`; preserve all historical sources/evidence and
+  scientific thresholds. Add source admission, exact phase/native budgets,
+  immutable finite raw storage and the protected low-mode startup/replay helpers.
+- Second independently authored internal method review conditionally supports a
+  diagnostic pilot. Preserve the old draft and add the seed-only historical replay,
+  two-model schedule and no unresolved fine-improvement claim clarifications in
+  `PROTECTED_METHOD_REVIEW.md`. No external peer review claimed.
+- Current four-component selection: **390 pass in 1.14 s** (199 source, 109 ledger,
+  56 snapshots, 26 startup). Changed-source Ruff passes. Preserve red JUnit:
+  swallowed callback failure 84 pass/4 fail; reentrant budget/native work 103/6;
+  collapsed probes/independent repeat 24/2; seed-flux type coercion 196/3. Fixes and
+  initial formatting failures are recorded in the detailed results.
+- Reviewer also reproduced early JSON/ZIP allocation and a ZIP64 override;
+  regression fixtures now reject them before parser allocation. Single-writer
+  owned POSIX workspace remains the scope, not untrusted PR isolation/power loss.
+- Existing predecessor source binder passes read-only in 18.462 s; the newly
+  implemented binder's real-data check awaits its committed-source checkpoint.
+  Full regression/integration qualification pending. No new native search run.
+- Documentation fits the current per-step structure; root README and overview
+  need no new physical-result claim or restructuring. No concurrent README changes
+  are included. Updated only scoped results/index links, Step 4 and next actions.
+- Independently authored follow-up checks find the reported fixes effective:
+  109 ledger tests plus 32 inline hook-boundary probes; both startup classes and
+  six invalid seed-flux values; early parser caps and the crafted ZIP64 override.
+  Implementation checkpoint: 47 public tests pass (3.863 s), 14 documentation/
+  release tests pass (0.56 s), documentation structure, repository Ruff and
+  whitespace pass. Full regression and real-data new-binder preflight follow.
+
 ## 2026-09-25 — Resume local Step 4 and register execution-layer qualification
 
 - User explicitly authorizes delegation and continuing Step 4 as far as possible.

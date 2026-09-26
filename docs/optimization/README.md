@@ -17,7 +17,8 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
-- [Protected runner qualification](PROTECTED_RUNNER_PROTOCOL.md). Registered next execution-layer work: exact budgets, immutable raw snapshots, source admission and synthetic composition; no native run authorized by a software-only result.
+- Protected runner execution components: [registration](PROTECTED_RUNNER_PROTOCOL.md), [results](PROTECTED_RUNNER_RESULTS.md). 390 synthetic tests pass after independently reviewed fixes; full regression and real-data source preflight pending. Integrated orchestration and physical acceptance remain separate.
+- [Second protected-fit method review](PROTECTED_METHOD_REVIEW.md). Independently authored internal support for a bounded diagnostic pilot, conditional on remaining execution/physical gates; seed-only historical replay, exact two-model schedule and no unresolved fine-improvement claim.
 - Protected runner storage: [protocol](PROTECTED_RUNNER_STORAGE_PROTOCOL.md), [results](PROTECTED_RUNNER_STORAGE_RESULTS.md). Qualified in its single-writer POSIX scope: 47 event-journal checks, 108 controller/auditor checks and a 2,229-pass full-regression report, with source/artifact identities bound. Source/native-budget orchestration and physical verification remain separate prerequisites.
 - Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). Complete in its synthetic scope: 108 controller/auditor tests and 2,180 full regression tests pass. Runner, method review and physical recomputation remain; no new field fit or physical claim.
 

@@ -1,6 +1,6 @@
 # Step 4 results so far: plasma and coils together
 
-**In progress.** Results through 25 September 2026. The detailed reports are
+**In progress.** Results through 26 September 2026. The detailed reports are
 mostly in German; this page summarizes them in English and links each one.
 The detailed reports and evidence files remain authoritative.
 [All steps](README.md) · [Roadmap and next actions](../PROJECT_PLAN.md) · [Status](../STATUS.md)
@@ -103,6 +103,16 @@ storage, not the remaining native-budget/source orchestration or physical audit.
 [Report](../optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) (English) ·
 [protocol](../optimization/PROTECTED_RUNNER_STORAGE_PROTOCOL.md) ·
 [evidence](../../evidence/protected-runner-storage-v1.json)
+
+### 7. Execution components and second method review — implemented (26 September)
+
+Source admission, exact work accounting, immutable raw snapshots and startup/replay
+helpers pass 390 synthetic tests after independent internal review found and
+helped correct budget reentry, storage-allocation and startup-check defects.
+Full component qualification and integrated worker/physical audit remain pending.
+The second method review conditionally supports a bounded diagnostic pilot; it
+does not approve native execution yet. [Results](../optimization/PROTECTED_RUNNER_RESULTS.md) ·
+[Method review](../optimization/PROTECTED_METHOD_REVIEW.md).
 
 ## What is not shown yet
 

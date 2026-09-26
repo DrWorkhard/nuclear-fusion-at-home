@@ -29,4 +29,5 @@ evidence bar for the Proxima comparison is the
 - [Step 4 results so far](STEP_4_PLASMA_AND_COILS.md). Work packages 4A–4D, the
   rejected coil pilot, certified coil starts, field errors about 2,700× the
   limit, certified perturbation radii, the qualified search controller and its
-  qualified single-writer event storage; native runner integration remains open.
+  qualified single-writer event storage, and the next execution components under
+  qualification; native runner integration remains open.
