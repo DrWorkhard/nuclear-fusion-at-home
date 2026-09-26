@@ -1,5 +1,29 @@
 # Validation log
 
+## 2026-09-26 — Implement and review local whole-homotopy curvature checks
+
+- Add separately authored producer/checker and a serial source-bound runner.
+  No actual fixed-state bounds yet. Producer 108, checker 58 and runner 61
+  synthetic controls pass in their respective recorded runs. Independent review
+  also checks 127 deadline cutoffs of a complete synthetic circle tree.
+- Preserve the failing tiny-curvature zero-bound control and corrected strict
+  positivity rule, the producer's incorrect transpose test expectation, and two
+  failing publication controls. Correct empty-result admission, duplicate late
+  publication, numeric/boolean qualification aliases, late parent acknowledgement
+  and lost post-link failure accounting. Thresholds and old code stay unchanged.
+- Independent intake with scientific imports blocked confirms 12 saved states /
+  336 physical copies and 56 references / 12,424,946 bytes. Intake review excludes
+  supervisor and numerical reconstruction; main reviews those components and the
+  final publication fixes. All reviews are internal, not external peer review.
+- Update detail/index/roadmap; scientific overview, root README and status still
+  accurately report the earlier field failures. Full regression and committed
+  qualification/checkpoint remain before the registered geometry-only study.
+- Closure: main runs 227 focused tests (2.95 s), 47 public tests (3.206 s), 16
+  documentation/release tests (15.00 s), full-repository Ruff, source-only intake,
+  documentation structure and whitespace; all pass. Review record binds 12
+  sources / 19 artifacts. All six reviewed intake/gate AST identities are unchanged
+  by the final publication corrections. Review scoped diff before commit.
+
 ## 2026-09-26 — Register independently reviewed local-curvature qualification
 
 - Fine pilot results committed at `bdbbace`. Freeze twelve subsequent geometry
