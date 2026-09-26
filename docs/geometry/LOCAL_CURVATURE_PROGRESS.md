@@ -6,7 +6,8 @@
 ## Current scope
 
 Implementation, internal review and full regression are complete at clean
-`8b519dc`; the separate execution checkpoint remains required. **The twelve
+`8b519dc`; qualification is committed at `49b826d` and the separate
+[execution checkpoint](../../evidence/local-curvature-execution-v1.json) is prepared. **The twelve
 fixed project states have not been evaluated with the new bound.** No old
 certificate, evaluator or acceptance threshold has changed. Step 4 remains open.
 
@@ -87,8 +88,7 @@ point requiring the retained artifacts, not part of the dependency-free starter:
 .venv/bin/python scripts/run_local_curvature.py --intake
 ```
 
-Before actual execution: commit the separate execution checkpoint, then
-run the twelve states serially in fresh
+Next: runtime clean-source admission and the twelve states serially in fresh
 outputs, with all negative and resource-limited outcomes retained. A tighter
 geometric bound would still need a separately registered optimization experiment
 to demonstrate useful field improvement.

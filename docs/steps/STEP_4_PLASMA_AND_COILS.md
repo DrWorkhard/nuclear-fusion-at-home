@@ -200,8 +200,8 @@ normal maximum and interior-vector RMS limits. Fine normal RMS remains
 
 Next method: a separately registered [local homotopy curvature qualification](../geometry/LOCAL_CURVATURE_PROTOCOL.md)
 on twelve saved states. Implementations pass internal review, 227 focused tests
-and the 5,110-test full regression at clean `8b519dc`. Separate execution checkpoint
-and actual calculations remain. This changes no historical acceptance decision.
+and the 5,110-test full regression at clean `8b519dc`. A separate execution checkpoint
+is prepared; actual calculations remain. This changes no historical acceptance decision.
 [Qualification and retained defects](../geometry/LOCAL_CURVATURE_PROGRESS.md).
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives

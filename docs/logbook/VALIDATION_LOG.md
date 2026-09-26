@@ -1,5 +1,16 @@
 # Validation log
 
+## 2026-09-26 — Bind separate local-curvature execution checkpoint
+
+- Qualification committed at `49b826d`; separate execution record binds its exact
+  bytes, the unchanged registration and all 12 qualified implementation sources.
+  No scope promotion: no fields, search, interval proof or Step 4 completion.
+- Update progress/index/roadmap/Step 4. Scientific summaries remain accurate.
+  Runtime clean-source gate precedes all twelve fixed states, serially, with no
+  retry or resource-limit change. No actual fixed-state bounds yet.
+- Closure: 47 public tests, documentation structure and whitespace pass; all
+  checkpoint sources match qualification. Review scoped diff before commit.
+
 ## 2026-09-26 — Qualify local curvature software at clean 8b519dc
 
 - Full research regression, no excluded paths: **5,110 passed, 334 warnings,

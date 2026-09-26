@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "registration": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/local-curvature-registration-v1.json",
+    "bytes": 1257,
+    "sha256": "793b48a8baa872163ad107894235c09327cc9345aadfddfb74f340bb967cb972"
+  },
+  "sources": [
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/local-curvature-registration-v1.json",
+      "bytes": 1257,
+      "sha256": "793b48a8baa872163ad107894235c09327cc9345aadfddfb74f340bb967cb972"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/docs/geometry/LOCAL_CURVATURE_PROTOCOL.md",
+      "bytes": 11277,
+      "sha256": "5bcd82e653eb40795f2d662d781941091af4216d8e7c81c65b08cac6e975dfc3"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/evidence/local-curvature-inputs-v1.json",
+      "bytes": 39784,
+      "sha256": "ca9c3bac130080cb261660abf18d6de29872c58f7d305114b06ee061969beca5"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/scripts/run_local_curvature.py",
+      "bytes": 46427,
+      "sha256": "7449a8b6bfe7b85b0dfc872c013f37e3030d396193877681f291cc14ad87997a"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/local_curvature.py",
+      "bytes": 14225,
+      "sha256": "699ed5d2e01ea1f510e8fcbfe14f1e939bee045d6bc3d3047f8e5fcbcbc12137"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/local_curvature_audit.py",
+      "bytes": 14536,
+      "sha256": "36f974d7a57c6e259da627b2d0d4bd96e91ae6ebf1e6c2b6c922adfbec01ea95"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coil_perturbation.py",
+      "bytes": 24456,
+      "sha256": "2ab92831b576ccbd3d6f053503d1433be5cb9722b849db53153762457d03bcb9"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coil_perturbation_audit.py",
+      "bytes": 25953,
+      "sha256": "3781343c2fb623bc6439bed2fc0079dea860c269120f02c2436f6f2c7ad17a5e"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clear_coil_geometry_audit.py",
+      "bytes": 25368,
+      "sha256": "ae61f2efcbdb5ccdd0ee03e54d65a7dbf7364677694fbc26f0d719c7f49cfa36"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_local_curvature.py",
+      "bytes": 19983,
+      "sha256": "0a230b4ca7ee2ebc72992e37ee774caa8ef20f93a76136c557bad96084d373fb"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_local_curvature_audit.py",
+      "bytes": 12900,
+      "sha256": "3c94c784b0b6caf84e7e38515e58d6b28888b8c60465a6e74e62c429b52f5573"
+    },
+    {
+      "path": "/Users/sebastianwirkert/workspace/fusion/tests/test_local_curvature_runner.py",
+      "bytes": 29686,
+      "sha256": "78d3c8ca530040909f6f9301602ce8713848294208390597f313ed8db3edad0f"
+    }
+  ],
+  "field_pass": false,
+  "step4_pass": false,
+  "kind": "local-curvature-execution-checkpoint",
+  "qualification": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/local-curvature-qualification-v1.json",
+    "bytes": 10590,
+    "sha256": "5e5a4b48fba403da15e8ed738c0ac146889e414cb5bc5009f7fce00bc8e92165"
+  },
+  "implementation_commit": "8b519dc6266b8df5bcf3f8b09da01a5ae814029c",
+  "execution_allowed": true
+}
