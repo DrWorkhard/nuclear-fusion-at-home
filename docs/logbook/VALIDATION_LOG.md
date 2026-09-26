@@ -1,5 +1,32 @@
 # Validation log
 
+## 2026-09-26 — Integrate original-seed fine bridges and preserve coarse ancestry
+
+- Independently reviewed archived intake (130 new tests), numerical bridge (73),
+  geometry composition (111) and cell orchestration (48); combined independent
+  cell/native run has 121 passes. Bind eight source/test files and thirteen
+  initial, failed and successful artifacts in `evidence/protected-fine-bridges-v1.json`.
+- Actual read-only intake passes in 18.252 s: 1,004 inline references / 345 files,
+  all eight coarse graphs, four active environment records, twelve version maps,
+  thirteen installed native Python source files and three versioned registration
+  edges. Preserve eleven historical project records and check four active
+  Simsopt records. No blanket provenance exclusions or regenerated old source graph.
+- Retain the intake's two reproduced validation failures and fixes. Geometry's
+  initial failures were synthetic-fixture setup errors, not physical failures;
+  both failed fixtures and passing replacements remain identified.
+- Native bridge tests enforce original-seed initialization, signed 100 kA
+  currents, selected coordinate bits on every operation, explicit N/V and frozen
+  coarse current. Geometry tests independently reconstruct synthetic full grids;
+  cell integration preserves exact 80-request/552,960-point work and raw graph.
+- No native project calculation or independent project-physics recomputation.
+  Prior-qualified report ancestry remains byte-bound, not generically expanded;
+  intake alone cannot authorize execution. Saved-field/graph/study integration,
+  whole regression and execution checkpoint remain open. Step 4 remains In progress.
+- Relevant detail/index/status updated; root README and roadmap retain accurate
+  scientific summaries. Closure: 47 public tests pass (3.425 s), 16 documentation/
+  release/README tests pass (15.20 s), scoped Ruff, documentation structure and
+  whitespace pass; all 22 recorded source/artifact references freshly rehash.
+
 ## 2026-09-26 — Review fixed fine work and no-search execution components
 
 - Implement exact typed eight-model/80-request/552,960-point plan, lossless

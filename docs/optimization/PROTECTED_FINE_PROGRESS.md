@@ -38,14 +38,40 @@ final write may leave a file but cannot return an acknowledged result after the
 terminal persistence; the returned reference additionally requires the final
 clock check to pass.
 
+## Reviewed archived inputs, numerical bridge and cell integration
+
+Subsequent scoped reviews cover archived intake (130 new tests), the numerical
+bridge (73), full geometry composition (111) and cell orchestration (48).
+The independent cell/bridge integration run has 121 passes. These are synthetic
+tests, not a full-project regression or a fine evaluation of our actual designs.
+Source hashes, independent reports and retained failures are in the separate
+[bridge review record](../../evidence/protected-fine-bridges-v1.json).
+
+A real **read-only** input check also passes in 18.252 seconds: all 1,004 inline
+references / 345 unique files, eight completed coarse-case graphs, active numerical
+packages and installed sources, four active Simsopt records, and three historical
+registration edges. All eleven historical project-repository records remain
+unchanged; current fine provenance is separate. Prior-qualified ancestry behind
+pinned historical reports remains byte-bound, not generically re-expanded. The
+check performs zero native requests and grants no execution permission.
+
+The bridge constructs each model at the original seed, records its signed
+100 kA initializer separately, then explicitly sets and bit-checks the selected
+coordinates before diagnostics and flux. Every result retains the selected coarse
+current and snapshot. Cell tests compose the actual bridge, fixed ledger and
+immutable storage for all eight cases with changed and fallback coordinates.
+
+The geometry tests additionally use the unchanged sampling and independent audit
+on synthetic geometry: both 256-square full-torus surfaces, every physical pair,
+all four grids, complete witnesses, the original-seed certificate and lossless
+mask decoding. Cell-only geometry fixtures test accounting, not those maths.
+
 ## Remaining integration and scientific work
 
-Complete the archived-source intake, original-seed/selected-state native bridge,
-geometry sampling, saved-data audit and cell/launcher integration. Recheck the
-entire coarse input graph without rebinding its historical repository metadata
-to today's commit. Current fine implementation provenance is a separate layer.
-Require independent review, complete regression, committed qualification and a
-committed execution checkpoint before any fine native call.
+Complete the saved-field and full-graph audit, closed execution-source gate,
+worker and study launcher. Require independent review, complete regression,
+committed qualification and a committed execution checkpoint before any fine
+native call. An archived-input check alone is never a substitute for that gate.
 
 Then execute every registered diagnostic, flux and geometry check for all eight
 fixed states. A correctly reconstructed threshold failure is a valid negative
