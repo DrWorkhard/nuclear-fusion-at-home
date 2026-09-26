@@ -1,5 +1,19 @@
 # Validation log
 
+## 2026-09-26 — Register the diagnostic pilot's execution connection
+
+- Before launcher implementation, specify source-bound native dependency wiring,
+  exact eight-case order, returned parent/physical-report linkage and serial failure
+  handling. Preserve original controller, limits, budgets and separate fine phase.
+- Permit only launcher implementation/synthetic tests until completed physical-
+  auditor and launcher qualification plus a committed execution checkpoint exist.
+  No new native execution is authorized by a software pass alone.
+- Explicitly separate posthoc physical reconstruction time from construction,
+  retained failed tails from confirmed work counts, and verified coarse diagnostics
+  from physical admission or Step 4 completion.
+- Registration checks: 47 public tests pass (3.737 s), 14 documentation/release
+  tests pass (0.58 s); documentation structure and whitespace pass. No native run.
+
 ## 2026-09-26 — Qualify isolated execution and real source contexts
 
 - Implementation `fd069e9`: full one-thread local regression **3,233 pass,
