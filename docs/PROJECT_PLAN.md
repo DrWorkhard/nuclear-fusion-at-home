@@ -32,23 +32,13 @@ the full history, the real clone URL, hosted CI, reviewer identities and branch
 protection — see the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
 and the [publication inventory](validation/PUBLICATION_INVENTORY.md).
 
-**Step 4A: local research resumed with the user's authorization.** Publication
-remains separate; all scientific preflight gates still apply. The
-[geometry-protected field-fit draft](optimization/PROTECTED_COIL_FIT_PROTOCOL.md)
-is one possible next experiment, not a required method or an exclusive work
-allocation. Its controller is qualified and its
-[event storage](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) is qualified.
-The [source admission, raw snapshots, budget ledger and startup helpers](optimization/PROTECTED_RUNNER_RESULTS.md)
-are now qualified separately. Their [integrated synthetic worker and graph audit](optimization/PROTECTED_CELL_RESULTS.md)
-are now qualified in their synthetic scope. The
-[source-bound native adapter and isolated process/resource orchestration](optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md)
-also pass synthetic and read-only source qualification.
-[Independent saved-physics reconstruction](optimization/PROTECTED_PHYSICS_RESULTS.md)
-now passes its synthetic and historical-data qualification. The
-[source-bound launcher](optimization/PROTECTED_PILOT_EXECUTION_RESULTS.md) passes
-124 focused tests and the complete 3,487-test regression. Next: admit its committed
-execution checkpoint from a clean checkout and run the diagnostic pilot. The
-[second method review](optimization/PROTECTED_METHOD_REVIEW.md) supports a bounded
-diagnostic pilot conditionally; its replay and claim-scope clarifications apply
-before any native run.
-Finer-grid acceptance remains a separate required phase.
+**Step 4A: finish fine validation, then improve the search.** Publication remains
+separate. The [eight-case native pilot](optimization/PROTECTED_COIL_FIT_RESULTS.md) completes
+construction and independent coarse verification at `2015ac5`. Every case makes
+small field-error reductions, then stops at the cumulative curvature bound.
+Next: qualify and execute the required fine phase for all eight fixed selections.
+Only afterward investigate tighter continuous bounds or geometry-aware directions,
+under unchanged physical limits and separately registered methods. The
+[second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting
+limits: small coarse gains do not establish resolved fine-grid improvement.
+Other useful approaches remain welcome; this pilot is not an exclusive work allocation.

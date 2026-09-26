@@ -161,6 +161,18 @@ and runtime clean-source admission gate the original eight-case native pilot.
 No new design result follows from this software qualification; fine acceptance
 remains separate. [Report](../optimization/PROTECTED_PILOT_EXECUTION_RESULTS.md).
 
+### 12. Protected native coil fit — eight coarse audits pass (26 September)
+
+At clean `2015ac5`, all eight registered constructions and independent coarse
+audits complete: 213 bundles, 795 certificates and 1,933 native requests. Own
+objectives decrease 6.31–9.16%, but normal RMS only 0.4463–0.4857% and interior
+RMS 1.1881–2.1916%. All searches stop because the next direction cannot pass
+the cumulative curvature certificate. This is not proof of physical infeasibility.
+All 81,792 sampled B/A vectors pass independent reconstruction; maximum relative
+discrepancy 1.804e-15. Required fine acceptance is still unrun; normal RMS remains
+0.26794–0.27478 against 1e-4. No resolved fine gain, physical baseline or Step 4
+completion follows. [Results](../optimization/PROTECTED_COIL_FIT_RESULTS.md).
+
 ## What is not shown yet
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives

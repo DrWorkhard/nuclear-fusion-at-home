@@ -66,6 +66,10 @@ implementation/testing by `protected_runner_map` and review by
 
 ## After qualification
 
+Update: qualification/checkpoint committed at `2015ac5`; actual clean-source
+admission and all eight native constructions/coarse audits subsequently pass.
+See the separate [scientific results](PROTECTED_COIL_FIT_RESULTS.md).
+
 Commit qualification and execution records, perform source-only admission from
 the clean checkout, then run the original diagnostic pilot.
 Do not edit tracked sources/docs while it is running; retain intermediate notes

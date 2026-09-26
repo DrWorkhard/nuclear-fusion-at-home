@@ -11,11 +11,14 @@ By “best” we mean a design that balances performance, buildability, robustne
 safety and practical cost — not just the top score on one metric. We want
 improvements that others can reproduce and challenge.
 
-**Research preview · 25 September 2026.** Our tools reproduce selected open
+**Research preview · 26 September 2026.** Our tools reproduce selected open
 references. One plasma-target study improved its preregistered metric
 (bounce-action variance, a particle-motion diagnostic) by **11.17%**.
 Our current starting coil sets have a full-grid normal field error of
-**about 0.27; the acceptance limit is 1e-4**. A feasible new coil design and
+**about 0.27; the acceptance limit is 1e-4**. A new
+[geometry-protected pilot](docs/optimization/PROTECTED_COIL_FIT_RESULTS.md) lowers
+coarse normal-field error by 0.45–0.49%; fine validation is pending.
+A feasible new coil design and
 a state-of-the-art advance remain ahead of us. We are independent of, and not
 endorsed by, Proxima Fusion or the Max Planck Institute.
 

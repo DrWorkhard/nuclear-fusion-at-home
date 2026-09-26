@@ -1,6 +1,6 @@
 # Research hints — invitations, not requirements
 
-Coordinator's snapshot, 2026-09-24. Our research goal is unchanged: useful,
+Coordinator's snapshot, 2026-09-26. Our research goal is unchanged: useful,
 independently checkable improvements to stellarator plasma/coil design. These
 are promising directions, not a closed list. **Unsolicited ideas and results are
 welcome. Compute cost disclosure is optional.** A contribution need not produce
@@ -23,11 +23,13 @@ Start with the [public quickstart](../validation/PUBLIC_QUICKSTART.md) and
 
 - **Geometry-preserving coil improvement.** The existing clear starts satisfy
   geometry limits but have large magnetic errors. Explore useful shape directions,
-  tighter justified continuous bounds, or different parameterizations. Our paused
-  [protected-fit draft](PROTECTED_COIL_FIT_PROTOCOL.md) is one unqualified proposal,
-  not the only permitted approach. Its [controller tests](PROTECTED_SEARCH_SOFTWARE_RESULTS.md)
-  now pass; native runner and physical checks remain open. Software qualification
-  does not make it a new design baseline.
+  tighter justified continuous bounds, or different parameterizations. The
+  [eight-case protected fit](PROTECTED_COIL_FIT_RESULTS.md) makes small verified
+  coarse reductions, but all searches stop at the cumulative curvature bound.
+  Its mandatory fine phase remains pending. A tighter continuous proof or a
+  direction respecting the active bound is interesting; preserve the original
+  seed/path guarantee and physical limits. This is not a new feasible baseline
+  or the only permitted approach.
 - **Portable full-physics evaluation.** Replace local-only data access with
   source-bound portable equilibrium/field packages and replay the original gates.
   Do not rewrite historical paths/hashes or drop difficult resolution levels.

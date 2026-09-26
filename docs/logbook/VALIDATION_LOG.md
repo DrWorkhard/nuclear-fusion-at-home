@@ -1,5 +1,29 @@
 # Validation log
 
+## 2026-09-26 — Execute all eight protected coarse searches and independent audits
+
+- Clean checkpoint `2015ac5`; source-only admission and canonical 296,513-byte
+  manifest round-trip pass in 24.754 s. Eight-case native CLI exits zero and returns
+  the complete summary; source-before/after hashes identical. No tracked changes,
+  environment sync, concurrent heavy job or hidden retry during execution.
+- Actual totals: 16 models, 213 bundles, 795 certificates, 1,933 native requests.
+  All eight parent acknowledgements, saved graph checks and independent physics
+  reports pass; 795 certificate and 213 bundle reconstructions, 64 startup checks,
+  1,278 direct B/A statistics / 81,792 vectors, maximum discrepancy 1.803858e-15.
+- 117 accepted search proposals and 582 geometry rejections. All eight terminate
+  certificate-limited; final rejection fails curvature alone. Own objectives and
+  both coarse RMS errors improve, but absolute field limits remain far away.
+- Record F-102 and source-bound coarse evidence; keep the required fine phase
+  explicitly unrun. No physical, resolved fine-gain, Step 4 or MS1 admission.
+- Read-only independent fine planning review checks exact 80-request schedule,
+  initializer convention, point counts, offsets and mask codec. Draft remains
+  separate/unregistered; no fine native work or implementation in this step.
+- Independent post-run review checks 11,602 files, all 213 archive hashes, 16
+  journal streams / 8,144 records and 819 checkpoint-prefix heads; confirms actual
+  counts, diagnostic changes and rejection interpretation without new physics.
+- Closure: 47 public tests pass (3.875 s), 16 documentation/release/README tests
+  pass (14.94 s); documentation structure, repository Ruff and whitespace pass.
+
 ## 2026-09-26 — Qualify the diagnostic pilot launcher
 
 - Clean committed implementation `6bb1e45`: complete regression **3,487 pass,

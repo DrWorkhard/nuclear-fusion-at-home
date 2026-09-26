@@ -1,5 +1,27 @@
 # Findings log
 
+## F-102 — Protected descent improves coarse fields, then hits the curvature certificate
+
+**Class:** independently reconstructed coarse experiment, not physical acceptance
+**Date:** 2026-09-26
+
+All eight native cases at clean `2015ac5` complete construction and independent
+coarse verification: 213 bundles, 795 certificates, 1,933 native requests. Normal
+RMS decreases 0.4463–0.4857%; interior RMS 1.1881–2.1916%. All 117 field-evaluated
+search proposals are accepted; 582 other proposals fail geometry certification.
+Every search terminates certificate-limited, and every final negative certificate
+fails only its curvature gate. Sampled selected curvature is 9.4877–9.6664/m;
+the cumulative bound approaches 12/m. This motivates a tighter proof/different
+direction, not a claim that the physical limit has been reached or can be waived.
+
+All 795 certificates and 213 saved bundles are independently reconstructed.
+Largest sampled direct B/A error is 1.804e-15 across 81,792 vectors. Source graph
+unchanged, no automatic retry, no new equilibrium. Mandatory fine acceptance for
+all eight selections remains pending, and normal RMS is still about 2,700 times
+its limit. Objective decreases of 6.31–9.16% must not substitute for field-error
+changes. No resolved fine-grid improvement, feasible baseline, Step 4 or MS1.
+[Results](../optimization/PROTECTED_COIL_FIT_RESULTS.md).
+
 ## F-101 — Saved-physics reconstruction reproduces all eight negative seeds
 
 **Class:** independent numerical/source qualification, not a new design

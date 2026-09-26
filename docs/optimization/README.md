@@ -17,9 +17,11 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
+- [Protected coil-fit results](PROTECTED_COIL_FIT_RESULTS.md). Eight native searches and independent coarse audits complete at `2015ac5`; normal RMS improves 0.4463–0.4857%, interior RMS 1.1881–2.1916%. All stop at the curvature certificate; mandatory fine phase remains unrun and field limits remain far away.
+
 - [Fine-phase integration notes](PROTECTED_FINE_DESIGN_NOTES.md). Read-only mapping of the required 80-request frozen-current acceptance phase, candidate-coordinate and seed-identity traps, direct geometry masks and the need for a separate no-search supervisor. Planning only, not a registered or executed fine phase.
 
-- Protected pilot execution: [registration](PROTECTED_PILOT_EXECUTION_PROTOCOL.md), [results](PROTECTED_PILOT_EXECUTION_RESULTS.md). Launcher qualified at `6bb1e45`: 124 synthetic tests and all 3,487 regression tests pass; separate execution checkpoint binds actual evidence. Runtime clean-source admission precedes the eight-case native pilot; original budgets/fine requirements unchanged.
+- Protected pilot execution: [registration](PROTECTED_PILOT_EXECUTION_PROTOCOL.md), [results](PROTECTED_PILOT_EXECUTION_RESULTS.md). Launcher qualified at `6bb1e45`: 124 synthetic tests and all 3,487 regression tests pass; runtime clean-source admission and the subsequent pilot pass at `2015ac5`. Original budgets/fine requirements unchanged.
 
 - Independent saved physics: [registration](PROTECTED_PHYSICS_PROTOCOL.md), [results](PROTECTED_PHYSICS_RESULTS.md). Scoped qualification complete: 130 synthetic tests, eight real saved-seed reconstructions and 3,363 tracked regression tests pass. Maximum sampled B/A error 1.316e-15; earlier physical rejections confirmed. Native launch and fine acceptance remain separate.
 
@@ -31,7 +33,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 - Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). Complete in its synthetic scope: 108 controller/auditor tests and 2,180 full regression tests pass. Runner, method review and physical recomputation remain; no new field fit or physical claim.
 
 - [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations: reproduction, kernels, counterexamples, geometry-preserving improvement and broader physics. Unsolicited useful work welcome; costs optional.
-- [Protected field-fit draft](PROTECTED_COIL_FIT_PROTOCOL.md). Preserved eight-cell low-mode proposal; controller qualification is now complete separately. Method review, native runner and physical auditor remain open; no field run or physical acceptance.
+- [Original protected field-fit registration](PROTECTED_COIL_FIT_PROTOCOL.md). Preserved eight-cell low-mode proposal with its historical paused heading unchanged. Later method/software qualifications and coarse execution are linked above; the required fine phase and physical acceptance remain open.
 - [Geometry-preserving search options](GEOMETRY_PRESERVING_SEARCH_OPTIONS.md). Two independent recommendations; qualify cumulative geometry bounds first. Free L-BFGS-B, support families and free currents remain separate options.
 - [Coupled-design options and reviews](COUPLED_DESIGN_OPTIONS.md). Filament co-design, reduced directions, REGCOIL and direct surfaces; three internal agent reviews, integration traps and separate realization/coupling/pressure/robustness work packages.
 - Paired actual-coil pilot: [protocol](COUPLED_COIL_PILOT_PROTOCOL.md), [negative results](COUPLED_COIL_PILOT_RESULTS.md). Two plasma targets, two coil classes and normal/interior-vector methods. Eight startup checks, six searches, all finer acceptance checks; no physical pass. Coarse grids missed very small plasma clearances.
