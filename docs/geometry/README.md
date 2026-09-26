@@ -10,7 +10,9 @@ geometries pass the specified filament checks, including all 72 direct tests.
 Their subsequent field calculations pass numerical checks but fail field-quality
 limits. The 52-state cumulative-perturbation study certifies every required small
 probe; 18 larger states remain conservatively uncertified, rather than proved
-impossible. Geometry success alone establishes no field improvement.
+impossible. The separate local whole-homotopy study now certifies all twelve
+fixed states, including two previously curvature-rejected proposals, without
+relaxing a limit. Geometry success alone establishes no field improvement.
 
 [Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
 
@@ -19,7 +21,7 @@ impossible. Geometry success alone establishes no field improvement.
 Historical detailed reports below remain in German; this index gives their scope
 and conclusions in English.
 
-- Local homotopy curvature: [protocol](LOCAL_CURVATURE_PROTOCOL.md), [method/input review](LOCAL_CURVATURE_REVIEW.md), [implementation qualification](LOCAL_CURVATURE_PROGRESS.md). Twelve fixed saved states and unchanged 12/m limit; complete seed-to-candidate coverage, exact budgets and separate arithmetic checker. Full regression passes 5,110 tests; separate execution checkpoint prepared. No project-state calculation or changed historical decision yet.
+- Local homotopy curvature: [protocol](LOCAL_CURVATURE_PROTOCOL.md), [method/input review](LOCAL_CURVATURE_REVIEW.md), [implementation qualification](LOCAL_CURVATURE_PROGRESS.md), [twelve-state results](LOCAL_CURVATURE_RESULTS.md). All 336 physical copies and 285,528 rectangle bounds pass separate checks; two previously rejected proposals now certify under unchanged limits. Historical decisions remain intact; their field usefulness is unmeasured.
 
 - [Local curvature-bound options](LOCAL_CURVATURE_BOUND_OPTIONS.md). Prospective interval/subdivision inequality motivated by the protected pilot's conservative curvature bottleneck. Preserve the original-seed homotopy guarantee, all other gates and the 12/m limit; no implementation, calculation or new candidate pass.
 - Coil perturbations: [protocol](COIL_PERTURBATION_PROTOCOL.md) and [results](COIL_PERTURBATION_RESULTS.md). Cumulative position/first-/second-derivative bounds protect distance, length and curvature relative to immutable seeds. Real 52-state matrix: 104 certificate calls, 208 direct grids; required small probes pass, 18 larger states remain uncertified. Includes checkpoint-reference preservation and the corrected test gap.

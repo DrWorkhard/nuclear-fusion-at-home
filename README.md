@@ -20,6 +20,8 @@ Our current starting coil sets have a full-grid normal field error of
 coarse normal-field error by 0.45–0.49%. Its [fine validation](docs/optimization/PROTECTED_FINE_RESULTS.md)
 now passes numerical and geometry checks for all eight candidates; all still
 fail the field-quality limits.
+A [tighter curvature check](docs/geometry/LOCAL_CURVATURE_RESULTS.md) now certifies
+two previously blocked proposals under the same limits; their field benefit is untested.
 A feasible new coil design and
 a state-of-the-art advance remain ahead of us. We are independent of, and not
 endorsed by, Proxima Fusion or the Max Planck Institute.

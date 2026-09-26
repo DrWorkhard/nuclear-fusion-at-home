@@ -196,13 +196,18 @@ normal maximum and interior-vector RMS limits. Fine normal RMS remains
 0.26794–0.27478 versus 1e-4. This closes the pilot, not any of packages 4A–4D.
 [Complete results and evidence](../optimization/PROTECTED_FINE_RESULTS.md).
 
+### 15. Local curvature — two formerly rejected proposals certify (26 September)
+
+The [local whole-homotopy curvature study](../geometry/LOCAL_CURVATURE_RESULTS.md)
+now certifies all twelve fixed states / 336 copies, including two proposals that
+the old curvature bound rejected. The separate checker reconstructs all 285,528
+bounds, with no relaxed limit. This changes no historical decision and measures
+no field.
+
 ## What is not shown yet
 
-Next method: a separately registered [local homotopy curvature qualification](../geometry/LOCAL_CURVATURE_PROTOCOL.md)
-on twelve saved states. Implementations pass internal review, 227 focused tests
-and the 5,110-test full regression at clean `8b519dc`. A separate execution checkpoint
-is prepared; actual calculations remain. This changes no historical acceptance decision.
-[Qualification and retained defects](../geometry/LOCAL_CURVATURE_PROGRESS.md).
+Next: a separately registered fixed field comparison of those proposals
+with their reference-N predecessors, before deciding on search integration.
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives
 in a coil-produced field, and no coupled, finite-pressure, confinement or

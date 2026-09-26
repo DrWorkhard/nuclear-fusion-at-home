@@ -32,18 +32,19 @@ the full history, the real clone URL, hosted CI, reviewer identities and branch
 protection — see the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
 and the [publication inventory](validation/PUBLICATION_INVENTORY.md).
 
-**Step 4A: improve the search after completed fine validation.** Publication remains
+**Step 4A: measure whether newly certified movement improves fields.** Publication remains
 separate. The [eight-case native pilot](optimization/PROTECTED_COIL_FIT_RESULTS.md) completes
 construction and independent coarse verification at `2015ac5`. Every case makes
 small field-error reductions, then stops at the cumulative curvature bound.
 The [complete fine study](optimization/PROTECTED_FINE_RESULTS.md) now passes
 numerical and geometry checks for all eight fixed selections; every candidate
 still fails field-quality limits. Its software has 4,883 passing full-regression
-tests. The separate [local homotopy curvature protocol](geometry/LOCAL_CURVATURE_PROTOCOL.md)
-and twelve fixed inputs have passed internal method/input review. The independent
-arithmetic/coverage implementations and runner now pass internal review and the
-5,110-test full regression, with a separate execution checkpoint prepared. Next: run that geometry-only
-study with all other gates unchanged. Then investigate geometry-aware directions or
+tests. The separate [local homotopy curvature study](geometry/LOCAL_CURVATURE_RESULTS.md)
+now certifies all twelve fixed states, including two previously rejected proposals,
+with independent checking and unchanged limits. Its full regression passes 5,110
+tests. Next: register and execute a small matched-grid field comparison of those
+two proposals and their own reference-N selections; no optimization is needed
+for this first usefulness test. Then investigate geometry-aware directions or
 extended search under a separately registered method, using actual field results
 to decide whether the added movement is useful. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting

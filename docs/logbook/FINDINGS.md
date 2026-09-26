@@ -1,5 +1,25 @@
 # Findings log
 
+## F-104 — A tighter path-wide bound certifies two formerly blocked proposals
+
+**Class:** independently checked geometry component, not field improvement
+**Date:** 2026-09-26
+
+At clean `c7562ca`, all twelve preregistered fixed states pass local curvature
+construction and its separate arithmetic/coverage checker: 336 physical copies,
+285,528 bounds per side, 142,932 passing leaves. Both previously rejected states
+(reference-n6-N trial 94 and reference-n8-N trial 50) now satisfy the separate
+geometry classification. All seven other original gates are reconstructed and
+unchanged. Original negative certificates are retained, not rewritten.
+
+This confirms conservatism of the former curvature bound on these two paths
+under the padded binary64 model. It does not establish rigorous interval proofs,
+measured fields for the proposals, a generally useful larger search region or
+physical acceptance. The experiment closes in 45.184 s, without retries, raised
+caps, fields or optimizer changes. Next measure these fixed steps' actual field
+effects before investing in search integration. Step 4A–4D remain open.
+[Results](../geometry/LOCAL_CURVATURE_RESULTS.md).
+
 ## F-103 — Fine validation confirms geometry and persistent field mismatch
 
 **Class:** independently reconstructed fixed-candidate negative result

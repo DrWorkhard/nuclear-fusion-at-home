@@ -1,5 +1,30 @@
 # Validation log
 
+## 2026-09-26 — Complete all twelve registered local-curvature states
+
+- Clean execution checkpoint `c7562cafc1cb2d228d64c9e624343f25649c9b16`, exit zero
+  and explicit complete study after 45.184 s; source/clean status unchanged.
+  No tracked edit, retry, raised cap, environment sync or concurrent heavy job.
+- All 336 physical copies and 285,528 attempted bounds per side pass independent
+  calculation/checking. Trees have 142,596 t splits / 142,932 passing leaves; no
+  arithmetic, depth, pending or deadline leaves. All 24 old-gate reconstructions
+  match, including the two preserved old curvature failures.
+- Both preselected rejected states now pass the separate local geometry check
+  under the same 12/m limit and seven other gates. No fields, gradients or
+  equilibria; this is geometric evidence, not field/physical admission. Record F-104.
+- Main rehashes 747 direct references / 31,376,319 bytes and replays structural
+  return validation, identity/coverage, counts and state aggregates; no numerical
+  recomputation. Largest state report 3,665,803 bytes; all phases below 2.676 s.
+- Update root README, detail/index/status/roadmap/Step 4 and findings; scientific
+  overview still applies. Next is a separate four-state field comparison, not a
+  new optimizer framework. No Step 4 or MS1 completion claim.
+- Independent record reviewer verifies 870 files / 48,322,630 bytes, 1,321
+  reference edges and 26 Git objects; all 24 returns and saved tree partitions
+  reconcile. No bounds/fields rerun and no independent runtime/disk measurement.
+  Bind both reviews and 12 top-level result references. Closure: 47 public tests
+  (3.298 s), 16 documentation/release tests (14.98 s), documentation structure
+  and whitespace pass. Review scoped diff; all historical evidence remains intact.
+
 ## 2026-09-26 — Bind separate local-curvature execution checkpoint
 
 - Qualification committed at `49b826d`; separate execution record binds its exact

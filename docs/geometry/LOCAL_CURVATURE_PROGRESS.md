@@ -7,9 +7,10 @@
 
 Implementation, internal review and full regression are complete at clean
 `8b519dc`; qualification is committed at `49b826d` and the separate
-[execution checkpoint](../../evidence/local-curvature-execution-v1.json) is prepared. **The twelve
-fixed project states have not been evaluated with the new bound.** No old
-certificate, evaluator or acceptance threshold has changed. Step 4 remains open.
+[execution checkpoint](../../evidence/local-curvature-execution-v1.json) at `c7562ca`.
+**All twelve fixed project states now pass the new bound and independent checker.**
+See the separate [results](LOCAL_CURVATURE_RESULTS.md). No old certificate,
+evaluator or acceptance threshold has changed. Step 4 remains open.
 
 The components are separate:
 
@@ -88,7 +89,7 @@ point requiring the retained artifacts, not part of the dependency-free starter:
 .venv/bin/python scripts/run_local_curvature.py --intake
 ```
 
-Next: runtime clean-source admission and the twelve states serially in fresh
-outputs, with all negative and resource-limited outcomes retained. A tighter
-geometric bound would still need a separately registered optimization experiment
-to demonstrate useful field improvement.
+The registered run is complete, in fresh outputs with unchanged limits and no
+retries. The two newly certified proposals still need a separately registered
+field comparison to determine usefulness; this does not require first building
+another optimizer. No field or design acceptance follows from the geometry result.
