@@ -123,9 +123,11 @@ also passes while constructing this record; no new field was calculated.
 
 ## Remaining execution and scientific work
 
-A committed execution checkpoint and fresh clean-source admission are still
-required before any fine native call. An archived-input check or saved-seed
-replay alone is never a substitute for that gate.
+The separate [execution checkpoint](../../evidence/protected-fine-execution-v1.json)
+binds qualification commit `8ac4128`, the exact implementation/protocol and the
+unchanged coarse anchors. Fresh clean-source admission and canonical manifest
+round-trip are required before launch. No native fine call has run at this
+checkpoint; a saved-seed replay is never a substitute for actual fine validation.
 
 Then execute every registered diagnostic, flux and geometry check for all eight
 fixed states. A correctly reconstructed threshold failure is a valid negative

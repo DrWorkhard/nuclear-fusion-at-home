@@ -37,7 +37,8 @@ separate. The [eight-case native pilot](optimization/PROTECTED_COIL_FIT_RESULTS.
 construction and independent coarse verification at `2015ac5`. Every case makes
 small field-error reductions, then stops at the cumulative curvature bound.
 The complete fine implementation is now qualified at `80dddb8` with 4,883 passing
-regression tests. Next: commit its execution checkpoint and execute the [registered fine phase](optimization/PROTECTED_FINE_PROTOCOL.md)
+regression tests, with separate qualification/execution records. Next: pass runtime
+source admission and execute the [registered fine phase](optimization/PROTECTED_FINE_PROTOCOL.md)
 for all eight fixed selections. Its reviewed schedule preserves 80 native requests
 per case and all original field, flux, refinement and geometry gates.
 Only afterward investigate tighter continuous bounds or geometry-aware directions,

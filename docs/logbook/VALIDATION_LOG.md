@@ -1,5 +1,18 @@
 # Validation log
 
+## 2026-09-26 — Prepare the separate fixed fine execution checkpoint
+
+- Qualification committed at `8ac4128`; bind its exact 47,132-byte record, SHA-256
+  `b33fc0738554261ca51944b222650a6d418f2bde69f1478fed63a2623060aa6a`, in the
+  separate `evidence/protected-fine-execution-v1.json` checkpoint. Exact protocol,
+  code, coarse cases and diagnostic-only scope match the qualification.
+- No code/evaluator/threshold or coarse selection changes. Runtime admission,
+  canonical source round-trip and clean-state checks precede the eight-case run;
+  no native fine work yet. No new scientific acceptance.
+- Update progress/index/status/roadmap/Step 4 page; root README remains accurate.
+- Closure: checkpoint/qualification links and scopes match exactly; 47 public
+  tests pass (3.378 s), documentation structure and whitespace checks pass.
+
 ## 2026-09-26 — Qualify the complete fine implementation at clean 80dddb8
 
 - Run the entire committed research suite with no excluded paths: **4,883 passed,
