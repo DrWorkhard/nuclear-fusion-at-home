@@ -19,7 +19,8 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Protected coil-fit results](PROTECTED_COIL_FIT_RESULTS.md). Eight native searches and independent coarse audits complete at `2015ac5`; normal RMS improves 0.4463–0.4857%, interior RMS 1.1881–2.1916%. All stop at the curvature certificate; mandatory fine phase remains unrun and field limits remain far away.
 
-- [Fine-phase integration notes](PROTECTED_FINE_DESIGN_NOTES.md). Read-only mapping of the required 80-request frozen-current acceptance phase, candidate-coordinate and seed-identity traps, direct geometry masks and the need for a separate no-search supervisor. Planning only, not a registered or executed fine phase.
+- [Fine acceptance registration](PROTECTED_FINE_PROTOCOL.md). Fixed eight-model/80-request schedule per selected case, original-seed/current identity, complete flux/refinement/geometry checks, explicit lossless mask codec and separate no-search supervision. Independently reviewed before implementation; native execution requires separate qualification/checkpoint.
+- [Fine-phase integration notes](PROTECTED_FINE_DESIGN_NOTES.md). Preserved pre-registration mapping of candidate-coordinate and seed-identity traps, geometry masks and reuse boundaries; the registration above now defines the implementation task.
 
 - Protected pilot execution: [registration](PROTECTED_PILOT_EXECUTION_PROTOCOL.md), [results](PROTECTED_PILOT_EXECUTION_RESULTS.md). Launcher qualified at `6bb1e45`: 124 synthetic tests and all 3,487 regression tests pass; runtime clean-source admission and the subsequent pilot pass at `2015ac5`. Original budgets/fine requirements unchanged.
 

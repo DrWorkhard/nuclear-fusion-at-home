@@ -87,10 +87,13 @@ reviews are not external peer review.
 Run the original separate fine phase for **all eight fixed selections**: six
 field/interior grids, two complete flux blocks, four direct geometry grids,
 sampled B/A and original-seed certificates, with selected coarse currents frozen.
-Its implementation and execution must be separately qualified; fine results
+The [fine registration](PROTECTED_FINE_PROTOCOL.md) now defines the reviewed
+implementation task. Implementation and execution must be separately qualified; fine results
 cannot alter this completed selection.
 
 Only afterward consider a separately registered tighter curvature proof or
 geometry-aware directions under unchanged physical limits. Neither small coarse
 gains nor a finished negative pilot closes realization/transfer 4A, coupled
 improvement 4B, pressure/confinement 4C or finite-build robustness 4D.
+The [local-bound proposal](../geometry/LOCAL_CURVATURE_BOUND_OPTIONS.md) is planning
+only and does not change any preserved certificate decision.

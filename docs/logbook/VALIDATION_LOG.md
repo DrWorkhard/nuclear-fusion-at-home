@@ -1,5 +1,21 @@
 # Validation log
 
+## 2026-09-26 — Register candidate-aware fine acceptance before implementation
+
+- After completed coarse evidence at `3b31695`, register all eight fixed selections,
+  eight original-seed models/80 native requests per case, six diagnostics and two
+  full flux blocks, plus four geometry grids. Preserve original limits and claims.
+- Independent read-only review verifies 552,960 field-point requests per case,
+  initializer convention (signed 100 kA, not 1 A), exact tolerances, separate offsets
+  and dtype-preserving uint8 mask encoding. No tests or native work by that review.
+- Preserve archived coarse source metadata verbatim; new fine sources are a
+  separate admission layer. Register no-search return/timing protocol and require
+  qualified committed code/checkpoint before native work. No fine implementation yet.
+- Save the independently proposed local curvature inequality as prospective notes,
+  not a changed certificate or a new experiment. Fine validation precedes its use.
+- Registration closure: public and documentation/release suites, documentation
+  structure and whitespace checks pass; no scientific source/evidence changed.
+
 ## 2026-09-26 — Execute all eight protected coarse searches and independent audits
 
 - Clean checkpoint `2015ac5`; source-only admission and canonical 296,513-byte

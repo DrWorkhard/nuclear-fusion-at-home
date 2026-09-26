@@ -36,7 +36,9 @@ and the [publication inventory](validation/PUBLICATION_INVENTORY.md).
 separate. The [eight-case native pilot](optimization/PROTECTED_COIL_FIT_RESULTS.md) completes
 construction and independent coarse verification at `2015ac5`. Every case makes
 small field-error reductions, then stops at the cumulative curvature bound.
-Next: qualify and execute the required fine phase for all eight fixed selections.
+Next: implement, qualify and execute the [registered fine phase](optimization/PROTECTED_FINE_PROTOCOL.md)
+for all eight fixed selections. Its reviewed schedule preserves 80 native requests
+per case and all original field, flux, refinement and geometry gates.
 Only afterward investigate tighter continuous bounds or geometry-aware directions,
 under unchanged physical limits and separately registered methods. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting
