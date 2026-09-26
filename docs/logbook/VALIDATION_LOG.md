@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-26 — Strategic review of work, results and structure
+
+- Maintainer asked for a high-level, consultant-style analysis saved in
+  `docs/review`. Added `STRATEGIC_REVIEW.md` (read-only review at `0da6a35`) and
+  indexed it. No code, evidence, threshold or milestone state changed; no
+  calculation run.
+- Basis: overview and step pages, key protocols/results, Git history and file
+  counts (337 commits, about 105,000 Python lines, 5,654-test regression, 207
+  documents / about 180,000 words, 4.8 GB local artifacts). Main findings: rigor
+  exceptional; Step 4 field error about 2,700× its limit with recent gains below
+  0.5%; no positive control for the Step 4 gates (limits described in their
+  protocol as new pilot conditions); process volume outpacing results; public
+  starter cannot reach the bottleneck. Eleven prioritized recommendations, open.
+- Limits: an AI reviewer's assessment, not domain-expert review; ratings are
+  qualitative and the rounds extrapolation is illustrative only.
+- Checks: documentation structure, links and whitespace on the changed files.
+  Another session's untracked residual-analysis files are not part of this commit.
+
 ## 2026-09-26 — Register saved residual diagnosis before longer continuation
 
 - Two independent internal planning reviews recommend a small one-step native

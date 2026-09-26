@@ -9,8 +9,11 @@ change where it is made and note the resolution here.
 Current conclusion: 26 of the 27 README recommendations are implemented and locally
 verified; 47 public tests and eight real checks pass on three local Python versions.
 The actual public clone URL remains a hosting prerequisite; a
-clearly labelled template and ZIP route are provided meanwhile. These are internal
-reviews by the maintainer or an AI agent, not external peer review.
+clearly labelled template and ZIP route are provided meanwhile. The strategic review
+rates rigor as exceptional but finds Step 4 stalled about 2,700× from its field
+limit, gates without a positive control and process volume outpacing results; its
+11 recommendations are open. These are internal reviews by the maintainer or an
+AI agent, not external peer review.
 
 [Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
 
@@ -23,6 +26,11 @@ reviews by the maintainer or an AI agent, not external peer review.
 - [README review resolution](ROOT_README_RESOLUTION.md). Point-by-point fixes,
   matched-resolution UI comparison, tracked candidate route, actual checks and
   unresolved hosting/resource prerequisites. The historical review above is unchanged.
+- [Strategic review, 26 September 2026](STRATEGIC_REVIEW.md). Consultant-style
+  assessment of work, results and structure at `0da6a35` across eight axes
+  (strategy, results, rigor, execution, structure, collaboration, reproducibility,
+  operating model), with a scorecard, metrics, 11 prioritized recommendations and
+  indicators to track.
 
 Related: the first eight-point release review and its resolution are recorded in
 [public review fixes](../validation/PUBLIC_REVIEW_FIXES.md).
