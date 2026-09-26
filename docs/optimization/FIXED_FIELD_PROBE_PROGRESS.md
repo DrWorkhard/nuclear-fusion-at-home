@@ -98,7 +98,11 @@ binds 540 source/configuration/protocol references and 45 artifacts, including
 distinct evidence for focused, public, documentation, full-regression and review
 checks. Prior failing controls and intermediate reviews are retained.
 
-A separate committed execution checkpoint and fresh native admission still precede
-new fields. No native environment sync or new native fields occurred.
+The separate [execution checkpoint](../../evidence/fixed-field-probe-execution-v1.json)
+binds that qualification and identical source closure for exactly 24 models /
+168 requests /804,864 points, at the registered 600 s per pair/phase. Runtime
+clean-source and fresh native admission still precede new fields; this checkpoint
+does not certify their outcomes. No native environment sync or new native fields
+occurred during qualification.
 The existing NumPy/netCDF import warning is retained, not silenced or repaired by
 changing the native environment during this study.

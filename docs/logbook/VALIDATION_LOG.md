@@ -1,5 +1,20 @@
 # Validation log
 
+## 2026-09-26 — Separate fixed field execution checkpoint
+
+- After qualification commit `eafe387`, bind its exact record and all 540 source
+  references in a separate execution checkpoint. It permits only the two registered
+  pairs /24 models /168 native requests /804,864 requested points, with unchanged
+  grids, criteria, 600 s phases and 605 s hard termination. No native retry.
+- The next run must freshly admit the clean implementation and actual native
+  environment before work and recheck both afterward. Explicit successful returns
+  remain separate from numerical labels and physical acceptance. No field has yet
+  been evaluated for the two new proposals.
+- Update progress/index and the Step 4 next action; no scientific status change.
+- Closure: canonical checkpoint/qualification and all 540 current source references
+  agree; 47 public tests pass in 3.298 s, 16 documentation/release tests in 14.92 s,
+  documentation structure and whitespace pass. This is still not a native run.
+
 ## 2026-09-26 — Fixed field probe: clean complete regression passes
 
 - Commit implementation at `b10c47f67bd73daf73e1cf654413f47df6f3b911`; run the
