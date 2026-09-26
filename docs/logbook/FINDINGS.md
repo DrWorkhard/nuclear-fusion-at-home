@@ -1,5 +1,25 @@
 # Findings log
 
+## F-100 — Isolated execution now has tested parent-bound completion
+
+**Class:** local source/software qualification, not an improved reactor design
+**Date:** 2026-09-26
+
+At `fd069e9`, 315 new tests and the 3,233-test full regression pass. Eight actual
+saved contexts validate against the admitted source graph; eight synthetic cells
+traverse real subprocesses and separate graph audits. Source changes, thread drift,
+swallowed callback failures and nonzero exits cannot become acknowledged success.
+Review also corrected stale process-group cleanup, strict deadline endpoints and
+return-time ordering. Failed development controls remain bound with final evidence.
+
+The key distinction is now executable: complete files do not prove a successful
+worker return or parent acknowledgement. Scope remains trusted single-writer
+POSIX execution, cooperative parent checks and returning parent callbacks, not
+untrusted-code isolation or kill-on-parent-death. Thirteen sources and 28 artifacts
+are hash-bound. No native optimization ran; independent saved-physics checks,
+runtime native qualification, fine acceptance and Step 4A–4D remain open.
+[Results](../optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md).
+
 ## F-099 — The complete synthetic search chain passes its integration gate
 
 **Class:** bounded software/recorded-data qualification, not a better coil design

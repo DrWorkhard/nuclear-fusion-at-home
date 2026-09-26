@@ -44,20 +44,27 @@ admission. Tests reject substituted contexts and results with a failed graph.
 2. Traverse every numerical bundle, including rejected current/Armijo trials.
    Read all sixteen raw arrays with the qualified canonical reader and validate
    the complete bundle schema. Historical archives retain their original checked
-   reader. Reconstruct the 401-point vacuum target identity, archived interior
-   target, fixed B² and signed flux with `audit_clear_coil_field_start.target`.
+   reader. Reconstruct the ns=401 vacuum reference identity, archived interior
+   target, fixed B² and signed flux with `audit_clear_coil_field_start.target`,
+   passing the admitted manifest's `cell_sources` mapping.
 3. Translate each new bundle into the existing independent `field_row` interface
-   at the fixed construction grid. Reconstruct all discrete objective/metric
+   at exactly `numerical.levels()[0]`, with explicit N/V method. Reconstruct all discrete objective/metric
    values, coil geometry, currents and flux. Reuse tolerances 5e-10 relative /
    1e-12 absolute for metrics, calibrated flux 1e-12 relative, and direct B/A
    5e-10 relative. Check 64 ordered points in each boundary/interior/loop array:
-   six vector comparisons per bundle. No new or relaxed tolerance.
+   six comparison statistics / 384 sampled vectors (1,152 scalar components)
+   per bundle. These are independent field reconstructions, with zero native
+   requests; do not call this "no field calculations". No new or relaxed tolerance.
 4. Feed all ten independently reconstructed startup objective values into
    `protected_startup.derivative_screen`: two protected low-mode directions,
    two step sizes, four recorded plus four reconstructed derivative checks,
    unchanged 2e-4 relative OR 1e-8 absolute limit. Preserve exact seed/history,
    seed/repeat, fresh-search-seed and selected-replay checks from the graph audit.
    Do not reuse the older full-coordinate FD stencil or seed-only row identities.
+   Preserve the original timing: the qualified cell's recorded native derivative
+   and replay screens run before search; independently reconstructed startup
+   checks are posthoc, required before admitting completed experiment evidence.
+   No new pre-search reconstruction hook is introduced by this component.
 5. Report every reconstructed bundle/certificate, exact reference identities,
    independent counts, startup outcomes and selected-versus-search-seed changes
    separately for objective, normal RMS/max and inner-vector RMS. These changes
@@ -66,6 +73,9 @@ admission. Tests reject substituted contexts and results with a failed graph.
 Fail closed on malformed data, missing/reordered evidence, numerical disagreement
 or failed publication. A successful report reference exists only if publication
 returns successfully. No retry or partial result may acquire a complete-pass flag.
+Publish full independent proofs and bundle results separately and reference them
+from the aggregate. Do not duplicate up to 128 full certificates or raw arrays
+inside the unchanged 8 MiB JSON limit.
 
 ## Required qualification
 
@@ -78,7 +88,10 @@ returns successfully. No retry or partial result may acquire a complete-pass fla
 - Read-only reconstruction of all eight actual saved native seed bundles against
   the admitted source graph, including independent seed certificates and all six
   sampled B/A comparisons. Old full-space probes cannot qualify the new low-mode
-  stencil; its real qualification remains a runtime requirement before search.
+  stencil. Compare the two distinct geometry-seed certificates to the actual
+  recorded producer proofs in the admitted perturbation graph, not an independently
+  generated certificate to itself. The new native recorded stencil remains a
+  runtime requirement before search; its reconstructed screen is posthoc.
 - Independent internal review, focused/public/docs/full regression and exact
   source/artifact binding. Run resource-heavy checks serially with the existing
   native environment unchanged and a 3 GiB initial / 2 GiB ongoing disk reserve.
@@ -92,3 +105,8 @@ field value or every gradient component. Preserve false flags for universal
 field/gradient verification, physical admission, fine-grid acceptance, realized
 field transfer, Step 4, SoTA and MS1. Native runtime screens, all fine-grid/flux
 gates and the physical packages 4A–4D remain necessary.
+
+Preimplementation internal review clarified interface mapping, bounded report
+storage, historical proof comparison, sample-count denominators and the original
+pre-search/posthoc order. These clarifications change no numerical threshold or
+scientific acceptance criterion and precede implementation/reconstruction runs.

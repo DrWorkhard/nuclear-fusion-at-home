@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "kind": "protected-native-plumbing-qualification",
+  "date": "2026-09-26",
+  "status": "completed",
+  "native_plumbing_qualification_pass": true,
+  "registration": {
+    "commit": "7adeaee3ceaee0a7e89879f2446d94a2ac33b7e6",
+    "path": "docs/optimization/PROTECTED_NATIVE_PLUMBING_PROTOCOL.md",
+    "sha256": "923ac373e5071da4b8e9dc41c2dec2749dff5e095527ed3522d179a1f200b185",
+    "bytes": 6429
+  },
+  "implementation_commit": "fd069e91ee62bc86771eb27e9898456a7b6bfe4c",
+  "qualification_scope": "Trusted single-writer local POSIX source/adapter and isolated parent/worker plumbing, synthetic subprocess qualification and read-only source/context admission; no native pilot.",
+  "components": {
+    "source_adapter_tests": 131,
+    "control_tests": 46,
+    "worker_tests": 26,
+    "process_tests": 101,
+    "pipeline_tests": 11,
+    "total_focused_tests": 315
+  },
+  "regression": {
+    "exit_code": 0,
+    "passed": 3233,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "warnings": 334,
+    "console_seconds": 271.79,
+    "junit_seconds": 271.668
+  },
+  "independent_review": {
+    "internal": true,
+    "blocking_findings_remaining": false,
+    "focused_passed": 315,
+    "junit_seconds": 14.446
+  },
+  "real_source_preflight": {
+    "contexts_passed": 8,
+    "source_bound_adapters": 8,
+    "seconds": 25.279368332994636,
+    "native_models_initialized": 0,
+    "native_requests": 0,
+    "producer_certificates": 0,
+    "equilibrium_solves": 0
+  },
+  "workspace": {
+    "clean_at_regression_start": true,
+    "clean_after_regression": true,
+    "clean_during_source_preflight": true,
+    "implementation_sources_match_commit": true,
+    "native_environment_resynced": false,
+    "prior_scientific_sources_modified": false
+  },
+  "limits": {
+    "new_native_search_executed": false,
+    "physical_reconstruction_integrated": false,
+    "field_values_verified": false,
+    "gradients_verified": false,
+    "geometry_certificates_verified": false,
+    "physical_admission": false,
+    "fine_grid_acceptance": false,
+    "step4_pass": false,
+    "sota_advance": false,
+    "ms1_reached": false,
+    "external_peer_review": false,
+    "hard_kill_on_parent_death": false,
+    "trusted_parent_callbacks_preempted": false,
+    "thread_pools_measured": false,
+    "thread_safety_qualified": false,
+    "hardware_power_loss_tested": false,
+    "untrusted_pr_sandbox": false
+  },
+  "predecessor": {
+    "path": "evidence/protected-cell-synthetic-v1.json",
+    "sha256": "8ab6729adb7b842835bf76f4761835ff20b138a7974f8a2ad49f480cef19d714",
+    "bytes": 14521
+  },
+  "sources": [
+    {
+      "path": "docs/optimization/PROTECTED_NATIVE_PLUMBING_PROTOCOL.md",
+      "sha256": "923ac373e5071da4b8e9dc41c2dec2749dff5e095527ed3522d179a1f200b185",
+      "bytes": 6429
+    },
+    {
+      "path": "scripts/protected_native_inputs.py",
+      "sha256": "c785bcf988aa6ca8b329c883c0c77ad00f7fcd966f6f411998c0c202a52d7e2f",
+      "bytes": 10041
+    },
+    {
+      "path": "scripts/protected_native_adapter.py",
+      "sha256": "fc10dfd22eb67affceaa88abb0d94bc2a86dff734d437105185ea74d1c750796",
+      "bytes": 7114
+    },
+    {
+      "path": "tests/test_protected_native_inputs.py",
+      "sha256": "0c63451595e981c149581d306b4d75a51db039d05bb417d9206bc191227257fb",
+      "bytes": 11260
+    },
+    {
+      "path": "tests/test_protected_native_adapter.py",
+      "sha256": "89823cd047b4cbcc59c31a4afcf93718c0c2458298eadfb163f100d6feb55f51",
+      "bytes": 13604
+    },
+    {
+      "path": "src/fusion_baselines/protected_worker_control.py",
+      "sha256": "485fcf5da9b5a7897d2775479d0f1a4d4a1aa6e61f2bcfad7fb880c452cf8344",
+      "bytes": 10094
+    },
+    {
+      "path": "tests/test_protected_worker_control.py",
+      "sha256": "9e5e5fd149d1048b94f706bfe10d39b8d3158dd2fb950134472c6b3a8cc0bbe3",
+      "bytes": 10819
+    },
+    {
+      "path": "src/fusion_baselines/protected_process.py",
+      "sha256": "9be817b814223b1cb09842f9ee51d02f22520e09ea203bf5ad5cbc0f23bb1d2c",
+      "bytes": 17232
+    },
+    {
+      "path": "tests/test_protected_process.py",
+      "sha256": "6a9881ef97ee70a8754f932fc788c12d8f7ace1cc71bb50dbd4f52bdc775562e",
+      "bytes": 23339
+    },
+    {
+      "path": "scripts/run_protected_cell_worker.py",
+      "sha256": "f5efe94dbff75a7146a78e538f36cd73b368b8294c0eb07f05320651bcbf8fcd",
+      "bytes": 5740
+    },
+    {
+      "path": "tests/test_protected_cell_worker.py",
+      "sha256": "6cf28c9c0b6f9b77835190445480e9941ff12eccb3e8ffd79bb46651a17c0709",
+      "bytes": 8429
+    },
+    {
+      "path": "tests/test_protected_native_pipeline.py",
+      "sha256": "0594490270c4224873c8ebc33f497d4f830851d8311bb771ef4c51af2747d290",
+      "bytes": 4928
+    },
+    {
+      "path": "src/fusion_baselines/resource_guard.py",
+      "sha256": "85558ec13d446b822a7601c741767bc44435dd95d278ae752d829409143dc2db",
+      "bytes": 2421
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/protected-native-plumbing-v1/control-initial.xml",
+      "sha256": "46cf136f0f878f15b9bfe59a52e840b2b282c10dc35ac52fe94068983cfb8fa3",
+      "bytes": 7261,
+      "junit": {
+        "tests": 45,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.058
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/control-review-fixed.xml",
+      "sha256": "dba070e3e4d2f11b8b4c969ee81e254c903d32df09642c7cec74ffb0bc1d0890",
+      "bytes": 7403,
+      "junit": {
+        "tests": 46,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.122
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/control-review-red.xml",
+      "sha256": "9381c4e62ba080fe88ae597edd6ded9747739606c090b59cc1ec048658cc3a0a",
+      "bytes": 8635,
+      "junit": {
+        "tests": 46,
+        "failures": 3,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.078
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/docs-fixed.xml",
+      "sha256": "31ac39725fc242493cac7f81f68f0a0f39414b0a129bfe45def09d1a035da13c",
+      "bytes": 2054,
+      "junit": {
+        "tests": 14,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.563
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/docs.xml",
+      "sha256": "00da23fb617a47dcad9e24716c005d00b5d56f535e2f805bba29a9e25c9966e5",
+      "bytes": 258,
+      "junit": {
+        "tests": 0,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.001
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/full-regression.log",
+      "sha256": "43c4858e967bf586abea682fd8357f56807540a7bb85b0b764471ecd91f5ac07",
+      "bytes": 9542
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/full-regression.xml",
+      "sha256": "79a03eed773712ea4925ea455494212892ad6849d25675016a956f1629643e8d",
+      "bytes": 444541,
+      "junit": {
+        "tests": 3233,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 271.668
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/independent-final.xml",
+      "sha256": "60070100e1523d23ee849fa638f404d0a011b8cd9dbefecac091df30f9150b64",
+      "bytes": 46592,
+      "junit": {
+        "tests": 315,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 14.446
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/independent-preprocess.xml",
+      "sha256": "92318fe02d4a52e8234fed0cba19b3100f8d0d6291b93f0a4bbc3bc2d48a7922",
+      "bytes": 33285,
+      "junit": {
+        "tests": 214,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 13.342
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/inputs-adapter-final.xml",
+      "sha256": "02359580b15c17ea282f7147d3316169bddc81e960a17141975e35c833ff02ee",
+      "bytes": 20420,
+      "junit": {
+        "tests": 130,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.106
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/inputs-adapter-initial.xml",
+      "sha256": "0c35f447dda0d080e54699d3fb059070d71be4ebd0e6b0cbe6e10e25852c1557",
+      "bytes": 19241,
+      "junit": {
+        "tests": 122,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.194
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/inputs-adapter-pipeline-binding.xml",
+      "sha256": "c15db0698afc270f61b59b5f44f748aab98adffaee7904b3b592b76cde98e55a",
+      "bytes": 20583,
+      "junit": {
+        "tests": 131,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.079
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/inputs-adapter-review-fixed.xml",
+      "sha256": "0b6e022f1364025a1b97363c6b1f0efc51e4a34f5775fdc86af00426d90cba1e",
+      "bytes": 20266,
+      "junit": {
+        "tests": 129,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.09
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/inputs-adapter-review-red.xml",
+      "sha256": "d91b66e63ddd65cdcbe3a0ac00a68e0ceebcead29ffcbce67006bff592c3a1d6",
+      "bytes": 26919,
+      "junit": {
+        "tests": 129,
+        "failures": 7,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.153
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/pipeline-initial.xml",
+      "sha256": "b750ee783d3e8e2ae2bcca48239682e1ca377fee97be2918169c8d3c522d5cc8",
+      "bytes": 2087,
+      "junit": {
+        "tests": 11,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 11.622
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/process-cleanup-retirement-red.xml",
+      "sha256": "9df678b414327095953aed71d279279718e8b6a2bbb846ef089c6bfe7698812c",
+      "bytes": 15119,
+      "junit": {
+        "tests": 101,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.551
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/process-final.xml",
+      "sha256": "a8389d8e8bbc94c2582534dec66eb114e1be0d4c12b7bb09c860936d3565314a",
+      "bytes": 13577,
+      "junit": {
+        "tests": 101,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.611
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/process-initial.xml",
+      "sha256": "0442adcb5cc5c19499a0364fb2f9372ff0e2414e4a7f1dd00442ddcf41011e82",
+      "bytes": 11741,
+      "junit": {
+        "tests": 88,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.214
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/process-publication-fixed.xml",
+      "sha256": "1afa49f617b503be3ba31415b6975ef8f0c0c4c1e5b36453c73923163be98e35",
+      "bytes": 13439,
+      "junit": {
+        "tests": 100,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.536
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/process-publication-red.xml",
+      "sha256": "6b3438b66bff5835d84e3ba260e7e38a9747b36026df2e22a532173aacab3f7e",
+      "bytes": 17957,
+      "junit": {
+        "tests": 100,
+        "failures": 3,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.538
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/process-review-fixed.xml",
+      "sha256": "b1c9fecdb58416dd91897132c52729f0e6b60598388c1b35c68402da24e1b452",
+      "bytes": 12541,
+      "junit": {
+        "tests": 94,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.37
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/process-review-red.xml",
+      "sha256": "fbc630f1a323492198ee2b86891f80bffbd35ce274ba201dc6ad35b7f8dabea6",
+      "bytes": 20260,
+      "junit": {
+        "tests": 94,
+        "failures": 6,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.479
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/source-preflight/binding.json",
+      "sha256": "4036b3ddf36503431ee2765dfe0fc0d961cf35e52cb9395b8c00dce1ebf246a6",
+      "bytes": 276562
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/source-preflight/summary.json",
+      "sha256": "2e7cac18bfe038f068c3940af90d960622a199ec6a3d897fe249009f740234ee",
+      "bytes": 12023
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/source-preflight.py",
+      "sha256": "f6d7a2cfd23c276ed7908126aef8338a16c3d0b5e4a4657d80956fce95db436b",
+      "bytes": 1975
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/worker-initial.xml",
+      "sha256": "0d29869ecea15a586a87b6aac73f26f690a4e76a3a61d851c1c91e05d2560fb0",
+      "bytes": 3419,
+      "junit": {
+        "tests": 22,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.356
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/worker-review-fixed.xml",
+      "sha256": "93a502eb39a1d84a97216a08d4b806f67ef6f131a75d7e95ab4b634323a969be",
+      "bytes": 4033,
+      "junit": {
+        "tests": 26,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 1.489
+      }
+    },
+    {
+      "path": "artifacts/protected-native-plumbing-v1/worker-review-red.xml",
+      "sha256": "c7dfe0cc05693ac78c5f1668e0b391a9f8b9046b1d85fa1a483e100f9d702ace",
+      "bytes": 8037,
+      "junit": {
+        "tests": 26,
+        "failures": 4,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 2.267
+      }
+    }
+  ]
+}

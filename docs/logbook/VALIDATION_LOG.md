@@ -1,5 +1,27 @@
 # Validation log
 
+## 2026-09-26 — Qualify isolated execution and real source contexts
+
+- Implementation `fd069e9`: full one-thread local regression **3,233 pass,
+  334 existing warnings, zero failures/errors/skips**, exit zero; 271.79 s console /
+  271.668 s JUnit. Tree clean through regression and subsequent source preflight.
+- Independently authored final review: 315 focused pass (14.446 s JUnit), five
+  production-source hashes unchanged. No remaining blocker within plumbing scope.
+- Actual source preflight: eight contexts and eight adapters validate in 25.279 s,
+  with zero native models/requests, producer certificates or equilibrium solves.
+  Qualification binds 13 sources and 28 artifacts, retaining all failed controls.
+- Close only this execution gate, record F-100 and update Step 4/status/next action.
+  No new field-fit result, physical acceptance or Step 4 completion.
+- Before physical-auditor implementation, independent review clarifies explicit
+  source/grid/method mapping, canonical versus historical readers, bounded report
+  storage and comparison to historical producer proofs. Preserve original order:
+  recorded native startup screens precede search; independent reconstruction is
+  posthoc before evidence admission. No added pre-search hook or loosened gate.
+- Closure: all 42 source/artifact/predecessor references, 13 source commit
+  identities and registration identity verified. Public suite 47 pass (3.772 s);
+  docs/Ruff/whitespace pass. Root README and overview remain accurate without
+  repeating detailed software evidence or changing the current physical claim.
+
 ## 2026-09-26 — Register independent saved-physics reconstruction
 
 - Register the next component before implementation: reconstruct all saved

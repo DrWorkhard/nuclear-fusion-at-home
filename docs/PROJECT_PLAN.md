@@ -40,10 +40,11 @@ allocation. Its controller is qualified and its
 [event storage](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md) is qualified.
 The [source admission, raw snapshots, budget ledger and startup helpers](optimization/PROTECTED_RUNNER_RESULTS.md)
 are now qualified separately. Their [integrated synthetic worker and graph audit](optimization/PROTECTED_CELL_RESULTS.md)
-are now qualified in their synthetic scope. Next: qualify the
-[source-bound native adapter and isolated process/resource orchestration](optimization/PROTECTED_NATIVE_PLUMBING_PROTOCOL.md)
-using synthetic workers and read-only saved data, then independent physical
-reconstruction before running the registered diagnostic pilot. The
+are now qualified in their synthetic scope. The
+[source-bound native adapter and isolated process/resource orchestration](optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md)
+also pass synthetic and read-only source qualification. Next: qualify
+[independent saved-physics reconstruction](optimization/PROTECTED_PHYSICS_PROTOCOL.md),
+then bind the execution checkpoint and run the registered diagnostic pilot. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) supports a bounded
 diagnostic pilot conditionally; its replay and claim-scope clarifications apply
 before any native run.

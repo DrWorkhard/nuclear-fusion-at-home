@@ -6,13 +6,13 @@
 ## Assessment
 
 The source-bound adapter, isolated worker and parent supervisor are implemented.
-Qualification is **in progress**, not a new field experiment. All eight synthetic
+Qualification is **complete in its registered scope**, not a new field experiment. All eight synthetic
 cases traverse a real subprocess, the complete synthetic cell, saved-graph audit
 and parent acknowledgement. Their arrays are deliberately nonphysical.
 
 The existing controller, numerical code, acceptance limits, historical sources
 and evidence remain unchanged. Full committed-source regression and the actual
-eight-context source preflight are still pending. No native model, producer
+eight-context source preflight pass. No native model, producer
 certificate, equilibrium calculation or new coil search has run in this stage.
 
 ## Interfaces
@@ -66,7 +66,9 @@ preempted operations. Thread-environment checks do not measure runtime thread po
   state and retirement of disappeared process groups now cover these boundaries.
   Cleanup addresses descendants even after the leader exits; all waits are bounded.
 - Independently rechecked control/worker/adapter/pipeline selection: 214 tests
-  pass (13.36 s). Final combined review and source-frozen qualification follow.
+  pass (13.36 s). Final combined independent review: **315 pass**, no failures,
+  errors or skips (14.51 s console / 14.446 s JUnit); reviewed source hashes
+  remain unchanged. No blocking finding remains within this software scope.
   Development JUnit files remain under
   `artifacts/protected-native-plumbing-v1/`; failed attempts are retained.
 
@@ -79,6 +81,23 @@ Precommit checks: 47 public tests pass (3.936 s); repository Ruff, documentation
 structure and whitespace pass. An initial documentation-test command named a
 nonexistent file and ran no tests; the correct release-maintenance test selection
 is used for the subsequent check. The failed command is not qualification evidence.
+The corrected documentation/release selection passes 14 tests (0.62 s).
+
+## Committed-source qualification
+
+At implementation `fd069e9`, full one-thread local regression passes **3,233
+tests**, with 334 existing warnings and zero failures/errors/skips, exit zero.
+Console time is 271.79 s; JUnit time 271.668 s. Both complete outputs are retained.
+The checkout stayed clean through the regression and subsequent source preflight.
+The existing native environment and old scientific sources were unchanged.
+
+The read-only actual source check passes in 25.279 s: all eight contexts validate
+and instantiate the source-bound adapter without initializing a native model.
+Historical numerical metrics and rejections remain unchanged. The
+[qualification record](../../evidence/protected-native-plumbing-v1.json) binds
+13 sources and 28 artifacts, including retained failures, the source graph and
+all original-schema shapes. This is local POSIX qualification, not hosted CI or
+an independent-machine reproduction.
 
 ## Next scientific gate
 
