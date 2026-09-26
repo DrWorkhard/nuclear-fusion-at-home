@@ -22,6 +22,10 @@
 
 - Preregister confirmatory studies; separate optimization from independent
   acceptance. Preserve thresholds, budgets, resolution levels and failed results.
+- Choose the [research lane](docs/validation/RESEARCH_WORKFLOW.md): exploration
+  needs a short reproducible record and bounded local execution, not automatic
+  preregistration/full regression. Confirm claims separately; existing protocols
+  keep their original requirements. Prefer reuse to new research infrastructure.
 - Keep historical evidence, source identities and complete checkpoint reference
   graphs immutable. Use fresh outputs and separately identified portable exports.
   Never rewrite old paths/hashes or broaden preservation exceptions implicitly.
@@ -43,8 +47,12 @@
   `engineering`, `validation`, `squid_c`, `logbook`, `review` or `steps`; no deeper
   hierarchy.
   Each folder's README explains its purpose, conclusions and every contained document.
-- Use English entry documentation and relative links. Keep overviews concise and
+- Write new prose in English and use relative links. Keep overviews concise and
   current; history belongs in the logbook, not this file.
+- The coordinating maintainer owns shared overviews/logs. Assign delegates
+  non-overlapping files or separate branches; reviewers report before editing.
+  Give public changes an editorial pass. Do not add tool/test milestones to the
+  scientific status table; obey the automated overview word/row budgets.
 - Keep step names/statuses consistent. The root README's plan includes MS1/MSX
   immediately before “Start in three commands”.
 - Give each topic one home and link to it instead of repeating it: goal and

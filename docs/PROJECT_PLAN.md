@@ -1,60 +1,48 @@
 # Roadmap and completion criteria
 
 Updated 26 September 2026.
-[Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md) · [Contribution guide](../CONTRIBUTING.md)
-
-What each step and milestone requires, and what comes next. Each step's results
-are in its [step results page](steps/README.md); the overall evidence is on the
-[status page](STATUS.md).
+[Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
 
-Stellarator plasma/coil optimization is our current route toward the end goal (MSX).
+Stellarator plasma/coil design is our current route toward MSX. MS0 creates a
+useful open result before a possible reactor-design advantage.
 
 | Step / milestone | Completion requires | Status | Results |
 | --- | --- | --- | --- |
-| 1. Establish a reliable foundation | Specified local reference, software and physics checks with source and environment identity, and honest acceptance and rejection; no new design required | Complete (local reference tools) | [Step 1](steps/STEP_1_FOUNDATION.md) |
-| 2. Make design iteration reproducible | Load a reference → change/optimize → save → independently evaluate → repeat, exactly reproducibly; no new design required | Complete (iteration workflow) | [Step 2](steps/STEP_2_ITERATION.md) |
-| 3. Improve our own plasma target | An actual boundary/equilibrium change with a registered, independently confirmed improvement | Complete (vacuum study) | [Step 3](steps/STEP_3_PLASMA_TARGET.md) |
-| 4. Develop plasma and coils together | Work packages 4A–4D; a favorable vacuum coil fit alone is not enough | In progress | [Step 4 so far](steps/STEP_4_PLASMA_AND_COILS.md) |
-| 5. Demonstrate a meaningful design advantage | Fair, reproducible comparisons with leading references and an independently verified, meaningful advantage | Not achieved | No results yet |
-| MS1. Contact Proxima Fusion with strong evidence | A targeted Step 5 outcome: strong, reproducible, independently checked evidence that our design is better than the design Proxima is pursuing; then contact them | Not reached | [Evidence framework](squid_c/MS1_PROXIMA_COMPARISON.md) |
+| 1. Establish a reliable foundation | Reproduce selected references and accept/reject correctly; no new design required | Complete (local reference tools) | [Step 1](steps/STEP_1_FOUNDATION.md) |
+| 2. Make design iteration reproducible | Change, save, independently evaluate and repeat; no new design required | Complete (iteration workflow) | [Step 2](steps/STEP_2_ITERATION.md) |
+| 3. Improve our own plasma target | Independently confirm a registered boundary/equilibrium improvement | Complete (vacuum study) | [Step 3](steps/STEP_3_PLASMA_TARGET.md) |
+| 4. Develop plasma and coils together | Realization/transfer, coupled improvement, pressure/confinement and finite-coil robustness (4A–4D) | In progress | [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) |
+| 5. Demonstrate a meaningful design advantage | Fair leading-reference comparison and independently verified practical benefit | Not achieved | — |
+| MS0. Publish a useful open coil benchmark | Portable attributed challenge, calibrated gate interpretation, control matrix and separate-machine reproduction; target 26 March 2027 | Planned | [Programme](optimization/STEP4_RESEARCH_PROGRAMME.md) |
+| MS1. Contact Proxima Fusion with strong evidence | Strong reproducible evidence that our design is better than Proxima's relevant design; then contact them | Not reached | [Evidence framework](squid_c/MS1_PROXIMA_COMPARISON.md) |
 | MSX. Our end goal | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve | Long-term goal | — |
 
 ## Next actions
 
-**Public release, alongside local research.** Goal: an outside contributor can start from a fresh
-checkout, reproduce a small reference, evaluate a candidate, replay the report and
-submit useful work without our local artifacts or chat history
-([release specification](validation/PUBLIC_RELEASE.md)). The portable starter and
-its local checks are done. Remaining before launch: a privacy and rights review of
-the full history, the real clone URL, hosted CI, reviewer identities and branch
-protection — see the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
-and the [publication inventory](validation/PUBLICATION_INVENTORY.md).
+**First: diagnosis and calibration, by 10 October.** Finish the existing saved-field
+diagnosis. Reproduce a suitable published coil/surface reference in its own
+conventions, then map it to our unchanged pilot gates. Distinguish a metric/model
+mismatch from a strict criterion or insufficient coil family. No automatic
+threshold relaxation and no presumption that local search is impossible.
 
-**Step 4A: continue useful movement and diagnose the large field mismatch.** Publication remains
-separate. The [eight-case native pilot](optimization/PROTECTED_COIL_FIT_RESULTS.md) completes
-construction and independent coarse verification at `2015ac5`. Every case makes
-small field-error reductions, then stops at the cumulative curvature bound.
-The [complete fine study](optimization/PROTECTED_FINE_RESULTS.md) now passes
-numerical and geometry checks for all eight fixed selections; every candidate
-still fails field-quality limits. Its software has 4,883 passing full-regression
-tests. The separate [local homotopy curvature study](geometry/LOCAL_CURVATURE_RESULTS.md)
-now certifies all twelve fixed states, including two previously rejected proposals,
-with independent checking and unchanged limits. Its full regression passes 5,110
-tests. The [matched-grid field comparison](optimization/FIXED_FIELD_PROBE_PROTOCOL.md)
-now [completes all 168 requests](optimization/FIXED_FIELD_PROBE_RESULTS.md) at clean
-`4f13685`. Both normal gains resolve under preset empirical margins; only the
-six-coil interior gain resolves. Currents decrease, but all absolute field limits
-still fail. Its [implementation and independent
-reviews](optimization/FIXED_FIELD_PROBE_PROGRESS.md) pass 544 focused and 5,654
-full-regression tests at clean `b10c47f`. Next: the [saved-field residual
-diagnosis](optimization/FIELD_RESIDUAL_PROTOCOL.md) of the roughly 2,700-fold
-normal-error gap; use it to prioritize the next construction method. A reviewed
-one-step normal-objective continuation with geometry protection and actual-
-direction gradient checks is available as a planning proposal, not yet executed.
-Do not extrapolate tiny local gains to feasibility or reset the geometry origin.
-The
-[second method review](optimization/PROTECTED_METHOD_REVIEW.md) defines the reporting
-limits: small coarse gains do not establish resolved fine-grid improvement.
-Other useful approaches remain welcome; this pilot is not an exclusive work allocation.
+**Then: time-boxed exploration, through 24 October or ten research sessions.**
+Map field error against clearance/curvature using existing tools and alternative
+starts/objectives. Fine RMS below 1e-2 with the existing geometric gates is a
+triage signal, not acceptance. If it is not reached, change the investigated
+family/approach instead of automatically extending protected local search.
+The [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) defines scope,
+decision rules, controls and retained negatives.
+
+**Alongside: make the bottleneck contributable.** Target a portable full-grid
+Step 4 challenge and four issue-ready tasks by 26 October; preserve the small
+starter as the entry path. Stage a privacy/rights-cleared release, verified
+hosted CI and an independent reproduction. Hosting, contact, storage destination
+and archive publication still require the owner's authority; no external action
+is implied by this plan. Follow the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
+
+Use the [two-lane workflow](validation/RESEARCH_WORKFLOW.md): lightweight,
+clearly labelled exploration; preregistered independent confirmation for claims.
+Dates are decision targets, not promises of scientific success. MS0 can deliver
+a useful negative benchmark; it does not replace Step 4, MS1 or MSX.

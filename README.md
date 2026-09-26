@@ -14,19 +14,11 @@ improvements that others can reproduce and challenge.
 **Research preview · 26 September 2026.** Our tools reproduce selected open
 references. One plasma-target study improved its preregistered metric
 (bounce-action variance, a particle-motion diagnostic) by **11.17%**.
-Our current starting coil sets have a full-grid normal field error of
-**about 0.27; the acceptance limit is 1e-4**. A new
-[geometry-protected pilot](docs/optimization/PROTECTED_COIL_FIT_RESULTS.md) lowers
-coarse normal-field error by 0.45–0.49%. Its [fine validation](docs/optimization/PROTECTED_FINE_RESULTS.md)
-now passes numerical and geometry checks for all eight candidates; all still
-fail the field-quality limits.
-A [tighter curvature check](docs/geometry/LOCAL_CURVATURE_RESULTS.md) now certifies
-two previously blocked proposals under the same limits. Their
-[matched field comparison](docs/optimization/FIXED_FIELD_PROBE_RESULTS.md) confirms
-small further normal-error reductions (0.057% and 0.065%), with less current;
-both remain far above the field limits.
-A feasible new coil design and
-a state-of-the-art advance remain ahead of us. We are independent of, and not
+Our coils still have normal-field error **about 0.27 versus a 1e-4 pilot limit**.
+Small checked improvements have not closed that gap. We are prioritizing
+reference/gate calibration and a time-boxed feasibility study before longer
+local searches. [Scientific evidence](docs/STATUS.md).
+No new accepted coil design or state-of-the-art advance yet. We are independent of, and not
 endorsed by, Proxima Fusion or the Max Planck Institute.
 
 ## A few terms
@@ -54,6 +46,7 @@ on the maintainer's machine, not that a reactor or universal toolchain is comple
 | **3. Improve our own plasma target**                 | Reduce the preregistered particle-motion diagnostic by changing the vacuum plasma target.                                                                  | **Complete (vacuum study)**          |
 | **4. Develop plasma and coils together**             | Find coils that realize the plasma benefit, then demonstrate coupled improvement, pressure/confinement validity and finite-coil robustness.                | **In progress**                      |
 | **5. Demonstrate a meaningful design advantage**     | Compare feasible designs fairly with leading references and independently verify the benefit.                                                              | **Not achieved**                     |
+| **MS0. Publish a useful open coil benchmark**        | By 26 March 2027: a portable attributed challenge, calibrated gate interpretation, control matrix and separate-machine reproduction.                          | **Planned**                          |
 | **MS1. Contact Proxima Fusion with strong evidence** | Contact Proxima as soon as strong, reproducible, independently checked evidence shows our design is better than the design they are pursuing.              | **Not reached**                      |
 | **MSX. Our end goal**                                | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve.                                               | **Long-term goal**                   |
 
@@ -62,6 +55,8 @@ explicit uncertainty and trade-offs. Improving our reference or a sparse score
 alone cannot establish that advantage. [MS1 evidence framework](docs/squid_c/MS1_PROXIMA_COMPARISON.md).
 MSX names our final milestone: expert scrutiny and practical follow-on work extend
 beyond MS1; “best” is an ambition, not a proven global optimum.
+MS0 creates something useful earlier, even if the benchmark result is negative.
+[Dated research programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md).
 
 ## Start in three commands
 
@@ -144,6 +139,11 @@ An evaluation takes a few seconds; budget longer loops accordingly.
 
 ## Contribute something useful
 
+Help make difficult design comparisons reproducible: shared cases, independent
+checks and useful counterexamples that can also benefit SIMSOPT/StellCoilBench.
+Our planned full-grid coil challenge will expose the research bottleneck; the
+current sparse starter is its entry path, not that completed challenge.
+
 **Exploratory PRs with lower sampled scores are welcome.** Commit the small
 `submissions/my-coil-study/candidate.json` (about 10 KB) and a brief
 `README.md` beside it with the reference revision, commands, both scores,
@@ -177,9 +177,10 @@ the larger native workflow.
 
 - `src/fusion_public/`: dependency-free starter and candidate helpers.
 - `src/fusion_baselines/`: historical and ongoing research code.
+- `scripts/`: native research and maintenance entry points; start with `fusion.py`.
 - `examples/`: attributed reference data; `submissions/`: small contributed candidates.
 - `docs/`: project status, methods, results and reviews.
-- `evidence/`: recorded research evidence; large local runs stay outside Git.
+- `evidence/`: result records; ignored `artifacts/` holds large local runs, not a public data archive.
 
 ## Licensing and project operation
 

@@ -27,8 +27,8 @@ evidence bar for the Proxima comparison is the
   changes lower the wide bounce-action metric by 11.17% with all ten gates passed;
   the first design stays rejected.
 - [Step 4 results so far](STEP_4_PLASMA_AND_COILS.md). Work packages 4A–4D, the
-  rejected coil pilot, certified coil starts, field errors about 2,700× the
-  limit, certified perturbation radii, the qualified search controller and its
-  qualified single-writer storage, integrated synthetic cell and isolated execution
-  plumbing and independent saved-physics reconstruction. Actual saved seeds pass
-  the new checker but still fail field limits; new native field-fit results remain open.
+  coil experiments and lessons, calibration/feasibility priority and links to
+  detailed numerical and software qualification. Field limits still fail.
+- [Archived Step 4 chronology](STEP_4_HISTORY.md). The former sixteen-entry
+  overview preserved from `798b2fb`; historical pending statements are not the
+  current scientific assessment.

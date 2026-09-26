@@ -17,7 +17,9 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 ## Current work and public contributions
 
-- [Saved-field residual diagnosis](FIELD_RESIDUAL_PROTOCOL.md). Exploratory eight-pair analysis of signed normal error and objective/acceptance normalization; fixed before array analysis, with no new native calculations. Separates useful local progress from extrapolation to feasibility.
+- [Step 4 research programme](STEP4_RESEARCH_PROGRAMME.md). Calibration and time-boxed reachability first; decision dates, full-grid challenge contract, four starter tasks, MS0 and evidence/expert-review actions. New long protected searches are not the default priority.
+
+- Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [preserved implementation](FIELD_RESIDUAL_PROGRESS.md). Exploratory eight-pair analysis of signed normal error and objective/acceptance normalization; fixed before array analysis, with no new native calculations. Execution closure remains pending after strategic reprioritization.
 
 - Newly certified fixed proposals: [field-comparison protocol](FIXED_FIELD_PROBE_PROTOCOL.md), [method/input review](FIXED_FIELD_PROBE_REVIEW.md), [implementation qualification](FIXED_FIELD_PROBE_PROGRESS.md), [complete results](FIXED_FIELD_PROBE_RESULTS.md). All 168 requests and numerical checks pass. Normal gains of 0.057%/0.065% resolve; only the six-coil interior gain resolves. Both currents decrease, but all field limits still fail. Full software qualification: 5,654 tests.
 

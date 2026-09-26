@@ -1,84 +1,48 @@
 # Scientific status and evidence
 
 Updated 26 September 2026.
-[Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Step results](steps/README.md) · [Public quickstart](validation/PUBLIC_QUICKSTART.md)
+[Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Step results](steps/README.md)
 
 ## Bottom line
 
-**We have a bounded local research foundation, a numerically improved vacuum
-plasma target, and useful coil-validation tools. We do not yet have a new
-physically accepted coil design, a completed Step 4, a state-of-the-art advance,
-or full SQuID-C readiness.**
-
-Step and milestone statuses, including MS1 and MSX, are kept in the
-[roadmap](PROJECT_PLAN.md); this page gives the evidence behind them. Full
-[SQuID-C readiness](squid_c/SQUID_C_READINESS.md) has further gates; missing
-author data is not the only obstacle.
+We can reproduce selected references, iterate designs and verify a local
+vacuum-plasma improvement. **We have no newly accepted coil design, completed
+Step 4, state-of-the-art advantage or MS1 result.** The immediate task is to
+calibrate the coil comparison and map achievable field/geometry trade-offs,
+not extrapolate small local gains.
 
 ## Established results and their limits
 
-| Work package | Evidence-backed result | What remains unproven |
+| Work | Scientific result | Limit |
 | --- | --- | --- |
-| Steps [1](steps/STEP_1_FOUNDATION.md) and [2](steps/STEP_2_ITERATION.md): bounded foundation and iteration | Eight foundation gates, six mandatory scientific regressions, two exactly repeated 24-bundle paths and four independent candidate checks | Universal QI/engineering validity; those candidates remain physically rejected |
-| [Step 3](steps/STEP_3_PLASMA_TARGET.md): own nfp2 vacuum plasma target | Relative bounce-action variance decreases from 2.3894265674e-4 to 2.1225270715e-4 (11.1700%); narrower-domain gain 4.8506%; all ten final gates pass | Global QI, improved measured confinement, finite pressure, practical coils or plant performance |
-| [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) coil initialization | All 12 constructed starting sets pass scoped geometry admission; selected six/eight-base-coil forms retain at least 98.2 mm certified plasma clearance, required 80 mm | Magnetic-field quality or full finite-build engineering |
-| [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) field starts | Four cells, eight normal/vector derivative checks, 20 refinements, 768 direct B/A comparisons and 252 flux gates pass numerical qualification | All four fail physical field limits: normal RMS 0.269–0.276 versus 1e-4; inner-vector RMS 0.3615–0.3723 versus 0.01 |
-| [Step 4](steps/STEP_4_PLASMA_AND_COILS.md) cumulative geometry bounds | The 52-state qualification passes all required small probes and independent direct checks; 18 larger probes remain uncertified | Uncertified does not mean physically impossible; no field improvement follows from this alone |
-| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) protected-search controller | Synthetic qualification complete: 108 controller/auditor tests pass; second method review subsequently completed conditionally | Native runner and physical verification; no new protected-fit search has run |
-| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) event storage | Single-writer POSIX qualification complete: 47 storage tests, 155 with controller/auditor; exact source/artifact identities recorded | Full native source/budget orchestration, physical audit and hardware power-loss guarantees |
-| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) execution components | 390 synthetic tests and real-data source preflight pass after independently reviewed fixes; four components qualified at `47544d0` | Integrated worker and physical audit; no new field-fit result |
-| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) integrated cell | Synthetic qualification complete at `c17123a`: 299 focused tests, eight historical schema comparisons and full regression pass; source/artifact identities bound | Native process/resource orchestration and independent physical reconstruction; no new field-fit result |
-| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) isolated execution plumbing | Qualification complete at `fd069e9`: 315 focused tests, full regression, eight synthetic subprocess paths and all eight real saved contexts pass | Independent saved-physics reconstruction, native pilot and fine-grid acceptance; no new field-fit result |
-| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) independent saved physics | Qualification complete at `2ac95db`: 130 focused tests, all eight actual saved seeds, two original certificates against four proofs and tracked regression pass; sampled B/A discrepancy ≤1.316e-15 | New native startup/search and fine acceptance; confirms previous field failures, not an improved design |
-| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) diagnostic launcher | Qualification complete at `6bb1e45`: 124 focused tests, one real nonphysical subprocess integration and full regression pass; separate execution checkpoint binds sources and evidence | Runtime source admission, eight-case native construction and fine acceptance; no new design result |
-| [Step 4A protected pilot](optimization/PROTECTED_COIL_FIT_RESULTS.md) | All eight native constructions and independent coarse audits complete at `2015ac5`: normal RMS decreases 0.4463–0.4857%, inner-vector RMS 1.1881–2.1916%; all eight stop at the conservative curvature certificate | Resolved improvement and useful movement beyond this conservative bound; coarse gains alone do not establish either |
-| [Step 4A fine validation](optimization/PROTECTED_FINE_RESULTS.md) | All eight fixed candidates complete at clean `e0ac3f7`: 640 native requests, 576 B/A comparisons, 40 refinements, 504 flux checks and 32 geometry grids; numerical and geometry gates pass | All fail field limits: fine normal RMS 0.26794–0.27478 versus 1e-4, interior RMS 0.35720–0.36411 versus .01; no feasible baseline, realized-field transfer or Step 4 completion |
-| [Step 4A local curvature](geometry/LOCAL_CURVATURE_RESULTS.md) | All 12 fixed states / 336 physical copies pass the new bound and separate checker at clean `c7562ca`; two previously rejected proposals now certify, with all limits unchanged | Geometry alone establishes no field improvement; subsequent field comparison below; no general useful search-region expansion |
-| [Step 4A fixed proposal fields](optimization/FIXED_FIELD_PROBE_RESULTS.md) | All 168 requests and numerical checks complete at clean `4f13685`; normal-error reductions of 0.057%/0.065% clear preset empirical margins; six-coil interior improvement also resolves; both currents decrease | Eight-coil interior improvement unresolved; all absolute field-error gates still fail; no physical baseline, Step 4 completion or MS1 |
+| [Steps 1–2](validation/FOUNDATION_ACCEPTANCE_RESULTS.md) | Selected W7-X/Goodman references and repeatable local design/evaluation workflows pass their defined checks | Workflow capability, not a new feasible design; broader W7-X file comparison remains 60/63 |
+| [Step 3](steps/STEP_3_PLASMA_TARGET.md) | Vacuum bounce-action variance decreases 11.17%; the registered narrower-domain comparison improves 4.85% | One proxy and configuration; not measured confinement, finite pressure, global QI or reactor performance |
+| [Step 4 coil starts](geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md) | Twelve starting sets pass scoped continuous geometry checks; selected plasma clearance is at least 98.2 mm versus 80 mm required | Padded floating-point bounds, not rigorous interval proofs or finite-build engineering |
+| [Protected fit and fine checks](optimization/PROTECTED_FINE_RESULTS.md) | Eight fixed selections pass numerical/geometry checks; fine normal RMS remains 0.26794–0.27478 | Every selection fails field-quality gates; a certified geometric path does not ensure a useful magnetic field |
+| [Newly certified fixed steps](optimization/FIXED_FIELD_PROBE_RESULTS.md) | Normal RMS decreases another 0.057%/0.065% beyond preset empirical margins; both currents decrease; one interior-error improvement resolves | Other interior gain unresolved; all absolute field-error gates still fail; no general search-method advantage |
+| [Gate calibration](optimization/STEP4_RESEARCH_PROGRAMME.md) | Analytic/component controls exist; no matched end-to-end positive control has established that a known-good coil design passes this Step 4 profile | Pilot limits are not universal standards; archived LPQA raw-flux failures are a different comparison |
 
-Each linked step page gives the method, full limits, detailed reports and evidence.
-Tool-qualification rows describe their own scope; later native results are separate.
-“Independent” in these reports refers to the specified numerical/source checks,
-not external peer review.
+The current normal-RMS limit is **1e-4**, maximum normal error **1e-3** and
+interior-vector RMS **0.01**. The roughly 2,700-fold normal-error gap is real;
+its cause and reachability remain unresolved. No threshold has been relaxed.
 
-## Failures we retain
+## Negative results and independence
 
-- The first plasma design and the first actual-coil pilot were rejected; see
-  [Step 3](steps/STEP_3_PLASMA_TARGET.md#failures-kept-on-record) and
-  [Step 4](steps/STEP_4_PLASMA_AND_COILS.md#1-first-actual-coil-pilot--all-six-designs-rejected-14-september).
-- The best preserved [LPQA coil search](optimization/CURRENT_START_GN_RESULTS.md)
-  reaches raw fine flux 8.129882e-8, still above its 1e-8 threshold. Its 0.754% gain
-  is real within that comparison, not a feasible-design or convergence claim.
-- The extended W7-X file comparison remains 60/63. The selected physics regression
-  does not erase the other three differences.
-- End-to-end QI/orbit qualification and valid complete mechanics remain open.
-  Earlier finite-mesh checks do not certify neighboring elements/full assemblies;
-  large linear-deformation outputs were outside the model's valid scope.
+The [first actual-coil pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) was
+rejected, including fine clearances of only 1.8–6.7 mm. Older
+[LPQA searches](optimization/CURRENT_START_GN_RESULTS.md) also remain rejected
+under their own raw-flux profile. Failed numerical controls and revised claims
+remain in the [logbook](logbook/README.md).
 
-Detail: [validation](validation/README.md), [QI](qi/README.md),
-[engineering](engineering/README.md), [research log](logbook/README.md).
-Older optimistic journal conclusions do not supersede this current assessment.
+Here, independent numerical checking means separate specified calculations,
+usually on the same machine. No external domain-expert review or separate-machine
+research reproduction is established. Backup/restore status is unverified.
+[SQuID-C readiness](squid_c/SQUID_C_READINESS.md) still requires physics and
+engineering qualification as well as suitable data.
 
-## Software and release evidence
-
-These checks show that the tools work as specified; they are not physical acceptance.
-
-| Area | Evidence | Not established |
-| --- | --- | --- |
-| Public starter | 47 public tests and eight copied-tree release checks pass on local Python 3.11/3.12/3.14 at `0d9abcf`; displayed reference/candidate comparisons now use matching 512-node resolution; the unchanged 256-node native check retains its 5e-10 limit | Hosted CI, independent machines, full-surface or physical acceptance; public reports never set physical admission or Step 4 to true |
-| Historical and current research suite | 5,654 tests pass, 334 warnings, zero failures/errors/skips at clean `b10c47f`; full suite with no excluded paths, console and JUnit retained ([field-probe qualification](optimization/FIXED_FIELD_PROBE_PROGRESS.md)) | Hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
-| Publication inventory | About 325 MB of tracked content; 365 tracked files with home-path indicators; no matches for five credential/key patterns | A complete security, privacy or rights review; no history was sanitized or published |
-
-Details: [release evidence](validation/PUBLIC_RELEASE_RESULTS.md),
-[storage qualification](optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md),
-[execution-component qualification](optimization/PROTECTED_RUNNER_RESULTS.md),
-[synthetic integration qualification](optimization/PROTECTED_CELL_RESULTS.md),
-[isolated execution qualification](optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md),
-[saved-physics qualification](optimization/PROTECTED_PHYSICS_RESULTS.md),
-[launcher qualification](optimization/PROTECTED_PILOT_EXECUTION_RESULTS.md),
-[review fixes](validation/PUBLIC_REVIEW_FIXES.md),
-[README review resolution](review/ROOT_README_RESOLUTION.md),
-[what public scores mean](validation/PUBLIC_QUICKSTART.md#what-the-report-means),
-[publication inventory](validation/PUBLICATION_INVENTORY.md),
-[netCDF4 warning](validation/NETCDF_IMPORT_WARNING.md).
-Next launch and research steps are in the [roadmap](PROJECT_PLAN.md).
+Software tests and release checks are recorded in
+[Step 4 methods](steps/STEP_4_PLASMA_AND_COILS.md#tools-and-detailed-evidence) and
+[release evidence](validation/PUBLIC_RELEASE_RESULTS.md), not counted as new
+scientific results. Hosting, CI, artifact publication and contributor growth
+are pending operational work. The [research programme](optimization/STEP4_RESEARCH_PROGRAMME.md)
+defines decision dates and indicators.

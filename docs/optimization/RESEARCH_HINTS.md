@@ -21,13 +21,20 @@ Start with the [public quickstart](../validation/PUBLIC_QUICKSTART.md) and
 
 ## Deeper research directions
 
+- **Calibrate and map the bottleneck first.** Reproduce matched author coil/surface
+  cases and map our metric conventions; explore attainable field/geometry trade-offs.
+  The [current programme](STEP4_RESEARCH_PROGRAMME.md) sets time boxes and offers
+  four issue-ready tasks toward a portable full-grid challenge. That challenge is
+  not implemented by the present sparse starter.
 - **Geometry-preserving coil improvement.** The existing clear starts satisfy
   geometry limits but have large magnetic errors. Explore useful shape directions,
   tighter justified continuous bounds, or different parameterizations. The
   [eight-case protected fit](PROTECTED_COIL_FIT_RESULTS.md) makes small verified
   coarse reductions, but all searches stop at the cumulative curvature bound.
-  Its mandatory fine phase remains pending. A tighter continuous proof or a
-  direction respecting the active bound is interesting; preserve the original
+  Its [fine phase](PROTECTED_FINE_RESULTS.md) is complete and retains all field
+  failures. A tighter curvature bound and [fixed field comparison](FIXED_FIELD_PROBE_RESULTS.md)
+  establish small useful steps, not reachability. Alternative directions remain
+  interesting; preserve the original
   seed/path guarantee and physical limits. This is not a new feasible baseline
   or the only permitted approach.
 - **Portable full-physics evaluation.** Replace local-only data access with

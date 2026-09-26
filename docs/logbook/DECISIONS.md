@@ -1,5 +1,26 @@
 # Decision log
 
+## D-028 — Calibrate and explore before extending protected search
+
+**Status:** adopted prospectively; no scientific gate changed
+**Date:** 2026-09-26
+
+Incorporate the [strategic review](../review/STRATEGIC_REVIEW_RESOLUTION.md):
+prioritize existing residual diagnosis, matched gate/metric calibration and a
+time-boxed reachability map. Do not infer impossibility from tiny local gains or
+relax thresholds merely because references fail. Existing protocols remain bound.
+
+Use lightweight exploration and separate preregistered confirmation. Subsystem
+tests follow risk; new infrastructure/full regression is not the default for
+each exploratory question. Define MS0 (open coil benchmark and separate-machine
+reproduction, target 26 March 2027) without weakening Step 4, MS1 or MSX.
+
+Give shared overviews one editor, enforce word/row limits, and retain the old
+Step 4 chronology separately. The docs-wrapper's exact operational hash-pair
+exception is explicit; historical physics/evidence stays immutable. Hosting,
+contact, backup destination and DOI publication still need appropriate authority.
+The programme records concrete decision dates, contributor tasks and pending work.
+
 ## D-027 — One English results page per roadmap step; a lean roadmap
 
 **Status:** accepted at the maintainer's request; extends D-026

@@ -14,6 +14,8 @@ separate from portable CI. The September 9 audit withdrew earlier readiness clai
 
 ## Public entry and release
 
+- [Two-lane research workflow](RESEARCH_WORKFLOW.md). Lightweight exploration versus preregistered confirmation, proportionate checks, single-writer editorial ownership and documentation budgets; no weakening of historical scientific contracts.
+
 - [README review resolution](../review/ROOT_README_RESOLUTION.md). Clear candidate-to-PR route, matched-resolution UI, Python loop and source-bound local verification of 26 recommendations; real clone URL remains a hosting prerequisite.
 - [Public review fixes](PUBLIC_REVIEW_FIXES.md). Eight-point release review resolution: CI scope, UTF-8, Python support, contributor-agent rules, score guidance, English navigation and consistent roadmap; exact operational preservation exceptions and validation record.
 - [Public quickstart](PUBLIC_QUICKSTART.md). Dependency-free reference/candidate/report commands, named coefficient editing, score interpretation and troubleshooting.

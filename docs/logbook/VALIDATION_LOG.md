@@ -1,5 +1,60 @@
 # Validation log
 
+## 2026-09-26 — Strategic feedback takes priority; no new experiment
+
+- Read the complete strategic review at `798b2fb`; preserve its bytes. A separate
+  read-only scientific fact check confirms pilot-gate origins and the missing
+  matched end-to-end control, while distinguishing LPQA raw-flux failures from
+  Goodman normal-RMS calibration and extrapolation from impossibility.
+- Pause residual execution. The prior combined check actually passed 190 focused,
+  47 public and 16 documentation/release tests; Ruff failed on formatting in the
+  independent runner tests. Keep those records and the unfinished implementation.
+  No field arrays, native models or further bounds were evaluated here.
+- Adopt two research lanes, dated calibration/exploration decisions, MS0 and four
+  issue-ready challenge tasks. Record all eleven recommendations with completed
+  policy/documentation changes versus unrun science and pending external actions.
+- Replace the status qualification catalogue with six scientific rows; simplify
+  roadmap and Step 4, archive the entire prior Step 4 overview, and preserve
+  detailed evidence. Expand the existing repository map and contributor rationale.
+- Add tested dependency-free overview word/row/roadmap checks to the docs command.
+  Explicitly admit only the exact historical/replacement docs-wrapper hash pair;
+  existing operational exceptions and scientific verifiers remain unchanged.
+- No remote, hosted issue, external contact, backup or archive publication was
+  created. Backup/restore status remains unknown, not asserted absent or verified.
+- Verification: 222 documentation/release and preserved residual-component tests
+  pass (15.88 s), plus the historical source-preservation test (0.63 s); 47 public
+  tests pass (3.273 s). Ruff, whitespace and isolated stdlib-only docs command pass.
+  JUnit is retained under `artifacts/strategic-review-v1/`. These are scoped checks,
+  not a new full native regression or a real-array residual result.
+- Verify the archived Step 4 text contains the complete original overview, the
+  supplied strategic review's SHA-256 is unchanged, and all three approved
+  operational old/new byte pairs match exactly. New editorial negative controls
+  run in the existing CI-selected release-maintenance test module.
+- A second read-only internal review of the response, programme, workflow,
+  README, plan, status and agent instructions finds no blocking inconsistency.
+  It performs no tests or physics. Preserve unfinished diagnostic code separately
+  at `b01ea4c`; the strategic changes neither run it nor declare it qualified.
+
+## 2026-09-26 — Saved residual diagnostic: separate arithmetic and intake controls
+
+- Implement a pure NumPy producer, independently authored stdlib/math.fsum
+  checker and fixed-input offline runner. Preserve the old field evaluators and
+  scientific source graph; no real-array residual analysis or native request.
+- Retain and fix first integration mismatch: `delta_squared_norm` must mean
+  signed endpoint squared-norm change, not squared secant norm. Preserve the
+  22-pass/one-failure record and new direct counterexample control. Retain the
+  initial scalar test's mistaken extreme-hypot expectation separately.
+- Independent runner controls find incomplete point-shape/schedule acceptance;
+  require complete matched shapes and exact ordered eight-pair coverage. Add
+  post-load/pre-arithmetic deadline checks and acknowledged full-write/hash checks.
+- Actual metadata intake passes 28 references /16 models /8 comparisons with
+  numerical evaluation and array loading blocked by sentinels. This is source
+  wiring only. Independent reciprocal arithmetic review finds no remaining
+  mathematical blocker in its stated finite-input scope.
+- Update detail/index; root README and status/plan/overview still accurately
+  report the completed field comparison and upcoming residual diagnosis.
+  This scoped offline qualification does not claim a new complete native suite.
+
 ## 2026-09-26 — Strategic review of work, results and structure
 
 - Maintainer asked for a high-level, consultant-style analysis saved in

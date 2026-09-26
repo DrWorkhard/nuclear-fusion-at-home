@@ -1,6 +1,6 @@
-# Reviews of documentation and usability
+# Reviews of research strategy, documentation and usability
 
-Purpose: keep reviews of the repository's public documentation, consistency and
+Purpose: keep reviews of research strategy, public documentation, consistency and
 newcomer experience, each tied to the exact version reviewed and the checks
 actually run. Reviews recommend changes; they do not change code, evidence,
 thresholds or scientific status. When a recommendation is implemented, record the
@@ -11,8 +11,11 @@ verified; 47 public tests and eight real checks pass on three local Python versi
 The actual public clone URL remains a hosting prerequisite; a
 clearly labelled template and ZIP route are provided meanwhile. The strategic review
 rates rigor as exceptional but finds Step 4 stalled about 2,700× from its field
-limit, gates without a positive control and process volume outpacing results; its
-11 recommendations are open. These are internal reviews by the maintainer or an
+limit, gates without a matched physical positive control and process volume
+outpacing results. Its [resolution](STRATEGIC_REVIEW_RESOLUTION.md) adopts a
+calibration/exploration priority, two research lanes, enforced documentation
+budgets and MS0; experiments, hosting, independent review and archiving remain
+explicitly pending. These are internal reviews by the maintainer or an
 AI agent, not external peer review.
 
 [Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
@@ -31,6 +34,9 @@ AI agent, not external peer review.
   (strategy, results, rigor, execution, structure, collaboration, reproducibility,
   operating model), with a scorecard, metrics, 11 prioritized recommendations and
   indicators to track.
+- [Strategic review resolution](STRATEGIC_REVIEW_RESOLUTION.md). All eleven
+  recommendations addressed with implementation versus pending-work distinctions;
+  qualified scientific inferences, dated priorities and checked editorial controls.
 
 Related: the first eight-point release review and its resolution are recorded in
 [public review fixes](../validation/PUBLIC_REVIEW_FIXES.md).

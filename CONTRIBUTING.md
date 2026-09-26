@@ -60,6 +60,11 @@ retroactively reject useful exploratory work for lacking preregistration.
 Changes to evaluators/criteria are welcome but need separate review from the
 candidate they would admit. Preserve old benchmarks and failures.
 
+The [two-lane workflow](docs/validation/RESEARCH_WORKFLOW.md) keeps exploration
+lightweight and confirmation separate. The [Step 4 programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)
+offers four issue-ready tasks toward a full-grid coil challenge; that expanded
+challenge is planned, not yet supplied by the sparse starter.
+
 Keep large raw runs outside Git; provide a reproducible recipe and content hashes
 for necessary artifacts. A tiny derived fixture can be committed with clear
 provenance/license and a size justification. Do not reformat historical evidence

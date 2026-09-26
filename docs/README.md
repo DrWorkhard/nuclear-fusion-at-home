@@ -22,6 +22,12 @@ A favorable plasma target does not automatically have practical coils; a coil
 system that approximates a target does not automatically preserve its confinement.
 This is why we separate optimization, numerical checks and physical acceptance.
 
+Following the [strategic review response](review/STRATEGIC_REVIEW_RESOLUTION.md),
+near-term work prioritizes calibration and reachability before longer searches.
+The [research workflow](validation/RESEARCH_WORKFLOW.md) separates fast exploration
+from independent confirmation; [MS0's programme](optimization/STEP4_RESEARCH_PROGRAMME.md)
+aims to make the bottleneck reproducible and contributable.
+
 “Quasi-isodynamic” (QI) describes a magnetic-field property relevant to reducing
 particle drifts. Our plasma result so far concerns one specific bounce-action
 diagnostic, not full QI.

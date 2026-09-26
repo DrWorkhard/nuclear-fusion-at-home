@@ -1,7 +1,9 @@
 """Exact, reviewed non-scientific maintenance exceptions to the historical tree freeze.
 
-Version 1, public release review of 2026-09-23. This is not a scientific acceptance
-change. Original bytes remain in Git; arbitrary future changes fail closed.
+Exact-pair mechanism version 1; public release review of 2026-09-23, with an
+explicit documentation-wrapper addition reviewed on 2026-09-26. This is not a
+scientific acceptance change. Original bytes remain in Git; arbitrary future
+changes fail closed.
 """
 
 import hashlib
@@ -16,6 +18,10 @@ APPROVED = {
     "src/fusion_baselines/documentation.py": (
         "fe8bd532e099fac4c83dabc92e39f301992de9d91194f8758a92e19aa7c80ca1",
         "3e185a879f958cde227aa5193b1b4cd3c98f33502e2351874cf6d012c119c8e1",
+    ),
+    "scripts/check_docs.py": (
+        "6a098d7d81531902e6003ec3219f143498c2a8553006f87d970feb9818569123",
+        "930d02cb3bd16458ee2075c8fb69396d8918c7b636638c01deb0ab95c930dc2e",
     ),
 }
 
