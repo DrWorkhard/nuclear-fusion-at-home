@@ -1,5 +1,27 @@
 # Findings log
 
+## F-101 — Saved-physics reconstruction reproduces all eight negative seeds
+
+**Class:** independent numerical/source qualification, not a new design
+**Date:** 2026-09-26
+
+At `2ac95db`, the independent reconstruction component passes 130 synthetic tests
+and all 3,363 tracked regression tests (334 existing warnings). All eight actual
+saved seeds pass objective/metric and sampled direct B/A reconstruction; maximum
+relative discrepancy is 1.316e-15 over 48 comparison statistics / 3,072 vectors.
+Two distinct original geometric certificates agree with four recorded producer
+proofs. Coarse normal RMS remains 0.269149–0.276109 and inner-vector RMS remains
+0.361571–0.372173: the old physical failures are confirmed, not repaired.
+
+The checker traverses negative as well as positive evidence, reconstructs the
+registered startup derivatives posthoc and separates large proof reports from the
+aggregate. Review corrected swallowed storage failure and disk-minimum reporting.
+Eleven sources and 23 artifacts are bound. The inactive next-launcher prototypes
+were untracked and excluded from this qualification; no committed test/source was
+omitted or changed. No new native model, field request, equilibrium or search ran.
+Runtime native qualification, launcher admission and the fine phase remain open.
+[Results](../optimization/PROTECTED_PHYSICS_RESULTS.md).
+
 ## F-100 — Isolated execution now has tested parent-bound completion
 
 **Class:** local source/software qualification, not an improved reactor design

@@ -6,9 +6,10 @@
 ## Assessment
 
 The independent saved-physics auditor and historical qualification driver are
-implemented. **130 synthetic tests pass**, including a separately authored
-internal review rerun. Real saved-seed reconstruction and full source-frozen
-regression are next; this component is not yet fully qualified.
+implemented and **qualified in the registered saved-data scope**. All 130
+synthetic tests, all eight real historical seed reconstructions and all 3,363
+tracked regression tests at `2ac95db` pass, with a separately authored internal
+review. The inactive next-stage launcher remains separately unqualified.
 
 The calculations reuse the unchanged, separately implemented metric, sampled
 Biot–Savart and cumulative-certificate auditors. No new native optimization,
@@ -60,4 +61,35 @@ checks are posthoc before completed evidence can be accepted.
 Evidence is under `artifacts/protected-physics-v1/`. These are internal checks,
 not external peer review. The core and driver were implemented by
 `protected_budget_impl` and `protected_runner_map`; `cell_integration_review`
-independently reviewed both. Qualification closure and actual-data results follow.
+independently reviewed both.
+
+## Actual historical evidence and committed-source regression
+
+At `2ac95db`, the actual eight saved native seed bundles pass independent
+reconstruction. Six B/A comparison statistics per case cover **3,072 sampled
+vectors / 9,216 scalar components**; maximum relative disagreement is
+**1.316e-15**, against the unchanged 5e-10 threshold. Two distinct geometry
+certificates are independently recomputed and agree with four actual recorded
+producer proofs. The method/target combinations share those original geometries;
+they are not eight independent geometric certificates.
+
+The reconstructed coarse field errors remain **0.269149–0.276109 normal RMS**
+and **0.361571–0.372173 inner-vector RMS**, against physical limits 1e-4 and 0.01.
+This confirms the earlier negative results, not a design improvement. No native
+model/request, producer certificate, equilibrium solve or search was executed.
+The new protected startup stencil still needs its own native runtime checks.
+
+Full **tracked** research regression passes 3,363 tests, 334 existing warnings,
+zero failures/errors/skips, exit zero; 286.74 s console / 286.655 s JUnit.
+The two untracked, inactive next-stage launcher test paths were explicitly
+excluded; neither was present when the run started. No committed test was omitted.
+Those prototypes are outside this qualification and were not imported by the
+historical qualifier. The whole checkout was not clean; tracked files and all
+qualified scientific source bytes remained unchanged. The environment was not
+resynchronized. Both complete regression outputs are retained.
+
+The [qualification record](../../evidence/protected-saved-physics-v1.json) binds
+11 sources and 23 artifacts, including both retained driver failures and the
+complete actual-data evidence. Native execution next requires the separately
+reviewed launcher and a committed execution checkpoint. Fine-grid acceptance,
+realized-field transfer and Step 4B–4D remain open.

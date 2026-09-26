@@ -1,0 +1,372 @@
+{
+  "schema_version": 1,
+  "kind": "protected-saved-physics-qualification",
+  "date": "2026-09-26",
+  "status": "completed",
+  "saved_physics_qualification_pass": true,
+  "registration": {
+    "commit": "721774b",
+    "initial_commit": "f1a6e1803dd39ffea6f3660198d67b3a3c363f07",
+    "path": "docs/optimization/PROTECTED_PHYSICS_PROTOCOL.md",
+    "sha256": "ebfa31937b8ee80aa7408bdba03b4c94e87be64d7349318855646dc5cf9b8426",
+    "bytes": 7252
+  },
+  "implementation_commit": "2ac95dbc687c8257166a379a5abbabb76ff96a1d",
+  "qualification_scope": "Independent saved-data core and historical reconstruction of eight original seed bundles and two unique geometry certificates; no new native search.",
+  "components": {
+    "core_tests": 69,
+    "qualification_driver_tests": 61,
+    "total_focused_tests": 130
+  },
+  "regression": {
+    "exit_code": 0,
+    "passed": 3363,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "warnings": 334,
+    "console_seconds": 286.74,
+    "junit_seconds": 286.655,
+    "scope": "All tracked tests at implementation commit; inactive untracked next-stage pilot tests explicitly excluded.",
+    "excluded_untracked_prototypes": [
+      "tests/test_protected_pilot_inputs.py",
+      "tests/test_protected_coil_fit_launcher.py"
+    ]
+  },
+  "independent_review": {
+    "internal": true,
+    "blocking_findings_remaining": false,
+    "focused_passed": 130,
+    "junit_seconds": 15.139
+  },
+  "historical_reconstruction": {
+    "contexts_passed": 8,
+    "certificate_recomputations": 2,
+    "recorded_certificates_checked": 4,
+    "sampled_BA_comparisons": 48,
+    "sampled_vectors": 3072,
+    "sampled_scalar_components": 9216,
+    "native_requests": 0,
+    "native_models_initialized": 0,
+    "producer_certificates": 0,
+    "equilibrium_solves": 0,
+    "search_calls": 0,
+    "maximum_sampled_direct_error": 1.3158613849789467e-15,
+    "cases": [
+      {
+        "case": "reference-n6-N",
+        "normal_rms": 0.27605127749683156,
+        "inner_vector_rms": 0.37118085578130794,
+        "maximum_sampled_direct_error": 8.195320088223305e-16
+      },
+      {
+        "case": "reference-n6-V",
+        "normal_rms": 0.27605127749683156,
+        "inner_vector_rms": 0.37118085578130794,
+        "maximum_sampled_direct_error": 8.195320088223305e-16
+      },
+      {
+        "case": "reference-n8-N",
+        "normal_rms": 0.2691494913208603,
+        "inner_vector_rms": 0.3615707220782134,
+        "maximum_sampled_direct_error": 8.2965378914066945e-16
+      },
+      {
+        "case": "reference-n8-V",
+        "normal_rms": 0.2691494913208603,
+        "inner_vector_rms": 0.3615707220782134,
+        "maximum_sampled_direct_error": 8.2965378914066945e-16
+      },
+      {
+        "case": "selected-n6-N",
+        "normal_rms": 0.2761091931402846,
+        "inner_vector_rms": 0.3721730265588622,
+        "maximum_sampled_direct_error": 8.197825430555749e-16
+      },
+      {
+        "case": "selected-n6-V",
+        "normal_rms": 0.2761091931402846,
+        "inner_vector_rms": 0.3721730265588622,
+        "maximum_sampled_direct_error": 8.197825430555749e-16
+      },
+      {
+        "case": "selected-n8-N",
+        "normal_rms": 0.2692089584965065,
+        "inner_vector_rms": 0.36244924105707477,
+        "maximum_sampled_direct_error": 1.3158613849789467e-15
+      },
+      {
+        "case": "selected-n8-V",
+        "normal_rms": 0.2692089584965065,
+        "inner_vector_rms": 0.36244924105707477,
+        "maximum_sampled_direct_error": 1.3158613849789467e-15
+      }
+    ],
+    "minimum_observed_free_bytes": 53592698880
+  },
+  "workspace": {
+    "whole_checkout_clean": false,
+    "tracked_files_unchanged_during_regression": true,
+    "qualified_implementation_sources_match_commit": true,
+    "inactive_untracked_next_stage_prototypes_present": true,
+    "inactive_prototypes_not_imported_by_historical_qualifier": true,
+    "native_environment_resynced": false,
+    "prior_scientific_sources_modified": false
+  },
+  "limits": {
+    "new_native_search_executed": false,
+    "new_protected_startup_runtime_qualified": false,
+    "full_grid_fields_verified": false,
+    "all_gradient_components_verified": false,
+    "physical_admission": false,
+    "fine_grid_acceptance": false,
+    "realized_field_transfer": false,
+    "step4_pass": false,
+    "sota_advance": false,
+    "ms1_reached": false,
+    "external_peer_review": false,
+    "execution_checkpoint_admitted": false
+  },
+  "predecessor": {
+    "path": "evidence/protected-native-plumbing-v1.json",
+    "sha256": "1f8dcb5e4c9772770f61b127b47946013c1de0c4dedda251b3eac1787ebfdd6f",
+    "bytes": 13764
+  },
+  "sources": [
+    {
+      "path": "docs/optimization/PROTECTED_PHYSICS_PROTOCOL.md",
+      "sha256": "ebfa31937b8ee80aa7408bdba03b4c94e87be64d7349318855646dc5cf9b8426",
+      "bytes": 7252
+    },
+    {
+      "path": "scripts/audit_protected_cell_physics.py",
+      "sha256": "23a1188c30308be18f3fda87a5b1f6ae82de4b95c35a8de94e95a66a2d8cd382",
+      "bytes": 15635
+    },
+    {
+      "path": "tests/test_protected_cell_physics.py",
+      "sha256": "431f86c59eb4e855f6386532b40821f7c25a97335247dcbf85eecc8c1740b945",
+      "bytes": 24368
+    },
+    {
+      "path": "scripts/qualify_protected_cell_physics.py",
+      "sha256": "3c9f20e09c80b238b8a2a2011953d349a996e4e7966cdde076b193c1f05c147f",
+      "bytes": 16201
+    },
+    {
+      "path": "tests/test_qualify_protected_cell_physics.py",
+      "sha256": "dca90b49d0e1cdd0e4dcac4bcc1160d66fc347f2e902b8edc3618d08918f58ee",
+      "bytes": 19733
+    },
+    {
+      "path": "scripts/audit_clear_coil_field_start.py",
+      "sha256": "ae564d5a2812a15a31101d387551f4c123cd138482726b28fdb9f0b470faf841",
+      "bytes": 50617
+    },
+    {
+      "path": "src/fusion_baselines/clear_coil_field_audit.py",
+      "sha256": "3e13e2c22ec517fbac38fb6462e6c8aa69ca39688f15f0c29b3090e966d6b482",
+      "bytes": 21221
+    },
+    {
+      "path": "src/fusion_baselines/coupled_coil_audit.py",
+      "sha256": "0f713e3a6c60a94bf98f6c1ca28936fb2ac358161b96c62fd5186d59fd0f4b3f",
+      "bytes": 25688
+    },
+    {
+      "path": "src/fusion_baselines/coil_perturbation_audit.py",
+      "sha256": "3781343c2fb623bc6439bed2fc0079dea860c269120f02c2436f6f2c7ad17a5e",
+      "bytes": 25953
+    },
+    {
+      "path": "src/fusion_baselines/protected_cell_audit.py",
+      "sha256": "cc4902f98ec4f3eb6ace4e321bcdd50de66ea89c008aaf2103d5ce512cc006f3",
+      "bytes": 18052
+    },
+    {
+      "path": "src/fusion_baselines/protected_startup.py",
+      "sha256": "be018a09da1924928d9b9a3d5fec20eae90dd98525336fbf45b9e77e1c0866d5",
+      "bytes": 5575
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "artifacts/protected-physics-v1/core-final.xml",
+      "sha256": "82546689ab05f5d6118d819eb836af6f2f4ed2f4e26463cc6160c3de36899370",
+      "bytes": 10337,
+      "junit": {
+        "tests": 69,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 15.671
+      }
+    },
+    {
+      "path": "artifacts/protected-physics-v1/core-initial.xml",
+      "sha256": "c17887b41d77a5751dad4a942d5e04b74ad226c00d872aa8a9eabe67cdab407b",
+      "bytes": 9662,
+      "junit": {
+        "tests": 64,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 14.364
+      }
+    },
+    {
+      "path": "artifacts/protected-physics-v1/full-regression.log",
+      "sha256": "37735482011144a507913b6962ce4063d07ee5eba57da38652d5f2e0032de9d5",
+      "bytes": 9702
+    },
+    {
+      "path": "artifacts/protected-physics-v1/full-regression.xml",
+      "sha256": "14918e8e456aa4a5d8e5434d9882cfad95c1be93882ecb69825f6465ea71dfa9",
+      "bytes": 464592,
+      "junit": {
+        "tests": 3363,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 286.655
+      }
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/case-reference-n6-N.json",
+      "sha256": "39f34b8fa046ed8784536fbdb3cea087fa17c22dc414856d4fdafbe8370e8aa9",
+      "bytes": 3902
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/case-reference-n6-V.json",
+      "sha256": "5fa6c388e12cf3dab373d4c5c22f7351bdca8276927fa75b46af8220b3abf88b",
+      "bytes": 3901
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/case-reference-n8-N.json",
+      "sha256": "35fb29bf883ecb3e008eb3deb589350c6584f6fb5387bac7b659f89b4d413ad3",
+      "bytes": 4037
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/case-reference-n8-V.json",
+      "sha256": "b850a0a6ff63111be55dd65a2f7ca30dc45c562ef7d66bb8e4c1169ee66eaccf",
+      "bytes": 4035
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/case-selected-n6-N.json",
+      "sha256": "e06685c58e1dcd5bf57e3c46ead6c5fdd466a118af2c2c514ab6f9c25d41bb1b",
+      "bytes": 3895
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/case-selected-n6-V.json",
+      "sha256": "22e318862e77c9448980b019c8eb61fa3dc5da38825e3d4448d40dcc35218f4d",
+      "bytes": 3895
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/case-selected-n8-N.json",
+      "sha256": "8d5a056efbbd189d47fda751dfb922d581ca45db914fe3b92f77c00bfde42b3d",
+      "bytes": 4033
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/case-selected-n8-V.json",
+      "sha256": "d6131ef4c235a1279a97f8708c64de93b0cc80c7669f773248116d46209ffb71",
+      "bytes": 4033
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/certificate-n6.json",
+      "sha256": "8b4dccd989ab4feebf7470d5b91d1cba40a93c2e33a7bb7005e82b92d4e6c42e",
+      "bytes": 84397
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/certificate-n8.json",
+      "sha256": "09e4653ca478c03c9d9ea2d2035276dd3895b6756987a7ff54b5692e7dd48760",
+      "bytes": 138052
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/source-after.json",
+      "sha256": "fefb2a1c830bc9b815d66702b1a5f186afbe03d4f2e3e1b794ce1e2b909a0fe5",
+      "bytes": 285931
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/source-before.json",
+      "sha256": "fefb2a1c830bc9b815d66702b1a5f186afbe03d4f2e3e1b794ce1e2b909a0fe5",
+      "bytes": 285931
+    },
+    {
+      "path": "artifacts/protected-physics-v1/historical-seeds/summary.json",
+      "sha256": "b48e0b4632d6ab59755b46b0243e22a99a5d1030a11f31942ea0fbb74004e540",
+      "bytes": 3672
+    },
+    {
+      "path": "artifacts/protected-physics-v1/independent-final.xml",
+      "sha256": "64f84ad6259e4c096e8e0b48d4525ec3ba7850c32f585e910fccdb7cca7ecd7a",
+      "bytes": 20322,
+      "junit": {
+        "tests": 130,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 15.139
+      }
+    },
+    {
+      "path": "artifacts/protected-physics-v1/qualification-driver-initial.xml",
+      "sha256": "f40c2081f207d047fab438a01f3ad151d91d05698cd70a1040316c94805ba7e8",
+      "bytes": 9524,
+      "junit": {
+        "tests": 57,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.504
+      }
+    },
+    {
+      "path": "artifacts/protected-physics-v1/qualification-driver-reserve-fixed.xml",
+      "sha256": "4a8576b6a76ccd5e6f4da08edd1f39a1434c181403b918f4cc2bc0e417097845",
+      "bytes": 10253,
+      "junit": {
+        "tests": 61,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.517
+      }
+    },
+    {
+      "path": "artifacts/protected-physics-v1/qualification-driver-reserve-red.xml",
+      "sha256": "8b2020c0335aad7bbcdf11775617aa2a284c3edcf23f220d00c12d4ee3472e8b",
+      "bytes": 11851,
+      "junit": {
+        "tests": 61,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.514
+      }
+    },
+    {
+      "path": "artifacts/protected-physics-v1/qualification-driver-store-fixed.xml",
+      "sha256": "02e661cbd056919878ad91c29f8a8b54d5ae6f4e4f638b63d329f47010e459c2",
+      "bytes": 10253,
+      "junit": {
+        "tests": 61,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.528
+      }
+    },
+    {
+      "path": "artifacts/protected-physics-v1/qualification-driver-store-red.xml",
+      "sha256": "9b381e1e30e666ab89e219db7664a2c93384a4afc0244530049808545714c45e",
+      "bytes": 17238,
+      "junit": {
+        "tests": 61,
+        "failures": 4,
+        "errors": 0,
+        "skipped": 0,
+        "seconds": 0.54
+      }
+    }
+  ]
+}

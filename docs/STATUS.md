@@ -29,6 +29,7 @@ author data is not the only obstacle.
 | [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) execution components | 390 synthetic tests and real-data source preflight pass after independently reviewed fixes; four components qualified at `47544d0` | Integrated worker and physical audit; no new field-fit result |
 | [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) integrated cell | Synthetic qualification complete at `c17123a`: 299 focused tests, eight historical schema comparisons and full regression pass; source/artifact identities bound | Native process/resource orchestration and independent physical reconstruction; no new field-fit result |
 | [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) isolated execution plumbing | Qualification complete at `fd069e9`: 315 focused tests, full regression, eight synthetic subprocess paths and all eight real saved contexts pass | Independent saved-physics reconstruction, native pilot and fine-grid acceptance; no new field-fit result |
+| [Step 4A](steps/STEP_4_PLASMA_AND_COILS.md) independent saved physics | Qualification complete at `2ac95db`: 130 focused tests, all eight actual saved seeds, two original certificates against four proofs and tracked regression pass; sampled B/A discrepancy ≤1.316e-15 | New native startup/search, launcher qualification and fine acceptance; confirms previous field failures, not an improved design |
 
 Each linked step page gives the method, full limits, detailed reports and evidence.
 “Independent” in these reports refers to the specified numerical/source checks,
@@ -59,7 +60,7 @@ These checks show that the tools work as specified; they are not physical accept
 | Area | Evidence | Not established |
 | --- | --- | --- |
 | Public starter | 47 public tests and eight copied-tree release checks pass on local Python 3.11/3.12/3.14 at `0d9abcf`; displayed reference/candidate comparisons now use matching 512-node resolution; the unchanged 256-node native check retains its 5e-10 limit | Hosted CI, independent machines, full-surface or physical acceptance; public reports never set physical admission or Step 4 to true |
-| Historical research suite | 3,233 passes, 334 warnings, zero failures/errors/skips at `fd069e9`; both full console and JUnit retained | A hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
+| Historical research suite | 3,363 tracked tests pass, 334 warnings, zero failures/errors/skips at `2ac95db`; both console and JUnit retained; two inactive untracked launcher-test paths explicitly excluded | Launcher qualification, hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
 | Publication inventory | About 325 MB of tracked content; 365 tracked files with home-path indicators; no matches for five credential/key patterns | A complete security, privacy or rights review; no history was sanitized or published |
 
 Details: [release evidence](validation/PUBLIC_RELEASE_RESULTS.md),
@@ -67,6 +68,7 @@ Details: [release evidence](validation/PUBLIC_RELEASE_RESULTS.md),
 [execution-component qualification](optimization/PROTECTED_RUNNER_RESULTS.md),
 [synthetic integration qualification](optimization/PROTECTED_CELL_RESULTS.md),
 [isolated execution qualification](optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md),
+[saved-physics qualification](optimization/PROTECTED_PHYSICS_RESULTS.md),
 [review fixes](validation/PUBLIC_REVIEW_FIXES.md),
 [README review resolution](review/ROOT_README_RESOLUTION.md),
 [what public scores mean](validation/PUBLIC_QUICKSTART.md#what-the-report-means),

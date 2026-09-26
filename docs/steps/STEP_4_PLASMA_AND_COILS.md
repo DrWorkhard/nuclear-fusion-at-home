@@ -139,6 +139,18 @@ native work. Thirteen sources and 28 artifacts are bound. Independent physics
 reconstruction is registered next; no new native search has run.
 [Report](../optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md).
 
+### 10. Independent saved-physics checker — scoped qualification complete (26 September)
+
+Every saved bundle/certificate, including negative proposals, now has an independent
+reconstruction path. All 130 synthetic tests pass. On actual saved data, all eight
+seeds pass metric and sampled B/A reconstruction: 3,072 vectors, maximum relative
+disagreement 1.316e-15. Two geometric certificates agree with four original recorded
+proofs. All 3,363 tracked regression tests pass; untracked inactive launcher tests
+are separately excluded, not qualified by this result.
+The old field errors and physical rejections are confirmed, not improved. Native
+launcher qualification and the separate fine phase remain before new design evidence.
+[Results](../optimization/PROTECTED_PHYSICS_RESULTS.md).
+
 ## What is not shown yet
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives

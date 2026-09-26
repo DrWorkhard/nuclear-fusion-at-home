@@ -30,5 +30,5 @@ evidence bar for the Proxima comparison is the
   rejected coil pilot, certified coil starts, field errors about 2,700× the
   limit, certified perturbation radii, the qualified search controller and its
   qualified single-writer storage, integrated synthetic cell and isolated execution
-  plumbing; independent physics reconstruction and new native field-fit results
-  remain open.
+  plumbing and independent saved-physics reconstruction. Actual saved seeds pass
+  the new checker but still fail field limits; new native field-fit results remain open.

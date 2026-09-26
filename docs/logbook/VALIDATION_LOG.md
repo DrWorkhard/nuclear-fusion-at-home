@@ -1,5 +1,28 @@
 # Validation log
 
+## 2026-09-26 — Qualify independent physics on real saved seeds
+
+- Committed implementation `2ac95db`: reconstruct all eight saved native bundles,
+  including both methods/targets/classes; all pass. Two distinct original geometry
+  certificates independently agree with four actual producer proofs. All 48 direct
+  B/A statistics / 3,072 vectors pass; maximum relative error 1.315862e-15.
+- Numerical reconstruction confirms unchanged coarse normal RMS 0.269149–0.276109
+  and inner-vector RMS 0.361571–0.372173. No new native model/request, producer
+  certificate, equilibrium or search. Independent NumPy/SciPy reconstruction is
+  real calculation, not a claim of zero computation.
+- Full tracked research regression: **3,363 passed, 334 warnings, no failures,
+  errors or skips**, exit zero; 286.74 s console / 286.655 s JUnit. Explicitly
+  ignore only the two inactive untracked next-launcher test paths (absent at run
+  start); all committed tests included and all tracked files unchanged. Do not
+  claim a clean whole checkout or qualification of those separate prototypes.
+- Qualification binds 11 sources and 23 artifacts, including retained failures
+  and real source-before/after graphs. Record F-101. Native launch still requires
+  its independent software qualification and committed execution checkpoint; fine
+  acceptance and Step 4 remain open. Root README/overview physical claims unchanged.
+- Closure: all 35 source/artifact/predecessor references, 11 source commit
+  identities and reviewed registration identity verified. Public suite 47 pass
+  (3.759 s); documentation/release suite 14 pass (1.02 s); docs/whitespace pass.
+
 ## 2026-09-26 — Implement and review independent saved-physics reconstruction
 
 - Follow reviewed registration `721774b`; add only the separate auditor and

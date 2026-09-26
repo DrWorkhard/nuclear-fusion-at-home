@@ -42,9 +42,11 @@ The [source admission, raw snapshots, budget ledger and startup helpers](optimiz
 are now qualified separately. Their [integrated synthetic worker and graph audit](optimization/PROTECTED_CELL_RESULTS.md)
 are now qualified in their synthetic scope. The
 [source-bound native adapter and isolated process/resource orchestration](optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md)
-also pass synthetic and read-only source qualification. Next: qualify
-[independent saved-physics reconstruction](optimization/PROTECTED_PHYSICS_PROTOCOL.md),
-then bind the execution checkpoint and run the registered diagnostic pilot. The
+also pass synthetic and read-only source qualification.
+[Independent saved-physics reconstruction](optimization/PROTECTED_PHYSICS_RESULTS.md)
+now passes its synthetic and historical-data qualification. Next: finish the
+[source-bound launcher](optimization/PROTECTED_PILOT_EXECUTION_PROTOCOL.md), bind
+its reviewed execution checkpoint and run the registered diagnostic pilot. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) supports a bounded
 diagnostic pilot conditionally; its replay and claim-scope clarifications apply
 before any native run.
