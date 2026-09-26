@@ -19,7 +19,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Fine-phase integration notes](PROTECTED_FINE_DESIGN_NOTES.md). Read-only mapping of the required 80-request frozen-current acceptance phase, candidate-coordinate and seed-identity traps, direct geometry masks and the need for a separate no-search supervisor. Planning only, not a registered or executed fine phase.
 
-- Protected pilot execution: [registration](PROTECTED_PILOT_EXECUTION_PROTOCOL.md), [results](PROTECTED_PILOT_EXECUTION_RESULTS.md). Launcher reviewed; 124 synthetic tests pass, including one real nonphysical subprocess connection. Full regression/checkpoint pending; native remains closed, original budgets/fine-phase requirements unchanged.
+- Protected pilot execution: [registration](PROTECTED_PILOT_EXECUTION_PROTOCOL.md), [results](PROTECTED_PILOT_EXECUTION_RESULTS.md). Launcher qualified at `6bb1e45`: 124 synthetic tests and all 3,487 regression tests pass; separate execution checkpoint binds actual evidence. Runtime clean-source admission precedes the eight-case native pilot; original budgets/fine requirements unchanged.
 
 - Independent saved physics: [registration](PROTECTED_PHYSICS_PROTOCOL.md), [results](PROTECTED_PHYSICS_RESULTS.md). Scoped qualification complete: 130 synthetic tests, eight real saved-seed reconstructions and 3,363 tracked regression tests pass. Maximum sampled B/A error 1.316e-15; earlier physical rejections confirmed. Native launch and fine acceptance remain separate.
 

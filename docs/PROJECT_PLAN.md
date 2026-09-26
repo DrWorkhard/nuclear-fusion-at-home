@@ -44,9 +44,10 @@ are now qualified in their synthetic scope. The
 [source-bound native adapter and isolated process/resource orchestration](optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md)
 also pass synthetic and read-only source qualification.
 [Independent saved-physics reconstruction](optimization/PROTECTED_PHYSICS_RESULTS.md)
-now passes its synthetic and historical-data qualification. Next: finish the
-[source-bound launcher](optimization/PROTECTED_PILOT_EXECUTION_PROTOCOL.md), bind
-its reviewed execution checkpoint and run the registered diagnostic pilot. The
+now passes its synthetic and historical-data qualification. The
+[source-bound launcher](optimization/PROTECTED_PILOT_EXECUTION_RESULTS.md) passes
+124 focused tests and the complete 3,487-test regression. Next: admit its committed
+execution checkpoint from a clean checkout and run the diagnostic pilot. The
 [second method review](optimization/PROTECTED_METHOD_REVIEW.md) supports a bounded
 diagnostic pilot conditionally; its replay and claim-scope clarifications apply
 before any native run.

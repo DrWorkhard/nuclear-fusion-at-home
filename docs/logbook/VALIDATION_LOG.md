@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-26 — Qualify the diagnostic pilot launcher
+
+- Clean committed implementation `6bb1e45`: complete regression **3,487 pass,
+  334 existing warnings, zero failures/errors/skips**, exit zero; 288.37 s console /
+  288.153 s JUnit. No excluded paths or tracked edits during execution.
+- Bind five launcher protocol/code/test sources and all six retained artifacts;
+  independent internal final review has 124 focused passes and no remaining scoped
+  blocker. Create separate launcher qualification and fixed execution checkpoint.
+- Only software launch readiness closes: runtime clean-source admission must
+  still succeed before the original diagnostic pilot. No new native search,
+  physical admission, fine acceptance, Step 4 or MS1 completion at this checkpoint.
+- Root README and scientific overview retain accurate physical conclusions;
+  update status, roadmap, Step 4 detail and optimization index.
+- Independent record review verifies all 13 source/artifact/linked-record files,
+  five JUnit summaries and exact implementation/registration identities.
+- Closure checks: 47 public tests pass (3.800 s), 16 documentation/release/README
+  tests pass (14.94 s); documentation structure, Ruff and whitespace checks pass.
+
 ## 2026-09-26 — Implement and independently review the pilot launch connection
 
 - Follow registration `908f43c`; explicit native dependency wiring, eight-case

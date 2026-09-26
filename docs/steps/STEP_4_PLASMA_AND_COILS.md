@@ -151,6 +151,16 @@ The old field errors and physical rejections are confirmed, not improved. Native
 launcher qualification and the separate fine phase remain before new design evidence.
 [Results](../optimization/PROTECTED_PHYSICS_RESULTS.md).
 
+### 11. Diagnostic launcher — software qualification complete (26 September)
+
+At clean `6bb1e45`, 124 focused tests and the complete 3,487-test regression pass
+with 334 existing warnings. Independent internal review checks source admission,
+parent acknowledgements and separately returned physics audits; one real
+nonphysical subprocess path passes. Committed qualification/execution records
+and runtime clean-source admission gate the original eight-case native pilot.
+No new design result follows from this software qualification; fine acceptance
+remains separate. [Report](../optimization/PROTECTED_PILOT_EXECUTION_RESULTS.md).
+
 ## What is not shown yet
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives

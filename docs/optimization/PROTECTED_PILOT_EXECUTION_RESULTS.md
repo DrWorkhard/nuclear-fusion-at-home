@@ -5,11 +5,14 @@
 
 ## Current result
 
-The source-bound serial launcher is implemented and independently reviewed;
-**124 synthetic tests pass**. Full committed-source regression and the separate
-execution checkpoint are next. **Native launch remains closed**: real physics
-qualification pins are present, but the required committed execution checkpoint
-does not yet exist. No native coil search has run.
+The source-bound serial launcher is qualified at `6bb1e45`: **124 synthetic tests
+and all 3,487 full-regression tests pass**. Independent internal review has no
+remaining blocker within this software scope. The separate
+[qualification](../../evidence/protected-pilot-launcher-v1.json) and
+[execution checkpoint](../../evidence/protected-pilot-execution-v1.json) bind the
+actual sources and evidence. Runtime source-only admission must still pass from
+their clean committed checkout before the original eight-case diagnostic pilot.
+No new native coil search has run at this qualification checkpoint.
 
 The source gate requires the complete previous source/qualification graph, exact
 committed launcher code and a clean repository. The fixed execution-checkpoint
@@ -40,6 +43,9 @@ discovery, hidden work or budget transfer.
 - Independent final rerun: 124 pass, zero failures/errors/skips, 1.53 s console /
   1.522 s JUnit. Four source/test hashes unchanged; no blocking finding remains
   within the software scope. Ruff and whitespace pass.
+- Complete regression at clean `6bb1e45`: 3,487 pass, 334 existing warnings,
+  zero failures/errors/skips, exit zero; 288.37 s console / 288.153 s JUnit.
+  No test paths excluded; all tracked sources unchanged throughout the run.
 - Eight-case ordering is tested with explicit mocks. One case additionally uses
   the real qualified parent, worker and saved-graph auditor with the existing
   nonphysical synthetic adapter; a deliberate failure prevents a second launch.
@@ -60,8 +66,8 @@ implementation/testing by `protected_runner_map` and review by
 
 ## After qualification
 
-Freeze the complete clean checkout, bind actual qualification and execution
-records, perform source-only admission, then run the original diagnostic pilot.
+Commit qualification and execution records, perform source-only admission from
+the clean checkout, then run the original diagnostic pilot.
 Do not edit tracked sources/docs while it is running; retain intermediate notes
 in ignored artifacts and integrate them after source-bound execution ends.
 Fine acceptance needs its separate candidate-aware contracts and supervisor;
