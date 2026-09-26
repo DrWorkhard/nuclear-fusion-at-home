@@ -1,5 +1,27 @@
 # Validation log
 
+## 2026-09-26 — Implement and review synthetic protected-cell integration
+
+- Follow registration `88fd4d6`; add complete context/bundle boundaries, injected
+  cell orchestration and a separate saved-graph/accounting auditor. Preserve all
+  older numerical/source identities, resource limits and documentation structure.
+- Before integration execution, clarify hash-bound compact controller certificate
+  views: complete proofs stay in immutable manifests, avoiding the unchanged 8 MiB
+  final-event cap. Exercise 116 proposals with 140 KB proofs and 20-field budgets.
+- Contract: 179 tests pass; independently retained read-only script verifies eight
+  saved seed contexts, 72 rejected identity mutations and eight retained finite-
+  overcurrent schemas, checking 28 input references without new native calculations.
+- Retain red tests for fixed-array/live-initial-state identity (171 pass/eight
+  fail), ineffective invalidation/post-publication guard (51/two), and CRC-corrupt
+  hash-bound archive handling (one failure). Apply reviewed fail-closed fixes.
+- Full regression, final review/source freeze and source/artifact binding follow;
+  synthetic progress does not authorize native dispatch or change physical claims.
+- Focused total: 299 pass (179 contract, 54 cell, 66 graph audit). Additional
+  retained model-routing red run: 53 pass/one fail, fixed before qualification.
+  Public suite: 47 pass in 3.755 s; docs/Ruff/whitespace pass. Initial `python`
+  command was unavailable; use `python3`. Wrong documentation test filename caused
+  zero collection; retained JUnit and rerun with the actual documented files.
+
 ## 2026-09-26 — Register protected-cell synthetic integration
 
 - Component qualification closed at `d130fff`; now register the integrated

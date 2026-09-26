@@ -55,6 +55,19 @@ boundary points/normals/B/A `(4096,3)`, weights `(4096,)`; inner points/target/B
 coordinates, names, method, source identities, signed physical currents and metrics.
 This schema check cannot replace independent physical field/geometry calculations.
 
+### Controller certificate representation (pre-execution clarification)
+
+During implementation, read-only inspection found that representative saved
+n6/n8 full certificates occupy about 82/135 KB each. Copying 116 of these into
+the controller's final event could exceed the qualified 8 MiB record limit.
+Keep that limit and the controller unchanged: persist each complete certificate
+in its manifest, then return a controller view containing exactly `status`,
+`calculation_complete`, `certified` and `certificate_reference`. The three flags
+must equal the referenced full result. Independently check this linkage, including
+case, original seed, state and proposal identity. This uses the controller's
+existing extensible certificate contract; no proof data is discarded. Exercise
+the full 116-proposal budget with this representation before qualification.
+
 ## Failure and qualification controls
 
 Test both coil classes and methods, completed synthetic paths, selection/replay

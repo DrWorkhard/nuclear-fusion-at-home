@@ -116,6 +116,15 @@ The second method review conditionally supports a bounded diagnostic pilot; it
 does not approve native execution yet. [Results](../optimization/PROTECTED_RUNNER_RESULTS.md) ·
 [Method review](../optimization/PROTECTED_METHOD_REVIEW.md).
 
+### 8. Integrated protected cell — synthetic verification in progress (26 September)
+
+The startup/search/replay chain now has complete numerical boundaries and a
+separate saved-graph/accounting auditor. Focused tests and independent internal
+review cover rejection, both budgets, exact replay and injected failures.
+Read-only schema checks accept all eight historical seeds; no new native coil
+search ran. Full regression and final qualification remain pending.
+[Results and retained defects](../optimization/PROTECTED_CELL_RESULTS.md).
+
 ## What is not shown yet
 
 No coil set whose field meets the limits, no check that the Step 3 benefit survives
