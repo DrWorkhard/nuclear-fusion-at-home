@@ -1,5 +1,23 @@
 # Validation log
 
+## 2026-09-26 — Fixed field probe: clean complete regression passes
+
+- Commit implementation at `b10c47f67bd73daf73e1cf654413f47df6f3b911`; run the
+  entire committed suite, without exclusions, environment sync or concurrent
+  heavy research jobs. Before/after Git identities match and remain clean.
+- Actual result: 5,654 passed, 334 warnings, zero failures/errors/skips;
+  466.15 s console /466.910 s wrapper. JUnit: 798,003 bytes, SHA-256
+  `356bc212684914f725287529a45ccea243e8624cf84953624de759d5a20c4fb6`.
+- Bind the five named evidence roles, 540 unchanged source/config/protocol
+  references and 45 artifacts in `fixed-field-probe-qualification-v1.json`.
+  Final internal review closes saved-return and scientific integration findings;
+  main reviews process/group and shared-index accounting. This is not external
+  peer review. Preserve every referenced failing control and earlier review.
+- Update progress, index, roadmap, Step 4 and status. Root README/docs overview
+  remain accurate: the newly certified proposal fields have not been measured.
+  Software qualification does not close a Step 4 package or authorize execution
+  without the separate committed checkpoint and fresh native source admission.
+
 ## 2026-09-26 — Fixed field probe: focused implementation qualification
 
 - Implement strict four-state intake, original-seed value-only bridge, independent

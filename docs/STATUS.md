@@ -65,7 +65,7 @@ These checks show that the tools work as specified; they are not physical accept
 | Area | Evidence | Not established |
 | --- | --- | --- |
 | Public starter | 47 public tests and eight copied-tree release checks pass on local Python 3.11/3.12/3.14 at `0d9abcf`; displayed reference/candidate comparisons now use matching 512-node resolution; the unchanged 256-node native check retains its 5e-10 limit | Hosted CI, independent machines, full-surface or physical acceptance; public reports never set physical admission or Step 4 to true |
-| Historical and current research suite | 5,110 tests pass, 334 warnings, zero failures/errors/skips at clean `8b519dc`; full suite with no excluded paths, console and JUnit retained | Hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
+| Historical and current research suite | 5,654 tests pass, 334 warnings, zero failures/errors/skips at clean `b10c47f`; full suite with no excluded paths, console and JUnit retained ([field-probe qualification](optimization/FIXED_FIELD_PROBE_PROGRESS.md)) | Hosted or fresh native rebuild; the strict netCDF4 import warning remains unresolved |
 | Publication inventory | About 325 MB of tracked content; 365 tracked files with home-path indicators; no matches for five credential/key patterns | A complete security, privacy or rights review; no history was sanitized or published |
 
 Details: [release evidence](validation/PUBLIC_RELEASE_RESULTS.md),

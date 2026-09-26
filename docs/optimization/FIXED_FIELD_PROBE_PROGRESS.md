@@ -1,6 +1,6 @@
 # Fixed field comparison: implementation and qualification
 
-26 September 2026. Focused qualification passes; **no new proposal fields measured**.
+26 September 2026. Software qualification passes; **no new proposal fields measured**.
 [Scientific protocol](FIXED_FIELD_PROBE_PROTOCOL.md) ·
 [Input/method review](FIXED_FIELD_PROBE_REVIEW.md) · [Index](README.md)
 
@@ -89,7 +89,16 @@ documentation/release tests pass 16/16 (15.26 s); repository Ruff, documentation
 structure and whitespace checks pass. Commands, console output and JUnit remain
 under `artifacts/fixed-field-probe-v1/implementation-checks/`.
 
-Full regression on a clean implementation commit and the separate qualification/
-execution commits remain. No native environment sync or new native fields occurred.
+The complete research suite passes **5,654 tests**, 334 warnings and zero failures,
+errors or skips at clean implementation `b10c47f67bd73daf73e1cf654413f47df6f3b911`.
+Console duration is 466.15 s; wrapper duration 466.910 s. Before/after Git identities
+match and remain clean. Console and JUnit are retained under `full-regression/`.
+The [qualification record](../../evidence/fixed-field-probe-qualification-v1.json)
+binds 540 source/configuration/protocol references and 45 artifacts, including
+distinct evidence for focused, public, documentation, full-regression and review
+checks. Prior failing controls and intermediate reviews are retained.
+
+A separate committed execution checkpoint and fresh native admission still precede
+new fields. No native environment sync or new native fields occurred.
 The existing NumPy/netCDF import warning is retained, not silenced or repaired by
 changing the native environment during this study.
