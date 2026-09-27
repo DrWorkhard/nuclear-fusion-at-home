@@ -32,6 +32,8 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Coherent shape freedom](COHERENT_COIL_EXPLORATION.md). Wider shapes reach RMS 0.01384 with checked geometry, 81.80% below the matched small-change arm at 1.06% higher current. Both searches exhaust 600 bundles; boundary limits still fail. Initial derivative failure and diagnosed retry remain explicit.
 
+- [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md). Prospective five-point comparison on three refined interior/coil grids, with frozen currents and independently reconstructed target fields; no result yet. Separates vector-field fidelity from boundary error and realized-field topology.
+
 - Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [results](FIELD_RESIDUAL_RESULTS.md). All eight comparisons complete. Only 11.6%/19.6% of squared normalized residual aligns with the observed response versus 88.1%/89.6% for the raw objective; prioritize metric calibration and objective/start comparisons, not automatic continuation.
 
 - [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations; useful unsolicited work is welcome and compute disclosure is optional.

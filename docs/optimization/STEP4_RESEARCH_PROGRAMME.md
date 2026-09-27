@@ -82,8 +82,10 @@ Its first attempt stops before optimization on the derivative guard; a separate
 thirty-bundle component sweep supports smaller probes under unchanged tolerances.
 The retry reaches RMS 0.01384 with checked geometry, 81.80% below its matched
 small-change control at 1.06% more current. Both searches exhaust 600 bundles;
-the first failure remains in effort accounting. Review convergence and remaining
-box restrictions before the next bounded comparison; the 1e-2 signal is not yet met.
+the first failure remains in effort accounting. Session 7 now specifies matched
+restarts from that checked selection: original absolute bounds versus wider low
+modes, 1,200 bundles each. This separates extra iterations from box freedom;
+the 1e-2 signal is not yet met.
 Source-bound failed
 attempts remain in each result record and are not omitted from effort accounting.
 

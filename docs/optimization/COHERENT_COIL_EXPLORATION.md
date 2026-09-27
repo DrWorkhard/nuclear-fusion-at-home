@@ -1,6 +1,7 @@
 # Matched low-frequency shape freedom
 
-27 September 2026. Exploration session 6 complete; **wider shapes improve the fit**.
+27 September 2026. Session 6 complete; **wider shapes improve the fit**.
+Session 7 is a prospective matched restart, not a completed result.
 [Programme](STEP4_RESEARCH_PROGRAMME.md) · [Starting geometry](CONSTRAINED_COIL_EXPLORATION.md)
 
 ## Result and limits
@@ -255,3 +256,63 @@ normalizing only the documented probe tuple, module references and metadata;
 they also test the exact 10/600 accounting, selection, source rejection and
 override restoration. All nineteen fixed input hashes and the real saved-data
 preflight pass without fields. Old sources and outputs remain unchanged.
+
+## Session 7: extra iterations versus additional low-mode freedom
+
+This follow-up is declared after inspecting session 6. Its wider arm's incumbent
+RMS falls another 8.36% in its last hundred bundles, versus 0.95% for control.
+At its lowest-objective trial 599, eleven low-mode and fourteen high-mode
+coordinates still have outward gradients at their bounds, while the projected
+gradient maximum is about 4.01e-4 versus solver tolerance 1e-9. A coil-family
+floor is therefore not established. An independent saved-data reviewer favors
+a matched restart before changing coil count or increasing high-mode freedom.
+
+Both arms start at the **same geometry-checked coherent trial 598**, not the
+lower-total-objective trial 599. Reset L-BFGS history in both; the old solver
+state was not saved. Bind the completed search, exact selected snapshot/trial,
+geometry report and their source graph. Replay the nine coarse seed anchors,
+not fine metrics or shape52's older field.
+
+- **Control:** keep the original absolute box centered on shape52: low modes
+  0–2 ±0.08 m, high modes 3–5 ±0.02 m.
+- **Expanded:** same original center and high-mode bounds; low modes ±0.12 m.
+
+Do **not** recenter either box around trial 598. All 198 coordinates remain
+active. Shape52 is only the bound center; trial 598 is the actual magnetic start.
+Because that start is on 28 control bounds, central probes use shared feasible
+directions: begin with sine/cosine of coordinates 1–198, zero coordinates whose
+distance to either control bound is ≤2×1.25e-6 m, then normalize. Require at least
+two remaining coordinates, retain the explicit mask/vectors, and reject a
+nonfinite or out-of-box probe. Do not clip or inset the start. Use h=1.25e-6 and
+6.25e-7, unchanged absolute 1e-7 OR relative 1e-4 derivative tolerances, exact seed
+repeat and ten startup bundles. These checks cover the recorded feasible
+directions, not every derivative coordinate. Either failed startup stays failed.
+
+Each arm receives **1,200 total bundles including startup**, maxiter/maxfun 1,190,
+maxls 20, ftol 1e-12 and gtol 1e-9. Keep the same local-normalized objective,
+strong construction penalties, current normalization and physical limits.
+Select the lowest sampled-feasible RMS before checking it, excluding probes;
+keep every attempted point and do not replace an endpoint after its fine result.
+Coarse 64²/256 and frozen-current fine 128²/512 at both shifts remain unchanged,
+with independent B/A and full saved-loop data. Reuse the same separately bounded
+continuous-geometry schedule above for eligible frozen endpoints.
+
+New output family `artifacts/coherent-restart-v1/`: 450 s per arm, 1,200 s total /
+1,205 s external, one thread, 256 MiB and 3/2 GiB disk reserves. Reuse the reviewed
+model, fine checker and recorder; source changes are limited to explicit bounds,
+seed/probe handling and this paired orchestration. Prior source files/results
+remain unchanged. This is exploration session 7, within the ten-session ceiling.
+
+Compare both new endpoints and currents with their shared start. A same-box gain
+shows residual optimization opportunity; an expanded-box gain over that control
+supports additional low-mode freedom in this pair. A result below 1e-2 with
+checked geometry triggers a matched comparison and interior/topology screening,
+not acceptance or Step 4 completion. If no such signal appears by the programme's
+ceiling, switch the investigated family/approach instead of automatic continuation.
+
+Implementation/preflight: 63 combined restart/retry/coherent/constrained synthetic
+tests pass (2.08 s main); an independent reviewer reruns 47 restart/coherent/
+constrained tests (1.37 s). All twenty pinned inputs and nine actual saved seed
+anchors pass. The actual shared mask retains 169 coordinates and masks 29
+(28 exactly on bounds plus one near a bound); all eight central probes fit both
+absolute boxes. No new fields are used by these preflight checks.

@@ -34,8 +34,9 @@ improves field error only with geometry violations. [Constraint-aware fitting](o
 gave a geometry-checked adaptive fit at RMS 0.1517. The
 [paired shape test](optimization/COHERENT_COIL_EXPLORATION.md) now reaches 0.01384
 with checked geometry, 81.80% below its small-change control at 1.06% higher current.
-Both searches exhaust their budgets. Review remaining box restrictions and
-convergence before choosing the next bounded comparison; no tolerance is relaxed.
+Both searches exhaust their budgets. The next matched restart compares original
+absolute bounds with wider low modes, separating extra iterations from shape
+freedom; no tolerance is relaxed.
 Fine RMS below 1e-2 with geometric gates is a
 triage signal, not acceptance. If it is not reached, change the investigated
 family/approach instead of automatically extending protected local search.

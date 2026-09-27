@@ -42,6 +42,13 @@ pressure, benefit-transfer or engineering acceptance follows from this result.
 
 ## Supporting results retained at their point of use
 
+The next paired-restart implementation passes **63 combined synthetic tests**
+(2.08 s); independent review reruns 47 (1.37 s) and finds no launch blocker.
+Twenty exact inputs, nine saved coarse anchors, absolute bounds and the actual
+169-free/29-masked startup directions pass metadata checks without fields.
+Ruff, documentation and whitespace checks pass. This is readiness, not a new
+search result. A separate five-point interior screen is prospective.
+
 - The initial paired-search failure and thirty-bundle derivative diagnosis remain
   in the coherent-shape report. Additional independent analytic geometry replay
   checks 46,080 curvatures and 5,940 gradient entries; maximum gradient error is
