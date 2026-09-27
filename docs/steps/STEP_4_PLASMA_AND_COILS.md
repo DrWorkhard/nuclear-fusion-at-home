@@ -25,10 +25,10 @@ geometry; both searches exhaust their 1,200-bundle budgets. The best error is
 still about **49× above 1e-4**, and maximum normal error also fails its limit.
 
 The 1e-2 exploration signal is met. This supports more work on the method, not
-physical acceptance. A fixed-candidate
-[interior screen](../optimization/INTERIOR_FIELD_EXPLORATION.md) is implemented
-and tested. The one-ULP flux mismatch is repaired and real-data intake passes;
-it has not evaluated the actual fields. Realized
+physical acceptance. The fixed-candidate
+[interior screen](../optimization/INTERIOR_FIELD_EXPLORATION.md) now reaches
+**0.04029**, 73.66% below the matched control but still 4.03× the 0.01 limit.
+All fifteen numerical rows pass; all five interior limits fail. Realized
 magnetic surfaces, confinement and transfer of the Step 3 benefit remain open.
 
 ## Lessons retained from closed work

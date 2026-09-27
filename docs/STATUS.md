@@ -18,7 +18,8 @@ advantage or MS1 result.
 | [Steps 1–2](steps/README.md) | Selected reference calculations and repeatable independently evaluated iteration pass their defined checks | Capability, not a new feasible design; broader W7-X comparison remains 60/63 |
 | [Step 3](steps/STEP_3_PLASMA_TARGET.md) | Vacuum bounce-action variance falls 11.17%; the narrower-domain comparison improves 4.85% | One diagnostic/configuration, not measured confinement, pressure or reactor performance |
 | [Boundary calibration](optimization/REFERENCE_CALIBRATION.md) | QUASR 952 refined RMS is 2.27e-6; LPQA mean/max reproduce on the tested half-period grid | Boundary-component control, not an end-to-end Goodman positive; coarse sampling misleads |
-| [Matched coil restart](optimization/COHERENT_COIL_EXPLORATION.md) | Wider low modes reach RMS 0.004889, 55.27% below the original-box control, at 8.64% less current; both endpoints pass scoped continuous geometry | Both 1,200-bundle caps exhausted; boundary limits fail; interior screen, topology and plasma-benefit transfer remain open |
+| [Matched coil restart](optimization/COHERENT_COIL_EXPLORATION.md) | Wider low modes reach RMS 0.004889, 55.27% below the original-box control, at 8.64% less current; both endpoints pass scoped continuous geometry | Both 1,200-bundle caps exhausted; boundary limits fail |
+| [Interior fields](optimization/INTERIOR_FIELD_EXPLORATION.md) | Best snapshot reaches vector RMS 0.04029, 73.66% below its matched control; all fifteen numerical rows pass | All five candidates fail the 0.01 interior limit; topology and Step 3 benefit transfer remain open |
 | [Earlier negative studies](validation/REPRODUCING_RESULTS.md) | Exposed missed fine clearances, poorly aligned objectives and limited current-only gains | Closed methods are frozen, not converted into successful designs |
 
 Current limits remain normal RMS **1e-4**, maximum normal error **1e-3** and

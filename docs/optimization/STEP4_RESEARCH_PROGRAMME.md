@@ -12,12 +12,13 @@ remain included in the evidence, not erased from effort.
 
 ## Next work
 
-1. Run the repaired [interior-field screen](INTERIOR_FIELD_EXPLORATION.md) on
-   its five fixed candidates. Keep both favorable and unfavorable results.
-2. Map field error against clearance, curvature, current and coil complexity
+The [interior screen](INTERIOR_FIELD_EXPLORATION.md) is complete: 73.66% lower
+error for the expanded restart, still 4.03× its limit. This supports proceeding.
+
+1. Map field error against clearance, curvature, current and coil complexity
    using longer penalized fits, wider justified ranges and the existing
    eight-coil family as a separately labelled comparison.
-3. Freeze the best two or three candidates, then use the shared trusted field
+2. Freeze the best two or three candidates, then use the shared trusted field
    and continuous-geometry checks. Investigate realized-field topology and
    matched realization of the Step 3 target before claiming benefit transfer.
 

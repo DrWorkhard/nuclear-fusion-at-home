@@ -14,8 +14,9 @@ coil shapes can accurately reproduce a promising plasma target.
 **Research preview · 27 September 2026.** A geometry-checked exploratory fit reaches
 normal-field RMS **0.004889 versus a 1e-4 pilot limit**. In a matched restart,
 wider shape freedom lowers error **55.27%** and current **8.64%**.
-This is useful progress, not an accepted reactor design or a state-of-the-art
-advantage. Interior fields, realized magnetic surfaces and plasma-benefit transfer
+Its interior-vector RMS is **0.04029 versus a 0.01 limit**, 73.66% below the
+matched control. This is useful progress, not an accepted design or a
+state-of-the-art advantage. Realized magnetic surfaces and plasma-benefit transfer
 remain open. [Scientific evidence](docs/STATUS.md).
 
 We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.

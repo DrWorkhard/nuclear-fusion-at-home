@@ -28,8 +28,8 @@ ambition, not a claimed global optimum. [Future comparison](squid_c/README.md).
 1. **Simplification implemented.** Closed code/tests/reports now resolve at
    `research-freeze-2026-09-27`. The working normalized coil fit, shared
    checks and public starter remain. [Reproduction](validation/REPRODUCING_RESULTS.md).
-2. **Test the promising coils, then map trade-offs.** The interior adapter's
-   exact-flux intake is repaired; now screen the fixed fields. Explore longer fits,
+2. **Map the working fit's trade-offs.** The completed interior screen supports
+   continued fitting but still fails its absolute limit. Explore longer fits,
    wider shape freedom and separately labelled coil
    families. Check the best two or three with the shared fine evaluator and
    continuous geometry. Acceptance limits stay unchanged.

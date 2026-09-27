@@ -1,90 +1,63 @@
-# Interior-field screen of exploratory coil fits
+# Interior fields of the exploratory coil fits
 
-27 September 2026. **Real-data intake passes; native screen not yet executed.**
-The adapter now uses the exact source-bound flux `-0.03141592653589793`, also
-checked against the committed input. Recomputing `-np.pi/100` had introduced a
-one-ULP mismatch and rejected the original snapshots; that failed implementation
-remains at the freeze tag. Exact identity checks and all physics limits remain
-unchanged. **51 focused tests pass**, including the real committed-input regression
-and rejection of a one-ULP input change. Real-data intake verifies all five fixed
-snapshots, both target levels and 76 source identities without native field calls.
-This diagnostic accompanies
-the [coherent-shape experiments](COHERENT_COIL_EXPLORATION.md); it does not add an
-optimization session or change their selection rules.
+27 September 2026. **Completed exploratory screen; every interior limit still fails.**
+[Evidence](../../evidence/coherent-interior-v1.json) · [Boundary fits](COHERENT_COIL_EXPLORATION.md)
 
-## Question and fixed comparison
+## Question and result
 
-Does the improving boundary fit also improve the vector field inside the target?
-Boundary error alone can hide amplitude or tangential mismatch. Inspect the
-following five fixed geometries, without optimizing or selecting on interior error:
+Does the improved boundary fit also improve the vector field inside the target?
+Yes for these fixed snapshots: the expanded-low endpoint reaches **0.0402915**,
+**73.66% below** its matched restart control, but still **4.03× the 0.01 limit**.
 
-1. Original six-coil shaped initialization at 100 mm offset.
-2. Geometry-checked shape/full trial 52.
-3. Geometry-checked coherent-wide trial 598.
-4. Session 7's frozen original-absolute-box endpoint.
-5. Session 7's frozen expanded-low-mode endpoint.
+| Frozen snapshot | Fine interior-vector RMS | Base current | Scoped geometry |
+| --- | ---: | ---: | --- |
+| Original shaped seed | 0.3712380 | 294.966 kA | Prior qualification; not reaudited here |
+| Shape trial 52 | 0.3123243 | 324.792 kA | Prior pass, exact snapshot joined |
+| Coherent trial 598 | 0.1823903 | 349.383 kA | Prior pass, exact snapshot joined |
+| Restart, original bounds | 0.1529416 | 345.245 kA | Prior pass, exact snapshot joined |
+| Restart, expanded low modes | **0.0402915** | **315.407 kA** | Prior pass, exact snapshot joined |
 
-Both session-7 endpoints must come from the successfully completed paired run;
-bind its actual result hash before execution and verify snapshots against the
-saved selections. Report their separate geometry verdicts, including unresolved
-ones, alongside the screen: the combined evidence must bind the geometry report
-and its exact snapshots. The field-only adapter marks geometry as not assessed
-there and does not filter candidates on geometry or the new interior score.
-Failed searches remain
-failures, not silently omitted cases. Earlier source graphs remain unchanged.
+All five were fixed before this screen; none was optimized or selected on these
+interior results. All use the **original reference401**, not the accepted Step 3
+target. The geometry joins reuse separate completed reports; this screen does
+not recalculate geometry or grant physical acceptance.
 
-All five address the **original reference**, input
-`evidence/plasma-design-v2/reference-input-401.json` (SHA-256
-`57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f`).
-This is not the accepted Step 3 target. The reference is symmetric nfp2, zero
-pressure/current, with positive equilibrium edge flux π/100 Wb and oriented
-coil-loop target **−π/100 Wb**.
+## Method and verification
 
-## Fixed method and limits
+Script: `scripts/screen_coherent_interior.py`, clean revision `8fae8b0`.
+Raw output: `artifacts/coherent-interior-v1/run/`; execution receipt and every
+output identity are bound by the linked evidence.
 
-Reconstruct target Cartesian fields on s=0.25, 0.5 and 0.75 from the qualified
-64² archives indexed by `evidence/plasma-balanced-v1/validation.json` (SHA-256
-`84eff962b74ca5124147e12b4e30927a29b44f31c849333b0ae17c79a382d50c`).
-Bind those arrays and the reference Wout/input. Use the nested 32² and full 64²
-grids, with the same fixed **B² scale 1.6293829620247962 T²** throughout.
+Use archived target fields on s=0.25, 0.5 and 0.75, fixed
+**B² = 1.6293829620247962 T²**, and the exact signed loop flux
+**−0.03141592653589793 Wb**. Six order-5 base curves give 24 physical coils.
+Each snapshot keeps its saved current. Report
+`sqrt(mean(|Bcoil−Btarget|²)/B²)` at (interior grid, coil nodes)
+**(32²,256), (64²,256), (64²,512)**.
 
-For every snapshot evaluate these three levels:
+All fifteen rows pass native/independent geometry, signed-current and sampled
+B/A comparisons. Each row checks 64 B and 64 A points using the shared independent
+filament implementation. The 80 source identities remain unchanged. Separate
+saved-array arithmetic reproduces all fifteen vector/flux summaries and joins
+four prior geometry reports to the exact snapshots.
 
-| Interior points per surface | Nodes per physical coil | Purpose |
-| --- | --- | --- |
-| 32² | 256 | Coarser interior screen |
-| 64² | 256 | Isolate interior-grid refinement |
-| 64² | 512 | Isolate coil-quadrature refinement |
+Largest interior-grid RMS change is 5.723e-5; largest coil-quadrature change is
+2.776e-17. The best candidate's grid change is 3.288e-6 and interior field RMS is
+1.02854 times the target. All flux/current screens pass; all interior RMS gates
+fail. These are numerical refinement observations, not rigorous error bounds.
 
-Freeze each snapshot's actual physical currents, not the sparse public starter's
-current. Verify all six named Fourier curves, 24 physical copies and signed
-currents independently. Do not renormalize on a finer grid. Report
-`sqrt(mean(|Bcoil − Btarget|²) / B²_scale)`, per-surface errors, field amplitudes,
-minimum field, current and measured frozen-current loop flux. The interior pilot
-limit remains **0.01**; resolution differences are reported, not rounded away.
+Execution: **6.747 s worker / 7.292 s supervised**, 14.58 MB family,
+within 180/185 s and 128 MiB limits, one thread. No optimizer or VMEC solve.
+An MPI TCP bind warning is retained in stderr; execution and numerical checks
+completed. No extra permission was requested to enable MPI networking.
 
-Retain full B, target coordinates/fields, loop A/tangents and coil geometry,
-plus 64 independently recomputed B and A points per row. Reuse the existing
-independent Fourier/filament primitives; matching native fields is a numerical
-check, not external validation. No optimizer, equilibrium solve or new target.
+## Retained failure and next question
 
-Bounded fresh family `artifacts/coherent-interior-v1/`: fifteen rows, 180 s worker /
-185 s external, 128 MiB aggregate, one thread and 3/2 GiB initial/live disk
-reserves. Source identities and final publication must remain valid; retain
-failed prefixes. Run after the paired optimization, not concurrently with it.
+Initial real-data intake rejected a one-ULP difference from recomputing π/100.
+The repair binds the exact committed-input value, with no relaxed tolerance;
+51 focused tests include that regression and rejection of a one-ULP input change.
 
-## Interpretation and next physical checks
-
-A lower interior score is useful evidence about vacuum field fidelity; it does
-not prove nested surfaces, confinement or preservation of the Step 3 benefit.
-The realized field still needs actual field-line tracing and refined topology
-checks. Calling the ideal VMEC geometry a realized surface, or evaluating coil
-|B| along ideal field lines, would not establish that result.
-
-The frozen tracing driver expects different input formats and needs a small
-snapshot adapter with raw trajectories, refinement and domain-departure checks.
-Existing action routines require physical arc length, unchanged absolute bounce
-levels and complete well coverage on **realized-field** traces. Benefit transfer
-also needs a matched coil realization of the selected Step 3 target. The old
-free-boundary driver at the tag truncates the target and coil family; it cannot be reused
-unchanged. These are remaining Step 4A tasks, not results of this screen.
+This result supports continued normalized fitting. It does not establish
+realized magnetic surfaces, confinement or transfer of the Step 3 benefit.
+Next: longer/wider fitting with unchanged independent limits, then actual-field
+topology and a matched realization of the selected Step 3 target.

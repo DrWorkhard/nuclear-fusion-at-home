@@ -27,8 +27,9 @@ exhausted; neither is an optimum. Expanded geometry bounds: length ≤3.28691 m,
 curvature ≤10.0353/m, coil clearance ≥0.0628479 m, plasma clearance ≥0.132237 m.
 
 The **1e-2 exploration signal is met**, but RMS remains 48.89 times the 1e-4
-acceptance limit; maximum normal error also fails. No interior, realized-surface,
-benefit-transfer, pressure or engineering acceptance is established.
+acceptance limit; maximum normal error also fails. The subsequent
+[interior screen](INTERIOR_FIELD_EXPLORATION.md) reaches 0.04029 versus 0.01.
+No realized-surface, benefit-transfer, pressure or engineering acceptance is established.
 
 ## Checks and reproducibility
 
@@ -50,5 +51,4 @@ curvature-penalty branch crossings before smaller probes passed unchanged tolera
 
 Detailed earlier protocols, negative results and original scripts remain at the
 [freeze tag](../validation/REPRODUCING_RESULTS.md). The shared evaluator is unchanged.
-Next: the [prepared interior screen](INTERIOR_FIELD_EXPLORATION.md), then a
-wall-clock-bounded trade-off map—not another certified-step framework.
+Next: a wall-clock-bounded trade-off map using the working fit and shared checks.

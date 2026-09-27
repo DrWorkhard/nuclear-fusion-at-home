@@ -9,9 +9,8 @@ Step 4 completion follows.
 
 - [Coherent-shape results](COHERENT_COIL_EXPLORATION.md): matched comparisons,
   best candidates, geometry limits and retained failures.
-- [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md): prepared five-point
-  diagnostic; exact-flux intake repaired and checked against real data,
-  ready for native evaluation.
+- [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md): five fixed snapshots;
+  best interior RMS 0.04029, 73.66% below its matched control but above 0.01.
 - [Boundary calibration](REFERENCE_CALIBRATION.md): QUASR/LPQA component controls
   and why metric conventions matter.
 - [Research programme](STEP4_RESEARCH_PROGRAMME.md): next decisions, trade-off
@@ -24,7 +23,7 @@ The latest completed fit is `scripts/explore_coherent_restart.py`; its explicit
 source-bound inputs and settings reproduce the recorded comparison in the native
 environment. It reuses the normalized model, construction penalties and fine
 checker in `explore_normalized_coils.py` / `explore_constrained_coils.py`.
-The prepared `screen_coherent_interior.py` is a fixed-snapshot field diagnostic,
+The completed `screen_coherent_interior.py` is a fixed-snapshot field diagnostic,
 not another optimizer.
 
 The acceptance mathematics live in `coupled_coil_audit.py`,

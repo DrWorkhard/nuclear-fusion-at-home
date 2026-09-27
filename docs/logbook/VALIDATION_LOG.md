@@ -2,31 +2,42 @@
 
 Updated 27 September 2026. Git retains earlier verification records.
 
-## Interior-screen intake repair
+## Fixed-candidate interior screen completed
 
-The prepared screen rejected original snapshots because `-np.pi/100` is one ULP
-different from their saved flux. It now uses **−0.03141592653589793 Wb**, exactly
-as the hash-bound reference input specifies, and explicitly checks that pairing.
-No tolerance was added, snapshot changed or physics threshold relaxed.
-The prior failure is preserved in the cleanup commit `fbfbe47`.
+Clean implementation `8fae8b0` evaluates all five fixed snapshots at all three
+levels. Best fine interior-vector RMS is **0.04029150094**, **73.6556% below**
+the matched control's 0.1529415940. Every candidate still fails the 0.01 limit.
+No optimization, VMEC solve, current renormalization or physical acceptance.
 
-- Focused suite: **51 tests pass**, 0.89 s; includes committed-input identity and
-  rejection of a one-ULP flux change.
-- Real-data intake: all five prospectively fixed snapshots, both target levels
-  and **76 source identities** pass; no native fields evaluated.
-- All 48 public tests, scoped Ruff, documentation and whitespace checks pass.
+- Worker **6.747 s**, supervisor **7.292 s**, 14,580,923-byte family; within the
+  180/185 s and 128 MiB limits. 138,240 native B points, 5,120 A points and
+  1,920 independent sample comparisons. All fifteen numerical rows pass.
+- All **80 source hashes** verified unchanged. Separate saved-array arithmetic
+  recomputes all fifteen vector-error/per-surface/field-amplitude/loop-flux
+  summaries and sampled B/A comparisons. Four prior geometry reports are joined
+  to exact matching snapshots, not recalculated.
+- Largest interior-grid RMS change: 5.723e-5. Coil-node refinement changes RMS
+  by at most 2.776e-17; these are empirical resolution checks, not error proofs.
+- The original seed's finest interior RMS reproduces 0.37123798260413354.
+- MPI logs one sandbox TCP bind warning; the single-thread worker and checks
+  complete. Stderr remains preserved; MPI networking was not enabled.
 
-The existing one-threaded launcher is bound to the completed restart's actual
-result digest. Planned native screen: fifteen rows, 180 s worker/185 s supervisor,
-128 MiB output, 3/2 GiB disk reserves. Process inspection found no concurrent
-research job; available disk is 39 GiB. The [screen record](../optimization/INTERIOR_FIELD_EXPLORATION.md)
-owns the question, conventions and limitations.
+[Result and limitations](../optimization/INTERIOR_FIELD_EXPLORATION.md) ·
+[Source-bound evidence](../../evidence/coherent-interior-v1.json).
 
-## Retained cleanup qualification
+## Software and retained failure
 
-At `fbfbe47`: 404 active tests, 48 public tests and eight copied-tree release
-checks pass (local Python 3.11/3.12). The tagged removals, unchanged scientific
-evidence and source-reference checks remain recorded in that commit.
-No dependency sync, hosted CI, separate-machine reproduction or external review.
-Optional engineering dependency pruning remains deferred after the earlier
-approval-service limit. Step 4/MS1 remain open.
+The exact-flux repair passes **51 focused tests** (0.89 s), including committed
+input identity and rejection of a one-ULP change. It uses the original saved
+−0.03141592653589793 Wb, with no tolerance relaxation. The failed recomputation
+from π/100 is retained at the freeze tag/cleanup commit.
+
+Latest public check: **48 tests pass** (3.243 s); focused Ruff, documentation and
+whitespace checks pass. The cleanup commit `fbfbe47` retains the 404-test active
+regression and local Python 3.11/3.12 copied-tree qualification. No new dependency
+sync or hosted CI run.
+
+Next work is a longer/wider trade-off study, not more acceptance machinery.
+Realized topology, Step 3 benefit transfer, pressure/engineering and MS1 remain
+open. Optional dependency pruning and independent backup/reproduction remain
+unverified as documented previously.
