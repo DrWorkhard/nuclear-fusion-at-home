@@ -31,6 +31,7 @@ SCOPE = dict(
 )
 SOURCES = (
     "scripts/analyze_field_residuals.py",
+    "scripts/run_field_residuals.py",
     "src/fusion_baselines/field_residuals.py",
     "src/fusion_baselines/field_residual_audit.py",
     "src/fusion_baselines/protected_run_snapshots.py",
@@ -231,7 +232,7 @@ def run(root, output):
         guard()
         raw = encode(value)
         charged += len(raw)
-        need(charged <= JSON_LIMIT, "8 MiB total output limit")
+        need(charged <= JSON_LIMIT - 128 * 1024, "8 MiB output including launcher reserve")
         path = output / name
         with path.open("xb") as stream:
             need(stream.write(raw) == len(raw), "complete result write required")
@@ -349,7 +350,7 @@ def run(root, output):
     except BaseException as error:
         # Failure publication is never a positive returned result; retain partial rows.
         raw = encode(dict(complete=False, error=repr(error), comparisons=rows, **SCOPE))
-        if charged + len(raw) <= JSON_LIMIT:
+        if charged + len(raw) <= JSON_LIMIT - 128 * 1024:
             with (output / "failure.json").open("xb") as stream:
                 need(stream.write(raw) == len(raw), "complete failure write required")
         raise

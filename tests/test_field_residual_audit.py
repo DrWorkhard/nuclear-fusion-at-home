@@ -300,3 +300,19 @@ def test_tolerance_is_or_not_sum():
 def test_failed_identity_raises_instead_of_clipping():
     with pytest.raises(ArithmeticError, match="registered arithmetic identity failed"):
         audit._identity(1e-3, 1.0, "control")
+
+
+def test_single_point_perfect_fit_rounding_limitation_fails_closed():
+    from fusion_baselines.field_residuals import analyze_pair
+
+    arguments = (
+        [[-0.5800752403121104, 0.8667301319453795, -0.6555770510030897]],
+        [[-0.5837537032934108, 0.8710425770175112, -0.6590608476101262]],
+        [[1.2711308092178142, -1.602604689323625, -0.40372284577657025]],
+        [0.2732628111463021],
+        0.5029549355840589,
+    )
+    # Dividing a last-bit nearzero fit by1e-4 can cross the fixed absolute
+    # comparison limit. Record this conservative limitation, do not relax it.
+    with pytest.raises(ValueError, match="fit_limit_ratio: independent scalar mismatch"):
+        audit.compare(analyze_pair(*arguments), audit.analyze_pair(*arguments))

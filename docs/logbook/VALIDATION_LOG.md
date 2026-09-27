@@ -4,28 +4,32 @@ Updated 27 September 2026. This page records the latest maintenance check, not
 an append-only session history. Git retains previous versions; individual result
 reports retain the checks supporting their scientific claims.
 
-## Repository cleanup
+## Residual diagnostic: ready for clean-source execution
 
-Removed superseded progress/planning pages, completed README review paperwork
-and the duplicate Step 4 archive. Condensed the shared logs into current decisions,
-lessons and this verification record. Updated links, stale next actions and the
-current-state documentation policy. No scientific code, protocol, evaluator,
-threshold, case, source identity, saved evidence or local run was changed.
+Added a thin external 65 s supervisor for the registered saved-array analysis,
+with explicit returned-reference acceptance and checked durable publication.
+The worker reserves launcher bytes inside its unchanged 8 MiB output cap.
+Original field evaluators, inputs, numerical tolerances and scientific protocol
+remain unchanged; no real arrays have been analyzed for this qualification.
 
-Checks actually run for this documentation-only cleanup using the existing `.venv`:
+Checks actually run with the existing `.venv`:
 
-- `python scripts/test_public.py`: **47 passed** (3.742 s).
-- Targeted pytest: **52 passed** (final repeat: 27.58 s), covering documentation, release
-  maintenance, actual README workflow and foundation acceptance/preservation.
-- Isolated stdlib-only `scripts/check_docs.py`, repository Ruff and `git diff --check`: pass.
-- Local file-link check across all **214 remaining tracked Markdown files**: no broken targets.
-- Git diff confirms no changes to code, protocols, evidence, data or environments;
-  all ten removed files are tracked and recoverable from the preceding `1c805af`.
-- Independent read-only documentation review finds no blocking issue; a minor
-  stale-prerequisite phrase was corrected. This is internal review, not peer review.
+- Residual producer, independent arithmetic, intake/runner and launcher: **203
+  tests pass** (0.74 s); `artifacts/field-residual-v1/execution-final-checks.xml`.
+- Public tests: **47 pass**. Documentation/release/README workflow: **32 pass**.
+  Logs and command/return-code records: `artifacts/field-residual-v1/execution-readiness-checks/`.
+- Documentation structure, repository Ruff and whitespace: pass.
+- Independent mathematical/intake review found no blocker in the fixed study.
+  Its additional synthetic sweep passes121/128: seven single-point perfect-fit
+  rounding comparisons fail closed; all96 multi-point comparisons pass. The
+  first counterexample is now an expected-rejection test, without relaxed limits.
+- Launcher review identified unchecked short writes; count/flush/fsync/readback
+  checks and three synthetic publication-failure tests address that issue.
+  Independent final rerun:203 pass in0.73 s; no remaining scoped execution blocker.
 
-The retained three shared-note paths satisfy existing preservation tooling;
-their old chronology lives in Git. No archive document was created.
+This is scoped software verification, not a full native regression, physical
+acceptance or a completed diagnosis. Clean committed execution and an actual
+eight-pair result remain required.
 
 ## Scientific and release checks
 
@@ -37,5 +41,5 @@ their old chronology lives in Git. No archive document was created.
 - [Pending residual analysis](../optimization/FIELD_RESIDUAL_PROGRESS.md): component
   checks exist; final execution qualification and real-array analysis remain open.
 
-No new physics calculation, full native regression, hosted CI, external review or
-publication follows from a documentation cleanup.
+No new fields, full native regression, hosted CI, external peer review or
+publication follows from this saved-data software check.
