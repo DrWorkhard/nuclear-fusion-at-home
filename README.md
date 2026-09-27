@@ -14,7 +14,7 @@ reproducible, testable improvements.
 **Research preview · 27 September 2026.** Our tools reproduce selected open
 references. One plasma-target study improved its preregistered metric
 (bounce-action variance, a particle-motion diagnostic) by **11.17%**.
-An exploratory geometry-checked coil fit reaches normal-field error **0.2235
+An exploratory geometry-checked coil fit reaches normal-field error **0.1517
 versus a 1e-4 pilot limit**, at higher current. Lower-error candidates have
 unresolved clearance. Matched references reproduce archived scores and low refined
 boundary error on QUASR. Next: independent base currents. Full target/geometry

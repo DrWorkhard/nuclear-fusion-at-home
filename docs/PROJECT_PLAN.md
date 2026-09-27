@@ -31,7 +31,7 @@ explicit; no automatic threshold relaxation.
 Map field error against clearance/curvature using existing tools and alternative
 starts/objectives. The [objective comparison](optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
 improves field error only with geometry violations. [Constraint-aware fitting](optimization/CONSTRAINED_COIL_EXPLORATION.md)
-now gives one geometry-checked fit at RMS 0.2235 with higher current; the better
+now gives a geometry-checked adaptive fit at RMS 0.1517 with higher current; better
 sampled fits have unresolved clearance. Next test independent base currents on
 fixed original geometries. Fine RMS below 1e-2 with geometric gates is a
 triage signal, not acceptance. If it is not reached, change the investigated

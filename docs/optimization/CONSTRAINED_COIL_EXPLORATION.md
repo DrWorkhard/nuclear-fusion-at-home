@@ -176,3 +176,52 @@ Next test [independent base currents](INDEPENDENT_CURRENT_EXPLORATION.md) on the
 two original geometries. This isolates a previously frozen design freedom before
 another shape/current search. No interior-field, topology, plasma-benefit transfer,
 pressure or finite-build claim is made; Step 4A–4D remain open.
+
+## Adaptive saved-point follow-up
+
+Inspecting the saved trials with plasma-clearance filters 85/90/92/95 mm revealed
+two lower-error points with more margin: circle/full trial 126 and shape/full
+trial 52. Freeze these exact points and their seeds before finer checking.
+Their coarse RMS values are 0.1906723 / 0.1516789, plasma gaps 90.601 / 90.939 mm,
+coil gaps above 70 mm and sampled curvature below 11.5/m. These extra selection
+margins do not change the original acceptance gates.
+
+This is **adaptive postselection after inspecting results**, not preregistered
+confirmation or a new search. Preserve the complete inspected filter table,
+exact trial/seed hashes and the original four-arm selections/verdicts. Replay
+only these two points at both existing fine grids with frozen coarse current;
+then apply the same continuous-geometry schedule. No replacement point is chosen
+after seeing its outcome. Use 180 s / 185 s external field limits, 64 MiB outputs;
+geometry retains 300 s / 305 s and 8 MiB. Same one-thread and disk rules. Fresh
+outputs: `artifacts/constrained-coils-slack-v1/`. No new optimizer evaluations.
+
+### Follow-up result
+
+Both frozen points complete four fine screens in 6.022 s (6.386 s supervised)
+and four geometry levels in 24.086 s (24.338 s supervised). Sources stay unchanged
+in the dirty, hash-bound execution at `e0f45e1`. The
+[adaptive evidence record](../../evidence/constrained-coils-slack-v1.json) links
+the original immutable study and preserves the sixteen inspected filter rows.
+
+**Shape/full trial 52 passes the scoped continuous bounds**: length ≤2.081313 m,
+tighter curvature ≤11.065107/m, coil separation ≥147.712 mm and plasma clearance
+≥80.714 mm. Fine normal RMS is **0.151678906**, maximum across fine grids 0.515305,
+and current 324.792 kA. Relative to the unchanged shaped seed, RMS falls **45.05%**
+at **10.11% higher current**. This passes a supplemental geometry conjunction,
+not the older loose curvature-bound flag; original limits are unchanged.
+It is now the lowest checked RMS with scoped continuous geometry in this study,
+but still about **1,517 times the field limit** and 15 times the triage signal.
+
+Circle/full trial 126 has fine RMS 0.190672518 and current 338.982 kA. Its plasma
+lower bound is 79.826 mm: unresolved, not a demonstrated violation. No extra
+point or finer grid was substituted after that result. The earlier four-arm
+selections, the circle/low2 pass and all unresolved results remain unchanged.
+
+The independent follow-up audit rehashes all **1,573 original manifest files**
+and reconstructs all sixteen filter choices from the 744 original hashed trials.
+It verifies the two frozen trials/seeds, 36 replay / seven geometry source
+identities, four array hashes, 48 fine metrics and four complete saved-loop
+integrals. All 256 B / 256 A samples pass. Four geometry levels, 1,104 coil-pair /
+96 plasma lower-bound calculations and 24 tighter curvature enclosures reproduce
+with separate arithmetic. This confirms the supplemental scoped pass and the
+other unresolved verdict; it is not a full distance-grid rerun or external review.

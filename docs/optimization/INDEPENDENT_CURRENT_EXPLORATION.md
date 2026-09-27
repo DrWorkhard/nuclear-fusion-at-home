@@ -49,6 +49,16 @@ Report all five flux-nullspace singular values, rank/conditioning, active bounds
 and flux cancellation. Ambiguous numerical certification remains unresolved.
 Raw-flux improvement may worsen local-normalized RMS/max; report both.
 
+Numerical tolerances: equality/box 1e-10; scaled stationarity 1e-8, dual signs
+1e-10, complementarity 1e-9, relative supporting-plane objective gap 1e-8;
+active-bound identification 1e-8. SLSQP uses `ftol=1e-14`. If its point does not
+certify, permit one nonsingular active-set linear KKT polish, fixing only its
+identified bounds. Reject a singular system, changed active set or failed
+recertification; retain both raw and polished points. No regularization or
+singular-mode truncation. A synthetic near-optimum exposed the stricter gap test;
+the tolerance stays unchanged. These are **numerical KKT/supporting-plane checks**
+with finite primal tolerance, not an exact or interval-arithmetic optimum proof.
+
 ## Controls, checks and bounds
 
 Fit at 64² boundary / 256 coil and loop nodes. Replay the exact equal-current

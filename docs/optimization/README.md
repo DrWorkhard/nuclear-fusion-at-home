@@ -6,7 +6,7 @@ searches on LPQA, plus paired coil realization of our QI-like plasma targets.
 [Steps 1/2 are complete](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md) as reference
 and iteration capabilities. A new feasible optimum was not their completion
 criterion. Step 4 remains **In progress**: current starting coils pass geometry
-checks; an exploratory geometry-checked fit reaches normal RMS 0.2235 versus a
+checks; an exploratory geometry-checked fit reaches normal RMS 0.1517 versus a
 1e-4 limit, with higher current. Lower sampled errors have unresolved clearance.
 
 The best older LPQA coil search passes checked geometry limits but exceeds its
@@ -26,7 +26,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Alternative coil-start screen](COIL_START_SCREEN.md). Twelve checked boundary/loop rows: shaped100 retains lowest RMS 0.27605; circle100 offers more curvature margin, not a better initial field. All four fail boundary gates.
 
-- [Constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md). Four completed arms: one continuous-geometry pass at RMS 0.22350, 27.59% below its circular seed with higher current; best sampled RMS 0.13731 has unresolved clearance. All boundary limits fail.
+- [Constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md). Four arms plus an adaptive saved-point check: continuous geometry passes at RMS 0.15168, 45.05% below the shaped seed with higher current. Best sampled RMS 0.13731 has unresolved clearance; boundary limits still fail.
 
 - [Independent base currents](INDEPENDENT_CURRENT_EXPLORATION.md). Prospective two-shape convex raw-field diagnostic with exact flux constraint and bounded six-current freedom; geometry unchanged, normalized metrics reported separately.
 

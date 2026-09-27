@@ -72,7 +72,8 @@ not confirmation holdouts.
 Three exploration sessions are complete: the [objective comparison](NORMALIZED_OBJECTIVE_EXPLORATION.md)
 improves error only with geometry violations, and the [static start screen](COIL_START_SCREEN.md)
 finds curvature freedom without a better starting field. [Constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md)
-gives one geometry-checked fit at RMS 0.2235; lower sampled errors have unresolved
+and an adaptive saved-point check give a geometry-checked fit at RMS 0.1517;
+lower sampled errors have unresolved
 clearance. Session 4 tests [independent currents](INDEPENDENT_CURRENT_EXPLORATION.md).
 Source-bound failed
 attempts remain in each result record and are not omitted from effort accounting.

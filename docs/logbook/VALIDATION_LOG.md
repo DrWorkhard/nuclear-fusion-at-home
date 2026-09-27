@@ -4,15 +4,31 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Constraint-aware fitting: completed exploratory comparison
+## Constraint-aware fitting: adaptive saved-point checks complete
 
-Four arms complete 744 bundles and eight fine screens in 148.426 s (149.177 s
-supervised), retaining 29,713,557 search bytes. Execution is dirty but source-bound
-at `b54eda4`. One candidate passes scoped continuous geometry at RMS 0.22350,
-27.59% below its own seed with 13.91% more current. Lower sampled scores have
-unresolved clearance. All boundary-error limits still fail.
+An adaptive check of two saved full-mode points performs no new optimization.
+Four fine screens complete in 6.022 s (6.386 s supervised), four geometry levels
+in 24.086 s (24.338 s supervised). Execution is dirty but source-bound at
+`e0f45e1`; the original four-arm experiment remains unchanged.
+Shape trial 52 passes scoped continuous geometry at RMS 0.15168, 45.05% below its
+own seed with 10.11% more current. Circle trial 126 has unresolved clearance.
+All boundary-error limits still fail; these are adaptive exploratory checks.
 
-Checks actually performed in the existing `.venv`:
+Latest independent checks actually performed in the existing `.venv`:
+
+- Rehashed all **1,573 files** in the original experiment manifest and recreated
+  all sixteen inspected filter choices from 744 unchanged hashed trials.
+- Verified the two frozen trials/seeds, **36 replay / seven geometry sources**,
+  four fine array hashes and preserved coarse currents.
+- Separate arithmetic reproduces **48 fine metrics**, four full saved-loop-A
+  integrals and all **256 B / 256 A** comparisons.
+- Four geometry levels: independently checked 1,104 coil-pair / 96 plasma bound
+  rows and 24 tighter curvature enclosures. Shape's plasma lower bound is
+  80.713670 mm; circle's is 79.825504 mm, unresolved rather than a failure.
+- No full distance-grid rerun, new native audit fields, directed interval proof
+  or complete self-disjointness is claimed.
+
+Implementation and original experiment checks supporting this replay:
 
 - **53 combined experiment tests pass** (13.27 s): fourteen new synthetic
   constrained-search tests, 28 objective/cache tests (including a native circle),
@@ -33,8 +49,8 @@ Checks actually performed in the existing `.venv`:
   only, with unchanged numerics/gates. Neither geometry run calls native fields.
 
 The [result record](../optimization/CONSTRAINED_COIL_EXPLORATION.md) and
-[evidence manifest](../../evidence/constrained-coils-exploration-v1.json) bind the
-actual data, both pre-run questions and failure. **47 public tests pass** (3.374 s). Scoped Ruff,
+[adaptive evidence](../../evidence/constrained-coils-slack-v1.json) bind the
+latest checks to the immutable original study. **47 public tests pass**. Scoped Ruff,
 documentation structure and whitespace checks pass. No full native regression
 is claimed.
 

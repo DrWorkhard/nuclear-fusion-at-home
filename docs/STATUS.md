@@ -22,11 +22,11 @@ not extrapolate small local gains.
 | [Newly certified fixed steps](optimization/FIXED_FIELD_PROBE_RESULTS.md) | Normal RMS decreases another 0.057%/0.065% beyond preset empirical margins; both currents decrease; one interior-error improvement resolves | Other interior gain unresolved; all absolute field-error gates still fail; no general search-method advantage |
 | [Residual diagnosis](optimization/FIELD_RESIDUAL_RESULTS.md) | Observed responses align with 11.6%/19.6% of squared normalized residual versus 88.1%/89.6% of raw-objective residual; all eight comparisons checked | One-response affine fit, not a physical extrapolation or a lower bound on the coil family |
 | [Boundary calibration](optimization/REFERENCE_CALIBRATION.md) | QUASR 952 reaches refined RMS 2.27e-6; LPQA's archived mean/max reproduce on the tested half-period grid | Positive boundary-component control only; no matched end-to-end Goodman positive; coarse QUASR grid misleadingly reports near zero |
-| [Constraint-aware fitting](optimization/CONSTRAINED_COIL_EXPLORATION.md) | One continuous-geometry pass at RMS 0.22350, 27.59% below its circular seed with 13.91% more current; best sampled RMS 0.13731 | Three other clearances unresolved, not proven violations; all boundary limits fail. No physical acceptance |
+| [Constraint-aware fitting](optimization/CONSTRAINED_COIL_EXPLORATION.md) | Adaptive saved-point check passes continuous geometry at RMS 0.15168, 45.05% below its shaped seed with 10.11% more current; best sampled RMS 0.13731 | Lower sampled error has unresolved clearance; all boundary limits fail. Adaptive exploration, not physical acceptance |
 
 The current normal-RMS limit is **1e-4**, maximum normal error **1e-3** and
 interior-vector RMS **0.01**. The geometry-checked exploratory fit remains about
-2,235 times the normal-error limit;
+1,517 times the normal-error limit;
 its cause and reachability within the geometry limits remain unresolved.
 The lower sampled errors have unresolved continuous clearance; no threshold is relaxed.
 

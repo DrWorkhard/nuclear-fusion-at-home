@@ -62,7 +62,10 @@ then finds more curvature room in circles, but no better initial field. The
 [constraint-aware comparison](../optimization/CONSTRAINED_COIL_EXPLORATION.md)
 now finds a continuous-geometry pass at RMS 0.2235, 27.59% below its own circular
 seed with 13.91% more current. The best sampled RMS is 0.1373, with unresolved
-continuous clearance. Neither meets boundary-error limits. Next test independent
+continuous clearance. A declared adaptive check of an earlier saved shaped point
+then passes continuous geometry at RMS 0.1517, 45.05% below its shaped seed with
+10.11% more current. The original selections remain unchanged; this is exploration,
+not confirmation, and still fails boundary-error limits. Next test independent
 base currents on fixed original geometries; acceptance limits remain unchanged.
 
 The [research programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns
