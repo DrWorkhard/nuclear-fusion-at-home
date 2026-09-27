@@ -2,8 +2,8 @@
 
 The working method is **penalized normalized coil fitting**, followed by separate
 fine-grid field and continuous-geometry checks. Best checked exploratory normal
-RMS is **0.002050**, against a 1e-4 pilot limit, with length headroom. Its interior
-RMS 0.01166 fails 0.01. A longer-coil fit passes the interior component but
+RMS is **0.001996**, against a 1e-4 pilot limit, with length headroom. Its interior
+RMS 0.01148 fails 0.01. A longer-coil fit passes the interior component but
 has unresolved length bounds.
 No accepted reactor design or
 Step 4 completion follows.
@@ -11,7 +11,8 @@ Step 4 completion follows.
 ## Current documents
 
 - [Length-headroom experiment](LENGTH_HEADROOM_EXPLORATION.md): tighter construction
-  resolves geometry, with an interior-field trade-off; expanded box prepared.
+  resolves geometry; further expansion gives only a modest gain. Includes a
+  [portable candidate](../../submissions/length-headroom-six-coil/README.md).
 - [Longer-fit comparison](LONGER_COIL_EXPLORATION.md): completed five-minute
   restarts; more shape freedom helps, but length headroom is now needed.
 - [Coherent-shape results](COHERENT_COIL_EXPLORATION.md): matched comparisons,

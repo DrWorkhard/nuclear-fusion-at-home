@@ -1,55 +1,68 @@
 # Construction length headroom
 
-27 September 2026. **Current-box run completed; expanded-box follow-up prepared.**
-[Evidence](../../evidence/coil-headroom-v2.json) ·
-[Preceding result](LONGER_COIL_EXPLORATION.md) · [Programme](STEP4_RESEARCH_PROGRAMME.md)
+27 September 2026. **Both explorations complete; Step 4 remains open.**
+[Current-box evidence](../../evidence/coil-headroom-v2.json) ·
+[Expanded-box evidence](../../evidence/coil-headroom-v3.json) · [Programme](STEP4_RESEARCH_PROGRAMME.md)
 
-Question: can the wider fit retain its field improvement with enough coil-length
-margin for the existing conservative geometry check?
+## Question and comparison
 
-Start: wider-box trial1561 from `coherent-longrun-v2`, six order-5 coils, all 198
-named coefficients, original reference401 and exact flux. The first run keeps
-its shape52-centered ±0.16/0.04 m low/high-mode box. The follow-up expands this
-to ±0.20/0.06 m, restarting the same seed/history rather than the new endpoint.
-Both keep current normalization and every acceptance gate.
-Only the construction length-penalty target changes: **3.44 m instead of 3.5 m**.
-The other penalty terms/weights and field objective stay fixed.
+Can the [wider fit](LONGER_COIL_EXPLORATION.md) retain its field improvement
+with enough length margin for the shared conservative geometry check?
 
-Select the lowest normal RMS among completed non-probe points with sampled
-geometry/current passing and **all sampled lengths ≤3.45 m**. No fallback to
-the old no-margin seed; no feasible point is a retained negative result.
-This prospective construction rule is stricter than the unchanged 3.5 m
-acceptance gate. Fine/interior results do not select the candidate.
+Both runs start wider-box trial1561: six order-5 coils, 198 named coordinates,
+original reference401 and exact flux. Construction penalizes lengths above
+**3.44 m**, rather than 3.5 m; other penalties/objective stay fixed. Select the
+lowest normal RMS among completed non-probe points with sampled geometry/current
+passing and all lengths **≤3.45 m**. No fallback to the no-margin seed.
 
-Script: `scripts/explore_coil_headroom.py`. Reuses the existing search, startup
-finite differences, two shifted 128²/512-node boundary checks, continuous
-geometry schedule and three-level interior screen. Geometry-penalty seed replay
-is deliberately omitted because that objective changes; field-state replay and
-full new-objective derivative checks remain. No topology/benefit-transfer claim.
+The acceptance limit stays **3.5 m**. Fine/interior results do not select the
+candidate. Absolute coefficient boxes remain centered on shape52:
 
-Resources: 300 s startup/search, 360 s total worker, 370 s external cap; one
-thread, 256 MiB search/fine and 128 MiB interior outputs; initial/live disk
-reserves 3/2 GiB. SciPy's nonbinding integer ceilings are 2³¹−1; no bundle cap.
-Raw output: `artifacts/coil-headroom-v2/`; follow-up planned in `coil-headroom-v3`.
-The v1 setup failed before
-any search because native penalty objects do not support subtraction. Its
-2.563 s supervisor receipt and prefix remain; direct assembly of the same
-declared objective corrects this. Retain failed prefixes.
+| Box: low/high-mode widths | Boundary RMS | Interior RMS | Geometry |
+| --- | ---: | ---: | --- |
+| Current: ±0.16/0.04 m | 0.002050310 | 0.01165995 | Scoped pass |
+| Expanded: ±0.20/0.06 m | **0.001996268** | **0.01147939** | Scoped pass |
 
-Run in the recorded native environment with the four thread variables set to 1:
-`python scripts/explore_coil_headroom.py --output artifacts/my-headroom`.
-Use `--box expanded` for the new comparison; default `current` is unchanged.
-The local supervisor also records the pre-run question and process receipt.
+Expanded improves these errors **2.64% / 1.55%** over current, but reduces the
+coil-clearance lower bound by 6.49 mm. Both still fail normal RMS 1e-4, maximum
+normal error 1e-3 and interior RMS 0.01. The earlier longer-coil candidate passes
+the interior component but has unresolved length bounds: a genuine trade-off.
 
-## Current-box result
+Expanded bounds: length ≤3.474220 m, coil clearance ≥0.06831 m, plasma clearance
+≥0.13307 m, curvature ≤10.04691/m. Current 308.141 kA; worst shifted maximum
+normal error 0.00942578. These are padded floating-point bounds, not interval
+proofs, complete self-disjointness or finite-build engineering.
 
-Revision `963793d`: 1,575 completed bundles; selected trial1574. Boundary RMS
-**0.002050310**, maximum 0.0101974, still fail their gates. Scoped geometry passes:
-length ≤3.477734 m, coil clearance ≥0.07481 m, plasma clearance ≥0.13292 m,
-curvature ≤10.03498/m. Current 308.150 kA. Interior RMS **0.01165995** fails 0.01.
-Length headroom resolves the previous geometry uncertainty, at a field cost.
+## Checks and reproduction
 
-All two boundary and three interior numerical rows pass. Separate saved-array
-arithmetic recomputes metrics, selection across all 1,576 records and bound
-classification; all 91 source hashes match. Worker 306.360 s, supervisor
-306.938 s; retained family 36.15 MB. No realized topology or Step 3 transfer.
+Script: `scripts/explore_coil_headroom.py`; revisions `963793d` (current) and
+`5a3c1d0` (expanded). Outputs: `artifacts/coil-headroom-v2/` and `v3/` beside it.
+Use the recorded native environment, four thread variables set to 1, and:
+`python scripts/explore_coil_headroom.py --box expanded --output artifacts/my-headroom`.
+Default `--box current` preserves the first box exactly.
+
+Each receives 300 s startup/search and 360/370 s worker/supervisor limits,
+256 MiB search/fine plus 128 MiB interior, and 3/2 GiB initial/live disk reserves.
+Current completes 1,575 bundles, selecting trial1574; expanded completes 1,462,
+selecting trial1459. Workers take 306.360 / 284.409 s; families occupy 36.15 / 34.03 MB.
+
+Shared checks: both shifted 128²/512-node boundary grids, conservative geometry,
+and three interior levels. All ten numerical rows pass. Separate saved-array
+arithmetic verifies scores, currents/flux, independent B/A samples, selections
+and bound classification; 91 source hashes match per run. The new objective's
+startup derivatives pass; replay checks the unchanged field state, not its
+intentionally changed penalty. No full geometry reimplementation or external review.
+
+The v1 setup failed before search on unsupported penalty-object subtraction;
+its prefix and receipt remain. Direct assembly and a native derivative test fix it.
+
+## Conclusion and next test
+
+Headroom resolves geometry, at a field cost. Further box expansion helps only
+modestly: the selected point has 3.91 mm minimum coefficient-box slack. The final
+gradient maximum is 3.40e-5 against a 1e-9 tolerance; termination was on objective
+change. Investigate scaling/stopping and penalty conditioning before blaming
+coil count or claiming an optimum.
+
+[Portable candidate](../../submissions/length-headroom-six-coil/README.md).
+Realized topology, confinement and transfer of the Step 3 plasma benefit remain open.

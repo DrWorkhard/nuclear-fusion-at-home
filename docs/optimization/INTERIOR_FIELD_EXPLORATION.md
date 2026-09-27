@@ -59,5 +59,7 @@ The repair binds the exact committed-input value, with no relaxed tolerance;
 
 This result supports continued normalized fitting. It does not establish
 realized magnetic surfaces, confinement or transfer of the Step 3 benefit.
-Next: longer/wider fitting with unchanged independent limits, then actual-field
-topology and a matched realization of the selected Step 3 target.
+The [longer/wider follow-up](LONGER_COIL_EXPLORATION.md) and subsequent
+[headroom comparison](LENGTH_HEADROOM_EXPLORATION.md) now test that direction.
+Actual-field topology and matched realization of the selected Step 3 target
+remain open; the programme owns current next actions.

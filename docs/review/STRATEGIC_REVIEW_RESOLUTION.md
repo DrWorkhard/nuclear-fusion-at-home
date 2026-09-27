@@ -9,13 +9,13 @@ The owner chose **tag, then remove**. The complete tracked pre-cleanup state is
 [Reproduction instructions](../validation/REPRODUCING_RESULTS.md).
 
 Cleanup removes 691 retired files and reduces docs from 211 to 34 pages.
-The active suite passes 404 tests; all 48 public tests and eight isolated
-release checks pass. [Actual checks and limitations](../logbook/VALIDATION_LOG.md).
+At cleanup commit `fbfbe47`, 404 active tests, all 48 public tests and eight isolated
+release checks passed. [Current checks and limitations](../logbook/VALIDATION_LOG.md).
 
 | Recommendation | Current decision |
 | --- | --- |
 | Freeze completed/stalled pipelines | Remove retired code, tests and detailed reports from main; keep the active numerical dependency closure and old evidence identities |
-| Run the working method properly | Penalized normalized fitting is the active search; latest checked RMS 0.004889 meets exploration triage, not acceptance |
+| Run the working method properly | Penalized normalized fitting is active; current scores and their failed gates belong in the status page, not this review response |
 | One trusted checker | Reuse field/geometry mathematics; do not add per-optimizer acceptance frameworks |
 | Lightweight exploration | One-page records, wall-clock/resource ceilings, focused checks; old experiments keep their budgets |
 | Single writer | One agent writes per working tree; read-only reviews or separate branches for delegates |

@@ -5,7 +5,7 @@ Updated 27 September 2026. [Status](../STATUS.md) · [Step 4](../steps/STEP_4_PL
 ## Focus
 
 Use the method that moves field error: penalized normalized coil fitting.
-The headroom fit reaches **0.002050 with scoped geometry checks**. Longer coils
+The headroom fit reaches **0.001996 with scoped geometry checks**. Longer coils
 reach 0.001948 and pass the interior-vector component, but length bounds are
 unresolved. The unchanged boundary acceptance limit remains 1e-4.
 Failed starts and interrupted runs remain evidence, not erased from effort.
@@ -15,8 +15,10 @@ Failed starts and interrupted runs remain evidence, not erased from effort.
 The [longer-fit comparison](LONGER_COIL_EXPLORATION.md) shows enough progress to
 continue fitting, with explicit attention to construction headroom.
 
-1. Test wider shape freedom with the successful construction length margin;
-   leave acceptance unchanged. Map field error against clearance, curvature,
+1. Investigate objective scaling/stopping and penalty conditioning: the expanded
+   headroom fit has no active box bounds, but stops on objective change well
+   before its gradient tolerance. This is not proof of an optimum. Retain length
+   margin and leave acceptance unchanged. Map field error against clearance, curvature,
    current and coil complexity. Consider the existing eight-coil family as a
    separately labelled comparison if the present family stalls.
 2. Freeze the best two or three candidates, then use the shared trusted field

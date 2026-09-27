@@ -57,6 +57,7 @@ The v1 prefix was deliberately terminated after 152.934 s when review caught
 NumPy-boolean serialization in result assembly. Its receipt and partial trials
 remain; v2 uses the shared strict converter, with unchanged mathematics/budgets.
 
-Next: put length headroom into construction/selection, not relax the 3.5 m
-acceptance limit. Boundary error, realized topology and Step 3 benefit transfer
-remain open. Passing the interior component alone does not complete Step 4.
+The [headroom follow-up](LENGTH_HEADROOM_EXPLORATION.md) resolves length bounds
+without relaxing 3.5 m, but loses the interior pass. Boundary error, realized
+topology and Step 3 benefit transfer remain open. An interior component pass
+alone does not complete Step 4; current next actions belong in the programme.

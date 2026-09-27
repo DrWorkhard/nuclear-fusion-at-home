@@ -9,10 +9,11 @@ This directory is tracked by Git. Use a unique descriptive folder, for example
   exact reproduction commands, both scores, trade-offs, checks and limitations.
   Credit any reused work. Compute spending and agent/model details are optional.
 
-Start from the bundled reference or inspect the
-[constraint-aware shape example](constraint-aware-shape52/README.md): a saved
-research geometry that improves both public sampled scores, with explicit
-current differences and limits. It does not replace the reference benchmark.
+Start from the bundled reference or our
+[lower-error six-coil example](length-headroom-six-coil/README.md). The
+[shorter-coil example](constraint-aware-shape52/README.md) illustrates a different
+length/field trade-off. Both preserve public currents and improve both sampled
+scores; neither replaces the reference benchmark or establishes acceptance.
 
 Keep generated reports, audit JSON and raw runs in `results/` (intentionally
 ignored); include their command outputs or a concise summary in the PR. Do not

@@ -19,7 +19,7 @@ a coil set reaches within 10× of the boundary RMS limit.
 ## Current result
 
 The [length-headroom fit](../optimization/LENGTH_HEADROOM_EXPLORATION.md) reaches
-normal RMS **0.002050** with scoped geometry passing, but interior RMS 0.01166
+normal RMS **0.001996** with scoped geometry passing, but interior RMS 0.01148
 fails 0.01. The preceding [longer-coil endpoint](../optimization/LONGER_COIL_EXPLORATION.md)
 reaches **0.001948**, but continuous length bounds remain **unresolved**.
 Both fail boundary RMS 1e-4 and maximum normal error 1e-3.
@@ -27,7 +27,8 @@ Both fail boundary RMS 1e-4 and maximum normal error 1e-3.
 The wider endpoint passes the interior-vector component: **0.009770** against
 0.01 on all three checked grids. This is a component success, not acceptance
 of the whole design. Length headroom resolves geometry but sacrifices that
-interior pass; the next comparison widens shape freedom while keeping headroom.
+interior pass. Further shape-box expansion helps only modestly; its endpoint
+is away from every box bound and stops on objective change, not gradient tolerance.
 The 3.5 m limit is unchanged. The 1e-2 exploratory signal supports continued work.
 All these coil fits use the original reference401, not the improved Step 3
 target. Realized magnetic surfaces, confinement and benefit transfer remain open.

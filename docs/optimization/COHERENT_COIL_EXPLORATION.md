@@ -51,4 +51,6 @@ curvature-penalty branch crossings before smaller probes passed unchanged tolera
 
 Detailed earlier protocols, negative results and original scripts remain at the
 [freeze tag](../validation/REPRODUCING_RESULTS.md). The shared evaluator is unchanged.
-Next: a wall-clock-bounded trade-off map using the working fit and shared checks.
+The [longer fits](LONGER_COIL_EXPLORATION.md) and
+[headroom comparison](LENGTH_HEADROOM_EXPLORATION.md) extend this result;
+the [programme](STEP4_RESEARCH_PROGRAMME.md) owns current next actions.

@@ -12,12 +12,11 @@ magnetic field that confines plasma. Our immediate question is whether practical
 coil shapes can accurately reproduce a promising plasma target.
 
 **Research preview · 27 September 2026.** A geometry-checked exploratory fit reaches
-normal-field RMS **0.002050 versus a 1e-4 pilot limit**, with interior RMS
-0.01166 above its 0.01 limit. A longer-coil fit reaches
-**0.001948**, with interior-vector RMS **0.009770 below the 0.01 limit**, but
-its continuous coil-length bounds remain unresolved. This is useful progress,
-not an accepted design or a state-of-the-art advantage. Realized magnetic surfaces and plasma-benefit transfer
-remain open. [Scientific evidence](docs/STATUS.md).
+normal-field RMS **0.001996 versus a 1e-4 pilot limit**, with interior RMS
+**0.01148 versus 0.01**. Both field limits still fail. The geometry is available
+in the public starter below. This is useful progress, not an accepted design or
+a state-of-the-art advantage. Realized magnetic surfaces and plasma-benefit
+transfer remain open. [Scientific evidence](docs/STATUS.md).
 
 We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.
 
@@ -89,7 +88,7 @@ python fusion.py public audit --report results/my-report.json --output results/m
 The example changes one coefficient by +0.1 mm; it is not a known improvement.
 `--value` is absolute, in metres. Quote coefficient names.
 [Named mapping and Python search loop](docs/validation/PUBLIC_QUICKSTART.md#evaluate-your-own-candidate)
-· [Lower-score example](submissions/constraint-aware-shape52/README.md).
+· [Lower-score example](submissions/length-headroom-six-coil/README.md).
 
 The public starter uses sparse samples and fixed currents. Research uses dense
 grids and flux-normalized currents, with limits **1e-4 normal RMS** and

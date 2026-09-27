@@ -2,73 +2,56 @@
 
 Updated 27 September 2026. Git retains earlier verification records.
 
-## Length-headroom follow-up completed
+## Completed headroom comparison
 
-Revision `963793d`: **1,575 bundles completed**, trial1574 selected with all
-sampled lengths ≤3.45 m. The shared 1024-node/512²-surface geometry check passes:
-length upper bound **3.477734 m**. Boundary RMS **0.002050310** and maximum
-0.0101974 fail; interior RMS **0.01165995** also fails. This improves the best
-geometry-checked boundary fit, not the full acceptance outcome.
+Clean revisions `963793d` and `5a3c1d0` test the same seed with construction
+length target 3.44 m, selection limit 3.45 m and unchanged acceptance 3.5 m.
 
-All **91 source hashes** match. Separate saved-array arithmetic checks both
-boundary and three interior rows, flux/current identity, independent B/A samples,
-the prospective selection across **1,576 records** and bound classification.
-Worker **306.360 s**, supervisor **306.938 s**, retained family **36.15 MB**;
-all declared resource ceilings respected. No complete geometry rerun.
-[Evidence](../../evidence/coil-headroom-v2.json).
+- Both pass scoped geometry. Expanded-box boundary RMS **0.001996268** and
+  interior RMS **0.01147939** improve 2.64% / 1.55% over current-box, but still
+  fail their limits. Coil-clearance lower bound decreases 6.49 mm.
+- Shared geometry gives length upper **3.474220 m**, coil clearance lower
+  **0.06831 m**, plasma clearance lower **0.13307 m**, curvature upper **10.04691/m**.
+  No directed interval proof or full self-disjointness claim.
+- Current/expanded complete **1,575 / 1,462 bundles**, selecting trials
+  **1574 / 1459**. All **91 source hashes per run** verify unchanged.
+- Separate saved-array arithmetic checks all **3,038 trial records**, both
+  selections, four boundary and six interior numerical rows, current/flux
+  identities, saved independent B/A samples and composed geometry classifications.
+  No independent full geometry rerun or separate-machine reproduction.
+- Workers **306.360 / 284.409 s**, supervisors **306.938 / 285.020 s**.
+  Retained raw families **36.15 / 34.03 MB**, with complete path/hash inventory
+  digests. All declared resource ceilings respected; runs were serial.
+- Expanded stops on objective change after 278.205 s of startup/search,
+  not its gradient criterion: final max gradient **3.40e-5** versus **1e-9**.
+  No active coefficient bounds (selected minimum slack 3.91 mm).
+  This does not prove a family optimum or establish the cause of slow convergence.
 
-The next comparison keeps the same seed, penalty, selection and 300 s budget,
-but expands the low/high-mode widths from ±0.16/0.04 to ±0.20/0.06 m. Its
-default-box identity is tested. It is prepared, not yet a scientific result.
-Focused headroom/shared-search checks: **31 passed**, **12.53 s**; scoped Ruff,
-docs and diff checks pass. Public suite passes all **48 tests**.
+[Result](../optimization/LENGTH_HEADROOM_EXPLORATION.md) ·
+[Current evidence](../../evidence/coil-headroom-v2.json) ·
+[Expanded evidence](../../evidence/coil-headroom-v3.json).
 
-## Preceding longer/wider check
+The first headroom setup failed before search on unsupported native penalty
+subtraction (supervisor 2.563 s). Its prefix remains at `coil-headroom-v1`.
+Direct assembly and the real native penalty/derivative test fix that API error.
 
-Clean implementation `eb458ef` completes both 300 s searches. The same-box
-candidate passes scoped geometry at boundary RMS **0.004712664**. The wider-box
-candidate reaches **0.001947576**, but length bounds remain unresolved.
-Its interior-vector RMS **0.009769586** passes 0.01 at all three tested levels.
-Both boundary gates still fail; no overall physical acceptance or Step 4 closure.
+## Software and portable candidate
 
-- Search/fine/geometry worker **619.612 s**, supervisor **620.427 s**: within
-  660/670 s. Interior worker **2.915 s**, supervisor **3.388 s**. One thread.
-- All **82 search** and **96 interior source hashes** verified unchanged.
-  Separate saved-array arithmetic checks boundary and interior RMS, independent
-  sampled B/A comparisons, flux and the composed geometry classifications.
-  No duplicate full continuous-geometry calculation or separate-machine run.
-- All **3,225 trial records** checked; selection reproduced from completed
-  eligible points. All four fine boundary rows and six interior rows pass
-  numerical checks. No interior-score-based selection.
-- Complete retained raw-family inventory: **6,504 files / 73,728,182 bytes**,
-  within 256 MiB. Its sorted path/hash digest is recorded in the evidence.
-- Wider sampled lengths approach 3.5 m; the conservative upper bound is
-  **3.519998 m**. This is unresolved, not proof of an actual length violation.
-- The interrupted v1 prefix and −15 termination receipt remain. The strict
-  shared JSON converter repairs result serialization, not numerical physics.
+- Active native regression: **420 passed**, 13 known HiGHS-option warnings,
+  **22.17 s**. Focused headroom/shared-search checks: **31 passed**, **12.53 s**.
+- Public suite: **48 passed**, **3.217 s**; repository-wide Ruff, docs and
+  whitespace checks pass.
+- The [portable candidate](../../submissions/length-headroom-six-coil/README.md)
+  exactly preserves all 198 selected names/coefficients. The case and evaluator
+  are unchanged. Local Python 3.12 evaluation/replay passes, with sampled normal
+  RMS **0.001744032** and interior RMS **0.03610319**.
+- Python **3.11 with `-I -S`** also evaluates and replays that candidate without
+  site packages. This is a local interpreter check, not a second machine.
+- Public current stays 294,966.466322 A, unlike native 308,140.584432 A.
+  Public replay is same-code and sparse, not scientific admission.
+- The exact-flux identity and one-ULP poison regressions remain passing.
+  No native environment sync, hosted CI or external scientific review.
 
-[Result and limitations](../optimization/LONGER_COIL_EXPLORATION.md) ·
-[Source-bound evidence](../../evidence/coherent-longrun-v2.json).
-
-## Software checks
-
-- Active research regression: **410 passed**, 13 known HiGHS-option warnings,
-  **22.12 s** in the intact native environment.
-- Public suite: **48 passed**, **3.364 s**. Scoped Ruff, documentation structure
-  and whitespace checks pass. No dependency sync or hosted CI run.
-- The exact-flux input regression and one-ULP poison test remain passing;
-  −0.03141592653589793 Wb is unchanged. New strict-JSON tests cover geometry
-  pass/fail/unresolved results.
-
-The [headroom experiment](../optimization/LENGTH_HEADROOM_EXPLORATION.md) uses
-construction penalty 3.44 m, selection 3.45 m, unchanged 3.5 m acceptance.
-The first setup failed before search on native
-penalty-object subtraction (2.563 s); direct assembly fixes that unsupported API.
-The failed output remains at `artifacts/coil-headroom-v1/`.
-All **9 headroom tests pass** (12.91 s), including real native penalty assembly
-and a finite-difference check of its derivative. Scoped Ruff/docs/diff pass.
-
-The next experiment keeps headroom and tests more shape freedom.
-Shared acceptance thresholds stay fixed. Realized topology, Step 3 benefit
-transfer, pressure/engineering, independent backup/reproduction and MS1 remain
-open. Native source arrays and ignored outputs are not backed up by Git.
+Next: diagnose objective scaling/stopping and penalty conditioning. Physical
+acceptance, realized topology, Step 3 transfer, pressure/engineering, independent
+backup/reproduction and MS1 remain open. Git does not back up ignored raw data.
