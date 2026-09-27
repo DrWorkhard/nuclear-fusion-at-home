@@ -7,8 +7,8 @@
 - Exploration gets a short question/input/output/conclusion record and finite
   execution resources. Confirmatory claims get independent, preregistered checks.
 - Do not resume certified-step/current-only search by default. The fixed-candidate
-  interior screen supports normalized fitting. The latest wider endpoint needs
-  length headroom in construction and selection; absolute gates and actual-field
+  interior screen supports normalized fitting. Retain the now-tested construction
+  length headroom while exploring shape freedom; absolute gates and actual-field
   topology remain separate acceptance requirements.
 - Evaluate existing community benchmark integration before bespoke infrastructure.
 - Preserve original evidence, ignored raw artifacts and the native environment.

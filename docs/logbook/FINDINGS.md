@@ -5,8 +5,9 @@
   against its matched control. Budget exhaustion is not an optimum.
 - **Construction needs headroom.** The [longer/wider fit](../optimization/LONGER_COIL_EXPLORATION.md)
   passes the interior-vector component, but sampled lengths just below 3.5 m
-  leave conservative length bounds unresolved. Improve the construction margin,
-  not the acceptance threshold. Boundary error remains a separate failure.
+  leave conservative length bounds unresolved. A tighter construction target
+  resolves geometry at a modest boundary-error cost, but loses the interior
+  pass. That trade-off is measurable; it is not fixed by lowering standards.
 - **Check the right objective.** Raw-field and normalized errors can disagree;
   fixed loop flux does not preserve the whole field. Current-only negative
   results remain at the [freeze tag](../validation/REPRODUCING_RESULTS.md).

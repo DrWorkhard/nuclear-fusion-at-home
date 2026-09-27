@@ -54,6 +54,23 @@ def test_tie_breaking_is_by_trial_not_file_order():
     assert study.select([a, b], 13) == b
 
 
+def test_default_box_is_unchanged_and_expanded_box_contains_it():
+    import numpy as np
+
+    center = np.sin(np.arange(198))
+    a, b = study.bounds(center, "current")
+    old_a, old_b = study.prior.bounds(center, "wider-box")
+    assert np.array_equal(a, old_a) and np.array_equal(b, old_b)
+    c, d = study.bounds(center, "expanded")
+    low = study.restart.previous.active_indices("low2")
+    high = np.setdiff1d(np.arange(198), low)
+    assert np.all(c < a) and np.all(d > b)
+    np.testing.assert_allclose((d-c)[low], .4)
+    np.testing.assert_allclose((d-c)[high], .12)
+    with pytest.raises(ValueError, match="named box"):
+        study.bounds(center, "unknown")
+
+
 def test_native_penalty_assembly_changes_only_the_length_target(monkeypatch):
     import numpy as np
     from simsopt.geo import CurveLength, CurveXYZFourier

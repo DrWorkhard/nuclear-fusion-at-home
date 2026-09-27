@@ -5,8 +5,9 @@ and continuous clearance/length bounds. These are separate from sampled
 optimization penalties. A conservative bound below a clearance limit is
 unresolved, not automatically a physical violation.
 
-The latest [coherent fits](../optimization/COHERENT_COIL_EXPLORATION.md) pass
-their scoped geometric checks. Padded floating-point bounds do not establish
+The latest [length-headroom fit](../optimization/LENGTH_HEADROOM_EXPLORATION.md)
+passes scoped geometry; its longer predecessor has unresolved length bounds.
+Padded floating-point bounds do not establish
 directed interval proofs, complete self-disjointness or finite-build engineering.
 
 Shared implementation: `coupled_coil_audit.py`, `clear_coil_geometry_audit.py`

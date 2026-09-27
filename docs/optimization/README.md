@@ -2,15 +2,16 @@
 
 The working method is **penalized normalized coil fitting**, followed by separate
 fine-grid field and continuous-geometry checks. Best checked exploratory normal
-RMS is **0.004713**, against a 1e-4 pilot limit. A wider fit reaches 0.001948
-and passes the interior component, but its length bounds remain unresolved.
+RMS is **0.002050**, against a 1e-4 pilot limit, with length headroom. Its interior
+RMS 0.01166 fails 0.01. A longer-coil fit passes the interior component but
+has unresolved length bounds.
 No accepted reactor design or
 Step 4 completion follows.
 
 ## Current documents
 
 - [Length-headroom experiment](LENGTH_HEADROOM_EXPLORATION.md): tighter construction
-  targets with unchanged acceptance; prepared follow-up to the wider fit.
+  resolves geometry, with an interior-field trade-off; expanded box prepared.
 - [Longer-fit comparison](LONGER_COIL_EXPLORATION.md): completed five-minute
   restarts; more shape freedom helps, but length headroom is now needed.
 - [Coherent-shape results](COHERENT_COIL_EXPLORATION.md): matched comparisons,
@@ -25,7 +26,7 @@ Step 4 completion follows.
 
 ## Executable path
 
-The latest completed fit is `scripts/explore_coherent_longrun.py`; its explicit
+The latest completed fit is `scripts/explore_coil_headroom.py`; its explicit
 source-bound inputs and settings reproduce the recorded comparison in the native
 environment. It reuses the normalized model, construction penalties and fine
 checker in `explore_normalized_coils.py` / `explore_constrained_coils.py`.
@@ -42,7 +43,7 @@ The latest reproduction command is:
 
 ```bash
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1 \
-  python scripts/explore_coherent_longrun.py --output artifacts/my-longrun
+  python scripts/explore_coil_headroom.py --output artifacts/my-headroom
 ```
 
 It requires the recorded local snapshots and the [native environment](../validation/ENVIRONMENT.md).

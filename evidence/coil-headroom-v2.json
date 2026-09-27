@@ -1,0 +1,145 @@
+{
+  "kind": "coil-length-headroom-exploration",
+  "source_revision": "963793d6942260e974e5344b4b082ee37c7fa54b",
+  "completed": true,
+  "physical_admission": false,
+  "step4_pass": false,
+  "result": {
+    "path": "artifacts/coil-headroom-v2/run/result.json",
+    "sha256": "6c1515b62425dc4f10ef71c0741a76d7fbf240369186f5835ff0ec7024e3546d",
+    "bytes": 230094
+  },
+  "execution": {
+    "path": "artifacts/coil-headroom-v2/execution.json",
+    "sha256": "4fd3fe8ced496fdfd835c7263c51712492b0df3872e900847965e4bc523995d5",
+    "bytes": 2860
+  },
+  "script": {
+    "path": "scripts/explore_coil_headroom.py",
+    "sha256": "198aeba309c92ee6f1750fb482274a7751070789ada78fde575498e3e2af34e3",
+    "bytes": 8176
+  },
+  "launcher": {
+    "path": "artifacts/coil-headroom-v2/launch.py",
+    "sha256": "5c075fe9b78ac192256437cadc9cf42b38d77ad7d112a77c0f7fe576d77b0742",
+    "bytes": 1836
+  },
+  "snapshot": {
+    "path": "artifacts/coil-headroom-v2/run/headroom/selected-snapshot.json",
+    "sha256": "21803802cd0655de3baf03a9128ee0751df3872a702333cbdebc04749e9e17ff",
+    "bytes": 19234
+  },
+  "selected_trial": {
+    "path": "artifacts/coil-headroom-v2/run/headroom/trial-1574.json",
+    "sha256": "0405c5b2a066eb4a3051ac8b14ab4a8593a6177a24ea0b95a375a3d68a4c18dd",
+    "bytes": 13006
+  },
+  "selected_index": 1574,
+  "sources_verified": 91,
+  "trials_checked": 1576,
+  "eligible": 1558,
+  "bundles_completed": 1575,
+  "status": {
+    "error": "declared elapsed-time limit reached",
+    "reason": "budget"
+  },
+  "worker_seconds": 306.35998958395794,
+  "supervised_seconds": 306.93792958406266,
+  "search_seconds": 300.0121593750082,
+  "boundary": [
+    {
+      "shift": 0,
+      "normal_rms": 0.002050309928300324,
+      "normal_max": 0.010181019898834007,
+      "current": 308149.9346306994,
+      "flux_relative_error": 6.661338147750939e-16
+    },
+    {
+      "shift": 0.5,
+      "normal_rms": 0.0020503099308975922,
+      "normal_max": 0.010197406333458513,
+      "current": 308149.9346306994,
+      "flux_relative_error": 6.661338147750939e-16
+    }
+  ],
+  "geometry": {
+    "status": "pass",
+    "ncoil": 1024,
+    "nsurface": 512,
+    "ncurvature": 1024,
+    "length_upper": 3.47773365518437,
+    "coil_lower": 0.07480951017412918,
+    "plasma_lower": 0.13291564112760465,
+    "curvature_upper": 10.034977541416607,
+    "interval_arithmetic": false
+  },
+  "interior": [
+    {
+      "ninner": 32,
+      "nodes": 256,
+      "rms": 0.011663186536520122,
+      "report": {
+        "path": "artifacts/coil-headroom-v2/run/interior/level-0.json",
+        "sha256": "1c0bc384c3c58fd6b05a64a192c3865dc02234680510cf3c50eb711f38429cd3",
+        "bytes": 1233
+      },
+      "arrays": {
+        "path": "artifacts/coil-headroom-v2/run/interior/level-0.npz",
+        "sha256": "43a8fda4c2be540410ad8148c5316db27badb6091861f7839cdc7bde5fe82863",
+        "bytes": 454238
+      }
+    },
+    {
+      "ninner": 64,
+      "nodes": 256,
+      "rms": 0.011659952347070736,
+      "report": {
+        "path": "artifacts/coil-headroom-v2/run/interior/level-1.json",
+        "sha256": "3b7bdc3d0132252ae0bcf189e71b0693434d13847aabd74dcedbf0ba557a9d00",
+        "bytes": 1236
+      },
+      "arrays": {
+        "path": "artifacts/coil-headroom-v2/run/interior/level-1.npz",
+        "sha256": "92243fd744d4fe2dd720f21c827b5b228010b6b2841f82c4191f73ce319faaea",
+        "bytes": 1064094
+      }
+    },
+    {
+      "ninner": 64,
+      "nodes": 512,
+      "rms": 0.011659952347070731,
+      "report": {
+        "path": "artifacts/coil-headroom-v2/run/interior/level-2.json",
+        "sha256": "52973e0a52db8902cf1a17b7d48d78060e3fa58472afc263207baa821b0fcc59",
+        "bytes": 1235
+      },
+      "arrays": {
+        "path": "artifacts/coil-headroom-v2/run/interior/level-2.npz",
+        "sha256": "d9981165252c4cb3e405478b880ec41a94449568990d77f4bcaf5d6637a31696",
+        "bytes": 1356326
+      }
+    }
+  ],
+  "raw_family": {
+    "path": "artifacts/coil-headroom-v2",
+    "file_count": 3176,
+    "bytes": 36152060,
+    "manifest_sha256": "1b447c73254e43dab49305d1fa3839d96ea3f713bcf09302d6f6816e82a4223f",
+    "manifest_convention": "SHA256 of sorted relative path + NUL + file SHA256 + newline, excluding __pycache__"
+  },
+  "retained_failed_setup": {
+    "result": {
+      "path": "artifacts/coil-headroom-v1/run/result.json",
+      "sha256": "7ec8e87e9f82254141a0c4090808925c9d28fb4d34ecc8c4fca00fae15d21257",
+      "bytes": 60264
+    },
+    "execution": {
+      "path": "artifacts/coil-headroom-v1/execution.json",
+      "sha256": "44eed987c0479818cb4e52cf24b0fcbffb220c99dffd9333a1a340e8094b9374",
+      "bytes": 2648
+    },
+    "source_revision": "69c09aa"
+  },
+  "checks": "Saved-array arithmetic, selection, flux/current identities, sampled independent B/A and shared bound classification; no independent rerun of full geometry.",
+  "scope": "Original reference401, not selected Step 3 plasma. Exploratory component checks only; no realized topology, benefit transfer, confinement or finite-build result."
+}

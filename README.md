@@ -12,7 +12,8 @@ magnetic field that confines plasma. Our immediate question is whether practical
 coil shapes can accurately reproduce a promising plasma target.
 
 **Research preview · 27 September 2026.** A geometry-checked exploratory fit reaches
-normal-field RMS **0.004713 versus a 1e-4 pilot limit**. A wider-shape fit reaches
+normal-field RMS **0.002050 versus a 1e-4 pilot limit**, with interior RMS
+0.01166 above its 0.01 limit. A longer-coil fit reaches
 **0.001948**, with interior-vector RMS **0.009770 below the 0.01 limit**, but
 its continuous coil-length bounds remain unresolved. This is useful progress,
 not an accepted design or a state-of-the-art advantage. Realized magnetic surfaces and plasma-benefit transfer

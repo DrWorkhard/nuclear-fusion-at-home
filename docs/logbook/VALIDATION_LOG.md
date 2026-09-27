@@ -2,7 +2,28 @@
 
 Updated 27 September 2026. Git retains earlier verification records.
 
-## Longer/wider fit and interior check completed
+## Length-headroom follow-up completed
+
+Revision `963793d`: **1,575 bundles completed**, trial1574 selected with all
+sampled lengths ≤3.45 m. The shared 1024-node/512²-surface geometry check passes:
+length upper bound **3.477734 m**. Boundary RMS **0.002050310** and maximum
+0.0101974 fail; interior RMS **0.01165995** also fails. This improves the best
+geometry-checked boundary fit, not the full acceptance outcome.
+
+All **91 source hashes** match. Separate saved-array arithmetic checks both
+boundary and three interior rows, flux/current identity, independent B/A samples,
+the prospective selection across **1,576 records** and bound classification.
+Worker **306.360 s**, supervisor **306.938 s**, retained family **36.15 MB**;
+all declared resource ceilings respected. No complete geometry rerun.
+[Evidence](../../evidence/coil-headroom-v2.json).
+
+The next comparison keeps the same seed, penalty, selection and 300 s budget,
+but expands the low/high-mode widths from ±0.16/0.04 to ±0.20/0.06 m. Its
+default-box identity is tested. It is prepared, not yet a scientific result.
+Focused headroom/shared-search checks: **31 passed**, **12.53 s**; scoped Ruff,
+docs and diff checks pass. Public suite passes all **48 tests**.
+
+## Preceding longer/wider check
 
 Clean implementation `eb458ef` completes both 300 s searches. The same-box
 candidate passes scoped geometry at boundary RMS **0.004712664**. The wider-box
@@ -39,16 +60,15 @@ Both boundary gates still fail; no overall physical acceptance or Step 4 closure
   −0.03141592653589793 Wb is unchanged. New strict-JSON tests cover geometry
   pass/fail/unresolved results.
 
-The [headroom experiment](../optimization/LENGTH_HEADROOM_EXPLORATION.md) is
-prepared: construction penalty 3.44 m, selection 3.45 m, unchanged 3.5 m
-acceptance. Its selection/reuse tests pass: **29 tests**, **0.76 s**. No native
-headroom run has completed yet. The first setup failed before search on native
+The [headroom experiment](../optimization/LENGTH_HEADROOM_EXPLORATION.md) uses
+construction penalty 3.44 m, selection 3.45 m, unchanged 3.5 m acceptance.
+The first setup failed before search on native
 penalty-object subtraction (2.563 s); direct assembly fixes that unsupported API.
 The failed output remains at `artifacts/coil-headroom-v1/`.
 All **9 headroom tests pass** (12.91 s), including real native penalty assembly
 and a finite-difference check of its derivative. Scoped Ruff/docs/diff pass.
 
-The next experiment puts length headroom into construction and selection.
+The next experiment keeps headroom and tests more shape freedom.
 Shared acceptance thresholds stay fixed. Realized topology, Step 3 benefit
 transfer, pressure/engineering, independent backup/reproduction and MS1 remain
 open. Native source arrays and ignored outputs are not backed up by Git.

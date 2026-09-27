@@ -7,7 +7,7 @@ Updated 27 September 2026.
 
 We can reproduce selected references, iterate designs and verify a local
 vacuum-plasma improvement. Our best geometry-checked exploratory coil fit reaches
-normal-field RMS **0.004713**, about **47× the 1e-4 limit**. A lower-error wider
+normal-field RMS **0.002050**, about **21× the 1e-4 limit**. A lower-error wider
 fit remains geometry-unresolved. Step 4 remains in
 progress: there is no accepted new coil design, demonstrated state-of-the-art
 advantage or MS1 result.
@@ -22,6 +22,7 @@ advantage or MS1 result.
 | [Matched coil restart](optimization/COHERENT_COIL_EXPLORATION.md) | Wider low modes reach RMS 0.004889, 55.27% below the original-box control, at 8.64% less current; both endpoints pass scoped continuous geometry | Both 1,200-bundle caps exhausted; boundary limits fail |
 | [Interior fields](optimization/INTERIOR_FIELD_EXPLORATION.md) | Best snapshot reaches vector RMS 0.04029, 73.66% below its matched control; all fifteen numerical rows pass | All five candidates fail the 0.01 interior limit; topology and Step 3 benefit transfer remain open |
 | [Longer/wider fits](optimization/LONGER_COIL_EXPLORATION.md) | Same-box RMS 0.004713 passes scoped geometry; wider RMS 0.001948 has interior RMS 0.009770, passing that component | Wider length upper bounds unresolved; both boundary gates still fail, no topology/benefit transfer |
+| [Length headroom](optimization/LENGTH_HEADROOM_EXPLORATION.md) | Boundary RMS 0.002050 with scoped geometry passing; length upper bound 3.477734 m | Interior RMS 0.01166 fails 0.01; both boundary gates fail |
 | [Earlier negative studies](validation/REPRODUCING_RESULTS.md) | Exposed missed fine clearances, poorly aligned objectives and limited current-only gains | Closed methods are frozen, not converted into successful designs |
 
 Current limits remain normal RMS **1e-4**, maximum normal error **1e-3** and

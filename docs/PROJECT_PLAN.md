@@ -28,9 +28,9 @@ ambition, not a claimed global optimum. [Future comparison](squid_c/README.md).
 1. **Simplification implemented.** Closed code/tests/reports now resolve at
    `research-freeze-2026-09-27`. The working normalized coil fit, shared
    checks and public starter remain. [Reproduction](validation/REPRODUCING_RESULTS.md).
-2. **Map the working fit's trade-offs.** A wider fit passes the interior
-   component, but its length bounds remain unresolved. Add construction headroom
-   before further expansion; explore separately labelled coil
+2. **Map the working fit's trade-offs.** Construction headroom resolves length
+   bounds but sacrifices the interior component pass. Test wider shape freedom
+   with that headroom; explore separately labelled coil
    families. Check the best two or three with the shared fine evaluator and
    continuous geometry. Acceptance limits stay unchanged.
 3. **Decide on 24 October.** The 1e-2 exploratory signal is met, but interior

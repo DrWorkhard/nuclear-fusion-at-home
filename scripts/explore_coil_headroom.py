@@ -18,6 +18,16 @@ SOURCE = ROOT / "artifacts/coherent-longrun-v2/run/result.json"
 SOURCE_SHA = "f0fe739a8eee398961278012686c8c778fae0832e3e4ade7c84ae5a212cb9a1a"
 PENALTY_LENGTH, SELECT_LENGTH = 3.44, 3.45
 SEARCH_SECONDS, TOTAL_SECONDS = 300, 360
+BOXES = {"current": (.16, .04), "expanded": (.20, .06)}
+
+
+def bounds(center, box):
+    s.need(box in BOXES and np.shape(center) == (198,) and np.isfinite(center).all(),
+           "named box and finite shape52 center required")
+    low, high = BOXES[box]
+    widths = np.full(198, high)
+    widths[restart.previous.active_indices("low2")] = low
+    return center-widths, center+widths
 
 
 class Model(restart.previous.Model):
@@ -51,7 +61,7 @@ def select(rows, completed):
     return min(eligible, key=lambda r: (r["metrics"]["normal_rms"], r["index"]))
 
 
-def run(output):
+def run(output, box="current"):
     from scipy.optimize import minimize
 
     started = time.monotonic()
@@ -65,7 +75,7 @@ def run(output):
                   construction_penalty_length=PENALTY_LENGTH,
                   construction_selection_length=SELECT_LENGTH, acceptance_length=3.5,
                   search_seconds=SEARCH_SECONDS, total_seconds=TOTAL_SECONDS,
-                  source=dict(path=str(SOURCE), sha256=SOURCE_SHA))
+                  source=dict(path=str(SOURCE), sha256=SOURCE_SHA), box=box)
     try:
         data, targets, states, sources = s.intake(prior.RESULT, prior.RESULT_SHA, record.guard)
         s.bind(SOURCE, SOURCE_SHA, sources)
@@ -75,7 +85,7 @@ def run(output):
         s.need(association["selected_index"] == 1561, "exact wider-box trial1561 required")
         center = np.ravel(states[1]["snapshot"]["base_coefficients"])
         start = np.ravel(seed["base_coefficients"])
-        lower, upper = prior.bounds(center, "wider-box")
+        lower, upper = bounds(center, box)
         _, directions = restart.masked_directions(start, lower, upper)
         chosen_before = previous["arms"][1]["fine_selected"]
         anchors = {k: chosen_before["metrics"][k] for k in (
@@ -148,4 +158,6 @@ def run(output):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", required=True, type=Path)
-    raise SystemExit(run(parser.parse_args().output.resolve()))
+    parser.add_argument("--box", choices=BOXES, default="current")
+    args = parser.parse_args()
+    raise SystemExit(run(args.output.resolve(), args.box))
