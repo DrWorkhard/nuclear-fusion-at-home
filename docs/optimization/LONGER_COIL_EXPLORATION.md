@@ -1,6 +1,6 @@
 # Longer coherent fits: time and shape freedom
 
-27 September 2026. **Prepared exploration; no new result yet.**
+27 September 2026. **Prepared retry; no completed new comparison yet.**
 [Programme](STEP4_RESEARCH_PROGRAMME.md) · [Starting result](COHERENT_COIL_EXPLORATION.md)
 
 Question: can more optimization time and a wider shape domain close the remaining
@@ -30,7 +30,7 @@ these checks can distinguish a promising search point from a checked one; they
 still do not establish topology or Step 3 benefit transfer.
 
 Script: `scripts/explore_coherent_longrun.py`. Fresh output family:
-`artifacts/coherent-longrun-v1/`. Run one thread, with 660 s worker/670 s supervisor,
+`artifacts/coherent-longrun-v2/`. Run one thread, with 660 s worker/670 s supervisor,
 256 MiB aggregate output and 3/2 GiB initial/live disk reserve. The selected
 endpoints will receive the same interior-field diagnostic after optimization,
 not be chosen on its values. No other heavy job runs concurrently.
@@ -39,3 +39,10 @@ All original thresholds stay fixed: boundary RMS 1e-4, maximum normal 1e-3,
 interior RMS 0.01; length 3.5 m, curvature 12/m, coil/plasma clearance 0.06/0.08 m,
 current 500 kA and relative loop-flux mismatch 1e-6. The exploratory 1e-2 signal
 is already met, not a replacement for these gates.
+
+The v1 run was deliberately stopped after 152.934 s when review found that the
+new geometry-result assembly could not serialize NumPy booleans. Its partial
+trials and supervisor receipt remain unchanged; it is not a completed comparison.
+Use the existing strict NumPy-to-JSON conversion, test pass/fail/unresolved
+serialization, and restart both arms from the same trial1198. No mathematical
+routine, selection rule, bound or time budget changes in v2.

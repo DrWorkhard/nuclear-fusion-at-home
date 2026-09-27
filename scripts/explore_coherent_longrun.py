@@ -54,6 +54,7 @@ def solver_adapter(minimize):
 
 
 def geometry(snapshot, data, guard):
+    from fusion_baselines.clear_coil_field_audit import json_value
     from fusion_baselines.coupled_coil_audit import geometry_certificates
     from fusion_baselines.curvature_bounds import classify_enclosure, curvature_enclosure
 
@@ -75,8 +76,8 @@ def geometry(snapshot, data, guard):
         guard()
         if passed or witness:
             break
-    return dict(status=levels[-1]["status"], levels=levels, interval_arithmetic=False,
-                complete_self_disjointness=False, physical_admission=False)
+    return json_value(dict(status=levels[-1]["status"], levels=levels, interval_arithmetic=False,
+                           complete_self_disjointness=False, physical_admission=False))
 
 
 def run(output):

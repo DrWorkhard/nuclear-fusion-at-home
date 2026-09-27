@@ -1,6 +1,7 @@
 """Only changed experiment settings; shared search/physics retain their own tests."""
 
 import importlib.util
+import json
 import math
 from pathlib import Path
 
@@ -44,3 +45,21 @@ def test_solver_adapter_preserves_method_bounds_and_tolerances():
         return "done"
     assert study.solver_adapter(solve)("objective", "seed", bounds="fixed",
         method="L-BFGS-B", options={"maxiter": 1190}) == "done"
+
+
+def test_geometry_result_serializes_numpy_scalars_without_changing_gates(monkeypatch):
+    from fusion_baselines import coupled_coil_audit, curvature_bounds
+
+    g = dict(length_upper=[np.float64(3.)], coil_lower=np.float64(.07),
+             plasma_lower=np.float64(.09), coil_pairs=[dict(sampled=.08)],
+             plasma_distances=[dict(sampled=.10)],
+             self_nearness=[dict(exact_repeated_node=np.bool_(False))])
+    monkeypatch.setattr(coupled_coil_audit, "geometry_certificates", lambda *args: g)
+    monkeypatch.setattr(curvature_bounds, "curvature_enclosure", lambda *args:
+        dict(maximum_lower_bound=10., maximum_upper_bound=11., regularity_resolved=True))
+    result = study.geometry(dict(base_coefficients=[[]]), {}, lambda: None)
+    assert json.loads(json.dumps(result)) == result and result["status"] == "pass"
+    g["coil_lower"] = np.float64(.05)
+    assert study.geometry(dict(base_coefficients=[[]]), {}, lambda: None)["status"] == "unresolved"
+    g["coil_pairs"][0]["sampled"] = .04
+    assert study.geometry(dict(base_coefficients=[[]]), {}, lambda: None)["status"] == "fail"

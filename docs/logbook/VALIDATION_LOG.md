@@ -39,9 +39,15 @@ sync or hosted CI run.
 
 The [longer/wider study](../optimization/LONGER_COIL_EXPLORATION.md) is prepared:
 two 300 s restarts, original versus wider absolute boxes, unchanged shared
-numerics and independent limits. Its three settings tests plus 17 shared-restart
-tests pass (20 total, 1.06 s); scoped Ruff passes after removing an unused import.
-No numerical result is claimed for this study before execution.
+numerics and independent limits. Initial v1 execution was deliberately stopped
+after 152.934 s upon finding a NumPy-boolean serialization defect in the new
+geometry-result assembly. The interrupted prefix and termination receipt remain.
+The shared strict JSON converter fixes this without changing physics; **21 tests
+pass** (0.64 s), including pass/fail/unresolved serialization and the shared
+restart controls. Scoped Ruff passes. Both arms will restart from trial1198 in
+a fresh v2 family, with unchanged bounds, selection and budgets.
+Real geometry-only preflight also serializes successfully and reproduces the
+prior best snapshot's geometry/curvature values exactly; no native field call.
 
 Next work is that trade-off study, not more acceptance machinery.
 Realized topology, Step 3 benefit transfer, pressure/engineering and MS1 remain
