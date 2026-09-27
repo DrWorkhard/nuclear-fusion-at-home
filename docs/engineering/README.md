@@ -29,5 +29,6 @@ completed numerical checks from engineering conclusions.
 - [Robustness protocol](ROBUSTNESS_PROTOCOL.md). Spatially correlated manufacturing perturbations of filaments, not a complete tolerance model.
 - [Structural protocol](STRUCTURAL_PROTOCOL.md). Volume-mesh/mechanics path and resolution sequence, not a validated reactor structure.
 
-Historical content and hashes remain unchanged. Resolve old filenames with the
-[migration manifest](../../manifests/documentation-layout-v1.json).
+Required protocols and evidence retain their identities; current summaries evolve.
+Git retains old document versions. The [migration manifest](../../manifests/documentation-layout-v1.json)
+resolves filenames used before the documentation reorganization.

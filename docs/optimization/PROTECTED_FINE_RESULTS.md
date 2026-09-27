@@ -2,7 +2,7 @@
 
 26 September 2026. [Registration](PROTECTED_FINE_PROTOCOL.md) ·
 [Coarse search](PROTECTED_COIL_FIT_RESULTS.md) ·
-[Software qualification](PROTECTED_FINE_PROGRESS.md) · [Index](README.md)
+[Software qualification](../../evidence/protected-fine-qualification-v1.json) · [Index](README.md)
 
 ## Result
 
@@ -90,9 +90,9 @@ bound; their modest gains are retained as coarse results. Passing these fine
 checks alone does not satisfy a separately preregistered matched-grid improvement
 margin, and cannot establish Pareto dominance or plasma-benefit transfer.
 
-Next, qualify a separate local homotopy curvature bound on fixed saved states,
-with independent arithmetic and complete coverage checks. Keep all other gates
-and old decisions unchanged. A tighter bound may allow movement; the remaining
-clearance margins and useful field-error reduction still need actual evidence.
-The [prospective proposal](../geometry/LOCAL_CURVATURE_BOUND_OPTIONS.md) is not
-an implemented or qualified replacement certifier.
+The subsequent [local curvature study](../geometry/LOCAL_CURVATURE_RESULTS.md)
+certified two previously blocked proposals under unchanged limits. Their
+[field comparison](FIXED_FIELD_PROBE_RESULTS.md) found small gains, still far from
+acceptance. Current follow-up is diagnosis and reference calibration under the
+[research programme](STEP4_RESEARCH_PROGRAMME.md); none of these follow-ups
+changes this study's selection, thresholds or negative field verdicts.

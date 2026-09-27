@@ -64,16 +64,11 @@ Artifacts remain under `artifacts/protected-pilot-v1/`. Maintainer prototyping,
 implementation/testing by `protected_runner_map` and review by
 `cell_integration_review` are internal work, not external peer review.
 
-## After qualification
+## Subsequent execution
 
-Update: qualification/checkpoint committed at `2015ac5`; actual clean-source
-admission and all eight native constructions/coarse audits subsequently pass.
-See the separate [scientific results](PROTECTED_COIL_FIT_RESULTS.md).
-
-Commit qualification and execution records, perform source-only admission from
-the clean checkout, then run the original diagnostic pilot.
-Do not edit tracked sources/docs while it is running; retain intermediate notes
-in ignored artifacts and integrate them after source-bound execution ends.
-Fine acceptance needs its separate candidate-aware contracts and supervisor;
-see the [read-only integration notes](PROTECTED_FINE_DESIGN_NOTES.md).
-Completing the pilot alone does not complete Step 4A–4D.
+The checkpoint at `2015ac5` led to completed clean-source admission and all eight
+[native constructions/coarse audits](PROTECTED_COIL_FIT_RESULTS.md).
+The separate [fine validation](PROTECTED_FINE_RESULTS.md) is also complete:
+numerical and geometry checks pass, physical field limits fail. This launcher
+report establishes software qualification, not Step 4A–4D completion. Current
+priorities are in the [research programme](STEP4_RESEARCH_PROGRAMME.md).

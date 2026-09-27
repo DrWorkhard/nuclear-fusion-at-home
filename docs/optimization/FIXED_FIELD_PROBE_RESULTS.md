@@ -1,7 +1,7 @@
 # Fixed proposal fields: small resolved gains, absolute limits still missed
 
 26 September 2026. [Protocol](FIXED_FIELD_PROBE_PROTOCOL.md) ·
-[Qualification](FIXED_FIELD_PROBE_PROGRESS.md) · [Index](README.md)
+[Qualification](../../evidence/fixed-field-probe-qualification-v1.json) · [Index](README.md)
 
 ## Result
 
@@ -109,12 +109,11 @@ Original measurements, summaries and corrections remain linked, not overwritten.
 
 ## Consequence
 
-Proceed to a separately registered small continuation experiment from the two
-fixed proposals, retaining normal-objective selection and independent checks.
-The original seed remains the geometry reference. Tighter curvature does not
-remove conservative clearance limits or justify extrapolating these tiny gains
-to feasibility. A parallel diagnosis of the large target-field mismatch is
-appropriate before investing in longer searches.
+Prioritize the [saved residual diagnosis](FIELD_RESIDUAL_PROGRESS.md) and matched
+reference/gate calibration in the [research programme](STEP4_RESEARCH_PROGRAMME.md).
+A small continuation remains optional, not the default next action. Tighter
+curvature does not remove conservative clearance limits or justify extrapolating
+these tiny gains to feasibility. The original seed remains the geometry reference.
 
 [Machine-readable results](../../evidence/fixed-field-probe-results-v1.json) bind
 the explicit study, saved rows, reviews, corrections and qualification. Raw arrays

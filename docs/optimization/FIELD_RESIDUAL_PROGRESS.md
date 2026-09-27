@@ -57,9 +57,10 @@ These are internal reviews, not external peer review. All original field-study
 sources, thresholds and evidence remain unchanged. The last complete native
 research regression is the separately recorded 5,654-pass implementation; the
 new saved-data modules are checked with scoped synthetic and integration tests.
-Exact commands, results, failing controls and source hashes are retained under
-`artifacts/field-residual-v1/`. The interrupted combined check passed 190 focused,
-47 public and 16 documentation/release tests, but Ruff caught formatting in the
-independent runner tests. It did not produce a completed qualification or a new
-field diagnosis. Subsequent formatting/check closure is recorded separately;
-the registered 65 s external launcher and real-array execution are still pending.
+The preserved implementation at `1c805af` passes all **190 focused tests** within
+the combined 222-test documentation/release/residual check; Ruff also passes after
+formatting corrections. Initial failed controls remain under
+`artifacts/field-residual-v1/`; that combined check is under
+`artifacts/strategic-review-v1/initial-checks.xml`. These component checks are not
+completed execution qualification or a field diagnosis. The registered 65 s
+external launcher, final execution review and real-array analysis remain pending.

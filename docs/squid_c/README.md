@@ -18,5 +18,6 @@ time of comparison. The historical data request is an unsent draft.
 - [Data request draft](SQUID_C_DATA_REQUEST.md). Historical German draft request for equilibria, profiles, coils, currents, scaling and diagnostics; unsent.
 - [Readiness assessment](SQUID_C_READINESS.md). Detailed German account of gates G1–G6, partial successes and outstanding internal/external requirements.
 
-Historical content and hashes remain unchanged. Resolve old filenames with the
-[migration manifest](../../manifests/documentation-layout-v1.json).
+Required protocols and evidence retain their identities; current summaries evolve.
+Git retains old document versions. The [migration manifest](../../manifests/documentation-layout-v1.json)
+resolves filenames used before the documentation reorganization.

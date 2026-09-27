@@ -179,7 +179,7 @@ the larger native workflow.
 - `src/fusion_baselines/`: historical and ongoing research code.
 - `scripts/`: native research and maintenance entry points; start with `fusion.py`.
 - `examples/`: attributed reference data; `submissions/`: small contributed candidates.
-- `docs/`: project status, methods, results and reviews.
+- `docs/`: current guidance and supporting results; superseded documents live in Git.
 - `evidence/`: result records; ignored `artifacts/` holds large local runs, not a public data archive.
 
 ## Licensing and project operation

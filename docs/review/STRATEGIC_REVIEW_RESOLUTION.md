@@ -1,6 +1,6 @@
 # Strategic review: decisions, changes and remaining work
 
-26 September 2026. Response to the unchanged [review at `0da6a35`](STRATEGIC_REVIEW.md).
+26 September 2026. Response to the [review of `0da6a35`](STRATEGIC_REVIEW.md).
 The review was supplied from another AI agent; as its own heading states, it is
 not external domain-expert peer review. [Index](README.md) · [Roadmap](../PROJECT_PLAN.md)
 
@@ -55,23 +55,14 @@ reconstruction reports by a separate read-only agent; the retained note is
 `3b58cecdcfd028285a8fc3ad1b337a1fa273d897cef193727b16343c644abbb2`.
 The note performed no new calculation and is not expert validation.
 
-## Documentation and preservation
+## Current documentation and verification
 
-Status shrinks from 1,162 to 450 words and from 19 table data rows to six
-scientific rows; the roadmap from 613 to 483 words; Step 4 from 1,909 to 487.
-Counts use whitespace-delimited Markdown tokens. The complete previous Step 4
-overview is [archived](../steps/STEP_4_HISTORY.md); detailed original reports and
-scientific evidence are untouched. The repository map already existed in the
-reviewed README; it was clarified, not invented anew.
+The [workflow](../validation/RESEARCH_WORKFLOW.md) defines enforced overview
+word/row budgets and roadmap consistency. Superseded plans, progress diaries and
+duplicate archives are removed; Git retains history. Protocols and evidence needed
+to reproduce current claims stay intact. The [review policy](../validation/REVIEW_POLICY.md)
+documents the exact operational exceptions; scientific evaluators are not exempted.
 
-The new editorial check is a small dependency-free module called by the existing
-docs command. That wrapper is historically frozen, so its **one exact old/new
-hash pair** is explicitly added to the operational-preservation table:
-`6a098d7d...` → `930d02cb...`. The two prior exceptions stay byte-identical;
-no scientific evaluator or path-wide exemption is added. Tests reject a changed
-replacement or original and still require the exact approved set.
-
-Existing residual-analysis work was interrupted before its execution closure.
-Its passing checks, initial failed controls and unfinished status are preserved;
-no result is fabricated to clear the workspace. Current verification is recorded
-in the [validation log](../logbook/VALIDATION_LOG.md).
+Residual analysis remains [unfinished](../optimization/FIELD_RESIDUAL_PROGRESS.md).
+Actual current checks are in the [verification record](../logbook/VALIDATION_LOG.md);
+documentation changes are not new scientific results.

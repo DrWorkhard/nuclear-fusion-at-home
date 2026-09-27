@@ -265,5 +265,4 @@ the key protocols and results (most of them German), Git history and file counts
 All numbers come from those sources; the 1,600–1,800 rounds figure is an
 illustrative extrapolation, not a forecast. The scientific judgments are an AI
 reviewer's, and a domain expert should check them, especially on gate calibration
-and on the significance of the Step 3 metric. The ratings are qualitative. The
-[README review](ROOT_README_REVIEW.md) covers the front page in detail.
+and on the significance of the Step 3 metric. The ratings are qualitative.

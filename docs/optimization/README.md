@@ -21,29 +21,33 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [preserved implementation](FIELD_RESIDUAL_PROGRESS.md). Exploratory eight-pair analysis of signed normal error and objective/acceptance normalization; fixed before array analysis, with no new native calculations. Execution closure remains pending after strategic reprioritization.
 
-- Newly certified fixed proposals: [field-comparison protocol](FIXED_FIELD_PROBE_PROTOCOL.md), [method/input review](FIXED_FIELD_PROBE_REVIEW.md), [implementation qualification](FIXED_FIELD_PROBE_PROGRESS.md), [complete results](FIXED_FIELD_PROBE_RESULTS.md). All 168 requests and numerical checks pass. Normal gains of 0.057%/0.065% resolve; only the six-coil interior gain resolves. Both currents decrease, but all field limits still fail. Full software qualification: 5,654 tests.
+- [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations; useful unsolicited work is welcome and compute disclosure is optional.
+
+## Completed Step 4 experiments and supporting methods
+
+Qualifications below describe specific software revisions, not pending tasks or
+new scientific milestones. Current next actions are in the programme above.
+
+- Newly certified fixed proposals: [field-comparison protocol](FIXED_FIELD_PROBE_PROTOCOL.md), [method/input review](FIXED_FIELD_PROBE_REVIEW.md), [complete results and qualification](FIXED_FIELD_PROBE_RESULTS.md). All 168 requests and numerical checks pass. Normal gains of 0.057%/0.065% resolve; only the six-coil interior gain resolves. Both currents decrease, but all field limits still fail.
 
 - [Protected coil-fit results](PROTECTED_COIL_FIT_RESULTS.md). Eight native searches and independent coarse audits complete at `2015ac5`; normal RMS improves 0.4463–0.4857%, interior RMS 1.1881–2.1916%. All stop at the curvature certificate; subsequent fine results below retain the field failures.
 
-- [Fine acceptance registration](PROTECTED_FINE_PROTOCOL.md). Fixed eight-model/80-request schedule per selected case, original-seed/current identity, complete flux/refinement/geometry checks, explicit lossless mask codec and separate no-search supervision. Independently reviewed before implementation; native execution requires separate qualification/checkpoint.
-- [Fine validation progress](PROTECTED_FINE_PROGRESS.md). Implementation qualified at clean `80dddb8`: 4,883 complete regression tests pass, including 142 final integration tests. Retains independent reviews, failed controls and the separate execution checkpoint; scientific results are reported separately.
+- [Fine acceptance registration](PROTECTED_FINE_PROTOCOL.md). Fixed eight-model/80-request schedule per selected case, original-seed/current identity, complete flux/refinement/geometry checks, lossless mask codec and separate no-search supervision. Qualification is linked from the completed results.
 - [Complete fine results](PROTECTED_FINE_RESULTS.md). All eight fixed candidates complete at `e0ac3f7`: 640 native requests, 576 B/A comparisons, 40 refinements, 504 flux checks and 32 geometry grids pass numerical/geometry checks. All candidates fail the three field-error limits; no accepted design or Step 4 completion.
-- [Fine-phase integration notes](PROTECTED_FINE_DESIGN_NOTES.md). Preserved pre-registration mapping of candidate-coordinate and seed-identity traps, geometry masks and reuse boundaries; the registration above now defines the implementation task.
 
 - Protected pilot execution: [registration](PROTECTED_PILOT_EXECUTION_PROTOCOL.md), [results](PROTECTED_PILOT_EXECUTION_RESULTS.md). Launcher qualified at `6bb1e45`: 124 synthetic tests and all 3,487 regression tests pass; runtime clean-source admission and the subsequent pilot pass at `2015ac5`. Original budgets/fine requirements unchanged.
 
-- Independent saved physics: [registration](PROTECTED_PHYSICS_PROTOCOL.md), [results](PROTECTED_PHYSICS_RESULTS.md). Scoped qualification complete: 130 synthetic tests, eight real saved-seed reconstructions and 3,363 tracked regression tests pass. Maximum sampled B/A error 1.316e-15; earlier physical rejections confirmed. Native launch and fine acceptance remain separate.
+- Independent saved physics: [registration](PROTECTED_PHYSICS_PROTOCOL.md), [results](PROTECTED_PHYSICS_RESULTS.md). Eight real saved-seed reconstructions verify sampled B/A to 1.316e-15 and confirm earlier physical rejections; source-bound component qualification supports the completed pilot.
 
-- Native plumbing: [registration](PROTECTED_NATIVE_PLUMBING_PROTOCOL.md), [results](PROTECTED_NATIVE_PLUMBING_RESULTS.md). Qualification complete: 315 focused and 3,233 full-suite tests pass; all eight real saved contexts/source-bound adapters validate read-only. No native pilot or physical acceptance follows from this software gate.
-- Protected cell integration: [registration](PROTECTED_CELL_PROTOCOL.md), [results](PROTECTED_CELL_RESULTS.md). Synthetic qualification complete: 299 focused tests, 2,918 full-suite passes and eight historical schema comparisons, with reviewed fixes and source/artifact binding. Native launching and physical acceptance remain separate.
-- Protected runner execution components: [registration](PROTECTED_RUNNER_PROTOCOL.md), [results](PROTECTED_RUNNER_RESULTS.md). Scoped qualification complete: 390 synthetic tests, 2,619 full-suite passes and successful real-data source preflight after independently reviewed fixes. Integrated orchestration and physical acceptance remain separate.
-- [Second protected-fit method review](PROTECTED_METHOD_REVIEW.md). Independently authored internal support for a bounded diagnostic pilot, conditional on remaining execution/physical gates; seed-only historical replay, exact two-model schedule and no unresolved fine-improvement claim.
-- Protected runner storage: [protocol](PROTECTED_RUNNER_STORAGE_PROTOCOL.md), [results](PROTECTED_RUNNER_STORAGE_RESULTS.md). Qualified in its single-writer POSIX scope: 47 event-journal checks, 108 controller/auditor checks and a 2,229-pass full-regression report, with source/artifact identities bound. Source/native-budget orchestration and physical verification remain separate prerequisites.
-- Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). Complete in its synthetic scope: 108 controller/auditor tests and 2,180 full regression tests pass. Runner, method review and physical recomputation remain; no new field fit or physical claim.
+- Native plumbing: [registration](PROTECTED_NATIVE_PLUMBING_PROTOCOL.md), [results](PROTECTED_NATIVE_PLUMBING_RESULTS.md). Qualified source-bound adapters for eight saved contexts; software success is distinct from physical acceptance.
+- Protected cell integration: [registration](PROTECTED_CELL_PROTOCOL.md), [results](PROTECTED_CELL_RESULTS.md). Qualified synthetic orchestration, schema comparisons and source/artifact binding.
+- Protected runner execution components: [registration](PROTECTED_RUNNER_PROTOCOL.md), [results](PROTECTED_RUNNER_RESULTS.md). Qualified process, callback and resource controls with real-data source preflight.
+- [Second protected-fit method review](PROTECTED_METHOD_REVIEW.md). Independently authored internal support for a bounded diagnostic pilot, conditional on its original execution/physical gates; seed-only historical replay, exact two-model schedule and no unresolved fine-improvement claim.
+- Protected runner storage: [protocol](PROTECTED_RUNNER_STORAGE_PROTOCOL.md), [results](PROTECTED_RUNNER_STORAGE_RESULTS.md). Qualified single-writer POSIX event storage with source/artifact identities bound.
+- Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). Qualified synthetic controller/auditor; physical outcomes are in the completed experiment reports above.
 
-- [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations: reproduction, kernels, counterexamples, geometry-preserving improvement and broader physics. Unsolicited useful work welcome; costs optional.
 - [Original protected field-fit registration](PROTECTED_COIL_FIT_PROTOCOL.md). Preserved eight-cell low-mode proposal with its historical paused heading unchanged. Later qualifications, coarse execution and completed fine validation are linked above; physical acceptance remains open.
-- [Geometry-preserving search options](GEOMETRY_PRESERVING_SEARCH_OPTIONS.md). Two independent recommendations; qualify cumulative geometry bounds first. Free L-BFGS-B, support families and free currents remain separate options.
+- [Geometry-preserving method rationale](GEOMETRY_PRESERVING_SEARCH_OPTIONS.md). Background linked from the registered perturbation protocol; its proposed pilot is now complete. The research programme, not this dated rationale, sets current priorities.
 - [Coupled-design options and reviews](COUPLED_DESIGN_OPTIONS.md). Filament co-design, reduced directions, REGCOIL and direct surfaces; three internal agent reviews, integration traps and separate realization/coupling/pressure/robustness work packages.
 - Paired actual-coil pilot: [protocol](COUPLED_COIL_PILOT_PROTOCOL.md), [negative results](COUPLED_COIL_PILOT_RESULTS.md). Two plasma targets, two coil classes and normal/interior-vector methods. Eight startup checks, six searches, all finer acceptance checks; no physical pass. Coarse grids missed very small plasma clearances.
 - Geometry-to-field starts: [protocol](CLEAR_COIL_FIELD_START_PROTOCOL.md), [results](CLEAR_COIL_FIELD_START_RESULTS.md). Four cells, six resolutions, 1,048 native requests, 768 B/A comparisons, 20 refinements and 252 flux checks. Numerics, geometry and current pass; all four fail physical field limits.
@@ -96,5 +100,6 @@ results retain failures rather than relabeling them as design successes.
 - Spatial trust-region pilot: [protocol](SPATIAL_TRF_PILOT_PROTOCOL.md), [results](SPATIAL_TRF_PILOT_RESULTS.md). 128 proposals: better flux per proposal but substantially more time; both candidates infeasible.
 - Timed spatial pilot: [protocol](TIMED_SPATIAL_PILOT_PROTOCOL.md), [results](TIMED_SPATIAL_PILOT_RESULTS.md). Two 300-second runs per representation with complete accounting; all four candidates independently rejected.
 
-Historical content and hashes remain unchanged. Resolve old filenames with the
-[migration manifest](../../manifests/documentation-layout-v1.json).
+Required protocols and evidence retain their identities; current summaries evolve.
+Git retains old document versions. The [migration manifest](../../manifests/documentation-layout-v1.json)
+resolves filenames used before the documentation reorganization.

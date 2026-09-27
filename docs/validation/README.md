@@ -16,12 +16,9 @@ separate from portable CI. The September 9 audit withdrew earlier readiness clai
 
 - [Two-lane research workflow](RESEARCH_WORKFLOW.md). Lightweight exploration versus preregistered confirmation, proportionate checks, single-writer editorial ownership and documentation budgets; no weakening of historical scientific contracts.
 
-- [README review resolution](../review/ROOT_README_RESOLUTION.md). Clear candidate-to-PR route, matched-resolution UI, Python loop and source-bound local verification of 26 recommendations; real clone URL remains a hosting prerequisite.
-- [Public review fixes](PUBLIC_REVIEW_FIXES.md). Eight-point release review resolution: CI scope, UTF-8, Python support, contributor-agent rules, score guidance, English navigation and consistent roadmap; exact operational preservation exceptions and validation record.
 - [Public quickstart](PUBLIC_QUICKSTART.md). Dependency-free reference/candidate/report commands, named coefficient editing, score interpretation and troubleshooting.
-- [Portable release verification](PUBLIC_RELEASE_RESULTS.md). Original source-bound qualification, retained JSON-depth/CI-preservation failures and eight successful local reference/candidate/replay checks; historical counts apply to that revision.
+- [Portable release verification](PUBLIC_RELEASE_RESULTS.md). Source-bound starter contract, local Python compatibility, retained failures and pending hosted/independent checks.
 - [Review policy](REVIEW_POLICY.md). Open intake, optional cost disclosure, separate software/scientific decisions, trusted evaluation, safe PR execution and remaining hosting checklist.
-- [Public release plan](PUBLIC_RELEASE.md). Original implementation/acceptance plan for the real-coil starter and open contributions.
 - [Publication inventory](PUBLICATION_INVENTORY.md). Read-only size/history and limited credential/privacy-pattern checks: about 325 MB tracked content and 365 files with home-path indicators at the recorded revision. No full security/rights clearance.
 - [Historical research entry points](PROJECT_ENTRYPOINTS.md). English guide to discovery, dry runs, the fixed field-start study and independent saved-run audits; separate from the portable candidate interface.
 
@@ -41,7 +38,7 @@ and limits. Original evidence and failed attempts remain unchanged.
 - [Evidence standard](EVIDENCE_STANDARD.md). Claim classes, minimum provenance, independent checks and negative findings.
 - [Experiment protocol](EXPERIMENT_PROTOCOL.md). Problem identity, computation budgets, multiple starts and feasible Pareto comparisons.
 - [W7-X equilibrium protocol](W7X_EQUILIBRIUM_PROTOCOL.md). Version-matched VMEC comparison, protected physical subset and three remaining output differences.
-- [Documentation layout](DOCUMENTATION_LAYOUT.md). Shallow indexed structure, historical hashes and automated checks.
+- [Documentation migration record](DOCUMENTATION_LAYOUT.md). One-time layout/hash verification for old evidence paths; current structure and maintenance rules are in [AGENTS.md](../../AGENTS.md) and the [workflow](RESEARCH_WORKFLOW.md).
 
 Resolve historical bare filenames with the
 [migration manifest](../../manifests/documentation-layout-v1.json).

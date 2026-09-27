@@ -32,7 +32,8 @@ The [first actual-coil pilot](optimization/COUPLED_COIL_PILOT_RESULTS.md) was
 rejected, including fine clearances of only 1.8–6.7 mm. Older
 [LPQA searches](optimization/CURRENT_START_GN_RESULTS.md) also remain rejected
 under their own raw-flux profile. Failed numerical controls and revised claims
-remain in the [logbook](logbook/README.md).
+remain in the relevant result reports and evidence; current lessons are in the
+[research notes](logbook/README.md). Git retains superseded assessments.
 
 Here, independent numerical checking means separate specified calculations,
 usually on the same machine. No external domain-expert review or separate-machine

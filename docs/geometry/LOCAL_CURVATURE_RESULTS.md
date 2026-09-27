@@ -1,7 +1,7 @@
 # Local whole-homotopy curvature: twelve-state results
 
 26 September 2026. [Protocol](LOCAL_CURVATURE_PROTOCOL.md) ·
-[Software qualification](LOCAL_CURVATURE_PROGRESS.md) · [Index](README.md)
+[Software qualification](../../evidence/local-curvature-qualification-v1.json) · [Index](README.md)
 
 ## Result
 
@@ -9,8 +9,10 @@
 checker. Both previously curvature-rejected proposals now pass the complete
 local geometry classification, with the seven other gates unchanged.** This
 establishes conservatism of the old bound on these two proposals, not their field
-quality or a generally larger useful search region. Their fields remain unmeasured.
-The old decisions and original evidence are preserved.
+quality or a generally larger useful search region. The subsequent
+[field comparison](../optimization/FIXED_FIELD_PROBE_RESULTS.md) measured small
+gains but retained every absolute field-quality failure. Original decisions and
+evidence are unchanged.
 
 | Fixed group | States | Old geometry pass | New local geometry pass |
 | --- | ---: | ---: | ---: |
@@ -62,15 +64,12 @@ the study, both reviews and all fixed-state summaries. Raw reports remain under
 regression before execution passes 5,110 tests. Software success, a tighter
 geometric check and physical acceptance are separate claims.
 
-## Scientific consequence and next experiment
+## Scientific consequence
 
-We can now test the two already frozen proposals' fields without confusing a
-conservative geometric rejection with an actual violation. The minimal proposed
-follow-up compares those proposals with their own reference-N selections: four
-fixed states, matched diagnostic grids, original coarse flux normalization and
-currents frozen for refinement. No optimizer or adaptive candidate selection is
-needed to answer that first question.
-
-That field experiment needs its own registration and independent checks. It has
-not run. No field limit, physical admission, Step 4A–4D completion, state-of-the-art
-advance or MS1 follows from this geometry result.
+The bound distinguishes conservative rejection from actual geometric violation
+for these fixed states. Their separately registered
+[field comparison is complete](../optimization/FIXED_FIELD_PROBE_RESULTS.md).
+Neither result establishes physical admission, Step 4A–4D completion or MS1.
+Current follow-up is residual diagnosis and reference calibration under the
+[research programme](../optimization/STEP4_RESEARCH_PROGRAMME.md), not another
+automatic extension of local search.

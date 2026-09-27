@@ -67,13 +67,12 @@ scientific milestones. Their complete reports remain available:
   [native plumbing](../optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md),
   [saved-physics checker](../optimization/PROTECTED_PHYSICS_RESULTS.md) and
   [pilot launcher](../optimization/PROTECTED_PILOT_EXECUTION_RESULTS.md).
-- [Fine pipeline](../optimization/PROTECTED_FINE_PROGRESS.md),
-  [fixed field comparison](../optimization/FIXED_FIELD_PROBE_PROGRESS.md) and
+- [Fine pipeline qualification](../../evidence/protected-fine-qualification-v1.json),
+  [fixed field qualification](../../evidence/fixed-field-probe-qualification-v1.json) and
   [pending residual analysis](../optimization/FIELD_RESIDUAL_PROGRESS.md).
 
 The last recorded full research regression passed 5,654 tests at its stated
 implementation; it is not a regression of every later edit.
-Original reports, source identities, failed runs and the old overview remain in
-the repository/history. The retained [chronology](STEP_4_HISTORY.md) is historical,
-not an alternative current status. There is still no demonstrated transfer of
-the Step 3 benefit into a physically accepted coil field.
+Required protocols, source identities and scientific evidence remain available;
+superseded overviews and progress diaries are recoverable through Git. There is
+still no demonstrated transfer of the Step 3 benefit into an accepted coil field.

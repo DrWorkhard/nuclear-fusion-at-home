@@ -42,5 +42,6 @@ results preserve their actual outcomes and limitations.
 - Radial action: [protocol](QI_RADIAL_ACTION_PROTOCOL.md), [results](QI_RADIAL_ACTION_RESULTS.md). Four frozen vacuum/pressure cases, fixed invariants and 320 well families; no global maximum-J claim.
 - Trace cross-check: [protocol](QI_TRACE_CROSSCHECK_PROTOCOL.md), [results](QI_TRACE_CROSSCHECK_RESULTS.md). Independent VMEC Fourier reconstruction and field-line inversion for the first vacuum pilot.
 
-Historical content and hashes remain unchanged. Resolve old filenames with the
-[migration manifest](../../manifests/documentation-layout-v1.json).
+Required protocols and evidence retain their identities; current summaries evolve.
+Git retains old document versions. The [migration manifest](../../manifests/documentation-layout-v1.json)
+resolves filenames used before the documentation reorganization.

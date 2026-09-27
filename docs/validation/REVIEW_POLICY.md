@@ -68,8 +68,8 @@ The historical `.github/workflows/ci.yml` remains byte-preserved. Its runner now
 has an explicit **dev-only** scope: Ruff, dependency-free public tests, docs checks
 and selected documentation/operational tests. It no longer collects the entire
 native suite with missing scientific dependencies. This is a reviewed, exact-hash
-operational exception, documented in [the review resolution](PUBLIC_REVIEW_FIXES.md),
-not a relaxed physics test or a need to disable Actions before the first push.
+operational exception, not a relaxed physics test or a need to disable Actions
+before the first push.
 Run this sync-based profile only in a disposable checkout, never the qualified
 research environment. Portable CI separately tests Python 3.11/3.12/3.14 on
 Linux/macOS/Windows through `.github/workflows/public-ci.yml`.
@@ -77,6 +77,13 @@ Hosted runs are not claimed until actually observed. GitHub's
 [secure-use guidance](https://docs.github.com/en/actions/reference/security/secure-use)
 and [privileged-trigger guidance](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target)
 support these execution boundaries (checked 2026-09-23).
+
+The [operational-preservation table](../../src/fusion_baselines/operational_preservation.py)
+accepts only exact original/replacement SHA-256 pairs for `scripts/run_core_ci.sh`,
+`src/fusion_baselines/documentation.py` and `scripts/check_docs.py`. Unknown paths,
+changed bytes and symlinks are rejected; scientific evaluators and thresholds are
+not exempted. The four public evaluator-identity files remain unchanged by UI
+and documentation maintenance. See the [release verification](PUBLIC_RELEASE_RESULTS.md).
 
 ## Launch checklist — requires actual hosting work
 

@@ -6,7 +6,7 @@
   autonomous continuation, delegation, publishing, contact or merging.
 - Read [README](README.md), [CONTRIBUTING](CONTRIBUTING.md), the
   [overview](docs/README.md), [status](docs/STATUS.md), [plan](docs/PROJECT_PLAN.md)
-  and the relevant folder index. Maintainers also read the latest validation log.
+  and the relevant folder index. Maintainers also read the current verification record.
 - Check Git status and running experiments. Preserve unrelated user edits,
   pinned external checkouts and existing runs; do not resume research outside scope.
 
@@ -26,8 +26,8 @@
   needs a short reproducible record and bounded local execution, not automatic
   preregistration/full regression. Confirm claims separately; existing protocols
   keep their original requirements. Prefer reuse to new research infrastructure.
-- Keep historical evidence, source identities and complete checkpoint reference
-  graphs immutable. Use fresh outputs and separately identified portable exports.
+- Keep evidence supporting current claims, source identities and required checkpoint
+  reference graphs intact. Use fresh outputs and separately identified portable exports.
   Never rewrite old paths/hashes or broaden preservation exceptions implicitly.
 - Use explicit named physical-parameter mappings. Evaluator/model changes require
   separate review, versioning and revalidation; candidates cannot change their verifier.
@@ -47,8 +47,13 @@
   `engineering`, `validation`, `squid_c`, `logbook`, `review` or `steps`; no deeper
   hierarchy.
   Each folder's README explains its purpose, conclusions and every contained document.
-- Write new prose in English and use relative links. Keep overviews concise and
-  current; history belongs in the logbook, not this file.
+- Keep the repository at its current state; **Git tracks history**. Delete
+  superseded plans, completed progress diaries and duplicate archives instead of
+  moving them into archive documents. Update links and retain useful conclusions
+  in their canonical current document. Keep protocols/evidence still needed to
+  reproduce supported results, including failures; check dependencies before deletion.
+- Write new prose in English and use relative links. Keep overviews concise;
+  shared notes describe current decisions, lessons and the latest checks, not a journal.
 - The coordinating maintainer owns shared overviews/logs. Assign delegates
   non-overlapping files or separate branches; reviewers report before editing.
   Give public changes an editorial pass. Do not add tool/test milestones to the
@@ -76,7 +81,8 @@ Native research checks require their documented environment; portable CI is not
 a full native regression. See the [review policy](docs/validation/REVIEW_POLICY.md).
 
 **Maintainer sessions only:** after each completed work step, update the relevant
-detail document and validation log; add findings/decisions when warranted. Check
+detail document and replace the current verification record; update lessons/decisions
+when warranted, without appending session history. Check
 the root README and three documentation overviews for affected summaries, run
 checks, review the diff and commit scoped changes under the user's authorization.
 Report any blocked check/commit honestly. Contributors document their scoped PR;

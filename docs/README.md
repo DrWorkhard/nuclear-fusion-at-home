@@ -1,7 +1,7 @@
 # Nuclear Fusion @ Home: scientific overview
 
 For scientific reviewers and contributors who want the reasoning behind the work
-and a map of the evidence. Updated 26 September 2026.
+and a map of the evidence. Updated 27 September 2026.
 [Front page](../README.md) · [Status](STATUS.md) · [Roadmap](PROJECT_PLAN.md)
 
 The goal, how to start and a progress summary are on the [front page](../README.md).
@@ -46,8 +46,11 @@ diagnostic, not full QI.
 
 ## Detailed evidence and methods
 
-Most historical reports are in German; entry documentation and folder indexes are
-in English. Each folder index states its purpose, current conclusion and limits.
+Some reproducibility reports are in German; entry documentation and folder indexes
+are in English. Each index states its purpose, current conclusion and limits.
+Current guidance lives here; superseded plans and chronology live in Git, not
+duplicate archive documents. Scientific protocols and evidence remain when needed
+to reproduce supported results, including failures.
 
 - [Step results](steps/README.md): one English page per roadmap step with its result, limits, failures and evidence.
 - [Optimization](optimization/README.md): algorithms, attempts, negative results and [open research hints](optimization/RESEARCH_HINTS.md).
@@ -56,7 +59,7 @@ in English. Each folder index states its purpose, current conclusion and limits.
 - [Engineering](engineering/README.md): perturbations, meshes, loads and model limitations.
 - [Validation](validation/README.md): portable entry points, scientific evidence, environment and review.
 - [SQuID-C / Proxima comparison](squid_c/README.md): future intake, readiness limits and the MS1 evidence framework.
-- [Research log](logbook/README.md): decisions, findings, actual checks and preserved failures.
+- [Current research notes](logbook/README.md): decisions, lessons and latest verification.
 - [Reviews](review/README.md): documentation and usability reviews with the exact reviewed version and open recommendations.
 
 Contribution rules: [CONTRIBUTING](../CONTRIBUTING.md) and the

@@ -9,12 +9,11 @@ or select an installed version such as `py -3.12`. The launcher rejects old vers
 before import. No additional download is needed after obtaining the repository.
 The separate historical native workflow still requires Python 3.12+.
 
-Previous local verification (24 September, macOS): **44 public tests and eight copied-tree release checks
-pass on each of Python 3.11.4, 3.12.13 and 3.14.3**, including the real reference,
-changed candidate and tamper rejection. The fresh dev-only core runner also passes.
-For subsequent changes and current counts, see the [original verification](PUBLIC_RELEASE_RESULTS.md),
-[README-review follow-up](../review/ROOT_README_RESOLUTION.md) and
-[current review fixes and tests](PUBLIC_REVIEW_FIXES.md). Hosted CI and independent
+Local compatibility verification (25 September, macOS): **47 public tests and
+eight copied-tree release checks pass on Python 3.11.4, 3.12.13 and 3.14.3**,
+including the real reference, changed candidate and tamper rejection.
+See [release verification and scope](PUBLIC_RELEASE_RESULTS.md) and the
+[latest maintenance checks](../logbook/VALIDATION_LOG.md). Hosted CI and independent
 hardware reproduction have not yet been verified.
 
 ## Reproduce a real reference

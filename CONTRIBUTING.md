@@ -81,8 +81,11 @@ contribution need not use the candidate folder or this format.
 ## Review, credit and conduct
 
 Keep PR documentation local to your change: usage text, a focused report, or the
-PR description with actual checks and limitations. Maintainers integrate shared
-validation logs, decisions, status and roadmap; contributors do not need to edit
+PR description with actual checks and limitations. Keep documentation current;
+remove superseded plans and duplicate history rather than creating archives.
+Git retains earlier versions. Keep the protocols and evidence needed to reproduce
+supported results, including negative findings. Maintainers integrate current
+verification, decisions, status and roadmap; contributors do not need to edit
 those files or commit after every small step. The general instructions in
 [AGENTS.md](AGENTS.md) apply to outside agents; its maintainer completion duties
 apply only to repository-owner sessions.

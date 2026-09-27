@@ -1,42 +1,28 @@
-# Reviews of research strategy, documentation and usability
+# Active reviews
 
-Purpose: keep reviews of research strategy, public documentation, consistency and
-newcomer experience, each tied to the exact version reviewed and the checks
-actually run. Reviews recommend changes; they do not change code, evidence,
-thresholds or scientific status. When a recommendation is implemented, record the
-change where it is made and note the resolution here.
+Purpose: review findings that still guide project work, with the reviewed revision
+and the scope of the checks clearly identified. Resolved change-by-change paperwork
+and reviews of obsolete interfaces belong in Git, not a growing archive here.
 
-Current conclusion: 26 of the 27 README recommendations are implemented and locally
-verified; 47 public tests and eight real checks pass on three local Python versions.
-The actual public clone URL remains a hosting prerequisite; a
-clearly labelled template and ZIP route are provided meanwhile. The strategic review
-rates rigor as exceptional but finds Step 4 stalled about 2,700× from its field
-limit, gates without a matched physical positive control and process volume
-outpacing results. Its [resolution](STRATEGIC_REVIEW_RESOLUTION.md) adopts a
-calibration/exploration priority, two research lanes, enforced documentation
-budgets and MS0; experiments, hosting, independent review and archiving remain
-explicitly pending. These are internal reviews by the maintainer or an
-AI agent, not external peer review.
+Current conclusion: the strategic review calls for matched gate calibration,
+time-boxed exploration and a contributable full-grid benchmark. Its policy changes
+are implemented; experiments, hosting, independent reproduction and expert review
+remain pending. These are internal AI/maintainer reviews, not domain-expert peer review.
 
 [Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
 
 ## Documents
 
-- [Root README review, 24 September 2026](ROOT_README_REVIEW.md). Understandability
-  and consistency of the root README (blob `bae5c81`, on commit `7a0b2ed`): every
-  command run verbatim in a fresh clone, numbers and links checked, and 27 open
-  recommendations grouped as before-launch, clarity, ease of use and consistency.
-- [README review resolution](ROOT_README_RESOLUTION.md). Point-by-point fixes,
-  matched-resolution UI comparison, tracked candidate route, actual checks and
-  unresolved hosting/resource prerequisites. The historical review above is unchanged.
-- [Strategic review, 26 September 2026](STRATEGIC_REVIEW.md). Consultant-style
-  assessment of work, results and structure at `0da6a35` across eight axes
-  (strategy, results, rigor, execution, structure, collaboration, reproducibility,
-  operating model), with a scorecard, metrics, 11 prioritized recommendations and
-  indicators to track.
-- [Strategic review resolution](STRATEGIC_REVIEW_RESOLUTION.md). All eleven
-  recommendations addressed with implementation versus pending-work distinctions;
-  qualified scientific inferences, dated priorities and checked editorial controls.
+- [Strategic review](STRATEGIC_REVIEW.md). Assessment of `0da6a35` across strategy,
+  science, rigor, execution, structure, collaboration and reproducibility. Dated
+  counts describe that revision; eleven recommendations remain relevant.
+- [Strategic review response](STRATEGIC_REVIEW_RESOLUTION.md). Disposition of all
+  eleven recommendations, scientific qualifications and remaining work. The
+  [programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns current actions.
 
-Related: the first eight-point release review and its resolution are recorded in
-[public review fixes](../validation/PUBLIC_REVIEW_FIXES.md).
+Release behavior and actual checks are documented in the
+[public quickstart](../validation/PUBLIC_QUICKSTART.md),
+[release verification](../validation/PUBLIC_RELEASE_RESULTS.md) and
+[launch checklist](../validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
+Source-bound method reviews needed for scientific reproduction remain with their
+respective protocols and results.

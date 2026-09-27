@@ -43,14 +43,19 @@ machine and external expert review are different checks; label them separately.
 ## Ownership and documentation
 
 The coordinating maintainer is the single editor of root README, status, plan,
-overview and shared logs during a work session. Assign each delegated writer
+overview and shared notes during a work session. Assign each delegated writer
 explicit non-overlapping files, or use separate branches with deliberate merges.
 Reviewers send findings; they do not edit another writer's files concurrently.
 Public-facing changes receive a concise editorial pass before publication.
 
 Keep one home per topic: README for motivation/onboarding, roadmap for priorities,
 status for scientific results, step/detail pages for methods and qualification,
-logbook for history. New prose is English; historical German evidence remains.
+and shared notes for current decisions, lessons and latest checks. **History lives
+in Git.** Delete superseded plans, completed progress diaries and duplicate archives;
+do not move them into a new history document. Repair links and keep any still-useful
+conclusion in its canonical page. Retain source-bound protocols, negative results
+and evidence needed to reproduce supported claims; inspect dependencies before
+deletion. New prose is English; scientific records may retain their original language.
 The documentation check enforces word/row budgets and roadmap placement, not
 scientific truth, language fluency or every possible semantic duplication.
 
@@ -60,8 +65,11 @@ Status permits at most eight table data rows. Only root README and the plan hold
 the roadmap table, with matching names/statuses. `python scripts/check_docs.py`
 enforces these limits; historical detail reports are not truncated to fit them.
 
-After a completed work item, add a concise result/check/decision record, review
+After a completed work item, update the current result/check/decision record, review
 affected summaries and commit under current user authority. Do not write a new
-report for every passing test or copy test counts into the roadmap. Track elapsed
+report for every passing test, append a session chronicle or copy test counts into
+the roadmap. Earlier records are recoverable with `git log -p -- path/to/file` and
+`git show <revision>:path/to/file`. Git does not back up ignored local artifacts;
+their retention/backup obligations remain separate. Track elapsed
 question-to-answer time and science/tooling effort in the work record when known;
 do not invent historical timings or use test/commit volume as scientific progress.

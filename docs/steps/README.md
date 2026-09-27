@@ -29,6 +29,3 @@ evidence bar for the Proxima comparison is the
 - [Step 4 results so far](STEP_4_PLASMA_AND_COILS.md). Work packages 4A–4D, the
   coil experiments and lessons, calibration/feasibility priority and links to
   detailed numerical and software qualification. Field limits still fail.
-- [Archived Step 4 chronology](STEP_4_HISTORY.md). The former sixteen-entry
-  overview preserved from `798b2fb`; historical pending statements are not the
-  current scientific assessment.
