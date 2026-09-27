@@ -4,43 +4,39 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Local-normalized current implementation ready
+## Local-normalized currents: four-arm result complete
 
-The next experiment is implemented and independently reviewed before execution.
-**42 combined local/raw-current synthetic tests pass** (0.39 s); the reviewer
-separately reruns all 22 new tests (0.23 s). Derivatives, fixed flux/current box,
-startup/bundle accounting, feasible-only selection and late publication pass;
-native fine checks are mocked in this suite. Scoped Ruff and whitespace pass.
-No real local-current result is claimed by these implementation checks.
-
-## Independent currents: raw-objective result complete
-
-Two fixed-geometry current fits complete fourteen replay/fine rows in 4.794 s
-worker / 7.151 s supervised. Execution is dirty but source-bound at `39a1e13`;
-sources remain unchanged. Both raw-objective numerical optimality checks pass,
-without polishing, while normalized RMS worsens by 59.68% / 83.25%. Flux/current
-checks pass, but the boundary field becomes much weaker. This is a negative
-design result, not a failure of the numerical solver or a Step 4 completion.
+At clean `a3ce1ab`, four fixed-geometry searches complete **268 bundles and eight
+fine screens**, in 6.746 s worker / 7.066 s supervised. Sources remain unchanged;
+13,338,934 run bytes are retained. Equal-current starts give RMS gains of
+12.91% / 6.93% for circle/shape; raw-fit starts reach worse solutions. All eight
+flux/current checks pass and all eight normal-RMS/max gates fail. Boundary-field
+strength is still much lower than the original controls. No physical acceptance.
 
 Latest independent checks actually performed in the existing `.venv`:
 
-- **Twenty synthetic implementation tests pass** (0.44 s main / 0.43 s reviewer),
-  including derivatives, constrained optimality, mappings, partial/slow writes
-  and rejection of late final publication. No real study runs in these tests.
-- Verified 27 sources, all 54 run files / sixteen NPZs, 238 scalars, both saved
-  response matrices, flux vectors, numerical optimality checks and nullspace
-  spectra. Both starts retain their exact original geometry.
-- Fourteen complete saved-loop-A integrals, six coarse linearity pairs and all
-  **896 B / 896 A** comparisons pass. Maximum errors are 6.14e-16 / 1.13e-16.
-- Independent Fourier reconstruction verifies all three grids and loops to
-  1.95e-14. Explicit six/24-current mappings and frozen fine currents match.
-- The reviewer did not rerun native fields, the full ancestral reference graph,
-  physical diagnostics or resource-history measurements.
+- **42 combined local/raw-current synthetic tests pass** (0.39 s); the reviewer
+  separately reruns 22 new tests (0.23 s). These include analytic derivatives,
+  scale invariance, bounds/equality, selection, accounting and late rejection.
+- Verified **31 sources and all 570 run files**, both saved response bases,
+  four historical fine controls and eight new fine arrays.
+- All **268 attempt/completion pairs**, forty startup calls, sixteen derivative
+  checks, four exact repeats, 1,608 gradient components and 4,692 scalar metrics
+  reproduce. The selected indices are the exact lowest feasible seed/search RMS;
+  probes/repeats are excluded. Every recorded current vector satisfies the box
+  and equality.
+- Frozen six/24-current assignments and fine geometry/grids match their sources.
+  Eight full loop-A integrals and **512 each of B, A and loop-B** comparisons
+  pass. Maximum scalar/gradient discrepancies: 4.44e-16 / 1.044e-14.
+- The reviewer did not rerun native fields or remeasure execution/resource
+  history. No nonconvex global-optimality, interior or confinement proof follows.
 
-The [result record](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md) and
-[evidence](../../evidence/independent-currents-v1.json) retain exact identities,
-failed-screen outcomes and scope. The next local-normalized-current experiment
-is specified there; its results are not yet claimed.
+The [current-study result](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md) and
+[evidence](../../evidence/local-currents-v1.json) retain all identities and
+negative screens, including the earlier raw-objective result. Independent
+saved-gradient inspection finds widespread old coefficient-box saturation;
+the [next paired shape question](../optimization/COHERENT_COIL_EXPLORATION.md)
+is specified before execution, not reported as a result.
 
 ## Public export of the improved shape
 
@@ -55,7 +51,7 @@ only geometry is exported, not its magnetic state or native interior acceptance.
 Independent review checks both saved resolution levels, coefficient/current
 identities, all source hashes and unchanged evaluator/reference bytes against
 `39a1e13`. See the [portable evidence](../../evidence/public-shape52-v1.json).
-**47 public tests pass** (3.360 s); scoped Ruff, documentation structure and
+**47 public tests pass** (latest run 3.330 s); scoped Ruff, documentation structure and
 whitespace checks pass. No full native regression, independent public field
 rerun or separate-machine replay is claimed.
 

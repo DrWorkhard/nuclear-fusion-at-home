@@ -21,6 +21,12 @@ These lessons guide that work rather than duplicating the full result chronology
   reproduce the archived LPQA mean/max and show that near-zero QUASR collocation
   error becomes finite after refinement. Neither clipping nor collocation is
   physical perfection. Do not relax gates merely because current designs fail.
+- **One fixed flux does not preserve the whole field.** In the
+  [independent-current study](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md),
+  raw-error minima weaken boundary fields and worsen normalized error despite
+  meeting the target loop flux. Direct normalized fitting helps, but still leaves
+  weak-field trade-offs. Retain amplitudes, maxima and interior checks; a favorable
+  single boundary score does not establish field fidelity or confinement.
 - **Use named physical coordinates.** Positional optimizer arrays can change
   meaning across processes. The [mapping correction](../optimization/REPLAY_MAPPING_REMEDIATION.md)
   explains why replay must bind names, coefficients and physical fields.

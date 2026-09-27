@@ -147,7 +147,7 @@ comparison errors remain below 6.14e-16 / 1.13e-16. Actual native requests:
 B=1600, A=68, combined independent=14. The reviewer did not rerun native fields,
 the full ancestral graph, physical diagnostics or resource-history measurements.
 
-## Next question: local-normalized current fitting
+## Follow-up question: local-normalized current fitting
 
 Exploration session 5 reuses these exact saved six-column matrices and unchanged
 geometries. Compare four arms: circle and shaped, each starting from its equal-
@@ -171,9 +171,63 @@ mocked frozen-current fine replay. These are implementation checks, not results.
 
 Freeze the selected six currents before two native fine checks per arm at
 128² / 512 nodes, unshifted and half-shifted. Reuse original control fine rows;
-save new full B/normals, loop A/tangents and independent B/A comparisons. These
+save new full B/normals, loop A/tangents and independent B/A comparisons. The
 screens also retain full loop B and its independent sampled comparison. These
 adaptive checks are not confirmation holdouts. Bounds: **240 s worker / 245 s
 external**, 64 MiB output, one thread, same 3/2 GiB reserves; fresh outputs under
 `artifacts/local-currents-v1/`. No new field responses during optimization and
 no shape, topology, pressure or interior-vector change/qualification.
+
+## Completed local-normalized result
+
+All four arms finish at clean revision `a3ce1ab` with unchanged sources, in
+6.746 s worker / 7.066 s supervised. They use **268 bundles including forty
+startup bundles**, eight fine screens and 13,338,934 run bytes. All solvers
+return success; this is not a global-optimality result. The
+[evidence](../../evidence/local-currents-v1.json) binds the exact saved responses,
+all attempted points, selections and new fields. Result SHA-256:
+`8e7dad4d996adbab965db29c9224aa7b2414d9f076de84e610bee41819416ce8`.
+
+| Geometry / start | Bundles | Fine RMS | Change from equal-current control | Maximum current, kA | Area-mean field, T |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Circle / equal | 64 | 0.268826 | −12.91% | 393.564 | 0.532247 |
+| Circle / raw fit | 47 | 0.288769 | −6.44% | 409.194 | 0.340679 |
+| Shaped / equal | 76 | 0.256930 | −6.93% | 357.255 | 0.445385 |
+| Shaped / raw fit | 81 | 0.266855 | −3.33% | 500.000 | 0.682286 |
+
+The two starts reach different solutions. In this four-arm comparison the
+equal-current starts give lower error, without reversed base currents. Raw-fit
+starts retain four / two base reversals; the shaped arm reaches the 500 kA bound.
+The equal-start selected base currents in kA are:
+
+```
+circle: [393.563767, 15.126140, 20.202205, 24.401601, 22.801134, 273.248419]
+shaped: [357.255132, 33.281393, 22.331618, 24.052135, 34.388179, 169.394800]
+```
+
+All eight refined/shifted rows pass fixed-current and target-flux checks, but
+fail both boundary-error limits. Maximum normalized normal error is at least
+0.65 across these designs. The weak-field issue is reduced, not removed:
+equal-start area-mean fields are still well below the controls' 1.26231 / 1.28277 T;
+their worst shifted minima are 0.159576 / 0.136263 T. Interior fidelity and
+confinement have not been checked. Exact unchanged geometry permits reuse of the
+original scoped geometry bounds, not new load/robustness claims.
+
+**Decision:** normalized fitting avoids the raw objective's reversed ranking,
+but these current-only searches do not approach the 1e-2 exploratory signal or
+beat the separate shape-52 result. Keep current freedom as a possible combined
+design variable; do not automatically extend current-only searches. The next
+experiment should test geometric freedom/initialization, with unchanged physical
+gates and its own declared scope: the [matched coherent-shape study](COHERENT_COIL_EXPLORATION.md).
+
+Independent saved-data audit rehashes 31 sources and all 570 run files, verifies
+both saved bases, four historical fine controls and eight new fine arrays. It
+checks all 268 attempt/completion pairs, forty startup calls, sixteen derivative
+checks, four exact repeats, 1,608 gradient components and 4,692 scalar metrics.
+All currents remain within box/equality constraints; selected indices 63/46/75/80
+are the lowest feasible seed/search RMS points, excluding probes/repeats. Fine
+currents and geometry/grids match their frozen sources exactly. Eight full
+loop-A integrals and **512 each of B, A and loop-B** sampled comparisons pass.
+Maximum scalar/gradient discrepancies are 4.44e-16 / 1.044e-14, derivative-check
+error 1.212e-8 and fine relative flux error 1.11e-15. No new native audit fields,
+global-optimality proof or physical admission is claimed.

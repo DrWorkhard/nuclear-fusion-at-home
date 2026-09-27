@@ -28,7 +28,9 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md). Four arms plus an adaptive saved-point check: continuous geometry passes at RMS 0.15168, 45.05% below the shaped seed with higher current. Best sampled RMS 0.13731 has unresolved clearance; boundary limits still fail.
 
-- [Independent base currents](INDEPENDENT_CURRENT_EXPLORATION.md). Both fixed-shape raw-error minima certify numerically, but raw gains of 89–92% worsen normalized RMS 60–83% with weak boundary fields. Next: direct normalized-current fitting from saved responses.
+- [Independent base currents](INDEPENDENT_CURRENT_EXPLORATION.md). Raw-error minima worsen normalized RMS; direct normalized fitting then improves the original circle/shape RMS by 12.91%/6.93%, with weaker boundary fields. All field gates still fail.
+
+- [Coherent shape freedom](COHERENT_COIL_EXPLORATION.md). Matched small/wider low-mode boxes from the same checked shape52, after saved gradients expose box-restricted descent. Prospective equal-budget comparison; old mappings/gates unchanged.
 
 - Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [results](FIELD_RESIDUAL_RESULTS.md). All eight comparisons complete. Only 11.6%/19.6% of squared normalized residual aligns with the observed response versus 88.1%/89.6% for the raw objective; prioritize metric calibration and objective/start comparisons, not automatic continuation.
 

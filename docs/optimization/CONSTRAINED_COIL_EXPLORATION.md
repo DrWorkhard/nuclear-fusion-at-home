@@ -172,9 +172,10 @@ cover, all **2,208 coil-pair and 192 plasma lower-bound calculations**, and all
 clearances. It does not rerun the full distance-grid searches or prove complete
 self-disjointness; those limits remain explicit.
 
-Next test [independent base currents](INDEPENDENT_CURRENT_EXPLORATION.md) on the
-two original geometries. This isolates a previously frozen design freedom before
-another shape/current search. No interior-field, topology, plasma-benefit transfer,
+The subsequent [independent-current study](INDEPENDENT_CURRENT_EXPLORATION.md)
+finds modest normalized-error gains but no field acceptance. The next
+[matched shape study](COHERENT_COIL_EXPLORATION.md) tests larger coherent freedom
+from the checked point below. No interior-field, topology, plasma-benefit transfer,
 pressure or finite-build claim is made; Step 4A–4D remain open.
 
 ## Adaptive saved-point follow-up
