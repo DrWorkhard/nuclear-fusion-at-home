@@ -1,6 +1,8 @@
 # Interior-field screen of exploratory coil fits
 
-27 September 2026. **Prospective; no result yet.** This diagnostic accompanies
+27 September 2026. **Prepared, not executed; paused for repository simplification.**
+The implementation passes 49 synthetic tests (0.58 s main); no actual intake,
+native field, optimization or VMEC run is claimed. This diagnostic accompanies
 the [coherent-shape experiments](COHERENT_COIL_EXPLORATION.md); it does not add an
 optimization session or change their selection rules.
 
@@ -18,8 +20,11 @@ following five fixed geometries, without optimizing or selecting on interior err
 
 Both session-7 endpoints must come from the successfully completed paired run;
 bind its actual result hash before execution and verify snapshots against the
-saved selections. Retain their separate geometry verdicts, including unresolved
-ones, rather than filtering on the new interior score. Failed searches remain
+saved selections. Report their separate geometry verdicts, including unresolved
+ones, alongside the screen: the combined evidence must bind the geometry report
+and its exact snapshots. The field-only adapter marks geometry as not assessed
+there and does not filter candidates on geometry or the new interior score.
+Failed searches remain
 failures, not silently omitted cases. Earlier source graphs remain unchanged.
 
 All five address the **original reference**, input

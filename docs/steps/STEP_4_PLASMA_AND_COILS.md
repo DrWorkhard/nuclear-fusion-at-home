@@ -76,6 +76,11 @@ matched small-change control at 1.06% higher current. Both searches exhaust thei
 600-bundle budgets; all boundary limits still fail. No topology or Step 3 benefit
 transfer is established; acceptance limits remain unchanged.
 
+A matched restart then reaches **0.004889 with checked geometry**, 55.27% below
+the original-box control at 8.64% lower current. Both 1,200-bundle arms exhaust
+their budgets. The exploratory 1e-2 signal is met, while physical gates and
+transfer remain open. Repository simplification now precedes further research.
+
 The [research programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns
 calibration, decision windows, the open challenge and MS0. No gate or historical
 verdict changes with this reprioritization.

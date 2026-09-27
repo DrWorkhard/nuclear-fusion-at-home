@@ -1,69 +1,38 @@
 # Current verification
 
-Updated 27 September 2026. Latest completed work, not an append-only history.
-Git retains previous versions; canonical result pages retain scientific checks
-and failed attempts.
+Updated 27 September 2026. Latest completed work; Git retains previous records.
 
-## Matched coherent-shape search complete and independently checked
+## Matched restart closed before repository simplification
 
-At clean `c1d2260`, both 600-bundle arms complete in 233.572 s worker /
-234.478 s supervised. Wider shapes reach fine normal RMS **0.0138430**, 81.80%
-below the small-box control with 1.06% more current. All four fine independent
-checks and both startup sequences pass; sources remain unchanged. Both searches
-exhaust their budgets, so this is not an optimum.
+At clean `c1fdddf`, both 1,200-bundle arms complete in 478.475 s worker /
+479.247 s supervised. Expanded low modes reach fine RMS **0.00488873136**,
+55.27% below the original-box control with 8.64% less current. Both endpoints
+pass scoped continuous geometry; both boundary-error limits remain failed.
+The 1e-2 exploratory signal is met, not Step 4 acceptance.
 
-The 15.557 s geometry follow-up uses no native fields. Wider-arm bounds pass:
-length ≤2.82955 m, tighter curvature ≤10.1262/m, coil clearance ≥0.0639913 m,
-plasma clearance ≥0.112898 m. Control clearance remains unresolved after two
-levels, not physically disproven. Supplemental curvature bounds are explicit;
-the old loose-curvature flag is not rewritten.
-
-Checks actually performed in the existing `.venv`:
-
-- **46 combined retry/coherent/constrained tests pass** (1.71 s main / 1.49 s
-  independent preflight). Source-bound real preflight checks nineteen inputs.
-- Independent saved-data audit verifies 45 sources, all 1,200 trial/attempt
-  pairs, eight derivative checks, anchors/repeats, boxes, budgets and selections.
-- Separate formulas reproduce 48 fine metrics, four full saved-loop fluxes,
-  256 B and 256 A comparisons, and all 24 physical curves per endpoint.
-- Geometry audit verifies seven source identities, exact snapshots, three
-  levels' cover/bound arithmetic, 828 pair bounds, 72 plasma bounds and eighteen
-  tighter curvature enclosures. No full distance-grid rerun or interval proof.
-- NumPy-scalar serialization control passes before the geometry run. Publication
-  and external process-group caps pass; no timeouts or late results occurred.
-- **47 public tests pass** (3.417 s); documentation structure and whitespace
-  checks pass after updating current summaries.
+Independent saved-data audit checks 46 search and seven geometry sources, all
+2,400 trial pairs, eight derivative checks, repeats, absolute bounds and selections;
+48 fine metrics, four loop integrals and 256 each of B/A comparisons. Geometry
+checks compose 552 pair and 48 plasma bounds and twelve tighter-curvature
+classifications. No native field or full distance/enclosure recalculation is
+claimed by that audit. Geometry execution takes 4.539 s / 4.826 s supervised.
 
 The [canonical result](../optimization/COHERENT_COIL_EXPLORATION.md) and
-[evidence](../../evidence/coherent-coils-exploration-v2.json) retain the exact
-questions, execution receipts, sources and complete local file manifest.
-The wider RMS is still 138.43 times the acceptance limit. No interior, topology,
-pressure, benefit-transfer or engineering acceptance follows from this result.
+[evidence](../../evidence/coherent-restart-v1.json) preserve the questions,
+execution receipts, sources and 4,827 run files / 52,263,829 bytes.
+Earlier failures remain in the predecessor evidence.
 
-## Supporting results retained at their point of use
+## Implementation checks
 
-The next paired-restart implementation passes **63 combined synthetic tests**
-(2.08 s); independent review reruns 47 (1.37 s) and finds no launch blocker.
-Twenty exact inputs, nine saved coarse anchors, absolute bounds and the actual
-169-free/29-masked startup directions pass metadata checks without fields.
-Ruff, documentation and whitespace checks pass. This is readiness, not a new
-search result. A separate five-point interior screen is prospective.
+- Matched restart: **63 combined synthetic tests pass** (2.08 s main);
+  independent reviewer reruns 47 (1.37 s).
+- Prepared interior screen: **49 synthetic tests pass** (0.58 s main, 0.71 s
+  implementer). No actual interior run, optimization or VMEC calculation.
+  Source-level review checks reference401 archive identities and exact B² scale.
+- Scoped Ruff, documentation structure and whitespace checks pass.
+- Latest recorded public run: **47 tests pass** (3.466 s).
 
-- The initial paired-search failure and thirty-bundle derivative diagnosis remain
-  in the coherent-shape report. Additional independent analytic geometry replay
-  checks 46,080 curvatures and 5,940 gradient entries; maximum gradient error is
-  3.43e-15. The numerical probe change did not alter physical or derivative limits.
-- [Independent-current study](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md):
-  normalized fits improve RMS modestly but weaken boundary fields. Raw-objective
-  fits worsen normalized quality; all field gates remain failed.
-- [Public shape52 example](../../submissions/constraint-aware-shape52/README.md):
-  evaluation and same-code audit pass; the public current differs from its native
-  normalization. This remains an example, not the newly accepted reference.
-- [Matched calibration](../optimization/REFERENCE_CALIBRATION.md): thirteen rows,
-  156 independently reproduced metrics and 832 field comparisons; no complete
-  Goodman positive control.
-- [Public release results](../validation/PUBLIC_RELEASE_RESULTS.md) retain exact
-  dated portability checks and unverified hosted coverage.
-
-No full native regression, separate-machine replay, hosted CI, external peer
-review, release or Step 4 completion is claimed by this record.
+The user-requested simplicity review now takes priority. No additional research
+run has been launched. The interior screen is preserved but unexecuted.
+No full native regression, separate-machine reproduction, external peer review,
+hosted release or Step 4 completion is claimed.

@@ -22,13 +22,13 @@ not extrapolate small local gains.
 | [Newly certified fixed steps](optimization/FIXED_FIELD_PROBE_RESULTS.md) | Normal RMS decreases another 0.057%/0.065% beyond preset empirical margins; both currents decrease; one interior-error improvement resolves | Other interior gain unresolved; all absolute field-error gates still fail; no general search-method advantage |
 | [Independent currents](optimization/INDEPENDENT_CURRENT_EXPLORATION.md) | Raw fitting worsens normalized error; direct normalized fitting reduces original-circle/shape RMS by 12.91%/6.93% | All field gates fail; boundary fields weaken despite fixed loop flux. Current freedom alone has not closed the gap |
 | [Boundary calibration](optimization/REFERENCE_CALIBRATION.md) | QUASR 952 reaches refined RMS 2.27e-6; LPQA's archived mean/max reproduce on the tested half-period grid | Positive boundary-component control only; no matched end-to-end Goodman positive; coarse QUASR grid misleadingly reports near zero |
-| [Wider coherent shapes](optimization/COHERENT_COIL_EXPLORATION.md) | Continuous-geometry pass at RMS 0.013843; 81.80% below the matched small-change arm with 1.06% more current; 90.87% below shape52 | Both 600-bundle searches exhaust their budgets; all boundary limits fail. No interior/topology/benefit-transfer acceptance |
+| [Wider coherent shapes](optimization/COHERENT_COIL_EXPLORATION.md) | Continuous-geometry pass at RMS 0.004889; 55.27% below the matched original-box restart with 8.64% less current | Both 1,200-bundle restarts exhaust their budgets; boundary limits fail. The 1e-2 exploration signal is met, not physical acceptance |
 
 The current normal-RMS limit is **1e-4**, maximum normal error **1e-3** and
 interior-vector RMS **0.01**. The geometry-checked exploratory fit remains about
-138 times the normal-error limit;
+49 times the normal-error limit;
 its cause and reachability within the geometry limits remain unresolved.
-The matched small-change arm has unresolved continuous clearance; no threshold is relaxed.
+Both latest restart endpoints pass scoped continuous geometry; no threshold is relaxed.
 
 ## Negative results and independence
 

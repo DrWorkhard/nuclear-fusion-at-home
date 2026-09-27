@@ -1,8 +1,38 @@
 # Matched low-frequency shape freedom
 
-27 September 2026. Session 6 complete; **wider shapes improve the fit**.
-Session 7 is a prospective matched restart, not a completed result.
+27 September 2026. Sessions 6–7 complete; **wider shapes improve the fit**.
 [Programme](STEP4_RESEARCH_PROGRAMME.md) · [Starting geometry](CONSTRAINED_COIL_EXPLORATION.md)
+
+## Latest result: matched restart
+
+Session 7 completes at clean `c1fdddf`, 1,200 bundles per arm in 478.475 s worker /
+479.247 s supervised. Both arms exhaust their budgets. Sources remain unchanged.
+The [evidence](../../evidence/coherent-restart-v1.json) binds the exact pre-run
+question and all 4,827 run files / 52,263,829 bytes. No interior screen has run.
+
+| Frozen endpoint | Original absolute box | Expanded low modes |
+| --- | ---: | ---: |
+| Selected trial | 1197 | 1198 |
+| Fine normal RMS | 0.0109284215 | **0.00488873136** |
+| Current | 345.245 kA | **315.407 kA** |
+| Scoped continuous geometry | Pass | Pass |
+
+The expanded arm improves RMS **55.27%** and current **8.64%** versus the matched
+control. It reaches the 1e-2 exploratory signal, but remains **48.89 times the
+1e-4 acceptance limit**. Both shifted fine grids agree closely; maximum-normal
+limits still fail. Geometry bounds for the expanded arm are length ≤3.28691 m,
+curvature ≤10.0353/m, coil clearance ≥0.0628479 m and plasma clearance ≥0.132237 m.
+Geometry takes 4.539 s without native fields. These remain padded floating-point
+bounds, not interval proofs, engineering qualification or Step 4 completion.
+
+Independent saved-data checking verifies 46 search and seven geometry sources,
+all 2,400 trial pairs, shared masked startup directions, eight derivative checks,
+anchors/repeats, absolute bounds and selections. It reproduces 48 fine metrics,
+four saved-loop integrals and 256 B/256 A comparisons. Geometry checks compose
+552 pair and 48 plasma lower bounds and twelve tight-curvature classifications;
+they do not rerun the full distance grids or tight enclosures. The already-running
+study is closed before the user-requested repository simplification; no new
+optimization is launched for that cleanup.
 
 ## Result and limits
 

@@ -6,7 +6,7 @@ searches on LPQA, plus paired coil realization of our QI-like plasma targets.
 [Steps 1/2 are complete](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md) as reference
 and iteration capabilities. A new feasible optimum was not their completion
 criterion. Step 4 remains **In progress**: current starting coils pass geometry
-checks; an exploratory geometry-checked fit reaches normal RMS 0.01384 versus a
+checks; an exploratory geometry-checked fit reaches normal RMS 0.004889 versus a
 1e-4 limit, with higher current. Lower sampled errors have unresolved clearance.
 
 The best older LPQA coil search passes checked geometry limits but exceeds its
@@ -30,7 +30,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Independent base currents](INDEPENDENT_CURRENT_EXPLORATION.md). Raw-error minima worsen normalized RMS; direct normalized fitting then improves the original circle/shape RMS by 12.91%/6.93%, with weaker boundary fields. All field gates still fail.
 
-- [Coherent shape freedom](COHERENT_COIL_EXPLORATION.md). Wider shapes reach RMS 0.01384 with checked geometry, 81.80% below the matched small-change arm at 1.06% higher current. Both searches exhaust 600 bundles; boundary limits still fail. Initial derivative failure and diagnosed retry remain explicit.
+- [Coherent shape freedom](COHERENT_COIL_EXPLORATION.md). Wider shapes reach RMS 0.004889 with checked geometry, 55.27% below a matched original-box restart at 8.64% less current. The exploration signal is met; boundary limits still fail. Initial failures remain explicit.
 
 - [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md). Prospective five-point comparison on three refined interior/coil grids, with frozen currents and independently reconstructed target fields; no result yet. Separates vector-field fidelity from boundary error and realized-field topology.
 

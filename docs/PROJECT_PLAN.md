@@ -32,14 +32,12 @@ Map field error against clearance/curvature using existing tools and alternative
 starts/objectives. The [objective comparison](optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
 improves field error only with geometry violations. [Constraint-aware fitting](optimization/CONSTRAINED_COIL_EXPLORATION.md)
 gave a geometry-checked adaptive fit at RMS 0.1517. The
-[paired shape test](optimization/COHERENT_COIL_EXPLORATION.md) now reaches 0.01384
-with checked geometry, 81.80% below its small-change control at 1.06% higher current.
-Both searches exhaust their budgets. The next matched restart compares original
-absolute bounds with wider low modes, separating extra iterations from shape
-freedom; no tolerance is relaxed.
-Fine RMS below 1e-2 with geometric gates is a
-triage signal, not acceptance. If it is not reached, change the investigated
-family/approach instead of automatically extending protected local search.
+[paired shape restart](optimization/COHERENT_COIL_EXPLORATION.md) now reaches
+0.004889 with checked geometry, 55.27% below its original-box control at 8.64%
+lower current. Both searches exhaust their budgets. The 1e-2 triage signal is
+met, not physical acceptance. First simplify the repository as requested; then
+map the working method's trade-offs and screen interior fields before transfer
+claims. No protected-search extension or threshold relaxation is implied.
 The [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) defines scope,
 decision rules, controls and retained negatives.
 
