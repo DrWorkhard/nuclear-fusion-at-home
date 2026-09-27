@@ -16,7 +16,7 @@ references. One plasma-target study improved its preregistered metric
 (bounce-action variance, a particle-motion diagnostic) by **11.17%**.
 An exploratory geometry-checked coil fit reaches normal-field error **0.1517
 versus a 1e-4 pilot limit**, at higher current. Lower-error candidates have
-unresolved clearance. Next: larger coherent shape changes. Full target/geometry
+unresolved clearance. A wider-shape test stopped at its derivative check. Full target/geometry
 calibration remains open.
 [Scientific evidence](docs/STATUS.md).
 No new accepted coil design or state-of-the-art advance yet. We are independent of, and not

@@ -78,6 +78,8 @@ clearance. [Independent-current raw fits](INDEPENDENT_CURRENT_EXPLORATION.md)
 worsen normalized error; direct normalized fitting then gives modest gains with
 weaker fields. Session 6 compares [small/wider low-mode shape boxes](COHERENT_COIL_EXPLORATION.md)
 from the same checked shape52, after saved gradients expose box-restricted descent.
+Its first attempt stops before optimization on the derivative guard; a separately
+specified step-size diagnostic precedes any retry. The failed attempt remains.
 Source-bound failed
 attempts remain in each result record and are not omitted from effort accounting.
 

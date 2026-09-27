@@ -1,6 +1,6 @@
 # Matched low-frequency shape freedom
 
-27 September 2026. Exploration session 6; **prospective, not a result**.
+27 September 2026. Exploration session 6; **first attempt fails before search**.
 [Programme](STEP4_RESEARCH_PROGRAMME.md) · [Starting geometry](CONSTRAINED_COIL_EXPLORATION.md)
 
 ## Question and rationale
@@ -95,3 +95,52 @@ retain the shape/current/clearance trade-off and check continuous geometry. If
 both remain far from the 1e-2 triage signal, prioritize a distinct family such as
 the existing n8 starts instead of repeatedly widening this one. Neither the
 triage signal nor experiment completion replaces Step 4 acceptance.
+
+## First attempt: startup derivative failure
+
+At clean `e8eeaf9`, both arms stop after their ten startup bundles; no optimizer
+or fine screen runs. Worker time 7.080 s / supervised 7.660 s; 53 run files use
+1,245,748 bytes. All sources remain unchanged. The
+[failed-attempt evidence](../../evidence/coherent-coils-failed-v1.json) preserves
+the exact original question, code, coefficients, gradients and failure verdict.
+Result SHA-256:
+`b371d45a07c5ed197b2c9fd56112d66474448036c29f29b4232a31dafeb813a2`.
+
+All nine startup anchors replay exactly, as do repeated values/gradients and both
+arms. Three of four directional checks fail the original absolute 1e-7 or
+relative 1e-4 criterion:
+
+| Direction | Absolute error at h=1e-5 | At h=5e-6 | Error reduction |
+| --- | ---: | ---: | ---: |
+| Sine | 5.25910e-6 | 1.31111e-6 | 4.0112× |
+| Cosine | 5.62513e-6 | 1.44166e-6 | 3.9018× |
+
+Independent saved-data inspection checks all 39 sources and twenty startup rows.
+Only the curvature construction penalty is active. Splitting saved scalar values
+into field/geometry terms attributes essentially all step-size dependence to the
+geometry penalty: the field derivative changes only about 4–7e-12 on halving h.
+Two-level Richardson extrapolation of saved values differs from the analytic
+derivatives by 4.893e-9 / 4.717e-8. This supports finite-step truncation as an
+explanation, but does **not** turn the failed startup into a pass.
+
+### Bounded derivative-scale diagnosis before any retry
+
+Keep this failed run and its script unchanged. A separate diagnostic reuses its
+exact shape52 seed, control box and nine coarse anchors. No optimizer or new
+candidate is permitted. Use thirty total bundles: seed, central probes in the
+same normalized sine/cosine directions at h=2e-5, 1e-5, 5e-6, 2.5e-6, 1.25e-6,
+6.25e-7 and 3.125e-7, then an exact seed repeat. Retain all attempts and independently
+report field, geometry and total directional derivatives, raw errors and
+convergence ratios. The acceptance tolerances remain unchanged; undefined or
+inconsistent results remain failures.
+
+Save the geometry gradient separately; subtract it from the total gradient for
+the field component and compare both with their scalar central differences.
+This is a same-model derivative diagnostic, not an independent physics code.
+Require stable repeat/anchors and consistent finer-step behavior before defining
+any fresh search startup rule. A retry must have a new output/source identity and
+retain the initial failure, rather than silently changing its probes.
+
+Diagnostic bounds: 180 s / 185 s external, 64 MiB, one thread, same 3/2 GiB disk
+reserves; fresh `artifacts/coherent-derivative-scale-v1/`. No new geometry,
+confinement, field acceptance or Step 4 completion follows from a derivative check.

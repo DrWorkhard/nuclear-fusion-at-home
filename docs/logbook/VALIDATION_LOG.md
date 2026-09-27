@@ -4,15 +4,26 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Coherent-shape comparison ready
+## Coherent-shape comparison: failed startup retained
 
-The next paired-box experiment passes **58 combined implementation tests**
-(14.23 s), including the existing native-circle cache regression. Independent
-review passes thirty coherent/constrained synthetic tests (0.88 s), verifies
-thirteen pinned sources, exact ninety-coordinate widening and original coarse
-anchors, and reviews deadline/selection/publication behavior. Scoped Ruff,
-documentation and whitespace checks pass. No new shape optimization is claimed
-by this readiness check; the separate geometry runner's serializer check passes.
+At clean `e8eeaf9`, both paired arms stop after ten startup bundles each.
+All nine original coarse anchors replay exactly, but three of four directional
+checks fail their unchanged tolerances. **No optimizer or fine screen runs.**
+Worker/supervisor times are 7.080 / 7.660 s; 53 run files use 1,245,748 bytes.
+
+Independent review verifies 39 source hashes, the execution/question identities,
+all twenty startup rows and bit-exact repeats across arms and original trial52.
+Saved scalar components localize the step-size dependence to the curvature
+penalty; magnetic finite differences change only about 4–7e-12. Error reduction
+of about four on halving h supports truncation error, not an automatic pass.
+The [failed result and separate diagnostic](../optimization/COHERENT_COIL_EXPLORATION.md)
+preserve the failure and specify thirty diagnostic bundles before any retry.
+
+Implementation qualification remains scoped: **58 combined tests pass**
+(14.23 s), including the existing native-circle cache regression; independent
+review reruns thirty coherent/constrained synthetic tests (0.88 s). No full
+native regression is claimed. The unused geometry runner's serializer check
+passes; no geometry computation occurred for this attempt.
 
 ## Local-normalized currents: four-arm result complete
 
