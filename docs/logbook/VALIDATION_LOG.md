@@ -4,13 +4,14 @@ Updated 27 September 2026. This page records the latest maintenance check, not
 an append-only session history. Git retains previous versions; individual result
 reports retain the checks supporting their scientific claims.
 
-## Residual diagnostic: ready for clean-source execution
+## Residual diagnostic: completed and independently checked
 
 Added a thin external 65 s supervisor for the registered saved-array analysis,
 with explicit returned-reference acceptance and checked durable publication.
 The worker reserves launcher bytes inside its unchanged 8 MiB output cap.
 Original field evaluators, inputs, numerical tolerances and scientific protocol
-remain unchanged; no real arrays have been analyzed for this qualification.
+remain unchanged. Clean execution at `7b4ec75` completes all eight comparisons in
+1.836 s, with 55,702 scientific bytes and no new native work.
 
 Checks actually run with the existing `.venv`:
 
@@ -20,16 +21,19 @@ Checks actually run with the existing `.venv`:
   Logs and command/return-code records: `artifacts/field-residual-v1/execution-readiness-checks/`.
 - Documentation structure, repository Ruff and whitespace: pass.
 - Independent mathematical/intake review found no blocker in the fixed study.
-  Its additional synthetic sweep passes121/128: seven single-point perfect-fit
-  rounding comparisons fail closed; all96 multi-point comparisons pass. The
+  Its additional synthetic sweep passes 121/128: seven single-point perfect-fit
+  rounding comparisons fail closed; all 96 multi-point comparisons pass. The
   first counterexample is now an expected-rejection test, without relaxed limits.
 - Launcher review identified unchecked short writes; count/flush/fsync/readback
   checks and three synthetic publication-failure tests address that issue.
-  Independent final rerun:203 pass in0.73 s; no remaining scoped execution blocker.
+  Independent final rerun: 203 pass in 0.73 s; no remaining scoped execution blocker.
+- Post-run independent audit verifies 64 files / 40,040,460 bytes, nine Git source
+  identities and 496 separately reconstructed scalar values. All eight comparisons
+  and sixteen model identities reconcile. No producer/checker formulas reused.
 
-This is scoped software verification, not a full native regression, physical
-acceptance or a completed diagnosis. Clean committed execution and an actual
-eight-pair result remain required.
+The [result record](../../evidence/field-residual-results-v1.json) binds execution,
+all grid rows, sources and qualification logs. Diagnosis is complete; a full
+native regression, physical acceptance or Step 4 completion is not claimed.
 
 ## Scientific and release checks
 
@@ -38,8 +42,8 @@ eight-pair result remain required.
   That regression does not cover all subsequent edits.
 - [Public release verification](../validation/PUBLIC_RELEASE_RESULTS.md): dated
   portability/compatibility checks, known failures and unverified hosted coverage.
-- [Pending residual analysis](../optimization/FIELD_RESIDUAL_PROGRESS.md): component
-  checks exist; final execution qualification and real-array analysis remain open.
+- [Residual analysis](../optimization/FIELD_RESIDUAL_RESULTS.md): eight comparisons
+  complete at clean `7b4ec75`, with independent arithmetic and unchanged limits.
 
 No new fields, full native regression, hosted CI, external peer review or
 publication follows from this saved-data software check.

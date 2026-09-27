@@ -15,9 +15,10 @@ not universal reactor standards. Steps 4A–4D and MS1 remain open.
 
 ## First decision window: by 10 October 2026
 
-1. Finish the [already registered saved-field diagnosis](FIELD_RESIDUAL_PROTOCOL.md).
-   Preserve its bounds and independent checks; do not add another generic
-   framework. Its pending implementation is kept, not discarded or called done.
+1. The [registered saved-field diagnosis](FIELD_RESIDUAL_RESULTS.md) is complete.
+   Its eight comparisons show weak normalized-residual alignment relative to the
+   raw objective. Use this to motivate objective/start comparisons, not to infer
+   that other coil directions cannot succeed.
 2. Prepare and run a matched positive-control calibration. First inventory locally
    available author coil/surface pairs, source revisions, licenses and reported
    metrics. Reproduce the author's own metric at the author's physical scale and

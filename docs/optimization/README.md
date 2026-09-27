@@ -19,7 +19,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Step 4 research programme](STEP4_RESEARCH_PROGRAMME.md). Calibration and time-boxed reachability first; decision dates, full-grid challenge contract, four starter tasks, MS0 and evidence/expert-review actions. New long protected searches are not the default priority.
 
-- Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [preserved implementation](FIELD_RESIDUAL_PROGRESS.md). Exploratory eight-pair analysis of signed normal error and objective/acceptance normalization; fixed before array analysis, with no new native calculations. Execution closure remains pending after strategic reprioritization.
+- Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [results](FIELD_RESIDUAL_RESULTS.md). All eight comparisons complete. Only 11.6%/19.6% of squared normalized residual aligns with the observed response versus 88.1%/89.6% for the raw objective; prioritize metric calibration and objective/start comparisons, not automatic continuation.
 
 - [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations; useful unsolicited work is welcome and compute disclosure is optional.
 

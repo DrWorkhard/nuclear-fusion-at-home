@@ -21,8 +21,8 @@ useful open result before a possible reactor-design advantage.
 
 ## Next actions
 
-**First: diagnosis and calibration, by 10 October.** Finish the existing saved-field
-diagnosis. Reproduce a suitable published coil/surface reference in its own
+**First: calibration, by 10 October.** The [saved-field diagnosis](optimization/FIELD_RESIDUAL_RESULTS.md)
+is complete and motivates an objective comparison. Reproduce a suitable published coil/surface reference in its own
 conventions, then map it to our unchanged pilot gates. Distinguish a metric/model
 mismatch from a strict criterion or insufficient coil family. No automatic
 threshold relaxation and no presumption that local search is impossible.

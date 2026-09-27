@@ -109,7 +109,7 @@ Original measurements, summaries and corrections remain linked, not overwritten.
 
 ## Consequence
 
-Prioritize the [saved residual diagnosis](FIELD_RESIDUAL_PROGRESS.md) and matched
+The [saved residual diagnosis](FIELD_RESIDUAL_RESULTS.md) is complete. Prioritize matched
 reference/gate calibration in the [research programme](STEP4_RESEARCH_PROGRAMME.md).
 A small continuation remains optional, not the default next action. Tighter
 curvature does not remove conservative clearance limits or justify extrapolating

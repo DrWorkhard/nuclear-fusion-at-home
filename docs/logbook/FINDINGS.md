@@ -16,8 +16,8 @@ These lessons guide that work rather than duplicating the full result chronology
 - **Compare the same metric and conventions.** Objective descent does not by
   itself imply normal-RMS improvement; raw LPQA flux, Goodman normalized fields
   and the sparse public scores are different comparisons. The
-  [pending residual diagnosis](../optimization/FIELD_RESIDUAL_PROGRESS.md) and
-  reference calibration address this distinction. Do not relax gates merely
+  [completed residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md) shows
+  this difference in our observed steps; reference calibration is next. Do not relax gates merely
   because the current designs fail them.
 - **Use named physical coordinates.** Positional optimizer arrays can change
   meaning across processes. The [mapping correction](../optimization/REPLAY_MAPPING_REMEDIATION.md)

@@ -25,7 +25,7 @@ run, portable challenge, backup, release or scientific milestone.
 | --- | --- | --- |
 | 1. Positive-control calibration | Prioritized; not run | Source/scale/metric crosswalk and explicit discrepancy branches defined. Local LPQA material can test metric reproduction; a matched Goodman coil positive is not established. Keep pilot gates and old verdicts unchanged. |
 | 2. Reachability study | Time-boxed plan adopted | Through 24 October or ten active sessions; vary starts/objectives and distinguish sampled/certified fronts. RMS 1e-2 is a triage signal, not a new 1e-4 acceptance gate. No exploratory run claimed. |
-| 3. Residual diagnosis | Preserved and prioritized | Existing registration and pending implementation retained. Final execution/review remains; no real arrays were analyzed for this change. No automatic extra continuation. |
+| 3. Residual diagnosis | Complete | Eight saved-field comparisons pass independent arithmetic; normalized-error alignment is much weaker than raw-objective alignment. [Results](../optimization/FIELD_RESIDUAL_RESULTS.md) motivate objective/start comparisons; no physical extrapolation or automatic continuation. |
 | 4. Launch | Prerequisites retained; external action pending | Existing launch/privacy/rights checklist remains authoritative. No Git remote is configured locally. Hosting, real CI, owner identities and channels need owner action/authority; nothing was pushed or enabled. |
 | 5. Two lanes | Implemented in instructions/policy | Lightweight adaptive exploration; preregistered confirmation for claims. Proportionate subsystem checks, immutable failures and existing registered contracts preserved. |
 | 6. Documentation guardrails | Implemented | Scientific-only status summary, lean roadmap/Step 4 page, enforced word/row budgets and roadmap consistency, English-new-prose rule. Existing repository map expanded. |
@@ -63,6 +63,6 @@ duplicate archives are removed; Git retains history. Protocols and evidence need
 to reproduce current claims stay intact. The [review policy](../validation/REVIEW_POLICY.md)
 documents the exact operational exceptions; scientific evaluators are not exempted.
 
-Residual analysis remains [unfinished](../optimization/FIELD_RESIDUAL_PROGRESS.md).
+Residual analysis is [complete](../optimization/FIELD_RESIDUAL_RESULTS.md).
 Actual current checks are in the [verification record](../logbook/VALIDATION_LOG.md);
 documentation changes are not new scientific results.

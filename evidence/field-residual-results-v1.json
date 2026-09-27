@@ -1,0 +1,627 @@
+{
+  "checks": {
+    "bytes": 26530,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/field-residual-v1/execution-final-checks.xml",
+    "sha256": "6faec8102419fdc4520e34ebbc2a388d4b1640a0319b8d5a592ff493ee4b2569"
+  },
+  "closure_checks": {
+    "bytes": 2612,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/field-residual-v1/execution-readiness-checks/result.json",
+    "sha256": "16a57f046e764ea736324b3ce9d6b3b706debcaaa669fa4e9b401fb7d698a8dd"
+  },
+  "complete": true,
+  "counts": {
+    "decompositions": 8,
+    "matched_pairs": 8,
+    "models": 16,
+    "new_geometry_bounds": 0,
+    "new_gradients": 0,
+    "new_native_requests": 0,
+    "residual_fits": 16
+  },
+  "elapsed_seconds": 1.835668500047177,
+  "execution": {
+    "bytes": 855,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/field-residual-v1/execution/execution.json",
+    "sha256": "cf9e51dcdf6d7860d68034b8bfa23020af90c4017e1d2e9df04c059eb1a0460c"
+  },
+  "execution_commit": "7b4ec7526e3ba5e815748afe006417c37beda5ef",
+  "kind": "saved-field-residual-results",
+  "metadata_hash_checks": 61,
+  "ms1_reached": false,
+  "physical_admission": false,
+  "physical_extrapolation": false,
+  "result": {
+    "bytes": 16445,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/field-residual-v1/execution/analysis/result.json",
+    "sha256": "a5a997fd3ba0c2996478cd7763c3a6bacc21c7ed814cce205687c305fff7e2fd"
+  },
+  "rows": [
+    {
+      "level": {
+        "index": 0,
+        "ncoil": 256,
+        "ninner": 32,
+        "nphi": 64,
+        "ntheta": 64,
+        "offset": 0
+      },
+      "metrics": {
+        "control": {
+          "JN": 0.03574024765187972,
+          "boundary_B_rms": 1.2336858269655084,
+          "normal_rms": 0.27472163747576217
+        },
+        "deltas": {
+          "JN": -0.0004027964098827358,
+          "boundary_B_rms": -0.0060686519564885355,
+          "normal_rms": -0.00015669723369021726
+        },
+        "proposal": {
+          "JN": 0.035337451241996984,
+          "boundary_B_rms": 1.22761717500902,
+          "normal_rms": 0.27456494024207195
+        }
+      },
+      "pair_index": 0,
+      "residuals": {
+        "normal": {
+          "aligned_fraction": 0.11579189916705772,
+          "alignment": 0.34028208763768,
+          "alpha": 202.56306785227184,
+          "beta": 201.56306785227184,
+          "control_norm": 0.27472163747576217,
+          "delta_norm": -0.00015669723369021726,
+          "fit_fraction": 0.9403234022574054,
+          "fit_limit_ratio": 2583.271848249342,
+          "fit_norm": 0.2583271848249342,
+          "orthogonality": -3.3881317890172014e-21,
+          "projection_resolved": true,
+          "proposal_norm": 0.27456494024207195,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.0004614999827494259
+        },
+        "objective": {
+          "aligned_fraction": 0.8812867544235251,
+          "alignment": 0.9387687438467075,
+          "alpha": 155.8920733473027,
+          "beta": 154.8920733473027,
+          "control_norm": 0.2673583649406905,
+          "delta_norm": -0.0015108475853576886,
+          "fit_fraction": 0.3445478857524377,
+          "fit_limit_ratio": null,
+          "fit_norm": 0.09211775937854358,
+          "orthogonality": 4.743384504624082e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.2658475173553328,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.0016100092264031993
+        }
+      },
+      "split": {
+        "control_denominator_term": 0.000772718952427025,
+        "control_numerator_term": -0.0008590036218926523,
+        "cross_term": -4.523741353344294e-06,
+        "delta_squared_norm": -8.607168723155645e-05,
+        "denominator_norm_squared": 2.0268270155887464e-06,
+        "energy_identity_error": 6.871131268126884e-18,
+        "numerator_norm_squared": 2.7098965718332683e-06,
+        "vector_identity_error": 1.5178830414797062e-16
+      }
+    },
+    {
+      "level": {
+        "index": 1,
+        "ncoil": 256,
+        "ninner": 32,
+        "nphi": 128,
+        "ntheta": 128,
+        "offset": 0
+      },
+      "metrics": {
+        "control": {
+          "JN": 0.03574020362229531,
+          "boundary_B_rms": 1.233685858886153,
+          "normal_rms": 0.27472164315291886
+        },
+        "deltas": {
+          "JN": -0.00040279366055307603,
+          "boundary_B_rms": -0.006068653728204643,
+          "normal_rms": -0.00015669582098737367
+        },
+        "proposal": {
+          "JN": 0.035337409961742235,
+          "boundary_B_rms": 1.2276172051579484,
+          "normal_rms": 0.2745649473319315
+        }
+      },
+      "pair_index": 0,
+      "residuals": {
+        "normal": {
+          "aligned_fraction": 0.11579317208996262,
+          "alignment": 0.3402839580261794,
+          "alpha": 202.56713463708044,
+          "beta": 201.56713463708044,
+          "control_norm": 0.27472164315291886,
+          "delta_norm": -0.00015669582098737367,
+          "fit_fraction": 0.9403227254033784,
+          "fit_limit_ratio": 2583.27004216847,
+          "fit_norm": 0.258327004216847,
+          "orthogonality": 1.6940658945086007e-21,
+          "projection_resolved": true,
+          "proposal_norm": 0.2745649473319315,
+          "pythagoras_error": 1.3877787807814457e-17,
+          "secant_norm": 0.00046149326372718754
+        },
+        "objective": {
+          "aligned_fraction": 0.8812831239623377,
+          "alignment": 0.9387668102155815,
+          "alpha": 155.89230390338582,
+          "beta": 154.89230390338582,
+          "control_norm": 0.2673582002568663,
+          "delta_norm": -0.00151083817951847,
+          "fit_fraction": 0.34455315415427845,
+          "fit_limit_ratio": null,
+          "fit_norm": 0.09211911118751451,
+          "orthogonality": -9.656175598699024e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.2658473620773478,
+          "pythagoras_error": 2.7755575615628914e-17,
+          "secant_norm": 0.0016100025373649368
+        }
+      },
+      "split": {
+        "control_denominator_term": 0.0007727182869677537,
+        "control_numerator_term": -0.0008590021762536034,
+        "cross_term": -4.523722117118736e-06,
+        "delta_squared_norm": -8.607091325339711e-05,
+        "denominator_norm_squared": 2.026822983933317e-06,
+        "energy_identity_error": 1.3037531124138191e-17,
+        "numerator_norm_squared": 2.709875165650992e-06,
+        "vector_identity_error": 1.5222198501696482e-16
+      }
+    },
+    {
+      "level": {
+        "index": 2,
+        "ncoil": 512,
+        "ninner": 32,
+        "nphi": 128,
+        "ntheta": 128,
+        "offset": 0
+      },
+      "metrics": {
+        "control": {
+          "JN": 0.03574020362229531,
+          "boundary_B_rms": 1.233685858886153,
+          "normal_rms": 0.27472164315291886
+        },
+        "deltas": {
+          "JN": -0.0004027936605530552,
+          "boundary_B_rms": -0.006068653728204643,
+          "normal_rms": -0.00015669582098742918
+        },
+        "proposal": {
+          "JN": 0.035337409961742255,
+          "boundary_B_rms": 1.2276172051579484,
+          "normal_rms": 0.27456494733193143
+        }
+      },
+      "pair_index": 0,
+      "residuals": {
+        "normal": {
+          "aligned_fraction": 0.1157931720899698,
+          "alignment": 0.34028395802618994,
+          "alpha": 202.5671346370849,
+          "beta": 201.5671346370849,
+          "control_norm": 0.27472164315291886,
+          "delta_norm": -0.00015669582098742918,
+          "fit_fraction": 0.9403227254033745,
+          "fit_limit_ratio": 2583.2700421684594,
+          "fit_norm": 0.25832700421684596,
+          "orthogonality": 5.082197683525802e-21,
+          "projection_resolved": true,
+          "proposal_norm": 0.27456494733193143,
+          "pythagoras_error": 1.3877787807814457e-17,
+          "secant_norm": 0.0004614932637271917
+        },
+        "objective": {
+          "aligned_fraction": 0.8812831239623382,
+          "alignment": 0.9387668102155818,
+          "alpha": 155.89230390338497,
+          "beta": 154.89230390338497,
+          "control_norm": 0.2673582002568663,
+          "delta_norm": -0.0015108381795184145,
+          "fit_fraction": 0.3445531541542777,
+          "fit_limit_ratio": null,
+          "fit_norm": 0.0921191111875143,
+          "orthogonality": -2.879912020664621e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.2658473620773479,
+          "pythagoras_error": 1.3877787807814457e-17,
+          "secant_norm": 0.0016100025373649463
+        }
+      },
+      "split": {
+        "control_denominator_term": 0.0007727182869677552,
+        "control_numerator_term": -0.0008590021762536083,
+        "cross_term": -4.52372211711877e-06,
+        "delta_squared_norm": -8.607091325339711e-05,
+        "denominator_norm_squared": 2.0268229839333247e-06,
+        "energy_identity_error": 9.568084172184577e-18,
+        "numerator_norm_squared": 2.7098751656510216e-06,
+        "vector_identity_error": 1.6046192152785466e-16
+      }
+    },
+    {
+      "level": {
+        "index": 3,
+        "ncoil": 512,
+        "ninner": 32,
+        "nphi": 128,
+        "ntheta": 128,
+        "offset": 0.5
+      },
+      "metrics": {
+        "control": {
+          "JN": 0.035740203622017803,
+          "boundary_B_rms": 1.2336858588862663,
+          "normal_rms": 0.27472164315159403
+        },
+        "deltas": {
+          "JN": -0.00040279366054289667,
+          "boundary_B_rms": -0.006068653728208417,
+          "normal_rms": -0.00015669582098692958
+        },
+        "proposal": {
+          "JN": 0.03533740996147491,
+          "boundary_B_rms": 1.2276172051580578,
+          "normal_rms": 0.2745649473306071
+        }
+      },
+      "pair_index": 0,
+      "residuals": {
+        "normal": {
+          "aligned_fraction": 0.1157931720876163,
+          "alignment": 0.3402839580227318,
+          "alpha": 202.5671346325904,
+          "beta": 201.5671346325904,
+          "control_norm": 0.27472164315159403,
+          "delta_norm": -0.00015669582098692958,
+          "fit_fraction": 0.940322725404626,
+          "fit_limit_ratio": 2583.27004215944,
+          "fit_norm": 0.258327004215944,
+          "orthogonality": 3.3881317890172014e-21,
+          "projection_resolved": true,
+          "proposal_norm": 0.2745649473306071,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.0004614932637305157
+        },
+        "objective": {
+          "aligned_fraction": 0.8812831238772064,
+          "alignment": 0.9387668101702394,
+          "alpha": 155.89230389100234,
+          "beta": 154.89230389100234,
+          "control_norm": 0.26735820025582835,
+          "delta_norm": -0.001510838179486107,
+          "fit_fraction": 0.3445531542778179,
+          "fit_limit_ratio": null,
+          "fit_norm": 0.09211911122018616,
+          "orthogonality": -3.049318610115481e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.26584736207634224,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.0016100025374088162
+        }
+      },
+      "split": {
+        "control_denominator_term": 0.0007727182869598516,
+        "control_numerator_term": -0.0008590021762450327,
+        "cross_term": -4.523722117090863e-06,
+        "delta_squared_norm": -8.60709132527171e-05,
+        "denominator_norm_squared": 2.0268229839189103e-06,
+        "energy_identity_error": 4.716279450311944e-18,
+        "numerator_norm_squared": 2.7098751656405963e-06,
+        "vector_identity_error": 1.6479873021779667e-16
+      }
+    },
+    {
+      "level": {
+        "index": 0,
+        "ncoil": 256,
+        "ninner": 32,
+        "nphi": 64,
+        "ntheta": 64,
+        "offset": 0
+      },
+      "metrics": {
+        "control": {
+          "JN": 0.03304825635918268,
+          "boundary_B_rms": 1.2193451908232096,
+          "normal_rms": 0.26794631577636446
+        },
+        "deltas": {
+          "JN": -0.00032869927640689217,
+          "boundary_B_rms": -0.0050869874069154886,
+          "normal_rms": -0.00017467415717264956
+        },
+        "proposal": {
+          "JN": 0.03271955708277579,
+          "boundary_B_rms": 1.214258203416294,
+          "normal_rms": 0.2677716416191918
+        }
+      },
+      "pair_index": 1,
+      "residuals": {
+        "normal": {
+          "aligned_fraction": 0.19650647764759546,
+          "alignment": 0.4432905115695524,
+          "alpha": 301.0340686845006,
+          "beta": 300.0340686845006,
+          "control_norm": 0.26794631577636446,
+          "delta_norm": -0.00017467415717264956,
+          "fit_fraction": 0.8963780019346774,
+          "fit_limit_ratio": 2401.811831613757,
+          "fit_norm": 0.2401811831613757,
+          "orthogonality": 0.0,
+          "projection_resolved": true,
+          "proposal_norm": 0.2677716416191918,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.0003945668339558172
+        },
+        "objective": {
+          "aligned_fraction": 0.8961457413492452,
+          "alignment": 0.9466497458665719,
+          "alpha": 179.70012235363342,
+          "beta": 178.70012235363342,
+          "control_norm": 0.25709242057743625,
+          "delta_norm": -0.0012817207121812446,
+          "fit_fraction": 0.3222642683431639,
+          "fit_limit_ratio": null,
+          "fit_norm": 0.08285170081396047,
+          "orthogonality": -2.879912020664621e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.255810699865255,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.0013543478513882655
+        }
+      },
+      "split": {
+        "control_denominator_term": 0.0006266758714861753,
+        "control_numerator_term": -0.0007204076371629367,
+        "cross_term": -3.2288929926259172e-06,
+        "delta_squared_norm": -9.357608269031092e-05,
+        "denominator_norm_squared": 1.4006554645562321e-06,
+        "energy_identity_error": 7.359022245745361e-18,
+        "numerator_norm_squared": 1.9839205145276023e-06,
+        "vector_identity_error": 1.3617579286417936e-16
+      }
+    },
+    {
+      "level": {
+        "index": 1,
+        "ncoil": 256,
+        "ninner": 32,
+        "nphi": 128,
+        "ntheta": 128,
+        "offset": 0
+      },
+      "metrics": {
+        "control": {
+          "JN": 0.03304826709762773,
+          "boundary_B_rms": 1.2193452100569504,
+          "normal_rms": 0.26794632072792374
+        },
+        "deltas": {
+          "JN": -0.0003286998539762942,
+          "boundary_B_rms": -0.005086986131822568,
+          "normal_rms": -0.00017467425034684014
+        },
+        "proposal": {
+          "JN": 0.03271956724365144,
+          "boundary_B_rms": 1.2142582239251278,
+          "normal_rms": 0.2677716464775769
+        }
+      },
+      "pair_index": 1,
+      "residuals": {
+        "normal": {
+          "aligned_fraction": 0.19649702285471318,
+          "alignment": 0.44327984711095675,
+          "alpha": 301.01940525711194,
+          "beta": 300.01940525711194,
+          "control_norm": 0.26794632072792374,
+          "delta_norm": -0.00017467425034684014,
+          "fit_fraction": 0.8963832758063299,
+          "fit_limit_ratio": 2401.826007143498,
+          "fit_norm": 0.2401826007143498,
+          "orthogonality": 5.082197683525802e-21,
+          "projection_resolved": true,
+          "proposal_norm": 0.2677716464775769,
+          "pythagoras_error": 2.7755575615628914e-17,
+          "secant_norm": 0.0003945765688586325
+        },
+        "objective": {
+          "aligned_fraction": 0.8961444228951997,
+          "alignment": 0.9466490494872953,
+          "alpha": 179.69959914366444,
+          "beta": 178.69959914366444,
+          "control_norm": 0.2570924623462451,
+          "delta_norm": -0.001281722760701376,
+          "fit_fraction": 0.3222663139467111,
+          "fit_limit_ratio": null,
+          "fit_norm": 0.08285224018380803,
+          "orthogonality": -1.5246593050577406e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.25581073958554373,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.001354351018422969
+        }
+      },
+      "split": {
+        "control_denominator_term": 0.0006266759509307484,
+        "control_numerator_term": -0.0007204077759183952,
+        "cross_term": -3.2288965509059256e-06,
+        "delta_squared_norm": -9.357613431894285e-05,
+        "denominator_norm_squared": 1.4006571768288957e-06,
+        "energy_identity_error": 1.1777146098623792e-17,
+        "numerator_norm_squared": 1.983930042769281e-06,
+        "vector_identity_error": 1.5135462327897642e-16
+      }
+    },
+    {
+      "level": {
+        "index": 2,
+        "ncoil": 512,
+        "ninner": 32,
+        "nphi": 128,
+        "ntheta": 128,
+        "offset": 0
+      },
+      "metrics": {
+        "control": {
+          "JN": 0.03304826709762773,
+          "boundary_B_rms": 1.2193452100569504,
+          "normal_rms": 0.26794632072792374
+        },
+        "deltas": {
+          "JN": -0.0003286998539762942,
+          "boundary_B_rms": -0.005086986131822568,
+          "normal_rms": -0.00017467425034689565
+        },
+        "proposal": {
+          "JN": 0.03271956724365144,
+          "boundary_B_rms": 1.2142582239251278,
+          "normal_rms": 0.26777164647757684
+        }
+      },
+      "pair_index": 1,
+      "residuals": {
+        "normal": {
+          "aligned_fraction": 0.19649702285472062,
+          "alignment": 0.44327984711096513,
+          "alpha": 301.0194052571144,
+          "beta": 300.0194052571144,
+          "control_norm": 0.26794632072792374,
+          "delta_norm": -0.00017467425034689565,
+          "fit_fraction": 0.8963832758063257,
+          "fit_limit_ratio": 2401.8260071434865,
+          "fit_norm": 0.24018260071434866,
+          "orthogonality": -1.0164395367051604e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.26777164647757684,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.00039457656885863673
+        },
+        "objective": {
+          "aligned_fraction": 0.8961444228952016,
+          "alignment": 0.9466490494872963,
+          "alpha": 179.69959914366444,
+          "beta": 178.69959914366444,
+          "control_norm": 0.2570924623462451,
+          "delta_norm": -0.001281722760701376,
+          "fit_fraction": 0.3222663139467092,
+          "fit_limit_ratio": null,
+          "fit_norm": 0.08285224018380753,
+          "orthogonality": 4.404571325722362e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.25581073958554373,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.00135435101842297
+        }
+      },
+      "split": {
+        "control_denominator_term": 0.000626675950930746,
+        "control_numerator_term": -0.0007204077759183959,
+        "cross_term": -3.228896550905912e-06,
+        "delta_squared_norm": -9.35761343189706e-05,
+        "denominator_norm_squared": 1.400657176828884e-06,
+        "energy_identity_error": 1.2942663434045709e-17,
+        "numerator_norm_squared": 1.983930042769283e-06,
+        "vector_identity_error": 1.6219664500383146e-16
+      }
+    },
+    {
+      "level": {
+        "index": 3,
+        "ncoil": 512,
+        "ninner": 32,
+        "nphi": 128,
+        "ntheta": 128,
+        "offset": 0.5
+      },
+      "metrics": {
+        "control": {
+          "JN": 0.03304826709754438,
+          "boundary_B_rms": 1.2193452100568862,
+          "normal_rms": 0.2679463207270481
+        },
+        "deltas": {
+          "JN": -0.00032869985398111673,
+          "boundary_B_rms": -0.005086986131821014,
+          "normal_rms": -0.00017467425035422313
+        },
+        "proposal": {
+          "JN": 0.032719567243563265,
+          "boundary_B_rms": 1.2142582239250652,
+          "normal_rms": 0.2677716464766939
+        }
+      },
+      "pair_index": 1,
+      "residuals": {
+        "normal": {
+          "aligned_fraction": 0.1964970228553006,
+          "alignment": 0.44327984711161933,
+          "alpha": 301.01940524428295,
+          "beta": 300.01940524428295,
+          "control_norm": 0.2679463207270481,
+          "delta_norm": -0.00017467425035422313,
+          "fit_fraction": 0.8963832758060021,
+          "fit_limit_ratio": 2401.8260071347704,
+          "fit_norm": 0.24018260071347705,
+          "orthogonality": -5.082197683525802e-21,
+          "projection_resolved": true,
+          "proposal_norm": 0.2677716464766939,
+          "pythagoras_error": 0.0,
+          "secant_norm": 0.000394576568874749
+        },
+        "objective": {
+          "aligned_fraction": 0.8961444228894551,
+          "alignment": 0.9466490494842611,
+          "alpha": 179.69959913942142,
+          "beta": 178.69959913942142,
+          "control_norm": 0.2570924623459209,
+          "delta_norm": -0.0012817227607218595,
+          "fit_fraction": 0.32226631395562355,
+          "fit_limit_ratio": null,
+          "fit_norm": 0.08285224018599488,
+          "orthogonality": -4.0657581468206416e-20,
+          "projection_resolved": true,
+          "proposal_norm": 0.25581073958519907,
+          "pythagoras_error": 2.7755575615628914e-17,
+          "secant_norm": 0.0013543510184488986
+        }
+      },
+      "split": {
+        "control_denominator_term": 0.0006266759509283384,
+        "control_numerator_term": -0.0007204077759196479,
+        "cross_term": -3.228896550897036e-06,
+        "delta_squared_norm": -9.357613432260659e-05,
+        "denominator_norm_squared": 1.4006571768214664e-06,
+        "energy_identity_error": 2.032879073410321e-18,
+        "numerator_norm_squared": 1.9839300427805393e-06,
+        "vector_identity_error": 1.713039432527097e-16
+      }
+    }
+  ],
+  "schema_version": 1,
+  "scientific_bytes": 55702,
+  "sota_advance": false,
+  "source_unchanged": true,
+  "step4_pass": false,
+  "summary_source": {
+    "bytes": 2525,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/field-residual-v1/summarize.py",
+    "sha256": "817593dbd94bf93016160b9496aa1086bf2f5f8af969f70fa7fb07930987cdf4"
+  }
+}

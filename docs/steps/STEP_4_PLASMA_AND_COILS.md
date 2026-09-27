@@ -45,8 +45,9 @@ not a generally effective search or a path to feasibility.
 
 The [strategic review response](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 prioritizes gate calibration and exploration of achievable field/geometry
-trade-offs. The [saved residual diagnosis](../optimization/FIELD_RESIDUAL_PROTOCOL.md)
-is registered; its implementation is preserved, with no real-array result yet.
+trade-offs. The [saved residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md)
+is complete: observed responses align much better with the raw objective than
+normalized field error, motivating objective/start comparisons after calibration.
 A reviewed one-step continuation proposal remains optional. No further long
 protected search is justified merely by the recent small gains.
 
@@ -69,7 +70,7 @@ scientific milestones. Their complete reports remain available:
   [pilot launcher](../optimization/PROTECTED_PILOT_EXECUTION_RESULTS.md).
 - [Fine pipeline qualification](../../evidence/protected-fine-qualification-v1.json),
   [fixed field qualification](../../evidence/fixed-field-probe-qualification-v1.json) and
-  [pending residual analysis](../optimization/FIELD_RESIDUAL_PROGRESS.md).
+  [completed residual analysis](../optimization/FIELD_RESIDUAL_RESULTS.md).
 
 The last recorded full research regression passed 5,654 tests at its stated
 implementation; it is not a regression of every later edit.
