@@ -25,6 +25,11 @@ review reruns thirty coherent/constrained synthetic tests (0.88 s). No full
 native regression is claimed. The unused geometry runner's serializer check
 passes; no geometry computation occurred for this attempt.
 
+The separate derivative-scale diagnostic passes **44 combined synthetic tests**
+(1.21 s). Independent preflight review added explicit nonfinite-comparison
+rejection before any real diagnostic run; no acceptance tolerance changed.
+This readiness check does not supply a new derivative or optimization result.
+
 ## Local-normalized currents: four-arm result complete
 
 At clean `a3ce1ab`, four fixed-geometry searches complete **268 bundles and eight
@@ -72,7 +77,7 @@ only geometry is exported, not its magnetic state or native interior acceptance.
 Independent review checks both saved resolution levels, coefficient/current
 identities, all source hashes and unchanged evaluator/reference bytes against
 `39a1e13`. See the [portable evidence](../../evidence/public-shape52-v1.json).
-**47 public tests pass** (latest run 3.330 s); scoped Ruff, documentation structure and
+**47 public tests pass**; scoped Ruff, documentation structure and
 whitespace checks pass. No full native regression, independent public field
 rerun or separate-machine replay is claimed.
 

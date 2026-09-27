@@ -144,3 +144,10 @@ retain the initial failure, rather than silently changing its probes.
 Diagnostic bounds: 180 s / 185 s external, 64 MiB, one thread, same 3/2 GiB disk
 reserves; fresh `artifacts/coherent-derivative-scale-v1/`. No new geometry,
 confinement, field acceptance or Step 4 completion follows from a derivative check.
+
+Diagnostic implementation: 44 combined diagnostic/coherent/constrained tests
+pass (1.21 s main), including component arithmetic, exact accounting/repeat,
+late rejection and overflow controls. Preflight review found that an infinite
+finite difference could satisfy an unguarded relative `inf <= inf` comparison;
+the new diagnostic now rejects all nonfinite derived comparisons explicitly.
+No real diagnostic was run before that correction; tolerances remain unchanged.
