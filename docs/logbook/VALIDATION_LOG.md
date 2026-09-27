@@ -4,6 +4,16 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
+## Coherent-shape comparison ready
+
+The next paired-box experiment passes **58 combined implementation tests**
+(14.23 s), including the existing native-circle cache regression. Independent
+review passes thirty coherent/constrained synthetic tests (0.88 s), verifies
+thirteen pinned sources, exact ninety-coordinate widening and original coarse
+anchors, and reviews deadline/selection/publication behavior. Scoped Ruff,
+documentation and whitespace checks pass. No new shape optimization is claimed
+by this readiness check; the separate geometry runner's serializer check passes.
+
 ## Local-normalized currents: four-arm result complete
 
 At clean `a3ce1ab`, four fixed-geometry searches complete **268 bundles and eight

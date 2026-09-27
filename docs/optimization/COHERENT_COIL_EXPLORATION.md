@@ -67,11 +67,25 @@ Any selected geometry needs a separate continuous check; the seed's certificate
 cannot be inherited after a shape change. Fine screens consulted in exploration
 are not confirmation holdouts. No new interior, topology or confinement claim.
 
+For endpoints passing the sampled geometry/current/flux screens, reuse the
+continuous schedule: 1024 coil nodes / 512² surface, then 2048 / 1024² if
+unresolved; supplemental curvature enclosures at 1024 / 4096 nodes. Stop on a
+scoped pass or explicit violation witness. A conservative lower bound below a
+clearance limit remains unresolved, not a failure witness. Separate geometry
+budget: 300 s / 305 s external, 8 MiB, same disk/thread rules. No new fields,
+directed interval proof or complete self-disjointness is implied.
+
 Execution: 300 s per arm, 900 s total / 905 s external process-group cap, one
 thread, 256 MiB aggregate output, 3 GiB initial / 2 GiB live reserve. Fresh family
 `artifacts/coherent-coils-v1/`; old scripts/artifacts remain unchanged. A thin
 wrapper records its explicit runtime bounds/budget overrides and restores them
 after use. Check final publication after writing so late results cannot pass.
+
+Implementation checks: 58 combined coherent/constrained/objective tests pass
+(14.23 s), including the interacting native-circle cache regression. Independent
+review reruns thirty coherent/constrained synthetic tests (0.88 s), verifies all
+thirteen pinned inputs and the ninety named widened coordinates, and checks the
+late-publication/storage controls. This is readiness for execution, not a result.
 
 ## Decision
 
