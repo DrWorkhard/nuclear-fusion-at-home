@@ -9,6 +9,8 @@ Step 4 completion follows.
 
 ## Current documents
 
+- [Length-headroom experiment](LENGTH_HEADROOM_EXPLORATION.md): tighter construction
+  targets with unchanged acceptance; prepared follow-up to the wider fit.
 - [Longer-fit comparison](LONGER_COIL_EXPLORATION.md): completed five-minute
   restarts; more shape freedom helps, but length headroom is now needed.
 - [Coherent-shape results](COHERENT_COIL_EXPLORATION.md): matched comparisons,

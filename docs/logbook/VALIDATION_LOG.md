@@ -39,7 +39,12 @@ Both boundary gates still fail; no overall physical acceptance or Step 4 closure
   −0.03141592653589793 Wb is unchanged. New strict-JSON tests cover geometry
   pass/fail/unresolved results.
 
-The next experiment should put length headroom into construction and selection.
+The [headroom experiment](../optimization/LENGTH_HEADROOM_EXPLORATION.md) is
+prepared: construction penalty 3.44 m, selection 3.45 m, unchanged 3.5 m
+acceptance. Its selection/reuse tests pass: **29 tests**, **0.76 s**. No native
+headroom run has completed yet.
+
+The next experiment puts length headroom into construction and selection.
 Shared acceptance thresholds stay fixed. Realized topology, Step 3 benefit
 transfer, pressure/engineering, independent backup/reproduction and MS1 remain
 open. Native source arrays and ignored outputs are not backed up by Git.
