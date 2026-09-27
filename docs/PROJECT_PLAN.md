@@ -30,9 +30,10 @@ explicit; no automatic threshold relaxation.
 **Then: time-boxed exploration, through 24 October or ten research sessions.**
 Map field error against clearance/curvature using existing tools and alternative
 starts/objectives. The [objective comparison](optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
-improves field error only with geometry violations. The [start screen](optimization/COIL_START_SCREEN.md)
-finds more curvature room, not a better initial field; next compare stronger
-geometry penalties and low-order freedom. Fine RMS below 1e-2 with geometric gates is a
+improves field error only with geometry violations. [Constraint-aware fitting](optimization/CONSTRAINED_COIL_EXPLORATION.md)
+now gives one geometry-checked fit at RMS 0.2235 with higher current; the better
+sampled fits have unresolved clearance. Next test independent base currents on
+fixed original geometries. Fine RMS below 1e-2 with geometric gates is a
 triage signal, not acceptance. If it is not reached, change the investigated
 family/approach instead of automatically extending protected local search.
 The [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) defines scope,
