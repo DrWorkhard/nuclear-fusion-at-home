@@ -52,7 +52,9 @@ def check_documentation(root: Path) -> list[str]:
             if path != index and path.resolve() not in indexed:
                 errors.append(f"unindexed document: {path.relative_to(root)}")
     markdown = sorted(docs.rglob("*.md"))
-    markdown += [p for p in (root / "README.md", root / "AGENTS.md") if p.is_file()]
+    markdown += sorted(root.glob("*.md"))
+    for folder in (root / "examples", root / "submissions", root / ".github"):
+        markdown += sorted(folder.rglob("*.md"))
     for path in markdown:
         for target in sorted(local_links(path)):
             if not target.exists():

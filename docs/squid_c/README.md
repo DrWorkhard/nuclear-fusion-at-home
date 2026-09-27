@@ -1,23 +1,10 @@
-# SQuID-C and Proxima Fusion comparison
+# SQuID-C and Proxima comparison
 
-Purpose: define authoritative data intake, SQuID-C reproduction requirements and
-the evidence needed for a meaningful comparison with Proxima Fusion's design.
+SQuID-C is a later matched-reference target, not a prerequisite for contributing
+to the current Goodman coil problem. Intake code and detailed readiness plans
+are [frozen in Git](../validation/REPRODUCING_RESULTS.md).
 
-Current conclusion: intake schemas/interfaces exist, but full readiness and MS1
-are not reached. An accepted optimization baseline, broader QI/engineering models
-and a qualified authoritative comparison dataset remain outstanding. SQuID-C must
-not be assumed to represent Proxima's current design without verification at the
-time of comparison. The historical data request is an unsent draft.
-
-[Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
-
-## Documents
-
-- [MS1: comparison and outreach](MS1_PROXIMA_COMPARISON.md). English framework for strong, reproducible design-level evidence before contacting Proxima on the path to MSX: reference identity, matched constraints, uncertainty, independent checks and current gaps. No outreach performed.
-- [SQuID-C acceptance](SQUID_C_ACCEPTANCE.md). Historical German draft reproduction contract: canonical state, data roles, provenance and outstanding scientific evaluation.
-- [Data request draft](SQUID_C_DATA_REQUEST.md). Historical German draft request for equilibria, profiles, coils, currents, scaling and diagnostics; unsent.
-- [Readiness assessment](SQUID_C_READINESS.md). Detailed German account of gates G1–G6, partial successes and outstanding internal/external requirements.
-
-Required protocols and evidence retain their identities; current summaries evolve.
-Git retains old document versions. The [migration manifest](../../manifests/documentation-layout-v1.json)
-resolves filenames used before the documentation reorganization.
+**MS1:** obtain strong, reproducible, independently checked evidence that our
+design improves on Proxima's relevant versioned design under matched conditions;
+then contact Proxima. No such advantage or contact is established. MSX remains
+the best achievable reactor design for humanity.

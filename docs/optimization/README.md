@@ -1,120 +1,53 @@
-# Optimization and coil design
+# Active coil research
 
-Purpose: reproducible optimization evaluators, checked derivatives and controlled
-searches on LPQA, plus paired coil realization of our QI-like plasma targets.
+The working method is **penalized normalized coil fitting**, followed by separate
+fine-grid field and continuous-geometry checks. Best checked exploratory normal
+RMS is **0.004889**, against a 1e-4 pilot limit. No accepted reactor design or
+Step 4 completion follows.
 
-[Steps 1/2 are complete](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md) as reference
-and iteration capabilities. A new feasible optimum was not their completion
-criterion. Step 4 remains **In progress**: current starting coils pass geometry
-checks; an exploratory geometry-checked fit reaches normal RMS 0.004889 versus a
-1e-4 limit, with higher current. Lower sampled errors have unresolved clearance.
+## Current documents
 
-The best older LPQA coil search passes checked geometry limits but exceeds its
-raw-flux threshold by a factor of 8.13. The audited Gauss–Newton follow-up improves
-fine flux by 0.754%; exact current redistribution previously helped negligibly.
-These studies establish neither a feasible new baseline nor a general method ranking.
+- [Coherent-shape results](COHERENT_COIL_EXPLORATION.md): matched comparisons,
+  best candidates, geometry limits and retained failures.
+- [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md): prepared five-point
+  diagnostic; real-data intake exposes a one-ULP flux-identity mismatch to fix
+  before native evaluation.
+- [Boundary calibration](REFERENCE_CALIBRATION.md): QUASR/LPQA component controls
+  and why metric conventions matter.
+- [Research programme](STEP4_RESEARCH_PROGRAMME.md): next decisions, trade-off
+  map and open-benchmark route.
+- [Research hints](RESEARCH_HINTS.md): useful contributions, not an allowlist.
 
-[Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
+## Executable path
 
-## Current work and public contributions
+The latest completed fit is `scripts/explore_coherent_restart.py`; its explicit
+source-bound inputs and settings reproduce the recorded comparison in the native
+environment. It reuses the normalized model, construction penalties and fine
+checker in `explore_normalized_coils.py` / `explore_constrained_coils.py`.
+The prepared `screen_coherent_interior.py` is a fixed-snapshot field diagnostic,
+not another optimizer.
 
-- [Step 4 research programme](STEP4_RESEARCH_PROGRAMME.md). Calibration and time-boxed reachability first; decision dates, full-grid challenge contract, four starter tasks, MS0 and evidence/expert-review actions. New long protected searches are not the default priority.
+The acceptance mathematics live in `coupled_coil_audit.py`,
+`clear_coil_geometry_audit.py`, `curvature_bounds.py` and
+`boundary_control_metrics.py`. Use these shared checks; do not create a new
+checker for every optimizer. Historical filenames do not imply retired physics:
+these retained routines are active dependencies.
 
-- [Matched boundary-reference calibration](REFERENCE_CALIBRATION.md). Fixed QUASR/LPQA coil-surface pairs, distinct mean/RMS/raw-flux definitions, source-scale preservation and a small refinement screen; not a full Goodman positive control.
+The latest reproduction command is:
 
-- [Raw versus local-normalized fitting](NORMALIZED_OBJECTIVE_EXPLORATION.md). Corrected two-arm comparison completes 160 bundles and four fine screens: local RMS 0.18779 versus raw 0.20869, at 47% greater current; both fail curvature and all field gates. The first adapter-failure run is retained.
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1 \
+  python scripts/explore_coherent_restart.py --output artifacts/my-restart
+```
 
-- [Alternative coil-start screen](COIL_START_SCREEN.md). Twelve checked boundary/loop rows: shaped100 retains lowest RMS 0.27605; circle100 offers more curvature margin, not a better initial field. All four fail boundary gates.
+It requires the recorded local snapshots and the [native environment](../validation/ENVIRONMENT.md).
+It is not the portable public starter. Existing studies retain their exact
+budgets. Future exploration uses a declared wall-clock/resource ceiling and
+adds search bounds only for a stated scientific comparison.
 
-- [Constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md). Four arms plus an adaptive saved-point check: continuous geometry passes at RMS 0.15168, 45.05% below the shaped seed with higher current. Best sampled RMS 0.13731 has unresolved clearance; boundary limits still fail.
+## Frozen methods
 
-- [Independent base currents](INDEPENDENT_CURRENT_EXPLORATION.md). Raw-error minima worsen normalized RMS; direct normalized fitting then improves the original circle/shape RMS by 12.91%/6.93%, with weaker boundary fields. All field gates still fail.
-
-- [Coherent shape freedom](COHERENT_COIL_EXPLORATION.md). Wider shapes reach RMS 0.004889 with checked geometry, 55.27% below a matched original-box restart at 8.64% less current. The exploration signal is met; boundary limits still fail. Initial failures remain explicit.
-
-- [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md). Prospective five-point comparison on three refined interior/coil grids, with frozen currents and independently reconstructed target fields; no result yet. Separates vector-field fidelity from boundary error and realized-field topology.
-
-- Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [results](FIELD_RESIDUAL_RESULTS.md). All eight comparisons complete. Only 11.6%/19.6% of squared normalized residual aligns with the observed response versus 88.1%/89.6% for the raw objective; prioritize metric calibration and objective/start comparisons, not automatic continuation.
-
-- [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations; useful unsolicited work is welcome and compute disclosure is optional.
-
-## Completed Step 4 experiments and supporting methods
-
-Qualifications below describe specific software revisions, not pending tasks or
-new scientific milestones. Current next actions are in the programme above.
-
-- Newly certified fixed proposals: [field-comparison protocol](FIXED_FIELD_PROBE_PROTOCOL.md), [method/input review](FIXED_FIELD_PROBE_REVIEW.md), [complete results and qualification](FIXED_FIELD_PROBE_RESULTS.md). All 168 requests and numerical checks pass. Normal gains of 0.057%/0.065% resolve; only the six-coil interior gain resolves. Both currents decrease, but all field limits still fail.
-
-- [Protected coil-fit results](PROTECTED_COIL_FIT_RESULTS.md). Eight native searches and independent coarse audits complete at `2015ac5`; normal RMS improves 0.4463–0.4857%, interior RMS 1.1881–2.1916%. All stop at the curvature certificate; subsequent fine results below retain the field failures.
-
-- [Fine acceptance registration](PROTECTED_FINE_PROTOCOL.md). Fixed eight-model/80-request schedule per selected case, original-seed/current identity, complete flux/refinement/geometry checks, lossless mask codec and separate no-search supervision. Qualification is linked from the completed results.
-- [Complete fine results](PROTECTED_FINE_RESULTS.md). All eight fixed candidates complete at `e0ac3f7`: 640 native requests, 576 B/A comparisons, 40 refinements, 504 flux checks and 32 geometry grids pass numerical/geometry checks. All candidates fail the three field-error limits; no accepted design or Step 4 completion.
-
-- Protected pilot execution: [registration](PROTECTED_PILOT_EXECUTION_PROTOCOL.md), [results](PROTECTED_PILOT_EXECUTION_RESULTS.md). Launcher qualified at `6bb1e45`: 124 synthetic tests and all 3,487 regression tests pass; runtime clean-source admission and the subsequent pilot pass at `2015ac5`. Original budgets/fine requirements unchanged.
-
-- Independent saved physics: [registration](PROTECTED_PHYSICS_PROTOCOL.md), [results](PROTECTED_PHYSICS_RESULTS.md). Eight real saved-seed reconstructions verify sampled B/A to 1.316e-15 and confirm earlier physical rejections; source-bound component qualification supports the completed pilot.
-
-- Native plumbing: [registration](PROTECTED_NATIVE_PLUMBING_PROTOCOL.md), [results](PROTECTED_NATIVE_PLUMBING_RESULTS.md). Qualified source-bound adapters for eight saved contexts; software success is distinct from physical acceptance.
-- Protected cell integration: [registration](PROTECTED_CELL_PROTOCOL.md), [results](PROTECTED_CELL_RESULTS.md). Qualified synthetic orchestration, schema comparisons and source/artifact binding.
-- Protected runner execution components: [registration](PROTECTED_RUNNER_PROTOCOL.md), [results](PROTECTED_RUNNER_RESULTS.md). Qualified process, callback and resource controls with real-data source preflight.
-- [Second protected-fit method review](PROTECTED_METHOD_REVIEW.md). Independently authored internal support for a bounded diagnostic pilot, conditional on its original execution/physical gates; seed-only historical replay, exact two-model schedule and no unresolved fine-improvement claim.
-- Protected runner storage: [protocol](PROTECTED_RUNNER_STORAGE_PROTOCOL.md), [results](PROTECTED_RUNNER_STORAGE_RESULTS.md). Qualified single-writer POSIX event storage with source/artifact identities bound.
-- Protected-search software qualification: [protocol](PROTECTED_SEARCH_SOFTWARE_PROTOCOL.md), [results](PROTECTED_SEARCH_SOFTWARE_RESULTS.md). Qualified synthetic controller/auditor; physical outcomes are in the completed experiment reports above.
-
-- [Original protected field-fit registration](PROTECTED_COIL_FIT_PROTOCOL.md). Preserved eight-cell low-mode proposal with its historical paused heading unchanged. Later qualifications, coarse execution and completed fine validation are linked above; physical acceptance remains open.
-- [Geometry-preserving method rationale](GEOMETRY_PRESERVING_SEARCH_OPTIONS.md). Background linked from the registered perturbation protocol; its proposed pilot is now complete. The research programme, not this dated rationale, sets current priorities.
-- [Coupled-design options and reviews](COUPLED_DESIGN_OPTIONS.md). Filament co-design, reduced directions, REGCOIL and direct surfaces; three internal agent reviews, integration traps and separate realization/coupling/pressure/robustness work packages.
-- Paired actual-coil pilot: [protocol](COUPLED_COIL_PILOT_PROTOCOL.md), [negative results](COUPLED_COIL_PILOT_RESULTS.md). Two plasma targets, two coil classes and normal/interior-vector methods. Eight startup checks, six searches, all finer acceptance checks; no physical pass. Coarse grids missed very small plasma clearances.
-- Geometry-to-field starts: [protocol](CLEAR_COIL_FIELD_START_PROTOCOL.md), [results](CLEAR_COIL_FIELD_START_RESULTS.md). Four cells, six resolutions, 1,048 native requests, 768 B/A comparisons, 20 refinements and 252 flux checks. Numerics, geometry and current pass; all four fail physical field limits.
-- Blocked native reference: [protocol](BLOCK_NATIVE_REFERENCE_PROTOCOL.md), [results](BLOCK_NATIVE_REFERENCE_RESULTS.md). Four full-size resource runs in 64 surface blocks and 336 comparisons pass, at most 0.427 GiB/38.2 seconds. Three earlier memory failures remain preserved.
-
-## Historical LPQA searches and diagnostics
-
-Most detailed reports below remain in German. Protocols define the experiment;
-results retain failures rather than relabeling them as design successes.
-
-- Current-start Gauss–Newton: [protocol](CURRENT_START_GN_PROTOCOL.md), [results](CURRENT_START_GN_RESULTS.md). Two exactly repeated 2,048-bundle searches with native Gram controls and all four acceptance phases. Fine flux 8.129882e-8, 0.754% gain; still rejected, no Pareto dominance.
-- Geometric curvature: [protocol](GEOMETRIC_CURVATURE_PROTOCOL.md), [results](GEOMETRIC_CURVATURE_RESULTS.md). Two sources, 32 fields and full matrices verified. All six quadratic prediction signs correct; at least 99.60% less prediction error. Local diagnosis, not a new design.
-- Geometric descent: [protocol](GEOMETRIC_DESCENT_PROTOCOL.md), [results](GEOMETRIC_DESCENT_RESULTS.md). Six independently certified radius linear programs, 32 native bundles and 250 checks. Derivatives pass; all six real steps increase flux and violate construction constraints.
-- Fixed geometry / optimal currents: [protocol](FIXED_GEOMETRY_CURRENT_PROTOCOL.md), [results](FIXED_GEOMETRY_CURRENT_RESULTS.md). Exact three-dimensional least squares, QR/provenance controls, 114 independent checks and eight field holdouts. Best fine gain only 0.000016608%; both shapes remain infeasible.
-- Composite-start SLSQP: [protocol](SLSQP_COMPOSITE_PROTOCOL.md), [results](SLSQP_COMPOSITE_RESULTS.md). Same starting physics, qualified start Jacobian and two 2,048-bundle arms. Exact replay and fine checks; geometry/native pass, flux 8.191665e-8 fails.
-- Polishing-start derivatives: [protocol](POLISH_START_DERIVATIVE_PROTOCOL.md), [results](POLISH_START_DERIVATIVE_RESULTS.md). Two directions, three complex steps and independent real chain rule. All 120 pair rows and 35 audit checks pass; error ≤4.063e-11 supports rounding explanation. Earlier finite-difference failure retained.
-- SLSQP polishing: [protocol](SLSQP_POLISH_PROTOCOL.md), [results](SLSQP_POLISH_RESULTS.md). Planned two 2,048-bundle arms; stopped after nine startup bundles on four distance derivatives, before solver start. Independent postmortem confirms failure classification.
-- Alternative upstream start: [protocol](UPSTREAM_START_PROTOCOL.md), [results](UPSTREAM_START_RESULTS.md). First preselected archive case, fixed current sum and fresh qualification. Both search paths/fine checks complete; geometry/native pass, flux 8.955e-8 fails.
-- Upstream LPQA reconstruction: [protocol](UPSTREAM_LPQA_RECONSTRUCTION_PROTOCOL.md), [results](UPSTREAM_LPQA_RECONSTRUCTION_RESULTS.md). Five fixed archive cases pass source/field cross-checks and geometric grid screens; true raw flux near 1e-6 rather than reported zero, all rejected against 1e-8.
-- Upstream LPQA inventory: [protocol](UPSTREAM_LPQA_INVENTORY_PROTOCOL.md), [results](UPSTREAM_LPQA_INVENTORY_RESULTS.md). 5,301 source-checked reports, 27 nominally matching records and five unqualified reconstruction candidates. 2,954 thresholded zero reports do not establish zero raw flux.
-- Natural augmented-Lagrangian recovery: [protocol](NATURAL_AUGLAG_RECOVERY_PROTOCOL.md), [results](NATURAL_AUGLAG_RECOVERY_RESULTS.md). Separate single-arm/prefix postmortem and unchanged two-arm repeat. Replays/geometry/native checks pass; flux remains 26.99 times its limit.
-- Jacobian-scaled augmented Lagrangian: [protocol](NATURAL_AUGLAG_JAC_PROTOCOL.md), [results](NATURAL_AUGLAG_JAC_RESULTS.md). Separate x_scale=jac trial, same physics and budgets. Fully repeated/audited; 11.4% less flux but higher curvature, still 23.91 times the limit.
-- [Field-strength audit](FIELD_STRENGTH_AUDIT.md). Tests whether reduced field amplitude alone explains lower raw flux, with fixed base-current sum and global-scale controls. No new threshold.
-- Original natural-flux augmented Lagrangian: [protocol](NATURAL_AUGLAG_PROTOCOL.md), [interrupted results](NATURAL_AUGLAG_RESULTS.md). Least-squares residual rather than old quartic penalty. First 1,033-bundle arm and saved 700-bundle prefix verified; original study remains incomplete.
-- SLSQP-1024: [protocol](DIRECT_SLSQP_1024_PROTOCOL.md), [results](DIRECT_SLSQP_1024_RESULTS.md). Equal maximum bundle budget to Gauss–Newton. New repeats exact, historical prefix/audit fails; geometry/native pass, flux rejected at 12.7 times the limit.
-- Native field projection: [corrected protocol](GN_NATIVE_COVECTOR_PROTOCOL.md), [results](GN_NATIVE_COVECTOR_RESULTS.md). Consistent identity check without changing values, gradients or Gauss–Newton matrix. Two 1,024-bundle searches replay exactly; geometry/native pass, flux 24.7 times the limit.
-- Saved Gauss–Newton failure point: [protocol](GN_FAILED_POINT_PROTOCOL.md), [results](GN_FAILED_POINT_RESULTS.md). Native state stability and independent derivatives pass; separately rounded field projection caused adapter identity mismatch.
-- [Gauss–Newton failure replay protocol](GN_FAILURE_REPLAY_PROTOCOL.md). At most 29 bundles to reproduce the failed prefix and capture the full failure point, without changing thresholds.
-- Gauss–Newton trust pilot: [protocol](GN_TRUST_PILOT_PROTOCOL.md), [stopped results](GN_TRUST_PILOT_RESULTS.md). Planned two 1,024-bundle repeats. Field/gradient identity fails after 28 complete bundles; second arm not started.
-- Quadratic field model: [protocol](QUADRATIC_FIELD_MODEL_PROTOCOL.md), [results](QUADRATIC_FIELD_MODEL_RESULTS.md). Four saved steps, full native matrices and independent kernel audit. All signs correct; ≥99.907% less prediction error than linear model.
-- [Composite local-descent results](DIRECT_DESCENT_COMPOSITE_RESULTS.md). Four real probes: smallest slightly improves, larger predicted descents strongly worsen flux; motivates quadratic model.
-- Complex-step clearance: [protocol](COMPLEX_CLEARANCE_PROTOCOL.md), [results](COMPLEX_CLEARANCE_RESULTS.md). All 120 pair-direction derivatives agree at both fixed states to about 2.4e-12. Earlier difference-test failure preserved.
-- Local descent diagnosis: [protocol](DIRECT_DESCENT_DIAGNOSTIC_PROTOCOL.md), [stopped results](DIRECT_DESCENT_DIAGNOSTIC_RESULTS.md). New direction check misses its fixed limit; no descent probes. Cancellation is a hypothesis, not an established fix.
-- Direct SLSQP pilot: [protocol](DIRECT_SLSQP_PILOT_PROTOCOL.md), [results](DIRECT_SLSQP_PILOT_RESULTS.md). Exactly repeated 256-bundle run and independent selection check; geometry/native pass, flux fails, convergence unresolved.
-- Direct inequalities: [qualification protocol](DIRECT_INEQUALITY_QUALIFICATION_PROTOCOL.md), [results](DIRECT_INEQUALITY_QUALIFICATION_RESULTS.md). Conservative smooth geometric constraints; all 138 derivative rows and independent/native metrics agree, before optimization.
-
-## Historical evaluator and method controls
-
-- Affine feasibility: [protocol](AFFINE_FEASIBILITY_PROTOCOL.md), [results](AFFINE_FEASIBILITY_RESULTS.md). Fixed coordinate scaling enables equal consumed budgets; both methods remain infeasible on holdout.
-- [Batched qualification failure](BATCHED_QUALIFICATION_FAILURE.md). Original JSON serialization failure retained separately from successful retry.
-- Batched spatial Jacobian: [protocol](BATCHED_SPATIAL_JACOBIAN_PROTOCOL.md), [results](BATCHED_SPATIAL_JACOBIAN_RESULTS.md). Analytic derivatives in 16 coil contractions, control formulae, matrix comparisons and repeated timing.
-- Guarded feasibility: [protocol](GUARDED_FEASIBILITY_PROTOCOL.md), [results](GUARDED_FEASIBILITY_RESULTS.md). Geometry margins and finer curvature support repeatability, but field errors remain too large.
-- [Guarded replay protocol](GUARDED_REPLAY_PROTOCOL.md). Independent reconstruction and conditioning diagnosis of a saved candidate.
-- Normalized feasibility: [protocol](NORMALIZED_FEASIBILITY_PROTOCOL.md), [results](NORMALIZED_FEASIBILITY_RESULTS.md). Rescaled common evaluator with unchanged independent flux/geometry acceptance.
-- Optimization evaluator: [protocol](OPTIMIZATION_ORACLE_PROTOCOL.md), [results](OPTIMIZATION_ORACLE_RESULTS.md). Named parameter space, vectors/Jacobians, budgets, repeats and retained setup failure.
-- [Replay mapping correction](REPLAY_MAPPING_REMEDIATION.md). Runtime names changed positional parameter order; explicit named physical mapping fixes replay.
-- Spatial flux factorization: [protocol](SPATIAL_FLUX_FACTORIZATION_PROTOCOL.md), [results](SPATIAL_FLUX_FACTORIZATION_RESULTS.md). Objective-preserving algebra on two physical states with derivative controls.
-- [Point-local adjoint derivative protocol](SPATIAL_FLUX_LOCAL_VJP_PROTOCOL.md). Qualifies the same Jacobian through local vector-Jacobian products.
-- [Spatial Gram check](SPATIAL_GRAM_CHECK.md). Independent identity for the extra positive-semidefinite Gauss–Newton term; no convergence claim.
-- Spatial trust-region pilot: [protocol](SPATIAL_TRF_PILOT_PROTOCOL.md), [results](SPATIAL_TRF_PILOT_RESULTS.md). 128 proposals: better flux per proposal but substantially more time; both candidates infeasible.
-- Timed spatial pilot: [protocol](TIMED_SPATIAL_PILOT_PROTOCOL.md), [results](TIMED_SPATIAL_PILOT_RESULTS.md). Two 300-second runs per representation with complete accounting; all four candidates independently rejected.
-
-Required protocols and evidence retain their identities; current summaries evolve.
-Git retains old document versions. The [migration manifest](../../manifests/documentation-layout-v1.json)
-resolves filenames used before the documentation reorganization.
+Certified-step search, current-only fitting and completed LPQA/plasma/engineering
+pipelines are removed from the main branch. Their full code, tests and reports
+resolve at the [freeze tag](../validation/REPRODUCING_RESULTS.md).
+Their failures remain scientific evidence; they are not active maintenance work.

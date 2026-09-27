@@ -2,7 +2,7 @@
 
 **Complete, 13 September 2026**, in the registered local scope, in the same
 acceptance run as [Step 1](STEP_1_FOUNDATION.md). English summary of the German
-[detailed results](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md); that report
+[detailed results at the freeze tag](../validation/REPRODUCING_RESULTS.md); that report
 and the evidence files remain authoritative.
 [All steps](README.md) · [Roadmap](../PROJECT_PLAN.md) · [Status](../STATUS.md)
 
@@ -12,7 +12,7 @@ That we can load a reference, change or optimize it, save the result, evaluate i
 independently and repeat — with a real optimizer, and exactly reproducibly. A new
 best design, feasibility or a ranking of methods was deliberately not required.
 
-The [registered protocol](../validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md) (German)
+The registered protocol `docs/validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md` at that tag
 fixed a small real cycle before running it:
 
 - Start from the already qualified SLSQP current minimum and its start matrix;
@@ -53,5 +53,5 @@ limits stayed unchanged and rejected both candidates.
 - [Iteration audit](../../evidence/foundation-acceptance-v2/cycle-audit.json)
 - [Candidate checks](../../evidence/foundation-acceptance-v2/holdouts/summary.json)
 - [Final audit](../../evidence/foundation-acceptance-v2/summary.json)
-- Commands for a single cycle and its audit: [detailed results](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md)
+- Commands for a single cycle and its audit: [detailed results at the freeze tag](../validation/REPRODUCING_RESULTS.md)
   (native research environment required).

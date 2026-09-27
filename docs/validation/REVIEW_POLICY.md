@@ -62,28 +62,24 @@ Initially require maintainer approval for merges. Later automation may cover
 explicitly low-risk classes; physics/criteria/data/security changes retain special
 review. Error recovery must not grant broader permissions.
 
-The existing full research suite stays a separate local/native path; a small
+The reduced active research suite stays a separate local/native path; a small
 portable green check must never be described as a full native regression pass.
-The historical `.github/workflows/ci.yml` remains byte-preserved. Its runner now
-has an explicit **dev-only** scope: Ruff, dependency-free public tests, docs checks
-and selected documentation/operational tests. It no longer collects the entire
-native suite with missing scientific dependencies. This is a reviewed, exact-hash
-operational exception, not a relaxed physics test or a need to disable Actions
-before the first push.
+The `.github/workflows/ci.yml` runner has an explicit **dev-only** scope: Ruff,
+dependency-free public tests, docs checks and selected documentation/maintenance
+tests. It does not collect native tests with missing scientific dependencies.
 Run this sync-based profile only in a disposable checkout, never the qualified
-research environment. Portable CI separately tests Python 3.11/3.12/3.14 on
+research environment. Portable CI separately tests Python 3.11 and 3.14 on
 Linux/macOS/Windows through `.github/workflows/public-ci.yml`.
 Hosted runs are not claimed until actually observed. GitHub's
 [secure-use guidance](https://docs.github.com/en/actions/reference/security/secure-use)
 and [privileged-trigger guidance](https://docs.github.com/en/actions/reference/security/securely-using-pull_request_target)
 support these execution boundaries (checked 2026-09-23).
 
-The [operational-preservation table](../../src/fusion_baselines/operational_preservation.py)
-accepts only exact original/replacement SHA-256 pairs for `scripts/run_core_ci.sh`,
-`src/fusion_baselines/documentation.py` and `scripts/check_docs.py`. Unknown paths,
-changed bytes and symlinks are rejected; scientific evaluators and thresholds are
-not exempted. The four public evaluator-identity files remain unchanged by UI
-and documentation maintenance. See the [release verification](PUBLIC_RELEASE_RESULTS.md).
+Historical byte-freeze exceptions are retired with their code at the
+[freeze tag](REPRODUCING_RESULTS.md). Active code can evolve through reviewed
+changes; scientific evidence identities and historical verdicts stay unchanged.
+The public evaluator-identity files are unchanged by this cleanup. See
+[release verification](PUBLIC_RELEASE_RESULTS.md).
 
 ## Launch checklist — requires actual hosting work
 
@@ -94,8 +90,8 @@ tracked evidence, but does not clear security, privacy, rights or later revision
 - Review intended public contents **and Git history** for secrets/personal material,
   oversized artifacts and rights/attribution. The small starter does not certify
   every historical file as publication-ready.
-- Set the real public clone URL in the root README once hosting exists; replace
-  the clearly labelled clone template. Verify it in a fresh checkout. Remove
+- Set the real public clone URL in the root README once hosting exists. Verify
+  it in a fresh checkout. Remove
   obsolete launch-only statements, and update dated verification coverage from
   actual hosted/machine results rather than assuming a push proves them.
 - Configure named maintainers/CODEOWNERS, required review/checks and branch/ruleset

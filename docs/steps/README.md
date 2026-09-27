@@ -2,16 +2,16 @@
 
 Purpose: one English results page per roadmap step. Each page states what the
 step had to show, the actual result with its key numbers, what it does not show,
-failures kept on record, and links to the detailed reports (mostly German) and
-the evidence files. Requirements and next actions stay in the
+failures kept on record, and links to evidence. Closed detailed reports/code/tests
+resolve at the [freeze tag](../validation/REPRODUCING_RESULTS.md).
+Requirements and next actions stay in the
 [roadmap](../PROJECT_PLAN.md); the overall evidence summary is on the
 [status page](../STATUS.md).
 
 Current conclusion: Steps 1–3 are complete in their registered scopes. Step 4 is
-in progress: coil geometry is certified and field calculations are qualified, but
-field errors fail their limits by large factors. Step 5 has no results yet; its
-evidence bar for the Proxima comparison is the
-[MS1 evidence framework](../squid_c/MS1_PROXIMA_COMPARISON.md).
+in progress: selected coils pass scoped continuous geometry, but their fields
+fail acceptance limits. Step 5 has no results yet; a future
+[Proxima comparison](../squid_c/README.md) needs a matched reference.
 
 [Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
 

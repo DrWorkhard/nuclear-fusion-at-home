@@ -1,7 +1,7 @@
 # Step 3 result: an improved plasma target of our own
 
 **Complete, 14 September 2026**, for one registered vacuum study. English summary
-of the German [detailed results](../qi/PLASMA_BALANCED_RESULTS.md); that report
+of the German [detailed results at the freeze tag](../validation/REPRODUCING_RESULTS.md); that report
 and the evidence files remain authoritative.
 [All steps](README.md) · [Roadmap](../PROJECT_PLAN.md) · [Status](../STATUS.md)
 
@@ -10,7 +10,7 @@ and the evidence files remain authoritative.
 A real change to a quasi-isodynamic-like plasma boundary, with freshly computed
 equilibria, that improves a registered physics metric and is confirmed by
 separate checks — unlike Steps 1 and 2, a genuine improvement was required. The
-[registered protocol](../qi/PLASMA_BALANCED_PROTOCOL.md) (German) fixed all gates
+registered protocol `docs/qi/PLASMA_BALANCED_PROTOCOL.md` at that tag fixed all gates
 before the first new calculation.
 
 **Setup.** Starting point: the nfp2 vacuum configuration from Goodman et al.'s
@@ -69,7 +69,7 @@ external review or a second MHD solver family.
 
 ## Failures kept on record
 
-The [first plasma design](../qi/PLASMA_OPTIMIZATION_RESULTS.md) (German) improved
+The first plasma design (`docs/qi/PLASMA_OPTIMIZATION_RESULTS.md` at that tag) improved
 its training metric by 14.35% but made the wide metric 15.53% worse and violated
 20 local action limits; it was rejected. Both attempts together used 32 cold solves.
 The Step 3 evidence is preserved at commit `d429783`.
@@ -83,5 +83,5 @@ The Step 3 evidence is preserved at commit `d429783`.
 - Phase audits: [archive](../../evidence/plasma-balanced-v1/archive-audit.json),
   [proposals](../../evidence/plasma-balanced-v1/propose-audit.json),
   [endpoints](../../evidence/plasma-balanced-v1/endpoints.json)
-- Commands for each phase: [detailed results](../qi/PLASMA_BALANCED_RESULTS.md)
+- Commands for each phase: [detailed results at the freeze tag](../validation/REPRODUCING_RESULTS.md)
   (native research environment required).

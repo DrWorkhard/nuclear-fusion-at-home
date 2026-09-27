@@ -1,7 +1,7 @@
 # Step 1 result: a reliable foundation
 
 **Complete, 13 September 2026**, in the registered local scope. English summary
-of the German [detailed results](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md);
+of the German [detailed results at the freeze tag](../validation/REPRODUCING_RESULTS.md);
 that report and the evidence files remain authoritative.
 [All steps](README.md) · [Roadmap](../PROJECT_PLAN.md) · [Status](../STATUS.md)
 
@@ -11,7 +11,7 @@ That our local toolchain reproduces selected open references and correctly
 accepts or rejects coil designs, before we rely on it for new designs. Steps 1
 and 2 are capability milestones: they did not require a new feasible design, a
 new method or a state-of-the-art result. The gates were fixed in the
-[registered protocol](../validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md) (German)
+registered protocol `docs/validation/FOUNDATION_ACCEPTANCE_PROTOCOL.md` at that tag
 before the acceptance run.
 
 **Scope:** the locked local Python/SIMSOPT/StellCoilBench toolchain on the
@@ -75,5 +75,5 @@ Research from before these sharpened milestones is preserved unchanged at `5971f
   [final audit](../../evidence/foundation-acceptance-v2/summary.json)
 - [Candidate checks](../../evidence/foundation-acceptance-v2/holdouts/summary.json)
 - [Re-confirmation with absolute run path](../../evidence/foundation-acceptance-v2-confirmation-absolute.json)
-- Commands and operating limits: [detailed results](../validation/FOUNDATION_ACCEPTANCE_RESULTS.md).
+- Commands and operating limits: [detailed results at the freeze tag](../validation/REPRODUCING_RESULTS.md).
   Re-running requires the native research environment, not the public starter.

@@ -1,99 +1,23 @@
-"""Small command-line surface for evidence capture and intake validation."""
+"""Small public dispatcher and explicit retirement notice for the old research CLI."""
 
-from __future__ import annotations
-
-import argparse
-import json
 import sys
-from pathlib import Path
 
-from fusion_baselines.external import verify_external_spec
-from fusion_baselines.intake import summarize_equilibrium_manifest
-from fusion_baselines.manifest import load_manifest, validate_manifest
-from fusion_baselines.provenance import build_run_record, write_json_atomic
+FREEZE = "research-freeze-2026-09-27"
 
 
-def _parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(prog="fusion-baselines")
-    commands = parser.add_subparsers(dest="command", required=True)
+def main(argv=None):
+    args = list(sys.argv[1:] if argv is None else argv)
+    if args and args[0] == "public":
+        from fusion_public.cli import main as public_main
 
-    capture = commands.add_parser("capture-environment")
-    capture.add_argument("--project-root", type=Path, default=Path.cwd())
-    capture.add_argument("--stellcoilbench", type=Path)
-    capture.add_argument("--output", type=Path)
-
-    validate = commands.add_parser("validate-manifest")
-    validate.add_argument("manifest", type=Path)
-    validate.add_argument(
-        "--data-root",
-        type=Path,
-        help="Trusted root against which file paths are resolved (default: manifest directory)",
-    )
-    validate.add_argument("--structure-only", action="store_true")
-
-    summarize = commands.add_parser("summarize-equilibrium")
-    summarize.add_argument("manifest", type=Path)
-    summarize.add_argument("--data-root", type=Path)
-    summarize.add_argument("--output", type=Path)
-
-    verify = commands.add_parser("verify-stellcoilbench")
-    verify.add_argument("--project-root", type=Path, default=Path.cwd())
-    verify.add_argument(
-        "--spec",
-        type=Path,
-        default=Path("references/stellcoilbench_baseline.json"),
-    )
-    return parser
-
-
-def main() -> int:
-    try:
-        return _main()
-    except (ValueError, OSError) as error:
-        print(f"ERROR: {error}", file=sys.stderr)
-        return 1
-
-
-def _main() -> int:
-    args = _parser().parse_args()
-    if args.command == "capture-environment":
-        external = {"stellcoilbench": args.stellcoilbench} if args.stellcoilbench else {}
-        record = build_run_record(args.project_root, external)
-        if args.output:
-            write_json_atomic(args.output, record)
-        else:
-            print(json.dumps(record, indent=2, sort_keys=True))
+        return public_main(args[1:])
+    if not args or args in (["--help"], ["-h"]):
+        print("Public starter: python fusion.py public --help\n"
+              "Active native fitting: docs/optimization/README.md\n"
+              f"Frozen research commands and evidence: Git tag {FREEZE}\n"
+              "Reproduction: docs/validation/REPRODUCING_RESULTS.md")
         return 0
-
-    if args.command == "verify-stellcoilbench":
-        errors = verify_external_spec(args.project_root, args.spec)
-        if errors:
-            for error in errors:
-                print(f"ERROR: {error}")
-            return 1
-        print(f"verified: {args.spec}")
-        return 0
-
-    if args.command == "summarize-equilibrium":
-        manifest = load_manifest(args.manifest)
-        data_root = args.data_root if args.data_root is not None else args.manifest.parent
-        result = summarize_equilibrium_manifest(manifest, data_root)
-        if args.output:
-            write_json_atomic(args.output, result)
-        else:
-            print(json.dumps(result, indent=2, sort_keys=True))
-        return 0 if result.get("intake_checks_pass", result["expected_metadata_matches"]) else 1
-
-    manifest = load_manifest(args.manifest)
-    data_root = args.data_root if args.data_root is not None else args.manifest.parent
-    errors = validate_manifest(
-        manifest,
-        data_root,
-        verify_files=not args.structure_only,
-    )
-    if errors:
-        for error in errors:
-            print(f"ERROR: {error}")
-        return 1
-    print(f"valid: {args.manifest}")
-    return 0
+    print(f"ERROR: The old research command {args[0]!r} is frozen at Git tag {FREEZE}. "
+          "Use 'python fusion.py public --help' for the current starter, or read "
+          "docs/validation/REPRODUCING_RESULTS.md for historical replay.", file=sys.stderr)
+    return 2

@@ -1,55 +1,20 @@
-# Research lessons and unresolved questions
+# Current research lessons
 
-The [scientific status](../STATUS.md) owns the current result summary; the
-[programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns next experiments.
-These lessons guide that work rather than duplicating the full result chronology.
+- **Wider coherent motion matters.** The [matched restart](../optimization/COHERENT_COIL_EXPLORATION.md)
+  reaches RMS 0.004889 with checked geometry and improves both error and current
+  against its matched control. Budget exhaustion is not an optimum.
+- **Check the right objective.** Raw-field and normalized errors can disagree;
+  fixed loop flux does not preserve the whole field. Current-only negative
+  results remain at the [freeze tag](../validation/REPRODUCING_RESULTS.md).
+- **Geometry and field quality differ.** Sampled penalties can miss clearance
+  failures; conservative bound rejection is not proof of impossibility.
+- **Inspect numerical failures.** Larger finite-difference probes crossed
+  curvature-penalty branches; a diagnosed smaller probe passed unchanged
+  tolerances. Native field identity/cache tests caught a separate old defect.
+- **Boundary fitting is only part of the physics.** Interior fields, actual field
+  lines and transfer of the Step 3 benefit still need independent checks.
+- **Use named coordinates and retained failures.** Numerical reproduction must
+  bind geometry, currents, target and conventions—not array positions alone.
 
-- **Geometry and field quality are separate.** Coarse samples missed small
-  clearances in the [first coil pilot](../optimization/COUPLED_COIL_PILOT_RESULTS.md).
-  Continuous geometric checks later passed, while
-  [fine field errors](../optimization/PROTECTED_FINE_RESULTS.md) still failed.
-  A geometrically certified step is not an accepted design.
-- **A conservative rejection is not physical impossibility.** The
-  [local curvature check](../geometry/LOCAL_CURVATURE_RESULTS.md) certified two
-  previously blocked proposals. Their [field comparison](../optimization/FIXED_FIELD_PROBE_RESULTS.md)
-  shows small gains, not a demonstrated route to feasibility.
-- **Compare the same metric and conventions.** Objective descent does not by
-  itself imply normal-RMS improvement; raw LPQA flux, Goodman normalized fields
-  and the sparse public scores are different comparisons. The
-  [completed residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md) shows
-  this difference in our observed steps. [Matched references](../optimization/REFERENCE_CALIBRATION.md)
-  reproduce the archived LPQA mean/max and show that near-zero QUASR collocation
-  error becomes finite after refinement. Neither clipping nor collocation is
-  physical perfection. Do not relax gates merely because current designs fail.
-- **One fixed flux does not preserve the whole field.** In the
-  [independent-current study](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md),
-  raw-error minima weaken boundary fields and worsen normalized error despite
-  meeting the target loop flux. Direct normalized fitting helps, but still leaves
-  weak-field trade-offs. Retain amplitudes, maxima and interior checks; a favorable
-  single boundary score does not establish field fidelity or confinement.
-- **Finite differences can cross penalty switches.** The
-  [coherent-shape startup](../optimization/COHERENT_COIL_EXPLORATION.md) fails its
-  original derivative check when larger probes straddle sampled curvature
-  penalty branches. A fixed component/step-size study supports smaller probes
-  under the same tolerances. Preserve the failure and diagnose convergence;
-  neither silent probe changes nor relaxed physical gates are justified.
-- **Small boxes can conceal useful coherent motion.** The
-  [matched shape comparison](../optimization/COHERENT_COIL_EXPLORATION.md) gives
-  81.80% lower fine RMS with wider low modes, with checked geometry and 1.06% more
-  current. Both searches still exhaust their budgets; box-limited local fits do
-  not establish the coil family's reachability or optimum.
-- **Use named physical coordinates.** Positional optimizer arrays can change
-  meaning across processes. The [mapping correction](../optimization/REPLAY_MAPPING_REMEDIATION.md)
-  explains why replay must bind names, coefficients and physical fields.
-- **Test interacting native caches, not only repeatability.** The
-  [objective experiment](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
-  caught an instrumentation wrapper assigning two fields equal native identities.
-  Seed repeats passed while one field cache stayed stale. Perturb/reset checks
-  with two fields and fresh unwrapped controls now cover that failure.
-- **Plasma-proxy improvement is not reactor improvement.** The
-  [Step 3 result](../steps/STEP_3_PLASMA_TARGET.md) is a vacuum diagnostic; realized
-  coil fields, confinement, pressure and finite-build robustness remain separate
-  [Step 4 requirements](../steps/STEP_4_PLASMA_AND_COILS.md).
-
-Keep each result's failures and limits in its canonical report and evidence.
-Replace this summary as understanding changes; Git retains superseded findings.
+The [status page](../STATUS.md) owns numerical conclusions; this page records
+lessons, not another result history.

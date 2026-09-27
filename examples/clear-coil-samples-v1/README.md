@@ -69,4 +69,4 @@ Project source code remains under the repository's MIT license. No affiliation,
 author endorsement or reproduction of the full published dataset is implied.
 
 See [public quickstart and limits](../../docs/validation/PUBLIC_QUICKSTART.md)
-and [the original numerical result](../../docs/optimization/CLEAR_COIL_FIELD_START_RESULTS.md).
+and [the original numerical result at the freeze tag](../../docs/validation/REPRODUCING_RESULTS.md).

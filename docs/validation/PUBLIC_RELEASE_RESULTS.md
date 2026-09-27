@@ -5,6 +5,11 @@ checks, see [current verification](../logbook/VALIDATION_LOG.md). This page reco
 versioned release evidence, not an assertion that every check was rerun at HEAD.
 No new optimization or physical-design acceptance is established.
 
+The simplicity cleanup retains the numerical contract and reduces public CI to
+Python 3.11/3.14 across three systems. Current local checks are in the log above;
+the source-bound records below describe their original revisions, now reachable
+through the [reproduction guide](REPRODUCING_RESULTS.md).
+
 ## Supported interface and numerical contract
 
 - Python 3.11+ standard library; six order-5 base Fourier curves, 24 physical

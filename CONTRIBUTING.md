@@ -62,7 +62,7 @@ candidate they would admit. Preserve old benchmarks and failures.
 
 The [two-lane workflow](docs/validation/RESEARCH_WORKFLOW.md) keeps exploration
 lightweight and confirmation separate. The [Step 4 programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)
-offers four issue-ready tasks toward a full-grid coil challenge; that expanded
+sets priorities toward a full-grid coil challenge; that expanded
 challenge is planned, not yet supplied by the sparse starter.
 
 Keep large raw runs outside Git; provide a reproducible recipe and content hashes
@@ -83,8 +83,10 @@ contribution need not use the candidate folder or this format.
 Keep PR documentation local to your change: usage text, a focused report, or the
 PR description with actual checks and limitations. Keep documentation current;
 remove superseded plans and duplicate history rather than creating archives.
-Git retains earlier versions. Keep the protocols and evidence needed to reproduce
-supported results, including negative findings. Maintainers integrate current
+Git retains earlier versions. Frozen protocols and code resolve at the
+[research tag](docs/validation/REPRODUCING_RESULTS.md); scientific evidence and
+necessary raw data retain their identities, including negative findings.
+Maintainers integrate current
 verification, decisions, status and roadmap; contributors do not need to edit
 those files or commit after every small step. The general instructions in
 [AGENTS.md](AGENTS.md) apply to outside agents; its maintainer completion duties

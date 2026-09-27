@@ -244,7 +244,8 @@ class CliTests(unittest.TestCase):
             capture_output=True, text=True, timeout=20,
         )
         self.assertEqual(result.returncode, 0)
-        for term in ("public", "profiles", "local artifacts", "not physical admission"):
+        for term in ("public", "Active native fitting", "research-freeze-2026-09-27",
+                     "not physical admission"):
             self.assertIn(term, result.stdout)
 
     def run_cli(self, *args):

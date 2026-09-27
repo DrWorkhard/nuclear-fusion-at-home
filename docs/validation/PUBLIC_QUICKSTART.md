@@ -213,4 +213,4 @@ Do not run foreign PR code in your trusted research workspace. Review against a
 trusted project revision. The starter's data parser is not a sandbox for arbitrary
 programs. [Review/security policy](REVIEW_POLICY.md) ·
 [Dataset conventions and license](../../examples/clear-coil-samples-v1/README.md) ·
-[Historical CLI](PROJECT_ENTRYPOINTS.md).
+[Frozen research commands and reproduction](REPRODUCING_RESULTS.md).

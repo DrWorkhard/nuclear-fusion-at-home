@@ -1,5 +1,5 @@
-"""New research CLI; the historical installed intake command stays unchanged."""
+"""Public dispatcher; retired research commands have an explicit freeze notice."""
 
-from fusion_baselines.workflow_cli import main
+from fusion_baselines.cli import main
 
 raise SystemExit(main())

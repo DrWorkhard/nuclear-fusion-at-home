@@ -134,7 +134,6 @@ class UsabilityTests(unittest.TestCase):
         for version, args, required in (
             ((3, 9, 6), ["public", "demo"], "3.11+"),
             ((3, 10, 9), ["--help"], "3.11+"),
-            ((3, 11, 4), ["profiles"], "3.12+"),
         ):
             stderr = io.StringIO()
             with patch.object(sys, "version_info", version), patch.object(
@@ -144,3 +143,12 @@ class UsabilityTests(unittest.TestCase):
             self.assertIn(required, stderr.getvalue())
             self.assertIn("python3.12", stderr.getvalue())
             self.assertIn("py -3.12", stderr.getvalue())
+
+    def test_retired_research_command_explains_freeze_without_native_imports(self):
+        result = subprocess.run(
+            [sys.executable, "-I", "-S", str(ROOT / "fusion.py"), "profiles"],
+            capture_output=True, text=True, check=False, timeout=20,
+        )
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("research-freeze-2026-09-27", result.stderr)
+        self.assertNotIn("Traceback", result.stderr)

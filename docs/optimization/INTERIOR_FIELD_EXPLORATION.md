@@ -1,8 +1,14 @@
 # Interior-field screen of exploratory coil fits
 
-27 September 2026. **Prepared, not executed; paused for repository simplification.**
-The implementation passes 49 synthetic tests (0.58 s main); no actual intake,
-native field, optimization or VMEC run is claimed. This diagnostic accompanies
+27 September 2026. **Native screen unexecuted; real-data intake currently blocked.**
+The implementation passes 49 synthetic tests, but cleanup preflight rejects the
+original snapshot: its saved flux is `-0.03141592653589793`, whereas the screen's
+`-np.pi/100` is `-0.031415926535897934` (one ULP). The strict equality predates
+cleanup and is unchanged at the freeze tag. Repair the adapter against the exact
+source-bound input and add a real-data regression before execution; do not rewrite
+the snapshots or loosen physics limits. All 51 combined source references of the
+two fitting results separately pass their hash checks. No native field,
+optimization or VMEC run is claimed. This diagnostic accompanies
 the [coherent-shape experiments](COHERENT_COIL_EXPLORATION.md); it does not add an
 optimization session or change their selection rules.
 
@@ -75,10 +81,10 @@ The realized field still needs actual field-line tracing and refined topology
 checks. Calling the ideal VMEC geometry a realized surface, or evaluating coil
 |B| along ideal field lines, would not establish that result.
 
-The local tracing driver expects different input formats and needs a small
+The frozen tracing driver expects different input formats and needs a small
 snapshot adapter with raw trajectories, refinement and domain-departure checks.
 Existing action routines require physical arc length, unchanged absolute bounce
 levels and complete well coverage on **realized-field** traces. Benefit transfer
 also needs a matched coil realization of the selected Step 3 target. The old
-free-boundary driver truncates the target and coil family; it cannot be reused
+free-boundary driver at the tag truncates the target and coil family; it cannot be reused
 unchanged. These are remaining Step 4A tasks, not results of this screen.

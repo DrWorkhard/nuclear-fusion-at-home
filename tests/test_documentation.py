@@ -33,6 +33,17 @@ def test_valid_structure_and_link_resolution(project):
     assert check_documentation(project) == []
 
 
+@pytest.mark.parametrize("name", [
+    "CONTRIBUTING.md", "examples/case/README.md", "submissions/trial/README.md",
+    ".github/PULL_REQUEST_TEMPLATE.md",
+])
+def test_contributor_links_are_checked(project, name):
+    path = project / name
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("[removed report](missing.md)\n", encoding="utf-8")
+    assert any("broken local link" in error for error in check_documentation(project))
+
+
 @pytest.mark.parametrize(
     ("mutation", "expected"),
     [

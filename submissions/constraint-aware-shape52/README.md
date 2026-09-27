@@ -1,7 +1,8 @@
 # A checked exploratory shape to reproduce and improve
 
 This is the geometry of shaped/full trial 52 from our
-[constraint-aware study](../../docs/optimization/CONSTRAINED_COIL_EXPLORATION.md).
+[constraint-aware study at the freeze tag](../../docs/validation/REPRODUCING_RESULTS.md)
+(`docs/optimization/CONSTRAINED_COIL_EXPLORATION.md` there).
 It improves both public sampled scores without changing the trusted evaluator,
 case, currents or reference. It is **not an accepted reactor design**.
 

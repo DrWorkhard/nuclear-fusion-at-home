@@ -1,109 +1,56 @@
-# Step 4: plasma and coils together
+# Step 4: develop plasma and coils together
 
-**In progress.** Updated 27 September 2026.
-[All steps](README.md) · [Roadmap](../PROJECT_PLAN.md) · [Scientific status](../STATUS.md)
+**In progress, 27 September 2026.** A better plasma target must be realized by
+practical coils and retain its benefit in their magnetic field.
+[All steps](README.md) · [Roadmap](../PROJECT_PLAN.md) · [Status](../STATUS.md)
 
-## What the step has to show
+## Completion requirements
 
-The required chain is ideal plasma target → actual coils → realized field
-surfaces/topology → preserved plasma benefit. A favorable vacuum field fit alone
-does not complete Step 4.
-
-| Package | Required evidence | State |
+| Package | Required result | Status |
 | --- | --- | --- |
-| 4A — Realization and transfer | Coils for reference and Step 3 targets pass numerical, geometry and field checks; realized-field topology and plasma benefit verified | In progress; absolute field limits fail |
-| 4B — Coupled improvement | Actual coupled plasma/coil improvement against coil-only controls, independently accepted | Open |
-| 4C — Pressure and confinement | Validated finite-pressure/current response and realized-field confinement diagnostics | Open |
-| 4D — Finite geometry and robustness | Qualified winding/build/load models and manufacturing-perturbation response | Open |
+| 4A — Realization and transfer | Accepted coil fields/geometry, verified magnetic surfaces and transfer of the Step 3 benefit | Open; active focus |
+| 4B — Coupled improvement | Independently accepted plasma/coil improvement against coil-only controls | Open |
+| 4C — Pressure and confinement | Validated finite-pressure/current response and realized-field confinement diagnostics | Open; detailed work deferred |
+| 4D — Finite geometry and robustness | Qualified winding/build/load models and manufacturing-perturbation response | Open; detailed work deferred |
 
-Detailed method choices are in [coupled design options](../optimization/COUPLED_DESIGN_OPTIONS.md).
-The [scientific status](../STATUS.md) is the canonical current result summary.
+Deferring detailed work is not completing it. Revisit the deferred physics once
+a coil set reaches within 10× of the boundary RMS limit.
 
-## What the experiments taught us
+## Current result
 
-The [first coil pilot](../optimization/COUPLED_COIL_PILOT_RESULTS.md) failed:
-fine evaluation exposed only 1.8–6.7 mm plasma clearance where coarse sampling
-looked much better. Preserve that negative result. The subsequent
-[initialization study](../geometry/CLEAR_COIL_INITIALIZATION_RESULTS.md) found
-twelve geometry-admissible starts, but their
-[magnetic fields](../optimization/CLEAR_COIL_FIELD_START_RESULTS.md) remained
-far from the target. Geometric validity and field fidelity are separate problems.
+The [matched normalized-fit restart](../optimization/COHERENT_COIL_EXPLORATION.md)
+reaches fine normal RMS **0.00488873136**, **55.27% below** the original-box
+control, with **8.64% less current**. Both endpoints pass scoped continuous
+geometry; both searches exhaust their 1,200-bundle budgets. The best error is
+still about **49× above 1e-4**, and maximum normal error also fails its limit.
 
-[Cumulative perturbation bounds](../geometry/COIL_PERTURBATION_RESULTS.md)
-made local movement checkable. The
-[protected search](../optimization/PROTECTED_COIL_FIT_RESULTS.md) then found
-small improvements in eight cases before hitting a conservative curvature bound.
-[Fine validation](../optimization/PROTECTED_FINE_RESULTS.md) retained all
-absolute field failures. A tighter
-[whole-path curvature check](../geometry/LOCAL_CURVATURE_RESULTS.md)
-certified two previously rejected steps under unchanged limits, and the
-[matched field comparison](../optimization/FIXED_FIELD_PROBE_RESULTS.md)
-confirmed small normal-error gains. This proves useful movement for two steps,
-not a generally effective search or a path to feasibility.
+The 1e-2 exploration signal is met. This supports more work on the method, not
+physical acceptance. A fixed-candidate
+[interior screen](../optimization/INTERIOR_FIELD_EXPLORATION.md) is implemented
+and synthetically tested, but real-data intake currently rejects a one-ULP flux
+constant mismatch. It has not evaluated the actual fields. Realized
+magnetic surfaces, confinement and transfer of the Step 3 benefit remain open.
 
-## Current decision, not another automatic search extension
+## Lessons retained from closed work
 
-The [strategic review response](../review/STRATEGIC_REVIEW_RESOLUTION.md)
-prioritizes gate calibration and exploration of achievable field/geometry
-trade-offs. The [saved residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md)
-is complete: observed responses align much better with the raw objective than
-normalized field error. The [matched boundary calibration](../optimization/REFERENCE_CALIBRATION.md)
-now demonstrates low refined RMS on QUASR and reproduces LPQA's reported mean/max
-under tested conventions. It supports an objective comparison, without claiming
-a matched positive control for all Goodman gates.
-A reviewed one-step continuation proposal remains optional. No further long
-protected search is justified merely by the recent small gains.
+The first coil pilot failed fine clearance checks (1.8–6.7 mm). Better starts
+solved scoped geometry, not field fidelity. Certified small-step search gained
+little: its objective aligned poorly with normalized acceptance error.
+Current-only freedom did not close the gap. Normalized fitting with geometry
+penalties and coherent shape changes has been more productive so far.
 
-The [matched objective experiment](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
-now completes: local-normalized fitting lowers fine RMS to 0.18779 versus raw
-0.20869, but uses more current and both endpoints violate curvature. The raw
-endpoint also violates plasma clearance. The [static start screen](../optimization/COIL_START_SCREEN.md)
-then finds more curvature room in circles, but no better initial field. The
-[constraint-aware comparison](../optimization/CONSTRAINED_COIL_EXPLORATION.md)
-now finds a continuous-geometry pass at RMS 0.2235, 27.59% below its own circular
-seed with 13.91% more current. The best sampled RMS is 0.1373, with unresolved
-continuous clearance. A declared adaptive check of an earlier saved shaped point
-then passes continuous geometry at RMS 0.1517, 45.05% below its shaped seed with
-10.11% more current. The original selections remain unchanged; this is exploration,
-not confirmation, and still fails boundary-error limits. The
-[independent-current test](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md)
-then reduces raw error by 89–92% but worsens normalized RMS by 60–83% with weaker
-boundary fields. Direct normalized-current fitting helps by 12.91%/6.93%, without
-closing the gap. The [coherent-shape comparison](../optimization/COHERENT_COIL_EXPLORATION.md)
-initially stops at its derivative guard. After a separate scale diagnosis, the
-retry reaches RMS **0.01384 with checked continuous geometry**, 81.80% below its
-matched small-change control at 1.06% higher current. Both searches exhaust their
-600-bundle budgets; all boundary limits still fail. No topology or Step 3 benefit
-transfer is established; acceptance limits remain unchanged.
-
-A matched restart then reaches **0.004889 with checked geometry**, 55.27% below
-the original-box control at 8.64% lower current. Both 1,200-bundle arms exhaust
-their budgets. The exploratory 1e-2 signal is met, while physical gates and
-transfer remain open. Repository simplification now precedes further research.
-
-The [research programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns
-calibration, decision windows, the open challenge and MS0. No gate or historical
-verdict changes with this reprioritization.
+These failures and their original protocols are preserved at the
+[freeze tag](../validation/REPRODUCING_RESULTS.md), not maintained as active
+search infrastructure. No historical result or threshold is rewritten.
 
 ## Tools and detailed evidence
 
-Software qualifications support the experiments; they are not additional
-scientific milestones. Their complete reports remain available:
+Use the [active fitting path](../optimization/README.md) and its existing
+fine-field and continuous-geometry checks. The
+[boundary calibration](../optimization/REFERENCE_CALIBRATION.md) supplies a
+positive component control, not a complete Goodman acceptance control.
 
-- [Search controller](../optimization/PROTECTED_SEARCH_SOFTWARE_RESULTS.md),
-  [storage](../optimization/PROTECTED_RUNNER_STORAGE_RESULTS.md),
-  [execution components](../optimization/PROTECTED_RUNNER_RESULTS.md) and
-  [method review](../optimization/PROTECTED_METHOD_REVIEW.md).
-- [Integrated cell](../optimization/PROTECTED_CELL_RESULTS.md),
-  [native plumbing](../optimization/PROTECTED_NATIVE_PLUMBING_RESULTS.md),
-  [saved-physics checker](../optimization/PROTECTED_PHYSICS_RESULTS.md) and
-  [pilot launcher](../optimization/PROTECTED_PILOT_EXECUTION_RESULTS.md).
-- [Fine pipeline qualification](../../evidence/protected-fine-qualification-v1.json),
-  [fixed field qualification](../../evidence/fixed-field-probe-qualification-v1.json) and
-  [completed residual analysis](../optimization/FIELD_RESIDUAL_RESULTS.md).
-
-The last recorded full research regression passed 5,654 tests at its stated
-implementation; it is not a regression of every later edit.
-Required protocols, source identities and scientific evidence remain available;
-superseded overviews and progress diaries are recoverable through Git. There is
-still no demonstrated transfer of the Step 3 benefit into an accepted coil field.
+The [programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns next experiments
+and the October decision. Keep exploration records short; check the best two or
+three candidates before making claims. Software checks are recorded separately
+in [current verification](../logbook/VALIDATION_LOG.md).

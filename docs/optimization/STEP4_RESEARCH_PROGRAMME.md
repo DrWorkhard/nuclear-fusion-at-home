@@ -1,172 +1,51 @@
-# Step 4 research programme: calibration, feasibility and an open challenge
+# Near-term research programme
 
-26 September 2026. Prospective priorities following the
-[strategic review](../review/STRATEGIC_REVIEW.md), not new execution results.
-[Roadmap](../PROJECT_PLAN.md) · [Scientific status](../STATUS.md) ·
-[Two research lanes](../validation/RESEARCH_WORKFLOW.md)
+Updated 27 September 2026. [Status](../STATUS.md) · [Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)
 
-## Near-term question
+## Focus
 
-Can a useful coil family approximate these targets under defensible geometric
-constraints? Answer this before investing in a longer protected local search.
-The latest small gains are evidence of useful local motion, not evidence of
-reachability or impossibility. The Step 4 limits remain unchanged pilot criteria,
-not universal reactor standards. Steps 4A–4D and MS1 remain open.
+Use the method that moves field error: penalized normalized coil fitting.
+The matched restart reaches **0.004889 with scoped geometry checks**, below the
+1e-2 exploratory signal but above the unchanged 1e-4 acceptance limit.
+Seven exploration sessions are complete; a failed startup and its diagnosis
+remain included in the evidence, not erased from effort.
 
-## First decision window: by 10 October 2026
+## Next work
 
-1. The [registered saved-field diagnosis](FIELD_RESIDUAL_RESULTS.md) is complete.
-   Its eight comparisons show weak normalized-residual alignment relative to the
-   raw objective. Use this to motivate objective/start comparisons, not to infer
-   that other coil directions cannot succeed.
-2. The [matched boundary calibration](REFERENCE_CALIBRATION.md) now supplies a
-   QUASR boundary-positive control and reproduces LPQA's archived mean/max at the
-   tested settings. Its 13 rows distinguish collocation error, flux clipping and
-   RMS definitions. This completes a component comparison, not an end-to-end
-   Goodman/current/geometry calibration; data rights still need verification
-   before a new portable export.
-3. If a suitable control is missing, record the exact missing data or adapter;
-   do not substitute a different surface, a rescaled coil or an analytic unit
-   test and call the physical gates calibrated. Analytic controls are still useful
-   for units/signs, but answer a different question.
+1. Repair the [interior-field screen](INTERIOR_FIELD_EXPLORATION.md)'s exact-flux
+   intake mismatch, then run its five fixed candidates. Keep both favorable and
+   unfavorable results.
+2. Map field error against clearance, curvature, current and coil complexity
+   using longer penalized fits, wider justified ranges and the existing
+   eight-coil family as a separately labelled comparison.
+3. Freeze the best two or three candidates, then use the shared trusted field
+   and continuous-geometry checks. Investigate realized-field topology and
+   matched realization of the Step 3 target before claiming benefit transfer.
 
-The calibration record must map target/equilibrium, coil count and symmetry,
-currents/flux normalization, length units, physical scale, winding assumptions,
-normal-RMS versus raw/normalized flux definitions, area weights, resolution and
-clearance/curvature definitions. LPQA benchmark flux failures and QI-target
-normal-RMS failures are not the same quantity or evidence of the same limitation.
-Match vacuum/pressure/plasma-current assumptions and the interior target before
-interpreting the vector gate. Select controls for source/definition completeness,
-not by trying cases until one passes; absent data is not a failed physics gate.
-The existing [LPQA reconstruction](UPSTREAM_LPQA_RECONSTRUCTION_RESULTS.md)
-and [inventory](UPSTREAM_LPQA_INVENTORY_RESULTS.md) provide a local metric-control
-starting point, not a known-good Goodman-target design. The inspected Goodman
-manifest supplies equilibria, not matching author coil sets. No global assertion
-about public coil-data availability follows from this local inventory.
+Exploration needs one short record: script/input/output identities, question,
+wall-clock/resource ceiling and conclusion. Do not add arbitrary evaluation or
+coefficient caps; retain them when needed for a particular matched experiment.
+Past studies retain their original rules. No routine full historical regression,
+new orchestration framework or separately written checker for every script.
 
-**Decision:** if author metrics cannot be reproduced, repair or explain the
-comparison before interpreting gate failures. If they reproduce but our gates
-reject, report which stricter requirement is responsible. This does not prove
-our thresholds are wrong or the target unreachable. Any justified new profile
-requires separate rationale, versioning, review and fresh evaluation of all
-controls; retain the old verdicts. A synthetic positive control is not a
-substitute for a relevant physical design.
+By **24 October 2026**, review the reachability/trade-off map. The 1e-2 signal now
+supports further local fitting; it does not promise success. If progress stalls,
+change family/target rather than automatically extend a failed method.
 
-## Exploration window: through 24 October 2026
+## MS0 and community value
 
-Use a maximum of ten active research sessions in the exploratory lane, with a
-ceiling recorded before each local run (initial default: 30 minutes, 3 GiB start /
-2 GiB live disk reserve). Reuse existing optimizers/evaluators. Contributor compute
-disclosure remains optional; these limits govern our own executions only.
+Target **26 March 2027**: a useful attributed open coil challenge with calibrated
+gate interpretation, positive/negative controls and separate-machine reproduction.
+First assess contributing the Goodman case and checked coils to an existing
+benchmark such as StellCoilBench. Build only missing adapters, not a parallel
+benchmark platform by default.
 
-Explore stage-2 coil fitting in a small, documented matrix: existing versus
-alternative geometry-feasible starts; raw-field versus normalized-error objectives;
-and clearance/curvature trade-offs. Broader coil counts, current freedoms or
-topologies are separate identified families, not silent changes to a comparison.
-Sampled geometry can guide exploration cheaply, but only separately checked
-continuous geometry earns a certified label. Report both sampled and certified
-fronts, uncertified cases and actual violations distinctly. Freeze shortlisted
-candidates before finer checking; fine results consulted during exploration are
-not confirmation holdouts.
+Near-term contributions: metric crosswalks, portable target/coil exports,
+independent checks and replications. Unsolicited approaches remain welcome.
+Hosting, publication, external contact and a backup destination still require
+the owner's authority. No such external action has occurred.
 
-Seven exploration sessions are complete: the [objective comparison](NORMALIZED_OBJECTIVE_EXPLORATION.md)
-improves error only with geometry violations, and the [static start screen](COIL_START_SCREEN.md)
-finds curvature freedom without a better starting field. [Constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md)
-and an adaptive saved-point check give a geometry-checked fit at RMS 0.1517;
-lower sampled errors have unresolved
-clearance. [Independent-current raw fits](INDEPENDENT_CURRENT_EXPLORATION.md)
-worsen normalized error; direct normalized fitting then gives modest gains with
-weaker fields. Session 6 compares [small/wider low-mode shape boxes](COHERENT_COIL_EXPLORATION.md)
-from the same checked shape52, after saved gradients expose box-restricted descent.
-Its first attempt stops before optimization on the derivative guard; a separate
-thirty-bundle component sweep supports smaller probes under unchanged tolerances.
-The retry reaches RMS 0.01384 with checked geometry, 81.80% below its matched
-small-change control at 1.06% more current. Both searches exhaust 600 bundles;
-the first failure remains in effort accounting. Session 7's matched restarts
-reach RMS 0.004889 with checked geometry, 55.27% below the original-box control
-at 8.64% less current. The 1e-2 signal is now met, not physical acceptance.
-Repository simplification takes priority before further experiments.
-Source-bound failed
-attempts remain in each result record and are not omitted from effort accounting.
-
-At the earlier of ten sessions or 24 October, publish the reachability map or the
-specific blocker. Use **fine normal RMS below 1e-2 with unchanged geometric gates**
-as a triage signal for further local fitting, not a new acceptance threshold
-(the old RMS limit is still 1e-4). Retain current, maximum normal and interior
-errors as well. If no candidate reaches that signal, stop automatic continuation
-of this local-search family and choose a different initialization/coil family,
-objective or target using the measured trade-offs. Failure within a time box is
-not a proof of infeasibility. If a signal appears, compare it fairly with the
-matched reference before committing a larger budget.
-
-The previously reviewed one-step protected continuation remains an optional
-integration test, not the default next scientific objective. No new native run
-is authorized merely by this programme or its dates.
-
-## MS0: a useful open benchmark within six months
-
-Target **26 March 2027**: an attributed, portable coil benchmark/challenge, with
-calibrated interpretations of its gates, a published negative/positive-control
-matrix and at least one reproduction on a separate machine. A well-explained
-negative benchmark can satisfy this milestone; an accepted reactor design is
-not required. This creates value before a possible Proxima comparison.
-
-Deliver incrementally:
-
-- By **26 October 2026**, prepare a portable Step 4 reference challenge and four
-  issue-ready tasks below, or document the precise data/license/model blocker.
-  This is a target, not a claim that the current sparse starter already does it.
-- Publish only after the [launch checklist](../validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
-  clears the exact release/history and the owner authorizes hosting. Obtain real
-  CI and a discussion/review channel; do not invent a URL or maintainer identities.
-- By **26 December 2026**, seek an authorized independent expert review of the
-  Step 3 proxy's interpretation and Step 4 gate comparability; pursue a second
-  physics-code comparison where a suitable matched calculation exists. Proxima
-  outreach still waits for MS1; no outreach has been performed here.
-- For MS0 completion, another person must reproduce the packaged case from a
-  fresh machine/checkpoint without private paths or chat history. Record actual
-  results, not just a checksum match or same-machine agent review.
-
-### Minimum challenge contract
-
-Package a fixed, licensed coil/target pair, explicit named coefficients/currents,
-units and symmetry, dense reference grids, geometry limits and trusted evaluator
-revision. Support candidate → full-grid evaluate → independent replay with no
-maintainer-local paths. Include continuous geometry checks and refinement-aware
-scores; name unsupported finite-build/topology/pressure physics explicitly.
-Publish size/dependency requirements and test the package in a disposable clean
-checkout before claiming portability. Export new identifiers; never rewrite
-historical paths/hashes in place.
-
-A leaderboard, once hosted, must separate exploratory scores, numerically checked
-results and fully accepted entries for this profile. Show field/current/geometry
-trade-offs and rejected gates; no single score implies a reactor advantage.
-Unsolicited methods remain welcome, and compute spending is not a ranking rule.
-The contribution value is reproducible cross-tool evidence and design challenges
-that can also benefit upstream SIMSOPT/StellCoilBench, not replacing those tools.
-
-### Four issue-ready tasks (not yet hosted issues)
-
-| Task | Reviewable completion |
-| --- | --- |
-| Matched reference and metric crosswalk | Attributed coil/surface pair; reproduced author metric; explicit differences from our profile, including negative gates |
-| Portable target/coil export | Licensed, hash-bound minimal package; fresh-checkout replay without local paths; old evidence untouched |
-| Full-grid and continuous-geometry adapter | Trusted evaluate/replay path with fixed identities, adversarial negative controls and scoped numerical checks |
-| Independent reproduction / counterexample | Exact release and observed outcome on another machine, or a preserved failure of the public/expanded checks |
-
-## Preservation and review indicators
-
-Backup status is **not verified**. Before claiming durable preservation, the
-maintainer must select an independent storage destination, copy the Git bundle,
-pinned-source identities, necessary environment recipes and full reachable result
-graphs, then restore a representative result and verify its hashes. A copy on the
-same disk is not an independent backup. Do not delete local artifacts after export.
-Major-result DOI archives follow rights/privacy review and explicit publication
-authority; portable derivatives retain a manifest mapping to original evidence.
-
-Track at each decision window: best fine RMS with certified geometry; matched
-controls reproduced / controls passing each gate; covered design families;
-question-to-answer time and science/tooling effort when recorded; external
-reproductions/expert reviews; archive/restore status. Baseline evidence is on the
-[status page](../STATUS.md); unknown values stay unknown. Calendar targets neither
-schedule background work nor make a missed scientific result complete.
+Pressure, engineering and SQuID-C work are parked until an actual coil set is
+within ten times the field-error limit, unless evidence justifies revisiting them.
+They remain required for eventual completion; detailed historical plans are at
+the [freeze tag](../validation/REPRODUCING_RESULTS.md). Proxima contact waits for MS1.

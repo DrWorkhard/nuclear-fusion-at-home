@@ -1,19 +1,19 @@
-# Current research decisions
+# Current decisions
 
-Keep decisions at their point of use, not in a second chronological ledger:
+- Keep penalized normalized fitting, the public starter and shared acceptance
+  mathematics active. Retired producers/runners/tests resolve at
+  `research-freeze-2026-09-27`; do not copy them into archive directories.
+- One writer per working tree. Delegate read-only review or use separate branches.
+- Exploration gets a short question/input/output/conclusion record and finite
+  execution resources. Confirmatory claims get independent, preregistered checks.
+- Do not resume certified-step/current-only search by default. Fix the interior
+  adapter's real-data flux-identity mismatch before its first native screen,
+  then proceed to a justified trade-off map.
+- Evaluate existing community benchmark integration before bespoke infrastructure.
+- Preserve original evidence, ignored raw artifacts and the native environment.
+  Git tags do not replace an independent data backup.
+- Pressure/engineering/SQuID-C details are parked, not removed from eventual
+  completion. MS1 requires a fair Proxima comparison before contact.
 
-- [Roadmap](../PROJECT_PLAN.md): completion criteria, MS0/MS1/MSX and priorities.
-- [Step 4 programme](../optimization/STEP4_RESEARCH_PROGRAMME.md): diagnosis and
-  reference calibration before longer searches; time-boxed exploration.
-- [Research workflow](../validation/RESEARCH_WORKFLOW.md): exploratory and
-  confirmatory lanes, proportional checks and editorial ownership.
-- [Review policy](../validation/REVIEW_POLICY.md): open contributions, optional
-  compute disclosure, trusted evaluation and publication prerequisites.
-- [Agent instructions](../../AGENTS.md): current working rules. The repository
-  describes the current project; superseded instructions and chronology belong
-  in Git, not new archive documents.
-
-Scientific protocols and evidence needed to reproduce current claims remain
-available. Removing duplicate prose does not change results or thresholds.
-This file's established path is retained for documentation/preservation tooling;
-earlier decisions and their reasons are available with `git log -p --` on this path.
+[Programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) ·
+[Review response](../review/STRATEGIC_REVIEW_RESOLUTION.md)

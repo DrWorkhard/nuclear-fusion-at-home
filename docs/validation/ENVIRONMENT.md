@@ -1,76 +1,34 @@
-# Canonical environment
+# Active research environment
 
-## Platform qualified so far
+The public starter requires only Python 3.11+. Its commands do not install or
+import the native research stack. [Quickstart](PUBLIC_QUICKSTART.md).
 
-- macOS 15.7.4, Apple M1 (`arm64`), 8 logical CPUs, 16 GiB RAM;
-- CPython 3.12.13 managed by `uv`;
-- OpenMPI 5.0.10;
-- StellCoilBench commit `c7949edc4ea6378fc3be633304c69c288c3b79b5`;
-- SIMSOPT commit `a79006b0bc1e6df8ab48de284e3457d39a49b995`.
-
-Run `./scripts/bootstrap_macos.sh`. It verifies repository commits and input
-hashes after installation. `uv.lock` pins all Python dependencies, including the
-resolved SIMSOPT Git commit.
-
-Finite-build and scikit-fem structural diagnostics additionally use the locked
-engineering extra:
+The existing native environment uses Python 3.12 with NumPy, SciPy, SIMSOPT and
+netCDF4, plus the recorded target/coil artifacts. Keep that environment intact.
+Do not run `uv sync` in it to test a dev-only CI configuration; use a disposable
+checkout. This cleanup performs no package installation or environment repair.
 
 ```bash
-uv sync --extra dev --extra engineering
+.venv/bin/python -m pytest -q
+.venv/bin/python scripts/test_public.py
+.venv/bin/python scripts/check_docs.py
 ```
 
-This installs Gmsh, meshio, and scikit-fem. DOLFINx and ParaStell are not part of
-the qualified Apple ARM environment.
-
-## Known host-specific corrections
-
-On the qualified host, the Command Line Tools directory
-`/Library/Developer/CommandLineTools/usr/include/c++/v1` exists but lacks standard
-C++ headers. The bootstrap script prepends the complete libc++ directory from the
-active macOS SDK during extension compilation.
-
-`mpi4py` requires a separate MPI runtime. OpenMPI is installed through Homebrew.
-
-## Thread policy
-
-Baseline wall times use one numerical-library thread unless an experiment states
-otherwise:
+Native field evaluations use one thread:
 
 ```bash
-OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 <command>
+export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1
 ```
 
-MPI process count and thread environment are part of every comparison record.
+Retain an initial 3 GiB and live 2 GiB disk reserve for the recorded studies.
+Use a fresh output directory and finite wall-clock/storage bounds.
 
-## Isolated physics environments
+Historical builds, platform patches, VMEC/particle/engineering recipes and exact
+versions resolve at the [freeze tag](REPRODUCING_RESULTS.md), together with each
+report's recorded source/environment identities. A current editable checkout
+does not make old absolute artifact paths portable.
 
-VMEC++, SIMPLE, and NEO-JAX are kept outside the root Python environment so their
-dependency solvers cannot replace the augmented-Lagrangian SIMSOPT fork. The
-NEO-JAX environment is recreated with `./scripts/bootstrap_neo_jax.sh` and pins
-NEO-JAX 1.0.1 plus `booz-xform` 0.1.0 in
-`environments/neo-jax/uv.lock`.
-# Strict QI data integration
-
-`bash scripts/run_qi_integration.sh` creates the locked core environment,
-and must therefore run in a separate core checkout, never the qualified native
-root environment. It
-downloads/verifies and extracts the pinned Goodman archive, and runs five
-real-data tests without permitting missing-data skips. For an existing download
-cache, set `FUSION_QI_ARCHIVE=/absolute/path/qifiles.zip`; its published checksum
-is still checked and data are extracted into the current checkout. The cache is
-read-only to this path. Without a cache the download is about 1 GiB.
-
-The tests check nfp=1/2 metadata and independently retrace/integrate all three
-vacuum cases at s=0.5, five frozen pitches and sixteen field lines against tracked
-v1 action values (relative tolerance 1e-3). They need neither the original
-machine's absolute artifact paths nor an installed legacy SciPy tracer. This is
-a bounded QI numerical regression, not a fresh VMEC solve or full scientific
-qualification. W7-X/native-solver integration remains a separate, expensive gate.
-
-## Strict combined cached-data regression
-
-`PYTHONPATH=src .venv/bin/python scripts/run_scientific_integration.py NEW_OUTPUT`
-requires all six existing QI/W7-X integration tests with zero skips and a verified
-exact JUnit test set. It never synchronizes or changes installed packages.
-See [scope and controls](STRICT_SCIENTIFIC_INTEGRATION.md). A cached-data pass
-does not close the fresh native solver/build gate.
+The optional engineering dependency declarations remain locked for compatibility:
+offline lock regeneration was blocked by the approval service's usage limit.
+Their implementation is retired, and nothing was installed. Do not present those
+optional packages as an active engineering qualification.

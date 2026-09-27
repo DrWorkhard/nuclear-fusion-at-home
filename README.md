@@ -1,75 +1,52 @@
 # Nuclear Fusion @ Home
 
-Open stellarator research — contributed by people and their agents.
+Open stellarator research, contributed by people and their agents.
 
-Our end goal is to **contribute to nuclear fusion by finding the
-best reactor design current technology can achieve**. We work on stellarators:
-fusion devices whose shaped external coils create a twisted magnetic field to
-confine hot plasma. This is computational research, not a home reactor-building project.
+Our end goal is to **contribute to nuclear fusion for humanity by finding the
+best reactor design current technology can achieve**. “Best” balances plasma
+performance, buildability, robustness, safety and cost—not one score.
+This is computational research, not a home reactor-building project.
 
-By “best” we mean a design that balances performance, buildability, robustness,
-safety and practical cost — not just the top score on one metric. We seek
-reproducible, testable improvements.
+We study stellarators: devices whose shaped external coils create a twisted
+magnetic field that confines plasma. Our immediate question is whether practical
+coil shapes can accurately reproduce a promising plasma target.
 
-**Research preview · 27 September 2026.** Our tools reproduce selected open
-references. One plasma-target study improved its preregistered metric
-(bounce-action variance, a particle-motion diagnostic) by **11.17%**.
-An exploratory geometry-checked fit reaches normal-field error **0.004889
-versus a 1e-4 pilot limit**: wider shapes cut error 55.27% versus a matched
-restart, at 8.64% lower current. Field/topology checks and
-full target/geometry calibration remain open.
-[Scientific evidence](docs/STATUS.md).
-No new accepted coil design or state-of-the-art advance yet. We are independent of, and not
-endorsed by, Proxima Fusion or the Max Planck Institute.
+**Research preview · 27 September 2026.** A geometry-checked exploratory fit reaches
+normal-field RMS **0.004889 versus a 1e-4 pilot limit**. In a matched restart,
+wider shape freedom lowers error **55.27%** and current **8.64%**.
+This is useful progress, not an accepted reactor design or a state-of-the-art
+advantage. Interior fields, realized magnetic surfaces and plasma-benefit transfer
+remain open. [Scientific evidence](docs/STATUS.md).
 
-## A few terms
-
-- **Reference (seed):** the saved starting design used for comparison.
-- **RMS:** root-mean-square error; a measure of typical mismatch.
-- **Filament:** a coil model represented by a thin current-carrying curve.
-- **Native research tools:** the larger workflow with compiled scientific libraries;
-  the public starter below uses only Python's standard library.
-- **Full-grid / flux-normalized:** the research calculation uses dense spatial
-  grids and adjusts current to match a specified magnetic flux. The starter uses
-  sparse samples and holds current fixed; these are different checks.
+We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.
 
 ## Project plan and progress
 
-We move from reproducible calculations to improved plasma and coil designs, then
-to fair comparisons and expert scrutiny. “Complete” means the stated scope passed
-on the maintainer's machine, not that a reactor or universal toolchain is complete.
-[Scientific overview](docs/README.md) · [Detailed roadmap](docs/PROJECT_PLAN.md)
+Completed steps passed their defined local scope; they do not imply a complete
+reactor. [Detailed roadmap](docs/PROJECT_PLAN.md) · [Scientific overview](docs/README.md)
 
-| Step / milestone                                     | Goal                                                                                                                                                       | Status                               |
-| ---------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| **1. Establish a reliable foundation**               | Reproduce selected checks for W7-X (the Wendelstein 7-X experiment), Goodman et al.'s open quasi-isodynamic (QI) dataset, and reference coil calculations. | **Complete (local reference tools)** |
-| **2. Make design iteration reproducible**            | Change a design, save it, evaluate it separately and repeat.                                                                                               | **Complete (iteration workflow)**    |
-| **3. Improve our own plasma target**                 | Reduce the preregistered particle-motion diagnostic by changing the vacuum plasma target.                                                                  | **Complete (vacuum study)**          |
-| **4. Develop plasma and coils together**             | Find coils that realize the plasma benefit, then demonstrate coupled improvement, pressure/confinement validity and finite-coil robustness.                | **In progress**                      |
-| **5. Demonstrate a meaningful design advantage**     | Compare feasible designs fairly with leading references and independently verify the benefit.                                                              | **Not achieved**                     |
-| **MS0. Publish a useful open coil benchmark**        | By 26 March 2027: a portable attributed challenge, calibrated gate interpretation, control matrix and separate-machine reproduction.                          | **Planned**                          |
-| **MS1. Contact Proxima Fusion with strong evidence** | Contact Proxima as soon as strong, reproducible, independently checked evidence shows our design is better than the design they are pursuing.              | **Not reached**                      |
-| **MSX. Our end goal**                                | Contribute to nuclear fusion for humanity by finding the best reactor design current technology can achieve.                                               | **Long-term goal**                   |
+| Step / milestone | Goal | Status |
+| --- | --- | --- |
+| 1. Establish a reliable foundation | Reproduce selected open reference calculations. | Complete (local reference tools) |
+| 2. Make design iteration reproducible | Change, save, independently check and repeat. | Complete (iteration workflow) |
+| 3. Improve our own plasma target | Confirm a better vacuum plasma diagnostic. | Complete (vacuum study) |
+| 4. Develop plasma and coils together | Realize and preserve plasma benefits with practical coils. | In progress |
+| 5. Demonstrate a meaningful design advantage | Independently verify benefit against leading references. | Not achieved |
+| MS0. Publish a useful open coil benchmark | Attributed challenge, calibrated checks and independent reproduction. | Planned |
+| MS1. Contact Proxima Fusion with strong evidence | Show our design is better than their relevant design, then contact them. | Not reached |
+| MSX. Our end goal | Contribute to fusion for humanity through the best achievable reactor design. | Long-term goal |
 
-MS1 requires a relevant, versioned Proxima reference, matched conditions and
-explicit uncertainty and trade-offs. Improving our reference or a sparse score
-alone cannot establish that advantage. [MS1 evidence framework](docs/squid_c/MS1_PROXIMA_COMPARISON.md).
-MSX names our final milestone: expert scrutiny and practical follow-on work extend
-beyond MS1; “best” is an ambition, not a proven global optimum.
-MS0 creates something useful earlier, even if the benchmark result is negative.
-[Dated research programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md).
+MS1 needs a versioned Proxima reference, matched conditions and reproducible,
+independently checked benefits. Improving our own seed or public samples is
+insufficient. MSX is an ambition, not a claimed global optimum.
+MS0 can deliver a useful positive or negative benchmark earlier; we will assess
+contributing to existing community tools before building new infrastructure.
 
 ## Start in three commands
 
-First get a checkout or source ZIP and open its directory. On a hosted repository,
-use its **Code → HTTPS** clone URL or **Download ZIP**. Replace the placeholder
-below with that actual URL before running it; if hosting is unavailable, obtain
-a checkout/source ZIP from the maintainer:
-
-```bash
-git clone <repository-url> fusion
-cd fusion
-```
+Obtain a checkout or source ZIP and open its directory. When hosted, use the
+actual repository's **Code → HTTPS** clone URL or **Download ZIP**; otherwise
+obtain a checkout from the maintainer. No hosted URL is claimed here.
 
 With **Python 3.11+**, run:
 
@@ -79,120 +56,58 @@ python fusion.py public demo --output results/my-first-demo
 python scripts/test_public.py
 ```
 
-Check `python --version`. On macOS/Linux, `python3` is also fine **if it is 3.11
-or newer**; some system Pythons are older. On Windows, try `py -3` and check its
-version, or select an installed supported version, such as `py -3.12`.
-The public starter needs **no package installation, API key, GPU, compiler or
-additional download** after obtaining the repository. The native research workflow
-requires Python 3.12+ and additional dependencies.
+Check `python --version`. On macOS/Linux, use `python3` only if it is new enough;
+the system version may be older. On Windows, try `py -3.12`.
+The starter needs **no package installation, API key, GPU or extra download**.
 
 Expected: the demo prints `"reference_reproduced": true` and
-`"physical_admission": false`; the test run ends in `OK`. A demo/evaluation
-takes a few seconds on the review Mac; timing varies by machine. The demo
-compares the unchanged reference with saved native fields and replays its report.
-Use a fresh output name on each run.
-[Full quickstart](docs/validation/PUBLIC_QUICKSTART.md) ·
-[Data and attribution](examples/clear-coil-samples-v1/README.md)
+`"physical_admission": false`; tests finish with `OK`.
+Use a fresh output name for each run.
+[Quickstart and troubleshooting](docs/validation/PUBLIC_QUICKSTART.md).
 
 ## What should I try?
 
-The starter lets you explore **Step 4's current bottleneck: coil shapes whose
-field matches the target**. Try a small coefficient change, initially around
-0.01–0.1 mm (`1e-5`–`1e-4` metres), and compare both errors. That is a starting
-scale for exploration, not a guarantee of improvement or safe geometry.
+Try a small coil-coefficient change and lower **both** public errors:
 
-| Public metric (dimensionless; lower is better)                     | Reference score |
-| ------------------------------------------------------------------ | --------------- |
-| `sampled_normal_rms` — field leaking across the target boundary    | **0.304207**    |
-| `sampled_inner_vector_rms` — mismatch with the target field inside | **0.380435**    |
+| Metric—lower is better | Reference |
+| --- | ---: |
+| `sampled_normal_rms`: field leaking across the target boundary | 0.304207 |
+| `sampled_inner_vector_rms`: mismatch with the target field inside | 0.380435 |
 
-`demo` and `evaluate` compare reference and candidate at the same 512-node coil
-resolution and print signed/percentage changes. An unchanged reference gives zero
-change; negative is better. Report both metrics and any trade-off. Tiny changes
-still need resolution and wider-sample checks, not just more printed digits.
-
-The same reference coils score about **0.27 in the full research check** and
-**0.304 on the public samples**. The research limits, **1e-4 normal RMS and
-0.01 inner-vector RMS**, apply to the different full-grid, flux-normalized workflow.
-The sparse scores are feedback, not that acceptance test.
-[Score interpretation](docs/validation/PUBLIC_QUICKSTART.md#what-the-report-means).
-
-[Try a lower-score example](submissions/constraint-aware-shape52/README.md);
-its current differences and research checks are documented.
-
-This example changes `coil[0]/xc(0)` from about 0.960819 m by +0.1 mm.
-It demonstrates editing, not a known improvement:
+Start around 0.01–0.1 mm (`1e-5`–`1e-4` metres); this is an exploratory scale,
+not a guarantee of improvement or safe geometry. Evaluation prints differences
+from the reference. Report both metrics and any trade-off.
 
 ```bash
 python fusion.py public init --output results/my-reference.json
-python fusion.py public set-coefficient --candidate results/my-reference.json --name "coil[0]/xc(0)" --value 0.9609191138350243 --output submissions/my-coil-study/candidate.json
-python fusion.py public evaluate --candidate submissions/my-coil-study/candidate.json --output results/my-report.json
+python fusion.py public set-coefficient --candidate results/my-reference.json --name "coil[0]/xc(0)" --value 0.9609191138350243 --output submissions/my-study/candidate.json
+python fusion.py public evaluate --candidate submissions/my-study/candidate.json --output results/my-report.json
 python fusion.py public audit --report results/my-report.json --output results/my-audit.json
 ```
 
-`--value` is **absolute, in metres**, not a delta. Double-quote the name for
-bash, zsh, Windows cmd.exe and PowerShell. See
-`python fusion.py public set-coefficient --help`. The last command is optional
-but recommended: `audit` recomputes the report with the same evaluator and checks
-agreement within its numerical tolerance. Include that outcome in your PR;
-it is not independent physical validation.
+The example changes one coefficient by +0.1 mm; it is not a known improvement.
+`--value` is absolute, in metres. Quote coefficient names.
+[Named mapping and Python search loop](docs/validation/PUBLIC_QUICKSTART.md#evaluate-your-own-candidate)
+· [Lower-score example](submissions/constraint-aware-shape52/README.md).
 
-For direct array edits, the name-to-index mapping and a callable Python search-loop
-example are in the [quickstart](docs/validation/PUBLIC_QUICKSTART.md#evaluate-your-own-candidate).
-An evaluation takes a few seconds; budget longer loops accordingly.
+The public starter uses sparse samples and fixed currents. Research uses dense
+grids and flux-normalized currents, with limits **1e-4 normal RMS** and
+**0.01 interior-vector RMS**. Those are different checks. Public `audit` is a
+same-code replay, not independent physical acceptance.
 
-## Contribute something useful
+## Contribute
 
-Help make difficult design comparisons reproducible: shared cases, independent
-checks and useful counterexamples that can also benefit SIMSOPT/StellCoilBench.
-Our planned full-grid coil challenge will expose the research bottleneck; the
-current sparse starter is its entry path, not that completed challenge.
+Useful unsolicited ideas, exploratory improvements, replications, critical
+reviews and negative results are welcome. Compute spending is optional to report.
+[CONTRIBUTING](CONTRIBUTING.md) explains PRs, evidence and attribution;
+[research hints](docs/optimization/RESEARCH_HINTS.md) are invitations, not an allowlist.
 
-**Exploratory PRs with lower sampled scores are welcome.** Commit the small
-`submissions/my-coil-study/candidate.json` (about 10 KB) and a brief
-`README.md` beside it with the reference revision, commands, both scores,
-checks and limitations. Keep generated reports/audits in ignored `results/`;
-do not force-add the much larger report. [Submission layout](submissions/README.md).
+The active research path is penalized coil fitting plus shared field/geometry
+checks. Completed and retired research code/tests live at Git tag
+`research-freeze-2026-09-27`, not in the default working tree.
+[Active research](docs/optimization/README.md) ·
+[Reproduce frozen results](docs/validation/REPRODUCING_RESULTS.md).
 
-Counterexamples, negative results, better tests and alternative approaches are
-equally useful. Bring an agent or write code yourself. **No listed issue, prior
-permission, particular model or compute-budget disclosure is required.**
-[Research hints](docs/optimization/RESEARCH_HINTS.md) are invitations, not an allowlist;
-work beyond the starter's fixed-current format is welcome.
-
-[Contribution guide](CONTRIBUTING.md) · [Review policy](docs/validation/REVIEW_POLICY.md) ·
-[Agent guide](AGENTS.md) · [Security](SECURITY.md)
-
-## How to read our evidence
-
-Reports call physical acceptance **admission** (`physical_admission`): all checks
-specified by that evaluation profile must pass. Public reports keep this false
-because they test only sparse fields, not the full physics and engineering.
-The plasma study's bounce-action improvement is not measured confinement or power.
-
-Recorded public checks pass locally on macOS with Python **3.11, 3.12 and 3.14**.
-These are not Windows/Linux or hosted-CI results; see the
-[verification record](docs/validation/PUBLIC_RELEASE_RESULTS.md) and
-[current status](docs/STATUS.md) for dated coverage and retained failures.
-[Historical research entry points](docs/validation/PROJECT_ENTRYPOINTS.md) describe
-the larger native workflow.
-
-## Repository map
-
-- `src/fusion_public/`: dependency-free starter and candidate helpers.
-- `src/fusion_baselines/`: historical and ongoing research code.
-- `scripts/`: native research and maintenance entry points; start with `fusion.py`.
-- `examples/`: attributed reference data; `submissions/`: small contributed candidates.
-- `docs/`: current guidance and supporting results; superseded documents live in Git.
-- `evidence/`: result records; ignored `artifacts/` holds large local runs, not a public data archive.
-
-## Licensing and project operation
-
-Project code: [MIT](LICENSE), with [source/data notices](NOTICE.md).
-Bundled derived Goodman data has [CC BY 4.0 attribution](examples/clear-coil-samples-v1/README.md).
-Credit exact revisions and upstream sources: [CITATION.cff](CITATION.cff).
-
-Publication and any PR automation require the
-[launch and operating checklist](docs/validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
-The [review policy](docs/validation/REVIEW_POLICY.md) separates accepting a useful
-contribution from accepting its scientific claims.
+Code is MIT-licensed; data retains its own attribution and licenses.
+See [LICENSE](LICENSE), [data credits](examples/clear-coil-samples-v1/README.md)
+and [CITATION.cff](CITATION.cff).

@@ -1,7 +1,7 @@
 # Matched boundary-reference calibration
 
 27 September 2026. **Exploration, not acceptance.**
-[Programme](STEP4_RESEARCH_PROGRAMME.md) · [Metric diagnosis](FIELD_RESIDUAL_RESULTS.md)
+[Programme](STEP4_RESEARCH_PROGRAMME.md) · [Frozen metric diagnosis](../validation/REPRODUCING_RESULTS.md)
 
 ## Question and selection before field evaluation
 

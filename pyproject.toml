@@ -21,6 +21,8 @@ dev = [
 benchmark = [
   "stellcoilbench",
 ]
+# Locked compatibility extra; its retired implementation is available at the freeze tag.
+# Remove with a verified lockfile regeneration, not by mutating the native environment.
 engineering = [
     "gmsh>=4.15.2",
     "meshio>=5.3.5",
@@ -34,7 +36,7 @@ stellcoilbench = { git = "https://github.com/akaptano/stellcoilbench.git", rev =
 fusion-baselines = "fusion_baselines.cli:main"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/fusion_baselines"]
+packages = ["src/fusion_baselines", "src/fusion_public"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
