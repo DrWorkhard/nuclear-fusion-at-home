@@ -30,7 +30,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Independent base currents](INDEPENDENT_CURRENT_EXPLORATION.md). Raw-error minima worsen normalized RMS; direct normalized fitting then improves the original circle/shape RMS by 12.91%/6.93%, with weaker boundary fields. All field gates still fail.
 
-- [Coherent shape freedom](COHERENT_COIL_EXPLORATION.md). Matched small/wider low-mode boxes from shape52; first attempt stops at its startup derivative guard. Saved values suggest curvature-penalty finite-step error; a separate scale diagnostic precedes any retry.
+- [Coherent shape freedom](COHERENT_COIL_EXPLORATION.md). Matched small/wider low-mode boxes from shape52; first attempt stops at its derivative guard. A thirty-bundle component sweep supports smaller probes under unchanged tolerances for a fresh retry; no search result yet.
 
 - Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [results](FIELD_RESIDUAL_RESULTS.md). All eight comparisons complete. Only 11.6%/19.6% of squared normalized residual aligns with the observed response versus 88.1%/89.6% for the raw objective; prioritize metric calibration and objective/start comparisons, not automatic continuation.
 

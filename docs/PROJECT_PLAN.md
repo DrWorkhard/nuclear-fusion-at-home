@@ -33,7 +33,8 @@ starts/objectives. The [objective comparison](optimization/NORMALIZED_OBJECTIVE_
 improves field error only with geometry violations. [Constraint-aware fitting](optimization/CONSTRAINED_COIL_EXPLORATION.md)
 now gives a geometry-checked adaptive fit at RMS 0.1517 with higher current; better
 sampled fits have unresolved clearance. Normalized current-only fits help modestly.
-The paired shape test stopped at its derivative guard; diagnose its scale before retry.
+The paired shape test stopped at its derivative guard; smaller diagnosed probes
+now support a fresh retry without relaxing any tolerance.
 Fine RMS below 1e-2 with geometric gates is a
 triage signal, not acceptance. If it is not reached, change the investigated
 family/approach instead of automatically extending protected local search.

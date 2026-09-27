@@ -151,3 +151,53 @@ late rejection and overflow controls. Preflight review found that an infinite
 finite difference could satisfy an unguarded relative `inf <= inf` comparison;
 the new diagnostic now rejects all nonfinite derived comparisons explicitly.
 No real diagnostic was run before that correction; tolerances remain unchanged.
+
+### Derivative-scale result and fresh retry rule
+
+The diagnostic completes at clean `cd376b5`: thirty bundles in 9.151 s worker /
+9.510 s supervised, 64 run files / 1,213,143 bytes, unchanged sources and exact
+full-component seed repetition. The [diagnostic evidence](../../evidence/coherent-derivative-scale-v1.json)
+binds result SHA-256
+`fc0f32fed25f72451a71d8293252303430fc7e93f62c177f7ef7a80b5fedfb99`.
+
+Every magnetic-component check passes. All three components in both directions
+pass the original tolerances at the **four tested steps h≤2.5e-6**.
+At h=1.25e-6 and 6.25e-7 the maximum
+total discrepancy is 8.04e-11; no tolerance has been relaxed. Geometry errors
+fall much faster than a simple h² law near 2.5e-6, so the full sweep, not just the
+first pair's approximate fourfold ratio, is needed to interpret the behavior.
+Native requests: 120 B, thirty A, thirty B-vjp, plus thirty explicit extra
+geometry-gradient extractions. No optimizer, fine field or new design is involved.
+
+Separate Fourier reconstruction of first/second curve derivatives for all thirty
+saved points reproduces all 180 per-coil curvature maxima to 2.31e-14. It locates
+the sampled penalty switches: larger positive probes cross κ=10/m at base coil 0,
+node 69/256, and sometimes node 220/256. Negative probes and all tested steps
+≤1.25e-6 preserve the seed's active set. The nearest seed curvature is 1.67e-4/m
+from the switch. Thus the larger probes straddle a construction-penalty branch;
+the selected smaller probes stay on the same branches. This is the **soft penalty
+threshold 10/m**, not a violation or change of the physical curvature limit 12/m.
+The reconstruction uses `|γ′×γ″| / |γ′|³` at the original 256 equally spaced nodes,
+not new native fields or a continuous-geometry certificate.
+
+Independent saved-data review verifies all 42 source hashes, reproduces all
+42 component finite-difference/error/tolerance classifications and exact seed
+repetition, and separately reconstructs all thirty coil sets. Its 180 curvature
+maxima agree within 9.24e-14 and confirm the same branch crossings. This is a
+saved-data/geometry arithmetic audit, not a new native field calculation.
+
+**Fresh retry:** change only the paired search's two startup probe sizes to
+**1.25e-6 and 6.25e-7**. Retain the same ten startup / 600 total bundles, paired
+boxes, objective, penalties, actual acceptance limits, selected-endpoint rule and
+fine/geometry schedules. Use a separately identified script and fresh
+`artifacts/coherent-coils-v2/` outputs; bind this diagnostic and the failed first
+attempt. Both new arms must independently pass their startup again. This is an
+explicitly diagnosed numerical-probe revision, not a relabeling of the failed
+attempt or proof of physical acceptance.
+
+The retry's 46 combined retry/coherent/constrained tests pass (1.71 s main).
+Sixteen new tests verify syntax-tree equivalence of the copied search after
+normalizing only the documented probe tuple, module references and metadata;
+they also test the exact 10/600 accounting, selection, source rejection and
+override restoration. All nineteen fixed input hashes and the real saved-data
+preflight pass without fields. Old sources and outputs remain unchanged.

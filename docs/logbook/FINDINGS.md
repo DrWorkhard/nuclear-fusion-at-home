@@ -27,6 +27,12 @@ These lessons guide that work rather than duplicating the full result chronology
   meeting the target loop flux. Direct normalized fitting helps, but still leaves
   weak-field trade-offs. Retain amplitudes, maxima and interior checks; a favorable
   single boundary score does not establish field fidelity or confinement.
+- **Finite differences can cross penalty switches.** The
+  [coherent-shape startup](../optimization/COHERENT_COIL_EXPLORATION.md) fails its
+  original derivative check when larger probes straddle sampled curvature
+  penalty branches. A fixed component/step-size study supports smaller probes
+  under the same tolerances. Preserve the failure and diagnose convergence;
+  neither silent probe changes nor relaxed physical gates are justified.
 - **Use named physical coordinates.** Positional optimizer arrays can change
   meaning across processes. The [mapping correction](../optimization/REPLAY_MAPPING_REMEDIATION.md)
   explains why replay must bind names, coefficients and physical fields.
