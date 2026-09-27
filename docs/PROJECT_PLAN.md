@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 26 September 2026.
+Updated 27 September 2026.
 [Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
@@ -21,15 +21,16 @@ useful open result before a possible reactor-design advantage.
 
 ## Next actions
 
-**First: calibration, by 10 October.** The [saved-field diagnosis](optimization/FIELD_RESIDUAL_RESULTS.md)
-is complete and motivates an objective comparison. Reproduce a suitable published coil/surface reference in its own
-conventions, then map it to our unchanged pilot gates. Distinguish a metric/model
-mismatch from a strict criterion or insufficient coil family. No automatic
-threshold relaxation and no presumption that local search is impossible.
+**Calibration checkpoint, by 10 October.** The [saved-field diagnosis](optimization/FIELD_RESIDUAL_RESULTS.md)
+and [boundary-reference comparison](optimization/REFERENCE_CALIBRATION.md) are
+complete: one boundary-positive control and reproduced LPQA mean/max conventions,
+but no end-to-end Goodman control. Keep the remaining model/geometry distinctions
+explicit; no automatic threshold relaxation.
 
 **Then: time-boxed exploration, through 24 October or ten research sessions.**
 Map field error against clearance/curvature using existing tools and alternative
-starts/objectives. Fine RMS below 1e-2 with the existing geometric gates is a
+starts/objectives. Start with a matched raw-versus-local-normalized objective
+comparison. Fine RMS below 1e-2 with the existing geometric gates is a
 triage signal, not acceptance. If it is not reached, change the investigated
 family/approach instead of automatically extending protected local search.
 The [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) defines scope,

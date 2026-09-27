@@ -19,11 +19,12 @@ not universal reactor standards. Steps 4A–4D and MS1 remain open.
    Its eight comparisons show weak normalized-residual alignment relative to the
    raw objective. Use this to motivate objective/start comparisons, not to infer
    that other coil directions cannot succeed.
-2. Prepare and run a matched positive-control calibration. First inventory locally
-   available author coil/surface pairs, source revisions, licenses and reported
-   metrics. Reproduce the author's own metric at the author's physical scale and
-   settings, then separately evaluate our unchanged gates. Prefer an existing
-   attributed benchmark to designing another toy that merely passes our code.
+2. The [matched boundary calibration](REFERENCE_CALIBRATION.md) now supplies a
+   QUASR boundary-positive control and reproduces LPQA's archived mean/max at the
+   tested settings. Its 13 rows distinguish collocation error, flux clipping and
+   RMS definitions. This completes a component comparison, not an end-to-end
+   Goodman/current/geometry calibration; data rights still need verification
+   before a new portable export.
 3. If a suitable control is missing, record the exact missing data or adapter;
    do not substitute a different surface, a rescaled coil or an analytic unit
    test and call the physical gates calibrated. Analytic controls are still useful

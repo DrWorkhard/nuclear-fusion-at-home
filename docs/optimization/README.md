@@ -19,6 +19,8 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Step 4 research programme](STEP4_RESEARCH_PROGRAMME.md). Calibration and time-boxed reachability first; decision dates, full-grid challenge contract, four starter tasks, MS0 and evidence/expert-review actions. New long protected searches are not the default priority.
 
+- [Matched boundary-reference calibration](REFERENCE_CALIBRATION.md). Fixed QUASR/LPQA coil-surface pairs, distinct mean/RMS/raw-flux definitions, source-scale preservation and a small refinement screen; not a full Goodman positive control.
+
 - Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [results](FIELD_RESIDUAL_RESULTS.md). All eight comparisons complete. Only 11.6%/19.6% of squared normalized residual aligns with the observed response versus 88.1%/89.6% for the raw objective; prioritize metric calibration and objective/start comparisons, not automatic continuation.
 
 - [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations; useful unsolicited work is welcome and compute disclosure is optional.

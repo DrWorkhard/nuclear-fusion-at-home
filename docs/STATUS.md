@@ -21,7 +21,7 @@ not extrapolate small local gains.
 | [Protected fit and fine checks](optimization/PROTECTED_FINE_RESULTS.md) | Eight fixed selections pass numerical/geometry checks; fine normal RMS remains 0.26794–0.27478 | Every selection fails field-quality gates; a certified geometric path does not ensure a useful magnetic field |
 | [Newly certified fixed steps](optimization/FIXED_FIELD_PROBE_RESULTS.md) | Normal RMS decreases another 0.057%/0.065% beyond preset empirical margins; both currents decrease; one interior-error improvement resolves | Other interior gain unresolved; all absolute field-error gates still fail; no general search-method advantage |
 | [Residual diagnosis](optimization/FIELD_RESIDUAL_RESULTS.md) | Observed responses align with 11.6%/19.6% of squared normalized residual versus 88.1%/89.6% of raw-objective residual; all eight comparisons checked | One-response affine fit, not a physical extrapolation or a lower bound on the coil family |
-| [Gate calibration](optimization/STEP4_RESEARCH_PROGRAMME.md) | Analytic/component controls exist; no matched end-to-end positive control has established that a known-good coil design passes this Step 4 profile | Pilot limits are not universal standards; archived LPQA raw-flux failures are a different comparison |
+| [Boundary calibration](optimization/REFERENCE_CALIBRATION.md) | QUASR 952 reaches refined RMS 2.27e-6; LPQA's archived mean/max reproduce on the tested half-period grid | Positive boundary-component control only; no matched end-to-end Goodman positive; coarse QUASR grid misleadingly reports near zero |
 
 The current normal-RMS limit is **1e-4**, maximum normal error **1e-3** and
 interior-vector RMS **0.01**. The roughly 2,700-fold normal-error gap is real;

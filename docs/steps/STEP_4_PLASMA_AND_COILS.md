@@ -1,6 +1,6 @@
 # Step 4: plasma and coils together
 
-**In progress.** Updated 26 September 2026.
+**In progress.** Updated 27 September 2026.
 [All steps](README.md) · [Roadmap](../PROJECT_PLAN.md) · [Scientific status](../STATUS.md)
 
 ## What the step has to show
@@ -47,7 +47,10 @@ The [strategic review response](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 prioritizes gate calibration and exploration of achievable field/geometry
 trade-offs. The [saved residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md)
 is complete: observed responses align much better with the raw objective than
-normalized field error, motivating objective/start comparisons after calibration.
+normalized field error. The [matched boundary calibration](../optimization/REFERENCE_CALIBRATION.md)
+now demonstrates low refined RMS on QUASR and reproduces LPQA's reported mean/max
+under tested conventions. It supports an objective comparison, without claiming
+a matched positive control for all Goodman gates.
 A reviewed one-step continuation proposal remains optional. No further long
 protected search is justified merely by the recent small gains.
 

@@ -1,49 +1,51 @@
 # Current verification
 
-Updated 27 September 2026. This page records the latest maintenance check, not
-an append-only session history. Git retains previous versions; individual result
-reports retain the checks supporting their scientific claims.
+Updated 27 September 2026. Latest completed work, not an append-only history.
+Git retains previous versions; canonical result pages retain scientific checks
+and failed attempts.
 
-## Residual diagnostic: completed and independently checked
+## Matched boundary calibration
 
-Added a thin external 65 s supervisor for the registered saved-array analysis,
-with explicit returned-reference acceptance and checked durable publication.
-The worker reserves launcher bytes inside its unchanged 8 MiB output cap.
-Original field evaluators, inputs, numerical tolerances and scientific protocol
-remain unchanged. Clean execution at `7b4ec75` completes all eight comparisons in
-1.836 s, with 55,702 scientific bytes and no new native work.
+Added a small exploratory metric crosswalk and fixed QUASR/LPQA comparison,
+without modifying existing evaluators or gates. The first attempt failed before
+fields on legacy generic surface labels. Physical tensor-slot mapping and a
+regression test resolve that adapter mismatch; the failed prefix remains.
 
-Checks actually run with the existing `.venv`:
+The retry completes all 13 fixed rows in 2.657 s (2.946 s supervised), below its
+180/185 s ceilings. About 4.88 MB is retained. Native fields run in 128-point
+blocks with one thread. Exact source hashes bind the uncommitted implementation
+atop `9270692`; this is exploratory, not a clean-commit confirmatory result.
 
-- Residual producer, independent arithmetic, intake/runner and launcher: **203
-  tests pass** (0.74 s); `artifacts/field-residual-v1/execution-final-checks.xml`.
-- Public tests: **47 pass**. Documentation/release/README workflow: **32 pass**.
-  Logs and command/return-code records: `artifacts/field-residual-v1/execution-readiness-checks/`.
-- Documentation structure, repository Ruff and whitespace: pass.
-- Independent mathematical/intake review found no blocker in the fixed study.
-  Its additional synthetic sweep passes 121/128: seven single-point perfect-fit
-  rounding comparisons fail closed; all 96 multi-point comparisons pass. The
-  first counterexample is now an expected-rejection test, without relaxed limits.
-- Launcher review identified unchecked short writes; count/flush/fsync/readback
-  checks and three synthetic publication-failure tests address that issue.
-  Independent final rerun: 203 pass in 0.73 s; no remaining scoped execution blocker.
-- Post-run independent audit verifies 64 files / 40,040,460 bytes, nine Git source
-  identities and 496 separately reconstructed scalar values. All eight comparisons
-  and sixteen model identities reconcile. No producer/checker formulas reused.
+Checks actually performed in the existing `.venv`:
 
-The [result record](../../evidence/field-residual-results-v1.json) binds execution,
-all grid rows, sources and qualification logs. Diagnosis is complete; a full
-native regression, physical acceptance or Step 4 completion is not claimed.
+- **42 metric/representation tests pass** (1.50 s), including independently
+  formulated sums, current/area scaling, named coils and legacy tensor labels.
+- All **13** independent sampled-field comparisons pass, largest normalized
+  discrepancy **8.742e-16**. All **39** native scalar-integrator comparisons pass.
+- Read-only independent replay verifies 17 source and 13 array identities,
+  13 complete rows, **156** independently summed scalar metrics and **832** saved
+  field-point comparisons. LPQA's archived mean/max reproduce to about 1e-18.
+- Independent direct tensor-series reconstruction from all 661 QUASR source
+  coefficients reproduces four saved position/normal grids without SIMSOPT;
+  normalized normal-vector error is at most 3.769e-15.
+- **47 public tests pass** (3.385 s). Scoped Ruff, documentation structure and
+  whitespace checks pass. No full native regression was run for these isolated
+  exploratory additions.
 
-## Scientific and release checks
+The [result page](../optimization/REFERENCE_CALIBRATION.md) explains collocation,
+refinement and mean/RMS differences; the
+[evidence record](../../evidence/boundary-control-calibration-v1.json) binds all
+rows and both attempts. QUASR is a boundary-component positive only. Neither
+case establishes complete Goodman acceptance or Step 4 completion.
 
-- [Fixed field comparison](../optimization/FIXED_FIELD_PROBE_RESULTS.md): latest
-  completed field study and its source-bound 5,654-test pre-execution regression.
-  That regression does not cover all subsequent edits.
-- [Public release verification](../validation/PUBLIC_RELEASE_RESULTS.md): dated
-  portability/compatibility checks, known failures and unverified hosted coverage.
-- [Residual analysis](../optimization/FIELD_RESIDUAL_RESULTS.md): eight comparisons
-  complete at clean `7b4ec75`, with independent arithmetic and unchanged limits.
+## Other scoped checks
 
-No new fields, full native regression, hosted CI, external peer review or
-publication follows from this saved-data software check.
+- [Residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md): eight saved
+  comparisons complete at clean `7b4ec75`; independent source/arithmetic audit.
+- [Fixed field comparison](../optimization/FIXED_FIELD_PROBE_RESULTS.md): its
+  source-bound 5,654-test regression predates later edits, not current full coverage.
+- [Public release results](../validation/PUBLIC_RELEASE_RESULTS.md): exact dated
+  portability checks and unverified hosted coverage.
+
+No hosted CI, external peer review, release or pressure/engineering validation
+is claimed by this maintenance record.

@@ -1,0 +1,756 @@
+{
+  "execution": {
+    "bytes": 543,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/execution.json",
+    "sha256": "f59b23ec4bc514a8ca9e36e844e22434606c49d693200bbc982c73ed7d1b08cf"
+  },
+  "exploratory": true,
+  "launcher": {
+    "bytes": 1684,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/launch.py",
+    "sha256": "028f424194351e3c3fe584231171bca6e012e835217af66c4df04ef97b6e001e"
+  },
+  "no_complete_step4_positive_control": true,
+  "result": {
+    "bytes": 23546,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/result.json",
+    "sha256": "e80fba89061057af698c882ddcd095f8dd8072608644c2e324ac89a5db88e4a6"
+  },
+  "retained_failed_attempt": [
+    {
+      "bytes": 1698,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v1/launch.py",
+      "sha256": "31ec6366b7b7c447ba7bb54e435cf96c8a1a5680a17bb26f6bbff46920574f25"
+    },
+    {
+      "bytes": 544,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v1/execution.json",
+      "sha256": "6a7bdc102bf6b6962678d19a095293a58355c9abca5cc0ed00bc2f4e41841f40"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v1/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 764,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v1/stderr.log",
+      "sha256": "cd539e7111cabf8840b882bf5e426f4bff7854af281d0cae3863266377206161"
+    },
+    {
+      "bytes": 4853,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v1/run/inputs.json",
+      "sha256": "b477669bd95cee7605f7e852a6ed9332e20aa9ed6c31f9f2bb3a2c85276e78e2"
+    }
+  ],
+  "schema": "boundary-control-calibration-evidence-v1",
+  "source_record": {
+    "acceptance": false,
+    "completed": true,
+    "crosscheck_points": 64,
+    "elapsed_s": 2.6569280000403523,
+    "inputs_unscaled": true,
+    "interior_target": false,
+    "native_block_size": 128,
+    "pressure": false,
+    "repository": {
+      "available": true,
+      "branch": "main",
+      "commit": "9270692b77846869dab5b0c602878766d912fad6",
+      "dirty": true,
+      "path": "/Users/sebastianwirkert/workspace/fusion"
+    },
+    "rows": [
+      {
+        "arrays": {
+          "bytes": 38817,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/quasr-952-0.npz",
+          "sha256": "a657682b74dcbfbd5662b4318d1b5c3ea8df5bd0b6a25f73e793341161d4ffaa"
+        },
+        "case": "quasr-952",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 3.7758415928989687e-31,
+            "passes": true
+          },
+          "normalized": {
+            "native": 1.6324003215955406e-31,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 3.8093941450862414e-31,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 5.635475559608569e-16,
+        "metrics": {
+          "area_bn_rms": 5.762079042449117e-16,
+          "area_mean_abs_ratio": 3.6305782428787556e-16,
+          "area_mean_b": 1.0047558457056611,
+          "local_flux": 3.800236764437216e-31,
+          "mean_area_jacobian": 2.3095925939205704,
+          "min_b": 0.9590703619358407,
+          "normal_max": 2.5556841252494013e-15,
+          "normal_rms": 5.736574476174819e-16,
+          "normalized_global_flux": 1.642988665159641e-31,
+          "parameter_abs_bn_over_mean_b": 3.551298063405229e-16,
+          "parameter_mean_b": 1.006283187950517,
+          "raw_quadratic_flux": 3.8341032641948547e-31
+        },
+        "n": 21,
+        "nodes": 160,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 112952,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/quasr-952-1.npz",
+          "sha256": "df2a36f2ebe0a988745186eb66a62e9ca1f29fc3b13068dc174458608d31e42e"
+        },
+        "case": "quasr-952",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 5.965836983441636e-12,
+            "passes": true
+          },
+          "normalized": {
+            "native": 2.474137056061784e-12,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 5.773719609488956e-12,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 6.871957671317179e-16,
+        "metrics": {
+          "area_bn_rms": 2.236009999366493e-06,
+          "area_mean_abs_ratio": 1.3354161657379942e-06,
+          "area_mean_b": 1.0047556998853147,
+          "local_flux": 5.965836983437724e-12,
+          "mean_area_jacobian": 2.3096076120688225,
+          "min_b": 0.9584082657181764,
+          "normal_max": 6.400996140834253e-06,
+          "normal_rms": 2.2729065896591186e-06,
+          "normalized_global_flux": 2.4741370560601236e-12,
+          "parameter_abs_bn_over_mean_b": 1.2919413420695203e-06,
+          "parameter_mean_b": 1.0062831879382765,
+          "raw_quadratic_flux": 5.773719609485086e-12
+        },
+        "n": 42,
+        "nodes": 160,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 126402,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/quasr-952-2.npz",
+          "sha256": "79cbfdf15040f76807a533ae6ac4f2d64c567a2a18255e5b458da70d7b6ba1c3"
+        },
+        "case": "quasr-952",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 5.965836983416535e-12,
+            "passes": true
+          },
+          "normalized": {
+            "native": 2.4741370560515166e-12,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 5.7737196094649955e-12,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 6.586462777855588e-16,
+        "metrics": {
+          "area_bn_rms": 2.2360099993626256e-06,
+          "area_mean_abs_ratio": 1.335416165747344e-06,
+          "area_mean_b": 1.0047556998853144,
+          "local_flux": 5.965836983416678e-12,
+          "mean_area_jacobian": 2.3096076120688225,
+          "min_b": 0.958408265718177,
+          "normal_max": 6.40099614067885e-06,
+          "normal_rms": 2.272906589655109e-06,
+          "normalized_global_flux": 2.4741370560515642e-12,
+          "parameter_abs_bn_over_mean_b": 1.2919413420780735e-06,
+          "parameter_mean_b": 1.0062831879382765,
+          "raw_quadratic_flux": 5.773719609465112e-12
+        },
+        "n": 42,
+        "nodes": 320,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 489248,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/quasr-952-3.npz",
+          "sha256": "e86c16bbaae824e95fc0c240d240eec092ae551858c5a441ed9475fb69795980"
+        },
+        "case": "quasr-952",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 5.965837209479566e-12,
+            "passes": true
+          },
+          "normalized": {
+            "native": 2.4741369576379774e-12,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 5.7737193528048045e-12,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 6.593044732505606e-16,
+        "metrics": {
+          "area_bn_rms": 2.2360099547981966e-06,
+          "area_mean_abs_ratio": 1.6185499881860539e-06,
+          "area_mean_b": 1.0047556998396079,
+          "local_flux": 5.9658372094777045e-12,
+          "mean_area_jacobian": 2.3096076014611517,
+          "min_b": 0.958408265718177,
+          "normal_max": 6.401989272968464e-06,
+          "normal_rms": 2.2729066379378244e-06,
+          "normalized_global_flux": 2.4741369576372e-12,
+          "parameter_abs_bn_over_mean_b": 1.5638190506152265e-06,
+          "parameter_mean_b": 1.0062831879382765,
+          "raw_quadratic_flux": 5.77371935280298e-12
+        },
+        "n": 84,
+        "nodes": 320,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 514307,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/quasr-952-4.npz",
+          "sha256": "68bfac5568b74c58b4bf6b7d88cc2bfd721eb7768dea1d524c468bd64815999e"
+        },
+        "case": "quasr-952",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 5.96583720949387e-12,
+            "passes": true
+          },
+          "normalized": {
+            "native": 2.4741369576439305e-12,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 5.773719352818698e-12,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 5.828670879282072e-16,
+        "metrics": {
+          "area_bn_rms": 2.2360099548009046e-06,
+          "area_mean_abs_ratio": 1.6185499881863582e-06,
+          "area_mean_b": 1.0047556998396079,
+          "local_flux": 5.965837209492038e-12,
+          "mean_area_jacobian": 2.3096076014611517,
+          "min_b": 0.958408265718177,
+          "normal_max": 6.401989272440325e-06,
+          "normal_rms": 2.272906637940555e-06,
+          "normalized_global_flux": 2.474136957643193e-12,
+          "parameter_abs_bn_over_mean_b": 1.563819050616613e-06,
+          "parameter_mean_b": 1.0062831879382765,
+          "raw_quadratic_flux": 5.773719352816963e-12
+        },
+        "n": 84,
+        "nodes": 640,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 515999,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/quasr-952-5.npz",
+          "sha256": "c424f5f1a8af48d3a8e56ec7bb9985d2bfa81eeb54b3f687d9876fc593e27462"
+        },
+        "case": "quasr-952",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 5.965837209545848e-12,
+            "passes": true
+          },
+          "normalized": {
+            "native": 2.4741369576665394e-12,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 5.773719352871152e-12,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 8.741904837807691e-16,
+        "metrics": {
+          "area_bn_rms": 2.2360099548113705e-06,
+          "area_mean_abs_ratio": 1.7526561719741077e-06,
+          "area_mean_b": 1.0047556998396099,
+          "local_flux": 5.965837209545328e-12,
+          "mean_area_jacobian": 2.3096076014610247,
+          "min_b": 0.9584784991648496,
+          "normal_max": 5.941287614126277e-06,
+          "normal_rms": 2.2729066379507688e-06,
+          "normalized_global_flux": 2.4741369576663447e-12,
+          "parameter_abs_bn_over_mean_b": 1.6931880952400246e-06,
+          "parameter_mean_b": 1.0062831879382765,
+          "raw_quadratic_flux": 5.773719352870694e-12
+        },
+        "n": 84,
+        "nodes": 640,
+        "position_error": 0.0,
+        "shift": 0.5
+      },
+      {
+        "arrays": {
+          "bytes": 77310,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/lpqa-92598-0.npz",
+          "sha256": "cf99ceb32e8e4b2f56a7fe2a56698cdd043518c9ef8834c9fe2f381cc8cf6d4d"
+        },
+        "case": "lpqa-92598",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 1.2607336668226685e-06,
+            "passes": true
+          },
+          "normalized": {
+            "native": 1.2976304951858008e-07,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 9.972498548513735e-07,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 3.387999773988765e-16,
+        "metrics": {
+          "area_bn_rms": 0.00047818515735236617,
+          "area_mean_abs_ratio": 0.0004048938974800148,
+          "area_mean_b": 0.9355353129163275,
+          "local_flux": 1.2607336668226649e-06,
+          "mean_area_jacobian": 8.722516387580987,
+          "min_b": 0.8374096434674305,
+          "normal_max": 0.002033327190327832,
+          "normal_rms": 0.0005376575838126625,
+          "normalized_global_flux": 1.2976304951857984e-07,
+          "parameter_abs_bn_over_mean_b": 0.00042330453681366914,
+          "parameter_mean_b": 0.9460615730575219,
+          "raw_quadratic_flux": 9.97249854851372e-07
+        },
+        "n": 21,
+        "nodes": 160,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 151670,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/lpqa-92598-1.npz",
+          "sha256": "477be72702ec9cc4d160bcaa1a331ce28f6f2fc5473112f909fcda9a0c2bd7c3"
+        },
+        "case": "lpqa-92598",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 1.263824029616677e-06,
+            "passes": true
+          },
+          "normalized": {
+            "native": 1.301153999227606e-07,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 9.999576474126145e-07,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 3.961870282411436e-16,
+        "metrics": {
+          "area_bn_rms": 0.00047883394395818946,
+          "area_mean_abs_ratio": 0.00040679694636111503,
+          "area_mean_b": 0.9355353292946983,
+          "local_flux": 1.2638240296166755e-06,
+          "mean_area_jacobian": 8.722515360257612,
+          "min_b": 0.8373104085089096,
+          "normal_max": 0.002033327190327832,
+          "normal_rms": 0.0005383161765020964,
+          "normalized_global_flux": 1.301153999227605e-07,
+          "parameter_abs_bn_over_mean_b": 0.0004245361221873068,
+          "parameter_mean_b": 0.9460615728079834,
+          "raw_quadratic_flux": 9.99957647412613e-07
+        },
+        "n": 42,
+        "nodes": 160,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 204364,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/lpqa-92598-2.npz",
+          "sha256": "8ecec51e9e30eba0ffe1004665f3f36f3061cf84414fe2775944b6377cf43cea"
+        },
+        "case": "lpqa-92598",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 1.263824029616639e-06,
+            "passes": true
+          },
+          "normalized": {
+            "native": 1.3011539992275686e-07,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 9.999576474125859e-07,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 4.443059973708341e-16,
+        "metrics": {
+          "area_bn_rms": 0.00047883394395818247,
+          "area_mean_abs_ratio": 0.0004067969463611125,
+          "area_mean_b": 0.9355353292946982,
+          "local_flux": 1.2638240296166399e-06,
+          "mean_area_jacobian": 8.722515360257612,
+          "min_b": 0.8373104085089095,
+          "normal_max": 0.002033327190327802,
+          "normal_rms": 0.0005383161765020888,
+          "normalized_global_flux": 1.301153999227567e-07,
+          "parameter_abs_bn_over_mean_b": 0.0004245361221873016,
+          "parameter_mean_b": 0.9460615728079836,
+          "raw_quadratic_flux": 9.99957647412584e-07
+        },
+        "n": 42,
+        "nodes": 320,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 567540,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/lpqa-92598-3.npz",
+          "sha256": "814ad072213eff8b55901a805990b937fd26b899ba779a6e198e66bd20071407"
+        },
+        "case": "lpqa-92598",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 1.26381849613146e-06,
+            "passes": true
+          },
+          "normalized": {
+            "native": 1.3011478676849646e-07,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 9.999529352300893e-07,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 3.3422138886441676e-16,
+        "metrics": {
+          "area_bn_rms": 0.00047883281573287453,
+          "area_mean_abs_ratio": 0.0004065025967355257,
+          "area_mean_b": 0.9355353292982964,
+          "local_flux": 1.2638184961314547e-06,
+          "mean_area_jacobian": 8.722515360247833,
+          "min_b": 0.8372777425602589,
+          "normal_max": 0.002033327190327802,
+          "normal_rms": 0.0005383149980282602,
+          "normalized_global_flux": 1.3011478676849673e-07,
+          "parameter_abs_bn_over_mean_b": 0.00042402780101312535,
+          "parameter_mean_b": 0.9460615728079834,
+          "raw_quadratic_flux": 9.999529352300908e-07
+        },
+        "n": 84,
+        "nodes": 320,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 935255,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/lpqa-92598-4.npz",
+          "sha256": "e7efe5700093936efb797e641cfd9073b4d67bb6e1d83d4cdf03fb9619bd2ec6"
+        },
+        "case": "lpqa-92598",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 1.2638184961314625e-06,
+            "passes": true
+          },
+          "normalized": {
+            "native": 1.3011478676849758e-07,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 9.999529352300978e-07,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 4.4224960538068407e-16,
+        "metrics": {
+          "area_bn_rms": 0.00047883281573287556,
+          "area_mean_abs_ratio": 0.000406502596735525,
+          "area_mean_b": 0.9355353292982964,
+          "local_flux": 1.2638184961314585e-06,
+          "mean_area_jacobian": 8.722515360247833,
+          "min_b": 0.8372777425602586,
+          "normal_max": 0.002033327190327892,
+          "normal_rms": 0.0005383149980282611,
+          "normalized_global_flux": 1.3011478676849729e-07,
+          "parameter_abs_bn_over_mean_b": 0.0004240278010131257,
+          "parameter_mean_b": 0.9460615728079834,
+          "raw_quadratic_flux": 9.99952935230095e-07
+        },
+        "n": 84,
+        "nodes": 640,
+        "position_error": 0.0,
+        "shift": 0.0
+      },
+      {
+        "arrays": {
+          "bytes": 938147,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/lpqa-92598-5.npz",
+          "sha256": "909179692081679354c528699e3c45b9fc1b19d96ac4082e7e9e3ad914dfdcfa"
+        },
+        "case": "lpqa-92598",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 1.2638184961347638e-06,
+            "passes": true
+          },
+          "normalized": {
+            "native": 1.3011478676882795e-07,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 9.999529352326393e-07,
+            "passes": true
+          }
+        },
+        "half_period": false,
+        "independent_B_error": 3.397805715810452e-16,
+        "metrics": {
+          "area_bn_rms": 0.00047883281573348494,
+          "area_mean_abs_ratio": 0.00040670459439990736,
+          "area_mean_b": 0.9355353292982962,
+          "local_flux": 1.2638184961347532e-06,
+          "mean_area_jacobian": 8.722515360247835,
+          "min_b": 0.8372046627951046,
+          "normal_max": 0.001992148596406894,
+          "normal_rms": 0.0005383149980289627,
+          "normalized_global_flux": 1.301147867688285e-07,
+          "parameter_abs_bn_over_mean_b": 0.0004242282923779196,
+          "parameter_mean_b": 0.9460615728079834,
+          "raw_quadratic_flux": 9.999529352326404e-07
+        },
+        "n": 84,
+        "nodes": 640,
+        "position_error": 0.0,
+        "shift": 0.5
+      },
+      {
+        "arrays": {
+          "bytes": 158104,
+          "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/run/lpqa-92598-6.npz",
+          "sha256": "b21c9850a3544ba490b57e36b39724f989118e40d70c4d21c6ee9b52dabfd160"
+        },
+        "case": "lpqa-92598",
+        "checks_pass": true,
+        "flux_checks": {
+          "local": {
+            "native": 1.26386898970054e-06,
+            "passes": true
+          },
+          "normalized": {
+            "native": 1.3012091070529656e-07,
+            "passes": true
+          },
+          "quadratic flux": {
+            "native": 9.999999991587071e-07,
+            "passes": true
+          }
+        },
+        "half_period": true,
+        "independent_B_error": 3.3853340862194527e-16,
+        "metrics": {
+          "area_bn_rms": 0.0004788440840764729,
+          "area_mean_abs_ratio": 0.0004072166553454366,
+          "area_mean_b": 0.9355353296802815,
+          "local_flux": 1.2638689897005434e-06,
+          "mean_area_jacobian": 8.722515357730042,
+          "min_b": 0.8374149266310329,
+          "normal_max": 0.001928126342752205,
+          "normal_rms": 0.0005383257516968137,
+          "normalized_global_flux": 1.301209107052969e-07,
+          "parameter_abs_bn_over_mean_b": 0.00042427132308611964,
+          "parameter_mean_b": 0.9460615728079833,
+          "raw_quadratic_flux": 9.999999991587103e-07
+        },
+        "n": 32,
+        "nodes": 256,
+        "position_error": 0.0,
+        "shift": 0.0
+      }
+    ],
+    "schedule": [
+      [
+        21,
+        160,
+        0.0
+      ],
+      [
+        42,
+        160,
+        0.0
+      ],
+      [
+        42,
+        320,
+        0.0
+      ],
+      [
+        84,
+        320,
+        0.0
+      ],
+      [
+        84,
+        640,
+        0.0
+      ],
+      [
+        84,
+        640,
+        0.5
+      ]
+    ],
+    "schema": "exploratory-boundary-controls-v1",
+    "simsopt_version": "0.1.dev5668+ga79006b0b",
+    "sources": [
+      {
+        "bytes": 93645,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt/tests/test_files/serial0000952.json",
+        "sha256": "8bf9b7a83ebf7b7ff20275b857937f4da91672ba9012c51ea481dbb5eb730934"
+      },
+      {
+        "bytes": 6628,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/plasma_surfaces/input.LandremanPaul2021_QA",
+        "sha256": "4c6ba4bc391a69b5b6a5e84ff82df9b0ce92e20c42f2a47f89a9283fd5bc3458"
+      },
+      {
+        "bytes": 195291,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/submissions/LandremanPaul2021_QA/auto/2026-02-17_083339_92598/order_8/biot_savart_optimized.json",
+        "sha256": "40c3abd2c172fdfc94be6a2b5de05ef2e29c3f37c8b4fbd04c6fdb47eef69b4a"
+      },
+      {
+        "bytes": 12880,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/submissions/LandremanPaul2021_QA/auto/2026-02-17_083339_92598/results.json",
+        "sha256": "48933af3cf40d3690b1a12b9fe3c14deae41eff4eb983c943f815010cbe5f968"
+      },
+      {
+        "bytes": 731,
+        "path": "/Users/sebastianwirkert/workspace/fusion/external/stellcoilbench/submissions/LandremanPaul2021_QA/auto/2026-02-17_083339_92598/case.yaml",
+        "sha256": "0d4680fbe5fd34a8a42aeab3bab10108a81b58524c59797f275e29f8a90391ea"
+      },
+      {
+        "bytes": 11527,
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/explore_boundary_controls.py",
+        "sha256": "a3148aa182f27d15fd0e5a66ae89a178d8782ea11f82e4fbc2c1b89ad2470542"
+      },
+      {
+        "bytes": 2923,
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/boundary_control_metrics.py",
+        "sha256": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb"
+      },
+      {
+        "bytes": 1486,
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/filament_field.py",
+        "sha256": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0"
+      },
+      {
+        "bytes": 6236,
+        "path": "/Users/sebastianwirkert/workspace/fusion/scripts/audit_coil_geometry.py",
+        "sha256": "fd9b16b8370279e4ed9a34b0a6130f9e1bb2ab7de159bb237706a696efa84bf1"
+      },
+      {
+        "bytes": 4615,
+        "path": "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py",
+        "sha256": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128"
+      },
+      {
+        "bytes": 11202,
+        "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/biotsavart.py",
+        "sha256": "538a68bec673966b92a2af1c97d2604288812df0a7e0b02f7b98f3fcc8a19364"
+      },
+      {
+        "bytes": 43147,
+        "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/coil.py",
+        "sha256": "36b93c2aae050dfcfd84099697d0215e8993edb0f2796b0547cb43d0120fe356"
+      },
+      {
+        "bytes": 12716,
+        "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curvexyzfourier.py",
+        "sha256": "c3c9e0cdcc6420b408dd39dcd815fc8860a4c78dd3302491fa24cc6fdacdc10c"
+      },
+      {
+        "bytes": 9760,
+        "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/surfacexyztensorfourier.py",
+        "sha256": "e3a1f77f0294b6441da6f8661b356dbf17744a1bd536ef690888d31bac8dbc49"
+      },
+      {
+        "bytes": 90059,
+        "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/surfacerzfourier.py",
+        "sha256": "52a3b16e991d808cd3c0ab42904f7cdf9b5eae043d620ed224dffd0cde903ec3"
+      },
+      {
+        "bytes": 4597,
+        "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/objectives/fluxobjective.py",
+        "sha256": "455afdc715ea1ef891af52c972bfcae6b16fd6553973dc464010f52e04e26b42"
+      },
+      {
+        "bytes": 1928880,
+        "path": "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsoptpp.cpython-312-darwin.so",
+        "sha256": "af5823c4e5ec68490a8f7b4678a90266b054b87e18b52726cc34a6d61b6a22cc"
+      }
+    ]
+  },
+  "stderr": {
+    "bytes": 143,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/stderr.log",
+    "sha256": "944c57d83aa1bc28ce41039fb0535cb8f5a114b91f50b5ce1bf492d1b742519b"
+  },
+  "stdout": {
+    "bytes": 1608,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/boundary-controls-v2/stdout.log",
+    "sha256": "b77c55a54869c5786a9618654d6c48b3a881029e2eefbfa5979054b1fdb3d58d"
+  }
+}

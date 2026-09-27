@@ -17,8 +17,10 @@ These lessons guide that work rather than duplicating the full result chronology
   itself imply normal-RMS improvement; raw LPQA flux, Goodman normalized fields
   and the sparse public scores are different comparisons. The
   [completed residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md) shows
-  this difference in our observed steps; reference calibration is next. Do not relax gates merely
-  because the current designs fail them.
+  this difference in our observed steps. [Matched references](../optimization/REFERENCE_CALIBRATION.md)
+  reproduce the archived LPQA mean/max and show that near-zero QUASR collocation
+  error becomes finite after refinement. Neither clipping nor collocation is
+  physical perfection. Do not relax gates merely because current designs fail.
 - **Use named physical coordinates.** Positional optimizer arrays can change
   meaning across processes. The [mapping correction](../optimization/REPLAY_MAPPING_REMEDIATION.md)
   explains why replay must bind names, coefficients and physical fields.
