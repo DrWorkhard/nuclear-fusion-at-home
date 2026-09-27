@@ -22,12 +22,15 @@ SEARCH_SECONDS, TOTAL_SECONDS = 300, 360
 
 class Model(restart.previous.Model):
     def __init__(self, *args, **kwargs):
+        from simsopt.geo import LpCurveCurvature
         from simsopt.objectives import QuadraticPenalty
 
         super().__init__(*args, **kwargs)
         # Only the construction objective changes. Shared metrics still use 3.5 m.
-        self.geometry += sum(QuadraticPenalty(term, PENALTY_LENGTH, "max")
-                             - QuadraticPenalty(term, 3.5, "max") for term in self.lengths)
+        self.geometry = (sum(QuadraticPenalty(term, PENALTY_LENGTH, "max")
+                             for term in self.lengths)
+                         + 1000*self.cc + 1000*self.cp
+                         + 1e-2*sum(LpCurveCurvature(c, 2, threshold=10) for c in self.curves))
 
 
 def select(rows, completed):

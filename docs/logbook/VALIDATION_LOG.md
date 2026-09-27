@@ -42,7 +42,11 @@ Both boundary gates still fail; no overall physical acceptance or Step 4 closure
 The [headroom experiment](../optimization/LENGTH_HEADROOM_EXPLORATION.md) is
 prepared: construction penalty 3.44 m, selection 3.45 m, unchanged 3.5 m
 acceptance. Its selection/reuse tests pass: **29 tests**, **0.76 s**. No native
-headroom run has completed yet.
+headroom run has completed yet. The first setup failed before search on native
+penalty-object subtraction (2.563 s); direct assembly fixes that unsupported API.
+The failed output remains at `artifacts/coil-headroom-v1/`.
+All **9 headroom tests pass** (12.91 s), including real native penalty assembly
+and a finite-difference check of its derivative. Scoped Ruff/docs/diff pass.
 
 The next experiment puts length headroom into construction and selection.
 Shared acceptance thresholds stay fixed. Realized topology, Step 3 benefit

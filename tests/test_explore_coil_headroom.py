@@ -52,3 +52,32 @@ def test_no_margin_candidate_is_not_silently_replaced_by_seed():
 def test_tie_breaking_is_by_trial_not_file_order():
     a, b = row(12, .002), row(5, .002)
     assert study.select([a, b], 13) == b
+
+
+def test_native_penalty_assembly_changes_only_the_length_target(monkeypatch):
+    import numpy as np
+    from simsopt.geo import CurveLength, CurveXYZFourier
+    from simsopt.objectives import QuadraticPenalty
+
+    curve = CurveXYZFourier(64, 1)
+    curve.set("xc(1)", 3.48/(2*np.pi))
+    curve.set("ys(1)", 3.48/(2*np.pi))
+    length = CurveLength(curve)
+    zero = QuadraticPenalty(length, 100, "max")
+
+    def initialize(self, *args, **kwargs):
+        self.curves, self.lengths = [curve]*6, [length]*6
+        self.cc = self.cp = self.geometry = zero
+
+    monkeypatch.setattr(study.restart.previous.Model, "__init__", initialize)
+    model = study.Model()
+    assert model.geometry.J() == pytest.approx(6*.5*(3.48-3.44)**2)
+    gradient = model.geometry.dJ().copy()
+    original = curve.get("xc(1)")
+    curve.set("xc(1)", original+1e-6)
+    right = model.geometry.J()
+    curve.set("xc(1)", original-1e-6)
+    left = model.geometry.J()
+    curve.set("xc(1)", original)
+    index = model.geometry.dof_names.index(curve.name+":xc(1)")
+    assert (right-left)/2e-6 == pytest.approx(gradient[index], rel=1e-6)

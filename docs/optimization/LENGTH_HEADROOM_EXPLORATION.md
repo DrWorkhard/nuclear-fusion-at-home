@@ -27,7 +27,10 @@ full new-objective derivative checks remain. No topology/benefit-transfer claim.
 Resources: 300 s startup/search, 360 s total worker, 370 s external cap; one
 thread, 256 MiB search/fine and 128 MiB interior outputs; initial/live disk
 reserves 3/2 GiB. SciPy's nonbinding integer ceilings are 2³¹−1; no bundle cap.
-Raw output planned at `artifacts/coil-headroom-v1/`. Retain failed prefixes.
+Raw output planned at `artifacts/coil-headroom-v2/`. The v1 setup failed before
+any search because native penalty objects do not support subtraction. Its
+2.563 s supervisor receipt and prefix remain; direct assembly of the same
+declared objective corrects this. Retain failed prefixes.
 
 Run in the recorded native environment with the four thread variables set to 1:
 `python scripts/explore_coil_headroom.py --output artifacts/my-headroom`.
