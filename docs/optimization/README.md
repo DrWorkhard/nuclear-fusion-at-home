@@ -23,6 +23,10 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Raw versus local-normalized fitting](NORMALIZED_OBJECTIVE_EXPLORATION.md). Corrected two-arm comparison completes 160 bundles and four fine screens: local RMS 0.18779 versus raw 0.20869, at 47% greater current; both fail curvature and all field gates. The first adapter-failure run is retained.
 
+- [Alternative coil-start screen](COIL_START_SCREEN.md). Twelve checked boundary/loop rows: shaped100 retains lowest RMS 0.27605; circle100 offers more curvature margin, not a better initial field. All four fail boundary gates.
+
+- [Constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md). Prospective four-arm comparison of circular/shaped starts and full/low-order modes, with stronger construction penalties and unchanged acceptance limits.
+
 - Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [results](FIELD_RESIDUAL_RESULTS.md). All eight comparisons complete. Only 11.6%/19.6% of squared normalized residual aligns with the observed response versus 88.1%/89.6% for the raw objective; prioritize metric calibration and objective/start comparisons, not automatic continuation.
 
 - [Research hints](RESEARCH_HINTS.md). Nonexclusive invitations; useful unsolicited work is welcome and compute disclosure is optional.

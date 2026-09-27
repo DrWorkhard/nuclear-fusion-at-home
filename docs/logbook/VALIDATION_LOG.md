@@ -4,43 +4,35 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Normalized-objective experiment: completed exploratory comparison
+## Alternative coil starts: completed static comparison
 
-The corrected raw/local comparison at clean `5b744f2` completes 160 coarse
-bundles and four fine screens in 37.224 s (38.027 s supervised). Both hit their
-80-bundle caps. Source fingerprints remain unchanged; about 7.49 MB is retained.
-Lower local-normalized RMS comes with higher current; both selected designs
-violate geometric and field limits. No accepted design or gate change follows.
+Twelve field/loop rows complete in 6.362 s (6.734 s supervised); 15,219,993 run
+bytes are retained. This was a dirty, source-hash-bound exploration at `566a6ab`,
+not clean-commit confirmation. Shape100 retains the lowest starting error;
+circle100 offers more curvature margin. All four fail boundary-error limits.
 
 Checks actually performed in the existing `.venv`:
 
-- **28 synthetic/native-circle experiment tests pass** (2.31 s), covering chain rule, current
-  scaling, named mapping, derivative checks, exact repeats, budget and late-result
-  rejection and interacting field caches. `artifacts/normalized-coils-v2/implementation-tests.xml`.
-- **101 reused-component tests pass** (5.90 s): coupled fields, independent coil
-  reconstruction, sparse geometry and boundary metrics.
-  `artifacts/normalized-coils-v1/reused-components.xml`.
-- **47 public tests pass** (3.546 s). Scoped Ruff, documentation structure and
-  whitespace checks pass. Full native regression was not rerun.
-- Independent audit verifies 22 loaded sources, nine project/question Git
-  identities, nine native Python files against pinned Git, all 160 trial pairs,
-  both selected minima and all eight real directional derivative checks.
-- Separate `math.fsum` reconstruction reproduces **48 fine metrics**; **256**
-  saved independent/native field comparisons pass. All twelve independently
-  reconstructed curvature maxima agree; explicit witnesses prove both curvature
-  failures. Independent geometry also confirms the raw plasma-gap failure.
-- Reported flux closure is checked arithmetically, not independently re-integrated:
-  loop-A arrays were not saved in this small comparison. Both arms now have 78
-  distinct unit-flux values, resolving the old cache symptom.
-- The first attempt at `e916c8d` remains an invalid comparison: its instrumented
-  fields collided in the dependency graph. The failed prefix, shared-class fix,
-  synthetic counterexample and unchanged thresholds are in the result record.
+- **11 focused tests pass** (0.33 s), independently rerun (0.32 s): named
+  geometry mapping, fresh current normalization, frozen fine scale, replay,
+  serialization and execution bounds.
+  `artifacts/coil-start-screen-v1/implementation-tests.xml`.
+- Independent audit rehashes **22 sources**, launcher/question and **12 NPZs**;
+  checks snapshot/construction/audit links, signed currents and unchanged geometry.
+- Separate arithmetic reproduces **144 boundary metrics**, twelve normalized-raw
+  values and **twelve complete saved-loop-A integrals**. All 768 B and 768 A
+  independent samples pass; maximum discrepancies 1.009e-15 / 1.390e-16.
+- All twelve rows, B=1152 / A=40 / independent=24 requests, source stability,
+  exact current freezing, Shape100 replay and external limits are checked.
+- Relative flux residual is at most 8.882e-16. This is saved-loop replay plus
+  independent point checks, not a full independent Stokes test. No new geometry
+  certificate or physical admission is asserted.
 
-The [experiment record](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
-specifies actual budgets, source fingerprints and limits. The
-[evidence manifest](../../evidence/normalized-coils-exploration-v2.json) binds the
-complete run and retained invalid first attempt. Sampled geometry and numerical
-agreement do not establish continuous acceptance or Step 4 completion.
+The [result record](../optimization/COIL_START_SCREEN.md) and
+[evidence manifest](../../evidence/coil-start-screen-v1.json) bind the actual
+data and pre-run question. **47 public tests pass** (3.433 s). Scoped Ruff,
+documentation structure and whitespace checks pass. No full native regression
+is claimed.
 
 ## Completed matched boundary calibration
 
@@ -52,6 +44,10 @@ This does not establish a complete Goodman positive or Step 4 acceptance.
 
 ## Other scoped checks
 
+- [Objective comparison](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md):
+  160 coarse bundles, four fine screens, independent arithmetic and explicit
+  curvature witnesses; both endpoints infeasible. Its first cache-identity
+  failure and 28 implementation / 101 reused-component tests remain documented.
 - [Residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md): eight saved
   comparisons complete at clean `7b4ec75`; independent source/arithmetic audit.
 - [Fixed field comparison](../optimization/FIXED_FIELD_PROBE_RESULTS.md): its

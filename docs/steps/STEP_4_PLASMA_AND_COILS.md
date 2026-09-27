@@ -57,8 +57,10 @@ protected search is justified merely by the recent small gains.
 The [matched objective experiment](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
 now completes: local-normalized fitting lowers fine RMS to 0.18779 versus raw
 0.20869, but uses more current and both endpoints violate curvature. The raw
-endpoint also violates plasma clearance. This motivates alternative starts and
-better constraint handling, not accepting the lower error as a usable design.
+endpoint also violates plasma clearance. The [static start screen](../optimization/COIL_START_SCREEN.md)
+then finds more curvature room in circles, but no better initial field. The next
+[constraint-aware comparison](../optimization/CONSTRAINED_COIL_EXPLORATION.md)
+tests stronger penalties and low-order freedom, not relaxed acceptance limits.
 
 The [research programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns
 calibration, decision windows, the open challenge and MS0. No gate or historical

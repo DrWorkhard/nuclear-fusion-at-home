@@ -69,6 +69,12 @@ fronts, uncertified cases and actual violations distinctly. Freeze shortlisted
 candidates before finer checking; fine results consulted during exploration are
 not confirmation holdouts.
 
+Two exploration sessions are complete: the [objective comparison](NORMALIZED_OBJECTIVE_EXPLORATION.md)
+improves error only with geometry violations, and the [static start screen](COIL_START_SCREEN.md)
+finds curvature freedom without a better starting field. Session 3 tests
+[constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md); source-bound failed
+attempts remain in each result record and are not omitted from effort accounting.
+
 At the earlier of ten sessions or 24 October, publish the reachability map or the
 specific blocker. Use **fine normal RMS below 1e-2 with unchanged geometric gates**
 as a triage signal for further local fitting, not a new acceptance threshold
