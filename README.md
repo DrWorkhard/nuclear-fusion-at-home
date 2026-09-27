@@ -8,16 +8,17 @@ fusion devices whose shaped external coils create a twisted magnetic field to
 confine hot plasma. This is computational research, not a home reactor-building project.
 
 By “best” we mean a design that balances performance, buildability, robustness,
-safety and practical cost — not just the top score on one metric. We want
-improvements that others can reproduce and challenge.
+safety and practical cost — not just the top score on one metric. We seek
+reproducible, testable improvements.
 
-**Research preview · 26 September 2026.** Our tools reproduce selected open
+**Research preview · 27 September 2026.** Our tools reproduce selected open
 references. One plasma-target study improved its preregistered metric
 (bounce-action variance, a particle-motion diagnostic) by **11.17%**.
 Our coils still have normal-field error **about 0.27 versus a 1e-4 pilot limit**.
-Small checked improvements have not closed that gap. We are prioritizing
-reference/gate calibration and a time-boxed feasibility study before longer
-local searches. [Scientific evidence](docs/STATUS.md).
+Small gains have not closed that gap. Matched references now reproduce archived
+scores and low refined boundary error on QUASR. Next: compare optimization
+objectives and starting shapes. Full target/geometry calibration remains open.
+[Scientific evidence](docs/STATUS.md).
 No new accepted coil design or state-of-the-art advance yet. We are independent of, and not
 endorsed by, Proxima Fusion or the Max Planck Institute.
 

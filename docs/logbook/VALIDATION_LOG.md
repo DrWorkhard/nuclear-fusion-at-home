@@ -4,7 +4,31 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Matched boundary calibration
+## Normalized-objective experiment: preparation
+
+The isolated raw/local comparison now has a fixed exploratory question, original
+seed replay anchors, equal bundle ceilings and separately screened endpoints.
+No existing evaluator or acceptance limit changes. Execution is pending.
+
+Checks actually performed in the existing `.venv`:
+
+- **27 synthetic experiment tests pass** (0.45 s), covering chain rule, current
+  scaling, named mapping, derivative checks, exact repeats, budget and late-result
+  rejection. `artifacts/normalized-coils-v1/implementation-tests.xml`.
+- **101 reused-component tests pass** (5.90 s): coupled fields, independent coil
+  reconstruction, sparse geometry and boundary metrics.
+  `artifacts/normalized-coils-v1/reused-components.xml`.
+- **47 public tests pass** (3.259 s). Scoped Ruff, documentation structure and
+  whitespace checks pass. Full native regression was not rerun.
+- A separate read-only review confirmed the raw current-elimination derivative,
+  local-RMS normalization and fine-grid cache/current handling. Its resource and
+  failure-reporting findings are addressed in the implementation and tests.
+
+The [experiment record](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
+specifies actual budgets, source fingerprints and limits. Passing software
+checks is not a successful design search.
+
+## Completed matched boundary calibration
 
 Added a small exploratory metric crosswalk and fixed QUASR/LPQA comparison,
 without modifying existing evaluators or gates. The first attempt failed before
@@ -16,7 +40,7 @@ The retry completes all 13 fixed rows in 2.657 s (2.946 s supervised), below its
 blocks with one thread. Exact source hashes bind the uncommitted implementation
 atop `9270692`; this is exploratory, not a clean-commit confirmatory result.
 
-Checks actually performed in the existing `.venv`:
+Checks supporting that completed component result:
 
 - **42 metric/representation tests pass** (1.50 s), including independently
   formulated sums, current/area scaling, named coils and legacy tensor labels.
