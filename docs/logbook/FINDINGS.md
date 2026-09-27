@@ -33,6 +33,11 @@ These lessons guide that work rather than duplicating the full result chronology
   penalty branches. A fixed component/step-size study supports smaller probes
   under the same tolerances. Preserve the failure and diagnose convergence;
   neither silent probe changes nor relaxed physical gates are justified.
+- **Small boxes can conceal useful coherent motion.** The
+  [matched shape comparison](../optimization/COHERENT_COIL_EXPLORATION.md) gives
+  81.80% lower fine RMS with wider low modes, with checked geometry and 1.06% more
+  current. Both searches still exhaust their budgets; box-limited local fits do
+  not establish the coil family's reachability or optimum.
 - **Use named physical coordinates.** Positional optimizer arrays can change
   meaning across processes. The [mapping correction](../optimization/REPLAY_MAPPING_REMEDIATION.md)
   explains why replay must bind names, coefficients and physical fields.

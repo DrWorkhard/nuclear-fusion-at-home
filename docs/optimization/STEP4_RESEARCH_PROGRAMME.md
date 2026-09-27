@@ -69,7 +69,7 @@ fronts, uncertified cases and actual violations distinctly. Freeze shortlisted
 candidates before finer checking; fine results consulted during exploration are
 not confirmation holdouts.
 
-Five exploration sessions are complete: the [objective comparison](NORMALIZED_OBJECTIVE_EXPLORATION.md)
+Six exploration sessions are complete: the [objective comparison](NORMALIZED_OBJECTIVE_EXPLORATION.md)
 improves error only with geometry violations, and the [static start screen](COIL_START_SCREEN.md)
 finds curvature freedom without a better starting field. [Constraint-aware fitting](CONSTRAINED_COIL_EXPLORATION.md)
 and an adaptive saved-point check give a geometry-checked fit at RMS 0.1517;
@@ -79,8 +79,11 @@ worsen normalized error; direct normalized fitting then gives modest gains with
 weaker fields. Session 6 compares [small/wider low-mode shape boxes](COHERENT_COIL_EXPLORATION.md)
 from the same checked shape52, after saved gradients expose box-restricted descent.
 Its first attempt stops before optimization on the derivative guard; a separate
-thirty-bundle component sweep supports smaller probes for a fresh retry under
-unchanged tolerances. The failed attempt remains in effort accounting.
+thirty-bundle component sweep supports smaller probes under unchanged tolerances.
+The retry reaches RMS 0.01384 with checked geometry, 81.80% below its matched
+small-change control at 1.06% more current. Both searches exhaust 600 bundles;
+the first failure remains in effort accounting. Review convergence and remaining
+box restrictions before the next bounded comparison; the 1e-2 signal is not yet met.
 Source-bound failed
 attempts remain in each result record and are not omitted from effort accounting.
 

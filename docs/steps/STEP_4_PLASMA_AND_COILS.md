@@ -70,8 +70,11 @@ not confirmation, and still fails boundary-error limits. The
 then reduces raw error by 89–92% but worsens normalized RMS by 60–83% with weaker
 boundary fields. Direct normalized-current fitting helps by 12.91%/6.93%, without
 closing the gap. The [coherent-shape comparison](../optimization/COHERENT_COIL_EXPLORATION.md)
-stops before optimization at its derivative guard. A separate scale diagnostic
-supports a fresh retry with smaller probes; acceptance limits remain unchanged.
+initially stops at its derivative guard. After a separate scale diagnosis, the
+retry reaches RMS **0.01384 with checked continuous geometry**, 81.80% below its
+matched small-change control at 1.06% higher current. Both searches exhaust their
+600-bundle budgets; all boundary limits still fail. No topology or Step 3 benefit
+transfer is established; acceptance limits remain unchanged.
 
 The [research programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns
 calibration, decision windows, the open challenge and MS0. No gate or historical

@@ -31,10 +31,11 @@ explicit; no automatic threshold relaxation.
 Map field error against clearance/curvature using existing tools and alternative
 starts/objectives. The [objective comparison](optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
 improves field error only with geometry violations. [Constraint-aware fitting](optimization/CONSTRAINED_COIL_EXPLORATION.md)
-now gives a geometry-checked adaptive fit at RMS 0.1517 with higher current; better
-sampled fits have unresolved clearance. Normalized current-only fits help modestly.
-The paired shape test stopped at its derivative guard; smaller diagnosed probes
-now support a fresh retry without relaxing any tolerance.
+gave a geometry-checked adaptive fit at RMS 0.1517. The
+[paired shape test](optimization/COHERENT_COIL_EXPLORATION.md) now reaches 0.01384
+with checked geometry, 81.80% below its small-change control at 1.06% higher current.
+Both searches exhaust their budgets. Review remaining box restrictions and
+convergence before choosing the next bounded comparison; no tolerance is relaxed.
 Fine RMS below 1e-2 with geometric gates is a
 triage signal, not acceptance. If it is not reached, change the investigated
 family/approach instead of automatically extending protected local search.

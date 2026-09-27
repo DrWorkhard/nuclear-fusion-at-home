@@ -4,69 +4,59 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Derivative-scale diagnostic complete and independently checked
+## Matched coherent-shape search complete and independently checked
 
-At clean `cd376b5`, thirty diagnostic bundles complete in 9.151 s worker /
-9.510 s supervised, with 64 run files / 1,213,143 bytes. All nine original coarse
-anchors and exact full-component seed repetition pass; all sources remain
-unchanged. This is a fixed-seed numerical diagnostic, not optimization or a new
-design.
+At clean `c1d2260`, both 600-bundle arms complete in 233.572 s worker /
+234.478 s supervised. Wider shapes reach fine normal RMS **0.0138430**, 81.80%
+below the small-box control with 1.06% more current. All four fine independent
+checks and both startup sequences pass; sources remain unchanged. Both searches
+exhaust their budgets, so this is not an optimum.
 
-All three components pass unchanged tolerances at the four tested steps
-h≤2.5e-6. Maximum total discrepancy at the proposed retry steps 1.25e-6 / 6.25e-7
-is 8.04e-11. Separate explicit Fourier reconstruction of all thirty saved coil
-sets reproduces 180 sampled curvature maxima to 2.31e-14. Larger positive probes
-cross one/two κ=10 penalty branches; chosen smaller probes preserve the sampled
-active set. The physical curvature limit stays 12/m.
+The 15.557 s geometry follow-up uses no native fields. Wider-arm bounds pass:
+length ≤2.82955 m, tighter curvature ≤10.1262/m, coil clearance ≥0.0639913 m,
+plasma clearance ≥0.112898 m. Control clearance remains unresolved after two
+levels, not physically disproven. Supplemental curvature bounds are explicit;
+the old loose-curvature flag is not rewritten.
 
 Checks actually performed in the existing `.venv`:
 
-- **44 combined diagnostic/coherent/constrained synthetic tests pass** (1.21 s).
-  Independent preflight review reruns fourteen new tests (0.33 s); its overflow
-  counterexample was fixed before the real run, without changing tolerances.
-- Component identities, exact thirty-bundle accounting and repeat are recorded;
-  120 B / thirty A / thirty B-vjp requests plus thirty extra geometry-gradient
-  extractions completed. No independent native field kernel was rerun.
-- Independent saved-data review verifies 42 source hashes, all 42 component
-  finite-difference/error/tolerance classifications and exact seed repetition.
-  Separate reconstruction of all thirty coil sets reproduces 180 curvature
-  maxima within 9.24e-14 and confirms the penalty-branch crossings.
-- **47 public tests pass**; scoped Ruff, documentation structure and whitespace
-  checks pass. No full native regression or separate-machine replay is claimed.
+- **46 combined retry/coherent/constrained tests pass** (1.71 s main / 1.49 s
+  independent preflight). Source-bound real preflight checks nineteen inputs.
+- Independent saved-data audit verifies 45 sources, all 1,200 trial/attempt
+  pairs, eight derivative checks, anchors/repeats, boxes, budgets and selections.
+- Separate formulas reproduce 48 fine metrics, four full saved-loop fluxes,
+  256 B and 256 A comparisons, and all 24 physical curves per endpoint.
+- Geometry audit verifies seven source identities, exact snapshots, three
+  levels' cover/bound arithmetic, 828 pair bounds, 72 plasma bounds and eighteen
+  tighter curvature enclosures. No full distance-grid rerun or interval proof.
+- NumPy-scalar serialization control passes before the geometry run. Publication
+  and external process-group caps pass; no timeouts or late results occurred.
+- **47 public tests pass** (3.417 s); documentation structure and whitespace
+  checks pass after updating current summaries.
 
 The [canonical result](../optimization/COHERENT_COIL_EXPLORATION.md) and
-[evidence](../../evidence/coherent-derivative-scale-v1.json) preserve the initial
-failed attempt unchanged. That clean `e8eeaf9` attempt stopped after twenty
-startup bundles, before optimizer/fine work; its independent audit checked
-39 sources and exact saved startup values. A separately identified retry changes
-only the two startup step sizes, not budgets, selection, objective or gates.
-No retry result is claimed here.
-
-The fresh retry implementation passes **46 combined synthetic tests** (1.71 s),
-including an exact syntax-tree comparison isolating the documented probe change,
-source rejection, selection, 10/600 accounting and override restoration. The
-nineteen fixed-input hashes and actual saved-diagnostic preflight also pass;
-no native search was run for those checks.
+[evidence](../../evidence/coherent-coils-exploration-v2.json) retain the exact
+questions, execution receipts, sources and complete local file manifest.
+The wider RMS is still 138.43 times the acceptance limit. No interior, topology,
+pressure, benefit-transfer or engineering acceptance follows from this result.
 
 ## Supporting results retained at their point of use
 
+- The initial paired-search failure and thirty-bundle derivative diagnosis remain
+  in the coherent-shape report. Additional independent analytic geometry replay
+  checks 46,080 curvatures and 5,940 gradient entries; maximum gradient error is
+  3.43e-15. The numerical probe change did not alter physical or derivative limits.
 - [Independent-current study](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md):
-  four normalized-current arms / 268 bundles improve original circle/shape RMS
-  12.91%/6.93% at best, but weaken boundary fields and fail all field gates.
-  Independent checks cover 31 sources, 570 files, 4,692 scalar metrics and
-  512 each of B/A/loop-B samples. The earlier raw-objective negative result remains.
-- [Public shape-52 example](../../submissions/constraint-aware-shape52/README.md):
-  normal/interior sampled scores improve 43.80%/23.20%; evaluation and same-code
-  audit pass. Geometry matches the native export, but the public current differs;
-  no native interior or physical acceptance is inherited.
-- [Constraint-aware fitting](../optimization/CONSTRAINED_COIL_EXPLORATION.md):
-  shape52 remains the best scoped continuous-geometry pass at RMS 0.151679;
-  lower sampled scores have unresolved clearance. All boundary limits fail.
+  normalized fits improve RMS modestly but weaken boundary fields. Raw-objective
+  fits worsen normalized quality; all field gates remain failed.
+- [Public shape52 example](../../submissions/constraint-aware-shape52/README.md):
+  evaluation and same-code audit pass; the public current differs from its native
+  normalization. This remains an example, not the newly accepted reference.
 - [Matched calibration](../optimization/REFERENCE_CALIBRATION.md): thirteen rows,
   156 independently reproduced metrics and 832 field comparisons; no complete
   Goodman positive control.
 - [Public release results](../validation/PUBLIC_RELEASE_RESULTS.md) retain exact
   dated portability checks and unverified hosted coverage.
 
-No hosted CI, external peer review, release, pressure/engineering validation or
-Step 4 completion is claimed by this maintenance record.
+No full native regression, separate-machine replay, hosted CI, external peer
+review, release or Step 4 completion is claimed by this record.

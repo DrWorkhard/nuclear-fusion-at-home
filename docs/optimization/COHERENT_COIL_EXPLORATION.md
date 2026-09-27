@@ -1,7 +1,56 @@
 # Matched low-frequency shape freedom
 
-27 September 2026. Exploration session 6; **first attempt fails before search**.
+27 September 2026. Exploration session 6 complete; **wider shapes improve the fit**.
 [Programme](STEP4_RESEARCH_PROGRAMME.md) · [Starting geometry](CONSTRAINED_COIL_EXPLORATION.md)
+
+## Result and limits
+
+The diagnosed retry at clean `c1d2260` completes both 600-bundle arms in
+233.572 s worker / 234.478 s supervised. All startup checks pass, the source
+graph is unchanged, and both searches stop at their fixed budget, not at a
+demonstrated optimum. The [result evidence](../../evidence/coherent-coils-exploration-v2.json)
+binds 2,427 run files / 36,177,183 bytes and result SHA-256
+`328ccd9727e406a72b50016aa03d93f4ac4b0e57f7f57a11686050d7c088cf2b`.
+
+| Same shape52 start and budget | Control | Wider low modes |
+| --- | ---: | ---: |
+| Frozen selected trial | 599 | 598 |
+| Fine normal RMS, unshifted | 0.0760607170 | **0.0138430479** |
+| Fine normal RMS, half-cell shifted | 0.0760607171 | 0.0138430479 |
+| Worst sampled maximum normal error | 0.41178849 | 0.08238964 |
+| Current per base coil | 345.713 kA | 349.383 kA |
+| Minimum sampled boundary field | 1.15021 T | 1.20476 T |
+| Continuous geometry verdict | Unresolved clearance | **Scoped pass** |
+
+The wider arm lowers RMS **81.80% versus its matched control**, with 1.06% more
+current, or **90.87% versus shape52**, with 7.57% more current. Compared with the
+original shaped initialization, RMS is 94.99% lower. These comparisons describe
+this pair, not a universal optimizer ranking. Trial 599 has the wider arm's
+lowest penalized objective, but 598 has its lowest sampled-feasible RMS; the
+predeclared selection is preserved.
+
+The separate geometry run completes in 15.557 s / 15.844 s supervised with no
+native fields. Wider-arm first-level bounds: maximum length 2.82955 m, maximum
+curvature 10.1262/m, coil clearance at least 0.0639913 m and plasma clearance at
+least 0.112898 m. Control remains unresolved after the second level: plasma
+clearance lower bound 0.0757012 m is below 0.08 m, without a violation witness.
+No directed interval proof or full self-disjointness check is implied.
+
+Independent saved-data review verifies all 45 search sources, 1,200 trial/attempt
+pairs, eight startup derivative checks, anchors/repeats, boxes, budgets and
+selections. Separate formulas reproduce 48 fine metrics and four full saved-loop
+fluxes; 256 B and 256 A comparisons and all 24 physical Fourier curves at each
+endpoint agree. These are saved-data checks, not a second native search.
+The geometry audit separately reproduces all three levels' cover/bound arithmetic,
+828 coil-pair bounds, 72 plasma bounds and eighteen tighter curvature enclosures.
+It does not rerun the full distance grids. The original loose curvature flag is
+unchanged; the explicit supplemental curvature conjunction supplies the scoped pass.
+
+**Still not accepted:** the wider RMS is 138.43 times the 1e-4 limit and 1.3843
+times the exploratory 1e-2 signal; its maximum error also fails. Interior-field,
+topology, benefit transfer, finite-pressure and engineering requirements remain
+open. The accepted public reference is unchanged. The first failed attempt and
+its diagnosis below remain part of the study's evidence and effort accounting.
 
 ## Question and rationale
 
@@ -185,6 +234,11 @@ Independent saved-data review verifies all 42 source hashes, reproduces all
 repetition, and separately reconstructs all thirty coil sets. Its 180 curvature
 maxima agree within 9.24e-14 and confirm the same branch crossings. This is a
 saved-data/geometry arithmetic audit, not a new native field calculation.
+An additional independent analytic reconstruction checks all 46,080 sampled
+curvatures, thirty geometry penalties and 5,940 geometry-gradient components,
+with maximum discrepancies 4.09e-14, 1.32e-18 and 3.43e-15 respectively.
+The squared-hinge penalty is continuously differentiable, but not twice
+differentiable at its switch; the branch transition explains the non-h² behavior.
 
 **Fresh retry:** change only the paired search's two startup probe sizes to
 **1.25e-6 and 6.25e-7**. Retain the same ten startup / 600 total bundles, paired
