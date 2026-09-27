@@ -18,18 +18,17 @@ a coil set reaches within 10× of the boundary RMS limit.
 
 ## Current result
 
-The [matched normalized-fit restart](../optimization/COHERENT_COIL_EXPLORATION.md)
-reaches fine normal RMS **0.00488873136**, **55.27% below** the original-box
-control, with **8.64% less current**. Both endpoints pass scoped continuous
-geometry; both searches exhaust their 1,200-bundle budgets. The best error is
-still about **49× above 1e-4**, and maximum normal error also fails its limit.
+The [longer-fit comparison](../optimization/LONGER_COIL_EXPLORATION.md) reaches
+normal RMS **0.004713** with scoped geometry passing. Its wider-box endpoint
+reaches **0.001948**, but continuous length bounds remain **unresolved**.
+Both fail boundary RMS 1e-4 and maximum normal error 1e-3.
 
-The 1e-2 exploration signal is met. This supports more work on the method, not
-physical acceptance. The fixed-candidate
-[interior screen](../optimization/INTERIOR_FIELD_EXPLORATION.md) now reaches
-**0.04029**, 73.66% below the matched control but still 4.03× the 0.01 limit.
-All fifteen numerical rows pass; all five interior limits fail. Realized
-magnetic surfaces, confinement and transfer of the Step 3 benefit remain open.
+The wider endpoint passes the interior-vector component: **0.009770** against
+0.01 on all three checked grids. This is a component success, not acceptance
+of the whole design. Construction now needs length headroom, without changing
+the 3.5 m acceptance limit. The 1e-2 exploratory signal supports continued work.
+All these coil fits use the original reference401, not the improved Step 3
+target. Realized magnetic surfaces, confinement and benefit transfer remain open.
 
 ## Lessons retained from closed work
 

@@ -54,8 +54,10 @@ fixes base-current magnitude at 294,966.466322 A. The native fit uses
 The public evaluator does not restore flux after a shape edit. A common current
 scale leaves same-point normalized normal error unchanged; different sampling/
 weights explain the normal-score difference. Field amplitude, flux and the
-interior-vector score do change with current. The native interior-vector metric
-has not been newly checked for this candidate.
+interior-vector score do change with current. The subsequent
+[native interior screen](../../docs/optimization/INTERIOR_FIELD_EXPLORATION.md)
+measures RMS **0.3123243**, still above its 0.01 limit. This does not change
+the frozen-current public result above.
 
 Native scoped continuous bounds: length ≤2.081313 m, curvature ≤11.065107/m,
 coil separation ≥147.712 mm, plasma clearance ≥80.714 mm. These are independently

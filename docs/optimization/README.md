@@ -2,13 +2,15 @@
 
 The working method is **penalized normalized coil fitting**, followed by separate
 fine-grid field and continuous-geometry checks. Best checked exploratory normal
-RMS is **0.004889**, against a 1e-4 pilot limit. No accepted reactor design or
+RMS is **0.004713**, against a 1e-4 pilot limit. A wider fit reaches 0.001948
+and passes the interior component, but its length bounds remain unresolved.
+No accepted reactor design or
 Step 4 completion follows.
 
 ## Current documents
 
-- [Longer-fit comparison](LONGER_COIL_EXPLORATION.md): prepared five-minute
-  restarts with original versus expanded shape freedom and shared checks.
+- [Longer-fit comparison](LONGER_COIL_EXPLORATION.md): completed five-minute
+  restarts; more shape freedom helps, but length headroom is now needed.
 - [Coherent-shape results](COHERENT_COIL_EXPLORATION.md): matched comparisons,
   best candidates, geometry limits and retained failures.
 - [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md): five fixed snapshots;
@@ -21,7 +23,7 @@ Step 4 completion follows.
 
 ## Executable path
 
-The latest completed fit is `scripts/explore_coherent_restart.py`; its explicit
+The latest completed fit is `scripts/explore_coherent_longrun.py`; its explicit
 source-bound inputs and settings reproduce the recorded comparison in the native
 environment. It reuses the normalized model, construction penalties and fine
 checker in `explore_normalized_coils.py` / `explore_constrained_coils.py`.
@@ -38,7 +40,7 @@ The latest reproduction command is:
 
 ```bash
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1 \
-  python scripts/explore_coherent_restart.py --output artifacts/my-restart
+  python scripts/explore_coherent_longrun.py --output artifacts/my-longrun
 ```
 
 It requires the recorded local snapshots and the [native environment](../validation/ENVIRONMENT.md).

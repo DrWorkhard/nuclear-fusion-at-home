@@ -5,19 +5,20 @@ Updated 27 September 2026. [Status](../STATUS.md) · [Step 4](../steps/STEP_4_PL
 ## Focus
 
 Use the method that moves field error: penalized normalized coil fitting.
-The matched restart reaches **0.004889 with scoped geometry checks**, below the
-1e-2 exploratory signal but above the unchanged 1e-4 acceptance limit.
-Seven exploration sessions are complete; a failed startup and its diagnosis
-remain included in the evidence, not erased from effort.
+The longer same-box fit reaches **0.004713 with scoped geometry checks**. Wider
+freedom reaches 0.001948 and passes the interior-vector component, but length
+bounds are unresolved. The unchanged boundary acceptance limit remains 1e-4.
+Failed starts and interrupted runs remain evidence, not erased from effort.
 
 ## Next work
 
-The [interior screen](INTERIOR_FIELD_EXPLORATION.md) is complete: 73.66% lower
-error for the expanded restart, still 4.03× its limit. This supports proceeding.
+The [longer-fit comparison](LONGER_COIL_EXPLORATION.md) shows enough progress to
+continue fitting, with explicit attention to construction headroom.
 
-1. Map field error against clearance, curvature, current and coil complexity
-   using longer penalized fits, wider justified ranges and the existing
-   eight-coil family as a separately labelled comparison.
+1. Test stricter construction length targets within the existing wider box;
+   leave acceptance unchanged. Map field error against clearance, curvature,
+   current and coil complexity. Consider the existing eight-coil family as a
+   separately labelled comparison if the present family stalls.
 2. Freeze the best two or three candidates, then use the shared trusted field
    and continuous-geometry checks. Investigate realized-field topology and
    matched realization of the Step 3 target before claiming benefit transfer.

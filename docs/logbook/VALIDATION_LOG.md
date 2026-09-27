@@ -2,54 +2,44 @@
 
 Updated 27 September 2026. Git retains earlier verification records.
 
-## Fixed-candidate interior screen completed
+## Longer/wider fit and interior check completed
 
-Clean implementation `8fae8b0` evaluates all five fixed snapshots at all three
-levels. Best fine interior-vector RMS is **0.04029150094**, **73.6556% below**
-the matched control's 0.1529415940. Every candidate still fails the 0.01 limit.
-No optimization, VMEC solve, current renormalization or physical acceptance.
+Clean implementation `eb458ef` completes both 300 s searches. The same-box
+candidate passes scoped geometry at boundary RMS **0.004712664**. The wider-box
+candidate reaches **0.001947576**, but length bounds remain unresolved.
+Its interior-vector RMS **0.009769586** passes 0.01 at all three tested levels.
+Both boundary gates still fail; no overall physical acceptance or Step 4 closure.
 
-- Worker **6.747 s**, supervisor **7.292 s**, 14,580,923-byte family; within the
-  180/185 s and 128 MiB limits. 138,240 native B points, 5,120 A points and
-  1,920 independent sample comparisons. All fifteen numerical rows pass.
-- All **80 source hashes** verified unchanged. Separate saved-array arithmetic
-  recomputes all fifteen vector-error/per-surface/field-amplitude/loop-flux
-  summaries and sampled B/A comparisons. Four prior geometry reports are joined
-  to exact matching snapshots, not recalculated.
-- Largest interior-grid RMS change: 5.723e-5. Coil-node refinement changes RMS
-  by at most 2.776e-17; these are empirical resolution checks, not error proofs.
-- The original seed's finest interior RMS reproduces 0.37123798260413354.
-- MPI logs one sandbox TCP bind warning; the single-thread worker and checks
-  complete. Stderr remains preserved; MPI networking was not enabled.
+- Search/fine/geometry worker **619.612 s**, supervisor **620.427 s**: within
+  660/670 s. Interior worker **2.915 s**, supervisor **3.388 s**. One thread.
+- All **82 search** and **96 interior source hashes** verified unchanged.
+  Separate saved-array arithmetic checks boundary and interior RMS, independent
+  sampled B/A comparisons, flux and the composed geometry classifications.
+  No duplicate full continuous-geometry calculation or separate-machine run.
+- All **3,225 trial records** checked; selection reproduced from completed
+  eligible points. All four fine boundary rows and six interior rows pass
+  numerical checks. No interior-score-based selection.
+- Complete retained raw-family inventory: **6,504 files / 73,728,182 bytes**,
+  within 256 MiB. Its sorted path/hash digest is recorded in the evidence.
+- Wider sampled lengths approach 3.5 m; the conservative upper bound is
+  **3.519998 m**. This is unresolved, not proof of an actual length violation.
+- The interrupted v1 prefix and −15 termination receipt remain. The strict
+  shared JSON converter repairs result serialization, not numerical physics.
 
-[Result and limitations](../optimization/INTERIOR_FIELD_EXPLORATION.md) ·
-[Source-bound evidence](../../evidence/coherent-interior-v1.json).
+[Result and limitations](../optimization/LONGER_COIL_EXPLORATION.md) ·
+[Source-bound evidence](../../evidence/coherent-longrun-v2.json).
 
-## Software and retained failure
+## Software checks
 
-The exact-flux repair passes **51 focused tests** (0.89 s), including committed
-input identity and rejection of a one-ULP change. It uses the original saved
-−0.03141592653589793 Wb, with no tolerance relaxation. The failed recomputation
-from π/100 is retained at the freeze tag/cleanup commit.
+- Active research regression: **410 passed**, 13 known HiGHS-option warnings,
+  **22.12 s** in the intact native environment.
+- Public suite: **48 passed**, **3.364 s**. Scoped Ruff, documentation structure
+  and whitespace checks pass. No dependency sync or hosted CI run.
+- The exact-flux input regression and one-ULP poison test remain passing;
+  −0.03141592653589793 Wb is unchanged. New strict-JSON tests cover geometry
+  pass/fail/unresolved results.
 
-Latest public check: **48 tests pass** (3.243 s); focused Ruff, documentation and
-whitespace checks pass. The cleanup commit `fbfbe47` retains the 404-test active
-regression and local Python 3.11/3.12 copied-tree qualification. No new dependency
-sync or hosted CI run.
-
-The [longer/wider study](../optimization/LONGER_COIL_EXPLORATION.md) is prepared:
-two 300 s restarts, original versus wider absolute boxes, unchanged shared
-numerics and independent limits. Initial v1 execution was deliberately stopped
-after 152.934 s upon finding a NumPy-boolean serialization defect in the new
-geometry-result assembly. The interrupted prefix and termination receipt remain.
-The shared strict JSON converter fixes this without changing physics; **21 tests
-pass** (0.64 s), including pass/fail/unresolved serialization and the shared
-restart controls. Scoped Ruff passes. Both arms will restart from trial1198 in
-a fresh v2 family, with unchanged bounds, selection and budgets.
-Real geometry-only preflight also serializes successfully and reproduces the
-prior best snapshot's geometry/curvature values exactly; no native field call.
-
-Next work is that trade-off study, not more acceptance machinery.
-Realized topology, Step 3 benefit transfer, pressure/engineering and MS1 remain
-open. Optional dependency pruning and independent backup/reproduction remain
-unverified as documented previously.
+The next experiment should put length headroom into construction and selection.
+Shared acceptance thresholds stay fixed. Realized topology, Step 3 benefit
+transfer, pressure/engineering, independent backup/reproduction and MS1 remain
+open. Native source arrays and ignored outputs are not backed up by Git.

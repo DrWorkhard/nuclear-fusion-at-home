@@ -3,6 +3,10 @@
 - **Wider coherent motion matters.** The [matched restart](../optimization/COHERENT_COIL_EXPLORATION.md)
   reaches RMS 0.004889 with checked geometry and improves both error and current
   against its matched control. Budget exhaustion is not an optimum.
+- **Construction needs headroom.** The [longer/wider fit](../optimization/LONGER_COIL_EXPLORATION.md)
+  passes the interior-vector component, but sampled lengths just below 3.5 m
+  leave conservative length bounds unresolved. Improve the construction margin,
+  not the acceptance threshold. Boundary error remains a separate failure.
 - **Check the right objective.** Raw-field and normalized errors can disagree;
   fixed loop flux does not preserve the whole field. Current-only negative
   results remain at the [freeze tag](../validation/REPRODUCING_RESULTS.md).
