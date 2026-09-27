@@ -7,6 +7,8 @@ Step 4 completion follows.
 
 ## Current documents
 
+- [Longer-fit comparison](LONGER_COIL_EXPLORATION.md): prepared five-minute
+  restarts with original versus expanded shape freedom and shared checks.
 - [Coherent-shape results](COHERENT_COIL_EXPLORATION.md): matched comparisons,
   best candidates, geometry limits and retained failures.
 - [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md): five fixed snapshots;

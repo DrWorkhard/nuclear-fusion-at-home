@@ -37,7 +37,13 @@ whitespace checks pass. The cleanup commit `fbfbe47` retains the 404-test active
 regression and local Python 3.11/3.12 copied-tree qualification. No new dependency
 sync or hosted CI run.
 
-Next work is a longer/wider trade-off study, not more acceptance machinery.
+The [longer/wider study](../optimization/LONGER_COIL_EXPLORATION.md) is prepared:
+two 300 s restarts, original versus wider absolute boxes, unchanged shared
+numerics and independent limits. Its three settings tests plus 17 shared-restart
+tests pass (20 total, 1.06 s); scoped Ruff passes after removing an unused import.
+No numerical result is claimed for this study before execution.
+
+Next work is that trade-off study, not more acceptance machinery.
 Realized topology, Step 3 benefit transfer, pressure/engineering and MS1 remain
 open. Optional dependency pruning and independent backup/reproduction remain
 unverified as documented previously.
