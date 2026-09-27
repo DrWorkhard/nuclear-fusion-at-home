@@ -42,7 +42,8 @@ FIXED = {
 }
 LEVELS = ((32, 256), (64, 256), (64, 512))
 LABELS = ("original-shape", "shape52", "coherent598", "restart-control", "restart-expanded-low")
-B2, TARGET_FLUX = 1.6293829620247962, -np.pi / 100
+# Exact values of the source-bound archives/input, not recomputed from rounded pi.
+B2, TARGET_FLUX = 1.6293829620247962, -0.03141592653589793
 SECONDS, MAX_BYTES = 180, 128 * 1024**2
 
 
@@ -159,6 +160,7 @@ def intake(restart_result, restart_sha256, guard=lambda: None):
         guard()
         bind(ROOT / path, expected, sources)
     data = {p: read_json(ROOT / p) for p in FIXED if p.endswith(".json")}
+    need(data[TARGET]["phiedge"] == -TARGET_FLUX, "exact source-bound target flux required")
     index = data[INDEX]
     states = [s for s in index["states"] if s["label"] == "reference-401"]
     need(

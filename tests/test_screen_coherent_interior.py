@@ -1,4 +1,4 @@
-"""Synthetic-only frozen interior screen controls: no native field evaluations."""
+"""Synthetic controls and committed-input regression; no native field evaluations."""
 
 import copy
 import importlib.util
@@ -202,6 +202,14 @@ def test_snapshot_normalization_is_exact(snapshot, field):
     snapshot[field] = np.nextafter(snapshot[field], np.inf)
     with pytest.raises(ValueError):
         screen.snapshot_identity(snapshot)
+
+
+def test_flux_constant_matches_exact_committed_input():
+    source = ROOT / screen.TARGET
+    assert screen.digest(source) == screen.FIXED[screen.TARGET]
+    assert screen.TARGET_FLUX == -screen.read_json(source)["phiedge"]
+    # This one-ULP substitution caused real intake to reject all original snapshots.
+    assert screen.TARGET_FLUX != -np.pi / 100
 
 
 def metric_arrays(n=32):
@@ -448,7 +456,7 @@ def intake_context(tmp_path, snapshot, monkeypatch):
         refs[name] = screen.digest(path)
         return dict(path=str(path), sha256=refs[name])
 
-    input_ref = save(screen.TARGET, dict(reference=True))
+    input_ref = save(screen.TARGET, dict(reference=True, phiedge=-screen.TARGET_FLUX))
     wout_ref = save(screen.WOUT, dict(synthetic=True))
     original = copy.deepcopy(snapshot)
     original["sources"] = dict(input=input_ref, wout=wout_ref)
@@ -529,6 +537,7 @@ def test_intake_prospectively_keeps_all_five_and_qualified_target_levels(intake_
         "target-wout",
         "target-grid",
         "target-check",
+        "target-flux",
     ],
 )
 def test_intake_pairing_and_domain_poisoning(intake_context, fault):
@@ -551,6 +560,10 @@ def test_intake_pairing_and_domain_poisoning(intake_context, fault):
         index["states"][0]["fields"].pop()
     if fault == "target-check":
         index["states"][0]["fields"][0]["checks"]["cartesian"] = 1
+    if fault == "target-flux":
+        target = screen.ROOT / screen.TARGET
+        write(target, dict(phiedge=np.nextafter(-screen.TARGET_FLUX, np.inf)))
+        screen.FIXED[screen.TARGET] = screen.digest(target)
     write(path, restart)
     write(screen.ROOT / screen.INDEX, index)
     screen.FIXED[screen.INDEX] = screen.digest(screen.ROOT / screen.INDEX)

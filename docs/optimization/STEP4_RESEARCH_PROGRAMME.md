@@ -12,9 +12,8 @@ remain included in the evidence, not erased from effort.
 
 ## Next work
 
-1. Repair the [interior-field screen](INTERIOR_FIELD_EXPLORATION.md)'s exact-flux
-   intake mismatch, then run its five fixed candidates. Keep both favorable and
-   unfavorable results.
+1. Run the repaired [interior-field screen](INTERIOR_FIELD_EXPLORATION.md) on
+   its five fixed candidates. Keep both favorable and unfavorable results.
 2. Map field error against clearance, curvature, current and coil complexity
    using longer penalized fits, wider justified ranges and the existing
    eight-coil family as a separately labelled comparison.

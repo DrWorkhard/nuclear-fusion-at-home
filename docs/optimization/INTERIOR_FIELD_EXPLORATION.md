@@ -1,14 +1,14 @@
 # Interior-field screen of exploratory coil fits
 
-27 September 2026. **Native screen unexecuted; real-data intake currently blocked.**
-The implementation passes 49 synthetic tests, but cleanup preflight rejects the
-original snapshot: its saved flux is `-0.03141592653589793`, whereas the screen's
-`-np.pi/100` is `-0.031415926535897934` (one ULP). The strict equality predates
-cleanup and is unchanged at the freeze tag. Repair the adapter against the exact
-source-bound input and add a real-data regression before execution; do not rewrite
-the snapshots or loosen physics limits. All 51 combined source references of the
-two fitting results separately pass their hash checks. No native field,
-optimization or VMEC run is claimed. This diagnostic accompanies
+27 September 2026. **Real-data intake passes; native screen not yet executed.**
+The adapter now uses the exact source-bound flux `-0.03141592653589793`, also
+checked against the committed input. Recomputing `-np.pi/100` had introduced a
+one-ULP mismatch and rejected the original snapshots; that failed implementation
+remains at the freeze tag. Exact identity checks and all physics limits remain
+unchanged. **51 focused tests pass**, including the real committed-input regression
+and rejection of a one-ULP input change. Real-data intake verifies all five fixed
+snapshots, both target levels and 76 source identities without native field calls.
+This diagnostic accompanies
 the [coherent-shape experiments](COHERENT_COIL_EXPLORATION.md); it does not add an
 optimization session or change their selection rules.
 

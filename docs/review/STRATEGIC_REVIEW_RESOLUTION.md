@@ -34,9 +34,9 @@ service's usage limit. The old optional engineering dependency declarations rema
 consistent with the unchanged lockfile; retired code is removed and no environment
 was synchronized.
 
-Cleanup preflight also exposed a pre-existing one-ULP flux-identity mismatch
-in the prepared interior adapter. Its real-data intake must be repaired before
-the first native screen; passing synthetic tests was insufficient.
+Cleanup preflight exposed a pre-existing one-ULP flux-identity mismatch in the
+interior adapter. The follow-up repair uses the exact committed-input value;
+real-data intake now passes. The synthetic-only controls had missed this defect.
 
 The strategic calibration result remains limited to boundary components:
 QUASR positive control and matched LPQA conventions, not a complete Goodman

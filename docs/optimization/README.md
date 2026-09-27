@@ -10,8 +10,8 @@ Step 4 completion follows.
 - [Coherent-shape results](COHERENT_COIL_EXPLORATION.md): matched comparisons,
   best candidates, geometry limits and retained failures.
 - [Interior-field screen](INTERIOR_FIELD_EXPLORATION.md): prepared five-point
-  diagnostic; real-data intake exposes a one-ULP flux-identity mismatch to fix
-  before native evaluation.
+  diagnostic; exact-flux intake repaired and checked against real data,
+  ready for native evaluation.
 - [Boundary calibration](REFERENCE_CALIBRATION.md): QUASR/LPQA component controls
   and why metric conventions matter.
 - [Research programme](STEP4_RESEARCH_PROGRAMME.md): next decisions, trade-off

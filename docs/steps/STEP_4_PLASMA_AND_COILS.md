@@ -27,8 +27,8 @@ still about **49× above 1e-4**, and maximum normal error also fails its limit.
 The 1e-2 exploration signal is met. This supports more work on the method, not
 physical acceptance. A fixed-candidate
 [interior screen](../optimization/INTERIOR_FIELD_EXPLORATION.md) is implemented
-and synthetically tested, but real-data intake currently rejects a one-ULP flux
-constant mismatch. It has not evaluated the actual fields. Realized
+and tested. The one-ULP flux mismatch is repaired and real-data intake passes;
+it has not evaluated the actual fields. Realized
 magnetic surfaces, confinement and transfer of the Step 3 benefit remain open.
 
 ## Lessons retained from closed work
