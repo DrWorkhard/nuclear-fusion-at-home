@@ -1,6 +1,7 @@
 # Raw versus local-normalized coil fitting
 
-27 September 2026. **Exploration; no acceptance claim.**
+27 September 2026. **Completed exploration; both selected designs fail geometry
+and field limits.**
 [Programme](STEP4_RESEARCH_PROGRAMME.md) · [Calibration](REFERENCE_CALIBRATION.md)
 
 ## Question and prospective comparison
@@ -119,5 +120,61 @@ on reset. Original limits and native libraries are unchanged.
 The [failed-attempt manifest](../../evidence/normalized-coils-failed-v1.json)
 binds the retained local outputs; Git preserves the executable source. Do not loosen derivative tolerances,
 reinterpret the 14.22% discrepancy as harmless quadrature error or claim that one
-objective won. The retry will repeat the complete two-arm schedule in a fresh
-directory (`artifacts/normalized-coils-v2/`) after the adapter regression and review pass.
+objective won. The corrected retry below repeats the complete two-arm schedule
+in a fresh directory (`artifacts/normalized-coils-v2/`) after regression and review.
+
+## Corrected comparison and independent replay
+
+The full retry at clean `5b744f2` completes in **37.224 s** (38.027 s supervised),
+with 80 completed bundles per arm, all eight derivative checks, exact seed
+repeats, and both fine screens per endpoint. Both searches stop at the declared
+bundle cap, not demonstrated convergence. The
+[complete evidence](../../evidence/normalized-coils-exploration-v2.json) binds
+every attempted/completed point, selected coefficients, field arrays, sources,
+execution and the invalid first attempt. Output is about 7.49 MB.
+
+| Fine endpoint, unshifted 128² / 512 | Raw objective | Local-normalized objective |
+| --- | ---: | ---: |
+| Area-weighted normal RMS | 0.208694197 | 0.187787976 |
+| Sampled maximum normal ratio | 0.574569 | 0.527694 |
+| Physical base current, kA | 233.803 | 343.882 |
+| Largest sampled curvature, 1/m (limit 12) | **17.3520 — fail** | **16.5284 — fail** |
+| Sampled minimum plasma gap, mm (limit 80) | **72.9327 — fail** | 80.7695 — sampled only |
+| Sampled minimum coil gap, mm | 93.2766 | 170.4669 |
+| Longest coil, m | 2.03912 | 2.05130 |
+| Frozen-current relative flux error | 4.42e-16 | 4.42e-16 |
+
+Local-normalized fitting gives **10.02% lower RMS but 47.08% greater current**
+than this raw-objective endpoint. Neither is an acceptable design or a Pareto
+dominance result. Both miss the 1e-4 RMS / 1e-3 maximum gates by large margins.
+Only the unchanged seed among each arm's search points passes all sampled
+geometry limits; lower field objectives alone select infeasible points.
+
+The shifted grids agree closely in RMS (raw 0.2086941971, local 0.1877879758);
+sampled maxima vary and remain failures. Both currents stay below 500 kA.
+The valid retry has 78 distinct unit-flux values per arm, resolving the stale-cache
+symptom. Independent field discrepancies are ≤8.712e-16; all four refined flux
+checks agree with target within 4.42e-16 relative error at frozen coarse current.
+
+Independent read-only replay verifies 22 source files, nine relevant Git objects
+and the prospective question, all 160 attempt/completion pairs, selections,
+coordinate boxes and current/objective identities. All eight derivative checks
+pass: maximum errors 3.079e-11 raw and 2.223e-11 local. Separate `math.fsum`
+arithmetic reproduces 48 fine scalar metrics and checks 256 saved independent/
+native field-point comparisons. No new fields are called for that audit.
+Independent trigonometric derivatives confirm all twelve base-coil curvature
+maxima, including explicit >12/m witnesses. Independent surface/coil sampling
+also confirms the raw plasma-gap violation. Loop-A arrays were not saved in
+this experiment, so reported flux closure has arithmetic/refinement checks,
+not a separate re-integration audit.
+
+The selected raw/local designs hit 140/144 of 198 coefficient-box faces.
+This explains why a larger envelope is worth investigating, but increasing it
+alone would not resolve the demonstrated geometric violations.
+
+**Decision:** objective choice matters, but the current soft geometry penalty
+does not keep these search results buildable. Before a larger search, screen the
+existing circle100 and farther-out shaped starts at the same fixed target and
+physical normalization. Their pre-existing geometry margins are known, whereas
+their field scores are not. Keep the present negative result and all gates;
+do not relabel sampled or infeasible improvement as completion of Step 4.

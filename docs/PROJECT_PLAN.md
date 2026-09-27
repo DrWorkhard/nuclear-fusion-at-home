@@ -29,8 +29,9 @@ explicit; no automatic threshold relaxation.
 
 **Then: time-boxed exploration, through 24 October or ten research sessions.**
 Map field error against clearance/curvature using existing tools and alternative
-starts/objectives. Start with a matched raw-versus-local-normalized objective
-comparison. Fine RMS below 1e-2 with the existing geometric gates is a
+starts/objectives. The [objective comparison](optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
+improves field error only with geometry violations; next screen the existing
+circle and farther-out shaped starts. Fine RMS below 1e-2 with geometric gates is a
 triage signal, not acceptance. If it is not reached, change the investigated
 family/approach instead of automatically extending protected local search.
 The [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) defines scope,

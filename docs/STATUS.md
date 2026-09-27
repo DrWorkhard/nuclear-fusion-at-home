@@ -22,10 +22,12 @@ not extrapolate small local gains.
 | [Newly certified fixed steps](optimization/FIXED_FIELD_PROBE_RESULTS.md) | Normal RMS decreases another 0.057%/0.065% beyond preset empirical margins; both currents decrease; one interior-error improvement resolves | Other interior gain unresolved; all absolute field-error gates still fail; no general search-method advantage |
 | [Residual diagnosis](optimization/FIELD_RESIDUAL_RESULTS.md) | Observed responses align with 11.6%/19.6% of squared normalized residual versus 88.1%/89.6% of raw-objective residual; all eight comparisons checked | One-response affine fit, not a physical extrapolation or a lower bound on the coil family |
 | [Boundary calibration](optimization/REFERENCE_CALIBRATION.md) | QUASR 952 reaches refined RMS 2.27e-6; LPQA's archived mean/max reproduce on the tested half-period grid | Positive boundary-component control only; no matched end-to-end Goodman positive; coarse QUASR grid misleadingly reports near zero |
+| [Objective comparison](optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md) | Local-normalized fitting reaches fine RMS 0.18779 versus raw 0.20869, at 47% greater current | Both violate curvature and field limits; raw also violates plasma clearance. No new feasible design |
 
 The current normal-RMS limit is **1e-4**, maximum normal error **1e-3** and
 interior-vector RMS **0.01**. The roughly 2,700-fold normal-error gap is real;
-its cause and reachability remain unresolved. No threshold has been relaxed.
+its cause and reachability within the geometry limits remain unresolved.
+The lower exploratory errors above violate geometry; no threshold is relaxed.
 
 ## Negative results and independence
 

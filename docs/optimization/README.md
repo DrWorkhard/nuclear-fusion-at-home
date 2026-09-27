@@ -21,7 +21,7 @@ These studies establish neither a feasible new baseline nor a general method ran
 
 - [Matched boundary-reference calibration](REFERENCE_CALIBRATION.md). Fixed QUASR/LPQA coil-surface pairs, distinct mean/RMS/raw-flux definitions, source-scale preservation and a small refinement screen; not a full Goodman positive control.
 
-- [Raw versus local-normalized fitting](NORMALIZED_OBJECTIVE_EXPLORATION.md). First small matched-objective experiment from the original six-coil Goodman seed, with fixed budgets, derivative checks and separate endpoint screens; software checks pass, execution pending.
+- [Raw versus local-normalized fitting](NORMALIZED_OBJECTIVE_EXPLORATION.md). Corrected two-arm comparison completes 160 bundles and four fine screens: local RMS 0.18779 versus raw 0.20869, at 47% greater current; both fail curvature and all field gates. The first adapter-failure run is retained.
 
 - Saved-field residual diagnosis: [protocol](FIELD_RESIDUAL_PROTOCOL.md), [results](FIELD_RESIDUAL_RESULTS.md). All eight comparisons complete. Only 11.6%/19.6% of squared normalized residual aligns with the observed response versus 88.1%/89.6% for the raw objective; prioritize metric calibration and objective/start comparisons, not automatic continuation.
 

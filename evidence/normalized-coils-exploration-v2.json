@@ -1,0 +1,3211 @@
+{
+  "exploratory": true,
+  "files": [
+    {
+      "bytes": 526,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/execution.json",
+      "sha256": "4576dc7612752aff51f749551f1a4fb089839338dc0c953ce1e1736287c0bf56"
+    },
+    {
+      "bytes": 4157,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/implementation-tests.xml",
+      "sha256": "e63c4ce13bf278e22ac7a8d11c285da0ffc64079998f2f8466f312f5bd7ca99c"
+    },
+    {
+      "bytes": 1686,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/launch.py",
+      "sha256": "f6ee316308d9d9f811294c3579ebbaaa6ad21617b00935dcc13881cd5f9af27d"
+    },
+    {
+      "bytes": 41,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/fine-0-attempt.json",
+      "sha256": "da48125fa118e1933b0b8debce9ff03719468a7c84f4f907c11c3345c6ecac5b"
+    },
+    {
+      "bytes": 43,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/fine-0.5-attempt.json",
+      "sha256": "e206ce7e78941a77bb77c61a245d02e3db6ff24a7e5dc37a63fb583ef272340f"
+    },
+    {
+      "bytes": 1682,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/fine-0.5.json",
+      "sha256": "e2e31b2de6d4ca47fa7a84e3bdca2e8065cbdbc20cba922dab483c59a496aa1a"
+    },
+    {
+      "bytes": 1107348,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/fine-0.5.npz",
+      "sha256": "b2361a2ef50d790900d3ab435c5f306e095d1b01126a3cc4f740ea5e419b43e5"
+    },
+    {
+      "bytes": 1680,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/fine-0.json",
+      "sha256": "850f780338e0b75e559a5d9cbab18fb8268a3085b404b4f97f4fd4568ef4a1e6"
+    },
+    {
+      "bytes": 1102997,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/fine-0.npz",
+      "sha256": "9edff6b19afff6c5637241d4c1daa7724c4f640778a6e3650f9a21bf7774e73f"
+    },
+    {
+      "bytes": 412,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/progress.json",
+      "sha256": "47f8e30bcfd811be2034fe0465b1458aa122b2887f974b24c1116211ecc3d16e"
+    },
+    {
+      "bytes": 19515,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/result.json",
+      "sha256": "49b1321c51239736e075dbc019972e3ec606537ee319acf31f6b3d3f643ac292"
+    },
+    {
+      "bytes": 15318,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/search.json",
+      "sha256": "dccfab31bfc9aacb5276d37cde12a649d6d196b4032c7df8a63159c42ad3e876"
+    },
+    {
+      "bytes": 5649,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-000-attempt.json",
+      "sha256": "444ab12b6c2941c3ec51a5550995c697cd22631550c07662cbd3e91f05668400"
+    },
+    {
+      "bytes": 12640,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-000.json",
+      "sha256": "53df3b69a14d81a7819a6306a710bc6113d8a2b3d2db147e9f1653187e88fe21"
+    },
+    {
+      "bytes": 5659,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-001-attempt.json",
+      "sha256": "446821a1c9885f8330bf83caf7d364bfecfd0d6ee0aefa665a2742769383bfc1"
+    },
+    {
+      "bytes": 12631,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-001.json",
+      "sha256": "3ee599622e3693bc757c211e872145fd299dda0a769101c0258602ffabeb0a13"
+    },
+    {
+      "bytes": 5645,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-002-attempt.json",
+      "sha256": "53e6879c64dfc16084c16ea212fc09416fedacffe6a5847b1c327f5db86ccca8"
+    },
+    {
+      "bytes": 12627,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-002.json",
+      "sha256": "aab3f65176c97b21f5bd5c2c008c3d14eabd16841db3023fdffc2dafa814b5d5"
+    },
+    {
+      "bytes": 5665,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-003-attempt.json",
+      "sha256": "8f689045e54c6b4d54fc6a1bb1dc4271dd471ee6eb385308b8536ccc263a416d"
+    },
+    {
+      "bytes": 12640,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-003.json",
+      "sha256": "8b8801a91166ee591cda4fd1ea506a6d3cfb8426191b581d4db5b7475a22d669"
+    },
+    {
+      "bytes": 5660,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-004-attempt.json",
+      "sha256": "d2a9c340b592f2b832c2c18a8cdec009209e1d0416740ad1f7cbd6779845f79a"
+    },
+    {
+      "bytes": 12648,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-004.json",
+      "sha256": "f4f17afc3f539e2351d14749fa0de5a2b175f2020311c09df687623158994d58"
+    },
+    {
+      "bytes": 5660,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-005-attempt.json",
+      "sha256": "50ea7e95087bcc58ebb4190ee39030f06c6526ea2f76d4bbf461442aabc5b30a"
+    },
+    {
+      "bytes": 12630,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-005.json",
+      "sha256": "a7d677320e83e18027da6612c35652948d6d2ede4f1287d9bb09afa064edbf69"
+    },
+    {
+      "bytes": 5669,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-006-attempt.json",
+      "sha256": "a870466a1ed93c90265ed91d48fad0974890a1caa4e71fe9ba3eedcf9274fe14"
+    },
+    {
+      "bytes": 12640,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-006.json",
+      "sha256": "cccee8fe9e5823a70ed7a417cc6310c8500f07bdbf1bae982c80b6ef7d3d98f9"
+    },
+    {
+      "bytes": 5661,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-007-attempt.json",
+      "sha256": "2389b54a35ea4c92397cecee454fb409016e98ab3c056d370d4c0feec2e9825c"
+    },
+    {
+      "bytes": 12635,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-007.json",
+      "sha256": "e4d951780198567ab4d7fade9d581bfabf099addb53149a3761dd667c12b4012"
+    },
+    {
+      "bytes": 5653,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-008-attempt.json",
+      "sha256": "216664a2099acbff0cb6acd7d083b625b79f671bd8a01f2bb9e22468ea3337a9"
+    },
+    {
+      "bytes": 12630,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-008.json",
+      "sha256": "ee2073f0163d35b0f2fed2e5bf967a5365155e907e0bf10fc1178976d353fac7"
+    },
+    {
+      "bytes": 5653,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-009-attempt.json",
+      "sha256": "b292100172a34ab8d71033e94a4472273528d8c9f6e7dea357cb0edb576c4447"
+    },
+    {
+      "bytes": 12650,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-009.json",
+      "sha256": "f2af4849b7060b7902ed9e7b3699bd552e4cc5ab93ae69b2c8d44cc4cbfbc64b"
+    },
+    {
+      "bytes": 5650,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-010-attempt.json",
+      "sha256": "5c1917e466fa8f492979745a49bf2207b8dbbdb84afd7466c3f0bc9c662ce4b7"
+    },
+    {
+      "bytes": 12647,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-010.json",
+      "sha256": "af90a9db2ad1ee2e7f54d4acd39b10610ad02a2b27d86750215c1fc2b50dfb70"
+    },
+    {
+      "bytes": 5599,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-011-attempt.json",
+      "sha256": "22b3291e2b039cb5a77af22efefc91058293218c650edffc17066cd0dba74874"
+    },
+    {
+      "bytes": 12550,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-011.json",
+      "sha256": "d703793c0bf96cbe928922290f7508d558766c507b13bbef7c2b8b637c0ca694"
+    },
+    {
+      "bytes": 5603,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-012-attempt.json",
+      "sha256": "c1d40cf87ff70590c3a64c882320049ccd483cd15549e462d6cf6355def66de8"
+    },
+    {
+      "bytes": 12655,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-012.json",
+      "sha256": "c30e6742722f9840be2d3216d9de3fb99e4b98745748986122eddaa0081fb678"
+    },
+    {
+      "bytes": 5591,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-013-attempt.json",
+      "sha256": "140b9fedb7836f65b2538f9393f75855ac30c40e5eba287f178be81ca8cc4f4a"
+    },
+    {
+      "bytes": 12650,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-013.json",
+      "sha256": "0765dca536695909edaa6a9cd9740630c923d944e9c317168afd946f2af825e8"
+    },
+    {
+      "bytes": 5605,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-014-attempt.json",
+      "sha256": "334e4848b461b958f6fb8780b7ef098b35e5c571b518b91324adabf2bae6c1bd"
+    },
+    {
+      "bytes": 12670,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-014.json",
+      "sha256": "bb4d5ddd4328a299db1f4ea05455d6d28a5bdf6f95c7363cfc87fe775d5e181d"
+    },
+    {
+      "bytes": 5612,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-015-attempt.json",
+      "sha256": "85c2cdc32580a1ffc272748a9fa2a31e9e56c7d7b5905c88f9b665fe56e352fe"
+    },
+    {
+      "bytes": 12691,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-015.json",
+      "sha256": "da0e02b83ef282c8ec4a08bebf774de27ab7acafe23956530fff30f1e25c017f"
+    },
+    {
+      "bytes": 5605,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-016-attempt.json",
+      "sha256": "fa2d8aa3658c6e557cdd9e7e30925fb22db3a442d984bd5b1033e9699f73fb76"
+    },
+    {
+      "bytes": 12663,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-016.json",
+      "sha256": "69ee85c6187aaf7b6c5b3e55d7936c4087d0fc18b057dc5627ccfea659a1329d"
+    },
+    {
+      "bytes": 5604,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-017-attempt.json",
+      "sha256": "7413d1cb2c87f77c5e8d9c794b8cff0a63680f32df9e37f29830dfc5f9543c55"
+    },
+    {
+      "bytes": 12663,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-017.json",
+      "sha256": "5c4342925a2335dbdda857259a6e6277ee80f2a357327c7e61cf6737d9bf80c2"
+    },
+    {
+      "bytes": 5613,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-018-attempt.json",
+      "sha256": "cd7949008e35097bede22aa417ae10711ff3fa925e8f539c5d129fd11841e150"
+    },
+    {
+      "bytes": 12683,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-018.json",
+      "sha256": "567e59a49c67de07a3c8774ca3bfe715c06ec17f6c9641f5f72b30593097af6f"
+    },
+    {
+      "bytes": 5607,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-019-attempt.json",
+      "sha256": "20e7859e6c52124885deb091f513ca1d9a8baf36fde63315874520a36c008ddb"
+    },
+    {
+      "bytes": 12688,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-019.json",
+      "sha256": "b03c4c3763cb9fd71be8f498d3535a6b2ff5cfc76c806a4e02c9ff007ddfc1d8"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-020-attempt.json",
+      "sha256": "239406462b7dc9b52beb49efb4d6afce9ec0899a81814e46df0d41161cdde7c7"
+    },
+    {
+      "bytes": 12678,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-020.json",
+      "sha256": "800f293ba6880c73ed734baf7573b7452e1c90f14abdd672210649258f13519d"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-021-attempt.json",
+      "sha256": "d3ff0288dc1c7077f2756c1effe676a1f0f049479e41ddfa28720762ca7ef7dd"
+    },
+    {
+      "bytes": 12666,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-021.json",
+      "sha256": "4288ee06f5f5fceaa3544ed3892776c43b90c86e1d75e50a2131cf6488380dbe"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-022-attempt.json",
+      "sha256": "4ba9393d9a2054592723b66b61bb8840416daa2c8f36857abbc585edab890893"
+    },
+    {
+      "bytes": 12674,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-022.json",
+      "sha256": "3a75b65a612a05f710b9d55dd6fb3d29896dc27b5a7d0ac87b48655da70077d7"
+    },
+    {
+      "bytes": 5598,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-023-attempt.json",
+      "sha256": "feb8079890e05ccf32a75d3ff039fdd7f9e7acc659e718e6505d7ebeb85675bf"
+    },
+    {
+      "bytes": 12674,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-023.json",
+      "sha256": "e551d6308cfa45b33fc895b0b83557ec6464b62e03556191030168c6bcc9243f"
+    },
+    {
+      "bytes": 5589,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-024-attempt.json",
+      "sha256": "8246b0abcff3f282fd4ff88e2a0fab526013e35ba0cb8b74944f3ccc6d29af6b"
+    },
+    {
+      "bytes": 12688,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-024.json",
+      "sha256": "4fbae5f6015b945e60c584e4e922c454a7408ee0c19b8fc6930b5f902e9e65ca"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-025-attempt.json",
+      "sha256": "b0d8fbd89056d65d0ecadd26e34865822a42ff7e34171f1d28b1d1c6d5add2e4"
+    },
+    {
+      "bytes": 12697,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-025.json",
+      "sha256": "01313e88eb0c9fe51827662a7383259028c8aff252a44ec41e0c0109e3477b81"
+    },
+    {
+      "bytes": 5596,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-026-attempt.json",
+      "sha256": "c439f074505cd1be8d9d6424912c2fe561550490c9ecc66b9476372c90eae491"
+    },
+    {
+      "bytes": 12719,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-026.json",
+      "sha256": "85d5f6379f35794c30bf1062a4f6a1e2c4dc7d1fdbd82e5d4abce683fada6d84"
+    },
+    {
+      "bytes": 5599,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-027-attempt.json",
+      "sha256": "6ffe5f2cf49d9b14c36f52fa39a373e08c515692d4adcd778fd2a8613e993b09"
+    },
+    {
+      "bytes": 12693,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-027.json",
+      "sha256": "f42f3e34fe1608b6dfd15989287d797df8eaadd5cbb70e4a9e7eefccdbb01492"
+    },
+    {
+      "bytes": 5594,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-028-attempt.json",
+      "sha256": "ed6f647858b0fc461f5c290002797e77b6f38e2e638d1c8799095dbd04fa1449"
+    },
+    {
+      "bytes": 12693,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-028.json",
+      "sha256": "a993453aa4b80a5af6df93bb560d9d6c9a276d621897668ff12f8038b0d7a03d"
+    },
+    {
+      "bytes": 5589,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-029-attempt.json",
+      "sha256": "1f6edc258bbc20bbebcc683844d3b7f7b1417beca4d31b2fa08513ace7044995"
+    },
+    {
+      "bytes": 12648,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-029.json",
+      "sha256": "9ddb8bde31984492566164d0de99326b8ebbd21df0727cbd99fd2d360db21cf7"
+    },
+    {
+      "bytes": 5587,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-030-attempt.json",
+      "sha256": "e202ff8352163aff08d64b554444dc334214c7cdfb51741345bab2e9d796e1ed"
+    },
+    {
+      "bytes": 12668,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-030.json",
+      "sha256": "5d97af9f0dcec74cfbbbaaf2088e0d1c6eff77b7289ab5dbb4fc1b55c289de95"
+    },
+    {
+      "bytes": 5597,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-031-attempt.json",
+      "sha256": "0cbd8ebce42c7af4829d4da6352e04b7e0c9d1a8821bc3135b4ad59f5eb27797"
+    },
+    {
+      "bytes": 12674,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-031.json",
+      "sha256": "1ca12fb6605e4d4a253cac4c0874f5e5e64fe5e4add95f236fd76a7a9ff15647"
+    },
+    {
+      "bytes": 5594,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-032-attempt.json",
+      "sha256": "94efebb69085030ccdf2dd85e4ce3a92a71b451788e6c92abc593a38512022a8"
+    },
+    {
+      "bytes": 12695,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-032.json",
+      "sha256": "bf621e147d33f19b7f81f284b277f9f108ecd84cc0ec32afc5ea2d83e142d265"
+    },
+    {
+      "bytes": 5580,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-033-attempt.json",
+      "sha256": "57d47b6c40521695f2449126b5856a78125bdcef9c67d5bcb1b85e504d8c2373"
+    },
+    {
+      "bytes": 12678,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-033.json",
+      "sha256": "da2f8dd1aa389b0947e97d886c42de7c88a2553baa9de4119518e836d9f35c33"
+    },
+    {
+      "bytes": 5589,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-034-attempt.json",
+      "sha256": "692337600d15e4973ed34127d775c94d98aefe6979c10eb86ca3d7174092e49b"
+    },
+    {
+      "bytes": 12705,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-034.json",
+      "sha256": "64343413b01a22ca11e318ca4409c76e8adceb1924b2fff287323588896339e2"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-035-attempt.json",
+      "sha256": "b7ae86a1032ef90ebebad10fb80579d8bb907f435e31a65a68cf29deee7d88c4"
+    },
+    {
+      "bytes": 12708,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-035.json",
+      "sha256": "b4d95dbf7cb1ed7ad1a39b51c7e0fe4bd6dae63424908f037ff25cc621c6d27c"
+    },
+    {
+      "bytes": 5602,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-036-attempt.json",
+      "sha256": "c1d6873a2025e216f8c14914d91b3b8258a6c6c3675057a10ba8239cbb312f82"
+    },
+    {
+      "bytes": 12698,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-036.json",
+      "sha256": "b5791c1c928004b92d3dcee7a134e4c1113261fdecc00d75c1df08b591384258"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-037-attempt.json",
+      "sha256": "f4b73672e7e880d29a187b188193e1c8c1e0ffe8bff44437d453cb6de0f6c424"
+    },
+    {
+      "bytes": 12698,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-037.json",
+      "sha256": "7eb28607115b893996c3f8e605ce911a89b46817b8469eebded2199d4a4c58ab"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-038-attempt.json",
+      "sha256": "202a646c0468e746b2d6016d09107d46ddf3d4b04af84b854701668b7ea0b57f"
+    },
+    {
+      "bytes": 12704,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-038.json",
+      "sha256": "76f7385fa6138d170d31df21b2f8d4b9dfa65eea27b52cc1a47ef9c8c288523b"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-039-attempt.json",
+      "sha256": "b1903b2e6d761864c02dd01d7d8a8cf7c04c30b8009f8ad49708a628d5303c71"
+    },
+    {
+      "bytes": 12695,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-039.json",
+      "sha256": "ae3364fd498b3cb78bd2ff40ae41c7c21d975382cfc7e6e69e21637ce840ec2c"
+    },
+    {
+      "bytes": 5597,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-040-attempt.json",
+      "sha256": "a2d64f5d4276379996b28e68b4f230134ba0ec6bd7d9632244554f6050c2c0a4"
+    },
+    {
+      "bytes": 12697,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-040.json",
+      "sha256": "08a78cbeb783d240d2ea096609d9a0c7bb1ceaad6333c2237da28049cb2064ef"
+    },
+    {
+      "bytes": 5593,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-041-attempt.json",
+      "sha256": "a924f8eac97c1c31ac497f7ec66206851d74fb5c0f2e71816b24e9179db33686"
+    },
+    {
+      "bytes": 12696,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-041.json",
+      "sha256": "e58b9d02e7d02fcde1f01398302d6d2fb5ee802decb7a3f137a81bc36f23d71d"
+    },
+    {
+      "bytes": 5598,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-042-attempt.json",
+      "sha256": "f8babf1ae19e46c165e2b0e243178693dbc60525d70981d8dbe00eeeab892be4"
+    },
+    {
+      "bytes": 12689,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-042.json",
+      "sha256": "6d76040fffb063dd35b96657561da7d50df4782fab74831705cd7191f863d97b"
+    },
+    {
+      "bytes": 5597,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-043-attempt.json",
+      "sha256": "b5b38e1d7ab9609399046052190450198c4cf18a7ae39b456f71f3c0a72c1b94"
+    },
+    {
+      "bytes": 12719,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-043.json",
+      "sha256": "e005dff1b4c9b81fdca20526a528fd3fd09be67884129e5a64a75956041cb1aa"
+    },
+    {
+      "bytes": 5595,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-044-attempt.json",
+      "sha256": "ad8aa4448eae08b1fc31f1f8fd8cb934be9aabec753a4af29f6fc07d2d0ed407"
+    },
+    {
+      "bytes": 12703,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-044.json",
+      "sha256": "07c40de5bd6a1092da0d8ebd91bd6c0a97e80856d6a31a3027ee3a31efdb7f15"
+    },
+    {
+      "bytes": 5596,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-045-attempt.json",
+      "sha256": "196d43a23311c915882257d5012a152798fdc315a2c9c1fb65117c6ea15de042"
+    },
+    {
+      "bytes": 12725,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-045.json",
+      "sha256": "658aa25b609153b4d55156d0bd4ebe6e2d90e7a20f4b03aedd35fcb5bafd2b3d"
+    },
+    {
+      "bytes": 5599,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-046-attempt.json",
+      "sha256": "37d27292a9021f3d536e1c31c15019b1f0e514d60a6db757e43ef6f588221c1e"
+    },
+    {
+      "bytes": 12718,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-046.json",
+      "sha256": "0090eddcb3fb5551578defb045c2402ef431495504c062a67f6baf80b0d5a0c4"
+    },
+    {
+      "bytes": 5596,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-047-attempt.json",
+      "sha256": "f647cbc6e4e7aa300b3e41b44f8ae2524557d543fcba0a3e568d089cad910a8c"
+    },
+    {
+      "bytes": 12706,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-047.json",
+      "sha256": "2922d60c618bf02eb529c123291c28036d295eb57cb66b2d5271a39cabaf73a6"
+    },
+    {
+      "bytes": 5588,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-048-attempt.json",
+      "sha256": "84efa8ba18ce840298bf5798dc717743ccfe4346cc0687cdd2ffc9240ac6c4e4"
+    },
+    {
+      "bytes": 12703,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-048.json",
+      "sha256": "4ae3e5dc46301ef773ee6a26bd2a3ff05749ea173b1539a68a2f45e8fa0ffef6"
+    },
+    {
+      "bytes": 5589,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-049-attempt.json",
+      "sha256": "ee6f727d2431225f60cae05d836a5329435516ae096866b7cd233b9b18b8ecb1"
+    },
+    {
+      "bytes": 12679,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-049.json",
+      "sha256": "8f4130566ca50f9aee15d53dacf48ca940e0b98113bb8ea2f6831693875a8ff3"
+    },
+    {
+      "bytes": 5597,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-050-attempt.json",
+      "sha256": "922ec6cee869c26a8dc9eadc0685b48fa5a6a253a18c9bae24a4a10bde19cc28"
+    },
+    {
+      "bytes": 12707,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-050.json",
+      "sha256": "a58bc02405ebb0c1a5b75efd16d55a4cf2384c09eacee76f3e050c9da1998d96"
+    },
+    {
+      "bytes": 5595,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-051-attempt.json",
+      "sha256": "f771adc07d678af38de9dc0132b5cb11b61839a4377166a730a1768ad2e0d64f"
+    },
+    {
+      "bytes": 12712,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-051.json",
+      "sha256": "ec366b49cc7b6119dd05f4237e3db503a6329b8c1d95d352aca3081a5df9274b"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-052-attempt.json",
+      "sha256": "47c22004d772d07c7bc84b899dce2c958de06db96aba158763ba173afab19cf0"
+    },
+    {
+      "bytes": 12716,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-052.json",
+      "sha256": "8f10a0d2fe01889993c10c02a8a7b750a066ab94f05dc0f324b3213d56893f3e"
+    },
+    {
+      "bytes": 5585,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-053-attempt.json",
+      "sha256": "b464c2e87d89b56c9c8154a690290726b7fae63a18c45b7ec68b5967006852e7"
+    },
+    {
+      "bytes": 12707,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-053.json",
+      "sha256": "e739effd0a0c0a1b70500f1863688a75267738d1627d2a96d0979e00677d7823"
+    },
+    {
+      "bytes": 5594,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-054-attempt.json",
+      "sha256": "f9e56915f576d0f2c4281a352f8253904d7629c32c1789f67ccf1cde54e92e14"
+    },
+    {
+      "bytes": 12719,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-054.json",
+      "sha256": "77a82205f3097ed20085fbca48baf6950510c47542c34a4c0a1172157c285c88"
+    },
+    {
+      "bytes": 5587,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-055-attempt.json",
+      "sha256": "5a7e5edd4c5770944789cc0b5b49b619c4c3036218029f356e7d68f44cd1336d"
+    },
+    {
+      "bytes": 12719,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-055.json",
+      "sha256": "736fd036903c7dfad3d755b3596ece3fe105a9813d956dff8a78809980e33a84"
+    },
+    {
+      "bytes": 5593,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-056-attempt.json",
+      "sha256": "7b419a023a12195b7230d5ba0834f893d7a7ddb605acf84a619c0197a6b97df0"
+    },
+    {
+      "bytes": 12711,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-056.json",
+      "sha256": "22b1e70f9a871920cd888f5ca46f49e4c6c49cf0c2ed18acf92a60d4569d1568"
+    },
+    {
+      "bytes": 5595,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-057-attempt.json",
+      "sha256": "122f3d280da7e9fc22ca7056db7d9aee3dc54eca4429498381cafff57ab7db0f"
+    },
+    {
+      "bytes": 12711,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-057.json",
+      "sha256": "7b6795418e908574c9f4b5a39b64fe7eb14c3e42791dcbc0993bbd6fbbda285a"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-058-attempt.json",
+      "sha256": "2b02b8f8dee6aec8bf07d2bac9f1f9e134d2ebec09b35e6de8e7b4c40395096d"
+    },
+    {
+      "bytes": 12704,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-058.json",
+      "sha256": "356c15d5468c68183e840099ac66d4a7025b181a8617805e8242411f8b1b5c3f"
+    },
+    {
+      "bytes": 5590,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-059-attempt.json",
+      "sha256": "a2c3c092347f4c98daf7e8c1414bbbea9fbf748f78ae8dceb7439c89f17d5678"
+    },
+    {
+      "bytes": 12704,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-059.json",
+      "sha256": "8b2198cf7fce9fd9eef6929162c768f80d11788adc554e2290dcffe1e8b91ae2"
+    },
+    {
+      "bytes": 5591,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-060-attempt.json",
+      "sha256": "b50d6fb679cd17e84933d98a5eb592f7b9367687619eea315ed6885803fc08d5"
+    },
+    {
+      "bytes": 12713,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-060.json",
+      "sha256": "607107e7c2843bcc59e6628d7be219e0504950bb9a17e9d572c38a393242b1bf"
+    },
+    {
+      "bytes": 5590,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-061-attempt.json",
+      "sha256": "7ff5396d2bd6bda44aa1ec6fa27521451e7a54940be64d9dd53810f14a2f89c1"
+    },
+    {
+      "bytes": 12699,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-061.json",
+      "sha256": "1152aa0d0f85a50c796a9373dc89547c667893ce5674f69d6ac99eb3da1a4847"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-062-attempt.json",
+      "sha256": "80cfdde10163e17a7263862d1b8d6f47fd766ab7e8ac7f06b220d5ab36469cba"
+    },
+    {
+      "bytes": 12701,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-062.json",
+      "sha256": "98da32b62046dffd119595fb360c1dc02476729dd5dfa8c6474b502176d668d1"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-063-attempt.json",
+      "sha256": "b2504fa2c3f4c798437102a2d9b5d5e7a7d15e3616b921b386e95361725f1dca"
+    },
+    {
+      "bytes": 12700,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-063.json",
+      "sha256": "3bcf72750fa9c2a824d4b2e5cabba65b3ddb778e144ca7d139fcad922a491503"
+    },
+    {
+      "bytes": 5593,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-064-attempt.json",
+      "sha256": "f499feb7caa84aef846feb2c7b6bca959376876c9c0b33e8e8e8ed0379e17178"
+    },
+    {
+      "bytes": 12709,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-064.json",
+      "sha256": "40be71154e1cdae73d82d7ebc26cde0b404b3de4d81cbd9781e554d51450e8be"
+    },
+    {
+      "bytes": 5589,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-065-attempt.json",
+      "sha256": "0935710c762ead2132346db0c7d39fdc589f82be2e209af08319244f6808f1c1"
+    },
+    {
+      "bytes": 12698,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-065.json",
+      "sha256": "91783c82264e16a6fae908d84da90c9a210b727dd48eba919875b24976d0fb3d"
+    },
+    {
+      "bytes": 5591,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-066-attempt.json",
+      "sha256": "255d5330828d7420b2cf738c95f2577839ab822d9c36cd63fce203a7ec6c3c3b"
+    },
+    {
+      "bytes": 12705,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-066.json",
+      "sha256": "a0e064b9b95a450689e7cff51dfaaefedb14f3e2b5ec201c20ca310501cb9ef1"
+    },
+    {
+      "bytes": 5594,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-067-attempt.json",
+      "sha256": "f96ef3dcf0f12358fe8058396cf7792ef758e3f91774b639f297bd1c25e24293"
+    },
+    {
+      "bytes": 12697,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-067.json",
+      "sha256": "118bf45143f13cb9e7c5dfedfd3abb45552299d95e94f5e30fc70619e1f9513a"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-068-attempt.json",
+      "sha256": "cba584214a3057c5eb8b01886aca361563d14e6ff24ed5861cbfce91e63a3064"
+    },
+    {
+      "bytes": 12679,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-068.json",
+      "sha256": "b69b12759d868f365ab881bcc39cd3f4f74a528c2b23fe88fbeb9f80343dbd76"
+    },
+    {
+      "bytes": 5593,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-069-attempt.json",
+      "sha256": "ef522182d460044c8a98d9af3d25f144f4c99aa80e96319d67da5c716f96f966"
+    },
+    {
+      "bytes": 12706,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-069.json",
+      "sha256": "00411c25996ba87c4664174245fe546453544760096b4d7a7e6e920ec37a1564"
+    },
+    {
+      "bytes": 5599,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-070-attempt.json",
+      "sha256": "4f6f57665e7fb028ae88567224322f966e8c68f821d8bf925560cfd042cf4712"
+    },
+    {
+      "bytes": 12723,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-070.json",
+      "sha256": "ff05e765506e148e06dca7b7df71d904ddafef653831694abce984f6d1aafebe"
+    },
+    {
+      "bytes": 5590,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-071-attempt.json",
+      "sha256": "6486d178d4ea9ba18d6c11b29538724e154309d2b85f3c2c36784948b698b04a"
+    },
+    {
+      "bytes": 12699,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-071.json",
+      "sha256": "bf78c9dd50f6bfc66617a0f3b957b75090fe57f05be864c4d477fc6cd5f2b4f9"
+    },
+    {
+      "bytes": 5589,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-072-attempt.json",
+      "sha256": "5c6a9d53459bb8475403ace1258744cac65588d52a65f7e08181f5130ccbfe0e"
+    },
+    {
+      "bytes": 12707,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-072.json",
+      "sha256": "138d9138714ae01a56c6f53acb266d9ad1cb2400ff48c1b927d249c04ac28c2e"
+    },
+    {
+      "bytes": 5593,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-073-attempt.json",
+      "sha256": "f98c881d64a818df6a2aa10f5fe176dbc9b6ddbc7b5099be106e026f174ae8b2"
+    },
+    {
+      "bytes": 12698,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-073.json",
+      "sha256": "cb85c3bda219d5a8903d453b697a366115e30e030a199746e9e44815680a632a"
+    },
+    {
+      "bytes": 5587,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-074-attempt.json",
+      "sha256": "5148914c4eaadb3b34ec2be4b832506b9f3e85a4ed0e1e7d15a9d916c261163e"
+    },
+    {
+      "bytes": 12702,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-074.json",
+      "sha256": "f5b64b14ff04b284bd47464e5dcd49142107b79bb8468608abdf1ed995e9a22c"
+    },
+    {
+      "bytes": 5590,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-075-attempt.json",
+      "sha256": "d399a63224a79056f334431739ef5377485eb649b48a37744a3ffa156695a391"
+    },
+    {
+      "bytes": 12705,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-075.json",
+      "sha256": "2769c5753415bd899eb56318d9655c797b21df81aa2877a1180ba94f8274cf3a"
+    },
+    {
+      "bytes": 5587,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-076-attempt.json",
+      "sha256": "39e33edeabb73e3049a5a8e24d7f897050df2b40bd1fafff77b086f32132fb5f"
+    },
+    {
+      "bytes": 12706,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-076.json",
+      "sha256": "c9b5ebb3240315d747e4387b854577914689bce4345ecd24c0ed1d7beb08f58c"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-077-attempt.json",
+      "sha256": "dc522b67c1cc89836b57cd29e96e085689d7175605f5de3c309184b3dd62b8e0"
+    },
+    {
+      "bytes": 12698,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-077.json",
+      "sha256": "57dac707920d13e3dcee15b567d99d09af074b8a4ecf7418de0f644e95cb8934"
+    },
+    {
+      "bytes": 5590,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-078-attempt.json",
+      "sha256": "b88a916a6b83bab0c4221db0fdba43f9cce4efa24d3e6b99a1b1e4a1485379d2"
+    },
+    {
+      "bytes": 12698,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-078.json",
+      "sha256": "2d71e9f6216f293b716d0abbf7c75445534cd6c2366728df5ad7bbc383ab5311"
+    },
+    {
+      "bytes": 5590,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-079-attempt.json",
+      "sha256": "315c84470bf058c43aa014db474786abe01d2acb67ff570c422ff6b91eb40e53"
+    },
+    {
+      "bytes": 12707,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/local/trial-079.json",
+      "sha256": "f0b28f5604d85f270fa6f81187c6f4ec50382661060abfd3230b9b0183d442b5"
+    },
+    {
+      "bytes": 41,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/fine-0-attempt.json",
+      "sha256": "da48125fa118e1933b0b8debce9ff03719468a7c84f4f907c11c3345c6ecac5b"
+    },
+    {
+      "bytes": 43,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/fine-0.5-attempt.json",
+      "sha256": "e206ce7e78941a77bb77c61a245d02e3db6ff24a7e5dc37a63fb583ef272340f"
+    },
+    {
+      "bytes": 1676,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/fine-0.5.json",
+      "sha256": "b267c285580655fc42ac76b90cd16d9ee7f192c5e9bb1f608d0ab2a9925edba2"
+    },
+    {
+      "bytes": 1106973,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/fine-0.5.npz",
+      "sha256": "52a37f20d31d1e0144f2f7958c0e2bff03c2ec409e97afac37c8538f64a17f5b"
+    },
+    {
+      "bytes": 1673,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/fine-0.json",
+      "sha256": "dbe464a9855c979a3811ad9a80352c218c4ff01cfd14d2aef00f1aa4e661fbdb"
+    },
+    {
+      "bytes": 1102579,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/fine-0.npz",
+      "sha256": "999b582b1abb65e4092e54755004e88e485092d9f4dfffa4251cd020bd0e2f1e"
+    },
+    {
+      "bytes": 414,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/progress.json",
+      "sha256": "6f0aa36507dcb1e0937154a76cdc30547c0e6804045ad2c7ea93332797acde8c"
+    },
+    {
+      "bytes": 19534,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/result.json",
+      "sha256": "eafa1bd9600d9e9aaee090acd09933801aeeb44084278d001f7ee1c34d5531a9"
+    },
+    {
+      "bytes": 15348,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/search.json",
+      "sha256": "faeecc2979356bf26834fa376ec7d3ae49c14c70fe5c458389c7870607315521"
+    },
+    {
+      "bytes": 5649,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-000-attempt.json",
+      "sha256": "444ab12b6c2941c3ec51a5550995c697cd22631550c07662cbd3e91f05668400"
+    },
+    {
+      "bytes": 12596,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-000.json",
+      "sha256": "34173b4792b7d25bd79d65a25de020f26f76071786ea1d45d9b9ccea64f82655"
+    },
+    {
+      "bytes": 5659,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-001-attempt.json",
+      "sha256": "bb57407101903e900e82af54d7bc35d467096e54b95204561daaf334de416e5c"
+    },
+    {
+      "bytes": 12617,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-001.json",
+      "sha256": "7d97b347125e2662803aa67cd0b812c6db0690ef90e85d2facc0acb722ae6cf5"
+    },
+    {
+      "bytes": 5645,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-002-attempt.json",
+      "sha256": "a11214627a733923dd3d1f2d0e3f3c89eedb2cb450ae1115af3e1cef7d4df990"
+    },
+    {
+      "bytes": 12590,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-002.json",
+      "sha256": "d052e51b572fcaa3ccc7b809a6ed56e9af1737ceb149eef7d059181080c6c8fe"
+    },
+    {
+      "bytes": 5665,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-003-attempt.json",
+      "sha256": "490543f4d9341e3cb7b3f10f94aa72ca7c593e97c8baccb19db64817ebeb1409"
+    },
+    {
+      "bytes": 12604,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-003.json",
+      "sha256": "a66ceee9ca2ed9d67faf5aa4188ca847e24d5811ea3f00f9a6709a112aa87b66"
+    },
+    {
+      "bytes": 5660,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-004-attempt.json",
+      "sha256": "25095b91e567fe7b6f52a788d9a86dd6c84e7d36d6a74ca504c0c58852d80ee2"
+    },
+    {
+      "bytes": 12607,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-004.json",
+      "sha256": "11e4dd2e979e75646f44d70e280a375a64637428f56798bc44a0275cfd5ca1d3"
+    },
+    {
+      "bytes": 5660,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-005-attempt.json",
+      "sha256": "ac1da18c47d4f318b2f0adeaaf7fba94b689a69cd3a3ce40361adefad0d138eb"
+    },
+    {
+      "bytes": 12593,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-005.json",
+      "sha256": "3d5a5e942243894923a351693babc92e203f84c9df40a48c6a7e2318ba052ea6"
+    },
+    {
+      "bytes": 5669,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-006-attempt.json",
+      "sha256": "b237d0747fa2d8d5dc08616152970b4985cc5ef988bd06d4b9900333b106e3b7"
+    },
+    {
+      "bytes": 12613,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-006.json",
+      "sha256": "465871ff2774a635be9a579d28c91535ae95200a57d4b19823145331d95c3a8a"
+    },
+    {
+      "bytes": 5661,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-007-attempt.json",
+      "sha256": "ac0ccae034b04461c0e0e1d3cb607a914f5d1a2cf24d6ca36c296502d71a1d12"
+    },
+    {
+      "bytes": 12600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-007.json",
+      "sha256": "e8a7625355885e73f805475e5f0ef6a42a7bb7d9ce97bb13537622bcd9c69f5f"
+    },
+    {
+      "bytes": 5653,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-008-attempt.json",
+      "sha256": "ddbaf4a6d56205858c3fd17ef6537ef97ebe7dc321f3ce3cf3f610abb2f415fd"
+    },
+    {
+      "bytes": 12597,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-008.json",
+      "sha256": "ee2bd4bb9f86ceb112f09fa90d06f7fd4af1b89ad4a74035b135d673a75af88e"
+    },
+    {
+      "bytes": 5653,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-009-attempt.json",
+      "sha256": "ff26a38c80ebb299bbb7b876c039e009f08a1e68d8f0b61e86f939e0254a7329"
+    },
+    {
+      "bytes": 12608,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-009.json",
+      "sha256": "fe7eaad8be8eb368f7bccd59c5bc68c2807eeeb843609c74361ec98fd74ca4d8"
+    },
+    {
+      "bytes": 5652,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-010-attempt.json",
+      "sha256": "58855a46eb1eab5bcdfeee9c32a52f69666cd3d7fee70b7f441f1af7c2f3c0cf"
+    },
+    {
+      "bytes": 12607,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-010.json",
+      "sha256": "ca9c8b421501581344af671c65061a396bc082dd5edda2a1c1bf38d828e42983"
+    },
+    {
+      "bytes": 5580,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-011-attempt.json",
+      "sha256": "7b6faa4bb8007054839f4bb2ae3c403a35d2c14f125cf6c46e24db9b1899395a"
+    },
+    {
+      "bytes": 12501,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-011.json",
+      "sha256": "8e13aa58bc7e59d1299cb3de5bbd4878b0636ef086a7cf2c9da6e2159129b933"
+    },
+    {
+      "bytes": 5611,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-012-attempt.json",
+      "sha256": "c2218d7f192a3d1784e8bbd9b5be15fdfac766fcb89b38102136cf2fa4b6ec85"
+    },
+    {
+      "bytes": 12616,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-012.json",
+      "sha256": "e398b1ff6220ec5ca57d56b989a7f864bf8a14331db3edb5827e984573ab78e3"
+    },
+    {
+      "bytes": 5604,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-013-attempt.json",
+      "sha256": "50085d62a716d0e44738134502a5e233205d78825abab68ec863810f9da0afb3"
+    },
+    {
+      "bytes": 12637,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-013.json",
+      "sha256": "46e75e0a2eebd044e74b880afdf9864883d7d2ad5d092dc26a8a4b6ec3a44ec3"
+    },
+    {
+      "bytes": 5592,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-014-attempt.json",
+      "sha256": "819dc8dc220a9e40cca943a8d8eac26f408ad2b9993068906da14b2fd4d5d582"
+    },
+    {
+      "bytes": 12662,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-014.json",
+      "sha256": "5e4e88dc69530f91013994939d362342e6fccd725ae8d4daed62fbb2319ae3b8"
+    },
+    {
+      "bytes": 5594,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-015-attempt.json",
+      "sha256": "4250abbeea6bcc05dde641e683f53b561083141c1dcaeda6ff1ab7e66b299a8d"
+    },
+    {
+      "bytes": 12674,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-015.json",
+      "sha256": "c2d780efd12cd3c98268f1eaa41c4fd4dbbdb9ce072388a6fca177d4d0e4a5f8"
+    },
+    {
+      "bytes": 5603,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-016-attempt.json",
+      "sha256": "f66ce68f9354f715a1d5f475d5dab0a973575280ec0fe7b3305f6c525b3a3a55"
+    },
+    {
+      "bytes": 12660,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-016.json",
+      "sha256": "be16f612e9948b21a1ffa33e9ba625a38c40f1baff406d5654a2b88607ed3e1d"
+    },
+    {
+      "bytes": 5593,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-017-attempt.json",
+      "sha256": "0e2504598feb2ecab27210b39af1d9ae22d48c76aab5e3d1dffc640eeec80f63"
+    },
+    {
+      "bytes": 12674,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-017.json",
+      "sha256": "696221568e77b455423932b328a31708462c17f0398d3b04fce7144ddb7e0f26"
+    },
+    {
+      "bytes": 5601,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-018-attempt.json",
+      "sha256": "70cc44afed5e087c7f9383d5865b74fd9b390680fd20f841ee494ebc26f0e9a9"
+    },
+    {
+      "bytes": 12691,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-018.json",
+      "sha256": "07ce9e85e4cc40bc6534024542b12cfb4b6bf2cdc7c970cb9fe6a19d86113c34"
+    },
+    {
+      "bytes": 5587,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-019-attempt.json",
+      "sha256": "ebb52321823ccd0628b9e51d87af0f027b3ec5d48806b5dae0912a1fa09675c3"
+    },
+    {
+      "bytes": 12676,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-019.json",
+      "sha256": "20877c8a991fa162f845203023c3f673f2a7814ca611c4ee51d1d584e4c61016"
+    },
+    {
+      "bytes": 5598,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-020-attempt.json",
+      "sha256": "7f875ac04ab6967d977e49e83924194908506a5dfdd812df4c5d607b024b339d"
+    },
+    {
+      "bytes": 12657,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-020.json",
+      "sha256": "f08c09f009d3d484fd0d5b04e81381ca5fc9c4d7a6c58c577ab6eb839479203b"
+    },
+    {
+      "bytes": 5599,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-021-attempt.json",
+      "sha256": "3d3a91880481b47c4e56b4a6c9c041db36b2973d80ec451abd6f16b4044b891b"
+    },
+    {
+      "bytes": 12667,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-021.json",
+      "sha256": "690f63357076933f77c7d497fc4b668b3ac7a04893b51ec2c67bc3aac37e9e4e"
+    },
+    {
+      "bytes": 5605,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-022-attempt.json",
+      "sha256": "6c2b60d7de93a2d5b77b14938ce80ab9c5f5a46e180c2fe7e9100bc0c8ec1fd1"
+    },
+    {
+      "bytes": 12705,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-022.json",
+      "sha256": "140ffa3b31cdfbdf9115b5e5b5e70ef50a57a69159776825827f665b07749012"
+    },
+    {
+      "bytes": 5607,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-023-attempt.json",
+      "sha256": "2df1cf6b476ef48d51e2ffe7f8eed3374ad9c7d9ad55e59784c30f51f10f2b57"
+    },
+    {
+      "bytes": 12686,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-023.json",
+      "sha256": "85a88fe56682dea0f750f49c02e58951b5c8394288f039277d72bcd0a9bdf21d"
+    },
+    {
+      "bytes": 5610,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-024-attempt.json",
+      "sha256": "fcabd5cb703f71b7c9c067e7ea36af443608e581ddb32598c83b22220aac2184"
+    },
+    {
+      "bytes": 12669,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-024.json",
+      "sha256": "55672780f02b368b62b0062b2518648c2cb8421bd086c29a1a73ca153707f43c"
+    },
+    {
+      "bytes": 5612,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-025-attempt.json",
+      "sha256": "c3aff238a031f79b35eb78839693aab79a5d32700dd7a2a9e65743796a74e34a"
+    },
+    {
+      "bytes": 12694,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-025.json",
+      "sha256": "eafe770411f5e6c998e939b0be5b089e697b09d8076da80c374ef1dc0e2dae6f"
+    },
+    {
+      "bytes": 5603,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-026-attempt.json",
+      "sha256": "eb3b621858c1dd1c56454193c3bbea8e2b7b23092f86351f3488c4ed2ace2940"
+    },
+    {
+      "bytes": 12706,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-026.json",
+      "sha256": "bfa2016c6110cbf28ef620f7ac1577a1f5965761d15a59ed48d15462daedc3ba"
+    },
+    {
+      "bytes": 5613,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-027-attempt.json",
+      "sha256": "d2f8003a0390c675f879da8e1bfec3e5de17536a3a58bd226fdd2725d26d13c9"
+    },
+    {
+      "bytes": 12721,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-027.json",
+      "sha256": "47bb29322463d5436ab6af9a8786e55b953d4519d69fa688d0cde8e160e7c3ba"
+    },
+    {
+      "bytes": 5606,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-028-attempt.json",
+      "sha256": "850f464272398d73ea7a807f81af3595dce3a020ba9cc6e8ec74ce1d6f72d6fb"
+    },
+    {
+      "bytes": 12711,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-028.json",
+      "sha256": "ee73ba3d9868db7233a63f64dbf749362a776234600efda78752f029763fe70c"
+    },
+    {
+      "bytes": 5619,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-029-attempt.json",
+      "sha256": "e8886652b7fa20b8fc8a46a213f30491bd2a7281ac7b1c674fa7955ac6c42f80"
+    },
+    {
+      "bytes": 12712,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-029.json",
+      "sha256": "9545d8369ce604dfd59b23fc11ba99ac74970530784f5e7ae6bbb588aee5d0e9"
+    },
+    {
+      "bytes": 5611,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-030-attempt.json",
+      "sha256": "cd478fac8ad7bde8832294407aa1782af950f4443166be0bc6722d42f34fe614"
+    },
+    {
+      "bytes": 12710,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-030.json",
+      "sha256": "ec9d7f3117687201004674734356d8e38e406a8ea8780774a815fcd509934cca"
+    },
+    {
+      "bytes": 5619,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-031-attempt.json",
+      "sha256": "3d822857f6a3a090d6a3809967220430b324527f35b8c3a51831b49ea41f7eb7"
+    },
+    {
+      "bytes": 12741,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-031.json",
+      "sha256": "96ef8e81a29424adf3fd96016e06349d39b540e1b62e71238fe69bdb046a07eb"
+    },
+    {
+      "bytes": 5603,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-032-attempt.json",
+      "sha256": "aee4ecdf920dff2552322f2ef431e1231a74859a7a1253541a62afe060040312"
+    },
+    {
+      "bytes": 12723,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-032.json",
+      "sha256": "47b32d908cca2714271e00bfcd44ca6a0fb6bf5914e8fc18080d57499aba6db3"
+    },
+    {
+      "bytes": 5612,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-033-attempt.json",
+      "sha256": "809d90b066b716b0c5996f4c0c2a571e2cae95bd7c9b140c8e1af63b789ff2bf"
+    },
+    {
+      "bytes": 12718,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-033.json",
+      "sha256": "a6488e444ac7971dfba418e71428217fdd1247a296feb0aa33d9f4449c6a3538"
+    },
+    {
+      "bytes": 5613,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-034-attempt.json",
+      "sha256": "b021a9973300460b86dd80ecadc284ff8a0cdf86e1bc486a94416261ec4b7554"
+    },
+    {
+      "bytes": 12735,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-034.json",
+      "sha256": "78318d894c7d4083847b1aa7e2154cad61a4e9ae0cba68f2f891786522a3f057"
+    },
+    {
+      "bytes": 5609,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-035-attempt.json",
+      "sha256": "6d960bb57b00c7566f0cc2eab53b747cc2dea09bdfd8b2829dad94abecfb7285"
+    },
+    {
+      "bytes": 12713,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-035.json",
+      "sha256": "9b55ca5776c135fa50d886bf8c8846578cb63ce99c5ef52a5608698c0eff5f6d"
+    },
+    {
+      "bytes": 5609,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-036-attempt.json",
+      "sha256": "cef2a57006d3ff0a8a0a7661de71e0688b2f693d9903225600d779f3924d4d45"
+    },
+    {
+      "bytes": 12714,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-036.json",
+      "sha256": "9ad000a62bf4910f49026605175844a9387ed2755feecbb60db9225d49dffc6f"
+    },
+    {
+      "bytes": 5605,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-037-attempt.json",
+      "sha256": "33287436c4eb2670c4734b447eb75a10e0c0232d6c73613b331a9e0eed1af2fd"
+    },
+    {
+      "bytes": 12715,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-037.json",
+      "sha256": "8bb0218bf04c98c63048830266e721c22e2ff618b0cc03b85454cd1e138ea0a5"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-038-attempt.json",
+      "sha256": "80d8864c27f8780aa170263b48f111d30c3fc75ca3f527d8af5c348d8d55c88f"
+    },
+    {
+      "bytes": 12703,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-038.json",
+      "sha256": "ec8b946b1afbe66ee4d5101effb7c2e512fe8f16b7b8aa5f5b8b4844c2a54854"
+    },
+    {
+      "bytes": 5609,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-039-attempt.json",
+      "sha256": "9f911fa64379863ba01bbad6a8c34801ddb51116ca006eb2618bc9383617d7b6"
+    },
+    {
+      "bytes": 12715,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-039.json",
+      "sha256": "b4bf5764e49cc8c2d78824738aeeb723d81b6069d33718a070ac7b3b40f99c2a"
+    },
+    {
+      "bytes": 5604,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-040-attempt.json",
+      "sha256": "92ed95423cbcbf9caa41a32b42712ac81267b6e98ed95e042813de5ca0994273"
+    },
+    {
+      "bytes": 12716,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-040.json",
+      "sha256": "5af9441723a30aff3e51dbec3f634ce29949bcde5299ca6356cf3bd0b63fcc91"
+    },
+    {
+      "bytes": 5611,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-041-attempt.json",
+      "sha256": "19cc64145f57b9b48ee943c23f67f1db31ae92cf956df95a237035b0d785fc64"
+    },
+    {
+      "bytes": 12690,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-041.json",
+      "sha256": "212339c383d236155a6789de0a778d8d7ad1ffd59ab6d833f33187db6ca395f4"
+    },
+    {
+      "bytes": 5601,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-042-attempt.json",
+      "sha256": "5d0b47d3372a5673e0094003bb89f035e857bc2ef1978d6025f488e3ccbabc8e"
+    },
+    {
+      "bytes": 12703,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-042.json",
+      "sha256": "28b04d7c5e6e7ee9e0799b8b8dacbe6c5a70c01bcfbb5f24f7d58adcbbcd4fbd"
+    },
+    {
+      "bytes": 5608,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-043-attempt.json",
+      "sha256": "7cf82473fe3f505905427fa3dde7e6de859130638fed7dc8da6f20247e39fdf7"
+    },
+    {
+      "bytes": 12693,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-043.json",
+      "sha256": "6455e3036591e20b1bbfb23531a3a480cee27d76b934fd8254a1b45dd030a181"
+    },
+    {
+      "bytes": 5606,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-044-attempt.json",
+      "sha256": "62f1f91fd11be6948e7e96d6159002c864e9eb7c8ee7081325154da3d37da2eb"
+    },
+    {
+      "bytes": 12700,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-044.json",
+      "sha256": "f161091fced6aa80215eba964861c511910f734787a641036aa3b3994624d995"
+    },
+    {
+      "bytes": 5602,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-045-attempt.json",
+      "sha256": "48c143c0e09c0dda1758e8cdaf937bca84e16f5db440310b9d6bee5687eccdf2"
+    },
+    {
+      "bytes": 12715,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-045.json",
+      "sha256": "ec1b380045dea5cc0b9f9e351bdf48b135d9550ec354ceab844f0f5d575cb23a"
+    },
+    {
+      "bytes": 5608,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-046-attempt.json",
+      "sha256": "b1511c6886ad0b49992cf6c9c776dea79ec3807f99f7ed965b1a694c600009c2"
+    },
+    {
+      "bytes": 12714,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-046.json",
+      "sha256": "dd2ceae8146c020c6bb92bd3af64df253d27be5b605e06de89bb8e46f8499ee6"
+    },
+    {
+      "bytes": 5599,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-047-attempt.json",
+      "sha256": "22cb77dca37d3a2c14b13313398714358a14f3ccd77cca295a002393245d5713"
+    },
+    {
+      "bytes": 12705,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-047.json",
+      "sha256": "b4f5a5a9696361f40641be1c2590e4a8a79d4319e3343b8e38bb7ecf41d0a9c3"
+    },
+    {
+      "bytes": 5604,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-048-attempt.json",
+      "sha256": "20309e6be6aaf1de3d5f5cffa510c6f3c9eb82a8ff5bf2f6aa0e2f0ffaf92988"
+    },
+    {
+      "bytes": 12702,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-048.json",
+      "sha256": "1422ead55bbe3c85061374b8a3ee7b5140dc56eb9337b8c710f5ad1c4074e9eb"
+    },
+    {
+      "bytes": 5598,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-049-attempt.json",
+      "sha256": "0ed0ab20e5eb520ae9c510a15d08dd82d77aaac4e8fee62364cf6b73b17c1d5f"
+    },
+    {
+      "bytes": 12709,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-049.json",
+      "sha256": "7d4ad364a70e7dfb9791373cf865986b2bc004c6f6aa51007e5f29ec4eeb0a15"
+    },
+    {
+      "bytes": 5602,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-050-attempt.json",
+      "sha256": "bd75275eca69c3c87cef35fba540034799d25c34f0d422450944296587c0cc45"
+    },
+    {
+      "bytes": 12726,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-050.json",
+      "sha256": "a2b6ea8c28586d307306a1a9ff97455d4621406b807f2157b8d0db8bce008cee"
+    },
+    {
+      "bytes": 5603,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-051-attempt.json",
+      "sha256": "064ef2eb197eedbd18be8f157e17725c8dd9c710f98274fab2a71b4413ccbd73"
+    },
+    {
+      "bytes": 12715,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-051.json",
+      "sha256": "80bdcf7fa8e2d2bdf190a0444db76d3bd52e5707fac3b9f07ab07a8a07c37156"
+    },
+    {
+      "bytes": 5606,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-052-attempt.json",
+      "sha256": "bb3a14ef6701e76acf8728c6ae5477f6c80433fece9302b86339d8446b0cf338"
+    },
+    {
+      "bytes": 12711,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-052.json",
+      "sha256": "a8973882b3f662df950d062d7c4a75c4820fe0f4ee18a519d2efd216884b9d39"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-053-attempt.json",
+      "sha256": "9bf3b0fb19dde7cd91ecac2556eae6e09d1fb4464896e1f7549ce4bc7c7d7538"
+    },
+    {
+      "bytes": 12713,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-053.json",
+      "sha256": "2f28e6cac0fe9a3bf8a896f281a3bf6bd7936b12ca3c43b1942298cd072c8eba"
+    },
+    {
+      "bytes": 5604,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-054-attempt.json",
+      "sha256": "a52489c74635f03074acbd708dfb5246d0b730dcb112a57681bb9cade45473f0"
+    },
+    {
+      "bytes": 12713,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-054.json",
+      "sha256": "4baf7a559b8fbb0f84f235365400202e8bfbab2ad480fd82efb5196c4087f3f7"
+    },
+    {
+      "bytes": 5606,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-055-attempt.json",
+      "sha256": "22d9b1caf10dca3701224c96839140ce46fd52365df8ca7ee4a38f69c13e6c73"
+    },
+    {
+      "bytes": 12721,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-055.json",
+      "sha256": "e0a83d3b4be96f555a3df1e0a2927833a58238acab2b3d3fbc80115cb73c31ef"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-056-attempt.json",
+      "sha256": "546615aef8a26822f3b370e293e1c502b2e4b02a6a263405509bb0af5c551708"
+    },
+    {
+      "bytes": 12720,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-056.json",
+      "sha256": "1740f4e636f87c3d0032ee5ef29d64beca3bbb7afcce6adb1eb02fa0ea64e764"
+    },
+    {
+      "bytes": 5601,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-057-attempt.json",
+      "sha256": "13b4578c703ce94ecec0751667a3452d65a73fcfd62a20cb7acc2f75aec0ea29"
+    },
+    {
+      "bytes": 12702,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-057.json",
+      "sha256": "81be429802e53621c8e97529f1b1a08d7870e429ff75acb603c00256b927cd29"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-058-attempt.json",
+      "sha256": "a92158af3e982c6e6be81a0759d19ae02263eee2f8654ab945f9d85e498661be"
+    },
+    {
+      "bytes": 12697,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-058.json",
+      "sha256": "45c36a8498ffc3b7cc60be73dcb41c88e450e76613d4035bb83be54183958e3b"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-059-attempt.json",
+      "sha256": "590c09211e7b5e8a0a57d3de361c4af0064770ef70d74dfef18daac2032bf478"
+    },
+    {
+      "bytes": 12707,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-059.json",
+      "sha256": "da5566934f0d14f05d49707f6859aa8820496ed18365dfae3e9a3cd3d36c9ec3"
+    },
+    {
+      "bytes": 5602,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-060-attempt.json",
+      "sha256": "3b7b94e077029ba4a087f98e6e3e45532f1aacf82beec84896f202fef0c65236"
+    },
+    {
+      "bytes": 12707,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-060.json",
+      "sha256": "df1bb5aa2d15c3bf23ad41fd0fdd6e352fc1eb0970233e4db5952ce007008ced"
+    },
+    {
+      "bytes": 5602,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-061-attempt.json",
+      "sha256": "7ed0bb16d0e2a8f7a4e7e366155891a5e80d07ef2c5a5a3afa0a86f3ac95ba93"
+    },
+    {
+      "bytes": 12711,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-061.json",
+      "sha256": "52adad2bcd5dac0776e01a15c7ca7f32410f2aa746d9cd84bf1ab44dec72f507"
+    },
+    {
+      "bytes": 5608,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-062-attempt.json",
+      "sha256": "488f577d4b5bb4287aa1e8dde8feed84aad7b0fb704a73d3c2d6997ebe9c3ddc"
+    },
+    {
+      "bytes": 12714,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-062.json",
+      "sha256": "0836c3f120fec513206b7645421d83fb32d9b8bb5a643c80943e504852edb559"
+    },
+    {
+      "bytes": 5596,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-063-attempt.json",
+      "sha256": "cbe50fa1ac8feec0dde44012d72c718ae3c333cc4bb430891ac41885d8980c21"
+    },
+    {
+      "bytes": 12712,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-063.json",
+      "sha256": "d53c82527c2212cd95c3ae91a27da694124dd25ae7edba9877aee52ee4d36a10"
+    },
+    {
+      "bytes": 5599,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-064-attempt.json",
+      "sha256": "e266f09e5f5c28cff161b9478d4bdb2d32b9ec298087d31ca20d3707600a8a47"
+    },
+    {
+      "bytes": 12693,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-064.json",
+      "sha256": "baf0e09a004523f666aa01d47a50286e277365362b50200571cb54543a526dd5"
+    },
+    {
+      "bytes": 5599,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-065-attempt.json",
+      "sha256": "53537fdb3fa34450d82142aebd6a34628766bd1caf3c4cfbede8099cd3cbb5ea"
+    },
+    {
+      "bytes": 12711,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-065.json",
+      "sha256": "598ea336b8aa413c264e693abfe672c787edc85932967b4de7c73fc04bb172f4"
+    },
+    {
+      "bytes": 5612,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-066-attempt.json",
+      "sha256": "67bb2673315bcafb1db1f5a3d911e0a37e32c8af9bb545a4c265b77e52ec06dd"
+    },
+    {
+      "bytes": 12743,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-066.json",
+      "sha256": "89d83aae142180c1dbf505dd2ff43db80b65d8ffee7aa4117cddfa8b70b334e1"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-067-attempt.json",
+      "sha256": "a2dbf38cb92d18014e67624e615ad52630324a36c31a32e187bf2b5db57606d2"
+    },
+    {
+      "bytes": 12725,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-067.json",
+      "sha256": "f4e86dc3d270168b2ed1b282ecd80a7c2d55d1a5bfc84ca15b02bb66fdc4685f"
+    },
+    {
+      "bytes": 5610,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-068-attempt.json",
+      "sha256": "c32a1347e65886fab62ba45e63b5c220be866ea7a55bd573b3db232613035703"
+    },
+    {
+      "bytes": 12745,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-068.json",
+      "sha256": "78fb7bed9db0bb35e3c9d5334b70f55c5ce0facde105b4f036cd22969bf74e48"
+    },
+    {
+      "bytes": 5598,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-069-attempt.json",
+      "sha256": "afd4cc19c794777d19e5f186a378de646b1936dc1cfb3c5f2de35dd729ff8d40"
+    },
+    {
+      "bytes": 12704,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-069.json",
+      "sha256": "02ce3bb9773ac3673ca01ff61abeb86fdf453e3e9bb4998b26e8d32c484a911e"
+    },
+    {
+      "bytes": 5603,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-070-attempt.json",
+      "sha256": "24585f1cb5da8ba67f3c057d0b673070932e608b934db21b23a67636fa6a85c1"
+    },
+    {
+      "bytes": 12734,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-070.json",
+      "sha256": "9055dbd0e09cfb98fd321073c490d99e6173b97986e1770978994be66dfbc20a"
+    },
+    {
+      "bytes": 5605,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-071-attempt.json",
+      "sha256": "b065a45d645114e7a1102a1b807c663bc91b1dc83ef2f61fd7339b670247ad8b"
+    },
+    {
+      "bytes": 12724,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-071.json",
+      "sha256": "250f3734cf66c8f4f8db935406e8f8bee8c0eed7ad4fae74e3cba846131e9991"
+    },
+    {
+      "bytes": 5604,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-072-attempt.json",
+      "sha256": "3066642280bbe3de16bded5da2a99ee1dc9eebaf467a4138ebc8e67d180d45b6"
+    },
+    {
+      "bytes": 12721,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-072.json",
+      "sha256": "802485f7e8344732c2bb3dcd2282d96d54498bf4835d4bdc90c4f42b629ce70f"
+    },
+    {
+      "bytes": 5607,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-073-attempt.json",
+      "sha256": "399bc0322b8b38811073689205f33a4d488ed43773ac3669fbe39b4d9d402b4b"
+    },
+    {
+      "bytes": 12721,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-073.json",
+      "sha256": "8daf8fffc4049046d30aa239f71e842a570c98be51101ffe86b9e3dfd797eed2"
+    },
+    {
+      "bytes": 5600,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-074-attempt.json",
+      "sha256": "e05cecd51f918e0c8e805fe375c27d07a7f9804577cc039b7409b9f169c95d2f"
+    },
+    {
+      "bytes": 12705,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-074.json",
+      "sha256": "01fa81b4148ab9f27d2546773a1d7d1f254f85d832fb75c019f256231f92e7e0"
+    },
+    {
+      "bytes": 5602,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-075-attempt.json",
+      "sha256": "79008b7eaea6d6aa98086fc082d22642d9f533dbfa9e7d77c8eee00d72865bad"
+    },
+    {
+      "bytes": 12703,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-075.json",
+      "sha256": "3a3849af9fc1af56cc6f3cf0c9edf847ce77bd27149eff427f826c8359715e3f"
+    },
+    {
+      "bytes": 5605,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-076-attempt.json",
+      "sha256": "c9a2091d4efb71dda7773c1a4620c38b45cc4342f30a2e49d2362b15326a60b7"
+    },
+    {
+      "bytes": 12723,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-076.json",
+      "sha256": "f5273932aff6bdd378b82db91dae65c7c7b7b4e65b9e1d76cb6c7b08c2eba279"
+    },
+    {
+      "bytes": 5606,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-077-attempt.json",
+      "sha256": "761fa8e38950d83e30121fcbe89504ed9aa7e632661d10ace330b9bb1327e401"
+    },
+    {
+      "bytes": 12735,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-077.json",
+      "sha256": "a18418902fe7ce05b627315298ef98b3859e95a93c4c27e2918a666ab131a5e0"
+    },
+    {
+      "bytes": 5598,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-078-attempt.json",
+      "sha256": "b8289e73bd96b8c026efce79317c1977976941c587de22a7be2a7a17f81ef3da"
+    },
+    {
+      "bytes": 12723,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-078.json",
+      "sha256": "e1830d89d4e08e8c6f1f455e36fa7306875b91f29e05585b26e9f64771a1980f"
+    },
+    {
+      "bytes": 5606,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-079-attempt.json",
+      "sha256": "4923396a7aa5d95954aecd1bf933173b3493e4e821cd0064af0a460309d692db"
+    },
+    {
+      "bytes": 12739,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/raw/trial-079.json",
+      "sha256": "64e5a4ba6551405e801d8d41912932291e69effcc179d90f6293f6d9a7d8023b"
+    },
+    {
+      "bytes": 53666,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/summary.json",
+      "sha256": "fc8037d7d83247667b8b2b8c175ee699ebfd85037d9266fd4dc55eeef8f31b1a"
+    },
+    {
+      "bytes": 157,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/stderr.log",
+      "sha256": "06a1589d7756a6d73edf91f5ed45b873a78cd6f2daf29f6319d7c723b32dc4ff"
+    },
+    {
+      "bytes": 233,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/stdout.log",
+      "sha256": "2e90289d30ae8d09b2b7599995429a3c71655291a96ba6aff432a5a65152348c"
+    },
+    {
+      "bytes": 1562,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/summarize.py",
+      "sha256": "459ee816b19a812b62bea70b01f1e906e6dc74093faa8c5ba3c0994e13209e7b"
+    }
+  ],
+  "physical_admission": false,
+  "result": {
+    "bytes": 53666,
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/normalized-coils-v2/run/summary.json",
+    "sha256": "fc8037d7d83247667b8b2b8c175ee699ebfd85037d9266fd4dc55eeef8f31b1a"
+  },
+  "retained_failure": {
+    "bytes": 47152,
+    "path": "/Users/sebastianwirkert/workspace/fusion/evidence/normalized-coils-failed-v1.json",
+    "sha256": "9cc62a691b1c43ea887e9ac0042214ac926cff97cd6c2fa8f688d959ae9eed99"
+  },
+  "schema": "normalized-coils-exploration-v2",
+  "state_of_art_claim": false,
+  "summary": {
+    "arms": [
+      {
+        "arm": "raw",
+        "bundles_attempted": 80,
+        "bundles_completed": 80,
+        "derivative_checks": [
+          {
+            "analytic": -0.02677590768887026,
+            "direction": "sin",
+            "error": 2.1741591166302143e-11,
+            "finite_difference": -0.02677590766712867,
+            "h": 1e-05,
+            "passed": true
+          },
+          {
+            "analytic": -0.02677590768887026,
+            "direction": "sin",
+            "error": 6.1290798825108794e-12,
+            "finite_difference": -0.02677590768274118,
+            "h": 5e-06,
+            "passed": true
+          },
+          {
+            "analytic": -0.007069304102775665,
+            "direction": "cos",
+            "error": 2.6848983106231294e-12,
+            "finite_difference": -0.007069304100090767,
+            "h": 1e-05,
+            "passed": true
+          },
+          {
+            "analytic": -0.007069304102775665,
+            "direction": "cos",
+            "error": 3.0787418621447404e-11,
+            "finite_difference": -0.007069304071988246,
+            "h": 5e-06,
+            "passed": true
+          }
+        ],
+        "fine": [
+          {
+            "arrays_sha256": "999b582b1abb65e4092e54755004e88e485092d9f4dfffa4251cd020bd0e2f1e",
+            "metrics": {
+              "area_bn_rms": 0.20422405996458826,
+              "area_mean_abs_ratio": 0.1619387317293454,
+              "area_mean_b": 0.9985837878815691,
+              "coil_distance": 0.0932765889984861,
+              "current": 233803.0850522359,
+              "current_limit_met": true,
+              "flux_relative_error": 4.4174370575882185e-16,
+              "frozen_scale": 2.338030850522359,
+              "geometry_certified": false,
+              "independent_B_error": 8.711996002035194e-16,
+              "independent_B_pass": true,
+              "inner_vector_checked": false,
+              "kappa_max": [
+                17.352030160033173,
+                12.52342933957987,
+                12.80831631906134,
+                12.360993875052127,
+                12.50531332995335,
+                14.369951202921989
+              ],
+              "lengths": [
+                1.7090131415716878,
+                1.859159328950986,
+                1.8159925696737296,
+                1.8539437204401024,
+                1.926002471502704,
+                2.039116705060318
+              ],
+              "local_flux": 0.13286946278785683,
+              "mean_area_jacobian": 6.101469291305195,
+              "measured_flux": -0.03141592653589794,
+              "min_b": 0.7469144752592154,
+              "normal_limit_met": false,
+              "normal_max": 0.5745690415556207,
+              "normal_max_limit_met": false,
+              "normal_rms": 0.2086941966791652,
+              "normalized_global_flux": 0.020605174387365637,
+              "parameter_abs_bn_over_mean_b": 0.15660747944217088,
+              "parameter_mean_b": 1.010338893973438,
+              "physical_admission": false,
+              "raw_quadratic_flux": 0.127238413547749,
+              "sampled_geometry_limits_met": false,
+              "surface_distance": 0.07293269472437841,
+              "target_flux": -0.03141592653589793
+            },
+            "ncoil": 512,
+            "nloop": 512,
+            "nphi": 128,
+            "ntheta": 128,
+            "shift": 0
+          },
+          {
+            "arrays_sha256": "52a37f20d31d1e0144f2f7958c0e2bff03c2ec409e97afac37c8538f64a17f5b",
+            "metrics": {
+              "area_bn_rms": 0.2042240649560794,
+              "area_mean_abs_ratio": 0.1619354095671141,
+              "area_mean_b": 0.9985837877947507,
+              "coil_distance": 0.0932765889984861,
+              "current": 233803.0850522359,
+              "current_limit_met": true,
+              "flux_relative_error": 4.4174370575882185e-16,
+              "frozen_scale": 2.338030850522359,
+              "geometry_certified": false,
+              "independent_B_error": 5.231258957576798e-16,
+              "independent_B_pass": true,
+              "inner_vector_checked": false,
+              "kappa_max": [
+                17.352030160033173,
+                12.52342933957987,
+                12.80831631906134,
+                12.360993875052127,
+                12.50531332995335,
+                14.369951202921989
+              ],
+              "lengths": [
+                1.7090131415716878,
+                1.859159328950986,
+                1.8159925696737296,
+                1.8539437204401024,
+                1.926002471502704,
+                2.039116705060318
+              ],
+              "local_flux": 0.1328694633088695,
+              "mean_area_jacobian": 6.101469291305224,
+              "measured_flux": -0.03141592653589794,
+              "min_b": 0.7475251271652749,
+              "normal_limit_met": false,
+              "normal_max": 0.5743453008358005,
+              "normal_max_limit_met": false,
+              "normal_rms": 0.2086941970883344,
+              "normalized_global_flux": 0.020605175403076086,
+              "parameter_abs_bn_over_mean_b": 0.15660519462784067,
+              "parameter_mean_b": 1.0103388938850364,
+              "physical_admission": false,
+              "raw_quadratic_flux": 0.12723841976748124,
+              "sampled_geometry_limits_met": false,
+              "surface_distance": 0.07293269472437841,
+              "target_flux": -0.03141592653589793
+            },
+            "ncoil": 512,
+            "nloop": 512,
+            "nphi": 128,
+            "ntheta": 128,
+            "shift": 0.5
+          }
+        ],
+        "native_counts": {
+          "A": {
+            "attempted": 82,
+            "completed": 82
+          },
+          "A_vjp": {
+            "attempted": 80,
+            "completed": 80
+          },
+          "B": {
+            "attempted": 576,
+            "completed": 576
+          },
+          "B_vjp": {
+            "attempted": 80,
+            "completed": 80
+          },
+          "independent_B": {
+            "attempted": 2,
+            "completed": 2
+          }
+        },
+        "output_bytes_before_result": 3692728,
+        "physical_admission": false,
+        "seed_replay": {
+          "flux_normalized_raw": {
+            "actual": 0.039344660151591306,
+            "expected": 0.039344660151591306,
+            "passed": true
+          },
+          "normal_rms": {
+            "actual": 0.2760512774968315,
+            "expected": 0.2760512774968315,
+            "passed": true
+          },
+          "scale": {
+            "actual": 2.9496646632221735,
+            "expected": 2.9496646632221735,
+            "passed": true
+          },
+          "unit_flux": {
+            "actual": -0.01065067732193652,
+            "expected": -0.01065067732193652,
+            "passed": true
+          }
+        },
+        "selected": {
+          "deadline_met": true,
+          "gradient": [
+            -0.0022453765418516385,
+            0.008555359553501306,
+            0.01321961178988752,
+            0.00013104082414308604,
+            0.013637981072554279,
+            0.005807658701800358,
+            0.0049210821486426835,
+            -2.7263138696109745e-05,
+            0.005542481122788405,
+            8.934934651695474e-05,
+            0.0003217467719924122,
+            0.1406839924183236,
+            -0.01973039870224593,
+            -0.018766091249493702,
+            0.034176017117749063,
+            0.07085457706760115,
+            -0.04074377891677329,
+            0.021874744562575286,
+            0.015351403943640016,
+            0.0060671277799304955,
+            -2.3825641141235476e-05,
+            7.368748545853038e-05,
+            -0.0017018308462937153,
+            -0.0007388152156868793,
+            -0.005212675747954214,
+            -5.0922302112885176e-05,
+            0.006839904332998419,
+            -0.00012693243694051086,
+            -0.0009935771159833313,
+            -4.398648838501232e-06,
+            3.884291722444297e-05,
+            0.0004802488052786588,
+            -0.00015232469915213995,
+            -0.006213769271174164,
+            -0.002882493363765539,
+            -0.014022504193286213,
+            0.0013901783432237892,
+            7.17990208302428e-06,
+            6.548099533342606e-05,
+            -0.008395009968402877,
+            6.013704107456349e-05,
+            0.0001624481979941936,
+            6.927690018479742e-05,
+            -0.001071440342840498,
+            0.008839978731370884,
+            0.013390712273608047,
+            0.02419142035128119,
+            -0.006448931318882982,
+            0.003133840892116991,
+            0.018399881201024294,
+            0.010561167781147645,
+            -0.0027016868971546037,
+            -2.013986286346619e-05,
+            0.0031347230366147467,
+            -0.00013074604807045598,
+            -0.0005248152914188106,
+            0.0025399417666978094,
+            -0.003557164573434588,
+            0.0026264719976632008,
+            0.0030732828530483803,
+            -2.6634870843068843e-05,
+            0.0011130142065058633,
+            -0.00030047645053622295,
+            -0.0021811003617848153,
+            -5.984924252125552e-05,
+            0.00012365643433582277,
+            -0.011417062373900552,
+            -0.002705067028231917,
+            -0.004230517199481152,
+            -0.004344954152849419,
+            -0.0038462330908034647,
+            -0.002213835906843733,
+            0.00012073893331375485,
+            -0.00030946341752463623,
+            0.0020632267651045106,
+            1.2626645808486397e-05,
+            0.0002743273223259294,
+            -0.005703354201155337,
+            0.011352447739966933,
+            0.011665537267320721,
+            -0.00732395001639308,
+            -0.004125136090739758,
+            0.00995477239789297,
+            -0.0004580055726160243,
+            -0.0029432655173755565,
+            -0.00010633940322865359,
+            -0.00034780999230998606,
+            -4.243461125269174e-06,
+            0.009235731669938454,
+            -0.0003207095177539743,
+            -0.005333590286755552,
+            0.005294171577020041,
+            -7.916680787529973e-05,
+            -0.0020731148894185328,
+            0.0009919194170776196,
+            5.1296846067063785e-06,
+            -0.005716952133249596,
+            -1.2561809757787642e-05,
+            0.0039203920980894315,
+            -0.009469835532925755,
+            0.00489017055238471,
+            0.005132903880239629,
+            -0.006491814371888877,
+            -0.008403557394416474,
+            0.006682580823480412,
+            0.0013872368878089494,
+            -0.0061599469943314535,
+            -3.354343781120008e-06,
+            -0.0001578034685444118,
+            -0.00010548309651577624,
+            -0.013385122375989787,
+            0.0018194925547734568,
+            0.00031614806726134985,
+            -0.01328252599975765,
+            -0.0007447732491278725,
+            0.0015903612797894436,
+            4.7450527016822965e-05,
+            0.00014740307909153914,
+            0.0048910588692858996,
+            -9.07311327028398e-06,
+            7.780505895468883e-05,
+            0.016532527776639876,
+            0.0006917292522682646,
+            -0.0042003996072259775,
+            0.008014973453797418,
+            -0.0001401847652702497,
+            -0.0024504842714902454,
+            0.0003394611725175251,
+            -0.0001458351277827917,
+            -0.006551120786370239,
+            0.00011468309873607376,
+            0.0030941833006323718,
+            -0.003936143356442153,
+            0.027702114276632366,
+            0.01623598598804369,
+            -0.0067845909112479565,
+            -0.00709375219982177,
+            0.006226820302138382,
+            -0.016114678033752678,
+            5.847827515341475e-06,
+            0.0011479527303673242,
+            -0.008854590280231538,
+            3.550302096291211e-05,
+            -0.010132367659661495,
+            0.0007484921197501567,
+            -0.010877746430397605,
+            -0.017054392808524787,
+            0.00972378815643534,
+            0.0011663973973820318,
+            -0.0042745543002775605,
+            -0.00019878743913122093,
+            0.002595012725231454,
+            5.6960797082091625e-05,
+            8.305255362406685e-05,
+            0.024810561246893542,
+            -0.007251033984438611,
+            -0.011796118153146538,
+            0.01349620063165268,
+            -0.0028803096573950075,
+            -1.1048604971979677e-05,
+            0.011312870226839232,
+            -0.008298508633241757,
+            -0.00911496479608075,
+            0.002346389606347883,
+            1.7410014303787143e-05,
+            -0.003239079934362249,
+            0.043056395037579034,
+            0.010385860295974991,
+            0.003198485424078806,
+            -0.0058115153613308625,
+            -0.0060990942958526985,
+            -0.0024132569794898242,
+            -0.007506723395476712,
+            -0.009850164200009824,
+            4.1918380548591067e-05,
+            -1.4787355449815895e-05,
+            0.01295282059539034,
+            0.0013741508424937108,
+            -0.024378247454923313,
+            -0.004479938124478078,
+            0.009598864566103675,
+            6.992776821867185e-06,
+            -0.01427332515687782,
+            -0.00015954182344207974,
+            1.3403577294719346e-05,
+            3.655020166588776e-05,
+            5.1720490083652804e-05,
+            0.010875865112651392,
+            -0.021106451121506612,
+            -0.004263537990077868,
+            -0.0005251284214503335,
+            -0.007702811571323489,
+            0.021658916332601297,
+            0.01146371362784551,
+            -0.0073059161646348925,
+            0.0036758062729444043,
+            -0.00011923279481830659,
+            -8.512679257890229e-05
+          ],
+          "index": 79,
+          "metrics": {
+            "area_bn_rms": 0.2042397838148929,
+            "area_mean_abs_ratio": 0.16193113580359456,
+            "area_mean_b": 0.9985828251310469,
+            "coil_distance": 0.0932765889984861,
+            "current": 233803.0850522359,
+            "current_limit_met": true,
+            "flux_normalized_raw": 0.012800517209569113,
+            "flux_objective": 0.012800517209569087,
+            "geometry_certified": false,
+            "geometry_penalty": 0.000269573989940209,
+            "kappa_max": [
+              17.328262676538163,
+              12.444482136588073,
+              12.80831631906134,
+              12.360993875052127,
+              12.50531332995335,
+              14.369951202921989
+            ],
+            "lengths": [
+              1.709013141571688,
+              1.859159328950986,
+              1.8159925696737298,
+              1.8539437204401024,
+              1.9260024715027042,
+              2.0391167050603185
+            ],
+            "local_flux": 0.13287256208673198,
+            "mean_area_jacobian": 6.101469294924129,
+            "min_b": 0.7563884124809267,
+            "normal_max": 0.5745690415556208,
+            "normal_rms": 0.20869663059233326,
+            "normalized_global_flux": 0.020608429052370366,
+            "parameter_abs_bn_over_mean_b": 0.15661537239417572,
+            "parameter_mean_b": 1.010337997911007,
+            "raw_quadratic_flux": 0.12725800734580206,
+            "sampled_geometry_limits_met": false,
+            "scale": 2.338030850522359,
+            "surface_distance": 0.07293269472437841,
+            "unit_flux": -0.013436917023091903
+          },
+          "native_after": {
+            "A": {
+              "attempted": 80,
+              "completed": 80
+            },
+            "A_vjp": {
+              "attempted": 80,
+              "completed": 80
+            },
+            "B": {
+              "attempted": 320,
+              "completed": 320
+            },
+            "B_vjp": {
+              "attempted": 80,
+              "completed": 80
+            },
+            "independent_B": {
+              "attempted": 0,
+              "completed": 0
+            }
+          },
+          "native_before": {
+            "A": {
+              "attempted": 79,
+              "completed": 79
+            },
+            "A_vjp": {
+              "attempted": 79,
+              "completed": 79
+            },
+            "B": {
+              "attempted": 316,
+              "completed": 316
+            },
+            "B_vjp": {
+              "attempted": 79,
+              "completed": 79
+            },
+            "independent_B": {
+              "attempted": 0,
+              "completed": 0
+            }
+          },
+          "role": "search",
+          "status": "completed",
+          "value": 0.013070091199509295,
+          "x": [
+            0.9708191138350243,
+            -0.021535880686618818,
+            0.1634953247480853,
+            0.0055843069685730835,
+            -0.01467407719225745,
+            -0.009895251405132387,
+            0.011096671837648201,
+            0.007369362016804002,
+            -0.007662961403871274,
+            -0.002655423624805534,
+            -0.00230940072785354,
+            0.11649423606608934,
+            0.00848127249573643,
+            0.032841092822821764,
+            -0.010079411390063067,
+            -0.010615353936276975,
+            0.010013790414133092,
+            -0.007222570461791939,
+            -0.009960294304968467,
+            -0.009692323031861513,
+            0.007703057764622578,
+            -0.004908967440886283,
+            -0.06841372135047447,
+            -0.3523015823634434,
+            0.021635423346320994,
+            -0.010984971127264926,
+            -0.009391605709839539,
+            -0.034046274642521156,
+            0.017651296431183777,
+            0.0034003237150138873,
+            -0.0037556698298260175,
+            -0.0031358986138833173,
+            0.007292936130791704,
+            0.9424690818042186,
+            -0.04011851735511833,
+            0.1844342227640515,
+            -0.009635637742258337,
+            4.2222218807478324e-05,
+            0.003016428851236165,
+            0.032590376166645854,
+            0.006381926857936961,
+            -0.004411395639658284,
+            0.003690252262474803,
+            0.012716884638607066,
+            0.3762413401768944,
+            -0.030759769614521357,
+            0.06225302081087979,
+            0.010150923788773478,
+            -0.009791899546466462,
+            -0.009413351344005106,
+            -0.0006427598126653583,
+            0.009924538105613261,
+            -0.005440662337336544,
+            -0.006200035270692666,
+            0.005943373117497117,
+            -0.22795047259221884,
+            -0.3749234713897923,
+            0.06424789227539907,
+            -0.009456207308878205,
+            -0.010394382865860504,
+            -0.044247070412834426,
+            0.024632274702297847,
+            -0.0036418017111356114,
+            0.009802808567069748,
+            -0.012553349590328087,
+            0.005486110130241039,
+            0.8355715437051976,
+            -0.06372938476184276,
+            0.18572053483230702,
+            0.012389690235028561,
+            0.008078008288140887,
+            0.02078084125799893,
+            0.01705713790442387,
+            0.008776179478231838,
+            -0.009039004144070443,
+            0.0003123805981990991,
+            -0.0033721895740803144,
+            0.64348332599245,
+            -0.06657454673484665,
+            0.12483510871892613,
+            0.0118336738102472,
+            0.008525203888818621,
+            -0.0017275695496203752,
+            0.026995898659397548,
+            0.0090831630948764,
+            -0.005995091552051316,
+            -0.0017592183426797877,
+            0.006680971200438444,
+            -0.36821640607658707,
+            -0.33566849106987545,
+            0.10293385559425154,
+            -0.012422617532754778,
+            0.004313470998576755,
+            -0.0034737182292333326,
+            0.03836695072396966,
+            0.0019250204178099777,
+            0.008493930690358397,
+            0.007026510711289142,
+            0.00043339931553148907,
+            0.6353881769562422,
+            -0.0745603330018228,
+            0.1465591319694985,
+            0.011292413380175323,
+            0.005991762527750748,
+            0.0059421652765032276,
+            0.004747034456602394,
+            0.00935379330991234,
+            -0.0030309079444066395,
+            -0.0022501360235617587,
+            0.004669899426756408,
+            0.8250217400842806,
+            -0.09413666404705293,
+            0.19403183313264522,
+            0.011684305909243946,
+            0.004776363225791877,
+            0.010776234286367039,
+            0.022474799239086626,
+            0.0029526422116657905,
+            -0.007388181612895939,
+            0.005076018222371046,
+            -0.000915835423009032,
+            -0.40209555940585523,
+            -0.3249679395570415,
+            0.11605194403815942,
+            -0.016584250054698903,
+            0.0001280639471491286,
+            0.014960839025440818,
+            0.03451342584045973,
+            -0.00017266140763891403,
+            0.008938489432321764,
+            0.006352905850849451,
+            -0.004502333303356048,
+            0.3791270203976747,
+            -0.04029051741696805,
+            0.10773988609886717,
+            0.002571686619379802,
+            0.008972667019916841,
+            0.0041559666194884975,
+            0.01247882241396888,
+            0.0011879693875987746,
+            -0.00948633350995842,
+            0.007564523511700512,
+            0.0024589941678074875,
+            0.9011514588824362,
+            -0.0831277779593427,
+            0.2942492298521485,
+            -0.007933534909050815,
+            -0.01248020121358993,
+            0.02417552660126994,
+            0.015984406690518083,
+            0.012997048057954623,
+            -0.008759899393205036,
+            -0.0027952153782818713,
+            -0.0030563188722241307,
+            -0.3207512074479121,
+            -0.2747206681114034,
+            0.08915293648790658,
+            -0.01268455044874547,
+            0.02941111830922797,
+            0.013539692964879032,
+            0.005777300891171249,
+            0.008657724775627266,
+            0.019705559154613986,
+            -0.0038186668029151632,
+            -0.003541097632913011,
+            0.12838754613889447,
+            -0.013265862039074688,
+            0.03355231899315331,
+            -0.012356300638215346,
+            0.013900985383251591,
+            0.011806258863559724,
+            0.007332820634938696,
+            0.011178150319107672,
+            0.008049507308374206,
+            -0.005462788556515668,
+            -0.007752986464547413,
+            0.8892426904799453,
+            -0.03480668501489448,
+            0.34081270611096165,
+            -0.007897880263541086,
+            0.01963092576851394,
+            0.008710956335314934,
+            -0.010259238631540034,
+            0.007212321419096596,
+            -0.02465096376052874,
+            0.006445622669658071,
+            -0.00103576475913923,
+            -0.12897769618400745,
+            -0.27317193736118084,
+            0.035020740922012274,
+            0.03988660985892388,
+            0.028052320366803475,
+            -0.01360227528633352,
+            -0.007157792704180252,
+            0.024943304929461937,
+            -0.0009738398165982619,
+            -0.003468505715377264,
+            0.005086000057878578
+          ]
+        },
+        "startup_pass": true,
+        "status": {
+          "error": "80 total coarse bundles consumed",
+          "reason": "budget"
+        }
+      },
+      {
+        "arm": "local",
+        "bundles_attempted": 80,
+        "bundles_completed": 80,
+        "derivative_checks": [
+          {
+            "analytic": -0.005476731089356828,
+            "direction": "sin",
+            "error": 9.266641273764087e-13,
+            "finite_difference": -0.005476731088430164,
+            "h": 1e-05,
+            "passed": true
+          },
+          {
+            "analytic": -0.005476731089356828,
+            "direction": "sin",
+            "error": 8.44084264289835e-12,
+            "finite_difference": -0.0054767310977976704,
+            "h": 5e-06,
+            "passed": true
+          },
+          {
+            "analytic": -0.018023961081650948,
+            "direction": "cos",
+            "error": 2.223244505161759e-11,
+            "finite_difference": -0.018023961059418503,
+            "h": 1e-05,
+            "passed": true
+          },
+          {
+            "analytic": -0.018023961081650948,
+            "direction": "cos",
+            "error": 2.400628307253072e-12,
+            "finite_difference": -0.018023961084051576,
+            "h": 5e-06,
+            "passed": true
+          }
+        ],
+        "fine": [
+          {
+            "arrays_sha256": "9edff6b19afff6c5637241d4c1daa7724c4f640778a6e3650f9a21bf7774e73f",
+            "metrics": {
+              "area_bn_rms": 0.2671561483390005,
+              "area_mean_abs_ratio": 0.14090508502566923,
+              "area_mean_b": 1.4605665385933306,
+              "coil_distance": 0.17046688098743368,
+              "current": 343881.7641281358,
+              "current_limit_met": true,
+              "flux_relative_error": 4.4174370575882185e-16,
+              "frozen_scale": 3.438817641281358,
+              "geometry_certified": false,
+              "independent_B_error": 6.061443138784436e-16,
+              "independent_B_pass": true,
+              "inner_vector_checked": false,
+              "kappa_max": [
+                12.393059752520013,
+                13.923869941914814,
+                12.652234940888626,
+                12.623932428223874,
+                12.688198120813485,
+                16.528389579956293
+              ],
+              "lengths": [
+                1.7523198290394209,
+                1.8600477765353796,
+                1.813222595781814,
+                1.865322476851457,
+                1.9206439553354242,
+                2.0512970301617868
+              ],
+              "local_flux": 0.10758209452905042,
+              "mean_area_jacobian": 6.101469291305195,
+              "measured_flux": -0.03141592653589794,
+              "min_b": 1.152732874985835,
+              "normal_limit_met": false,
+              "normal_max": 0.5276937321308162,
+              "normal_max_limit_met": false,
+              "normal_rms": 0.18778797579031342,
+              "normalized_global_flux": 0.016590724138194166,
+              "parameter_abs_bn_over_mean_b": 0.13698203669467354,
+              "parameter_mean_b": 1.4701116635412073,
+              "physical_admission": false,
+              "raw_quadratic_flux": 0.2177382765947119,
+              "sampled_geometry_limits_met": false,
+              "surface_distance": 0.08076952774919875,
+              "target_flux": -0.03141592653589793
+            },
+            "ncoil": 512,
+            "nloop": 512,
+            "nphi": 128,
+            "ntheta": 128,
+            "shift": 0
+          },
+          {
+            "arrays_sha256": "b2361a2ef50d790900d3ab435c5f306e095d1b01126a3cc4f740ea5e419b43e5",
+            "metrics": {
+              "area_bn_rms": 0.2671561482034059,
+              "area_mean_abs_ratio": 0.14092434784781002,
+              "area_mean_b": 1.4605665385823068,
+              "coil_distance": 0.17046688098743368,
+              "current": 343881.7641281358,
+              "current_limit_met": true,
+              "flux_relative_error": 4.4174370575882185e-16,
+              "frozen_scale": 3.438817641281358,
+              "geometry_certified": false,
+              "independent_B_error": 6.181726432135489e-16,
+              "independent_B_pass": true,
+              "inner_vector_checked": false,
+              "kappa_max": [
+                12.393059752520013,
+                13.923869941914814,
+                12.652234940888626,
+                12.623932428223874,
+                12.688198120813485,
+                16.528389579956293
+              ],
+              "lengths": [
+                1.7523198290394209,
+                1.8600477765353796,
+                1.813222595781814,
+                1.865322476851457,
+                1.9206439553354242,
+                2.0512970301617868
+              ],
+              "local_flux": 0.10758209450630582,
+              "mean_area_jacobian": 6.101469291305224,
+              "measured_flux": -0.03141592653589794,
+              "min_b": 1.1564418963006722,
+              "normal_limit_met": false,
+              "normal_max": 0.5285349843746252,
+              "normal_max_limit_met": false,
+              "normal_rms": 0.18778797577046225,
+              "normalized_global_flux": 0.01659072412220369,
+              "parameter_abs_bn_over_mean_b": 0.1369964495973718,
+              "parameter_mean_b": 1.4701116635368487,
+              "physical_admission": false,
+              "raw_quadratic_flux": 0.21773827637368767,
+              "sampled_geometry_limits_met": false,
+              "surface_distance": 0.08076952774919875,
+              "target_flux": -0.03141592653589793
+            },
+            "ncoil": 512,
+            "nloop": 512,
+            "nphi": 128,
+            "ntheta": 128,
+            "shift": 0.5
+          }
+        ],
+        "native_counts": {
+          "A": {
+            "attempted": 82,
+            "completed": 82
+          },
+          "A_vjp": {
+            "attempted": 0,
+            "completed": 0
+          },
+          "B": {
+            "attempted": 576,
+            "completed": 576
+          },
+          "B_vjp": {
+            "attempted": 80,
+            "completed": 80
+          },
+          "independent_B": {
+            "attempted": 2,
+            "completed": 2
+          }
+        },
+        "output_bytes_before_result": 3692653,
+        "physical_admission": false,
+        "seed_replay": {
+          "flux_normalized_raw": {
+            "actual": 0.039344660151591306,
+            "expected": 0.039344660151591306,
+            "passed": true
+          },
+          "normal_rms": {
+            "actual": 0.2760512774968315,
+            "expected": 0.2760512774968315,
+            "passed": true
+          },
+          "scale": {
+            "actual": 2.9496646632221735,
+            "expected": 2.9496646632221735,
+            "passed": true
+          },
+          "unit_flux": {
+            "actual": -0.01065067732193652,
+            "expected": -0.01065067732193652,
+            "passed": true
+          }
+        },
+        "selected": {
+          "deadline_met": true,
+          "gradient": [
+            0.002765960530702776,
+            0.0019412155571247233,
+            -0.00026288567695899713,
+            -0.0027061352605759754,
+            0.0069605033853973805,
+            0.004001646768953233,
+            -0.0017297587308107956,
+            -7.229786918109269e-06,
+            0.005726276655862755,
+            0.00014957366958753273,
+            6.961395885343074e-05,
+            -0.0016000082480285296,
+            0.014185418537412167,
+            0.011525598386429756,
+            -0.013257641739753261,
+            -0.002337667141098081,
+            0.007469506627468845,
+            0.006478765008174575,
+            -0.0037521272159660255,
+            8.650695893378316e-06,
+            0.00032900248970204335,
+            6.38677301022083e-05,
+            -0.0003171225799288881,
+            -0.0035407548178530072,
+            -0.0023340095710696757,
+            6.173214032630147e-05,
+            9.545169930812668e-05,
+            -6.30061539875522e-05,
+            0.0009084168906084752,
+            0.0001768002951422845,
+            -0.0004055640337683349,
+            0.00036092944513143634,
+            -0.00027002875104533336,
+            -0.003384844213443209,
+            0.00023288734421621134,
+            -0.009623677070775095,
+            -0.00015812866529554348,
+            0.007492186354625649,
+            0.000766906826919169,
+            4.320771636718082e-05,
+            0.00012443469857029415,
+            0.001319940987624054,
+            0.0003820475547327085,
+            -0.005413062229908228,
+            -0.003435986872327701,
+            0.021780100916932263,
+            0.029940622253698437,
+            -0.010748213726051517,
+            -0.0010872093016928905,
+            0.025650077383770176,
+            0.014290167215515579,
+            -0.013101435401369987,
+            0.0014057867741620877,
+            -0.00021548224662622587,
+            -0.00018197349228572107,
+            4.181836403254406e-05,
+            -0.0025875891316538774,
+            -0.007139387073770145,
+            0.0054642409050639495,
+            0.0022468649482797307,
+            -0.0035522177278757712,
+            0.005181355442330934,
+            -0.002829399851691745,
+            -0.0027008565873163737,
+            4.8152541117508314e-05,
+            0.00013593748403650492,
+            -0.014010711117697406,
+            -0.002751990435695482,
+            -0.0051100163763293975,
+            -0.006904495682756585,
+            -0.0037729824498069844,
+            -0.002447868991975243,
+            -0.00034979120524343673,
+            -0.0008449045997779632,
+            0.0033880095168256083,
+            -9.330328217483177e-05,
+            0.0006668888369717333,
+            -0.008048694920665475,
+            0.014953922576834063,
+            0.014645361750787927,
+            -0.010409785841187352,
+            -0.004582728807933389,
+            0.013459190590046067,
+            -0.0012509802177347105,
+            -0.003957181469770123,
+            0.00081242136214686,
+            0.0011748262976784265,
+            -0.0008545102799372428,
+            0.013952099779703367,
+            -0.0013086626920918412,
+            -0.007293983371249594,
+            0.007873145406551008,
+            -0.0005782672372902602,
+            -0.0025678917975152918,
+            0.001228611792215686,
+            -0.0003234958920967394,
+            -0.00700810173321528,
+            4.430671098778734e-05,
+            0.003773099012961283,
+            -0.0037371051450680232,
+            0.005626003716800457,
+            0.0024546198971233924,
+            -0.006483029854317635,
+            -0.011266616900428046,
+            0.006494516679540207,
+            -0.0001574054800800727,
+            -0.008644559089387788,
+            3.9291682787738594e-05,
+            0.0002201058892536546,
+            -0.00048698726925546854,
+            -0.02329470879168379,
+            0.002854450748606069,
+            -5.2430239237450445e-05,
+            -0.02393462394609951,
+            -0.00012566725640256507,
+            0.003253301515819913,
+            -0.0002167378109136335,
+            -4.295395115264068e-05,
+            0.009767780167610231,
+            0.0001663077417860192,
+            -0.00020543798392958027,
+            0.02458824651400152,
+            0.0018109572185204897,
+            -0.0049371857216245225,
+            0.012528532215422643,
+            -0.0014403640017280012,
+            -0.0034233315341957796,
+            0.0018198745978348133,
+            -9.351158901506774e-05,
+            -0.01147884796479956,
+            -0.0001545375663289084,
+            0.004289105663620807,
+            0.014893626271638816,
+            0.04909030558590345,
+            0.023918910217679556,
+            -0.006051634594773902,
+            -0.008105469775632274,
+            0.010418661965953285,
+            -0.023901559898536987,
+            7.773941541549796e-05,
+            0.00023214305982791923,
+            -0.01666847686181002,
+            0.0007974102867195944,
+            -0.016510063767478076,
+            -0.0021852150304284977,
+            -0.01721383424633675,
+            -0.017313344082982834,
+            0.013235248286553696,
+            -9.334868225496567e-05,
+            -0.007541586621279595,
+            -0.00021104140109730617,
+            0.005892354941806314,
+            0.00031038487421260457,
+            0.00018140072692539007,
+            0.02953614006881303,
+            -0.017195235422958248,
+            -0.01919904092936354,
+            0.01664889527157979,
+            -0.006481426641431904,
+            0.002305711036699663,
+            0.018903943969189114,
+            -0.011920062494455354,
+            -0.010922818814919851,
+            0.006546130211114922,
+            -0.0009774463660555469,
+            0.008951531685561552,
+            0.0698859435463868,
+            0.012995052704626104,
+            0.01091722804242843,
+            -0.003353346481532184,
+            -0.01113137009639041,
+            -0.003843677840037787,
+            -0.013969609266824702,
+            -0.02037776206847987,
+            -3.879458014985522e-05,
+            0.004168667745862784,
+            0.019929433804223455,
+            0.0031528369407552233,
+            -0.03391500694460114,
+            -0.0027211691370544605,
+            0.013700078537129895,
+            -5.3170390777866616e-05,
+            -0.022689606542455387,
+            0.0002612248168865792,
+            -9.788144198608073e-05,
+            -0.00015750647545262775,
+            -9.569010402890165e-05,
+            0.01040421635405501,
+            -0.04184303327850686,
+            -0.006109323772182118,
+            -0.006931895756387575,
+            -0.015039515098328229,
+            0.03926073761580692,
+            0.019227596934060082,
+            -0.0043670562475955025,
+            0.01633504757206362,
+            0.00017865060052130524,
+            -0.004387822902765105
+          ],
+          "index": 79,
+          "metrics": {
+            "area_bn_rms": 0.26715467703410023,
+            "area_mean_abs_ratio": 0.14095341461227393,
+            "area_mean_b": 1.4605662631269702,
+            "coil_distance": 0.17048307716488326,
+            "current": 343881.7641281358,
+            "current_limit_met": true,
+            "flux_normalized_raw": 0.021901426222262252,
+            "flux_objective": 0.01763219040858414,
+            "geometry_certified": false,
+            "geometry_penalty": 0.0002537608844667603,
+            "kappa_max": [
+              12.393059752520013,
+              13.923869941914814,
+              12.623045410189109,
+              12.623932428223874,
+              12.688198120813485,
+              16.528389579956293
+            ],
+            "lengths": [
+              1.7523198290394206,
+              1.8600477765353798,
+              1.8132225957818142,
+              1.8653224768514571,
+              1.9206439553354242,
+              2.0512970301617868
+            ],
+            "local_flux": 0.10758226838023185,
+            "mean_area_jacobian": 6.101469294924129,
+            "min_b": 1.1597759744302518,
+            "normal_max": 0.5276937321308162,
+            "normal_rms": 0.18778812746595103,
+            "normalized_global_flux": 0.016590561518522184,
+            "parameter_abs_bn_over_mean_b": 0.13699657863941733,
+            "parameter_mean_b": 1.470111458558256,
+            "raw_quadratic_flux": 0.21773587843721287,
+            "sampled_geometry_limits_met": false,
+            "scale": 3.438817641281358,
+            "surface_distance": 0.08076952774919875,
+            "unit_flux": -0.009135676797386631
+          },
+          "native_after": {
+            "A": {
+              "attempted": 80,
+              "completed": 80
+            },
+            "A_vjp": {
+              "attempted": 0,
+              "completed": 0
+            },
+            "B": {
+              "attempted": 320,
+              "completed": 320
+            },
+            "B_vjp": {
+              "attempted": 80,
+              "completed": 80
+            },
+            "independent_B": {
+              "attempted": 0,
+              "completed": 0
+            }
+          },
+          "native_before": {
+            "A": {
+              "attempted": 79,
+              "completed": 79
+            },
+            "A_vjp": {
+              "attempted": 0,
+              "completed": 0
+            },
+            "B": {
+              "attempted": 316,
+              "completed": 316
+            },
+            "B_vjp": {
+              "attempted": 79,
+              "completed": 79
+            },
+            "independent_B": {
+              "attempted": 0,
+              "completed": 0
+            }
+          },
+          "role": "search",
+          "status": "completed",
+          "value": 0.0178859512930509,
+          "x": [
+            0.9508191138350243,
+            -0.021535880686618818,
+            0.18349532474808533,
+            0.009396810607331245,
+            -0.01467407719225745,
+            -0.009895251405132387,
+            0.0310966718376482,
+            0.0027183437022531482,
+            -0.007662961403871274,
+            -0.004401257163146119,
+            0.008771753778919162,
+            0.13649423606608935,
+            -0.01151872750426357,
+            0.012841092822821762,
+            0.009920588609936934,
+            0.009384646063723025,
+            -0.009986209585866908,
+            -0.007222570461791939,
+            0.010039705695031534,
+            -0.00447505758016666,
+            -0.004510741415454295,
+            -0.003373673746420654,
+            -0.06841372135047447,
+            -0.3523015823634434,
+            0.021635423346320994,
+            -0.011238856591544008,
+            -4.6927673366153696e-05,
+            -0.047913572004474006,
+            -0.002348703568816223,
+            0.0033976468469714724,
+            0.0030878815854467386,
+            -0.009543608061256611,
+            -0.0016541427457117388,
+            0.9424690818042186,
+            -0.04276696611086003,
+            0.1844342227640515,
+            0.010364362257741663,
+            -0.009497601062743341,
+            -0.008583704858349176,
+            0.029813209227175938,
+            0.00623307728287423,
+            -0.01025119946862833,
+            0.008149951237224184,
+            0.012716884638607066,
+            0.39624134017689444,
+            -0.030759769614521357,
+            0.06225302081087979,
+            0.010150923788773478,
+            0.010208100453533538,
+            -0.009413351344005106,
+            -0.0006427598126653583,
+            0.009924538105613261,
+            -0.010104050226766768,
+            -0.005686528065710821,
+            0.010195058298305425,
+            -0.24795047259221886,
+            -0.3549234713897923,
+            0.06424789227539907,
+            -0.009456207308878205,
+            -0.010394382865860504,
+            -0.024254096104190354,
+            0.024632274702297847,
+            0.010271896345560898,
+            0.009802808567069748,
+            -0.010651642911717007,
+            0.010043147176237457,
+            0.8355715437051976,
+            -0.06372938476184276,
+            0.18572053483230702,
+            0.012389690235028561,
+            0.008078008288140887,
+            0.02078084125799893,
+            0.020363899294712693,
+            0.008207003644681306,
+            -0.009039004144070443,
+            0.0007250225739910274,
+            -0.003153212317256625,
+            0.64348332599245,
+            -0.06657454673484665,
+            0.12483510871892613,
+            0.0118336738102472,
+            0.008525203888818621,
+            -0.0017275695496203752,
+            0.026995898659397548,
+            0.0090831630948764,
+            -0.005604488661807861,
+            -0.002116299267821683,
+            0.006244744096538726,
+            -0.36821640607658707,
+            -0.33566849106987545,
+            0.10293385559425154,
+            -0.012422617532754778,
+            0.006987861380716794,
+            -0.0034737182292333326,
+            0.03836695072396966,
+            0.001791044482829459,
+            0.008493930690358397,
+            0.007925026102413628,
+            0.00043339931553148907,
+            0.6353881769562422,
+            -0.0745603330018228,
+            0.1465591319694985,
+            0.011292413380175323,
+            0.005991762527750748,
+            0.0059421652765032276,
+            0.024262540311546264,
+            0.00935379330991234,
+            0.0033562561510342864,
+            0.002788409794190802,
+            0.0015067664584926038,
+            0.8250217400842806,
+            -0.09413666404705293,
+            0.20040910463426534,
+            0.011684305909243946,
+            0.004776363225791877,
+            0.010776234286367039,
+            0.016693218466972495,
+            0.0039594918165357,
+            -0.007388181612895939,
+            -0.0004302180415601176,
+            -0.0068802522567994245,
+            -0.40209555940585523,
+            -0.3249679395570415,
+            0.11605194403815942,
+            -0.016584250054698903,
+            0.007876978864643528,
+            0.014960839025440818,
+            0.03451342584045973,
+            0.001182168542246948,
+            0.008938489432321764,
+            0.012886752053976717,
+            -0.004502333303356048,
+            0.3591270203976747,
+            -0.04029051741696805,
+            0.10773988609886717,
+            0.002571686619379802,
+            0.008972667019916841,
+            0.0041559666194884975,
+            0.01247882241396888,
+            0.00152230089265458,
+            -0.0015409577213097861,
+            0.007564523511700512,
+            -0.004338443100036785,
+            0.9011514588824362,
+            -0.06312777795934271,
+            0.2942492298521485,
+            -0.007933534909050815,
+            -0.01248020121358993,
+            0.03295062035499722,
+            0.015984406690518083,
+            0.008760943236568688,
+            -0.008759899393205036,
+            0.0028526381462739185,
+            -0.005663882662818672,
+            -0.3207512074479121,
+            -0.2747206681114034,
+            0.08915293648790658,
+            -0.01268455044874547,
+            0.02941111830922797,
+            0.0041269688650884,
+            0.005777300891171249,
+            0.008657724775627266,
+            0.019705559154613986,
+            -0.0038186668029151632,
+            0.003635793237121431,
+            0.10838754613889448,
+            -0.013265862039074688,
+            0.03355231899315331,
+            -0.012356300638215346,
+            0.013900985383251591,
+            0.011806258863559724,
+            0.007332820634938696,
+            0.011178150319107672,
+            0.008049507308374206,
+            -0.008351140815697284,
+            -0.009058788807545556,
+            0.8892426904799453,
+            -0.03480668501489448,
+            0.34081270611096165,
+            -0.007897880263541086,
+            0.01963092576851394,
+            0.01301053237304693,
+            -0.010259238631540034,
+            0.007425088714803644,
+            -0.023587141777152213,
+            0.0067293980880608895,
+            -0.0012501461622395026,
+            -0.12897769618400745,
+            -0.27317193736118084,
+            0.035020740922012274,
+            0.03988660985892388,
+            0.028052320366803475,
+            -0.01360227528633352,
+            -0.007157792704180252,
+            0.024943304929461937,
+            -0.0009738398165982619,
+            -0.00671120129987428,
+            0.006701176193089395
+          ]
+        },
+        "startup_pass": true,
+        "status": {
+          "error": "80 total coarse bundles consumed",
+          "reason": "budget"
+        }
+      }
+    ],
+    "elapsed_seconds": 37.224470833083615,
+    "kind": "exploratory-normalized-coils",
+    "limits": {
+      "arm_search_seconds": 300,
+      "output_bytes": 268435456,
+      "overall_seconds": 900,
+      "startup_bundles": 10,
+      "total_coarse_bundles_per_arm": 80
+    },
+    "overall_deadline_met": true,
+    "physical_admission": false,
+    "repository": {
+      "available": true,
+      "branch": "main",
+      "commit": "5b744f22a96f1c9da9c62a9f1c80ef3613bc3749",
+      "dirty": false,
+      "path": "/Users/sebastianwirkert/workspace/fusion"
+    },
+    "simsopt": {
+      "available": true,
+      "branch": "auglag_coils",
+      "commit": "a79006b0bc1e6df8ab48de284e3457d39a49b995",
+      "dirty": false,
+      "path": "/Users/sebastianwirkert/workspace/fusion/external/simsopt"
+    },
+    "source_fingerprints_after": {
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lbfgsb.cpython-312-darwin.so": "24a8a24d2fa62c723161f800a86662f15300acbf35b16b3d3749047896b552f9",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lbfgsb_py.py": "61b69554f33a210284d4ae3de7da282152f9302b428eeb16984498b54e381d57",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/derivative.py": "a49392e34ff916cba3c3240e989480657d7e2bfeea2875bbd9118d3e5bac8bf5",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/optimizable.py": "1fcb1fa4bcca768a65bd172c2dc3655a5d7caebdbdc29212343eb6bca71784c4",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/util.py": "c70ec5f79716f4ea36d67b6f7d195e1f79cfa5129bd4b752f18f106aba644758",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/biotsavart.py": "538a68bec673966b92a2af1c97d2604288812df0a7e0b02f7b98f3fcc8a19364",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/coil.py": "36b93c2aae050dfcfd84099697d0215e8993edb0f2796b0547cb43d0120fe356",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curveobjectives.py": "f6395ccb7977b84b6fe8cf5df96ff6d7debe7fdbf9190b4cd7441a4bcdcae51d",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curvexyzfourier.py": "c3c9e0cdcc6420b408dd39dcd815fc8860a4c78dd3302491fa24cc6fdacdc10c",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/surfacerzfourier.py": "52a3b16e991d808cd3c0ab42904f7cdf9b5eae043d620ed224dffd0cde903ec3",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/objectives/fluxobjective.py": "455afdc715ea1ef891af52c972bfcae6b16fd6553973dc464010f52e04e26b42",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsoptpp.cpython-312-darwin.so": "af5823c4e5ec68490a8f7b4678a90266b054b87e18b52726cc34a6d61b6a22cc",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00-snapshot.json": "4c29c1f7afb67f290bd3c7c2ec23829e5f386e7e8c299f8d40a0e0f4e2f03830",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00.json": "264f345594ed2effa987f836e3e3167623db233024bf454da917b0c129dcde8f",
+      "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+      "/Users/sebastianwirkert/workspace/fusion/scripts/explore_normalized_coils.py": "9303dcbce1d1add0b4753db4ae087b384651ac0e2b7efa22447e3def17187781",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coil_audit.py": "0f713e3a6c60a94bf98f6c1ca28936fb2ac358161b96c62fd5186d59fd0f4b3f",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coils.py": "2298bb67c8d9db55700ca4d617e924db714387b046a1ebe7f81445e11d88e6a6",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe"
+    },
+    "source_fingerprints_before": {
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lbfgsb.cpython-312-darwin.so": "24a8a24d2fa62c723161f800a86662f15300acbf35b16b3d3749047896b552f9",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lbfgsb_py.py": "61b69554f33a210284d4ae3de7da282152f9302b428eeb16984498b54e381d57",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/derivative.py": "a49392e34ff916cba3c3240e989480657d7e2bfeea2875bbd9118d3e5bac8bf5",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/optimizable.py": "1fcb1fa4bcca768a65bd172c2dc3655a5d7caebdbdc29212343eb6bca71784c4",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/util.py": "c70ec5f79716f4ea36d67b6f7d195e1f79cfa5129bd4b752f18f106aba644758",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/biotsavart.py": "538a68bec673966b92a2af1c97d2604288812df0a7e0b02f7b98f3fcc8a19364",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/coil.py": "36b93c2aae050dfcfd84099697d0215e8993edb0f2796b0547cb43d0120fe356",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curveobjectives.py": "f6395ccb7977b84b6fe8cf5df96ff6d7debe7fdbf9190b4cd7441a4bcdcae51d",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curvexyzfourier.py": "c3c9e0cdcc6420b408dd39dcd815fc8860a4c78dd3302491fa24cc6fdacdc10c",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/surfacerzfourier.py": "52a3b16e991d808cd3c0ab42904f7cdf9b5eae043d620ed224dffd0cde903ec3",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/objectives/fluxobjective.py": "455afdc715ea1ef891af52c972bfcae6b16fd6553973dc464010f52e04e26b42",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsoptpp.cpython-312-darwin.so": "af5823c4e5ec68490a8f7b4678a90266b054b87e18b52726cc34a6d61b6a22cc",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00-snapshot.json": "4c29c1f7afb67f290bd3c7c2ec23829e5f386e7e8c299f8d40a0e0f4e2f03830",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00.json": "264f345594ed2effa987f836e3e3167623db233024bf454da917b0c129dcde8f",
+      "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+      "/Users/sebastianwirkert/workspace/fusion/scripts/explore_normalized_coils.py": "9303dcbce1d1add0b4753db4ae087b384651ac0e2b7efa22447e3def17187781",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coil_audit.py": "0f713e3a6c60a94bf98f6c1ca28936fb2ac358161b96c62fd5186d59fd0f4b3f",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coils.py": "2298bb67c8d9db55700ca4d617e924db714387b046a1ebe7f81445e11d88e6a6",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe"
+    },
+    "source_hashes": {
+      "artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00-snapshot.json": "4c29c1f7afb67f290bd3c7c2ec23829e5f386e7e8c299f8d40a0e0f4e2f03830",
+      "artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00.json": "264f345594ed2effa987f836e3e3167623db233024bf454da917b0c129dcde8f",
+      "evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f"
+    },
+    "sources_unchanged": true,
+    "step4_pass": false
+  }
+}

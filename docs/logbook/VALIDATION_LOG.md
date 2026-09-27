@@ -4,14 +4,13 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Normalized-objective experiment: adapter repair
+## Normalized-objective experiment: completed exploratory comparison
 
-The isolated raw/local comparison now has a fixed exploratory question, original
-seed replay anchors, equal bundle ceilings and separately screened endpoints.
-No existing evaluator or acceptance limit changes. The first execution at clean
-`e916c8d` exits nonzero after 23.22 s: raw-objective derivative checks stop search.
-The local arm's stale flux normalization invalidates the intended comparison.
-The failed outputs remain bound by their manifest; no design benefit is claimed.
+The corrected raw/local comparison at clean `5b744f2` completes 160 coarse
+bundles and four fine screens in 37.224 s (38.027 s supervised). Both hit their
+80-bundle caps. Source fingerprints remain unchanged; about 7.49 MB is retained.
+Lower local-normalized RMS comes with higher current; both selected designs
+violate geometric and field limits. No accepted design or gate change follows.
 
 Checks actually performed in the existing `.venv`:
 
@@ -21,54 +20,35 @@ Checks actually performed in the existing `.venv`:
 - **101 reused-component tests pass** (5.90 s): coupled fields, independent coil
   reconstruction, sparse geometry and boundary metrics.
   `artifacts/normalized-coils-v1/reused-components.xml`.
-- **47 public tests pass** (3.259 s). Scoped Ruff, documentation structure and
+- **47 public tests pass** (3.546 s). Scoped Ruff, documentation structure and
   whitespace checks pass. Full native regression was not rerun.
-- A separate read-only review confirmed the raw current-elimination derivative,
-  local-RMS normalization and fine-grid cache/current handling. Its resource and
-  failure-reporting findings are addressed in the implementation and tests.
-- Actual startup exposed a missing interaction test: separately created wrapper
-  classes gave boundary/loop fields the same native identity and suppressed loop
-  invalidation. Separate source inspection confirms the cause. A two-field
-  native-circle regression fails before the shared-class repair and passes after;
-  derivative tolerances remain unchanged. A fresh complete retry is pending.
+- Independent audit verifies 22 loaded sources, nine project/question Git
+  identities, nine native Python files against pinned Git, all 160 trial pairs,
+  both selected minima and all eight real directional derivative checks.
+- Separate `math.fsum` reconstruction reproduces **48 fine metrics**; **256**
+  saved independent/native field comparisons pass. All twelve independently
+  reconstructed curvature maxima agree; explicit witnesses prove both curvature
+  failures. Independent geometry also confirms the raw plasma-gap failure.
+- Reported flux closure is checked arithmetically, not independently re-integrated:
+  loop-A arrays were not saved in this small comparison. Both arms now have 78
+  distinct unit-flux values, resolving the old cache symptom.
+- The first attempt at `e916c8d` remains an invalid comparison: its instrumented
+  fields collided in the dependency graph. The failed prefix, shared-class fix,
+  synthetic counterexample and unchanged thresholds are in the result record.
 
 The [experiment record](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
-specifies actual budgets, source fingerprints and limits. Passing software
-checks is not a successful design search.
+specifies actual budgets, source fingerprints and limits. The
+[evidence manifest](../../evidence/normalized-coils-exploration-v2.json) binds the
+complete run and retained invalid first attempt. Sampled geometry and numerical
+agreement do not establish continuous acceptance or Step 4 completion.
 
 ## Completed matched boundary calibration
 
-Added a small exploratory metric crosswalk and fixed QUASR/LPQA comparison,
-without modifying existing evaluators or gates. The first attempt failed before
-fields on legacy generic surface labels. Physical tensor-slot mapping and a
-regression test resolve that adapter mismatch; the failed prefix remains.
-
-The retry completes all 13 fixed rows in 2.657 s (2.946 s supervised), below its
-180/185 s ceilings. About 4.88 MB is retained. Native fields run in 128-point
-blocks with one thread. Exact source hashes bind the uncommitted implementation
-atop `9270692`; this is exploratory, not a clean-commit confirmatory result.
-
-Checks supporting that completed component result:
-
-- **42 metric/representation tests pass** (1.50 s), including independently
-  formulated sums, current/area scaling, named coils and legacy tensor labels.
-- All **13** independent sampled-field comparisons pass, largest normalized
-  discrepancy **8.742e-16**. All **39** native scalar-integrator comparisons pass.
-- Read-only independent replay verifies 17 source and 13 array identities,
-  13 complete rows, **156** independently summed scalar metrics and **832** saved
-  field-point comparisons. LPQA's archived mean/max reproduce to about 1e-18.
-- Independent direct tensor-series reconstruction from all 661 QUASR source
-  coefficients reproduces four saved position/normal grids without SIMSOPT;
-  normalized normal-vector error is at most 3.769e-15.
-- **47 public tests pass** (3.385 s). Scoped Ruff, documentation structure and
-  whitespace checks pass. No full native regression was run for these isolated
-  exploratory additions.
-
-The [result page](../optimization/REFERENCE_CALIBRATION.md) explains collocation,
-refinement and mean/RMS differences; the
-[evidence record](../../evidence/boundary-control-calibration-v1.json) binds all
-rows and both attempts. QUASR is a boundary-component positive only. Neither
-case establishes complete Goodman acceptance or Step 4 completion.
+The [result page](../optimization/REFERENCE_CALIBRATION.md) retains the 13-row
+study, all 156 independently reproduced metrics, 832 sampled field comparisons
+and direct QUASR tensor-surface reconstruction. QUASR is a boundary-component
+positive only; LPQA reproduces archived mean/max under the tested convention.
+This does not establish a complete Goodman positive or Step 4 acceptance.
 
 ## Other scoped checks
 
