@@ -16,8 +16,7 @@ references. One plasma-target study improved its preregistered metric
 (bounce-action variance, a particle-motion diagnostic) by **11.17%**.
 An exploratory geometry-checked coil fit reaches normal-field error **0.1517
 versus a 1e-4 pilot limit**, at higher current. Lower-error candidates have
-unresolved clearance. Matched references reproduce archived scores and low refined
-boundary error on QUASR. Next: independent base currents. Full target/geometry
+unresolved clearance. Next: normalized-error current fitting. Full target/geometry
 calibration remains open.
 [Scientific evidence](docs/STATUS.md).
 No new accepted coil design or state-of-the-art advance yet. We are independent of, and not
@@ -117,6 +116,9 @@ The same reference coils score about **0.27 in the full research check** and
 0.01 inner-vector RMS**, apply to the different full-grid, flux-normalized workflow.
 The sparse scores are feedback, not that acceptance test.
 [Score interpretation](docs/validation/PUBLIC_QUICKSTART.md#what-the-report-means).
+
+[Try a lower-score example](submissions/constraint-aware-shape52/README.md);
+its current differences and research checks are documented.
 
 This example changes `coil[0]/xc(0)` from about 0.960819 m by +0.1 mm.
 It demonstrates editing, not a known improvement:

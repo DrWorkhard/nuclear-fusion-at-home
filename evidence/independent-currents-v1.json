@@ -1,0 +1,1574 @@
+{
+  "execution": {
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/Users/sebastianwirkert/workspace/fusion/scripts/explore_independent_currents.py",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run"
+    ],
+    "elapsed_s": 7.150654415949248,
+    "launcher_sha256": "e0abb5985d87aecbbcc1a592c437bc92611dbe16fc46671ef3d72bf3fcd9bf01",
+    "question_sha256": "09cb8f7cd4addf7bcde50b23643016974213609f8bf101657f4591a4ad832e21",
+    "question_text": "# Fixed-geometry, independent-current exploration\n\n27 September 2026. **Exploratory current-family diagnostic, not confirmation.**\n[Programme](STEP4_RESEARCH_PROGRAMME.md) \u00b7 [Static starts](COIL_START_SCREEN.md)\n\n## Question and fixed inputs\n\nDoes releasing the six base-coil currents improve the field without changing\ngeometry? Previous Goodman searches use equal base currents with a shared scale.\nFive relative-current directions are therefore untested for these shapes. The\nolder LPQA current study used another target and already independently optimized\ncurrents; its small gain does not answer this question.\n\nUse the **original** `n6-circle-d100mm` and `n6-shape-d100mm` starts from the\nstatic-screen result, SHA-256\n`6ef5c6c9824847e2eba6fbacc96c5abca3268032ff7760451f5b4d732132a89d`.\nDo not substitute newly optimized shapes. Preserve all 198 named coefficients\nand 24 physical-copy matrices exactly; their existing geometric bounds apply\nonly through that identity. Use the same reference surface, oriented target\nloop flux \u22120.03141592653589793 Wb and fixed target B\u00b2=1.6293829620247962 T\u00b2.\nThe positive equilibrium `phiedge` is not the oriented loop target.\nThis is exploration session 4 of the ten-session window.\n\n## Method and interpretation\n\nBuild six coarse response columns B\u2c7c, A\u2c7c, each from 100 kA in one base group\nand its four correctly signed symmetry copies. Let q\u2c7c=I\u2c7c/(100 kA), area weights\nsum to one, and n\u0302 be the unit boundary normal. Solve the convex problem\n\n```\nminimize  0.5 ||M q||\u00b2\nsubject to  \u03c6\u1d40q = target_flux,  -5 \u2264 q\u2c7c \u2264 5\nM[p,j] = sqrt(weight[p]) * (n\u0302[p] \u00b7 B\u2c7c[p]) / sqrt(target_B\u00b2)\n\u03c6[j] = mean(A\u2c7c \u00b7 loop_tangent)\n```\n\nThis releases relative currents, including **base-current reversals**, within\nthe existing absolute 500 kA limit. Physical copy current remains\n`(-1 if flip else +1) * I[base_index]`. Use a separate explicit-current record;\nthe old magnetic snapshot schema assumes a shared scale and cannot represent it.\nGeometry is unchanged; forces, loads, winding supply complexity and power are\nnot established by a current fit.\n\nUse SLSQP with analytic quadratic gradient/equality and at most 200 iterations.\nIndependently check primal feasibility, stationarity with equality/bound\nmultipliers, dual signs, complementarity and objective reconstruction. No silent\nregularization, singular-value truncation or favorable solver-flag inference.\nReport all five flux-nullspace singular values, rank/conditioning, active bounds\nand flux cancellation. Ambiguous numerical certification remains unresolved.\nRaw-flux improvement may worsen local-normalized RMS/max; report both.\n\nNumerical tolerances: equality/box 1e-10; scaled stationarity 1e-8, dual signs\n1e-10, complementarity 1e-9, supporting-plane objective gap divided by\n`max(1, |objective|)` \u22641e-8;\nactive-bound identification 1e-8. SLSQP uses `ftol=1e-14`. If its point does not\ncertify, permit one nonsingular active-set linear KKT polish, fixing only its\nidentified bounds. Reject a singular system, changed active set or failed\nrecertification; retain both raw and polished points. No regularization or\nsingular-mode truncation. A synthetic near-optimum exposed the stricter gap test;\nthe tolerance stays unchanged. These are **numerical KKT/supporting-plane checks**\nwith finite primal tolerance, not an exact or interval-arithmetic optimum proof.\n\n## Controls, checks and bounds\n\nFit at 64\u00b2 boundary / 256 coil and loop nodes. Replay the exact equal-current\nstatic control and one prechosen unequal mixture,\n`q = static_scale * [0.8, 0.9, 1.0, 1.1, 1.2, 1.05]`, with plain native fields\nand independent B/A samples. The unequal mixture tests linearity; it need not\nmatch the target flux. Replay the fitted point independently as well. Keep full\nbasis arrays and current/loop identities.\n\nFreeze each control's and proposal's **six currents** before fine evaluation:\n128\u00b2 boundary / 512 coil and loop nodes, unshifted and half-cell shifted.\nStore full B/normals and loop A/tangents, all 6/24 currents and 64 independent\nB/A comparison points per screen. No per-column normalization, post-fit common\nrescaling, LPQA fixed-current sum or fitted-field normalization denominator.\nCurrent/flux and field screens keep their original values: 500 kA, 1e-6 relative\nflux, 1e-4 normal RMS and 1e-3 normal maximum. No interior/physical admission.\n\nTwo fits total; per shape, six basis evaluations, control/unequal/fit replays and\nfour fine screens. **180 s worker / 185 s external process-group cap**, serial\none-thread execution, 128-point field blocks, 64 MiB outputs, 3 GiB initial /\n2 GiB live disk reserve. Bind all actual sources and retain failed prefixes.\nFresh output family: `artifacts/independent-currents-v1/`.\n\n## Decision\n\nIf raw and normalized metrics improve with stable flux and acceptable current,\nrelative currents warrant a later combined shape/current study. Otherwise retain\nthe trade-off and favor another family/initialization. A convex optimum applies\nonly to these fixed geometry columns and the raw objective, not to stellarator\ndesign globally. No Step 4 completion or Proxima advantage follows.\n\nImplementation and independent review pass all twenty synthetic tests (0.44 s\nmain / 0.43 s reviewer). Slow/partial writes, late final publication and a late\nbasis save are rejected; failed diagnostic bytes remain. Scoped Ruff and\ndocumentation checks pass. No real-input current fit has run yet.\n",
+    "returncode": 0,
+    "timed_out": false,
+    "timeout_s": 185
+  },
+  "exploratory": true,
+  "files": [
+    {
+      "bytes": 6206,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/execution.json",
+      "sha256": "337bc24a49c5c6bf627325bf44ef061e8c040a30598bdab68e4b766ad1ffefe1"
+    },
+    {
+      "bytes": 3159,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/implementation-tests-v2.xml",
+      "sha256": "fbf92c95c61c03384e014acac3a8b53e8831f9b7f1fcf3bffe83bf42f0643b42"
+    },
+    {
+      "bytes": 2281,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/implementation-tests.xml",
+      "sha256": "0a36adb4ef21d1349be67e7a30f0fa3a4e3acb1e3a7bed15538d58043cbe4186"
+    },
+    {
+      "bytes": 1848,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/launch.py",
+      "sha256": "e0abb5985d87aecbbcc1a592c437bc92611dbe16fc46671ef3d72bf3fcd9bf01"
+    },
+    {
+      "bytes": 5728,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/inputs.json",
+      "sha256": "5db30c48240934734729c2696807463368a28d8c19b6c76674de139b18942181"
+    },
+    {
+      "bytes": 76,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-attempt.json",
+      "sha256": "05637530a6363e1eb2d00fee6362edec5c542a108a7b54c75ebe77c17c773f61"
+    },
+    {
+      "bytes": 1116825,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-basis.npz",
+      "sha256": "a41fdcc029b2ed7169cfb7e42514202316004ce0c73581a70cb72e1db1be7676"
+    },
+    {
+      "bytes": 206,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-control-attempt.json",
+      "sha256": "52a7c995d7ae8d621dfb02fc61ccd5d2da1968a91b9123f57ffa06224471dea5"
+    },
+    {
+      "bytes": 1863,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-control.json",
+      "sha256": "b41a1b65ec510de09b053784360527c01b9885fee24fb4c12bcb7354192ce48a"
+    },
+    {
+      "bytes": 426658,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-control.npz",
+      "sha256": "a5c867f21356818e4789233bf9ca5a8ffbc6f0ca869513d40c1fd20f634c546a"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-fit-attempt.json",
+      "sha256": "be7303e10f078c24b312bec2234921212b496394ce2b04ae7b9b6558479db022"
+    },
+    {
+      "bytes": 1823,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-fit.json",
+      "sha256": "4ede675dc4b936945a85d5bf64d78bfef765971011d60c1fae52017e6c5d0786"
+    },
+    {
+      "bytes": 427534,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-fit.npz",
+      "sha256": "4557e402c0e281f9e054d745e0327315c8b97d8c15a74cec0a1bb9a9923cb3fd"
+    },
+    {
+      "bytes": 221,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-unequal-linearity-attempt.json",
+      "sha256": "30f58b4de003ff4a39bb2a06b4847dac5da36343d529c20e102be967508e1db8"
+    },
+    {
+      "bytes": 1765,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-unequal-linearity.json",
+      "sha256": "6149caa06fcea6daf80fdae6fd39dfc4a212436de8a3ca687a91d44ccda610e2"
+    },
+    {
+      "bytes": 426845,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-0-unequal-linearity.npz",
+      "sha256": "f1e4542d0f20897a74b871a310352acb2eee2975596ef622a8ec79bcfb8b71da"
+    },
+    {
+      "bytes": 77,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-1-attempt.json",
+      "sha256": "b1d0dcf85d5366d78d16634b7009f933b23c8c967006e4de7ca32fdf2353a804"
+    },
+    {
+      "bytes": 206,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-1-control-attempt.json",
+      "sha256": "52a7c995d7ae8d621dfb02fc61ccd5d2da1968a91b9123f57ffa06224471dea5"
+    },
+    {
+      "bytes": 1668,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-1-control.json",
+      "sha256": "f790eb2ab7509def16ab7569a8771ee194e10e823f381d5df2e73c9a113a720f"
+    },
+    {
+      "bytes": 1466936,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-1-control.npz",
+      "sha256": "609b25056b94c147f7256f417328206427fa3ac3375a1feabdaaf15e3b8efcdb"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-1-fit-attempt.json",
+      "sha256": "be7303e10f078c24b312bec2234921212b496394ce2b04ae7b9b6558479db022"
+    },
+    {
+      "bytes": 1735,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-1-fit.json",
+      "sha256": "e09c51935c173f4653b5a748f8dc25a9cd8e02f1f748b2cb9391da37ad777829"
+    },
+    {
+      "bytes": 1471219,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-1-fit.npz",
+      "sha256": "9baee6f867c5a5327a5daa7fc6cea57e39a22264ef0436856fda4bdb6f29f101"
+    },
+    {
+      "bytes": 77,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-2-attempt.json",
+      "sha256": "4cf4308db07e0222b9bbf11bf4432e41e4a239a26d62ac0b21a487ff33c1fdc1"
+    },
+    {
+      "bytes": 206,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-2-control-attempt.json",
+      "sha256": "52a7c995d7ae8d621dfb02fc61ccd5d2da1968a91b9123f57ffa06224471dea5"
+    },
+    {
+      "bytes": 1670,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-2-control.json",
+      "sha256": "fd6f6321b83c6abd369edad1f35aba487335a0634837240e312024981d8a5c0b"
+    },
+    {
+      "bytes": 1471046,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-2-control.npz",
+      "sha256": "078da184909c0e41ead01bae6b0c0233ebd886458b4586b6eb73f1ce00cdc114"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-2-fit-attempt.json",
+      "sha256": "be7303e10f078c24b312bec2234921212b496394ce2b04ae7b9b6558479db022"
+    },
+    {
+      "bytes": 1736,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-2-fit.json",
+      "sha256": "72f83dee14aea4f5c2f5d91348b5e0b2e1ca943aa17eb482bd47d4eebede7cf9"
+    },
+    {
+      "bytes": 1475216,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-2-fit.npz",
+      "sha256": "cd7086cdc30f7f8fa4a4bada9154c1b6466203decf365ce359be7fb3ecbe135e"
+    },
+    {
+      "bytes": 3414,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-circle-d100mm-qp.json",
+      "sha256": "063a96202e0931476efc6d6e0e09c8673b1b6ddf58f7ca61524d8c52fc7f93a5"
+    },
+    {
+      "bytes": 75,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-attempt.json",
+      "sha256": "bab8a6832d504fa3803597197214af6d365572b44de90173208ee38fd4f6854d"
+    },
+    {
+      "bytes": 1246033,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-basis.npz",
+      "sha256": "921ef7f266064cc3f7289f213ea8d5b1706c4eebdbe5ea56eeb376cd953fac6b"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-control-attempt.json",
+      "sha256": "879ec1a213a66d5faa7bfd522308e7c6dd01b95f3ab18c7faf5ee9e7d9ac0424"
+    },
+    {
+      "bytes": 1845,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-control.json",
+      "sha256": "0eec033bb36fa6fd497e89e33b1d4a3a4fd68eb9a5f23f073afd561e3d2cab73"
+    },
+    {
+      "bytes": 555143,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-control.npz",
+      "sha256": "c9daea42afd0ba89a6699e48c59d1bcf82a850e18288797b6627dc7a0dc510c7"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-fit-attempt.json",
+      "sha256": "20d2345a93e53a6b56df7cfd66c4959cd30a8d016d93cc0ec3736d6030fbee0a"
+    },
+    {
+      "bytes": 1836,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-fit.json",
+      "sha256": "e04ccc6b105d7c56e05adaa6cc4112a7538a6dc0546b8ffc2481c055797cbc57"
+    },
+    {
+      "bytes": 555847,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-fit.npz",
+      "sha256": "a6b9821c6957af6808d35379cdc3b2bff8cc205e89506b6182907677f6fc913d"
+    },
+    {
+      "bytes": 220,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-unequal-linearity-attempt.json",
+      "sha256": "2c04e4cfbe741b2d8846f69ae3438f2df66fe3cd49d853948b40b647234d371d"
+    },
+    {
+      "bytes": 1766,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-unequal-linearity.json",
+      "sha256": "e9fe0a57f85dac5987ef0e31594a556799a1e98ac1a49e82bf40c22d1b91bc47"
+    },
+    {
+      "bytes": 555167,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-0-unequal-linearity.npz",
+      "sha256": "ee0a13eddfa95d8c0dc5ba2aed02a2cdd40276162fc6d6987c3c929e2bff9c6d"
+    },
+    {
+      "bytes": 76,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-1-attempt.json",
+      "sha256": "7ca8ba3edf5078fd9de57f9db8f7df5392578459ce657ed5911aea8e4824ffe2"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-1-control-attempt.json",
+      "sha256": "879ec1a213a66d5faa7bfd522308e7c6dd01b95f3ab18c7faf5ee9e7d9ac0424"
+    },
+    {
+      "bytes": 1678,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-1-control.json",
+      "sha256": "c9947168276a5296579a5adad42f7262d5a82c7c7e917c8e48a9653acc46caba"
+    },
+    {
+      "bytes": 1688478,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-1-control.npz",
+      "sha256": "3d058df4e014c25a9d2670b1f1511f55214430a6c23cdbccc760eee4edc73559"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-1-fit-attempt.json",
+      "sha256": "20d2345a93e53a6b56df7cfd66c4959cd30a8d016d93cc0ec3736d6030fbee0a"
+    },
+    {
+      "bytes": 1729,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-1-fit.json",
+      "sha256": "39a0bd0bdb8e44a60e73afc59715c8fe6a5a61df968c6dc1d8b6863e76ae3a8b"
+    },
+    {
+      "bytes": 1691506,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-1-fit.npz",
+      "sha256": "867840548bc565f6698ad58f975bcd12d7869086d06fdd2ffed61f8976334ea3"
+    },
+    {
+      "bytes": 76,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-2-attempt.json",
+      "sha256": "eb3d782f1d9a84c5e01c553ae95c2f9fbb455c625be6997dc2162f74b2c5c15c"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-2-control-attempt.json",
+      "sha256": "879ec1a213a66d5faa7bfd522308e7c6dd01b95f3ab18c7faf5ee9e7d9ac0424"
+    },
+    {
+      "bytes": 1679,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-2-control.json",
+      "sha256": "2e5e04ae0364c87b56ae2b2aeabbc5bf5d8329226da948852791a85a6071cb74"
+    },
+    {
+      "bytes": 1692455,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-2-control.npz",
+      "sha256": "a2f3a0018df08f4781fbe9da88f6c52c4a37704ea4b861f60496669ff628b174"
+    },
+    {
+      "bytes": 211,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-2-fit-attempt.json",
+      "sha256": "20d2345a93e53a6b56df7cfd66c4959cd30a8d016d93cc0ec3736d6030fbee0a"
+    },
+    {
+      "bytes": 1729,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-2-fit.json",
+      "sha256": "339d8ce4589491ca68e5440364d4c91efc03e28a952a63cb1459d73376adc04a"
+    },
+    {
+      "bytes": 1695565,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-2-fit.npz",
+      "sha256": "40ba7579f8d9a826e7cf9b04bcb2dd3ab8dbacc2fe20baac73a1b8fb9f27149d"
+    },
+    {
+      "bytes": 3388,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/n6-shape-d100mm-qp.json",
+      "sha256": "9fd40da6ee127eba243de3f18dc4ac8c4fed2cf62888417739d9b5a344fe0347"
+    },
+    {
+      "bytes": 46430,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/run/result.json",
+      "sha256": "54ce6a3f405e7f3f87d747c46937c574cfd23e0414809e5f2da83021861c7bf6"
+    },
+    {
+      "bytes": 143,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/stderr.log",
+      "sha256": "2ed9fd0c377409dbe90d15494eba19175c4c1f09a7a3f04075067463f880d537"
+    },
+    {
+      "bytes": 112,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/stdout.log",
+      "sha256": "69de056283a34d4a7fa6db103e7b31c839dd9768e3012ecb15f53f0fd56e8c9f"
+    },
+    {
+      "bytes": 1714,
+      "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/independent-currents-v1/summarize.py",
+      "sha256": "cbd4bb1ed05283873a00bc8057567b75051e014d86374be39abd26514ad3472f"
+    }
+  ],
+  "global_optimum_scope": "Numerical convex raw-objective certificate on each fixed coarse basis only",
+  "independent_saved_data_audit": {
+    "A_comparisons": 896,
+    "B_comparisons": 896,
+    "arrays": 16,
+    "loop_integrals": 14,
+    "native_rerun": false,
+    "run_files": 54,
+    "scalar_metrics": 238,
+    "separate_machine": false,
+    "source_files": 27
+  },
+  "normalized_field_improved": false,
+  "physical_admission": false,
+  "report": {
+    "cases": [
+      {
+        "basis_sha256": "a41fdcc029b2ed7169cfb7e42514202316004ce0c73581a70cb72e1db1be7676",
+        "case": "n6-circle-d100mm",
+        "certificate": {
+          "active_tolerance": 1e-08,
+          "convex_lower_bound": 0.0038866857010631476,
+          "equality_multiplier": -0.007773374121719414,
+          "errors": {
+            "box": 0.0,
+            "complementarity": 0.0,
+            "dual_sign": 0.0,
+            "duality_gap": 1.2758498524161055e-09,
+            "equality": 3.3306690738754696e-16,
+            "stationarity": 1.346337480249201e-10
+          },
+          "gap_interpretation": "supporting-plane gap with numerical primal tolerance",
+          "interval_arithmetic": false,
+          "lower_active": [],
+          "lower_multipliers": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "objective": 0.003886686976913,
+          "passed": true,
+          "tolerances": {
+            "box": 1e-10,
+            "complementarity": 1e-09,
+            "dual_sign": 1e-10,
+            "duality_gap": 1e-08,
+            "equality": 1e-10,
+            "stationarity": 1e-08
+          },
+          "upper_active": [],
+          "upper_multipliers": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "conditioning": {
+          "condition_number": 3.9508485322567712,
+          "rank": 5,
+          "rank_tolerance": 4.937419837026091e-14,
+          "singular_values": [
+            0.0542875052202207,
+            0.03947006152010893,
+            0.02715786115263647,
+            0.020442380195857146,
+            0.013740720449541263
+          ]
+        },
+        "control_q": [
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308
+        ],
+        "evaluations": 38,
+        "geometry_reference": {
+          "case": "n6-circle-d100mm",
+          "path": "evidence/clear-coil-initialization-v1-audit.json",
+          "sha256": "b068fd6a6c76e8b4aaf57341e5a2ae139be196f35defacc644f1d5c890c0ea49"
+        },
+        "gradient_evaluations": 38,
+        "iterations": 38,
+        "message": "Optimization terminated successfully",
+        "polish": {
+          "reason": "raw point certifies",
+          "selected": false
+        },
+        "q": [
+          4.16189819218047,
+          -0.4818163252852063,
+          0.670360896653013,
+          -0.2601374850545014,
+          -0.11407528824277297,
+          -0.10967495856678366
+        ],
+        "raw_certificate": {
+          "active_tolerance": 1e-08,
+          "convex_lower_bound": 0.0038866857010631476,
+          "equality_multiplier": -0.007773374121719414,
+          "errors": {
+            "box": 0.0,
+            "complementarity": 0.0,
+            "dual_sign": 0.0,
+            "duality_gap": 1.2758498524161055e-09,
+            "equality": 3.3306690738754696e-16,
+            "stationarity": 1.346337480249201e-10
+          },
+          "gap_interpretation": "supporting-plane gap with numerical primal tolerance",
+          "interval_arithmetic": false,
+          "lower_active": [],
+          "lower_multipliers": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "objective": 0.003886686976913,
+          "passed": true,
+          "tolerances": {
+            "box": 1e-10,
+            "complementarity": 1e-09,
+            "dual_sign": 1e-10,
+            "duality_gap": 1e-08,
+            "equality": 1e-10,
+            "stationarity": 1e-08
+          },
+          "upper_active": [],
+          "upper_multipliers": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "raw_q": [
+          4.16189819218047,
+          -0.4818163252852063,
+          0.670360896653013,
+          -0.2601374850545014,
+          -0.11407528824277297,
+          -0.10967495856678366
+        ],
+        "selected": "slsqp",
+        "solver_options": {
+          "ftol": 1e-14,
+          "maxiter": 200,
+          "method": "SLSQP"
+        },
+        "solver_success": true
+      },
+      {
+        "basis_sha256": "921ef7f266064cc3f7289f213ea8d5b1706c4eebdbe5ea56eeb376cd953fac6b",
+        "case": "n6-shape-d100mm",
+        "certificate": {
+          "active_tolerance": 1e-08,
+          "convex_lower_bound": 0.004463265220368197,
+          "equality_multiplier": -0.008926536260373007,
+          "errors": {
+            "box": 0.0,
+            "complementarity": 0.0,
+            "dual_sign": 0.0,
+            "duality_gap": 2.9191764786690166e-09,
+            "equality": 0.0,
+            "stationarity": 1.792325564155847e-10
+          },
+          "gap_interpretation": "supporting-plane gap with numerical primal tolerance",
+          "interval_arithmetic": false,
+          "lower_active": [],
+          "lower_multipliers": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "objective": 0.0044632681395446756,
+          "passed": true,
+          "tolerances": {
+            "box": 1e-10,
+            "complementarity": 1e-09,
+            "dual_sign": 1e-10,
+            "duality_gap": 1e-08,
+            "equality": 1e-10,
+            "stationarity": 1e-08
+          },
+          "upper_active": [],
+          "upper_multipliers": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "conditioning": {
+          "condition_number": 2.442229772477949,
+          "rank": 5,
+          "rank_tolerance": 4.75902433202838e-14,
+          "singular_values": [
+            0.05232602589934115,
+            0.04010712706397938,
+            0.029155931861770283,
+            0.026895075842180007,
+            0.021425513065566233
+          ]
+        },
+        "control_q": [
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757
+        ],
+        "evaluations": 30,
+        "geometry_reference": {
+          "case": "n6-shape-d100mm",
+          "path": "evidence/clear-coil-initialization-v1-audit.json",
+          "sha256": "b068fd6a6c76e8b4aaf57341e5a2ae139be196f35defacc644f1d5c890c0ea49"
+        },
+        "gradient_evaluations": 30,
+        "iterations": 30,
+        "message": "Optimization terminated successfully",
+        "polish": {
+          "reason": "raw point certifies",
+          "selected": false
+        },
+        "q": [
+          3.643596970563848,
+          0.17460117674709252,
+          0.35044361713402,
+          -0.06553229047973602,
+          -0.07719619998016716,
+          -0.07459855347221356
+        ],
+        "raw_certificate": {
+          "active_tolerance": 1e-08,
+          "convex_lower_bound": 0.004463265220368197,
+          "equality_multiplier": -0.008926536260373007,
+          "errors": {
+            "box": 0.0,
+            "complementarity": 0.0,
+            "dual_sign": 0.0,
+            "duality_gap": 2.9191764786690166e-09,
+            "equality": 0.0,
+            "stationarity": 1.792325564155847e-10
+          },
+          "gap_interpretation": "supporting-plane gap with numerical primal tolerance",
+          "interval_arithmetic": false,
+          "lower_active": [],
+          "lower_multipliers": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "objective": 0.0044632681395446756,
+          "passed": true,
+          "tolerances": {
+            "box": 1e-10,
+            "complementarity": 1e-09,
+            "dual_sign": 1e-10,
+            "duality_gap": 1e-08,
+            "equality": 1e-10,
+            "stationarity": 1e-08
+          },
+          "upper_active": [],
+          "upper_multipliers": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "raw_q": [
+          3.643596970563848,
+          0.17460117674709252,
+          0.35044361713402,
+          -0.06553229047973602,
+          -0.07719619998016716,
+          -0.07459855347221356
+        ],
+        "selected": "slsqp",
+        "solver_options": {
+          "ftol": 1e-14,
+          "maxiter": 200,
+          "method": "SLSQP"
+        },
+        "solver_success": true
+      }
+    ],
+    "completed": true,
+    "counts": {
+      "A": {
+        "attempted": 68,
+        "completed": 68
+      },
+      "B": {
+        "attempted": 1600,
+        "completed": 1600
+      },
+      "independent_BA": {
+        "attempted": 14,
+        "completed": 14
+      }
+    },
+    "current_names": [
+      "base[0]/current_100kA",
+      "base[1]/current_100kA",
+      "base[2]/current_100kA",
+      "base[3]/current_100kA",
+      "base[4]/current_100kA",
+      "base[5]/current_100kA"
+    ],
+    "elapsed_s": 4.794474332942627,
+    "geometry_unchanged": true,
+    "kind": "independent-six-base-currents",
+    "loads": false,
+    "new_geometry_certificate": false,
+    "normalization": {
+      "B2_scale": 1.6293829620247962,
+      "target_flux": -0.03141592653589793
+    },
+    "physical_admission": false,
+    "pressure": false,
+    "repository": {
+      "available": true,
+      "branch": "main",
+      "commit": "39a1e13767e43ecb5abc5cdd414697759f6e93af",
+      "dirty": true,
+      "path": "/Users/sebastianwirkert/workspace/fusion"
+    },
+    "rows": [
+      {
+        "arrays_sha256": "a5c867f21356818e4789233bf9ca5a8ffbc6f0ca869513d40c1fd20f634c546a",
+        "case": "n6-circle-d100mm",
+        "checks_pass": true,
+        "control_replay": {
+          "measured_flux": true,
+          "normal_rms": true,
+          "raw_objective": true
+        },
+        "errors": {
+          "A": 8.886119947416683e-17,
+          "B": 3.615680756852068e-16,
+          "linearity_A": 7.110250420355456e-17,
+          "linearity_B": 1.0341220108076296e-15,
+          "position": 2.2887833992611187e-16,
+          "tangent": 6.836362506388176e-16
+        },
+        "label": "control",
+        "metrics": {
+          "area_bn_rms": 0.40686435979169494,
+          "area_mean_abs_ratio": 0.26455379965790676,
+          "area_mean_b": 1.2623066235982234,
+          "base_current_sum": 1727517.6198475847,
+          "base_reversed": [],
+          "coarse_flux_cancellation": 1.0,
+          "coarse_flux_contributions": [
+            -0.022170416557936747,
+            -0.005338590708627863,
+            -0.0016970313034624126,
+            -0.0009201661345189684,
+            -0.000679247065309982,
+            -0.0006104747660419496
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 2.220446049250313e-16,
+          "local_flux": 0.2906490123229942,
+          "mean_area_jacobian": 6.101469294924129,
+          "measured_flux": -0.031415926535897934,
+          "min_b": 1.0689612820823262,
+          "normal_limit_met": false,
+          "normal_max": 0.6236803573885863,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.30866131958243026,
+          "normalized_global_flux": 0.051687539834585405,
+          "parameter_abs_bn_over_mean_b": 0.24612402758115162,
+          "parameter_mean_b": 1.2654139130571675,
+          "raw_objective": 0.050797943493589404,
+          "raw_quadratic_flux": 0.5050143646872565
+        },
+        "n": 64,
+        "nodes": 256,
+        "physical_admission": false,
+        "q": [
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "f1e4542d0f20897a74b871a310352acb2eee2975596ef622a8ec79bcfb8b71da",
+        "case": "n6-circle-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 6.973502068242161e-17,
+          "B": 4.310007477361469e-16,
+          "linearity_A": 5.637184056103667e-17,
+          "linearity_B": 8.02411276441058e-16,
+          "position": 2.2887833992611187e-16,
+          "tangent": 6.836362506388176e-16
+        },
+        "label": "unequal-linearity",
+        "metrics": {
+          "area_bn_rms": 0.42912952920808933,
+          "area_mean_abs_ratio": 0.268667391690135,
+          "area_mean_b": 1.2854995786494319,
+          "base_current_sum": 1741913.6000129813,
+          "base_reversed": [],
+          "coarse_flux_cancellation": 1.0,
+          "coarse_flux_contributions": [
+            -0.0177363332463494,
+            -0.0048047316377650764,
+            -0.0016970313034624126,
+            -0.0010121827479708653,
+            -0.0008150964783719784,
+            -0.0006409985043440471
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": false,
+          "flux_relative_error": 0.14990971576956957,
+          "local_flux": 0.29539055248212237,
+          "mean_area_jacobian": 6.101469294924129,
+          "measured_flux": -0.02670637391826379,
+          "min_b": 1.04196636759353,
+          "normal_limit_met": false,
+          "normal_max": 0.6249481712425716,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.31116882744448304,
+          "normalized_global_flux": 0.05517973234605167,
+          "parameter_abs_bn_over_mean_b": 0.2525935809755435,
+          "parameter_mean_b": 1.2771672147924251,
+          "raw_objective": 0.056509782270435314,
+          "raw_quadratic_flux": 0.5617993530687034
+        },
+        "n": 64,
+        "nodes": 256,
+        "physical_admission": false,
+        "q": [
+          2.3033568264634465,
+          2.5912764297713773,
+          2.879196033079308,
+          3.1671156363872393,
+          3.4550352396951696,
+          3.0231558347332737
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "4557e402c0e281f9e054d745e0327315c8b97d8c15a74cec0a1bb9a9923cb3fd",
+        "case": "n6-circle-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 8.597825768387651e-17,
+          "B": 3.50859578827998e-16,
+          "linearity_A": 5.553316972107109e-17,
+          "linearity_B": 7.782228837900114e-16,
+          "position": 2.2887833992611187e-16,
+          "tangent": 6.836362506388176e-16
+        },
+        "label": "fit",
+        "metrics": {
+          "area_bn_rms": 0.112542450114663,
+          "area_mean_abs_ratio": 0.39257821294984613,
+          "area_mean_b": 0.2660269922280818,
+          "base_current_sum": 386655.5031684218,
+          "base_reversed": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "coarse_flux_cancellation": 1.0653608320725934,
+          "coarse_flux_contributions": [
+            -0.0320474936517889,
+            0.0008933813911523856,
+            -0.00039511843346790216,
+            8.31376888950767e-05,
+            2.6912132370654557e-05,
+            2.325433694075721e-05
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 0.0,
+          "local_flux": 0.7411125460250491,
+          "mean_area_jacobian": 6.101469294924129,
+          "measured_flux": -0.03141592653589793,
+          "min_b": 0.014850288550142449,
+          "normal_limit_met": false,
+          "normal_max": 0.998124064113858,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.4928784902298405,
+          "normalized_global_flux": 0.028886627845735816,
+          "parameter_abs_bn_over_mean_b": 0.20801658033989223,
+          "parameter_mean_b": 0.3088507383141603,
+          "raw_objective": 0.0038866869769130013,
+          "raw_quadratic_flux": 0.038640004287410934
+        },
+        "n": 64,
+        "nodes": 256,
+        "objective_replay": true,
+        "physical_admission": false,
+        "q": [
+          4.16189819218047,
+          -0.4818163252852063,
+          0.670360896653013,
+          -0.2601374850545014,
+          -0.11407528824277297,
+          -0.10967495856678366
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "609b25056b94c147f7256f417328206427fa3ac3375a1feabdaaf15e3b8efcdb",
+        "case": "n6-circle-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 7.076311083754595e-17,
+          "B": 5.386657280558463e-16,
+          "position": 2.2887833992611187e-16,
+          "tangent": 6.871065597431946e-16
+        },
+        "label": "control",
+        "metrics": {
+          "area_bn_rms": 0.40686427859656454,
+          "area_mean_abs_ratio": 0.2645128388535712,
+          "area_mean_b": 1.2623066338084155,
+          "base_current_sum": 1727517.6198475847,
+          "base_reversed": [],
+          "coarse_flux_cancellation": 1.0,
+          "coarse_flux_contributions": [
+            -0.022170416557936747,
+            -0.005338590708627863,
+            -0.0016970313034624126,
+            -0.0009201661345189684,
+            -0.000679247065309982,
+            -0.0006104747660419496
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 8.881784197001252e-16,
+          "local_flux": 0.290648997958228,
+          "mean_area_jacobian": 6.101469291305195,
+          "measured_flux": -0.031415926535897955,
+          "min_b": 1.0668141358192538,
+          "normal_limit_met": false,
+          "normal_max": 0.628687617207281,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.3086613120464727,
+          "normalized_global_flux": 0.05168751909016677,
+          "parameter_abs_bn_over_mean_b": 0.24603294278497567,
+          "parameter_mean_b": 1.265413919713938,
+          "raw_objective": 0.05079792321879689,
+          "raw_quadratic_flux": 0.5050141628232322
+        },
+        "n": 128,
+        "nodes": 512,
+        "physical_admission": false,
+        "q": [
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "9baee6f867c5a5327a5daa7fc6cea57e39a22264ef0436856fda4bdb6f29f101",
+        "case": "n6-circle-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 7.052483035923776e-17,
+          "B": 3.4825220092346196e-16,
+          "position": 2.2887833992611187e-16,
+          "tangent": 6.871065597431946e-16
+        },
+        "label": "fit",
+        "metrics": {
+          "area_bn_rms": 0.11254248509054968,
+          "area_mean_abs_ratio": 0.39253713323767647,
+          "area_mean_b": 0.2660270137680929,
+          "base_current_sum": 386655.5031684218,
+          "base_reversed": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "coarse_flux_cancellation": 1.0653608320725934,
+          "coarse_flux_contributions": [
+            -0.0320474936517889,
+            0.0008933813911523856,
+            -0.00039511843346790216,
+            8.31376888950767e-05,
+            2.6912132370654557e-05,
+            2.325433694075721e-05
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 1.1102230246251565e-15,
+          "local_flux": 0.7411149159548626,
+          "mean_area_jacobian": 6.101469291305195,
+          "measured_flux": -0.03141592653589796,
+          "min_b": 0.014834764638292123,
+          "normal_limit_met": false,
+          "normal_max": 0.9996403663153361,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.49287927843883594,
+          "normalized_global_flux": 0.02888664648908561,
+          "parameter_abs_bn_over_mean_b": 0.20792233474149774,
+          "parameter_mean_b": 0.3088507783993183,
+          "raw_objective": 0.0038866893927186666,
+          "raw_quadratic_flux": 0.03864002828153892
+        },
+        "n": 128,
+        "nodes": 512,
+        "physical_admission": false,
+        "q": [
+          4.16189819218047,
+          -0.4818163252852063,
+          0.670360896653013,
+          -0.2601374850545014,
+          -0.11407528824277297,
+          -0.10967495856678366
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "078da184909c0e41ead01bae6b0c0233ebd886458b4586b6eb73f1ce00cdc114",
+        "case": "n6-circle-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 7.076311083754595e-17,
+          "B": 3.797332677325313e-16,
+          "position": 2.2887833992611187e-16,
+          "tangent": 6.871065597431946e-16
+        },
+        "label": "control",
+        "metrics": {
+          "area_bn_rms": 0.40686427859679997,
+          "area_mean_abs_ratio": 0.26451920889004465,
+          "area_mean_b": 1.2623066338084872,
+          "base_current_sum": 1727517.6198475847,
+          "base_reversed": [],
+          "coarse_flux_cancellation": 1.0,
+          "coarse_flux_contributions": [
+            -0.022170416557936747,
+            -0.005338590708627863,
+            -0.0016970313034624126,
+            -0.0009201661345189684,
+            -0.000679247065309982,
+            -0.0006104747660419496
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 8.881784197001252e-16,
+          "local_flux": 0.2906489979578628,
+          "mean_area_jacobian": 6.101469291305225,
+          "measured_flux": -0.031415926535897955,
+          "min_b": 1.0670024149581196,
+          "normal_limit_met": false,
+          "normal_max": 0.6278148499765968,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.308661312046278,
+          "normalized_global_flux": 0.051687519090215,
+          "parameter_abs_bn_over_mean_b": 0.24605274720338646,
+          "parameter_mean_b": 1.2654139197139358,
+          "raw_objective": 0.050797923218855685,
+          "raw_quadratic_flux": 0.5050141628238192
+        },
+        "n": 128,
+        "nodes": 512,
+        "physical_admission": false,
+        "q": [
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308,
+          2.879196033079308
+        ],
+        "shift": 0.5
+      },
+      {
+        "arrays_sha256": "cd7086cdc30f7f8fa4a4bada9154c1b6466203decf365ce359be7fb3ecbe135e",
+        "case": "n6-circle-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 7.052483035923776e-17,
+          "B": 3.4563585505441714e-16,
+          "position": 2.2887833992611187e-16,
+          "tangent": 6.871065597431946e-16
+        },
+        "label": "fit",
+        "metrics": {
+          "area_bn_rms": 0.11254248509046964,
+          "area_mean_abs_ratio": 0.3925481000536777,
+          "area_mean_b": 0.26602701377143745,
+          "base_current_sum": 386655.5031684218,
+          "base_reversed": [
+            1,
+            3,
+            4,
+            5
+          ],
+          "coarse_flux_cancellation": 1.0653608320725934,
+          "coarse_flux_contributions": [
+            -0.0320474936517889,
+            0.0008933813911523856,
+            -0.00039511843346790216,
+            8.31376888950767e-05,
+            2.6912132370654557e-05,
+            2.325433694075721e-05
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 1.1102230246251565e-15,
+          "local_flux": 0.7411149171226072,
+          "mean_area_jacobian": 6.101469291305225,
+          "measured_flux": -0.03141592653589796,
+          "min_b": 0.014761398623487304,
+          "normal_limit_met": false,
+          "normal_max": 0.9999549136125073,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.49287927882713967,
+          "normalized_global_flux": 0.028886646489042305,
+          "parameter_abs_bn_over_mean_b": 0.20795133460121837,
+          "parameter_mean_b": 0.30885077840612607,
+          "raw_objective": 0.003886689392713139,
+          "raw_quadratic_flux": 0.03864002828148415
+        },
+        "n": 128,
+        "nodes": 512,
+        "physical_admission": false,
+        "q": [
+          4.16189819218047,
+          -0.4818163252852063,
+          0.670360896653013,
+          -0.2601374850545014,
+          -0.11407528824277297,
+          -0.10967495856678366
+        ],
+        "shift": 0.5
+      },
+      {
+        "arrays_sha256": "c9daea42afd0ba89a6699e48c59d1bcf82a850e18288797b6627dc7a0dc510c7",
+        "case": "n6-shape-d100mm",
+        "checks_pass": true,
+        "control_replay": {
+          "measured_flux": true,
+          "normal_rms": true,
+          "raw_objective": true
+        },
+        "errors": {
+          "A": 1.1188630228279524e-16,
+          "B": 5.758910465946844e-16,
+          "linearity_A": 8.341116186757555e-17,
+          "linearity_B": 8.97551716036339e-16,
+          "position": 6.15396035271249e-16,
+          "tangent": 3.164845858793506e-15
+        },
+        "label": "control",
+        "metrics": {
+          "area_bn_rms": 0.3580712747419399,
+          "area_mean_abs_ratio": 0.23289790350682715,
+          "area_mean_b": 1.2827692982060306,
+          "base_current_sum": 1769798.7979333054,
+          "base_reversed": [],
+          "coarse_flux_cancellation": 1.0,
+          "coarse_flux_contributions": [
+            -0.025194605227881552,
+            -0.0036582115312359846,
+            -0.0009795317542237866,
+            -0.0005400697576130826,
+            -0.0005009886412401611,
+            -0.0005425196237033531
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 0.0,
+          "local_flux": 0.23247912211460897,
+          "mean_area_jacobian": 6.101469294924129,
+          "measured_flux": -0.03141592653589793,
+          "min_b": 1.0384156831884734,
+          "normal_limit_met": false,
+          "normal_max": 0.5975962499953336,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.2760512774968315,
+          "normalized_global_flux": 0.03874274262337763,
+          "parameter_abs_bn_over_mean_b": 0.21757893752576568,
+          "parameter_mean_b": 1.2900386750328132,
+          "raw_objective": 0.03934466015159136,
+          "raw_quadratic_flux": 0.3911500581278341
+        },
+        "n": 64,
+        "nodes": 256,
+        "physical_admission": false,
+        "q": [
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "ee0a13eddfa95d8c0dc5ba2aed02a2cdd40276162fc6d6987c3c929e2bff9c6d",
+        "case": "n6-shape-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 8.845388854693244e-17,
+          "B": 5.102561251608285e-16,
+          "linearity_A": 4.443059973708341e-17,
+          "linearity_B": 8.540148173506097e-16,
+          "position": 6.15396035271249e-16,
+          "tangent": 3.164845858793506e-15
+        },
+        "label": "unequal-linearity",
+        "metrics": {
+          "area_bn_rms": 0.3757239688507232,
+          "area_mean_abs_ratio": 0.23694757564286892,
+          "area_mean_b": 1.3053901813958437,
+          "base_current_sum": 1784547.1212494161,
+          "base_reversed": [],
+          "coarse_flux_cancellation": 1.0,
+          "coarse_flux_contributions": [
+            -0.020155684182305244,
+            -0.0032923903781123865,
+            -0.0009795317542237866,
+            -0.0005940767333743909,
+            -0.0006011863694881934,
+            -0.0005696456048885207
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": false,
+          "flux_relative_error": 0.16626635243550048,
+          "local_flux": 0.23582230435696439,
+          "mean_area_jacobian": 6.101469294924129,
+          "measured_flux": -0.026192515022392532,
+          "min_b": 0.9912568183463212,
+          "normal_limit_met": false,
+          "normal_max": 0.5909296264148188,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.2780290797291481,
+          "normalized_global_flux": 0.04101317722229146,
+          "parameter_abs_bn_over_mean_b": 0.2224449393363274,
+          "parameter_mean_b": 1.2999693454475785,
+          "raw_objective": 0.04331961977603854,
+          "raw_quadratic_flux": 0.430667636426078
+        },
+        "n": 64,
+        "nodes": 256,
+        "physical_admission": false,
+        "q": [
+          2.3597317305777405,
+          2.6546981968999583,
+          2.9496646632221757,
+          3.2446311295443935,
+          3.539597595866611,
+          3.0971478963832846
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "a6b9821c6957af6808d35379cdc3b2bff8cc205e89506b6182907677f6fc913d",
+        "case": "n6-shape-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 8.886543247164328e-17,
+          "B": 5.131409033635341e-16,
+          "linearity_A": 5.727871989595296e-17,
+          "linearity_B": 8.327961149004857e-16,
+          "position": 6.15396035271249e-16,
+          "tangent": 3.164845858793506e-15
+        },
+        "label": "fit",
+        "metrics": {
+          "area_bn_rms": 0.1206016008311847,
+          "area_mean_abs_ratio": 0.3994519690181182,
+          "area_mean_b": 0.2646193069255014,
+          "base_current_sum": 395131.47205128433,
+          "base_reversed": [
+            3,
+            4,
+            5
+          ],
+          "coarse_flux_cancellation": 1.0024720405012006,
+          "coarse_flux_contributions": [
+            -0.03112183850166252,
+            -0.00021654259418284105,
+            -0.00011637616144230822,
+            1.1998654856094516e-05,
+            1.311146308228823e-05,
+            1.3720603451359641e-05
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 4.440892098500626e-16,
+          "local_flux": 0.7806338419536791,
+          "mean_area_jacobian": 6.101469294924129,
+          "measured_flux": -0.03141592653589794,
+          "min_b": 0.008117478799937964,
+          "normal_limit_met": false,
+          "normal_max": 0.9987563658723997,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.5058496690782301,
+          "normalized_global_flux": 0.031039748664037897,
+          "parameter_abs_bn_over_mean_b": 0.2043387671234613,
+          "parameter_mean_b": 0.3081002012679084,
+          "raw_objective": 0.0044632681395446756,
+          "raw_quadratic_flux": 0.04437216093611111
+        },
+        "n": 64,
+        "nodes": 256,
+        "objective_replay": true,
+        "physical_admission": false,
+        "q": [
+          3.643596970563848,
+          0.17460117674709252,
+          0.35044361713402,
+          -0.06553229047973602,
+          -0.07719619998016716,
+          -0.07459855347221356
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "3d058df4e014c25a9d2670b1f1511f55214430a6c23cdbccc760eee4edc73559",
+        "case": "n6-shape-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 1.119400808498433e-16,
+          "B": 5.091252874640395e-16,
+          "position": 7.60885600558393e-16,
+          "tangent": 3.3984432745746066e-15
+        },
+        "label": "control",
+        "metrics": {
+          "area_bn_rms": 0.35807095873148914,
+          "area_mean_abs_ratio": 0.23284437074523626,
+          "area_mean_b": 1.2827693148538275,
+          "base_current_sum": 1769798.7979333054,
+          "base_reversed": [],
+          "coarse_flux_cancellation": 1.0,
+          "coarse_flux_contributions": [
+            -0.025194605227881552,
+            -0.0036582115312359846,
+            -0.0009795317542237866,
+            -0.0005400697576130826,
+            -0.0005009886412401611,
+            -0.0005425196237033531
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 8.881784197001252e-16,
+          "local_flux": 0.2324791084644201,
+          "mean_area_jacobian": 6.101469291305195,
+          "measured_flux": -0.031415926535897955,
+          "min_b": 1.038215426426996,
+          "normal_limit_met": false,
+          "normal_max": 0.5975962499953337,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.2760512694744173,
+          "normalized_global_flux": 0.03874267166286664,
+          "parameter_abs_bn_over_mean_b": 0.21750442998572628,
+          "parameter_mean_b": 1.2900387327597753,
+          "raw_objective": 0.039344590705538696,
+          "raw_quadratic_flux": 0.3911493674888653
+        },
+        "n": 128,
+        "nodes": 512,
+        "physical_admission": false,
+        "q": [
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "867840548bc565f6698ad58f975bcd12d7869086d06fdd2ffed61f8976334ea3",
+        "case": "n6-shape-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 1.0457375849358085e-16,
+          "B": 3.480555740603721e-16,
+          "position": 7.60885600558393e-16,
+          "tangent": 3.3984432745746066e-15
+        },
+        "label": "fit",
+        "metrics": {
+          "area_bn_rms": 0.1206016618799883,
+          "area_mean_abs_ratio": 0.39952216842264787,
+          "area_mean_b": 0.26461930983930343,
+          "base_current_sum": 395131.47205128433,
+          "base_reversed": [
+            3,
+            4,
+            5
+          ],
+          "coarse_flux_cancellation": 1.0024720405012006,
+          "coarse_flux_contributions": [
+            -0.03112183850166252,
+            -0.00021654259418284105,
+            -0.00011637616144230822,
+            1.1998654856094516e-05,
+            1.311146308228823e-05,
+            1.3720603451359641e-05
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 1.1102230246251565e-15,
+          "local_flux": 0.7806380697440782,
+          "mean_area_jacobian": 6.101469291305195,
+          "measured_flux": -0.03141592653589796,
+          "min_b": 0.00811747879993796,
+          "normal_limit_met": false,
+          "normal_max": 0.9987563658723999,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.5058510390276094,
+          "normalized_global_flux": 0.031039779010202568,
+          "parameter_abs_bn_over_mean_b": 0.20432678845351462,
+          "parameter_mean_b": 0.30810020548433464,
+          "raw_objective": 0.00446327265817871,
+          "raw_quadratic_flux": 0.04437220583238104
+        },
+        "n": 128,
+        "nodes": 512,
+        "physical_admission": false,
+        "q": [
+          3.643596970563848,
+          0.17460117674709252,
+          0.35044361713402,
+          -0.06553229047973602,
+          -0.07719619998016716,
+          -0.07459855347221356
+        ],
+        "shift": 0.0
+      },
+      {
+        "arrays_sha256": "a2f3a0018df08f4781fbe9da88f6c52c4a37704ea4b861f60496669ff628b174",
+        "case": "n6-shape-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 1.119400808498433e-16,
+          "B": 6.132404541021692e-16,
+          "position": 7.60885600558393e-16,
+          "tangent": 3.3984432745746066e-15
+        },
+        "label": "control",
+        "metrics": {
+          "area_bn_rms": 0.3580709587299088,
+          "area_mean_abs_ratio": 0.23285592710082173,
+          "area_mean_b": 1.2827693148539474,
+          "base_current_sum": 1769798.7979333054,
+          "base_reversed": [],
+          "coarse_flux_cancellation": 1.0,
+          "coarse_flux_contributions": [
+            -0.025194605227881552,
+            -0.0036582115312359846,
+            -0.0009795317542237866,
+            -0.0005400697576130826,
+            -0.0005009886412401611,
+            -0.0005425196237033531
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 8.881784197001252e-16,
+          "local_flux": 0.23247910846219055,
+          "mean_area_jacobian": 6.101469291305225,
+          "measured_flux": -0.031415926535897955,
+          "min_b": 1.0401788339951479,
+          "normal_limit_met": false,
+          "normal_max": 0.5980210929281319,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.2760512694730929,
+          "normalized_global_flux": 0.038742671662516166,
+          "parameter_abs_bn_over_mean_b": 0.21751866619129068,
+          "parameter_mean_b": 1.290038732759822,
+          "raw_objective": 0.039344590705191404,
+          "raw_quadratic_flux": 0.3911493674854145
+        },
+        "n": 128,
+        "nodes": 512,
+        "physical_admission": false,
+        "q": [
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757,
+          2.9496646632221757
+        ],
+        "shift": 0.5
+      },
+      {
+        "arrays_sha256": "40ba7579f8d9a826e7cf9b04bcb2dd3ab8dbacc2fe20baac73a1b8fb9f27149d",
+        "case": "n6-shape-d100mm",
+        "checks_pass": true,
+        "errors": {
+          "A": 1.0457375849358085e-16,
+          "B": 5.062447149621105e-16,
+          "position": 7.60885600558393e-16,
+          "tangent": 3.3984432745746066e-15
+        },
+        "label": "fit",
+        "metrics": {
+          "area_bn_rms": 0.12060166187962654,
+          "area_mean_abs_ratio": 0.399542877830407,
+          "area_mean_b": 0.26461930983933796,
+          "base_current_sum": 395131.47205128433,
+          "base_reversed": [
+            3,
+            4,
+            5
+          ],
+          "coarse_flux_cancellation": 1.0024720405012006,
+          "coarse_flux_contributions": [
+            -0.03112183850166252,
+            -0.00021654259418284105,
+            -0.00011637616144230822,
+            1.1998654856094516e-05,
+            1.311146308228823e-05,
+            1.3720603451359641e-05
+          ],
+          "current_limit_met": true,
+          "flux_limit_met": true,
+          "flux_relative_error": 1.1102230246251565e-15,
+          "local_flux": 0.7806380697641875,
+          "mean_area_jacobian": 6.101469291305225,
+          "measured_flux": -0.03141592653589796,
+          "min_b": 0.008104473792911073,
+          "normal_limit_met": false,
+          "normal_max": 0.999981369986266,
+          "normal_max_limit_met": false,
+          "normal_rms": 0.5058510390341235,
+          "normalized_global_flux": 0.03103977901001576,
+          "parameter_abs_bn_over_mean_b": 0.20431126247696563,
+          "parameter_mean_b": 0.30810020548436756,
+          "raw_objective": 0.004463272658151934,
+          "raw_quadratic_flux": 0.044372205832115055
+        },
+        "n": 128,
+        "nodes": 512,
+        "physical_admission": false,
+        "q": [
+          3.643596970563848,
+          0.17460117674709252,
+          0.35044361713402,
+          -0.06553229047973602,
+          -0.07719619998016716,
+          -0.07459855347221356
+        ],
+        "shift": 0.5
+      }
+    ],
+    "sources_after": {
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_minimize.py": "6b20ec664e77e2f8f7d725eba541c3765ca9037e9d759b18627da9bdf8933ca6",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_slsqp_py.py": "9e97132bfb5773096675f03b0adb6f5ed67510666f7f2c5da22d0e9669c2e338",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_slsqplib.cpython-312-darwin.so": "89a69a2839997f291abbd03bae7dfbdf71ba11995d4675cc501ddfb3c648a771",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/optimizable.py": "1fcb1fa4bcca768a65bd172c2dc3655a5d7caebdbdc29212343eb6bca71784c4",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/util.py": "c70ec5f79716f4ea36d67b6f7d195e1f79cfa5129bd4b752f18f106aba644758",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/biotsavart.py": "538a68bec673966b92a2af1c97d2604288812df0a7e0b02f7b98f3fcc8a19364",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/coil.py": "36b93c2aae050dfcfd84099697d0215e8993edb0f2796b0547cb43d0120fe356",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/magneticfield.py": "922ec756c497108259445798a6bdc835202d8249cc63f8c9dd3ccfdd84cb97f9",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curve.py": "3191f3f9f5c7b7f1fae368a8e81bcf7eac8e61b4d4d257a245874a450553886a",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curvexyzfourier.py": "c3c9e0cdcc6420b408dd39dcd815fc8860a4c78dd3302491fa24cc6fdacdc10c",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsoptpp.cpython-312-darwin.so": "af5823c4e5ec68490a8f7b4678a90266b054b87e18b52726cc34a6d61b6a22cc",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00-snapshot.json": "4c29c1f7afb67f290bd3c7c2ec23829e5f386e7e8c299f8d40a0e0f4e2f03830",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00.json": "264f345594ed2effa987f836e3e3167623db233024bf454da917b0c129dcde8f",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/run.json": "5f3f5b86e3a80101491a70475fbbbdcdee6138754873463a1c63f0545b45a309",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/sets/n6-circle-d100mm/snapshot.json": "829ea3573b6e46771d771810420c0e378a07f4bb16363305376f4b6d39856de6",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/sets/n6-shape-d100mm/snapshot.json": "90fe6f84395d319d45ac39fab832a2b3908f0d16d7638e971e2a4602a3ef65d1",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/sets/n6-shape-d140mm/snapshot.json": "53784adda5dd4d0d4d5fba3b1ba31e08707d55624ed7d9b633999298b54580df",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/sets/n6-shape-d180mm/snapshot.json": "40e075d4fc856c0149523a5c6be8139dd65f4499ac602fbbd9c09c5a3cf100e1",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/coil-start-screen-v1/run/result.json": "6ef5c6c9824847e2eba6fbacc96c5abca3268032ff7760451f5b4d732132a89d",
+      "/Users/sebastianwirkert/workspace/fusion/evidence/clear-coil-initialization-v1-audit.json": "b068fd6a6c76e8b4aaf57341e5a2ae139be196f35defacc644f1d5c890c0ea49",
+      "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+      "/Users/sebastianwirkert/workspace/fusion/scripts/explore_coil_starts.py": "f587e81065c4e529bacc4f62d04051768026c19d19edcb548a7dbd9bc3bd2464",
+      "/Users/sebastianwirkert/workspace/fusion/scripts/explore_independent_currents.py": "511efdcc7190abd52c794d325112e659b4fd04fc0cf86e71d245cae05b8e0312",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clear_coil_geometry_audit.py": "ae61f2efcbdb5ccdd0ee03e54d65a7dbf7364677694fbc26f0d719c7f49cfa36",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coil_audit.py": "0f713e3a6c60a94bf98f6c1ca28936fb2ac358161b96c62fd5186d59fd0f4b3f",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/provenance.py": "6dbacd6f72cf5c5b4bb7af342772fea03d6188f227d45aa538caf5c9475d56e7"
+    },
+    "sources_before": {
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_minimize.py": "6b20ec664e77e2f8f7d725eba541c3765ca9037e9d759b18627da9bdf8933ca6",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_slsqp_py.py": "9e97132bfb5773096675f03b0adb6f5ed67510666f7f2c5da22d0e9669c2e338",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_slsqplib.cpython-312-darwin.so": "89a69a2839997f291abbd03bae7dfbdf71ba11995d4675cc501ddfb3c648a771",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/optimizable.py": "1fcb1fa4bcca768a65bd172c2dc3655a5d7caebdbdc29212343eb6bca71784c4",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/util.py": "c70ec5f79716f4ea36d67b6f7d195e1f79cfa5129bd4b752f18f106aba644758",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/biotsavart.py": "538a68bec673966b92a2af1c97d2604288812df0a7e0b02f7b98f3fcc8a19364",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/coil.py": "36b93c2aae050dfcfd84099697d0215e8993edb0f2796b0547cb43d0120fe356",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/magneticfield.py": "922ec756c497108259445798a6bdc835202d8249cc63f8c9dd3ccfdd84cb97f9",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curve.py": "3191f3f9f5c7b7f1fae368a8e81bcf7eac8e61b4d4d257a245874a450553886a",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curvexyzfourier.py": "c3c9e0cdcc6420b408dd39dcd815fc8860a4c78dd3302491fa24cc6fdacdc10c",
+      "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsoptpp.cpython-312-darwin.so": "af5823c4e5ec68490a8f7b4678a90266b054b87e18b52726cc34a6d61b6a22cc",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00-snapshot.json": "4c29c1f7afb67f290bd3c7c2ec23829e5f386e7e8c299f8d40a0e0f4e2f03830",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00.json": "264f345594ed2effa987f836e3e3167623db233024bf454da917b0c129dcde8f",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/run.json": "5f3f5b86e3a80101491a70475fbbbdcdee6138754873463a1c63f0545b45a309",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/sets/n6-circle-d100mm/snapshot.json": "829ea3573b6e46771d771810420c0e378a07f4bb16363305376f4b6d39856de6",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/sets/n6-shape-d100mm/snapshot.json": "90fe6f84395d319d45ac39fab832a2b3908f0d16d7638e971e2a4602a3ef65d1",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/sets/n6-shape-d140mm/snapshot.json": "53784adda5dd4d0d4d5fba3b1ba31e08707d55624ed7d9b633999298b54580df",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/clear-coil-initialization-v1/sets/n6-shape-d180mm/snapshot.json": "40e075d4fc856c0149523a5c6be8139dd65f4499ac602fbbd9c09c5a3cf100e1",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/coil-start-screen-v1/run/result.json": "6ef5c6c9824847e2eba6fbacc96c5abca3268032ff7760451f5b4d732132a89d",
+      "/Users/sebastianwirkert/workspace/fusion/evidence/clear-coil-initialization-v1-audit.json": "b068fd6a6c76e8b4aaf57341e5a2ae139be196f35defacc644f1d5c890c0ea49",
+      "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+      "/Users/sebastianwirkert/workspace/fusion/scripts/explore_coil_starts.py": "f587e81065c4e529bacc4f62d04051768026c19d19edcb548a7dbd9bc3bd2464",
+      "/Users/sebastianwirkert/workspace/fusion/scripts/explore_independent_currents.py": "511efdcc7190abd52c794d325112e659b4fd04fc0cf86e71d245cae05b8e0312",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/clear_coil_geometry_audit.py": "ae61f2efcbdb5ccdd0ee03e54d65a7dbf7364677694fbc26f0d719c7f49cfa36",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/coupled_coil_audit.py": "0f713e3a6c60a94bf98f6c1ca28936fb2ac358161b96c62fd5186d59fd0f4b3f",
+      "/Users/sebastianwirkert/workspace/fusion/src/fusion_baselines/provenance.py": "6dbacd6f72cf5c5b4bb7af342772fea03d6188f227d45aa538caf5c9475d56e7"
+    },
+    "sources_unchanged": true
+  },
+  "schema": "independent-currents-v1",
+  "state_of_art_claim": false
+}

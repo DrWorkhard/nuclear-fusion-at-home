@@ -65,8 +65,10 @@ seed with 13.91% more current. The best sampled RMS is 0.1373, with unresolved
 continuous clearance. A declared adaptive check of an earlier saved shaped point
 then passes continuous geometry at RMS 0.1517, 45.05% below its shaped seed with
 10.11% more current. The original selections remain unchanged; this is exploration,
-not confirmation, and still fails boundary-error limits. Next test independent
-base currents on fixed original geometries; acceptance limits remain unchanged.
+not confirmation, and still fails boundary-error limits. The
+[independent-current test](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md)
+then reduces raw error by 89–92% but worsens normalized RMS by 60–83% with weaker
+boundary fields. Next use normalized-current fitting; acceptance limits remain unchanged.
 
 The [research programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) owns
 calibration, decision windows, the open challenge and MS0. No gate or historical

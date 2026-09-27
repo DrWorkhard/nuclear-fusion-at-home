@@ -4,78 +4,67 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Constraint-aware fitting: adaptive saved-point checks complete
+## Independent currents: raw-objective result complete
 
-An adaptive check of two saved full-mode points performs no new optimization.
-Four fine screens complete in 6.022 s (6.386 s supervised), four geometry levels
-in 24.086 s (24.338 s supervised). Execution is dirty but source-bound at
-`e0f45e1`; the original four-arm experiment remains unchanged.
-Shape trial 52 passes scoped continuous geometry at RMS 0.15168, 45.05% below its
-own seed with 10.11% more current. Circle trial 126 has unresolved clearance.
-All boundary-error limits still fail; these are adaptive exploratory checks.
+Two fixed-geometry current fits complete fourteen replay/fine rows in 4.794 s
+worker / 7.151 s supervised. Execution is dirty but source-bound at `39a1e13`;
+sources remain unchanged. Both raw-objective numerical optimality checks pass,
+without polishing, while normalized RMS worsens by 59.68% / 83.25%. Flux/current
+checks pass, but the boundary field becomes much weaker. This is a negative
+design result, not a failure of the numerical solver or a Step 4 completion.
 
 Latest independent checks actually performed in the existing `.venv`:
 
-- Rehashed all **1,573 files** in the original experiment manifest and recreated
-  all sixteen inspected filter choices from 744 unchanged hashed trials.
-- Verified the two frozen trials/seeds, **36 replay / seven geometry sources**,
-  four fine array hashes and preserved coarse currents.
-- Separate arithmetic reproduces **48 fine metrics**, four full saved-loop-A
-  integrals and all **256 B / 256 A** comparisons.
-- Four geometry levels: independently checked 1,104 coil-pair / 96 plasma bound
-  rows and 24 tighter curvature enclosures. Shape's plasma lower bound is
-  80.713670 mm; circle's is 79.825504 mm, unresolved rather than a failure.
-- No full distance-grid rerun, new native audit fields, directed interval proof
-  or complete self-disjointness is claimed.
+- **Twenty synthetic implementation tests pass** (0.44 s main / 0.43 s reviewer),
+  including derivatives, constrained optimality, mappings, partial/slow writes
+  and rejection of late final publication. No real study runs in these tests.
+- Verified 27 sources, all 54 run files / sixteen NPZs, 238 scalars, both saved
+  response matrices, flux vectors, numerical optimality checks and nullspace
+  spectra. Both starts retain their exact original geometry.
+- Fourteen complete saved-loop-A integrals, six coarse linearity pairs and all
+  **896 B / 896 A** comparisons pass. Maximum errors are 6.14e-16 / 1.13e-16.
+- Independent Fourier reconstruction verifies all three grids and loops to
+  1.95e-14. Explicit six/24-current mappings and frozen fine currents match.
+- The reviewer did not rerun native fields, the full ancestral reference graph,
+  physical diagnostics or resource-history measurements.
 
-Implementation and original experiment checks supporting this replay:
+The [result record](../optimization/INDEPENDENT_CURRENT_EXPLORATION.md) and
+[evidence](../../evidence/independent-currents-v1.json) retain exact identities,
+failed-screen outcomes and scope. The next local-normalized-current experiment
+is specified there; its results are not yet claimed.
 
-- **53 combined experiment tests pass** (13.27 s): fourteen new synthetic
-  constrained-search tests, 28 objective/cache tests (including a native circle),
-  and eleven static-screen tests. The independent reviewer reran all fourteen
-  new tests (0.54 s). `artifacts/constrained-coils-v1/implementation-tests.xml`.
-- **Five reused curvature tests pass** (0.14 s), plus the retry serializer check.
-- Independent search audit checks 30 sources, all **744 trial/attempt pairs**,
-  masks/boxes, actual selections and **sixteen directional derivatives**.
-  Separate formulas reproduce 96 fine metrics and eight saved-loop-A integrals;
-  all **512 B / 512 A** comparisons and selected physical-curve reconstructions pass.
-- Geometry follow-up completes eight levels in 44.329 s (44.711 s supervised).
-  Independent saved-data arithmetic checks seven sources, four snapshots, 2,208
-  coil-pair / 192 plasma lower bounds and 48 tighter curvature enclosures.
-  Result: one scoped pass, three unresolved clearances, not three proven failures.
-  No full distance-grid rerun, directed interval proof or full self-disjointness.
-- The first geometry attempt failed while serializing a NumPy Boolean (2.361 s).
-  Its script/prefix remain intact; the fresh retry changes scalar serialization
-  only, with unchanged numerics/gates. Neither geometry run calls native fields.
+## Public export of the improved shape
 
-The [result record](../optimization/CONSTRAINED_COIL_EXPLORATION.md) and
-[adaptive evidence](../../evidence/constrained-coils-slack-v1.json) bind the
-latest checks to the immutable original study. **47 public tests pass**. Scoped Ruff,
-documentation structure and whitespace checks pass. No full native regression
-is claimed.
+The [shape-52 candidate](../../submissions/constraint-aware-shape52/README.md)
+reproduces all 198 native coefficients/names and physical-copy mappings.
+Public evaluation and same-code audit both exit zero: normal RMS 0.170953
+(−43.80% from the starter), interior-vector RMS 0.292176 (−23.20%).
+Replay passes; independent implementation, physical admission and Step 4
+completion remain false. The public fixed current differs from the native fit;
+only geometry is exported, not its magnetic state or native interior acceptance.
 
-## Completed matched boundary calibration
+Independent review checks both saved resolution levels, coefficient/current
+identities, all source hashes and unchanged evaluator/reference bytes against
+`39a1e13`. See the [portable evidence](../../evidence/public-shape52-v1.json).
+**47 public tests pass** (3.360 s); scoped Ruff, documentation structure and
+whitespace checks pass. No full native regression, independent public field
+rerun or separate-machine replay is claimed.
 
-The [result page](../optimization/REFERENCE_CALIBRATION.md) retains the 13-row
-study, all 156 independently reproduced metrics, 832 sampled field comparisons
-and direct QUASR tensor-surface reconstruction. QUASR is a boundary-component
-positive only; LPQA reproduces archived mean/max under the tested convention.
-This does not establish a complete Goodman positive or Step 4 acceptance.
+## Supporting checks retained in their result pages
 
-## Other scoped checks
-
-- [Static start screen](../optimization/COIL_START_SCREEN.md): twelve boundary/loop
-  rows, 144 independently reproduced metrics and preserved original geometry.
-- [Objective comparison](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md):
-  160 coarse bundles, four fine screens, independent arithmetic and explicit
-  curvature witnesses; both endpoints infeasible. Its first cache-identity
-  failure and 28 implementation / 101 reused-component tests remain documented.
-- [Residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md): eight saved
-  comparisons complete at clean `7b4ec75`; independent source/arithmetic audit.
-- [Fixed field comparison](../optimization/FIXED_FIELD_PROBE_RESULTS.md): its
-  source-bound 5,654-test regression predates later edits, not current full coverage.
-- [Public release results](../validation/PUBLIC_RELEASE_RESULTS.md): exact dated
-  portability checks and unverified hosted coverage.
+- [Constraint-aware fitting](../optimization/CONSTRAINED_COIL_EXPLORATION.md):
+  744 search bundles, original four-arm selections and adaptive saved-point
+  checks. Shape trial 52 passes scoped continuous geometry at RMS 0.151679;
+  circle trial 126 has unresolved clearance. All boundary-error limits fail.
+- [Matched calibration](../optimization/REFERENCE_CALIBRATION.md): thirteen rows,
+  156 independently reproduced metrics, 832 field comparisons and QUASR surface
+  reconstruction. No complete Goodman positive control is established.
+- [Static starts](../optimization/COIL_START_SCREEN.md),
+  [objective comparison](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md) and
+  [saved residual diagnosis](../optimization/FIELD_RESIDUAL_RESULTS.md) retain
+  source-bound implementation checks, actual results and failed attempts.
+- [Public release results](../validation/PUBLIC_RELEASE_RESULTS.md) retain exact
+  dated portability checks and unverified hosted coverage.
 
 No hosted CI, external peer review, release or pressure/engineering validation
 is claimed by this maintenance record.

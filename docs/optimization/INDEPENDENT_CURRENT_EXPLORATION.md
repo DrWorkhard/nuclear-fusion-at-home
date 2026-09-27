@@ -50,7 +50,8 @@ and flux cancellation. Ambiguous numerical certification remains unresolved.
 Raw-flux improvement may worsen local-normalized RMS/max; report both.
 
 Numerical tolerances: equality/box 1e-10; scaled stationarity 1e-8, dual signs
-1e-10, complementarity 1e-9, relative supporting-plane objective gap 1e-8;
+1e-10, complementarity 1e-9, supporting-plane objective gap divided by
+`max(1, |objective|)` ≤1e-8;
 active-bound identification 1e-8. SLSQP uses `ftol=1e-14`. If its point does not
 certify, permit one nonsingular active-set linear KKT polish, fixing only its
 identified bounds. Reject a singular system, changed active set or failed
@@ -90,4 +91,84 @@ the trade-off and favor another family/initialization. A convex optimum applies
 only to these fixed geometry columns and the raw objective, not to stellarator
 design globally. No Step 4 completion or Proxima advantage follows.
 
-Implementation is being prepared; no new fit has run.
+Implementation and independent review pass all twenty synthetic tests (0.44 s
+main / 0.43 s reviewer). Slow/partial writes, late final publication and a late
+basis save are rejected; failed diagnostic bytes remain. Scoped Ruff and
+documentation checks pass.
+
+## Completed raw-objective result
+
+Both fixed-geometry fits numerically certify without polishing. The run completes
+fourteen replay/fine rows in 4.794 s worker / 7.151 s supervised, using 18,049,370
+bytes. It is a dirty, hash-bound exploration at `39a1e13`; sources remain unchanged.
+The [evidence record](../../evidence/independent-currents-v1.json) binds all inputs,
+basis arrays, currents, fields and the pre-run question. Result SHA-256:
+`54ce6a3f405e7f3f87d747c46937c574cfd23e0414809e5f2da83021861c7bf6`.
+
+| Fine unshifted metric | Circle control → fit | Shaped control → fit |
+| --- | ---: | ---: |
+| Raw normalized error | 0.0507979 → 0.00388669 | 0.0393446 → 0.00446327 |
+| Local normal RMS | 0.308661 → 0.492879 | 0.276051 → 0.505851 |
+| Area-mean field, T | 1.26231 → 0.26603 | 1.28277 → 0.26462 |
+| Minimum sampled field, T | 1.06681 → 0.014835 | 1.03822 → 0.008117 |
+
+Raw error falls **92.35% / 88.66%**, while normalized RMS **increases
+59.68% / 83.25%**. The target-loop flux and current limit still pass. Fitted base
+currents, in kA, are:
+
+```
+circle: [416.189819, -48.181633, 67.036090, -26.013749, -11.407529, -10.967496]
+shaped: [364.359697,  17.460118, 35.044362,  -6.553229,  -7.719620,  -7.459855]
+```
+
+No bound is active. Both five-dimensional flux-nullspace systems have numerical
+rank five, condition numbers 3.951 / 2.442. Scaled stationarity residuals are
+1.347e-10 / 1.793e-10; supporting-plane gaps 1.276e-9 / 2.920e-9. These support
+the scoped raw-objective numerical result, not the field's suitability.
+
+The refined/shifted screens retain the negative conclusion: maximum normalized
+normal errors reach 0.99995 / 0.99998, and minimum fields 0.014761 / 0.008104 T.
+All fourteen rows fail both boundary-error limits. All twelve control/fit rows
+pass flux/current screens; the two unequal probes intentionally miss target flux.
+Geometries remain exactly the previously checked starts; no new engineering or
+current-independent physical qualification follows.
+
+**Interpretation:** the raw objective can reward a much weaker boundary field
+despite the specified loop flux being preserved. It does not adequately select
+for normalized field direction in this current family. This does not establish
+that relative-current freedom itself is unhelpful; test the appropriate objective.
+
+Independent saved-data audit checks 27 sources, all 54 run files / sixteen NPZs,
+238 scalars, both field matrices/flux vectors/KKT checks, nullspace spectra,
+current mappings and frozen fine values. Fourteen full loop integrals, six
+coarse linearity pairs and **896 B plus 896 A** comparisons pass. Separate Fourier
+reconstruction verifies all three grids and loop geometry to 1.95e-14; field
+comparison errors remain below 6.14e-16 / 1.13e-16. Actual native requests:
+B=1600, A=68, combined independent=14. The reviewer did not rerun native fields,
+the full ancestral graph, physical diagnostics or resource-history measurements.
+
+## Next question: local-normalized current fitting
+
+Exploration session 5 reuses these exact saved six-column matrices and unchanged
+geometries. Compare four arms: circle and shaped, each starting from its equal-
+current control and its raw-QP fit. These starts are all strictly inside the
+current box. Minimize `0.5 sum(weight * (n̂·B(q))² / |B(q)|²)` with an analytic
+six-current gradient, the same flux equality and ±500 kA limits. No regularization,
+extra field-strength constraint, post-fit rescaling or silent threshold change.
+This objective is nonconvex; no global-optimality certificate is implied.
+
+Before each search: two sine/cosine directions projected into the flux nullspace,
+central differences at 1e-5 / 5e-6 in q units (absolute ≤1e-7 or relative ≤1e-4),
+and exact repetition. Require probes inside the current box; exclude them from
+selection. A zero sampled field is invalid, not clipped into a favorable score.
+Permit **400 total objective/gradient bundles per arm**, including ten startup
+bundles, and at most 200 SLSQP iterations. Retain every attempt, actual metrics,
+failed points and the lowest-RMS feasible seed/search point. Reject late results.
+
+Freeze the selected six currents before two native fine checks per arm at
+128² / 512 nodes, unshifted and half-shifted. Reuse original control fine rows;
+save new full B/normals, loop A/tangents and independent B/A comparisons. These
+adaptive checks are not confirmation holdouts. Bounds: **240 s worker / 245 s
+external**, 64 MiB output, one thread, same 3/2 GiB reserves; fresh outputs under
+`artifacts/local-currents-v1/`. No new field responses during optimization and
+no shape, topology, pressure or interior-vector change/qualification.
