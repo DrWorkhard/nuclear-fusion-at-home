@@ -4,17 +4,20 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
-## Normalized-objective experiment: preparation
+## Normalized-objective experiment: adapter repair
 
 The isolated raw/local comparison now has a fixed exploratory question, original
 seed replay anchors, equal bundle ceilings and separately screened endpoints.
-No existing evaluator or acceptance limit changes. Execution is pending.
+No existing evaluator or acceptance limit changes. The first execution at clean
+`e916c8d` exits nonzero after 23.22 s: raw-objective derivative checks stop search.
+The local arm's stale flux normalization invalidates the intended comparison.
+The failed outputs remain bound by their manifest; no design benefit is claimed.
 
 Checks actually performed in the existing `.venv`:
 
-- **27 synthetic experiment tests pass** (0.45 s), covering chain rule, current
+- **28 synthetic/native-circle experiment tests pass** (2.31 s), covering chain rule, current
   scaling, named mapping, derivative checks, exact repeats, budget and late-result
-  rejection. `artifacts/normalized-coils-v1/implementation-tests.xml`.
+  rejection and interacting field caches. `artifacts/normalized-coils-v2/implementation-tests.xml`.
 - **101 reused-component tests pass** (5.90 s): coupled fields, independent coil
   reconstruction, sparse geometry and boundary metrics.
   `artifacts/normalized-coils-v1/reused-components.xml`.
@@ -23,6 +26,11 @@ Checks actually performed in the existing `.venv`:
 - A separate read-only review confirmed the raw current-elimination derivative,
   local-RMS normalization and fine-grid cache/current handling. Its resource and
   failure-reporting findings are addressed in the implementation and tests.
+- Actual startup exposed a missing interaction test: separately created wrapper
+  classes gave boundary/loop fields the same native identity and suppressed loop
+  invalidation. Separate source inspection confirms the cause. A two-field
+  native-circle regression fails before the shared-class repair and passes after;
+  derivative tolerances remain unchanged. A fresh complete retry is pending.
 
 The [experiment record](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
 specifies actual budgets, source fingerprints and limits. Passing software

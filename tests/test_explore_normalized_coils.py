@@ -1,4 +1,4 @@
-"""Synthetic orchestration/math checks only; no native fields or real fixtures."""
+"""Synthetic checks and one native-circle cache regression; no real fixtures."""
 
 import importlib.util
 import json
@@ -240,3 +240,37 @@ def test_fine_freezes_current_blocks_field_and_rejects_crosscheck(
 def test_module_load_has_no_native_field_symbols():
     assert "BiotSavart" not in experiment.__dict__
     assert "SquaredFlux" not in experiment.__dict__
+
+
+def test_two_native_circle_fields_have_distinct_names_and_invalidate(tmp_path, clock):
+    pytest.importorskip("simsopt")
+    from simsopt.field import BiotSavart, Coil, Current
+    from simsopt.geo import CurveXYZFourier
+
+    curve = CurveXYZFourier(64, 1)
+    curve.set("xc(1)", 1.)
+    curve.set("ys(1)", 1.)
+    coils = [Coil(curve, Current(1e5))]
+    records = [experiment.Recorder(tmp_path/f"field-{i}", 1) for i in range(2)]
+    fields = [experiment.tracked_field(BiotSavart, coils, record) for record in records]
+    points = np.array([[.2, .1, .3], [-.3, .2, .4], [.1, -.2, -.5]])
+    for field in fields:
+        field.set_points(points)
+    before = [[field.B().copy(), field.A().copy()] for field in fields]
+    curve.set("xc(0)", .05)
+    reference = BiotSavart(coils)
+    reference.set_points(points)
+    for i, field in enumerate(fields):
+        for j, name in enumerate(("B", "A")):
+            after, expected = getattr(field, name)(), getattr(reference, name)()
+            assert not np.array_equal(after, before[i][j]), f"stale {name} for field {i}"
+            np.testing.assert_allclose(after, expected, rtol=1e-12, atol=1e-14)
+    assert fields[0].name != fields[1].name and fields[0] != fields[1]
+    assert type(fields[0]) is type(fields[1])
+    assert len({*fields, reference}) == 3
+    curve.set("xc(0)", 0.)
+    for i, field in enumerate(fields):
+        np.testing.assert_allclose(field.B(), before[i][0], rtol=1e-12, atol=1e-14)
+        np.testing.assert_allclose(field.A(), before[i][1], rtol=1e-12, atol=1e-14)
+    assert all(record.counts["B"] == dict(attempted=3, completed=3) for record in records)
+    assert all(record.counts["A"] == dict(attempted=3, completed=3) for record in records)

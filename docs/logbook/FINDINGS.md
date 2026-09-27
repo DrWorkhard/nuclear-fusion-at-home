@@ -24,6 +24,11 @@ These lessons guide that work rather than duplicating the full result chronology
 - **Use named physical coordinates.** Positional optimizer arrays can change
   meaning across processes. The [mapping correction](../optimization/REPLAY_MAPPING_REMEDIATION.md)
   explains why replay must bind names, coefficients and physical fields.
+- **Test interacting native caches, not only repeatability.** The
+  [objective experiment](../optimization/NORMALIZED_OBJECTIVE_EXPLORATION.md)
+  caught an instrumentation wrapper assigning two fields equal native identities.
+  Seed repeats passed while one field cache stayed stale. Perturb/reset checks
+  with two fields and fresh unwrapped controls now cover that failure.
 - **Plasma-proxy improvement is not reactor improvement.** The
   [Step 3 result](../steps/STEP_3_PLASMA_TARGET.md) is a vacuum diagnostic; realized
   coil fields, confinement, pressure and finite-build robustness remain separate

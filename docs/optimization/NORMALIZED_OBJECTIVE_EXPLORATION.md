@@ -85,13 +85,39 @@ requires frozen-selection independent confirmation and interior/geometry checks.
 ## Implementation checks and execution
 
 The isolated experiment reuses the existing field and sparse geometry tools;
-it changes neither shared evaluators nor the acceptance gates. Twenty-seven
-synthetic orchestration/chain-rule tests pass, and 101 relevant reused-component
+it changes neither shared evaluators nor the acceptance gates. Twenty-eight
+synthetic/native-circle tests pass, and 101 relevant reused-component
 tests pass. Named mapping, seed replay, failed startup, shared output cap and
 late-result rejection are covered. Source fingerprints include the actual loaded
 native Python/binary and optimizer implementation, before and after execution.
 
 Run `scripts/explore_normalized_coils.py NEW_OUTPUT_DIRECTORY` in the existing
 native environment with the stated one-thread settings and an external 905 s
-process-group watchdog. The local launcher and raw outputs are kept under
-`artifacts/normalized-coils-v1/`. No optimization outcome is claimed yet.
+process-group watchdog. Raw outputs are retained in separately identified runs.
+
+## First attempt: adapter failure, not an objective comparison
+
+At clean `e916c8d`, `artifacts/normalized-coils-v1/` exits nonzero after 23.22 s.
+Both arms reproduce the original seed, but the raw arm fails all four derivative
+checks and stops before search: discrepancies 0.0118–0.0152, not rounding noise.
+Its exact seed repeat passes. The local arm completes 80 bundles and two fine
+screens, but its recorded coarse current/flux scale stays constant over every
+trial; the fine flux differs from the target by 14.22%. This is not a valid
+normalized-current comparison or a new admitted design.
+
+The cause is **our instrumentation adapter**, not a changed physical model or
+SIMSOPT flux formula. Defining a fresh subclass called `Tracked` for each field
+resets the native optimization object's class counter: boundary and loop fields
+both become `Tracked1`. Name-based equality merges their parent dependency
+references, so the loop vector-potential cache fails to invalidate after coil
+changes. Separate source inspection confirms this mechanism. A single shared
+wrapper class with per-instance accounting repairs it. A native-circle
+regression fails before the repair and passes afterward: both fields' B/A
+caches change with perturbed geometry, match fresh unwrapped fields and restore
+on reset. Original limits and native libraries are unchanged.
+
+The [failed-attempt manifest](../../evidence/normalized-coils-failed-v1.json)
+binds the retained local outputs; Git preserves the executable source. Do not loosen derivative tolerances,
+reinterpret the 14.22% discrepancy as harmless quadrature error or claim that one
+objective won. The retry will repeat the complete two-arm schedule in a fresh
+directory (`artifacts/normalized-coils-v2/`) after the adapter regression and review pass.

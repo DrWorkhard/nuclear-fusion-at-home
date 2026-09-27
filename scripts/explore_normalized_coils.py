@@ -7,6 +7,7 @@ chosen coarse current. Run serially with one native thread and an external cap.
 
 import argparse
 import copy
+import functools
 import hashlib
 import importlib
 import io
@@ -36,7 +37,7 @@ def fingerprints(root):
     modules = ("simsoptpp", "simsopt.field.biotsavart", "simsopt.field.coil",
                "simsopt.geo.curvexyzfourier", "simsopt.geo.surfacerzfourier",
                "simsopt.geo.curveobjectives", "simsopt.objectives.fluxobjective",
-               "simsopt._core.optimizable", "simsopt._core.derivative",
+               "simsopt._core.optimizable", "simsopt._core.derivative", "simsopt._core.util",
                "scipy.optimize._lbfgsb_py", "scipy.optimize._lbfgsb",
                "fusion_baselines.coupled_coils", "fusion_baselines.coupled_coil_audit",
                "fusion_baselines.filament_field", "fusion_baselines.curvature_bounds",
@@ -123,20 +124,31 @@ class Recorder:
         return answer
 
 
-def tracked_field(field_class, coils, record):
+@functools.cache
+def tracked_field_class(field_class):
+    """One class/counter per native type: Optimizable equality uses class + ID."""
     class Tracked(field_class):
+        def __init__(self, coils, record):
+            self.record = record
+            super().__init__(coils)
+
         def B(self):
-            return record.call("B", super().B)
+            return self.record.call("B", super().B)
 
         def A(self):
-            return record.call("A", super().A)
+            return self.record.call("A", super().A)
 
         def B_vjp(self, weights):
-            return record.call("B_vjp", super().B_vjp, weights)
+            return self.record.call("B_vjp", super().B_vjp, weights)
 
         def A_vjp(self, weights):
-            return record.call("A_vjp", super().A_vjp, weights)
-    return Tracked(coils)
+            return self.record.call("A_vjp", super().A_vjp, weights)
+    Tracked.__name__ = f"ExploratoryTracked_{field_class.__module__}_{field_class.__name__}"
+    return Tracked
+
+
+def tracked_field(field_class, coils, record):
+    return tracked_field_class(field_class)(coils, record)
 
 
 class Model:
