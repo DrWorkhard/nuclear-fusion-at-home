@@ -164,10 +164,15 @@ selection. A zero sampled field is invalid, not clipped into a favorable score.
 Permit **400 total objective/gradient bundles per arm**, including ten startup
 bundles, and at most 200 SLSQP iterations. Retain every attempt, actual metrics,
 failed points and the lowest-RMS feasible seed/search point. Reject late results.
+SLSQP uses `ftol=1e-12`; selection requires equality error ≤1e-10. Forty-two
+combined local/raw-current synthetic tests pass (0.39 s main), including analytic
+derivatives, scale invariance, probe exclusion, exact budgets, late rejection and
+mocked frozen-current fine replay. These are implementation checks, not results.
 
 Freeze the selected six currents before two native fine checks per arm at
 128² / 512 nodes, unshifted and half-shifted. Reuse original control fine rows;
 save new full B/normals, loop A/tangents and independent B/A comparisons. These
+screens also retain full loop B and its independent sampled comparison. These
 adaptive checks are not confirmation holdouts. Bounds: **240 s worker / 245 s
 external**, 64 MiB output, one thread, same 3/2 GiB reserves; fresh outputs under
 `artifacts/local-currents-v1/`. No new field responses during optimization and

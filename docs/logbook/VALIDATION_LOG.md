@@ -4,6 +4,15 @@ Updated 27 September 2026. Latest completed work, not an append-only history.
 Git retains previous versions; canonical result pages retain scientific checks
 and failed attempts.
 
+## Local-normalized current implementation ready
+
+The next experiment is implemented and independently reviewed before execution.
+**42 combined local/raw-current synthetic tests pass** (0.39 s); the reviewer
+separately reruns all 22 new tests (0.23 s). Derivatives, fixed flux/current box,
+startup/bundle accounting, feasible-only selection and late publication pass;
+native fine checks are mocked in this suite. Scoped Ruff and whitespace pass.
+No real local-current result is claimed by these implementation checks.
+
 ## Independent currents: raw-objective result complete
 
 Two fixed-geometry current fits complete fourteen replay/fine rows in 4.794 s
