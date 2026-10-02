@@ -1,4 +1,4 @@
-*New York Times, 01.01.2027:*
+_New Years Eve, 2026_
 
 > "**Big leap in nuclear fusion technology.**
 >
