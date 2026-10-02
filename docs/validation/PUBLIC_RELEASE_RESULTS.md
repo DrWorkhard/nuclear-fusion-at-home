@@ -32,6 +32,13 @@ through the [reproduction guide](REPRODUCING_RESULTS.md).
 
 ## Hosted launch verification
 
+Launch hardening at `557a106e2d62de4e1ca9485bd9eb61aa0f6a91e2` passed
+[core-ci](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36976443061)
+and all six [portable jobs](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36976443009)
+before the exact tested commit was fast-forwarded to protected main. Code-owner
+routing, unprivileged checkout and cancellation controls were added; scientific
+code, public data and historical evidence remained unchanged from `6bda543`.
+
 Public source `631434c5597db58aa1e5cc597f2c751d8ca95f35` passed
 [core-ci](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36971892980)
 and [portable-public-ci](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36971892966)

@@ -55,9 +55,15 @@ protection are enabled; the alert endpoint returns zero alerts. Auto-merge is of
   contributor reproduction) and
   [#2](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/2) (historical
   artifact rights). No independent review or rights clearance is claimed.
-- Launch files are to be tested on a separate remote branch before the exact
-  passing commit is fast-forwarded to main under the authorized owner session.
-  This uses the documented sole-owner review exception, never a CI bypass.
+- Launch commit `557a106e2d62de4e1ca9485bd9eb61aa0f6a91e2` passed
+  [core](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36976443061)
+  and all six [portable jobs](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36976443009)
+  on the launch branch, then was fast-forwarded to protected main unchanged.
+  GitHub reported only the documented sole-owner PR/review exception, not a CI
+  bypass. CODEOWNERS validation on that branch returned no errors. A subsequent
+  default-ref API request returned 404; the explicit `ref=main` request then
+  returned no errors. Scientific code/data/evidence trees are unchanged
+  against `6bda543`; auto-merge and unattended monitoring remain off.
 - Local process inspection remains unavailable in the sandbox; no research solve
   or heavy build was started. Disk had about 12 GiB free before the single
   disposable clone. Native dependencies, scientific kernels and evidence are
