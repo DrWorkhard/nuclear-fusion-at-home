@@ -2,27 +2,27 @@
 
 Updated 2 October 2026. Git retains earlier verification records.
 
-## GitHub publication preflight
+## GitHub publication and hosted CI
 
-Publication was requested, but there is no configured remote or connected GitHub
-integration yet; the owning account/repository name is still needed. No push,
-public repository, hosted CI run or repository-settings change has occurred.
+On 2 October 2026 the owner authorized publication. The public repository
+[DrWorkhard/nuclear-fusion-at-home](https://github.com/DrWorkhard/nuclear-fusion-at-home)
+was created and `main` (`e0eb02b`) plus the tags `foundation-pre-scope-2026-09-13`
+and `research-freeze-2026-09-27` were pushed over SSH as DrWorkhard; the owner then
+pushed `631434c`. The full history was published deliberately, including the
+local-path provenance and author metadata described in the
+[inventory](../validation/PUBLICATION_INVENTORY.md) (zero matches for its five
+limited credential patterns at `a5de268`; local paths in 398 tracked files).
 
-- Read-only [inventory](../validation/PUBLICATION_INVENTORY.md) at `a5de268`:
-  1,081 tracked files, 373 reachable commits, zero matches for five limited
-  credential patterns. Local paths remain in 398 tracked files; author metadata
-  and complete-history distribution rights still need intentional review.
-- Inventory tests: **3 passed**, **0.76 s**. Public tests: **48 passed**,
-  **3.358 s**. Documentation/release tests: **37 passed**, **0.22 s**.
-  Documentation and whitespace checks pass.
-- Local copied-tree public qualification: **8 checks passed** using Python with
-  isolated imports, no site packages and a socket audit guard. Raw outputs are
-  retained locally in `results/github-preflight-2026-10-02`; they are ignored by
-  Git. This is neither hosted CI nor separate-machine reproduction.
-- The user's README date edit is preserved, not included in the committed-object
-  scan. No scientific evidence, evaluator, native environment or research result
-  was changed. Process-list inspection was denied by the local sandbox; no
-  research or other heavy job was started.
+- Hosted GitHub Actions, first runs: `core-ci` passed for both commits (runs
+  36971843925 and 36971892980, about 20 s each). `portable-public-ci` passed all six
+  jobs (Linux, macOS, Windows × Python 3.11, 3.14) for both commits (runs
+  36971843923 and 36971892966).
+- Fresh anonymous HTTPS clone of `631434c` on macOS with CPython 3.12.13:
+  `public cases` succeeds, `public demo` reports `reference_reproduced: true` and
+  `physical_admission: false`, and the public tests pass.
+- Not yet configured: branch protection, private vulnerability reporting and a
+  discussion channel (launch checklist, handled separately). Rights review of the
+  complete history and reproduction by another person remain open.
 
 ## Contributor documentation checks
 

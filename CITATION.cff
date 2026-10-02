@@ -6,6 +6,8 @@ authors:
   - family-names: Wirkert
     given-names: Sebastian
 license: MIT
+repository-code: "https://github.com/DrWorkhard/nuclear-fusion-at-home"
+url: "https://github.com/DrWorkhard/nuclear-fusion-at-home"
 abstract: >-
   Research tools and a portable public contribution starter for stellarator
   field and coil studies. Project code is MIT; bundled derived reference data

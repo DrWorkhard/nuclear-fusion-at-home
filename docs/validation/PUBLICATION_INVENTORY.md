@@ -1,8 +1,11 @@
 # Publication inventory: history, size and privacy indicators
 
 Updated 2 October 2026. Read-only release preparation, **not a complete security
-or rights audit**. Publication is requested; GitHub access and the destination
-account/repository are not yet configured. No repository has been published.
+or rights audit**. Published on 2 October 2026 as the public repository
+[DrWorkhard/nuclear-fusion-at-home](https://github.com/DrWorkhard/nuclear-fusion-at-home): complete history of `main`
+plus the tags `foundation-pre-scope-2026-09-13` and `research-freeze-2026-09-27`.
+The owner chose to publish the full history, including the local-path provenance
+and author metadata described below.
 [Review policy](REVIEW_POLICY.md) · [Portable release result](PUBLIC_RELEASE_RESULTS.md)
 
 ## Latest check
@@ -44,11 +47,11 @@ passed in 0.76 s. They cover deleted credentials remaining in history, selected
 patterns without disclosure of matched values, and exclusion of untracked files.
 Counts change as history grows; rerun for the actual publication revision.
 
-## Publication decisions still required
+## Publication decisions
 
-Publishing this history also publishes its local-path provenance and Git author
-metadata. Review these intentionally, alongside distribution rights for all
-included artifacts. Existing MIT source and CC BY4.0 starter notices are not
+Publishing this history also published its local-path provenance and Git author
+metadata; the owner accepted this before publication. Distribution rights for all
+included artifacts still need review. Existing MIT source and CC BY4.0 starter notices are not
 blanket clearance of the complete research history. Preserve evidence identities;
 do not silently sanitize old records or rewrite history to suppress indicators.
 
@@ -59,6 +62,6 @@ its limited patterns. It does not inspect licensing rights. A reviewed separate
 public export would be a different publication scope, not a replacement for the
 research history and its freeze tag.
 
-Local software checks do not verify hosted CI, GitHub permissions or branch
-protection. Record the actual remote and hosted checks only after they exist;
-keep ignored raw runs and the native environment outside the Git publication.
+Hosted CI results are recorded in [current verification](../logbook/VALIDATION_LOG.md).
+GitHub permissions and branch protection are not verified by this inventory.
+Keep ignored raw runs and the native environment outside the Git publication.

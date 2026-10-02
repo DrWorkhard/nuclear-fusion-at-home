@@ -45,5 +45,7 @@ requirements; [SQuID-C comparison](squid_c/README.md) needs more than suitable d
 
 Latest software checks belong in [current verification](logbook/VALIDATION_LOG.md),
 not the scientific result tally. Historical public qualifications are in
-[release evidence](validation/PUBLIC_RELEASE_RESULTS.md). Hosting, hosted CI and
-publication clearance remain pending.
+[release evidence](validation/PUBLIC_RELEASE_RESULTS.md). The repository is public at
+[github.com/DrWorkhard/nuclear-fusion-at-home](https://github.com/DrWorkhard/nuclear-fusion-at-home) since 2 October 2026, and hosted CI passes
+on Linux, macOS and Windows. Repository protection settings and a rights review
+of the complete history remain open.

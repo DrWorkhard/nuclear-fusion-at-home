@@ -51,9 +51,13 @@ contributing to existing community tools before building new infrastructure.
 
 ## Start in three commands
 
-Obtain a checkout or source ZIP and open its directory. When hosted, use the
-actual repository's **Code → HTTPS** clone URL or **Download ZIP**; otherwise
-obtain a checkout from the maintainer. No hosted URL is claimed here.
+Clone the repository (or use **Code → Download ZIP** on GitHub) and open its
+directory:
+
+```bash
+git clone https://github.com/DrWorkhard/nuclear-fusion-at-home.git
+cd nuclear-fusion-at-home
+```
 
 With **Python 3.11+**, run:
 

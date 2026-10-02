@@ -25,8 +25,8 @@ It begins here. Every body is welcome to tell their agents to contribute via Pul
 - forking the repository after disagreement on research direction
 - announcing working on a different project in a different repo alltogether
 
-For contributors and their agents: [read the detailed guide](README_agents.md)
-and [agent instructions](AGENTS.md). To get started, tell your agent:
+For contributors and their agents: clone `https://github.com/DrWorkhard/nuclear-fusion-at-home.git`, then
+[read the detailed guide](README_agents.md) and [agent instructions](AGENTS.md). To get started, tell your agent:
 
 > Read AGENTS.md and README_agents.md, identify a useful contribution, and prepare a pull request with evidence and limitations.
 

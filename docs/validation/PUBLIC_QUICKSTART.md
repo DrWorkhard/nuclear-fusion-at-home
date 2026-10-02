@@ -13,8 +13,10 @@ Local compatibility verification (25 September, macOS): **47 public tests and
 eight copied-tree release checks pass on Python 3.11.4, 3.12.13 and 3.14.3**,
 including the real reference, changed candidate and tamper rejection.
 See [release verification and scope](PUBLIC_RELEASE_RESULTS.md) and the
-[latest maintenance checks](../logbook/VALIDATION_LOG.md). Hosted CI and independent
-hardware reproduction have not yet been verified.
+[latest maintenance checks](../logbook/VALIDATION_LOG.md). Since 2 October 2026,
+hosted CI (GitHub Actions on Linux, macOS and Windows with Python 3.11 and 3.14)
+passes the public tests and copied-tree checks. Reproduction by another person on
+separate hardware is still outstanding.
 
 ## Reproduce a real reference
 

@@ -47,7 +47,8 @@ global optimum. It does not relax scientific or engineering acceptance.
 Pressure, detailed engineering and SQuID-C intake are deferred until a coil set
 is within 10× of the field limit; they remain necessary for later completion.
 Exploration uses [short records and proportionate checks](validation/RESEARCH_WORKFLOW.md).
-Dates are decision targets, not promises of scientific success. Hosting, contact,
-artifact publication and automated merging need separate authorization; the
+Dates are decision targets, not promises of scientific success. The repository is
+public on [GitHub](https://github.com/DrWorkhard/nuclear-fusion-at-home) since 2 October 2026; contact and artifact
+publication need separate authorization. The
 [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
-records the operational prerequisites.
+records the remaining operational prerequisites.
