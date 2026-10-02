@@ -29,7 +29,14 @@ For a separate historical working tree, choose a new destination:
 git worktree add --detach ../fusion-frozen research-freeze-2026-09-27
 ```
 
-No remote/tag URL is invented; the repository is not yet publicly hosted.
+Both historical tags are available in the
+[public repository](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/research-freeze-2026-09-27).
+Use a full clone, or fetch the tag explicitly if your checkout is shallow:
+
+```bash
+git fetch origin tag research-freeze-2026-09-27
+```
+
 Do not run old workflows blindly: read the protocol and resource requirements
 at the tag. When a report records an earlier source revision, use that exact
 revision and verify its hashes; the freeze tag is the navigation starting point,

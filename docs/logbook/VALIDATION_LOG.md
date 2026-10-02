@@ -20,9 +20,48 @@ limited credential patterns at `a5de268`; local paths in 398 tracked files).
 - Fresh anonymous HTTPS clone of `631434c` on macOS with CPython 3.12.13:
   `public cases` succeeds, `public demo` reports `reference_reproduced: true` and
   `physical_admission: false`, and the public tests pass.
-- Not yet configured: branch protection, private vulnerability reporting and a
-  discussion channel (launch checklist, handled separately). Rights review of the
-  complete history and reproduction by another person remain open.
+- Publication follow-up builds on the owner's documentation commit `6bda543`.
+  Concurrent launch-document edits were preserved and only extended after that
+  commit. Rights review of the complete history and reproduction by another
+  person remain open.
+
+## Launch protections and follow-up checks
+
+GitHub API read-back confirms private reporting enabled; fork workflow approval
+required for all external contributors; full action-SHA pinning required; default
+workflow token read-only with review approval disabled. Secret scanning and push
+protection are enabled; the alert endpoint returns zero alerts. Auto-merge is off.
+
+- Active rulesets: `24350197` requires the seven observed GitHub Actions checks
+  and forbids main force-push/deletion with no bypass; `24350199` requires PR/code-
+  owner review, with an explicit review-only exception for sole owner DrWorkhard;
+  `24350200` forbids frozen-tag updates/deletion with no bypass.
+- An initial classic protection request was rejected (HTTP 422: an organization-
+  only user restriction). Read-back showed no partial protection. Separate
+  rulesets supply the intended personal-repository configuration without
+  broadening the CI exception.
+- Fresh anonymous clone of `6bda543`: all eight public qualification operations
+  and docs checks pass. Freeze tag identity matches `56181dc`. Outputs remain
+  local in `/private/tmp/fusion-launch.tIVtF1/checkout/results/launch-qualification`.
+  This local clone is not another person's independent reproduction.
+- History inventory repeat: 376 commits, 3,481 blobs, zero selected credential
+  matches; details and limits are in the [inventory](../validation/PUBLICATION_INVENTORY.md).
+- Active native suite: **429 passed**, 13 known HiGHS-option warnings, **26.58 s**.
+  Public suite: **48 passed**, **3.344 s**. Focused documentation/release/inventory
+  suite: **43 passed**, **1.06 s**. Ruff, docs and whitespace checks pass after
+  correcting an initial import-order lint error in the new release tests.
+- Follow-ups have explicit acceptance criteria in issues
+  [#1](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/1) (independent
+  contributor reproduction) and
+  [#2](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/2) (historical
+  artifact rights). No independent review or rights clearance is claimed.
+- Launch files are to be tested on a separate remote branch before the exact
+  passing commit is fast-forwarded to main under the authorized owner session.
+  This uses the documented sole-owner review exception, never a CI bypass.
+- Local process inspection remains unavailable in the sandbox; no research solve
+  or heavy build was started. Disk had about 12 GiB free before the single
+  disposable clone. Native dependencies, scientific kernels and evidence are
+  unchanged. Monitoring is session-triggered/manual, not a promised scheduler.
 
 ## Contributor documentation checks
 

@@ -12,10 +12,10 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
   confirmation, proportionate tests and single-writer ownership.
 - [Environment](ENVIRONMENT.md): active native dependencies, execution safeguards
   and the distinction between public CI and native checks.
-- [Release evidence](PUBLIC_RELEASE_RESULTS.md): source-bound local public
-  qualifications, failed checks and outstanding hosted/independent verification.
+- [Release evidence](PUBLIC_RELEASE_RESULTS.md): source-bound local and hosted
+  public qualifications, failed checks and outstanding independent verification.
 - [Review policy](REVIEW_POLICY.md): open contribution intake, trusted evaluation,
-  safe PR execution and the hosting checklist.
+  safe PR execution, live repository protections and the remaining launch work.
 - [Publication inventory](PUBLICATION_INVENTORY.md): dated size/privacy-pattern
   inventory, not a full security or rights clearance of the current tree.
 

@@ -1,5 +1,6 @@
 """Dev-only release controls: no scientific packages or local artifacts required."""
 
+import re
 from pathlib import Path
 from unittest.mock import patch
 
@@ -70,6 +71,34 @@ def test_entry_guides_are_connected_and_msx_keeps_the_2030_goal():
         assert msx[2] == "Aspirational 2030 goal"
         milestones.append(msx)
     assert milestones[0] == milestones[1]
+
+
+def test_public_launch_contact_and_ownership():
+    root = Path(__file__).resolve().parents[1]
+    repo = "https://github.com/DrWorkhard/nuclear-fusion-at-home"
+    assert repo + ".git" in (root / "README_agents.md").read_text(encoding="utf-8")
+    owners = (root / ".github/CODEOWNERS").read_text(encoding="utf-8")
+    assert [line for line in owners.splitlines() if line and not line.startswith("#")] == [
+        "* @DrWorkhard"]
+    for name in ("SECURITY.md", ".github/ISSUE_TEMPLATE/config.yml"):
+        assert repo + "/security/advisories/new" in (root / name).read_text(encoding="utf-8")
+
+
+@pytest.mark.parametrize("workflow", ["ci.yml", "public-ci.yml"])
+def test_launch_workflows_are_unprivileged_and_bounded(workflow):
+    root = Path(__file__).resolve().parents[1]
+    content = (root / ".github/workflows" / workflow).read_text(encoding="utf-8")
+    assert "permissions:\n  contents: read" in content
+    assert "persist-credentials: false" in content
+    assert "timeout-minutes: 10" in content
+    assert "cancel-in-progress: true" in content
+    assert "group: ${{ github.workflow }}-${{ github.ref }}" in content
+    assert "pull_request_target" not in content
+    assert "secrets." not in content
+    assert "schedule:" not in content
+    actions = re.findall(r"uses:\s*([^\s#]+)", content)
+    assert actions and all(re.fullmatch(r"[\w./-]+@[0-9a-f]{40}", action)
+                           for action in actions)
 
 
 @pytest.fixture

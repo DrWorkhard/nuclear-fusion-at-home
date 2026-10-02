@@ -16,5 +16,5 @@ These notices do not assert affiliation with or endorsement by the authors,
 Proxima Fusion, the Max Planck Institute or any other institution.
 
 The distribution-rights/privacy review for the complete historical Git repository
-remains a separate pre-publication task; qualification of this small packet is
+remains open after publication; qualification of this small packet is
 not a blanket clearance of all old artifacts or history.

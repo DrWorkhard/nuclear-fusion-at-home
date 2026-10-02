@@ -30,6 +30,26 @@ through the [reproduction guide](REPRODUCING_RESULTS.md).
   geometry, full-surface normalization, QI, pressure or engineering acceptance;
   `physical_admission` remains false.
 
+## Hosted launch verification
+
+Public source `631434c5597db58aa1e5cc597f2c751d8ca95f35` passed
+[core-ci](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36971892980)
+and [portable-public-ci](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36971892966)
+on 2 October 2026. All six portable jobs passed: Ubuntu 24.04, macOS 14 and
+Windows 2022, each on Python 3.11 and 3.14. Each ran the public tests, docs check
+and eight-operation reference/candidate qualification. These are real fresh
+hosted-machine runs, not the earlier local Windows-encoding simulation.
+
+A new anonymous HTTPS clone of `6bda54343e5bf2fb7e0195f459e037babe60e098`
+also passed all eight qualification checks and documentation checks locally on
+macOS/Python 3.12.13, with `-I -S` and the script's socket audit guard.
+Both remote historical tags were present, and the freeze tag peeled to
+`56181dc4250cb24ce3d2bedf5cec3d894d1ac250`.
+
+This establishes portability of the public layer. It does not establish
+independent scientific validation, reproduction by another person or portable
+native research data. Later commits need their own CI results.
+
 ## Source-bound local verification
 
 The latest multi-Python interface qualification is
@@ -67,10 +87,11 @@ failure from last-bit metric rounding. The unchanged numerical replay tolerance
 passed; no scientific limit or disk guard was relaxed. Final passing checks do not
 erase those observations. Raw logs remain referenced by the evidence records.
 
-Actual Windows/Linux or hosted matrix runs and independent-machine reproduction
-are **not established** by the local checks. Git history and ignored artifacts
-still require separate rights/privacy/security review and backup arrangements.
+The launch runs above establish actual Windows/Linux/macOS public execution.
+Independent-contributor and native research reproduction remain open. Git history
+and ignored artifacts still require separate rights/security review and backup
+arrangements; the owner accepted the recorded path/identity disclosure.
 The starter's portable packet does not make the full native research graph portable.
 The [launch checklist](REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
 owns hosting, real clone URL, reviewer/protection settings and security prerequisites.
-No hosting, external contact or automatic merging is enabled by these files.
+Hosting is live; automatic merging and unattended monitoring are not enabled.

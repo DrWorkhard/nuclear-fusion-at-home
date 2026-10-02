@@ -47,5 +47,6 @@ Latest software checks belong in [current verification](logbook/VALIDATION_LOG.m
 not the scientific result tally. Historical public qualifications are in
 [release evidence](validation/PUBLIC_RELEASE_RESULTS.md). The repository is public at
 [github.com/DrWorkhard/nuclear-fusion-at-home](https://github.com/DrWorkhard/nuclear-fusion-at-home) since 2 October 2026, and hosted CI passes
-on Linux, macOS and Windows. Repository protection settings and a rights review
-of the complete history remain open.
+on Linux, macOS and Windows. Main/tag protections and private security reporting
+are enabled; complete-history rights review and external-contributor reproduction
+remain open. See the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).

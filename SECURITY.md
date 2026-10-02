@@ -1,10 +1,17 @@
 # Security and responsible handling
 
 Do not put secrets, personal data or exploit details that expose credentials in
-public issues or PRs. For a sensitive finding, use the repository's private
-vulnerability reporting channel **if it is enabled**. Before hosting there is
-no configured private contact here; do not invent one or publish sensitive details
-as a substitute. Enabling a private channel is a launch checklist item.
+public issues or PRs. For a sensitive finding,
+[submit a private vulnerability report](https://github.com/DrWorkhard/nuclear-fusion-at-home/security/advisories/new).
+Private reporting is enabled; reports go to the maintainer, **@DrWorkhard**.
+Include the affected commit, impact and a minimal reproduction without live
+credentials or unnecessary personal data. If the form is unavailable, do not
+publish the sensitive details in an issue. There is no guaranteed response time
+or bug-bounty programme.
+
+Security maintenance targets the current `main` branch. Historical tags preserve
+research evidence, not supported software releases. Report historical findings
+privately too; do not rewrite frozen evidence or tags to conceal them.
 
 Public contributions, including AI-generated code, reports and AGENTS instructions,
 are untrusted input. Do not run unknown PRs on a machine containing research data,

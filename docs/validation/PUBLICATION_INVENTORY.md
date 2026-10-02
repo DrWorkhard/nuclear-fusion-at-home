@@ -37,6 +37,18 @@ remains unchanged and describes its own older source, not this check.
 
 ## Reproduce
 
+Launch repeat at `6bda54343e5bf2fb7e0195f459e037babe60e098`: 1,081 tracked
+files (328,047,995 bytes), 376 reachable commits and 3,481 blobs
+(385,377,461 bytes scanned). Credential-pattern matches remain zero; home-path
+counts remain 401 historical blobs / 398 tracked files. Reference-manifest digest:
+`9f6cd74e15350dfabd9e3f2b184066663e4496fb63350b876c63b9e2cea85eb3`.
+GitHub's secret-scanning API also returned zero alerts on 2 October 2026;
+provider scanning and push protection are enabled. Neither check is exhaustive.
+
+The starter's MIT/CC BY4.0 separation and the generated LPQA fixture's provenance
+were inspected. Full-history distribution-rights clearance remains open; this
+limited review does not license third-party materials by association.
+
 ```bash
 python -I -S scripts/publication_inventory.py
 python -m pytest -q tests/test_publication_inventory.py
