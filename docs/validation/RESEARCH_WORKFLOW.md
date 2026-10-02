@@ -49,7 +49,8 @@ or work on separate branches/worktrees with deliberate merges. Reviewers send
 findings; they do not edit the writer's files concurrently.
 Public-facing changes receive a concise editorial pass before publication.
 
-Keep one home per topic: README for motivation/onboarding, roadmap for priorities,
+Keep one home per topic: README for motivation, README_agents for technical
+onboarding, roadmap for priorities,
 status for scientific results, step/detail pages for methods and qualification,
 and shared notes for current decisions, lessons and latest checks. **History lives
 in Git.** Delete superseded plans, completed progress diaries and duplicate archives;
@@ -61,9 +62,10 @@ New prose is English; frozen records may retain their original language.
 The documentation check enforces word/row budgets and roadmap placement, not
 scientific truth, language fluency or every possible semantic duplication.
 
-Current budgets (whitespace-delimited Markdown tokens): root README 1,500;
+Current budgets (whitespace-delimited Markdown tokens): root README and
+README_agents 1,500 each;
 AGENTS 700; docs overview, status and plan 600 each; current Step 4 page 900.
-Status permits at most eight table data rows. Only root README and the plan hold
+Status permits at most eight table data rows. Only README_agents and the plan hold
 the roadmap table, with matching names/statuses. `python scripts/check_docs.py`
 enforces these limits; frozen reports are read from Git, not truncated to fit them.
 

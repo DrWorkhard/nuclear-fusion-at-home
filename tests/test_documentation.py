@@ -34,7 +34,7 @@ def test_valid_structure_and_link_resolution(project):
 
 
 @pytest.mark.parametrize("name", [
-    "CONTRIBUTING.md", "examples/case/README.md", "submissions/trial/README.md",
+    "README_agents.md", "CONTRIBUTING.md", "examples/case/README.md", "submissions/trial/README.md",
     ".github/PULL_REQUEST_TEMPLATE.md",
 ])
 def test_contributor_links_are_checked(project, name):

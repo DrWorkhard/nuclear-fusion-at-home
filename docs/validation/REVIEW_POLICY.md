@@ -90,7 +90,8 @@ tracked evidence, but does not clear security, privacy, rights or later revision
 - Review intended public contents **and Git history** for secrets/personal material,
   oversized artifacts and rights/attribution. The small starter does not certify
   every historical file as publication-ready.
-- Set the real public clone URL in the root README once hosting exists. Verify
+- Set the real public clone URL in README_agents.md once hosting exists; link it
+  from the human README. Verify
   it in a fresh checkout. Remove
   obsolete launch-only statements, and update dated verification coverage from
   actual hosted/machine results rather than assuming a push proves them.

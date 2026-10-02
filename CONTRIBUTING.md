@@ -9,7 +9,8 @@ not an allowlist. Code without an AI agent is equally welcome.
 
 ## Start here
 
-1. Read the [project overview](README.md) and [scientific status](docs/STATUS.md).
+1. Read the [project introduction](README.md), [technical contributor guide](README_agents.md)
+   and [scientific status](docs/STATUS.md). Agents also follow [AGENTS.md](AGENTS.md).
 2. Run the [portable quickstart](docs/validation/PUBLIC_QUICKSTART.md). It needs
    only Python 3.11+, not our private workspace, large datasets or an API key.
 3. Make a small, coherent change on your branch. Run `python scripts/test_public.py`

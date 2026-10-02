@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 27 September 2026.
+Updated 2 October 2026.
 [Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
@@ -17,11 +17,13 @@ cover their stated local scope, not a complete reactor.
 | 5. Demonstrate a meaningful design advantage | Verify practical benefit against leading matched references. | Not achieved |
 | MS0. Publish a useful open coil benchmark | Attributed challenge, calibrated checks and separate-machine reproduction. | Planned |
 | MS1. Contact Proxima Fusion with strong evidence | Show our design is better than their relevant design, then contact them. | Not reached |
-| MSX. Our end goal | Contribute to fusion for humanity through the best reactor design current technology can achieve. | Long-term goal |
+| MSX. Our end goal | Make nuclear fusion happen in 2030 for humanity through the best reactor design current technology can build, with power output comparable to today's nuclear plants. | Aspirational 2030 goal |
 
 MS1 needs a versioned Proxima reference, matched conditions and independently
-checked reproducible benefits. Improving our own seed is insufficient. MSX is an
-ambition, not a claimed global optimum. [Future comparison](squid_c/README.md).
+checked reproducible benefits. Improving our own seed is insufficient. MSX's
+2030 target is aspirational, not a validated delivery schedule or a claimed
+global optimum. It does not relax scientific or engineering acceptance.
+[Future comparison](squid_c/README.md).
 
 ## Current priorities
 

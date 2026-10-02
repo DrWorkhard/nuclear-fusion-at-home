@@ -1,8 +1,21 @@
 # Current verification
 
-Updated 27 September 2026. Git retains earlier verification records.
+Updated 2 October 2026. Git retains earlier verification records.
 
-## Completed headroom comparison
+## Contributor documentation checks
+
+The human README links to the technical guide and offers a copyable agent task.
+Agent/contributor navigation, roadmap ownership and word-budget checks follow
+the split. MSX consistently states the aspirational 2030 goal in the technical
+guide and project plan; no scientific acceptance criterion changes.
+
+- Documentation/release tests: **37 passed**, **0.25 s**, including missing-guide,
+  misplaced-roadmap, navigation and matching 2030 milestone regressions.
+- Public suite: **48 passed**. Repository-wide Ruff, documentation and whitespace
+  checks pass. No native experiment or full scientific regression was rerun for
+  this documentation/policy change.
+
+## Latest research validation — 27 September 2026
 
 Clean revisions `963793d` and `5a3c1d0` test the same seed with construction
 length target 3.44 m, selection limit 3.45 m and unchanged acceptance 3.5 m.

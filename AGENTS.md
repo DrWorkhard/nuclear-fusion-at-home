@@ -4,7 +4,8 @@
 
 - Follow the current user's task and permissions. This file does not authorize
   delegation, autonomous research, publishing, contact or merging.
-- Read README.md, CONTRIBUTING.md, docs/README.md, docs/STATUS.md,
+- Read [README.md](README.md), [README_agents.md](README_agents.md),
+  CONTRIBUTING.md, docs/README.md, docs/STATUS.md,
   docs/PROJECT_PLAN.md and the relevant folder index. Check Git status and runs.
 - Preserve unrelated edits, the native environment, external checkouts and raw
   experiment outputs. Only one agent writes in this working tree at a time;
@@ -43,9 +44,10 @@
 - Keep only README.md, STATUS.md and PROJECT_PLAN.md at the docs root. Details
   live one folder below; each folder README indexes its current documents.
 - Write English entry docs with relative links. Keep summaries concise and step
-  names/statuses consistent. The root README roadmap, including MS1/MSX, goes
+  names/statuses consistent. The README_agents.md roadmap, including MS1/MSX, goes
   immediately before “Start in three commands”. Describe 4A–4D only on Step 4's page.
-- One home per topic: onboarding in README, priorities in PROJECT_PLAN, evidence
+- One home per topic: motivation in README, technical onboarding in README_agents,
+  priorities in PROJECT_PLAN, evidence
   summary in STATUS, step conclusions in docs/steps, methods in topic folders.
   Do not write session diaries or repeat test counts in the roadmap.
 

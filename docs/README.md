@@ -4,7 +4,9 @@ For scientific reviewers and contributors who want the reasoning behind the work
 and a map of the evidence. Updated 27 September 2026.
 [Front page](../README.md) · [Status](STATUS.md) · [Roadmap](PROJECT_PLAN.md)
 
-The goal, how to start and a progress summary are on the [front page](../README.md).
+The [front page](../README.md) introduces the vision. The
+[guide for contributors and agents](../README_agents.md) holds technical onboarding
+and a progress summary.
 The [roadmap](PROJECT_PLAN.md) defines what each step and milestone requires, the
 [step results](steps/README.md) explain what each step achieved, and the
 [status page](STATUS.md) summarizes the current evidence, its limits and retained

@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 import pytest
 
-from fusion_baselines.documentation import check_documentation
+from fusion_baselines.documentation import check_documentation, local_links
 from fusion_baselines.documentation_policy import (
     ROADMAP_NAMES,
     STATUS_ROW_LIMIT,
@@ -36,7 +36,8 @@ def test_utf8_docs_and_python_under_cp1252_default(tmp_path):
 def test_roadmap_names_statuses_and_readme_order():
     root = Path(__file__).resolve().parents[1]
     tables = {}
-    for name in ("README.md", "docs/README.md", "docs/STATUS.md", "docs/PROJECT_PLAN.md"):
+    for name in ("README.md", "README_agents.md", "docs/README.md", "docs/STATUS.md",
+                 "docs/PROJECT_PLAN.md"):
         content = (root / name).read_text(encoding="utf-8")
         rows = []
         for line in content.splitlines():
@@ -45,15 +46,30 @@ def test_roadmap_names_statuses_and_readme_order():
                                                       "5.", "MS0.", "MS1.", "MSX.")):
                 rows.append((cells[1], cells[3]))
         tables[name] = rows
-    # D-026: the roadmap table lives only in the front page and the roadmap.
-    assert len(tables["README.md"]) == 8
-    assert tables["README.md"] == tables["docs/PROJECT_PLAN.md"]
-    assert tables["docs/README.md"] == tables["docs/STATUS.md"] == []
-    assert tables["README.md"][3] == ("4. Develop plasma and coils together", "In progress")
-    content = (root / "README.md").read_text(encoding="utf-8")
+    # Keep the human invitation free of the technical roadmap table.
+    assert len(tables["README_agents.md"]) == 8
+    assert tables["README_agents.md"] == tables["docs/PROJECT_PLAN.md"]
+    assert tables["README.md"] == tables["docs/README.md"] == tables["docs/STATUS.md"] == []
+    assert tables["README_agents.md"][3] == ("4. Develop plasma and coils together", "In progress")
+    content = (root / "README_agents.md").read_text(encoding="utf-8")
     headings = [line for line in content.splitlines() if line.startswith("## ")]
     index = headings.index("## Project plan and progress")
     assert headings[index + 1] == "## Start in three commands"
+
+
+def test_entry_guides_are_connected_and_msx_keeps_the_2030_goal():
+    root = Path(__file__).resolve().parents[1]
+    for name in ("README.md", "AGENTS.md", "CONTRIBUTING.md", "docs/README.md"):
+        assert root / "README_agents.md" in local_links(root / name)
+    assert {root / "README.md", root / "AGENTS.md"} <= local_links(root / "README_agents.md")
+    milestones = []
+    for name in ("README_agents.md", "docs/PROJECT_PLAN.md"):
+        rows = table_rows((root / name).read_text(encoding="utf-8"))
+        msx = next(row for row in rows if row[0] == "MSX. Our end goal")
+        assert "2030" in msx[1] and "current technology" in msx[1]
+        assert msx[2] == "Aspirational 2030 goal"
+        milestones.append(msx)
+    assert milestones[0] == milestones[1]
 
 
 @pytest.fixture
@@ -61,15 +77,32 @@ def project(tmp_path):
     (tmp_path / "docs").mkdir()
     table = "| Step | Goal | Status |\n| --- | --- | --- |\n"
     table += "".join(f"| **{name}** | Requirement | Planned |\n" for name in ROADMAP_NAMES)
-    for name in ("README.md", "docs/PROJECT_PLAN.md"):
+    for name in ("README_agents.md", "docs/PROJECT_PLAN.md"):
         (tmp_path / name).write_text(table, encoding="utf-8")
-    for name in ("docs/STATUS.md", "docs/README.md"):
+    for name in ("README.md", "docs/STATUS.md", "docs/README.md"):
         (tmp_path / name).write_text("# Overview\n", encoding="utf-8")
     return tmp_path
 
 
 def test_real_overviews_fit_policy():
     assert check_overview_policy(Path(__file__).resolve().parents[1]) == []
+
+
+def test_human_readme_needs_no_technical_roadmap(project):
+    (project / "README.md").write_text("# An invitation to contribute\n", encoding="utf-8")
+    assert check_overview_policy(project) == []
+
+
+def test_technical_guide_is_required(project):
+    (project / "README_agents.md").unlink()
+    assert "missing overview: README_agents.md" in check_overview_policy(project)
+
+
+def test_roadmap_cannot_drift_back_into_human_readme(project):
+    text = (project / "README_agents.md").read_text(encoding="utf-8")
+    (project / "README.md").write_text(text, encoding="utf-8")
+    assert "duplicated roadmap table outside its two homes: README.md" in check_overview_policy(
+        project)
 
 
 def test_table_headers_rules_code_and_multiple_tables():
