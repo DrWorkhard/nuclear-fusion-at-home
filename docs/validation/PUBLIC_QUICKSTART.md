@@ -58,6 +58,8 @@ an editing example, not an optimized or safe coil change: +0.1 mm from the refer
 (`1e-5`–`1e-4` m), comparing both scores; there is no universally safe step size.
 Double-quote names in bash/zsh, cmd.exe and PowerShell. Evaluate the resulting
 `submissions/my-coil-study/candidate.json`. Existing outputs are protected.
+Negative values also support scientific notation: `--value -1e-4` sets the
+coefficient to -0.0001 m; `--value=-1e-4` is equivalent.
 
 For direct JSON edits, the exact zero-based mapping is:
 
