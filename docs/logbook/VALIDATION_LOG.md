@@ -2,6 +2,28 @@
 
 Updated 2 October 2026. Git retains earlier verification records.
 
+## GitHub publication preflight
+
+Publication was requested, but there is no configured remote or connected GitHub
+integration yet; the owning account/repository name is still needed. No push,
+public repository, hosted CI run or repository-settings change has occurred.
+
+- Read-only [inventory](../validation/PUBLICATION_INVENTORY.md) at `a5de268`:
+  1,081 tracked files, 373 reachable commits, zero matches for five limited
+  credential patterns. Local paths remain in 398 tracked files; author metadata
+  and complete-history distribution rights still need intentional review.
+- Inventory tests: **3 passed**, **0.76 s**. Public tests: **48 passed**,
+  **3.358 s**. Documentation/release tests: **37 passed**, **0.22 s**.
+  Documentation and whitespace checks pass.
+- Local copied-tree public qualification: **8 checks passed** using Python with
+  isolated imports, no site packages and a socket audit guard. Raw outputs are
+  retained locally in `results/github-preflight-2026-10-02`; they are ignored by
+  Git. This is neither hosted CI nor separate-machine reproduction.
+- The user's README date edit is preserved, not included in the committed-object
+  scan. No scientific evidence, evaluator, native environment or research result
+  was changed. Process-list inspection was denied by the local sandbox; no
+  research or other heavy job was started.
+
 ## Contributor documentation checks
 
 The human README links to the technical guide and offers a copyable agent task.
