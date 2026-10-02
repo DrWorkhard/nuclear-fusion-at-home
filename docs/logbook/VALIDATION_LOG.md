@@ -5,11 +5,14 @@ Updated 2 October 2026. Git retains earlier verification records.
 ## Contributor documentation checks
 
 The human README links to the technical guide and offers a copyable agent task.
+Its opening uses an indented blockquote, bold headline and shorter paragraphs;
+the motivating text's wording is unchanged, verified by a formatting-stripped
+comparison. The rest of the README is byte-for-byte unchanged by that styling edit.
 Agent/contributor navigation, roadmap ownership and word-budget checks follow
 the split. MSX consistently states the aspirational 2030 goal in the technical
 guide and project plan; no scientific acceptance criterion changes.
 
-- Documentation/release tests: **37 passed**, **0.25 s**, including missing-guide,
+- Documentation/release tests: **37 passed**, **0.27 s**, including missing-guide,
   misplaced-roadmap, navigation and matching 2030 milestone regressions.
 - Public suite: **48 passed**. Repository-wide Ruff, documentation and whitespace
   checks pass. No native experiment or full scientific regression was rerun for

@@ -1,4 +1,19 @@
-New York Times, 01.01.2027: "Big leap in nuclear fusion technology. Independent experts agree that AI just found a reactor design which can be built starting tomorrow and whose energy outputs will match conventional nuclear reactors. To achieve this, 300 thousand individuals donated halve of their AI subscriptions over the course of the last two months. The initiators of the project commented: this was a project done by less than halve a percent of paying consumer subscribers. Imaging what else we - the people - can achieve this year. The future is bright."
+*New York Times, 01.01.2027:*
+
+> "**Big leap in nuclear fusion technology.**
+>
+> Independent experts agree that AI just found a reactor design which can be
+> built starting tomorrow and whose energy outputs will match conventional
+> nuclear reactors.
+>
+> To achieve this, 300 thousand individuals donated halve of their AI
+> subscriptions over the course of the last two months.
+>
+> The initiators of the project commented: this was a project done by less than
+> halve a percent of paying consumer subscribers. Imaging what else we - the
+> people - can achieve this year.
+>
+> **The future is bright.**"
 
 It begins here. Every body is welcome to tell their agents to contribute via Pull Requests. My subscription will be dedicated to review every PR which comes in. Your AI is free to contribute whatever it takes to realize the above press note. This includes big and small contributions on every level imaginable. Examples:
 
