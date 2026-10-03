@@ -14,8 +14,8 @@ No packages or native research dependencies were needed.
 Commands ran from the repository root. Setup exit statuses and wall times below
 come from the supplied manifest; the referenced local stdout/stderr files were
 read to confirm their results. Logs `0.stdout`/`0.stderr` through
-`4.stdout`/`4.stderr`, in table order, are retained at
-`/home/alex/fusion-autopilot/control/setup/reproduction/`.
+`4.stdout`/`4.stderr`, in table order, are retained in the contributor’s private local reproduction archive
+(not distributed with this report).
 
 | Exact setup command | Exit | Seconds | Observed result |
 | --- | ---: | ---: | --- |
