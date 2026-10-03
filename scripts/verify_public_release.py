@@ -22,7 +22,8 @@ def verify(output):
     output.mkdir(parents=True, exist_ok=False)
     exported = output / "checkout with spaces"
     exported.mkdir()
-    files = [ROOT / "fusion.py", ROOT / "scripts/test_public.py"]
+    files = [ROOT / "fusion.py", ROOT / "scripts/test_public.py",
+             ROOT / "scripts/verify_public_release.py"]
     for name in ("src/fusion_public", "public_tests", "examples"):
         files.extend(p for p in (ROOT / name).rglob("*")
                      if p.is_file() and "__pycache__" not in p.parts)
@@ -54,8 +55,21 @@ def verify(output):
         )
         command = [sys.executable, "-I", "-S", "-c", offline_runner, *arguments]
         started = time.monotonic()
-        completed = subprocess.run(command, cwd=exported, env=env, text=True,
-                                   stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=180)
+        try:
+            completed = subprocess.run(command, cwd=exported, env=env, text=True,
+                                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=180)
+        except subprocess.TimeoutExpired as error:
+            # Timeout output can be bytes even with text=True, including a partial character.
+            partial = error.stdout or ""
+            if isinstance(partial, bytes):
+                partial = partial.decode("utf-8", errors="replace")
+            record = dict(label=label, argv=arguments, returncode=None,
+                          expected_returncode=expected, elapsed_seconds=time.monotonic()-started,
+                          output=partial, passed=False, timed_out=True,
+                          timeout_seconds=error.timeout)
+            save_new(output / f"{len(operations):02d}-{label}.json", record)
+            operations.append(record)
+            raise
         record = dict(label=label, argv=arguments, returncode=completed.returncode,
                       expected_returncode=expected, elapsed_seconds=time.monotonic()-started,
                       output=completed.stdout, passed=completed.returncode == expected)
