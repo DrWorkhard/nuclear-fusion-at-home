@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -24,11 +25,16 @@ def parser():
         description="Set an absolute Fourier coefficient, not an increment. "
         'Example name: "coil[0]/xc(0)". Use double quotes in your shell.',
     )
+    # argparse's default pattern mistakes negative exponents for options before
+    # type=float can run. Limit the extended number syntax to this subcommand.
+    edit._negative_number_matcher = re.compile(
+        r"^-(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$"
+    )
     edit.add_argument("--candidate", type=Path, required=True)
     edit.add_argument("--name", required=True,
                       help='Exact parameter_names entry, e.g. "coil[0]/xc(0)"')
     edit.add_argument("--value", type=float, required=True,
-                      help="Absolute value in metres, not a delta")
+                      help="Absolute value in metres, not a delta (e.g. --value -1e-4)")
     edit.add_argument("--output", type=Path, required=True, help="Fresh JSON file")
     demo = commands.add_parser("demo", help="Reproduce the starter and replay its report")
     demo.add_argument("--output", type=Path, required=True, help="Fresh directory")

@@ -127,6 +127,49 @@ class UsabilityTests(unittest.TestCase):
             self.assertIn("already exists", repeated.stderr)
             self.assertEqual(before, output.read_bytes())
 
+    def test_cli_set_negative_scientific_coefficients(self):
+        with tempfile.TemporaryDirectory() as directory:
+            candidate = Path(directory) / "candidate.json"
+            save_new(candidate, self.seed)
+            before = candidate.read_bytes()
+            for index, value in enumerate(("-1e-4", "-2E-3", "-5.e-2", "-.5e-3", "-1e+0")):
+                with self.subTest(value=value):
+                    output = Path(directory) / f"changed-{index}.json"
+                    command = [sys.executable, "-I", "-S", str(ROOT / "fusion.py"), "public",
+                               "set-coefficient", "--candidate", str(candidate),
+                               "--name", "coil[1]/ys(3)", "--value", value,
+                               "--output", str(output)]
+                    run = subprocess.run(command, capture_output=True, text=True, timeout=20)
+                    self.assertEqual(run.returncode, 0, run.stderr)
+                    expected = copy.deepcopy(self.seed)
+                    expected["base_coefficients"][1][1][5] = float(value)
+                    self.assertEqual(json.loads(output.read_text(encoding="utf-8")), expected)
+            self.assertEqual(candidate.read_bytes(), before)
+
+    def test_cli_negative_scientific_values_preserve_validation(self):
+        with tempfile.TemporaryDirectory() as directory:
+            candidate = Path(directory) / "candidate.json"
+            save_new(candidate, self.seed)
+            for index, (values, message) in enumerate((
+                (["-1e309"], "finite"),
+                (["-1.1e1"], "|c| <= 10 m"),
+                (["-1e"], "argument --value"),
+                ([], "argument --value"),
+                (["--unknown"], "argument --value"),
+                (["-1e-4", "--unknown"], "unrecognized arguments"),
+            )):
+                with self.subTest(values=values):
+                    output = Path(directory) / f"invalid-{index}.json"
+                    command = [sys.executable, "-I", "-S", str(ROOT / "fusion.py"), "public",
+                               "set-coefficient", "--candidate", str(candidate),
+                               "--name", "coil[1]/ys(3)", "--output", str(output),
+                               "--value", *values]
+                    run = subprocess.run(command, capture_output=True, text=True, timeout=20)
+                    self.assertEqual(run.returncode, 2, run.stderr)
+                    self.assertIn(message, run.stderr)
+                    self.assertNotIn("Traceback", run.stderr)
+                    self.assertFalse(output.exists())
+
     def test_unsupported_version_before_imports(self):
         spec = importlib.util.spec_from_file_location("launcher", ROOT / "fusion.py")
         launcher = importlib.util.module_from_spec(spec)
