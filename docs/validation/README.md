@@ -6,6 +6,8 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
 
 - [Public quickstart](PUBLIC_QUICKSTART.md): dependency-free commands, named
   coefficients, score interpretation and troubleshooting.
+- [Ubuntu server reproduction, 2 October 2026](SERVER_REPRODUCTION_20261002.md):
+  pinned public-reference outputs, both sampled errors, hashes and replay limits.
 - [Reproducing results](REPRODUCING_RESULTS.md): current tools and the freeze tag;
   how old evidence paths resolve without changing their identities.
 - [Research workflow](RESEARCH_WORKFLOW.md): short explorations, separate
