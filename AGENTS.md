@@ -16,13 +16,27 @@
 - Focus on penalized normalized coil fitting and the shared field/geometry checks.
   Certified-step search, current-only search and completed studies are frozen at
   `research-freeze-2026-09-27`; do not revive them without a concrete reason.
+- Start from the decision, not the method. Before new research or infrastructure,
+  state which continue/change/stop decision the result could alter and prefer the
+  cheapest decisive or falsifying test. If no current decision could change, do
+  not widen the scope.
+- Work observation -> reproduction/contract -> diagnosis -> sibling audit ->
+  minimal change -> regression -> evidence. When a systemic issue appears, check
+  directly related projections once; do not recursively grow a generic auditor.
 - Explore with existing tools. Record the question, inputs, script, output and
   conclusion in at most one page. Use wall-clock, storage and disk-reserve limits;
   add coefficient/evaluation limits only when the experiment needs them.
   Already recorded studies retain their original budgets and rules.
+- Prefer existing execution and validation paths. Do not add a generic runner,
+  framework, protocol or checker unless current work needs it for more than one
+  case, or the existing path cannot express the decisive test.
 - Keep optimization separate from acceptance. Preregister confirmatory claims;
   use trusted fine-grid fields, continuous geometry and independent checks.
   Do not weaken gates or let candidates alter their verifier.
+- Treat proxy and gate improvements as provisional. Sparse, public or solver
+  metrics are not scientific progress until their relation to the relevant dense,
+  acceptance or physical question is checked. Do not optimize known benchmark
+  artifacts as if they were the research objective.
 - Use explicit named physical coordinates and frozen current/target conventions.
   Preserve failures. Distinguish software success, numerical agreement and
   physical acceptance. Agent review is not external peer review.
@@ -74,6 +88,10 @@ Run `python scripts/test_public.py`, `python scripts/check_docs.py`,
 requires its native environment. Run broad regression for evaluator changes,
 claims or releases, not every exploratory note. Never sync the native environment
 to run core CI; use a disposable checkout.
+
+Evidence and completion claims belong to the exact tested revision. A green run
+on a nearby commit, stale output or an unreproduced local state does not close
+the work.
 
 Maintainers: after each completed work item, update the relevant current record,
 check affected summaries, review the diff and commit under the user's authority.
