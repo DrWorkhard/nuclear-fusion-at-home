@@ -2,79 +2,68 @@
 
 ## Scope and orientation
 
-- Follow the current user's task and permissions. This file does not authorize
-  delegation, autonomous research, publishing, contact or merging.
+- Follow user scope/permissions; this file authorizes no delegation, autonomous
+  research, publishing, contact or merging.
 - Read [README.md](README.md), [README_agents.md](README_agents.md),
   CONTRIBUTING.md, docs/README.md, docs/STATUS.md,
   docs/PROJECT_PLAN.md and the relevant folder index. Check Git status and runs.
 - Preserve unrelated edits, the native environment, external checkouts and raw
-  experiment outputs. Only one agent writes in this working tree at a time;
-  delegate read-only reviews or use separate branches.
+  experiment outputs. One writer per working tree; delegated reviews are read-only
+  or use separate branches.
 
 ## Scientific work
 
 - Focus on penalized normalized coil fitting and the shared field/geometry checks.
   Certified-step search, current-only search and completed studies are frozen at
   `research-freeze-2026-09-27`; do not revive them without a concrete reason.
-- Start from the decision, not the method. Before new research or infrastructure,
-  state which continue/change/stop decision the result could alter and prefer the
-  cheapest decisive or falsifying test. If no current decision could change, do
-  not widen the scope.
-- Work observation -> reproduction/contract -> diagnosis -> sibling audit ->
-  minimal change -> regression -> evidence. When a systemic issue appears, check
-  directly related projections once; do not recursively grow a generic auditor.
-- Explore with existing tools. Record the question, inputs, script, output and
-  conclusion in at most one page. Use wall-clock, storage and disk-reserve limits;
-  add coefficient/evaluation limits only when the experiment needs them.
-  Already recorded studies retain their original budgets and rules.
-- Prefer existing execution and validation paths. Do not add a generic runner,
-  framework, protocol or checker unless current work needs it for more than one
-  case, or the existing path cannot express the decisive test.
+- Before expanding research or infrastructure, name the decision it could change
+  and choose the cheapest decisive test. Otherwise, keep the scope unchanged.
+- Reproduce, diagnose, check related cases once, make the smallest fix, test and
+  record evidence. Do not turn a local issue into a generic audit.
+- Reuse tools; generalize only for demonstrated reuse or a decisive test existing
+  tools cannot express. Record the question, inputs, script, output and
+  conclusion in at most one page. Limit wall-clock, storage and disk reserve;
+  cap coefficients/evaluations only when needed. Existing studies keep their rules/budgets.
 - Keep optimization separate from acceptance. Preregister confirmatory claims;
   use trusted fine-grid fields, continuous geometry and independent checks.
   Do not weaken gates or let candidates alter their verifier.
-- Treat proxy and gate improvements as provisional. Sparse, public or solver
-  metrics are not scientific progress until their relation to the relevant dense,
-  acceptance or physical question is checked. Do not optimize known benchmark
-  artifacts as if they were the research objective.
 - Use explicit named physical coordinates and frozen current/target conventions.
   Preserve failures. Distinguish software success, numerical agreement and
-  physical acceptance. Agent review is not external peer review.
+  physical acceptance. Validate proxy gains against the relevant scientific
+  question; do not optimize benchmark artifacts. Agent review is not external
+  peer review.
 - Welcome unsolicited ideas, replications and negative results. Compute-budget
   disclosure is optional; research hints are not an allowlist.
+- Welcome [adversarial PR reviews](README_agents.md#contribute) as contributions;
+  tie reproducible findings to the reviewed commit.
 - Treat PR code as untrusted. Execute in isolation without secrets, not in the
   trusted research workspace. Do not overlap heavy jobs with controlled timing.
-- Found something outside your current task? If your user permits posting to
-  GitHub, open one focused issue instead of widening your PR. Open issues are also
-  possible contributions; see [issues](CONTRIBUTING.md#issues-report-side-findings-pick-up-open-work).
+- If authorized to post, report out-of-scope findings as focused
+  [issues](CONTRIBUTING.md#issues-report-side-findings-pick-up-open-work), not broader PRs.
+  Open issues are also possible contributions.
 - Before opening a PR, complete the
-  [pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request): current `main`,
-  public tests, docs check, `ruff check .`, `git diff --check`, reproduction from a
-  fresh clone and Windows-safe file handling.
+  [pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request).
 
 ## Current repository, history in Git
 
-- Use the quickstart's shallow, single-branch, no-tags clone for contributions.
-  Never require historical evidence or raw runs for core/public work. Fetch a
-  specific archive only for a task that needs it; keep CI checkouts shallow.
-- Keep `main` small: active code/inputs, public cases/candidates and short evidence
-  summaries with tag, archive commit and original producer/evaluator Git states.
-  Full completed evidence belongs in files of an annotated `evidence-*` tag's
-  commit, not in its description or a copied archive tree on `main`.
-- Before removing evidence from `main`, verify original file hashes and the
-  published tag/commit. Its annotation records question, result/limits, producer
-  SHA and dirty state, evidence paths, reproduction commands and raw-data
-  availability. Never move/delete evidence tags; corrections use new tags.
-  Use a separate worktree for future evidence snapshots; see
-  [reproduction](docs/validation/REPRODUCING_RESULTS.md).
-- Preserve evidence identities and local raw outputs. A tag preserves committed
-  files, not ignored artifacts, environments or independent backups. Record
-  external artifact locations/hashes and missing data honestly. Keep only inputs
-  needed by active evaluators on `main`; no whole-tree byte-freeze exceptions.
-- Keep only README.md, STATUS.md and PROJECT_PLAN.md at the docs root. Details
-  live one folder below; each folder README indexes its current documents.
-- Write English entry docs with relative links. Keep summaries concise and step
-  names/statuses consistent. The README_agents.md roadmap, including MS1/MSX, goes
+- Use shallow, single-branch, no-tags clones and shallow CI checkouts. Core/public
+  work must not require historical evidence or raw runs; fetch archives only
+  when needed.
+- Keep active code/inputs, public cases/candidates and short evidence summaries
+  on `main`, linked to archive tags/commits and original producer/evaluator states.
+  Full evidence belongs in an annotated `evidence-*` commit, not its description
+  or a copied archive tree. Follow the
+  [archive procedure](docs/validation/REPRODUCING_RESULTS.md), including annotation
+  provenance, reproduction and availability; prepare snapshots in separate worktrees.
+- Verify original hashes and published tag/commit identities before removing
+  evidence. Never move/delete evidence tags; corrections get new tags. Preserve
+  evidence identities and local raw outputs. Git does not back up ignored data or
+  environments; retain external locations/hashes and disclose missing data.
+  No whole-tree byte-freeze exceptions.
+- Only README.md, STATUS.md and PROJECT_PLAN.md belong at the docs root.
+  Details go one folder below, indexed by each folder's README.
+- Write English entry docs with relative links. Keep step names/statuses consistent.
+  The README_agents.md roadmap, including MS1/MSX, goes
   immediately before “Start in three commands”. Describe 4A–4D only on Step 4's page.
 - One home per topic: motivation in README, technical onboarding in README_agents,
   priorities in PROJECT_PLAN, evidence
@@ -89,11 +78,9 @@ requires its native environment. Run broad regression for evaluator changes,
 claims or releases, not every exploratory note. Never sync the native environment
 to run core CI; use a disposable checkout.
 
-Evidence and completion claims belong to the exact tested revision. A green run
-on a nearby commit, stale output or an unreproduced local state does not close
-the work.
+Bind evidence and completion claims to the exact tested revision and input state;
+nearby green commits, stale outputs and unreproduced local states are insufficient.
 
-Maintainers: after each completed work item, update the relevant current record,
-check affected summaries, review the diff and commit under the user's authority.
-Contributors document their scoped PR without editing shared logs/status.
-Report blocked checks or commits honestly.
+Maintainers: update relevant records/summaries, review the diff and commit completed
+work under user authority. Contributors document scoped PRs without changing shared
+logs/status. Report blocked checks/commits honestly.

@@ -116,6 +116,11 @@ reviews and negative results are welcome. Compute spending is optional to report
 your task there too ([how](CONTRIBUTING.md#issues-report-side-findings-pick-up-open-work)).
 [research hints](docs/optimization/RESEARCH_HINTS.md) are invitations, not an allowlist.
 
+Adversarial reviews of open PRs are a valuable contribution. Challenge assumptions,
+seek counterexamples, test failure cases, and question whether the evidence
+supports the claims. Report reproducible findings tied to the reviewed commit.
+Criticize methods and claims, not people.
+
 The active research path is penalized coil fitting plus shared field/geometry
 checks. Keep short evidence summaries on `main`, linked to immutable annotated
 `evidence-*` tags and the original producer/evaluator revisions. Full evidence

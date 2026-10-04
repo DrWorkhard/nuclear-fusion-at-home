@@ -94,8 +94,8 @@ The public evaluator-identity files are unchanged by this cleanup. See
 | Named maintainer and protection | Live main-check and review rulesets; `@DrWorkhard` owns all paths in [CODEOWNERS](../../.github/CODEOWNERS). Frozen tags cannot be updated/deleted. Details below. |
 | Hosted and independent reproduction | Six hosted clean-machine public checks pass; a second person's independent reproduction and native research reproduction remain open. CI is same-code replay, not peer review. |
 | Private security reports | Enabled, with [reporting instructions](../../SECURITY.md) and a private link in the issue chooser. |
-| Monitoring and costs | Initial mode is manual triage at each maintainer review session. No scheduler, new paid service, bot identity or automatic review posting. Unattended cadence/budget remains a separate decision. |
-| Merging | Manual owner decision; auto-merge remains disabled. CI never gives scientific acceptance. |
+| Monitoring and costs | Since 4 October 2026, the owner's cloud review routine checks open PRs hourly and when a PR is opened or updated (see below). It runs on the owner's Claude subscription; no new paid service or bot account. |
+| Merging | The routine squash-merges approved low-risk PRs after required CI passes; protected-path PRs and owner PRs stay manual. GitHub auto-merge remains disabled. CI never gives scientific acceptance. |
 
 Open follow-ups: [independent contributor reproduction](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/1)
 and [historical artifact rights review](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/2).
@@ -127,11 +127,23 @@ All external contributors need maintainer approval before fork workflows run.
 Default tokens are read-only and cannot approve PRs. Full action SHA pinning is
 required; both checkouts discard credentials. Jobs have ten-minute limits and
 new runs cancel superseded runs for the same workflow/ref. No native solves,
-self-hosted runners or API-spending jobs are added. CI executes untrusted code
+self-hosted runners or API-spending CI jobs are added. CI executes untrusted code
 only on disposable hosted runners; inspect workflow changes before approving.
 
-At each manual review session, inspect open PRs/issues, failing checks and private
-security reports; record a substantive outcome or the specific missing evidence.
-No daily unattended service or response-time guarantee is implied. An automated
-monitor would need an explicit schedule, credentials/permissions and spending
-decision; it must remain separate from privileged merging.
+## Automated pull-request review
+
+On 4 October 2026 the owner chose unattended review. A Claude Code routine on
+the owner's account runs hourly, on same-repository PR events and, for fork PRs,
+when [`pr-review-trigger.yml`](../../.github/workflows/pr-review-trigger.yml)
+relays the event. That relay runs the base-branch workflow with no repository
+permissions, never checks out PR code and sends only the PR number with the
+`CLAUDE_ROUTINE_TOKEN` secret. The routine reads PRs as untrusted data, executes
+no PR code, relies on hosted CI, may push small credited fix-ups to contributor
+branches, and posts reviews as `@DrWorkhard` with an AI-assistant footer. It
+merges only when CI is green, the branch is current and no protected path above
+(evaluator, data, evidence, `.github/`, `AGENTS.md`, locks, security policy)
+changes; otherwise it leaves a summary for the owner. Its prompt and merge rules
+are trusted configuration outside the repository; PR content cannot change them.
+This is maintainer triage, not external peer review or scientific acceptance.
+Manual sessions still handle issues and private security reports. No
+response-time guarantee is implied.
