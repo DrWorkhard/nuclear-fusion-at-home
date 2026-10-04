@@ -148,3 +148,43 @@ def test_summary_with_numpy_transit_counts_is_json_serializable():
     report = json.loads(json.dumps(summarize([line], 200)))
     assert report["lines_completing_transits"] == 1
     assert report["all_confined_and_iota_matching"] is True
+
+
+def test_exact_containment_on_circular_section():
+    from fusion_baselines.realized_field import inside_target
+
+    target = torus()  # R0 = 1, minor radius 0.1
+    phi = 0.3
+    points = [[r*np.cos(phi), r*np.sin(phi), z] for r, z in
+              ((1.05, 0.0), (1.0999, 0.0), (1.1001, 0.0), (1.0, 0.0995), (1.0, -0.1005))]
+    assert inside_target(target, points).tolist() == [True, True, False, True, False]
+
+
+def test_classifier_stop_inside_target_is_not_reported_as_an_exit(monkeypatch):
+    from simsopt import geo
+    from simsopt.field import tracing
+
+    from fusion_baselines.realized_field import trace
+
+    target = torus()
+
+    def compute(field, starts, z, **kwargs):
+        paths, hits = [], []
+        for radius in (1.09, 1.2):  # stop point inside, then truly outside the section
+            xyz = helix(target, 0.5, turns=0.4)
+            end = np.arctan2(xyz[-1, 1], xyz[-1, 0])
+            stop = [radius*np.cos(end), radius*np.sin(end), 0.0]
+            paths.append(np.column_stack((np.arange(len(xyz)), xyz)))
+            hits.append(np.array([[len(xyz), -1, *stop]]))
+        return paths, hits
+
+    monkeypatch.setattr(tracing, "compute_fieldlines", compute)
+    monkeypatch.setattr(tracing, "LevelsetStoppingCriterion", lambda value: value)
+    monkeypatch.setattr(geo, "SurfaceClassifier", lambda *a, **k: type(
+        "Classifier", (), {"dist": staticmethod(lambda *a: 1.)})())
+    lines, _ = trace(None, target, None, transits=5, s_values=(0.5, 0.5))
+    assert [line["termination"] for line in lines] == ["classifier_stop_inside_target", "boundary"]
+    assert [line["left_target"] for line in lines] == [False, True]
+    summary = summarize(lines, 5)
+    assert summary["classifier_stops_inside_target"] == 1
+    assert summary["lines_confined"] == 1 and not summary["all_confined_and_iota_matching"]

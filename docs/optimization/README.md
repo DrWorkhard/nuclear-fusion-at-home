@@ -116,7 +116,10 @@ Direct mode bypasses interpolation entirely.
 `all_confined_and_iota_matching` requires every line to stay inside the target,
 complete at least the requested transits, and match **signed** iota within 0.02.
 A transit stopping event is distinct from boundary escape; reaching the integration
-time cap early cannot pass. The summary does not measure nestedness or island
+time cap early cannot pass. The gridded stopping classifier (h = 0.02 m) can stop
+lines a few mm inside the boundary. A `boundary` exit therefore requires an exact
+point-in-section test of the stop point. Unconfirmed stops are reported as
+`classifier_stop_inside_target`, which is inconclusive and cannot pass. The summary does not measure nestedness or island
 widths. Plots are exploratory, not a nested-surface proof or physical acceptance.
 The improved Step 3 target, edge s > 0.95 and benefit transfer remain untested.
 [Confirmation, 4 October 2026](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-pr18-trace-confirmation-2026-10-04/evidence/pr18-trace-confirmation-2026-10-04)

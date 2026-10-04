@@ -121,13 +121,33 @@ def trace(field, target, surface, transits=200, tol=1e-10, s_values=S_VALUES):
         if len(hit) and hit[-1, 1] < 0 and hit[-1, 0] > path[-1, 0]:
             path = np.vstack((path, hit[-1, [0, 2, 3, 4]]))
         turns, iota = winding(path[:, 1:4], target)
-        left = bool(len(hit) and np.any(hit[:, 1] == -1))
-        termination = ("boundary" if left else "requested_transits" if turns >= transits
-                       else "integration_limit")
+        stopped = bool(len(hit) and np.any(hit[:, 1] == -1))
+        # The gridded classifier can stop lines a few mm inside the boundary; only an
+        # exact containment test of the stop point confirms an exit.
+        left = stopped and not bool(inside_target(target, path[-1:, 1:4])[0])
+        termination = ("boundary" if left else "classifier_stop_inside_target" if stopped
+                       else "requested_transits" if turns >= transits else "integration_limit")
         lines.append(dict(s=s, R0=float(path[0, 1]), transits=turns, left_target=left,
                           termination=termination,
                           iota_traced=iota, iota_target=target.iota(s)))
     return lines, hits
+
+
+def inside_target(target, xyz, count=2000):
+    """Exact containment of each point in the target boundary section at its own phi."""
+    xyz = np.atleast_2d(np.asarray(xyz, dtype=float))
+    need(xyz.ndim == 2 and xyz.shape[1] == 3 and count >= 64, "points and section resolution")
+    theta = np.linspace(0, 2*np.pi, count, endpoint=False)
+    result = []
+    for x, y, z in xyz:
+        r = math.hypot(x, y)
+        br, bz = target.rz(1.0, theta, np.full(count, math.atan2(y, x)))
+        nr, nz = np.roll(br, -1), np.roll(bz, -1)
+        crosses = (bz > z) != (nz > z)
+        with np.errstate(divide="ignore", invalid="ignore"):
+            at = br + (z - bz) * (nr - br) / (nz - bz)
+        result.append(bool(np.count_nonzero(crosses & (r < at)) % 2))
+    return np.asarray(result)
 
 
 def sample_points(target, rng, count):
@@ -146,10 +166,13 @@ def summarize(lines, requested_transits, iota_tolerance=0.02):
     need(np.isfinite([[line[k] for k in ("transits", "iota_traced", "iota_target")]
                       for line in lines]).all(), "finite trace metrics required")
     confined = [not line["left_target"] for line in lines]
+    inconclusive = sum(line.get("termination") == "classifier_stop_inside_target"
+                       for line in lines)
     complete = [bool(line["transits"] >= requested_transits) for line in lines]
     mismatch = max(abs(line["iota_traced"] - line["iota_target"]) for line in lines)
     return dict(lines_confined=sum(confined), lines=len(lines), max_abs_iota_mismatch=mismatch,
                 lines_completing_transits=sum(complete), requested_transits=requested_transits,
+                classifier_stops_inside_target=inconclusive,
                 all_confined_and_iota_matching=all(confined) and all(complete)
                 and mismatch <= iota_tolerance, nestedness_tested=False,
                 iota_tolerance=iota_tolerance, physical_admission=False)
