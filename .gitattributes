@@ -10,3 +10,4 @@
 # every platform without renormalizing the historical file.
 /evidence/plasma-design-v2/reference-input-401.json -text
 /evidence/issue25-matched-v1/** -text
+/evidence/plasma-balanced-v1/selected-input-401.json -text
