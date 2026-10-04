@@ -24,7 +24,7 @@ from fusion_baselines.provenance import build_run_record  # noqa: E402
 from fusion_public.data import load as load_candidate  # noqa: E402
 
 
-def run(output, snapshot=None, candidate=None, wout=None, seconds=600):
+def run(output, snapshot=None, candidate=None, wout=None, seconds=600, target_id="reference401"):
     check.need((snapshot is None) != (candidate is None), "exactly one snapshot or candidate")
     check.need(np.isfinite(seconds) and 0 < seconds <= 1800, "check budget at most 1800 s")
     check.need(all(os.environ.get(k) == "1" for k in (
@@ -39,17 +39,18 @@ def run(output, snapshot=None, candidate=None, wout=None, seconds=600):
                   fine=[], interior=[])
     try:
         if wout is None:
+            check.need(target_id == "reference401", "selected401 requires --wout")
             data, targets, sources = check.intake(record.guard)
         else:
             data, targets, sources, report["portable_target"] = check.portable_intake(
-                wout, record.guard)
+                wout, record.guard, target_id)
         if candidate is not None:
             path = check.bind(candidate, check.digest(candidate), sources)
-            seed = check.candidate_snapshot(load_candidate(path), data)
+            seed = check.candidate_snapshot(load_candidate(path), data, target_id=target_id)
         else:
             path = check.bind(snapshot, check.digest(snapshot), sources)
             seed = check.read_json(path)
-            check.snapshot_identity(seed)
+            check.snapshot_identity(seed, target_id)
         report["sources_before"] = dict(sources)
         record.save("seed.json", seed)
         chosen = dict(index=-1, x=np.asarray(seed["base_coefficients"]).ravel(),
@@ -57,7 +58,7 @@ def run(output, snapshot=None, candidate=None, wout=None, seconds=600):
         for shift in (0., .5):
             report["fine"].append(fit.fine(seed, data, chosen, record, shift))
         selected = check.read_json(output/"selected-snapshot.json")
-        check.snapshot_identity(selected)
+        check.snapshot_identity(selected, target_id)
         report["geometry"] = check.geometry(selected, data, record.guard)
         interior = check.Recorder(output/"interior", record.deadline, record.storage)
         for i, (n, nodes) in enumerate(check.LEVELS):
@@ -94,9 +95,10 @@ if __name__ == "__main__":
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--snapshot", type=Path)
     source.add_argument("--candidate", type=Path, help="public six-coil candidate JSON")
+    parser.add_argument("--target", choices=tuple(check.TARGETS), default="reference401")
     parser.add_argument("--wout", type=Path, help="portable reference401 Wout")
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--seconds", type=float, default=600)
     args = parser.parse_args()
     paths = [None if p is None else p.resolve() for p in (args.snapshot, args.candidate, args.wout)]
-    raise SystemExit(run(args.output.resolve(), *paths, args.seconds))
+    raise SystemExit(run(args.output.resolve(), *paths, args.seconds, args.target))

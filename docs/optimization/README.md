@@ -2,7 +2,7 @@
 
 One normalized fitter, one set of field/geometry checks.
 [Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
-[Contribution ideas](RESEARCH_HINTS.md)
+[Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md)
 
 ## Native workflow
 
@@ -41,9 +41,10 @@ Implementation: [driver](../../scripts/fit_coils.py),
 [objective and search](../../src/fusion_baselines/coil_fit.py),
 [checks and target intake](../../src/fusion_baselines/coil_check.py).
 Independent geometry/field mathematics stay separate from optimization penalties.
-This driver supports reference401 only; matched improved-target fitting and
-realized-plasma-benefit diagnostics remain to be implemented in the
-[next experiment](STEP4_RESEARCH_PROGRAMME.md).
+The default remains reference401. `--target selected401 --wout <archived-wout>`
+selects the hash-bound improved Step 3 target with its frozen normalization.
+`check_coils.py` supports the same option; `trace_surfaces.py --snapshot` preserves
+the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
 ## Portable checks
 
