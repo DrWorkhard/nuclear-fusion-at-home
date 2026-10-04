@@ -40,6 +40,9 @@
 
 ## Current repository, history in Git
 
+- Use the quickstart's shallow, single-branch, no-tags clone for contributions.
+  Never require historical evidence or raw runs for core/public work. Fetch a
+  specific archive only for a task that needs it; keep CI checkouts shallow.
 - Keep `main` small: active code/inputs, public cases/candidates and short evidence
   summaries with tag, archive commit and original producer/evaluator Git states.
   Full completed evidence belongs in files of an annotated `evidence-*` tag's

@@ -10,7 +10,8 @@ new best score or compute-spending report is required. The
 1. Read the [vision](README.md), [technical guide](README_agents.md) and
    [scientific status](docs/STATUS.md). Agents also follow [AGENTS.md](AGENTS.md).
 2. Run the [portable quickstart](docs/validation/PUBLIC_QUICKSTART.md): Python
-   3.11+, no installation, API key or native research artifacts.
+   3.11+, no installation, API key or native research artifacts. Use its shallow
+   clone command; neither full Git history nor evidence archives are required.
 3. Make a coherent change, complete the checks below and open a PR explaining
    what changed or was learned, evidence, limitations and attribution.
 

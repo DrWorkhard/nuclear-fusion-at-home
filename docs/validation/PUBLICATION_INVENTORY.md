@@ -37,6 +37,10 @@ remains unchanged and describes its own older source, not this check.
 
 ## Reproduce
 
+This maintainer audit needs the intended history and refs in a separate checkout.
+A shallow contributor clone cannot establish full-history coverage; the scanner
+only examines objects reachable locally. Do not expand contributor clones for it.
+
 Launch repeat at `6bda54343e5bf2fb7e0195f459e037babe60e098`: 1,081 tracked
 files (328,047,995 bytes), 376 reachable commits and 3,481 blobs
 (385,377,461 bytes scanned). Credential-pattern matches remain zero; home-path

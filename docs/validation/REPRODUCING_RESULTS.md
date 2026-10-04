@@ -24,9 +24,13 @@ unchanged files because current evaluators need them:
 
 Together these inputs are 208,154 bytes. Historical local files remain intact
 and ignored; their absence from a fresh main checkout is intentional.
+Ordinary contributions use the [small clone](PUBLIC_QUICKSTART.md#download-only-current-main).
+For individual reports, open the pinned file links in [Status](../STATUS.md).
+The commands below opt into downloading the complete historical snapshot
+(over 326 MB of uncompressed retired files); depth 1 omits its older ancestry:
 
 ```bash
-git fetch origin tag evidence-archive-2026-10-04
+git fetch --depth 1 --no-tags origin tag evidence-archive-2026-10-04
 git rev-parse evidence-archive-2026-10-04^{commit}
 git cat-file -p evidence-archive-2026-10-04
 git show evidence-archive-2026-10-04:evidence/coil-headroom-v3.json
@@ -42,7 +46,7 @@ source hashes; do not retroactively label those runs clean or reproducible.
 The [status table](../STATUS.md) links important results to their source states;
 [completed steps](../steps/README.md) retain their scoped conclusions. Full Git
 history is unchanged. This shrinks the default checkout, not an ordinary full
-clone's historical object database.
+clone's historical object database. A shallow clone avoids that database.
 
 ## Record future evidence this way
 
@@ -102,7 +106,12 @@ numerical replay. No copied historical code tree is maintained on `main`.
 | `8581b1b` | Chained normalized/constrained/coherent/restart/longrun/headroom drivers |
 | `bf51e3a` | Submitted interior-pass continuation driver |
 
-Example: `git show 8581b1b:scripts/explore_coil_headroom.py`.
+Example after fetching the required revision:
+`git show 8581b1b:scripts/explore_coil_headroom.py`.
+Historical revisions are absent from a shallow clone. To replay one, resolve its
+full SHA from the linked record, then explicitly fetch that snapshot with
+`git fetch --depth 1 --no-tags origin FULL_SHA` and create a detached worktree at
+that SHA. This downloads its historical files; do not do it for public CI.
 Read the historical protocol and resource requirements before executing it.
 Current verification uses the [native environment](ENVIRONMENT.md),
 [public checks](PUBLIC_QUICKSTART.md) and `python scripts/check_docs.py`.

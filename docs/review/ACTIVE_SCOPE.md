@@ -4,7 +4,7 @@
 
 The maintained runtime is **2,804 Python lines**: 1,996 for native research and
 808 for public participation. The entire code footprint falls from 12,068 lines
-at `8581b1b` to **6,111**, including tests and maintenance: **49.4% less**.
+at `8581b1b` to **6,117**, including tests and maintenance: **49.3% less**.
 Counts include blank lines, comments and docstrings; they exclude dependencies,
 data, generated output and Git history. This is a measured working implementation,
 not proof of a mathematical minimum or sufficient software for a reactor.
@@ -17,8 +17,8 @@ Current counts include the separately merged sparse current-normalization diagno
 | Run provenance | 65 | Know which code, inputs and machine produced an observation |
 | Public runtime, including root CLI | 808 | Let contributors reproduce and modify candidates without native installation |
 | Tests, native and public | 2,758 | Analytic controls, poisoned-input rejection, numerical identity and failure handling |
-| Maintenance, packaging entry, publication checks and CI | 549 | Keep the contribution/review workflow reproducible and attributed |
-| **All tracked Python, shell and YAML** | **6,111** | Runtime plus verification and collaboration |
+| Maintenance, packaging entry, publication checks and CI | 555 | Keep the contribution/review workflow reproducible and attributed |
+| **All tracked Python, shell and YAML** | **6,117** | Runtime plus verification and collaboration |
 
 ## Decisions after questioning the scope
 

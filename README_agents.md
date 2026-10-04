@@ -51,11 +51,11 @@ contributing to existing community tools before building new infrastructure.
 
 ## Start in three commands
 
-Clone the repository (or use **Code → Download ZIP** on GitHub) and open its
-directory:
+Clone only current `main` (or use **Code → Download ZIP** on GitHub) and open its
+directory. Historical evidence is an optional, separate download:
 
 ```bash
-git clone https://github.com/DrWorkhard/nuclear-fusion-at-home.git
+git clone --depth 1 --single-branch --branch main --no-tags https://github.com/DrWorkhard/nuclear-fusion-at-home.git
 cd nuclear-fusion-at-home
 ```
 
