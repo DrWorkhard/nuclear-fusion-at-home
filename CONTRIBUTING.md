@@ -10,7 +10,8 @@ new best score or compute-spending report is required. The
 1. Read the [vision](README.md), [technical guide](README_agents.md) and
    [scientific status](docs/STATUS.md). Agents also follow [AGENTS.md](AGENTS.md).
 2. Run the [portable quickstart](docs/validation/PUBLIC_QUICKSTART.md): Python
-   3.11+, no installation, API key or native research artifacts.
+   3.11+, no installation, API key or native research artifacts. Use its shallow
+   clone command; neither full Git history nor evidence archives are required.
 3. Make a coherent change, complete the checks below and open a PR explaining
    what changed or was learned, evidence, limitations and attribution.
 
@@ -74,11 +75,17 @@ comparators before independent confirmation. Never improve a candidate by changi
 its case, evaluator or acceptance rules; evaluator changes require separate review.
 Do not retroactively demand preregistration of exploratory contributions.
 
-Retain failures and original scientific evidence identities. Large raw outputs
-stay outside Git with hashes and an obtainable reproduction recipe where possible;
-small derived fixtures need provenance, licenses and size justification. Do not
-rewrite historical paths or evidence. Old tools resolve through
-[reproduction](docs/validation/REPRODUCING_RESULTS.md).
+Retain failures and original scientific evidence identities. Keep short conclusions
+and tag/commit pointers on `main`; complete evidence files belong in an annotated
+`evidence-*` snapshot with the producer/evaluator revision, dirty state, hashes,
+reproduction command and data availability. Maintain archive tags without updates
+or deletion; corrections receive a new tag. Verify the published archive before
+removing tracked payloads. Maintainers publish tags under the user's authority;
+contributors propose a summary and evidence snapshot in their scoped PR.
+Large raw outputs stay outside Git with hashes and an obtainable reproduction
+recipe where possible; a tag does not back them up. Preserve local raw runs and
+keep small inputs required by current evaluators. See the
+[archive workflow](docs/validation/REPRODUCING_RESULTS.md).
 
 ## Review and credit
 

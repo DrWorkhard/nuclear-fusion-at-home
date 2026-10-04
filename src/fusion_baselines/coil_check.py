@@ -10,6 +10,7 @@ import numpy as np
 from fusion_baselines import coupled_coil_audit as independent
 from fusion_baselines.clear_coil_field_audit import archived_target
 from fusion_baselines.coil_fit import Recorder as RunRecorder
+from fusion_public.data import load_case, validate_candidate
 
 ROOT = Path(__file__).resolve().parents[2]
 TARGET = "evidence/plasma-design-v2/reference-input-401.json"
@@ -71,14 +72,14 @@ def candidate_snapshot(candidate, data, nodes=256):
     The unit flux uses the fitter's own loop and 1e5 A base current, so a converted
     candidate enters fitting and checks exactly like a native seed.
     """
+    validate_candidate(candidate)
+
     from simsopt.field import BiotSavart, Current, coils_via_symmetries
     from simsopt.geo import CurveXYZFourier
 
     from fusion_baselines.coil_fit import loop_geometry
 
     names = independent.parameter_names(6, 5)
-    need(candidate.get("parameter_names") == names and candidate.get("coefficient_unit") == "m",
-         "canonical metre-valued six-coil candidate required")
     curves = []
     for coefficients in candidate["base_coefficients"]:
         curve = CurveXYZFourier(nodes, 5)
@@ -108,7 +109,7 @@ def candidate_snapshot(candidate, data, nodes=256):
 
 
 def portable_intake(wout, guard=lambda: None):
-    """Reference401 target from a supplied Wout, accepted only against the public starter."""
+    """Reconstructed target accepted as consistent with reference401, not dense identity."""
     from fusion_baselines import wout_target
 
     sources = {}
@@ -120,14 +121,15 @@ def portable_intake(wout, guard=lambda: None):
     sources[str(Path(wout).resolve())] = sha256
     guard()
     targets = {n: archived_target(archives, n) for n in (32, 64)}
-    starter = read_json(ROOT / wout_target.STARTER)
+    starter, _ = load_case()
     errors = wout_target.starter_errors(targets[32], starter)
     need(max(errors.values()) <= 1e-8, f"Wout does not reproduce the public starter: {errors}")
     measured = {n: t["B2_scale"] for n, t in targets.items()}
     need(all(abs(b2/B2 - 1) <= 1e-9 for b2 in measured.values()), "target B2 differs from frozen")
     for target in targets.values():
         target["B2_scale"] = B2  # Normalization stays frozen; the measured value is reported.
-    portable = dict(wout_sha256=sha256, starter_errors=errors, measured_B2=measured[64])
+    portable = dict(check="consistency with public starter", dense_identity_verified=False,
+                    wout_sha256=sha256, starter_errors=errors, measured_B2=measured[64])
     return data, targets, sources, portable
 
 

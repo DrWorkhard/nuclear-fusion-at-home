@@ -21,6 +21,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from fusion_baselines import coil_check as check  # noqa: E402
 from fusion_baselines import coil_fit as fit  # noqa: E402
 from fusion_baselines.provenance import build_run_record  # noqa: E402
+from fusion_public.data import load as load_candidate  # noqa: E402
 
 
 def run(output, snapshot=None, candidate=None, wout=None, seconds=600):
@@ -44,7 +45,7 @@ def run(output, snapshot=None, candidate=None, wout=None, seconds=600):
                 wout, record.guard)
         if candidate is not None:
             path = check.bind(candidate, check.digest(candidate), sources)
-            seed = check.candidate_snapshot(check.read_json(path), data)
+            seed = check.candidate_snapshot(load_candidate(path), data)
         else:
             path = check.bind(snapshot, check.digest(snapshot), sources)
             seed = check.read_json(path)

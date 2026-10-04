@@ -40,7 +40,8 @@ uv venv --python 3.12 .native && uv pip install --python .native/bin/python nump
 Regenerating the reference401 Wout needs `vmecpp`. Install it in a separate
 environment, because vmecpp 0.8 requires SIMSOPT ≥1.8.1 while the fork reports a
 development version. With a Wout, `fit_coils.py --wout` and `check_coils.py --wout`
-rebuild the interior target and accept it only if it reproduces the public starter.
+rebuild the interior target and accept it as consistent with the public starter.
+This is not proof of dense target identity.
 See the [active research](../optimization/README.md#portable-checks) instructions.
 
 Historical builds, platform patches, VMEC/particle/engineering recipes and exact

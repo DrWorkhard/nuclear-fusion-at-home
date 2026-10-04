@@ -101,6 +101,25 @@ def test_launch_workflows_are_unprivileged_and_bounded(workflow):
                            for action in actions)
 
 
+def test_review_trigger_never_touches_pull_request_code():
+    root = Path(__file__).resolve().parents[1]
+    content = (root / ".github/workflows/pr-review-trigger.yml").read_text(encoding="utf-8")
+    assert "permissions: {}" in content
+    assert "timeout-minutes: 2" in content
+    assert "uses:" not in content and "checkout" not in content
+    assert "head.repo.full_name != github.repository" in content
+    assert set(re.findall(r"secrets\.\w+", content)) == {"secrets.CLAUDE_ROUTINE_TOKEN"}
+    expressions = set(re.findall(r"\$\{\{\s*([^}]*?)\s*\}\}", content))
+    assert expressions == {
+        "github.workflow",
+        "github.event.pull_request.number || github.run_id",
+        "secrets.CLAUDE_ROUTINE_TOKEN",
+        "github.event.pull_request.number",
+    }
+    run = content.split("run: |", 1)[1]
+    assert "${{" not in run
+
+
 @pytest.fixture
 def project(tmp_path):
     (tmp_path / "docs").mkdir()
