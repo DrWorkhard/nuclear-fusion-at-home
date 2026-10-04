@@ -1,54 +1,67 @@
-# Near-term research programme
+# One question before more fitting
 
-Updated 27 September 2026. [Status](../STATUS.md) · [Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)
+Updated 4 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 
-## Focus
+**Can practical coils preserve a useful plasma benefit?** Boundary error is a
+necessary diagnostic in our protocol, not the project objective. The current
+fits use reference401, not the improved Step 3 target. Resolve that disconnect
+before treating further optimization as progress toward a reactor.
 
-Use the method that moves field error: penalized normalized coil fitting.
-The headroom fit reaches **0.001996 with scoped geometry checks**. Longer coils
-reach 0.001948 and pass the interior-vector component, but length bounds are
-unresolved. The unchanged boundary acceptance limit remains 1e-4.
-Failed starts and interrupted runs remain evidence, not erased from effort.
+This is prospective work. The current driver reproduces reference401 only;
+matched-target input support and realized-field diagnostics still need to be
+prepared with existing physics tools. This cleanup does not supply new results.
 
-## Next work
+## Next experiment and decision
 
-The [longer-fit comparison](LONGER_COIL_EXPLORATION.md) shows enough progress to
-continue fitting, with explicit attention to construction headroom.
+1. **Prepare a matched comparison.** Bind the reference and improved targets,
+   starting coils, currents/flux conventions and numerical grids. Reuse the
+   normalized fitter and shared checks. Run one conditioning/stopping comparison
+   against the current recipe before adding more optimizer variants. Match
+   wall-clock budgets and report startup and search time separately.
+2. **Inspect actual fields early.** Use a small, fixed set of saved candidates
+   to examine magnetic surfaces, islands and interior fidelity; a failing field
+   can still diagnose why the method fails. Compare the Step 3 diagnostic in
+   reference-target and improved-target coil fields on matched domains. If
+   surfaces or required data are missing, report the blockage, not benefit
+   transfer. Register selection, tolerances and holdouts before confirmation.
+3. **Decide by 24 October 2026.** Continue the fixed-target recipe only if a
+   reference401 comparison at least halves its current geometry-checked boundary
+   RMS (0.001996268) without worsening interior RMS (0.01147939), and
+   realized-field diagnostics support
+   investigating benefit transfer. The factor of two is a prospective resource
+   allocation hurdle, **not** a new acceptance limit or a prediction. Otherwise
+   stop extending this recipe and choose one alternative: another coil family,
+   another target, or joint plasma/coil optimization in existing software.
+   Incomplete checks are insufficient grounds to scale the search.
 
-1. Investigate objective scaling/stopping and penalty conditioning: the expanded
-   headroom fit has no active box bounds, but stops on objective change well
-   before its gradient tolerance. This is not proof of an optimum. Retain length
-   margin and leave acceptance unchanged. Map field error against clearance, curvature,
-   current and coil complexity. Consider the existing eight-coil family as a
-   separately labelled comparison if the present family stalls.
-2. Freeze the best two or three candidates, then use the shared trusted field
-   and continuous-geometry checks. Investigate realized-field topology and
-   matched realization of the Step 3 target before claiming benefit transfer.
+Keep target-specific normalization frozen and report each target separately;
+do not treat errors against different targets as a matched improvement.
+Report boundary RMS/max, interior RMS, geometry, current, realized-field findings
+and elapsed time together. The original 1e-4 / 1e-3 / 0.01 limits and continuous
+geometry checks remain unchanged. No endpoint or solver success flag admits a
+physical design; the [Step 4 requirements](../steps/STEP_4_PLASMA_AND_COILS.md) still apply.
 
-Exploration needs one short record: script/input/output identities, question,
-wall-clock/resource ceiling and conclusion. Do not add arbitrary evaluation or
-coefficient caps; retain them when needed for a particular matched experiment.
-Past studies retain their original rules. No routine full historical regression,
-new orchestration framework or separately written checker for every script.
+For this next comparison, declare at most 30 minutes per search arm, one native
+thread, 256 MiB retained output per arm and 3 GiB initial / 2 GiB live disk reserve.
+Use existing tools and one short result record. Stop at the resource ceiling,
+retain failures and make no conclusion from a run with incomplete diagnostics.
+These prospective limits do not change recorded experiments or restrict unsolicited
+contributions. Avoid running heavy jobs during controlled timing.
 
-By **24 October 2026**, review the reachability/trade-off map. The 1e-2 signal now
-supports further local fitting; it does not promise success. If progress stalls,
-change family/target rather than automatically extend a failed method.
+## Reactor relevance and collaboration
 
-## MS0 and community value
+Do a desk-level feasibility screen alongside this comparison, without rebuilding
+retired solvers: identify the proposed device scale, field and pressure assumptions,
+net-electric-power balance, winding/blanket/shield space, magnet loads, heat exhaust
+and maintenance access. For each, record a source or an explicit unknown and the
+cheapest check that could reject the direction. Detailed pressure/engineering work
+starts when that decision needs it, rather than automatically at a boundary score.
 
-Target **26 March 2027**: a useful attributed open coil challenge with calibrated
-gate interpretation, positive/negative controls and separate-machine reproduction.
-First assess contributing the Goodman case and checked coils to an existing
-benchmark such as StellCoilBench. Build only missing adapters, not a parallel
-benchmark platform by default.
-
-Near-term contributions: metric crosswalks, portable target/coil exports,
-independent checks and replications. Unsolicited approaches remain welcome.
-Hosting, publication, external contact and a backup destination still require
-the owner's authority. No such external action has occurred.
-
-Pressure, engineering and SQuID-C work are parked until an actual coil set is
-within ten times the field-error limit, unless evidence justifies revisiting them.
-They remain required for eventual completion; detailed historical plans are at
-the [freeze tag](../validation/REPRODUCING_RESULTS.md). Proxima contact waits for MS1.
+The smallest MS0 deliverable is the matched target/coil data and existing checker
+running outside the maintainer's workspace, with a positive control and retained
+failures. Assess an adapter to existing community tools first; no new platform.
+Public dense boundary evaluation already exists, but interior targets and full
+acceptance are not portable yet. Prioritize that missing reproducibility now;
+26 March 2027 remains the outer MS0 decision target, not a reason to delay it.
+Publication and external contact require separate authority. No new outreach or
+physical acceptance follows from this programme.

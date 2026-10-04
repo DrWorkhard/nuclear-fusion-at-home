@@ -42,6 +42,25 @@ at the tag. When a report records an earlier source revision, use that exact
 revision and verify its hashes; the freeze tag is the navigation starting point,
 not a substitute for every earlier byte identity.
 
+## Later completed tools
+
+The 4 October simplification removes the completed boundary calibration and coil
+start screen drivers/tests, inactive `environments/` manifests, and superseded
+review/decision documents. Their last complete pre-cleanup tree is
+**`d5d395b`**. For example:
+
+```bash
+git show d5d395b:scripts/explore_boundary_controls.py
+git show d5d395b:scripts/explore_coil_starts.py
+git show d5d395b:environments/vmecpp/pyproject.toml
+```
+
+Use the exact producer revision recorded by each experiment for numerical replay;
+this newer navigation revision does not replace older source identities. Native
+fits retain their imported and hash-bound dependencies. Their data still requires
+the recorded local artifacts, including failed runs. No evidence or raw data is
+removed by this cleanup.
+
 ## Evidence paths and data
 
 Old evidence JSON remains unchanged. A removed repository-relative source or

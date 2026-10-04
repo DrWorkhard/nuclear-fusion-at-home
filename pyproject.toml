@@ -18,20 +18,6 @@ dev = [
   "pytest>=8",
   "ruff>=0.6",
 ]
-benchmark = [
-  "stellcoilbench",
-]
-# Locked compatibility extra; its retired implementation is available at the freeze tag.
-# Remove with a verified lockfile regeneration, not by mutating the native environment.
-engineering = [
-    "gmsh>=4.15.2",
-    "meshio>=5.3.5",
-    "scikit-fem>=12.0.2",
-]
-
-[tool.uv.sources]
-stellcoilbench = { git = "https://github.com/akaptano/stellcoilbench.git", rev = "c7949edc4ea6378fc3be633304c69c288c3b79b5" }
-
 [project.scripts]
 fusion-baselines = "fusion_baselines.cli:main"
 

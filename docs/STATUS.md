@@ -1,16 +1,18 @@
 # Scientific status and evidence
 
-Updated 27 September 2026.
+Updated 4 October 2026; numerical results unchanged.
 [Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Step results](steps/README.md)
 
-## Bottom line
+## Current result
 
 We can reproduce selected references, iterate designs and verify a local
 vacuum-plasma improvement. Our best geometry-checked exploratory coil fit reaches
 normal-field RMS **0.001996**, about **20× the 1e-4 limit**, with interior RMS
 **0.01148**, still above 0.01. Step 4 remains in
 progress: there is no accepted new coil design, demonstrated state-of-the-art
-advantage or MS1 result.
+advantage or MS1 result. All current fits use the original plasma target;
+transfer of the Step 3 improvement has not been demonstrated. These results do
+not substantiate the README's year-end reactor-design vision.
 
 ## Established results and their limits
 
@@ -48,5 +50,7 @@ not the scientific result tally. Historical public qualifications are in
 [release evidence](validation/PUBLIC_RELEASE_RESULTS.md). The repository is public at
 [github.com/DrWorkhard/nuclear-fusion-at-home](https://github.com/DrWorkhard/nuclear-fusion-at-home) since 2 October 2026, and hosted CI passes
 on Linux, macOS and Windows. Main/tag protections and private security reporting
-are enabled; complete-history rights review and external-contributor reproduction
-remain open. See the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
+are enabled; complete-history rights review and native research reproduction
+remain open. A contributor has reported
+[Ubuntu public replay](validation/SERVER_REPRODUCTION_20261002.md); this is
+portability evidence, not independent physics validation. See the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).

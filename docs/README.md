@@ -1,7 +1,7 @@
 # Nuclear Fusion @ Home: scientific overview
 
 For scientific reviewers and contributors who want the reasoning behind the work
-and a map of the evidence. Updated 27 September 2026.
+and a map of the evidence. Updated 4 October 2026.
 [Front page](../README.md) · [Status](STATUS.md) · [Roadmap](PROJECT_PLAN.md)
 
 The [front page](../README.md) introduces the vision. The
@@ -25,7 +25,8 @@ system that approximates a target does not automatically preserve its confinemen
 This is why we separate optimization, numerical checks and physical acceptance.
 
 Following the [review response](review/STRATEGIC_REVIEW_RESOLUTION.md),
-near-term work focuses on normalized coil fitting and shared acceptance checks.
+near-term work tests whether normalized coil fitting preserves useful plasma
+benefits, with shared acceptance checks and early reactor feasibility screening.
 The [research workflow](validation/RESEARCH_WORKFLOW.md) separates fast exploration
 from independent confirmation; [MS0's programme](optimization/STEP4_RESEARCH_PROGRAMME.md)
 aims to make the bottleneck reproducible and contributable.
@@ -60,8 +61,8 @@ Tracked evidence stays unchanged; raw data needs separate retention and backup.
 - [Engineering](engineering/README.md): deferred models and limits of filament geometry.
 - [Validation](validation/README.md): portable entry points, scientific evidence, environment and review.
 - [SQuID-C / Proxima comparison](squid_c/README.md): future matched-reference requirements.
-- [Current research notes](logbook/README.md): decisions, lessons and latest verification.
-- [Reviews](review/README.md): strategic and simplicity reviews, plus our current response.
+- [Current verification](logbook/README.md): latest software checks and limitations.
+- [Assessment](review/README.md): the scientific route and simplification decisions.
 
 ## Reading the evidence
 

@@ -5,8 +5,9 @@ fine-grid field and continuous-geometry checks. Best checked exploratory normal
 RMS is **0.001996**, against a 1e-4 pilot limit, with length headroom. Its interior
 RMS 0.01148 fails 0.01. A longer-coil fit passes the interior component but
 has unresolved length bounds.
-No accepted reactor design or
-Step 4 completion follows.
+No accepted reactor design or Step 4 completion follows. The
+[programme](STEP4_RESEARCH_PROGRAMME.md) now prioritizes matched benefit in actual
+coil fields and a continue/change/stop decision over open-ended fitting.
 
 ## Current documents
 
@@ -21,11 +22,17 @@ Step 4 completion follows.
   best interior RMS 0.04029, 73.66% below its matched control but above 0.01.
 - [Boundary calibration](REFERENCE_CALIBRATION.md): QUASR/LPQA component controls
   and why metric conventions matter.
-- [Research programme](STEP4_RESEARCH_PROGRAMME.md): next decisions, trade-off
-  map and open-benchmark route.
+- [Research programme](STEP4_RESEARCH_PROGRAMME.md): next matched comparison, decision rule
+  and portable-checker work.
 - [Research hints](RESEARCH_HINTS.md): useful contributions, not an allowlist.
 
 ## Executable path
+
+Keep this dependency chain intact: headroom → longrun → restart → coherent →
+constrained → normalized. Earlier files contain reused implementation and some
+are also hash-bound by saved run manifests; they are not six independent active
+research programmes. Completed leaf drivers resolve through
+[historical replay](../validation/REPRODUCING_RESULTS.md#later-completed-tools).
 
 The latest completed fit is `scripts/explore_coil_headroom.py`; its explicit
 source-bound inputs and settings reproduce the recorded comparison in the native

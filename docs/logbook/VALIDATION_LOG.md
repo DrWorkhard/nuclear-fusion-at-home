@@ -1,140 +1,49 @@
 # Current verification
 
-Updated 2 October 2026. Git retains earlier verification records.
+Updated 4 October 2026. Historical checks remain in Git; numerical research
+results are summarized in [status](../STATUS.md) and the linked experiment pages.
 
-## GitHub publication and hosted CI
+## Simplification and scientific focus
 
-On 2 October 2026 the owner authorized publication. The public repository
-[DrWorkhard/nuclear-fusion-at-home](https://github.com/DrWorkhard/nuclear-fusion-at-home)
-was created and `main` (`e0eb02b`) plus the tags `foundation-pre-scope-2026-09-13`
-and `research-freeze-2026-09-27` were pushed over SSH as DrWorkhard; the owner then
-pushed `631434c`. The full history was published deliberately, including the
-local-path provenance and author metadata described in the
-[inventory](../validation/PUBLICATION_INVENTORY.md) (zero matches for its five
-limited credential patterns at `a5de268`; local paths in 398 tracked files).
+Base: `d5d395b`, equal to fetched `origin/main` before editing. Latest base runs
+[core](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/37192450027)
+and [portable](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/37192450038)
+passed. These hosted results cover the base, not the local simplification.
 
-- Hosted GitHub Actions, first runs: `core-ci` passed for both commits (runs
-  36971843925 and 36971892980, about 20 s each). `portable-public-ci` passed all six
-  jobs (Linux, macOS, Windows × Python 3.11, 3.14) for both commits (runs
-  36971843923 and 36971892966).
-- Fresh anonymous HTTPS clone of `631434c` on macOS with CPython 3.12.13:
-  `public cases` succeeds, `public demo` reports `reference_reproduced: true` and
-  `physical_admission: false`, and the public tests pass.
-- Publication follow-up builds on the owner's documentation commit `6bda543`.
-  Concurrent launch-document edits were preserved and only extended after that
-  commit. Rights review of the complete history and reproduction by another
-  person remain open.
+- Removed two completed leaf experiment drivers and their tests, inactive
+  VMEC++/NEO-JAX manifests, unused benchmark/engineering extras, and four
+  superseded review/decision documents. Reproduction locations are in the
+  [guide](../validation/REPRODUCING_RESULTS.md#later-completed-tools).
+- Regenerated `uv.lock` offline with uv: 65 → 12 resolved packages. This is a
+  smaller dependency declaration/lock, not a measured runtime speedup. Installed
+  native environments and external checkouts were not synchronized or removed.
+- Retained all acceptance mathematics and the fitter's imported/hash-bound
+  dependency chain. The new programme changes prospective research priorities,
+  not historical acceptance limits. No optimization or new physics experiment ran.
 
-## Launch protections and follow-up checks
+## Checks actually run
 
-GitHub API read-back confirms private reporting enabled; fork workflow approval
-required for all external contributors; full action-SHA pinning required; default
-workflow token read-only with review approval disabled. Secret scanning and push
-protection are enabled; the alert endpoint returns zero alerts. Auto-merge is off.
+| Check | Result |
+| --- | --- |
+| Active native regression, four thread variables set to 1 | 412 passed in 25.51 s; 13 existing HiGHS-option warnings |
+| Isolated public suite, Python 3.12.13 | 57 passed |
+| Ruff, documentation structure and `git diff --check` | Pass |
+| Core CI in disposable local clone with the proposed patch, `UV_OFFLINE=1 ./scripts/run_core_ci.sh` | Locked installation, Ruff, 57 public tests, docs and 40 maintenance tests pass |
+| Copied-tree release check, `python -I -S scripts/verify_public_release.py --output results/simplification-20261004` | All 8 operations pass; physical admission remains false |
+| Real native input intake | Five snapshots and both interior grids load; 76 source identities verify |
+| Saved longer-fit / headroom source manifests | All 82 / 91 source hashes still match |
+| Root README and scientific inputs/evaluators/evidence | Unchanged against the base revision |
 
-- Active rulesets: `24350197` requires the seven observed GitHub Actions checks
-  and forbids main force-push/deletion with no bypass; `24350199` requires PR/code-
-  owner review, with an explicit review-only exception for sole owner DrWorkhard;
-  `24350200` forbids frozen-tag updates/deletion with no bypass.
-- An initial classic protection request was rejected (HTTP 422: an organization-
-  only user restriction). Read-back showed no partial protection. Separate
-  rulesets supply the intended personal-repository configuration without
-  broadening the CI exception.
-- Fresh anonymous clone of `6bda543`: all eight public qualification operations
-  and docs checks pass. Freeze tag identity matches `56181dc`. Outputs remain
-  local in `/private/tmp/fusion-launch.tIVtF1/checkout/results/launch-qualification`.
-  This local clone is not another person's independent reproduction.
-- History inventory repeat: 376 commits, 3,481 blobs, zero selected credential
-  matches; details and limits are in the [inventory](../validation/PUBLICATION_INVENTORY.md).
-- Active native suite: **429 passed**, 13 known HiGHS-option warnings, **26.58 s**.
-  Public suite: **48 passed**, **3.344 s**. Focused documentation/release/inventory
-  suite: **43 passed**, **1.06 s**. Ruff, docs and whitespace checks pass after
-  correcting an initial import-order lint error in the new release tests.
-- Follow-ups have explicit acceptance criteria in issues
-  [#1](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/1) (independent
-  contributor reproduction) and
-  [#2](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/2) (historical
-  artifact rights). No independent review or rights clearance is claimed.
-- Launch commit `557a106e2d62de4e1ca9485bd9eb61aa0f6a91e2` passed
-  [core](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36976443061)
-  and all six [portable jobs](https://github.com/DrWorkhard/nuclear-fusion-at-home/actions/runs/36976443009)
-  on the launch branch, then was fast-forwarded to protected main unchanged.
-  GitHub reported only the documented sole-owner PR/review exception, not a CI
-  bypass. CODEOWNERS validation on that branch returned no errors. A subsequent
-  default-ref API request returned 404; the explicit `ref=main` request then
-  returned no errors. Scientific code/data/evidence trees are unchanged
-  against `6bda543`; auto-merge and unattended monitoring remain off.
-- Local process inspection remains unavailable in the sandbox; no research solve
-  or heavy build was started. Disk had about 12 GiB free before the single
-  disposable clone. Native dependencies, scientific kernels and evidence are
-  unchanged. Monitoring is session-triggered/manual, not a promised scheduler.
+The disposable clone used Python 3.12.13 on this Mac and required no ignored
+research artifacts. This is fresh-checkout software reproduction on the same
+machine, not independent scientific reproduction. No new Windows/hosted run,
+external expert review, backup/restore qualification or accepted coil design is
+claimed. The native suite validates the retained software; it does not execute
+the proposed matched-target or reactor-feasibility study.
 
-## Contributor documentation checks
-
-The human README links to the technical guide and offers a copyable agent task.
-Its opening uses an indented blockquote, bold headline and shorter paragraphs;
-the motivating text's wording is unchanged, verified by a formatting-stripped
-comparison. The rest of the README is byte-for-byte unchanged by that styling edit.
-Agent/contributor navigation, roadmap ownership and word-budget checks follow
-the split. MSX consistently states the aspirational 2030 goal in the technical
-guide and project plan; no scientific acceptance criterion changes.
-
-- Documentation/release tests: **37 passed**, **0.27 s**, including missing-guide,
-  misplaced-roadmap, navigation and matching 2030 milestone regressions.
-- Public suite: **48 passed**. Repository-wide Ruff, documentation and whitespace
-  checks pass. No native experiment or full scientific regression was rerun for
-  this documentation/policy change.
-
-## Latest research validation — 27 September 2026
-
-Clean revisions `963793d` and `5a3c1d0` test the same seed with construction
-length target 3.44 m, selection limit 3.45 m and unchanged acceptance 3.5 m.
-
-- Both pass scoped geometry. Expanded-box boundary RMS **0.001996268** and
-  interior RMS **0.01147939** improve 2.64% / 1.55% over current-box, but still
-  fail their limits. Coil-clearance lower bound decreases 6.49 mm.
-- Shared geometry gives length upper **3.474220 m**, coil clearance lower
-  **0.06831 m**, plasma clearance lower **0.13307 m**, curvature upper **10.04691/m**.
-  No directed interval proof or full self-disjointness claim.
-- Current/expanded complete **1,575 / 1,462 bundles**, selecting trials
-  **1574 / 1459**. All **91 source hashes per run** verify unchanged.
-- Separate saved-array arithmetic checks all **3,038 trial records**, both
-  selections, four boundary and six interior numerical rows, current/flux
-  identities, saved independent B/A samples and composed geometry classifications.
-  No independent full geometry rerun or separate-machine reproduction.
-- Workers **306.360 / 284.409 s**, supervisors **306.938 / 285.020 s**.
-  Retained raw families **36.15 / 34.03 MB**, with complete path/hash inventory
-  digests. All declared resource ceilings respected; runs were serial.
-- Expanded stops on objective change after 278.205 s of startup/search,
-  not its gradient criterion: final max gradient **3.40e-5** versus **1e-9**.
-  No active coefficient bounds (selected minimum slack 3.91 mm).
-  This does not prove a family optimum or establish the cause of slow convergence.
-
-[Result](../optimization/LENGTH_HEADROOM_EXPLORATION.md) ·
-[Current evidence](../../evidence/coil-headroom-v2.json) ·
-[Expanded evidence](../../evidence/coil-headroom-v3.json).
-
-The first headroom setup failed before search on unsupported native penalty
-subtraction (supervisor 2.563 s). Its prefix remains at `coil-headroom-v1`.
-Direct assembly and the real native penalty/derivative test fix that API error.
-
-## Software and portable candidate
-
-- Active native regression: **420 passed**, 13 known HiGHS-option warnings,
-  **22.17 s**. Focused headroom/shared-search checks: **31 passed**, **12.53 s**.
-- Public suite: **48 passed**, **3.217 s**; repository-wide Ruff, docs and
-  whitespace checks pass.
-- The [portable candidate](../../submissions/length-headroom-six-coil/README.md)
-  exactly preserves all 198 selected names/coefficients. The case and evaluator
-  are unchanged. Local Python 3.12 evaluation/replay passes, with sampled normal
-  RMS **0.001744032** and interior RMS **0.03610319**.
-- Python **3.11 with `-I -S`** also evaluates and replays that candidate without
-  site packages. This is a local interpreter check, not a second machine.
-- Public current stays 294,966.466322 A, unlike native 308,140.584432 A.
-  Public replay is same-code and sparse, not scientific admission.
-- The exact-flux identity and one-ULP poison regressions remain passing.
-  No native environment sync, hosted CI or external scientific review.
-
-Next: diagnose objective scaling/stopping and penalty conditioning. Physical
-acceptance, realized topology, Step 3 transfer, pressure/engineering, independent
-backup/reproduction and MS1 remain open. Git does not back up ignored raw data.
+The [public release record](../validation/PUBLIC_RELEASE_RESULTS.md) owns historical
+release evidence; the [review policy](../validation/REVIEW_POLICY.md) owns hosting
+protections and remaining rights/reproduction work. A contributor's
+[Ubuntu replay](../validation/SERVER_REPRODUCTION_20261002.md) is separate portability
+evidence. Raw research artifacts and failed runs remain retained locally; Git does
+not back them up.

@@ -1,9 +1,13 @@
 # Engineering scope
 
-Finite-build, load and manufacturing-response work is parked until the coil fit
-is within ten times the field-error limit, unless a concrete result warrants
-earlier work. Those requirements are not removed from eventual Step 4 completion.
+Screen reactor feasibility now: device scale, magnetic field and pressure,
+net power balance, winding/blanket/shield space, loads, heat exhaust and maintenance.
+Record assumptions and missing evidence before detailed simulations. The
+[programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) defines the decision this
+screen supports; a boundary-error threshold alone does not establish readiness.
 
-Historical mesh/FEM/perturbation code, tests and reports resolve at the
-[freeze tag](../validation/REPRODUCING_RESULTS.md). The current filament geometry
-checks do not constitute engineering qualification.
+Reuse established community tools when a specific design decision requires
+finite-build, load or manufacturing-response analysis. Historical mesh/FEM code,
+environment manifests and reports resolve through
+[reproduction](../validation/REPRODUCING_RESULTS.md).
+Filament geometry checks are not engineering qualification.

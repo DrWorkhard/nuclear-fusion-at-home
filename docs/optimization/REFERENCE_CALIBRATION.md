@@ -33,7 +33,9 @@ we have not reproduced that old environment or established its exact grid.
 ## Fixed small experiment
 
 Use [the existing native environment](../validation/ENVIRONMENT.md) and
-`scripts/explore_boundary_controls.py`. Both cases receive this matrix:
+`scripts/explore_boundary_controls.py` from the recorded producer revision
+([historical replay](../validation/REPRODUCING_RESULTS.md#later-completed-tools)).
+This completed driver is no longer maintained on main. Both cases receive this matrix:
 
 | Surface grid | Coil nodes | Shift in grid cells |
 | --- | --- | --- |

@@ -28,7 +28,9 @@ versions resolve at the [freeze tag](REPRODUCING_RESULTS.md), together with each
 report's recorded source/environment identities. A current editable checkout
 does not make old absolute artifact paths portable.
 
-The optional engineering dependency declarations remain locked for compatibility:
-offline lock regeneration was blocked by the approval service's usage limit.
-Their implementation is retired, and nothing was installed. Do not present those
-optional packages as an active engineering qualification.
+The root lockfile covers the core package and development checks only. Unused
+`benchmark` and `engineering` extras have been removed; installing the core package
+does not install SIMSOPT or qualify a native research environment. The recorded
+native stack remains separately managed and unchanged. Inactive VMEC++/NEO-JAX
+manifests are available from their historical revisions; their installed local
+environments have not been removed.

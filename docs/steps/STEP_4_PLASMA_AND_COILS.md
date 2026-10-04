@@ -1,6 +1,6 @@
 # Step 4: develop plasma and coils together
 
-**In progress, 27 September 2026.** A better plasma target must be realized by
+**In progress, 4 October 2026.** A better plasma target must be realized by
 practical coils and retain its benefit in their magnetic field.
 [All steps](README.md) · [Roadmap](../PROJECT_PLAN.md) · [Status](../STATUS.md)
 
@@ -13,8 +13,9 @@ practical coils and retain its benefit in their magnetic field.
 | 4C — Pressure and confinement | Validated finite-pressure/current response and realized-field confinement diagnostics | Open; detailed work deferred |
 | 4D — Finite geometry and robustness | Qualified winding/build/load models and manufacturing-perturbation response | Open; detailed work deferred |
 
-Deferring detailed work is not completing it. Revisit the deferred physics once
-a coil set reaches within 10× of the boundary RMS limit.
+Deferring detailed work is not completing it. Screen reactor feasibility now;
+start detailed pressure/engineering work when it can decide whether to continue
+this design direction. A boundary-error threshold alone is not a readiness test.
 
 ## Current result
 
@@ -29,7 +30,8 @@ The wider endpoint passes the interior-vector component: **0.009770** against
 of the whole design. Length headroom resolves geometry but sacrifices that
 interior pass. Further shape-box expansion helps only modestly; its endpoint
 is away from every box bound and stops on objective change, not gradient tolerance.
-The 3.5 m limit is unchanged. The 1e-2 exploratory signal supports continued work.
+The 3.5 m limit is unchanged. The old 1e-2 exploratory signal is met; it no
+longer decides continued work.
 All these coil fits use the original reference401, not the improved Step 3
 target. Realized magnetic surfaces, confinement and benefit transfer remain open.
 

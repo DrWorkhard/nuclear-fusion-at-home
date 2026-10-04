@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 2 October 2026.
+Updated 4 October 2026.
 [Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
@@ -27,28 +27,29 @@ global optimum. It does not relax scientific or engineering acceptance.
 
 ## Current priorities
 
-1. **Simplification implemented.** Closed code/tests/reports now resolve at
-   `research-freeze-2026-09-27`. The working normalized coil fit, shared
-   checks and public starter remain. [Reproduction](validation/REPRODUCING_RESULTS.md).
-2. **Map the working fit's trade-offs.** Construction headroom resolves length
-   bounds but sacrifices the interior component pass. Wider boxes now give only
-   modest gains, with no active coefficient bounds. Inspect stopping/conditioning
-   before further extension; explore separately labelled coil
-   families. Check the best two or three with the shared fine evaluator and
-   continuous geometry. Acceptance limits stay unchanged.
-3. **Decide on 24 October.** The 1e-2 exploratory signal is met, but interior
-   fidelity and benefit transfer remain open. Use the
-   [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) to decide what merits
-   further work, not to declare success from a boundary score.
-4. **Deliver something reusable toward MS0**, targeted for 26 March 2027.
-   Assess contribution to existing community benchmarks first. The present
-   sparse starter is not yet a portable full-grid challenge.
+The [assessment](review/STRATEGIC_REVIEW_RESOLUTION.md) finds no demonstrated path
+from present results to the README's year-end reactor vision. Keep the ambition;
+spend effort on decisions that test the path.
 
-Pressure, detailed engineering and SQuID-C intake are deferred until a coil set
-is within 10× of the field limit; they remain necessary for later completion.
-Exploration uses [short records and proportionate checks](validation/RESEARCH_WORKFLOW.md).
-Dates are decision targets, not promises of scientific success. The repository is
-public on [GitHub](https://github.com/DrWorkhard/nuclear-fusion-at-home) since 2 October 2026; contact and artifact
-publication need separate authorization. The
-[launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work)
-records the remaining operational prerequisites.
+1. **Test benefit in actual coil fields.** Compare the original and improved
+   Step 3 targets with matched fitting effort. Diagnose stopping once, then
+   evaluate interior fields, magnetic surfaces and benefit transfer using shared
+   checks. Current fits address only the original target.
+2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
+   power balance, pressure/confinement, magnets, blanket/shield space and heat
+   exhaust before expensive optimization. Detailed simulations follow a decision
+   need; boundary RMS alone does not determine their priority.
+3. **Make the 24 October decision binding.** The
+   [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) defines the comparison,
+   resource limits and continue/change/stop rule. Do not extend the same recipe
+   merely because an old exploratory threshold was crossed.
+4. **Make the decisive test portable.** Supply the missing target data and reuse
+   existing field/geometry checks so contributors can address the actual
+   bottleneck. Prefer an existing community benchmark. Aim to resolve this now;
+   26 March 2027 is the outer MS0 decision target, not a six-month tooling project.
+
+One method, shared checks, one short record per question. Maintain only code
+needed for active work or reproduction; completed tools resolve at their recorded
+Git revisions. Preserve evidence and raw data. Existing acceptance limits remain
+unchanged. Dates allocate effort; they do not promise scientific success.
+Unsolicited alternatives remain welcome. Publishing/contact need separate authority.

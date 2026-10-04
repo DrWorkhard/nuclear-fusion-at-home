@@ -1,163 +1,94 @@
 # Contributing to Nuclear Fusion @ Home
 
-People and their agents are welcome. You do **not** need a listed issue, prior
-permission, a particular model, a new best score, or a compute-spending report.
-We welcome relevant unsolicited work, replications, bug reports, critical reviews,
-negative results, documentation, new methods and proposals outside our current
-[research hints](docs/optimization/RESEARCH_HINTS.md). Hints are invitations,
-not an allowlist. Code without an AI agent is equally welcome.
+Relevant unsolicited ideas, designs, replications, fixes, critical reviews and
+negative results are welcome. No listed issue, prior permission, AI agent, model,
+new best score or compute-spending report is required. The
+[research hints](docs/optimization/RESEARCH_HINTS.md) are invitations, not an allowlist.
 
 ## Start here
 
-1. Read the [project introduction](README.md), [technical contributor guide](README_agents.md)
-   and [scientific status](docs/STATUS.md). Agents also follow [AGENTS.md](AGENTS.md).
-2. Run the [portable quickstart](docs/validation/PUBLIC_QUICKSTART.md). It needs
-   only Python 3.11+, not our private workspace, large datasets or an API key.
-3. Make a small, coherent change on your branch and run the
-   [pre-PR checklist](#before-you-open-a-pull-request) below.
-4. Open a pull request explaining the contribution, evidence and limitations.
-   An issue is optional, including for work not on the hints list. Large changes
-   often benefit from discussion, but unrequested work will still be assessed.
+1. Read the [vision](README.md), [technical guide](README_agents.md) and
+   [scientific status](docs/STATUS.md). Agents also follow [AGENTS.md](AGENTS.md).
+2. Run the [portable quickstart](docs/validation/PUBLIC_QUICKSTART.md): Python
+   3.11+, no installation, API key or native research artifacts.
+3. Make a coherent change, complete the checks below and open a PR explaining
+   what changed or was learned, evidence, limitations and attribution.
 
 ## Before you open a pull request
 
-Hosted CI runs these checks on Linux, macOS and Windows; a PR merges only when all
-pass and the branch is up to date. Contributors' agents should do this themselves.
-In the first pull requests, most review rounds were spent on exactly these items.
-
-1. **Update your branch** with the latest `main` and resolve conflicts.
-2. **Run the checks CI runs**, from the repository root:
+1. Update your branch with current `main` and resolve conflicts.
+2. Run from the repository root:
 
    ```bash
    python scripts/test_public.py
    python scripts/check_docs.py
-   uvx ruff@0.16.5 check .   # or: pip install ruff==0.16.5, then: ruff check .
+   uvx ruff@0.16.5 check .
    git diff --check
    ```
 
-   Use `ruff check --fix .` for import order. Write `zip(..., strict=True)` and keep
-   lines at most 100 characters. If you changed `scripts/verify_public_release.py`
+   Run focused tests for changed code. If changing `scripts/verify_public_release.py`
    or anything it copies, also run
    `python -I -S scripts/verify_public_release.py --output results/<fresh-name>`.
-   With [uv](https://docs.astral.sh/uv/), `./scripts/run_core_ci.sh` repeats the
-   core job exactly; run it in a disposable clone.
-3. **Make reproduction commands work from a fresh clone.** Reference only files in
-   the repository or in your PR, never paths under ignored `results/`. Label hashes
-   of local-only files as "not distributed", or commit the small script instead.
-4. **Keep it portable to Windows.** Read and write text with `encoding="utf-8"`. If
-   your code hashes or byte-compares a file outside `examples/`, `src/fusion_public/`
-   and `public_tests/`, pin its line endings in `.gitattributes`, as done for
-   `evidence/plasma-design-v2/reference-input-401.json`.
-5. **List the checks you actually ran** in the PR description, with results. If
-   something is left undone, say so; maintainers may push a small fix-up to your
-   branch, and your authorship is preserved in the squash merge.
+   `./scripts/run_core_ci.sh` repeats core CI with uv; use a disposable checkout
+   so its sync cannot replace the native research environment.
+3. Reproduce your commands from a fresh clone. Required inputs must be committed
+   or explicitly obtainable; never depend silently on ignored `results/` files.
+   Label local-only evidence as not distributed.
+4. Keep Windows compatibility: use `encoding="utf-8"` for text I/O. Pin line endings
+   in `.gitattributes` for files whose bytes you hash or compare. `examples/`,
+   `src/fusion_public/` and `public_tests/` are already covered. Ruff checks import
+   order, `zip(..., strict=True)` and the 100-character line limit.
+5. List actual checks and untested parts in the PR. Hosted Linux/macOS/Windows CI
+   must pass on the current branch before merging.
 
 ## Issues: report side findings, pick up open work
 
-**Found something outside your current task?** Open an issue rather than widening
-your PR or dropping the finding. This applies to a bug, a wrong or unclear document,
-a portability problem, a doubtful number, a missing check or an idea. Agents should
-do this too, when their user allows posting to GitHub.
+Search [open issues](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues)
+for useful work and duplicates. For a finding outside your PR, open one focused
+issue when authorized to post: observation, revision, reproduction, impact and
+uncertainty. Use the bug/research templates; report security issues privately via
+[SECURITY.md](SECURITY.md). Larger efforts benefit from a coordination comment.
+`Fixes #N` closes an issue on merge; `Related to #N` does not. Neither an issue nor
+a research hint is required for a contribution.
 
-- Search the [open issues](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues) first and keep one topic per issue.
-- Use the bug or research template. Say what you saw, where (file, command,
-  revision), how to reproduce it and why it matters, and mark what is uncertain.
-- Remove credentials and personal paths. Report security problems privately, as
-  [SECURITY.md](SECURITY.md) describes.
+## Evidence and designs
 
-Issues #8–#10 are good examples: each records one concrete finding made while
-working on a different contribution.
+Explain the contribution, exact reference/evaluator version, reproducible inputs,
+checks actually run, failures and limits. Credit people, upstream code and data;
+retain their licenses and exclude secrets/private data. Hardware, AI model and
+spending are optional, except that speed or equal-budget claims need measurements.
+Review capacity limits what maintainers can rerun, not what others may contribute.
 
-**Looking for something to do?** [Open issues](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues) are possible contributions,
-alongside the [research hints](docs/optimization/RESEARCH_HINTS.md). Issues labelled
-[`help wanted`](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues?q=is%3Aopen+label%3A%22help+wanted%22) or
-[`good first issue`](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues?q=is%3Aopen+label%3A%22good+first+issue%22) are good
-starting points. For larger work, comment on the issue first to avoid duplicate
-effort. Link it from your PR: `Fixes #N` closes it on merge, `Related to #N` does not.
-Issues are invitations, not assignments; work without an issue remains welcome.
+Public candidate PRs use `submissions/<study>/candidate.json` and a short adjacent
+`README.md` with both sampled errors and a replay outcome. Keep generated reports
+in ignored `results/`; see the [submission layout](submissions/README.md).
+Sparse and dense boundary scores are diagnostics, not full physical acceptance.
+Other designs/methods are welcome outside the six-coil schema; explain the checks
+they need. Optional metadata uses [contribution.json](examples/contribution.json)
+and `python fusion.py public check-submission --file <path>`; that validates
+structure only and never executes submitted commands or URLs.
 
-## What to include
+Keep exploration lightweight and confirmation separate under the
+[research workflow](docs/validation/RESEARCH_WORKFLOW.md). Freeze candidates and
+comparators before independent confirmation. Never improve a candidate by changing
+its case, evaluator or acceptance rules; evaluator changes require separate review.
+Do not retroactively demand preregistration of exploratory contributions.
 
-- **Contribution:** what changed or what we learned, and why it matters.
-- **Evidence:** tests actually run, reproduction instructions and result files
-  when applicable. Identify the reference/evaluator version for numerical claims.
-- **Limitations:** what has not been tested; failed checks and negative results
-  are useful evidence, not something to hide.
-- **Attribution:** credit people, source code and datasets; include applicable
-  license notices. Never submit secrets, credentials or personal data.
+Retain failures and original scientific evidence identities. Large raw outputs
+stay outside Git with hashes and an obtainable reproduction recipe where possible;
+small derived fixtures need provenance, licenses and size justification. Do not
+rewrite historical paths or evidence. Old tools resolve through
+[reproduction](docs/validation/REPRODUCING_RESULTS.md).
 
-Compute time, money spent, hardware, model/provider and relationship to a research
-hint are **optional**. Their absence or the amount spent does not disqualify a
-contribution. Claims specifically about speed, resource efficiency or equal-budget
-comparisons do need measurements supporting that claim. We assess the contribution,
-not the contributor's spending. Maintainer/CI execution limits only bound the
-resources we can run; expensive external work can be reviewed from evidence and
-independent reproduction plans without automatic rejection.
+## Review and credit
 
-For structured metadata, copy [examples/contribution.json](examples/contribution.json)
-and run `python fusion.py public check-submission --file path/to/contribution.json`.
-This format is optional, and the checker validates structure, not scientific merit.
-It never executes commands or follows URLs in your description.
+Keep PR documentation local to its change. Maintainers integrate shared status,
+priorities and verification; contributors need not edit those records. Delete
+superseded plans and duplicate prose: history lives in Git.
 
-## Designs and research results
-
-The first public candidate interface accepts the fixed six-coil Fourier schema
-in [the starter](examples/clear-coil-samples-v1/README.md). Edit only the candidate
-in your experiment; do not alter the case or evaluator to improve its reported
-score. Other designs, novel physics or different methods remain welcome through
-ordinary PRs/proposals; the initial file format is not the project's scientific
-boundary. Explain what a suitable independent check would require.
-
-Exploratory PRs that lower the starter's sampled errors are explicitly welcome.
-Aim below reference normal RMS 0.304207 and inner-vector RMS 0.380435; report both
-and disclose trade-offs. See [score interpretation](docs/validation/PUBLIC_QUICKSTART.md#what-the-report-means).
-The starter has public sparse samples and frozen currents. A lower score is
-not a full-surface/geometry/QI pass. Label exploratory work honestly. Before a
-confirmatory project study, agree a versioned evaluation protocol; we do not
-retroactively reject useful exploratory work for lacking preregistration.
-Changes to evaluators/criteria are welcome but need separate review from the
-candidate they would admit. Preserve old benchmarks and failures.
-
-The [two-lane workflow](docs/validation/RESEARCH_WORKFLOW.md) keeps exploration
-lightweight and confirmation separate. The [Step 4 programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)
-sets priorities toward a full-grid coil challenge; that expanded
-challenge is planned, not yet supplied by the sparse starter.
-
-Keep large raw runs outside Git; provide a reproducible recipe and content hashes
-for necessary artifacts. A tiny derived fixture can be committed with clear
-provenance/license and a size justification. Do not reformat historical evidence
-or rewrite its old absolute paths. New portable exports have their own identity.
-
-For a public candidate PR, use `submissions/<unique-study-name>/candidate.json`
-and a short `README.md` beside it. Commit the candidate (about 10 KB), your exact
-reference/evaluator revision, reproduction commands, both scores and limitations.
-Keep generated reports/audits in ignored `results/`; put the audit outcome in the
-summary rather than force-adding the larger report. See the
-[submission layout and git add example](submissions/README.md). Other kinds of
-contribution need not use the candidate folder or this format.
-
-## Review, credit and conduct
-
-Keep PR documentation local to your change: usage text, a focused report, or the
-PR description with actual checks and limitations. Keep documentation current;
-remove superseded plans and duplicate history rather than creating archives.
-Git retains earlier versions. Frozen protocols and code resolve at the
-[research tag](docs/validation/REPRODUCING_RESULTS.md); scientific evidence and
-necessary raw data retain their identities, including negative findings.
-Maintainers integrate current
-verification, decisions, status and roadmap; contributors do not need to edit
-those files or commit after every small step. The general instructions in
-[AGENTS.md](AGENTS.md) apply to outside agents; its maintainer completion duties
-apply only to repository-owner sessions.
-
-Review checks usefulness, correctness, reproducibility, scope, security and
-maintainability. Being unsolicited is not a negative criterion. Where evaluation
-is not yet possible, reviewers should record the specific missing evidence or
-capability, not ignore the proposal. Passing CI is not a scientific endorsement.
-See the [review policy](docs/validation/REVIEW_POLICY.md).
-
-Keep discussion constructive and evidence-based. Credit contributions and
-reproductions by their actual role; agent assistance does not remove the submitter's
-responsibility for the PR. Criticize claims and methods, not people. Participation
-does not imply authorship on every later publication; attribution should follow
-the actual contribution. See [CITATION.cff](CITATION.cff) and retain upstream credit.
+Review assesses usefulness, correctness, reproducibility and maintainability;
+missing evaluation capability should be stated explicitly. CI success is not
+scientific endorsement. See the [review policy](docs/validation/REVIEW_POLICY.md).
+Criticize methods and claims, not people. AI assistance does not remove submitter
+responsibility; credit contributions by their actual role, following
+[CITATION.cff](CITATION.cff) and upstream attribution.

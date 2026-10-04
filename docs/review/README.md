@@ -1,13 +1,9 @@
-# Reviews
+# Research review
 
-These are internal reviews, not external domain-expert peer review.
+[Current assessment](STRATEGIC_REVIEW_RESOLUTION.md) evaluates the scientific route
+against the unchanged README vision and explains the simplifications.
+It is an internal assessment, not external peer review.
 
-- [Simplicity review](SIMPLICITY_REVIEW.md): independent assessment of the
-  pre-cleanup state at `c1d2260`; the owner chose tag-and-remove.
-- [Strategic review](STRATEGIC_REVIEW.md): calibration, exploration and useful
-  community outcomes before reactor-level claims.
-- [Current response](STRATEGIC_REVIEW_RESOLUTION.md): how both reviews guide
-  the active repository and research priorities.
-
-Earlier documentation/usability reviews are [available at the freeze tag](../validation/REPRODUCING_RESULTS.md).
-Their quoted numerical states are historical, not current status.
+Earlier strategic and simplicity reviews are available in Git at
+`d5d395b` under this directory. Their historical counts and recommendations are
+not current status. [Reproduction](../validation/REPRODUCING_RESULTS.md).
