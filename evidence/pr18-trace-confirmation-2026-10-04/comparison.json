@@ -1,0 +1,97 @@
+{
+  "producer_commit": "df9db024ef6170df820649e61cccd868f65f0b88",
+  "candidate_sha256": "249d6668bdfa9d91d4164d7008adf4da17f1663e3e2a98c76b083a051db13c10",
+  "wout_sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+  "direct": {
+    "lines_confined": 10,
+    "lines": 10,
+    "max_abs_iota_mismatch": 0.004950845603316378,
+    "lines_completing_transits": 10,
+    "requested_transits": 200,
+    "all_confined_and_iota_matching": true,
+    "nestedness_tested": false,
+    "iota_tolerance": 0.02,
+    "physical_admission": false
+  },
+  "interpolated": {
+    "lines_confined": 10,
+    "lines": 10,
+    "max_abs_iota_mismatch": 0.004950966752257591,
+    "lines_completing_transits": 10,
+    "requested_transits": 200,
+    "all_confined_and_iota_matching": true,
+    "nestedness_tested": false,
+    "iota_tolerance": 0.02,
+    "physical_admission": false
+  },
+  "interpolation_errors": {
+    "48": 3.817779912659082e-06,
+    "64": 6.796473975059875e-07
+  },
+  "comparisons": [
+    {
+      "s": 0.05,
+      "crossings": 400,
+      "signed_iota_difference": 3.2253301895934783e-06,
+      "max_crossing_distance_m": 1.990822634730462e-06
+    },
+    {
+      "s": 0.15,
+      "crossings": 400,
+      "signed_iota_difference": 1.8631083287257155e-06,
+      "max_crossing_distance_m": 3.3487647329967913e-06
+    },
+    {
+      "s": 0.25,
+      "crossings": 400,
+      "signed_iota_difference": 3.6957924870462122e-06,
+      "max_crossing_distance_m": 1.0228931002228345e-05
+    },
+    {
+      "s": 0.35,
+      "crossings": 400,
+      "signed_iota_difference": 8.63164800413152e-07,
+      "max_crossing_distance_m": 1.2885290123326836e-05
+    },
+    {
+      "s": 0.45,
+      "crossings": 400,
+      "signed_iota_difference": 6.13474913091494e-08,
+      "max_crossing_distance_m": 3.885656577783222e-05
+    },
+    {
+      "s": 0.55,
+      "crossings": 400,
+      "signed_iota_difference": 2.265566473758085e-06,
+      "max_crossing_distance_m": 3.56836589353802e-05
+    },
+    {
+      "s": 0.65,
+      "crossings": 400,
+      "signed_iota_difference": 6.783615392746967e-07,
+      "max_crossing_distance_m": 4.8649079463021525e-05
+    },
+    {
+      "s": 0.75,
+      "crossings": 400,
+      "signed_iota_difference": 2.660764292894413e-06,
+      "max_crossing_distance_m": 5.5115559365170506e-05
+    },
+    {
+      "s": 0.85,
+      "crossings": 400,
+      "signed_iota_difference": 1.2256825898671053e-07,
+      "max_crossing_distance_m": 7.354164575870948e-05
+    },
+    {
+      "s": 0.95,
+      "crossings": 400,
+      "signed_iota_difference": 1.2114894121229014e-07,
+      "max_crossing_distance_m": 9.687487571217741e-05
+    }
+  ],
+  "max_signed_iota_difference": 3.6957924870462122e-06,
+  "max_crossing_distance_m": 9.687487571217741e-05,
+  "physical_admission": false,
+  "nestedness_tested": false
+}

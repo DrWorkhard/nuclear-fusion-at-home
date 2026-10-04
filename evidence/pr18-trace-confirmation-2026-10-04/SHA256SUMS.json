@@ -1,0 +1,82 @@
+{
+  "compare.py": {
+    "bytes": 1723,
+    "sha256": "fa233eb3ad9ba0f05c5eb271073487bc52f751e67736bac39808a4f7ab464a74"
+  },
+  "comparison.json": {
+    "bytes": 2819,
+    "sha256": "433343236a4f6179689d1e6e54c35d262026ba14332f1e640696f763b30804ba"
+  },
+  "direct/poincare.npz": {
+    "bytes": 128299,
+    "sha256": "a9c77fd35053e92d882bc0bdc2760b1a126ad3e69ff4fe451738a821dd9502a8"
+  },
+  "direct/poincare.png": {
+    "bytes": 186835,
+    "sha256": "0fa2ac50911d292d93558d1a0d12c5fcddc6c3c91fc41876639cec302f3f47ac"
+  },
+  "direct/result.json": {
+    "bytes": 3974,
+    "sha256": "c67f40384833bb0c3ce002f87457ee58845d5e40ae4b7d936c6b2d158d092d67"
+  },
+  "direct-execution.json": {
+    "bytes": 628,
+    "sha256": "b9601543c51e45bd6b9d6e1536299f364b04776596021021720efc092502f8b7"
+  },
+  "direct-rerun-execution.json": {
+    "bytes": 646,
+    "sha256": "216bd34442d780e7c0c243602b05b07f728e16f468bca2b6591d431fa7cb05ee"
+  },
+  "direct-rerun.log": {
+    "bytes": 275,
+    "sha256": "dd662aa975b72af3a404e33a4eb81ae1160f2a5640f7540ded8922fa443cf819"
+  },
+  "direct.log": {
+    "bytes": 2178,
+    "sha256": "975684abea096e5874b7db7d5db1853d86bcbfa2b17993d0127ce6146ea878ee"
+  },
+  "input-hashes.json": {
+    "bytes": 412,
+    "sha256": "f4e490285c72a0268938fbafb869dab39499e0101208826f8d10757d8bb74cde"
+  },
+  "interpolated/poincare.npz": {
+    "bytes": 128268,
+    "sha256": "175fbcb6ad9ca824d401f1d3c32226c2354e8de691870d525ff721b0fec48c87"
+  },
+  "interpolated/poincare.png": {
+    "bytes": 186790,
+    "sha256": "14a6138a92692602e6bce50c3f081a3a2a11fa4113903cf616c9c3118f599bab"
+  },
+  "interpolated/result.json": {
+    "bytes": 4048,
+    "sha256": "3e4d323a4d4f14e32d113a0bb4724aabf03455ee37011a0e9734e27aa111ee1c"
+  },
+  "interpolated-execution.json": {
+    "bytes": 630,
+    "sha256": "0b23ab1fc589cb255fbc91001da6ef42840a0be09218642973e54af447378b07"
+  },
+  "interpolated.log": {
+    "bytes": 275,
+    "sha256": "10902eff94118de97338afe0d8cb0796c64372580193aa4a71f68a83698b6c1a"
+  },
+  "package-versions.json": {
+    "bytes": 130,
+    "sha256": "51c7484e575b31b899073550fc0b6952564110cd815e4d3a890d05abbebb1e16"
+  },
+  "protocol-amendment.txt": {
+    "bytes": 609,
+    "sha256": "8a28801512b6a38deadc9ad03d31adf9823deca1f8c4b5dfe397a47e13d9f271"
+  },
+  "protocol.txt": {
+    "bytes": 1388,
+    "sha256": "ee402cff85cd7cf6d6352672d8d40cbb81fb331d3c91d5ff7c86eac861aff8ad"
+  },
+  "run.py": {
+    "bytes": 1967,
+    "sha256": "078fe30c683463d8a6be3bd0f244a30e989f8cbea9d6f76d7eb4ca12e1e022a0"
+  },
+  "serial-python.py": {
+    "bytes": 408,
+    "sha256": "1db4ce991eccf03ceec3e41f42f5273d52516ff4378a34f242095ae6f2a19545"
+  }
+}

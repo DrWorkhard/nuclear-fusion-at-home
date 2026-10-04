@@ -1,0 +1,147 @@
+{
+ "kind": "realized-field-surfaces",
+ "completed": true,
+ "candidate": "submissions/length-headroom-six-coil/candidate.json",
+ "candidate_sha256": "249d6668bdfa9d91d4164d7008adf4da17f1663e3e2a98c76b083a051db13c10",
+ "provenance": {
+  "schema_version": 1,
+  "host": {
+   "captured_at": "2026-10-04T15:26:35.561172+00:00",
+   "platform": "macOS-15.7.4-arm64-arm-64bit",
+   "machine": "arm64",
+   "processor": "arm",
+   "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+   "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+   "logical_cpu_count": 8
+  },
+  "repository": {
+   "path": "/private/tmp/fusion-pr18-fixes",
+   "available": true,
+   "commit": "df9db024ef6170df820649e61cccd868f65f0b88",
+   "branch": "contribution/realized-field-surfaces",
+   "dirty": false
+  },
+  "external_repositories": {}
+ },
+ "target_check": "reference401 boundary/flux consistency; not dense identity",
+ "wout_sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+ "flux_scale": 1.0446631045011783,
+ "current_A": 308140.58443190984,
+ "transits": 200,
+ "physical_admission": false,
+ "step4_pass": false,
+ "kernel_control": {
+  "boundary": 4.2760182779060734e-16,
+  "inner": 3.5099926685173996e-16,
+  "independent_volume": 2.568501893646827e-16
+ },
+ "interpolation_errors": {
+  "48": 3.817779912659082e-06,
+  "64": 6.796473975059875e-07
+ },
+ "field": "InterpolatedField degree 4",
+ "lines": [
+  {
+   "s": 0.05,
+   "R0": 0.9435917121966705,
+   "transits": 200.0019419167748,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5907333190608225,
+   "iota_target": -0.5869172658365314
+  },
+  {
+   "s": 0.15,
+   "R0": 0.9506103453493919,
+   "transits": 200.00303991090001,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5793085761726586,
+   "iota_target": -0.5771743896617605
+  },
+  {
+   "s": 0.25,
+   "R0": 0.9554726715479133,
+   "transits": 200.00138877691765,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5695395245454521,
+   "iota_target": -0.5676835985949651
+  },
+  {
+   "s": 0.35,
+   "R0": 0.9594505613312814,
+   "transits": 200.00204885361453,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5607104299602663,
+   "iota_target": -0.5584793059147145
+  },
+  {
+   "s": 0.45,
+   "R0": 0.9629132045169738,
+   "transits": 200.00024346743882,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.551082955261697,
+   "iota_target": -0.5494833610014542
+  },
+  {
+   "s": 0.55,
+   "R0": 0.9660287897856271,
+   "transits": 200.00297328531647,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.541793668835696,
+   "iota_target": -0.5406401654725983
+  },
+  {
+   "s": 0.65,
+   "R0": 0.9688900140244474,
+   "transits": 200.00280572825767,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5339256461217801,
+   "iota_target": -0.5319111944271938
+  },
+  {
+   "s": 0.75,
+   "R0": 0.9715541507956987,
+   "transits": 200.00004870070597,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5260086074122067,
+   "iota_target": -0.5232676795161622
+  },
+  {
+   "s": 0.85,
+   "R0": 0.9740594553203594,
+   "transits": 200.00310448507736,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5188397099762417,
+   "iota_target": -0.5146897976143009
+  },
+  {
+   "s": 0.95,
+   "R0": 0.9764329220084511,
+   "transits": 200.0022977155646,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5111141705742316,
+   "iota_target": -0.506163203821974
+  }
+ ],
+ "summary": {
+  "lines_confined": 10,
+  "lines": 10,
+  "max_abs_iota_mismatch": 0.004950966752257591,
+  "lines_completing_transits": 10,
+  "requested_transits": 200,
+  "all_confined_and_iota_matching": true,
+  "nestedness_tested": false,
+  "iota_tolerance": 0.02,
+  "physical_admission": false
+ },
+ "seconds": 208.9
+}

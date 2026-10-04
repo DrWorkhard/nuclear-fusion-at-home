@@ -1,0 +1,23 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "/tmp/fusion-serial-python.py",
+    "scripts",
+    "scripts/trace_surfaces.py",
+    "--candidate",
+    "submissions/length-headroom-six-coil/candidate.json",
+    "--wout",
+    "/tmp/fusion-review-inputs/reference401.nc",
+    "--output",
+    "/tmp/fusion-pr18-fixes/results/review-direct-200",
+    "--transits",
+    "200",
+    "--direct"
+  ],
+  "output": "/tmp/fusion-pr18-fixes/results/review-direct-200",
+  "mode": "direct",
+  "wall_seconds_limit": 600,
+  "storage_bytes_limit": 268435456,
+  "exit_code": 1,
+  "seconds": 236.94077304191887
+}
