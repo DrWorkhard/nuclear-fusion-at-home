@@ -188,10 +188,30 @@ This rebuilds the native one-period boundary grid from the committed reference i
 (hash-bound to the starter) and prints the dense normal RMS/max. It also prints the
 current that restores the target flux, as the research fit does. For the supplied
 candidate it reproduces the native 0.00199627 / 0.00942578 and 308,140.58 A in about
-20 s. The normal metric does not depend on the current; the interior metric does, and
-needs native target arrays that are not distributed. Still not physical admission.
+20 s. The normal metric does not depend on a uniform current scale; the interior
+metric does. Still not physical admission.
 The reference input derives from Goodman et al.'s CC BY 4.0 data; see the
 [data provenance](../../examples/clear-coil-samples-v1/README.md#provenance-and-attribution).
+
+### Compare interior current conventions
+
+```bash
+python fusion.py public normalized-interior --candidate submissions/length-headroom-six-coil/candidate.json
+```
+
+This separate diagnostic reports both fixed-current and flux-normalized errors on
+**the same 64 bundled interior points**, using 512 coil nodes for the field. The
+256-node flux calculation preserves signed current ratios and targets the absolute
+boundary-section flux from the committed reference input. For the headroom candidate,
+current increases from 294,966.47 A to 308,140.58 A; sparse interior RMS changes from
+0.03610 to 0.01078. This exposes an objective difference, not a coil-shape improvement.
+The native dense interior value is about 0.01148 and still fails its 0.01 limit.
+Sparse results must not be used as a dense acceptance gate. Full interior target
+arrays are not bundled; native regeneration needs a separate environment.
+
+Existing `evaluate` and `audit` reports retain their fixed currents and evaluator
+identity. The diagnostic does not mutate the candidate or case, establish magnetic
+surfaces, or imply confinement or physical admission.
 
 ## Tests and optional contribution metadata
 
