@@ -22,7 +22,8 @@ def verify(output):
     output.mkdir(parents=True, exist_ok=False)
     exported = output / "checkout with spaces"
     exported.mkdir()
-    files = [ROOT / "fusion.py", ROOT / "scripts/test_public.py"]
+    files = [ROOT / "fusion.py", ROOT / "scripts/test_public.py",
+             ROOT / "evidence/plasma-design-v2/reference-input-401.json"]
     for name in ("src/fusion_public", "public_tests", "examples"):
         files.extend(p for p in (ROOT / name).rglob("*")
                      if p.is_file() and "__pycache__" not in p.parts)
