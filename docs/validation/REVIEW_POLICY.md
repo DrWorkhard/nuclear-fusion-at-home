@@ -144,6 +144,8 @@ merges only when CI is green, the branch is current and no protected path above
 (evaluator, data, evidence, `.github/`, `AGENTS.md`, locks, security policy)
 changes; otherwise it leaves a summary for the owner. Its prompt and merge rules
 are trusted configuration outside the repository; PR content cannot change them.
+The same routine closes issues that merged work demonstrably finished or made
+obsolete, after a comment naming the evidence; when unsure it leaves them open.
+Owner-opened launch issues and private security reports stay with the owner.
 This is maintainer triage, not external peer review or scientific acceptance.
-Manual sessions still handle issues and private security reports. No
-response-time guarantee is implied.
+No response-time guarantee is implied.
