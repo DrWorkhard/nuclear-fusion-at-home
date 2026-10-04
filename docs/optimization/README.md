@@ -45,5 +45,32 @@ This driver supports reference401 only; matched improved-target fitting and
 realized-plasma-benefit diagnostics remain to be implemented in the
 [next experiment](STEP4_RESEARCH_PROGRAMME.md).
 
+## Portable checks
+
+Without the maintainer's archives, supply a reference401 Wout. One can be regenerated
+by vmecpp from the committed input in about 6 minutes:
+`vmecpp.run(vmecpp.VmecInput.from_file("evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(path)`.
+`--wout` rebuilds the three 64×64 interior archives
+([`wout_target.py`](../../src/fusion_baselines/wout_target.py)). It accepts the
+result only if the Wout boundary equals the input to 1e-12 and the public starter's
+64 interior samples are reproduced to 1e-8. Normalization stays frozen; the measured
+B2 is reported. `check_coils.py` runs the same fine, geometry and interior checks on
+a snapshot or a public candidate without fitting:
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1 \
+  .native/bin/python scripts/check_coils.py \
+  --candidate submissions/length-headroom-six-coil/candidate.json \
+  --wout results/wout_reference_regen.nc --output results/my-check
+```
+
+Positive control (4 October 2026, macOS, the [portable setup](../validation/ENVIRONMENT.md#portable-native-setup)):
+- **Fine boundary and geometry:** reproduce the length-headroom evidence to ≤1e-15
+  (RMS 0.0019962675237, maximum 0.0094257750, length bound 3.4742191 m).
+- **Interior:** reproduces 0.0114827 and 0.0114794 to 8e-11.
+
+`check_coils.py` saves its converted `seed.json`, which `fit_coils.py --snapshot … --wout …`
+accepts for a portable search.
+
 For old results, use their [original revisions](../validation/REPRODUCING_RESULTS.md),
 not this prospective search. Evidence and raw outputs are unchanged.
