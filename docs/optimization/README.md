@@ -119,7 +119,13 @@ A transit stopping event is distinct from boundary escape; reaching the integrat
 time cap early cannot pass. The summary does not measure nestedness or island
 widths. Plots are exploratory, not a nested-surface proof or physical acceptance.
 The improved Step 3 target, edge s > 0.95 and benefit transfer remain untested.
-Earlier positive summaries must be rerun under this corrected contract.
+[Confirmation, 4 October 2026](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-pr18-trace-confirmation-2026-10-04/evidence/pr18-trace-confirmation-2026-10-04)
+uses clean producer `df9db024ef6170df820649e61cccd868f65f0b88`, archive `21886ce`.
+For length-headroom-six-coil, direct and interpolated runs both complete 200
+transits for 10/10 lines; maximum signed-iota mismatch is 0.004951. Between methods,
+iota differs by at most 3.70e-6 and corresponding crossings by 0.097 mm. These
+are same-machine diagnostics using the original Wout, not a nestedness proof or
+physical acceptance. Other earlier positive summaries still need corrected reruns.
 
 For old results, use their [original revisions](../validation/REPRODUCING_RESULTS.md),
 not this prospective search. Evidence is linked from immutable tags; local raw outputs are preserved.
