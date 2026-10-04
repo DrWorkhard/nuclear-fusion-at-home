@@ -22,8 +22,12 @@ def verify(output):
     output.mkdir(parents=True, exist_ok=False)
     exported = output / "checkout with spaces"
     exported.mkdir()
+    # Retain source/data notices and their direct local references with the public code.
     files = [ROOT / "fusion.py", ROOT / "scripts/test_public.py",
              ROOT / "scripts/verify_public_release.py",
+             ROOT / "LICENSE", ROOT / "NOTICE.md",
+             ROOT / "references/public-data-sources.json",
+             ROOT / "references/external_sources.json",
              ROOT / "evidence/plasma-design-v2/reference-input-401.json"]
     for name in ("src/fusion_public", "public_tests", "examples"):
         files.extend(p for p in (ROOT / name).rglob("*")

@@ -1,5 +1,6 @@
-"""Release-runner failure controls without subprocesses, waits or field studies."""
+"""Release copy and failure controls without subprocesses, waits or field studies."""
 
+import hashlib
 import importlib.util
 import json
 import subprocess
@@ -18,8 +19,32 @@ spec.loader.exec_module(release)
 
 
 class ReleaseTests(unittest.TestCase):
+    def test_copy_retains_notices_and_direct_references(self):
+        with tempfile.TemporaryDirectory() as directory:
+            output = Path(directory) / "qualification"
+            # Stop after copying; the real eight-operation run is a separate qualification.
+            with patch.object(
+                release.subprocess, "run",
+                return_value=subprocess.CompletedProcess([], 2, "stop after copy\n"),
+            ) as run:
+                with self.assertRaisesRegex(ValueError, "Failed release check: public-unit-tests"):
+                    release.verify(output)
+            run.assert_called_once()
+            qualification = json.loads((output / "qualification.json").read_text(encoding="utf-8"))
+            for relative in (
+                "LICENSE", "NOTICE.md", "examples/clear-coil-samples-v1/README.md",
+                "references/public-data-sources.json", "references/external_sources.json",
+            ):
+                with self.subTest(path=relative):
+                    source = (ROOT / relative).read_bytes()
+                    exported = output / "checkout with spaces" / relative
+                    self.assertTrue(exported.is_file(), f"Missing exported notice: {relative}")
+                    self.assertEqual(exported.read_bytes(), source)
+                    self.assertEqual(qualification["copied_files"][relative],
+                                     hashlib.sha256(source).hexdigest())
+
     def assert_failed_qualification(self, output, run, error_type, partial):
-        qualification = json.loads((output / "qualification.json").read_text())
+        qualification = json.loads((output / "qualification.json").read_text(encoding="utf-8"))
         self.assertFalse(qualification["complete"])
         self.assertFalse(qualification["physical_admission"])
         self.assertFalse(qualification["step4_pass"])
@@ -34,7 +59,7 @@ class ReleaseTests(unittest.TestCase):
         self.assertEqual(operations[0]["elapsed_seconds"], 0.25)
         for index, record in enumerate(operations):
             path = output / f"{index:02d}-{record['label']}.json"
-            self.assertEqual(json.loads(path.read_text()), record)
+            self.assertEqual(json.loads(path.read_text(encoding="utf-8")), record)
         failed = operations[1]
         self.assertEqual(failed["argv"], ["fusion.py", "public", "cases"])
         self.assertEqual(failed["expected_returncode"], 0)
