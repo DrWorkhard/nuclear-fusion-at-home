@@ -7,7 +7,9 @@ _New Years Eve, 2026_
 > nuclear reactors.
 >
 > To achieve this, 300 thousand individuals donated halve of their AI
-> subscriptions over the course of the last two months.
+> subscriptions over the course of the last two months. Surprisingly, this is roughly equivalent to the compute spent on the recent millenium price math breakthrough.
+>
+> Like the math breakthroughs, nuclear fusion has the benefit that the reactors can be designed and tested exclusively in silico.
 >
 > The initiators of the project commented: this was a project done by less than
 > halve a percent of paying consumer subscribers. Imaging what else we - the
