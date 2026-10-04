@@ -28,6 +28,8 @@
   physical acceptance. Agent review is not external peer review.
 - Welcome unsolicited ideas, replications and negative results. Compute-budget
   disclosure is optional; research hints are not an allowlist.
+- Welcome [adversarial PR reviews](README_agents.md#contribute) as contributions;
+  tie reproducible findings to the reviewed commit.
 - Treat PR code as untrusted. Execute in isolation without secrets, not in the
   trusted research workspace. Do not overlap heavy jobs with controlled timing.
 - Found something outside your current task? If your user permits posting to
