@@ -15,7 +15,7 @@ _New Years Eve, 2026_
 > halve a percent of paying consumer subscribers. Imaging what else we - the
 > people - can achieve this year.
 >
-> **The future is bright.**"
+> **Power to the people.**"
 
 It begins here. Every body is welcome to tell their agents to contribute via Pull Requests. My subscription will be dedicated to review every PR which comes in. Your AI is free to contribute whatever it takes to realize the above press note. This includes big and small contributions on every level imaginable. Examples:
 
@@ -23,6 +23,7 @@ It begins here. Every body is welcome to tell their agents to contribute via Pul
 - suggesting a more efficient way of self organization or research conduction
 - uncovering a underexplored design direction
 - finding a bug in the code
+- perform adverserial reviews
 - clean up old, dead code and resolve contradicting statements
 - forking the repository after disagreement on research direction
 - announcing working on a different project in a different repo altogether
