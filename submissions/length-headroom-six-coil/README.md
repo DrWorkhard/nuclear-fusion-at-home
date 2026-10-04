@@ -1,6 +1,6 @@
 # Six-coil fit with construction length margin
 
-A reusable geometry from our [headroom study](../../docs/optimization/LENGTH_HEADROOM_EXPLORATION.md):
+A reusable geometry from our [headroom study](../../evidence/coil-headroom-v3.json):
 expanded-box trial1459, native producer revision `5a3c1d0`.
 It lowers both public sampled errors, without changing the reference, evaluator
 or public currents. It is **an exploratory candidate, not an accepted design**.

@@ -54,8 +54,8 @@ and their code/tests resolve at the [freeze tag](validation/REPRODUCING_RESULTS.
 The main tree holds active work and concise conclusions, not duplicate archives.
 Tracked evidence stays unchanged; raw data needs separate retention and backup.
 
-- [Step results](steps/README.md): one English page per roadmap step with its result, limits, failures and evidence.
-- [Optimization](optimization/README.md): algorithms, attempts, negative results and [open research hints](optimization/RESEARCH_HINTS.md).
+- [Step results](steps/README.md): brief completed-step conclusions and active Step 4 requirements.
+- [Optimization](optimization/README.md): active fitter, next experiment and [open research hints](optimization/RESEARCH_HINTS.md).
 - [Geometry](geometry/README.md): curvature, clearance, continuous bounds and discretization checks.
 - [QI physics](qi/README.md): completed plasma result and remaining realized-field questions.
 - [Engineering](engineering/README.md): deferred models and limits of filament geometry.

@@ -51,8 +51,9 @@ This is a **new derived packet**, not an edited historical record. Its manifest
 and parent digests bind the original native seed bundle, input equilibrium,
 output equilibrium, raw arrays and independent audit at project revision3334f1e.
 The originals and their private-machine paths have not been rewritten.
-The maintainer exporter is [export_public_starter.py](../../scripts/export_public_starter.py);
-ordinary users do not need that exporter or its NumPy/historical-data dependencies.
+The completed exporter is `scripts/export_public_starter.py` at revision
+`8c5753c`; see [historical reproduction](../../docs/validation/REPRODUCING_RESULTS.md).
+Ordinary users need only this packet.
 
 Underlying plasma configuration: Alan Goodman, *Data for paper “Constructing
 precisely quasi-isodynamic magnetic fields”*, version1.0,18October2022,

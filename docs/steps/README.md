@@ -1,31 +1,34 @@
-# Step results
+# Completed steps
 
-Purpose: one English results page per roadmap step. Each page states what the
-step had to show, the actual result with its key numbers, what it does not show,
-failures kept on record, and links to evidence. Closed detailed reports/code/tests
-resolve at the [freeze tag](../validation/REPRODUCING_RESULTS.md).
-Requirements and next actions stay in the
-[roadmap](../PROJECT_PLAN.md); the overall evidence summary is on the
-[status page](../STATUS.md).
+Steps 1–3 passed their registered local scopes. They do not establish a reactor.
+[Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md) ·
+[Active Step 4 requirements](STEP_4_PLASMA_AND_COILS.md)
 
-Current conclusion: Steps 1–3 are complete in their registered scopes. Step 4 is
-in progress: selected coils pass scoped continuous geometry, but their fields
-fail acceptance limits. Step 5 has no results yet; a future
-[Proxima comparison](../squid_c/README.md) needs a matched reference.
+## Steps 1 and 2: foundation and repeatable iteration
 
-[Overview](../README.md) · [Status](../STATUS.md) · [Roadmap](../PROJECT_PLAN.md)
+Selected W7-X/Goodman regressions and independent coil checks passed. The broader
+W7-X comparison remains 60/63. A real optimizer cycle repeated exactly, but both
+candidates failed the raw-flux limit: 8.191664e-8 versus 1e-8. The selected point
+came from a start replay, so this established reproducibility, not optimizer gain.
+The initial acceptance run failed a bookkeeping check and remains rejected.
 
-## Documents
+Producer `1aa28b6`: [final audit](../../evidence/foundation-acceptance-v2/summary.json),
+[iteration](../../evidence/foundation-acceptance-v2/cycle-audit.json),
+[candidate checks](../../evidence/foundation-acceptance-v2/holdouts/summary.json).
 
-- [Step 1: a reliable foundation](STEP_1_FOUNDATION.md). Local toolchain reproduces
-  the W7-X/Goodman regressions and correctly accepts or rejects coil candidates;
-  first acceptance run rejected for a bookkeeping bug, complete rerun passed.
-- [Step 2: reproducible design iteration](STEP_2_ITERATION.md). A real optimizer
-  cycle repeats exactly and is independently evaluated; both candidates correctly
-  rejected on the flux limit.
-- [Step 3: an improved plasma target](STEP_3_PLASMA_TARGET.md). Four boundary
-  changes lower the wide bounce-action metric by 11.17% with all ten gates passed;
-  the first design stays rejected.
-- [Step 4 results so far](STEP_4_PLASMA_AND_COILS.md). Work packages 4A–4D, the
-  coil experiments and lessons, calibration/feasibility priority and links to
-  detailed numerical and software qualification. Field limits still fail.
+## Step 3: vacuum plasma diagnostic
+
+Four boundary changes reduced wide-domain bounce-action variance by **11.17%**
+and narrow-domain variance by **4.85%**; all ten registered gates passed.
+Both domains informed construction. The first design improved the narrow metric
+but worsened the wide metric by 15.53% and violated 20 local limits; it remains
+rejected. These are diagnostic gains, not measured confinement or fusion power.
+Realized coil fields, pressure, transport and engineering remain open.
+
+Evidence revision `d429783`: [final audit](../../evidence/plasma-balanced-v1/final-audit.json),
+[diagnostics](../../evidence/plasma-balanced-v1/validation.json),
+[selected target](../../evidence/plasma-balanced-v1/selected-input-401.json),
+[reference target](../../evidence/plasma-design-v2/reference-input-401.json).
+
+Detailed methods, budgets, failures and original commands remain at their recorded
+Git revisions; see [reproduction](../validation/REPRODUCING_RESULTS.md).

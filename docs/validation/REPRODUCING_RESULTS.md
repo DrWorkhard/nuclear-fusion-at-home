@@ -61,6 +61,25 @@ fits retain their imported and hash-bound dependencies. Their data still require
 the recorded local artifacts, including failed runs. No evidence or raw data is
 removed by this cleanup.
 
+## Minimal result summaries
+
+The second cleanup keeps completed Step 1–3 conclusions in the
+[step index](../steps/README.md) and coil results in [status](../STATUS.md), with
+direct evidence links. Full result pages, the old sampled geometry audit and the
+completed starter exporter remain at **`8c5753c`**:
+
+```bash
+git show 8c5753c:docs/optimization/LENGTH_HEADROOM_EXPLORATION.md
+git show 8c5753c:docs/steps/STEP_3_PLASMA_TARGET.md
+git show 8c5753c:scripts/audit_coil_geometry.py
+git show 8c5753c:scripts/export_public_starter.py
+```
+
+These are navigation revisions. Reproduce numerical claims from the original
+producer revision and environment in their evidence. The exporter/audit are not
+needed to use the public packet or run the active fitter. Shared acceptance code,
+original evidence, candidate JSON, raw runs and installed environments are retained.
+
 ## Evidence paths and data
 
 Old evidence JSON remains unchanged. A removed repository-relative source or

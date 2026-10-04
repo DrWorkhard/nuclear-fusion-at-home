@@ -1,56 +1,44 @@
-# Scientific status and evidence
+# Scientific status
 
-Updated 4 October 2026; numerical results unchanged.
-[Overview](README.md) · [Roadmap](PROJECT_PLAN.md) · [Step results](steps/README.md)
+Updated 4 October 2026; no new numerical results.
+[Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
-## Current result
-
-We can reproduce selected references, iterate designs and verify a local
-vacuum-plasma improvement. Our best geometry-checked exploratory coil fit reaches
-normal-field RMS **0.001996**, about **20× the 1e-4 limit**, with interior RMS
-**0.01148**, still above 0.01. Step 4 remains in
-progress: there is no accepted new coil design, demonstrated state-of-the-art
-advantage or MS1 result. All current fits use the original plasma target;
-transfer of the Step 3 improvement has not been demonstrated. These results do
-not substantiate the README's year-end reactor-design vision.
+**No accepted coil design or demonstrated reactor advantage.** The best
+geometry-checked fit has boundary RMS **0.001996**, about **20×** its limit,
+and interior RMS **0.01148**, also failing. All coil fits use reference401;
+transfer of the improved Step 3 target is untested. Present evidence does not
+substantiate the README's reactor-design timeline.
 
 ## Established results and their limits
 
+Links below lead to original evidence or the completed-step summary.
+
 | Work | Result | Limit |
 | --- | --- | --- |
-| [Steps 1–2](steps/README.md) | Selected reference calculations and repeatable independently evaluated iteration pass their defined checks | Capability, not a new feasible design; broader W7-X comparison remains 60/63 |
-| [Step 3](steps/STEP_3_PLASMA_TARGET.md) | Vacuum bounce-action variance falls 11.17%; the narrower-domain comparison improves 4.85% | One diagnostic/configuration, not measured confinement, pressure or reactor performance |
-| [Boundary calibration](optimization/REFERENCE_CALIBRATION.md) | QUASR 952 refined RMS is 2.27e-6; LPQA mean/max reproduce on the tested half-period grid | Boundary-component control, not an end-to-end Goodman positive; coarse sampling misleads |
-| [Matched coil restart](optimization/COHERENT_COIL_EXPLORATION.md) | Wider low modes reach RMS 0.004889, 55.27% below the original-box control, at 8.64% less current; both endpoints pass scoped continuous geometry | Both 1,200-bundle caps exhausted; boundary limits fail |
-| [Interior fields](optimization/INTERIOR_FIELD_EXPLORATION.md) | Best snapshot reaches vector RMS 0.04029, 73.66% below its matched control; all fifteen numerical rows pass | All five candidates fail the 0.01 interior limit; topology and Step 3 benefit transfer remain open |
-| [Longer/wider fits](optimization/LONGER_COIL_EXPLORATION.md) | Same-box RMS 0.004713 passes scoped geometry; wider RMS 0.001948 has interior RMS 0.009770, passing that component | Wider length upper bounds unresolved; both boundary gates still fail, no topology/benefit transfer |
-| [Length headroom](optimization/LENGTH_HEADROOM_EXPLORATION.md) | Expanded-box boundary RMS 0.001996 with scoped geometry passing; length upper bound 3.474220 m; portable candidate available | Interior RMS 0.01148 and both boundary gates fail; solver stopping is not physical acceptance |
-| [Earlier negative studies](validation/REPRODUCING_RESULTS.md) | Exposed missed fine clearances, poorly aligned objectives and limited current-only gains | Closed methods are frozen, not converted into successful designs |
+| [Steps 1–2](steps/README.md#steps-1-and-2-foundation-and-repeatable-iteration) | Selected references and repeatable independent iteration checks pass | Capability, not design success; broader W7-X comparison 60/63 |
+| [Step 3](steps/README.md#step-3-vacuum-plasma-diagnostic) | Vacuum bounce-action variance improves 11.17% wide / 4.85% narrow | Both domains informed construction; not confinement or power |
+| [Boundary calibration](../evidence/boundary-control-calibration-v1.json) | QUASR refined RMS 2.27e-6; LPQA mean/max reproduced | Boundary component only; coarse-grid near-zero error misleads |
+| [Matched restart](../evidence/coherent-restart-v1.json) | RMS 0.004889, 55.27% lower, 8.64% less current; scoped geometry passes | Both 1,200-bundle budgets exhausted; boundary fails |
+| [Interior screen](../evidence/coherent-interior-v1.json) | Best RMS 0.04029, 73.66% below matched control | All five snapshots fail 0.01 |
+| [Longer/wider fits](../evidence/coherent-longrun-v2.json) | Wider boundary/interior RMS 0.001948 / 0.009770 | Interior passes; length bounds unresolved; boundary fails |
+| [Length headroom](../evidence/coil-headroom-v3.json) | Boundary/interior RMS 0.001996 / 0.01148; length bound 3.474220 m | Geometry passes; fields fail; expanded box gains only 2.64% boundary RMS |
+| [Earlier failures](validation/REPRODUCING_RESULTS.md) | Fine clearance, objective alignment and current-only studies exposed limitations | Remain failures; no retired method is relabelled successful |
 
-Current limits remain normal RMS **1e-4**, maximum normal error **1e-3** and
-interior-vector RMS **0.01**. Meeting the **1e-2 exploratory signal** justifies
-further investigation, not acceptance. Geometry checks use padded floating-point
-bounds; they are neither interval proofs nor finite-build engineering models.
+Acceptance still requires boundary RMS **1e-4**, maximum normal error **1e-3**
+and interior RMS **0.01**, plus the [Step 4 requirements](steps/STEP_4_PLASMA_AND_COILS.md).
+Geometry bounds use padded floating point, not interval proofs or finite-build
+engineering. Solver stopping does not prove an optimum.
 
-## Reproducibility and remaining work
+## Reproduce or contribute
 
-The active repository now concentrates on normalized coil fitting and shared
-checks. Closed code, tests and detailed reports resolve at the
-[freeze tag](validation/REPRODUCING_RESULTS.md); tracked scientific evidence and
-local raw artifacts retain their identities. Git does not back up ignored data.
+The [best portable geometry](../submissions/length-headroom-six-coil/README.md)
+is available; public sparse and dense diagnostics are not physical acceptance.
+Use [historical revisions](validation/REPRODUCING_RESULTS.md) for full methods,
+budgets and failure records. Evidence and raw artifacts retain their identities;
+Git does not back up ignored data.
 
-Independent numerical checks here usually mean separately specified calculations
-on the same machine. External domain-expert review, separate-machine research
-reproduction and backup/restore verification are not established.
-[Step 4](steps/STEP_4_PLASMA_AND_COILS.md) retains all unfinished physical
-requirements; [SQuID-C comparison](squid_c/README.md) needs more than suitable data.
-
-Latest software checks belong in [current verification](logbook/VALIDATION_LOG.md),
-not the scientific result tally. Historical public qualifications are in
-[release evidence](validation/PUBLIC_RELEASE_RESULTS.md). The repository is public at
-[github.com/DrWorkhard/nuclear-fusion-at-home](https://github.com/DrWorkhard/nuclear-fusion-at-home) since 2 October 2026, and hosted CI passes
-on Linux, macOS and Windows. Main/tag protections and private security reporting
-are enabled; complete-history rights review and native research reproduction
-remain open. A contributor has reported
-[Ubuntu public replay](validation/SERVER_REPRODUCTION_20261002.md); this is
-portability evidence, not independent physics validation. See the [launch checklist](validation/REVIEW_POLICY.md#launch-checklist--requires-actual-hosting-work).
+Independent numerical checks generally mean separate calculations on the same
+machine. [Ubuntu public replay](validation/SERVER_REPRODUCTION_20261002.md) provides
+portability evidence. External physics review, native research reproduction,
+backup/restore and complete-history rights clearance remain open.
+[Software checks](logbook/VALIDATION_LOG.md) · [Hosting/review policy](validation/REVIEW_POLICY.md).

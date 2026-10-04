@@ -1,6 +1,6 @@
 # Plasma physics
 
-The completed [Step 3 vacuum study](../steps/STEP_3_PLASMA_TARGET.md) improved one
+The completed [Step 3 vacuum study](../steps/README.md#step-3-vacuum-plasma-diagnostic) improved one
 bounce-action diagnostic. It does not establish global QI, confinement, finite
 pressure or transfer into an actual coil field.
 

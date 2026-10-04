@@ -5,7 +5,7 @@ and continuous clearance/length bounds. These are separate from sampled
 optimization penalties. A conservative bound below a clearance limit is
 unresolved, not automatically a physical violation.
 
-The latest [length-headroom fit](../optimization/LENGTH_HEADROOM_EXPLORATION.md)
+The latest [length-headroom fit](../../evidence/coil-headroom-v3.json)
 passes scoped geometry; its longer predecessor has unresolved length bounds.
 Padded floating-point bounds do not establish
 directed interval proofs, complete self-disjointness or finite-build engineering.
