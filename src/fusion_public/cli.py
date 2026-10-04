@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .data import CASE_ID, load, load_case, save_new
 from .dense import dense_boundary
+from .interior import normalized_interior
 from .report import audit, evaluate
 from .submission import validate
 from .usability import score_comparison, set_coefficient, validate_for_cli
@@ -51,6 +52,12 @@ def parser():
         "dense normal RMS/max and flux-normalized current. Takes about 20 s.",
     )
     dense.add_argument("--candidate", type=Path, required=True)
+    interior = commands.add_parser(
+        "normalized-interior", help="Compare fixed and flux-normalized sparse interior errors",
+        description="Print both interior errors on the 64 bundled points. This separate "
+        "diagnostic does not change fixed-current reports or establish physical acceptance.",
+    )
+    interior.add_argument("--candidate", type=Path, required=True)
     submission = commands.add_parser("check-submission", help="Check optional PR metadata")
     submission.add_argument("--file", type=Path, required=True)
     return result
@@ -80,6 +87,10 @@ def main(argv=None):
             return 0
         if args.command == "dense-boundary":
             print(json.dumps(dense_boundary(validate_for_cli(load(args.candidate)), case),
+                             indent=2))
+            return 0
+        if args.command == "normalized-interior":
+            print(json.dumps(normalized_interior(validate_for_cli(load(args.candidate)), case),
                              indent=2))
             return 0
         fresh(args.output)
