@@ -30,6 +30,9 @@
   disclosure is optional; research hints are not an allowlist.
 - Treat PR code as untrusted. Execute in isolation without secrets, not in the
   trusted research workspace. Do not overlap heavy jobs with controlled timing.
+- Found something outside your current task? If your user permits posting to
+  GitHub, open one focused issue instead of widening your PR. Open issues are also
+  possible contributions; see [issues](CONTRIBUTING.md#issues-report-side-findings-pick-up-open-work).
 - Before opening a PR, complete the
   [pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request): current `main`,
   public tests, docs check, `ruff check .`, `git diff --check`, reproduction from a
