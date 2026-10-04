@@ -7,6 +7,7 @@ import sys
 from pathlib import Path
 
 from .data import CASE_ID, load, load_case, save_new
+from .dense import dense_boundary
 from .report import audit, evaluate
 from .submission import validate
 from .usability import score_comparison, set_coefficient, validate_for_cli
@@ -44,6 +45,12 @@ def parser():
     au = commands.add_parser("audit", help="Recompute a report, not full design acceptance")
     au.add_argument("--report", type=Path, required=True)
     au.add_argument("--output", type=Path, required=True)
+    dense = commands.add_parser(
+        "dense-boundary", help="Normal field on the full 64x64 native boundary grid",
+        description="Rebuild the native boundary grid from committed data and print the "
+        "dense normal RMS/max and flux-normalized current. Takes about 20 s.",
+    )
+    dense.add_argument("--candidate", type=Path, required=True)
     submission = commands.add_parser("check-submission", help="Check optional PR metadata")
     submission.add_argument("--file", type=Path, required=True)
     return result
@@ -70,6 +77,10 @@ def main(argv=None):
                     scope="64 boundary, 64 inner, 64 loop points; fixed-current filament B/A",
                 )],
             ), indent=2))
+            return 0
+        if args.command == "dense-boundary":
+            print(json.dumps(dense_boundary(validate_for_cli(load(args.candidate)), case),
+                             indent=2))
             return 0
         fresh(args.output)
         if args.command == "set-coefficient":
