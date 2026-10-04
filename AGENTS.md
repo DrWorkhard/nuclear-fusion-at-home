@@ -40,14 +40,20 @@
 
 ## Current repository, history in Git
 
-- Keep the main branch current. Delete obsolete code/tests/docs; do not build
-  copied archive trees. Frozen reproduction starts at the tag and the exact
-  source revision recorded by the evidence. See
+- Keep `main` small: active code/inputs, public cases/candidates and short evidence
+  summaries with tag, archive commit and original producer/evaluator Git states.
+  Full completed evidence belongs in files of an annotated `evidence-*` tag's
+  commit, not in its description or a copied archive tree on `main`.
+- Before removing evidence from `main`, verify original file hashes and the
+  published tag/commit. Its annotation records question, result/limits, producer
+  SHA and dirty state, evidence paths, reproduction commands and raw-data
+  availability. Never move/delete evidence tags; corrections use new tags.
+  Use a separate worktree for future evidence snapshots; see
   [reproduction](docs/validation/REPRODUCING_RESULTS.md).
-- Keep scientific evidence identities unchanged. A tag preserves tracked files,
-  not ignored artifacts, native environments or independent backups. Retain raw
-  data needed for supported claims. Active code may evolve through reviewed
-  changes; do not reintroduce whole-tree byte-freeze exceptions.
+- Preserve evidence identities and local raw outputs. A tag preserves committed
+  files, not ignored artifacts, environments or independent backups. Record
+  external artifact locations/hashes and missing data honestly. Keep only inputs
+  needed by active evaluators on `main`; no whole-tree byte-freeze exceptions.
 - Keep only README.md, STATUS.md and PROJECT_PLAN.md at the docs root. Details
   live one folder below; each folder README indexes its current documents.
 - Write English entry docs with relative links. Keep summaries concise and step

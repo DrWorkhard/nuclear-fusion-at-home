@@ -32,7 +32,10 @@ another machine and external expert review are different checks.
 Follow [AGENTS.md](../../AGENTS.md) for ownership, evidence retention, documentation
 homes and maintainer completion. Keep decisions in the roadmap, lessons beside
 their results and only latest checks in the verification record. Git preserves
-history, not ignored raw data; backup/restore remains a separate obligation.
+committed history, not ignored raw data. Store full completed records in immutable
+annotated `evidence-*` snapshots and short tag/commit-linked conclusions on `main`;
+follow [the archive procedure](REPRODUCING_RESULTS.md). Backup/restore of local raw
+data remains a separate obligation.
 Record question-to-answer time when measured, never test/commit volume as science.
 
 `python scripts/check_docs.py` enforces local links, folder indexes and whitespace-

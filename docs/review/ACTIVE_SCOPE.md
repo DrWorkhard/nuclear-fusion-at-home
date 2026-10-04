@@ -2,22 +2,23 @@
 
 4 October 2026. [Plan](../PROJECT_PLAN.md) · [Scientific assessment](STRATEGIC_REVIEW_RESOLUTION.md)
 
-The maintained runtime is **2,743 Python lines**: 1,996 for native research and
-747 for public participation. The entire code footprint falls from 12,068 lines
-at `8581b1b` to **6,003**, including tests and maintenance: **50.3% less**.
+The maintained runtime is **2,804 Python lines**: 1,996 for native research and
+808 for public participation. The entire code footprint falls from 12,068 lines
+at `8581b1b` to **6,111**, including tests and maintenance: **49.4% less**.
 Counts include blank lines, comments and docstrings; they exclude dependencies,
 data, generated output and Git history. This is a measured working implementation,
 not proof of a mathematical minimum or sufficient software for a reactor.
+Current counts include the separately merged sparse current-normalization diagnostic.
 
 | Retained responsibility | Lines | Why keep it? |
 | --- | ---: | --- |
 | Native fitting: driver, objective/search, sparse surface penalty | 647 | Propose coils with one method and explicit resource limits |
 | Native target, field and geometry checks | 1,284 | Detect coordinate/current errors, misleading sampled geometry and failed physics limits |
 | Run provenance | 65 | Know which code, inputs and machine produced an observation |
-| Public runtime, including root CLI | 747 | Let contributors reproduce and modify candidates without native installation |
-| Tests, native and public | 2,711 | Analytic controls, poisoned-input rejection, numerical identity and failure handling |
+| Public runtime, including root CLI | 808 | Let contributors reproduce and modify candidates without native installation |
+| Tests, native and public | 2,758 | Analytic controls, poisoned-input rejection, numerical identity and failure handling |
 | Maintenance, packaging entry, publication checks and CI | 549 | Keep the contribution/review workflow reproducible and attributed |
-| **All tracked Python, shell and YAML** | **6,003** | Runtime plus verification and collaboration |
+| **All tracked Python, shell and YAML** | **6,111** | Runtime plus verification and collaboration |
 
 ## Decisions after questioning the scope
 
@@ -32,8 +33,10 @@ not proof of a mathematical minimum or sufficient software for a reactor.
   Their currents and sampling differ; unifying their scores would be misleading.
 - **Keep provisionally:** documentation/release/attribution checks. They are
   collaboration overhead, not physics. Add no new framework around them.
-- **Keep as evidence:** candidate data, failures and raw outputs. Old producers
-  belong at their exact Git revisions, not in the active import graph.
+- **Keep as evidence:** public candidates and essential active inputs on `main`;
+  full historical records in immutable [evidence tags](../validation/REPRODUCING_RESULTS.md).
+  Preserve local raw outputs. Old producers belong at their exact Git revisions,
+  not in the active import graph.
 - **Do not build yet:** another optimizer family, custom equilibrium solver,
   distributed-compute platform or detailed engineering suite without a decision
   that requires it. Prefer existing scientific software.

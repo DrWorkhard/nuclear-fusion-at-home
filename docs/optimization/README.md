@@ -46,4 +46,4 @@ realized-plasma-benefit diagnostics remain to be implemented in the
 [next experiment](STEP4_RESEARCH_PROGRAMME.md).
 
 For old results, use their [original revisions](../validation/REPRODUCING_RESULTS.md),
-not this prospective search. Evidence and raw outputs are unchanged.
+not this prospective search. Evidence is linked from immutable tags; local raw outputs are preserved.

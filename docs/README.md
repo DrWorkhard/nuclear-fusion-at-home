@@ -51,8 +51,9 @@ diagnostic, not full QI.
 
 Current entry documentation is English. Closed detailed reports, some in German,
 and their code/tests resolve at the [freeze tag](validation/REPRODUCING_RESULTS.md).
-The main tree holds active work and concise conclusions, not duplicate archives.
-Tracked evidence stays unchanged; raw data needs separate retention and backup.
+The main tree holds active work, essential inputs and concise conclusions linked
+to immutable evidence tags. Complete tracked evidence is preserved in the tagged
+commits; local raw data needs separate retention and backup.
 
 - [Step results](steps/README.md): brief completed-step conclusions and active Step 4 requirements.
 - [Optimization](optimization/README.md): active fitter, next experiment and [open research hints](optimization/RESEARCH_HINTS.md).

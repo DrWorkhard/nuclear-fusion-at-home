@@ -118,7 +118,9 @@ exception when a second maintainer joins. Administrators can edit rulesets, so
 these are operational controls, not tamper-proof guarantees.
 
 [Frozen-tag protection](https://github.com/DrWorkhard/nuclear-fusion-at-home/rules/24350200)
-blocks updates/deletions of the two published research tags, with no bypass.
+blocks updates/deletions of the two original research tags and all `evidence-*`
+tags, with no bypass. The additional pattern was verified on 4 October 2026;
+creation remains allowed. Archive evidence before removing it from `main`.
 It does not back up ignored raw data or prohibit an administrator changing policy.
 
 All external contributors need maintainer approval before fork workflows run.

@@ -74,11 +74,17 @@ comparators before independent confirmation. Never improve a candidate by changi
 its case, evaluator or acceptance rules; evaluator changes require separate review.
 Do not retroactively demand preregistration of exploratory contributions.
 
-Retain failures and original scientific evidence identities. Large raw outputs
-stay outside Git with hashes and an obtainable reproduction recipe where possible;
-small derived fixtures need provenance, licenses and size justification. Do not
-rewrite historical paths or evidence. Old tools resolve through
-[reproduction](docs/validation/REPRODUCING_RESULTS.md).
+Retain failures and original scientific evidence identities. Keep short conclusions
+and tag/commit pointers on `main`; complete evidence files belong in an annotated
+`evidence-*` snapshot with the producer/evaluator revision, dirty state, hashes,
+reproduction command and data availability. Maintain archive tags without updates
+or deletion; corrections receive a new tag. Verify the published archive before
+removing tracked payloads. Maintainers publish tags under the user's authority;
+contributors propose a summary and evidence snapshot in their scoped PR.
+Large raw outputs stay outside Git with hashes and an obtainable reproduction
+recipe where possible; a tag does not back them up. Preserve local raw runs and
+keep small inputs required by current evaluators. See the
+[archive workflow](docs/validation/REPRODUCING_RESULTS.md).
 
 ## Review and credit
 
