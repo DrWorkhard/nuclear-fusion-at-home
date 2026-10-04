@@ -167,6 +167,50 @@ class AnalyticTests(unittest.TestCase):
                         self.assertTrue(math.isclose(b[2], expected, rel_tol=2e-14))
                         self.assertLess(max(abs(b[0]), abs(b[1]), *map(abs, a)), 1e-17)
 
+    @staticmethod
+    def elliptic(m):
+        """Complete elliptic integrals K(m), E(m) by the arithmetic-geometric mean."""
+        a, b, total, power = 1.0, math.sqrt(1 - m), m, 1.0
+        for _ in range(60):
+            if abs(a - b) <= 4e-16 * a:
+                break
+            power *= 2
+            total += power * ((a - b) / 2) ** 2
+            a, b = (a + b) / 2, math.sqrt(a * b)
+        k = math.pi / (2 * a)
+        return k, k * (1 - total / 2)
+
+    def test_circle_field_matches_analytic_off_axis(self):
+        # On axis A vanishes by symmetry; off axis it checks A's magnitude and B_rho.
+        radius, current, phi = 1.0, 1000.0, 0.7
+        for count in (256, 512):
+            nodes = field.curve(self.circle(radius), count)
+            for rho, z in ((0.3, 0.0), (0.5, 0.4), (1.5, -0.7), (1.2, 0.2), (1.0, 0.2)):
+                with self.subTest(count=count, rho=rho, z=z):
+                    point = [rho*math.cos(phi), rho*math.sin(phi), z]
+                    values = field.field([point], [(nodes, current)])
+                    b, a = values["B_T"][0], values["A_Tm"][0]
+                    outer, inner = (radius + rho)**2 + z*z, (radius - rho)**2 + z*z
+                    m = 4 * radius * rho / outer
+                    k, e = self.elliptic(m)
+                    factor = 2e-7 * current / math.sqrt(outer)
+                    expected_z = factor * (k + (radius**2 - rho**2 - z*z) / inner * e)
+                    expected_rho = factor * z / rho * (-k + (radius**2 + rho**2 + z*z) / inner * e)
+                    expected_phi = (4e-7 * current / math.sqrt(m) * math.sqrt(radius / rho)
+                                    * ((1 - m / 2) * k - e))
+                    scale = math.hypot(expected_rho, expected_z)
+                    cylindrical = [
+                        lambda v: v[0]*math.cos(phi) + v[1]*math.sin(phi),
+                        lambda v: -v[0]*math.sin(phi) + v[1]*math.cos(phi),
+                        lambda v: v[2],
+                    ]
+                    got_b = [f(b) for f in cylindrical]
+                    got_a = [f(a) for f in cylindrical]
+                    for got, want in zip(got_b, (expected_rho, 0, expected_z), strict=True):
+                        self.assertLess(abs(got - want), 1e-13 * scale)
+                    for got, want in zip(got_a, (0, expected_phi, 0), strict=True):
+                        self.assertLess(abs(got - want), 1e-13 * abs(expected_phi))
+
     def test_current_linearity_and_sign(self):
         nodes = field.curve(self.circle(), 64)
         first = field.field([[0.1, 0.3, 0.5]], [(nodes, 1000)])
