@@ -77,7 +77,7 @@ def winding(xyz, target):
     theta = np.unwrap(np.arctan2(xyz[:, 2] - zaxis, radius - raxis))
     turned = phi[-1] - phi[0]
     need(turned != 0, "line must advance toroidally")
-    return abs(turned) / (2 * np.pi), float((theta[-1] - theta[0]) / turned)
+    return float(abs(turned) / (2 * np.pi)), float((theta[-1] - theta[0]) / turned)
 
 
 def coils(candidate, current):
@@ -146,7 +146,7 @@ def summarize(lines, requested_transits, iota_tolerance=0.02):
     need(np.isfinite([[line[k] for k in ("transits", "iota_traced", "iota_target")]
                       for line in lines]).all(), "finite trace metrics required")
     confined = [not line["left_target"] for line in lines]
-    complete = [line["transits"] >= requested_transits for line in lines]
+    complete = [bool(line["transits"] >= requested_transits) for line in lines]
     mismatch = max(abs(line["iota_traced"] - line["iota_target"]) for line in lines)
     return dict(lines_confined=sum(confined), lines=len(lines), max_abs_iota_mismatch=mismatch,
                 lines_completing_transits=sum(complete), requested_transits=requested_transits,

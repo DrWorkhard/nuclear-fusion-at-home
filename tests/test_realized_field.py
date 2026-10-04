@@ -1,3 +1,5 @@
+import json
+
 import netCDF4
 import numpy as np
 import pytest
@@ -137,3 +139,12 @@ def test_native_toroidal_field_completes_requested_transits_without_escape():
                      transits=3, s_values=(.25,))
     assert lines[0]["termination"] == "requested_transits"
     assert summarize(lines, 3)["all_confined_and_iota_matching"]
+    json.dumps(dict(lines=lines, summary=summarize(lines, 3)))
+
+
+def test_summary_with_numpy_transit_counts_is_json_serializable():
+    line = dict(transits=np.float64(200.1), left_target=False,
+                iota_traced=-.59, iota_target=-.59)
+    report = json.loads(json.dumps(summarize([line], 200)))
+    assert report["lines_completing_transits"] == 1
+    assert report["all_confined_and_iota_matching"] is True

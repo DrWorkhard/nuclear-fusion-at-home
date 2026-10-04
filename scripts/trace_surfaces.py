@@ -65,7 +65,7 @@ def run(candidate_path, wout, output, transits=200, direct=False):
     target_input = load_input(case)
     target = rf.Target.from_wout(wout, target_input)
     scale = flux_scale(candidate, case, target_input)
-    report = dict(kind="realized-field-surfaces", candidate=str(candidate_path),
+    report = dict(kind="realized-field-surfaces", completed=False, candidate=str(candidate_path),
                   candidate_sha256=hashlib.sha256(Path(candidate_path).read_bytes()).hexdigest(),
                   provenance=build_run_record(ROOT),
                   target_check="reference401 boundary/flux consistency; not dense identity",
@@ -93,8 +93,9 @@ def run(candidate_path, wout, output, transits=200, direct=False):
         (output/"result.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
         raise SystemExit("interpolant above 1e-6; rerun with --direct")
     report["field"] = "direct BiotSavart" if direct else "InterpolatedField degree 4"
+    (output/"result.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
     lines, hits = rf.trace(field if direct else model, target, surface, transits)
-    report.update(lines=lines, summary=rf.summarize(lines, transits),
+    report.update(completed=True, lines=lines, summary=rf.summarize(lines, transits),
                   seconds=round(time.monotonic()-started, 1))
     (output/"result.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
     np.savez_compressed(output/"poincare.npz", **{f"line_{i}": hit

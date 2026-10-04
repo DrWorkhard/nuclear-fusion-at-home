@@ -10,6 +10,7 @@ import numpy as np
 from fusion_baselines import coupled_coil_audit as independent
 from fusion_baselines.clear_coil_field_audit import archived_target
 from fusion_baselines.coil_fit import Recorder as RunRecorder
+from fusion_public.data import load_case, validate_candidate
 
 ROOT = Path(__file__).resolve().parents[2]
 TARGET = "evidence/plasma-design-v2/reference-input-401.json"
@@ -63,6 +64,73 @@ def snapshot_identity(snapshot):
     )
     need(np.isfinite(snapshot["seed_unit_flux"]) and snapshot["seed_unit_flux"] != 0,
          "finite seed flux orientation required")
+
+
+def candidate_snapshot(candidate, data, nodes=256):
+    """Native snapshot of a public six-coil candidate, normalized to the target flux.
+
+    The unit flux uses the fitter's own loop and 1e5 A base current, so a converted
+    candidate enters fitting and checks exactly like a native seed.
+    """
+    validate_candidate(candidate)
+
+    from simsopt.field import BiotSavart, Current, coils_via_symmetries
+    from simsopt.geo import CurveXYZFourier
+
+    from fusion_baselines.coil_fit import loop_geometry
+
+    names = independent.parameter_names(6, 5)
+    curves = []
+    for coefficients in candidate["base_coefficients"]:
+        curve = CurveXYZFourier(nodes, 5)
+        curve.local_full_x = np.asarray(coefficients, dtype=float).ravel()
+        curves.append(curve)
+    field = BiotSavart(coils_via_symmetries(curves, [Current(1e5) for _ in curves], 2, True))
+    points, tangents = loop_geometry(data, nodes)
+    field.set_points(points)
+    unit_flux = float(np.mean(np.sum(field.A()*tangents, axis=1)))
+    need(np.isfinite(unit_flux) and abs(unit_flux) > 1e-12, "nonzero unit-current flux required")
+    scale = TARGET_FLUX/unit_flux
+    physical = []
+    for period in range(2):
+        c, s = np.cos(np.pi*period), np.sin(np.pi*period)
+        rotation = np.array([[c, -s, 0.0], [s, c, 0.0], [0.0, 0.0, 1.0]])
+        for flip in (False, True):
+            matrix = rotation.T @ (np.diag([1.0, -1.0, -1.0]) if flip else np.eye(3))
+            physical.extend(dict(base_index=i, period=period, flip=flip, matrix=matrix.tolist(),
+                                 current=1e5*scale*(-1 if flip else 1)) for i in range(6))
+    snapshot = dict(schema_version=1, nfp=2, nbase=6, order=5, names=names,
+                    base_coefficients=np.asarray(candidate["base_coefficients"]).tolist(),
+                    physical=physical, scale=scale, B2_scale=B2, unit_flux=unit_flux,
+                    target_flux=TARGET_FLUX, seed_unit_flux=unit_flux,
+                    construction=dict(source="public candidate", nloop=nodes, ncoil=nodes))
+    snapshot_identity(snapshot)
+    return snapshot
+
+
+def portable_intake(wout, guard=lambda: None):
+    """Reconstructed target accepted as consistent with reference401, not dense identity."""
+    from fusion_baselines import wout_target
+
+    sources = {}
+    bind(ROOT / TARGET, FIXED[TARGET], sources)
+    data = read_json(ROOT / TARGET)
+    need(data["phiedge"] == -TARGET_FLUX, "exact source-bound target flux required")
+    guard()
+    archives, sha256 = wout_target.archives(wout, data)
+    sources[str(Path(wout).resolve())] = sha256
+    guard()
+    targets = {n: archived_target(archives, n) for n in (32, 64)}
+    starter, _ = load_case()
+    errors = wout_target.starter_errors(targets[32], starter)
+    need(max(errors.values()) <= 1e-8, f"Wout does not reproduce the public starter: {errors}")
+    measured = {n: t["B2_scale"] for n, t in targets.items()}
+    need(all(abs(b2/B2 - 1) <= 1e-9 for b2 in measured.values()), "target B2 differs from frozen")
+    for target in targets.values():
+        target["B2_scale"] = B2  # Normalization stays frozen; the measured value is reported.
+    portable = dict(check="consistency with public starter", dense_identity_verified=False,
+                    wout_sha256=sha256, starter_errors=errors, measured_B2=measured[64])
+    return data, targets, sources, portable
 
 
 def intake(guard=lambda: None):

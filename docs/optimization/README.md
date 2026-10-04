@@ -45,6 +45,39 @@ This driver supports reference401 only; matched improved-target fitting and
 realized-plasma-benefit diagnostics remain to be implemented in the
 [next experiment](STEP4_RESEARCH_PROGRAMME.md).
 
+## Portable checks
+
+Without the maintainer's archives, supply a reference401 Wout. One can be regenerated
+by vmecpp from the committed input in about 6 minutes:
+`vmecpp.run(vmecpp.VmecInput.from_file("evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(path)`.
+`--wout` rebuilds the three 64×64 interior archives
+([`wout_target.py`](../../src/fusion_baselines/wout_target.py)). It accepts the
+result as consistent only if the Wout boundary equals the input to 1e-12 and the public starter's
+64 interior samples are reproduced to 1e-8. Normalization stays frozen; the measured
+B2 is reported. These checks do not establish dense interior identity; reports
+label `portable_target.check` as `consistency with public starter` and
+`dense_identity_verified` as false. `check_coils.py` runs the same fine, geometry and interior checks on
+a snapshot or a public candidate without fitting:
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1 \
+  .native/bin/python scripts/check_coils.py \
+  --candidate submissions/length-headroom-six-coil/candidate.json \
+  --wout results/wout_reference_regen.nc --output results/my-check
+```
+
+Positive control (4 October 2026, macOS, the [portable setup](../validation/ENVIRONMENT.md#portable-native-setup)):
+- **Fine boundary and geometry:** reproduce the [archived length-headroom evidence](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coil-headroom-v3.json) to ≤1.5e-15
+  (RMS 0.0019962675237, maximum 0.0094257750, length bound 3.4742191 m).
+- **Interior:** reproduces 0.0114827 and 0.0114794 to 8e-11.
+
+This control is reference401-only and from the same machine/OS family as the
+reported evidence; it is not independent physical acceptance or improved-target
+validation.
+
+`check_coils.py` saves its converted `seed.json`, which `fit_coils.py --snapshot … --wout …`
+accepts for a portable search.
+
 ## Realized-field surfaces
 
 [`scripts/trace_surfaces.py`](../../scripts/trace_surfaces.py) traces a public
@@ -64,11 +97,11 @@ import vmecpp
 path = Path("results/wout_reference_regen.nc")
 path.parent.mkdir(parents=True, exist_ok=True)
 vmecpp.run(vmecpp.VmecInput.from_file(
-    "evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(path)
+    "evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(str(path))
 ```
 
 ```bash
-OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/trace_surfaces.py \
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .native/bin/python scripts/trace_surfaces.py \
   --candidate submissions/length-headroom-six-coil/candidate.json \
   --wout results/wout_reference_regen.nc --output results/my-surfaces --transits 200
 ```
