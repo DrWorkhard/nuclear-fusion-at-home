@@ -190,6 +190,8 @@ current that restores the target flux, as the research fit does. For the supplie
 candidate it reproduces the native 0.00199627 / 0.00942578 and 308,140.58 A in about
 20 s. The normal metric does not depend on the current; the interior metric does, and
 needs native target arrays that are not distributed. Still not physical admission.
+The reference input derives from Goodman et al.'s CC BY 4.0 data; see the
+[data provenance](../../examples/clear-coil-samples-v1/README.md#provenance-and-attribution).
 
 ## Tests and optional contribution metadata
 

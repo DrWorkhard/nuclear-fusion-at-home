@@ -80,7 +80,8 @@ def flux_scale(candidate, case, document, count=256):
     """Uniform current factor that restores the target toroidal flux |phiedge|."""
     points, tangents = flux_loop(document)
     potential = field(points, physical_curves(candidate, case, count))["A_Tm"]
-    flux = sum(sum(a*t for a, t in zip(av, tv)) for av, tv in zip(potential, tangents))
+    flux = sum(sum(a*t for a, t in zip(av, tv, strict=True))
+               for av, tv in zip(potential, tangents, strict=True))
     flux /= len(points)
     require(flux != 0, "Nonzero loop flux required")
     return abs(document["phiedge"]) / abs(flux)
@@ -99,7 +100,7 @@ def dense_boundary(candidate, case, count=256):
     scale = flux_scale(candidate, case, document, count)
     return dict(
         ncoil=count, grid_points=len(points),
-        dense_normal_rms=math.sqrt(sum(w*e*e for w, e in zip(weights, errors))),
+        dense_normal_rms=math.sqrt(sum(w*e*e for w, e in zip(weights, errors, strict=True))),
         dense_normal_max=max(abs(e) for e in errors),
         flux_scale=scale,
         flux_normalized_current_A=scale*max(abs(c["current"]) for c in case["physical"]),
