@@ -18,7 +18,7 @@ from fusion_baselines import coil_fit as fit  # noqa: E402
 from fusion_baselines.provenance import build_run_record  # noqa: E402
 
 
-def run(snapshot_path, output, seconds=300, check_seconds=120):
+def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None):
     from scipy.optimize import minimize
 
     check.need(np.isfinite([seconds, check_seconds]).all()
@@ -36,7 +36,11 @@ def run(snapshot_path, output, seconds=300, check_seconds=120):
                   search_seconds=seconds, check_seconds=check_seconds,
                   coefficient_bounds=None, solver_options=fit.SOLVER_OPTIONS, fine=[], interior=[])
     try:
-        data, targets, sources = check.intake(record.guard)
+        if wout is None:
+            data, targets, sources = check.intake(record.guard)
+        else:
+            data, targets, sources, report["portable_target"] = check.portable_intake(
+                wout, record.guard)
         snapshot_path = check.bind(snapshot_path, check.digest(snapshot_path), sources)
         seed = check.read_json(snapshot_path)
         check.snapshot_identity(seed)
@@ -100,6 +104,7 @@ if __name__ == "__main__":
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--seconds", type=float, default=300)
     parser.add_argument("--check-seconds", type=float, default=120)
+    parser.add_argument("--wout", type=Path, help="portable reference401 Wout (see docs)")
     args = parser.parse_args()
-    raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(),
-                         args.seconds, args.check_seconds))
+    raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(), args.seconds,
+                         args.check_seconds, None if args.wout is None else args.wout.resolve()))
