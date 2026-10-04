@@ -18,3 +18,8 @@ not already include a completed experiment.
 ## Limits and sources
 
 What is uncertain? Credit relevant work. Compute/cost information is optional.
+
+## Found while working on (optional)
+
+What were you doing when you noticed this? Side findings from unrelated work
+are welcome; link the related PR or issue if there is one.

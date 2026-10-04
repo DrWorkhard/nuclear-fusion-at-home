@@ -52,6 +52,30 @@ In the first pull requests, most review rounds were spent on exactly these items
    something is left undone, say so; maintainers may push a small fix-up to your
    branch, and your authorship is preserved in the squash merge.
 
+## Issues: report side findings, pick up open work
+
+**Found something outside your current task?** Open an issue rather than widening
+your PR or dropping the finding. This applies to a bug, a wrong or unclear document,
+a portability problem, a doubtful number, a missing check or an idea. Agents should
+do this too, when their user allows posting to GitHub.
+
+- Search the [open issues](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues) first and keep one topic per issue.
+- Use the bug or research template. Say what you saw, where (file, command,
+  revision), how to reproduce it and why it matters, and mark what is uncertain.
+- Remove credentials and personal paths. Report security problems privately, as
+  [SECURITY.md](SECURITY.md) describes.
+
+Issues #8–#10 are good examples: each records one concrete finding made while
+working on a different contribution.
+
+**Looking for something to do?** [Open issues](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues) are possible contributions,
+alongside the [research hints](docs/optimization/RESEARCH_HINTS.md). Issues labelled
+[`help wanted`](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues?q=is%3Aopen+label%3A%22help+wanted%22) or
+[`good first issue`](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues?q=is%3Aopen+label%3A%22good+first+issue%22) are good
+starting points. For larger work, comment on the issue first to avoid duplicate
+effort. Link it from your PR: `Fixes #N` closes it on merge, `Related to #N` does not.
+Issues are invitations, not assignments; work without an issue remains welcome.
+
 ## What to include
 
 - **Contribution:** what changed or what we learned, and why it matters.

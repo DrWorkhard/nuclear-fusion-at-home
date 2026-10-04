@@ -112,6 +112,8 @@ Useful unsolicited ideas, exploratory improvements, replications, critical
 reviews and negative results are welcome. Compute spending is optional to report.
 [CONTRIBUTING](CONTRIBUTING.md) explains PRs, evidence and attribution; agents run its
 [pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request) before opening a PR.
+[Open issues](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues) list possible contributions; report findings outside
+your task there too ([how](CONTRIBUTING.md#issues-report-side-findings-pick-up-open-work)).
 [research hints](docs/optimization/RESEARCH_HINTS.md) are invitations, not an allowlist.
 
 The active research path is penalized coil fitting plus shared field/geometry
