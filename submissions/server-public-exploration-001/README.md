@@ -35,29 +35,35 @@ matched saved native fields; the selected repeat report matched exactly and
 From the repository root, using fresh output names, reproduce the selected result:
 
 ```bash
-export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1
-export VECLIB_MAXIMUM_THREADS=1 NUMEXPR_NUM_THREADS=1 BLIS_NUM_THREADS=1 OMP_THREAD_LIMIT=1
 python3 -I -S fusion.py public evaluate --candidate submissions/server-public-exploration-001/candidate.json --output results/server-public-exploration-check01.json
 python3 -I -S fusion.py public audit --report results/server-public-exploration-check01.json --output results/server-public-exploration-audit01.json
 ```
 
-Local ignored evidence is in `results/public-bounded-exploration-001-attempt1-20261003/`:
-`recipe.py`, `run/plan.json` (inputs, source hashes, limits and selection), all seven
-`run/trial-*/` candidates/reports/comparisons (including non-improving trials 04–06),
-`run/selected/`, `run/replay/report.json`, `run/summary.json` and `run/sha256.json`.
-The exact sweep command was:
+To repeat the whole sweep with public commands only, set the coefficient to each
+absolute value (reference ± 10, 50 and 100 µm) and evaluate it, using a fresh `results/`
+directory:
 
 ```bash
-python3 -I -S results/public-bounded-exploration-001-attempt1-20261003/recipe.py results/public-bounded-exploration-001-attempt1-20261003/run
+mkdir -p results/xc0-sweep
+for value in 0.9607191138350243 0.9607691138350243 0.9608091138350243 \
+             0.9608291138350242 0.9608691138350243 0.9609191138350243; do
+  python3 -I -S fusion.py public set-coefficient --candidate examples/clear-coil-samples-v1/candidate.json \
+    --name "coil[0]/xc(0)" --value "$value" --output "results/xc0-sweep/candidate-$value.json"
+  python3 -I -S fusion.py public evaluate --candidate "results/xc0-sweep/candidate-$value.json" \
+    --output "results/xc0-sweep/report-$value.json"
+done
 ```
 
-Retain that directory separately from Git; reruns require a fresh output directory.
+The contributor's original run used a local recipe (not distributed). Its outputs are
+retained outside Git in `results/public-bounded-exploration-001-attempt1-20261003/`,
+including the plan, all seven trials (also the non-improving trials 04–06), the
+selected repeat, the replay and a hash manifest.
 SHA-256 identities (file bytes, not the reports' canonical-JSON hashes):
 
 - Candidate: `54428d868d4443170bfe5d0f03b1222d49839ff2a65efdedb61c0047bb8c782d`
 - Unchanged case: `6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd`
-- Recipe: `93c7ad5a58386d9dc5cc8f5c67d491bf61ce9430e81647a0c00647ccb2859546`
-- Run hash manifest: `9fcf3980b26d12617a7280b91d82446f34450627cfce045b283d7da5874cbbf4`
+- Local recipe (not distributed): `93c7ad5a58386d9dc5cc8f5c67d491bf61ce9430e81647a0c00647ccb2859546`
+- Local run hash manifest (not distributed): `9fcf3980b26d12617a7280b91d82446f34450627cfce045b283d7da5874cbbf4`
 
 The 256/512-node fields agree within 2.06e-15 relative across this sweep, but both
 use the same public spatial samples. Sparse samples can be overfit; fixed currents
