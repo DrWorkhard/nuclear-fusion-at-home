@@ -13,11 +13,44 @@ not an allowlist. Code without an AI agent is equally welcome.
    and [scientific status](docs/STATUS.md). Agents also follow [AGENTS.md](AGENTS.md).
 2. Run the [portable quickstart](docs/validation/PUBLIC_QUICKSTART.md). It needs
    only Python 3.11+, not our private workspace, large datasets or an API key.
-3. Make a small, coherent change on your branch. Run `python scripts/test_public.py`
-   for the public layer, and relevant additional tests for the changed subsystem.
+3. Make a small, coherent change on your branch and run the
+   [pre-PR checklist](#before-you-open-a-pull-request) below.
 4. Open a pull request explaining the contribution, evidence and limitations.
    An issue is optional, including for work not on the hints list. Large changes
    often benefit from discussion, but unrequested work will still be assessed.
+
+## Before you open a pull request
+
+Hosted CI runs these checks on Linux, macOS and Windows; a PR merges only when all
+pass and the branch is up to date. Contributors' agents should do this themselves.
+In the first pull requests, most review rounds were spent on exactly these items.
+
+1. **Update your branch** with the latest `main` and resolve conflicts.
+2. **Run the checks CI runs**, from the repository root:
+
+   ```bash
+   python scripts/test_public.py
+   python scripts/check_docs.py
+   uvx ruff@0.16.5 check .   # or: pip install ruff==0.16.5, then: ruff check .
+   git diff --check
+   ```
+
+   Use `ruff check --fix .` for import order. Write `zip(..., strict=True)` and keep
+   lines at most 100 characters. If you changed `scripts/verify_public_release.py`
+   or anything it copies, also run
+   `python -I -S scripts/verify_public_release.py --output results/<fresh-name>`.
+   With [uv](https://docs.astral.sh/uv/), `./scripts/run_core_ci.sh` repeats the
+   core job exactly; run it in a disposable clone.
+3. **Make reproduction commands work from a fresh clone.** Reference only files in
+   the repository or in your PR, never paths under ignored `results/`. Label hashes
+   of local-only files as "not distributed", or commit the small script instead.
+4. **Keep it portable to Windows.** Read and write text with `encoding="utf-8"`. If
+   your code hashes or byte-compares a file outside `examples/`, `src/fusion_public/`
+   and `public_tests/`, pin its line endings in `.gitattributes`, as done for
+   `evidence/plasma-design-v2/reference-input-401.json`.
+5. **List the checks you actually ran** in the PR description, with results. If
+   something is left undone, say so; maintainers may push a small fix-up to your
+   branch, and your authorship is preserved in the squash merge.
 
 ## What to include
 

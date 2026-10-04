@@ -8,6 +8,17 @@ documentation and negative results are welcome. No linked issue is required.
 What did you actually test? Include reproduction commands, reference/version and
 small reports when relevant. Do not claim checks you did not run.
 
+## Checks run
+
+See the [pre-PR checklist](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/main/CONTRIBUTING.md#before-you-open-a-pull-request).
+
+- [ ] Branch updated with the latest `main`
+- [ ] `python scripts/test_public.py`
+- [ ] `python scripts/check_docs.py`
+- [ ] `ruff check .` (ruff 0.16.5)
+- [ ] `git diff --check`
+- [ ] Reproduction commands use only files in the repository or this PR
+
 ## Limits and failures
 
 What remains unknown or failed? Does this change evaluation rules, case data,

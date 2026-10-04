@@ -110,7 +110,8 @@ same-code replay, not independent physical acceptance.
 
 Useful unsolicited ideas, exploratory improvements, replications, critical
 reviews and negative results are welcome. Compute spending is optional to report.
-[CONTRIBUTING](CONTRIBUTING.md) explains PRs, evidence and attribution;
+[CONTRIBUTING](CONTRIBUTING.md) explains PRs, evidence and attribution; agents run its
+[pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request) before opening a PR.
 [research hints](docs/optimization/RESEARCH_HINTS.md) are invitations, not an allowlist.
 
 The active research path is penalized coil fitting plus shared field/geometry

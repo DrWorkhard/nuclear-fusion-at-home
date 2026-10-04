@@ -30,6 +30,10 @@
   disclosure is optional; research hints are not an allowlist.
 - Treat PR code as untrusted. Execute in isolation without secrets, not in the
   trusted research workspace. Do not overlap heavy jobs with controlled timing.
+- Before opening a PR, complete the
+  [pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request): current `main`,
+  public tests, docs check, `ruff check .`, `git diff --check`, reproduction from a
+  fresh clone and Windows-safe file handling.
 
 ## Current repository, history in Git
 
