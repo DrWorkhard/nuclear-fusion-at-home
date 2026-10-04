@@ -57,7 +57,8 @@ def verify(output):
         started = time.monotonic()
         try:
             completed = subprocess.run(command, cwd=exported, env=env, text=True,
-                                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT, timeout=180)
+                                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                                       timeout=180)
         except subprocess.TimeoutExpired as error:
             # Timeout output can be bytes even with text=True, including a partial character.
             partial = error.stdout or ""
