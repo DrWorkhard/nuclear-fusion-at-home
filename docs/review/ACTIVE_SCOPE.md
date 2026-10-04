@@ -32,8 +32,10 @@ not proof of a mathematical minimum or sufficient software for a reactor.
   Their currents and sampling differ; unifying their scores would be misleading.
 - **Keep provisionally:** documentation/release/attribution checks. They are
   collaboration overhead, not physics. Add no new framework around them.
-- **Keep as evidence:** candidate data, failures and raw outputs. Old producers
-  belong at their exact Git revisions, not in the active import graph.
+- **Keep as evidence:** public candidates and essential active inputs on `main`;
+  full historical records in immutable [evidence tags](../validation/REPRODUCING_RESULTS.md).
+  Preserve local raw outputs. Old producers belong at their exact Git revisions,
+  not in the active import graph.
 - **Do not build yet:** another optimizer family, custom equilibrium solver,
   distributed-compute platform or detailed engineering suite without a decision
   that requires it. Prefer existing scientific software.

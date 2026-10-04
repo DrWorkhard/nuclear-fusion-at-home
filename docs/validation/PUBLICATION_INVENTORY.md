@@ -32,7 +32,7 @@ seven positive and seven negative synthetic controls passed.
 
 The reference-manifest SHA-256 returned by the inventory is
 `91d912da66f752f34aaaa0d5c5b6e76df1b9251cd2c3c185b45347d3ac1d75b0`.
-The earlier [inventory evidence](../../evidence/publication-inventory-v1.json)
+The earlier [inventory evidence](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/publication-inventory-v1.json)
 remains unchanged and describes its own older source, not this check.
 
 ## Reproduce

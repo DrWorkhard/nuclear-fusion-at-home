@@ -7,11 +7,11 @@ The portable packet in `examples/clear-coil-samples-v1` is a derived reference
 dataset under **CC BY4.0**. Retain its [attribution and changes notice](examples/clear-coil-samples-v1/README.md),
 including Alan Goodman's original dataset DOI and license link. Its license is
 not replaced by the software's MIT license. The selected upstream license
-metadata check is recorded in [references/public-data-sources.json](references/public-data-sources.json).
+metadata check is recorded in [references/public-data-sources.json](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/references/public-data-sources.json).
 
 External research software and datasets keep their own licenses. The portable
 starter does not bundle SIMSOPT, VMEC, StellCoilBench or the full Goodman archive.
-For historical source identities see [references/external_sources.json](references/external_sources.json).
+For historical source identities see [references/external_sources.json](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/references/external_sources.json).
 These notices do not assert affiliation with or endorsement by the authors,
 Proxima Fusion, the Max Planck Institute or any other institution.
 

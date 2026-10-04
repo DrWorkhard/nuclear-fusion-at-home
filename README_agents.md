@@ -117,8 +117,13 @@ your task there too ([how](CONTRIBUTING.md#issues-report-side-findings-pick-up-o
 [research hints](docs/optimization/RESEARCH_HINTS.md) are invitations, not an allowlist.
 
 The active research path is penalized coil fitting plus shared field/geometry
-checks. Completed and retired research code/tests live at Git tag
-`research-freeze-2026-09-27`, not in the default working tree.
+checks. Keep short evidence summaries on `main`, linked to immutable annotated
+`evidence-*` tags and the original producer/evaluator revisions. Full evidence
+is stored as files in the tagged commit; the tag description explains its scope
+and reproduction. Verify the published archive before removing payloads from
+`main`. Never move a tag; corrections get a new one. Ignored raw data needs
+separate retention and explicit availability. Completed code/tests resolve at
+`research-freeze-2026-09-27` and later recorded revisions.
 [Active research](docs/optimization/README.md) ·
 [Reproduce frozen results](docs/validation/REPRODUCING_RESULTS.md).
 

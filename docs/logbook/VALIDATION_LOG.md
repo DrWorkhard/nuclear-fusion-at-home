@@ -1,41 +1,43 @@
 # Current verification
 
-4 October 2026. Base `8581b1b`; original scientific results are unchanged.
-[Scope and counts](../review/ACTIVE_SCOPE.md) · [Research command](../optimization/README.md)
+4 October 2026. Base `68db098`; no runtime code, evaluator or scientific result
+changed. [Archive procedure](../validation/REPRODUCING_RESULTS.md) · [Status](../STATUS.md)
 
-Question: can one explicit-snapshot fitter replace the chain of completed studies
-without changing its objective or checks? Inputs: the saved headroom-v3 snapshot
-and trusted reference401 archives. The extraction removes historical orchestration,
-not acceptance thresholds. New searches have wall-clock/storage bounds instead
-of inherited coefficient boxes and bundle caps; they are prospective experiments.
+Archived 944 historical files (326,449,769 bytes) outside the default main tree.
+The annotated `evidence-archive-2026-10-04` tag points to
+`68db098b664bb072854b687040e103aaafee463c`; its published tag-object ID is
+`6755d9ed09d034897a1a6106eb1be08a5a16cfc3`. GitHub rule 24350200 now blocks
+updates/deletion of all `evidence-*` tags, preserving the original tag protections
+and no-bypass policy. Historical payloads were removed only from the index;
+all local originals remain intact and ignored.
 
 | Check | Result |
 | --- | --- |
-| Native regression, one thread | 210 passed |
-| `python -I -S scripts/test_public.py` | 57 passed |
-| `scripts/check_docs.py`, Ruff, `git diff --check` | Pass |
-| Old/new native objective comparison | Exactly equal values, all 198 gradient components and all metrics at two points |
-| New driver: 5 s search + 120 s check budget | Completed in 21.66 s; startup passes, 18 completed bundles, two fine grids, scoped geometry pass, three interior grids; source hashes unchanged |
-| Fresh-clone core checks | Pass: 57 public tests, 40 maintenance tests, docs and Ruff |
-| Fresh-clone portable release | All 8 copied-tree operations pass with isolated Python 3.12 |
+| Remote archive identity | Tag object and peeled commit match local Git |
+| Archived payload preservation | All 944 original Git blobs match local files; SHA-256 and size unchanged |
+| Historical links | All 18 distinct pinned evidence/attribution-file targets resolve in the archive |
+| Public suite | 57 passed |
+| Documentation, maintenance and native-input tests | 69 passed |
+| Real native intake | Nine input hashes and both target grids pass |
+| Docs, Ruff, `git diff --check` | Pass |
+| Fresh-clone core checks | 57 public tests, 40 maintenance tests, docs and Ruff pass |
+| Fresh-clone public release | All eight copied-tree qualification operations pass |
+| Fresh-clone archive retrieval | All 944 retired files absent from main and recoverable byte-for-byte from the tag |
 | Hosted CI | Required on the pushed commit before updating protected main |
-| Root README, evidence, public candidate JSON, previous raw runs, native environment | Unchanged |
 
-Comparison: `results/coil-fit-refactor-20261004/compare_models.py` runs the old model
-from an exported `8581b1b` tree and the new model on the same snapshot, then at
-`x + 1e-6*sin(arange(198)+1)`. Inputs, outputs and hashes remain in that ignored
-results directory. End-to-end output is retained at
-`artifacts/coil-fit-refactor-smoke-20261004`; reproduce with the documented command
-and `--seconds 5 --check-seconds 120` into a fresh directory. This bounded run tests
-software integration, not optimizer performance or a new scientific improvement.
+Main now has 104 tracked files, approximately 0.78 MB of content, versus 1,048
+files / 327.22 MB before this migration. Two active reference inputs total
+208,154 bytes and retain their original hashes. Root README, public candidate
+JSON, runtime code, native environment and raw experiment outputs are unchanged.
+No native solve or broad numerical regression is needed for this storage-only
+change. Fresh-clone checks prove the ignored historical payload is unnecessary
+for core/public workflows. The first clone check exposed two stale attribution
+links in NOTICE.md; these now pin the archive and the repeated check passes.
 
-Fresh-clone checks ran at `3b4e63b`; the only subsequent edit updates this record.
-The first release invocation selected macOS Python 3.9 and failed the documented
-minimum-version requirement; that output remains retained. Repeating with the
-clone’s Python 3.12 passed.
-
-Conclusion: the extracted objective agrees at the tested points, and the active
-workflow executes independently of old study runners. This is not an exhaustive
-proof of equivalence. No physical admission, improved-target benefit transfer,
-external review or separate-machine native reproduction is claimed. CI must use
-a disposable checkout; no native environment sync was performed.
+The previous refactor's native regression, objective-equivalence comparison and
+smoke-run record remain in the archive at `docs/logbook/VALIDATION_LOG.md`.
+Historical dirty states remain dirty; their base SHA alone is insufficient.
+Neither this tag nor the push backs up ignored raw runs or native environments.
+The archive changes checkout contents, not Git history size or scientific claims.
+The owner-requested migration uses the documented sole-maintainer review
+exception only after the required CI checks pass.
