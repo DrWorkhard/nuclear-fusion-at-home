@@ -174,6 +174,25 @@ clearance, curvature, target flux, islands, QI, pressure, finite-build and robus
 are outside this profile. Every report keeps `physical_admission:false` and
 `step4_pass:false`; a successful command does not imply otherwise.
 
+### Check the full boundary grid
+
+The 64 boundary samples lie on one helical line of the native 64×64 grid. Stellarator
+symmetry pairs them, so they carry about 31 independent constraints. A candidate can
+lower the sampled score while the dense error rises. Check the dense value:
+
+```bash
+python fusion.py public dense-boundary --candidate submissions/length-headroom-six-coil/candidate.json
+```
+
+This rebuilds the native one-period boundary grid from the committed reference input
+(hash-bound to the starter) and prints the dense normal RMS/max. It also prints the
+current that restores the target flux, as the research fit does. For the supplied
+candidate it reproduces the native 0.00199627 / 0.00942578 and 308,140.58 A in about
+20 s. The normal metric does not depend on the current; the interior metric does, and
+needs native target arrays that are not distributed. Still not physical admission.
+The reference input derives from Goodman et al.'s CC BY 4.0 data; see the
+[data provenance](../../examples/clear-coil-samples-v1/README.md#provenance-and-attribution).
+
 ## Tests and optional contribution metadata
 
 ```bash
