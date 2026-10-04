@@ -1,57 +1,70 @@
 # Matched target-to-coil benefit experiment
 
-Question: does Step 3's vacuum action improvement survive practical coil realization?
-Related to [issue #25](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/25).
-This is a prospective exploratory comparison, not physical acceptance or confirmation.
+**Full benefit transfer remains unresolved.** The wide action diagnostic cannot
+be evaluated completely in either fitted coil field. This is a useful negative
+result for [issue #25](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/25),
+not physical acceptance or a confinement claim.
 
-## Frozen inputs and selection
+## Question, inputs and method
 
-Use reference401 and selected401, with input/Wout SHA256 and target-specific B²
-in `coil_check.TARGETS`. The improved input is restored byte-for-byte from archive
-`68db098b664bb072854b687040e103aaafee463c`. Both original Wouts are preserved locally;
-selected401 currently requires the exact archived Wout, not a regenerated substitute.
-Start both arms from `submissions/length-headroom-six-coil/candidate.json`, with
-identical 198 named geometric coefficients. Normalize each to its own boundary
-flux loop. Freeze the selected current before all diagnostic evaluations.
+Does Step 3's vacuum action improvement survive practical coils? Both arms start
+from the same length-headroom geometry and use the original archived reference401
+and selected401 Wouts. `coil_check.TARGETS` binds their inputs, Wout hashes and
+frozen B² normalizations (1.6293829620247962 / 1.6313464444829588). The improved
+input is restored unchanged from archive `68db098`. Currents are normalized to
+each target's boundary flux and then frozen for diagnostics.
 
-Run the existing penalized fitter sequentially, with 300 s including intake/model
-startup per arm, then 300 s for shared fine/continuous-geometry/interior checks.
-Use unchanged candidate selection and acceptance gates. Report startup and search
-time separately. No optimizer variants or adaptive extension. A seed selected
-again counts as no optimizer improvement. Failed or late calls cannot win.
+[Producer/evaluator `a551289`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/a551289e63e44d7dbae7b5d5a0e5f4b6026db257)
+was clean. Its [prospective rules](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/a551289e63e44d7dbae7b5d5a0e5f4b6026db257/docs/optimization/ISSUE25_MATCHED_TARGETS.md)
+freeze selection, grids, budgets and failure handling before fitting. The two
+sequential searches each receive 300 s including intake/model startup, followed
+by unchanged shared field/geometry checks. Both exhaust their search budgets;
+late/incomplete trials cannot win. Startup/search times are recorded separately.
 
-## Diagnostic rule, fixed before fitting
+Direct coil-field tracing uses ten starts and 200 transits. `measure_coil_bounce.py`
+then follows actual coil trajectories from target-PEST launch coordinates, using
+801 toroidal samples and 16 alpha labels over two field periods. It reuses the
+Step 3 fixed bounce fields, period families and action statistic, retaining every
+missing/extra/censored well failure. Conditional refinement is skipped because
+both wide domains fail. No unseen holdout or verified realized-flux coordinates
+exist here; this is exploratory.
 
-Trace the selected frozen-current snapshot directly for 200 transits, using the
-existing ten starts, signed iota and 0.02 diagnostic tolerance; allow 300 s per arm.
-A classifier stop is inconclusive given the known issue #20 / PR #33 limitation.
-Do not infer nested surfaces, particle confinement or benefit transfer from this test.
+## Result
 
-Then compare the original Step 3 narrow (3 surfaces × 5 pitches) and wide
-(5 × 7) period-action statistics in ideal-target and actual-coil fields. Reuse the
-frozen bounce quadrature and VMEC trace kernels; their restoration supports this
-specific transfer question. Launch 16 uniformly spaced target-PEST alpha labels,
-trace one full toroidal turn on 801 points, using direct Biot–Savart with 512 coil
-nodes. Integrate actual coil trajectories, not paths constrained to target surfaces.
-Use the original fixed bounce fields and reject missing, extra, censored or
-period-crossing wells. Retain all failed cells; incomplete domains have no aggregate.
-Allow 600 s per arm. If both wide domains are complete, repeat both at 1601 points
-and 32 alpha labels within another 600 s per arm; otherwise do not refine selectively.
+| Diagnostic | Original target fit | Improved target fit |
+| --- | ---: | ---: |
+| Fine boundary RMS | 0.0019320403 | 0.0019531336 |
+| Fine maximum normal error | 0.0090690841 | 0.0092677579 |
+| Interior RMS | 0.0107165171 | 0.0108879575 |
+| Scoped continuous geometry | Pass | Pass |
+| Frozen base current | 307,977 A | 308,134 A |
+| Lines completing 200 transits | 10/10 | 10/10 |
+| Maximum signed-iota mismatch | 0.005262 | 0.005641 |
+| Narrow action-variance score | 4.254756e-5 | 4.038923e-5 |
+| Wide action-variance score | Incomplete | Incomplete |
 
-Launch s/alpha label the target, not independently verified realized flux surfaces.
-Even a resolved gain is exploratory. No unseen holdout or calibrated realized-flux
-coordinate construction exists here; confirmation requires those before any claim
-that the physical Step 3 benefit transferred. Ideal controls must reproduce the
-original diagnostic at the matching resolution, with relative score error ≤1e-8.
+Field errors are against different targets, not a matched benefit measure. Both
+fits fail the original field limits. At q=0.03, the original fit lacks required
+well coverage at s=0.1/0.25; the improved fit also fails at s=0.75 (an extra well
+on one launch line). There are 32 / 33 failed launch lines. No failed cell is
+dropped to manufacture a wide score. The narrow diagnostic is 5.07% lower for the
+improved arm, but is still degraded relative to each ideal target and does not
+establish physical transfer. Ten surviving lines do not prove nested surfaces.
 
-## Resources and decision
+## Evidence, availability and decision
 
-One native thread, sequential arms, 256 MiB retained output per arm across stages,
-3 GiB initial and 2 GiB live disk reserve. Preserve interrupted stages and output
-hashes. Stop on a resource failure and label incomplete evidence accordingly.
+The evidence archive is prepared locally at commit
+`05a4511084912fea9bd8d03e81f01018882396b8`, tag `evidence-issue25-matched-v1`.
+Publication is pending: the automatic approval review timed out twice.
+The archive is not yet available from GitHub.
+Dense target reconstruction and ideal controls match the qualified archived arrays
+exactly. The archive retains commands, failed trials, snapshots and diagnostic
+arrays; `replay.py` reproduces field/action metrics without Wouts or SIMSOPT
+(NumPy/SciPy required). Local raw outputs remain in `artifacts/issue25-matched-v1`.
+Original Wouts and upstream validation archives remain maintainer-local; no
+separate-machine native reproduction or external physics review is claimed.
 
-Report each target's field errors separately. If diagnostics are complete, report
-whether the launch-label action improvement survives, disappears or is unresolved;
-otherwise identify the failed prerequisite. The next decision is whether to build
-and validate a realized-flux-surface action diagnostic or first change coil/target
-realization. None of these outcomes changes acceptance gates or establishes a reactor.
+All stages completed within their declared limits, using one native thread and
+less than 256 MiB per arm. Next: diagnose shallow-well fidelity and validate actual
+flux-surface labels before confirming benefit transfer. The small fitting gains
+and narrow score do not justify scaling the same recipe or relaxing acceptance.

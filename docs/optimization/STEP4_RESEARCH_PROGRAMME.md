@@ -3,13 +3,13 @@
 Updated 4 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 
 **Can practical coils preserve a useful plasma benefit?** Boundary error is a
-necessary diagnostic in our protocol, not the project objective. The current
-fits use reference401, not the improved Step 3 target. Resolve that disconnect
-before treating further optimization as progress toward a reactor.
+necessary diagnostic in our protocol, not the project objective. The [first matched-target experiment](ISSUE25_MATCHED_TARGETS.md) now includes
+the improved Step 3 target, but leaves full benefit transfer unresolved. Resolve
+the shallow-well and realized-flux-label limitations before claiming reactor progress.
 
-This is prospective work. The current driver reproduces reference401 only;
-matched-target input support and realized-field diagnostics still need to be
-prepared with existing physics tools. This cleanup does not supply new results.
+The programme remains prospective beyond that exploratory comparison. Matched
+target intake and target-launch action diagnostics now exist; confirmed physical
+benefit transfer and the planned conditioning/stopping comparison remain open.
 
 ## Next experiment and decision
 
