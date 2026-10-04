@@ -45,5 +45,27 @@ This driver supports reference401 only; matched improved-target fitting and
 realized-plasma-benefit diagnostics remain to be implemented in the
 [next experiment](STEP4_RESEARCH_PROGRAMME.md).
 
+## Realized-field surfaces
+
+[`scripts/trace_surfaces.py`](../../scripts/trace_surfaces.py) traces a public
+candidate's coil field at its flux-normalized current. Ten lines start on target
+surfaces s = 0.05–0.95, and each line reports whether it stays inside the target
+boundary. It also reports the transform (rotational transform ι) compared with the
+target's `iotaf`, and saves Poincaré plots. Native coils must first reproduce the
+public kernel to 1e-12. The interpolated field must agree with the direct field to
+1e-6; otherwise rerun with `--direct`.
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/trace_surfaces.py \
+  --candidate submissions/length-headroom-six-coil/candidate.json \
+  --wout artifacts/plasma-design-v2/reference-fine/wout.nc --output results/my-surfaces
+```
+
+Without the local Wout, vmecpp regenerates reference401 from the committed input in
+about 6 minutes. The regenerated file matches the starter's interior samples to 3.4e-10:
+`vmecpp.run(vmecpp.VmecInput.from_file("evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(path)`.
+Nested surfaces with a matching ι are necessary for benefit transfer, not evidence of
+it. The check covers vacuum fields at s ≤ 0.95 only, and judges islands visually.
+
 For old results, use their [original revisions](../validation/REPRODUCING_RESULTS.md),
 not this prospective search. Evidence and raw outputs are unchanged.
