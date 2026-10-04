@@ -1,6 +1,7 @@
 """Trace a public candidate's coil field against a VMEC target; a diagnostic, not acceptance."""
 
 import argparse
+import hashlib
 import json
 import math
 import os
@@ -14,7 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from fusion_baselines import realized_field as rf  # noqa: E402
-from fusion_public.data import load, load_case  # noqa: E402
+from fusion_baselines.provenance import build_run_record  # noqa: E402
+from fusion_public.data import load, load_case, validate_candidate  # noqa: E402
 from fusion_public.dense import flux_scale, load_input  # noqa: E402
 from fusion_public.field import field as public_field  # noqa: E402
 from fusion_public.field import physical_curves  # noqa: E402
@@ -57,19 +59,25 @@ def run(candidate_path, wout, output, transits=200, direct=False):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     started = time.monotonic()
-    candidate = load(candidate_path)
+    candidate = validate_candidate(load(candidate_path))
     case, _ = load_case()
     public_current = abs(case["physical"][0]["current"])
-    scale = flux_scale(candidate, case, load_input(case))
-    target = rf.Target.from_wout(wout)
+    target_input = load_input(case)
+    target = rf.Target.from_wout(wout, target_input)
+    scale = flux_scale(candidate, case, target_input)
     report = dict(kind="realized-field-surfaces", candidate=str(candidate_path),
+                  candidate_sha256=hashlib.sha256(Path(candidate_path).read_bytes()).hexdigest(),
+                  provenance=build_run_record(ROOT),
+                  target_check="reference401 boundary/flux consistency; not dense identity",
                   wout_sha256=target.sha256, flux_scale=scale, current_A=scale*public_current,
                   transits=transits, physical_admission=False, step4_pass=False)
     # Control: the native coils reproduce the independent public kernel at the public current.
     reference = rf.coils(candidate, public_current)
     control = {}
-    for group in ("boundary", "inner"):
-        points = case["groups"][group]["points_m"]
+    points_by_group = {key: case["groups"][key]["points_m"] for key in ("boundary", "inner")}
+    points_by_group["independent_volume"] = rf.sample_points(
+        target, np.random.default_rng(20261005), 64).tolist()
+    for group, points in points_by_group.items():
         native = BiotSavart(reference)
         native.set_points(np.asarray(points, dtype=float))
         expected = np.asarray(public_field(points, physical_curves(candidate, case, 512))["B_T"])
@@ -78,16 +86,19 @@ def run(candidate_path, wout, output, transits=200, direct=False):
     rf.need(max(control.values()) <= 1e-12, "native coils differ from the public kernel")
     field = BiotSavart(rf.coils(candidate, scale*public_current))
     surface = SurfaceRZFourier.from_wout(str(wout), range="full torus", nphi=128, ntheta=64)
-    model, errors = interpolated(field, surface, target, np.random.default_rng(20261004))
+    model, errors = (None, {}) if direct else interpolated(
+        field, surface, target, np.random.default_rng(20261004))
     report["interpolation_errors"] = errors
     if model is None and not direct:
-        (output/"result.json").write_text(json.dumps(report, indent=1))
+        (output/"result.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
         raise SystemExit("interpolant above 1e-6; rerun with --direct")
     report["field"] = "direct BiotSavart" if direct else "InterpolatedField degree 4"
     lines, hits = rf.trace(field if direct else model, target, surface, transits)
-    report.update(lines=lines, summary=rf.summarize(lines),
+    report.update(lines=lines, summary=rf.summarize(lines, transits),
                   seconds=round(time.monotonic()-started, 1))
-    (output/"result.json").write_text(json.dumps(report, indent=1))
+    (output/"result.json").write_text(json.dumps(report, indent=1), encoding="utf-8")
+    np.savez_compressed(output/"poincare.npz", **{f"line_{i}": hit
+                                               for i, hit in enumerate(hits)})
     plot(lines, hits, target, output/"poincare.png", Path(candidate_path).parent.name)
     return report
 

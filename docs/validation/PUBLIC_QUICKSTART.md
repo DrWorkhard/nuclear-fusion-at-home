@@ -18,6 +18,33 @@ hosted CI (GitHub Actions on Linux, macOS and Windows with Python 3.11 and 3.14)
 passes the public tests and copied-tree checks. Reproduction by another person on
 separate hardware is still outstanding.
 
+## Download only current main
+
+```bash
+git clone --depth 1 --single-branch --branch main --no-tags https://github.com/DrWorkhard/nuclear-fusion-at-home.git
+cd nuclear-fusion-at-home
+```
+
+This downloads one commit, current files and no archive tags. Branches, commits
+and PRs work normally; use your fork's URL if contributing through a fork.
+At `70f8905`, a fresh public HTTPS clone transferred a **228,000-byte Git pack**
+and checked out **784,750 bytes** across 106 files. Protocol overhead and local
+filesystem allocation are additional; package environments are separate.
+The multi-GB local research outputs are ignored and never part of this clone.
+
+Update with `git pull --ff-only` on an unmodified `main`. The clone remembers
+single-branch fetching and `--no-tags`. If a rebase needs older commits, deepen
+only as needed with `git fetch --deepen=10 origin main`; crossing into older
+research history can download historical data. Do not routinely fetch all tags
+or use `--unshallow`. Existing full clones keep their downloaded history; use a
+new directory for a small clone and preserve any local work/raw data.
+For a Git-free copy, use GitHub's **Code → Download ZIP** on `main`.
+
+Read individual historical records through the pinned links in
+[Status](../STATUS.md). Download a complete [evidence snapshot](REPRODUCING_RESULTS.md)
+only when reproducing that study. Full-history publication audits belong in a
+separate maintainer checkout, not the contributor setup.
+
 ## Reproduce a real reference
 
 Open a terminal in the repository directory:

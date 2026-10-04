@@ -13,6 +13,8 @@ from pathlib import Path
 
 import numpy as np
 
+from fusion_baselines.reference_wout import validate_reference
+
 S_VALUES = tuple(round(0.05 + 0.1 * k, 2) for k in range(10))
 
 
@@ -34,13 +36,15 @@ class Target:
              "finite full-mesh target coefficients required")
 
     @classmethod
-    def from_wout(cls, path):
+    def from_wout(cls, path, target_input=None):
         import netCDF4
 
         path = Path(path)
         with path.open("rb") as stream:
             sha256 = hashlib.file_digest(stream, "sha256").hexdigest()
         with netCDF4.Dataset(path) as data:
+            if target_input is not None:
+                validate_reference(data, target_input)
             need(int(data["lasym__logical__"][...]) == 0, "stellarator-symmetric Wout required")
             values = [np.ma.filled(data[k][...], np.nan) for k in
                       ("xm", "xn", "rmnc", "zmns", "iotaf")]
@@ -93,29 +97,59 @@ def coils(candidate, current):
 
 
 def trace(field, target, surface, transits=200, tol=1e-10, s_values=S_VALUES):
-    """Trace lines from target surfaces; stop a line only when it leaves the target boundary."""
-    from simsopt.field.tracing import LevelsetStoppingCriterion, compute_fieldlines
+    """Trace until boundary exit, requested transits or the finite integration-time cap."""
+    from simsopt.field.tracing import (
+        LevelsetStoppingCriterion,
+        ToroidalTransitStoppingCriterion,
+        compute_fieldlines,
+    )
     from simsopt.geo import SurfaceClassifier
 
     need(0 < transits <= 2000 and 0 < tol < 1e-6, "bounded transits and tight tolerance")
     classifier = SurfaceClassifier(surface, h=0.02, p=2)
     starts = [float(target.rz(s, 0.0, 0.0)[0]) for s in s_values]
+    # A finite integration cap, not proof that the requested transits were completed.
     tmax = 1.3 * transits * 2 * math.pi * max(starts)
     paths, hits = compute_fieldlines(field, starts, [0.0] * len(starts), tmax=tmax, tol=tol,
                                      phis=[0.0, math.pi / 2],
-                                     stopping_criteria=[LevelsetStoppingCriterion(classifier.dist)])
+                                     stopping_criteria=[LevelsetStoppingCriterion(classifier.dist),
+                                                        ToroidalTransitStoppingCriterion(
+                                                            transits, False)])
     lines = []
     for s, path, hit in zip(s_values, paths, hits, strict=True):
+        # SIMSOPT returns the terminal stopping state in hits, not in the path.
+        if len(hit) and hit[-1, 1] < 0 and hit[-1, 0] > path[-1, 0]:
+            path = np.vstack((path, hit[-1, [0, 2, 3, 4]]))
         turns, iota = winding(path[:, 1:4], target)
-        left = bool(len(hit) and hit[-1, 1] < 0)
+        left = bool(len(hit) and np.any(hit[:, 1] == -1))
+        termination = ("boundary" if left else "requested_transits" if turns >= transits
+                       else "integration_limit")
         lines.append(dict(s=s, R0=float(path[0, 1]), transits=turns, left_target=left,
+                          termination=termination,
                           iota_traced=iota, iota_target=target.iota(s)))
     return lines, hits
 
 
-def summarize(lines, iota_tolerance=0.02):
+def sample_points(target, rng, count):
+    """Seeded 3-D volume locations independent of the structured public sample grid."""
+    s = rng.uniform(0.05, 0.95, count)
+    theta, phi = rng.uniform(0, 2*math.pi, (2, count))
+    rz = [target.rz(a, b, c) for a, b, c in zip(s, theta, phi, strict=True)]
+    radius, z = np.asarray(rz).T
+    return np.column_stack((radius*np.cos(phi), radius*np.sin(phi), z))
+
+
+def summarize(lines, requested_transits, iota_tolerance=0.02):
+    need(bool(lines) and np.isfinite([requested_transits, iota_tolerance]).all()
+         and 0 < requested_transits <= 2000 and iota_tolerance >= 0,
+         "nonempty lines, bounded transits and finite tolerance required")
+    need(np.isfinite([[line[k] for k in ("transits", "iota_traced", "iota_target")]
+                      for line in lines]).all(), "finite trace metrics required")
     confined = [not line["left_target"] for line in lines]
-    mismatch = max(abs(abs(line["iota_traced"]) - abs(line["iota_target"])) for line in lines)
+    complete = [line["transits"] >= requested_transits for line in lines]
+    mismatch = max(abs(line["iota_traced"] - line["iota_target"]) for line in lines)
     return dict(lines_confined=sum(confined), lines=len(lines), max_abs_iota_mismatch=mismatch,
-                nested_and_matching=all(confined) and mismatch <= iota_tolerance,
+                lines_completing_transits=sum(complete), requested_transits=requested_transits,
+                all_confined_and_iota_matching=all(confined) and all(complete)
+                and mismatch <= iota_tolerance, nestedness_tested=False,
                 iota_tolerance=iota_tolerance, physical_admission=False)

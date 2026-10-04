@@ -11,18 +11,21 @@ substantiate the README's reactor-design timeline.
 
 ## Established results and their limits
 
-Links below lead to original evidence or the completed-step summary.
+Full records are preserved at [evidence-archive-2026-10-04](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-archive-2026-10-04),
+archive commit [`68db098`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/68db098b664bb072854b687040e103aaafee463c). Links below pin those original
+bytes; source revisions identify each study's producer, not the archive date.
+The [archive workflow](validation/REPRODUCING_RESULTS.md) explains retrieval.
 
-| Work | Result | Limit |
-| --- | --- | --- |
-| [Steps 1–2](steps/README.md#steps-1-and-2-foundation-and-repeatable-iteration) | Selected references and repeatable independent iteration checks pass | Capability, not design success; broader W7-X comparison 60/63 |
-| [Step 3](steps/README.md#step-3-vacuum-plasma-diagnostic) | Vacuum bounce-action variance improves 11.17% wide / 4.85% narrow | Both domains informed construction; not confinement or power |
-| [Boundary calibration](../evidence/boundary-control-calibration-v1.json) | QUASR refined RMS 2.27e-6; LPQA mean/max reproduced | Boundary component only; coarse-grid near-zero error misleads |
-| [Matched restart](../evidence/coherent-restart-v1.json) | RMS 0.004889, 55.27% lower, 8.64% less current; scoped geometry passes | Both 1,200-bundle budgets exhausted; boundary fails |
-| [Interior screen](../evidence/coherent-interior-v1.json) | Best RMS 0.04029, 73.66% below matched control | All five snapshots fail 0.01 |
-| [Longer/wider fits](../evidence/coherent-longrun-v2.json) | Wider boundary/interior RMS 0.001948 / 0.009770 | Interior passes; length bounds unresolved; boundary fails |
-| [Length headroom](../evidence/coil-headroom-v3.json) | Boundary/interior RMS 0.001996 / 0.01148; length bound 3.474220 m | Geometry passes; fields fail; expanded box gains only 2.64% boundary RMS |
-| [Earlier failures](validation/REPRODUCING_RESULTS.md) | Fine clearance, objective alignment and current-only studies exposed limitations | Remain failures; no retired method is relabelled successful |
+| Work | Result | Limit | Source state |
+| --- | --- | --- | --- |
+| [Steps 1–2](steps/README.md#steps-1-and-2-foundation-and-repeatable-iteration) | Selected references and repeatable independent iteration checks pass | Capability, not design success; broader W7-X comparison 60/63 | [`1aa28b6`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/1aa28b6b9b30e7724f58134c813f71a7eb4c4f4a) |
+| [Step 3](steps/README.md#step-3-vacuum-plasma-diagnostic) | Vacuum bounce-action variance improves 11.17% wide / 4.85% narrow | Both domains informed construction; not confinement or power | [`f285fbdf`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/f285fbdf0eb21cea060a2f34c391da901a8dad35) (dirty; verify code hashes) |
+| [Boundary calibration](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/boundary-control-calibration-v1.json) | QUASR refined RMS 2.27e-6; LPQA mean/max reproduced | Boundary component only; coarse-grid near-zero error misleads | [`9270692`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/9270692b77846869dab5b0c602878766d912fad6) (dirty; verify code hashes) |
+| [Matched restart](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coherent-restart-v1.json) | RMS 0.004889, 55.27% lower, 8.64% less current; scoped geometry passes | Both 1,200-bundle budgets exhausted; boundary fails | [`c1fdddf`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/c1fdddf122268f60ff3f7c3e5e1f879238f77a2c) |
+| [Interior screen](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coherent-interior-v1.json) | Best RMS 0.04029, 73.66% below matched control | All five snapshots fail 0.01 | [`8fae8b0`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/8fae8b0f9478ebb64873e4608bbd2fb0597c6a4f) |
+| [Longer/wider fits](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coherent-longrun-v2.json) | Wider boundary/interior RMS 0.001948 / 0.009770 | Interior passes; length bounds unresolved; boundary fails | [`eb458ef`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/eb458ef84c4495cd091495f4d69a25ebbcb5aee1) |
+| [Length headroom](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coil-headroom-v3.json) | Boundary/interior RMS 0.001996 / 0.01148; length bound 3.474220 m | Geometry passes; fields fail; expanded box gains only 2.64% boundary RMS | [`5a3c1d0`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/5a3c1d02f90746b9fd061d1174fa02f9e58784d6) |
+| [Earlier failures](validation/REPRODUCING_RESULTS.md) | Fine clearance, objective alignment and current-only studies exposed limitations | Remain failures; no retired method is relabelled successful | Per archived record |
 
 Acceptance still requires boundary RMS **1e-4**, maximum normal error **1e-3**
 and interior RMS **0.01**, plus the [Step 4 requirements](steps/STEP_4_PLASMA_AND_COILS.md).

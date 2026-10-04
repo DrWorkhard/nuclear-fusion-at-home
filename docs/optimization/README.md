@@ -49,23 +49,44 @@ realized-plasma-benefit diagnostics remain to be implemented in the
 
 [`scripts/trace_surfaces.py`](../../scripts/trace_surfaces.py) traces a public
 candidate's coil field at its flux-normalized current. Ten lines start on target
-surfaces s = 0.05–0.95, and each line reports whether it stays inside the target
-boundary. It also reports the transform (rotational transform ι) compared with the
-target's `iotaf`, and saves Poincaré plots. Native coils must first reproduce the
-public kernel to 1e-12. The interpolated field must agree with the direct field to
-1e-6; otherwise rerun with `--direct`.
+surfaces s = 0.05–0.95. The Wout must match reference401's symmetry, period count,
+401 surfaces, boundary and edge flux before tracing. This establishes consistency,
+not identity of its unsampled interior. Native coils must reproduce the public
+kernel to 1e-12 at both published points and 64 independent seeded volume points.
+
+Regenerate the Wout from committed input first (requires `vmecpp` in its own
+environment; see the [native environment](../validation/ENVIRONMENT.md)):
+
+```python
+from pathlib import Path
+import vmecpp
+
+path = Path("results/wout_reference_regen.nc")
+path.parent.mkdir(parents=True, exist_ok=True)
+vmecpp.run(vmecpp.VmecInput.from_file(
+    "evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(path)
+```
 
 ```bash
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 .venv/bin/python scripts/trace_surfaces.py \
   --candidate submissions/length-headroom-six-coil/candidate.json \
-  --wout artifacts/plasma-design-v2/reference-fine/wout.nc --output results/my-surfaces
+  --wout results/wout_reference_regen.nc --output results/my-surfaces --transits 200
 ```
 
-Without the local Wout, vmecpp regenerates reference401 from the committed input in
-about 6 minutes. The regenerated file matches the starter's interior samples to 3.4e-10:
-`vmecpp.run(vmecpp.VmecInput.from_file("evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(path)`.
-Nested surfaces with a matching ι are necessary for benefit transfer, not evidence of
-it. The check covers vacuum fields at s ≤ 0.95 only, and judges islands visually.
+The preserved local archive Wout is an alternative if already available; a fresh
+clone does not include it. The interpolant must agree pointwise with the direct
+field to 1e-6. This does not bound accumulated trajectory error. Confirm a positive
+candidate with the same command plus `--direct` and a new output directory;
+compare signed iota and the saved Poincaré crossings (`poincare.npz`/`.png`).
+Direct mode bypasses interpolation entirely.
+
+`all_confined_and_iota_matching` requires every line to stay inside the target,
+complete at least the requested transits, and match **signed** iota within 0.02.
+A transit stopping event is distinct from boundary escape; reaching the integration
+time cap early cannot pass. The summary does not measure nestedness or island
+widths. Plots are exploratory, not a nested-surface proof or physical acceptance.
+The improved Step 3 target, edge s > 0.95 and benefit transfer remain untested.
+Earlier positive summaries must be rerun under this corrected contract.
 
 For old results, use their [original revisions](../validation/REPRODUCING_RESULTS.md),
-not this prospective search. Evidence and raw outputs are unchanged.
+not this prospective search. Evidence is linked from immutable tags; local raw outputs are preserved.

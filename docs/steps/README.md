@@ -12,9 +12,9 @@ candidates failed the raw-flux limit: 8.191664e-8 versus 1e-8. The selected poin
 came from a start replay, so this established reproducibility, not optimizer gain.
 The initial acceptance run failed a bookkeeping check and remains rejected.
 
-Producer `1aa28b6`: [final audit](../../evidence/foundation-acceptance-v2/summary.json),
-[iteration](../../evidence/foundation-acceptance-v2/cycle-audit.json),
-[candidate checks](../../evidence/foundation-acceptance-v2/holdouts/summary.json).
+Producer `1aa28b6`: [final audit](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/foundation-acceptance-v2/summary.json),
+[iteration](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/foundation-acceptance-v2/cycle-audit.json),
+[candidate checks](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/foundation-acceptance-v2/holdouts/summary.json).
 
 ## Step 3: vacuum plasma diagnostic
 
@@ -25,9 +25,10 @@ but worsened the wide metric by 15.53% and violated 20 local limits; it remains
 rejected. These are diagnostic gains, not measured confinement or fusion power.
 Realized coil fields, pressure, transport and engineering remain open.
 
-Evidence revision `d429783`: [final audit](../../evidence/plasma-balanced-v1/final-audit.json),
+Recorded base `f285fbdf` is dirty; verify the recorded code hashes.
+Evidence was committed at `d429783`: [final audit](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/plasma-balanced-v1/final-audit.json),
 [diagnostics](../../evidence/plasma-balanced-v1/validation.json),
-[selected target](../../evidence/plasma-balanced-v1/selected-input-401.json),
+[selected target](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/plasma-balanced-v1/selected-input-401.json),
 [reference target](../../evidence/plasma-design-v2/reference-input-401.json).
 
 Detailed methods, budgets, failures and original commands remain at their recorded

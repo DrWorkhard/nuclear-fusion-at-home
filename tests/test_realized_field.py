@@ -64,11 +64,76 @@ def test_invalid_inputs_are_rejected():
 
 
 def test_summary_requires_every_line_confined_and_matching():
-    good = [dict(left_target=False, iota_traced=-0.59, iota_target=-0.587)] * 3
-    assert summarize(good)["nested_and_matching"] is True
-    escaped = good[:2] + [dict(left_target=True, iota_traced=-0.59, iota_target=-0.587)]
-    assert summarize(escaped)["lines_confined"] == 2
-    assert summarize(escaped)["nested_and_matching"] is False
-    shifted = [dict(left_target=False, iota_traced=-0.62, iota_target=-0.587)]
-    assert summarize(shifted)["nested_and_matching"] is False
-    assert summarize(good)["physical_admission"] is False
+    good = [dict(transits=200., left_target=False, iota_traced=-0.59, iota_target=-0.587)] * 3
+    assert summarize(good, 200)["all_confined_and_iota_matching"] is True
+    escaped = good[:2] + [dict(good[0], transits=5., left_target=True)]
+    assert summarize(escaped, 200)["lines_confined"] == 2
+    assert summarize(escaped, 200)["all_confined_and_iota_matching"] is False
+    shifted = [dict(transits=200., left_target=False, iota_traced=-0.62, iota_target=-0.587)]
+    assert summarize(shifted, 200)["all_confined_and_iota_matching"] is False
+    assert summarize(good, 200)["physical_admission"] is False
+
+
+def test_summary_rejects_opposite_sign_and_short_traces():
+    good = dict(transits=200., left_target=False, iota_traced=-0.59, iota_target=-0.59)
+    flipped = summarize([dict(good, iota_traced=0.59)], 200)
+    assert flipped["max_abs_iota_mismatch"] == pytest.approx(1.18)
+    assert not flipped["all_confined_and_iota_matching"]
+    short = summarize([dict(good, transits=199.99)], 200)
+    assert short["lines_completing_transits"] == 0
+    assert not short["all_confined_and_iota_matching"]
+    assert not summarize([good], 200)["nestedness_tested"]
+    with pytest.raises(ValueError, match="nonempty"):
+        summarize([], 200)
+    with pytest.raises(ValueError, match="finite trace"):
+        summarize([dict(good, transits=float("nan"))], 200)
+
+
+def test_transit_stop_is_not_an_escape_and_time_cap_cannot_pass(monkeypatch):
+    from simsopt import geo
+    from simsopt.field import tracing
+
+    from fusion_baselines.realized_field import trace
+
+    target = torus()
+    def compute(field, starts, z, **kwargs):
+        assert len(kwargs["stopping_criteria"]) == 2
+        paths = []
+        for turns in (5., 0.5):
+            xyz = helix(target, 0.5, turns=turns)
+            paths.append(np.column_stack((np.arange(len(xyz)), xyz)))
+        endpoint = paths[0][-1]
+        paths[0] = paths[0][:-1]  # Native paths omit the stopping event itself.
+        return paths, [np.array([[endpoint[0], -2, *endpoint[1:]]]), np.empty((0, 5))]
+    monkeypatch.setattr(tracing, "compute_fieldlines", compute)
+    monkeypatch.setattr(tracing, "LevelsetStoppingCriterion", lambda value: value)
+    monkeypatch.setattr(geo, "SurfaceClassifier", lambda *a, **k: type(
+        "Classifier", (), {"dist": staticmethod(lambda *a: 1.)})())
+    lines, _ = trace(None, target, None, transits=5, s_values=(0.5, 0.5))
+    assert not any(line["left_target"] for line in lines)
+    assert [line["termination"] for line in lines] == ["requested_transits", "integration_limit"]
+    assert not summarize(lines, 5)["all_confined_and_iota_matching"]
+
+
+def test_wout_target_binding_rejects_wrong_period_before_loading_surfaces(tmp_path):
+    path = tmp_path / "wrong-period.nc"
+    with netCDF4.Dataset(path, "w") as data:
+        data.createVariable("nfp", "i4")[...] = 3
+    with pytest.raises(ValueError, match="symmetric nfp2"):
+        Target.from_wout(path, target_input={})
+
+
+def test_native_toroidal_field_completes_requested_transits_without_escape():
+    from simsopt.field import ToroidalField
+    from simsopt.geo import SurfaceRZFourier
+
+    from fusion_baselines.realized_field import trace
+
+    surface = SurfaceRZFourier.from_nphi_ntheta(32, 32, nfp=2, mpol=1, ntor=0)
+    surface.set_rc(0, 0, 1.)
+    surface.set_rc(1, 0, .1)
+    surface.set_zs(1, 0, .1)
+    lines, _ = trace(ToroidalField(1., 1.), torus(iota=0.), surface,
+                     transits=3, s_values=(.25,))
+    assert lines[0]["termination"] == "requested_transits"
+    assert summarize(lines, 3)["all_confined_and_iota_matching"]
