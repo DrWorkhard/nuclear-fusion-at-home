@@ -1,0 +1,30 @@
+{
+  "active": null,
+  "bundles": 0,
+  "native": {
+    "A": {
+      "attempted": 8,
+      "completed": 8
+    },
+    "A_vjp": {
+      "attempted": 0,
+      "completed": 0
+    },
+    "B": {
+      "attempted": 256,
+      "completed": 256
+    },
+    "B_vjp": {
+      "attempted": 0,
+      "completed": 0
+    },
+    "independent_B": {
+      "attempted": 0,
+      "completed": 0
+    },
+    "independent_BA": {
+      "attempted": 2,
+      "completed": 2
+    }
+  }
+}

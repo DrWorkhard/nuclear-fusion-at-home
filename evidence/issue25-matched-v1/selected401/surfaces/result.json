@@ -1,0 +1,146 @@
+{
+ "kind": "realized-field-surfaces",
+ "completed": true,
+ "provenance": {
+  "schema_version": 1,
+  "host": {
+   "captured_at": "2026-10-04T18:26:05.014164+00:00",
+   "platform": "macOS-15.7.4-arm64-arm-64bit",
+   "machine": "arm64",
+   "processor": "arm",
+   "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+   "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+   "logical_cpu_count": 8
+  },
+  "repository": {
+   "path": "/private/tmp/fusion-issue25-Hg6Meh/repo",
+   "available": true,
+   "commit": "a551289e63e44d7dbae7b5d5a0e5f4b6026db257",
+   "branch": "research/issue25-matched-targets",
+   "dirty": false
+  },
+  "external_repositories": {}
+ },
+ "target_id": "selected401",
+ "target_input_sha256": "6bec3483eaced499bafe7ee94b16aa960d219ec1fec86cc0690012f8ebdb033e",
+ "target_check": "boundary/flux consistency; not dense identity",
+ "wout_sha256": "8cd6bebfc29963f80645acf25e1a3db194e4db381365b17a89b9844554f51b52",
+ "transits": 200,
+ "physical_admission": false,
+ "step4_pass": false,
+ "snapshot": "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/fit/selected-snapshot.json",
+ "snapshot_sha256": "c2ea45c171fd7452d5fc51395617f311bd2067f470dfd9d75a0fcf02896ade79",
+ "current_A": 308134.11394481524,
+ "frozen_current": true,
+ "kernel_control": {
+  "position": 5.408534590658595e-16,
+  "tangent": 3.4468743667713717e-15,
+  "independent_volume": 3.472004131313443e-16
+ },
+ "interpolation_errors": {},
+ "field": "direct BiotSavart",
+ "lines": [
+  {
+   "s": 0.05,
+   "R0": 0.9434747525916097,
+   "transits": 200.00187253779748,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5898808048523293,
+   "iota_target": -0.5873231269028232
+  },
+  {
+   "s": 0.15,
+   "R0": 0.9504756837983819,
+   "transits": 200.00384690117664,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5789972901317848,
+   "iota_target": -0.577467443159591
+  },
+  {
+   "s": 0.25,
+   "R0": 0.9553261662116803,
+   "transits": 200.00391001024272,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5690303022635954,
+   "iota_target": -0.5678708416482245
+  },
+  {
+   "s": 0.35,
+   "R0": 0.959294532474547,
+   "transits": 200.00171138084121,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5595369655351082,
+   "iota_target": -0.5585626643231796
+  },
+  {
+   "s": 0.45,
+   "R0": 0.9627489583828484,
+   "transits": 200.0013286671738,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5510103209358324,
+   "iota_target": -0.5494634544499875
+  },
+  {
+   "s": 0.55,
+   "R0": 0.9658571482517805,
+   "transits": 200.0014386993867,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5415042356983045,
+   "iota_target": -0.5405179719653675
+  },
+  {
+   "s": 0.65,
+   "R0": 0.9687115272799692,
+   "transits": 200.00057408666729,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5339142712292495,
+   "iota_target": -0.5316874248294486
+  },
+  {
+   "s": 0.75,
+   "R0": 0.9713692114022572,
+   "transits": 200.00092172535005,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5260332932036463,
+   "iota_target": -0.5229429256248299
+  },
+  {
+   "s": 0.85,
+   "R0": 0.9738683460108875,
+   "transits": 200.00139705832987,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.518930857723245,
+   "iota_target": -0.5142646926342345
+  },
+  {
+   "s": 0.95,
+   "R0": 0.976235847341887,
+   "transits": 200.00140386473356,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5112799005449042,
+   "iota_target": -0.505638458027661
+  }
+ ],
+ "summary": {
+  "lines_confined": 10,
+  "lines": 10,
+  "max_abs_iota_mismatch": 0.005641442517243189,
+  "lines_completing_transits": 10,
+  "requested_transits": 200,
+  "all_confined_and_iota_matching": true,
+  "nestedness_tested": false,
+  "iota_tolerance": 0.02,
+  "physical_admission": false
+ },
+ "seconds": 245.8
+}

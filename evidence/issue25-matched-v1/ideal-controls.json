@@ -1,0 +1,126 @@
+[
+  {
+    "target": "reference401",
+    "source_measurement_sha256": "dad756e6b3771c3c4b2ecdc2eaf9aab4167c4978fbc535f266934f7f0dff9a29",
+    "rows": [
+      {
+        "s": 0.1,
+        "archive_sha256": "b4d9037f615fd3bd4958c1d0154e67c78fbafad5baf2b0a9371d0b37bc280fea",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "s": 0.25,
+        "archive_sha256": "81fc94a000c37660968ff0e4d766b21b5b6c23add8aef6d9595b6d0f80e9ddb0",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "s": 0.5,
+        "archive_sha256": "528f051e170fe56c69d115410d04b90e2b3b883522ed3c69bad3a991bf53bf8d",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "s": 0.75,
+        "archive_sha256": "4f318067d67f63421e7c2511213b590a143548332af2e98c7cf399ac03fec0cd",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "s": 0.9,
+        "archive_sha256": "85e99db38dab93f75bf18c3c2594c162392fda35ba19e90dea6acdc8fabcb3a1",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      }
+    ],
+    "all_pass": true
+  },
+  {
+    "target": "selected401",
+    "source_measurement_sha256": "d1d0f60b1b5468742096bbaf2725b46e2ec3a6a8be0066e9087a1bd2869ed890",
+    "rows": [
+      {
+        "s": 0.1,
+        "archive_sha256": "3b6d9bda824e2f9ce4ceecd7f59d0b73dad6f9dc9577383fbcb5927997512e1e",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "s": 0.25,
+        "archive_sha256": "f46c8c0068231735adee148f190dfcac8af479f0b45394b1b96a96685e27c7b1",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "s": 0.5,
+        "archive_sha256": "9e027462c649d3b1d2d55d8d07461223eebf9f305765ca3ed50ff0afae50417f",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "s": 0.75,
+        "archive_sha256": "98f7ac303c5992b55063c3bda53a6e4a2852cf9fdf210e70e448a155b9cacf15",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      },
+      {
+        "s": 0.9,
+        "archive_sha256": "3ceb0ff1f4c418a69ed16cba6db80d33f2499efb3f71ab5de1eb0124b6b630e8",
+        "array_max_errors": {
+          "B": 0.0,
+          "length": 0.0,
+          "theta": 0.0
+        },
+        "score_relative_error": 0.0,
+        "passed": true
+      }
+    ],
+    "all_pass": true
+  }
+]

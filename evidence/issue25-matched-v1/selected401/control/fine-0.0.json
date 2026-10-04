@@ -1,0 +1,54 @@
+{
+  "arrays_sha256": "647b0d2a6330899d8129f445761f4b1f0e190a90f879982d5690d3dc5878f722",
+  "checks_pass": true,
+  "independent_errors": {
+    "A": 1.3597399555105182e-16,
+    "B": 5.968380700000166e-16
+  },
+  "metrics": {
+    "area_bn_rms": 0.002333715977101021,
+    "area_mean_abs_ratio": 0.0015541241803965096,
+    "area_mean_b": 1.2518635041903408,
+    "coil_distance": 0.07742446156477108,
+    "current": 308903.7303277707,
+    "current_limit_met": true,
+    "flux_limit_met": true,
+    "flux_relative_error": 6.661338147750939e-16,
+    "frozen_scale": 3.0890373032777068,
+    "geometry_certified": false,
+    "kappa_max": [
+      10.041200439324163,
+      10.023931334582105,
+      10.017816441809906,
+      8.240026817709099,
+      10.036632682322855,
+      10.025611115975835
+    ],
+    "lengths": [
+      2.8236042877473366,
+      2.821137541531145,
+      2.880179491698588,
+      3.4399819712440554,
+      3.440001390741748,
+      3.4400070633377373
+    ],
+    "local_flux": 1.2418277412120866e-05,
+    "mean_area_jacobian": 6.102305948246899,
+    "measured_flux": -0.03141592653589795,
+    "min_b": 1.002979947507293,
+    "normal_limit_met": false,
+    "normal_max": 0.009415926262974234,
+    "normal_max_limit_met": false,
+    "normal_rms": 0.0020174309889585446,
+    "normalized_global_flux": 1.6893520064285231e-06,
+    "parameter_abs_bn_over_mean_b": 0.0016384625664764773,
+    "parameter_mean_b": 1.2733936882049584,
+    "raw_quadratic_flux": 1.6617281660980723e-05,
+    "sampled_geometry_limits_met": true,
+    "surface_distance": 0.15195617686715748
+  },
+  "n": 128,
+  "nodes": 512,
+  "physical_admission": false,
+  "shift": 0.0
+}

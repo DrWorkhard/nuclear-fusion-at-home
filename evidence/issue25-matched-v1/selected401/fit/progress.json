@@ -1,0 +1,33 @@
+{
+  "active": {
+    "bundle": 1518,
+    "role": "search"
+  },
+  "bundles": 1519,
+  "native": {
+    "A": {
+      "attempted": 1527,
+      "completed": 1527
+    },
+    "A_vjp": {
+      "attempted": 0,
+      "completed": 0
+    },
+    "B": {
+      "attempted": 6331,
+      "completed": 6331
+    },
+    "B_vjp": {
+      "attempted": 1519,
+      "completed": 1519
+    },
+    "independent_B": {
+      "attempted": 0,
+      "completed": 0
+    },
+    "independent_BA": {
+      "attempted": 2,
+      "completed": 2
+    }
+  }
+}

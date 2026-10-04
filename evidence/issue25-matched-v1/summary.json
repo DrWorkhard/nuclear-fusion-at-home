@@ -1,0 +1,273 @@
+{
+  "question": "Does the Step 3 benefit survive coil realization?",
+  "producer": "a551289e63e44d7dbae7b5d5a0e5f4b6026db257",
+  "dirty": false,
+  "kind": "exploratory matched-target comparison",
+  "physical_admission": false,
+  "benefit_transfer_confirmed": false,
+  "result": "Wide-domain comparison unavailable because required well coverage fails in both actual coil fields.",
+  "next_decision": "Diagnose and improve shallow-well fidelity and validate realized flux labels before a confirmatory transfer claim; do not scale the same fitting recipe based on the narrow score.",
+  "rows": [
+    {
+      "target": "reference401",
+      "boundary_rms": 0.0019320402859593628,
+      "boundary_max": 0.009069084081090455,
+      "interior_rms": 0.01071651709510873,
+      "geometry": "pass",
+      "current_A": 307977.14904565935,
+      "search": {
+        "startup_s": 2.6747214160859585,
+        "search_s": 296.02928850008175,
+        "bundles_attempted": 1549,
+        "bundles_completed": 1548,
+        "status": {
+          "error": "declared elapsed-time limit reached",
+          "reason": "budget"
+        }
+      },
+      "intake_s": 1.2866636249236763,
+      "model_ready_s": 1.3174837499391288,
+      "fit_elapsed_s": 304.5268216249533,
+      "trace": {
+        "lines_confined": 10,
+        "lines": 10,
+        "max_abs_iota_mismatch": 0.005261746236183806,
+        "lines_completing_transits": 10,
+        "requested_transits": 200,
+        "all_confined_and_iota_matching": true,
+        "nestedness_tested": false,
+        "iota_tolerance": 0.02,
+        "physical_admission": false
+      },
+      "ideal_narrow_score": 1.1566931154823263e-05,
+      "ideal_wide_score": 0.0002381762029084787,
+      "coil_narrow_score": 4.254755907733501e-05,
+      "coil_wide_score": null,
+      "failed_cells": [
+        {
+          "s": 0.1,
+          "error": "exactly two uncensored wells required on every line",
+          "q": 0.03
+        },
+        {
+          "s": 0.25,
+          "error": "exactly two uncensored wells required on every line",
+          "q": 0.03
+        }
+      ],
+      "retained_bytes": 45736493
+    },
+    {
+      "target": "selected401",
+      "boundary_rms": 0.0019531336203722936,
+      "boundary_max": 0.009267757855118675,
+      "interior_rms": 0.010887957531161474,
+      "geometry": "pass",
+      "current_A": 308134.11394481524,
+      "search": {
+        "startup_s": 2.644736166810617,
+        "search_s": 295.7619342079852,
+        "bundles_attempted": 1519,
+        "bundles_completed": 1518,
+        "status": {
+          "error": "declared elapsed-time limit reached",
+          "reason": "budget"
+        }
+      },
+      "intake_s": 1.5712704590987414,
+      "model_ready_s": 1.6019950420595706,
+      "fit_elapsed_s": 304.39555833418854,
+      "trace": {
+        "lines_confined": 10,
+        "lines": 10,
+        "max_abs_iota_mismatch": 0.005641442517243189,
+        "lines_completing_transits": 10,
+        "requested_transits": 200,
+        "all_confined_and_iota_matching": true,
+        "nestedness_tested": false,
+        "iota_tolerance": 0.02,
+        "physical_admission": false
+      },
+      "ideal_narrow_score": 1.100894343118703e-05,
+      "ideal_wide_score": 0.00021163527006159635,
+      "coil_narrow_score": 4.0389230980703696e-05,
+      "coil_wide_score": null,
+      "failed_cells": [
+        {
+          "s": 0.1,
+          "error": "exactly two uncensored wells required on every line",
+          "q": 0.03
+        },
+        {
+          "s": 0.25,
+          "error": "exactly two uncensored wells required on every line",
+          "q": 0.03
+        },
+        {
+          "s": 0.75,
+          "error": "exactly two uncensored wells required on every line",
+          "q": 0.03
+        }
+      ],
+      "retained_bytes": 45198745
+    }
+  ],
+  "ideal_controls": [
+    {
+      "target": "reference401",
+      "source_measurement_sha256": "dad756e6b3771c3c4b2ecdc2eaf9aab4167c4978fbc535f266934f7f0dff9a29",
+      "rows": [
+        {
+          "s": 0.1,
+          "archive_sha256": "b4d9037f615fd3bd4958c1d0154e67c78fbafad5baf2b0a9371d0b37bc280fea",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        },
+        {
+          "s": 0.25,
+          "archive_sha256": "81fc94a000c37660968ff0e4d766b21b5b6c23add8aef6d9595b6d0f80e9ddb0",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        },
+        {
+          "s": 0.5,
+          "archive_sha256": "528f051e170fe56c69d115410d04b90e2b3b883522ed3c69bad3a991bf53bf8d",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        },
+        {
+          "s": 0.75,
+          "archive_sha256": "4f318067d67f63421e7c2511213b590a143548332af2e98c7cf399ac03fec0cd",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        },
+        {
+          "s": 0.9,
+          "archive_sha256": "85e99db38dab93f75bf18c3c2594c162392fda35ba19e90dea6acdc8fabcb3a1",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        }
+      ],
+      "all_pass": true
+    },
+    {
+      "target": "selected401",
+      "source_measurement_sha256": "d1d0f60b1b5468742096bbaf2725b46e2ec3a6a8be0066e9087a1bd2869ed890",
+      "rows": [
+        {
+          "s": 0.1,
+          "archive_sha256": "3b6d9bda824e2f9ce4ceecd7f59d0b73dad6f9dc9577383fbcb5927997512e1e",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        },
+        {
+          "s": 0.25,
+          "archive_sha256": "f46c8c0068231735adee148f190dfcac8af479f0b45394b1b96a96685e27c7b1",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        },
+        {
+          "s": 0.5,
+          "archive_sha256": "9e027462c649d3b1d2d55d8d07461223eebf9f305765ca3ed50ff0afae50417f",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        },
+        {
+          "s": 0.75,
+          "archive_sha256": "98f7ac303c5992b55063c3bda53a6e4a2852cf9fdf210e70e448a155b9cacf15",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        },
+        {
+          "s": 0.9,
+          "archive_sha256": "3ceb0ff1f4c418a69ed16cba6db80d33f2499efb3f71ab5de1eb0124b6b630e8",
+          "array_max_errors": {
+            "B": 0.0,
+            "length": 0.0,
+            "theta": 0.0
+          },
+          "score_relative_error": 0.0,
+          "passed": true
+        }
+      ],
+      "all_pass": true
+    }
+  ],
+  "target_controls": [
+    {
+      "target": "reference401",
+      "errors": {
+        "inner_points": 0.0,
+        "inner_target": 0.0
+      },
+      "B2_scale": 1.6293829620247962,
+      "passed": true,
+      "archive_sha256": [
+        "be41c29cb3e84cf1ad46cf2f700a3aba73bc0f441c084a04407d20ff6e085e63",
+        "d5b1fe25c7914ad0d19e62b622330d98cc07f8f24b83d5f4fc3bda685bf0197f",
+        "5ba97772ee4f9a4f8f3eeecd2b9573f2c3a3d9ca0d5df2cdfe3068b42f80dd6d"
+      ]
+    },
+    {
+      "target": "selected401",
+      "errors": {
+        "inner_points": 0.0,
+        "inner_target": 0.0
+      },
+      "B2_scale": 1.6313464444829588,
+      "passed": true,
+      "archive_sha256": [
+        "35b967c43f8357c53fb5ecac1d299d6a5afcb984e718f38e605fc36dd350cc1f",
+        "a686d71d503878c6f4cb4797ca89baff9a8c08c53054b7851ca8a360acd23f97",
+        "7bff92edd03225effbf420b9e8af7fa6d2b4c7b6fd1cf2221dd2fab5bf2fb8ad"
+      ]
+    }
+  ],
+  "native_inputs_availability": "Original Wouts and upstream validation archives remain maintainer-local; their hashes are in the records. No independent native reproduction claimed.",
+  "exploratory_narrow_relative_improvement": 0.0507274246381163
+}

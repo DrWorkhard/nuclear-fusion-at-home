@@ -1,0 +1,168 @@
+[
+  {
+    "target": "reference401",
+    "stage": "control",
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/check_coils.py",
+      "--candidate",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/submissions/length-headroom-six-coil/candidate.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+      "--target",
+      "reference401",
+      "--seconds",
+      "300",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/control"
+    ],
+    "status": 0,
+    "elapsed_s": 8.512990375049412
+  },
+  {
+    "target": "selected401",
+    "stage": "control",
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/check_coils.py",
+      "--candidate",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/submissions/length-headroom-six-coil/candidate.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+      "--target",
+      "selected401",
+      "--seconds",
+      "300",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/control"
+    ],
+    "status": 0,
+    "elapsed_s": 6.725399167044088
+  },
+  {
+    "target": "reference401",
+    "stage": "fit",
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/fit_coils.py",
+      "--snapshot",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/control/seed.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+      "--target",
+      "reference401",
+      "--seconds",
+      "300",
+      "--check-seconds",
+      "300",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/fit"
+    ],
+    "status": 0,
+    "elapsed_s": 305.05479187495075
+  },
+  {
+    "target": "selected401",
+    "stage": "fit",
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/fit_coils.py",
+      "--snapshot",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/control/seed.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+      "--target",
+      "selected401",
+      "--seconds",
+      "300",
+      "--check-seconds",
+      "300",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/fit"
+    ],
+    "status": 0,
+    "elapsed_s": 305.03723870799877
+  },
+  {
+    "target": "reference401",
+    "stage": "surfaces",
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/trace_surfaces.py",
+      "--snapshot",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/fit/selected-snapshot.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+      "--target",
+      "reference401",
+      "--transits",
+      "200",
+      "--direct",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/surfaces"
+    ],
+    "status": 0,
+    "elapsed_s": 239.04754220880568
+  },
+  {
+    "target": "selected401",
+    "stage": "surfaces",
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/trace_surfaces.py",
+      "--snapshot",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/fit/selected-snapshot.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+      "--target",
+      "selected401",
+      "--transits",
+      "200",
+      "--direct",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/surfaces"
+    ],
+    "status": 0,
+    "elapsed_s": 247.75763475010172
+  },
+  {
+    "target": "reference401",
+    "stage": "bounce",
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/measure_coil_bounce.py",
+      "--snapshot",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/fit/selected-snapshot.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+      "--target",
+      "reference401",
+      "--seconds",
+      "600",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/bounce"
+    ],
+    "status": 0,
+    "elapsed_s": 10.255947584053501
+  },
+  {
+    "target": "selected401",
+    "stage": "bounce",
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/measure_coil_bounce.py",
+      "--snapshot",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/fit/selected-snapshot.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+      "--target",
+      "selected401",
+      "--seconds",
+      "600",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/bounce"
+    ],
+    "status": 0,
+    "elapsed_s": 9.794372166972607
+  }
+]

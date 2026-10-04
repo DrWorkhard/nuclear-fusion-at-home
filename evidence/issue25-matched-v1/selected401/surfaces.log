@@ -1,0 +1,12 @@
+[Mac-mini-von-Sebastian][[37051,0],0][btl_tcp_component.c:1021:mca_btl_tcp_component_create_listen] bind() failed: Operation not permitted (1)
+{
+ "lines_confined": 10,
+ "lines": 10,
+ "max_abs_iota_mismatch": 0.005641442517243189,
+ "lines_completing_transits": 10,
+ "requested_transits": 200,
+ "all_confined_and_iota_matching": true,
+ "nestedness_tested": false,
+ "iota_tolerance": 0.02,
+ "physical_admission": false
+}

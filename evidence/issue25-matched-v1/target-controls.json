@@ -1,0 +1,30 @@
+[
+  {
+    "target": "reference401",
+    "errors": {
+      "inner_points": 0.0,
+      "inner_target": 0.0
+    },
+    "B2_scale": 1.6293829620247962,
+    "passed": true,
+    "archive_sha256": [
+      "be41c29cb3e84cf1ad46cf2f700a3aba73bc0f441c084a04407d20ff6e085e63",
+      "d5b1fe25c7914ad0d19e62b622330d98cc07f8f24b83d5f4fc3bda685bf0197f",
+      "5ba97772ee4f9a4f8f3eeecd2b9573f2c3a3d9ca0d5df2cdfe3068b42f80dd6d"
+    ]
+  },
+  {
+    "target": "selected401",
+    "errors": {
+      "inner_points": 0.0,
+      "inner_target": 0.0
+    },
+    "B2_scale": 1.6313464444829588,
+    "passed": true,
+    "archive_sha256": [
+      "35b967c43f8357c53fb5ecac1d299d6a5afcb984e718f38e605fc36dd350cc1f",
+      "a686d71d503878c6f4cb4797ca89baff9a8c08c53054b7851ca8a360acd23f97",
+      "7bff92edd03225effbf420b9e8af7fa6d2b4c7b6fd1cf2221dd2fab5bf2fb8ad"
+    ]
+  }
+]

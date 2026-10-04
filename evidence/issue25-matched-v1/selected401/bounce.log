@@ -1,0 +1,2 @@
+[Mac-mini-von-Sebastian][[32788,0],0][btl_tcp_component.c:1021:mca_btl_tcp_component_create_listen] bind() failed: Operation not permitted (1)
+{"completed": true, "benefit_transfer_confirmed": false, "ideal_wide_score": 0.00021163527006159635, "ideal_narrow_score": 1.100894343118703e-05, "coil_wide_score": null, "coil_narrow_score": 4.0389230980703696e-05, "elapsed_s": 8.289671916980296}

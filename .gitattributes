@@ -9,3 +9,4 @@
 # Hash-checked by the public dense diagnostic: keep its committed LF bytes on
 # every platform without renormalizing the historical file.
 /evidence/plasma-design-v2/reference-input-401.json -text
+/evidence/issue25-matched-v1/** -text

@@ -1,0 +1,58 @@
+{
+  "benefit_transfer_confirmed": false,
+  "completed": false,
+  "kind": "target-launch-coil-bounce",
+  "limitation": "target launch labels are not verified realized flux coordinates",
+  "physical_admission": false,
+  "provenance": {
+    "external_repositories": {},
+    "host": {
+      "captured_at": "2026-10-04T18:45:00.639186+00:00",
+      "logical_cpu_count": 8,
+      "machine": "arm64",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+      "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+    },
+    "repository": {
+      "available": true,
+      "branch": "research/issue25-matched-targets",
+      "commit": "a551289e63e44d7dbae7b5d5a0e5f4b6026db257",
+      "dirty": false,
+      "path": "/private/tmp/fusion-issue25-Hg6Meh/repo"
+    },
+    "schema_version": 1
+  },
+  "resolution": [
+    801,
+    16,
+    2
+  ],
+  "sources_before": {
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/fit/selected-snapshot.json": "ec1f8ce7073177d31e1dc1d44aad6478169b602189b8e8b204373481da368799",
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/scripts/measure_coil_bounce.py": "3a77dbd4ca21a20f04bd6aa411179f0e1c92acea34509c56375e3db6749c520f",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/__init__.py": "8d36f4ca6cbd9c95d1286a5f7914db91f020133819f8e39eb5aba6c405cc1390",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/bounce_action.py": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/clear_coil_field_audit.py": "ceb6584e9137e75b67a67b7a24ae2ab1aea01aa85b8f5748952dfbb2f5f802dd",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/coil_bounce.py": "8c2f599c2e6ca1db373e536ad6e9743a9f8f2d609bab7f55d52922f1fc90b6e2",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/coil_check.py": "faccc848e1689bb372b9bef8ebc6f7e2c7f50a0310acef680ee39b83119a328b",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/coil_fit.py": "b8f0dc217b3ec6cda296af8c55743d4906b943de9a9bfddc3225f2dbb6c974c7",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/coupled_coil_audit.py": "eccf1af7ad4827445bfbd5e0d249f8638c82645bc202166fe5b8f7be8f627fb4",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/documentation.py": "7fcfd5475aface32114e5845ff997edb2926f541f823d566d29185da47116aeb",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/documentation_policy.py": "72de8a9b9321992af6655b19c6bd30c81d50263ba5918c23bb8887a5d6d91dc3",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/provenance.py": "9960f5021f8b1d80e5d524df77df986cf889e7db8391e167ecb00776ae7faa29",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/realized_field.py": "9a944f9202b8d573d8d5465c761cf3d3f2babd44ffa035f6912419de1631931c",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/reference_wout.py": "f11823877c64f41f600afa133be087f0ea25dafc757215d7b07f3faae765032f",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/vmec_trace.py": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880",
+    "/private/tmp/fusion-issue25-Hg6Meh/repo/src/fusion_baselines/wout_target.py": "886fdd7348566624a0c7f62c5929aedf0c72f66e160d0f648a6d5a710813bc96"
+  },
+  "surfaces": [],
+  "target_id": "reference401"
+}
