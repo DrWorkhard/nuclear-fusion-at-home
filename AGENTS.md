@@ -49,7 +49,7 @@
 - Use shallow, single-branch, no-tags clones and shallow CI checkouts. Core/public
   work must not require historical evidence or raw runs; fetch archives only
   when needed.
-- Keep active code/inputs, public cases/candidates and short evidence summaries
+- Keep only active code/inputs, public cases/candidates and short evidence summaries
   on `main`, linked to archive tags/commits and original producer/evaluator states.
   Full evidence belongs in an annotated `evidence-*` commit, not its description
   or a copied archive tree. Follow the
@@ -62,7 +62,8 @@
   No whole-tree byte-freeze exceptions.
 - Only README.md, STATUS.md and PROJECT_PLAN.md belong at the docs root.
   Details go one folder below, indexed by each folder's README.
-- Write English entry docs with relative links. Keep step names/statuses consistent.
+- Write English entry docs with relative links. Keep summaries concise and step
+  names/statuses consistent.
   The README_agents.md roadmap, including MS1/MSX, goes
   immediately before “Start in three commands”. Describe 4A–4D only on Step 4's page.
 - One home per topic: motivation in README, technical onboarding in README_agents,
