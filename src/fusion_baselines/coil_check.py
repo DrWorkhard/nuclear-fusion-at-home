@@ -1,50 +1,29 @@
-"""Five frozen magnetic snapshots on archived reference401 interior grids; no search."""
+"""Fixed reference401 inputs and shared field/geometry checks, separate from fitting."""
 
-import argparse
 import hashlib
-import importlib
-import io
 import json
-import os
 import re
-import shutil
-import time
 from pathlib import Path
 
-import explore_coherent_coils as paired
 import numpy as np
 
 from fusion_baselines import coupled_coil_audit as independent
 from fusion_baselines.clear_coil_field_audit import archived_target
-from fusion_baselines.provenance import git_state
+from fusion_baselines.coil_fit import Recorder as RunRecorder
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 TARGET = "evidence/plasma-design-v2/reference-input-401.json"
 INDEX = "evidence/plasma-balanced-v1/validation.json"
 WOUT = "artifacts/plasma-design-v2/reference-fine/wout.nc"
-ORIGINAL = (
-    "artifacts/clear-coil-field-start-v1/reference-n6/operations/qualification-N-00-snapshot.json"
-)
-SHAPE52 = paired.SNAPSHOT
-COHERENT = "artifacts/coherent-coils-v2/run/coherent/selected-snapshot.json"
-COHERENT_RESULT = "artifacts/coherent-coils-v2/run/result.json"
-COHERENT_TRIAL = "artifacts/coherent-coils-v2/run/coherent/trial-598.json"
+
 FIXED = {
     TARGET: "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
     INDEX: "84eff962b74ca5124147e12b4e30927a29b44f31c849333b0ae17c79a382d50c",
     WOUT: "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
-    ORIGINAL: "4c29c1f7afb67f290bd3c7c2ec23829e5f386e7e8c299f8d40a0e0f4e2f03830",
-    SHAPE52: "2492d83ad3392069be5bfe8ae35b2e98ca0419916517e96065e017bcf15417e9",
-    paired.TRIAL: "954e8b63bbb8fc2fb3b3215c8f70c88b0f576796b43fa7e57d991bd45d66e961",
-    COHERENT: "e05ed6c3b497aa332c3ebfac1f1b9d5d63ec82fc6196f7bbd4ff8d238597176b",
-    COHERENT_RESULT: "328ccd9727e406a72b50016aa03d93f4ac4b0e57f7f57a11686050d7c088cf2b",
-    COHERENT_TRIAL: "59dee3d83fcc3dbeeca04de839adde9f8bdad0fa72311ae1169d3949209983d4",
 }
 LEVELS = ((32, 256), (64, 256), (64, 512))
-LABELS = ("original-shape", "shape52", "coherent598", "restart-control", "restart-expanded-low")
-# Exact values of the source-bound archives/input, not recomputed from rounded pi.
 B2, TARGET_FLUX = 1.6293829620247962, -0.03141592653589793
-SECONDS, MAX_BYTES = 180, 128 * 1024**2
+MAX_BYTES = 128*1024**2
 
 
 def need(condition, message):
@@ -74,7 +53,7 @@ def bind(path, expected, sources):
     return path
 
 
-def snapshot_identity(snapshot, trial=None):
+def snapshot_identity(snapshot):
     independent.validate_snapshot(snapshot)
     need(
         (snapshot["nbase"], snapshot["order"]) == (6, 5)
@@ -82,79 +61,11 @@ def snapshot_identity(snapshot, trial=None):
         and snapshot["target_flux"] == TARGET_FLUX,
         "fixed reference normalization and six order-five coils required",
     )
-    if trial is not None:
-        need(
-            trial["status"] == "completed"
-            and trial["role"] in ("search", "startup-seed")
-            and type(trial["index"]) is int
-            and trial["index"] >= 0
-            and np.array_equal(np.ravel(snapshot["base_coefficients"]), trial["x"])
-            and all(snapshot[k] == trial["metrics"][k] for k in ("scale", "unit_flux"))
-            and trial["metrics"]["current"] == 1e5 * snapshot["scale"],
-            "exact selected geometry/current/trial association required",
-        )
+    need(np.isfinite(snapshot["seed_unit_flux"]) and snapshot["seed_unit_flux"] != 0,
+         "finite seed flux orientation required")
 
 
-def selected_snapshot(report, folder, arm_name, sources, *, width):
-    need(
-        report.get("completed") is True
-        and report.get("sources_unchanged") is True
-        and report["sources_before"] == report["sources_after"],
-        "complete source-stable search required; no skipped failed arms",
-    )
-    for path, expected in report["sources_before"].items():
-        bind(path, expected, sources)
-    need(
-        report["sources_before"].get(str((ROOT / TARGET).resolve())) == FIXED[TARGET],
-        "search must target the exact reference401 input",
-    )
-    arms = [r for r in report["arms"] if r["arm"] == arm_name]
-    need(len(arms) == 1, "one explicitly named selected arm required")
-    arm = arms[0]
-    need(
-        arm.get("startup_pass") is True
-        and not arm.get("execution_error")
-        and arm["status"]["reason"] in ("budget", "solver-return")
-        and len(arm["fine"]) == 2,
-        "successful startup and both frozen fine rows required",
-    )
-    chosen = arm["fine_selected"]
-    need(type(chosen["index"]) is int and chosen["index"] >= 0, "selected integer index required")
-    stem = Path(folder) / arm_name
-    trial_path = stem / f"trial-{chosen['index']:0{width}}.json"
-    bind(trial_path, digest(trial_path), sources)
-    need(read_json(trial_path) == chosen, "saved selected trial differs from result")
-    snapshot_path = stem / "selected-snapshot.json"
-    bind(snapshot_path, digest(snapshot_path), sources)
-    snapshot = read_json(snapshot_path)
-    snapshot_identity(snapshot, chosen)
-    need(
-        arm["active_names"] == snapshot["names"] and arm["active_count"] == 198,
-        "selected named physical coordinates required",
-    )
-    for shift, fine in zip((0.0, 0.5), arm["fine"], strict=True):
-        path = stem / f"fine-{shift}.json"
-        bind(path, digest(path), sources)
-        need(
-            read_json(path) == fine
-            and fine["shift"] == shift
-            and fine["n"] == 128
-            and fine["nodes"] == 512
-            and fine["checks_pass"] is True
-            and fine["metrics"]["frozen_scale"] == snapshot["scale"]
-            and fine["metrics"]["current"] == 1e5 * snapshot["scale"],
-            "both associated fixed-current fine results required",
-        )
-        bind(stem / f"fine-{shift}.npz", fine["arrays_sha256"], sources)
-    return snapshot, dict(
-        snapshot=str(snapshot_path),
-        selected_index=chosen["index"],
-        fine_selection=arm["fine_selection"],
-        geometry_admission="not_assessed_here",
-    )
-
-
-def intake(restart_result, restart_sha256, guard=lambda: None):
+def intake(guard=lambda: None):
     sources = {}
     for path, expected in FIXED.items():
         guard()
@@ -198,59 +109,7 @@ def intake(restart_result, restart_sha256, guard=lambda: None):
         guard()
     targets = {n: archived_target(archives, n) for n in (32, 64)}
     need(all(t["B2_scale"] == B2 for t in targets.values()), "fixed archived64 B2 identity")
-    snapshots = [data[ORIGINAL], data[SHAPE52]]
-    snapshot_identity(snapshots[0])
-    need(
-        snapshots[0]["sources"]
-        == dict(
-            input=dict(path=str((ROOT / TARGET).resolve()), sha256=FIXED[TARGET]),
-            wout=state["wout"],
-        ),
-        "original magnetic seed target pairing",
-    )
-    snapshot_identity(snapshots[1], data[paired.TRIAL])
-    need(data[paired.TRIAL]["index"] == 52, "frozen shape52 selection")
-    coherent, association = selected_snapshot(
-        data[COHERENT_RESULT], (ROOT / COHERENT_RESULT).parent, "coherent", sources, width=3
-    )
-    need(
-        coherent == data[COHERENT]
-        and association["selected_index"] == 598
-        and read_json(ROOT / COHERENT_TRIAL) == data[COHERENT_RESULT]["arms"][1]["fine_selected"],
-        "frozen coherent598 selection",
-    )
-    snapshots.append(coherent)
-    associations = [
-        dict(snapshot=str(ROOT / ORIGINAL)),
-        dict(snapshot=str(ROOT / SHAPE52)),
-        association,
-    ]
-    restart_path = bind(restart_result, restart_sha256, sources)
-    restart = read_json(restart_path)
-    need(
-        restart["kind"] == "matched-absolute-box-coherent-restarts"
-        and restart["seed_sha256"] == FIXED[COHERENT]
-        and restart["center_sha256"] == FIXED[SHAPE52]
-        and [a["arm"] for a in restart["arms"]] == ["control", "expanded-low"],
-        "both prospectively named session7 arms required",
-    )
-    for arm in ("control", "expanded-low"):
-        guard()
-        snapshot, association = selected_snapshot(
-            restart, restart_path.parent, arm, sources, width=4
-        )
-        snapshots.append(snapshot)
-        associations.append(association)
-    guard()
-    return (
-        data[TARGET],
-        targets,
-        [
-            dict(label=label, snapshot=snapshot, association=association)
-            for label, snapshot, association in zip(LABELS, snapshots, associations, strict=True)
-        ],
-        sources,
-    )
+    return data[TARGET], targets, sources
 
 
 def error(actual, expected):
@@ -349,9 +208,9 @@ def field_metrics(B, target, A, tangents, snapshot, ninner):
     return result
 
 
-class Recorder(paired.Recorder):
-    def __init__(self, output, deadline):
-        super().__init__(output, deadline)
+class Recorder(RunRecorder):
+    def __init__(self, output, deadline, storage=None):
+        super().__init__(output, deadline, storage)
         self.counts = {k: dict(attempted=0, completed=0) for k in ("B", "A", "independent_BA")}
         self.points = {k: dict(attempted=0, completed=0) for k in self.counts}
 
@@ -361,7 +220,7 @@ class Recorder(paired.Recorder):
             if isinstance(value, bytes)
             else (json.dumps(value, sort_keys=True, indent=2, allow_nan=False) + "\n").encode()
         )
-        if self.storage[0] + len(payload) > MAX_BYTES:
+        if self.bytes + len(payload) > MAX_BYTES:
             raise OSError("128 MiB shared output ceiling including temporary publication")
         super().save(name, payload)
 
@@ -481,123 +340,28 @@ def refinements(rows):
     return result
 
 
-def fingerprints(sources):
-    result = dict(sources)
-    modules = (
-        "simsoptpp",
-        "simsopt.field.biotsavart",
-        "simsopt.field.coil",
-        "simsopt.field.magneticfield",
-        "simsopt.geo.curve",
-        "simsopt.geo.curvexyzfourier",
-        "simsopt._core.optimizable",
-        "simsopt._core.util",
-        "simsopt._core.derivative",
-        "fusion_baselines.coupled_coil_audit",
-        "fusion_baselines.clear_coil_field_audit",
-        "fusion_baselines.provenance",
-    )
-    paths = [Path(importlib.import_module(name).__file__).resolve() for name in modules]
-    paths += [
-        Path(__file__).resolve(),
-        ROOT / "tests/test_screen_coherent_interior.py",
-        Path(paired.__file__),
-        Path(paired.previous.__file__),
-        Path(paired.previous.common.__file__),
-    ]
-    for path in paths:
-        current = digest(path)
-        need(
-            str(path) not in result or result[str(path)] == current,
-            "source bytes changed during intake",
-        )
-        result[str(path)] = current
-    return result
+def geometry(snapshot, data, guard):
+    from fusion_baselines.clear_coil_field_audit import json_value
+    from fusion_baselines.coupled_coil_audit import geometry_certificates
+    from fusion_baselines.curvature_bounds import classify_enclosure, curvature_enclosure
 
-
-def run(output, restart_result, restart_sha256):
-    started = time.monotonic()
-    need(
-        all(
-            os.environ.get(k) == "1"
-            for k in (
-                "OMP_NUM_THREADS",
-                "OPENBLAS_NUM_THREADS",
-                "VECLIB_MAXIMUM_THREADS",
-                "MKL_NUM_THREADS",
-            )
-        ),
-        "one-thread environment required",
-    )
-    if shutil.disk_usage(ROOT).free < 3 * 1024**3:
-        raise OSError("3 GiB starting reserve required")
-    record = Recorder(output, started + SECONDS)
-    report = dict(
-        kind="fixed-coherent-interior-screen",
-        completed=False,
-        states=[],
-        repository=git_state(ROOT),
-        physical_admission=False,
-        transfer_pass=False,
-        optimizer_calls=0,
-        vmec_calls=0,
-        levels=LEVELS,
-        labels=LABELS,
-        limits=dict(seconds=SECONDS, output_bytes=MAX_BYTES),
-        restart_result=dict(path=str(Path(restart_result).resolve()), sha256=restart_sha256),
-    )
-    try:
-        data, targets, states, sources = intake(restart_result, restart_sha256, record.guard)
-        report["sources_before"] = fingerprints(sources)
-        record.write("inputs.json", report)
-        for state in states:
-            label, snapshot = state["label"], state["snapshot"]
-            result = dict(
-                label=label,
-                association=state["association"],
-                rows=[],
-                geometry_admission="not_assessed_here",
-                physical_admission=False,
-            )
-            report["states"].append(result)
-            record.write(label + "-snapshot.json", snapshot)
-            for level, (ninner, nodes) in enumerate(LEVELS):
-                stem = f"{label}-{level}"
-                record.active = dict(label=label, level=level)
-                record.write(stem + "-attempt.json", dict(label=label, ninner=ninner, ncoil=nodes))
-                row, arrays = screen_level(snapshot, data, targets[ninner], ninner, nodes, record)
-                buffer = io.BytesIO()
-                np.savez_compressed(buffer, **arrays)
-                record.guard()
-                payload = buffer.getvalue()
-                record.write(stem + ".npz", payload)
-                row["arrays"] = dict(
-                    path=str(output / (stem + ".npz")),
-                    sha256=hashlib.sha256(payload).hexdigest(),
-                    bytes=len(payload),
-                )
-                record.write(stem + ".json", row)
-                result["rows"].append(row)
-                need(row["checks_pass"], "independent field/geometry identity failed")
-            result["refinements"] = refinements(result["rows"])
-        report["sources_after"] = {path: digest(path) for path in report["sources_before"]}
-        report["sources_unchanged"] = report["sources_after"] == report["sources_before"]
-        report["completed"] = report["sources_unchanged"] and len(report["states"]) == 5
-        record.guard()
-    except Exception as exc:
-        report.update(completed=False, error=f"{type(exc).__name__}: {exc}")
-    report.update(counts=record.counts, points=record.points, elapsed_s=time.monotonic() - started)
-    code = paired.publish(record, report, started)
-    print(json.dumps(dict(output=str(output), completed=report["completed"])))
-    return code
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--restart-result", required=True, type=Path)
-    parser.add_argument("--restart-result-sha256", required=True)
-    args = parser.parse_args()
-    raise SystemExit(
-        run(args.output.resolve(), args.restart_result.resolve(), args.restart_result_sha256)
-    )
+    levels = []
+    for nc, ns, nk in ((1024, 512, 1024), (2048, 1024, 4096)):
+        guard()
+        g = geometry_certificates(snapshot, data, nc, ns, ns)
+        guard()
+        curvature = [curvature_enclosure(c, nk) for c in snapshot["base_coefficients"]]
+        states = [classify_enclosure(c, 12) for c in curvature]
+        passed = (max(g["length_upper"]) <= 3.5 and g["coil_lower"] >= .06
+                  and g["plasma_lower"] >= .08 and all(s == "pass" for s in states))
+        witness = (any(s == "fail" for s in states)
+                   or min(p["sampled"] for p in g["coil_pairs"]) < .06
+                   or min(p["sampled"] for p in g["plasma_distances"]) < .08)
+        levels.append(dict(ncoil=nc, nsurface=ns, ncurvature=nk, geometry=g,
+                           curvature=curvature, status="pass" if passed else
+                           "fail" if witness else "unresolved"))
+        guard()
+        if passed or witness:
+            break
+    return json_value(dict(status=levels[-1]["status"], levels=levels, interval_arithmetic=False,
+                           complete_self_disjointness=False, physical_admission=False))

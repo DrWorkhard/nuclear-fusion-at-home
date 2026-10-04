@@ -10,6 +10,6 @@ passes scoped geometry; its longer predecessor has unresolved length bounds.
 Padded floating-point bounds do not establish
 directed interval proofs, complete self-disjointness or finite-build engineering.
 
-Shared implementation: `coupled_coil_audit.py`, `clear_coil_geometry_audit.py`
+Shared implementation: `coupled_coil_audit.py`, `coil_check.py`
 and `curvature_bounds.py`. Completed path-certification studies and their tests
 are [frozen in Git](../validation/REPRODUCING_RESULTS.md), not maintained here.

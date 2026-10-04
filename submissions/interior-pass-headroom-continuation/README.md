@@ -32,6 +32,11 @@ Public evaluation and replay (Python 3.14.8, macOS) give `report_replay_pass: tr
 
 ## Reproduce
 
+The candidate remains usable by the current public evaluator. Its completed
+construction driver and dependencies are preserved at commit **`bf51e3a`**; run
+the commands below in a separate checkout of that revision. See
+[historical reproduction](../../docs/validation/REPRODUCING_RESULTS.md).
+
 Python 3.12 with `numpy scipy netCDF4 simsopt==1.11.1 vmecpp==0.8.0`, and one thread
 (`OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1`):
 

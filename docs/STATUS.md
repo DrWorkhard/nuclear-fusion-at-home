@@ -1,6 +1,6 @@
 # Scientific status
 
-Updated 4 October 2026; no new numerical results.
+Updated 4 October 2026; no new scientific result.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The best

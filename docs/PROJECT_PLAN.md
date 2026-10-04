@@ -48,7 +48,8 @@ spend effort on decisions that test the path.
    bottleneck. Prefer an existing community benchmark. Aim to resolve this now;
    26 March 2027 is the outer MS0 decision target, not a six-month tooling project.
 
-One method, shared checks, one short record per question. Maintain only code
+One method, shared checks, one short record per question.
+[Active scope and workflows](review/ACTIVE_SCOPE.md) identify the code required. Maintain only code
 needed for active work or reproduction; completed tools resolve at their recorded
 Git revisions. Preserve evidence and raw data. Existing acceptance limits remain
 unchanged. Dates allocate effort; they do not promise scientific success.

@@ -1,29 +1,49 @@
 # Active coil research
 
-Use penalized normalized fitting, then separate fine-field and continuous-geometry
-checks. [Results and evidence](../STATUS.md) ·
-[Next experiment and decision](STEP4_RESEARCH_PROGRAMME.md) ·
+One normalized fitter, one set of field/geometry checks.
+[Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
 [Contribution ideas](RESEARCH_HINTS.md)
 
-## Run the existing native fit
+## Native workflow
 
 ```bash
 OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1 \
-  python scripts/explore_coil_headroom.py --box expanded --output artifacts/my-headroom
+  .venv/bin/python scripts/fit_coils.py \
+  --snapshot artifacts/coil-headroom-v3/run/headroom/selected-snapshot.json \
+  --output artifacts/my-fit --seconds 300 --check-seconds 120
 ```
 
-This requires the recorded local snapshots and [native environment](../validation/ENVIRONMENT.md).
-It fits reference401 only; the proposed matched-target study is not implemented.
-The [portable candidate](../../submissions/length-headroom-six-coil/README.md) needs
-neither those artifacts nor native dependencies.
+Requires the preserved [native environment](../validation/ENVIRONMENT.md) and local
+reference401 field archives. The snapshot is explicit; the driver no longer loads
+an entire chain of previous experiments. Historical absolute artifact paths are
+not portable. Use the [public candidate](../../submissions/length-headroom-six-coil/README.md)
+for an installation-free contribution.
 
-The retained implementation chain is headroom → longrun → restart → coherent →
-constrained → normalized, plus the interior screen. These files contain reused
-code and saved-run source dependencies, not separate research programmes.
-Acceptance mathematics live in `coupled_coil_audit.py`,
-`clear_coil_geometry_audit.py`, `curvature_bounds.py` and
-`boundary_control_metrics.py`. Reuse them; optimization penalties do not admit a design.
+1. Verify fixed target/source hashes and named physical coil/current mapping.
+2. Check derivatives and exact repeat, then run penalized normalized L-BFGS-B.
+   Retain completed candidates with sampled geometry/current limits and length
+   at most 3.45 m; select the lowest boundary RMS. Probes cannot win; no fallback.
+3. Freeze the selected currents. Check two fine boundary grids, continuous
+   geometry bounds, three interior resolutions and independent B/A calculations.
+4. Save inputs, source identities, attempts, failures, fields and a short result.
+   `completed` means diagnostic execution succeeded; it does **not** mean the
+   field limits passed or a physical design was accepted.
 
-Completed reports and retired drivers resolve through
-[historical reproduction](../validation/REPRODUCING_RESULTS.md). Their results,
-including failures, are summarized once in status; raw evidence is unchanged.
+The prospective search removes inherited coefficient boxes and evaluation caps;
+its objective and acceptance limits are unchanged. Length construction target is
+3.44 m, acceptance is 3.5 m. Default budgets are 300 s search (including startup)
+and 120 s checking, each capped at 1,800 s; output is capped at 256 MiB including
+interior files, with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
+before and after execution: in-flight native work can overrun, and late checks
+cannot claim completion. Use a fresh output directory. Failures remain on disk.
+
+Implementation: [driver](../../scripts/fit_coils.py),
+[objective and search](../../src/fusion_baselines/coil_fit.py),
+[checks and target intake](../../src/fusion_baselines/coil_check.py).
+Independent geometry/field mathematics stay separate from optimization penalties.
+This driver supports reference401 only; matched improved-target fitting and
+realized-plasma-benefit diagnostics remain to be implemented in the
+[next experiment](STEP4_RESEARCH_PROGRAMME.md).
+
+For old results, use their [original revisions](../validation/REPRODUCING_RESULTS.md),
+not this prospective search. Evidence and raw outputs are unchanged.

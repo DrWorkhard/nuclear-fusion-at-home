@@ -56,8 +56,8 @@ git show d5d395b:environments/vmecpp/pyproject.toml
 ```
 
 Use the exact producer revision recorded by each experiment for numerical replay;
-this newer navigation revision does not replace older source identities. Native
-fits retain their imported and hash-bound dependencies. Their data still requires
+this newer navigation revision does not replace older source identities. Historical
+fits require their original imported and hash-bound dependencies. Their data requires
 the recorded local artifacts, including failed runs. No evidence or raw data is
 removed by this cleanup.
 
@@ -79,6 +79,25 @@ These are navigation revisions. Reproduce numerical claims from the original
 producer revision and environment in their evidence. The exporter/audit are not
 needed to use the public packet or run the active fitter. Shared acceptance code,
 original evidence, candidate JSON, raw runs and installed environments are retained.
+
+## One prospective fitter
+
+The last tree containing the chained normalized/constrained/coherent/restart/
+longrun/headroom drivers and their tests is **`8581b1b`**:
+
+```bash
+git show 8581b1b:scripts/explore_coil_headroom.py
+git show 8581b1b:scripts/screen_coherent_interior.py
+```
+
+The current [single fitter](../optimization/README.md) extracts the active
+objective and independent checks, reads an explicit native snapshot, and uses
+wall-clock/storage bounds instead of inherited coefficient boxes and bundle
+caps. It is a prospective workflow, not a byte-identical historical replay.
+The completed submission continuation driver resolves at its introduction
+revision **`bf51e3a`**; its public candidate and result summary remain current.
+The trusted reference401 target, current conventions and acceptance thresholds
+remain unchanged. Reproduce past claims at their exact producer revisions.
 
 ## Evidence paths and data
 

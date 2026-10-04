@@ -183,13 +183,6 @@ def filament_field_and_potential(points, positions, tangents, currents, chunk_si
     return magnetic, potential
 
 
-def direct_field(snapshot, points, ncoil=128, chunk_size=128):
-    curves = physical_curves(snapshot, ncoil)
-    return filament_field_and_potential(
-        points, curves["positions"], curves["tangents"], curves["currents"], chunk_size
-    )
-
-
 def _boundary_input(input_json):
     document = (
         json.loads(Path(input_json).read_text())

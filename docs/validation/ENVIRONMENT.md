@@ -3,8 +3,9 @@
 The public starter requires only Python 3.11+. Its commands do not install or
 import the native research stack. [Quickstart](PUBLIC_QUICKSTART.md).
 
-The existing native environment uses Python 3.12 with NumPy, SciPy, SIMSOPT and
-netCDF4, plus the recorded target/coil artifacts. Keep that environment intact.
+The active fitter uses Python 3.12 with NumPy, SciPy and SIMSOPT, plus the
+recorded target/coil artifacts. The existing native environment also contains
+historical dependencies such as netCDF4. Keep that environment intact.
 Do not run `uv sync` in it to test a dev-only CI configuration; use a disposable
 checkout. This cleanup performs no package installation or environment repair.
 
@@ -28,7 +29,8 @@ versions resolve at the [freeze tag](REPRODUCING_RESULTS.md), together with each
 report's recorded source/environment identities. A current editable checkout
 does not make old absolute artifact paths portable.
 
-The root lockfile covers the core package and development checks only. Unused
+The root package has no runtime dependencies. Its eight-package lockfile covers
+the package and development checks only. Unused
 `benchmark` and `engineering` extras have been removed; installing the core package
 does not install SIMSOPT or qualify a native research environment. The recorded
 native stack remains separately managed and unchanged. Inactive VMEC++/NEO-JAX
