@@ -1,12 +1,13 @@
 # Scientific status
 
-Updated 4 October 2026; no new scientific result.
+Updated 4 October 2026; includes the exploratory matched-target experiment.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
-**No accepted coil design or demonstrated reactor advantage.** The best
-geometry-checked fit has boundary RMS **0.001996**, about **20×** its limit,
-and interior RMS **0.01148**, also failing. All coil fits use reference401;
-transfer of the improved Step 3 target is untested. Present evidence does not
+**No accepted coil design or demonstrated reactor advantage.** The new matched
+reference-target fit reaches boundary RMS **0.001932**, about **19×** its limit,
+and interior RMS **0.01072**, also failing. The improved-target fit also fails.
+[Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
+wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved. Present evidence does not
 substantiate the README's reactor-design timeline.
 
 ## Established results and their limits

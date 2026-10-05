@@ -9,3 +9,6 @@
 # Hash-checked by the public dense diagnostic: keep its committed LF bytes on
 # every platform without renormalizing the historical file.
 /evidence/plasma-design-v2/reference-input-401.json -text
+
+# Preserve the restored, hash-bound improved Step 3 input.
+/evidence/plasma-balanced-v1/selected-input-401.json -text
