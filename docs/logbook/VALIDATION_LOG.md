@@ -1,35 +1,40 @@
 # Current verification
 
-4 October 2026. Lightweight contributor setup, based on `70f8905`.
-No runtime, evaluator, root README or scientific-result changes.
-[Quickstart](../validation/PUBLIC_QUICKSTART.md#download-only-current-main) ·
-[Archive procedure](../validation/REPRODUCING_RESULTS.md) · [Status](../STATUS.md)
+5 October 2026. Completion checks for issue #25 / PR #35.
+[Scientific result](../optimization/ISSUE25_MATCHED_TARGETS.md) ·
+[Archive procedure](../validation/REPRODUCING_RESULTS.md)
 
-A fresh public HTTPS clone with depth 1, main only and no tags downloaded a
-228,000-byte Git pack and checked out 106 files totaling 784,750 bytes.
-Git metadata file content totaled 269,437 bytes, including that pack; protocol
-and filesystem overhead are additional. The clone contains exactly one commit,
-no tags, and persistent main-only/no-tags fetch configuration. Historical
-payloads and ignored local raw runs are absent. Measurements describe the base
-revision; documentation changes alter the exact bytes.
+The tested PR revision is `756d30d3f39dbe447d46f814c21983c2bd65bd46`.
+The scientific producer/evaluator remains clean
+`a551289e63e44d7dbae7b5d5a0e5f4b6026db257`; completion edits change documentation
+only. A fresh depth-one, single-branch, no-tags clone of the PR checkout supplied
+all tracked test inputs. No ignored research outputs were copied into it.
 
 | Check | Result |
 | --- | --- |
-| Public tests in the shallow clone | 60 passed with an empty environment |
-| Documentation and maintenance tests with the proposed changes | 40 passed |
-| Docs, Ruff, `git diff --check` | Pass |
-| Root README and runtime diff | Unchanged |
-| CI checkout settings | Explicit depth 1 / no tags; pushes run for branches, not archive tags |
-| Hosted CI | Required on the pushed commit before protected main advances |
+| Native regression, preserved Python 3.12 environment | 264 passed; eight existing NumPy/netCDF deprecation warnings |
+| Dependency-free public tests | 60 passed |
+| Documentation, Ruff 0.16.5 and diff whitespace | Pass |
+| Hosted CI at the tested PR revision | Core and all six Linux/macOS/Windows public matrix jobs passed |
+| Prepared archive manifest | All 6,258 file hashes verified; manifest and summary match the tag annotation |
+| Original local outputs | All 6,254 files match the archive byte-for-byte |
+| Archived numerical replay | Both targets' field metrics and every action cell/failure reproduced |
 
-Tests used an existing disposable core environment; the native environment was
-not synchronized. No additional research regression is needed for onboarding
-and checkout settings. Contributors can create branches/commits and open PRs
-without downloading historical evidence. A deliberately deepened clone or
-explicit archive fetch can still download old data; a full clone remains full.
+Native tests ran in the isolated clone with an empty environment and one native
+thread, using the existing serial wrapper that disables optional `mpi4py`.
+The direct pytest attempt failed during sandbox MPI initialization before tests
+could run. The preserved environment was neither synchronized nor modified.
+Ruff used the cached 0.16.5 executable after uv's default cache access was denied.
+These checks do not establish MPI support or independent native reproduction.
 
-The preceding archive migration's hash checks and native-input verification are
-recorded at [70f8905](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/70f8905fcfabe550eb2825e48bc7a62e8192af27/docs/logbook/VALIDATION_LOG.md).
-Its seven hosted checks passed on main. Archive identities and protections are
-unchanged. Raw local outputs remain intact. This owner-requested change uses
-the documented sole-maintainer review exception after required CI passes.
+The prepared archive is commit `05a4511084912fea9bd8d03e81f01018882396b8`,
+annotated tag `evidence-issue25-matched-v1`, tag object
+`fcbdbe28ba77c2f327546dcb6e01fc9743e5bc07`. It remains local: automatic approval
+review rejected publication pending explicit user authority. Remote retrieval
+therefore remains unchecked. Original Wouts and upstream validation archives are
+maintainer-local. Array replay does not rerun optimization, native tracing or
+geometry, and is not physical acceptance or external peer review.
+
+Earlier verification records remain in Git. The experiment's failure cases and
+acceptance limits are unchanged; the unresolved physical transfer result meets
+the issue's allowance for an inconclusive test, once its evidence is available.

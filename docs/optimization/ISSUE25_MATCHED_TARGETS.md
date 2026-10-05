@@ -55,7 +55,9 @@ establish physical transfer. Ten surviving lines do not prove nested surfaces.
 
 The evidence archive is prepared locally at commit
 `05a4511084912fea9bd8d03e81f01018882396b8`, tag `evidence-issue25-matched-v1`.
-Publication is pending: the automatic approval review timed out twice.
+Publication awaits explicit approval: after earlier timeouts, automatic approval
+review rejected the tag push on 5 October because it requires specific authority
+to publish the archived outputs.
 The archive is not yet available from GitHub.
 Dense target reconstruction and ideal controls match the qualified archived arrays
 exactly. The archive retains commands, failed trials, snapshots and diagnostic

@@ -119,7 +119,8 @@ complete at least the requested transits, and match **signed** iota within 0.02.
 A transit stopping event is distinct from boundary escape; reaching the integration
 time cap early cannot pass. The summary does not measure nestedness or island
 widths. Plots are exploratory, not a nested-surface proof or physical acceptance.
-The improved Step 3 target, edge s > 0.95 and benefit transfer remain untested.
+The [matched experiment](ISSUE25_MATCHED_TARGETS.md) also traces the improved
+Step 3 target; full benefit transfer remains unresolved. Edge s > 0.95 remains untested.
 [Confirmation, 4 October 2026](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-pr18-trace-confirmation-2026-10-04/evidence/pr18-trace-confirmation-2026-10-04)
 uses clean producer `df9db024ef6170df820649e61cccd868f65f0b88`, archive `21886ce`.
 For length-headroom-six-coil, direct and interpolated runs both complete 200
