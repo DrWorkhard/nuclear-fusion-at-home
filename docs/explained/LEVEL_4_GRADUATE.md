@@ -47,8 +47,8 @@ the wide one by 15.53% and remains rejected.
 
 ## Results and lessons
 
-- Best geometry-checked fit: boundary RMS **0.001996**, maximum **0.00943**,
-  interior RMS **0.01148**; all three field limits fail. Geometry passes: length
+- Length-headroom fit (the public candidate): boundary RMS **0.001996**, maximum
+  **0.00943**, interior RMS **0.01148**; all three field limits fail. Geometry passes: length
   ≤ 3.474 m, coil–coil ≥ 0.068 m, coil–plasma ≥ 0.133 m, curvature ≤ 10.05/m
   (normalized scale). Widening the coefficient box gained only 2.64% boundary RMS.
 - A matched restart lowered boundary RMS by 55% with 8.6% less current. A wider
@@ -57,12 +57,16 @@ the wide one by 15.53% and remains rejected.
 - Failures that shaped the method: coarse clearance sampling missed 1.8–6.7 mm
   gaps; a certified small-step search followed a poorly aligned objective; adjusting
   currents alone could not close the gap.
-- All coil fits so far target reference401, **not** the improved Step 3 target.
+- **Matched targets ([issue #25](../optimization/ISSUE25_MATCHED_TARGETS.md)):**
+  from the same start, two 300 s searches fit reference401 and the improved Step 3
+  target. Fine boundary RMS 0.001932 / 0.001953, maximum 0.00907 / 0.00927,
+  interior RMS 0.01072 / 0.01089; geometry passes and field limits fail in both.
+  These errors are against different targets, so they are not a benefit measure.
 
 ## New diagnostics (October 2026)
 
 - **Realized-field tracing:** ten field lines started on target surfaces
-  s = 0.05–0.95 in the best coil field stay inside for 200 toroidal transits;
+  s = 0.05–0.95 in the length-headroom coil field stay inside for 200 transits;
   maximum signed-ι mismatch is 0.004951 against a 0.02 tolerance. Interpolated and
   direct field evaluation agree. This does not measure nestedness or island widths,
   and s > 0.95 is untested.
@@ -72,12 +76,20 @@ the wide one by 15.53% and remains rejected.
   1.5e-15. It ran on the same machine family, so it is not an independent
   reproduction.
 
+- **Action diagnostic in the coil fields:** trajectories launched from target
+  coordinates (801 toroidal samples, 16 field-line labels) reuse the Step 3
+  statistic. The wide domain is incomplete in both arms because required wells
+  are missing (32 / 33 failed launch lines); no failed cell is dropped. The narrow
+  score is 5.07% lower for the improved arm, but both are degraded relative to
+  their ideal targets. Matched-fit tracing: 10/10 lines, signed-ι mismatch
+  0.005262 / 0.005641.
+
 Details: [active coil research](../optimization/README.md).
 
 ## Open problems and the next decision
 
-1. Fit the improved Step 3 target with matched effort and compare the bounce-action
-   diagnostic in both coil fields on matched domains (benefit transfer).
+1. Diagnose why shallow wells are lost in the coil fields and validate realized
+   flux-surface labels before any benefit-transfer confirmation.
 2. Diagnose optimizer conditioning and stopping once, rather than adding variants.
 3. Screen reactor feasibility: device scale, field, power balance, magnet loads,
    blanket and shield space, heat exhaust.

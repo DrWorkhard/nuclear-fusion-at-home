@@ -25,7 +25,10 @@ careful checker tests it, like a teacher marking homework.
 - We found a doughnut shape that is a little better than the one we started with.
 - Now we are making wiggly magnet rings for the doughnut. Our best rings are
   getting better, but the invisible bottle still leaks more than we allow.
-  So we are not finished.
+- We also made rings for our better doughnut. We are still checking whether it
+  stays better once the real rings hold it. So far we cannot tell.
+
+So we are not finished.
 
 The newspaper story on our [front page](../../README.md) is a dream about the
 future. It has not happened yet. Nobody has built anything: everything so far
