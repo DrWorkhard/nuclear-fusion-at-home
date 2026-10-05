@@ -45,12 +45,16 @@ failures are kept, not hidden.
   a design cycle reliably, and we improved a plasma shape by 5–11% on one specific
   computer test of particle confinement.
 - **Step 4 is in progress: coils.** Our best coil set satisfies the shape rules,
-  but its field leaks through the plasma boundary about **20 times** more than our
-  limit, and the field inside is about 15% further off than allowed. A new test
-  shows its field lines stay inside and twist by about the right amount, which is
-  encouraging but not proof.
-- These coils were fitted to the original plasma shape, not to our improved one.
-  Whether our improvement survives with real coils is the open question.
+  but its field leaks through the plasma boundary about **19 times** more than our
+  limit, and the field inside is about 7% further off than allowed. Its field
+  lines stay inside and twist by about the right amount, which is encouraging but
+  not proof.
+- We have now fitted coils, with equal effort, to both the original and our
+  improved plasma shape. Both miss the limits by similar amounts. Our particle
+  test could only be finished in a narrow region, where the improved shape is
+  still about 5% better. In the wider region the coil fields lack some of the
+  magnetic dips the test needs, so we cannot yet say whether the improvement
+  survives with real coils.
 - **By 24 October 2026** we decide whether to keep improving this method or switch.
 - **Step 5 and a working reactor design are not reached.** The 2030 goal is an
   ambition to aim for, not a promise.

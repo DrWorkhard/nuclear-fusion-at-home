@@ -47,15 +47,18 @@ does our target.
   test domain and 4.85% in a narrow one. This is a computed diagnostic of a vacuum
   field, not measured confinement.
 
-The acceptance limits are fixed in advance. Our best geometry-checked coil set:
+The acceptance limits are fixed in advance. Our best geometry-checked coil set
+(fitted to reference401):
 
 | Check | Limit | Best so far | Result |
 | --- | --- | --- | --- |
-| Boundary normal-field RMS, B·n/\|B\| | 1e-4 | 0.001996 | Fails, about 20× |
-| Maximum boundary normal error | 1e-3 | 0.00943 | Fails |
-| Interior field mismatch (RMS) | 0.01 | 0.01148 | Fails |
-| Coil length | ≤ 3.5 m at this scale | 3.474 m | Passes |
-| Coil spacing, plasma distance, curvature | Project limits | Within limits | Passes |
+| Boundary normal-field RMS, B·n/\|B\| | 1e-4 | 0.001932 | Fails, about 19× |
+| Maximum boundary normal error | 1e-3 | 0.00907 | Fails |
+| Interior field mismatch (RMS) | 0.01 | 0.01072 | Fails |
+| Coil length (≤ 3.5 m at this scale), spacing, plasma distance, curvature | Project limits | Within limits | Passes |
+
+A coil set fitted the same way to the improved target scores almost the same
+(0.001953 and 0.01089) and also fails.
 
 ## Status by step
 
@@ -77,7 +80,11 @@ score is a useful hint, not an accepted design.
 
 ## What comes next
 
-The key test is whether our improved plasma target can be matched by coils and keep
-its advantage in the actual coil field. By 24 October 2026 the project decides
+The key test is whether the improved target keeps its advantage in the actual coil
+field. The first matched comparison could not finish the wide-domain test in either
+coil field: some trapped-particle wells the diagnostic needs are missing. In the
+narrow domain the improved arm is 5.07% better, but both arms are worse than their
+ideal targets. Next, the project investigates why shallow wells are lost and checks
+the flux-surface labels used in the coil field. By 24 October 2026 it decides
 whether to continue this coil-fitting recipe or switch to another coil family,
 another target, or optimizing plasma and coils together.
