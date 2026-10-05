@@ -4,7 +4,10 @@
 [Scientific result](../optimization/ISSUE25_MATCHED_TARGETS.md) ·
 [Archive procedure](../validation/REPRODUCING_RESULTS.md)
 
-The tested PR revision is `756d30d3f39dbe447d46f814c21983c2bd65bd46`.
+The fresh-clone regression revision is `756d30d3f39dbe447d46f814c21983c2bd65bd46`.
+Hosted checks also pass on documentation follow-up
+`397077ca12745f85cd5ec32ac4a56c011fb2fd9c`; final publication changes are documentation only.
+Final-commit checks are recorded on PR #35 before merge.
 The scientific producer/evaluator remains clean
 `a551289e63e44d7dbae7b5d5a0e5f4b6026db257`; completion edits change documentation
 only. A fresh depth-one, single-branch, no-tags clone of the PR checkout supplied
@@ -16,7 +19,7 @@ all tracked test inputs. No ignored research outputs were copied into it.
 | Dependency-free public tests | 60 passed |
 | Documentation, Ruff 0.16.5 and diff whitespace | Pass |
 | Hosted CI at the tested PR revision | Core and all six Linux/macOS/Windows public matrix jobs passed |
-| Prepared archive manifest | All 6,258 file hashes verified; manifest and summary match the tag annotation |
+| Published archive manifest | All 6,258 file hashes verified; manifest and summary match the tag annotation |
 | Original local outputs | All 6,254 files match the archive byte-for-byte |
 | Archived numerical replay | Both targets' field metrics and every action cell/failure reproduced |
 
@@ -27,14 +30,18 @@ could run. The preserved environment was neither synchronized nor modified.
 Ruff used the cached 0.16.5 executable after uv's default cache access was denied.
 These checks do not establish MPI support or independent native reproduction.
 
-The prepared archive is commit `05a4511084912fea9bd8d03e81f01018882396b8`,
+The published archive is commit `05a4511084912fea9bd8d03e81f01018882396b8`,
 annotated tag `evidence-issue25-matched-v1`, tag object
-`fcbdbe28ba77c2f327546dcb6e01fc9743e5bc07`. It remains local: automatic approval
-review rejected publication pending explicit user authority. Remote retrieval
-therefore remains unchecked. Original Wouts and upstream validation archives are
-maintainer-local. Array replay does not rerun optimization, native tracing or
+`fcbdbe28ba77c2f327546dcb6e01fc9743e5bc07`. After explicit owner approval,
+the remote tag and peeled commit IDs match exactly. A fresh shallow HTTPS clone
+of the published tag verifies all manifest hashes and reproduces both numerical
+replays. The [archive README](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/05a4511084912fea9bd8d03e81f01018882396b8/evidence/issue25-matched-v1/README.md)
+records retrieval scope and limits. Original Wouts and upstream validation archives
+remain maintainer-local. Array replay does not rerun optimization, native tracing or
 geometry, and is not physical acceptance or external peer review.
 
 Earlier verification records remain in Git. The experiment's failure cases and
 acceptance limits are unchanged; the unresolved physical transfer result meets
-the issue's allowance for an inconclusive test, once its evidence is available.
+the issue's allowance for an inconclusive test, with its evidence now available.
+The owner explicitly approved publication and merge. The documented sole-maintainer
+review exception applies to this owner-authored PR; required CI is not bypassed.

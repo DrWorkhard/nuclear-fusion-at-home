@@ -53,12 +53,11 @@ establish physical transfer. Ten surviving lines do not prove nested surfaces.
 
 ## Evidence, availability and decision
 
-The evidence archive is prepared locally at commit
-`05a4511084912fea9bd8d03e81f01018882396b8`, tag `evidence-issue25-matched-v1`.
-Publication awaits explicit approval: after earlier timeouts, automatic approval
-review rejected the tag push on 5 October because it requires specific authority
-to publish the archived outputs.
-The archive is not yet available from GitHub.
+The complete evidence is published as
+[evidence-issue25-matched-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue25-matched-v1/evidence/issue25-matched-v1),
+archive commit [`05a4511`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/05a4511084912fea9bd8d03e81f01018882396b8).
+The tag preserves the original producer, outputs and failed trials separately from
+`main`; see its README for retrieval, replay and data availability.
 Dense target reconstruction and ideal controls match the qualified archived arrays
 exactly. The archive retains commands, failed trials, snapshots and diagnostic
 arrays; `replay.py` reproduces field/action metrics without Wouts or SIMSOPT
