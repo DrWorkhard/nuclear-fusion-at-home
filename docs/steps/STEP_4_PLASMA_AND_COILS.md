@@ -10,10 +10,10 @@
 | 4C — Pressure and confinement | Validated finite-pressure/current response and realized-field confinement diagnostics | Open; detailed work deferred |
 | 4D — Finite geometry and robustness | Qualified winding/build/load models and manufacturing-perturbation response | Open; detailed work deferred |
 
-Current fits target the original reference401, not the improved Step 3 plasma.
-Construction headroom resolves scoped geometry but loses the interior component
-pass. Boundary limits still fail; no magnetic-surface or benefit transfer is
-established. QUASR/LPQA calibration checks boundary components, not the complete
+The [matched experiment](../optimization/ISSUE25_MATCHED_TARGETS.md) fits both
+reference401 and the improved Step 3 plasma. Both scoped geometry checks pass,
+but field limits fail and wide action diagnostics are incomplete. Limited direct
+tracing passes; verified nested surfaces and physical benefit transfer remain open. QUASR/LPQA calibration checks boundary components, not the complete
 Goodman acceptance profile.
 
 Retained lessons: coarse clearance missed 1.8–6.7 mm gaps; certified small-step
