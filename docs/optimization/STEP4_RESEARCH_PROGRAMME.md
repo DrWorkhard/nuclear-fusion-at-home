@@ -1,38 +1,42 @@
 # One question before more fitting
 
-Updated 4 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
+Updated 6 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 
 **Can practical coils preserve a useful plasma benefit?** Boundary error is a
 necessary diagnostic in our protocol, not the project objective. The [first matched-target experiment](ISSUE25_MATCHED_TARGETS.md) now includes
 the improved Step 3 target, but leaves full benefit transfer unresolved. Resolve
 the shallow-well and realized-flux-label limitations before claiming reactor progress.
 
-The programme remains prospective beyond that exploratory comparison. Matched
-target intake and target-launch action diagnostics now exist; confirmed physical
-benefit transfer and the planned conditioning/stopping comparison remain open.
+## Decision of 6 October 2026
 
-## Next experiment and decision
+The registered hurdle was to at least halve reference401's geometry-checked
+boundary RMS (0.001996268) without worsening interior RMS (0.01147939), with
+realized-field diagnostics supporting benefit transfer. It is not met:
 
-1. **Prepare a matched comparison.** Bind the reference and improved targets,
-   starting coils, currents/flux conventions and numerical grids. Reuse the
-   normalized fitter and shared checks. Run one conditioning/stopping comparison
-   against the current recipe before adding more optimizer variants. Match
-   wall-clock budgets and report startup and search time separately.
-2. **Inspect actual fields early.** Use a small, fixed set of saved candidates
-   to examine magnetic surfaces, islands and interior fidelity; a failing field
-   can still diagnose why the method fails. Compare the Step 3 diagnostic in
-   reference-target and improved-target coil fields on matched domains. If
-   surfaces or required data are missing, report the blockage, not benefit
-   transfer. Register selection, tolerances and holdouts before confirmation.
-3. **Decide by 24 October 2026.** Continue the fixed-target recipe only if a
-   reference401 comparison at least halves its current geometry-checked boundary
-   RMS (0.001996268) without worsening interior RMS (0.01147939), and
-   realized-field diagnostics support
-   investigating benefit transfer. The factor of two is a prospective resource
-   allocation hurdle, **not** a new acceptance limit or a prediction. Otherwise
-   stop extending this recipe and choose one alternative: another coil family,
-   another target, or joint plasma/coil optimization in existing software.
-   Incomplete checks are insufficient grounds to scale the search.
+- The preregistered conditioning/stopping comparison ([#31](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/31)) reached
+  boundary RMS 0.0018761 (−6.0%) and interior RMS 0.010310 in 30 minutes.
+  Removing the early stop added about 1.2% before one failed trial ended the run.
+- The [matched-target fits](ISSUE25_MATCHED_TARGETS.md) reached 0.001932 and
+  0.001953 in 300 s; the wide action diagnostic is incomplete in both coil fields.
+
+#31 was reported by a contributor (one seed and one budget per arm) and has not
+been rerun by the maintainer. That suffices for this resource decision, not for a
+physical conclusion. **We stop extending the fixed-target recipe and accept that
+Step 4 progress along this route has stalled.** Acceptance limits are unchanged.
+[Decision record](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/28).
+
+## Next: choose the route by 24 October 2026
+
+1. **Fix the fitter first** ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)): one failed search trial currently
+   discards a run, and the stopping rule ends searches early.
+2. **Run one coil-freedom probe** ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)): six coils at Fourier order 8
+   against the order-5 control, 30 minutes each, same target and checks. If the
+   probe at least halves boundary RMS with passing geometry and no worse interior
+   RMS, change the coil family; otherwise move to joint plasma/coil optimization
+   ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Do not extend budgets to cross the threshold.
+3. **Keep inspecting actual fields.** Shallow-well fidelity and realized flux
+   labels ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)) apply to whichever route follows. If surfaces or
+   required data are missing, report the blockage, not benefit transfer.
 
 Keep target-specific normalization frozen and report each target separately;
 do not treat errors against different targets as a matched improvement.
@@ -41,7 +45,7 @@ and elapsed time together. The original 1e-4 / 1e-3 / 0.01 limits and continuous
 geometry checks remain unchanged. No endpoint or solver success flag admits a
 physical design; the [Step 4 requirements](../steps/STEP_4_PLASMA_AND_COILS.md) still apply.
 
-For this next comparison, declare at most 30 minutes per search arm, one native
+For the probe, declare at most 30 minutes per search arm, one native
 thread, 256 MiB retained output per arm and 3 GiB initial / 2 GiB live disk reserve.
 Use existing tools and one short result record. Stop at the resource ceiling,
 retain failures and make no conclusion from a run with incomplete diagnostics.
@@ -50,7 +54,7 @@ contributions. Avoid running heavy jobs during controlled timing.
 
 ## Reactor relevance and collaboration
 
-Do a desk-level feasibility screen alongside this comparison, without rebuilding
+Do a desk-level feasibility screen alongside this work, without rebuilding
 retired solvers: identify the proposed device scale, field and pressure assumptions,
 net-electric-power balance, winding/blanket/shield space, magnet loads, heat exhaust
 and maintenance access. For each, record a source or an explicit unknown and the

@@ -1,6 +1,6 @@
 # Level 2: for a teenager
 
-Updated 5 October 2026 · [All five levels](README.md) ·
+Updated 6 October 2026 · [All five levels](README.md) ·
 Previous: [Level 1](LEVEL_1_CHILD.md) · Next: [Level 3](LEVEL_3_UNIVERSITY.md)
 
 ## Fusion in one paragraph
@@ -55,7 +55,11 @@ failures are kept, not hidden.
   still about 5% better. In the wider region the coil fields lack some of the
   magnetic dips the test needs, so we cannot yet say whether the improvement
   survives with real coils.
-- **By 24 October 2026** we decide whether to keep improving this method or switch.
+- **Our current method has stalled.** Thirty more minutes of computer search
+  improved the coils by only 6%, and we needed a factor of two to keep going. We
+  accept that and change course: one quick test with more flexible coil shapes
+  decides, by 24 October 2026, whether to use more flexible coils or to design the
+  plasma shape and the coils together.
 - **Step 5 and a working reactor design are not reached.** The 2030 goal is an
   ambition to aim for, not a promise.
 
