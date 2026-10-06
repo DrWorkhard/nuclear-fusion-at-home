@@ -51,7 +51,8 @@
     ],
     "volume_relative_grid_tolerance": 1e-06,
     "rescaling_allowed": false,
-    "volume_definition": "absolute full-torus integral of x dot (x_theta cross x_phi)/3; compare candidate to original at each grid"
+    "volume_definition": "absolute full-torus integral of x dot (x_theta cross x_phi)/3; compare candidate to original at each grid",
+    "volume_grids_description": "full-torus N theta by N phi midpoint grids; both angles in radians over [0,2*pi)"
   },
   "released_coordinates": [
     {
@@ -60,15 +61,6 @@
       "n": 1,
       "units": "m",
       "baseline": -0.00788128880747288,
-      "delta_min": -0.001,
-      "delta_max": 0.001
-    },
-    {
-      "field": "zbs",
-      "m": 2,
-      "n": 1,
-      "units": "m",
-      "baseline": 0.0001045991431585819,
       "delta_min": -0.001,
       "delta_max": 0.001
     }
@@ -82,19 +74,9 @@
       "search": "bounded plasma-coordinate poll with a coil fit at each target",
       "proposal_deltas_m": [
         [
-          0.001,
-          0
-        ],
-        [
-          -0.001,
-          0
-        ],
-        [
-          0,
           0.001
         ],
         [
-          0,
           -0.001
         ]
       ],
@@ -201,9 +183,11 @@
     "ideal_holdout_nalpha": 32,
     "ideal_holdout_alpha": "2*pi*(k+0.5)/32, k=0..31; never used in selection",
     "ideal_holdout_refinement_nphi": 3201,
-    "ideal_holdout_relative_score_tolerance": 0.01,
+    "ideal_holdout_relative_score_tolerance": 0.001,
     "holdout_scope": "withheld phase grid only; not unseen target/seed generalization",
-    "target_launch_trace_scope": "diagnostic only; no claim of matched realized flux/alpha"
+    "target_launch_trace_scope": "diagnostic only; no claim of matched realized flux/alpha",
+    "ideal_holdout_convergence_rule": "abs(S1601-S3201) <= 0.001*max(abs(S1601),abs(S3201),1e-12), separately for C and J",
+    "maximum_normal_error": "report both fine-grid maxima against unchanged 1e-3 acceptance gate; no acceptance from feasibility screens"
   },
   "common_physics_endpoint": {
     "status": "blocked; report null",
@@ -231,13 +215,14 @@
     "required_before_confirmation": "separate reviewed protocol freezing the qualified common flux/phase mapping, endpoint refinement, holdouts and error budget before new candidates"
   },
   "decision": {
-    "feasibility_continue": "all four proposals terminate within search budget; at least one nonzero proposal passes size/intake; frozen selected pair completes all diagnostics, continuous geometry and current limits; J ideal holdout <=0.99*C ideal holdout at both refinements; J own-target fine boundary and interior RMS each <=1.10*C corresponding diagnostic; direct traces complete; holdout refinement passes",
-    "change": "complete pair but feasibility screens fail; this bounded basis/recipe is unsupported, not all joint optimization",
-    "inconclusive": "missing input, unqualified implementation, resource/clock interruption, missing required scores or incomplete diagnostics",
+    "feasibility_continue": "both proposals terminate within search budget; at least one nonzero proposal passes size/intake; frozen selected pair completes all diagnostics, continuous geometry and current limits; J ideal holdout <=0.99*C ideal holdout at both refinements; J own-target fine boundary and interior RMS each <=1.10*C corresponding diagnostic; direct traces complete; holdout refinement passes",
+    "change": "both J proposals explicitly rejected without resource interruption, or complete selected pair fails feasibility screens; only this bounded basis/recipe is unsupported",
+    "inconclusive": "missing input or C candidate, unqualified implementation, resource/clock interruption, unfinished J proposal, or incomplete selected-pair diagnostics",
     "physical_benefit_claim_allowed": false,
     "physical_admission": false,
     "boundary_ratio_scope": "own-target feasibility non-regression screen only, never a common physics gain",
-    "after_continue": "qualify common realized-field endpoint before confirmatory optimization; no automatic larger search"
+    "after_continue": "qualify common realized-field endpoint before confirmatory optimization; no automatic larger search",
+    "numerical_rejection": "retain documented nonconvergence/invalid geometry or complete plasma-domain failure; resource interruption is not a completed rejection"
   },
   "records": [
     "source and dependency identities",
@@ -249,5 +234,6 @@
     "selected frozen state",
     "timing/storage/call counts",
     "all failed and completed diagnostics"
-  ]
+  ],
+  "cost_rationale": "Two equilibrium solves at the documented approximate six-minute regeneration scale plus two at-most-five-minute coil fits leave part of the30-minute search budget for intake/scoring. This is a planning estimate, not measured perturbed-target runtime; ceilings never increase."
 }

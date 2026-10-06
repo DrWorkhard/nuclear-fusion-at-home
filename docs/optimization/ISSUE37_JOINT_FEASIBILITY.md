@@ -10,9 +10,9 @@ any larger optimizer or claim of realized-field benefit.
 
 ## Frozen comparison
 
-C fits the original reference401 target. J polls exactly four perturbations:
-`rbc(m=2,n=1)` ±1 mm and `zbs(m=2,n=1)` ±1 mm, one at a time about the original
-boundary, in that order. These are physical Fourier coefficients in metres;
+C fits the original reference401 target. J polls exactly two perturbations:
+`rbc(m=2,n=1)` +1 mm then −1 mm about the original boundary. This is a named
+physical Fourier coefficient in metres;
 all other input values stay fixed. Every fit starts from the identical original
 length-headroom seed, using six order-5 coils. No cross-arm warm starts, adaptive
 polls or retries. The JSON pins input, original Wout and seed hashes; the Wout is
@@ -20,7 +20,7 @@ local-only. Regenerated inputs would require a new protocol version.
 
 Keep `rbc(0,0)=1 m`, nfp=2, stellarator symmetry, vacuum pressure/current and edge
 flux fixed. Reject volume changes above 0.1% from the original boundary; compare
-128/256 full-torus quadratures to 1e-6 relative agreement before solving. No global
+128²/256² full-torus midpoint quadratures to 1e-6 relative agreement before solving. No global
 rescaling. Volume is the absolute divergence-theorem surface integral of
 `x dot (x_theta cross x_phi)/3` over both angles. Keep signed coil flux and the
 reference B² diagnostic scale fixed; report changed target B² separately.
@@ -37,7 +37,10 @@ before diagnostics. No fallback selected using validation results.
 ## Cost, checks and decision
 
 Run C then J, one native thread, **1800 s search + 900 s total diagnostics per arm**.
-J gets at most 300 s coil fitting per proposal within that total. Intake, volume,
+J gets at most 300 s coil fitting per proposal within that total. Two solves at
+the documented approximate six-minute regeneration scale plus ten minutes of
+fitting fit this planning envelope; perturbed-target runtime remains unmeasured.
+Intake, volume,
 all equilibrium solves, reconstruction and scoring consume the search budget;
 failed work is charged. Both arms have 256 MiB total output and 3/2 GiB initial/live
 disk reserves. Enforce both wall and monotonic deadlines; clock disagreement
@@ -45,15 +48,17 @@ above 5 s makes the comparison incomplete. No sleep allowance or budget reset.
 
 Use the existing fine field, continuous geometry, interior and independent B/A
 checks, plus ten direct 200-turn traces. Ideal-action validation uses 32 withheld
-half-shifted phases and 1601/3201 toroidal samples, with 1% score convergence;
-these are withheld samples, not unseen devices. All four J proposals must finish
+half-shifted phases and 1601/3201 toroidal samples, with 0.1% score convergence;
+these are withheld samples, not unseen devices. Both J proposals must finish
 or be explicitly rejected within budget, and the selected pair must finish checks.
 Continue only if geometry/current checks pass, J improves ideal validation score
 by at least 1% at both resolutions, its own-target boundary/interior RMS are at
 most 10% worse than C's, and all direct traces complete. This is a feasibility
 screen; cross-target field ratios do not measure a common physics improvement.
-A complete failure changes this bounded recipe; incomplete diagnostics are
-inconclusive. Neither verdict establishes a general limit on joint optimization.
+Report maximum normal error against its unchanged limit too. Both proposals
+explicitly rejected, or a complete selected pair failing the screens, changes this
+bounded recipe. A missing C candidate, interrupted proposal or incomplete selected
+pair is inconclusive; resource interruption never counts as numerical rejection. Neither verdict establishes a general limit on joint optimization.
 
 ## Execution and scientific blockers
 
