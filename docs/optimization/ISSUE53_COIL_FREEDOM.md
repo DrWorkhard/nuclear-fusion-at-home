@@ -11,8 +11,9 @@ optimization next**. No accepted design or physical benefit follows.
 Clean producer/evaluator `fd99245147308b9dbd23473002968e3283bd08fe` contains the
 [prospective protocol](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/fd99245147308b9dbd23473002968e3283bd08fe/docs/optimization/ISSUE53_COIL_FREEDOM.md).
 The reviewed fitter fix preceded execution. C then P used the identical original
-length-headroom seed and reference401 Wout; P added only zero modes 6–8. Currents,
-flux and target B² conventions and acceptance limits stayed frozen. Each search
+length-headroom seed and reference401 Wout; P added only zero modes 6–8.
+Current-normalization, flux and target B² conventions and acceptance limits stayed
+fixed; selected currents were frozen for diagnostics. Each search
 received 1800 s including intake/startup, then at most 900 s shared diagnostics,
 one native thread and 256 MiB retained output. Both stopped at the search deadline;
 late trials were excluded. No search was extended or repeated.
