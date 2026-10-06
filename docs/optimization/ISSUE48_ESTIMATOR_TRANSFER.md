@@ -42,8 +42,8 @@ Prepared archive `evidence-issue48-estimator-transfer-v1`, commit
 all original outputs, source/input hashes, controls, commands, timing and replay.
 The exact traces/snapshots remain in matching archive `896180e939b0234aea29ab33621a73aad6c5d20a`.
 Original Wouts are local-only; saved-contour A-flux and reconstruction replay needs
-only NumPy/SciPy. A fresh shallow archive checkout reproduced 190 line integrals
-within 5.56e-16 with SIMSOPT/Wout-reading packages disabled. A separate audit checked
+only NumPy/SciPy. A fresh shallow archive checkout recomputed 190 line integrals; maximum
+recorded-label disagreement was 5.56e-16, with SIMSOPT/Wout-reading packages disabled. A separate audit checked
 162 derived-field identities. This does not rerun native B-fan checks, rebuild
 target contours or retrace. [Driver](../../scripts/qualify_saved_flux_labels.py).
 
