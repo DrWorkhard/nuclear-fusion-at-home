@@ -162,3 +162,6 @@ after the launch-matching pilot stopped.
 
 [Interval-estimator transfer](ISSUE48_ESTIMATOR_TRANSFER.md): both saved five-line
 sets qualify numerically under the new method; common flux/phase physics remains open.
+
+[Full nominal grid](ISSUE48_FULL_GRID.md): prospective 20-point measurement on
+each original frozen fit, covering five surfaces and four geometric launch phases.

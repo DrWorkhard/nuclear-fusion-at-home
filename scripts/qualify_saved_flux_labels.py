@@ -26,7 +26,7 @@ from fusion_baselines.provenance import build_run_record  # noqa: E402
 from fusion_baselines.realized_field import Target  # noqa: E402
 
 
-def qualified(line, edge):
+def qualified(line, edge, expected_label=.75):
     """Frozen reconstruction checks; a failed subset cannot disappear from a verdict."""
     prefixes = line['prefixes']
     if len(prefixes) != 3 or any('error' in p for p in prefixes):
@@ -46,8 +46,8 @@ def qualified(line, edge):
         'Stokes': b['grids'][-1]['stokes_abs_error']/abs(edge) < 1e-5,
         'independent': b['independent_label_error'] < 1e-10,
     }
-    if line['index']:
-        tests['matched label'] = abs(b['label']-.75) < 5e-4
+    if line['index'] and expected_label is not None:
+        tests['matched label'] = abs(b['label']-expected_label) < 5e-4
     return dict(passed=bool(all(tests.values())),
                 failures=[name for name, passed in tests.items() if not passed])
 

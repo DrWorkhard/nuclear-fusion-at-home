@@ -55,3 +55,15 @@ def test_control_is_not_forced_to_the_matched_launch_label():
         for subset in prefix['subsets']:
             subset['label'] = .246
     assert module.qualified(line, -1.)['passed']
+
+
+def test_nominal_grid_measures_offsets_without_weakening_reconstruction_checks():
+    line = passing_line()
+    for prefix in line['prefixes']:
+        prefix['label'] = .831
+        for subset in prefix['subsets']:
+            subset['label'] = .831
+    assert not module.qualified(line, -1.)['passed']
+    assert module.qualified(line, -1., expected_label=None)['passed']
+    line['prefixes'][-1]['subsets'][0]['heldout_radius_max_m'] = .001
+    assert not module.qualified(line, -1., expected_label=None)['passed']
