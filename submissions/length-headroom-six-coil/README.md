@@ -1,6 +1,6 @@
 # Six-coil fit with construction length margin
 
-A reusable geometry from our [headroom study](../../evidence/coil-headroom-v3.json):
+A reusable geometry from our [headroom study](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coil-headroom-v3.json):
 expanded-box trial1459, native producer revision `5a3c1d0`.
 It lowers both public sampled errors, without changing the reference, evaluator
 or public currents. It is **an exploratory candidate, not an accepted design**.
@@ -52,7 +52,7 @@ score, and neither public score is an acceptance decision.
 
 All coefficients/names exactly match native snapshot SHA-256
 `84bbdf3eca274981dfff80c967b6fd623a1a40350e583407cbb7262c26820217`.
-[Source evidence](../../evidence/coil-headroom-v3.json) binds the native selection,
+[Source evidence](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coil-headroom-v3.json) binds the native selection,
 fine arrays, geometry and retained failed setup. This small candidate is a
 separately identified portable export; it does not replace that evidence.
 

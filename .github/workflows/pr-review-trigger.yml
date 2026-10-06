@@ -1,0 +1,49 @@
+# Starts the maintainer's PR-review routine when a fork pull request changes.
+# GitHub-app routine triggers ignore fork PRs, so this relays the event.
+# It runs the base branch copy of this file, never checks out or executes PR
+# code, and sends only the PR number. Same-repository PRs use the app trigger.
+name: pr-review-trigger
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  start-review:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.pull_request.head.repo.full_name != github.repository &&
+       !github.event.pull_request.draft)
+    runs-on: ubuntu-24.04
+    timeout-minutes: 2
+    steps:
+      - name: Start the review routine
+        env:
+          ROUTINE_TOKEN: ${{ secrets.CLAUDE_ROUTINE_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+        run: |
+          case "$PR_NUMBER" in
+            "") text="Manual start" ;;
+            *[!0-9]*) echo "unexpected PR number" >&2; exit 1 ;;
+            *) text="Fork pull request #$PR_NUMBER was opened or updated" ;;
+          esac
+          status=$(curl --silent --show-error --max-time 30 \
+            -o "$RUNNER_TEMP/response.json" -w '%{http_code}' \
+            -X POST "https://api.anthropic.com/v1/claude_code/routines/trig_01BVbgYw5QUw6PRXFgGUNKih/fire" \
+            -H "Authorization: Bearer $ROUTINE_TOKEN" \
+            -H "anthropic-beta: experimental-cc-routine-2026-04-01" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "Content-Type: application/json" \
+            -d "{\"text\": \"$text\"}")
+          case "$status" in
+            2??) echo "Review routine started: $text" ;;
+            *) echo "Routine start failed with HTTP $status" >&2
+               cat "$RUNNER_TEMP/response.json" >&2; exit 1 ;;
+          esac

@@ -43,7 +43,7 @@ these public sample scores. It is not a preregistered confirmation result.
 
 The exported coefficients and all 198 names exactly match native snapshot SHA-256
 `2492d83ad3392069be5bfe8ae35b2e98ca0419916517e96065e017bcf15417e9`.
-The [source evidence](../../evidence/constrained-coils-slack-v1.json) records the
+The [source evidence](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/constrained-coils-slack-v1.json) records the
 full local provenance, including original trials and the selection sweep.
 The small candidate file and commands above suffice for public reproduction;
 private native artifacts are not needed for that calculation.
@@ -55,7 +55,7 @@ The public evaluator does not restore flux after a shape edit. A common current
 scale leaves same-point normalized normal error unchanged; different sampling/
 weights explain the normal-score difference. Field amplitude, flux and the
 interior-vector score do change with current. The subsequent
-[native interior screen](../../evidence/coherent-interior-v1.json)
+[native interior screen](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coherent-interior-v1.json)
 measures RMS **0.3123243**, still above its 0.01 limit. This does not change
 the frozen-current public result above.
 

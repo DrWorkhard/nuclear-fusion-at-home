@@ -1,41 +1,47 @@
 # Current verification
 
-4 October 2026. Base `8581b1b`; original scientific results are unchanged.
-[Scope and counts](../review/ACTIVE_SCOPE.md) · [Research command](../optimization/README.md)
+5 October 2026. Completion checks for issue #25 / PR #35.
+[Scientific result](../optimization/ISSUE25_MATCHED_TARGETS.md) ·
+[Archive procedure](../validation/REPRODUCING_RESULTS.md)
 
-Question: can one explicit-snapshot fitter replace the chain of completed studies
-without changing its objective or checks? Inputs: the saved headroom-v3 snapshot
-and trusted reference401 archives. The extraction removes historical orchestration,
-not acceptance thresholds. New searches have wall-clock/storage bounds instead
-of inherited coefficient boxes and bundle caps; they are prospective experiments.
+The fresh-clone regression revision is `756d30d3f39dbe447d46f814c21983c2bd65bd46`.
+Hosted checks also pass on documentation follow-up
+`397077ca12745f85cd5ec32ac4a56c011fb2fd9c`; final publication changes are documentation only.
+Final-commit checks are recorded on PR #35 before merge.
+The scientific producer/evaluator remains clean
+`a551289e63e44d7dbae7b5d5a0e5f4b6026db257`; completion edits change documentation
+only. A fresh depth-one, single-branch, no-tags clone of the PR checkout supplied
+all tracked test inputs. No ignored research outputs were copied into it.
 
 | Check | Result |
 | --- | --- |
-| Native regression, one thread | 210 passed |
-| `python -I -S scripts/test_public.py` | 57 passed |
-| `scripts/check_docs.py`, Ruff, `git diff --check` | Pass |
-| Old/new native objective comparison | Exactly equal values, all 198 gradient components and all metrics at two points |
-| New driver: 5 s search + 120 s check budget | Completed in 21.66 s; startup passes, 18 completed bundles, two fine grids, scoped geometry pass, three interior grids; source hashes unchanged |
-| Fresh-clone core checks | Pass: 57 public tests, 40 maintenance tests, docs and Ruff |
-| Fresh-clone portable release | All 8 copied-tree operations pass with isolated Python 3.12 |
-| Hosted CI | Required on the pushed commit before updating protected main |
-| Root README, evidence, public candidate JSON, previous raw runs, native environment | Unchanged |
+| Native regression, preserved Python 3.12 environment | 264 passed; eight existing NumPy/netCDF deprecation warnings |
+| Dependency-free public tests | 60 passed |
+| Documentation, Ruff 0.16.5 and diff whitespace | Pass |
+| Hosted CI at the tested PR revision | Core and all six Linux/macOS/Windows public matrix jobs passed |
+| Published archive manifest | All 6,258 file hashes verified; manifest and summary match the tag annotation |
+| Original local outputs | All 6,254 files match the archive byte-for-byte |
+| Archived numerical replay | Both targets' field metrics and every action cell/failure reproduced |
 
-Comparison: `results/coil-fit-refactor-20261004/compare_models.py` runs the old model
-from an exported `8581b1b` tree and the new model on the same snapshot, then at
-`x + 1e-6*sin(arange(198)+1)`. Inputs, outputs and hashes remain in that ignored
-results directory. End-to-end output is retained at
-`artifacts/coil-fit-refactor-smoke-20261004`; reproduce with the documented command
-and `--seconds 5 --check-seconds 120` into a fresh directory. This bounded run tests
-software integration, not optimizer performance or a new scientific improvement.
+Native tests ran in the isolated clone with an empty environment and one native
+thread, using the existing serial wrapper that disables optional `mpi4py`.
+The direct pytest attempt failed during sandbox MPI initialization before tests
+could run. The preserved environment was neither synchronized nor modified.
+Ruff used the cached 0.16.5 executable after uv's default cache access was denied.
+These checks do not establish MPI support or independent native reproduction.
 
-Fresh-clone checks ran at `3b4e63b`; the only subsequent edit updates this record.
-The first release invocation selected macOS Python 3.9 and failed the documented
-minimum-version requirement; that output remains retained. Repeating with the
-clone’s Python 3.12 passed.
+The published archive is commit `05a4511084912fea9bd8d03e81f01018882396b8`,
+annotated tag `evidence-issue25-matched-v1`, tag object
+`fcbdbe28ba77c2f327546dcb6e01fc9743e5bc07`. After explicit owner approval,
+the remote tag and peeled commit IDs match exactly. A fresh shallow HTTPS clone
+of the published tag verifies all manifest hashes and reproduces both numerical
+replays. The [archive README](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/05a4511084912fea9bd8d03e81f01018882396b8/evidence/issue25-matched-v1/README.md)
+records retrieval scope and limits. Original Wouts and upstream validation archives
+remain maintainer-local. Array replay does not rerun optimization, native tracing or
+geometry, and is not physical acceptance or external peer review.
 
-Conclusion: the extracted objective agrees at the tested points, and the active
-workflow executes independently of old study runners. This is not an exhaustive
-proof of equivalence. No physical admission, improved-target benefit transfer,
-external review or separate-machine native reproduction is claimed. CI must use
-a disposable checkout; no native environment sync was performed.
+Earlier verification records remain in Git. The experiment's failure cases and
+acceptance limits are unchanged; the unresolved physical transfer result meets
+the issue's allowance for an inconclusive test, with its evidence now available.
+The owner explicitly approved publication and merge. The documented sole-maintainer
+review exception applies to this owner-authored PR; required CI is not bypassed.

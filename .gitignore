@@ -12,3 +12,17 @@ results/
 
 # Local toolchain outputs.
 external/**/build/
+
+# Completed evidence lives at immutable evidence-* tags. Keep local originals.
+/evidence/**
+!/evidence/plasma-design-v2/
+/evidence/plasma-design-v2/**
+!/evidence/plasma-design-v2/reference-input-401.json
+!/evidence/plasma-balanced-v1/
+/evidence/plasma-balanced-v1/**
+!/evidence/plasma-balanced-v1/validation.json
+/cases/
+/fixtures/
+/manifests/
+/references/
+/patches/

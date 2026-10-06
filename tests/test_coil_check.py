@@ -356,3 +356,48 @@ def test_intake_source_poisoning(intake_context, fault):
     screen.FIXED[screen.INDEX] = screen.digest(path)
     with pytest.raises(ValueError):
         screen.intake()
+
+
+def selected_snapshot(snapshot):
+    result = dict(snapshot, target_id="selected401", B2_scale=screen.TARGETS["selected401"]["B2"])
+    return result
+
+
+def test_target_specific_snapshot_cannot_be_relabelled_or_use_other_normalization(snapshot):
+    selected = selected_snapshot(snapshot)
+    screen.snapshot_identity(selected, "selected401")
+    with pytest.raises(ValueError, match="target mismatch"):
+        screen.snapshot_identity(selected)
+    with pytest.raises(ValueError, match="target mismatch"):
+        screen.snapshot_identity(snapshot, "selected401")
+    with pytest.raises(ValueError, match="normalization"):
+        screen.snapshot_identity(dict(selected, B2_scale=screen.B2), "selected401")
+    with pytest.raises(ValueError, match="registered target"):
+        screen.snapshot_identity(selected, "invented-target")
+
+
+def test_selected_field_metrics_use_its_frozen_denominator(snapshot):
+    B, target, A, tangent = metric_arrays()
+    result = screen.field_metrics(B, target, A, tangent, selected_snapshot(snapshot), 32,
+                                  "selected401")
+    assert result["vector_rms"] == pytest.approx(
+        0.02/np.sqrt(screen.TARGETS["selected401"]["B2"]), rel=1e-14)
+    assert result["B2_scale"] != screen.B2
+    assert result["base_current"] == 200000.0
+    assert result["flux_limit_met"] and not result["fine_renormalization_applied"]
+
+
+def test_selected_intake_rejects_wrong_wout_before_sampling(tmp_path):
+    wrong = tmp_path/"wrong-wout.nc"
+    wrong.write_bytes(b"not the archived improved target")
+    with pytest.raises(ValueError, match="source identity changed"):
+        screen.portable_intake(wrong, target_id="selected401")
+
+
+def test_selected_input_is_exact_archived_input():
+    spec = screen.target_spec("selected401")
+    assert screen.digest(ROOT/spec["input"]) == spec["input_sha256"]
+    selected = screen.read_json(ROOT/spec["input"])
+    reference = screen.read_json(ROOT/screen.TARGET)
+    assert selected["phiedge"] == reference["phiedge"] == -spec["flux"]
+    assert selected["rbc"] != reference["rbc"] or selected["zbs"] != reference["zbs"]

@@ -18,7 +18,7 @@ from fusion_baselines import coil_fit as fit  # noqa: E402
 from fusion_baselines.provenance import build_run_record  # noqa: E402
 
 
-def run(snapshot_path, output, seconds=300, check_seconds=120):
+def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target_id="reference401"):
     from scipy.optimize import minimize
 
     check.need(np.isfinite([seconds, check_seconds]).all()
@@ -36,10 +36,15 @@ def run(snapshot_path, output, seconds=300, check_seconds=120):
                   search_seconds=seconds, check_seconds=check_seconds,
                   coefficient_bounds=None, solver_options=fit.SOLVER_OPTIONS, fine=[], interior=[])
     try:
-        data, targets, sources = check.intake(record.guard)
+        if wout is None:
+            check.need(target_id == "reference401", "selected401 requires --wout")
+            data, targets, sources = check.intake(record.guard)
+        else:
+            data, targets, sources, report["portable_target"] = check.portable_intake(
+                wout, record.guard, target_id)
         snapshot_path = check.bind(snapshot_path, check.digest(snapshot_path), sources)
         seed = check.read_json(snapshot_path)
-        check.snapshot_identity(seed)
+        check.snapshot_identity(seed, target_id)
         # Record the code actually executed, not every old experiment that produced the seed.
         from importlib import import_module
 
@@ -54,8 +59,10 @@ def run(snapshot_path, output, seconds=300, check_seconds=120):
         record.save("seed.json", seed)
         record.save("inputs.json", report)
         deadline = record.deadline
-        record.deadline = min(deadline, time.monotonic()+seconds)
+        record.deadline = min(deadline, started+seconds)
+        report["intake_s"] = time.monotonic()-started
         model = fit.Model(seed, data, record)
+        report["model_ready_s"] = time.monotonic()-started
         report["search"] = fit.search(model, record, minimize)
         record.save("search.json", report["search"])
         record.deadline = min(deadline, time.monotonic()+check_seconds)
@@ -66,7 +73,7 @@ def run(snapshot_path, output, seconds=300, check_seconds=120):
         for shift in (0., .5):
             report["fine"].append(fit.fine(seed, data, search["selected"], record, shift))
         snapshot = check.read_json(output/"selected-snapshot.json")
-        check.snapshot_identity(snapshot)
+        check.snapshot_identity(snapshot, target_id)
         report["geometry"] = check.geometry(snapshot, data, record.guard)
         interior = check.Recorder(output/"interior", record.deadline, record.storage)
         for i, (n, nodes) in enumerate(check.LEVELS):
@@ -100,6 +107,9 @@ if __name__ == "__main__":
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--seconds", type=float, default=300)
     parser.add_argument("--check-seconds", type=float, default=120)
+    parser.add_argument("--target", choices=tuple(check.TARGETS), default="reference401")
+    parser.add_argument("--wout", type=Path, help="portable reference401 Wout (see docs)")
     args = parser.parse_args()
-    raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(),
-                         args.seconds, args.check_seconds))
+    raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(), args.seconds,
+                         args.check_seconds, None if args.wout is None else args.wout.resolve(),
+                         args.target))
