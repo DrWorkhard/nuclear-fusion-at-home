@@ -90,26 +90,26 @@ Details: [active coil research](../optimization/README.md).
 
 1. Diagnose why shallow wells are lost in the coil fields and validate realized
    flux-surface labels before any benefit-transfer confirmation.
-2. Fix the fitter: one failed trial discards a run, and `ftol` acts as an
-   absolute threshold because the objective is about 5e-6 ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)).
+2. Prepare a bounded joint feasibility protocol. The fitter's failed-trial and
+   stopping issues were fixed before the [coil-freedom probe](../optimization/ISSUE53_COIL_FREEDOM.md).
 3. Specify a reactor operating point: the [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records the
    missing inputs (scale, field, power balance, magnets, blanket and shield space,
    heat exhaust) and defers reactor-scale search.
-4. Finite pressure (4C) and finite-build robustness (4D) remain deferred.
+4. Detailed finite-pressure and finite-build robustness work remains deferred.
 
 **Decision, 6 October 2026: the fixed-target recipe has stalled.** The hurdle was
 to halve boundary RMS without worsening interior RMS. The preregistered 30-minute
 conditioning/stopping comparison ([#31](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/31)) reached 0.0018761 (−6.0%); a
-scale-free objective added about 1.2% before a trial failure. Next, a matched
-coil-freedom probe ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) runs six coils at Fourier order 8 against the
-order-5 control. If it halves boundary RMS with passing geometry and no worse
-interior, the coil family changes; otherwise the project moves to joint plasma–coil
-optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). [Programme](../optimization/STEP4_RESEARCH_PROGRAMME.md).
+scale-free objective added about 1.2% before a trial failure. The subsequent
+[order-8 probe](../optimization/ISSUE53_COIL_FREEDOM.md) completed but missed the
+half-error hurdle. Its frozen rule selects joint plasma–coil optimization next.
+Clock discrepancies and unverified external load limit timing claims; this does
+not establish the plateau's cause. [Programme](../optimization/STEP4_RESEARCH_PROGRAMME.md).
 
 ## Good entry points
 
 Reproduce the best candidate and probe sparse-sampling artifacts with the dense
-boundary diagnostic; trace surfaces for other candidates; compare conditioning
-under a matched time budget; or try to break a claim. See the
+boundary diagnostic; trace surfaces for other candidates; reproduce the completed
+comparison; or try to break a claim. See the
 [research hints](../optimization/RESEARCH_HINTS.md) and
 [open issues](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues).

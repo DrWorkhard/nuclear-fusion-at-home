@@ -1,18 +1,21 @@
 # Scientific status
 
-Updated 6 October 2026; records the stalled fixed-target decision.
+Updated 7 October 2026; includes the completed local coil-freedom probe.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
-**No accepted coil design or demonstrated reactor advantage.** The new matched
+**No accepted coil design or demonstrated reactor advantage.** The matched
 reference-target fit reaches boundary RMS **0.001932**, about **19×** its limit,
 and interior RMS **0.01072**, also failing. The improved-target fit also fails.
 [Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
 wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
-**The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
-30 more minutes of search lowered boundary RMS by only 6%. A coil-freedom probe
-now chooses between a richer coil family and joint plasma/coil optimization
-([programme](optimization/STEP4_RESEARCH_PROGRAMME.md)). Present evidence does not
-substantiate the README's reactor-design timeline.
+**The next research route is joint plasma/coil optimization.** After the
+fixed-target recipe stalled, the [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md)
+reached boundary RMS 0.001766 versus 0.001835 for its order-5 control, a 3.78%
+improvement that missed the 50% hurdle. Geometry and tracing pass; the probe's
+interior RMS 0.009481 passes its individual limit, but both boundary gates fail.
+The local archive retains clock/load limitations; this is a resource-allocation
+decision, not controlled throughput or a causal/global conclusion. Publication is
+pending. Present evidence does not substantiate the README's reactor-design timeline.
 
 The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduces
 phase-dependent offsets in both frozen fits. Its bounded

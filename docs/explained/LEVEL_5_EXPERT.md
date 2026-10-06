@@ -62,18 +62,20 @@ Both targets are nfp = 2, zero-β configurations at a normalized scale. Detail:
 ## The decision: the fixed-target recipe has stalled
 
 The registered continuation hurdle was to halve the geometry-checked boundary RMS
-of reference401 without worsening interior RMS. Every fit with six order-5 coils
-lands at 0.0019–0.0020; the preregistered 30-minute comparison ([#31](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/31),
+of reference401 without worsening interior RMS. Earlier six-coil order-5 fits
+clustered near 0.0019–0.0020; the preregistered 30-minute comparison ([#31](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/31),
 contributor-reported, one seed) reached 0.0018761 (−6.0%), and removing the early
 stop added about 1.2%. On 6 October 2026 the project [recorded](../optimization/STEP4_RESEARCH_PROGRAMME.md) that the
 recipe has stalled and stopped extending it.
 
 The plateau may come from the coil family (six coils, order 5, length ≤ 3.5 m) or
 from the coupling between this QI target and practical coils; the same metric
-reaches 2.3e-6 for a co-designed QUASR configuration. A matched probe at Fourier
-order 8 ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) separates the two by 24 October: at least halving boundary
-RMS selects another coil family, otherwise joint plasma–coil optimization
-([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
+reaches 2.3e-6 for a co-designed QUASR configuration. The completed
+[order-8 probe](../optimization/ISSUE53_COIL_FREEDOM.md) missed its half-error hurdle,
+selecting joint plasma–coil optimization as a resource decision. One local search
+per arm, clock discrepancies and unverified external host load do not establish
+the plateau's cause or the coil family's ultimate capability.
+The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
 point is yet specified and defers reactor-scale search.
 
 ## Where expert input helps most

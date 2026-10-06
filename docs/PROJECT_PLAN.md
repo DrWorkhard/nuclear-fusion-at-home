@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 6 October 2026.
+Updated 7 October 2026.
 [Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
@@ -40,10 +40,12 @@ spend effort on decisions that test the path.
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. Detailed simulations follow a decision
    need; boundary RMS alone does not determine their priority.
-3. **Choose the next route by 24 October.** The fixed-target recipe has stalled
-   ([decision](optimization/STEP4_RESEARCH_PROGRAMME.md)). After a fitter fix
-   ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)), one coil-freedom probe ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) chooses between a
-   richer coil family and joint plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)).
+3. **Move to joint plasma/coil optimization.** The completed local
+   [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) missed its hurdle;
+   the [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) now calls for a bounded
+   joint feasibility protocol ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
+   Qualify a common realized-field endpoint before claiming benefit; missing
+   surfaces or wells restrict the next pilot to feasibility.
 4. **Make the decisive test portable.** Supply the missing target data and reuse
    existing field/geometry checks so contributors can address the actual
    bottleneck. Prefer an existing community benchmark. Aim to resolve this now;

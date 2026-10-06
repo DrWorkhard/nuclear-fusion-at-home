@@ -64,8 +64,9 @@ The private native fitter also accepts `--order 8`, adding zero modes to an
 order-5 snapshot while preserving its geometry and current. Omit the option to
 keep the input order; lowering order is rejected. Named gradients, frozen-current
 checks and snapshot output support both six-coil families. The public candidate
-format stays fixed. The [bounded coil-freedom comparison](ISSUE53_COIL_FREEDOM.md)
-is prospective; no order-8 fitting result is claimed.
+format stays fixed. The completed [bounded coil-freedom comparison](ISSUE53_COIL_FREEDOM.md)
+missed its continuation hurdle and selects joint plasma/coil optimization next;
+its full evidence is local pending publication.
 
 ## Portable checks
 
