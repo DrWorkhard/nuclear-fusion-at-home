@@ -421,3 +421,55 @@ def test_late_publication_never_claims_completion(tmp_path, clock, when):
     report = dict(completed=True)
     assert record.finish(report, 0) is (when == 'on-time')
     assert json.loads((record.output/'result.json').read_text())['completed'] is (when == 'on-time')
+
+
+def order5_snapshot():
+    from fusion_baselines.coupled_coil_audit import parameter_names, physical_curves  # noqa: F401
+
+    rng = np.random.default_rng(5)
+    coefficients = 0.01*rng.standard_normal((6, 3, 11))
+    coefficients[:, 0, 2] += 1.0  # nonzero c(1) radius keeps every curve nonstationary
+    coefficients[:, 1, 1] += 1.0
+    scale = -0.03141592653589793/-0.01
+    physical = []
+    for period in range(2):
+        c, s = np.cos(np.pi*period), np.sin(np.pi*period)
+        rotation = np.array([[c, -s, 0.0], [s, c, 0.0], [0.0, 0.0, 1.0]])
+        for flip in (False, True):
+            matrix = rotation.T @ (np.diag([1.0, -1.0, -1.0]) if flip else np.eye(3))
+            physical.extend(dict(base_index=i, period=period, flip=flip, matrix=matrix.tolist(),
+                                 current=1e5*scale*(-1 if flip else 1)) for i in range(6))
+    return dict(schema_version=1, nfp=2, nbase=6, order=5, names=parameter_names(6, 5),
+                base_coefficients=coefficients.tolist(), physical=physical, scale=scale,
+                B2_scale=1.0, unit_flux=-0.01, target_flux=-0.03141592653589793)
+
+
+def test_lift_order_preserves_geometry_and_pads_zero_modes():
+    from fusion_baselines.coupled_coil_audit import physical_curves, validate_snapshot
+
+    snapshot = order5_snapshot()
+    lifted = experiment.lift_order(snapshot, 8)
+    validate_snapshot(lifted)
+    coefficients = np.asarray(lifted["base_coefficients"])
+    assert coefficients.shape == (6, 3, 17) and lifted["lifted_from_order"] == 5
+    assert not coefficients[:, :, 11:].any()
+    np.testing.assert_array_equal(coefficients[:, :, :11], snapshot["base_coefficients"])
+    assert lifted["names"][:3] == ["coil[0]/xc(0)", "coil[0]/xs(1)", "coil[0]/xc(1)"]
+    assert len(lifted["names"]) == 6*3*17 == len(experiment.names(8))*6
+    before, after = physical_curves(snapshot, 128), physical_curves(lifted, 128)
+    for key in ("positions", "tangents"):
+        np.testing.assert_allclose(after[key], before[key], rtol=1e-14, atol=1e-15)
+    for order in (7, 4):
+        with pytest.raises(ValueError):
+            experiment.lift_order(lifted if order == 4 else snapshot, order)
+
+
+def test_order_eight_canonical_gradient_uses_named_coordinates():
+    simsopt = pytest.importorskip("simsopt.geo")
+    curves = [simsopt.CurveXYZFourier(64, 8) for _ in range(6)]
+    gradient = experiment.canonical_gradient(
+        curves, lambda curve: np.arange(len(curve.local_full_dof_names), dtype=float), 8)
+    assert gradient.shape == (306,)
+    np.testing.assert_array_equal(gradient[:51], np.arange(51))
+    with pytest.raises(ValueError, match="registered order"):
+        experiment.canonical_gradient(curves, lambda curve: np.zeros(51), 5)

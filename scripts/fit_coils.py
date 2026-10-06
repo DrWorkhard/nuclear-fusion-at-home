@@ -18,7 +18,8 @@ from fusion_baselines import coil_fit as fit  # noqa: E402
 from fusion_baselines.provenance import build_run_record  # noqa: E402
 
 
-def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target_id="reference401"):
+def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target_id="reference401",
+        order=None):
     from scipy.optimize import minimize
 
     check.need(np.isfinite([seconds, check_seconds]).all()
@@ -45,6 +46,10 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
         snapshot_path = check.bind(snapshot_path, check.digest(snapshot_path), sources)
         seed = check.read_json(snapshot_path)
         check.snapshot_identity(seed, target_id)
+        if order is not None and order != seed["order"]:
+            # Same geometry with exactly zero higher modes; recorded as the seed actually fitted.
+            seed = fit.lift_order(seed, order)
+            check.snapshot_identity(seed, target_id)
         # Record the code actually executed, not every old experiment that produced the seed.
         from importlib import import_module
 
@@ -109,7 +114,9 @@ if __name__ == "__main__":
     parser.add_argument("--check-seconds", type=float, default=120)
     parser.add_argument("--target", choices=tuple(check.TARGETS), default="reference401")
     parser.add_argument("--wout", type=Path, help="portable reference401 Wout (see docs)")
+    parser.add_argument("--order", type=int, choices=(5, 8),
+                        help="lift the snapshot to this Fourier order with zero new modes")
     args = parser.parse_args()
     raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(), args.seconds,
                          args.check_seconds, None if args.wout is None else args.wout.resolve(),
-                         args.target))
+                         args.target, args.order))
