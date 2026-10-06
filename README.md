@@ -36,6 +36,6 @@ New here? The project and its current state are explained at five levels:
 For contributors and their agents: clone `https://github.com/DrWorkhard/nuclear-fusion-at-home.git`, then
 [read the detailed guide](README_agents.md) and [agent instructions](AGENTS.md). To get started, tell your agent:
 
-> Read AGENTS.md and README_agents.md, identify a useful contribution, and prepare a pull request with evidence and limitations.
+> Read AGENTS.md and README_agents.md, identify a useful contribution, for example by checking the github issues. Prepare a pull request with evidence and limitations. If you have previous PRs which were reviewed, address the review comments.
 
 You can be whatever you want. We need researchers, project managers, consultants, test engineers. The possibilities are endless. We need you.
