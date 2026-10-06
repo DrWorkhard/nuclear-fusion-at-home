@@ -1,66 +1,59 @@
-# Interval-estimator transfer to the frozen matched launches
+# Interval estimator qualifies the saved matched-launch contours
 
-Prospective method check; no new result yet. The [two-contour diagnosis](ISSUE48_KNOT_QUADRATURE.md)
-resolved uniform-grid integration error for two chosen splines. The decision now
-is whether its numerical estimator works on **all** saved round-2 launches, or
-whether reconstruction still requires new tracing. This is a new exploratory
-method assessment, not a retrospective pass for the stopped matching pilot.
+**Both five-line arms pass this new numerical assessment.** Applying interval
+quadrature across all saved round-2 launches resolves the previous integration
+blocker without moving launches or retracing. The four adjusted launches in each
+field have estimated enclosed-flux labels within 5e-4 of 0.75. The separate
+[original matching pilot](ISSUE48_MATCHED_LAUNCHES.md) remains inconclusive under its
+original method; this does not retroactively change that verdict.
 
-## Inputs and bounded calculation
+| Final-prefix diagnostic | Reference fit | Improved-target fit |
+| --- | ---: | ---: |
+| Numerically qualified lines, including unchanged control | 5/5 | 5/5 |
+| Maximum residual from 0.75, four adjusted launches | 3.86e-5 | 7.93e-5 |
+| Maximum last-two-prefix label change | 1.84e-6 | 2.03e-7 |
+| Largest angular gap, rad | 0.176 | 0.127 |
+| Maximum held-out radial error | 18.9 µm | 3.26 µm |
+| Maximum alternating-subset label spread | 1.24e-6 | 4.17e-7 |
 
-Use matching archive `896180e939b0234aea29ab33621a73aad6c5d20a`, manifest SHA256
-`6b35f5634e7fea8f5a353bbaaad7fd367eed63d5378917caa883ef4a6c9494ab`.
-Pin both frozen snapshots, all ten raw traces and original reports. Keep the
-recorded centers, currents, 512-node coil discretization and edge denominators.
-No launch moves, secants, optimizer calls or retracing. Original Wouts and target
-inputs are hash-bound by `coil_check.TARGETS`; they remain maintainer-local.
+## Method and evidence
 
-For each five-line arm, exclude launch events, order pooled phi=0/pi crossings by
-time and recompute prefixes of 160/320/640 crossings. Require the recorded symmetry
-check and trace completion. Integrate the periodic polar spline on each interval
-using Gauss orders 4/8 and 24 radial fan nodes. Recompute both disjoint alternating
-subsets, including their separate order convergence and held-out radial residuals.
-Compute an independent NumPy A-line sum for every full prefix. Retain any failed
-prefix/subset; no failed line disappears from the denominator.
+The clean producer/evaluator is `38cd7cff0435416147757d4316792908a0e974d9`;
+its [prospective protocol](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/38cd7cff0435416147757d4316792908a0e974d9/docs/optimization/ISSUE48_ESTIMATOR_TRANSFER.md)
+was committed and reviewed before this single assessment. The
+[two-contour diagnosis](ISSUE48_KNOT_QUADRATURE.md) supplies the method. This run
+extends it to prefixes of 160/320/640 crossings and disjoint alternating subsets
+of all ten saved traces, retaining the original symmetry-checked phi=0/pi pooling,
+centers, frozen currents, edge denominators and 512-node coil discretization.
 
-Recheck the edge denominator using 2048 target-contour knots and interval order 8.
-Reconstruct the original s=0.25/0.75 target controls with the identical seeded
-160-point sample; compare each to its dense 2048-knot interval integral. Reuse the
-analytic uniform-field circle and polynomial-spline-area controls. These control
-surfaces are numerical checks, not evidence of realized invariant surfaces.
-Save their dense contours and sampled indices so numerical control replay does not
-require the local Wouts; rebuilding those contours still does.
+Gauss orders 4/8 integrate each spline interval; 24 radial nodes check Stokes.
+Original reconstruction thresholds are unchanged. Final subset order changes are
+at most 1.95e-11; final independent NumPy A-line discrepancies at most 3.34e-16.
+All target reconstruction, edge and analytic controls pass. Both arms retain the
+unchanged nominal s=0.25 control; it is not forced to estimated flux 0.25 or 0.75.
 
-One paired run: **600 s / 256 MiB**, one native thread, 3 GiB initial / 2 GiB live
-reserve, external 660 s supervisor. Include input checks and all controls. Record
-both monotonic elapsed time and UTC timestamps; avoid agent-controlled overlapping
-heavy jobs and make no controlled-throughput claim. On failure, retain outputs;
-no extension or numerical retry within this protocol.
+The driver completed in 160.16 s and end-to-end supervision in 170.77 s, within the
+600/660 s limits. One native thread, 256 MiB output ceiling and 3/2 GiB disk reserves
+were enforced; total output was below 1 MiB. UTC and monotonic durations agree to
+about 0.004 s. External host load remains unverified; no throughput claim follows.
 
-## Frozen gates and interpretation
+Prepared archive `evidence-issue48-estimator-transfer-v1`, commit
+`48337ac2b458a369b3231ed7bfa65f9d20e6f9e4`; **publication is pending**. It preserves
+all original outputs, source/input hashes, controls, commands, timing and replay.
+The exact traces/snapshots remain in matching archive `896180e939b0234aea29ab33621a73aad6c5d20a`.
+Original Wouts are local-only; saved-contour A-flux and reconstruction replay needs
+only NumPy/SciPy. A fresh shallow archive checkout reproduced 190 line integrals
+within 5.56e-16 with SIMSOPT/Wout-reading packages disabled. A separate audit checked
+162 derived-field identities. This does not rerun native B-fan checks, rebuild
+target contours or retrace. [Driver](../../scripts/qualify_saved_flux_labels.py).
 
-All three prefixes must be calculable. Reapply the original final-prefix gates:
-320 turns / 640 crossings, last-two-prefix label change below 5e-4, angular gap
-below 0.4 rad, alternating-subset label spread below 5e-4, held-out radial error
-below 0.1 mm, order/Stokes discrepancies below 1e-5 normalized flux. Additionally
-require each final subset's order convergence below 1e-5 and final independent
-line agreement below 1e-10. The four moved launches must each lie within 5e-4 of
-0.75; the unchanged s=0.25 control is not forced to that label.
+## Next decision and limits
 
-Require target-control label errors below 5e-4, edge change and edge Stokes below
-1e-5 normalized flux, and both analytic controls below 1e-10. Both five-line arms
-must pass before calling the pair **numerically qualified under this estimator**.
-Software completion and numerical qualification are recorded separately.
-
-Pass: no further retracing is justified solely by the old quadrature failure;
-proceed to the still-unqualified common flux/straight-field-line phase mapping.
-Fail: identify the failed reconstruction/label checks; do not repeat integration
-to manufacture a pass. An interrupted calculation is inconclusive. Neither outcome
-proves nesting, island absence, equal PEST alpha, confinement, benefit transfer or
-physical acceptance. Symmetry pooling can mix island components. Original studies
-retain their original producers and verdicts.
-
-Run [the driver](../../scripts/qualify_saved_flux_labels.py) with `--archive` pointing
-to the matching payload, `--native-inputs` to a root containing the exact original
-Wouts/target JSON paths, and a fresh `--output`. Source and input hashes are saved
-before and after; final evidence will identify the exact committed producer.
+No further tracing is justified solely by the old quadrature failure on this set.
+The remaining common-physics problem is qualifying realized surfaces and a shared
+straight-field-line phase convention over the full action domain. Four geometric
+launch phases at one adjusted label do not supply that endpoint. Symmetry pooling
+can mix island components; spline agreement does not prove nesting or island
+absence. This work establishes no equal PEST-alpha sampling, confinement, benefit
+transfer, continuum-filament error bound or physical acceptance. Agent review and
+same-machine numerical agreement are not external physics validation.
