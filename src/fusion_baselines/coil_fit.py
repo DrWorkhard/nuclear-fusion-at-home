@@ -12,7 +12,11 @@ import numpy as np
 
 MAX_BYTES, START_RESERVE, LIVE_RESERVE = 256*1024**2, 3*1024**3, 2*1024**3
 PROBE_STEPS = (1.25e-6, 6.25e-7)
-SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=1e-12, gtol=1e-9)
+SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=0., gtol=1e-9)
+
+
+class InvalidTrial(ValueError):
+    """A numerical trial outside the objective domain; startup must still fail."""
 
 
 def mode_map(entries):
@@ -247,7 +251,7 @@ class Model:
         phi = float(np.mean(np.sum(self.loop_field.A()*self.loop_tangent, axis=1)))
         if (not np.isfinite(phi) or abs(phi) <= 1e-12
                 or np.sign(phi) != np.sign(self.seed["seed_unit_flux"])):
-            raise ValueError("unit flux degenerate or orientation reversed")
+            raise InvalidTrial("unit flux degenerate or orientation reversed")
         return phi
 
     def evaluate(self, x):
@@ -256,7 +260,7 @@ class Model:
         self.set_x(x)
         phi, q = self.unit_flux(), float(self.objective.J())
         if q <= 1e-10:
-            raise ValueError("native SquaredFlux dJ truncation region")
+            raise InvalidTrial("native SquaredFlux dJ truncation region")
         dq = canonical_gradient(self.curves, self.objective.dJ(partials=True))
         value, gradient = q / self.area, dq / self.area
         penalty = float(self.geometry.J())
@@ -270,7 +274,7 @@ class Model:
                        scale=scale, unit_flux=phi, current=1e5*scale,
                        current_limit_met=abs(1e5*scale) <= 500000)
         if not np.isfinite(value+penalty) or not np.isfinite(gradient).all():
-            raise ValueError("nonfinite objective or gradient")
+            raise InvalidTrial("nonfinite objective or gradient")
         return float(value+penalty), gradient, metrics
 
 
@@ -344,9 +348,10 @@ def search(model, record, minimize):
     initial = model.x0.copy()
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
+    last_value = None
 
     def evaluate(x, role):
-        nonlocal selected, completed
+        nonlocal selected, completed, last_value
         record.guard()
         index = record.bundles
         record.bundles += 1
@@ -357,13 +362,27 @@ def search(model, record, minimize):
             value, gradient, metrics = model.evaluate(x)
             record.guard()
             row.update(value=value, gradient=gradient.tolist(), metrics=metrics, status="completed")
+        except InvalidTrial as exc:
+            row.update(status="failed", error=f"{type(exc).__name__}: {exc}")
+            if role != "search":
+                raise
+            # A finite uphill value lets L-BFGS-B backtrack. This is solver feedback,
+            # never a completed objective evaluation or a selectable candidate.
+            record.guard()
+            rejected_value = last_value + max(1., abs(last_value))
+            if not np.isfinite(rejected_value):
+                raise ValueError("finite rejection value unavailable") from exc
+            row["solver_rejection_value"] = rejected_value
         except Exception as exc:
             row.update(status="failed", error=f"{type(exc).__name__}: {exc}")
             raise
         finally:
             record.save(f"trial-{index:05}.json", row)
         record.guard()
+        if row["status"] == "failed":
+            return rejected_value, np.zeros_like(initial)
         completed += 1
+        last_value = value
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
                 and metrics["current_limit_met"] and max(metrics["lengths"]) <= 3.45
                 and (selected is None or metrics["normal_rms"]
@@ -403,6 +422,7 @@ def search(model, record, minimize):
         status = dict(reason="failure", error=f"{type(exc).__name__}: {exc}")
     model.set_x(initial if selected is None else np.asarray(selected["x"]))
     return dict(status=status, startup_pass=startup, derivative_checks=checks,
+                solver_options=SOLVER_OPTIONS.copy(),
                 startup_s=(search_started if search_started is not None else time.monotonic())
                 - started,
                 search_s=0 if search_started is None else time.monotonic()-search_started,

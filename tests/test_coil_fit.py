@@ -154,7 +154,7 @@ def test_startup_probes_do_not_win_and_no_inherited_evaluation_cap(tmp_path, clo
     np.testing.assert_array_equal(model.x, model.x0)
 
 
-@pytest.mark.parametrize('failure', ['gradient', 'repeat', 'exception', 'late'])
+@pytest.mark.parametrize('failure', ['gradient', 'repeat', 'exception', 'trial', 'late'])
 def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, failure):
     model = SyntheticModel()
     original = model.evaluate
@@ -167,6 +167,8 @@ def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, fail
             value += 1e-6
         if failure == 'exception':
             raise ValueError('synthetic failure')
+        if failure == 'trial':
+            raise experiment.InvalidTrial('unit flux degenerate or orientation reversed')
         if failure == 'late':
             clock[0] = 2
         return value, gradient, metrics
@@ -177,9 +179,84 @@ def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, fail
     assert not result['startup_pass']
     assert result['status']['reason'] == ('budget' if failure == 'late' else 'failure')
     assert (record.output/'trial-00000-attempt.json').is_file()
-    if failure in ('late', 'exception'):
+    if failure in ('late', 'exception', 'trial'):
         assert result['selected'] is None
         assert json.loads((record.output/'trial-00000.json').read_text())['status'] == 'failed'
+
+
+def test_failed_search_trial_preserves_candidate_and_can_backtrack(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if x[0] == 1.:
+            raise experiment.InvalidTrial('unit flux degenerate or orientation reversed')
+        return original(x)
+
+    def backtrack(function, x, **kwargs):
+        good = x - .001*model.linear
+        valid, _ = function(good)
+        bad = x.copy()
+        bad[0] = 1.
+        rejected, gradient = function(bad)
+        assert np.isfinite(rejected) and rejected > valid
+        assert np.isfinite(gradient).all()
+        function(good)  # Recovery must not depend on the rejected model state.
+        return SimpleNamespace(success=False, message='synthetic line-search stop')
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, backtrack)
+    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
+    assert result['selected']['index'] == 10
+    assert result['bundles_attempted'] == 13 and result['bundles_completed'] == 12
+    failed = json.loads((record.output/'trial-00011.json').read_text(encoding='utf-8'))
+    assert failed['status'] == 'failed' and 'InvalidTrial' in failed['error']
+    assert 'solver_rejection_value' in failed and 'metrics' not in failed
+    np.testing.assert_array_equal(model.x, result['selected']['x'])
+
+
+@pytest.mark.parametrize('error', [TimeoutError, OSError, RuntimeError])
+def test_search_does_not_recover_resource_or_unexpected_errors(tmp_path, clock, error):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if model.calls >= 10:
+            raise error('stop')
+        return original(x)
+
+    model.evaluate = evaluate
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
+    assert result['startup_pass']
+    assert result['status']['reason'] == ('budget' if error is TimeoutError else 'failure')
+    assert result['selected']['index'] == 0 and result['bundles_completed'] == 10
+
+
+def test_scipy_backtracks_from_invalid_trial_and_reaches_valid_minimum(tmp_path, clock):
+    from scipy.optimize import minimize
+
+    model = SyntheticModel()
+
+    def evaluate(x):
+        model.set_x(x)
+        if abs(x[0]) > .2:
+            raise experiment.InvalidTrial('outside synthetic objective domain')
+        value = float((x[0]-.1)**2 + 1e-6)
+        gradient = np.zeros_like(x)
+        gradient[0] = 2*(x[0]-.1)
+        return value, gradient, dict(normal_rms=value, lengths=[3.44]*6,
+            sampled_geometry_limits_met=True, current_limit_met=True)
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, minimize)
+    assert result['startup_pass'] and result['status']['success']
+    assert result['selected']['x'][0] == pytest.approx(.1, abs=1e-8)
+    trials = [json.loads(p.read_text(encoding='utf-8'))
+              for p in record.output.glob('trial-*.json') if '-attempt' not in p.name]
+    assert any(t['status'] == 'failed' for t in trials)
+    assert result['solver_options']['ftol'] == 0.
 
 
 @pytest.mark.parametrize('failure', ['length', 'current', 'geometry', 'late-write'])

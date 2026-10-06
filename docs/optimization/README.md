@@ -37,6 +37,18 @@ interior files, with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
 before and after execution: in-flight native work can overrun, and late checks
 cannot claim completion. Use a fresh output directory. Failures remain on disk.
 
+During search, known objective-domain failures (degenerate/reversed flux, truncated
+native objective or nonfinite final objective/gradient) are saved as failed trials.
+A finite uphill value lets the line search backtrack; failed trials cannot win,
+and earlier eligible candidates remain selectable. Startup/probe failures remain
+fatal, as do resource limits and unexpected errors. The recorded solver uses
+`ftol=0`, removing the positive reduction threshold that acted as an absolute
+cutoff for small objectives under [SciPy's rule](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-lbfgsb.html).
+The existing `gtol`, wall-clock budget and other solver stopping conditions remain;
+zero improvement can still stop a run. This addresses
+[#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52), without changing
+selection, field/geometry gates or historical evidence.
+
 Implementation: [driver](../../scripts/fit_coils.py),
 [objective and search](../../src/fusion_baselines/coil_fit.py),
 [checks and target intake](../../src/fusion_baselines/coil_check.py).
