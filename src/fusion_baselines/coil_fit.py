@@ -12,7 +12,7 @@ import numpy as np
 
 MAX_BYTES, START_RESERVE, LIVE_RESERVE = 256*1024**2, 3*1024**3, 2*1024**3
 PROBE_STEPS = (1.25e-6, 6.25e-7)
-SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=1e-12, gtol=1e-9)
+SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=0., gtol=1e-9)
 
 
 def mode_map(entries):
@@ -344,9 +344,10 @@ def search(model, record, minimize):
     initial = model.x0.copy()
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
+    largest_value = 0.
 
     def evaluate(x, role):
-        nonlocal selected, completed
+        nonlocal selected, completed, largest_value
         record.guard()
         index = record.bundles
         record.bundles += 1
@@ -359,10 +360,18 @@ def search(model, record, minimize):
             row.update(value=value, gradient=gradient.tolist(), metrics=metrics, status="completed")
         except Exception as exc:
             row.update(status="failed", error=f"{type(exc).__name__}: {exc}")
-            raise
+            if role != "search" or not isinstance(exc, (ValueError, FloatingPointError)):
+                raise
+            # Reject numerical trial failures; resource and programming errors remain fatal.
+            # Stay above every completed value, including the line search's starting point.
+            rejected_value = largest_value + max(1., abs(largest_value))
+            row.update(rejected_value=rejected_value)
         finally:
             record.save(f"trial-{index:05}.json", row)
         record.guard()
+        if row["status"] == "failed":
+            return rejected_value, np.zeros_like(initial)
+        largest_value = max(largest_value, value)
         completed += 1
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
                 and metrics["current_limit_met"] and max(metrics["lengths"]) <= 3.45
@@ -403,6 +412,7 @@ def search(model, record, minimize):
         status = dict(reason="failure", error=f"{type(exc).__name__}: {exc}")
     model.set_x(initial if selected is None else np.asarray(selected["x"]))
     return dict(status=status, startup_pass=startup, derivative_checks=checks,
+                solver_options=SOLVER_OPTIONS.copy(),
                 startup_s=(search_started if search_started is not None else time.monotonic())
                 - started,
                 search_s=0 if search_started is None else time.monotonic()-search_started,
