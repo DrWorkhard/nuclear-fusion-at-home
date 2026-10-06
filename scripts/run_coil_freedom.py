@@ -26,6 +26,10 @@ SERIAL_RUNNER = ("import runpy,sys; sys.modules['mpi4py']=None; "
                  "sys.argv=sys.argv[1:]; runpy.run_path(sys.argv[0],run_name='__main__')")
 
 
+class CleanupError(RuntimeError):
+    """An uncertain process-group state forbids starting the next arm."""
+
+
 def digest(path):
     with path.open("rb") as stream:
         return hashlib.file_digest(stream, "sha256").hexdigest()
@@ -70,15 +74,15 @@ def diagnostic_deadline(marker, outer_deadline):
 
 def stop(process):
     # Each child owns a process group, so native descendants cannot outlive an overrun.
-    if process.poll() is not None:
-        return
+    # Reap an exited leader first (macOS can return EPERM for a zombie-only group),
+    # but still signal the group: surviving descendants are independent of its exit.
+    process.poll()
     try:
         os.killpg(process.pid, signal.SIGTERM)
     except ProcessLookupError:
         pass
-    except PermissionError:
-        if process.poll() is None:
-            raise
+    except PermissionError as exc:
+        raise CleanupError("cannot terminate child process group") from exc
     try:
         process.wait(timeout=1)
     except subprocess.TimeoutExpired:
@@ -88,9 +92,8 @@ def stop(process):
             os.killpg(process.pid, signal.SIGKILL)
         except ProcessLookupError:
             pass
-        except PermissionError:
-            if process.poll() is None:
-                raise
+        except PermissionError as exc:
+            raise CleanupError("cannot confirm child process-group cleanup") from exc
     process.wait()
 
 
@@ -162,6 +165,7 @@ def run_arm(order, snapshot, wout, arm):
         result["completed"] = True
     except Exception as exc:
         result["error"] = f"{type(exc).__name__}: {exc}"
+        result["cleanup_failed"] = isinstance(exc, CleanupError)
     result.update(elapsed_s=time.monotonic()-started, retained_bytes=retained_bytes(arm))
     save(arm/"supervisor.json", result)
     return result
@@ -191,8 +195,11 @@ def run(snapshot, wout, output, revision):
             # A failed arm is retained. Still collect the other declared arm once.
             result["arms"].append(run_arm(order, snapshot, wout, output/name))
             save(output/"study.json", result)
+            if result["arms"][-1].get("cleanup_failed"):
+                break  # Do not overlap an unknown surviving process group.
         result["sources_after"] = {path: digest(Path(path)) for path in sources}
         result["completed"] = (result["sources_after"] == sources
+                               and len(result["arms"]) == 2
                                and all(arm["completed"] for arm in result["arms"]))
     except Exception as exc:
         result["error"] = f"{type(exc).__name__}: {exc}"

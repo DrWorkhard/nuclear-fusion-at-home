@@ -3,6 +3,7 @@
 import importlib.util
 import json
 import os
+import signal
 import sys
 import time
 from pathlib import Path
@@ -59,6 +60,67 @@ def test_zero_status_cannot_hide_aggregate_storage_overrun(tmp_path, monkeypatch
     assert not result["completed"] and result["stop_reason"] == "aggregate storage ceiling"
     assert (tmp_path/"fit"/"prior").read_bytes() == b"a"*60
     assert (tmp_path/"trace-data").read_bytes() == b"b"*60
+
+
+@pytest.mark.skipif(os.name != "posix", reason="study supervisor uses POSIX process groups")
+def test_descendant_cannot_write_after_its_leader_exits(tmp_path):
+    ready, late = tmp_path/"ready", tmp_path/"late"
+    child = ("import signal,time,pathlib; signal.signal(signal.SIGTERM,signal.SIG_IGN); "
+             f"pathlib.Path({str(ready)!r}).touch(); time.sleep(.6); "
+             f"pathlib.Path({str(late)!r}).touch()")
+    leader = ("import subprocess,sys,time,pathlib; "
+              f"subprocess.Popen([sys.executable,'-c',{child!r}]);"
+              f"\nwhile not pathlib.Path({str(ready)!r}).exists(): time.sleep(.01)")
+    result = runner.supervise([sys.executable, "-c", leader], tmp_path, "leader",
+                              time.monotonic()+5)
+    assert result["completed"]
+    time.sleep(.7)
+    assert ready.exists() and not late.exists()
+
+
+def test_cleanup_failure_is_not_assumed_safe_when_leader_has_exited(monkeypatch):
+    process = SimpleNamespace(pid=123, returncode=0, poll=lambda: 0)
+
+    def denied(*args):
+        raise PermissionError("process group may still exist")
+
+    monkeypatch.setattr(runner.os, "killpg", denied)
+    with pytest.raises(runner.CleanupError):
+        runner.stop(process)
+
+
+def test_cleanup_signals_the_group_after_leader_exit(monkeypatch):
+    signals = []
+    process = SimpleNamespace(pid=123, returncode=0, poll=lambda: 0, wait=lambda **kw: 0)
+    monkeypatch.setattr(runner.os, "killpg", lambda pid, sig: signals.append((pid, sig)))
+    runner.stop(process)
+    assert signals == [(123, signal.SIGTERM), (123, signal.SIGKILL)]
+
+
+@pytest.mark.parametrize("cleanup_failed,expected_orders", [(True, [5]), (False, [5, 8])])
+def test_unknown_survivor_aborts_study_but_ordinary_failure_retains_both_arms(
+        tmp_path, monkeypatch, cleanup_failed, expected_orders):
+    monkeypatch.setattr(runner, "ROOT", tmp_path)
+    monkeypatch.setattr(runner, "build_run_record", lambda _: dict(
+        repository=dict(dirty=False, commit="a"*40)))
+    protocol = tmp_path/"docs/optimization/ISSUE53_COIL_FREEDOM.md"
+    protocol.parent.mkdir(parents=True)
+    protocol.write_text("frozen", encoding="utf-8")
+    seed, wout = tmp_path/"seed", tmp_path/"wout"
+    seed.write_bytes(b"seed")
+    wout.write_bytes(b"wout")
+    monkeypatch.setattr(runner, "SNAPSHOT_SHA", runner.digest(seed))
+    monkeypatch.setattr(runner, "WOUT_SHA", runner.digest(wout))
+    orders = []
+
+    def failed_arm(order, *args):
+        orders.append(order)
+        return dict(completed=False, cleanup_failed=cleanup_failed)
+
+    monkeypatch.setattr(runner, "run_arm", failed_arm)
+    assert runner.run(seed, wout, tmp_path/"output", "a"*40) == 1
+    assert orders == expected_orders
+    assert not runner.read(tmp_path/"output"/"study.json")["completed"]
 
 
 def test_no_child_starts_after_deadline_or_below_reserve(tmp_path, monkeypatch):

@@ -44,6 +44,8 @@ retained and makes the arm incomplete even if its raw report says completed.
 Search selects only completed pre-deadline trials; an in-flight call can return
 late, with its overshoot charged against the outer 2700 s arm limit. The diagnostic
 clock is never restarted. An unreturned call is stopped at the outer limit.
+Group cleanup still runs after the leader exits; uncertain cleanup aborts the
+study before the next arm can start. Ordinary recorded failures retain both arms.
 
 Both use issue #52's failed-trial handling and `ftol=0`, unchanged `gtol`, objective,
 penalties and eligibility. Only completed eligible candidates can win; probes and
