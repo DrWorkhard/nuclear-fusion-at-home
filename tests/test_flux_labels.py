@@ -60,6 +60,17 @@ def test_interval_gauss_flux_matches_exact_irregular_spline_area():
             assert area == pytest.approx(np.pi*.2**2, abs=1e-12)
 
 
+def test_interval_method_controls_produce_json_serializable_reports():
+    import json
+    import runpy
+    from pathlib import Path
+
+    driver = runpy.run_path(str(Path(__file__).resolve().parents[1]
+                               /'scripts/diagnose_flux_quadrature.py'))
+    rows = json.loads(json.dumps(driver['controls'](lambda: None), allow_nan=False))
+    assert len(rows) == 2 and all(row['passed'] for row in rows)
+
+
 def test_missing_angular_coverage_is_reported_even_when_circle_flux_is_correct():
     theta = np.linspace(0., .5, 40)
     rz = np.column_stack((1.+.2*np.cos(theta), .2*np.sin(theta)))

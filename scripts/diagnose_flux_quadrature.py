@@ -46,12 +46,13 @@ def controls(guard):
         for coefficients, width in zip(spline.c.T, np.diff(spline.x), strict=True):
             polynomial = np.polynomial.Polynomial(coefficients[::-1])
             area += .5*(polynomial*polynomial).integ()(width)
+        area = float(area)
         result = labels.interval_flux_integrals(UniformY(), spline, [1., 0.], guard=guard)
         errors = dict(line=abs(result['line_flux']+area), area=abs(result['area_flux']+area))
         if not modulation:
             errors['circle'] = abs(area-np.pi*.2**2)
         rows.append(dict(modulation=modulation, exact_spline_area=area, errors=errors,
-                         passed=max(errors.values()) < 1e-10))
+                         passed=bool(max(errors.values()) < 1e-10)))
     return rows
 
 
