@@ -193,6 +193,7 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
             r, z = labels.scaled_launch(target.rz(s, theta0, 0.), center, scales[index])
             record.save(f'line-{index}-attempt.json', dict(index=index, s=s, theta=theta0,
                         actual_start_RZ=[float(r), float(z)]))
+            record.guard()
             paths, hits = compute_fieldlines(field, [float(r)], [float(z)], tmax=4800.,
                                              tol=1e-10, phis=[0., np.pi] if half_period else [0.],
                                              stopping_criteria=[
