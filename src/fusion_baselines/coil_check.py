@@ -74,10 +74,10 @@ def snapshot_identity(snapshot, target_id="reference401"):
     spec = target_spec(target_id)
     need(snapshot.get("target_id", "reference401") == target_id, "snapshot target mismatch")
     need(
-        (snapshot["nbase"], snapshot["order"]) == (6, 5)
+        snapshot["nbase"] == 6 and snapshot["order"] in (5, 8)
         and snapshot["B2_scale"] == spec["B2"]
         and snapshot["target_flux"] == spec["flux"],
-        "fixed target normalization and six order-five coils required",
+        "fixed target normalization and six order-five/eight coils required",
     )
     need(np.isfinite(snapshot["seed_unit_flux"]) and snapshot["seed_unit_flux"] != 0,
          "finite seed flux orientation required")
@@ -236,11 +236,12 @@ def native_coils(snapshot, nodes, target_id="reference401"):
     snapshot_identity(snapshot, target_id)
     own = independent.physical_curves(snapshot, nodes)
     curves, currents = [], []
+    width = 3*(2*snapshot['order']+1)
     for i, coefficients in enumerate(snapshot["base_coefficients"]):
-        curve = CurveXYZFourier(nodes, 5)
+        curve = CurveXYZFourier(nodes, snapshot['order'])
         need(
             [f"coil[{i}]/{name}" for name in curve.local_full_dof_names]
-            == snapshot["names"][33 * i : 33 * (i + 1)],
+            == snapshot["names"][width * i : width * (i + 1)],
             "native named coordinate identity",
         )
         curve.local_full_x = np.asarray(coefficients).ravel().copy()

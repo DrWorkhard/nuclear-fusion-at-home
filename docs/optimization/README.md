@@ -58,6 +58,13 @@ selects the hash-bound improved Step 3 target with its frozen normalization.
 `check_coils.py` supports the same option; `trace_surfaces.py --snapshot` preserves
 the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
+The private native fitter also accepts `--order 8`, adding zero modes to an
+order-5 snapshot while preserving its geometry and current. Omit the option to
+keep the input order; lowering order is rejected. Named gradients, frozen-current
+checks and snapshot output support both six-coil families. The public candidate
+format stays fixed. The [bounded coil-freedom comparison](ISSUE53_COIL_FREEDOM.md)
+is prospective; no order-8 fitting result is claimed.
+
 ## Portable checks
 
 Without the maintainer's archives, supply a reference401 Wout. One can be regenerated

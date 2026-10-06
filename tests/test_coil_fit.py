@@ -17,17 +17,20 @@ def clock(monkeypatch):
     monkeypatch.setattr(experiment.shutil, "disk_usage", lambda _: SimpleNamespace(free=8*1024**3))
     return now
 
-def test_named_mapping_handles_free_permutation_and_rejects_missing_coordinates():
-    names = experiment.names()
+@pytest.mark.parametrize('order', [5, 8])
+def test_named_mapping_handles_free_permutation_and_rejects_missing_coordinates(order):
+    names = experiment.names(order)
+    width = 2*order+1
     assert names[:3] == ["xc(0)", "xs(1)", "xc(1)"]
-    assert names[11] == "yc(0)" and names[22] == "zc(0)" and len(set(names)) == 33
+    assert names[width] == "yc(0)" and names[2*width] == "zc(0)"
+    assert len(set(names)) == 3*width
     curves = [SimpleNamespace(local_full_dof_names=names, local_dof_names=names[::-1])
               for _ in range(6)]
-    result = experiment.canonical_gradient(curves, lambda _: np.arange(33)[::-1])
-    np.testing.assert_array_equal(result, np.tile(np.arange(33), 6))
+    result = experiment.canonical_gradient(curves, lambda _: np.arange(3*width)[::-1], order)
+    np.testing.assert_array_equal(result, np.tile(np.arange(3*width), 6))
     curves[0].local_dof_names = names[:-1]
     with pytest.raises(ValueError, match="named"):
-        experiment.canonical_gradient(curves, lambda _: np.arange(33))
+        experiment.canonical_gradient(curves, lambda _: np.arange(3*width), order)
 
 def test_native_counts_failure_prefix_and_late_completion(tmp_path, clock):
     record = experiment.Recorder(tmp_path/"run", 1)
@@ -116,9 +119,9 @@ def test_progress_write_crossing_deadline_cannot_start_native_call(tmp_path, clo
 
 
 class SyntheticModel:
-    def __init__(self):
-        self.x0 = np.zeros(198)
-        self.linear = np.cos(np.arange(198)+1)
+    def __init__(self, size=198):
+        self.x0 = np.zeros(size)
+        self.linear = np.cos(np.arange(size)+1)
         self.calls, self.x = 0, self.x0.copy()
 
     def set_x(self, x):
@@ -138,13 +141,14 @@ def seed_solver(function, x, **kwargs):
     return SimpleNamespace(success=True, message='synthetic')
 
 
-def test_startup_probes_do_not_win_and_no_inherited_evaluation_cap(tmp_path, clock):
+@pytest.mark.parametrize('size', [198, 306])
+def test_startup_probes_do_not_win_and_no_inherited_evaluation_cap(tmp_path, clock, size):
     def many(function, x, **kwargs):
         for _ in range(100):
             function(x)
         return seed_solver(function, x, **kwargs)
 
-    model = SyntheticModel()
+    model = SyntheticModel(size)
     record = experiment.Recorder(tmp_path/'run', 1)
     result = experiment.search(model, record, many)
     assert result['startup_pass'] and result['bundles_completed'] == 111
@@ -152,6 +156,39 @@ def test_startup_probes_do_not_win_and_no_inherited_evaluation_cap(tmp_path, clo
     assert all(row['passed'] for row in result['derivative_checks'])
     assert not result['physical_admission']
     np.testing.assert_array_equal(model.x, model.x0)
+
+
+def test_order_eight_model_preserves_seed_objective_and_differentiates_added_modes(tmp_path, clock):
+    from pathlib import Path
+
+    pytest.importorskip('simsopt')
+    from fusion_baselines import coil_check
+
+    root = Path(__file__).resolve().parents[1]
+    data = coil_check.read_json(root/coil_check.TARGET)
+    candidate = coil_check.read_json(root/'submissions/length-headroom-six-coil/candidate.json')
+    seed = coil_check.candidate_snapshot(candidate, data)
+    models, values = [], []
+    for order in (5, 8):
+        model = experiment.Model(experiment.promote_order(seed, order), data,
+                                 experiment.Recorder(tmp_path/f'order-{order}', 60),
+                                 n=16, ncoil=128)
+        models.append(model)
+        values.append(model.evaluate(model.x0))
+    assert values[0][0] == pytest.approx(values[1][0], rel=1e-10, abs=1e-12)
+    old_gradient = values[0][1].reshape(6, 3, 11)
+    np.testing.assert_allclose(values[1][1].reshape(6, 3, 17)[:, :, :11], old_gradient,
+                               atol=1e-10, rtol=1e-8)
+    model = models[1]
+    direction = np.zeros((6, 3, 17))
+    direction[:, :, 11:] = np.sin(np.arange(108).reshape(6, 3, 6)+1)
+    direction = direction.ravel()/np.linalg.norm(direction)
+    point = model.x0+2e-4*direction
+    _, gradient, _ = model.evaluate(point)
+    h = 1.25e-6
+    derivative = (model.evaluate(point+h*direction)[0]
+                  - model.evaluate(point-h*direction)[0])/(2*h)
+    assert derivative == pytest.approx(float(gradient@direction), rel=1e-4, abs=1e-7)
 
 
 @pytest.mark.parametrize('failure', ['gradient', 'repeat', 'exception', 'trial', 'late'])
@@ -297,6 +334,7 @@ def test_unaccepted_lower_trial_cannot_make_invalid_point_look_converged(tmp_pat
 @pytest.mark.parametrize('value', [np.nan, np.inf])
 def test_model_classifies_nonfinite_native_derivatives_as_invalid_trials(component, value):
     model = object.__new__(experiment.Model)
+    model.order = 5
     model.set_x = lambda _: None
     model.unit_flux = lambda: -1.
     model.area = 1.
@@ -380,8 +418,9 @@ def test_clipped_native_gradient_is_rejected_before_derivatives(q):
 
 
 @pytest.mark.parametrize("mismatch", [False, True])
+@pytest.mark.parametrize('order', [5, 8])
 def test_fine_saves_full_loop_freezes_current_and_checks_independent_BA(
-        tmp_path, clock, monkeypatch, mismatch):
+        tmp_path, clock, monkeypatch, mismatch, order):
     from fusion_baselines import coupled_coil_audit
 
     record = experiment.Recorder(tmp_path/"run", 1)
@@ -424,8 +463,9 @@ def test_fine_saves_full_loop_freezes_current_and_checks_independent_BA(
     monkeypatch.setattr(coupled_coil_audit, "filament_field_and_potential", lambda p, *_: (
         np.tile(2*vectors["B"]+(1 if mismatch else 0), (len(p), 1)),
         np.tile(2*vectors["A"], (len(p), 1))))
-    seed = dict(target_flux=-1., physical=[dict(flip=False), dict(flip=True)])
-    chosen = dict(index=11, x=np.zeros(198), metrics=dict(scale=2., unit_flux=-.5))
+    seed = dict(order=order, target_flux=-1., physical=[dict(flip=False), dict(flip=True)])
+    chosen = dict(index=11, x=np.arange(18*(2*order+1))*1e-6,
+                  metrics=dict(scale=2., unit_flux=-.5))
     if mismatch:
         with pytest.raises(ValueError, match="independent fine"):
             experiment.fine(seed, {}, chosen, record, .5)
@@ -435,6 +475,9 @@ def test_fine_saves_full_loop_freezes_current_and_checks_independent_BA(
     assert row["checks_pass"] is not mismatch
     assert row["metrics"]["flux_relative_error"] == pytest.approx(.2)
     assert row["metrics"]["current"] == 200000
+    snapshot = json.loads((record.output/'selected-snapshot.json').read_text(encoding='utf-8'))
+    assert np.shape(snapshot['base_coefficients']) == (6, 3, 2*order+1)
+    np.testing.assert_array_equal(np.ravel(snapshot['base_coefficients']), chosen['x'])
     assert max(block_sizes) == 128
     with np.load(record.output/"fine-0.5.npz", allow_pickle=False) as saved:
         assert saved["A"].shape == saved["loop_tangent"].shape == (512, 3)
