@@ -110,3 +110,15 @@ def test_half_period_pooling_requires_vector_rotation_parity():
     assert max(driver["half_period_symmetry"](Toroidal(), points).values()) == 0
     with pytest.raises(ValueError, match="symmetry"):
         driver["half_period_symmetry"](UniformY(), points)
+
+
+def test_launch_correction_preserves_physical_ray_and_rejects_unbounded_steps():
+    from fusion_baselines.flux_labels import scaled_launch, secant_scale
+
+    np.testing.assert_allclose(scaled_launch([1.2, .1], [1., 0.], 1.02), [1.204, .102])
+    assert secant_scale(1., .72, 1.02, .749) == pytest.approx(1.0206896551724138)
+    for args in [(1., .72, 1., .73), (1., .72, 1.02, .70), (1., .72, 1.02, .721)]:
+        with pytest.raises(ValueError):
+            secant_scale(*args)
+    with pytest.raises(ValueError):
+        scaled_launch([1.2, .1], [1., 0.], 1.06)

@@ -44,7 +44,7 @@ def half_period_symmetry(field, points):
 
 
 def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
-        half_period=False, start_index=None):
+        half_period=False, start_index=None, launch_scales=None):
     from simsopt.field import BiotSavart
     from simsopt.field.tracing import ToroidalTransitStoppingCriterion, compute_fieldlines
 
@@ -70,6 +70,14 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
         check.bind(ROOT/spec["input"], spec["input_sha256"], sources)
         for path in [Path(__file__), *sorted((ROOT/"src/fusion_baselines").glob("*.py"))]:
             check.bind(path, check.digest(path), sources)
+        scales = np.ones(5)
+        if launch_scales is not None:
+            check.bind(launch_scales, check.digest(launch_scales), sources)
+            scales = np.asarray(check.read_json(launch_scales), dtype=float)
+            check.need(scales.shape == (5,) and np.isfinite(scales).all()
+                       and np.all((scales >= .95) & (scales <= 1.05)) and scales[0] == 1.,
+                       "five bounded scales with unchanged control launch required")
+        report["launch_scales"] = scales.tolist()
         report["sources_before"] = dict(sources)
         snapshot = check.read_json(snapshot_path)
         coils, _, mapping = check.native_coils(snapshot, 512, target_id)
@@ -117,7 +125,7 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
             if start_index is not None and index != start_index:
                 continue
             record.guard()
-            r, z = target.rz(s, theta0, 0.)
+            r, z = labels.scaled_launch(target.rz(s, theta0, 0.), center, scales[index])
             paths, hits = compute_fieldlines(field, [float(r)], [float(z)], tmax=4800.,
                                              tol=1e-10, phis=[0., np.pi] if half_period else [0.],
                                              stopping_criteria=[
@@ -134,7 +142,9 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
             section_hits = section_hits[np.argsort(section_hits[:, 0], kind="stable")]
             rz = np.column_stack((np.hypot(section_hits[:, 2], section_hits[:, 3]),
                                   section_hits[:, 4]))
-            row = dict(s=s, theta=theta0, transits=turns, iota=iota, prefixes=[],
+            row = dict(s=s, theta=theta0, launch_scale=float(scales[index]),
+                       actual_start_RZ=[float(r), float(z)],
+                       transits=turns, iota=iota, prefixes=[],
                        crossings_per_turn=2 if half_period else 1)
             for count in (crossings//4, crossings//2, crossings):
                 count *= row["crossings_per_turn"]
@@ -182,7 +192,8 @@ if __name__ == "__main__":
                         help="full-turn sample count; --half-period doubles section crossings")
     parser.add_argument("--half-period", action="store_true")
     parser.add_argument("--start-index", type=int, choices=range(5))
+    parser.add_argument("--launch-scales", type=Path)
     args = parser.parse_args()
     raise SystemExit(run(args.snapshot.resolve(), args.wout.resolve(), args.target,
                          args.output.resolve(), args.seconds, args.crossings,
-                         args.half_period, args.start_index))
+                         args.half_period, args.start_index, args.launch_scales))

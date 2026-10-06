@@ -94,3 +94,30 @@ def contour_diagnostics(field, rz, center, edge_flux, guard=lambda: None,
                 label=quadrature[-1]["line_flux"]/edge_flux,
                 quadrature_label_change=abs(quadrature[0]["line_flux"]-quadrature[1]["line_flux"])
                 /abs(edge_flux), subsets=subsets)
+
+
+def scaled_launch(rz, center, scale):
+    """Move a launch along its fixed physical R,Z ray, with a bounded scale factor."""
+    rz, center = np.asarray(rz, dtype=float), np.asarray(center, dtype=float)
+    if rz.shape != (2,) or center.shape != (2,) or not np.isfinite([rz, center]).all():
+        raise ValueError("finite physical R,Z launch and center required")
+    if not np.isfinite(scale) or not .95 <= scale <= 1.05:
+        raise ValueError("launch scale must remain within [0.95, 1.05]")
+    point = center+scale*(rz-center)
+    if point[0] <= 0:
+        raise ValueError("positive cylindrical R required")
+    return point
+
+
+def secant_scale(old_scale, old_label, new_scale, new_label, desired=.75):
+    """One bounded secant proposal; reject ill-conditioned or reversed slopes, never clip."""
+    values = np.array([old_scale, old_label, new_scale, new_label, desired])
+    if not np.isfinite(values).all() or abs(new_scale-old_scale) < 1e-10:
+        raise ValueError("finite distinct scale trials required")
+    slope = (new_label-old_label)/(new_scale-old_scale)
+    if slope <= 1e-3:
+        raise ValueError("positive resolved flux slope required")
+    proposal = new_scale+(desired-new_label)/slope
+    if not .95 <= proposal <= 1.05:
+        raise ValueError("secant proposal outside frozen scale bounds")
+    return float(proposal)
