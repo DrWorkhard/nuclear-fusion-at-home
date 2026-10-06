@@ -46,3 +46,16 @@ qualification tolerances, not physical acceptance gates. Otherwise record the
 specific failure and choose the cheapest check of its cause before any action
 rerun. A label alone does not verify nesting, island absence or equal-alpha measure.
 No full-domain or benefit-transfer conclusion follows from this five-start pilot.
+
+## One bounded refinement
+
+The clean 160-crossing producer was `23acc8de0892a3a77b669cd9a90dd693a452354a`.
+Both arms executed, but several phases fail the stated sampling/convergence checks.
+Keep those failures. Before any launch correction, repeat the same five starts
+with `--crossings 320`, analyze 80/160/320 prefixes, use 1024/2048 angular and
+24 radial quadrature nodes, and a finite native integration cap of 4800.
+The extra budget is 900 s / 256 MiB per arm with the same reserves and supervisor.
+The same tolerances apply to 160-to-320 changes; this is exploratory refinement,
+not a new confirmatory claim. Snapshot hashes are now enforced by the driver;
+returned late traces are saved before rejecting completion, as adversarial review
+requested. No scientific conclusion depends on a late or missing trace.

@@ -67,3 +67,22 @@ def test_invalid_contours_fail(change):
         rz[0] = [1., 0.]
     with pytest.raises(ValueError):
         polar_contour(rz, [1., 0.])
+
+
+def test_late_trace_is_saved_before_deadline_rejection(tmp_path):
+    import runpy
+    import time
+    from pathlib import Path
+
+    from fusion_baselines.coil_fit import Recorder
+
+    driver = runpy.run_path(str(Path(__file__).resolve().parents[1]
+                               /"scripts/measure_flux_labels.py"))
+    record = Recorder(tmp_path/"late", time.monotonic()-1)
+    path = np.arange(12).reshape(3, 4)
+    hit = np.arange(10).reshape(2, 5)
+    with pytest.raises(TimeoutError):
+        driver["save_trace"](record, 0, path, hit)
+    with np.load(tmp_path/"late/line-0.npz", allow_pickle=False) as arrays:
+        np.testing.assert_array_equal(arrays["path"], path)
+        np.testing.assert_array_equal(arrays["hits"], hit)

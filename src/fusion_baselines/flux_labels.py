@@ -67,18 +67,19 @@ def flux_integrals(field, spline, center, count=512, radial_count=12, guard=lamb
     return dict(line_flux=line, area_flux=area, stokes_abs_error=abs(line-area))
 
 
-def contour_diagnostics(field, rz, center, edge_flux, guard=lambda: None):
+def contour_diagnostics(field, rz, center, edge_flux, guard=lambda: None,
+                        grids=(256, 512), radial_count=12):
     """Record both resolution and disjoint crossing-subset sensitivity of a flux estimate."""
     if not np.isfinite(edge_flux) or edge_flux == 0:
         raise ValueError("finite nonzero oriented edge flux required")
     spline, gap = polar_contour(rz, center)
-    grids = [flux_integrals(field, spline, center, n, guard=guard) for n in (256, 512)]
+    quadrature = [flux_integrals(field, spline, center, n, radial_count, guard) for n in grids]
     subsets = []
     for offset in (0, 1):
         section = np.asarray(rz)[offset::2]
         try:
             sub, subgap = polar_contour(section, center)
-            points, tangent = contour_points(sub, center, 512)
+            points, tangent = contour_points(sub, center, grids[-1])
             guard()
             field.set_points(np.ascontiguousarray(points))
             flux = float(np.mean(np.einsum("ij,ij->i", field.A(), tangent)))
@@ -89,7 +90,7 @@ def contour_diagnostics(field, rz, center, edge_flux, guard=lambda: None):
                                 heldout_radius_max_m=float(np.max(abs(residual)))))
         except ValueError as exc:
             subsets.append(dict(error=str(exc)))
-    return dict(crossings=len(rz), max_gap_rad=gap, grids=grids,
-                label=grids[-1]["line_flux"]/edge_flux,
-                quadrature_label_change=abs(grids[0]["line_flux"]-grids[1]["line_flux"])
+    return dict(crossings=len(rz), max_gap_rad=gap, grids=quadrature,
+                label=quadrature[-1]["line_flux"]/edge_flux,
+                quadrature_label_change=abs(quadrature[0]["line_flux"]-quadrature[1]["line_flux"])
                 /abs(edge_flux), subsets=subsets)
