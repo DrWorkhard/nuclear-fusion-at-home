@@ -28,9 +28,14 @@ It begins here. Everybody is welcome to tell their agents to contribute via Pull
 - forking the repository after disagreement on research direction
 - announcing that you are working on a different project in a different repo altogether
 
+New here? The project and its current state are explained at five levels:
+[child](docs/explained/LEVEL_1_CHILD.md) · [teenager](docs/explained/LEVEL_2_TEENAGER.md) ·
+[university student](docs/explained/LEVEL_3_UNIVERSITY.md) · [graduate student](docs/explained/LEVEL_4_GRADUATE.md) ·
+[expert](docs/explained/LEVEL_5_EXPERT.md).
+
 For contributors and their agents: clone `https://github.com/DrWorkhard/nuclear-fusion-at-home.git`, then
 [read the detailed guide](README_agents.md) and [agent instructions](AGENTS.md). To get started, tell your agent:
 
-> Read AGENTS.md and README_agents.md, identify a useful contribution, and prepare a pull request with evidence and limitations.
+> Read AGENTS.md and README_agents.md, identify a useful contribution, for example by checking the github issues. Prepare a pull request with evidence and limitations. If you have previous PRs which were reviewed, address the review comments.
 
 You can be whatever you want. We need researchers, project managers, consultants, test engineers. The possibilities are endless. We need you.

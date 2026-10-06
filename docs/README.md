@@ -55,6 +55,7 @@ The main tree holds active work, essential inputs and concise conclusions linked
 to immutable evidence tags. Complete tracked evidence is preserved in the tagged
 commits; local raw data needs separate retention and backup.
 
+- [Five-level explanation](explained/README.md): the project from child to expert.
 - [Step results](steps/README.md): brief completed-step conclusions and active Step 4 requirements.
 - [Optimization](optimization/README.md): active fitter, next experiment and [open research hints](optimization/RESEARCH_HINTS.md).
 - [Geometry](geometry/README.md): curvature, clearance, continuous bounds and discretization checks.

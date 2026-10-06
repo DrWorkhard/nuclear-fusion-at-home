@@ -34,7 +34,9 @@ spend effort on decisions that test the path.
 1. **Test benefit in actual coil fields.** Compare the original and improved
    Step 3 targets with matched fitting effort. Diagnose stopping once, then
    evaluate interior fields, magnetic surfaces and benefit transfer using shared
-   checks. Current fits address only the original target.
+   checks. The [first matched comparison](optimization/ISSUE25_MATCHED_TARGETS.md)
+   leaves wide-domain benefit transfer unresolved because required wells are missing.
+   Diagnose shallow-well fidelity and qualify realized flux labels before confirmation.
 2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. Detailed simulations follow a decision

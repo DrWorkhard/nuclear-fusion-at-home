@@ -2,7 +2,7 @@
 
 4 October 2026. [Plan](../PROJECT_PLAN.md) · [Scientific assessment](STRATEGIC_REVIEW_RESOLUTION.md)
 
-The maintained runtime is **2,804 Python lines**: 1,996 for native research and
+The simplification baseline before later tracing/target work retained **2,804 Python lines**: 1,996 for native research and
 808 for public participation. The entire code footprint falls from 12,068 lines
 at `8581b1b` to **6,117**, including tests and maintenance: **49.3% less**.
 Counts include blank lines, comments and docstrings; they exclude dependencies,
@@ -46,7 +46,8 @@ Current counts include the separately merged sparse current-normalization diagno
 **Research:** explicit snapshot → fixed target intake → derivative checks →
 bounded fit → frozen-current fine fields and continuous geometry → short result.
 Use the [single command](../optimization/README.md). Numerical completion and
-physical acceptance are separate. The current driver still fits reference401 only.
+physical acceptance are separate. The driver now supports the two hash-bound Step 3 targets;
+[the matched experiment](../optimization/ISSUE25_MATCHED_TARGETS.md) explains the added diagnostics.
 
 **Contribution:** public case → named coefficient change → evaluate → dense
 boundary diagnostic → replay/report → reviewed contribution. Public replay is
@@ -60,8 +61,8 @@ supported scope. [Rules](../validation/RESEARCH_WORKFLOW.md).
 core/release checks → hosted CI → push the checked commit. Historical numerical
 replay starts at the [producer revision](../validation/REPRODUCING_RESULTS.md).
 
-The decisive missing work is matched improved-target input, realized magnetic
-surfaces/benefit transfer, and an early reactor feasibility screen. Their necessary
+The decisive missing work is qualified realized flux surfaces/benefit transfer
+and an early reactor feasibility screen. Matched input support is now available. Their necessary
 code size is unknown; existing solver adapters should come before new frameworks.
 The [24 October decision](../optimization/STEP4_RESEARCH_PROGRAMME.md) determines
 whether further work on this recipe is justified.

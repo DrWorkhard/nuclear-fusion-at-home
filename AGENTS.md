@@ -68,7 +68,8 @@
   immediately before “Start in three commands”. Describe 4A–4D only on Step 4's page.
 - One home per topic: motivation in README, technical onboarding in README_agents,
   priorities in PROJECT_PLAN, evidence
-  summary in STATUS, step conclusions in docs/steps, methods in topic folders.
+  summary in STATUS, step conclusions in docs/steps, methods in topic folders,
+  layered plain-language explanations in docs/explained.
   Do not write session diaries or repeat test counts in the roadmap.
 
 ## Checks and completion
