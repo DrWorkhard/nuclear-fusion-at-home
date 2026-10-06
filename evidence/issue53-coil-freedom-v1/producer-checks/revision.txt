@@ -1,0 +1,3 @@
+fd99245147308b9dbd23473002968e3283bd08fe
+Fresh shallow validation checkout: /private/tmp/fusion-research-integration-validation-20261006
+61 public and 316 native tests; docs, Ruff0.16.5 and diff checks pass. Eight pre-existing deprecation warnings.

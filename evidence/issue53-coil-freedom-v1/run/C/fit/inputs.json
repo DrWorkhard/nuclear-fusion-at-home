@@ -1,0 +1,88 @@
+{
+  "check_seconds": 900.0,
+  "coefficient_bounds": null,
+  "coil_order": 5,
+  "completed": false,
+  "fine": [],
+  "input_coil_order": 5,
+  "interior": [],
+  "kind": "normalized-coil-fit",
+  "physical_admission": false,
+  "portable_target": {
+    "B2_scale": 1.6293829620247962,
+    "archived_wout_identity": true,
+    "check": "consistency with public starter",
+    "dense_identity_verified": false,
+    "input_sha256": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "measured_B2": 1.6293829620247962,
+    "starter_errors": {
+      "inner_points": 0.0,
+      "inner_target": 0.0
+    },
+    "target_flux": -0.03141592653589793,
+    "target_id": "reference401",
+    "wout_sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e"
+  },
+  "provenance": {
+    "external_repositories": {},
+    "host": {
+      "captured_at": "2026-10-06T17:35:12.589881+00:00",
+      "logical_cpu_count": 8,
+      "machine": "arm64",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+      "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+    },
+    "repository": {
+      "available": true,
+      "branch": "integration/prepared-research",
+      "commit": "fd99245147308b9dbd23473002968e3283bd08fe",
+      "dirty": false,
+      "path": "/private/tmp/fusion-research-integration-20261006"
+    },
+    "schema_version": 1
+  },
+  "search_seconds": 1800.0,
+  "solver_options": {
+    "ftol": 0.0,
+    "gtol": 1e-09,
+    "maxfun": 2147483647,
+    "maxiter": 2147483647,
+    "maxls": 20
+  },
+  "sources_before": {
+    "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lbfgsb.cpython-312-darwin.so": "24a8a24d2fa62c723161f800a86662f15300acbf35b16b3d3749047896b552f9",
+    "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/scipy/optimize/_lbfgsb_py.py": "61b69554f33a210284d4ae3de7da282152f9302b428eeb16984498b54e381d57",
+    "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/_core/optimizable.py": "1fcb1fa4bcca768a65bd172c2dc3655a5d7caebdbdc29212343eb6bca71784c4",
+    "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/biotsavart.py": "538a68bec673966b92a2af1c97d2604288812df0a7e0b02f7b98f3fcc8a19364",
+    "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curveobjectives.py": "f6395ccb7977b84b6fe8cf5df96ff6d7debe7fdbf9190b4cd7441a4bcdcae51d",
+    "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/curvexyzfourier.py": "c3c9e0cdcc6420b408dd39dcd815fc8860a4c78dd3302491fa24cc6fdacdc10c",
+    "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/objectives/fluxobjective.py": "455afdc715ea1ef891af52c972bfcae6b16fd6553973dc464010f52e04e26b42",
+    "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsoptpp.cpython-312-darwin.so": "af5823c4e5ec68490a8f7b4678a90266b054b87e18b52726cc34a6d61b6a22cc",
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/coil-headroom-v3/run/headroom/selected-snapshot.json": "84bbdf3eca274981dfff80c967b6fd623a1a40350e583407cbb7262c26820217",
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+    "/private/tmp/fusion-research-integration-20261006/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "/private/tmp/fusion-research-integration-20261006/scripts/fit_coils.py": "3fb2364ac3f7c60b187caaaa277db4dedd83f95bf58f2386ff1c49f505800400",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/__init__.py": "8d36f4ca6cbd9c95d1286a5f7914db91f020133819f8e39eb5aba6c405cc1390",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/bounce_action.py": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/clear_coil_field_audit.py": "ceb6584e9137e75b67a67b7a24ae2ab1aea01aa85b8f5748952dfbb2f5f802dd",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/coil_bounce.py": "8c2f599c2e6ca1db373e536ad6e9743a9f8f2d609bab7f55d52922f1fc90b6e2",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/coil_check.py": "109841794f127c3edd3429ae8e75dcbdcd31a40d5d246f11059570c0ba42b1d7",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/coil_fit.py": "192ebae3be1f4629b8f82a099bdd2446e4f9f4471fffbc79f4f349ebd565a288",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/coupled_coil_audit.py": "3f9a5cee83447bc61d0cd633cdaac13e90a09f2bee42b6c908166d0f42476ba5",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/documentation.py": "7fcfd5475aface32114e5845ff997edb2926f541f823d566d29185da47116aeb",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/documentation_policy.py": "72de8a9b9321992af6655b19c6bd30c81d50263ba5918c23bb8887a5d6d91dc3",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/flux_labels.py": "e60491be53c82c48f9ff82deae02b2de9f3dbea6b10fd916a1261ca6ff5172ec",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/provenance.py": "9960f5021f8b1d80e5d524df77df986cf889e7db8391e167ecb00776ae7faa29",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/realized_field.py": "d071f01f818e0294686124f9756f564362d2f2dcfdaf9e1ecf3230eaea79e5b0",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/reference_wout.py": "f11823877c64f41f600afa133be087f0ea25dafc757215d7b07f3faae765032f",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/vmec_trace.py": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880",
+    "/private/tmp/fusion-research-integration-20261006/src/fusion_baselines/wout_target.py": "886fdd7348566624a0c7f62c5929aedf0c72f66e160d0f648a6d5a710813bc96"
+  },
+  "step4_pass": false
+}

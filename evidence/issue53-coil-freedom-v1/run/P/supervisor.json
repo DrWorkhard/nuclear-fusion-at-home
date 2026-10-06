@@ -1,0 +1,54 @@
+{
+  "order": 8,
+  "completed": true,
+  "physical_admission": false,
+  "fit": {
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "-c",
+      "import runpy,sys; sys.modules['mpi4py']=None; sys.argv=sys.argv[1:]; runpy.run_path(sys.argv[0],run_name='__main__')",
+      "/private/tmp/fusion-research-integration-20261006/scripts/fit_coils.py",
+      "--snapshot",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/coil-headroom-v3/run/headroom/selected-snapshot.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue53-coil-freedom-v1/P/fit",
+      "--seconds",
+      "1800",
+      "--check-seconds",
+      "900",
+      "--order",
+      "8"
+    ],
+    "returncode": 0,
+    "stop_reason": null,
+    "elapsed_s": 1818.5465825831052,
+    "deadline_monotonic": 1207749.855235,
+    "completed": true
+  },
+  "trace": {
+    "command": [
+      "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+      "-c",
+      "import runpy,sys; sys.modules['mpi4py']=None; sys.argv=sys.argv[1:]; runpy.run_path(sys.argv[0],run_name='__main__')",
+      "/private/tmp/fusion-research-integration-20261006/scripts/trace_surfaces.py",
+      "--snapshot",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue53-coil-freedom-v1/P/fit/selected-snapshot.json",
+      "--wout",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+      "--output",
+      "/Users/sebastianwirkert/workspace/fusion/artifacts/issue53-coil-freedom-v1/P/trace",
+      "--direct",
+      "--transits",
+      "200"
+    ],
+    "returncode": 0,
+    "stop_reason": null,
+    "elapsed_s": 260.2816360828001,
+    "deadline_monotonic": 1207749.855235,
+    "completed": true
+  },
+  "elapsed_s": 2078.8299912081566,
+  "retained_bytes": 253810851
+}

@@ -1,0 +1,147 @@
+{
+ "kind": "realized-field-surfaces",
+ "completed": true,
+ "provenance": {
+  "schema_version": 1,
+  "host": {
+   "captured_at": "2026-10-06T20:25:51.730389+00:00",
+   "platform": "macOS-15.7.4-arm64-arm-64bit",
+   "machine": "arm64",
+   "processor": "arm",
+   "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+   "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+   "logical_cpu_count": 8
+  },
+  "repository": {
+   "path": "/private/tmp/fusion-research-integration-20261006",
+   "available": true,
+   "commit": "fd99245147308b9dbd23473002968e3283bd08fe",
+   "branch": "integration/prepared-research",
+   "dirty": false
+  },
+  "external_repositories": {}
+ },
+ "target_id": "reference401",
+ "target_input_sha256": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+ "target_check": "boundary/flux consistency; not dense identity",
+ "wout_sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+ "transits": 200,
+ "physical_admission": false,
+ "step4_pass": false,
+ "snapshot": "/Users/sebastianwirkert/workspace/fusion/artifacts/issue53-coil-freedom-v1/C/fit/selected-snapshot.json",
+ "snapshot_sha256": "7820f63c6128c53dabf0419d387eb30b6ab92cf2a4e7ed10ccb6b414d2e1c87b",
+ "current_A": 307796.4293154598,
+ "frozen_current": true,
+ "kernel_control": {
+  "position": 5.644116367383966e-16,
+  "tangent": 2.882067137966685e-15,
+  "independent_volume": 4.0240907183776634e-16
+ },
+ "interpolation_errors": {},
+ "field": "direct BiotSavart",
+ "lines": [
+  {
+   "s": 0.05,
+   "R0": 0.9435917121966705,
+   "transits": 200.0038779632297,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5881347003489522,
+   "iota_target": -0.5869172658365314
+  },
+  {
+   "s": 0.15,
+   "R0": 0.9506103453493919,
+   "transits": 200.00283483301723,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5783861051352716,
+   "iota_target": -0.5771743896617605
+  },
+  {
+   "s": 0.25,
+   "R0": 0.9554726715479133,
+   "transits": 200.00011590793852,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5687720538982306,
+   "iota_target": -0.5676835985949651
+  },
+  {
+   "s": 0.35,
+   "R0": 0.9594505613312814,
+   "transits": 200.00295374959896,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5590089308534743,
+   "iota_target": -0.5584793059147145
+  },
+  {
+   "s": 0.45,
+   "R0": 0.9629132045169738,
+   "transits": 200.002269871267,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5509565710611323,
+   "iota_target": -0.5494833610014542
+  },
+  {
+   "s": 0.55,
+   "R0": 0.9660287897856271,
+   "transits": 200.0023075183345,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5415795496641379,
+   "iota_target": -0.5406401654725983
+  },
+  {
+   "s": 0.65,
+   "R0": 0.9688900140244474,
+   "transits": 200.00000796668814,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5339596234372596,
+   "iota_target": -0.5319111944271938
+  },
+  {
+   "s": 0.75,
+   "R0": 0.9715541507956987,
+   "transits": 200.0008179162694,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5260916698875202,
+   "iota_target": -0.5232676795161622
+  },
+  {
+   "s": 0.85,
+   "R0": 0.9740594553203594,
+   "transits": 200.00338269084415,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5189851152964314,
+   "iota_target": -0.5146897976143009
+  },
+  {
+   "s": 0.95,
+   "R0": 0.9764329220084511,
+   "transits": 200.00165789247046,
+   "left_target": false,
+   "termination": "requested_transits",
+   "iota_traced": -0.5124570610557414,
+   "iota_target": -0.506163203821974
+  }
+ ],
+ "summary": {
+  "lines_confined": 10,
+  "lines": 10,
+  "max_abs_iota_mismatch": 0.006293857233767408,
+  "lines_completing_transits": 10,
+  "requested_transits": 200,
+  "classifier_stops_inside_target": 0,
+  "all_confined_and_iota_matching": true,
+  "nestedness_tested": false,
+  "iota_tolerance": 0.02,
+  "physical_admission": false
+ },
+ "seconds": 238.5
+}

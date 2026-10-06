@@ -1,0 +1,12 @@
+{
+ "lines_confined": 10,
+ "lines": 10,
+ "max_abs_iota_mismatch": 0.006293857233767408,
+ "lines_completing_transits": 10,
+ "requested_transits": 200,
+ "classifier_stops_inside_target": 0,
+ "all_confined_and_iota_matching": true,
+ "nestedness_tested": false,
+ "iota_tolerance": 0.02,
+ "physical_admission": false
+}

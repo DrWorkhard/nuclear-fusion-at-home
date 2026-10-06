@@ -1,0 +1,18 @@
+{
+  "active": null,
+  "bundles": 0,
+  "native": {
+    "A": {
+      "attempted": 8,
+      "completed": 8
+    },
+    "B": {
+      "attempted": 216,
+      "completed": 216
+    },
+    "independent_BA": {
+      "attempted": 6,
+      "completed": 6
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "arrays_sha256": "5ecc8c003208cbb3854aafa982219f26eb07a34d57ce308fa5e9b0f206a2e637",
+  "checks": {
+    "A": 1.8619006149354548e-16,
+    "B": 4.20658714916891e-16,
+    "position": 6.175112953435787e-16,
+    "tangent": 5.703888968462193e-15
+  },
+  "checks_pass": true,
+  "metrics": {
+    "B2_scale": 1.6293829620247962,
+    "JV": 4.494598805244364e-05,
+    "base_current": 307603.4347053119,
+    "current_limit_met": true,
+    "field_rms": 1.285102005986768,
+    "field_rms_over_target": 1.0067601485094118,
+    "fine_renormalization_applied": false,
+    "flux_limit_met": true,
+    "flux_relative_error": 2.220446049250313e-16,
+    "frozen_scale": 3.076034347053119,
+    "inner_limit_met": true,
+    "mean_b": 1.2679385007691197,
+    "measured_flux": -0.03141592653589792,
+    "min_b": 1.0088583006879714,
+    "surface_vector_rms": [
+      0.009413427362310812,
+      0.009466770674742208,
+      0.009562612958862286
+    ],
+    "target_field_rms": 1.2764728598857071,
+    "vector_rms": 0.009481137911922137,
+    "zero_field_sampled": false
+  },
+  "ncoil": 256,
+  "ninner": 64,
+  "physical_admission": false
+}
