@@ -318,3 +318,64 @@ def test_late_publication_never_claims_completion(tmp_path, clock, when):
     report = dict(completed=True)
     assert record.finish(report, 0) is (when == 'on-time')
     assert json.loads((record.output/'result.json').read_text())['completed'] is (when == 'on-time')
+
+
+def test_failed_search_trial_is_retained_rejected_and_search_continues(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if model.calls == 11:  # second search trial; startup used ten evaluations
+            model.calls += 1
+            raise ValueError("unit flux degenerate or orientation reversed")
+        return original(x)
+
+    seen = []
+
+    def solver(function, x, **kwargs):
+        seen.append(function(x))
+        seen.append(function(x + 0.5))
+        seen.append(function(x - 0.1*model.linear))  # a descent step after the rejection
+        return SimpleNamespace(success=True, message="synthetic")
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, solver)
+    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
+    assert result['search_trial_failures'] == 1
+    assert seen[1][0] == experiment.FAILED_TRIAL_VALUE and not seen[1][1].any()
+    failed = [json.loads(p.read_text()) for p in sorted(record.output.glob('trial-?????.json'))]
+    assert [row['status'] for row in failed].count('failed') == 1
+    selected = result['selected']
+    assert selected['role'] == 'search' and selected['metrics']['normal_rms'] < 1
+
+
+def test_solver_sees_objective_scaled_by_startup_value(tmp_path, clock):
+    values = []
+
+    def solver(function, x, **kwargs):
+        values.append(function(x))
+        return SimpleNamespace(success=True, message="synthetic")
+
+    model = SyntheticModel()
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), solver)
+    value, gradient = values[0]
+    assert value == pytest.approx(1.0, rel=1e-15)
+    np.testing.assert_allclose(gradient, model.linear/1.0)
+    assert result['stopping']['objective_scale'] == 1.0
+    assert result['stopping']['ftol'] == experiment.SOLVER_OPTIONS['ftol']
+
+
+def test_unexpected_search_exception_still_fails_the_search(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if model.calls >= 10:  # every search trial
+            raise KeyError("programming error")
+        return original(x)
+
+    model.evaluate = evaluate
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
+    assert result['status']['reason'] == 'failure'
+    assert 'KeyError' in result['status']['error']

@@ -23,6 +23,9 @@ for an installation-free contribution.
 2. Check derivatives and exact repeat, then run penalized normalized L-BFGS-B.
    Retain completed candidates with sampled geometry/current limits and length
    at most 3.45 m; select the lowest boundary RMS. Probes cannot win; no fallback.
+   The solver sees J/J(seed), so `ftol` is relative rather than absolute (#52). A
+   failed search trial is recorded and rejected with a large value so the line
+   search backtracks; startup failures and unexpected exceptions remain fatal.
 3. Freeze the selected currents. Check two fine boundary grids, continuous
    geometry bounds, three interior resolutions and independent B/A calculations.
 4. Save inputs, source identities, attempts, failures, fields and a short result.

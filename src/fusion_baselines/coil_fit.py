@@ -13,6 +13,10 @@ import numpy as np
 MAX_BYTES, START_RESERVE, LIVE_RESERVE = 256*1024**2, 3*1024**3, 2*1024**3
 PROBE_STEPS = (1.25e-6, 6.25e-7)
 SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=1e-12, gtol=1e-9)
+# The solver sees J/J(seed), so ftol is relative to the startup objective, not an absolute
+# threshold hidden by scipy's max(|f|, 1) denominator (issue #52).
+FAILED_TRIAL_VALUE = 1e3  # Scaled units: far above the seed, so the line search backtracks.
+TRIAL_ERRORS = (ValueError, ArithmeticError, RuntimeError)
 
 
 def mode_map(entries):
@@ -339,10 +343,14 @@ def fine(seed, data, chosen, record, shift):
     return row
 
 
+class TrialRejected(Exception):
+    """A search trial whose model evaluation failed; recorded, then rejected."""
+
+
 def search(model, record, minimize):
     """One wall-clock-limited search; probes and incomplete points cannot win."""
     initial = model.x0.copy()
-    selected, completed, checks, startup = None, 0, [], False
+    selected, completed, checks, startup, failures, scale = None, 0, [], False, 0, None
     started, search_started = time.monotonic(), None
 
     def evaluate(x, role):
@@ -359,6 +367,9 @@ def search(model, record, minimize):
             row.update(value=value, gradient=gradient.tolist(), metrics=metrics, status="completed")
         except Exception as exc:
             row.update(status="failed", error=f"{type(exc).__name__}: {exc}")
+            if role == "search" and isinstance(exc, TRIAL_ERRORS):
+                # A failed search trial is retained and rejected, not fatal (issue #52).
+                raise TrialRejected from exc
             raise
         finally:
             record.save(f"trial-{index:05}.json", row)
@@ -391,9 +402,22 @@ def search(model, record, minimize):
                    and all(row["passed"] for row in checks))
         if not startup:
             raise ValueError("startup derivative or exact-repeat check failed")
+        scale = abs(value)
+        if not np.isfinite(scale) or scale == 0:
+            raise ValueError("finite nonzero startup objective required for scaling")
+
+        def scaled(x):
+            nonlocal failures
+            try:
+                trial, gradient = evaluate(x, "search")
+            except TrialRejected:
+                failures += 1
+                return FAILED_TRIAL_VALUE, np.zeros_like(x)
+            return trial/scale, gradient/scale
+
         search_started = time.monotonic()
-        solved = minimize(lambda x: evaluate(x, "search"), initial, jac=True,
-                          method="L-BFGS-B", options=SOLVER_OPTIONS.copy())
+        solved = minimize(scaled, initial, jac=True, method="L-BFGS-B",
+                          options=SOLVER_OPTIONS.copy())
         record.guard()
         status = dict(reason="solver-return", success=bool(solved.success),
                       message=str(solved.message))
@@ -407,4 +431,7 @@ def search(model, record, minimize):
                 - started,
                 search_s=0 if search_started is None else time.monotonic()-search_started,
                 bundles_attempted=record.bundles, bundles_completed=completed,
+                search_trial_failures=failures,
+                stopping=dict(SOLVER_OPTIONS, objective_scale=scale,
+                              failed_trial_value=FAILED_TRIAL_VALUE),
                 selected=selected, physical_admission=False)
