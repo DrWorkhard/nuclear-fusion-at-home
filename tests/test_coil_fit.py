@@ -304,7 +304,10 @@ def test_model_classifies_nonfinite_native_derivatives_as_invalid_trials(compone
     model.curves = [SimpleNamespace(local_full_dof_names=labels, local_dof_names=labels)]*6
     for name in ('objective', 'geometry'):
         values = np.full(33, value if name == component else 0.)
-        derivative = lambda _curve, values=values: values
+
+        def derivative(_curve, values=values):
+            return values
+
         setattr(model, name, SimpleNamespace(J=lambda: 1.,
                 dJ=lambda derivative=derivative, **_: derivative))
     with pytest.raises(experiment.InvalidTrial, match='nonfinite native gradient'):
