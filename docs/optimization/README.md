@@ -159,3 +159,6 @@ not this prospective search. Evidence is linked from immutable tags; local raw o
 
 [Saved-contour quadrature check](ISSUE48_KNOT_QUADRATURE.md): bounded method diagnosis
 after the launch-matching pilot stopped.
+
+[Interval-estimator transfer](ISSUE48_ESTIMATOR_TRANSFER.md): prospective check of
+all saved matched-launch prefixes and subsets, preserving the stopped pilot verdict.

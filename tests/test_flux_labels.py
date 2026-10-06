@@ -153,3 +153,31 @@ def test_launch_correction_preserves_physical_ray_and_rejects_unbounded_steps():
             secant_scale(*args)
     with pytest.raises(ValueError):
         scaled_launch([1.2, .1], [1., 0.], 1.06)
+
+
+def test_interval_estimator_checks_both_disjoint_subsets():
+    from fusion_baselines import flux_labels as labels
+
+    class Uniform:
+        def set_points(self, points):
+            self.points = points
+
+        def A(self):
+            return np.column_stack((np.zeros((len(self.points), 2)), -self.points[:, 0]))
+
+        def B(self):
+            return np.tile([0., 1., 0.], (len(self.points), 1))
+
+    theta = np.sort(np.random.default_rng(7048).uniform(0, 2*np.pi, 640))
+    rz = np.column_stack((1+.2*np.cos(theta), .2*np.sin(theta)))
+    result = labels.contour_diagnostics(Uniform(), rz, [1., 0.], -np.pi,
+                                        interval_orders=(4, 8), radial_count=24)
+    assert result['label'] == pytest.approx(.04, abs=1e-12)
+    assert result['quadrature_label_change'] < 1e-12
+    assert len(result['subsets']) == 2
+    for subset in result['subsets']:
+        assert subset['label'] == pytest.approx(.04, abs=1e-12)
+        assert subset['quadrature_label_change'] < 1e-12
+        assert subset['heldout_radius_max_m'] < 1e-12
+    with pytest.raises(ValueError, match='registered interval orders'):
+        labels.contour_diagnostics(Uniform(), rz, [1., 0.], -np.pi, interval_orders=(8, 4))

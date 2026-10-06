@@ -115,26 +115,45 @@ def interval_flux_integrals(field, spline, center, order=8, radial_count=24,
 
 
 def contour_diagnostics(field, rz, center, edge_flux, guard=lambda: None,
-                        grids=(256, 512), radial_count=12):
+                        grids=(256, 512), radial_count=12, interval_orders=None):
     """Record both resolution and disjoint crossing-subset sensitivity of a flux estimate."""
     if not np.isfinite(edge_flux) or edge_flux == 0:
         raise ValueError("finite nonzero oriented edge flux required")
     spline, gap = polar_contour(rz, center)
-    quadrature = [flux_integrals(field, spline, center, n, radial_count, guard) for n in grids]
+    if interval_orders is None:
+        quadrature = [flux_integrals(field, spline, center, n, radial_count, guard) for n in grids]
+    else:
+        if tuple(interval_orders) != (4, 8):
+            raise ValueError("registered interval orders 4 and 8 required")
+        quadrature = [interval_flux_integrals(field, spline, center, n, radial_count, guard)
+                      for n in interval_orders]
     subsets = []
     for offset in (0, 1):
         section = np.asarray(rz)[offset::2]
         try:
             sub, subgap = polar_contour(section, center)
-            points, tangent = contour_points(sub, center, grids[-1])
-            guard()
-            field.set_points(np.ascontiguousarray(points))
-            flux = float(np.mean(np.einsum("ij,ij->i", field.A(), tangent)))
+            if interval_orders is None:
+                points, tangent = contour_points(sub, center, grids[-1])
+                guard()
+                field.set_points(np.ascontiguousarray(points))
+                flux = float(np.mean(np.einsum("ij,ij->i", field.A(), tangent)))
+                subset_quadrature = {}
+            else:
+                values = []
+                for order in interval_orders:
+                    points, tangent, weights = interval_contour_points(sub, center, order)
+                    guard()
+                    field.set_points(np.ascontiguousarray(points))
+                    values.append(float(np.sum(weights*np.sum(field.A()*tangent, axis=1))))
+                    guard()
+                flux = values[-1]
+                subset_quadrature = dict(quadrature_label_change=abs(values[0]-flux)/abs(edge_flux))
             held = np.asarray(rz)[1-offset::2]-center
             angle = np.arctan2(held[:, 1], held[:, 0])
             residual = np.linalg.norm(held, axis=1)-sub(angle)
             subsets.append(dict(label=flux/edge_flux, max_gap_rad=subgap,
-                                heldout_radius_max_m=float(np.max(abs(residual)))))
+                                heldout_radius_max_m=float(np.max(abs(residual))),
+                                **subset_quadrature))
         except ValueError as exc:
             subsets.append(dict(error=str(exc)))
     return dict(crossings=len(rz), max_gap_rad=gap, grids=quadrature,
