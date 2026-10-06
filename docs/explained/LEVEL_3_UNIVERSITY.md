@@ -1,6 +1,6 @@
 # Level 3: for a university student
 
-Updated 5 October 2026 · [All five levels](README.md) ·
+Updated 6 October 2026 · [All five levels](README.md) ·
 Previous: [Level 2](LEVEL_2_TEENAGER.md) · Next: [Level 4](LEVEL_4_GRADUATE.md)
 
 ## The physics you need
@@ -85,6 +85,10 @@ field. The first matched comparison could not finish the wide-domain test in eit
 coil field: some trapped-particle wells the diagnostic needs are missing. In the
 narrow domain the improved arm is 5.07% better, but both arms are worse than their
 ideal targets. Next, the project investigates why shallow wells are lost and checks
-the flux-surface labels used in the coil field. By 24 October 2026 it decides
-whether to continue this coil-fitting recipe or switch to another coil family,
-another target, or optimizing plasma and coils together.
+the flux-surface labels used in the coil field.
+
+The coil-fitting recipe itself has stalled. On 6 October 2026 the project recorded
+that a 30-minute run lowered the boundary error by only 6%, far from the factor of
+two required to continue. One quick test with higher-order (more flexible) coil
+shapes decides by 24 October whether to change the coil family or to optimize
+plasma and coils together ([decision](../optimization/STEP4_RESEARCH_PROGRAMME.md)).

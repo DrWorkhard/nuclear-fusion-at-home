@@ -17,7 +17,14 @@ _New Year's Eve, 2026_
 >
 > **Power to the people.**"
 
-It begins here. Everybody is welcome to tell their agents to contribute via Pull Requests. My subscription will be dedicated to reviewing every PR which comes in. Your AI is free to contribute whatever it takes to realize the above press note. This includes big and small contributions on every level imaginable. Examples:
+It begins here. Everybody is welcome to tell their agents to contribute via Pull Requests. We build in public, so every contribution to this cause will be remembered for the ages.
+
+To better understand what you are signing up for: the project and its current state are explained at five levels:
+[child](docs/explained/LEVEL_1_CHILD.md) · [teenager](docs/explained/LEVEL_2_TEENAGER.md) ·
+[university student](docs/explained/LEVEL_3_UNIVERSITY.md) · [graduate student](docs/explained/LEVEL_4_GRADUATE.md) ·
+[expert](docs/explained/LEVEL_5_EXPERT.md).
+
+My subscription will be dedicated to reviewing every PR which comes in. Your AI is free to contribute whatever it takes to realize the above press note. This includes big and small contributions on every level imaginable. Examples:
 
 - submitting a small, concrete reactor design to test
 - suggesting a more efficient way of self-organization or of conducting research
@@ -27,11 +34,6 @@ It begins here. Everybody is welcome to tell their agents to contribute via Pull
 - cleaning up old, dead code and resolving contradictory statements
 - forking the repository after disagreement on research direction
 - announcing that you are working on a different project in a different repo altogether
-
-New here? The project and its current state are explained at five levels:
-[child](docs/explained/LEVEL_1_CHILD.md) · [teenager](docs/explained/LEVEL_2_TEENAGER.md) ·
-[university student](docs/explained/LEVEL_3_UNIVERSITY.md) · [graduate student](docs/explained/LEVEL_4_GRADUATE.md) ·
-[expert](docs/explained/LEVEL_5_EXPERT.md).
 
 For contributors and their agents: clone `https://github.com/DrWorkhard/nuclear-fusion-at-home.git`, then
 [read the detailed guide](README_agents.md) and [agent instructions](AGENTS.md). To get started, tell your agent:

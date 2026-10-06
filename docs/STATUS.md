@@ -1,13 +1,17 @@
 # Scientific status
 
-Updated 4 October 2026; includes the exploratory matched-target experiment.
+Updated 6 October 2026; records the stalled fixed-target decision.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The new matched
 reference-target fit reaches boundary RMS **0.001932**, about **19×** its limit,
 and interior RMS **0.01072**, also failing. The improved-target fit also fails.
 [Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
-wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved. Present evidence does not
+wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
+**The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
+30 more minutes of search lowered boundary RMS by only 6%. A coil-freedom probe
+now chooses between a richer coil family and joint plasma/coil optimization
+([programme](optimization/STEP4_RESEARCH_PROGRAMME.md)). Present evidence does not
 substantiate the README's reactor-design timeline.
 
 ## Established results and their limits

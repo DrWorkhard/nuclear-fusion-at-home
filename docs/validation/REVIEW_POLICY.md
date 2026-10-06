@@ -92,14 +92,13 @@ The public evaluator-identity files are unchanged by this cleanup. See
 | Public repository, clone URL and historical tags | Complete; fresh anonymous clone of `6bda543` reproduces the eight public qualification checks. Both tags resolve, including freeze commit `56181dc`. |
 | Content/history/size/privacy/rights | Partial: limited history scan has no credential matches, GitHub reports zero secret alerts, and the owner accepted path/author disclosure. Complete historical rights review and broader secret assurance remain open; see the [inventory](PUBLICATION_INVENTORY.md). |
 | Named maintainer and protection | Live main-check and review rulesets; `@DrWorkhard` owns all paths in [CODEOWNERS](../../.github/CODEOWNERS). Frozen tags cannot be updated/deleted. Details below. |
-| Hosted and independent reproduction | Six hosted clean-machine public checks pass; a second person's independent reproduction and native research reproduction remain open. CI is same-code replay, not peer review. |
+| Hosted and independent reproduction | Six hosted clean-machine public checks pass. A second contributor reproduced the public starter in a separate Linux sandbox at `eb53e6c` ([#1](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/1)): 60 tests, 8/8 qualification operations, matching reference and length-headroom scores. Source arrived as a SHA-verified artifact, not a `git clone`. Native research reproduction remains open. CI and replay are same-code checks, not peer review. |
 | Private security reports | Enabled, with [reporting instructions](../../SECURITY.md) and a private link in the issue chooser. |
 | Monitoring and costs | Since 4 October 2026, the owner's cloud review routine checks open PRs hourly and when a PR is opened or updated (see below). It runs on the owner's Claude subscription; no new paid service or bot account. |
 | Merging | The routine squash-merges approved low-risk PRs after required CI passes; protected-path PRs and owner PRs stay manual. GitHub auto-merge remains disabled. CI never gives scientific acceptance. |
 
-Open follow-ups: [independent contributor reproduction](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/1)
-and [historical artifact rights review](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/2).
-Each issue specifies evidence and completion criteria; opening it is not completion.
+Open follow-up: [historical artifact rights review](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/2).
+It specifies evidence and completion criteria; opening it is not completion.
 
 ## Live protection and operating limits
 
