@@ -37,7 +37,10 @@ before diagnostics. No fallback selected using validation results.
 ## Cost, checks and decision
 
 Run C then J, one native thread, **1800 s search + 900 s total diagnostics per arm**.
-J gets at most 300 s coil fitting per proposal within that total. Two solves at
+Start each J inner fit only with 300 s search time remaining; cap it at 300 s.
+A normal inner-fit cap (or C's declared search cap) retains an earlier eligible
+candidate after passing startup; late trials cannot win. An interrupted whole-arm
+budget does not complete an unfinished J proposal. Two solves at
 the documented approximate six-minute regeneration scale plus ten minutes of
 fitting fit this planning envelope; perturbed-target runtime remains unmeasured.
 Intake, volume,
@@ -53,7 +56,9 @@ these are withheld samples, not unseen devices. Both J proposals must finish
 or be explicitly rejected within budget, and the selected pair must finish checks.
 Continue only if geometry/current checks pass, J improves ideal validation score
 by at least 1% at both resolutions, its own-target boundary/interior RMS are at
-most 10% worse than C's, and all direct traces complete. This is a feasibility
+most 10% worse than C's, and all direct traces complete. For this screen, boundary
+RMS is the maximum of both fine shifts; interior RMS uses the finest 64/512 level.
+Report every coarser level as well. This is a feasibility
 screen; cross-target field ratios do not measure a common physics improvement.
 Report maximum normal error against its unchanged limit too. Both proposals
 explicitly rejected, or a complete selected pair failing the screens, changes this
