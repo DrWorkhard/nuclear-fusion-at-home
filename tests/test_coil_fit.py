@@ -229,6 +229,109 @@ def test_no_eligible_candidate_has_no_fallback(tmp_path, clock):
     assert result['startup_pass'] and result['selected'] is None
 
 
+@pytest.mark.parametrize('error', [ValueError, FloatingPointError])
+@pytest.mark.parametrize('continue_search', [False, True])
+def test_failed_search_trial_keeps_eligible_candidates(tmp_path, clock, error, continue_search):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if np.all(x == 1.):
+            raise error('invalid trial')
+        return original(x)
+
+    def solver(function, x, **kwargs):
+        before = function(x)[0]
+        rejected, gradient = function(np.ones_like(x))
+        assert np.isfinite(rejected) and rejected > before
+        np.testing.assert_array_equal(gradient, np.zeros_like(x))
+        if continue_search:
+            function(x-model.linear*.01)
+        return SimpleNamespace(success=continue_search, message='retained failure')
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, solver)
+    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
+    assert result['selected']['index'] == (12 if continue_search else 0)
+    assert result['bundles_attempted'] == 12+continue_search
+    assert result['bundles_completed'] == 11+continue_search
+    row = json.loads((record.output/'trial-00011.json').read_text(encoding='utf-8'))
+    assert row['status'] == 'failed' and row['error'] == f'{error.__name__}: invalid trial'
+    assert 'metrics' not in row and np.isfinite(row['rejected_value'])
+    np.testing.assert_array_equal(model.x, result['selected']['x'])
+
+
+@pytest.mark.parametrize('error', [TimeoutError, OSError, RuntimeError, TypeError])
+def test_resource_and_unexpected_search_failures_remain_fatal(tmp_path, clock, error):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if model.calls == 10:
+            raise error('fatal trial')
+        return original(x)
+
+    model.evaluate = evaluate
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
+    assert result['startup_pass'] and result['selected']['index'] == 0
+    assert result['status']['reason'] == ('budget' if error is TimeoutError else 'failure')
+    assert result['bundles_completed'] == 10
+
+
+@pytest.mark.parametrize('scale', [1., 5e-6])
+def test_real_lbfgsb_backtracks_failed_trial_without_discarding_seed(tmp_path, clock, scale):
+    from scipy.optimize import minimize
+
+    model = SyntheticModel()
+    model.linear /= 2*np.linalg.norm(model.linear)
+    original = model.evaluate
+
+    def evaluate(x):
+        if np.linalg.norm(x) > .75:
+            raise ValueError('unit flux degenerate or orientation reversed')
+        value, gradient, metrics = original(x)
+        return scale*value, scale*gradient, metrics
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, minimize)
+    failures = [json.loads(path.read_text(encoding='utf-8'))
+                for path in record.output.glob('trial-*.json') if '-attempt' not in path.name]
+    assert any(row['status'] == 'failed' for row in failures)
+    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
+    assert result['status']['success']
+    assert result['selected']['metrics']['normal_rms'] < .88
+    np.testing.assert_allclose(model.x, -model.linear, atol=1e-8)
+    assert result['solver_options']['ftol'] == 0.
+    assert result['solver_options']['gtol'] == 1e-9
+
+
+def test_failed_search_trial_output_error_cannot_be_recovered(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if model.calls == 10:
+            raise ValueError('invalid trial')
+        return original(x)
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    save = record.save
+
+    def write(name, value):
+        if name == 'trial-00010.json':
+            raise OSError('output ceiling')
+        save(name, value)
+
+    record.save = write
+    result = experiment.search(model, record, seed_solver)
+    assert result['status']['reason'] == 'failure'
+    assert result['selected']['index'] == 0 and result['bundles_completed'] == 10
+    assert 'OSError: output ceiling' in result['status']['error']
+
+
 @pytest.mark.parametrize('q', [-1., 0., 1e-12, 1e-10])
 def test_clipped_native_gradient_is_rejected_before_derivatives(q):
     model = object.__new__(experiment.Model)
