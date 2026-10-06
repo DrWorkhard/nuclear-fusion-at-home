@@ -32,7 +32,19 @@ def save_trace(record, index, path, hit):
     record.guard()
 
 
-def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160):
+def half_period_symmetry(field, points):
+    """Require B and A to rotate with the nfp2 field before pooling R,Z sections."""
+    rotation = np.array([-1., -1., 1.])
+    field.set_points(np.ascontiguousarray(points))
+    B, A = field.B().copy(), field.A().copy()
+    field.set_points(np.ascontiguousarray(points*rotation))
+    errors = dict(B=check.error(field.B(), B*rotation), A=check.error(field.A(), A*rotation))
+    check.need(max(errors.values()) <= 1e-12, "half-period field symmetry failed")
+    return errors
+
+
+def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
+        half_period=False, start_index=None):
     from simsopt.field import BiotSavart
     from simsopt.field.tracing import ToroidalTransitStoppingCriterion, compute_fieldlines
 
@@ -45,7 +57,9 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160):
     record = fit.Recorder(output, started+seconds)
     report = dict(kind="realized-flux-label-pilot", completed=False, target_id=target_id,
                   provenance=build_run_record(ROOT), lines=[], controls=[],
-                  requested_crossings=crossings,
+                  requested_crossings=crossings*(2 if half_period else 1),
+                  requested_transits=crossings, half_period_sections=half_period,
+                  selected_start_index=start_index,
                   orientation="counterclockwise in R,Z; section normal minus e_phi",
                   physical_admission=False, flux_surface_proven=False)
     try:
@@ -75,6 +89,8 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160):
         original_points, original_tangent = fit.loop_geometry(data, 512)
         field.set_points(original_points)
         original_flux = float(np.mean(np.sum(field.A()*original_tangent, axis=1)))
+        if half_period:
+            report["half_period_symmetry"] = half_period_symmetry(field, original_points)
         report.update(center_RZ=center.tolist(), edge=edge_values,
                       target_oriented_flux=original_flux,
                       target_flux_relative_error=abs(original_flux/spec["flux"]-1),
@@ -95,10 +111,13 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160):
         record.save("inputs.json", report)
         starts = [(0.25, 0.)]+[(0.75, float(t)) for t in (0., np.pi/2, np.pi, 3*np.pi/2)]
         for index, (s, theta0) in enumerate(starts):
+            if start_index is not None and index != start_index:
+                continue
             record.guard()
             r, z = target.rz(s, theta0, 0.)
             paths, hits = compute_fieldlines(field, [float(r)], [float(z)], tmax=4800.,
-                                             tol=1e-10, phis=[0.], stopping_criteria=[
+                                             tol=1e-10, phis=[0., np.pi] if half_period else [0.],
+                                             stopping_criteria=[
                                                  ToroidalTransitStoppingCriterion(
                                                      crossings+1, False)])
             path, hit = paths[0], hits[0]
@@ -106,13 +125,15 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160):
             if len(hit) and hit[-1, 1] < 0 and hit[-1, 0] > path[-1, 0]:
                 path = np.vstack((path, hit[-1, [0, 2, 3, 4]]))
             turns, iota = winding(path[:, 1:4], target)
-            section_hits = hit[hit[:, 1] == 0]
+            section_hits = hit[hit[:, 1] >= 0]
             # Exclude the launch event if this native version includes it.
             section_hits = section_hits[section_hits[:, 0] > 1e-8]
             rz = np.column_stack((np.hypot(section_hits[:, 2], section_hits[:, 3]),
                                   section_hits[:, 4]))
-            row = dict(s=s, theta=theta0, transits=turns, iota=iota, prefixes=[])
+            row = dict(s=s, theta=theta0, transits=turns, iota=iota, prefixes=[],
+                       crossings_per_turn=2 if half_period else 1)
             for count in (crossings//4, crossings//2, crossings):
+                count *= row["crossings_per_turn"]
                 try:
                     check.need(len(rz) >= count, "insufficient completed section crossings")
                     result = labels.contour_diagnostics(field, rz[:count], center, edge_flux,
@@ -140,7 +161,11 @@ if __name__ == "__main__":
     parser.add_argument("--target", required=True, choices=tuple(check.TARGETS))
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--seconds", type=float, default=900)
-    parser.add_argument("--crossings", type=int, choices=(160, 320), default=160)
+    parser.add_argument("--crossings", type=int, choices=(160, 320), default=160,
+                        help="full-turn sample count; --half-period doubles section crossings")
+    parser.add_argument("--half-period", action="store_true")
+    parser.add_argument("--start-index", type=int, choices=range(5))
     args = parser.parse_args()
     raise SystemExit(run(args.snapshot.resolve(), args.wout.resolve(), args.target,
-                         args.output.resolve(), args.seconds, args.crossings))
+                         args.output.resolve(), args.seconds, args.crossings,
+                         args.half_period, args.start_index))

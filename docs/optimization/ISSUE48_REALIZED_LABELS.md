@@ -59,3 +59,22 @@ The same tolerances apply to 160-to-320 changes; this is exploratory refinement,
 not a new confirmatory claim. Snapshot hashes are now enforced by the driver;
 returned late traces are saved before rejecting completion, as adversarial review
 requested. No scientific conclusion depends on a late or missing trace.
+
+## Targeted sampling test
+
+The 320-crossing refinement (`a7b6e1030dbfc88fe40b86a8ce5cddd081230796`)
+qualifies all selected-arm starts and four reference starts. Reference
+`s=0.75, theta=pi` still fails gap/radial checks (0.492 rad / 0.651 mm).
+Sampling a smooth target contour at those same observed angles produces comparable
+0.748–0.767 mm held-out errors. Its traced mean transform is near -21/40;
+this suggests sampling aliasing but does not establish island topology.
+
+Next, trace only that failed start for the same 321 turns with
+`--crossings 320 --half-period --start-index 3`, maximum 300 s (360 s supervisor)
+and the same storage/reserves. Pool R,Z at phi=0 and phi=pi only after native B/A
+rotation parity passes 1e-12. These sections are equivalent under frozen nfp2
+symmetry. Analyze 160/320/640 crossings (80/160/320 turns), applying unchanged
+qualification tolerances, including held-out physical radial error. Keep the
+full-turn failure; do not infer nesting or equal-alpha measure from a pass.
+Control contours are judged by dense-label error; their other diagnostics remain
+reported. No action rerun is authorized by numerical completion alone.

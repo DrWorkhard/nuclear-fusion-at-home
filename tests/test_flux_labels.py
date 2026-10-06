@@ -86,3 +86,27 @@ def test_late_trace_is_saved_before_deadline_rejection(tmp_path):
     with np.load(tmp_path/"late/line-0.npz", allow_pickle=False) as arrays:
         np.testing.assert_array_equal(arrays["path"], path)
         np.testing.assert_array_equal(arrays["hits"], hit)
+
+
+def test_half_period_pooling_requires_vector_rotation_parity():
+    import runpy
+    from pathlib import Path
+
+    driver = runpy.run_path(str(Path(__file__).resolve().parents[1]
+                               /"scripts/measure_flux_labels.py"))
+
+    class Toroidal:
+        def set_points(self, points):
+            self.points = points
+
+        def A(self):
+            return self.points.copy()
+
+        def B(self):
+            x, y, z = self.points.T
+            return np.column_stack((-y, x, .1+z))
+
+    points = np.array([[1., .1, .2], [.8, -.2, .3]])
+    assert max(driver["half_period_symmetry"](Toroidal(), points).values()) == 0
+    with pytest.raises(ValueError, match="symmetry"):
+        driver["half_period_symmetry"](UniformY(), points)
