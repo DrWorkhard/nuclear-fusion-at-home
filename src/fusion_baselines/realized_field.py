@@ -123,7 +123,7 @@ def trace(field, target, surface, transits=200, tol=1e-10, s_values=S_VALUES):
         turns, iota = winding(path[:, 1:4], target)
         stopped = bool(len(hit) and np.any(hit[:, 1] == -1))
         # The gridded classifier can stop lines a few mm inside the boundary; only an
-        # exact containment test of the stop point confirms an exit.
+        # polygon point-in-section test of the stop point confirms an exit.
         left = stopped and not bool(inside_target(target, path[-1:, 1:4])[0])
         termination = ("boundary" if left else "classifier_stop_inside_target" if stopped
                        else "requested_transits" if turns >= transits else "integration_limit")
@@ -134,7 +134,7 @@ def trace(field, target, surface, transits=200, tol=1e-10, s_values=S_VALUES):
 
 
 def inside_target(target, xyz, count=2000):
-    """Exact containment of each point in the target boundary section at its own phi."""
+    """Polygon containment of each point in the target boundary section at its own phi."""
     xyz = np.atleast_2d(np.asarray(xyz, dtype=float))
     need(xyz.ndim == 2 and xyz.shape[1] == 3 and count >= 64, "points and section resolution")
     theta = np.linspace(0, 2*np.pi, count, endpoint=False)
@@ -165,9 +165,11 @@ def summarize(lines, requested_transits, iota_tolerance=0.02):
          "nonempty lines, bounded transits and finite tolerance required")
     need(np.isfinite([[line[k] for k in ("transits", "iota_traced", "iota_target")]
                       for line in lines]).all(), "finite trace metrics required")
-    confined = [not line["left_target"] for line in lines]
-    inconclusive = sum(line.get("termination") == "classifier_stop_inside_target"
-                       for line in lines)
+    # An unconfirmed classifier stop is inconclusive: neither an exit nor confinement.
+    stopped = [line.get("termination") == "classifier_stop_inside_target" for line in lines]
+    confined = [not line["left_target"] and not stop
+                for line, stop in zip(lines, stopped, strict=True)]
+    inconclusive = sum(stopped)
     complete = [bool(line["transits"] >= requested_transits) for line in lines]
     mismatch = max(abs(line["iota_traced"] - line["iota_target"]) for line in lines)
     return dict(lines_confined=sum(confined), lines=len(lines), max_abs_iota_mismatch=mismatch,

@@ -187,4 +187,4 @@ def test_classifier_stop_inside_target_is_not_reported_as_an_exit(monkeypatch):
     assert [line["left_target"] for line in lines] == [False, True]
     summary = summarize(lines, 5)
     assert summary["classifier_stops_inside_target"] == 1
-    assert summary["lines_confined"] == 1 and not summary["all_confined_and_iota_matching"]
+    assert summary["lines_confined"] == 0 and not summary["all_confined_and_iota_matching"]
