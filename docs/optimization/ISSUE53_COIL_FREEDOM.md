@@ -29,9 +29,21 @@ starts for 200 turns. Use [fit_coils.py](../../scripts/fit_coils.py) with
 `--seconds 1800 --check-seconds 900 --order 5` or `--order 8`, then
 [trace_surfaces.py](../../scripts/trace_surfaces.py) with the selected snapshot,
 original Wout, `--direct --transits 200` and only the remaining diagnostic budget.
-A supervising launcher must charge fitting-check elapsed time against that 900 s
-before tracing, stop overdue work, retain partial reports and enforce 256 MiB per
-arm, 3 GiB initial / 2 GiB live reserve. Freeze its command/source identity before runs.
+The [study launcher](../../scripts/run_coil_freedom.py) runs C then P, using the fitter's
+same-host monotonic diagnostic deadline for tracing, including early solver stops.
+Invoke it with the original `--snapshot`, `--wout`, a fresh `--output` and the full
+reviewed `--revision`; it rejects changed inputs or a dirty/different checkout and
+records source hashes. It uses the current native Python with MPI disabled, four
+thread limits set to one, and a minimal child environment. No comparison has run.
+
+Its 0.1 s watchdog stops process groups on a deadline, aggregate output above
+256 MiB minus 64 KiB reserved for final reports, or live reserve below 2 GiB;
+each arm requires 3 GiB initially. Logs, cache and temporary outputs count. This
+is a monitored ceiling, not a filesystem quota: overshoot before detection is
+retained and makes the arm incomplete even if its raw report says completed.
+Search selects only completed pre-deadline trials; an in-flight call can return
+late, with its overshoot charged against the outer 2700 s arm limit. The diagnostic
+clock is never restarted. An unreturned call is stopped at the outer limit.
 
 Both use issue #52's failed-trial handling and `ftol=0`, unchanged `gtol`, objective,
 penalties and eligibility. Only completed eligible candidates can win; probes and

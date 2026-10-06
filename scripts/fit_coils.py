@@ -72,6 +72,10 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
         report["search"] = fit.search(model, record, minimize)
         record.save("search.json", report["search"])
         record.deadline = min(deadline, time.monotonic()+check_seconds)
+        # Shared monotonic clock lets a same-host supervisor give subsequent tracing
+        # only the remainder of this diagnostic budget, including early solver stops.
+        record.save("checks-start.json", dict(deadline_monotonic=record.deadline,
+                    search_elapsed_s=time.monotonic()-started))
         search = report["search"]
         check.need(search["startup_pass"] and search["status"]["reason"] != "failure"
                    and search["selected"] is not None,
