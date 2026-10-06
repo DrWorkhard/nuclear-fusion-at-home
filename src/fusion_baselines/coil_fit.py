@@ -62,8 +62,10 @@ def canonical_gradient(curves, derivative):
         if list(curve.local_full_dof_names) != names() or sorted(labels) != sorted(names()):
             raise ValueError("complete named order-five free coordinates required")
         values = np.asarray(derivative(curve), dtype=float)
-        if values.shape != (33,) or not np.isfinite(values).all():
-            raise ValueError("finite named local gradient required")
+        if values.shape != (33,):
+            raise ValueError("named local gradient shape required")
+        if not np.isfinite(values).all():
+            raise InvalidTrial("nonfinite native gradient")
         result.extend(values[[labels.index(name) for name in names()]])
     if len(result) != 198:
         raise ValueError("six base curves required")
@@ -348,10 +350,10 @@ def search(model, record, minimize):
     initial = model.x0.copy()
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
-    last_value = None
+    largest_value = None
 
     def evaluate(x, role):
-        nonlocal selected, completed, last_value
+        nonlocal selected, completed, largest_value
         record.guard()
         index = record.bundles
         record.bundles += 1
@@ -366,10 +368,11 @@ def search(model, record, minimize):
             row.update(status="failed", error=f"{type(exc).__name__}: {exc}")
             if role != "search":
                 raise
-            # A finite uphill value lets L-BFGS-B backtrack. This is solver feedback,
-            # never a completed objective evaluation or a selectable candidate.
+            # Exceed ALL observed values, including the accepted line-search base:
+            # a lower unaccepted trial must not make rejection look like descent.
+            # This solver feedback is never completed or selectable evidence.
             record.guard()
-            rejected_value = last_value + max(1., abs(last_value))
+            rejected_value = largest_value + max(1., abs(largest_value))
             if not np.isfinite(rejected_value):
                 raise ValueError("finite rejection value unavailable") from exc
             row["solver_rejection_value"] = rejected_value
@@ -382,7 +385,7 @@ def search(model, record, minimize):
         if row["status"] == "failed":
             return rejected_value, np.zeros_like(initial)
         completed += 1
-        last_value = value
+        largest_value = value if largest_value is None else max(largest_value, value)
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
                 and metrics["current_limit_met"] and max(metrics["lengths"]) <= 3.45
                 and (selected is None or metrics["normal_rms"]

@@ -38,8 +38,8 @@ before and after execution: in-flight native work can overrun, and late checks
 cannot claim completion. Use a fresh output directory. Failures remain on disk.
 
 During search, known objective-domain failures (degenerate/reversed flux, truncated
-native objective or nonfinite final objective/gradient) are saved as failed trials.
-A finite uphill value lets the line search backtrack; failed trials cannot win,
+native objective or nonfinite objective/derivatives) are saved as failed trials.
+A finite value above every observed objective lets the line search backtrack; failed trials cannot win,
 and earlier eligible candidates remain selectable. Startup/probe failures remain
 fatal, as do resource limits and unexpected errors. The recorded solver uses
 `ftol=0`, removing the positive reduction threshold that acted as an absolute

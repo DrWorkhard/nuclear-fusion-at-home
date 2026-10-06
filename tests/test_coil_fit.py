@@ -259,6 +259,66 @@ def test_scipy_backtracks_from_invalid_trial_and_reaches_valid_minimum(tmp_path,
     assert result['solver_options']['ftol'] == 0.
 
 
+def test_unaccepted_lower_trial_cannot_make_invalid_point_look_converged(tmp_path, clock):
+    from scipy.optimize import minimize
+
+    model = SyntheticModel()
+    solved = []
+
+    def evaluate(x):
+        model.set_x(x)
+        if .01 < x[0] < .99:
+            raise experiment.InvalidTrial('outside synthetic objective domain')
+        term = 100*np.exp(-10000*x[0])
+        value = float(term + 5 + 5*x[0]**2)
+        gradient = np.zeros_like(x)
+        gradient[0] = -10000*term + 10*x[0]
+        return value, gradient, dict(normal_rms=value, lengths=[3.44]*6,
+            sampled_geometry_limits_met=True, current_limit_met=True)
+
+    def capture(*args, **kwargs):
+        result = minimize(*args, **kwargs)
+        solved.append(result)
+        return result
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, capture)
+    assert result['startup_pass'] and result['status']['success']
+    assert not .01 < solved[0].x[0] < .99
+    assert result['selected']['x'][0] < .01
+    failures = [json.loads(p.read_text(encoding='utf-8'))
+                for p in record.output.glob('trial-*.json') if '-attempt' not in p.name]
+    failures = [row for row in failures if row['status'] == 'failed']
+    assert failures and all(row['solver_rejection_value'] > 105 for row in failures)
+
+
+@pytest.mark.parametrize('component', ['objective', 'geometry'])
+@pytest.mark.parametrize('value', [np.nan, np.inf])
+def test_model_classifies_nonfinite_native_derivatives_as_invalid_trials(component, value):
+    model = object.__new__(experiment.Model)
+    model.set_x = lambda _: None
+    model.unit_flux = lambda: -1.
+    model.area = 1.
+    labels = experiment.names()
+    model.curves = [SimpleNamespace(local_full_dof_names=labels, local_dof_names=labels)]*6
+    for name in ('objective', 'geometry'):
+        values = np.full(33, value if name == component else 0.)
+        derivative = lambda _curve, values=values: values
+        setattr(model, name, SimpleNamespace(J=lambda: 1.,
+                dJ=lambda derivative=derivative, **_: derivative))
+    with pytest.raises(experiment.InvalidTrial, match='nonfinite native gradient'):
+        model.evaluate(np.zeros(198))
+
+
+def test_native_derivative_shape_mismatch_is_fatal():
+    labels = experiment.names()
+    curves = [SimpleNamespace(local_full_dof_names=labels, local_dof_names=labels)]*6
+    with pytest.raises(ValueError, match='shape') as error:
+        experiment.canonical_gradient(curves, lambda _: np.zeros(32))
+    assert not isinstance(error.value, experiment.InvalidTrial)
+
+
 @pytest.mark.parametrize('failure', ['length', 'current', 'geometry', 'late-write'])
 def test_ineligible_better_candidate_cannot_win(tmp_path, clock, failure):
     model = SyntheticModel()
