@@ -1,4 +1,4 @@
-"""Fixed reference401 inputs and shared field/geometry checks, separate from fitting."""
+"""Frozen reference401/selected401 targets and shared checks, separate from fitting."""
 
 import hashlib
 import json
@@ -25,6 +25,21 @@ FIXED = {
 LEVELS = ((32, 256), (64, 256), (64, 512))
 B2, TARGET_FLUX = 1.6293829620247962, -0.03141592653589793
 MAX_BYTES = 128*1024**2
+TARGETS = {
+    "reference401": dict(input=TARGET, input_sha256=FIXED[TARGET],
+                         wout_sha256=FIXED[WOUT], B2=B2, flux=TARGET_FLUX),
+    "selected401": dict(
+        input="evidence/plasma-balanced-v1/selected-input-401.json",
+        input_sha256="6bec3483eaced499bafe7ee94b16aa960d219ec1fec86cc0690012f8ebdb033e",
+        wout_sha256="8cd6bebfc29963f80645acf25e1a3db194e4db381365b17a89b9844554f51b52",
+        B2=1.6313464444829588, flux=TARGET_FLUX),
+}
+
+
+def target_spec(target_id):
+    need(target_id in TARGETS, "registered target required")
+    return TARGETS[target_id]
+
 
 
 def need(condition, message):
@@ -54,25 +69,30 @@ def bind(path, expected, sources):
     return path
 
 
-def snapshot_identity(snapshot):
+def snapshot_identity(snapshot, target_id="reference401"):
     independent.validate_snapshot(snapshot)
+    spec = target_spec(target_id)
+    need(snapshot.get("target_id", "reference401") == target_id, "snapshot target mismatch")
     need(
         (snapshot["nbase"], snapshot["order"]) == (6, 5)
-        and snapshot["B2_scale"] == B2
-        and snapshot["target_flux"] == TARGET_FLUX,
-        "fixed reference normalization and six order-five coils required",
+        and snapshot["B2_scale"] == spec["B2"]
+        and snapshot["target_flux"] == spec["flux"],
+        "fixed target normalization and six order-five coils required",
     )
     need(np.isfinite(snapshot["seed_unit_flux"]) and snapshot["seed_unit_flux"] != 0,
          "finite seed flux orientation required")
 
 
-def candidate_snapshot(candidate, data, nodes=256):
+def candidate_snapshot(candidate, data, nodes=256, target_id="reference401"):
     """Native snapshot of a public six-coil candidate, normalized to the target flux.
 
     The unit flux uses the fitter's own loop and 1e5 A base current, so a converted
     candidate enters fitting and checks exactly like a native seed.
     """
     validate_candidate(candidate)
+    spec = target_spec(target_id)
+    need(data == read_json(bind(ROOT/spec["input"], spec["input_sha256"], {})),
+         "candidate conversion requires the exact target input")
 
     from simsopt.field import BiotSavart, Current, coils_via_symmetries
     from simsopt.geo import CurveXYZFourier
@@ -90,7 +110,7 @@ def candidate_snapshot(candidate, data, nodes=256):
     field.set_points(points)
     unit_flux = float(np.mean(np.sum(field.A()*tangents, axis=1)))
     need(np.isfinite(unit_flux) and abs(unit_flux) > 1e-12, "nonzero unit-current flux required")
-    scale = TARGET_FLUX/unit_flux
+    scale = spec["flux"]/unit_flux
     physical = []
     for period in range(2):
         c, s = np.cos(np.pi*period), np.sin(np.pi*period)
@@ -101,35 +121,51 @@ def candidate_snapshot(candidate, data, nodes=256):
                                  current=1e5*scale*(-1 if flip else 1)) for i in range(6))
     snapshot = dict(schema_version=1, nfp=2, nbase=6, order=5, names=names,
                     base_coefficients=np.asarray(candidate["base_coefficients"]).tolist(),
-                    physical=physical, scale=scale, B2_scale=B2, unit_flux=unit_flux,
-                    target_flux=TARGET_FLUX, seed_unit_flux=unit_flux,
+                    physical=physical, scale=scale, B2_scale=spec["B2"], unit_flux=unit_flux,
+                    target_id=target_id, target_flux=spec["flux"], seed_unit_flux=unit_flux,
                     construction=dict(source="public candidate", nloop=nodes, ncoil=nodes))
-    snapshot_identity(snapshot)
+    snapshot_identity(snapshot, target_id)
     return snapshot
 
 
-def portable_intake(wout, guard=lambda: None):
+def portable_intake(wout, guard=lambda: None, target_id="reference401"):
     """Reconstructed target accepted as consistent with reference401, not dense identity."""
     from fusion_baselines import wout_target
 
     sources = {}
-    bind(ROOT / TARGET, FIXED[TARGET], sources)
-    data = read_json(ROOT / TARGET)
-    need(data["phiedge"] == -TARGET_FLUX, "exact source-bound target flux required")
+    spec = target_spec(target_id)
+    bind(ROOT/spec["input"], spec["input_sha256"], sources)
+    data = read_json(ROOT/spec["input"])
+    need(data["phiedge"] == -spec["flux"], "exact source-bound target flux required")
+    # The improved target has no public sample packet: require the archived Wout
+    # identity rather than silently trusting only its boundary or a new normalization.
+    if target_id == "selected401":
+        bind(wout, spec["wout_sha256"], sources)
     guard()
     archives, sha256 = wout_target.archives(wout, data)
     sources[str(Path(wout).resolve())] = sha256
     guard()
     targets = {n: archived_target(archives, n) for n in (32, 64)}
-    starter, _ = load_case()
-    errors = wout_target.starter_errors(targets[32], starter)
-    need(max(errors.values()) <= 1e-8, f"Wout does not reproduce the public starter: {errors}")
+    errors = {}
+    if target_id == "reference401":
+        starter, _ = load_case()
+        errors = wout_target.starter_errors(targets[32], starter)
+        need(max(errors.values()) <= 1e-8,
+             f"Wout does not reproduce the public starter: {errors}")
     measured = {n: t["B2_scale"] for n, t in targets.items()}
-    need(all(abs(b2/B2 - 1) <= 1e-9 for b2 in measured.values()), "target B2 differs from frozen")
+    need(all(abs(b2/spec["B2"] - 1) <= 1e-9 for b2 in measured.values()),
+         "target B2 differs from frozen")
     for target in targets.values():
-        target["B2_scale"] = B2  # Normalization stays frozen; the measured value is reported.
-    portable = dict(check="consistency with public starter", dense_identity_verified=False,
-                    wout_sha256=sha256, starter_errors=errors, measured_B2=measured[64])
+        target["B2_scale"] = spec["B2"]  # Frozen before fitting, not measured from candidates.
+        target["target_id"] = target_id
+    portable = dict(target_id=target_id,
+                    check="consistency with public starter" if target_id == "reference401"
+                    else "archived selected401 Wout identity and input consistency",
+                    dense_identity_verified=False,
+                    archived_wout_identity=sha256 == spec["wout_sha256"],
+                    input_sha256=spec["input_sha256"], B2_scale=spec["B2"],
+                    target_flux=spec["flux"], wout_sha256=sha256,
+                    starter_errors=errors, measured_B2=measured[64])
     return data, targets, sources, portable
 
 
@@ -193,11 +229,11 @@ def error(actual, expected):
     return value
 
 
-def native_coils(snapshot, nodes):
+def native_coils(snapshot, nodes, target_id="reference401"):
     from simsopt.field import Current, coils_via_symmetries
     from simsopt.geo import CurveXYZFourier
 
-    snapshot_identity(snapshot)
+    snapshot_identity(snapshot, target_id)
     own = independent.physical_curves(snapshot, nodes)
     curves, currents = [], []
     for i, coefficients in enumerate(snapshot["base_coefficients"]):
@@ -226,8 +262,9 @@ def native_coils(snapshot, nodes):
     return coils, own, checks
 
 
-def field_metrics(B, target, A, tangents, snapshot, ninner):
-    snapshot_identity(snapshot)
+def field_metrics(B, target, A, tangents, snapshot, ninner, target_id="reference401"):
+    snapshot_identity(snapshot, target_id)
+    spec = target_spec(target_id)
     B, target, A, tangents = map(np.asarray, (B, target, A, tangents))
     need(
         type(ninner) is int
@@ -247,9 +284,9 @@ def field_metrics(B, target, A, tangents, snapshot, ninner):
         need(np.all(target_magnitude > 0), "nonzero target field required")
         flux = float(np.mean(np.sum(A * tangents, axis=1)))
         result = dict(
-            independent.inner_metrics(B, target, B2),
+            independent.inner_metrics(B, target, spec["B2"]),
             surface_vector_rms=[
-                independent.inner_metrics(a, b, B2)["vector_rms"]
+                independent.inner_metrics(a, b, spec["B2"])["vector_rms"]
                 for a, b in zip(B.reshape(3, -1, 3), target.reshape(3, -1, 3), strict=True)
             ],
             field_rms=float(np.sqrt(np.mean(magnitude**2))),
@@ -257,9 +294,9 @@ def field_metrics(B, target, A, tangents, snapshot, ninner):
             min_b=float(magnitude.min()),
             target_field_rms=float(np.sqrt(np.mean(target_magnitude**2))),
             measured_flux=flux,
-            flux_relative_error=abs(flux / TARGET_FLUX - 1),
+            flux_relative_error=abs(flux / spec["flux"] - 1),
             base_current=1e5 * snapshot["scale"],
-            B2_scale=B2,
+            B2_scale=spec["B2"],
             frozen_scale=snapshot["scale"],
         )
         result["field_rms_over_target"] = result["field_rms"] / result["target_field_rms"]
@@ -311,12 +348,16 @@ class Recorder(RunRecorder):
 def screen_level(snapshot, data, target, ninner, nodes, record):
     from simsopt.field import BiotSavart
 
+    target_id = target.get("target_id", "reference401")
+    spec = target_spec(target_id)
+    snapshot_identity(snapshot, target_id)
     need(
-        (ninner, nodes) in LEVELS and target["ninner"] == ninner and target["B2_scale"] == B2,
+        (ninner, nodes) in LEVELS and target["ninner"] == ninner
+        and target["B2_scale"] == spec["B2"],
         "one registered interior/coil grid required",
     )
     record.guard()
-    coils, own, checks = native_coils(snapshot, nodes)
+    coils, own, checks = native_coils(snapshot, nodes, target_id)
     record.guard()
     field = BiotSavart(coils)
 
@@ -375,7 +416,7 @@ def screen_level(snapshot, data, target, ninner, nodes, record):
         independent_B=direct_B,
         independent_A=direct_A,
     )
-    metrics = field_metrics(B, target_B, A, tangent, snapshot, ninner)
+    metrics = field_metrics(B, target_B, A, tangent, snapshot, ninner, target_id)
     record.guard()
     return dict(
         ninner=ninner,
