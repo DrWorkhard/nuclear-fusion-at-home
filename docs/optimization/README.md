@@ -2,7 +2,8 @@
 
 One normalized fitter, one set of field/geometry checks.
 [Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
-[Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md)
+[Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md) ·
+[Realized-label pilot](ISSUE48_REALIZED_LABELS.md)
 
 ## Native workflow
 
