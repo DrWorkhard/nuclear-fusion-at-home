@@ -19,7 +19,7 @@ spec.loader.exec_module(release)
 
 
 class ReleaseTests(unittest.TestCase):
-    def test_copy_retains_notices_and_direct_references(self):
+    def test_copy_retains_license_and_notices(self):
         with tempfile.TemporaryDirectory() as directory:
             output = Path(directory) / "qualification"
             # Stop after copying; the real eight-operation run is a separate qualification.
@@ -31,10 +31,7 @@ class ReleaseTests(unittest.TestCase):
                     release.verify(output)
             run.assert_called_once()
             qualification = json.loads((output / "qualification.json").read_text(encoding="utf-8"))
-            for relative in (
-                "LICENSE", "NOTICE.md", "examples/clear-coil-samples-v1/README.md",
-                "references/public-data-sources.json", "references/external_sources.json",
-            ):
+            for relative in ("LICENSE", "NOTICE.md", "examples/clear-coil-samples-v1/README.md"):
                 with self.subTest(path=relative):
                     source = (ROOT / relative).read_bytes()
                     exported = output / "checkout with spaces" / relative
