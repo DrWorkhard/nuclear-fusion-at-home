@@ -18,7 +18,9 @@ The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduc
 phase-dependent offsets in both frozen fits. Its bounded
 [launch-matching pilot](optimization/ISSUE48_MATCHED_LAUNCHES.md) remains inconclusive:
 reference qualifies, but one improved-target estimate fails quadrature convergence.
-Both local evidence snapshots retain the failures; publication is pending.
+Both local evidence snapshots retain the failures; publication is pending. A separate
+[saved-contour method check](optimization/ISSUE48_KNOT_QUADRATURE.md) resolves integration
+of two chosen splines; it does not reclassify the original matching pilot.
 
 ## Established results and their limits
 
