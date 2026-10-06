@@ -23,6 +23,9 @@ for an installation-free contribution.
 2. Check derivatives and exact repeat, then run penalized normalized L-BFGS-B.
    Retain completed candidates with sampled geometry/current limits and length
    at most 3.45 m; select the lowest boundary RMS. Probes cannot win; no fallback.
+   `--order 8` lifts a six-coil order-5 seed to order 8 with the new modes exactly
+   zero, so a richer family starts from identical coils (#53). Snapshots record
+   their order; the public starter stays order 5.
 3. Freeze the selected currents. Check two fine boundary grids, continuous
    geometry bounds, three interior resolutions and independent B/A calculations.
 4. Save inputs, source identities, attempts, failures, fields and a short result.

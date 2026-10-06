@@ -58,9 +58,9 @@ def validate_snapshot(snapshot):
     if (
         type(snapshot.get("nfp")) is not int
         or snapshot["nfp"] != 2
-        or (nbase, order) not in ((6, 5), (8, 7))
+        or (nbase, order) not in ((6, 5), (6, 8), (8, 7))
     ):
-        raise ValueError("registered nfp2 six/order5 or eight/order7 class required")
+        raise ValueError("registered nfp2 six/order5, six/order8 or eight/order7 class required")
     if snapshot.get("names") != parameter_names(nbase, order):
         raise ValueError("explicit canonical physical parameter mapping required")
     coefficients = _finite(snapshot.get("base_coefficients"))

@@ -44,26 +44,46 @@ def loop_geometry(data, count):
     return points, tangents
 
 
-def names():
+ORDERS = (5, 8)  # Registered six-coil Fourier orders; order 5 is the public starter class.
+
+
+def names(order=5):
+    if order not in ORDERS:
+        raise ValueError(f"registered coil Fourier order required: {ORDERS}")
     return [
         name for axis in "xyz" for name in
-        [f"{axis}c(0)"] + [f"{axis}{kind}({m})" for m in range(1, 6) for kind in "sc"]
+        [f"{axis}c(0)"] + [f"{axis}{kind}({m})" for m in range(1, order+1) for kind in "sc"]
     ]
 
 
-def canonical_gradient(curves, derivative):
-    result = []
+def canonical_gradient(curves, derivative, order=5):
+    local, result = names(order), []
     for curve in curves:
         labels = list(curve.local_dof_names)
-        if list(curve.local_full_dof_names) != names() or sorted(labels) != sorted(names()):
-            raise ValueError("complete named order-five free coordinates required")
+        if list(curve.local_full_dof_names) != local or sorted(labels) != sorted(local):
+            raise ValueError("complete named free coordinates of the registered order required")
         values = np.asarray(derivative(curve), dtype=float)
-        if values.shape != (33,) or not np.isfinite(values).all():
+        if values.shape != (len(local),) or not np.isfinite(values).all():
             raise ValueError("finite named local gradient required")
-        result.extend(values[[labels.index(name) for name in names()]])
-    if len(result) != 198:
+        result.extend(values[[labels.index(name) for name in local]])
+    if len(result) != 6*len(local):
         raise ValueError("six base curves required")
     return np.asarray(result)
+
+
+def lift_order(snapshot, order):
+    """Same coil geometry at a higher Fourier order: new modes are exactly zero."""
+    from fusion_baselines.coupled_coil_audit import parameter_names
+
+    old = snapshot["order"]
+    if order not in ORDERS or order < old:
+        raise ValueError("registered order at least the snapshot's order required")
+    coefficients = np.zeros((6, 3, 2*order+1))
+    coefficients[:, :, :2*old+1] = np.asarray(snapshot["base_coefficients"], dtype=float)
+    lifted = dict(snapshot, order=order, names=parameter_names(6, order),
+                  base_coefficients=coefficients.tolist())
+    lifted["lifted_from_order"] = old
+    return lifted
 
 
 class Recorder:
@@ -172,9 +192,10 @@ class Model:
         from fusion_baselines.sparse_coil_surface import SparseCurveSurfaceDistance
 
         self.seed, self.data, self.record = seed, data, record
+        self.order = seed.get("order", 5)
         self.x0 = np.asarray(seed["base_coefficients"]).ravel()
-        expected = [f"coil[{i}]/{name}" for i in range(6) for name in names()]
-        if seed["names"] != expected or self.x0.shape != (198,):
+        expected = [f"coil[{i}]/{name}" for i in range(6) for name in names(self.order)]
+        if seed["names"] != expected or self.x0.shape != (len(expected),):
             raise ValueError("exact six-coil named seed required")
 
         def surface(count, full=False, shift=0):
@@ -194,7 +215,7 @@ class Model:
         self.surface, geometry_surface = surface(n, shift=offset), surface(128, full=True)
         self.points, self.normals = self.surface.gamma().copy(), self.surface.normal().copy()
         self.area = float(np.linalg.norm(self.normals, axis=-1).mean())
-        self.curves = [CurveXYZFourier(ncoil, 5) for _ in range(6)]
+        self.curves = [CurveXYZFourier(ncoil, self.order) for _ in range(6)]
         self.set_x(self.x0)
         currents = [Current(1e5) for _ in range(6)]
         for current in currents:
@@ -228,10 +249,10 @@ class Model:
 
     def set_x(self, x):
         x = np.asarray(x, dtype=float)
-        if x.shape != (198,) or not np.isfinite(x).all():
-            raise ValueError("finite named 198-vector required")
-        for curve, row in zip(self.curves, x.reshape(6, 33), strict=True):
-            if list(curve.local_full_dof_names) != names():
+        if x.shape != self.x0.shape or not np.isfinite(x).all():
+            raise ValueError("finite named coefficient vector of the seed's size required")
+        for curve, row in zip(self.curves, x.reshape(6, -1), strict=True):
+            if list(curve.local_full_dof_names) != names(self.order):
                 raise ValueError("native physical coordinate order changed")
             curve.local_full_x = row.copy()
 
@@ -257,10 +278,10 @@ class Model:
         phi, q = self.unit_flux(), float(self.objective.J())
         if q <= 1e-10:
             raise ValueError("native SquaredFlux dJ truncation region")
-        dq = canonical_gradient(self.curves, self.objective.dJ(partials=True))
+        dq = canonical_gradient(self.curves, self.objective.dJ(partials=True), self.order)
         value, gradient = q / self.area, dq / self.area
         penalty = float(self.geometry.J())
-        gradient += canonical_gradient(self.curves, self.geometry.dJ(partials=True))
+        gradient += canonical_gradient(self.curves, self.geometry.dJ(partials=True), self.order)
         scale = self.seed["target_flux"]/phi
         metrics = boundary_metrics(scale*self.field.B().reshape(self.points.shape), self.normals)
         metrics.update(self.geometry_metrics(), flux_objective=float(value),
@@ -298,7 +319,7 @@ def fine(seed, data, chosen, record, shift):
     B = sample(model.field, points, "B")
     A = sample(model.loop_field, model.loop_points, "A")
     snapshot = copy.deepcopy(seed)
-    snapshot.update(base_coefficients=np.asarray(chosen["x"]).reshape(6, 3, 11).tolist(),
+    snapshot.update(base_coefficients=np.asarray(chosen["x"]).reshape(6, 3, -1).tolist(),
                     scale=scale, unit_flux=chosen["metrics"]["unit_flux"])
     for row in snapshot["physical"]:
         row["current"] = 1e5*scale*(-1 if row["flip"] else 1)
@@ -383,7 +404,7 @@ def search(model, record, minimize):
     try:
         value, gradient = evaluate(initial, "startup-seed")
         for label, function in (("sin", np.sin), ("cos", np.cos)):
-            direction = function(np.arange(198)+1)
+            direction = function(np.arange(len(initial))+1)
             direction /= np.linalg.norm(direction)
             analytic = float(gradient@direction)
             for h in PROBE_STEPS:
