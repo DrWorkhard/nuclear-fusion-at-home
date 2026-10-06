@@ -154,7 +154,7 @@ def test_startup_probes_do_not_win_and_no_inherited_evaluation_cap(tmp_path, clo
     np.testing.assert_array_equal(model.x, model.x0)
 
 
-@pytest.mark.parametrize('failure', ['gradient', 'repeat', 'exception', 'late'])
+@pytest.mark.parametrize('failure', ['gradient', 'repeat', 'exception', 'trial', 'late'])
 def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, failure):
     model = SyntheticModel()
     original = model.evaluate
@@ -167,6 +167,8 @@ def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, fail
             value += 1e-6
         if failure == 'exception':
             raise ValueError('synthetic failure')
+        if failure == 'trial':
+            raise experiment.InvalidTrial('numerical failure at startup')
         if failure == 'late':
             clock[0] = 2
         return value, gradient, metrics
@@ -177,7 +179,7 @@ def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, fail
     assert not result['startup_pass']
     assert result['status']['reason'] == ('budget' if failure == 'late' else 'failure')
     assert (record.output/'trial-00000-attempt.json').is_file()
-    if failure in ('late', 'exception'):
+    if failure in ('late', 'exception', 'trial'):
         assert result['selected'] is None
         assert json.loads((record.output/'trial-00000.json').read_text())['status'] == 'failed'
 
@@ -229,7 +231,7 @@ def test_no_eligible_candidate_has_no_fallback(tmp_path, clock):
     assert result['startup_pass'] and result['selected'] is None
 
 
-@pytest.mark.parametrize('error', [ValueError, FloatingPointError])
+@pytest.mark.parametrize('error', [experiment.InvalidTrial])
 @pytest.mark.parametrize('continue_search', [False, True])
 def test_failed_search_trial_keeps_eligible_candidates(tmp_path, clock, error, continue_search):
     model = SyntheticModel()
@@ -262,7 +264,8 @@ def test_failed_search_trial_keeps_eligible_candidates(tmp_path, clock, error, c
     np.testing.assert_array_equal(model.x, result['selected']['x'])
 
 
-@pytest.mark.parametrize('error', [TimeoutError, OSError, RuntimeError, TypeError])
+@pytest.mark.parametrize('error', [TimeoutError, OSError, RuntimeError, TypeError,
+                                 ValueError, FloatingPointError])
 def test_resource_and_unexpected_search_failures_remain_fatal(tmp_path, clock, error):
     model = SyntheticModel()
     original = model.evaluate
@@ -289,7 +292,7 @@ def test_real_lbfgsb_backtracks_failed_trial_without_discarding_seed(tmp_path, c
 
     def evaluate(x):
         if np.linalg.norm(x) > .75:
-            raise ValueError('unit flux degenerate or orientation reversed')
+            raise experiment.InvalidTrial('unit flux degenerate or orientation reversed')
         value, gradient, metrics = original(x)
         return scale*value, scale*gradient, metrics
 
@@ -313,7 +316,7 @@ def test_failed_search_trial_output_error_cannot_be_recovered(tmp_path, clock):
 
     def evaluate(x):
         if model.calls == 10:
-            raise ValueError('invalid trial')
+            raise experiment.InvalidTrial('invalid trial')
         return original(x)
 
     model.evaluate = evaluate
@@ -473,3 +476,67 @@ def test_order_eight_canonical_gradient_uses_named_coordinates():
     np.testing.assert_array_equal(gradient[:51], np.arange(51))
     with pytest.raises(ValueError, match="registered order"):
         experiment.canonical_gradient(curves, lambda curve: np.zeros(51), 5)
+
+
+@pytest.mark.parametrize('failure', ['shape', 'names'])
+def test_structural_gradient_failure_stops_search(tmp_path, clock, failure):
+    model = SyntheticModel()
+    original = model.evaluate
+    labels = experiment.names()
+    curves = [SimpleNamespace(local_full_dof_names=labels, local_dof_names=labels)]*6
+
+    def evaluate(x):
+        if model.calls == 10:
+            if failure == 'names':
+                curves[0].local_dof_names = labels[:-1] + ['unknown']
+            size = 32 if failure == 'shape' else 33
+            experiment.canonical_gradient(curves, lambda _: np.zeros(size))
+        return original(x)
+
+    model.evaluate = evaluate
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
+    assert result['startup_pass'] and result['status']['reason'] == 'failure'
+    assert result['bundles_completed'] == 10 and result['selected']['index'] == 0
+    failed = json.loads((tmp_path/'run/trial-00010.json').read_text(encoding='utf-8'))
+    assert failed['status'] == 'failed' and 'rejected_value' not in failed
+    assert failed['error'].startswith('ValueError:')
+
+
+@pytest.mark.parametrize('component', ['objective', 'geometry'])
+@pytest.mark.parametrize('value', [np.nan, np.inf])
+def test_model_nonfinite_native_derivatives_are_invalid_trials(component, value):
+    model = object.__new__(experiment.Model)
+    model.order = 5
+    model.set_x = lambda _: None
+    model.unit_flux = lambda: -1.
+    model.area = 1.
+    labels = experiment.names()
+    model.curves = [SimpleNamespace(local_full_dof_names=labels, local_dof_names=labels)]*6
+    for name in ('objective', 'geometry'):
+        values = np.full(33, value if name == component else 0.)
+
+        def derivative(_curve, values=values):
+            return values
+
+        setattr(model, name, SimpleNamespace(J=lambda: 1.,
+                dJ=lambda derivative=derivative, **_: derivative))
+    with pytest.raises(experiment.InvalidTrial, match='nonfinite native gradient'):
+        model.evaluate(np.zeros(198))
+
+
+def test_nonfinite_rejection_feedback_stops_search(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if model.calls == 10:
+            raise experiment.InvalidTrial('outside objective domain')
+        _, gradient, metrics = original(x)
+        return 1e308, np.zeros_like(gradient), metrics
+
+    model.evaluate = evaluate
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
+    assert result['startup_pass'] and result['status']['reason'] == 'failure'
+    assert 'finite rejection value unavailable' in result['status']['error']
+    row = json.loads((tmp_path/'run/trial-00010.json').read_text(encoding='utf-8'))
+    assert row['status'] == 'failed' and 'rejected_value' not in row

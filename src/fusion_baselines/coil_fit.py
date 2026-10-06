@@ -15,6 +15,10 @@ PROBE_STEPS = (1.25e-6, 6.25e-7)
 SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=0., gtol=1e-9)
 
 
+class InvalidTrial(ValueError):
+    """A known numerical objective-domain failure, recoverable only during search."""
+
+
 def mode_map(entries):
     result = {}
     for entry in entries:
@@ -63,8 +67,10 @@ def canonical_gradient(curves, derivative, order=5):
         if list(curve.local_full_dof_names) != local or sorted(labels) != sorted(local):
             raise ValueError("complete named free coordinates of the registered order required")
         values = np.asarray(derivative(curve), dtype=float)
-        if values.shape != (len(local),) or not np.isfinite(values).all():
-            raise ValueError("finite named local gradient required")
+        if values.shape != (len(local),):
+            raise ValueError("named local gradient shape required")
+        if not np.isfinite(values).all():
+            raise InvalidTrial("nonfinite native gradient")
         result.extend(values[[labels.index(name) for name in local]])
     if len(result) != 6*len(local):
         raise ValueError("six base curves required")
@@ -268,7 +274,7 @@ class Model:
         phi = float(np.mean(np.sum(self.loop_field.A()*self.loop_tangent, axis=1)))
         if (not np.isfinite(phi) or abs(phi) <= 1e-12
                 or np.sign(phi) != np.sign(self.seed["seed_unit_flux"])):
-            raise ValueError("unit flux degenerate or orientation reversed")
+            raise InvalidTrial("unit flux degenerate or orientation reversed")
         return phi
 
     def evaluate(self, x):
@@ -277,7 +283,7 @@ class Model:
         self.set_x(x)
         phi, q = self.unit_flux(), float(self.objective.J())
         if q <= 1e-10:
-            raise ValueError("native SquaredFlux dJ truncation region")
+            raise InvalidTrial("native SquaredFlux dJ truncation region")
         dq = canonical_gradient(self.curves, self.objective.dJ(partials=True), self.order)
         value, gradient = q / self.area, dq / self.area
         penalty = float(self.geometry.J())
@@ -291,7 +297,7 @@ class Model:
                        scale=scale, unit_flux=phi, current=1e5*scale,
                        current_limit_met=abs(1e5*scale) <= 500000)
         if not np.isfinite(value+penalty) or not np.isfinite(gradient).all():
-            raise ValueError("nonfinite objective or gradient")
+            raise InvalidTrial("nonfinite objective or gradient")
         return float(value+penalty), gradient, metrics
 
 
@@ -381,11 +387,13 @@ def search(model, record, minimize):
             row.update(value=value, gradient=gradient.tolist(), metrics=metrics, status="completed")
         except Exception as exc:
             row.update(status="failed", error=f"{type(exc).__name__}: {exc}")
-            if role != "search" or not isinstance(exc, (ValueError, FloatingPointError)):
+            if role != "search" or not isinstance(exc, InvalidTrial):
                 raise
             # Reject numerical trial failures; resource and programming errors remain fatal.
             # Stay above every completed value, including the line search's starting point.
             rejected_value = largest_value + max(1., abs(largest_value))
+            if not np.isfinite(rejected_value):
+                raise ValueError("finite rejection value unavailable") from exc
             row.update(rejected_value=rejected_value)
         finally:
             record.save(f"trial-{index:05}.json", row)

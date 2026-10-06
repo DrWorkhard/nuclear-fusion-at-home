@@ -42,10 +42,13 @@ interior files, with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
 before and after execution: in-flight native work can overrun, and late checks
 cannot claim completion. Use a fresh output directory. Failures remain on disk.
 
-For prospective searches, numerical trial failures (`ValueError` or
-`FloatingPointError`) are retained as failed and return a finite rejection value
-to permit line-search backtracking. They cannot be selected. Startup failures,
-resource limits, output failures and other exceptions still stop the search.
+For prospective searches, known numerical objective-domain failures (`InvalidTrial`)
+are retained as failed and return a finite rejection value to permit line-search
+backtracking. These include invalid unit flux, the native objective's truncation
+region and nonfinite objective/derivatives. Failed trials cannot be selected.
+Startup failures, malformed gradient names/shapes, unclassified exceptions,
+resource limits and output failures still stop the search. Generic `ValueError`
+and `FloatingPointError` are not sufficient evidence of a recoverable trial.
 `ftol=0` removes the positive absolute reduction threshold for small objectives;
 `gtol=1e-9`, wall-clock limits and candidate selection remain unchanged. Solver
 termination (including stagnation) and options are recorded. This fixes the
