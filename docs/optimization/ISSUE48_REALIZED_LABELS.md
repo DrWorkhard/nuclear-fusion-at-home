@@ -72,9 +72,14 @@ this suggests sampling aliasing but does not establish island topology.
 Next, trace only that failed start for the same 321 turns with
 `--crossings 320 --half-period --start-index 3`, maximum 300 s (360 s supervisor)
 and the same storage/reserves. Pool R,Z at phi=0 and phi=pi only after native B/A
-rotation parity passes 1e-12. These sections are equivalent under frozen nfp2
+rotation parity passes 1e-12 on 64 seeded off-symmetry points and the target axes agree. These sections are equivalent under frozen nfp2
 symmetry. Analyze 160/320/640 crossings (80/160/320 turns), applying unchanged
 qualification tolerances, including held-out physical radial error. Keep the
 full-turn failure; do not infer nesting or equal-alpha measure from a pass.
 Control contours are judged by dense-label error; their other diagnostics remain
 reported. No action rerun is authorized by numerical completion alone.
+
+Keep plane IDs/counts and chronological ordering, report individual-plane flux
+estimates, and leave alternating held-out subsets unchanged. In the pooled stream
+these compare the two planes. Symmetry can permute island components; covariance
+alone does not justify calling the pooled curve one invariant magnetic surface.

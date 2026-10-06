@@ -16,7 +16,7 @@ from fusion_baselines import coil_check as check  # noqa: E402
 from fusion_baselines import coil_fit as fit  # noqa: E402
 from fusion_baselines import flux_labels as labels  # noqa: E402
 from fusion_baselines.provenance import build_run_record  # noqa: E402
-from fusion_baselines.realized_field import Target, winding  # noqa: E402
+from fusion_baselines.realized_field import Target, sample_points, winding  # noqa: E402
 
 SNAPSHOT_SHA256 = {
     "reference401": "ec1f8ce7073177d31e1dc1d44aad6478169b602189b8e8b204373481da368799",
@@ -90,7 +90,10 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
         field.set_points(original_points)
         original_flux = float(np.mean(np.sum(field.A()*original_tangent, axis=1)))
         if half_period:
-            report["half_period_symmetry"] = half_period_symmetry(field, original_points)
+            check.need(np.max(abs(np.asarray(target.axis(np.pi))-center)) <= 1e-12,
+                       "target axis differs across equivalent sections")
+            symmetry_points = sample_points(target, np.random.default_rng(4807), 64)
+            report["half_period_symmetry"] = half_period_symmetry(field, symmetry_points)
         report.update(center_RZ=center.tolist(), edge=edge_values,
                       target_oriented_flux=original_flux,
                       target_flux_relative_error=abs(original_flux/spec["flux"]-1),
@@ -128,6 +131,7 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
             section_hits = hit[hit[:, 1] >= 0]
             # Exclude the launch event if this native version includes it.
             section_hits = section_hits[section_hits[:, 0] > 1e-8]
+            section_hits = section_hits[np.argsort(section_hits[:, 0], kind="stable")]
             rz = np.column_stack((np.hypot(section_hits[:, 2], section_hits[:, 3]),
                                   section_hits[:, 4]))
             row = dict(s=s, theta=theta0, transits=turns, iota=iota, prefixes=[],
@@ -141,6 +145,19 @@ def run(snapshot_path, wout, target_id, output, seconds=900, crossings=160,
                     row["prefixes"].append(dict(requested=count, **result))
                 except ValueError as exc:
                     row["prefixes"].append(dict(requested=count, error=str(exc)))
+            if half_period:
+                row["planes"] = []
+                for plane in (0, 1):
+                    mask = section_hits[:, 1] == plane
+                    plane_rz = rz[mask][:crossings]
+                    try:
+                        check.need(len(plane_rz) == crossings, "incomplete plane coverage")
+                        result = labels.contour_diagnostics(field, plane_rz, center, edge_flux,
+                                                            record.guard, grids, radial)
+                        row["planes"].append(dict(plane=plane, **result))
+                    except ValueError as exc:
+                        row["planes"].append(dict(plane=plane, error=str(exc)))
+                row["plane_hit_counts"] = [int(np.sum(section_hits[:, 1] == p)) for p in (0, 1)]
             report["lines"].append(row)
             record.save("progress-labels.json", report)
             print(f"{target_id} line {index}: {turns:.1f} transits", flush=True)
