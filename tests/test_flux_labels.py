@@ -40,6 +40,26 @@ def test_label_and_disjoint_subset_control():
     assert all(row["heldout_radius_max_m"] < 1e-12 for row in result["subsets"])
 
 
+def test_interval_gauss_flux_matches_exact_irregular_spline_area():
+    from fusion_baselines.flux_labels import interval_flux_integrals
+
+    theta = np.sort(np.random.default_rng(4810).uniform(0, 2*np.pi, 160))
+    for modulation in (0., .2):
+        radius = .2*(1+modulation*np.cos(2*theta))
+        rz = np.column_stack((1.+radius*np.cos(theta), radius*np.sin(theta)))
+        spline, _ = polar_contour(rz, [1., 0.])
+        area = 0.
+        for coefficients, width in zip(spline.c.T, np.diff(spline.x), strict=True):
+            polynomial = np.polynomial.Polynomial(coefficients[::-1])
+            area += .5*(polynomial*polynomial).integ()(width)
+        result = interval_flux_integrals(UniformY(), spline, [1., 0.])
+        assert result['line_flux'] == pytest.approx(-area, abs=1e-12)
+        assert result['area_flux'] == pytest.approx(-area, abs=1e-12)
+        assert result['stokes_abs_error'] < 1e-12
+        if not modulation:
+            assert area == pytest.approx(np.pi*.2**2, abs=1e-12)
+
+
 def test_missing_angular_coverage_is_reported_even_when_circle_flux_is_correct():
     theta = np.linspace(0., .5, 40)
     rz = np.column_stack((1.+.2*np.cos(theta), .2*np.sin(theta)))

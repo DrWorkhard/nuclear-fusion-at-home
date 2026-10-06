@@ -67,6 +67,53 @@ def flux_integrals(field, spline, center, count=512, radial_count=12, guard=lamb
     return dict(line_flux=line, area_flux=area, stokes_abs_error=abs(line-area))
 
 
+def interval_contour_points(spline, center, order):
+    """Gauss points/weights on every spline interval; tangent is per radian."""
+    if type(order) is not int or not 2 <= order <= 16:
+        raise ValueError("interval quadrature order must be an integer from 2 to 16")
+    center = np.asarray(center, dtype=float)
+    if center.shape != (2,) or not np.isfinite(center).all():
+        raise ValueError("finite two-coordinate center required")
+    nodes, weights = np.polynomial.legendre.leggauss(order)
+    widths = np.diff(spline.x)
+    theta = (spline.x[:-1, None]+widths[:, None]*(nodes+1)/2).ravel()
+    weights = (widths[:, None]*weights/2).ravel()
+    radius, derivative = spline(theta), spline(theta, 1)
+    if not np.isfinite([radius, derivative]).all() or np.any(radius <= 0):
+        raise ValueError("interpolated contour must have finite positive radius")
+    c, s = np.cos(theta), np.sin(theta)
+    points = np.column_stack((center[0]+radius*c, np.zeros(len(theta)), center[1]+radius*s))
+    tangent = np.column_stack((derivative*c-radius*s, np.zeros(len(theta)),
+                               derivative*s+radius*c))
+    if np.any(points[:, 0] <= 0):
+        raise ValueError("contour crosses cylindrical axis")
+    return points, tangent, weights
+
+
+def interval_flux_integrals(field, spline, center, order=8, radial_count=24,
+                           guard=lambda: None):
+    """A line and B fan flux with angular Gauss integration over each spline piece."""
+    points, tangent, angular_weights = interval_contour_points(spline, center, order)
+    guard()
+    field.set_points(np.ascontiguousarray(points))
+    line = float(np.sum(angular_weights*np.sum(field.A()*tangent, axis=1)))
+    nodes, weights = np.polynomial.legendre.leggauss(radial_count)
+    rho, weights = (nodes+1)/2, weights/2
+    origin = np.array([center[0], 0., center[1]])
+    radial = points-origin
+    fan = origin+rho[:, None, None]*radial
+    normals = (weights[:, None, None]*rho[:, None, None]*angular_weights[None, :, None]
+               *np.cross(radial, tangent)[None, :, :])
+    area = 0.
+    for first in range(0, fan.size//3, 128):
+        guard()
+        field.set_points(np.ascontiguousarray(fan.reshape(-1, 3)[first:first+128]))
+        area += float(np.sum(field.B()*normals.reshape(-1, 3)[first:first+128]))
+    guard()
+    return dict(line_flux=line, area_flux=area, stokes_abs_error=abs(line-area),
+                angular_points=len(points))
+
+
 def contour_diagnostics(field, rz, center, edge_flux, guard=lambda: None,
                         grids=(256, 512), radial_count=12):
     """Record both resolution and disjoint crossing-subset sensitivity of a flux estimate."""
