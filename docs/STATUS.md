@@ -14,6 +14,12 @@ now chooses between a richer coil family and joint plasma/coil optimization
 ([programme](optimization/STEP4_RESEARCH_PROGRAMME.md)). Present evidence does not
 substantiate the README's reactor-design timeline.
 
+The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduces
+phase-dependent offsets in both frozen fits. Its bounded
+[launch-matching pilot](optimization/ISSUE48_MATCHED_LAUNCHES.md) remains inconclusive:
+reference qualifies, but one improved-target estimate fails quadrature convergence.
+Both local evidence snapshots retain the failures; publication is pending.
+
 ## Established results and their limits
 
 Full records are preserved at [evidence-archive-2026-10-04](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-archive-2026-10-04),

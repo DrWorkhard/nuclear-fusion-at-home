@@ -1,47 +1,54 @@
 # Bounded matching of realized-flux launch labels
 
-**Exploratory question:** can four physically specified launch rays in each
-frozen #25 coil field be adjusted to the same enclosed-flux label 0.75?
-The [label qualification](ISSUE48_REALIZED_LABELS.md) finds phase-dependent offsets
-and a sampling limitation. Removing those offsets is a prerequisite to testing
-their effect on action diagnostics; it does not establish benefit transfer.
+**Inconclusive: the two arms do not jointly qualify.** Four physical launch rays
+in each frozen [issue25 fit](ISSUE25_MATCHED_TARGETS.md) were adjusted toward an
+estimated enclosed-flux label of 0.75. All eight nominal estimates reach the label
+tolerance, but one improved-target estimate fails quadrature qualification.
+This does not establish physical mismatch or lost benefit; it blocks a claim
+that the pair has reliable matched flux labels under this protocol.
 
-## Frozen inputs and rule
+| Final diagnostic | Reference fit | Improved-target fit |
+| --- | ---: | ---: |
+| Maximum estimated-label residual from 0.75 | 3.86e-5 | 7.75e-5 |
+| Phase-to-phase estimated-label spread | 4.02e-5 | 7.93e-5 |
+| Qualified lines, including unchanged control | 5/5 | 4/5 |
+| Largest final quadrature failure | None | theta=0: 4.25e-5, limit 1e-5 |
 
-Use the same two Wouts, snapshots, currents, axis coordinates and four nominal
-VMEC theta phases as the qualification. Keep the s=0.25 control start unchanged.
-For each affected start, define physical coordinates explicitly:
-`(R,Z)_new = (R,Z)_axis + rho * ((R,Z)_original - (R,Z)_axis)` at phi=0.
-The scalar `rho` must stay in [0.95,1.05]; these are ray displacements, not a new
-VMEC surface label or PEST alpha coordinate.
+## Method and stop rule
 
-Round 1 uses `rho=sqrt(0.75/estimated_label)` from the refined qualification,
-using the targeted two-section estimate for the previously failed reference ray.
-This is an initializer, not an exact quadratic flux law. Both arms now use the
-same 321-turn, two-section protocol and 1024/2048 angular, 24 radial quadrature.
-All corrected traces must pass the unchanged reconstruction checks.
+The [qualification study](ISSUE48_REALIZED_LABELS.md) supplied starting estimates.
+For nominal target VMEC theta={0,pi/2,pi,3pi/2} at s=0.75,phi=0, use the physical
+ray `(R,Z)_new=(R,Z)_axis+rho*((R,Z)_original-(R,Z)_axis)`, with rho in [0.95,1.05].
+Coils, currents, target normalization and the s=0.25 control launch stay frozen.
+Both arms use 321 turns and symmetry-checked phi=0/pi sections.
 
-If the first round qualifies but its estimated label differs from 0.75 by more
-than 5e-4, permit exactly one secant correction from the original and round-1
-trials. Reject nonfinite, unresolved (scale difference <1e-10, slope <=1e-3),
-nonpositive-slope or out-of-bounds proposals. Never clip or retry silently.
-Retain every attempt; requalify each second-round trace. Stop rather than correct
-from an unqualified first-round estimate. Keep already matched rays unchanged.
-Success requires all four corrected estimates within 5e-4 of 0.75 and total
-phase spread at most 1e-3 in each arm, as well as reconstruction qualification.
-These tolerances describe estimated numerical labels, not guaranteed true flux.
+The prospective rule allows a square-root initializer, then exactly one bounded
+secant if the first round qualifies. First-round estimates undershoot and some
+fail 1024/2048-point quadrature. A declared adaptive check recomputes all saved
+trajectory prefixes at 4096/8192 angular and 24 radial nodes, with unchanged
+thresholds, edge denominator and raw trajectories. Both first-round arms then
+qualify, permitting the single secant. Original failures remain failures.
 
-Each round has at most 900 s and 256 MiB per arm, sequentially on one thread,
-3 GiB initial / 2 GiB live reserve, with a 960 s supervisor. Record the actual
-launch coordinates, scale inputs and hashes, source-label producer, residuals,
-failures and elapsed time. Original outputs remain untouched. Use
-[measure_flux_labels.py](../../scripts/measure_flux_labels.py) with
-`--crossings 320 --half-period --launch-scales <frozen-json>`.
+After correction and the same refinement, selected theta=0 has angular-quadrature
+change 4.25387e-5 against 1e-5; its finest Stokes discrepancy 1.80e-6 passes. The
+pilot stops here with no more refinements or retries. Each trace arm is bounded
+to 900 s / 256 MiB (960 s supervisor); each paired saved-trace refinement to 600 s
+(660 s supervisor), one thread and the original 3 GiB / 2 GiB disk reserves.
 
-## Interpretation
+## Evidence and next decision
 
-Even success means only sampled enclosed-flux matching. It does not establish
-unique nested surfaces, canonical/equal-alpha sampling, complete well coverage,
-confinement or a valid replacement for the original 16-alpha action comparison.
-Do not substitute four geometric phases for that domain or relax field gates.
-Require adversarial review of the implementation and result before integration.
+Prepared archive [evidence-issue48-launch-matching-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-launch-matching-v1),
+commit [`896180e`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/896180e939b0234aea29ab33621a73aad6c5d20a).
+Publication is pending; the tag currently exists in the isolated local checkout.
+The clean trace producer is `30ba2ea921d94bfb309742f01a43173a555fb0e2`; its committed
+protocol precedes both rounds. The archive also binds the external refinement
+scripts and explicitly records evaluator-source verification after execution.
+It includes both rounds, raw traces, scales, failures, derived reports, commands,
+hashes and replay. Full-prefix A labels replay without the local-only Wouts;
+full retracing/target controls still require those original inputs.
+
+The numerical blocker can be diagnosed on saved traces in a separately declared
+method check. These four geometric phases do not replace the original 16-alpha
+PEST action domain. Even a numerical match would not prove invariant nested
+surfaces, equal-alpha sampling, confinement or benefit transfer. No field or
+geometry acceptance limit changes, and the stopped pilot is not relabelled a pass.
