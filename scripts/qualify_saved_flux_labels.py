@@ -1,6 +1,7 @@
 """Transfer the interval estimator to all fixed round-2 contours; no retracing."""
 
 import argparse
+import io
 import os
 import sys
 import time
@@ -122,6 +123,7 @@ def run(archive, native_inputs, output):
             arm = dict(target=target_id, edge_flux=edge, center_RZ=center, controls=[], lines=[])
             theta = np.linspace(0, 2*np.pi, 2048, endpoint=False)
             dense_edge = np.column_stack(target.rz(1., theta, np.zeros_like(theta)))
+            control_arrays = dict(edge=dense_edge, center=np.asarray(center))
             spline, _ = labels.polar_contour(dense_edge, center)
             new_edge = labels.interval_flux_integrals(field, spline, center, guard=record.guard)
             arm['edge_recheck'] = dict(**new_edge,
@@ -132,10 +134,17 @@ def run(archive, native_inputs, output):
                 exact = labels.interval_flux_integrals(field, spline, center, guard=record.guard)
                 indices = np.sort(np.random.default_rng(4806).choice(2048, 160, replace=False))
                 sampled = dense[indices]
+                control_arrays[f's{s}'] = dense
+                control_arrays['sample_indices'] = indices
                 row = estimate(field, sampled, center, edge, record)
                 row.update(s=s, dense_label=exact['line_flux']/edge,
                            label_error=abs(row['label']-exact['line_flux']/edge))
                 arm['controls'].append(row)
+            buffer = io.BytesIO()
+            np.savez_compressed(buffer, **control_arrays)
+            control_name = f'{target_id}-control-contours.npz'
+            record.save(control_name, buffer.getvalue())
+            arm['control_arrays_sha256'] = check.digest(output/control_name)
             for index in range(5):
                 path = archive/f'round2/{target_id}/line-{index}.npz'
                 with np.load(path, allow_pickle=False) as data:

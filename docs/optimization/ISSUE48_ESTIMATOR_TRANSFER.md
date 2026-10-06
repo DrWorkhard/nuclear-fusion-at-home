@@ -28,6 +28,8 @@ Reconstruct the original s=0.25/0.75 target controls with the identical seeded
 160-point sample; compare each to its dense 2048-knot interval integral. Reuse the
 analytic uniform-field circle and polynomial-spline-area controls. These control
 surfaces are numerical checks, not evidence of realized invariant surfaces.
+Save their dense contours and sampled indices so numerical control replay does not
+require the local Wouts; rebuilding those contours still does.
 
 One paired run: **600 s / 256 MiB**, one native thread, 3 GiB initial / 2 GiB live
 reserve, external 660 s supervisor. Include input checks and all controls. Record
