@@ -35,6 +35,14 @@ boundary RMS 1e-4 and maximum error 1e-3. Length upper bounds are 3.47012 / 3.46
 against 3.5 m; coil-clearance lower bounds 0.060715 / 0.064766 m against 0.06 m.
 Full geometry, current, per-line and resource records remain in the archive.
 
+Patrick Koch's separate [run 2](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53#issuecomment-6026203139)
+reports P/C = **0.964** on producer `ae29c55b75df39964a5968cbbfba7f8c804368b4`,
+using a regenerated portable Wout and converted seed. It independently selects
+the same research direction. Those contributor-reported results have not been
+replayed here; different inputs, code and host timing preclude pooling the runs
+or treating their close scores as exact reproduction. His fitter/order support
+is now merged in PRs #55 and #57; the table above retains its original producer.
+
 ## Limits and reproduction
 
 Budgets were enforced using **monotonic time**. Fit-to-trace wall timestamps span
@@ -49,7 +57,9 @@ Full evidence is in local annotated tag `evidence-issue53-coil-freedom-v1`, arch
 `293d0a65601c8293c936617f720fcfe099b3a27f`, tag object
 `a76dc5d124203a4556d9a5f6eecc96c129bc1d03`; **publication is pending**. Its README,
 manifest, summary and replay preserve all trials, original seed, diagnostic arrays,
-traces, source identities and timing limitations. Original Wout remains local;
+traces, source identities and timing limitations. The frozen producer includes the study-specific supervisor and fitter used for
+this run; current `main` uses the independently contributed fitter/order support.
+Original Wout remains local;
 replay of saved field metrics and sampled independent/native B/A needs only
 NumPy/SciPy. It does not rerun geometry or tracing. Original raw output remains at
 `artifacts/issue53-coil-freedom-v1/`. Agent review is not external physics review.

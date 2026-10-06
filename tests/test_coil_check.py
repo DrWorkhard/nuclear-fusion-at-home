@@ -57,68 +57,10 @@ def write(path, value):
     return path
 
 @pytest.mark.parametrize("field", ["scale", "unit_flux", "target_flux", "B2_scale"])
-@pytest.mark.parametrize('order', [5, 8])
-def test_snapshot_normalization_is_exact(snapshot, field, order):
-    snapshot = fit.promote_order(snapshot, order)
+def test_snapshot_normalization_is_exact(snapshot, field):
     snapshot[field] = np.nextafter(snapshot[field], np.inf)
     with pytest.raises(ValueError):
         screen.snapshot_identity(snapshot)
-
-
-def test_order_lift_preserves_every_existing_mode_derivative_and_current(snapshot):
-    before = json.dumps(snapshot, sort_keys=True)
-    lifted = fit.promote_order(snapshot, 8)
-    assert json.dumps(snapshot, sort_keys=True) == before
-    assert lifted['order'] == 8 and len(lifted['names']) == 306
-    np.testing.assert_array_equal(np.asarray(lifted['base_coefficients'])[:, :, :11],
-                                  snapshot['base_coefficients'])
-    assert np.count_nonzero(np.asarray(lifted['base_coefficients'])[:, :, 11:]) == 0
-    left, right = (screen.independent.physical_curves(s, 128) for s in (snapshot, lifted))
-    for name in ('positions', 'tangents', 'second', 'third', 'currents'):
-        np.testing.assert_allclose(left[name], right[name], atol=1e-12, rtol=1e-12)
-    screen.snapshot_identity(lifted)
-    with pytest.raises(ValueError, match='discarding'):
-        fit.promote_order(lifted, 5)
-    for order in (True, 7, 9):
-        with pytest.raises(ValueError, match='order'):
-            fit.promote_order(snapshot, order)
-    assert fit.promote_order(snapshot, 5) == snapshot
-
-
-def test_order_eight_native_high_modes_keep_independent_field_and_current_mapping(snapshot):
-    pytest.importorskip('simsopt')
-    from simsopt.field import BiotSavart
-
-    lifted = fit.promote_order(snapshot, 8)
-    points = np.array([[.2, .1, .3], [-.7, .2, .4], [.3, -.1, .6]])
-    fields = []
-    for seed in (snapshot, lifted):
-        coils, _, _ = screen.native_coils(seed, 256)
-        field = BiotSavart(coils)
-        field.set_points(points)
-        fields.append((field.B().copy(), field.A().copy()))
-    np.testing.assert_allclose(fields[0], fields[1], rtol=1e-12, atol=1e-13)
-    lifted['base_coefficients'][0][2][15] = 2e-4  # A nonzero order-eight sine mode.
-    coils, own, checks = screen.native_coils(lifted, 256)
-    field = BiotSavart(coils)
-    field.set_points(points)
-    B, A = screen.independent.filament_field_and_potential(
-        points, own['positions'], own['tangents'], own['currents'])
-    assert max(checks.values()) <= 1e-12
-    np.testing.assert_allclose(field.B(), B, atol=1e-12, rtol=1e-12)
-    np.testing.assert_allclose(field.A(), A, atol=1e-12, rtol=1e-12)
-    assert not np.allclose(field.B(), fields[0][0], atol=1e-12, rtol=1e-12)
-
-
-def test_order_eight_native_support_does_not_expand_public_candidate_format():
-    from fusion_public.data import validate_candidate
-
-    candidate = screen.read_json(ROOT/'submissions/length-headroom-six-coil/candidate.json')
-    candidate['base_coefficients'] = np.pad(np.asarray(candidate['base_coefficients']),
-                                           ((0, 0), (0, 0), (0, 6))).tolist()
-    candidate['parameter_names'] = screen.independent.parameter_names(6, 8)
-    with pytest.raises(ValueError):
-        validate_candidate(candidate)
 
 def test_flux_constant_matches_exact_committed_input():
     source = ROOT / screen.TARGET

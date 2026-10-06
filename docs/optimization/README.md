@@ -25,6 +25,9 @@ for an installation-free contribution.
 2. Check derivatives and exact repeat, then run penalized normalized L-BFGS-B.
    Retain completed candidates with sampled geometry/current limits and length
    at most 3.45 m; select the lowest boundary RMS. Probes cannot win; no fallback.
+   `--order 8` lifts a six-coil order-5 seed to order 8 with the new modes exactly
+   zero, so a richer family starts from identical coils (#53). Snapshots record
+   their order; the public starter stays order 5.
 3. Freeze the selected currents. Check two fine boundary grids, continuous
    geometry bounds, three interior resolutions and independent B/A calculations.
 4. Save inputs, source identities, attempts, failures, fields and a short result.
@@ -39,17 +42,15 @@ interior files, with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
 before and after execution: in-flight native work can overrun, and late checks
 cannot claim completion. Use a fresh output directory. Failures remain on disk.
 
-During search, known objective-domain failures (degenerate/reversed flux, truncated
-native objective or nonfinite objective/derivatives) are saved as failed trials.
-A finite value above every observed objective lets the line search backtrack; failed trials cannot win,
-and earlier eligible candidates remain selectable. Startup/probe failures remain
-fatal, as do resource limits and unexpected errors. The recorded solver uses
-`ftol=0`, removing the positive reduction threshold that acted as an absolute
-cutoff for small objectives under [SciPy's rule](https://docs.scipy.org/doc/scipy/reference/optimize.minimize-lbfgsb.html).
-The existing `gtol`, wall-clock budget and other solver stopping conditions remain;
-zero improvement can still stop a run. This addresses
-[#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52), without changing
-selection, field/geometry gates or historical evidence.
+For prospective searches, numerical trial failures (`ValueError` or
+`FloatingPointError`) are retained as failed and return a finite rejection value
+to permit line-search backtracking. They cannot be selected. Startup failures,
+resource limits, output failures and other exceptions still stop the search.
+`ftol=0` removes the positive absolute reduction threshold for small objectives;
+`gtol=1e-9`, wall-clock limits and candidate selection remain unchanged. Solver
+termination (including stagnation) and options are recorded. This fixes the
+[search prerequisite](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52),
+not the measured fitting plateau; historical runs retain their original rules.
 
 Implementation: [driver](../../scripts/fit_coils.py),
 [objective and search](../../src/fusion_baselines/coil_fit.py),
@@ -60,13 +61,12 @@ selects the hash-bound improved Step 3 target with its frozen normalization.
 `check_coils.py` supports the same option; `trace_surfaces.py --snapshot` preserves
 the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
-The private native fitter also accepts `--order 8`, adding zero modes to an
-order-5 snapshot while preserving its geometry and current. Omit the option to
-keep the input order; lowering order is rejected. Named gradients, frozen-current
-checks and snapshot output support both six-coil families. The public candidate
-format stays fixed. The completed [bounded coil-freedom comparison](ISSUE53_COIL_FREEDOM.md)
-missed its continuation hurdle and selects joint plasma/coil optimization next;
-its full evidence is local pending publication.
+The completed [bounded coil-freedom comparison](ISSUE53_COIL_FREEDOM.md)
+missed its continuation hurdle and selects joint plasma/coil optimization next.
+Its original producer and study-specific supervisor remain in the evidence
+archive; full local evidence awaits publication. Current order-8 support comes
+from Patrick Koch's [PR #57](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/57),
+following his [fitter fix](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/55).
 
 ## Portable checks
 

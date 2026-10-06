@@ -46,11 +46,10 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
         snapshot_path = check.bind(snapshot_path, check.digest(snapshot_path), sources)
         seed = check.read_json(snapshot_path)
         check.snapshot_identity(seed, target_id)
-        report['input_coil_order'] = seed['order']
-        if order is not None:
-            seed = fit.promote_order(seed, order)
-        check.snapshot_identity(seed, target_id)
-        report['coil_order'] = seed['order']
+        if order is not None and order != seed["order"]:
+            # Same geometry with exactly zero higher modes; recorded as the seed actually fitted.
+            seed = fit.lift_order(seed, order)
+            check.snapshot_identity(seed, target_id)
         # Record the code actually executed, not every old experiment that produced the seed.
         from importlib import import_module
 
@@ -72,10 +71,6 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
         report["search"] = fit.search(model, record, minimize)
         record.save("search.json", report["search"])
         record.deadline = min(deadline, time.monotonic()+check_seconds)
-        # Shared monotonic clock lets a same-host supervisor give subsequent tracing
-        # only the remainder of this diagnostic budget, including early solver stops.
-        record.save("checks-start.json", dict(deadline_monotonic=record.deadline,
-                    search_elapsed_s=time.monotonic()-started))
         search = report["search"]
         check.need(search["startup_pass"] and search["status"]["reason"] != "failure"
                    and search["selected"] is not None,
@@ -120,7 +115,7 @@ if __name__ == "__main__":
     parser.add_argument("--target", choices=tuple(check.TARGETS), default="reference401")
     parser.add_argument("--wout", type=Path, help="portable reference401 Wout (see docs)")
     parser.add_argument("--order", type=int, choices=(5, 8),
-                        help="preserve snapshot order by default; lift order5 to8 with zero modes")
+                        help="lift the snapshot to this Fourier order with zero new modes")
     args = parser.parse_args()
     raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(), args.seconds,
                          args.check_seconds, None if args.wout is None else args.wout.resolve(),

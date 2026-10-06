@@ -77,7 +77,7 @@ def snapshot_identity(snapshot, target_id="reference401"):
         snapshot["nbase"] == 6 and snapshot["order"] in (5, 8)
         and snapshot["B2_scale"] == spec["B2"]
         and snapshot["target_flux"] == spec["flux"],
-        "fixed target normalization and six order-five/eight coils required",
+        "fixed target normalization and six registered-order coils required",
     )
     need(np.isfinite(snapshot["seed_unit_flux"]) and snapshot["seed_unit_flux"] != 0,
          "finite seed flux orientation required")
@@ -236,9 +236,9 @@ def native_coils(snapshot, nodes, target_id="reference401"):
     snapshot_identity(snapshot, target_id)
     own = independent.physical_curves(snapshot, nodes)
     curves, currents = [], []
-    width = 3*(2*snapshot['order']+1)
     for i, coefficients in enumerate(snapshot["base_coefficients"]):
-        curve = CurveXYZFourier(nodes, snapshot['order'])
+        curve = CurveXYZFourier(nodes, snapshot["order"])
+        width = 3 * (2 * snapshot["order"] + 1)
         need(
             [f"coil[{i}]/{name}" for name in curve.local_full_dof_names]
             == snapshot["names"][width * i : width * (i + 1)],

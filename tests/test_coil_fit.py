@@ -17,20 +17,17 @@ def clock(monkeypatch):
     monkeypatch.setattr(experiment.shutil, "disk_usage", lambda _: SimpleNamespace(free=8*1024**3))
     return now
 
-@pytest.mark.parametrize('order', [5, 8])
-def test_named_mapping_handles_free_permutation_and_rejects_missing_coordinates(order):
-    names = experiment.names(order)
-    width = 2*order+1
+def test_named_mapping_handles_free_permutation_and_rejects_missing_coordinates():
+    names = experiment.names()
     assert names[:3] == ["xc(0)", "xs(1)", "xc(1)"]
-    assert names[width] == "yc(0)" and names[2*width] == "zc(0)"
-    assert len(set(names)) == 3*width
+    assert names[11] == "yc(0)" and names[22] == "zc(0)" and len(set(names)) == 33
     curves = [SimpleNamespace(local_full_dof_names=names, local_dof_names=names[::-1])
               for _ in range(6)]
-    result = experiment.canonical_gradient(curves, lambda _: np.arange(3*width)[::-1], order)
-    np.testing.assert_array_equal(result, np.tile(np.arange(3*width), 6))
+    result = experiment.canonical_gradient(curves, lambda _: np.arange(33)[::-1])
+    np.testing.assert_array_equal(result, np.tile(np.arange(33), 6))
     curves[0].local_dof_names = names[:-1]
     with pytest.raises(ValueError, match="named"):
-        experiment.canonical_gradient(curves, lambda _: np.arange(3*width), order)
+        experiment.canonical_gradient(curves, lambda _: np.arange(33))
 
 def test_native_counts_failure_prefix_and_late_completion(tmp_path, clock):
     record = experiment.Recorder(tmp_path/"run", 1)
@@ -119,9 +116,9 @@ def test_progress_write_crossing_deadline_cannot_start_native_call(tmp_path, clo
 
 
 class SyntheticModel:
-    def __init__(self, size=198):
-        self.x0 = np.zeros(size)
-        self.linear = np.cos(np.arange(size)+1)
+    def __init__(self):
+        self.x0 = np.zeros(198)
+        self.linear = np.cos(np.arange(198)+1)
         self.calls, self.x = 0, self.x0.copy()
 
     def set_x(self, x):
@@ -141,14 +138,13 @@ def seed_solver(function, x, **kwargs):
     return SimpleNamespace(success=True, message='synthetic')
 
 
-@pytest.mark.parametrize('size', [198, 306])
-def test_startup_probes_do_not_win_and_no_inherited_evaluation_cap(tmp_path, clock, size):
+def test_startup_probes_do_not_win_and_no_inherited_evaluation_cap(tmp_path, clock):
     def many(function, x, **kwargs):
         for _ in range(100):
             function(x)
         return seed_solver(function, x, **kwargs)
 
-    model = SyntheticModel(size)
+    model = SyntheticModel()
     record = experiment.Recorder(tmp_path/'run', 1)
     result = experiment.search(model, record, many)
     assert result['startup_pass'] and result['bundles_completed'] == 111
@@ -158,40 +154,7 @@ def test_startup_probes_do_not_win_and_no_inherited_evaluation_cap(tmp_path, clo
     np.testing.assert_array_equal(model.x, model.x0)
 
 
-def test_order_eight_model_preserves_seed_objective_and_differentiates_added_modes(tmp_path, clock):
-    from pathlib import Path
-
-    pytest.importorskip('simsopt')
-    from fusion_baselines import coil_check
-
-    root = Path(__file__).resolve().parents[1]
-    data = coil_check.read_json(root/coil_check.TARGET)
-    candidate = coil_check.read_json(root/'submissions/length-headroom-six-coil/candidate.json')
-    seed = coil_check.candidate_snapshot(candidate, data)
-    models, values = [], []
-    for order in (5, 8):
-        model = experiment.Model(experiment.promote_order(seed, order), data,
-                                 experiment.Recorder(tmp_path/f'order-{order}', 60),
-                                 n=16, ncoil=128)
-        models.append(model)
-        values.append(model.evaluate(model.x0))
-    assert values[0][0] == pytest.approx(values[1][0], rel=1e-10, abs=1e-12)
-    old_gradient = values[0][1].reshape(6, 3, 11)
-    np.testing.assert_allclose(values[1][1].reshape(6, 3, 17)[:, :, :11], old_gradient,
-                               atol=1e-10, rtol=1e-8)
-    model = models[1]
-    direction = np.zeros((6, 3, 17))
-    direction[:, :, 11:] = np.sin(np.arange(108).reshape(6, 3, 6)+1)
-    direction = direction.ravel()/np.linalg.norm(direction)
-    point = model.x0+2e-4*direction
-    _, gradient, _ = model.evaluate(point)
-    h = 1.25e-6
-    derivative = (model.evaluate(point+h*direction)[0]
-                  - model.evaluate(point-h*direction)[0])/(2*h)
-    assert derivative == pytest.approx(float(gradient@direction), rel=1e-4, abs=1e-7)
-
-
-@pytest.mark.parametrize('failure', ['gradient', 'repeat', 'exception', 'trial', 'late'])
+@pytest.mark.parametrize('failure', ['gradient', 'repeat', 'exception', 'late'])
 def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, failure):
     model = SyntheticModel()
     original = model.evaluate
@@ -204,8 +167,6 @@ def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, fail
             value += 1e-6
         if failure == 'exception':
             raise ValueError('synthetic failure')
-        if failure == 'trial':
-            raise experiment.InvalidTrial('unit flux degenerate or orientation reversed')
         if failure == 'late':
             clock[0] = 2
         return value, gradient, metrics
@@ -216,148 +177,9 @@ def test_failed_startup_never_searches_and_retains_failure(tmp_path, clock, fail
     assert not result['startup_pass']
     assert result['status']['reason'] == ('budget' if failure == 'late' else 'failure')
     assert (record.output/'trial-00000-attempt.json').is_file()
-    if failure in ('late', 'exception', 'trial'):
+    if failure in ('late', 'exception'):
         assert result['selected'] is None
         assert json.loads((record.output/'trial-00000.json').read_text())['status'] == 'failed'
-
-
-def test_failed_search_trial_preserves_candidate_and_can_backtrack(tmp_path, clock):
-    model = SyntheticModel()
-    original = model.evaluate
-
-    def evaluate(x):
-        if x[0] == 1.:
-            raise experiment.InvalidTrial('unit flux degenerate or orientation reversed')
-        return original(x)
-
-    def backtrack(function, x, **kwargs):
-        good = x - .001*model.linear
-        valid, _ = function(good)
-        bad = x.copy()
-        bad[0] = 1.
-        rejected, gradient = function(bad)
-        assert np.isfinite(rejected) and rejected > valid
-        assert np.isfinite(gradient).all()
-        function(good)  # Recovery must not depend on the rejected model state.
-        return SimpleNamespace(success=False, message='synthetic line-search stop')
-
-    model.evaluate = evaluate
-    record = experiment.Recorder(tmp_path/'run', 1)
-    result = experiment.search(model, record, backtrack)
-    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
-    assert result['selected']['index'] == 10
-    assert result['bundles_attempted'] == 13 and result['bundles_completed'] == 12
-    failed = json.loads((record.output/'trial-00011.json').read_text(encoding='utf-8'))
-    assert failed['status'] == 'failed' and 'InvalidTrial' in failed['error']
-    assert 'solver_rejection_value' in failed and 'metrics' not in failed
-    np.testing.assert_array_equal(model.x, result['selected']['x'])
-
-
-@pytest.mark.parametrize('error', [TimeoutError, OSError, RuntimeError])
-def test_search_does_not_recover_resource_or_unexpected_errors(tmp_path, clock, error):
-    model = SyntheticModel()
-    original = model.evaluate
-
-    def evaluate(x):
-        if model.calls >= 10:
-            raise error('stop')
-        return original(x)
-
-    model.evaluate = evaluate
-    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
-    assert result['startup_pass']
-    assert result['status']['reason'] == ('budget' if error is TimeoutError else 'failure')
-    assert result['selected']['index'] == 0 and result['bundles_completed'] == 10
-
-
-def test_scipy_backtracks_from_invalid_trial_and_reaches_valid_minimum(tmp_path, clock):
-    from scipy.optimize import minimize
-
-    model = SyntheticModel()
-
-    def evaluate(x):
-        model.set_x(x)
-        if abs(x[0]) > .2:
-            raise experiment.InvalidTrial('outside synthetic objective domain')
-        value = float((x[0]-.1)**2 + 1e-6)
-        gradient = np.zeros_like(x)
-        gradient[0] = 2*(x[0]-.1)
-        return value, gradient, dict(normal_rms=value, lengths=[3.44]*6,
-            sampled_geometry_limits_met=True, current_limit_met=True)
-
-    model.evaluate = evaluate
-    record = experiment.Recorder(tmp_path/'run', 1)
-    result = experiment.search(model, record, minimize)
-    assert result['startup_pass'] and result['status']['success']
-    assert result['selected']['x'][0] == pytest.approx(.1, abs=1e-8)
-    trials = [json.loads(p.read_text(encoding='utf-8'))
-              for p in record.output.glob('trial-*.json') if '-attempt' not in p.name]
-    assert any(t['status'] == 'failed' for t in trials)
-    assert result['solver_options']['ftol'] == 0.
-
-
-def test_unaccepted_lower_trial_cannot_make_invalid_point_look_converged(tmp_path, clock):
-    from scipy.optimize import minimize
-
-    model = SyntheticModel()
-    solved = []
-
-    def evaluate(x):
-        model.set_x(x)
-        if .01 < x[0] < .99:
-            raise experiment.InvalidTrial('outside synthetic objective domain')
-        term = 100*np.exp(-10000*x[0])
-        value = float(term + 5 + 5*x[0]**2)
-        gradient = np.zeros_like(x)
-        gradient[0] = -10000*term + 10*x[0]
-        return value, gradient, dict(normal_rms=value, lengths=[3.44]*6,
-            sampled_geometry_limits_met=True, current_limit_met=True)
-
-    def capture(*args, **kwargs):
-        result = minimize(*args, **kwargs)
-        solved.append(result)
-        return result
-
-    model.evaluate = evaluate
-    record = experiment.Recorder(tmp_path/'run', 1)
-    result = experiment.search(model, record, capture)
-    assert result['startup_pass'] and result['status']['success']
-    assert not .01 < solved[0].x[0] < .99
-    assert result['selected']['x'][0] < .01
-    failures = [json.loads(p.read_text(encoding='utf-8'))
-                for p in record.output.glob('trial-*.json') if '-attempt' not in p.name]
-    failures = [row for row in failures if row['status'] == 'failed']
-    assert failures and all(row['solver_rejection_value'] > 105 for row in failures)
-
-
-@pytest.mark.parametrize('component', ['objective', 'geometry'])
-@pytest.mark.parametrize('value', [np.nan, np.inf])
-def test_model_classifies_nonfinite_native_derivatives_as_invalid_trials(component, value):
-    model = object.__new__(experiment.Model)
-    model.order = 5
-    model.set_x = lambda _: None
-    model.unit_flux = lambda: -1.
-    model.area = 1.
-    labels = experiment.names()
-    model.curves = [SimpleNamespace(local_full_dof_names=labels, local_dof_names=labels)]*6
-    for name in ('objective', 'geometry'):
-        values = np.full(33, value if name == component else 0.)
-
-        def derivative(_curve, values=values):
-            return values
-
-        setattr(model, name, SimpleNamespace(J=lambda: 1.,
-                dJ=lambda derivative=derivative, **_: derivative))
-    with pytest.raises(experiment.InvalidTrial, match='nonfinite native gradient'):
-        model.evaluate(np.zeros(198))
-
-
-def test_native_derivative_shape_mismatch_is_fatal():
-    labels = experiment.names()
-    curves = [SimpleNamespace(local_full_dof_names=labels, local_dof_names=labels)]*6
-    with pytest.raises(ValueError, match='shape') as error:
-        experiment.canonical_gradient(curves, lambda _: np.zeros(32))
-    assert not isinstance(error.value, experiment.InvalidTrial)
 
 
 @pytest.mark.parametrize('failure', ['length', 'current', 'geometry', 'late-write'])
@@ -407,6 +229,109 @@ def test_no_eligible_candidate_has_no_fallback(tmp_path, clock):
     assert result['startup_pass'] and result['selected'] is None
 
 
+@pytest.mark.parametrize('error', [ValueError, FloatingPointError])
+@pytest.mark.parametrize('continue_search', [False, True])
+def test_failed_search_trial_keeps_eligible_candidates(tmp_path, clock, error, continue_search):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if np.all(x == 1.):
+            raise error('invalid trial')
+        return original(x)
+
+    def solver(function, x, **kwargs):
+        before = function(x)[0]
+        rejected, gradient = function(np.ones_like(x))
+        assert np.isfinite(rejected) and rejected > before
+        np.testing.assert_array_equal(gradient, np.zeros_like(x))
+        if continue_search:
+            function(x-model.linear*.01)
+        return SimpleNamespace(success=continue_search, message='retained failure')
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, solver)
+    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
+    assert result['selected']['index'] == (12 if continue_search else 0)
+    assert result['bundles_attempted'] == 12+continue_search
+    assert result['bundles_completed'] == 11+continue_search
+    row = json.loads((record.output/'trial-00011.json').read_text(encoding='utf-8'))
+    assert row['status'] == 'failed' and row['error'] == f'{error.__name__}: invalid trial'
+    assert 'metrics' not in row and np.isfinite(row['rejected_value'])
+    np.testing.assert_array_equal(model.x, result['selected']['x'])
+
+
+@pytest.mark.parametrize('error', [TimeoutError, OSError, RuntimeError, TypeError])
+def test_resource_and_unexpected_search_failures_remain_fatal(tmp_path, clock, error):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if model.calls == 10:
+            raise error('fatal trial')
+        return original(x)
+
+    model.evaluate = evaluate
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
+    assert result['startup_pass'] and result['selected']['index'] == 0
+    assert result['status']['reason'] == ('budget' if error is TimeoutError else 'failure')
+    assert result['bundles_completed'] == 10
+
+
+@pytest.mark.parametrize('scale', [1., 5e-6])
+def test_real_lbfgsb_backtracks_failed_trial_without_discarding_seed(tmp_path, clock, scale):
+    from scipy.optimize import minimize
+
+    model = SyntheticModel()
+    model.linear /= 2*np.linalg.norm(model.linear)
+    original = model.evaluate
+
+    def evaluate(x):
+        if np.linalg.norm(x) > .75:
+            raise ValueError('unit flux degenerate or orientation reversed')
+        value, gradient, metrics = original(x)
+        return scale*value, scale*gradient, metrics
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, minimize)
+    failures = [json.loads(path.read_text(encoding='utf-8'))
+                for path in record.output.glob('trial-*.json') if '-attempt' not in path.name]
+    assert any(row['status'] == 'failed' for row in failures)
+    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
+    assert result['status']['success']
+    assert result['selected']['metrics']['normal_rms'] < .88
+    np.testing.assert_allclose(model.x, -model.linear, atol=1e-8)
+    assert result['solver_options']['ftol'] == 0.
+    assert result['solver_options']['gtol'] == 1e-9
+
+
+def test_failed_search_trial_output_error_cannot_be_recovered(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        if model.calls == 10:
+            raise ValueError('invalid trial')
+        return original(x)
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1)
+    save = record.save
+
+    def write(name, value):
+        if name == 'trial-00010.json':
+            raise OSError('output ceiling')
+        save(name, value)
+
+    record.save = write
+    result = experiment.search(model, record, seed_solver)
+    assert result['status']['reason'] == 'failure'
+    assert result['selected']['index'] == 0 and result['bundles_completed'] == 10
+    assert 'OSError: output ceiling' in result['status']['error']
+
+
 @pytest.mark.parametrize('q', [-1., 0., 1e-12, 1e-10])
 def test_clipped_native_gradient_is_rejected_before_derivatives(q):
     model = object.__new__(experiment.Model)
@@ -418,9 +343,8 @@ def test_clipped_native_gradient_is_rejected_before_derivatives(q):
 
 
 @pytest.mark.parametrize("mismatch", [False, True])
-@pytest.mark.parametrize('order', [5, 8])
 def test_fine_saves_full_loop_freezes_current_and_checks_independent_BA(
-        tmp_path, clock, monkeypatch, mismatch, order):
+        tmp_path, clock, monkeypatch, mismatch):
     from fusion_baselines import coupled_coil_audit
 
     record = experiment.Recorder(tmp_path/"run", 1)
@@ -463,9 +387,8 @@ def test_fine_saves_full_loop_freezes_current_and_checks_independent_BA(
     monkeypatch.setattr(coupled_coil_audit, "filament_field_and_potential", lambda p, *_: (
         np.tile(2*vectors["B"]+(1 if mismatch else 0), (len(p), 1)),
         np.tile(2*vectors["A"], (len(p), 1))))
-    seed = dict(order=order, target_flux=-1., physical=[dict(flip=False), dict(flip=True)])
-    chosen = dict(index=11, x=np.arange(18*(2*order+1))*1e-6,
-                  metrics=dict(scale=2., unit_flux=-.5))
+    seed = dict(target_flux=-1., physical=[dict(flip=False), dict(flip=True)])
+    chosen = dict(index=11, x=np.zeros(198), metrics=dict(scale=2., unit_flux=-.5))
     if mismatch:
         with pytest.raises(ValueError, match="independent fine"):
             experiment.fine(seed, {}, chosen, record, .5)
@@ -475,9 +398,6 @@ def test_fine_saves_full_loop_freezes_current_and_checks_independent_BA(
     assert row["checks_pass"] is not mismatch
     assert row["metrics"]["flux_relative_error"] == pytest.approx(.2)
     assert row["metrics"]["current"] == 200000
-    snapshot = json.loads((record.output/'selected-snapshot.json').read_text(encoding='utf-8'))
-    assert np.shape(snapshot['base_coefficients']) == (6, 3, 2*order+1)
-    np.testing.assert_array_equal(np.ravel(snapshot['base_coefficients']), chosen['x'])
     assert max(block_sizes) == 128
     with np.load(record.output/"fine-0.5.npz", allow_pickle=False) as saved:
         assert saved["A"].shape == saved["loop_tangent"].shape == (512, 3)
@@ -501,3 +421,55 @@ def test_late_publication_never_claims_completion(tmp_path, clock, when):
     report = dict(completed=True)
     assert record.finish(report, 0) is (when == 'on-time')
     assert json.loads((record.output/'result.json').read_text())['completed'] is (when == 'on-time')
+
+
+def order5_snapshot():
+    from fusion_baselines.coupled_coil_audit import parameter_names, physical_curves  # noqa: F401
+
+    rng = np.random.default_rng(5)
+    coefficients = 0.01*rng.standard_normal((6, 3, 11))
+    coefficients[:, 0, 2] += 1.0  # nonzero c(1) radius keeps every curve nonstationary
+    coefficients[:, 1, 1] += 1.0
+    scale = -0.03141592653589793/-0.01
+    physical = []
+    for period in range(2):
+        c, s = np.cos(np.pi*period), np.sin(np.pi*period)
+        rotation = np.array([[c, -s, 0.0], [s, c, 0.0], [0.0, 0.0, 1.0]])
+        for flip in (False, True):
+            matrix = rotation.T @ (np.diag([1.0, -1.0, -1.0]) if flip else np.eye(3))
+            physical.extend(dict(base_index=i, period=period, flip=flip, matrix=matrix.tolist(),
+                                 current=1e5*scale*(-1 if flip else 1)) for i in range(6))
+    return dict(schema_version=1, nfp=2, nbase=6, order=5, names=parameter_names(6, 5),
+                base_coefficients=coefficients.tolist(), physical=physical, scale=scale,
+                B2_scale=1.0, unit_flux=-0.01, target_flux=-0.03141592653589793)
+
+
+def test_lift_order_preserves_geometry_and_pads_zero_modes():
+    from fusion_baselines.coupled_coil_audit import physical_curves, validate_snapshot
+
+    snapshot = order5_snapshot()
+    lifted = experiment.lift_order(snapshot, 8)
+    validate_snapshot(lifted)
+    coefficients = np.asarray(lifted["base_coefficients"])
+    assert coefficients.shape == (6, 3, 17) and lifted["lifted_from_order"] == 5
+    assert not coefficients[:, :, 11:].any()
+    np.testing.assert_array_equal(coefficients[:, :, :11], snapshot["base_coefficients"])
+    assert lifted["names"][:3] == ["coil[0]/xc(0)", "coil[0]/xs(1)", "coil[0]/xc(1)"]
+    assert len(lifted["names"]) == 6*3*17 == len(experiment.names(8))*6
+    before, after = physical_curves(snapshot, 128), physical_curves(lifted, 128)
+    for key in ("positions", "tangents"):
+        np.testing.assert_allclose(after[key], before[key], rtol=1e-14, atol=1e-15)
+    for order in (7, 4):
+        with pytest.raises(ValueError):
+            experiment.lift_order(lifted if order == 4 else snapshot, order)
+
+
+def test_order_eight_canonical_gradient_uses_named_coordinates():
+    simsopt = pytest.importorskip("simsopt.geo")
+    curves = [simsopt.CurveXYZFourier(64, 8) for _ in range(6)]
+    gradient = experiment.canonical_gradient(
+        curves, lambda curve: np.arange(len(curve.local_full_dof_names), dtype=float), 8)
+    assert gradient.shape == (306,)
+    np.testing.assert_array_equal(gradient[:51], np.arange(51))
+    with pytest.raises(ValueError, match="registered order"):
+        experiment.canonical_gradient(curves, lambda curve: np.zeros(51), 5)

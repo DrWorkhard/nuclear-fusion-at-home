@@ -15,10 +15,6 @@ PROBE_STEPS = (1.25e-6, 6.25e-7)
 SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=0., gtol=1e-9)
 
 
-class InvalidTrial(ValueError):
-    """A numerical trial outside the objective domain; startup must still fail."""
-
-
 def mode_map(entries):
     result = {}
     for entry in entries:
@@ -48,50 +44,46 @@ def loop_geometry(data, count):
     return points, tangents
 
 
+ORDERS = (5, 8)  # Registered six-coil Fourier orders; order 5 is the public starter class.
+
+
 def names(order=5):
-    if type(order) is not int or order not in (5, 8):
-        raise ValueError("active six-coil order must be 5 or 8")
+    if order not in ORDERS:
+        raise ValueError(f"registered coil Fourier order required: {ORDERS}")
     return [
         name for axis in "xyz" for name in
         [f"{axis}c(0)"] + [f"{axis}{kind}({m})" for m in range(1, order+1) for kind in "sc"]
     ]
 
 
-def promote_order(snapshot, order):
-    """Preserve a six-coil geometry/current exactly while adding zero order-6–8 modes."""
-    from fusion_baselines.coupled_coil_audit import parameter_names, validate_snapshot
-
-    validate_snapshot(snapshot)
-    names(order)
-    if snapshot['nbase'] != 6 or snapshot['order'] not in (5, 8):
-        raise ValueError("active six-coil snapshot required")
-    if order < snapshot['order']:
-        raise ValueError("discarding existing Fourier modes is forbidden")
-    result = copy.deepcopy(snapshot)
-    coefficients = np.asarray(snapshot['base_coefficients'], dtype=float)
-    result.update(order=order, names=parameter_names(6, order),
-                  base_coefficients=np.pad(coefficients,
-                      ((0, 0), (0, 0), (0, 2*(order-snapshot['order'])))).tolist())
-    validate_snapshot(result)
-    return result
-
-
 def canonical_gradient(curves, derivative, order=5):
-    expected = names(order)
-    result = []
+    local, result = names(order), []
     for curve in curves:
         labels = list(curve.local_dof_names)
-        if list(curve.local_full_dof_names) != expected or sorted(labels) != sorted(expected):
-            raise ValueError("complete named free coordinates at the declared order required")
+        if list(curve.local_full_dof_names) != local or sorted(labels) != sorted(local):
+            raise ValueError("complete named free coordinates of the registered order required")
         values = np.asarray(derivative(curve), dtype=float)
-        if values.shape != (len(expected),):
-            raise ValueError("named local gradient shape required")
-        if not np.isfinite(values).all():
-            raise InvalidTrial("nonfinite native gradient")
-        result.extend(values[[labels.index(name) for name in expected]])
-    if len(result) != 6*len(expected):
+        if values.shape != (len(local),) or not np.isfinite(values).all():
+            raise ValueError("finite named local gradient required")
+        result.extend(values[[labels.index(name) for name in local]])
+    if len(result) != 6*len(local):
         raise ValueError("six base curves required")
     return np.asarray(result)
+
+
+def lift_order(snapshot, order):
+    """Same coil geometry at a higher Fourier order: new modes are exactly zero."""
+    from fusion_baselines.coupled_coil_audit import parameter_names
+
+    old = snapshot["order"]
+    if order not in ORDERS or order < old:
+        raise ValueError("registered order at least the snapshot's order required")
+    coefficients = np.zeros((6, 3, 2*order+1))
+    coefficients[:, :, :2*old+1] = np.asarray(snapshot["base_coefficients"], dtype=float)
+    lifted = dict(snapshot, order=order, names=parameter_names(6, order),
+                  base_coefficients=coefficients.tolist())
+    lifted["lifted_from_order"] = old
+    return lifted
 
 
 class Recorder:
@@ -200,7 +192,7 @@ class Model:
         from fusion_baselines.sparse_coil_surface import SparseCurveSurfaceDistance
 
         self.seed, self.data, self.record = seed, data, record
-        self.order = seed['order']
+        self.order = seed.get("order", 5)
         self.x0 = np.asarray(seed["base_coefficients"]).ravel()
         expected = [f"coil[{i}]/{name}" for i in range(6) for name in names(self.order)]
         if seed["names"] != expected or self.x0.shape != (len(expected),):
@@ -257,11 +249,10 @@ class Model:
 
     def set_x(self, x):
         x = np.asarray(x, dtype=float)
-        expected = names(self.order)
-        if x.shape != (6*len(expected),) or not np.isfinite(x).all():
-            raise ValueError("finite named vector at the declared order required")
-        for curve, row in zip(self.curves, x.reshape(6, len(expected)), strict=True):
-            if list(curve.local_full_dof_names) != expected:
+        if x.shape != self.x0.shape or not np.isfinite(x).all():
+            raise ValueError("finite named coefficient vector of the seed's size required")
+        for curve, row in zip(self.curves, x.reshape(6, -1), strict=True):
+            if list(curve.local_full_dof_names) != names(self.order):
                 raise ValueError("native physical coordinate order changed")
             curve.local_full_x = row.copy()
 
@@ -277,7 +268,7 @@ class Model:
         phi = float(np.mean(np.sum(self.loop_field.A()*self.loop_tangent, axis=1)))
         if (not np.isfinite(phi) or abs(phi) <= 1e-12
                 or np.sign(phi) != np.sign(self.seed["seed_unit_flux"])):
-            raise InvalidTrial("unit flux degenerate or orientation reversed")
+            raise ValueError("unit flux degenerate or orientation reversed")
         return phi
 
     def evaluate(self, x):
@@ -286,7 +277,7 @@ class Model:
         self.set_x(x)
         phi, q = self.unit_flux(), float(self.objective.J())
         if q <= 1e-10:
-            raise InvalidTrial("native SquaredFlux dJ truncation region")
+            raise ValueError("native SquaredFlux dJ truncation region")
         dq = canonical_gradient(self.curves, self.objective.dJ(partials=True), self.order)
         value, gradient = q / self.area, dq / self.area
         penalty = float(self.geometry.J())
@@ -300,7 +291,7 @@ class Model:
                        scale=scale, unit_flux=phi, current=1e5*scale,
                        current_limit_met=abs(1e5*scale) <= 500000)
         if not np.isfinite(value+penalty) or not np.isfinite(gradient).all():
-            raise InvalidTrial("nonfinite objective or gradient")
+            raise ValueError("nonfinite objective or gradient")
         return float(value+penalty), gradient, metrics
 
 
@@ -328,8 +319,7 @@ def fine(seed, data, chosen, record, shift):
     B = sample(model.field, points, "B")
     A = sample(model.loop_field, model.loop_points, "A")
     snapshot = copy.deepcopy(seed)
-    snapshot.update(base_coefficients=np.asarray(chosen["x"]).reshape(
-                        6, 3, 2*seed['order']+1).tolist(),
+    snapshot.update(base_coefficients=np.asarray(chosen["x"]).reshape(6, 3, -1).tolist(),
                     scale=scale, unit_flux=chosen["metrics"]["unit_flux"])
     for row in snapshot["physical"]:
         row["current"] = 1e5*scale*(-1 if row["flip"] else 1)
@@ -375,7 +365,7 @@ def search(model, record, minimize):
     initial = model.x0.copy()
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
-    largest_value = None
+    largest_value = 0.
 
     def evaluate(x, role):
         nonlocal selected, completed, largest_value
@@ -389,28 +379,21 @@ def search(model, record, minimize):
             value, gradient, metrics = model.evaluate(x)
             record.guard()
             row.update(value=value, gradient=gradient.tolist(), metrics=metrics, status="completed")
-        except InvalidTrial as exc:
-            row.update(status="failed", error=f"{type(exc).__name__}: {exc}")
-            if role != "search":
-                raise
-            # Exceed ALL observed values, including the accepted line-search base:
-            # a lower unaccepted trial must not make rejection look like descent.
-            # This solver feedback is never completed or selectable evidence.
-            record.guard()
-            rejected_value = largest_value + max(1., abs(largest_value))
-            if not np.isfinite(rejected_value):
-                raise ValueError("finite rejection value unavailable") from exc
-            row["solver_rejection_value"] = rejected_value
         except Exception as exc:
             row.update(status="failed", error=f"{type(exc).__name__}: {exc}")
-            raise
+            if role != "search" or not isinstance(exc, (ValueError, FloatingPointError)):
+                raise
+            # Reject numerical trial failures; resource and programming errors remain fatal.
+            # Stay above every completed value, including the line search's starting point.
+            rejected_value = largest_value + max(1., abs(largest_value))
+            row.update(rejected_value=rejected_value)
         finally:
             record.save(f"trial-{index:05}.json", row)
         record.guard()
         if row["status"] == "failed":
             return rejected_value, np.zeros_like(initial)
+        largest_value = max(largest_value, value)
         completed += 1
-        largest_value = value if largest_value is None else max(largest_value, value)
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
                 and metrics["current_limit_met"] and max(metrics["lengths"]) <= 3.45
                 and (selected is None or metrics["normal_rms"]
