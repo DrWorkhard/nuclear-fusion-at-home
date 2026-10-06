@@ -2,7 +2,9 @@
 
 Screen reactor feasibility now: device scale, magnetic field and pressure,
 net power balance, winding/blanket/shield space, loads, heat exhaust and maintenance.
-Record assumptions and missing evidence before detailed simulations. The
+Record assumptions and missing evidence before detailed simulations. Start with the
+[early feasibility screen](REACTOR_FEASIBILITY_SCREEN.md): specified pilot inputs,
+missing operating assumptions and the cheapest rejection checks. The
 [programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) defines the decision this
 screen supports; a boundary-error threshold alone does not establish readiness.
 

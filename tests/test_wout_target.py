@@ -92,3 +92,18 @@ def test_candidate_snapshot_rejects_invalid_public_contract(data, change):
     seed = json.loads((ROOT/"examples/clear-coil-samples-v1/candidate.json").read_text())
     with pytest.raises(ValueError):
         candidate_snapshot(dict(seed, **change), data)
+
+
+def test_selected_candidate_conversion_rejects_reference_input(data):
+    from fusion_baselines import coil_check
+
+    candidate = json.loads((ROOT/"submissions/length-headroom-six-coil/candidate.json").read_text())
+    with pytest.raises(ValueError, match="exact target input"):
+        coil_check.candidate_snapshot(candidate, data, target_id="selected401")
+    spec = coil_check.target_spec("selected401")
+    selected = coil_check.read_json(ROOT/spec["input"])
+    snapshot = coil_check.candidate_snapshot(candidate, selected, target_id="selected401")
+    coil_check.snapshot_identity(snapshot, "selected401")
+    assert snapshot["target_id"] == "selected401"
+    assert snapshot["B2_scale"] == spec["B2"]
+    assert snapshot["base_coefficients"] == candidate["base_coefficients"]

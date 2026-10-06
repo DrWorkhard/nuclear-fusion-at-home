@@ -2,7 +2,7 @@
 
 One normalized fitter, one set of field/geometry checks.
 [Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
-[Contribution ideas](RESEARCH_HINTS.md)
+[Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md)
 
 ## Native workflow
 
@@ -41,9 +41,10 @@ Implementation: [driver](../../scripts/fit_coils.py),
 [objective and search](../../src/fusion_baselines/coil_fit.py),
 [checks and target intake](../../src/fusion_baselines/coil_check.py).
 Independent geometry/field mathematics stay separate from optimization penalties.
-This driver supports reference401 only; matched improved-target fitting and
-realized-plasma-benefit diagnostics remain to be implemented in the
-[next experiment](STEP4_RESEARCH_PROGRAMME.md).
+The default remains reference401. `--target selected401 --wout <archived-wout>`
+selects the hash-bound improved Step 3 target with its frozen normalization.
+`check_coils.py` supports the same option; `trace_surfaces.py --snapshot` preserves
+the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
 ## Portable checks
 
@@ -121,7 +122,8 @@ lines a few mm inside the boundary. A `boundary` exit therefore requires an exac
 point-in-section test of the stop point. Unconfirmed stops are reported as
 `classifier_stop_inside_target`, which is inconclusive and cannot pass. The summary does not measure nestedness or island
 widths. Plots are exploratory, not a nested-surface proof or physical acceptance.
-The improved Step 3 target, edge s > 0.95 and benefit transfer remain untested.
+The [matched experiment](ISSUE25_MATCHED_TARGETS.md) also traces the improved
+Step 3 target; full benefit transfer remains unresolved. Edge s > 0.95 remains untested.
 [Confirmation, 4 October 2026](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-pr18-trace-confirmation-2026-10-04/evidence/pr18-trace-confirmation-2026-10-04)
 uses clean producer `df9db024ef6170df820649e61cccd868f65f0b88`, archive `21886ce`.
 For length-headroom-six-coil, direct and interpolated runs both complete 200
