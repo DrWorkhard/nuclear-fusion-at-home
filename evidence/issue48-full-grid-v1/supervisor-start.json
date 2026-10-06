@@ -1,0 +1,15 @@
+{
+  "producer": "130347fe29e03852e257a63d0ce6ab9f828d2c85",
+  "source_clean": true,
+  "started_utc": "2026-10-06T23:20:11.980619+00:00",
+  "launcher_sha256": "95a4042b386d8a85170ee60a4a5753ebfca07826d9fff99014bede3694dd0fbb",
+  "supervisor_sha256": "bf415756945ae4d5b7a5c44fc9e41d2018af2822ff90deecf6827d126f98f5e3",
+  "supervisor_source": "293d0a65601c8293c936617f720fcfe099b3a27f",
+  "external_host_load_verified": false,
+  "agent_controlled_heavy_jobs": "serial",
+  "driver_limit_s": 1800,
+  "supervisor_limit_s": 1860,
+  "clock_discrepancy_limit_s": 5,
+  "arms": [],
+  "completed": false
+}

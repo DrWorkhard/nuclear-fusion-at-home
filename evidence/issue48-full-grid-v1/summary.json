@@ -1,0 +1,325 @@
+{
+  "software_completed": true,
+  "producer": "130347fe29e03852e257a63d0ce6ab9f828d2c85",
+  "physical_admission": false,
+  "equal_alpha_verified": false,
+  "nestedness_proven": false,
+  "original_matching_verdict": "inconclusive",
+  "arms": [
+    {
+      "target": "reference401",
+      "completed": true,
+      "driver_elapsed_s": 979.472959500039,
+      "supervisor_elapsed_s": 989.7139504998922,
+      "clock_discrepancy_s": 0.0008905001077437191,
+      "sources_unchanged": true,
+      "controls_pass": true,
+      "recorded_lines": 20,
+      "qualified_lines": 20,
+      "surface_summary": [
+        {
+          "labels": [
+            0.0988731218075515,
+            0.10091136022097373,
+            0.09876433256475059,
+            0.1009113544842152
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.0012356674352494157,
+          "numerically_qualified": true,
+          "phase_spread": 0.002147027656223141,
+          "phase_spread_exceeds_0_005": false,
+          "phases_complete": true,
+          "s": 0.1,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        },
+        {
+          "labels": [
+            0.24668910838329436,
+            0.25242992170019934,
+            0.2458550109138775,
+            0.2524299198318618
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.004144989086122514,
+          "numerically_qualified": true,
+          "phase_spread": 0.006574910786321858,
+          "phase_spread_exceeds_0_005": true,
+          "phases_complete": true,
+          "s": 0.25,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        },
+        {
+          "labels": [
+            0.48827935388471416,
+            0.5019978197073885,
+            0.4894691814656497,
+            0.5019978304256547
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.011720646115285838,
+          "numerically_qualified": true,
+          "phase_spread": 0.01371847654094055,
+          "phase_spread_exceeds_0_005": true,
+          "phases_complete": true,
+          "s": 0.5,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        },
+        {
+          "labels": [
+            0.7152211502626777,
+            0.7364051734523129,
+            0.7243532020708056,
+            0.7364049929447686
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.03477884973732226,
+          "numerically_qualified": true,
+          "phase_spread": 0.021184023189635193,
+          "phase_spread_exceeds_0_005": true,
+          "phases_complete": true,
+          "s": 0.75,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        },
+        {
+          "labels": [
+            0.8318632173615763,
+            0.8512375429488032,
+            0.8440232347965816,
+            0.8512375374142648
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.06813678263842371,
+          "numerically_qualified": true,
+          "phase_spread": 0.01937432558722685,
+          "phase_spread_exceeds_0_005": true,
+          "phases_complete": true,
+          "s": 0.9,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        }
+      ],
+      "failures": [],
+      "recorded_final_diagnostic_maxima": {
+        "max_gap_rad": 0.23991538346105168,
+        "heldout_radius_max_m": 7.49560216849951e-05,
+        "quadrature_label_change": 2.918821535928905e-13,
+        "independent_label_error": 1.6653345369377348e-16
+      }
+    },
+    {
+      "target": "selected401",
+      "completed": true,
+      "driver_elapsed_s": 972.4551180419512,
+      "supervisor_elapsed_s": 983.1728011250962,
+      "clock_discrepancy_s": 0.0009258749038281167,
+      "sources_unchanged": true,
+      "controls_pass": true,
+      "recorded_lines": 20,
+      "qualified_lines": 18,
+      "surface_summary": [
+        {
+          "labels": [
+            0.09969677637109459,
+            0.10078795960269726,
+            0.09835610912282902,
+            0.10078795616460902
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.0016438908771709837,
+          "numerically_qualified": true,
+          "phase_spread": 0.0024318504798682417,
+          "phase_spread_exceeds_0_005": false,
+          "phases_complete": true,
+          "s": 0.1,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        },
+        {
+          "labels": [
+            0.2485660419028071,
+            0.2522587623956572,
+            0.245206024976917,
+            0.25225876695987876
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.004793975023083014,
+          "numerically_qualified": true,
+          "phase_spread": 0.007052741982961769,
+          "phase_spread_exceeds_0_005": true,
+          "phases_complete": true,
+          "s": 0.25,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        },
+        {
+          "labels": [
+            0.49091030600236873,
+            null,
+            0.48828408256877726,
+            0.4999746642401073
+          ],
+          "line_qualified": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "numerically_qualified": false,
+          "phases_complete": true,
+          "s": 0.5,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        },
+        {
+          "labels": [
+            0.7149348938932188,
+            0.7331724323498396,
+            0.7210946072660587,
+            0.7331724265199115
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.03506510610678115,
+          "numerically_qualified": true,
+          "phase_spread": 0.018237538456620794,
+          "phase_spread_exceeds_0_005": true,
+          "phases_complete": true,
+          "s": 0.75,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        },
+        {
+          "labels": [
+            0.8251169642046218,
+            0.8414976228180464,
+            0.8350860005255838,
+            0.8414976137566774
+          ],
+          "line_qualified": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "max_absolute_offset": 0.07488303579537825,
+          "numerically_qualified": true,
+          "phase_spread": 0.016380658613424637,
+          "phase_spread_exceeds_0_005": true,
+          "phases_complete": true,
+          "s": 0.9,
+          "theta": [
+            0.0,
+            1.5707963267948966,
+            3.141592653589793,
+            4.71238898038469
+          ]
+        }
+      ],
+      "failures": [
+        {
+          "index": 9,
+          "s": 0.5,
+          "theta": 1.5707963267948966,
+          "failures": [
+            "incomplete prefixes"
+          ]
+        },
+        {
+          "index": 11,
+          "s": 0.5,
+          "theta": 4.71238898038469,
+          "failures": [
+            "label convergence",
+            "angular coverage"
+          ]
+        }
+      ],
+      "recorded_final_diagnostic_maxima": {
+        "max_gap_rad": 1.179338396856835,
+        "heldout_radius_max_m": 4.386428321602465e-06,
+        "quadrature_label_change": 1.9548107459648257e-07,
+        "independent_label_error": 1.6653345369377348e-16
+      }
+    }
+  ]
+}

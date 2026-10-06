@@ -1,0 +1,28 @@
+{
+  "target": "selected401",
+  "started_utc": "2026-10-06T23:36:41.738940+00:00",
+  "completed": false,
+  "initial_free_bytes": 8259342336,
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "-c",
+    "import runpy,sys; sys.modules['mpi4py']=None; sys.argv=sys.argv[1:]; runpy.run_path(sys.argv[0],run_name='__main__')",
+    "/private/tmp/fusion-issue48-grid-20261007/scripts/measure_flux_labels.py",
+    "--snapshot",
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/selected401/fit/selected-snapshot.json",
+    "--wout",
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-balanced-v1/endpoints/selected-fine/native/wout.nc",
+    "--target-input",
+    "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-balanced-v1/selected-input-401.json",
+    "--target",
+    "selected401",
+    "--output",
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/issue48-full-grid-v1/selected401/run",
+    "--full-grid",
+    "--half-period",
+    "--crossings",
+    "320",
+    "--seconds",
+    "1800"
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "analytic_controls": [
+    {
+      "errors": {
+        "area": 0.0,
+        "circle": 5.551115123125783e-17,
+        "line": 0.0
+      },
+      "exact_spline_area": 0.1256637061435918,
+      "modulation": 0.0,
+      "passed": true
+    },
+    {
+      "errors": {
+        "area": 8.326672684688674e-17,
+        "line": 8.326672684688674e-17
+      },
+      "exact_spline_area": 0.1281768786996913,
+      "modulation": 0.2,
+      "passed": true
+    }
+  ],
+  "center_RZ": [
+    0.9340295380453654,
+    0.0
+  ],
+  "completed": false,
+  "control_arrays_sha256": "47711977e1d0212ab70bbc60960a863aaa680497c77d8ca68c4df0eacdee1275",
+  "controls": [
+    {
+      "crossings": 160,
+      "exact_flux": -0.003140463366074325,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.0031402804822613915,
+          "line_flux": -0.003140280481694884,
+          "stokes_abs_error": 5.665073445071389e-13
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.0031402804822593658,
+          "line_flux": -0.0031402804822593658,
+          "stokes_abs_error": 0.0
+        }
+      ],
+      "label": 0.09995823229368184,
+      "label_error": 5.821372632719424e-06,
+      "max_gap_rad": 0.48214073742816144,
+      "quadrature_label_change": 1.7968008059469724e-11,
+      "s": 0.1,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 3.303226444782356e-05,
+          "label": 0.09994795884723108,
+          "max_gap_rad": 0.6152501297865127,
+          "quadrature_label_change": 9.745537047718401e-11
+        },
+        {
+          "heldout_radius_max_m": 0.0002663389816751193,
+          "label": 0.09987628857184605,
+          "max_gap_rad": 0.8717593739247107,
+          "quadrature_label_change": 4.002284804596903e-09
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.007851513371393552,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.00785107292956545,
+          "line_flux": -0.007851072928359322,
+          "stokes_abs_error": 1.2061272119945343e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.007851072929561328,
+          "line_flux": -0.007851072929561324,
+          "stokes_abs_error": 3.469446951953614e-18
+        }
+      ],
+      "label": 0.24990741307384615,
+      "label_error": 1.4019698949319093e-05,
+      "max_gap_rad": 0.4734663550128291,
+      "quadrature_label_change": 3.826091324244968e-11,
+      "s": 0.25,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 6.025689541185042e-05,
+          "label": 0.24988245576252374,
+          "max_gap_rad": 0.6041897233249331,
+          "quadrature_label_change": 2.0560386518624922e-10
+        },
+        {
+          "heldout_radius_max_m": 0.00042668758697419346,
+          "label": 0.2497034313308796,
+          "max_gap_rad": 0.8559665346464413,
+          "quadrature_label_change": 8.237535466041695e-09
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.0157042813260637,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.01570345051906319,
+          "line_flux": -0.01570345051721768,
+          "stokes_abs_error": 1.84550985604659e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.015703450519062887,
+          "line_flux": -0.015703450519062898,
+          "stokes_abs_error": 1.0408340855860843e-17
+        }
+      ],
+      "label": 0.499856354763403,
+      "label_error": 2.6445408187802943e-05,
+      "max_gap_rad": 0.46163362791874096,
+      "quadrature_label_change": 5.873512660766994e-11,
+      "s": 0.5,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 9.79988210247848e-05,
+          "label": 0.49980884077590204,
+          "max_gap_rad": 0.5891280256009006,
+          "quadrature_label_change": 3.0006777489688547e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0006014593433036064,
+          "label": 0.4994578520271556,
+          "max_gap_rad": 0.8353845957931458,
+          "quadrature_label_change": 1.2627994352223579e-08
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.02355876723061597,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.023557582296657123,
+          "line_flux": -0.023557582294635587,
+          "stokes_abs_error": 2.0215357166009085e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.023557582296670217,
+          "line_flux": -0.023557582296670224,
+          "stokes_abs_error": 6.938893903907228e-18
+        }
+      ],
+      "label": 0.7498611339945911,
+      "label_error": 3.771761894211245e-05,
+      "max_gap_rad": 0.4557799375203966,
+      "quadrature_label_change": 6.476448644783545e-11,
+      "s": 0.75,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 0.00013195325797714375,
+          "label": 0.7497930761961219,
+          "max_gap_rad": 0.576526505313173,
+          "quadrature_label_change": 2.840398775842116e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0007288790071087806,
+          "label": 0.7492784888555412,
+          "max_gap_rad": 0.8184883457206684,
+          "quadrature_label_change": 1.4347180789065336e-08
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.028272658685188516,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.028271273793957816,
+          "line_flux": -0.02827127379203304,
+          "stokes_abs_error": 1.924776310557874e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.02827127379398324,
+          "line_flux": -0.02827127379398324,
+          "stokes_abs_error": 0.0
+        }
+      ],
+      "label": 0.8999025944026654,
+      "label_error": 4.4082456194805e-05,
+      "max_gap_rad": 0.45458407303127446,
+      "quadrature_label_change": 6.207680730595493e-11,
+      "s": 0.9,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 0.00015142286819910117,
+          "label": 0.8998229929090716,
+          "max_gap_rad": 0.5698629210252868,
+          "quadrature_label_change": 2.1780372198057635e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0007932265621123369,
+          "label": 0.8992132034560945,
+          "max_gap_rad": 0.8095882525992497,
+          "quadrature_label_change": 1.430353087870221e-08
+        }
+      ]
+    }
+  ],
+  "current_A": 307977.14904565935,
+  "edge": {
+    "angular_points": 16384,
+    "area_flux": -0.031415926534525684,
+    "line_flux": -0.031415926534525726,
+    "stokes_abs_error": 4.163336342344337e-17
+  },
+  "flux_surface_proven": false,
+  "full_grid": true,
+  "half_period_sections": true,
+  "half_period_symmetry": {
+    "A": 1.2347725267394557e-16,
+    "B": 5.933728908467775e-16
+  },
+  "interval_orders": [
+    4,
+    8
+  ],
+  "kind": "realized-flux-label-grid",
+  "launch_scales": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "lines": [],
+  "mapping": {
+    "position": 5.243853759995343e-16,
+    "tangent": 3.0818672032197072e-15
+  },
+  "orientation": "counterclockwise in R,Z; section normal minus e_phi",
+  "physical_admission": false,
+  "polar_edge_magnitude_error": 4.3678727301710296e-11,
+  "provenance": {
+    "external_repositories": {},
+    "host": {
+      "captured_at": "2026-10-06T23:20:21.926350+00:00",
+      "logical_cpu_count": 8,
+      "machine": "arm64",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+      "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+    },
+    "repository": {
+      "available": true,
+      "branch": "research/issue48-full-grid",
+      "commit": "130347fe29e03852e257a63d0ce6ab9f828d2c85",
+      "dirty": false,
+      "path": "/private/tmp/fusion-issue48-grid-20261007"
+    },
+    "schema_version": 1
+  },
+  "quadrature_kind": "interval Gauss",
+  "radial_quadrature": 24,
+  "requested_crossings": 640,
+  "requested_transits": 320,
+  "selected_start_index": null,
+  "sources_before": {
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/issue25-matched-v1/reference401/fit/selected-snapshot.json": "ec1f8ce7073177d31e1dc1d44aad6478169b602189b8e8b204373481da368799",
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+    "/Users/sebastianwirkert/workspace/fusion/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "/private/tmp/fusion-issue48-grid-20261007/docs/optimization/ISSUE48_FULL_GRID.md": "6c089a5bef57f89c3568f250e7d10befd58ba07c940b30f0f37224fc1729a014",
+    "/private/tmp/fusion-issue48-grid-20261007/scripts/diagnose_flux_quadrature.py": "eb48b44e62ffa7cfdbc1e501c9d883cd01accdf1eb134d1fdea4d65d34485c0d",
+    "/private/tmp/fusion-issue48-grid-20261007/scripts/measure_flux_labels.py": "b1db847e78386e0cbc2b2a384629532e2c3ee7adc5c0ff92182108df55e4db0e",
+    "/private/tmp/fusion-issue48-grid-20261007/scripts/qualify_saved_flux_labels.py": "dc69b2e07f74d68203e7aec97817782141a525a6d265c93f4f17cc8c8bd71123",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/__init__.py": "8d36f4ca6cbd9c95d1286a5f7914db91f020133819f8e39eb5aba6c405cc1390",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/bounce_action.py": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/clear_coil_field_audit.py": "ceb6584e9137e75b67a67b7a24ae2ab1aea01aa85b8f5748952dfbb2f5f802dd",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/coil_bounce.py": "8c2f599c2e6ca1db373e536ad6e9743a9f8f2d609bab7f55d52922f1fc90b6e2",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/coil_check.py": "b42ae92a5390ac1356222d1a3e5468d55ff9563b49d044126c92c9dac5269c78",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/coil_fit.py": "490c571f77fc6237f3d7287119795982ec5b1821ebef5d391c6c0f4ccd7bb5f3",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/coupled_coil_audit.py": "3f9a5cee83447bc61d0cd633cdaac13e90a09f2bee42b6c908166d0f42476ba5",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/documentation.py": "7fcfd5475aface32114e5845ff997edb2926f541f823d566d29185da47116aeb",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/documentation_policy.py": "72de8a9b9321992af6655b19c6bd30c81d50263ba5918c23bb8887a5d6d91dc3",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/flux_labels.py": "6a99bdada7a0bbfbcde8cbd2b0ff19c626f2bbfd7ddc16043daee6d8724edcd9",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/provenance.py": "9960f5021f8b1d80e5d524df77df986cf889e7db8391e167ecb00776ae7faa29",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/realized_field.py": "d071f01f818e0294686124f9756f564362d2f2dcfdaf9e1ecf3230eaea79e5b0",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/reference_wout.py": "f11823877c64f41f600afa133be087f0ea25dafc757215d7b07f3faae765032f",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/vmec_trace.py": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880",
+    "/private/tmp/fusion-issue48-grid-20261007/src/fusion_baselines/wout_target.py": "886fdd7348566624a0c7f62c5929aedf0c72f66e160d0f648a6d5a710813bc96"
+  },
+  "target_flux_relative_error": 2.220446049250313e-16,
+  "target_id": "reference401",
+  "target_oriented_flux": -0.031415926535897934
+}
