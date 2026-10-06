@@ -2,7 +2,9 @@
 
 One normalized fitter, one set of field/geometry checks.
 [Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
-[Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md)
+[Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md) ·
+[Realized-label pilot](ISSUE48_REALIZED_LABELS.md) ·
+[Matched-launch pilot](ISSUE48_MATCHED_LAUNCHES.md)
 
 ## Native workflow
 
@@ -153,3 +155,6 @@ physical acceptance. Other earlier positive summaries still need corrected rerun
 
 For old results, use their [original revisions](../validation/REPRODUCING_RESULTS.md),
 not this prospective search. Evidence is linked from immutable tags; local raw outputs are preserved.
+
+[Saved-contour quadrature check](ISSUE48_KNOT_QUADRATURE.md): bounded method diagnosis
+after the launch-matching pilot stopped.
