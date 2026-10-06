@@ -67,6 +67,8 @@ Its original producer and study-specific supervisor remain in the evidence
 archive; full local evidence awaits publication. Current order-8 support comes
 from Patrick Koch's [PR #57](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/57),
 following his [fitter fix](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/55).
+The [prospective joint feasibility protocol](ISSUE37_JOINT_FEASIBILITY.md) fixes
+the next bounded comparison; execution and physics confirmation remain gated.
 
 ## Portable checks
 
