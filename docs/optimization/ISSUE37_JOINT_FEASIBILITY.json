@@ -69,7 +69,7 @@
     "C": {
       "target": "reference401 fixed",
       "search": "single existing coil fit from original seed",
-      "fit_cap_rule": "Use the remaining1800s arm search allowance after intake; ordinary declared search stopping may retain an earlier eligible candidate. Late trials cannot win."
+      "fit_cap_rule": "Use the remaining 1800 s arm search allowance after intake; ordinary declared search stopping may retain an earlier eligible candidate. Late trials cannot win."
     },
     "J": {
       "search": "bounded plasma-coordinate poll with a coil fit at each target",
@@ -85,7 +85,7 @@
       "coil_start": "original identical seed for each proposal; no warm starts from other arms",
       "fit_seconds_max_per_proposal": 300,
       "retry_or_more_proposals": false,
-      "fit_cap_rule": "Start an inner fit only with300search seconds remaining. Its ordinary300s search stop retains a previously completed eligible candidate; late trials cannot win. A whole-arm interruption before this cap is not normal completion."
+      "fit_cap_rule": "Start an inner fit only with 300 search seconds remaining. Its ordinary 300 s search stop retains a previously completed eligible candidate; late trials cannot win. A whole-arm interruption before this cap is not normal completion."
     }
   },
   "execution": {
@@ -190,8 +190,8 @@
     "target_launch_trace_scope": "diagnostic only; no claim of matched realized flux/alpha",
     "ideal_holdout_convergence_rule": "abs(S1601-S3201) <= 0.001*max(abs(S1601),abs(S3201),1e-12), separately for C and J",
     "maximum_normal_error": "report both fine-grid maxima against unchanged 1e-3 acceptance gate; no acceptance from feasibility screens",
-    "feasibility_boundary_rms_aggregation": "maximum RMS over both fine128x128 shifts, separately for C and J",
-    "feasibility_interior_rms_aggregation": "finest64x64 target grid with512coil nodes, separately for C and J; report every coarser level too"
+    "feasibility_boundary_rms_aggregation": "maximum RMS over both fine 128x128 shifts, separately for C and J",
+    "feasibility_interior_rms_aggregation": "finest 64x64 target grid with 512 coil nodes, separately for C and J; report every coarser level too"
   },
   "common_physics_endpoint": {
     "status": "blocked; report null",
@@ -227,7 +227,7 @@
     "boundary_ratio_scope": "own-target feasibility non-regression screen only, never a common physics gain",
     "after_continue": "qualify common realized-field endpoint before confirmatory optimization; no automatic larger search",
     "numerical_rejection": "retain documented nonconvergence/invalid geometry or complete plasma-domain failure; resource interruption is not a completed rejection",
-    "ordinary_search_stop": "Declared C search cap or J300s inner-fit cap is not itself an incomplete result; startup must pass and an eligible candidate must already be recorded. Other required proposal work must be complete."
+    "ordinary_search_stop": "Declared C search cap or J 300 s inner-fit cap is not itself an incomplete result; startup must pass and an eligible candidate must already be recorded. Other required proposal work must be complete."
   },
   "records": [
     "source and dependency identities",
@@ -240,5 +240,5 @@
     "timing/storage/call counts",
     "all failed and completed diagnostics"
   ],
-  "cost_rationale": "Two equilibrium solves at the documented approximate six-minute regeneration scale plus two at-most-five-minute coil fits leave part of the30-minute search budget for intake/scoring. This is a planning estimate, not measured perturbed-target runtime; ceilings never increase."
+  "cost_rationale": "Two equilibrium solves at the documented approximate six-minute regeneration scale plus two at-most-five-minute coil fits leave part of the 30-minute search budget for intake/scoring. This is a planning estimate, not measured perturbed-target runtime; ceilings never increase."
 }
