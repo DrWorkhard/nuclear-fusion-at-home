@@ -1,6 +1,6 @@
 # Level 4: for a graduate student
 
-Updated 5 October 2026 · [All five levels](README.md) ·
+Updated 6 October 2026 · [All five levels](README.md) ·
 Previous: [Level 3](LEVEL_3_UNIVERSITY.md) · Next: [Level 5](LEVEL_5_EXPERT.md)
 
 We run a two-stage stellarator design study in the open: improve a QI vacuum
@@ -90,16 +90,21 @@ Details: [active coil research](../optimization/README.md).
 
 1. Diagnose why shallow wells are lost in the coil fields and validate realized
    flux-surface labels before any benefit-transfer confirmation.
-2. Diagnose optimizer conditioning and stopping once, rather than adding variants.
-3. Screen reactor feasibility: device scale, field, power balance, magnet loads,
-   blanket and shield space, heat exhaust.
+2. Fix the fitter: one failed trial discards a run, and `ftol` acts as an
+   absolute threshold because the objective is about 5e-6 ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)).
+3. Specify a reactor operating point: the [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records the
+   missing inputs (scale, field, power balance, magnets, blanket and shield space,
+   heat exhaust) and defers reactor-scale search.
 4. Finite pressure (4C) and finite-build robustness (4D) remain deferred.
 
-**24 October 2026:** continue the fixed-target recipe only if a matched reference401
-comparison at least halves boundary RMS without worsening interior RMS and the
-realized-field diagnostics support pursuing transfer; otherwise switch to another
-coil family, another target, or joint plasma–coil optimization.
-[Programme](../optimization/STEP4_RESEARCH_PROGRAMME.md).
+**Decision, 6 October 2026: the fixed-target recipe has stalled.** The hurdle was
+to halve boundary RMS without worsening interior RMS. The preregistered 30-minute
+conditioning/stopping comparison ([#31](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/31)) reached 0.0018761 (−6.0%); a
+scale-free objective added about 1.2% before a trial failure. Next, a matched
+coil-freedom probe ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) runs six coils at Fourier order 8 against the
+order-5 control. If it halves boundary RMS with passing geometry and no worse
+interior, the coil family changes; otherwise the project moves to joint plasma–coil
+optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). [Programme](../optimization/STEP4_RESEARCH_PROGRAMME.md).
 
 ## Good entry points
 

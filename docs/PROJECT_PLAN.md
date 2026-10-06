@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 4 October 2026.
+Updated 6 October 2026.
 [Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
@@ -32,19 +32,18 @@ from present results to the README's year-end reactor vision. Keep the ambition;
 spend effort on decisions that test the path.
 
 1. **Test benefit in actual coil fields.** Compare the original and improved
-   Step 3 targets with matched fitting effort. Diagnose stopping once, then
-   evaluate interior fields, magnetic surfaces and benefit transfer using shared
-   checks. The [first matched comparison](optimization/ISSUE25_MATCHED_TARGETS.md)
+   Step 3 targets with matched fitting effort and evaluate interior fields,
+   magnetic surfaces and benefit transfer using shared checks. The [first matched comparison](optimization/ISSUE25_MATCHED_TARGETS.md)
    leaves wide-domain benefit transfer unresolved because required wells are missing.
    Diagnose shallow-well fidelity and qualify realized flux labels before confirmation.
 2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. Detailed simulations follow a decision
    need; boundary RMS alone does not determine their priority.
-3. **Make the 24 October decision binding.** The
-   [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) defines the comparison,
-   resource limits and continue/change/stop rule. Do not extend the same recipe
-   merely because an old exploratory threshold was crossed.
+3. **Choose the next route by 24 October.** The fixed-target recipe has stalled
+   ([decision](optimization/STEP4_RESEARCH_PROGRAMME.md)). After a fitter fix
+   ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)), one coil-freedom probe ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) chooses between a
+   richer coil family and joint plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)).
 4. **Make the decisive test portable.** Supply the missing target data and reuse
    existing field/geometry checks so contributors can address the actual
    bottleneck. Prefer an existing community benchmark. Aim to resolve this now;

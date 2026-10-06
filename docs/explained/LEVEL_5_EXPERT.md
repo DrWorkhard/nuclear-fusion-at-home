@@ -1,6 +1,6 @@
 # Level 5: for an expert
 
-Updated 5 October 2026 · [All five levels](README.md) · Previous: [Level 4](LEVEL_4_GRADUATE.md)
+Updated 6 October 2026 · [All five levels](README.md) · Previous: [Level 4](LEVEL_4_GRADUATE.md)
 
 An open, agent-assisted two-stage stellarator study. The plasma stage improved a
 vacuum QI diagnostic on an open target. The coil stage has not yet realized any
@@ -59,16 +59,22 @@ Both targets are nfp = 2, zero-β configurations at a normalized scale. Detail:
   fixed currents; the research checks use dense grids and flux-normalized currents.
   A public score is a hint, not evidence.
 
-## The open decision
+## The decision: the fixed-target recipe has stalled
 
-The [programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) sets a binding
-24 October 2026 decision. The fixed-target recipe continues only if a matched
-reference401 comparison at least halves the geometry-checked boundary RMS without
-worsening interior RMS, and the realized-field diagnostics support investigating
-benefit transfer. Otherwise the project changes to another coil family, another
-target, or joint plasma–coil optimization in existing software. A desk-level
-reactor feasibility screen is planned alongside it: device scale, field, power balance,
-magnet loads, blanket and shield space, heat exhaust and maintenance access.
+The registered continuation hurdle was to halve the geometry-checked boundary RMS
+of reference401 without worsening interior RMS. Every fit with six order-5 coils
+lands at 0.0019–0.0020; the preregistered 30-minute comparison ([#31](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/31),
+contributor-reported, one seed) reached 0.0018761 (−6.0%), and removing the early
+stop added about 1.2%. On 6 October 2026 the project [recorded](../optimization/STEP4_RESEARCH_PROGRAMME.md) that the
+recipe has stalled and stopped extending it.
+
+The plateau may come from the coil family (six coils, order 5, length ≤ 3.5 m) or
+from the coupling between this QI target and practical coils; the same metric
+reaches 2.3e-6 for a co-designed QUASR configuration. A matched probe at Fourier
+order 8 ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) separates the two by 24 October: at least halving boundary
+RMS selects another coil family, otherwise joint plasma–coil optimization
+([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
+point is yet specified and defers reactor-scale search.
 
 ## Where expert input helps most
 
