@@ -1,0 +1,30 @@
+{
+  "question": "Can a joined community boundary/requirements/coil sample support prediction of achieved normalized coil-field error without new simulations?",
+  "sample_selection": "First published results/eval row, offset 0; inspect linked IDs, not a performance-selected winner",
+  "download_bytes_ceiling": 67108864,
+  "single_file_bytes_ceiling": 16777216,
+  "request_timeout_s": 30,
+  "new_storage_bytes_ceiling": 134217728,
+  "live_disk_reserve_bytes": 2147483648,
+  "fetched_code_executed": false,
+  "failed_requests": [
+    {
+      "record": "coilset",
+      "attempts": [
+        "timeout at 30 s",
+        "HTTP 500 ResponseNotReady",
+        "HTTP 500 error body: index loading",
+        "later poll: timeout at 30 s"
+      ]
+    },
+    {
+      "record": "boundary",
+      "attempts": [
+        "timeout at 30 s",
+        "HTTP 500 ResponseNotReady",
+        "later poll: HTTP 500 index loading"
+      ]
+    }
+  ],
+  "error_detail": "Dataset index is loading; preserve all failures. No full shard downloaded."
+}

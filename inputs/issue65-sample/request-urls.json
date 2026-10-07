@@ -1,0 +1,6 @@
+{
+  "results-row-v1": "https://datasets-server.huggingface.co/rows?dataset=proxima-fusion%2Fcoilstellaration&config=results&split=eval&offset=0&length=1",
+  "requirements": "https://datasets-server.huggingface.co/filter?dataset=proxima-fusion%2Fcoilstellaration&config=requirements&split=train&where=%22id%22%3D%27DQinz2Bpbcvv3fxpfsR6wxB%27&offset=0&length=2",
+  "coilset": "https://datasets-server.huggingface.co/filter?dataset=proxima-fusion%2Fcoilstellaration&config=coilsets&split=train&where=%22id%22%3D%27DRSySxvjUFWt5VLxPVRW37N%27&offset=0&length=2",
+  "boundary": "https://datasets-server.huggingface.co/filter?dataset=proxima-fusion%2Fconstellaration&config=default&split=train&where=%22plasma_config_id%22%3D%27DMWkGVU6JZjx8Sx3ky4z4qB%27&offset=0&length=2"
+}

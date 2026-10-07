@@ -1,0 +1,21 @@
+{
+  "repository": "proximafusion/coilstellaration",
+  "revision": "03d1dc236044b97c5bd2fdf608a151754f9479dd",
+  "verified_git_blobs": {
+    "types": {
+      "git_blob": "4024a1c27f170665f2aed2983d1045b9a800095e",
+      "bytes": 29017,
+      "sha256": "0d10a3eb21c370164659201fdbdac8b6cd471932924826cee14b11c83c449a5f"
+    },
+    "license": {
+      "git_blob": "9b17c11c08173496ed6e0505838e521e1ef51ca4",
+      "bytes": 1109,
+      "sha256": "9ebb37cf7cf962d79fc4ff7640f9d548a39ab95ed79a48c89704f45e3db4771c"
+    },
+    "data-utils": {
+      "git_blob": "00e473de4118ddb260b7ed8bd03e4eaf38a54f4d",
+      "bytes": 10864,
+      "sha256": "344bde2f4a050ece764e3e1e0162b413951ad5876d81da2098a92f7e8204d205"
+    }
+  }
+}
