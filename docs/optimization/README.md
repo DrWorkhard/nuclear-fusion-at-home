@@ -209,5 +209,6 @@ fits and fine-boundary/geometry checks before further expensive diagnostics.
 Its [completed result](ISSUE37_FIT_COUPLING_RESULT.md) passes nonregression, while
 both absolute boundary gates fail; no automatic extension or long traces follow.
 
-The [fixed-coil boundary-response diagnostic](ISSUE37_BOUNDARY_RESPONSE.md) tests
-one local four-mode surface-alignment step before more coupled optimization.
+The [fixed-coil boundary-response diagnostic](ISSUE37_BOUNDARY_RESPONSE.md) found
+only 1.394% RMS reduction from its local four-mode step, with peak error and flux
+worse. It does not test moving-coil joint optimization.

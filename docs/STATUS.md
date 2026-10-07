@@ -1,6 +1,6 @@
 # Scientific status
 
-Updated 7 October 2026; includes local paired fitting screen.
+Updated 7 October 2026; includes local surface-response diagnosis.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The matched
@@ -11,18 +11,16 @@ wide-domain action diagnostics in both actual coil fields; benefit transfer rema
 **Joint plasma/coil optimization is the current research route.** The
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) improved boundary RMS
 3.78%, missing its 50% hurdle. Boundary gates fail; clock/load limitations prevent
-controlled-throughput claims. The first
-[joint comparison](optimization/ISSUE37_JOINT_RESULT.md) stopped on clock
-disagreement and remains inconclusive. A separately registered
-[awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md) completed with verdict
-**change**: selected joint held-out score was 9.17% worse; both candidates still
-fail absolute field limits. The later
+controlled-throughput claims. The [first joint attempt](optimization/ISSUE37_JOINT_RESULT.md) stopped on clock
+disagreement; the [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md) returned
+**change**, with a 9.17% worse held-out score. The later
 [smaller-step screen](optimization/ISSUE37_STEP_SCALE_RESULT.md) reduces training
 score 3.22%; [phase/resolution validation](optimization/ISSUE37_STEP_VALIDATION_RESULT.md)
 retains **3.258% ideal gain**. The [paired fitting screen](optimization/ISSUE37_FIT_COUPLING_RESULT.md)
 passes boundary nonregression, but candidate RMS remains **19.66×** its limit.
-Coil feasibility and actual-coil benefit remain unestablished. Local evidence
-awaits publication.
+A [fixed-coil surface test](optimization/ISSUE37_BOUNDARY_RESPONSE.md) improves RMS
+only 1.394%, with peak error and flux worse. Coil feasibility and actual-coil
+benefit remain unestablished. Local evidence awaits publication.
 Present evidence does not substantiate the README's reactor-design timeline.
 
 The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduces

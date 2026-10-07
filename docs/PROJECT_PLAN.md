@@ -47,10 +47,10 @@ to the README's year-end reactor vision. Prioritize decisions that test it.
    the [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md) missed the ideal-gain hurdle.
    [Smaller-step validation](optimization/ISSUE37_STEP_VALIDATION_RESULT.md)
    retains a 3.258% ideal gain. The [paired fitting screen](optimization/ISSUE37_FIT_COUPLING_RESULT.md)
-   passes nonregression, but absolute boundary errors still fail. Retain the target;
-   require a field-error hypothesis or topology question before further work,
-   without automatic fitting extensions or expensive acceptance diagnostics.
-   Preserve verdicts and gates.
+   passes nonregression; absolute field errors fail. The
+   [fixed-coil surface test](optimization/ISSUE37_BOUNDARY_RESPONSE.md) gains only 1.394% RMS
+   and worsens peak error/flux. Retain the validated target; moving-coil optimization
+   remains untested. Preserve gates; no automatic fit extensions or expensive diagnostics.
    Qualify a common realized-field endpoint before claiming benefit; missing
    surfaces or wells restrict the next pilot to feasibility.
 4. **Make the decisive test portable.** Supply the missing target data and reuse
