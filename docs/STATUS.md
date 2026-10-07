@@ -12,9 +12,9 @@ wide-domain action diagnostics in both actual coil fields; benefit transfer rema
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) improved boundary RMS
 3.78%, missing its 50% hurdle. Geometry, tracing and its individual interior
 limit pass; boundary gates fail. Clock/load limitations prevent controlled
-throughput or causal claims; publication is pending. The first local [joint comparison](optimization/ISSUE37_JOINT_RESULT.md)
-completed its control but was interrupted by a clock discrepancy during the first
-perturbed solve; its verdict remains inconclusive. A separately registered
+throughput or causal claims; publication is pending. The first
+[joint comparison](optimization/ISSUE37_JOINT_RESULT.md) stopped on clock
+disagreement and remains inconclusive. A separately registered
 [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md) completed with verdict
 **change**: the selected joint held-out ideal score was 9.17% worse. Own-target
 field nonregression and the remaining feasibility checks pass, but both candidates
