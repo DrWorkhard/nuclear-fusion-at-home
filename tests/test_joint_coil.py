@@ -89,10 +89,10 @@ def test_freezing_selection_keeps_target_seed_and_frozen_currents(snapshot, bind
 
 def test_changed_sources_prevent_freezing(snapshot, binding, tmp_path):
     source = tmp_path/'source'
-    source.write_text('before')
+    source.write_text('before', encoding='utf-8')
     prepared = dict(seed=adapted(snapshot, binding), binding=binding,
                     sources={str(source): joint.check.digest(source)})
-    source.write_text('after')
+    source.write_text('after', encoding='utf-8')
     with pytest.raises(ValueError, match='source/input changed'):
         joint.selected_snapshot(prepared, {})
 
@@ -122,13 +122,13 @@ def test_preparation_rebuilds_named_seed_for_each_target(snapshot, binding, monk
     binding.update(target_id=f'issue37-joint-v1/{proposal}',
                    input_sha256=joint.target.INPUT_HASHES[proposal])
     seed_path = tmp_path/'seed.json'
-    seed_path.write_text(json.dumps(snapshot))
+    seed_path.write_text(json.dumps(snapshot), encoding='utf-8')
     monkeypatch.setattr(joint, 'SEED_SHA', joint.check.digest(seed_path))
     parent = dict(sources_before={})
     for name, key in (('parent.json', 'record_sha256'), ('solver.json', 'solver_report_sha256'),
                       ('request.json', 'request_sha256')):
         path = tmp_path/name
-        path.write_text(name)
+        path.write_text(name, encoding='utf-8')
         parent[key] = joint.check.digest(path)
     data = {'proposal': proposal}
     numerical = dict(binding, solver_provenance_verified=True, numerical_consistency_pass=True)
@@ -148,9 +148,9 @@ def test_preparation_rebuilds_named_seed_for_each_target(snapshot, binding, monk
     assert prepared['seed']['scale'] == joint.check.TARGET_FLUX/(snapshot['unit_flux']*1.03)
     joint.snapshot_identity(prepared['seed'], binding)
     assert prepared['seed']['base_coefficients'] == snapshot['base_coefficients']
-    assert json.loads(seed_path.read_text()) == snapshot
+    assert json.loads(seed_path.read_text(encoding='utf-8')) == snapshot
     assert not prepared['physical_admission'] and not prepared['full_joint_execution_enabled']
-    seed_path.write_text(seed_path.read_text()+' ')
+    seed_path.write_text(seed_path.read_text(encoding='utf-8')+' ', encoding='utf-8')
     with pytest.raises(ValueError, match='source identity changed'):
         joint.prepare(seed_path, tmp_path, parent, SimpleNamespace(guard=lambda: None))
     assert len(models) == 1
