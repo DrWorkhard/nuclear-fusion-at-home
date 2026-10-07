@@ -120,20 +120,40 @@ def supervise(command, folder, arm_root, deadline_monotonic, deadline_wall):
                        PYTHONDONTWRITEBYTECODE='1', OMP_NUM_THREADS='1',
                        OPENBLAS_NUM_THREADS='1', VECLIB_MAXIMUM_THREADS='1', MKL_NUM_THREADS='1')
     reason, process = stop_reason(arm_root, deadline_monotonic, deadline_wall), None
+    state = dict(launching=False, terminate=False)
+
+    def terminated(signum, frame):
+        signal.signal(signal.SIGTERM, signal.SIG_IGN)  # Finish cleanup after repeated TERM.
+        state['terminate'] = True
+        if not state['launching']:
+            raise InterruptedError('supervisor received SIGTERM')
+        # Defer interruption until Popen has returned its handle; never lose a
+        # successfully spawned child between process creation and assignment.
+
+    previous = signal.signal(signal.SIGTERM, terminated)
     try:
-        if reason is None:
-            with (folder/'solver.log').open('xb') as log:
-                process = subprocess.Popen(command, cwd=folder, env=environment,
-                    stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT,
-                    start_new_session=True)
-                while True:
-                    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall)
-                    if reason is not None or process.poll() is not None:
-                        break
-                    time.sleep(.1)
+        try:
+            if reason is None:
+                with (folder/'solver.log').open('xb') as log:
+                    state['launching'] = True
+                    try:
+                        process = subprocess.Popen(command, cwd=folder, env=environment,
+                            stdin=subprocess.DEVNULL, stdout=log, stderr=subprocess.STDOUT,
+                            start_new_session=True)
+                    finally:
+                        state['launching'] = False
+                    if state['terminate']:
+                        raise InterruptedError('supervisor received SIGTERM during launch')
+                    while True:
+                        reason = stop_reason(arm_root, deadline_monotonic, deadline_wall)
+                        if reason is not None or process.poll() is not None:
+                            break
+                        time.sleep(.1)
+        finally:
+            if process is not None:
+                stop(process)
     finally:
-        if process is not None:
-            stop(process)
+        signal.signal(signal.SIGTERM, previous)
     reason = reason or stop_reason(arm_root, deadline_monotonic, deadline_wall)
     return dict(command=command, returncode=None if process is None else process.returncode,
                 stop_reason=reason, elapsed_s=time.monotonic()-started,

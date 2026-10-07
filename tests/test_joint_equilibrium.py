@@ -1,7 +1,10 @@
 """Budget, process cleanup and provenance-boundary counterexamples; no VMEC solves."""
 import os
+import signal
+import subprocess
 import sys
 import time
+from pathlib import Path
 
 import pytest
 
@@ -212,3 +215,56 @@ def test_worker_cold_call_and_input_environment_binding(tmp_path, monkeypatch, f
         assert report['completed'] and report['converged'] and report['output_input_exact']
     else:
         assert not (report['completed'] and report['converged'])
+
+
+def test_sigterm_of_supervisor_cleans_live_native_group(tmp_path):
+    folder = tmp_path/'cell'
+    folder.mkdir()
+    source = str(Path(__file__).resolve().parents[1]/'src')
+    child = "import os,time; print(os.getpid(),flush=True); time.sleep(30)"
+    code = (f"import sys,time;sys.path.insert(0,{source!r});from pathlib import Path;"
+            "from fusion_baselines.joint_equilibrium import supervise;"
+            f"supervise([sys.executable,'-I','-c',{child!r}],Path({str(folder)!r}),"
+            f"Path({str(tmp_path)!r}),time.monotonic()+20,time.time()+20)")
+    process = subprocess.Popen([sys.executable, '-I', '-c', code],
+        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+        env=dict(PATH='/usr/bin:/bin', PYTHONDONTWRITEBYTECODE='1'))
+    pid = None
+    try:
+        deadline = time.monotonic()+5
+        while time.monotonic() < deadline:
+            log = folder/'solver.log'
+            if log.exists() and log.read_text().strip():
+                pid = int(log.read_text().strip())
+                break
+            assert process.poll() is None
+            time.sleep(.02)
+        assert pid is not None, 'surrogate did not start'
+        process.terminate()
+        assert process.wait(timeout=5) != 0
+        for _ in range(50):
+            try:
+                os.kill(pid, 0)
+            except ProcessLookupError:
+                break
+            time.sleep(.02)
+        else:
+            pytest.fail('native group survived supervisor SIGTERM')
+    finally:
+        if process.poll() is None:
+            process.kill()
+            process.wait()
+        if pid is not None:
+            try:
+                os.killpg(pid, signal.SIGKILL)
+            except ProcessLookupError:
+                pass
+
+
+def test_sigterm_handler_is_restored(tmp_path):
+    folder = tmp_path/'cell'
+    folder.mkdir()
+    before = signal.getsignal(signal.SIGTERM)
+    solver.supervise([sys.executable, '-I', '-c', 'pass'], folder, tmp_path,
+                     time.monotonic()+5, time.time()+5)
+    assert signal.getsignal(signal.SIGTERM) == before
