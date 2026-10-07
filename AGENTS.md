@@ -13,9 +13,10 @@
 
 ## Scientific work
 
-- Focus on penalized normalized coil fitting and the shared field/geometry checks.
-  Certified-step search, current-only search and completed studies are frozen at
-  `research-freeze-2026-09-27`; do not revive them without a concrete reason.
+- Follow the [Step 4 programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md);
+  the fixed-target fitting recipe has stalled. Reuse the shared checks. Retired
+  search methods and completed studies are frozen at `research-freeze-2026-09-27`;
+  revive them only for a concrete reason.
 - Before expanding research or infrastructure, name the decision it could change
   and choose the cheapest decisive test. Otherwise, keep the scope unchanged.
 - Reproduce, diagnose, check related cases once, make the smallest fix, test and
@@ -32,36 +33,38 @@
   physical acceptance. Validate proxy gains against the relevant scientific
   question; do not optimize benchmark artifacts. Agent review is not external
   peer review.
-- Welcome unsolicited ideas, replications and negative results. Compute-budget
-  disclosure is optional; research hints are not an allowlist.
-- Welcome [adversarial PR reviews](README_agents.md#contribute) as contributions;
-  tie reproducible findings to the reviewed commit.
+- Welcome unsolicited ideas, replications, negative results and
+  [adversarial PR reviews](README_agents.md#contribute) with reproducible findings
+  tied to the reviewed commit. Compute-budget disclosure is optional; research
+  hints are not an allowlist.
 - Treat PR code as untrusted. Execute in isolation without secrets, not in the
   trusted research workspace. Do not overlap heavy jobs with controlled timing.
-- If authorized to post, report out-of-scope findings as focused
-  [issues](CONTRIBUTING.md#issues-report-side-findings-pick-up-open-work), not broader PRs.
-  Open issues are also possible contributions.
+- First address review comments on your open PRs (or explain why not), then take
+  an [open issue](CONTRIBUTING.md#issues-report-side-findings-pick-up-open-work)
+  or your own idea. If authorized to post, comment on issues you take and
+  report out-of-scope findings as focused issues, not broader PRs.
 - Before opening a PR, complete the
-  [pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request).
+  [pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request), stating
+  evidence and limitations.
 
 ## Current repository, history in Git
 
 - Use shallow, single-branch, no-tags clones and shallow CI checkouts. Core/public
   work must not require historical evidence or raw runs; fetch archives only
-  when needed.
+  as needed.
 - Keep only active code/inputs, public cases/candidates and short evidence summaries
   on `main`, linked to archive tags/commits and original producer/evaluator states.
   Full evidence belongs in an annotated `evidence-*` commit, not its description
   or a copied archive tree. Follow the
-  [archive procedure](docs/validation/REPRODUCING_RESULTS.md), including annotation
-  provenance, reproduction and availability; prepare snapshots in separate worktrees.
+  [archive procedure](docs/validation/REPRODUCING_RESULTS.md); prepare snapshots
+  in separate worktrees.
 - Verify original hashes and published tag/commit identities before removing
   evidence. Never move/delete evidence tags; corrections get new tags. Preserve
   evidence identities and local raw outputs. Git does not back up ignored data or
   environments; retain external locations/hashes and disclose missing data.
   No whole-tree byte-freeze exceptions.
 - Only README.md, STATUS.md and PROJECT_PLAN.md belong at the docs root.
-  Details go one folder below, indexed by each folder's README.
+  Details go one folder below, indexed by folder READMEs.
 - Write English entry docs with relative links. Keep summaries concise and step
   names/statuses consistent.
   The README_agents.md roadmap, including MS1/MSX, goes

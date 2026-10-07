@@ -28,7 +28,7 @@ global optimum. It does not relax scientific or engineering acceptance.
 ## Current priorities
 
 The [assessment](review/STRATEGIC_REVIEW_RESOLUTION.md) finds no demonstrated path
-from present results to the README's year-end reactor vision. Keep the ambition;
+from present results to the README's reactor vision. Keep the ambition;
 spend effort on decisions that test the path.
 
 1. **Test benefit in actual coil fields.** Compare the original and improved
