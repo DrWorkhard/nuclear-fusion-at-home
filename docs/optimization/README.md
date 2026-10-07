@@ -180,3 +180,6 @@ local eleven-period orbit near a patch of the reproduced failed samples.
 
 The prospective [return derivative check](ISSUE48_RETURN_DERIVATIVE.md) checks
 whether explicit derivative scales reproduce the rejected local search proposal.
+
+The prospective [bounded-step return search](ISSUE48_BOUNDED_RETURN.md) uses the
+same seed and physical neighborhood with a trust-region solver.
