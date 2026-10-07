@@ -58,10 +58,11 @@ is pending. Fresh shallow replay reproduced the intake, starter errors and B²
 result exactly; all 13 manifest entries, 24 source hashes and three input bindings
 verified. Agent review is not external physics review.
 
-A supplied hash proves byte identity, **not solver provenance**. The future trusted
-runner must bind each exact input to a successful budgeted solve, its executable/
-dependency state and resulting Wout; that integration remains unimplemented.
-This component explicitly reports solver provenance unverified, joint execution
+A supplied hash proves byte identity, **not solver provenance**. The separate
+[trusted runner](ISSUE37_SOLVER_QUALIFICATION.md) now binds one registered plus
+input to a successful budgeted solve, its executable/dependency state and Wout.
+Bare numerical intake still reports solver provenance unverified; the runner
+verifies it through its trusted parent receipt. Both leave joint execution
 disabled and physical admission false. Passing field representations does not
 prove global nestedness, stability, physical feasibility or a common action
 endpoint. The full protocol remains disabled until its separate prerequisites

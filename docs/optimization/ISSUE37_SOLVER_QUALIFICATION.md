@@ -1,6 +1,6 @@
 # One cold-solve provenance qualification
 
-Prospective, 7 October 2026. Before implementing the full
+Registered and executed on 7 October 2026. Before implementing the full
 [joint comparison](ISSUE37_JOINT_FEASIBILITY.md), test whether a trusted bounded
 runner can bind one registered input to a converged Wout that passes the
 [separate numerical intake](ISSUE37_TARGET_INTAKE.md). This is a component
@@ -59,3 +59,29 @@ convergence; the parent independently owns eligibility and the intake performs
 field checks. Synthetic process/provenance counterexamples and an adversarial
 review precede execution. Archive exact source/environment/input identities,
 receipts, Wout, logs and all failures; keep only the short conclusion in active docs.
+
+## Qualification result
+
+The one registered solve **passed** at clean producer/evaluator
+`871aeb74e1e2656a9d1b32764b85618f44a94199`: 174.879 s total, 171.492 s worker
+(including identity checks/serialization), 172.173 s subprocess supervision;
+clock disagreement below 0.0001 s. No retry or environment change. At 401 surfaces,
+force residuals (r/z/lambda) were 9.980e-13 / 2.914e-13 / 3.893e-17.
+All six field checks passed: maximum positive representation error 5.122e-7,
+independent geometry 2.257e-15. Volume was 0.19006046531779677 m³
+(-0.0039507525% from original); measured B² 1.625766758078491, with the reference
+normalization 1.6293829620247962 and signed flux unchanged.
+
+Local archive `b8d629a192d933ce22de523a57ca854a4c156963`, prepared tag
+`evidence-issue37-solver-qualification-v1`, contains all 14 original raw files
+(25,333,491 bytes), including Wout, exact launcher/driver, installed-file inventory,
+receipts and replay command under `evidence/issue37-solver-qualification-v1`.
+The 20-entry manifest SHA256 is
+`69270ec9eb466cc8ee71e149692a40f85376a29b2d785ba7a44c25de5e1c1982`.
+Publication is pending; raw outputs remain intact locally. Native log whitespace
+is retained byte-for-byte. Fresh shallow producer checks passed 360 research tests
+(23 focused), 61 public tests, docs, Ruff and source diff checks. Read-only agent
+review preceded execution; it is not external physics review.
+
+This clears only the registered plus input and runner for subsequent integration.
+No coil fit or joint-arm verdict was produced; the full comparison remains disabled.
