@@ -1,0 +1,374 @@
+{
+  "producer": "f485fbd79013fa3f469eb75661effb96051a0b28",
+  "completed": true,
+  "physical_admission": false,
+  "decision": "inconclusive for a qualified joint-design sample; only partial intake verified",
+  "task": "predict achieved normalized coil-field error from boundary, requirements and coils",
+  "dataset_revision_header": "286a268c664938519af6ceacfb4ec8143f64e20e",
+  "full_parquet_hash_verified": false,
+  "joined_requirements_id": "DQinz2Bpbcvv3fxpfsR6wxB",
+  "unavailable_joins": {
+    "constellaration_boundary_id": "DMWkGVU6JZjx8Sx3ky4z4qB",
+    "desc_coilset_id": "DRSySxvjUFWt5VLxPVRW37N"
+  },
+  "requested_plasma_clearance": 0.9104342731821006,
+  "reported_achieved_plasma_clearance": 0.7487473369905909,
+  "fractional_clearance_shortfall": 0.17759320024979972,
+  "upstream_baseline_flag": true,
+  "reported_representation": {
+    "unique_coils": 5,
+    "fourier_order": 7,
+    "field_periods": 3
+  },
+  "public_contract_compatible": false,
+  "independent_families_established": false,
+  "fetched_code_executed": false,
+  "geometry_or_field_replayed": false,
+  "arithmetic_checks": [
+    {
+      "arm": "regcoil",
+      "metric": "coil_to_coil_min_distances",
+      "statistic": "min",
+      "reported": 0.9585829869230327,
+      "recomputed": 0.9585829869230328,
+      "scaled_error": 1.1102230246251565e-16
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_to_coil_min_distances",
+      "statistic": "mean",
+      "reported": 1.1250768039666814,
+      "recomputed": 1.1250768039666812,
+      "scaled_error": 1.9735950838393344e-16
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_to_coil_min_distances",
+      "statistic": "max",
+      "reported": 1.5089304471760936,
+      "recomputed": 1.5089304471760938,
+      "scaled_error": 1.4715363808887243e-16
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_to_coil_min_distances",
+      "statistic": "std",
+      "reported": 0.2026473944121187,
+      "recomputed": 0.20264739441211874,
+      "scaled_error": 2.7755575615628914e-17
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_to_plasma_min_distances",
+      "statistic": "min",
+      "reported": 0.6244123341093304,
+      "recomputed": 0.6244123341093305,
+      "scaled_error": 1.1102230246251565e-16
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_to_plasma_min_distances",
+      "statistic": "mean",
+      "reported": 0.6416415724117754,
+      "recomputed": 0.6416415724117753,
+      "scaled_error": 1.1102230246251565e-16
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_to_plasma_min_distances",
+      "statistic": "max",
+      "reported": 0.6564584407375518,
+      "recomputed": 0.6564584407375518,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_to_plasma_min_distances",
+      "statistic": "std",
+      "reported": 0.010235581965355948,
+      "recomputed": 0.01023558196535594,
+      "scaled_error": 8.673617379884035e-18
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_lengths",
+      "statistic": "min",
+      "reported": 10.938187995177167,
+      "recomputed": 10.938187995177168,
+      "scaled_error": 1.6239955284947346e-16
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_lengths",
+      "statistic": "mean",
+      "reported": 12.420471843820943,
+      "recomputed": 12.420471843820943,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_lengths",
+      "statistic": "max",
+      "reported": 13.91333504513643,
+      "recomputed": 13.913335045136431,
+      "scaled_error": 1.2767297226995169e-16
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_lengths",
+      "statistic": "std",
+      "reported": 1.1751037942679714,
+      "recomputed": 1.1751037942679714,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_curvatures",
+      "statistic": "min",
+      "reported": -0.9424610067889206,
+      "recomputed": -0.9424610067889206,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_curvatures",
+      "statistic": "mean",
+      "reported": 0.5890804016748151,
+      "recomputed": 0.589080401674815,
+      "scaled_error": 1.1102230246251565e-16
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_curvatures",
+      "statistic": "max",
+      "reported": 2.229891365497223,
+      "recomputed": 2.229891365497223,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_curvatures",
+      "statistic": "std",
+      "reported": 0.5172945089268763,
+      "recomputed": 0.5172945089268763,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_torsions",
+      "statistic": "min",
+      "reported": -14.976545404254,
+      "recomputed": -14.976545404254,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_torsions",
+      "statistic": "mean",
+      "reported": 0.34485500056054386,
+      "recomputed": 0.34485500056054386,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_torsions",
+      "statistic": "max",
+      "reported": 158.06149433116278,
+      "recomputed": 158.06149433116278,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "regcoil",
+      "metric": "coil_torsions",
+      "statistic": "std",
+      "reported": 4.5503857255187565,
+      "recomputed": 4.5503857255187565,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_to_coil_min_distances",
+      "statistic": "min",
+      "reported": 0.8870307644935967,
+      "recomputed": 0.8870307644935969,
+      "scaled_error": 1.1102230246251565e-16
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_to_coil_min_distances",
+      "statistic": "mean",
+      "reported": 1.0189718485213612,
+      "recomputed": 1.0189718485213612,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_to_coil_min_distances",
+      "statistic": "max",
+      "reported": 1.389634796407266,
+      "recomputed": 1.389634796407266,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_to_coil_min_distances",
+      "statistic": "std",
+      "reported": 0.1888580736466541,
+      "recomputed": 0.18885807364665413,
+      "scaled_error": 2.7755575615628914e-17
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_to_plasma_min_distances",
+      "statistic": "min",
+      "reported": 0.7487473369905909,
+      "recomputed": 0.7487473369905909,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_to_plasma_min_distances",
+      "statistic": "mean",
+      "reported": 0.8479916868140519,
+      "recomputed": 0.8479916868140522,
+      "scaled_error": 3.3306690738754696e-16
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_to_plasma_min_distances",
+      "statistic": "max",
+      "reported": 0.9015906273659535,
+      "recomputed": 0.9015906273659535,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_to_plasma_min_distances",
+      "statistic": "std",
+      "reported": 0.05898489809595903,
+      "recomputed": 0.05898489809595904,
+      "scaled_error": 6.938893903907228e-18
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_lengths",
+      "statistic": "min",
+      "reported": 13.393290454530371,
+      "recomputed": 13.393290454530371,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_lengths",
+      "statistic": "mean",
+      "reported": 16.202211551444808,
+      "recomputed": 16.202211551444808,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_lengths",
+      "statistic": "max",
+      "reported": 19.94448574019192,
+      "recomputed": 19.94448574019192,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_lengths",
+      "statistic": "std",
+      "reported": 2.5359892822815864,
+      "recomputed": 2.535989282281586,
+      "scaled_error": 1.7511478181426821e-16
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_curvatures",
+      "statistic": "min",
+      "reported": -1.6954525931556157,
+      "recomputed": -1.6954525931556157,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_curvatures",
+      "statistic": "mean",
+      "reported": 0.47856844353267397,
+      "recomputed": 0.47856844353267397,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_curvatures",
+      "statistic": "max",
+      "reported": 2.0099775635353962,
+      "recomputed": 2.0099775635353962,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_curvatures",
+      "statistic": "std",
+      "reported": 0.4807034565847643,
+      "recomputed": 0.4807034565847643,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_torsions",
+      "statistic": "min",
+      "reported": -41.03764462845674,
+      "recomputed": -41.03764462845674,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_torsions",
+      "statistic": "mean",
+      "reported": 0.31841627111399495,
+      "recomputed": 0.3184162711139949,
+      "scaled_error": 5.551115123125783e-17
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_torsions",
+      "statistic": "max",
+      "reported": 51.502568498816004,
+      "recomputed": 51.502568498816004,
+      "scaled_error": 0.0
+    },
+    {
+      "arm": "desc",
+      "metric": "coil_torsions",
+      "statistic": "std",
+      "reported": 2.7591176338875227,
+      "recomputed": 2.7591176338875227,
+      "scaled_error": 0.0
+    }
+  ],
+  "source_hashes": {
+    "inputs/issue65-sample/acquisition-limits.json": "23991c391aab514e888fcf177e93e893b26b6a3a9419adbf74ef7499b01d2423",
+    "inputs/issue65-sample/boundary-row-v2.headers": "9a044ce1557652de323df7163f1aef0dcdc536283f5d5b0ca156fa332e0b6a7f",
+    "inputs/issue65-sample/boundary-row-v3.headers": "c5c6b05ef97658eae4a883990e3e259a213d644a9265febd933d749b6f73197a",
+    "inputs/issue65-sample/boundary-row-v3.json": "68771397aeefb2e305f8d23156f12d941075925f39d43e8dd58910ddd79d2979",
+    "inputs/issue65-sample/coilset-error-detail.headers": "a45ca6dae4d77f588fadff9e3d9ec599aaebc2b656d2ed525ebb0d0e8a7fda80",
+    "inputs/issue65-sample/coilset-error-detail.json": "8a0582e17296fb3f962094362eaccfbb28707f7ac59de267ad7deb6a590cc3dc",
+    "inputs/issue65-sample/coilset-row-v2.headers": "63ffa649888fe92d0b56ae200be813ec65ddfc4f8d89574c2ccab00d52b4559f",
+    "inputs/issue65-sample/coilset-row-v3.headers": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "inputs/issue65-sample/coilstellaration-tree-v1.json": "5c00addd7df214a338d931561f7a8e9b11afbd881e1cf29a0e1c55a7547f3210",
+    "inputs/issue65-sample/data-utils.txt": "344bde2f4a050ece764e3e1e0162b413951ad5876d81da2098a92f7e8204d205",
+    "inputs/issue65-sample/hf-coilstellaration-metadata-v1.json": "a137f690b66dfd97002438b0dae7e100000ff924ad1688460b2073c9e6438e11",
+    "inputs/issue65-sample/hf-coilstellaration-readme-v1.md": "6ad4e6be1131700f9bba263b69cdd6bfd56f77634284d677da112f05103b929b",
+    "inputs/issue65-sample/hf-coilstellaration-tree-v1.json": "7025fb7c59dde2cf182f69990bfd99c50177f5da78e3e9ae4698949d70bf927b",
+    "inputs/issue65-sample/license.txt": "9ebb37cf7cf962d79fc4ff7640f9d548a39ab95ed79a48c89704f45e3db4771c",
+    "inputs/issue65-sample/request-urls.json": "85d57c3bfda343ef04b76913b24c7bd60fe3da8e599b0eacb32d2293c981ff16",
+    "inputs/issue65-sample/requirements-row-v1.headers": "ab57d71ab7a59474b5ef1d4ce4dd807647b032033ff06bac35f3b374f1684f13",
+    "inputs/issue65-sample/requirements-row-v1.json": "990ad2d5123b585cba27992f991242a1fb261bb87b87291cdaec178ff7c9a752",
+    "inputs/issue65-sample/results-row-v1.headers": "7411932536fd27278f88f904049e3b425019fa1eaa0e23151d843fc5546521fe",
+    "inputs/issue65-sample/results-row-v1.json": "5a7b1cd80b3814cec004aadfe5de82db144166addd758e54161f90bb237285b5",
+    "inputs/issue65-sample/types.txt": "0d10a3eb21c370164659201fdbdac8b6cd471932924826cee14b11c83c449a5f",
+    "inputs/issue65-sample/upstream-identities.json": "ae69bbd2aa114a8e72668b98d7a1b44da3729c0e8b664af3e0fea61b6d0bf2fb",
+    "scripts/inspect_community_sample.py": "c577572ef198fe7981e85f84100e77cf860cfa35158dd629c435a2884fa4056f",
+    "src/fusion_public/data.py": "c9491881b0e0ebe9a2676b100542233da2261a8440b5781feb367f936e981e93"
+  }
+}
