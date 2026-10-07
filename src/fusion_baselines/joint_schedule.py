@@ -89,6 +89,8 @@ def checked_fit(operations, arm, proposal, solved, training):
             raise ArmInterrupted('fit cap without completed startup and eligible candidate')
     elif result['search']['status']['reason'] != 'solver-return':
         raise ArmInterrupted('contradictory fit completion')
+    else:
+        arm.guard(window)
     if not result['search']['startup_pass']:
         raise ArmInterrupted('fit startup failed')
     if arm.name == 'J' or not ordinary:

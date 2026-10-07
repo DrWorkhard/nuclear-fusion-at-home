@@ -244,3 +244,21 @@ def test_final_source_failure_prevents_completed_comparison(clock, tmp_path):
     operations.verify = changed
     result = schedule.run(operations, tmp_path/'run')
     assert not result['completed'] and 'changed original control source' in result['error']
+
+
+def test_late_normal_joint_fit_return_is_not_an_ordinary_cap(clock, tmp_path):
+    operations = Operations(clock)
+    original = operations.fit
+
+    def late(arm, proposal, solved, training, window, outer):
+        result = original(arm, proposal, solved, training, window, outer)
+        if proposal == 'plus':
+            clock.advance(window.monotonic-clock.mono+1.)
+            result['stop'] = 'solver-return'
+            result['search']['status']['reason'] = 'solver-return'
+        return result
+
+    operations.fit = late
+    result = schedule.run(operations, tmp_path/'run')
+    assert not result['completed'] and result['reason'] == 'deadline'
+    assert ('solve', 'minus') not in operations.calls
