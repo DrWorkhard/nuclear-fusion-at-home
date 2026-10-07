@@ -47,7 +47,7 @@ or re-attest timing. Host-condition interpretation was reviewed separately;
 agent review is not external physics peer review. The archive supplies the exact
 replay command and local input availability.
 
-Both registered offsets also scored worse than C in training. Before another
-full matched experiment, use those saved values to assess a cheaper, separately
-registered screen of the step scale or direction. Preserve all existing gates
-and require a newly reviewed input registration before any new target solve.
+Both registered offsets also scored worse than C in training. A separately
+registered [smaller-step screen](ISSUE37_STEP_SCALE_RESULT.md) subsequently passed
+its training threshold; validation is still required before another coil comparison.
+This does not change the present comparison's verdict or acceptance gates.

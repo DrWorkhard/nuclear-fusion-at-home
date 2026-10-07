@@ -196,4 +196,5 @@ with [verdict change](ISSUE37_AWAKE_RESULT.md): the selected joint ideal score w
 9.17% worse, while own-target field nonregression and the other feasibility checks passed.
 
 The [single smaller-step screen](ISSUE37_STEP_SCALE.md) registers one +0.35 mm
-ideal-target check before spending on another full matched comparison.
+ideal-target check. Its [completed result](ISSUE37_STEP_SCALE_RESULT.md) reduces
+training score 3.22%; phase/resolution validation comes before another coil comparison.

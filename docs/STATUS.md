@@ -1,6 +1,6 @@
 # Scientific status
 
-Updated 7 October 2026; includes the completed local joint-feasibility follow-up.
+Updated 7 October 2026; includes the local smaller-step screen.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The matched
@@ -10,16 +10,16 @@ and interior RMS **0.01072**, also failing. The improved-target fit also fails.
 wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
 **Joint plasma/coil optimization is the current research route.** The
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) improved boundary RMS
-3.78%, missing its 50% hurdle. Geometry, tracing and its individual interior
-limit pass; boundary gates fail. Clock/load limitations prevent controlled
-throughput or causal claims; publication is pending. The first
+3.78%, missing its 50% hurdle. Boundary gates fail; clock/load limitations prevent
+controlled-throughput claims. The first
 [joint comparison](optimization/ISSUE37_JOINT_RESULT.md) stopped on clock
 disagreement and remains inconclusive. A separately registered
 [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md) completed with verdict
-**change**: the selected joint held-out ideal score was 9.17% worse. Own-target
-field nonregression and the remaining feasibility checks pass, but both candidates
-still fail absolute field limits. This rejects the bounded two-point recipe,
-not joint optimization generally; actual-coil benefit remains unresolved.
+**change**: selected joint held-out score was 9.17% worse; both candidates still
+fail absolute field limits. The later
+[smaller-step screen](optimization/ISSUE37_STEP_SCALE_RESULT.md) reduces training
+score **3.22%**. Held-out validation and coil feasibility remain unestablished;
+local evidence awaits publication. Actual-coil benefit remains unresolved.
 Present evidence does not substantiate the README's reactor-design timeline.
 
 The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduces

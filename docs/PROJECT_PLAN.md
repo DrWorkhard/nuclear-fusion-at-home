@@ -46,9 +46,10 @@ spend effort on decisions that test the path.
    joint feasibility protocol ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
    Its [first local attempt](optimization/ISSUE37_JOINT_RESULT.md) was interrupted by
    host clock disagreement; the [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md)
-   completed but missed the ideal-gain hurdle. Use its saved training values to
-   define a cheaper screen of step scale or direction before another full matched
-   experiment. Preserve both attempts and all gates; register any new input first.
+   completed but missed the ideal-gain hurdle. The registered
+   [smaller-step screen](optimization/ISSUE37_STEP_SCALE_RESULT.md) reduces training
+   score 3.22%. Validate this fixed point's phase/resolution behavior before another
+   coil comparison. Preserve previous verdicts and gates; register validation first.
    Qualify a common realized-field endpoint before claiming benefit; missing
    surfaces or wells restrict the next pilot to feasibility.
 4. **Make the decisive test portable.** Supply the missing target data and reuse
