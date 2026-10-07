@@ -1,0 +1,24 @@
+{
+  "name": "headroom",
+  "path": "submissions/length-headroom-six-coil/candidate.json",
+  "candidate_sha256": "249d6668bdfa9d91d4164d7008adf4da17f1663e3e2a98c76b083a051db13c10",
+  "levels": [
+    {
+      "ncoil": 256,
+      "dense_rms": 0.0019962703617505675,
+      "sparse_rms": 0.0017440322504610566,
+      "spread_rms": 0.001861917684000453,
+      "sparse_relative_error": 0.12635468427649177,
+      "spread_relative_error": 0.06730184464207445
+    },
+    {
+      "ncoil": 512,
+      "dense_rms": 0.001996270361750561,
+      "sparse_rms": 0.0017440322504610182,
+      "spread_rms": 0.0018619176840004516,
+      "sparse_relative_error": 0.1263546842765081,
+      "spread_relative_error": 0.06730184464207212
+    }
+  ],
+  "max_quadrature_relative_change": 2.19824158875781e-14
+}

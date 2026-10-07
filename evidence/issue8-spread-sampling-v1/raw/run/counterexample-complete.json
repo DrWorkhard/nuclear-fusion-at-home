@@ -1,0 +1,24 @@
+{
+  "name": "counterexample",
+  "path": "submissions/millimetre-ranking-counterexample/candidate.json",
+  "candidate_sha256": "002882e9884034538f9aef8c25adb76d742f10435ea2a2abce4679cf8974395a",
+  "levels": [
+    {
+      "ncoil": 256,
+      "dense_rms": 0.0020255546427812607,
+      "sparse_rms": 0.0015616343921935245,
+      "spread_rms": 0.0018929756677612808,
+      "sparse_relative_error": 0.22903368824981873,
+      "spread_relative_error": 0.06545317130420014
+    },
+    {
+      "ncoil": 512,
+      "dense_rms": 0.0020255546427812607,
+      "sparse_rms": 0.0015616343921934302,
+      "spread_rms": 0.0018929756677613,
+      "sparse_relative_error": 0.22903368824986525,
+      "spread_relative_error": 0.0654531713041907
+    }
+  ],
+  "max_quadrature_relative_change": 6.039613253960852e-14
+}

@@ -1,0 +1,12 @@
+{
+  "completed": true,
+  "revision": "43d455116a860a745993ed9169cd0484aa8b606c",
+  "physical_admission": false,
+  "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+  "returncode": 0,
+  "cleanup_confirmed": true,
+  "promote_to_case_work": false,
+  "elapsed_s": 68.58748187497258,
+  "wall_elapsed_s": 68.58742785453796,
+  "retained_bytes_before_receipt": 3815775
+}

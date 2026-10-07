@@ -1,0 +1,39 @@
+{
+  "completed": false,
+  "revision": "43d455116a860a745993ed9169cd0484aa8b606c",
+  "sources_before": {
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/scripts/check_spread_sampling.py": "3f11a142ca3b89a6b893177f5c7134a551128346b6e83a9272752711c8e2d27a",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/docs/optimization/ISSUE8_SPREAD_SAMPLING.md": "0f01a6b47a2217ea87b3e05842e383e8d1ca2d92751adfec6931b4b293f47730",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/__init__.py": "1696997fcc914653281c0a32b437d4ae499e5bc19cf5d5f27f0e3f75de10bbf8",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/cli.py": "543ecaddcf6dcb3668ad1bacf224f30d331652adbe0c10b02e951ada210c1222",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/data.py": "c9491881b0e0ebe9a2676b100542233da2261a8440b5781feb367f936e981e93",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/dense.py": "68f40f1b652496c2c1fb5edb2c416d3af0496ae84ad1cd49938a854d487182b2",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/field.py": "2f7623d92bf33fffa3c79e53118928a67cde60c67a37de54da90dd06279ba690",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/interior.py": "a6875fdd99bbf3970a07332319fa06f926160496cb25b8ec2109b735372c781b",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/report.py": "b27b310c5bebb6dd3ded09b3dc0dc7c5d95cc56146376b0b121ea6deb07b0b00",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/submission.py": "9f878d2f08a44b9a1e2b4f195cb39b2dc74a8cb59b5f3eca0ec38a086a1ef8a5",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/src/fusion_public/usability.py": "79fb3e29d5800f74b2e2a559ef27b55af4332a390238e75a18424f86d827210d",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/examples/clear-coil-samples-v1/candidate.json": "a4d242dd0eab58226d3f435becb819e1cf0fb6b457bb942e293e70c7592c2a1e",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/examples/clear-coil-samples-v1/case.json": "6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/examples/clear-coil-samples-v1/manifest.json": "9e949f1247574e3f33e8a45d7a6c639fbb67018560ab3fcc58cf2f2dd2fba23c",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/submissions/length-headroom-six-coil/candidate.json": "249d6668bdfa9d91d4164d7008adf4da17f1663e3e2a98c76b083a051db13c10",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/submissions/millimetre-ranking-counterexample/candidate.json": "002882e9884034538f9aef8c25adb76d742f10435ea2a2abce4679cf8974395a",
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python": "e2605291e058fdbe3102e8185d0ac5fe0e063398de617010a6af3a42a78f05e3",
+    "/private/tmp/fusion-issue48-continuation-evidence-20261007/scripts/run_continuation_labels.py": "dfc4e8cb750e28aa8d399f6c64691659674a874a1c2f1126133424d82b3cd15b"
+  },
+  "physical_admission": false,
+  "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "-I",
+    "-S",
+    "-B",
+    "/private/tmp/fusion-issue8-spread-sampling-20261007/scripts/check_spread_sampling.py",
+    "--worker",
+    "--output",
+    "/private/tmp/issue8-spread-sampling-v1/run",
+    "--revision",
+    "43d455116a860a745993ed9169cd0484aa8b606c"
+  ]
+}

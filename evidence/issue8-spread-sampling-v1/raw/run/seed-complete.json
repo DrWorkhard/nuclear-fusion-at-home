@@ -1,0 +1,24 @@
+{
+  "name": "seed",
+  "path": "examples/clear-coil-samples-v1/candidate.json",
+  "candidate_sha256": "a4d242dd0eab58226d3f435becb819e1cf0fb6b457bb942e293e70c7592c2a1e",
+  "levels": [
+    {
+      "ncoil": 256,
+      "dense_rms": 0.2760512774968315,
+      "sparse_rms": 0.30420702807686917,
+      "spread_rms": 0.2680043073726676,
+      "sparse_relative_error": 0.101994639674728,
+      "spread_relative_error": 0.029150273083797806
+    },
+    {
+      "ncoil": 512,
+      "dense_rms": 0.2760512774968315,
+      "sparse_rms": 0.30420702807686917,
+      "spread_rms": 0.26800430737266756,
+      "sparse_relative_error": 0.101994639674728,
+      "spread_relative_error": 0.02915027308379803
+    }
+  ],
+  "max_quadrature_relative_change": 2.220446049250313e-16
+}
