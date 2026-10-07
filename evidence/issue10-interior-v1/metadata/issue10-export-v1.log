@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/private/tmp/fusion-issue10-interior-20261007/scripts/export_dense_interior.py", line 124, in <module>
+    export(args.archive, args.output, args.controls)
+  File "/private/tmp/fusion-issue10-interior-20261007/scripts/export_dense_interior.py", line 63, in export
+    assert snapshot["B2_scale"] == b2 and snapshot["target_flux"] == -math.pi / 100
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,10 @@
+{
+  "files": {
+    "reference401.json": "4c0b688b8e85df8c9cfb803357e1e46d0b93c6d73555f9776ef1e11d8beccff8",
+    "reference401-candidate.json": "2046cb9f0a7bdd4d0b1aabe9779ab954dfd8d6c8ffae8e62d03c5bca64e81d48",
+    "selected401.json": "4b4aad01e3333849526ddd08d3be85c7524da46de6a72498f1050d5b1b993049",
+    "selected401-candidate.json": "3320e32fa3f519194690f8462c47bebe3a7cdd2cdce2705d3bb6ba092c44c48b"
+  },
+  "source_manifest_entries": 6258,
+  "elapsed_s": 1.2414297081995755
+}

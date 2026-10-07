@@ -1,0 +1,65 @@
+{
+  "completed": true,
+  "producer_evaluator": "f40c53851e99f175f06257c17340e9b79237f3cb",
+  "arms": [
+    {
+      "target_id": "reference401",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "-I",
+        "-S",
+        "scripts/qualify_dense_interior.py",
+        "--target",
+        "reference401",
+        "--expected",
+        "/private/tmp/fusion-issue10-interior-20261007/artifacts/issue10-export-controls-v2/reference401-native.json",
+        "--expected-sha",
+        "f59bd03f03c126db1820766be831e02da4e64767a15aedcfa0c8b2beedd456f8",
+        "--output",
+        "/private/tmp/issue10-full-qualification-v1/reference401",
+        "--revision",
+        "f40c53851e99f175f06257c17340e9b79237f3cb"
+      ],
+      "completed": true,
+      "returncode": 0,
+      "elapsed_s": 45.77086954098195,
+      "wall_elapsed_s": 45.77068305015564
+    },
+    {
+      "target_id": "selected401",
+      "command": [
+        "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+        "-I",
+        "-S",
+        "scripts/qualify_dense_interior.py",
+        "--target",
+        "selected401",
+        "--expected",
+        "/private/tmp/fusion-issue10-interior-20261007/artifacts/issue10-export-controls-v2/selected401-native.json",
+        "--expected-sha",
+        "caa78f10048a4c5c920116dbd1c42d34a8ae267084ebdad5cb72844a6018b1f8",
+        "--output",
+        "/private/tmp/issue10-full-qualification-v1/selected401",
+        "--revision",
+        "f40c53851e99f175f06257c17340e9b79237f3cb"
+      ],
+      "completed": true,
+      "returncode": 0,
+      "elapsed_s": 45.7396302500274,
+      "wall_elapsed_s": 45.73944401741028
+    }
+  ],
+  "launcher_sha256": "f61e8f904e01f2bcffd06e7030e6e6362bc73323992f35363331c09394d69ee3",
+  "environment": {
+    "PATH": "/usr/bin:/bin:/usr/sbin:/sbin",
+    "TMPDIR": "/private/tmp",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x3",
+    "LC_CTYPE": "C.UTF-8"
+  },
+  "external_timeout_seconds_per_arm": 600
+}

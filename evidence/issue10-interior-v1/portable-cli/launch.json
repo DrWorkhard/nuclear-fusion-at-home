@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "-I",
+    "-S",
+    "fusion.py",
+    "public",
+    "dense-interior",
+    "--target",
+    "selected401",
+    "--candidate",
+    "examples/clear-coil-interior-v1/selected401-candidate.json"
+  ],
+  "cwd": "/private/tmp/issue10-public-release-v2/checkout with spaces",
+  "completed": true,
+  "timeout_s": 600,
+  "returncode": 0,
+  "elapsed_s": 45.612656000070274
+}

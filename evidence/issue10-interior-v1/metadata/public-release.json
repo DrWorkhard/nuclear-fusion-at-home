@@ -1,0 +1,208 @@
+{
+  "complete": true,
+  "copied_files": {
+    "LICENSE": "4eb4325e2c93bf6c3da8bf4a93441fee61416e73a0703eebc45e6b4838cfae7e",
+    "NOTICE.md": "9a7be7f4f32b65f7233d6aa8f68f6cdc2b82f0f67ca49efa0d58be26973870d9",
+    "evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "examples/clear-coil-interior-v1/README.md": "d2922b18c517aef252a64f6ea60ee796831d819d583d414a26ddcfdaec571c95",
+    "examples/clear-coil-interior-v1/manifest.json": "9f9b32ffb6176b22e149069896500da0ac1aa0c371b5f17be7fa7603ebfb2ccb",
+    "examples/clear-coil-interior-v1/reference401-candidate.json": "2046cb9f0a7bdd4d0b1aabe9779ab954dfd8d6c8ffae8e62d03c5bca64e81d48",
+    "examples/clear-coil-interior-v1/reference401.json": "4c0b688b8e85df8c9cfb803357e1e46d0b93c6d73555f9776ef1e11d8beccff8",
+    "examples/clear-coil-interior-v1/selected401-candidate.json": "3320e32fa3f519194690f8462c47bebe3a7cdd2cdce2705d3bb6ba092c44c48b",
+    "examples/clear-coil-interior-v1/selected401.json": "4b4aad01e3333849526ddd08d3be85c7524da46de6a72498f1050d5b1b993049",
+    "examples/clear-coil-samples-v1/README.md": "b5c79bc97c2f1aa07f95f6adea0413761918af0473679b95787c3bd96b0054da",
+    "examples/clear-coil-samples-v1/candidate.json": "a4d242dd0eab58226d3f435becb819e1cf0fb6b457bb942e293e70c7592c2a1e",
+    "examples/clear-coil-samples-v1/case.json": "6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd",
+    "examples/clear-coil-samples-v1/manifest.json": "9e949f1247574e3f33e8a45d7a6c639fbb67018560ab3fcc58cf2f2dd2fba23c",
+    "examples/contribution.json": "e53c3507a1307a25eb4f435daa91e9cd98fbc0ac13dd0fd1cc1a931460e444c0",
+    "fusion.py": "af60417e4f4720e8d64ad42ce88b388a11387a173a7e6985d78f84cf4e9f2fa6",
+    "public_tests/test_dense.py": "a3756100ce130f907bf6e3487a18df9e5a453e288c3061794e19a448ebcb6275",
+    "public_tests/test_dense_interior.py": "428b603c014e8bb59e142e6ff3052a2af38f70fd6a3db957a0a31bb127873fa6",
+    "public_tests/test_interior.py": "79399cde7ead6798ee7ed1a06bd529583d9169fc2fd820d93ad953006a65379d",
+    "public_tests/test_portable.py": "c2ddbc43fbb3ad3a7b5c7fcda01b2d50834244f448ca0ef85de6d2f18af80c50",
+    "public_tests/test_release.py": "969bf085e0fa8b11527b51147b90ffb1ca5cb787221551a02834a090be24f903",
+    "public_tests/test_usability.py": "1e36d9b215504c810397846a7fcbe03957638d78d3a7b94ae565d71483a86fa8",
+    "scripts/test_public.py": "ced85fbfe9aaeafa732789b4acfab937615dc1ba49bde46ac77b039fb1c9eab2",
+    "scripts/verify_public_release.py": "be1f91d592937f2825248720d2c0b9b75d983564a74bed250583ea87cb9c21cf",
+    "src/fusion_public/__init__.py": "1696997fcc914653281c0a32b437d4ae499e5bc19cf5d5f27f0e3f75de10bbf8",
+    "src/fusion_public/cli.py": "1e63c4aab436d58add60c8e22e12b677fec6bdad2fd4064dbff758b7f60839d4",
+    "src/fusion_public/data.py": "c9491881b0e0ebe9a2676b100542233da2261a8440b5781feb367f936e981e93",
+    "src/fusion_public/dense.py": "a1572793d8cf67896983e6f7a69d2e37c9ba7a971045ad7131cd5d1c4e6c6080",
+    "src/fusion_public/dense_interior.py": "cfef246527a61ffc435d3a182ab657b436383c6c7699e150604dd9d7e085db5d",
+    "src/fusion_public/field.py": "2f7623d92bf33fffa3c79e53118928a67cde60c67a37de54da90dd06279ba690",
+    "src/fusion_public/interior.py": "a6875fdd99bbf3970a07332319fa06f926160496cb25b8ec2109b735372c781b",
+    "src/fusion_public/report.py": "b27b310c5bebb6dd3ded09b3dc0dc7c5d95cc56146376b0b121ea6deb07b0b00",
+    "src/fusion_public/submission.py": "9f878d2f08a44b9a1e2b4f195cb39b2dc74a8cb59b5f3eca0ec38a086a1ef8a5",
+    "src/fusion_public/usability.py": "79fb3e29d5800f74b2e2a559ef27b55af4332a390238e75a18424f86d827210d"
+  },
+  "hosted_ci_verified": false,
+  "kind": "public-release-local-qualification",
+  "operations": [
+    {
+      "argv": [
+        "scripts/test_public.py"
+      ],
+      "elapsed_seconds": 6.890830915886909,
+      "expected_returncode": 0,
+      "label": "public-unit-tests",
+      "output": "test_changed_reference_input_is_rejected (test_dense.DenseBoundaryTests.test_changed_reference_input_is_rejected) ... ok\ntest_flux_scale_is_inverse_to_uniform_current_scaling (test_dense.DenseBoundaryTests.test_flux_scale_is_inverse_to_uniform_current_scaling) ... ok\ntest_rebuilt_grid_reproduces_every_bundled_boundary_sample (test_dense.DenseBoundaryTests.test_rebuilt_grid_reproduces_every_bundled_boundary_sample) ... ok\ntest_seed_current_is_the_flux_normalized_current (test_dense.DenseBoundaryTests.test_seed_current_is_the_flux_normalized_current) ... ok\ntest_both_dense_targets_and_grid_conventions (test_dense_interior.DenseInteriorTests.test_both_dense_targets_and_grid_conventions) ... ok\ntest_explicit_target_and_budget (test_dense_interior.DenseInteriorTests.test_explicit_target_and_budget) ... ok\ntest_packet_and_manifest_tampering_rejected (test_dense_interior.DenseInteriorTests.test_packet_and_manifest_tampering_rejected) ... ok\ntest_signed_scale_preserves_orientation (test_dense_interior.DenseInteriorTests.test_signed_scale_preserves_orientation) ... ok\ntest_changed_reference_provenance_is_rejected (test_interior.InteriorDiagnosticTests.test_changed_reference_provenance_is_rejected) ... ok\ntest_seed_flux_already_matches_and_signed_ratios_are_preserved (test_interior.InteriorDiagnosticTests.test_seed_flux_already_matches_and_signed_ratios_are_preserved) ... ok\ntest_vector_score_uses_fixed_target_scale_and_all_components (test_interior.InteriorDiagnosticTests.test_vector_score_uses_fixed_target_scale_and_all_components) ... ok\ntest_circle_field_matches_analytic_axis (test_portable.AnalyticTests.test_circle_field_matches_analytic_axis) ... ok\ntest_circle_field_matches_analytic_off_axis (test_portable.AnalyticTests.test_circle_field_matches_analytic_off_axis) ... ok\ntest_current_linearity_and_sign (test_portable.AnalyticTests.test_current_linearity_and_sign) ... ok\ntest_curve_tangent_units_and_orientation (test_portable.AnalyticTests.test_curve_tangent_units_and_orientation) ... ok\ntest_physical_mapping_is_right_row_matrix (test_portable.AnalyticTests.test_physical_mapping_is_right_row_matrix) ... ok\ntest_singular_node_is_rejected (test_portable.AnalyticTests.test_singular_node_is_rejected) ... ok\ntest_stationary_curve_and_bad_node_counts_rejected (test_portable.AnalyticTests.test_stationary_curve_and_bad_node_counts_rejected) ... ok\ntest_translation_covariance (test_portable.AnalyticTests.test_translation_covariance) ... ok\ntest_contribution_cli_without_cost (test_portable.CliTests.test_contribution_cli_without_cost) ... ok\ntest_discovery_without_environment_or_repository_cwd (test_portable.CliTests.test_discovery_without_environment_or_repository_cwd) ... ok\ntest_help_without_dependencies (test_portable.CliTests.test_help_without_dependencies) ... ok\ntest_init_and_overwrite_protection (test_portable.CliTests.test_init_and_overwrite_protection) ... ok\ntest_invalid_input_rejected_without_numerical_work (test_portable.CliTests.test_invalid_input_rejected_without_numerical_work) ... ok\ntest_root_help_explains_public_and_research_routes (test_portable.CliTests.test_root_help_explains_public_and_research_routes) ... ok\ntest_candidate_errors_are_rejected (test_portable.ContractTests.test_candidate_errors_are_rejected) ... ok\ntest_comparator_accepts_declared_float_tolerance_not_string_coercion (test_portable.ContractTests.test_comparator_accepts_declared_float_tolerance_not_string_coercion) ... ok\ntest_dangling_symlink_not_followed (test_portable.ContractTests.test_dangling_symlink_not_followed) ... ok\ntest_data_mutation_cannot_keep_manifest_digest (test_portable.ContractTests.test_data_mutation_cannot_keep_manifest_digest) ... ok\ntest_existing_file_not_overwritten (test_portable.ContractTests.test_existing_file_not_overwritten) ... ok\ntest_export_has_no_private_machine_paths (test_portable.ContractTests.test_export_has_no_private_machine_paths) ... ok\ntest_huge_and_deep_json (test_portable.ContractTests.test_huge_and_deep_json) ... ok\ntest_invalid_coefficients_fail_closed (test_portable.ContractTests.test_invalid_coefficients_fail_closed) ... ok\ntest_manifest_paths_are_not_executed_or_followed (test_portable.ContractTests.test_manifest_paths_are_not_executed_or_followed) ... ok\ntest_new_candidate_is_permitted_without_preapproved_hint (test_portable.ContractTests.test_new_candidate_is_permitted_without_preapproved_hint) ... ok\ntest_nonfinite_and_duplicate_json (test_portable.ContractTests.test_nonfinite_and_duplicate_json) ... ok\ntest_reference_packet_has_all_named_dofs_and_physical_copies (test_portable.ContractTests.test_reference_packet_has_all_named_dofs_and_physical_copies) ... ok\ntest_reference_provenance_retains_negative_scope (test_portable.ContractTests.test_reference_provenance_retains_negative_scope) ... ok\ntest_scientific_report_comparator_rejects_changed_values_and_flags (test_portable.ContractTests.test_scientific_report_comparator_rejects_changed_values_and_flags) ... ok\ntest_unknown_fields_cannot_change_fixed_current_or_code (test_portable.ContractTests.test_unknown_fields_cannot_change_fixed_current_or_code) ... ok\ntest_wrong_candidate_digest_rejected_before_computation (test_portable.ContractTests.test_wrong_candidate_digest_rejected_before_computation) ... ok\ntest_wrong_evaluator_rejected_before_computation (test_portable.ContractTests.test_wrong_evaluator_rejected_before_computation) ... ok\ntest_wrong_report_source_rejected_before_computation (test_portable.ContractTests.test_wrong_report_source_rejected_before_computation) ... ok\ntest_invalid_required_metadata_is_rejected (test_portable.ContributionTests.test_invalid_required_metadata_is_rejected) ... ok\ntest_no_budget_or_hint_is_needed (test_portable.ContributionTests.test_no_budget_or_hint_is_needed) ... ok\ntest_prose_is_never_executed (test_portable.ContributionTests.test_prose_is_never_executed) ... ok\ntest_structure_pass_is_not_scientific_acceptance (test_portable.ContributionTests.test_structure_pass_is_not_scientific_acceptance) ... ok\ntest_unsolicited_and_high_cost_are_not_rejection_reasons (test_portable.ContributionTests.test_unsolicited_and_high_cost_are_not_rejection_reasons) ... ok\ntest_copy_retains_license_and_notices (test_release.ReleaseTests.test_copy_retains_license_and_notices) ... ok\ntest_nonzero_exit_retains_output_and_failed_operation (test_release.ReleaseTests.test_nonzero_exit_retains_output_and_failed_operation) ... ok\ntest_timeout_retains_partial_output_and_failed_operation (test_release.ReleaseTests.test_timeout_retains_partial_output_and_failed_operation) ... ok\ntest_all_198_named_positions_and_no_input_mutation (test_usability.UsabilityTests.test_all_198_named_positions_and_no_input_mutation) ... ok\ntest_cli_negative_scientific_values_preserve_validation (test_usability.UsabilityTests.test_cli_negative_scientific_values_preserve_validation) ... ok\ntest_cli_set_by_name_and_existing_output_protection (test_usability.UsabilityTests.test_cli_set_by_name_and_existing_output_protection) ... ok\ntest_cli_set_negative_scientific_coefficients (test_usability.UsabilityTests.test_cli_set_negative_scientific_coefficients) ... ok\ntest_coefficient_errors_name_exact_component (test_usability.UsabilityTests.test_coefficient_errors_name_exact_component) ... ok\ntest_discovery_and_root_help_have_readable_spacing (test_usability.UsabilityTests.test_discovery_and_root_help_have_readable_spacing) ... ok\ntest_help_explains_absolute_metres_and_quoted_name (test_usability.UsabilityTests.test_help_explains_absolute_metres_and_quoted_name) ... ok\ntest_other_schema_errors_still_reject (test_usability.UsabilityTests.test_other_schema_errors_still_reject) ... ok\ntest_reference_and_change_are_explained (test_usability.UsabilityTests.test_reference_and_change_are_explained) ... ok\ntest_retired_research_command_explains_freeze_without_native_imports (test_usability.UsabilityTests.test_retired_research_command_explains_freeze_without_native_imports) ... ok\ntest_shape_errors_name_coil_and_axis (test_usability.UsabilityTests.test_shape_errors_name_coil_and_axis) ... ok\ntest_unchanged_reference_has_exactly_zero_matched_resolution_change (test_usability.UsabilityTests.test_unchanged_reference_has_exactly_zero_matched_resolution_change) ... ok\ntest_unknown_name_and_bad_values (test_usability.UsabilityTests.test_unknown_name_and_bad_values) ... ok\ntest_unsupported_version_before_imports (test_usability.UsabilityTests.test_unsupported_version_before_imports) ... ok\n\n----------------------------------------------------------------------\nRan 65 tests in 6.821s\n\nOK\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "fusion.py",
+        "public",
+        "cases"
+      ],
+      "elapsed_seconds": 0.03214608412235975,
+      "expected_returncode": 0,
+      "label": "discovery",
+      "output": "{\n  \"schema_version\": 1,\n  \"cases\": [\n    {\n      \"id\": \"clear-coil-samples-v1\",\n      \"data_sha256\": \"6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd\",\n      \"accepts_candidate\": true,\n      \"requirements\": \"Python 3.11+ standard library; no network or native solver\",\n      \"physical_admission\": false,\n      \"scope\": \"64 boundary, 64 inner, 64 loop points; fixed-current filament B/A\"\n    }\n  ]\n}\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "fusion.py",
+        "public",
+        "demo",
+        "--output",
+        "results/reference"
+      ],
+      "elapsed_seconds": 3.2265216659288853,
+      "expected_returncode": 0,
+      "label": "reference-demo",
+      "output": "{\n  \"output\": \"results/reference\",\n  \"reference_reproduced\": true,\n  \"comparison\": {\n    \"scores\": {\n      \"sampled_normal_rms\": {\n        \"reference\": 0.3042070280768691,\n        \"candidate\": 0.3042070280768691,\n        \"change\": 0.0,\n        \"change_percent\": 0.0\n      },\n      \"sampled_inner_vector_rms\": {\n        \"reference\": 0.3804347184410837,\n        \"candidate\": 0.3804347184410837,\n        \"change\": 0.0,\n        \"change_percent\": 0.0\n      }\n    },\n    \"direction\": \"Lower is better for both; negative change is improvement. Report trade-offs.\",\n    \"reference_scope\": \"Reference and candidate use the public evaluator at 512 nodes.\",\n    \"research_limits\": {\n      \"full_grid_normal_rms\": 0.0001,\n      \"full_grid_inner_vector_rms\": 0.01\n    },\n    \"interpretation\": \"Research limits belong to a different full-grid, flux-normalized profile, not a public pass/fail test. Tiny changes may be numerical noise. Exploratory lower-score PRs are welcome; this is not proof of a feasible design.\"\n  },\n  \"physical_admission\": false,\n  \"step4_pass\": false\n}\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "fusion.py",
+        "public",
+        "evaluate",
+        "--candidate",
+        "results/changed-candidate.json",
+        "--output",
+        "results/changed-report.json"
+      ],
+      "elapsed_seconds": 1.9767917499411851,
+      "expected_returncode": 0,
+      "label": "changed-candidate",
+      "output": "{\n  \"output\": \"results/changed-report.json\",\n  \"physical_admission\": false,\n  \"comparison\": {\n    \"scores\": {\n      \"sampled_normal_rms\": {\n        \"reference\": 0.3042070280768691,\n        \"candidate\": 0.30420716817649873,\n        \"change\": 1.4009962961969435e-07,\n        \"change_percent\": 4.6054041060580964e-05\n      },\n      \"sampled_inner_vector_rms\": {\n        \"reference\": 0.3804347184410837,\n        \"candidate\": 0.38043481935549567,\n        \"change\": 1.0091441199344686e-07,\n        \"change_percent\": 2.6526078483837183e-05\n      }\n    },\n    \"direction\": \"Lower is better for both; negative change is improvement. Report trade-offs.\",\n    \"reference_scope\": \"Reference and candidate use the public evaluator at 512 nodes.\",\n    \"research_limits\": {\n      \"full_grid_normal_rms\": 0.0001,\n      \"full_grid_inner_vector_rms\": 0.01\n    },\n    \"interpretation\": \"Research limits belong to a different full-grid, flux-normalized profile, not a public pass/fail test. Tiny changes may be numerical noise. Exploratory lower-score PRs are welcome; this is not proof of a feasible design.\"\n  },\n  \"sampled_metrics_512\": {\n    \"sampled_normal_rms\": 0.30420716817649873,\n    \"sampled_normal_max\": 0.576617336636077,\n    \"sampled_inner_vector_rms\": 0.38043481935549567,\n    \"max_abs_current_A\": 294966.46632221737\n  }\n}\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "fusion.py",
+        "public",
+        "audit",
+        "--report",
+        "results/changed-report.json",
+        "--output",
+        "results/changed-audit.json"
+      ],
+      "elapsed_seconds": 1.1613895420450717,
+      "expected_returncode": 0,
+      "label": "changed-replay",
+      "output": "{\n  \"schema_version\": 1,\n  \"kind\": \"public-report-replay\",\n  \"report_sha256\": \"4b8645172a0adbea7d460e665cc9759f3c4186b6c6b45742cee353075ee4266a\",\n  \"case_sha256\": \"6e5c51e54444f620450ab3df9e5d3969afbafd1e259d7b65c5fc9b49d1c0fadd\",\n  \"candidate_sha256\": \"4269c7656a0d03298aeed4e8bb02809bc2860e9fe85a647ce13461bd7a16177d\",\n  \"report_replay_pass\": true,\n  \"independent_implementation\": false,\n  \"seed_native_reference_pass\": null,\n  \"physical_admission\": false,\n  \"step4_pass\": false\n}\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "fusion.py",
+        "public",
+        "audit",
+        "--report",
+        "results/tampered-report.json",
+        "--output",
+        "results/should-not-exist.json"
+      ],
+      "elapsed_seconds": 1.157893749885261,
+      "expected_returncode": 2,
+      "label": "reject-false-admission",
+      "output": "ERROR: Mismatch at report.scope.physical_admission\n",
+      "passed": true,
+      "returncode": 2
+    },
+    {
+      "argv": [
+        "fusion.py",
+        "public",
+        "check-submission",
+        "--file",
+        "examples/contribution.json"
+      ],
+      "elapsed_seconds": 0.027407374931499362,
+      "expected_returncode": 0,
+      "label": "optional-cost",
+      "output": "{\n  \"schema_version\": 1,\n  \"contribution_record_valid\": true,\n  \"compute_disclosed\": false,\n  \"requested_topic_required\": false,\n  \"scientific_acceptance\": false\n}\n",
+      "passed": true,
+      "returncode": 0
+    },
+    {
+      "argv": [
+        "fusion.py",
+        "public",
+        "demo",
+        "--output",
+        "results/reference"
+      ],
+      "elapsed_seconds": 0.03012854210101068,
+      "expected_returncode": 2,
+      "label": "reject-overwrite",
+      "output": "ERROR: Output already exists; choose a fresh path: results/reference\n",
+      "passed": true,
+      "returncode": 2
+    }
+  ],
+  "physical_admission": false,
+  "python_socket_audit_guard": true,
+  "qualification_type": "local copied tree, not an OS security sandbox",
+  "reference": {
+    "reference_check": {
+      "passed": true,
+      "relative_errors": {
+        "boundary": {
+          "A_Tm": 5.527808853476058e-16,
+          "B_T": 8.061439928464242e-16
+        },
+        "inner": {
+          "A_Tm": 7.191067767231985e-16,
+          "B_T": 9.587997613578574e-16
+        },
+        "loop": {
+          "A_Tm": 4.878548940765712e-16,
+          "B_T": 6.556256070578645e-16
+        }
+      },
+      "tolerance": 5e-10
+    },
+    "report_sha256": "d6179bd58c453a7c15c68bc38cfd7c23bc5eadd5865c21cba4339898f94d519e",
+    "resolution_differences": {
+      "boundary": {
+        "A_Tm": 1.2437569920321135e-15,
+        "B_T": 1.451059187123564e-15
+      },
+      "inner": {
+        "A_Tm": 1.849131711573939e-15,
+        "B_T": 1.4381996420367862e-15
+      },
+      "loop": {
+        "A_Tm": 1.1708517457837702e-15,
+        "B_T": 1.1473448123512624e-15
+      }
+    },
+    "sampled_metrics_512": {
+      "max_abs_current_A": 294966.46632221737,
+      "sampled_inner_vector_rms": 0.3804347184410837,
+      "sampled_normal_max": 0.5766173462426617,
+      "sampled_normal_rms": 0.3042070280768691
+    }
+  },
+  "schema_version": 1,
+  "step4_pass": false
+}

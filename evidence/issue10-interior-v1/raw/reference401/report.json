@@ -1,0 +1,44 @@
+{
+  "B2_scale_T2": 1.6293829620247962,
+  "candidate_sha256": "38dc0e1f4d80b4bf7b4b1dcfc47f7a3685984a15808d6ba13f3736ae470f8325",
+  "case_sha256": "1232fb54fd3b45e578288e00efedcfc5f3d2669f64a973677512db48578905fc",
+  "completed": true,
+  "dense_inner_vector_rms": 0.010716517095108489,
+  "diagnostic": "dense-interior-target-surfaces",
+  "elapsed_seconds": 45.57928216597065,
+  "field_coil_nodes": 512,
+  "flux_coil_nodes": 256,
+  "flux_loop_points": 256,
+  "flux_normalized_max_abs_current_A": 307977.14904565923,
+  "flux_scale": 1.0441090232583563,
+  "inner_points": 12288,
+  "interior_limit": 0.01,
+  "interior_metric_below_limit": false,
+  "interpretation": "Equal-weight samples on three target surfaces, not a volume integral, realized-flux comparison, confinement or physical acceptance. Current ratios are preserved; the signed 256-node normalization is frozen before the 512-node field.",
+  "measured_unscaled_flux_Wb": -0.030088741535685696,
+  "packet_id": "clear-coil-interior-v1",
+  "packet_sha256": "4c0b688b8e85df8c9cfb803357e1e46d0b93c6d73555f9776ef1e11d8beccff8",
+  "physical_admission": false,
+  "quadrature_convergence_checked": false,
+  "schema_version": 1,
+  "signed_target_flux_Wb": -0.03141592653589793,
+  "source_sha256": {
+    "data.py": "c9491881b0e0ebe9a2676b100542233da2261a8440b5781feb367f936e981e93",
+    "dense.py": "a1572793d8cf67896983e6f7a69d2e37c9ba7a971045ad7131cd5d1c4e6c6080",
+    "dense_interior.py": "cfef246527a61ffc435d3a182ab657b436383c6c7699e150604dd9d7e085db5d",
+    "field.py": "2f7623d92bf33fffa3c79e53118928a67cde60c67a37de54da90dd06279ba690",
+    "interior.py": "a6875fdd99bbf3970a07332319fa06f926160496cb25b8ec2109b735372c781b"
+  },
+  "step4_pass": false,
+  "surface_s": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "surface_vector_rms": [
+    0.010635373965634833,
+    0.010697499247002168,
+    0.01081589323268043
+  ],
+  "target_id": "reference401"
+}
