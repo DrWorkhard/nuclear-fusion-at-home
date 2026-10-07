@@ -49,5 +49,9 @@ and all other electrical loads `P_other`. Then
 Count each recovered heat source and electrical load once. No numerical net-power
 estimate is justified until these quantities and the operating profiles are supplied.
 
-**Next:** supply one operating point and finite envelope with sourced ranges.
+A [conditional finite-envelope calculation](ISSUE27_ENVELOPE_SCREEN.md) now excludes
+some scaled copies of the latest coils. It supplies a numerical space constraint,
+not a coupled operating point or engineering qualification.
+
+**Next:** supply operating profiles, power balance and qualified component limits.
 Reuse system-design/geometry tools only for unresolved decision needs.

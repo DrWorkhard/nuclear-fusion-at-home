@@ -35,10 +35,10 @@ to the README's year-end reactor vision. Prioritize decisions that test it.
    magnetic surfaces and benefit transfer using shared checks. The [first matched comparison](optimization/ISSUE25_MATCHED_TARGETS.md)
    leaves wide-domain benefit transfer unresolved because required wells are missing.
    Diagnose shallow-well fidelity and qualify realized flux labels before confirmation.
-2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
-   power balance, pressure/confinement, magnets, blanket/shield space and heat
-   exhaust before expensive optimization. Detailed simulations follow a decision
-   need; boundary RMS alone does not determine their priority.
+2. **Screen reactor feasibility now.** The [conditional envelope screen](engineering/ISSUE27_ENVELOPE_SCREEN.md)
+   rejects some scaled scenarios; a coupled operating point remains missing.
+   Specify power balance, pressure/confinement, magnet, shielding and exhaust
+   assumptions before reactor-scale optimization.
 3. **Move to joint plasma/coil optimization.** The completed local
    [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) missed its hurdle;
    the [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) now calls for a bounded
