@@ -71,6 +71,8 @@ The local [interior-error/shallow-well comparison](ISSUE26_INTERIOR_WELLS.md)
 finds that an existing lower-error geometry restores both missing core cells.
 This supports testing interior fidelity in joint optimization; realized-flux
 qualification and benefit transfer remain open.
+The prospective [continuation flux-label grid](ISSUE48_CONTINUATION_LABELS.md)
+tests the next prerequisite with the unchanged #48 numerical estimator.
 
 The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
 supports both frozen matched targets using only Python's standard library.
