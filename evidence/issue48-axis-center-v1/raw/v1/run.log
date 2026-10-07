@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "<frozen runpy>", line 287, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/private/tmp/fusion-issue48-axis-center-20261007/scripts/diagnose_axis_center.py", line 172, in <module>
+    raise SystemExit(run(args.archive.resolve(), args.reference_archive.resolve(),
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/fusion-issue48-axis-center-20261007/scripts/diagnose_axis_center.py", line 73, in run
+    from simsopt.field import BiotSavart
+  File "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/__init__.py", line 3, in <module>
+    from .coil import *
+  File "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/field/coil.py", line 4, in <module>
+    from simsopt.geo.jit import jit
+  File "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/__init__.py", line 18, in <module>
+    from .boozersurface import *
+  File "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/boozersurface.py", line 6, in <module>
+    from .surfaceobjectives import boozer_surface_residual, boozer_surface_dexactresidual_dcoils_dcurrents_vjp, boozer_surface_dlsqgrad_dcoils_vjp
+  File "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/surfaceobjectives.py", line 8, in <module>
+    from .surfacexyztensorfourier import SurfaceXYZTensorFourier
+  File "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/surfacexyztensorfourier.py", line 5, in <module>
+    from .surfacerzfourier import SurfaceRZFourier
+  File "/Users/sebastianwirkert/workspace/fusion/.venv/lib/python3.12/site-packages/simsopt/geo/surfacerzfourier.py", line 11, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib.pyplot'; 'matplotlib' is not a package

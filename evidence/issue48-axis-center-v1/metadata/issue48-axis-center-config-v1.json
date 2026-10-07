@@ -1,0 +1,6 @@
+{
+  "archive": "/private/tmp/fusion-issue48-continuation-evidence-20261007/evidence/issue48-continuation-labels-v1",
+  "reference_archive": "/private/tmp/fusion-issue48-grid-evidence-20261007/evidence/issue48-full-grid-v1",
+  "supervisor": "/private/tmp/fusion-issue48-continuation-evidence-20261007/scripts/run_continuation_labels.py",
+  "environment": "/private/tmp/issue37-native-environment-v1.json"
+}

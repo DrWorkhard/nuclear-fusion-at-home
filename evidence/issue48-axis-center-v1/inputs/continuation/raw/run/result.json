@@ -1,0 +1,4495 @@
+{
+  "all_points_numerically_qualified": false,
+  "analytic_controls": [
+    {
+      "errors": {
+        "area": 0.0,
+        "circle": 5.551115123125783e-17,
+        "line": 0.0
+      },
+      "exact_spline_area": 0.1256637061435918,
+      "modulation": 0.0,
+      "passed": true
+    },
+    {
+      "errors": {
+        "area": 8.326672684688674e-17,
+        "line": 8.326672684688674e-17
+      },
+      "exact_spline_area": 0.1281768786996913,
+      "modulation": 0.2,
+      "passed": true
+    }
+  ],
+  "benefit_transfer_confirmed": false,
+  "candidate": "interior-pass-headroom-continuation",
+  "center_RZ": [
+    0.9340295380453654,
+    0.0
+  ],
+  "completed": true,
+  "control_arrays_sha256": "47711977e1d0212ab70bbc60960a863aaa680497c77d8ca68c4df0eacdee1275",
+  "controls": [
+    {
+      "crossings": 160,
+      "exact_flux": -0.0031413151590563007,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.0031411322144369314,
+          "line_flux": -0.0031411322138881924,
+          "stokes_abs_error": 5.487390056235775e-13
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.0031411322144348375,
+          "line_flux": -0.0031411322144348375,
+          "stokes_abs_error": 0.0
+        }
+      ],
+      "label": 0.09998534377086864,
+      "label_error": 5.82330816382981e-06,
+      "max_gap_rad": 0.48214073742816144,
+      "quadrature_label_change": 1.7400256961618793e-11,
+      "s": 0.1,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 3.303226444782356e-05,
+          "label": 0.09997506689859963,
+          "max_gap_rad": 0.6152501297865127,
+          "quadrature_label_change": 9.433649426050297e-11
+        },
+        {
+          "heldout_radius_max_m": 0.0002663389816751193,
+          "label": 0.09990337418100688,
+          "max_gap_rad": 0.8717593739247107,
+          "quadrature_label_change": 3.877695326992385e-09
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.00785315202162284,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.007852711416205188,
+          "line_flux": -0.007852711415057086,
+          "stokes_abs_error": 1.148102446446586e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.007852711416200668,
+          "line_flux": -0.007852711416200671,
+          "stokes_abs_error": 3.469446951953614e-18
+        }
+      ],
+      "label": 0.24995956772342245,
+      "label_error": 1.4024906178855545e-05,
+      "max_gap_rad": 0.4734663550128291,
+      "quadrature_label_change": 3.6401448330940734e-11,
+      "s": 0.25,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 6.025689541185042e-05,
+          "label": 0.24993460069048046,
+          "max_gap_rad": 0.6041897233249331,
+          "quadrature_label_change": 1.9527981782055005e-10
+        },
+        {
+          "heldout_radius_max_m": 0.00042668758697419346,
+          "label": 0.24975551698777482,
+          "max_gap_rad": 0.8559665346464413,
+          "quadrature_label_change": 7.848720386730823e-09
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.015706157944343074,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.015705326761866676,
+          "line_flux": -0.015705326760164767,
+          "stokes_abs_error": 1.7019094467052298e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.015705326761865295,
+          "line_flux": -0.015705326761865306,
+          "stokes_abs_error": 1.0408340855860843e-17
+        }
+      ],
+      "label": 0.49991607742670563,
+      "label_error": 2.6457359990850193e-05,
+      "max_gap_rad": 0.46163362791874096,
+      "quadrature_label_change": 5.412983803900784e-11,
+      "s": 0.5,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 9.79988210247848e-05,
+          "label": 0.4998685390596447,
+          "max_gap_rad": 0.5891280256009006,
+          "quadrature_label_change": 2.743132333626159e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0006014593433036064,
+          "label": 0.49951742018101847,
+          "max_gap_rad": 0.8353845957931458,
+          "quadrature_label_change": 1.1718564216314672e-08
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.0235599324322264,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.023558746852689404,
+          "line_flux": -0.02355874685090592,
+          "stokes_abs_error": 1.7834830834395632e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.023558746852701408,
+          "line_flux": -0.023558746852701422,
+          "stokes_abs_error": 1.3877787807814457e-17
+        }
+      ],
+      "label": 0.7498982029643841,
+      "label_error": 3.773816836738497e-05,
+      "max_gap_rad": 0.4557799375203966,
+      "quadrature_label_change": 5.715257978172112e-11,
+      "s": 0.75,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 0.00013195325797714375,
+          "label": 0.7498301003746736,
+          "max_gap_rad": 0.576526505313173,
+          "quadrature_label_change": 2.4176864932682394e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0007288790071087806,
+          "label": 0.7493152978640865,
+          "max_gap_rad": 0.8184883457206684,
+          "quadrature_label_change": 1.2913637096844497e-08
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.02827314458758764,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.028271758859984703,
+          "line_flux": -0.0282717588583548,
+          "stokes_abs_error": 1.6299010752174325e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.028271758860009738,
+          "line_flux": -0.028271758860009738,
+          "stokes_abs_error": 0.0
+        }
+      ],
+      "label": 0.899918034533855,
+      "label_error": 4.410907876228887e-05,
+      "max_gap_rad": 0.45458407303127446,
+      "quadrature_label_change": 5.2678268221820916e-11,
+      "s": 0.9,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 0.00015142286819910117,
+          "label": 0.8998383733087076,
+          "max_gap_rad": 0.5698629210252868,
+          "quadrature_label_change": 1.6636310918642421e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0007932265621123369,
+          "label": 0.8992283094905581,
+          "max_gap_rad": 0.8095882525992497,
+          "quadrature_label_change": 1.2581237106198365e-08
+        }
+      ]
+    }
+  ],
+  "controls_pass": true,
+  "current_A": 305178.2427715842,
+  "deadline_met": true,
+  "edge": {
+    "angular_points": 16384,
+    "area_flux": -0.0314159265345251,
+    "line_flux": -0.03141592653452502,
+    "stokes_abs_error": 8.326672684688674e-17
+  },
+  "elapsed_s": 979.4035038331058,
+  "equal_alpha_verified": false,
+  "flux_surface_proven": false,
+  "full_grid": true,
+  "half_period_sections": true,
+  "half_period_symmetry": {
+    "A": 1.3800594766410214e-16,
+    "B": 6.921931301058448e-16
+  },
+  "interval_orders": [
+    4,
+    8
+  ],
+  "kind": "realized-flux-label-grid",
+  "launch_scales": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "lines": [
+    {
+      "actual_start_RZ": [
+        0.9475581013218117,
+        0.0
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 0,
+      "iota": -0.5831798049242138,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.003057899053267783,
+              "line_flux": -0.0030578990532677723,
+              "stokes_abs_error": 1.0842021724855044e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0030578990532677854,
+              "line_flux": -0.0030578990532677854,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.0973359499649727,
+          "max_gap_rad": 0.1290903019073868,
+          "plane": 0,
+          "quadrature_label_change": 4.1413472416699357e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.444255857019615e-05,
+              "label": 0.09733055414541626,
+              "max_gap_rad": 0.3371138952597752,
+              "quadrature_label_change": 3.864978574844334e-11
+            },
+            {
+              "heldout_radius_max_m": 0.00029034972020892426,
+              "label": 0.09721356491984469,
+              "max_gap_rad": 0.9037414809236664,
+              "quadrature_label_change": 7.218194471300438e-09
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0030578990917200853,
+              "line_flux": -0.003057899091720078,
+              "stokes_abs_error": 7.37257477290143e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0030578990917200875,
+              "line_flux": -0.0030578990917200875,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.09733595118894749,
+          "max_gap_rad": 0.12535161635199016,
+          "plane": 1,
+          "quadrature_label_change": 3.03698797722462e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.00029697913722347147,
+              "label": 0.09722145126242586,
+              "max_gap_rad": 0.795237290639401,
+              "quadrature_label_change": 5.890740554856546e-09
+            },
+            {
+              "heldout_radius_max_m": 5.863993983366844e-05,
+              "label": 0.09732109109332691,
+              "max_gap_rad": 0.39452891805350987,
+              "quadrature_label_change": 1.2120886824225086e-10
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.003057831076861496,
+              "line_flux": -0.003057831076807139,
+              "stokes_abs_error": 5.435669275799526e-14
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0030578310768614864,
+              "line_flux": -0.0030578310768614864,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.09733378620875738,
+          "max_gap_rad": 0.39898878761249623,
+          "quadrature_label_change": 1.7299235697903656e-12,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.0007618902634517546,
+              "label": 0.09682646831057698,
+              "max_gap_rad": 1.1811251906516658,
+              "quadrature_label_change": 8.10395466802741e-08
+            },
+            {
+              "heldout_radius_max_m": 0.0007698341815222162,
+              "label": 0.09679591150193252,
+              "max_gap_rad": 1.0555228637145664,
+              "quadrature_label_change": 7.589171205373262e-08
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0030579000314284264,
+              "line_flux": -0.0030579000314284134,
+              "stokes_abs_error": 1.3010426069826053e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0030579000314284277,
+              "line_flux": -0.003057900031428428,
+              "stokes_abs_error": 4.336808689942018e-19
+            }
+          ],
+          "label": 0.09733598110079299,
+          "max_gap_rad": 0.1289174302102598,
+          "quadrature_label_change": 4.693526873892594e-16,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.944494539965133e-05,
+              "label": 0.09732944547357936,
+              "max_gap_rad": 0.3447080576964101,
+              "quadrature_label_change": 1.113318378978129e-11
+            },
+            {
+              "heldout_radius_max_m": 4.664198126629743e-05,
+              "label": 0.09732337097802173,
+              "max_gap_rad": 0.634781217053014,
+              "quadrature_label_change": 1.1908717322339852e-10
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.00305789978582231,
+              "line_flux": -0.0030578997858223067,
+              "stokes_abs_error": 3.469446951953614e-18
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.0030578997858223098,
+              "line_flux": -0.0030578997858223085,
+              "stokes_abs_error": 1.3010426069826053e-18
+            }
+          ],
+          "independent_label": 0.09733597328290741,
+          "independent_label_error": 2.7755575615628914e-17,
+          "label": 0.09733597328290738,
+          "max_gap_rad": 0.09246329983997725,
+          "quadrature_label_change": 5.5217963222265814e-17,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.4604551196807933e-08,
+              "label": 0.09733595118894749,
+              "max_gap_rad": 0.12535161635199016,
+              "quadrature_label_change": 3.03698797722462e-16
+            },
+            {
+              "heldout_radius_max_m": 2.2603771914972426e-08,
+              "label": 0.0973359499649727,
+              "max_gap_rad": 0.1290903019073868,
+              "quadrature_label_change": 4.1413472416699357e-16
+            }
+          ]
+        }
+      ],
+      "s": 0.1,
+      "theta": 0.0,
+      "transits": 321.00279434699974
+    },
+    {
+      "actual_start_RZ": [
+        0.9385193636301778,
+        0.05670108641947344
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 1,
+      "iota": -0.5825644408866247,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0031583608551103643,
+              "line_flux": -0.0031583608551099783,
+              "stokes_abs_error": 3.859759734048396e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0031583608551103643,
+              "line_flux": -0.003158360855110367,
+              "stokes_abs_error": 2.6020852139652106e-18
+            }
+          ],
+          "label": 0.10053374843614551,
+          "max_gap_rad": 0.20284657542642304,
+          "plane": 0,
+          "quadrature_label_change": 1.2368823761787542e-14,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 9.346762529054142e-08,
+              "label": 0.10053360162622116,
+              "max_gap_rad": 0.22392236886285133,
+              "quadrature_label_change": 3.393143840008234e-14
+            },
+            {
+              "heldout_radius_max_m": 8.441517796407838e-08,
+              "label": 0.10053356540484024,
+              "max_gap_rad": 0.22813356253771833,
+              "quadrature_label_change": 4.569286456642496e-14
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0031583608402638236,
+              "line_flux": -0.0031583608402634767,
+              "stokes_abs_error": 3.469446951953614e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.003158360840263825,
+              "line_flux": -0.0031583608402638253,
+              "stokes_abs_error": 4.336808689942018e-19
+            }
+          ],
+          "label": 0.10053374796356541,
+          "max_gap_rad": 0.1867117696548588,
+          "plane": 1,
+          "quadrature_label_change": 1.1098810607675428e-14,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 9.574643053053555e-08,
+              "label": 0.10053364317702654,
+              "max_gap_rad": 0.1867117696548588,
+              "quadrature_label_change": 1.5571465628678958e-14
+            },
+            {
+              "heldout_radius_max_m": 9.455780493501653e-08,
+              "label": 0.10053352138220956,
+              "max_gap_rad": 0.22841388599747514,
+              "quadrature_label_change": 6.010475296743634e-14
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.003158358952926211,
+              "line_flux": -0.0031583589529249542,
+              "stokes_abs_error": 1.2568071583451967e-15
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0031583589529262136,
+              "line_flux": -0.0031583589529262154,
+              "stokes_abs_error": 1.734723475976807e-18
+            }
+          ],
+          "label": 0.10053368788774343,
+          "max_gap_rad": 0.2278825640675004,
+          "quadrature_label_change": 4.014345926258725e-14,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.00015437398491395873,
+              "label": 0.1004746326175409,
+              "max_gap_rad": 0.5955840797709238,
+              "quadrature_label_change": 9.522486570090623e-10
+            },
+            {
+              "heldout_radius_max_m": 0.00014277929387049998,
+              "label": 0.10046345306586482,
+              "max_gap_rad": 0.7921117800025002,
+              "quadrature_label_change": 1.5934500545320803e-09
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0031583697647379096,
+              "line_flux": -0.003158369764737906,
+              "stokes_abs_error": 3.469446951953614e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.00315836976473791,
+              "line_flux": -0.0031583697647379087,
+              "stokes_abs_error": 1.3010426069826053e-18
+            }
+          ],
+          "label": 0.1005340320383984,
+          "max_gap_rad": 0.12359912253126826,
+          "quadrature_label_change": 8.282694483339872e-17,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 5.409201613692377e-07,
+              "label": 0.1005335840021227,
+              "max_gap_rad": 0.2278825640675004,
+              "quadrature_label_change": 4.6769614849259143e-14
+            },
+            {
+              "heldout_radius_max_m": 5.369756531231618e-07,
+              "label": 0.10053358574272957,
+              "max_gap_rad": 0.2224738894901046,
+              "quadrature_label_change": 4.2766312515644874e-14
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0031583689595515805,
+              "line_flux": -0.0031583689595515814,
+              "stokes_abs_error": 8.673617379884035e-19
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.0031583689595515796,
+              "line_flux": -0.0031583689595515796,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "independent_label": 0.10053400640852148,
+          "independent_label_error": 5.551115123125783e-17,
+          "label": 0.10053400640852153,
+          "max_gap_rad": 0.08320764809980385,
+          "quadrature_label_change": 5.5217963222265814e-17,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.9360779548539004e-07,
+              "label": 0.10053374796356541,
+              "max_gap_rad": 0.1867117696548588,
+              "quadrature_label_change": 1.1098810607675428e-14
+            },
+            {
+              "heldout_radius_max_m": 4.471000106531786e-07,
+              "label": 0.10053374843614551,
+              "max_gap_rad": 0.20284657542642304,
+              "quadrature_label_change": 1.2368823761787542e-14
+            }
+          ]
+        }
+      ],
+      "s": 0.1,
+      "theta": 1.5707963267948966,
+      "transits": 321.0040847882462
+    },
+    {
+      "actual_start_RZ": [
+        0.9204057551396897,
+        7.034128167770297e-18
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 2,
+      "iota": -0.5824847006617905,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.003178367562154241,
+              "line_flux": -0.003178367562154065,
+              "stokes_abs_error": 1.7607443281164592e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.003178367562154243,
+              "line_flux": -0.0031783675621542395,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.1011705817003781,
+          "max_gap_rad": 0.20745893682917815,
+          "plane": 0,
+          "quadrature_label_change": 5.549405303837714e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.518083200315658e-07,
+              "label": 0.1011702726886783,
+              "max_gap_rad": 0.2427268080909597,
+              "quadrature_label_change": 5.800647036499024e-14
+            },
+            {
+              "heldout_radius_max_m": 3.3703104451374144e-07,
+              "label": 0.10117024040313763,
+              "max_gap_rad": 0.247280070777407,
+              "quadrature_label_change": 6.783526781855355e-14
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.003178367959153043,
+              "line_flux": -0.0031783679591528835,
+              "stokes_abs_error": 1.5959455978986625e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0031783679591530435,
+              "line_flux": -0.003178367959153045,
+              "stokes_abs_error": 1.3010426069826053e-18
+            }
+          ],
+          "label": 0.10117059433724256,
+          "max_gap_rad": 0.17476043026451205,
+          "plane": 1,
+          "quadrature_label_change": 5.13527057967072e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.1384645497387065e-07,
+              "label": 0.10117010340747107,
+              "max_gap_rad": 0.24785896626983295,
+              "quadrature_label_change": 1.1441161979653477e-13
+            },
+            {
+              "heldout_radius_max_m": 2.7298613110640635e-07,
+              "label": 0.10117043648107156,
+              "max_gap_rad": 0.17476043026451205,
+              "quadrature_label_change": 9.88401541678558e-15
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.0031783523196982546,
+              "line_flux": -0.003178352319695042,
+              "stokes_abs_error": 3.2127078775090467e-15
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.003178352319698256,
+              "line_flux": -0.0031783523196982537,
+              "stokes_abs_error": 2.168404344971009e-18
+            }
+          ],
+          "label": 0.10117009651793507,
+          "max_gap_rad": 0.24852441456128194,
+          "quadrature_label_change": 1.0223605890602516e-13,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 9.302229094682729e-05,
+              "label": 0.10113249718996753,
+              "max_gap_rad": 0.5099324077193368,
+              "quadrature_label_change": 2.996094381931658e-10
+            },
+            {
+              "heldout_radius_max_m": 8.412657750562873e-05,
+              "label": 0.10113268203620744,
+              "max_gap_rad": 0.7306972013184825,
+              "quadrature_label_change": 5.127994784746739e-10
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.003178361954574019,
+              "line_flux": -0.0031783619545729556,
+              "stokes_abs_error": 1.0633854907737827e-15
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.003178361954574019,
+              "line_flux": -0.00317836195457402,
+              "stokes_abs_error": 8.673617379884035e-19
+            }
+          ],
+          "label": 0.10117040320555594,
+          "max_gap_rad": 0.2301661000033226,
+          "quadrature_label_change": 3.3876220436860077e-14,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.0503328008205914e-07,
+              "label": 0.1011701387771116,
+              "max_gap_rad": 0.24852441456128194,
+              "quadrature_label_change": 8.268889992534306e-14
+            },
+            {
+              "heldout_radius_max_m": 9.97647129821061e-08,
+              "label": 0.10117014046212221,
+              "max_gap_rad": 0.2482742726893452,
+              "quadrature_label_change": 8.056300834128582e-14
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0031783705367085515,
+              "line_flux": -0.0031783705367084917,
+              "stokes_abs_error": 5.984795992119984e-17
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.0031783705367085494,
+              "line_flux": -0.00317837053670855,
+              "stokes_abs_error": 4.336808689942018e-19
+            }
+          ],
+          "independent_label": 0.1011706763833825,
+          "independent_label_error": 0.0,
+          "label": 0.1011706763833825,
+          "max_gap_rad": 0.17148729785759365,
+          "quadrature_label_change": 1.8498017679459047e-15,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 5.781692106673897e-08,
+              "label": 0.10117059433724256,
+              "max_gap_rad": 0.17476043026451205,
+              "quadrature_label_change": 5.13527057967072e-15
+            },
+            {
+              "heldout_radius_max_m": 5.3130273366605585e-08,
+              "label": 0.1011705817003781,
+              "max_gap_rad": 0.20745893682917815,
+              "quadrature_label_change": 5.549405303837714e-15
+            }
+          ]
+        }
+      ],
+      "s": 0.1,
+      "theta": 3.141592653589793,
+      "transits": 321.0013535567169
+    },
+    {
+      "actual_start_RZ": [
+        0.9385193636301778,
+        -0.05670108641947344
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 3,
+      "iota": -0.5825660787280927,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0031583608344035474,
+              "line_flux": -0.0031583608344031566,
+              "stokes_abs_error": 3.907464629637758e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.003158360834403547,
+              "line_flux": -0.0031583608344035443,
+              "stokes_abs_error": 2.6020852139652106e-18
+            }
+          ],
+          "label": 0.10053374777702688,
+          "max_gap_rad": 0.2019375849463234,
+          "plane": 0,
+          "quadrature_label_change": 1.2341214780176408e-14,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.0027661239038477e-07,
+              "label": 0.1005335998476872,
+              "max_gap_rad": 0.22267873609197464,
+              "quadrature_label_change": 3.3020342006914955e-14
+            },
+            {
+              "heldout_radius_max_m": 8.303745647683658e-08,
+              "label": 0.10053356685509156,
+              "max_gap_rad": 0.22883375631912095,
+              "quadrature_label_change": 4.682483281248141e-14
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0031583607062267093,
+              "line_flux": -0.0031583607062263524,
+              "stokes_abs_error": 3.5691935518222806e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0031583607062267123,
+              "line_flux": -0.0031583607062267106,
+              "stokes_abs_error": 1.734723475976807e-18
+            }
+          ],
+          "label": 0.10053374369703154,
+          "max_gap_rad": 0.1849185078751211,
+          "plane": 1,
+          "quadrature_label_change": 1.140250940539789e-14,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.0393784486209534e-07,
+              "label": 0.10053364254894216,
+              "max_gap_rad": 0.1849185078751211,
+              "quadrature_label_change": 1.595799137123482e-14
+            },
+            {
+              "heldout_radius_max_m": 9.311082731396081e-08,
+              "label": 0.10053351985428512,
+              "max_gap_rad": 0.2262325600251991,
+              "quadrature_label_change": 6.04084517651588e-14
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.0031583590135586355,
+              "line_flux": -0.0031583590135575027,
+              "stokes_abs_error": 1.132774429812855e-15
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.003158359013558639,
+              "line_flux": -0.003158359013558639,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.10053368981773342,
+          "max_gap_rad": 0.2247952548514851,
+          "quadrature_label_change": 3.616776591058411e-14,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.00013947826771608732,
+              "label": 0.10047347125138811,
+              "max_gap_rad": 0.5973528679474067,
+              "quadrature_label_change": 7.520930102090414e-10
+            },
+            {
+              "heldout_radius_max_m": 0.00014920950746922547,
+              "label": 0.10046378675207465,
+              "max_gap_rad": 0.8020790837659226,
+              "quadrature_label_change": 1.5540277694781574e-09
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0031583697698946162,
+              "line_flux": -0.003158369769894612,
+              "stokes_abs_error": 4.336808689942018e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.003158369769894614,
+              "line_flux": -0.0031583697698946154,
+              "stokes_abs_error": 1.3010426069826053e-18
+            }
+          ],
+          "label": 0.10053403220254148,
+          "max_gap_rad": 0.12248203034734706,
+          "quadrature_label_change": 1.1043592644453163e-16,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 5.555400902322594e-07,
+              "label": 0.10053358425702907,
+              "max_gap_rad": 0.22715380949759378,
+              "quadrature_label_change": 4.458850530197964e-14
+            },
+            {
+              "heldout_radius_max_m": 5.382141730122386e-07,
+              "label": 0.10053358523831614,
+              "max_gap_rad": 0.22174699285163246,
+              "quadrature_label_change": 4.1938043067310883e-14
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.003158368948257356,
+              "line_flux": -0.003158368948257357,
+              "stokes_abs_error": 1.3010426069826053e-18
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.0031583689482573567,
+              "line_flux": -0.0031583689482573563,
+              "stokes_abs_error": 4.336808689942018e-19
+            }
+          ],
+          "independent_label": 0.10053400604901523,
+          "independent_label_error": 0.0,
+          "label": 0.10053400604901523,
+          "max_gap_rad": 0.08282551005023198,
+          "quadrature_label_change": 2.7608981611132907e-17,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.280448226909317e-07,
+              "label": 0.10053374369703154,
+              "max_gap_rad": 0.1849185078751211,
+              "quadrature_label_change": 1.140250940539789e-14
+            },
+            {
+              "heldout_radius_max_m": 4.6252654480050115e-07,
+              "label": 0.10053374777702688,
+              "max_gap_rad": 0.2019375849463234,
+              "quadrature_label_change": 1.2341214780176408e-14
+            }
+          ]
+        }
+      ],
+      "s": 0.1,
+      "theta": 4.71238898038469,
+      "transits": 321.000568412326
+    },
+    {
+      "actual_start_RZ": [
+        0.9554726715479133,
+        0.0
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 4,
+      "iota": -0.5681064321030924,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007724217591067743,
+              "line_flux": -0.007724217591067508,
+              "stokes_abs_error": 2.3505503099485736e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007724217591067744,
+              "line_flux": -0.00772421759106774,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.24586948223790542,
+          "max_gap_rad": 0.1932372841342751,
+          "plane": 0,
+          "quadrature_label_change": 7.399207071783619e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 9.983674282391941e-07,
+              "label": 0.24586859581170228,
+              "max_gap_rad": 0.24504803518929208,
+              "quadrature_label_change": 1.30038303388436e-13
+            },
+            {
+              "heldout_radius_max_m": 9.902177540085932e-07,
+              "label": 0.24586850632198282,
+              "max_gap_rad": 0.24621655357687544,
+              "quadrature_label_change": 1.4820501328856145e-13
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.00772421901252977,
+              "line_flux": -0.007724219012529624,
+              "stokes_abs_error": 1.457167719820518e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007724219012529767,
+              "line_flux": -0.0077242190125297715,
+              "stokes_abs_error": 4.336808689942018e-18
+            }
+          ],
+          "label": 0.24586952748444715,
+          "max_gap_rad": 0.17545410394684158,
+          "plane": 1,
+          "quadrature_label_change": 4.693526873892594e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 9.24025694327979e-07,
+              "label": 0.24586863973945294,
+              "max_gap_rad": 0.24580742429369806,
+              "quadrature_label_change": 1.2683566152154458e-13
+            },
+            {
+              "heldout_radius_max_m": 8.992016453206186e-07,
+              "label": 0.2458685817848849,
+              "max_gap_rad": 0.21978780841631274,
+              "quadrature_label_change": 1.2749827708021177e-13
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.007724158674798679,
+              "line_flux": -0.007724158674787542,
+              "stokes_abs_error": 1.1136924715771102e-14
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007724158674798681,
+              "line_flux": -0.007724158674798682,
+              "stokes_abs_error": 8.673617379884035e-19
+            }
+          ],
+          "label": 0.24586760687481551,
+          "max_gap_rad": 0.26918776388191556,
+          "quadrature_label_change": 3.5460975981339104e-13,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.854986035168109e-05,
+              "label": 0.24585260093787237,
+              "max_gap_rad": 0.5062495134904559,
+              "quadrature_label_change": 5.739587012767842e-11
+            },
+            {
+              "heldout_radius_max_m": 2.8480274336346173e-05,
+              "label": 0.24585025248990075,
+              "max_gap_rad": 0.5345128318654968,
+              "quadrature_label_change": 7.460642577664711e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007724200063402352,
+              "line_flux": -0.007724200063400608,
+              "stokes_abs_error": 1.7433970933566911e-15
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007724200063402361,
+              "line_flux": -0.007724200063402364,
+              "stokes_abs_error": 2.6020852139652106e-18
+            }
+          ],
+          "label": 0.24586892431498827,
+          "max_gap_rad": 0.2184118644792461,
+          "quadrature_label_change": 5.5880578780933e-14,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.757379562236874e-07,
+              "label": 0.24586796187366505,
+              "max_gap_rad": 0.2439445118551662,
+              "quadrature_label_change": 1.7012654468780098e-13
+            },
+            {
+              "heldout_radius_max_m": 4.6063760357484274e-07,
+              "label": 0.24586793134428134,
+              "max_gap_rad": 0.24504803518929208,
+              "quadrature_label_change": 1.8740976717637017e-13
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007724222966958861,
+              "line_flux": -0.007724222966958842,
+              "stokes_abs_error": 1.9081958235744878e-17
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.007724222966958865,
+              "line_flux": -0.007724222966958863,
+              "stokes_abs_error": 1.734723475976807e-18
+            }
+          ],
+          "independent_label": 0.2458696533578345,
+          "independent_label_error": 5.551115123125783e-17,
+          "label": 0.24586965335783456,
+          "max_gap_rad": 0.1403895928339347,
+          "quadrature_label_change": 6.626155586671897e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.1109044906833518e-07,
+              "label": 0.24586952748444715,
+              "max_gap_rad": 0.17545410394684158,
+              "quadrature_label_change": 4.693526873892594e-15
+            },
+            {
+              "heldout_radius_max_m": 2.2639005437669057e-07,
+              "label": 0.24586948223790542,
+              "max_gap_rad": 0.1932372841342751,
+              "quadrature_label_change": 7.399207071783619e-15
+            }
+          ]
+        }
+      ],
+      "s": 0.25,
+      "theta": 0.0,
+      "transits": 321.0033623261715
+    },
+    {
+      "actual_start_RZ": [
+        0.9452038399455343,
+        0.08887532611863116
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 5,
+      "iota": -0.5681336570666252,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007888275349849556,
+              "line_flux": -0.007888275349807222,
+              "stokes_abs_error": 4.2334191707738e-14
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.00788827534984973,
+              "line_flux": -0.007888275349849726,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.2510916028906798,
+          "max_gap_rad": 0.2979394848929215,
+          "plane": 0,
+          "quadrature_label_change": 1.3529505348719568e-12,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.161227896120167e-08,
+              "label": 0.25109101713140564,
+              "max_gap_rad": 0.3015623666025707,
+              "quadrature_label_change": 1.5115917432095266e-12
+            },
+            {
+              "heldout_radius_max_m": 2.795435861957518e-08,
+              "label": 0.25109102302262193,
+              "max_gap_rad": 0.3037783609715925,
+              "quadrature_label_change": 1.5053521133654105e-12
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007888275639369688,
+              "line_flux": -0.007888275639327254,
+              "stokes_abs_error": 4.243307094586868e-14
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007888275639369852,
+              "line_flux": -0.007888275639369854,
+              "stokes_abs_error": 1.734723475976807e-18
+            }
+          ],
+          "label": 0.2510916121063917,
+          "max_gap_rad": 0.3002952100226297,
+          "plane": 1,
+          "quadrature_label_change": 1.3559875228491815e-12,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.947075428139101e-08,
+              "label": 0.251091002597413,
+              "max_gap_rad": 0.3039488657296223,
+              "quadrature_label_change": 1.5109843456140816e-12
+            },
+            {
+              "heldout_radius_max_m": 2.0956214801665096e-08,
+              "label": 0.25109101285780816,
+              "max_gap_rad": 0.30360546900670116,
+              "quadrature_label_change": 1.5128617563636387e-12
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.007888260763213759,
+              "line_flux": -0.007888260763158857,
+              "stokes_abs_error": 5.490226329118997e-14
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.00788826076321398,
+              "line_flux": -0.007888260763213976,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.25109113858364324,
+          "max_gap_rad": 0.30675759444545925,
+          "quadrature_label_change": 1.7544955634242739e-12,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.6906211161681635e-05,
+              "label": 0.251082823032075,
+              "max_gap_rad": 0.4144939414763207,
+              "quadrature_label_change": 2.2946708104424116e-11
+            },
+            {
+              "heldout_radius_max_m": 9.156763256940037e-07,
+              "label": 0.2510911482077322,
+              "max_gap_rad": 0.30886978352264327,
+              "quadrature_label_change": 1.852341794254129e-12
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007888269008094704,
+              "line_flux": -0.007888269008045243,
+              "stokes_abs_error": 4.9460435747050724e-14
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007888269008094893,
+              "line_flux": -0.0078882690080949,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.2510914010263541,
+          "max_gap_rad": 0.3034301960555199,
+          "quadrature_label_change": 1.5806141972373588e-12,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.469338532095188e-08,
+              "label": 0.25109107958743915,
+              "max_gap_rad": 0.3069270621295779,
+              "quadrature_label_change": 1.671834272480542e-12
+            },
+            {
+              "heldout_radius_max_m": 1.600500428022844e-08,
+              "label": 0.2510910969530821,
+              "max_gap_rad": 0.30520565203185074,
+              "quadrature_label_change": 1.6648768091145364e-12
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007888281487304957,
+              "line_flux": -0.007888281487264835,
+              "stokes_abs_error": 4.012241927586757e-14
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.007888281487305119,
+              "line_flux": -0.007888281487305119,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "independent_label": 0.2510917982519525,
+          "independent_label_error": 5.551115123125783e-17,
+          "label": 0.25109179825195255,
+          "max_gap_rad": 0.296809703390676,
+          "quadrature_label_change": 1.2822715419474567e-12,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.087248189205139e-09,
+              "label": 0.2510916121063917,
+              "max_gap_rad": 0.3002952100226297,
+              "quadrature_label_change": 1.3559875228491815e-12
+            },
+            {
+              "heldout_radius_max_m": 4.2609081818412164e-09,
+              "label": 0.2510916028906798,
+              "max_gap_rad": 0.2979394848929215,
+              "quadrature_label_change": 1.3529505348719568e-12
+            }
+          ]
+        }
+      ],
+      "s": 0.25,
+      "theta": 1.5707963267948966,
+      "transits": 321.00165008818465
+    },
+    {
+      "actual_start_RZ": [
+        0.9123405873976008,
+        1.1108875540205857e-17
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 6,
+      "iota": -0.5678878232386549,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007833879367973865,
+              "line_flux": -0.007833879367973844,
+              "stokes_abs_error": 2.0816681711721685e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007833879367973863,
+              "line_flux": -0.007833879367973862,
+              "stokes_abs_error": 1.734723475976807e-18
+            }
+          ],
+          "label": 0.24936012501062793,
+          "max_gap_rad": 0.13110558800358163,
+          "plane": 0,
+          "quadrature_label_change": 5.521796322226581e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.550730413390697e-05,
+              "label": 0.24935494124924504,
+              "max_gap_rad": 0.34398791329814515,
+              "quadrature_label_change": 4.063655567416208e-12
+            },
+            {
+              "heldout_radius_max_m": 1.0504200585070844e-05,
+              "label": 0.24935604897237765,
+              "max_gap_rad": 0.4015206707919732,
+              "quadrature_label_change": 1.6112601668257164e-12
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007833879475992483,
+              "line_flux": -0.007833879475992471,
+              "stokes_abs_error": 1.214306433183765e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007833879475992483,
+              "line_flux": -0.007833879475992483,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.24936012844896746,
+          "max_gap_rad": 0.1254143442663799,
+          "plane": 1,
+          "quadrature_label_change": 3.865257425558607e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.4197874592902088e-05,
+              "label": 0.24935542971035068,
+              "max_gap_rad": 0.3639198961291359,
+              "quadrature_label_change": 2.6591314548946545e-12
+            },
+            {
+              "heldout_radius_max_m": 6.76061536078465e-06,
+              "label": 0.24935754896419735,
+              "max_gap_rad": 0.2738168755463851,
+              "quadrature_label_change": 5.53394427413548e-13
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.007833858663094556,
+              "line_flux": -0.007833858663091433,
+              "stokes_abs_error": 3.1225022567582528e-15
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007833858663094627,
+              "line_flux": -0.007833858663094629,
+              "stokes_abs_error": 1.734723475976807e-18
+            }
+          ],
+          "label": 0.2493594659538527,
+          "max_gap_rad": 0.29186607938891873,
+          "quadrature_label_change": 1.0171148825541362e-13,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.6921666047775156e-05,
+              "label": 0.24932789336346803,
+              "max_gap_rad": 0.4586962278475033,
+              "quadrature_label_change": 3.595561849588416e-11
+            },
+            {
+              "heldout_radius_max_m": 2.6837665468834593e-05,
+              "label": 0.24932418621046556,
+              "max_gap_rad": 0.5622760475050206,
+              "quadrature_label_change": 5.634104137624348e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007833880056526361,
+              "line_flux": -0.007833880056526337,
+              "stokes_abs_error": 2.42861286636753e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007833880056526356,
+              "line_flux": -0.007833880056526363,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.24936014692793476,
+          "max_gap_rad": 0.13174288695169878,
+          "quadrature_label_change": 8.282694483339871e-16,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.947089830879519e-06,
+              "label": 0.24935892224508208,
+              "max_gap_rad": 0.3023856023186742,
+              "quadrature_label_change": 1.732739685914701e-13
+            },
+            {
+              "heldout_radius_max_m": 4.484487380440605e-06,
+              "label": 0.24935820290329622,
+              "max_gap_rad": 0.3288854766733964,
+              "quadrature_label_change": 3.420752821619367e-13
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007833881499995624,
+              "line_flux": -0.007833881499995622,
+              "stokes_abs_error": 1.734723475976807e-18
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.007833881499995615,
+              "line_flux": -0.00783388149999562,
+              "stokes_abs_error": 5.204170427930421e-18
+            }
+          ],
+          "independent_label": 0.24936019287498828,
+          "independent_label_error": 0.0,
+          "label": 0.24936019287498828,
+          "max_gap_rad": 0.052980606374999795,
+          "quadrature_label_change": 5.5217963222265814e-17,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.1597116430367427e-07,
+              "label": 0.24936012844896746,
+              "max_gap_rad": 0.1254143442663799,
+              "quadrature_label_change": 3.865257425558607e-16
+            },
+            {
+              "heldout_radius_max_m": 1.1180066096169727e-07,
+              "label": 0.24936012501062793,
+              "max_gap_rad": 0.13110558800358163,
+              "quadrature_label_change": 5.521796322226581e-16
+            }
+          ]
+        }
+      ],
+      "s": 0.25,
+      "theta": 3.141592653589793,
+      "transits": 321.00251473568613
+    },
+    {
+      "actual_start_RZ": [
+        0.9452038399455343,
+        -0.08887532611863116
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 7,
+      "iota": -0.5682383376362037,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007888275212050802,
+              "line_flux": -0.007888275212008477,
+              "stokes_abs_error": 4.2325518090358116e-14
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.00788827521205097,
+              "line_flux": -0.00788827521205097,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.25109159850440915,
+          "max_gap_rad": 0.29933862450684323,
+          "plane": 0,
+          "quadrature_label_change": 1.3526192270926233e-12,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.1489156124682163e-08,
+              "label": 0.25109101811094187,
+              "max_gap_rad": 0.30298838672199935,
+              "quadrature_label_change": 1.5107634737611925e-12
+            },
+            {
+              "heldout_radius_max_m": 2.5902983730174967e-08,
+              "label": 0.2510910244469482,
+              "max_gap_rad": 0.30262460244463263,
+              "quadrature_label_change": 1.5055177672550774e-12
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007888274665867091,
+              "line_flux": -0.007888274665824629,
+              "stokes_abs_error": 4.2462561244960284e-14
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007888274665867253,
+              "line_flux": -0.007888274665867258,
+              "stokes_abs_error": 5.204170427930421e-18
+            }
+          ],
+          "label": 0.2510915811188416,
+          "max_gap_rad": 0.2989983284123014,
+          "plane": 1,
+          "quadrature_label_change": 1.35692622822396e-12,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.418663302972135e-08,
+              "label": 0.2510910186643888,
+              "max_gap_rad": 0.30280764867568966,
+              "quadrature_label_change": 1.5082786654161907e-12
+            },
+            {
+              "heldout_radius_max_m": 2.6394435637122626e-08,
+              "label": 0.251091016538423,
+              "max_gap_rad": 0.30261835648332697,
+              "quadrature_label_change": 1.5165061419363083e-12
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.007888260989551641,
+              "line_flux": -0.007888260989496743,
+              "stokes_abs_error": 5.4898793844238014e-14
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007888260989551853,
+              "line_flux": -0.007888260989551851,
+              "stokes_abs_error": 1.734723475976807e-18
+            }
+          ],
+          "label": 0.2510911457882016,
+          "max_gap_rad": 0.30642412715646206,
+          "quadrature_label_change": 1.7541642556449403e-12,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 6.595513659720179e-05,
+              "label": 0.25107780516217,
+              "max_gap_rad": 0.33346580517364044,
+              "quadrature_label_change": 3.519040796155e-11
+            },
+            {
+              "heldout_radius_max_m": 9.263051454350135e-07,
+              "label": 0.2510911472105191,
+              "max_gap_rad": 0.3092288722287293,
+              "quadrature_label_change": 1.8522865762909066e-12
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.007888268491540732,
+              "line_flux": -0.007888268491491256,
+              "stokes_abs_error": 4.9476048258334515e-14
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.00788826849154092,
+              "line_flux": -0.007888268491540926,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.25109138458393043,
+          "max_gap_rad": 0.30277436494130594,
+          "quadrature_label_change": 1.581055940943137e-12,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 8.639114486286292e-09,
+              "label": 0.25109109467043234,
+              "max_gap_rad": 0.30625820984937047,
+              "quadrature_label_change": 1.6722207982230979e-12
+            },
+            {
+              "heldout_radius_max_m": 1.297486770801548e-08,
+              "label": 0.2510910970577866,
+              "max_gap_rad": 0.3059214092278806,
+              "quadrature_label_change": 1.6649320270777588e-12
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.007888279214714508,
+              "line_flux": -0.007888279214674386,
+              "stokes_abs_error": 4.012241927586757e-14
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.007888279214714671,
+              "line_flux": -0.007888279214714678,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "independent_label": 0.2510917259131521,
+          "independent_label_error": 0.0,
+          "label": 0.2510917259131521,
+          "max_gap_rad": 0.2958674998883595,
+          "quadrature_label_change": 1.282547631763568e-12,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.239194512783984e-09,
+              "label": 0.2510915811188416,
+              "max_gap_rad": 0.2989983284123014,
+              "quadrature_label_change": 1.35692622822396e-12
+            },
+            {
+              "heldout_radius_max_m": 4.148450263863346e-09,
+              "label": 0.25109159850440915,
+              "max_gap_rad": 0.29933862450684323,
+              "quadrature_label_change": 1.3526192270926233e-12
+            }
+          ]
+        }
+      ],
+      "s": 0.25,
+      "theta": 4.71238898038469,
+      "transits": 321.00252254488913
+    },
+    {
+      "actual_start_RZ": [
+        0.9645074717803638,
+        0.0
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 8,
+      "iota": -0.5458458490225394,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015312028695827314,
+              "line_flux": -0.015312028695827302,
+              "stokes_abs_error": 1.214306433183765e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.015312028695827325,
+              "line_flux": -0.015312028695827318,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.48739701116247286,
+          "max_gap_rad": 0.12505710404082704,
+          "plane": 0,
+          "quadrature_label_change": 4.969616690003923e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.59811344538352e-06,
+              "label": 0.4873946762447107,
+              "max_gap_rad": 0.2457341926666743,
+              "quadrature_label_change": 1.6659259504157594e-13
+            },
+            {
+              "heldout_radius_max_m": 1.6088545164508194e-06,
+              "label": 0.4873946798749318,
+              "max_gap_rad": 0.2499744004072162,
+              "quadrature_label_change": 1.6631650522546463e-13
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015312028781481305,
+              "line_flux": -0.015312028781481293,
+              "stokes_abs_error": 1.214306433183765e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.015312028781481317,
+              "line_flux": -0.015312028781481305,
+              "stokes_abs_error": 1.214306433183765e-17
+            }
+          ],
+          "label": 0.487397013888924,
+          "max_gap_rad": 0.12557530643830095,
+          "plane": 1,
+          "quadrature_label_change": 3.865257425558607e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.5666116101320515e-06,
+              "label": 0.4873946881551886,
+              "max_gap_rad": 0.24869662363666833,
+              "quadrature_label_change": 1.6758651837957675e-13
+            },
+            {
+              "heldout_radius_max_m": 1.6216059126397675e-06,
+              "label": 0.48739468763704596,
+              "max_gap_rad": 0.24896813850943778,
+              "quadrature_label_change": 1.6775217226924353e-13
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.015214681978126624,
+              "line_flux": -0.015214671719597079,
+              "stokes_abs_error": 1.025852954493478e-08
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015214682309400483,
+              "line_flux": -0.015214682309399239,
+              "stokes_abs_error": 1.2437967322753707e-15
+            }
+          ],
+          "label": 0.48429837944390497,
+          "max_gap_rad": 1.2431768030834736,
+          "quadrature_label_change": 3.370838720462082e-07,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.00014847441197948091,
+              "label": 0.48322838472273494,
+              "max_gap_rad": 1.3203209387959247,
+              "quadrature_label_change": 5.030008880078913e-07
+            },
+            {
+              "heldout_radius_max_m": 0.00010656664519896261,
+              "label": 0.48382077071191515,
+              "max_gap_rad": 1.2431768030834736,
+              "quadrature_label_change": 4.2811108430660306e-07
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015310774707063714,
+              "line_flux": -0.015310774700764657,
+              "stokes_abs_error": 6.299056762304467e-12
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.015310774707086075,
+              "line_flux": -0.01531077470708607,
+              "stokes_abs_error": 5.204170427930421e-18
+            }
+          ],
+          "label": 0.4873570954611209,
+          "max_gap_rad": 0.5600667882349919,
+          "quadrature_label_change": 2.0121679800824485e-10,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.0542307454875517e-06,
+              "label": 0.4873481972307103,
+              "max_gap_rad": 0.5600667882349919,
+              "quadrature_label_change": 2.1451770098922422e-10
+            },
+            {
+              "heldout_radius_max_m": 1.5965424455519073e-05,
+              "label": 0.4873045083191771,
+              "max_gap_rad": 0.6490594543206027,
+              "quadrature_label_change": 7.872540422141571e-10
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.01531203300822841,
+              "line_flux": -0.015312033008228403,
+              "stokes_abs_error": 6.938893903907228e-18
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.015312033008228405,
+              "line_flux": -0.015312033008228408,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "independent_label": 0.4873971484304628,
+          "independent_label_error": 1.1102230246251565e-16,
+          "label": 0.4873971484304629,
+          "max_gap_rad": 0.06280538846575956,
+          "quadrature_label_change": 1.6565388966679743e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.108298226445205e-07,
+              "label": 0.487397013888924,
+              "max_gap_rad": 0.12557530643830095,
+              "quadrature_label_change": 3.865257425558607e-16
+            },
+            {
+              "heldout_radius_max_m": 3.078556523317122e-07,
+              "label": 0.48739701116247286,
+              "max_gap_rad": 0.12505710404082704,
+              "quadrature_label_change": 4.969616690003923e-16
+            }
+          ]
+        }
+      ],
+      "s": 0.5,
+      "theta": 0.0,
+      "transits": 321.00379040481005
+    },
+    {
+      "actual_start_RZ": [
+        0.9561818376653338,
+        0.1241787327800944
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 9,
+      "iota": -0.545093341045431,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015640369742186393,
+              "line_flux": -0.015640369742186373,
+              "stokes_abs_error": 2.0816681711721685e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0156403697421864,
+              "line_flux": -0.015640369742186393,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.49784843127253203,
+          "max_gap_rad": 0.14065169874376515,
+          "plane": 0,
+          "quadrature_label_change": 6.626155586671897e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 5.18364192261811e-06,
+              "label": 0.4978464512910242,
+              "max_gap_rad": 0.19958351129785612,
+              "quadrature_label_change": 1.3208136802765982e-13
+            },
+            {
+              "heldout_radius_max_m": 3.1326459481451074e-06,
+              "label": 0.497846793469932,
+              "max_gap_rad": 0.2675839353844318,
+              "quadrature_label_change": 1.1187159348831053e-13
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015640369417831604,
+              "line_flux": -0.015640369417831586,
+              "stokes_abs_error": 1.734723475976807e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.01564036941783163,
+              "line_flux": -0.015640369417831618,
+              "stokes_abs_error": 1.3877787807814457e-17
+            }
+          ],
+          "label": 0.49784842094799886,
+          "max_gap_rad": 0.1461962116194382,
+          "plane": 1,
+          "quadrature_label_change": 9.939233380007847e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.2524867930525114e-06,
+              "label": 0.49784660888594673,
+              "max_gap_rad": 0.28030328385889813,
+              "quadrature_label_change": 1.1739338981053712e-13
+            },
+            {
+              "heldout_radius_max_m": 5.268501237151724e-06,
+              "label": 0.4978460084031905,
+              "max_gap_rad": 0.2535756013361512,
+              "quadrature_label_change": 1.875202031028147e-13
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.015590810466612297,
+              "line_flux": -0.015590808401433443,
+              "stokes_abs_error": 2.0651788543157856e-09
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015590810534373601,
+              "line_flux": -0.015590810534373827,
+              "stokes_abs_error": 2.255140518769849e-16
+            }
+          ],
+          "label": 0.4962709126926454,
+          "max_gap_rad": 1.179275720970029,
+          "quadrature_label_change": 6.789360106882489e-08,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.653144477883425e-05,
+              "label": 0.4958081503205852,
+              "max_gap_rad": 1.2348805053536744,
+              "quadrature_label_change": 1.0283742658945027e-07
+            },
+            {
+              "heldout_radius_max_m": 0.00018363919264469813,
+              "label": 0.49544144439298665,
+              "max_gap_rad": 1.2256337252794927,
+              "quadrature_label_change": 1.166984924501211e-07
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015640365898670055,
+              "line_flux": -0.015640365898669108,
+              "stokes_abs_error": 9.471590178833367e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.01564036589867012,
+              "line_flux": -0.01564036589867012,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.4978483089296093,
+          "max_gap_rad": 0.2311326014942625,
+          "quadrature_label_change": 3.224729052180323e-14,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.8256332721202093e-06,
+              "label": 0.49784674616563224,
+              "max_gap_rad": 0.28673738587790787,
+              "quadrature_label_change": 2.3268849701862815e-13
+            },
+            {
+              "heldout_radius_max_m": 5.8600692227003814e-06,
+              "label": 0.49784550232994307,
+              "max_gap_rad": 0.3029930868364872,
+              "quadrature_label_change": 7.134160848316742e-13
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.015640375896016762,
+              "line_flux": -0.015640375896016773,
+              "stokes_abs_error": 1.0408340855860843e-17
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.01564037589601676,
+              "line_flux": -0.015640375896016773,
+              "stokes_abs_error": 1.3877787807814457e-17
+            }
+          ],
+          "independent_label": 0.4978486271550368,
+          "independent_label_error": 0.0,
+          "label": 0.4978486271550368,
+          "max_gap_rad": 0.07186048534222467,
+          "quadrature_label_change": 0.0,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.9525677538999595e-07,
+              "label": 0.49784842094799886,
+              "max_gap_rad": 0.1461962116194382,
+              "quadrature_label_change": 9.939233380007847e-16
+            },
+            {
+              "heldout_radius_max_m": 3.010372061351685e-07,
+              "label": 0.49784843127253203,
+              "max_gap_rad": 0.14065169874376515,
+              "quadrature_label_change": 6.626155586671897e-16
+            }
+          ]
+        }
+      ],
+      "s": 0.5,
+      "theta": 1.5707963267948966,
+      "transits": 321.0012467731977
+    },
+    {
+      "actual_start_RZ": [
+        0.9031117821353127,
+        1.5650616016143783e-17
+      ],
+      "crossings_per_turn": 2,
+      "failures": [
+        "label convergence",
+        "angular coverage",
+        "subset labels",
+        "heldout radius",
+        "quadrature",
+        "subset quadrature"
+      ],
+      "index": 10,
+      "iota": -0.5457459644923394,
+      "launch_scale": 1.0,
+      "passed": false,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.014354448466495024,
+              "line_flux": -0.014354571235749649,
+              "stokes_abs_error": 1.2276925462524624e-07
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.01435447268559347,
+              "line_flux": -0.014354472658872802,
+              "stokes_abs_error": 2.6720667345436766e-11
+            }
+          ],
+          "label": 0.4569170558473815,
+          "max_gap_rad": 1.2533554641016371,
+          "plane": 0,
+          "quadrature_label_change": 3.1377994450924548e-06,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.0012534746567575833,
+              "label": 0.54356193205026,
+              "max_gap_rad": 1.278127965641234,
+              "quadrature_label_change": 1.6721881821649306e-05
+            },
+            {
+              "heldout_radius_max_m": 0.0014009027434604207,
+              "label": 0.4747233341414388,
+              "max_gap_rad": 1.2548223882826246,
+              "quadrature_label_change": 8.171016362827189e-06
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.017480516260557823,
+              "line_flux": -0.017480968033590755,
+              "stokes_abs_error": 4.5177303293134075e-07
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.017480592995039162,
+              "line_flux": -0.017480593005126624,
+              "stokes_abs_error": 1.0087462115615509e-11
+            }
+          ],
+          "label": 0.5564245570130187,
+          "max_gap_rad": 1.2405728058045247,
+          "plane": 1,
+          "quadrature_label_change": 1.1937526773835238e-05,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.0047227371833222925,
+              "label": 0.49741304768635003,
+              "max_gap_rad": 1.2405728058045247,
+              "quadrature_label_change": 7.289919756279259e-07
+            },
+            {
+              "heldout_radius_max_m": 0.00452588729290869,
+              "label": 0.4783174922738355,
+              "max_gap_rad": 1.2665006771443093,
+              "quadrature_label_change": 6.100431102660457e-06
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.015334940817632588,
+              "line_flux": -0.015334886878054628,
+              "stokes_abs_error": 5.393957796043236e-08
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.01533494239855437,
+              "line_flux": -0.015334942398619109,
+              "stokes_abs_error": 6.473814539997846e-14
+            }
+          ],
+          "label": 0.48812637697527517,
+          "max_gap_rad": 1.4274006275333777,
+          "quadrature_label_change": 1.7672744561563785e-06,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.3587331616576066e-05,
+              "label": 0.4876343135473076,
+              "max_gap_rad": 1.4426304675981143,
+              "quadrature_label_change": 1.967986607811681e-06
+            },
+            {
+              "heldout_radius_max_m": 2.7265325719279948e-05,
+              "label": 0.48762119528364856,
+              "max_gap_rad": 1.4405004578463707,
+              "quadrature_label_change": 2.036514103146911e-06
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015365289412250838,
+              "line_flux": -0.015365269758368164,
+              "stokes_abs_error": 1.9653882674108836e-08
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.015365290028083265,
+              "line_flux": -0.015365290028089661,
+              "stokes_abs_error": 6.395925455926488e-15
+            }
+          ],
+          "label": 0.4890923720235893,
+          "max_gap_rad": 1.2674744407247438,
+          "quadrature_label_change": 6.452052742891037e-07,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.5392790684457553e-05,
+              "label": 0.48900502431203136,
+              "max_gap_rad": 1.2745125610952535,
+              "quadrature_label_change": 6.700571227759456e-07
+            },
+            {
+              "heldout_radius_max_m": 2.394991268253599e-05,
+              "label": 0.488791845669472,
+              "max_gap_rad": 1.2805742710377368,
+              "quadrature_label_change": 7.552957017720997e-07
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.01669941729270227,
+              "line_flux": -0.016711406468382768,
+              "stokes_abs_error": 1.198917568049837e-05
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.016698916421769187,
+              "line_flux": -0.016698940701820434,
+              "stokes_abs_error": 2.428005124732735e-08
+            }
+          ],
+          "independent_label": 0.5315437914418621,
+          "independent_label_error": 1.1102230246251565e-16,
+          "label": 0.5315437914418623,
+          "max_gap_rad": 1.2402556337886441,
+          "quadrature_label_change": 0.0003967976735823689,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.002780286275052238,
+              "label": 0.5564245570130187,
+              "max_gap_rad": 1.2405728058045247,
+              "quadrature_label_change": 1.1937526773835238e-05
+            },
+            {
+              "heldout_radius_max_m": 0.0024069897907680188,
+              "label": 0.4569170558473815,
+              "max_gap_rad": 1.2533554641016371,
+              "quadrature_label_change": 3.1377994450924548e-06
+            }
+          ]
+        }
+      ],
+      "s": 0.5,
+      "theta": 3.141592653589793,
+      "transits": 321.00163090070157
+    },
+    {
+      "actual_start_RZ": [
+        0.9561818376653338,
+        -0.1241787327800944
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 11,
+      "iota": -0.5451172383467388,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015640369839936972,
+              "line_flux": -0.015640369839936948,
+              "stokes_abs_error": 2.42861286636753e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.01564036983993696,
+              "line_flux": -0.01564036983993697,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.4978484343840295,
+          "max_gap_rad": 0.11790280616925797,
+          "plane": 0,
+          "quadrature_label_change": 6.626155586671897e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.4085912299284806e-06,
+              "label": 0.4978469208232174,
+              "max_gap_rad": 0.22119585117334983,
+              "quadrature_label_change": 7.134160848316742e-14
+            },
+            {
+              "heldout_radius_max_m": 4.362573489326282e-06,
+              "label": 0.49784656315953574,
+              "max_gap_rad": 0.22223300063399593,
+              "quadrature_label_change": 1.540581173901216e-13
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015640369655699624,
+              "line_flux": -0.01564036965569959,
+              "stokes_abs_error": 3.469446951953614e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.015640369655699624,
+              "line_flux": -0.015640369655699628,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.4978484285195728,
+          "max_gap_rad": 0.1194208887094092,
+          "plane": 1,
+          "quadrature_label_change": 1.214795190889848e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.008995998165676e-06,
+              "label": 0.4978466277852335,
+              "max_gap_rad": 0.23075061950861064,
+              "quadrature_label_change": 1.5063460367034113e-13
+            },
+            {
+              "heldout_radius_max_m": 4.689736340338091e-06,
+              "label": 0.4978463858346942,
+              "max_gap_rad": 0.21286995261491332,
+              "quadrature_label_change": 1.9116458867548425e-13
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.015614315265963982,
+              "line_flux": -0.015614313394706847,
+              "stokes_abs_error": 1.8712571353551866e-09
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015614315286165904,
+              "line_flux": -0.015614315286166093,
+              "stokes_abs_error": 1.8908485888147197e-16
+            }
+          ],
+          "label": 0.4970190921794555,
+          "max_gap_rad": 1.0563485858019135,
+          "quadrature_label_change": 6.020701773968323e-08,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 6.0444905154534434e-05,
+              "label": 0.49672608183678124,
+              "max_gap_rad": 1.1041858023441726,
+              "quadrature_label_change": 9.76226584872566e-08
+            },
+            {
+              "heldout_radius_max_m": 6.242212913763756e-05,
+              "label": 0.4965559670349022,
+              "max_gap_rad": 1.1096318419899056,
+              "quadrature_label_change": 1.0367689015459646e-07
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.015640363176913172,
+              "line_flux": -0.01564036317691148,
+              "stokes_abs_error": 1.6930901125533637e-15
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.01564036317691317,
+              "line_flux": -0.015640363176913162,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.4978482222933945,
+          "max_gap_rad": 0.19362340802243,
+          "quadrature_label_change": 5.3561424325597836e-14,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.617189002319166e-06,
+              "label": 0.4978467428458248,
+              "max_gap_rad": 0.24146062456468914,
+              "quadrature_label_change": 4.741014322263742e-13
+            },
+            {
+              "heldout_radius_max_m": 5.019002113186566e-06,
+              "label": 0.4978455183385835,
+              "max_gap_rad": 0.2597807553135483,
+              "quadrature_label_change": 6.364422440998357e-13
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.015640375613496568,
+              "line_flux": -0.015640375613496578,
+              "stokes_abs_error": 1.0408340855860843e-17
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.01564037561349657,
+              "line_flux": -0.01564037561349657,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "independent_label": 0.49784861816213943,
+          "independent_label_error": 0.0,
+          "label": 0.49784861816213943,
+          "max_gap_rad": 0.05882877497120498,
+          "quadrature_label_change": 2.2087185288906325e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.235546592525451e-07,
+              "label": 0.4978484285195728,
+              "max_gap_rad": 0.1194208887094092,
+              "quadrature_label_change": 1.214795190889848e-15
+            },
+            {
+              "heldout_radius_max_m": 2.986014134426229e-07,
+              "label": 0.4978484343840295,
+              "max_gap_rad": 0.11790280616925797,
+              "quadrature_label_change": 6.626155586671897e-16
+            }
+          ]
+        }
+      ],
+      "s": 0.5,
+      "theta": 4.71238898038469,
+      "transits": 321.0009376631144
+    },
+    {
+      "actual_start_RZ": [
+        0.9715541507956987,
+        0.0
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 12,
+      "iota": -0.5257912155842805,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02229633894062781,
+              "line_flux": -0.022296338940621545,
+              "stokes_abs_error": 6.265821195228227e-15
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0222963389406282,
+              "line_flux": -0.0222963389406282,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.7097145110816736,
+          "max_gap_rad": 0.24377338823743244,
+          "plane": 0,
+          "quadrature_label_change": 2.1181610692061166e-13,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.083679145719388e-05,
+              "label": 0.7096196940567939,
+              "max_gap_rad": 0.48771784554881226,
+              "quadrature_label_change": 9.2205826322627e-11
+            },
+            {
+              "heldout_radius_max_m": 4.269810329123047e-05,
+              "label": 0.7096205800548346,
+              "max_gap_rad": 0.5189966769890648,
+              "quadrature_label_change": 9.328964450475365e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.022296337031617434,
+              "line_flux": -0.022296337031611026,
+              "stokes_abs_error": 6.4080685202583254e-15
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022296337031617847,
+              "line_flux": -0.02229633703161784,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.7097144503159866,
+          "max_gap_rad": 0.24635331860353338,
+          "plane": 1,
+          "quadrature_label_change": 2.1689615953706012e-13,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.266082674293792e-05,
+              "label": 0.7096190957439462,
+              "max_gap_rad": 0.5140945112550837,
+              "quadrature_label_change": 9.232885194468622e-11
+            },
+            {
+              "heldout_radius_max_m": 4.232713171036656e-05,
+              "label": 0.709620122503802,
+              "max_gap_rad": 0.5095933918181941,
+              "quadrature_label_change": 9.485838683989821e-11
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.02229648494881715,
+              "line_flux": -0.022296484948817072,
+              "stokes_abs_error": 7.979727989493313e-17
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02229648494881717,
+              "line_flux": -0.022296484948817155,
+              "stokes_abs_error": 1.3877787807814457e-17
+            }
+          ],
+          "label": 0.7097191586666747,
+          "max_gap_rad": 0.13998512165575727,
+          "quadrature_label_change": 2.650462234668759e-15,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.622140234318949e-06,
+              "label": 0.7097115680778235,
+              "max_gap_rad": 0.2797916867594812,
+              "quadrature_label_change": 6.847027439560961e-13
+            },
+            {
+              "heldout_radius_max_m": 3.4701166929940186e-06,
+              "label": 0.7097115552753213,
+              "max_gap_rad": 0.2758937757287554,
+              "quadrature_label_change": 6.741008950174211e-13
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.022296482659076203,
+              "line_flux": -0.022296482659076165,
+              "stokes_abs_error": 3.8163916471489756e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022296482659076203,
+              "line_flux": -0.022296482659076206,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.7097190857819565,
+          "max_gap_rad": 0.12882475626001755,
+          "quadrature_label_change": 1.3252311173343795e-15,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.2533969131290363e-06,
+              "label": 0.7097115114615037,
+              "max_gap_rad": 0.26863132136374146,
+              "quadrature_label_change": 4.669230970074797e-13
+            },
+            {
+              "heldout_radius_max_m": 3.2441411882688787e-06,
+              "label": 0.709711744334985,
+              "max_gap_rad": 0.2651968127727167,
+              "quadrature_label_change": 4.660396095959234e-13
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022296484250563478,
+              "line_flux": -0.02229648425056346,
+              "stokes_abs_error": 1.734723475976807e-17
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.02229648425056346,
+              "line_flux": -0.02229648425056347,
+              "stokes_abs_error": 1.0408340855860843e-17
+            }
+          ],
+          "independent_label": 0.7097191364405697,
+          "independent_label_error": 1.1102230246251565e-16,
+          "label": 0.7097191364405696,
+          "max_gap_rad": 0.10654675349980947,
+          "quadrature_label_change": 3.3130777933359487e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.1953203039257185e-06,
+              "label": 0.7097144503159866,
+              "max_gap_rad": 0.24635331860353338,
+              "quadrature_label_change": 2.1689615953706012e-13
+            },
+            {
+              "heldout_radius_max_m": 2.1864189826900637e-06,
+              "label": 0.7097145110816736,
+              "max_gap_rad": 0.24377338823743244,
+              "quadrature_label_change": 2.1181610692061166e-13
+            }
+          ]
+        }
+      ],
+      "s": 0.75,
+      "theta": 0.0,
+      "transits": 321.0025852846669
+    },
+    {
+      "actual_start_RZ": [
+        0.9669946976269347,
+        0.1505836606086419
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 13,
+      "iota": -0.5243118199325009,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.022764912661045623,
+              "line_flux": -0.022764912661045633,
+              "stokes_abs_error": 1.0408340855860843e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02276491266104563,
+              "line_flux": -0.022764912661045626,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.724629675843804,
+          "max_gap_rad": 0.08904944943949644,
+          "plane": 0,
+          "quadrature_label_change": 2.2087185288906325e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.448839319497964e-06,
+              "label": 0.7246284948032818,
+              "max_gap_rad": 0.17252666364981106,
+              "quadrature_label_change": 1.0601848938675036e-14
+            },
+            {
+              "heldout_radius_max_m": 5.038649813979279e-07,
+              "label": 0.7246293293900135,
+              "max_gap_rad": 0.1365811916565569,
+              "quadrature_label_change": 1.5461029702234428e-15
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02276491237643144,
+              "line_flux": -0.022764912376431433,
+              "stokes_abs_error": 6.938893903907228e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022764912376431433,
+              "line_flux": -0.022764912376431433,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.7246296667842529,
+          "max_gap_rad": 0.12517646496582246,
+          "plane": 1,
+          "quadrature_label_change": 0.0,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.5055146300120845e-06,
+              "label": 0.7246285408525279,
+              "max_gap_rad": 0.1590844196097696,
+              "quadrature_label_change": 1.435667043778911e-15
+            },
+            {
+              "heldout_radius_max_m": 1.2671902197766705e-06,
+              "label": 0.7246289611047011,
+              "max_gap_rad": 0.24198162844314464,
+              "quadrature_label_change": 2.782985346402197e-14
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.022764854793242084,
+              "line_flux": -0.022764854793241265,
+              "stokes_abs_error": 8.187894806610529e-16
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.022764854793242143,
+              "line_flux": -0.022764854793242154,
+              "stokes_abs_error": 1.0408340855860843e-17
+            }
+          ],
+          "label": 0.7246278338544102,
+          "max_gap_rad": 0.19211550670332622,
+          "quadrature_label_change": 2.8271597169800097e-14,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.0001276708662846862,
+              "label": 0.72451091700571,
+              "max_gap_rad": 0.5711617938995199,
+              "quadrature_label_change": 1.5327126141420433e-10
+            },
+            {
+              "heldout_radius_max_m": 3.460302627206896e-05,
+              "label": 0.7245878957082843,
+              "max_gap_rad": 0.4372870498846839,
+              "quadrature_label_change": 1.2452644629958942e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.022764902749745113,
+              "line_flux": -0.022764902749745027,
+              "stokes_abs_error": 8.673617379884035e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022764902749745113,
+              "line_flux": -0.022764902749745103,
+              "stokes_abs_error": 1.0408340855860843e-17
+            }
+          ],
+          "label": 0.7246293603573098,
+          "max_gap_rad": 0.15705642279056287,
+          "quadrature_label_change": 2.429590381779696e-15,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.2553564261194055e-07,
+              "label": 0.724628189317853,
+              "max_gap_rad": 0.18598140784962514,
+              "quadrature_label_change": 2.0099338612904755e-14
+            },
+            {
+              "heldout_radius_max_m": 4.316068475881951e-07,
+              "label": 0.7246283646736379,
+              "max_gap_rad": 0.19221363277471104,
+              "quadrature_label_change": 1.910541527490397e-14
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02276491438605446,
+              "line_flux": -0.02276491438605445,
+              "stokes_abs_error": 1.0408340855860843e-17
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.02276491438605446,
+              "line_flux": -0.02276491438605446,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "independent_label": 0.7246297307525404,
+          "independent_label_error": 1.1102230246251565e-16,
+          "label": 0.7246297307525406,
+          "max_gap_rad": 0.06655741741416765,
+          "quadrature_label_change": 3.3130777933359487e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.6207986208022218e-07,
+              "label": 0.7246296667842529,
+              "max_gap_rad": 0.12517646496582246,
+              "quadrature_label_change": 0.0
+            },
+            {
+              "heldout_radius_max_m": 1.7163023210281514e-07,
+              "label": 0.724629675843804,
+              "max_gap_rad": 0.08904944943949644,
+              "quadrature_label_change": 2.2087185288906325e-16
+            }
+          ]
+        }
+      ],
+      "s": 0.75,
+      "theta": 1.5707963267948966,
+      "transits": 321.00107835108054
+    },
+    {
+      "actual_start_RZ": [
+        0.8959815372033145,
+        1.9093957896420892e-17
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 14,
+      "iota": -0.5242452913775033,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02280659075763293,
+              "line_flux": -0.02280659075763293,
+              "stokes_abs_error": 0.0
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022806590757632923,
+              "line_flux": -0.02280659075763293,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.7259563308619682,
+          "max_gap_rad": 0.07949060881342307,
+          "plane": 0,
+          "quadrature_label_change": 0.0,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.243549526262766e-06,
+              "label": 0.7259538552661882,
+              "max_gap_rad": 0.19102222970648297,
+              "quadrature_label_change": 2.1203697877350072e-14
+            },
+            {
+              "heldout_radius_max_m": 1.2293345961963964e-06,
+              "label": 0.7259539144649703,
+              "max_gap_rad": 0.1941591160398466,
+              "quadrature_label_change": 2.2087185288906324e-14
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02280659073438495,
+              "line_flux": -0.022806590734384957,
+              "stokes_abs_error": 6.938893903907228e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02280659073438494,
+              "line_flux": -0.022806590734384964,
+              "stokes_abs_error": 2.42861286636753e-17
+            }
+          ],
+          "label": 0.7259563301219625,
+          "max_gap_rad": 0.07942572005895876,
+          "plane": 1,
+          "quadrature_label_change": 2.2087185288906325e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.156559096972265e-06,
+              "label": 0.7259538841200835,
+              "max_gap_rad": 0.19214261672501687,
+              "quadrature_label_change": 2.4075031964907893e-14
+            },
+            {
+              "heldout_radius_max_m": 1.1635239961227395e-06,
+              "label": 0.7259538356199581,
+              "max_gap_rad": 0.1942434973503122,
+              "quadrature_label_change": 2.2639364921128982e-14
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.02280658142799779,
+              "line_flux": -0.022806581427997664,
+              "stokes_abs_error": 1.249000902703301e-16
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.0228065814279978,
+              "line_flux": -0.022806581427997803,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.7259560338904586,
+          "max_gap_rad": 0.16531256490654878,
+          "quadrature_label_change": 4.417437057781265e-15,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 0.00010531779588980605,
+              "label": 0.7257848467182356,
+              "max_gap_rad": 0.5667921430716176,
+              "quadrature_label_change": 1.6359160917637224e-10
+            },
+            {
+              "heldout_radius_max_m": 0.00021152902455785771,
+              "label": 0.7256722315934375,
+              "max_gap_rad": 0.6976905252351848,
+              "quadrature_label_change": 8.567560642525748e-10
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02280659035960388,
+              "line_flux": -0.022806590359603855,
+              "stokes_abs_error": 2.42861286636753e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022806590359603876,
+              "line_flux": -0.02280659035960387,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.7259563181923097,
+          "max_gap_rad": 0.13676485067873312,
+          "quadrature_label_change": 4.417437057781265e-16,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 2.496655299444317e-07,
+              "label": 0.7259561247791946,
+              "max_gap_rad": 0.13676485067873312,
+              "quadrature_label_change": 1.766974823112506e-15
+            },
+            {
+              "heldout_radius_max_m": 4.371777015121925e-07,
+              "label": 0.7259558164728697,
+              "max_gap_rad": 0.19410201313241382,
+              "quadrature_label_change": 6.626155586671897e-15
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02280659220466738,
+              "line_flux": -0.022806592204667395,
+              "stokes_abs_error": 1.3877787807814457e-17
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.022806592204667367,
+              "line_flux": -0.022806592204667395,
+              "stokes_abs_error": 2.7755575615628914e-17
+            }
+          ],
+          "independent_label": 0.7259563769225059,
+          "independent_label_error": 1.1102230246251565e-16,
+          "label": 0.7259563769225058,
+          "max_gap_rad": 0.050701160587558025,
+          "quadrature_label_change": 0.0,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 6.375914313183628e-08,
+              "label": 0.7259563301219625,
+              "max_gap_rad": 0.07942572005895876,
+              "quadrature_label_change": 2.2087185288906325e-16
+            },
+            {
+              "heldout_radius_max_m": 6.586937280339544e-08,
+              "label": 0.7259563308619682,
+              "max_gap_rad": 0.07949060881342307,
+              "quadrature_label_change": 0.0
+            }
+          ]
+        }
+      ],
+      "s": 0.75,
+      "theta": 3.141592653589793,
+      "transits": 321.0008100738797
+    },
+    {
+      "actual_start_RZ": [
+        0.9669946976269347,
+        -0.1505836606086419
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 15,
+      "iota": -0.5245569158330893,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.022764912694099405,
+              "line_flux": -0.0227649126940994,
+              "stokes_abs_error": 3.469446951953614e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.0227649126940994,
+              "line_flux": -0.0227649126940994,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.7246296768959384,
+          "max_gap_rad": 0.09972706571627521,
+          "plane": 0,
+          "quadrature_label_change": 0.0,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.1380776226907474e-06,
+              "label": 0.724629127769628,
+              "max_gap_rad": 0.19323811739678787,
+              "quadrature_label_change": 1.7338440451791465e-14
+            },
+            {
+              "heldout_radius_max_m": 2.479614096405347e-06,
+              "label": 0.724628809261127,
+              "max_gap_rad": 0.13089862406837982,
+              "quadrature_label_change": 2.2639364921128982e-14
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.022764912269049246,
+              "line_flux": -0.02276491226904924,
+              "stokes_abs_error": 6.938893903907228e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02276491226904924,
+              "line_flux": -0.02276491226904925,
+              "stokes_abs_error": 1.0408340855860843e-17
+            }
+          ],
+          "label": 0.7246296633661719,
+          "max_gap_rad": 0.11504839445671741,
+          "plane": 1,
+          "quadrature_label_change": 3.3130777933359487e-16,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.0346939352534612e-06,
+              "label": 0.7246291610798506,
+              "max_gap_rad": 0.18364984366271786,
+              "quadrature_label_change": 1.4135798584900048e-14
+            },
+            {
+              "heldout_radius_max_m": 2.4228098426878897e-06,
+              "label": 0.724628345341346,
+              "max_gap_rad": 0.22232692144321614,
+              "quadrature_label_change": 3.224729052180323e-14
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.022764855046374308,
+              "line_flux": -0.022764855046373433,
+              "stokes_abs_error": 8.743006318923108e-16
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02276485504637438,
+              "line_flux": -0.02276485504637437,
+              "stokes_abs_error": 1.0408340855860843e-17
+            }
+          ],
+          "label": 0.7246278419118589,
+          "max_gap_rad": 0.19176839737951035,
+          "quadrature_label_change": 2.981770014002354e-14,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 9.413987472711716e-05,
+              "label": 0.7245260836209968,
+              "max_gap_rad": 0.5210960603316919,
+              "quadrature_label_change": 2.356640826207496e-10
+            },
+            {
+              "heldout_radius_max_m": 3.628855329493308e-05,
+              "label": 0.7245896595294361,
+              "max_gap_rad": 0.4039024697614968,
+              "quadrature_label_change": 1.1124983922242782e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.022764902616113473,
+              "line_flux": -0.022764902616113393,
+              "stokes_abs_error": 7.979727989493313e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022764902616113476,
+              "line_flux": -0.022764902616113476,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.7246293561036831,
+          "max_gap_rad": 0.1523083813829884,
+          "quadrature_label_change": 2.650462234668759e-15,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.2781543099779107e-07,
+              "label": 0.7246281851412667,
+              "max_gap_rad": 0.19117845814555245,
+              "quadrature_label_change": 2.2639364921128982e-14
+            },
+            {
+              "heldout_radius_max_m": 4.5322351677201667e-07,
+              "label": 0.7246283567735217,
+              "max_gap_rad": 0.18008340466888173,
+              "quadrature_label_change": 1.7448876378235998e-14
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.022764914282970856,
+              "line_flux": -0.02276491428297084,
+              "stokes_abs_error": 1.734723475976807e-17
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.022764914282970807,
+              "line_flux": -0.022764914282970842,
+              "stokes_abs_error": 3.469446951953614e-17
+            }
+          ],
+          "independent_label": 0.724629727471287,
+          "independent_label_error": 2.220446049250313e-16,
+          "label": 0.7246297274712872,
+          "max_gap_rad": 0.06117881103654782,
+          "quadrature_label_change": 1.1043592644453163e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.5588361945012563e-07,
+              "label": 0.7246296633661719,
+              "max_gap_rad": 0.11504839445671741,
+              "quadrature_label_change": 3.3130777933359487e-16
+            },
+            {
+              "heldout_radius_max_m": 1.7403242570657174e-07,
+              "label": 0.7246296768959384,
+              "max_gap_rad": 0.09972706571627521,
+              "quadrature_label_change": 0.0
+            }
+          ]
+        }
+      ],
+      "s": 0.75,
+      "theta": 4.71238898038469,
+      "transits": 321.0021966594003
+    },
+    {
+      "actual_start_RZ": [
+        0.9752612888537305,
+        0.0
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 16,
+      "iota": -0.5147081275232689,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02560743993409479,
+              "line_flux": -0.025607439934094804,
+              "stokes_abs_error": 1.3877787807814457e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.025607439934094794,
+              "line_flux": -0.025607439934094804,
+              "stokes_abs_error": 1.0408340855860843e-17
+            }
+          ],
+          "label": 0.8151101291236186,
+          "max_gap_rad": 0.06436957892678574,
+          "plane": 0,
+          "quadrature_label_change": 0.0,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 4.904039122941017e-06,
+              "label": 0.8151053864642274,
+              "max_gap_rad": 0.20267351108255038,
+              "quadrature_label_change": 5.071217742332892e-13
+            },
+            {
+              "heldout_radius_max_m": 1.18592347624763e-05,
+              "label": 0.8151029931635221,
+              "max_gap_rad": 0.18600012712559266,
+              "quadrature_label_change": 1.1421283512893461e-12
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02560744013675689,
+              "line_flux": -0.025607440136756907,
+              "stokes_abs_error": 1.734723475976807e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02560744013675691,
+              "line_flux": -0.025607440136756907,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.8151101355745537,
+          "max_gap_rad": 0.06423097398704636,
+          "plane": 1,
+          "quadrature_label_change": 0.0,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.1246367222481068e-05,
+              "label": 0.8151032019986142,
+              "max_gap_rad": 0.16745687386657604,
+              "quadrature_label_change": 1.2234091931525214e-12
+            },
+            {
+              "heldout_radius_max_m": 4.891002467116712e-06,
+              "label": 0.8151056454354855,
+              "max_gap_rad": 0.16862917710494552,
+              "quadrature_label_change": 5.097722364679579e-13
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.025607426782885606,
+              "line_flux": -0.02560742678288569,
+              "stokes_abs_error": 8.326672684688674e-17
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.025607426782885655,
+              "line_flux": -0.025607426782885634,
+              "stokes_abs_error": 2.0816681711721685e-17
+            }
+          ],
+          "label": 0.8151097105076291,
+          "max_gap_rad": 0.17250052767340351,
+          "quadrature_label_change": 1.766974823112506e-15,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 9.0783841486336e-05,
+              "label": 0.8150357579415147,
+              "max_gap_rad": 0.3486919080270843,
+              "quadrature_label_change": 9.271272722500741e-11
+            },
+            {
+              "heldout_radius_max_m": 9.334128837680533e-05,
+              "label": 0.8150492508699723,
+              "max_gap_rad": 0.3478061424397181,
+              "quadrature_label_change": 9.389858820316879e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.025607447365524658,
+              "line_flux": -0.025607447365524665,
+              "stokes_abs_error": 6.938893903907228e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.025607447365524647,
+              "line_flux": -0.02560744736552465,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.8151103656733775,
+          "max_gap_rad": 0.07167551291713536,
+          "quadrature_label_change": 4.417437057781265e-16,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 6.482409651981103e-07,
+              "label": 0.8151098891329931,
+              "max_gap_rad": 0.10388894687420569,
+              "quadrature_label_change": 1.3031439320454731e-14
+            },
+            {
+              "heldout_radius_max_m": 2.675978172245186e-06,
+              "label": 0.8151094549155814,
+              "max_gap_rad": 0.14059636879572013,
+              "quadrature_label_change": 2.992813606646807e-14
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.025607442191604907,
+              "line_flux": -0.025607442191604907,
+              "stokes_abs_error": 0.0
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.025607442191604914,
+              "line_flux": -0.0256074421916049,
+              "stokes_abs_error": 1.3877787807814457e-17
+            }
+          ],
+          "independent_label": 0.815110200982397,
+          "independent_label_error": 1.1102230246251565e-16,
+          "label": 0.8151102009823968,
+          "max_gap_rad": 0.032213433957070325,
+          "quadrature_label_change": 2.2087185288906325e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.5965449531862852e-07,
+              "label": 0.8151101355745537,
+              "max_gap_rad": 0.06423097398704636,
+              "quadrature_label_change": 0.0
+            },
+            {
+              "heldout_radius_max_m": 1.627292848249695e-07,
+              "label": 0.8151101291236186,
+              "max_gap_rad": 0.06436957892678574,
+              "quadrature_label_change": 0.0
+            }
+          ]
+        }
+      ],
+      "s": 0.9,
+      "theta": 0.0,
+      "transits": 321.0004755273372
+    },
+    {
+      "actual_start_RZ": [
+        0.9734293867897409,
+        0.16410353708302372
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 17,
+      "iota": -0.5132063153738632,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.025996467989514584,
+              "line_flux": -0.025996467989514688,
+              "stokes_abs_error": 1.0408340855860843e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02599646798951459,
+              "line_flux": -0.025996467989514587,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.8274932767284571,
+          "max_gap_rad": 0.07869092506318509,
+          "plane": 0,
+          "quadrature_label_change": 3.202641866891417e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.6215457442784205e-06,
+              "label": 0.827491150600729,
+              "max_gap_rad": 0.13883050982704948,
+              "quadrature_label_change": 3.303138559955941e-13
+            },
+            {
+              "heldout_radius_max_m": 3.584191440392237e-06,
+              "label": 0.827492181088911,
+              "max_gap_rad": 0.138617674384641,
+              "quadrature_label_change": 1.805627397368092e-13
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.025996467832428823,
+              "line_flux": -0.02599646783242893,
+              "stokes_abs_error": 1.0755285551056204e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02599646783242882,
+              "line_flux": -0.025996467832428836,
+              "stokes_abs_error": 1.734723475976807e-17
+            }
+          ],
+          "label": 0.8274932717282623,
+          "max_gap_rad": 0.07863304921015768,
+          "plane": 1,
+          "quadrature_label_change": 2.981770014002354e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.7398756907031094e-06,
+              "label": 0.8274921730722867,
+              "max_gap_rad": 0.13851121085296603,
+              "quadrature_label_change": 1.7338440451791465e-13
+            },
+            {
+              "heldout_radius_max_m": 3.447120681870919e-06,
+              "label": 0.8274911611742712,
+              "max_gap_rad": 0.1388516458499578,
+              "quadrature_label_change": 3.251233674527011e-13
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.025996429940987373,
+              "line_flux": -0.025996429940993514,
+              "stokes_abs_error": 6.140921104957897e-15
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.025996429940987508,
+              "line_flux": -0.025996429940987505,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.8274920656062245,
+          "max_gap_rad": 0.12379063310737104,
+          "quadrature_label_change": 1.9127502460192877e-13,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 5.928697478266298e-05,
+              "label": 0.8274537377699633,
+              "max_gap_rad": 0.24729481152643773,
+              "quadrature_label_change": 5.688477266009313e-11
+            },
+            {
+              "heldout_radius_max_m": 6.041520188376781e-05,
+              "label": 0.8274483407716763,
+              "max_gap_rad": 0.24726572778435418,
+              "quadrature_label_change": 5.798416230784844e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02599646040519867,
+              "line_flux": -0.025996460405199442,
+              "stokes_abs_error": 7.73686670285656e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02599646040519869,
+              "line_flux": -0.02599646040519869,
+              "stokes_abs_error": 0.0
+            }
+          ],
+          "label": 0.827493035312184,
+          "max_gap_rad": 0.09376158078386565,
+          "quadrature_label_change": 2.396459603846336e-14,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 6.703359436421863e-07,
+              "label": 0.8274923686376943,
+              "max_gap_rad": 0.10877701492759462,
+              "quadrature_label_change": 9.265574228696203e-14
+            },
+            {
+              "heldout_radius_max_m": 5.665821891098766e-07,
+              "label": 0.8274921542062007,
+              "max_gap_rad": 0.10879156595602213,
+              "quadrature_label_change": 1.0723328457764021e-13
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.025996474126897217,
+              "line_flux": -0.025996474126897224,
+              "stokes_abs_error": 6.938893903907228e-18
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.025996474126897238,
+              "line_flux": -0.02599647412689722,
+              "stokes_abs_error": 1.734723475976807e-17
+            }
+          ],
+          "independent_label": 0.827493472087414,
+          "independent_label_error": 2.220446049250313e-16,
+          "label": 0.8274934720874138,
+          "max_gap_rad": 0.04860450159250229,
+          "quadrature_label_change": 1.1043592644453163e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.722917640142098e-07,
+              "label": 0.8274932717282623,
+              "max_gap_rad": 0.07863304921015768,
+              "quadrature_label_change": 2.981770014002354e-15
+            },
+            {
+              "heldout_radius_max_m": 3.528720426554388e-07,
+              "label": 0.8274932767284571,
+              "max_gap_rad": 0.07869092506318509,
+              "quadrature_label_change": 3.202641866891417e-15
+            }
+          ]
+        }
+      ],
+      "s": 0.9,
+      "theta": 1.5707963267948966,
+      "transits": 321.003265294769
+    },
+    {
+      "actual_start_RZ": [
+        0.892276531938749,
+        2.087109419269259e-17
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 18,
+      "iota": -0.5127987640937026,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02613095057754442,
+              "line_flux": -0.026130950577544568,
+              "stokes_abs_error": 1.491862189340054e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.026130950577544408,
+              "line_flux": -0.026130950577544422,
+              "stokes_abs_error": 1.3877787807814457e-17
+            }
+          ],
+          "label": 0.8317739904575919,
+          "max_gap_rad": 0.0718817754203176,
+          "plane": 0,
+          "quadrature_label_change": 4.638308910670328e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.0911052407802657e-05,
+              "label": 0.8317659949399978,
+              "max_gap_rad": 0.15865628640312623,
+              "quadrature_label_change": 2.711754173845474e-12
+            },
+            {
+              "heldout_radius_max_m": 1.1273758931340527e-05,
+              "label": 0.8317659521152444,
+              "max_gap_rad": 0.15683029367633283,
+              "quadrature_label_change": 2.6410751809209737e-12
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02613095061655225,
+              "line_flux": -0.0261309506165524,
+              "stokes_abs_error": 1.491862189340054e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02613095061655226,
+              "line_flux": -0.026130950616552247,
+              "stokes_abs_error": 1.3877787807814457e-17
+            }
+          ],
+          "label": 0.8317739916992496,
+          "max_gap_rad": 0.07188591078034401,
+          "plane": 1,
+          "quadrature_label_change": 4.859180763559392e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.1330608870804837e-05,
+              "label": 0.8317659786139437,
+              "max_gap_rad": 0.1582485146621333,
+              "quadrature_label_change": 2.6385351546127495e-12
+            },
+            {
+              "heldout_radius_max_m": 1.1107393475484617e-05,
+              "label": 0.8317659821536743,
+              "max_gap_rad": 0.15867218466969524,
+              "quadrature_label_change": 2.643394335376309e-12
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.026130429581132254,
+              "line_flux": -0.026130429581661847,
+              "stokes_abs_error": 5.295937299809594e-13
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.026130429581144286,
+              "line_flux": -0.026130429581144282,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.8317574066271082,
+          "max_gap_rad": 0.1995592715400596,
+          "quadrature_label_change": 1.647461063514234e-11,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.7771705697159375e-05,
+              "label": 0.8317184203207593,
+              "max_gap_rad": 0.24322480062723395,
+              "quadrature_label_change": 9.257611798399553e-11
+            },
+            {
+              "heldout_radius_max_m": 2.811487031974258e-05,
+              "label": 0.831719612834167,
+              "max_gap_rad": 0.24245662794016765,
+              "quadrature_label_change": 9.208003980240669e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.026130971422849647,
+              "line_flux": -0.026130971422849654,
+              "stokes_abs_error": 6.938893903907228e-18
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.026130971422849612,
+              "line_flux": -0.026130971422849647,
+              "stokes_abs_error": 3.469446951953614e-17
+            }
+          ],
+          "label": 0.8317746539842653,
+          "max_gap_rad": 0.04384227000282159,
+          "quadrature_label_change": 2.2087185288906325e-16,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 1.0391064882570022e-06,
+              "label": 0.831774024511337,
+              "max_gap_rad": 0.08750764737410588,
+              "quadrature_label_change": 2.782985346402197e-14
+            },
+            {
+              "heldout_radius_max_m": 8.727807801062193e-07,
+              "label": 0.8317740149805147,
+              "max_gap_rad": 0.08751925950500805,
+              "quadrature_label_change": 2.8050725316911032e-14
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02613096343136834,
+              "line_flux": -0.026130963431368337,
+              "stokes_abs_error": 3.469446951953614e-18
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.02613096343136835,
+              "line_flux": -0.026130963431368337,
+              "stokes_abs_error": 1.3877787807814457e-17
+            }
+          ],
+          "independent_label": 0.8317743996075146,
+          "independent_label_error": 0.0,
+          "label": 0.8317743996075146,
+          "max_gap_rad": 0.028115336685250902,
+          "quadrature_label_change": 0.0,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 5.883492279756819e-07,
+              "label": 0.8317739916992496,
+              "max_gap_rad": 0.07188591078034401,
+              "quadrature_label_change": 4.859180763559392e-15
+            },
+            {
+              "heldout_radius_max_m": 5.863824903001857e-07,
+              "label": 0.8317739904575919,
+              "max_gap_rad": 0.0718817754203176,
+              "quadrature_label_change": 4.638308910670328e-15
+            }
+          ]
+        }
+      ],
+      "s": 0.9,
+      "theta": 3.141592653589793,
+      "transits": 321.00300072317884
+    },
+    {
+      "actual_start_RZ": [
+        0.9734293867897409,
+        -0.16410353708302372
+      ],
+      "crossings_per_turn": 2,
+      "failures": [],
+      "index": 19,
+      "iota": -0.5134820956831766,
+      "launch_scale": 1.0,
+      "passed": true,
+      "plane_hit_counts": [
+        321,
+        321
+      ],
+      "planes": [
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.025996467961235576,
+              "line_flux": -0.02599646796123567,
+              "stokes_abs_error": 9.367506770274758e-17
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02599646796123558,
+              "line_flux": -0.025996467961235583,
+              "stokes_abs_error": 3.469446951953614e-18
+            }
+          ],
+          "label": 0.8274932758283083,
+          "max_gap_rad": 0.07841754052334116,
+          "plane": 0,
+          "quadrature_label_change": 2.7608981611132905e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.7070831029051288e-06,
+              "label": 0.8274921524223348,
+              "max_gap_rad": 0.13849591671422745,
+              "quadrature_label_change": 1.6742086448990994e-13
+            },
+            {
+              "heldout_radius_max_m": 3.218368995444587e-06,
+              "label": 0.8274911643947475,
+              "max_gap_rad": 0.1383037369281328,
+              "quadrature_label_change": 3.2357726448247764e-13
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.025996467855635252,
+              "line_flux": -0.025996467855635357,
+              "stokes_abs_error": 1.0408340855860843e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.02599646785563524,
+              "line_flux": -0.025996467855635252,
+              "stokes_abs_error": 1.3877787807814457e-17
+            }
+          ],
+          "label": 0.8274932724669455,
+          "max_gap_rad": 0.07861140155298063,
+          "plane": 1,
+          "quadrature_label_change": 3.3130777933359486e-15,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.7323078348333594e-06,
+              "label": 0.8274911596327735,
+              "max_gap_rad": 0.13878623182314076,
+              "quadrature_label_change": 3.350626008327089e-13
+            },
+            {
+              "heldout_radius_max_m": 3.3892512136257658e-06,
+              "label": 0.8274921926519203,
+              "max_gap_rad": 0.1387386403822921,
+              "quadrature_label_change": 1.836549456772561e-13
+            }
+          ]
+        }
+      ],
+      "prefixes": [
+        {
+          "crossings": 160,
+          "grids": [
+            {
+              "angular_points": 640,
+              "area_flux": -0.025996429600012163,
+              "line_flux": -0.0259964296000184,
+              "stokes_abs_error": 6.238065619612598e-15
+            },
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02599642960001228,
+              "line_flux": -0.02599642960001229,
+              "stokes_abs_error": 1.0408340855860843e-17
+            }
+          ],
+          "label": 0.8274920547526463,
+          "max_gap_rad": 0.12360297535151954,
+          "quadrature_label_change": 1.9447766646882019e-13,
+          "requested": 160,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 5.2044103634629746e-05,
+              "label": 0.8274557201167942,
+              "max_gap_rad": 0.24736464940351954,
+              "quadrature_label_change": 6.083109005566202e-11
+            },
+            {
+              "heldout_radius_max_m": 6.111638433904665e-05,
+              "label": 0.8274455017962068,
+              "max_gap_rad": 0.24707035565812596,
+              "quadrature_label_change": 5.624048946521573e-11
+            }
+          ]
+        },
+        {
+          "crossings": 320,
+          "grids": [
+            {
+              "angular_points": 1280,
+              "area_flux": -0.02599645986459552,
+              "line_flux": -0.025996459864596325,
+              "stokes_abs_error": 8.049116928532385e-16
+            },
+            {
+              "angular_points": 2560,
+              "area_flux": -0.025996459864595527,
+              "line_flux": -0.02599645986459552,
+              "stokes_abs_error": 6.938893903907228e-18
+            }
+          ],
+          "label": 0.8274930181042507,
+          "max_gap_rad": 0.09375362121633968,
+          "quadrature_label_change": 2.5621134935131336e-14,
+          "requested": 320,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 5.34324007442355e-07,
+              "label": 0.82749236144923,
+              "max_gap_rad": 0.10873506001859434,
+              "quadrature_label_change": 9.409140933074094e-14
+            },
+            {
+              "heldout_radius_max_m": 6.61689706818458e-07,
+              "label": 0.827492121496108,
+              "max_gap_rad": 0.10878023524974534,
+              "quadrature_label_change": 1.1021505459164256e-13
+            }
+          ]
+        },
+        {
+          "crossings": 640,
+          "grids": [
+            {
+              "angular_points": 2560,
+              "area_flux": -0.025996474193233875,
+              "line_flux": -0.02599647419323388,
+              "stokes_abs_error": 3.469446951953614e-18
+            },
+            {
+              "angular_points": 5120,
+              "area_flux": -0.025996474193233893,
+              "line_flux": -0.025996474193233865,
+              "stokes_abs_error": 2.7755575615628914e-17
+            }
+          ],
+          "independent_label": 0.8274934741989749,
+          "independent_label_error": 1.1102230246251565e-16,
+          "label": 0.8274934741989748,
+          "max_gap_rad": 0.04853704953383131,
+          "quadrature_label_change": 4.417437057781265e-16,
+          "requested": 640,
+          "subsets": [
+            {
+              "heldout_radius_max_m": 3.5123150909921463e-07,
+              "label": 0.8274932724669455,
+              "max_gap_rad": 0.07861140155298063,
+              "quadrature_label_change": 3.3130777933359486e-15
+            },
+            {
+              "heldout_radius_max_m": 3.536662566416826e-07,
+              "label": 0.8274932758283083,
+              "max_gap_rad": 0.07841754052334116,
+              "quadrature_label_change": 2.7608981611132905e-15
+            }
+          ]
+        }
+      ],
+      "s": 0.9,
+      "theta": 4.71238898038469,
+      "transits": 321.0007689474811
+    }
+  ],
+  "mapping": {
+    "position": 5.518957082084075e-16,
+    "tangent": 3.752092455020661e-15
+  },
+  "orientation": "counterclockwise in R,Z; section normal minus e_phi",
+  "physical_admission": false,
+  "polar_edge_magnitude_error": 4.370170891832004e-11,
+  "provenance": {
+    "external_repositories": {},
+    "host": {
+      "captured_at": "2026-10-07T11:48:09.162255+00:00",
+      "logical_cpu_count": 8,
+      "machine": "arm64",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+      "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+    },
+    "repository": {
+      "available": true,
+      "branch": "research/issue48-continuation-labels",
+      "commit": "3198a16c006e731aa62dba1588fd69d17bfa0c05",
+      "dirty": false,
+      "path": "/private/tmp/fusion-issue48-continuation-labels-20261007"
+    },
+    "schema_version": 1
+  },
+  "quadrature_kind": "interval Gauss",
+  "radial_quadrature": 24,
+  "requested_crossings": 640,
+  "requested_transits": 320,
+  "selected_start_index": null,
+  "sources_after": {
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/docs/optimization/ISSUE48_CONTINUATION_LABELS.md": "d5e5e2adb4208fa453d9e44ad4234451767f03afdd2bd1b94ea3fa79c997a7d7",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/diagnose_flux_quadrature.py": "64dde3bd9d10e9207a020bb59ff190f41c44e6b1659c8e2b0761ea590de8478f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/measure_flux_labels.py": "0639c6f453594743122b90e8be0fd0d64a3e170d4c992a25cc8010f4148b2462",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/qualify_saved_flux_labels.py": "c571b8e4d041ddb2da2ad9afda3763dcc6a306bbe5390c831deb2bc27391562a",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/__init__.py": "8d36f4ca6cbd9c95d1286a5f7914db91f020133819f8e39eb5aba6c405cc1390",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/bounce_action.py": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/clear_coil_field_audit.py": "ceb6584e9137e75b67a67b7a24ae2ab1aea01aa85b8f5748952dfbb2f5f802dd",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_bounce.py": "8c2f599c2e6ca1db373e536ad6e9743a9f8f2d609bab7f55d52922f1fc90b6e2",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_check.py": "b42ae92a5390ac1356222d1a3e5468d55ff9563b49d044126c92c9dac5269c78",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_fit.py": "8057dec95c181379dbf85b5e229ed2943035c73a555aaed049f7e95fac26348f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_trajectory.py": "6eb8f58b4ab876cfa7dafe3b1fd527269741f523f88dd3098b503d04cdb0f219",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coupled_coil_audit.py": "3f9a5cee83447bc61d0cd633cdaac13e90a09f2bee42b6c908166d0f42476ba5",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/documentation.py": "7fcfd5475aface32114e5845ff997edb2926f541f823d566d29185da47116aeb",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/documentation_policy.py": "72de8a9b9321992af6655b19c6bd30c81d50263ba5918c23bb8887a5d6d91dc3",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/flux_labels.py": "6a99bdada7a0bbfbcde8cbd2b0ff19c626f2bbfd7ddc16043daee6d8724edcd9",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/provenance.py": "9960f5021f8b1d80e5d524df77df986cf889e7db8391e167ecb00776ae7faa29",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/realized_field.py": "d071f01f818e0294686124f9756f564362d2f2dcfdaf9e1ecf3230eaea79e5b0",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/reference_wout.py": "f11823877c64f41f600afa133be087f0ea25dafc757215d7b07f3faae765032f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/vmec_trace.py": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/wout_target.py": "886fdd7348566624a0c7f62c5929aedf0c72f66e160d0f648a6d5a710813bc96",
+    "/private/tmp/issue26-shallow-wells-v1/run/continuation-snapshot.json": "73972fc86375fcffa67a44833d1c87016e7ff9d070857aac97acc1dcf335bb97"
+  },
+  "sources_before": {
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/docs/optimization/ISSUE48_CONTINUATION_LABELS.md": "d5e5e2adb4208fa453d9e44ad4234451767f03afdd2bd1b94ea3fa79c997a7d7",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/diagnose_flux_quadrature.py": "64dde3bd9d10e9207a020bb59ff190f41c44e6b1659c8e2b0761ea590de8478f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/measure_flux_labels.py": "0639c6f453594743122b90e8be0fd0d64a3e170d4c992a25cc8010f4148b2462",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/qualify_saved_flux_labels.py": "c571b8e4d041ddb2da2ad9afda3763dcc6a306bbe5390c831deb2bc27391562a",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/__init__.py": "8d36f4ca6cbd9c95d1286a5f7914db91f020133819f8e39eb5aba6c405cc1390",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/bounce_action.py": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/clear_coil_field_audit.py": "ceb6584e9137e75b67a67b7a24ae2ab1aea01aa85b8f5748952dfbb2f5f802dd",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_bounce.py": "8c2f599c2e6ca1db373e536ad6e9743a9f8f2d609bab7f55d52922f1fc90b6e2",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_check.py": "b42ae92a5390ac1356222d1a3e5468d55ff9563b49d044126c92c9dac5269c78",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_fit.py": "8057dec95c181379dbf85b5e229ed2943035c73a555aaed049f7e95fac26348f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_trajectory.py": "6eb8f58b4ab876cfa7dafe3b1fd527269741f523f88dd3098b503d04cdb0f219",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coupled_coil_audit.py": "3f9a5cee83447bc61d0cd633cdaac13e90a09f2bee42b6c908166d0f42476ba5",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/documentation.py": "7fcfd5475aface32114e5845ff997edb2926f541f823d566d29185da47116aeb",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/documentation_policy.py": "72de8a9b9321992af6655b19c6bd30c81d50263ba5918c23bb8887a5d6d91dc3",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/flux_labels.py": "6a99bdada7a0bbfbcde8cbd2b0ff19c626f2bbfd7ddc16043daee6d8724edcd9",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/provenance.py": "9960f5021f8b1d80e5d524df77df986cf889e7db8391e167ecb00776ae7faa29",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/realized_field.py": "d071f01f818e0294686124f9756f564362d2f2dcfdaf9e1ecf3230eaea79e5b0",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/reference_wout.py": "f11823877c64f41f600afa133be087f0ea25dafc757215d7b07f3faae765032f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/vmec_trace.py": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/wout_target.py": "886fdd7348566624a0c7f62c5929aedf0c72f66e160d0f648a6d5a710813bc96",
+    "/private/tmp/issue26-shallow-wells-v1/run/continuation-snapshot.json": "73972fc86375fcffa67a44833d1c87016e7ff9d070857aac97acc1dcf335bb97"
+  },
+  "surface_summary": [
+    {
+      "labels": [
+        0.09733597328290738,
+        0.10053400640852153,
+        0.1011706763833825,
+        0.10053400604901523
+      ],
+      "line_qualified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "max_absolute_offset": 0.0026640267170926213,
+      "numerically_qualified": true,
+      "phase_spread": 0.003834703100475109,
+      "phase_spread_exceeds_0_005": false,
+      "phases_complete": true,
+      "s": 0.1,
+      "theta": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ]
+    },
+    {
+      "labels": [
+        0.24586965335783456,
+        0.25109179825195255,
+        0.24936019287498828,
+        0.2510917259131521
+      ],
+      "line_qualified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "max_absolute_offset": 0.004130346642165439,
+      "numerically_qualified": true,
+      "phase_spread": 0.005222144894117986,
+      "phase_spread_exceeds_0_005": true,
+      "phases_complete": true,
+      "s": 0.25,
+      "theta": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ]
+    },
+    {
+      "labels": [
+        0.4873971484304629,
+        0.4978486271550368,
+        0.5315437914418623,
+        0.49784861816213943
+      ],
+      "line_qualified": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "numerically_qualified": false,
+      "phases_complete": true,
+      "s": 0.5,
+      "theta": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ]
+    },
+    {
+      "labels": [
+        0.7097191364405696,
+        0.7246297307525406,
+        0.7259563769225058,
+        0.7246297274712872
+      ],
+      "line_qualified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "max_absolute_offset": 0.04028086355943039,
+      "numerically_qualified": true,
+      "phase_spread": 0.0162372404819362,
+      "phase_spread_exceeds_0_005": true,
+      "phases_complete": true,
+      "s": 0.75,
+      "theta": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ]
+    },
+    {
+      "labels": [
+        0.8151102009823968,
+        0.8274934720874138,
+        0.8317743996075146,
+        0.8274934741989748
+      ],
+      "line_qualified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "max_absolute_offset": 0.08488979901760318,
+      "numerically_qualified": true,
+      "phase_spread": 0.01666419862511781,
+      "phase_spread_exceeds_0_005": true,
+      "phases_complete": true,
+      "s": 0.9,
+      "theta": [
+        0.0,
+        1.5707963267948966,
+        3.141592653589793,
+        4.71238898038469
+      ]
+    }
+  ],
+  "target_flux_relative_error": 6.661338147750939e-16,
+  "target_id": "reference401",
+  "target_oriented_flux": -0.03141592653589795
+}

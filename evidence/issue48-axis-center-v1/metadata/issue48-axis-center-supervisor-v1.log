@@ -1,0 +1,22 @@
+{
+  "completed": false,
+  "revision": "daff62fbce104b7d48b0210be1f899a69f49bc33",
+  "disabled_native_packages": [
+    "mpi4py",
+    "netCDF4",
+    "vmecpp",
+    "matplotlib"
+  ],
+  "driver_budget_s": 240,
+  "supervisor_budget_s": 270,
+  "output_limit_bytes": 268435456,
+  "physical_admission": false,
+  "environment_files": 1662,
+  "returncode": 1,
+  "cleanup_confirmed": true,
+  "error": "ValueError: Scientific driver failed; retain partial output",
+  "termination_requested": false,
+  "elapsed_s": 1.7001146250404418,
+  "wall_elapsed_s": 1.7000880241394043,
+  "retained_bytes_before_receipt": 10720
+}
