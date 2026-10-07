@@ -36,3 +36,6 @@ reference receipt/domain, without recomputing that reference's arrays. It does
 not rerun the equilibrium, numerical intake or fields, validate coils, or
 re-attest timing/host conditions. The archive records reproduction and local
 availability. Agent review is not external physics peer review.
+
+The later [fixed-point phase/resolution validation](ISSUE37_STEP_VALIDATION_RESULT.md)
+passes both grids and refinement checks. It does not establish coil feasibility.

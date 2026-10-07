@@ -48,8 +48,9 @@ spend effort on decisions that test the path.
    host clock disagreement; the [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md)
    completed but missed the ideal-gain hurdle. The registered
    [smaller-step screen](optimization/ISSUE37_STEP_SCALE_RESULT.md) reduces training
-   score 3.22%. Validate this fixed point's phase/resolution behavior before another
-   coil comparison. Preserve previous verdicts and gates; register validation first.
+   score 3.22%; [phase/resolution validation](optimization/ISSUE37_STEP_VALIDATION_RESULT.md)
+   retains a 3.258% ideal gain. Test this fixed target's coil feasibility under a
+   separately registered fitting/check budget. Preserve previous verdicts and gates.
    Qualify a common realized-field endpoint before claiming benefit; missing
    surfaces or wells restrict the next pilot to feasibility.
 4. **Make the decisive test portable.** Supply the missing target data and reuse

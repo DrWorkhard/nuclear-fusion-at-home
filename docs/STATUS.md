@@ -1,6 +1,6 @@
 # Scientific status
 
-Updated 7 October 2026; includes the local smaller-step screen.
+Updated 7 October 2026; includes local fixed-point validation.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The matched
@@ -18,8 +18,9 @@ disagreement and remains inconclusive. A separately registered
 **change**: selected joint held-out score was 9.17% worse; both candidates still
 fail absolute field limits. The later
 [smaller-step screen](optimization/ISSUE37_STEP_SCALE_RESULT.md) reduces training
-score **3.22%**. Held-out validation and coil feasibility remain unestablished;
-local evidence awaits publication. Actual-coil benefit remains unresolved.
+score 3.22%; [phase/resolution validation](optimization/ISSUE37_STEP_VALIDATION_RESULT.md)
+retains **3.258% ideal gain**. Coil feasibility and actual-coil benefit remain
+unestablished. Local evidence awaits publication.
 Present evidence does not substantiate the README's reactor-design timeline.
 
 The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduces

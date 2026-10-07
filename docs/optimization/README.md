@@ -200,4 +200,6 @@ ideal-target check. Its [completed result](ISSUE37_STEP_SCALE_RESULT.md) reduces
 training score 3.22%; phase/resolution validation comes before another coil comparison.
 
 The [fixed-point validation](ISSUE37_STEP_VALIDATION.md) freezes the next four
-ideal-target scores and their phase/refinement hurdles, with no new tuning.
+ideal-target scores and their phase/refinement hurdles. Its
+[completed result](ISSUE37_STEP_VALIDATION_RESULT.md) preserves a 3.258% ideal
+gain on both grids; coil feasibility remains untested for this candidate.
