@@ -54,6 +54,9 @@ Implementation: [driver](../../scripts/fit_coils.py),
 [objective and search](../../src/fusion_baselines/coil_fit.py),
 [checks and target intake](../../src/fusion_baselines/coil_check.py).
 Independent geometry/field mathematics stay separate from optimization penalties.
+The [versioned trajectory export](COIL_TRAJECTORY_V1.md) joins existing run files
+without native dependencies, retaining failed/incomplete evaluations and unknown
+optimizer-step labels. It does not change recording or acceptance checks.
 The default remains reference401. `--target selected401 --wout <archived-wout>`
 selects the hash-bound improved Step 3 target with its frozen normalization.
 `check_coils.py` supports the same option; `trace_surfaces.py --snapshot` preserves
