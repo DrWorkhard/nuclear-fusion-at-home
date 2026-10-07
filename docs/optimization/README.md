@@ -6,6 +6,8 @@ One normalized fitter, one set of field/geometry checks.
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
 geometry families, label compatibility, rights and the prerequisites for a learning pilot.
+The [first sample intake](ISSUE65_COMMUNITY_SAMPLE.md) verifies a requirements
+join and scalar arithmetic; unavailable coil/boundary joins leave qualification open.
 
 The [bounded retention plan](ISSUE66_RETENTION_PLAN.md) measures one existing run
 and a small local restore; durable custody and remote retrieval remain open.
