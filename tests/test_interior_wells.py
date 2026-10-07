@@ -50,7 +50,9 @@ def test_decision_retains_new_and_unstable_failures():
                               ({(0.1, 0.03)}, "lower-interior-error-insufficient"),
                               ({(0.9, 0.97)}, "lower-interior-error-insufficient")):
         arms = dict(reference=reference, continuation=comparison(failure))
-        assert module.compare(arms, ideal, 0.002)["verdict"] == expected
+        result = module.compare(arms, ideal, 0.002)
+        assert result["verdict"] == expected
+        assert result["core_restored"] == (not (failure & module.EXPECTED_FAILURES))
     arms["continuation"][0]["1601"][0]["error"] = "missing"
     assert module.compare(arms, ideal, 0.002)["verdict"] == "inconclusive"
 
@@ -64,3 +66,26 @@ def test_one_action_cannot_hide_in_an_aggregate():
     assert result["reason"] == "individual action refinement"
     arms["continuation"] = comparison(set())
     assert module.compare(arms, ideal, 0.009)["reason"] == "interior contrast not reproduced"
+
+
+def test_failure_receipt_respects_cap_and_preserves_attempt(tmp_path, monkeypatch):
+    from fusion_baselines.coil_fit import Recorder
+
+    monkeypatch.setattr(module, "MAX_OUTPUT_BYTES", 8192)
+    monkeypatch.setattr(module, "FAILURE_RESERVE", 4096)
+    record = Recorder(tmp_path/"run", module.START+900)
+    module.save_payload(record, "result.json", b"x"*4000)
+    with pytest.raises(ValueError, match="output ceiling"):
+        module.save_payload(record, "progress.json", b"x"*100)
+    # Model an interrupted publication, which the shared recorder charges to storage.
+    (record.output/"result.json.tmp").write_bytes(b"partial")
+    record.storage[0] += 7
+    receipt = module.save_failure(record, ValueError("x"*10000), "a"*40, "b"*64)
+    assert receipt["completed"] is False
+    assert receipt["decision"]["verdict"] == "inconclusive"
+    assert (record.output/"attempted-result.json").read_bytes() == b"x"*4000
+    assert (record.output/"result.json.tmp").read_bytes() == b"partial"
+    assert record.storage[0] == sum(p.stat().st_size for p in record.output.iterdir())
+    assert record.storage[0] <= module.MAX_OUTPUT_BYTES
+    with pytest.raises(ValueError, match="output ceiling"):
+        module.save_payload(record, "too-large.json", b"x"*8192, failure=True)

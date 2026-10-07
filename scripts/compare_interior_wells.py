@@ -28,6 +28,7 @@ SCIENTIFIC_ERRORS = {
     "exactly two uncensored wells required on every line",
     "well family crosses its registered field period",
 }
+MAX_OUTPUT_BYTES, FAILURE_RESERVE = 64*1024**2, 1024**2
 
 
 def need(condition, message):
@@ -37,6 +38,28 @@ def need(condition, message):
 
 def digest(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+def save_payload(record, name, value, *, failure=False):
+    payload = value if isinstance(value, bytes) else (
+        json.dumps(value, sort_keys=True, allow_nan=False, indent=2)+"\n").encode("utf-8")
+    ceiling = MAX_OUTPUT_BYTES if failure else MAX_OUTPUT_BYTES-FAILURE_RESERVE
+    need(record.storage[0]+len(payload) <= ceiling, "64 MiB output ceiling exceeded")
+    record.save(name, payload)
+
+
+def save_failure(record, error, revision, config_sha):
+    output = record.output
+    if (output/"result.json").exists():
+        (output/"result.json").rename(output/"attempted-result.json")
+    receipt = dict(completed=False, error=f"{type(error).__name__}: {error}"[:1024],
+                   elapsed_s=time.monotonic()-START, producer_evaluator=revision,
+                   config_sha256=config_sha,
+                   decision=dict(verdict="inconclusive", reason="execution failed"),
+                   retained_files=sorted(p.name for p in output.iterdir() if p.is_file()))
+    # A separate name preserves a failed result.json.tmp without retrying its publication.
+    save_payload(record, "failure.json", receipt, failure=True)
+    return receipt
 
 
 def clean_head(revision):
@@ -128,7 +151,8 @@ def compare(arms, ideal, interior_rms):
                 error = float(np.max(np.abs(np.asarray(fine["result"]["actions"])
                                              / coarse["result"]["actions"]-1)))
                 maximum = max(maximum, error)
-    result = dict(failed_cells=masks, max_individual_action_refinement=maximum)
+    result = dict(failed_cells=masks, max_individual_action_refinement=maximum,
+                  core_restored=not (EXPECTED_FAILURES & set(map(tuple, masks["continuation"]))))
     if masks["ideal"] or set(map(tuple, masks["reference"])) != EXPECTED_FAILURES:
         return dict(**result, verdict="inconclusive", reason="ideal/reference control mismatch")
     if maximum > 1e-3:
@@ -191,10 +215,7 @@ def run(config_path, config_sha, output, revision):
                   benefit_transfer_confirmed=False, realized_flux_labels_qualified=False)
 
     def save(name, value):
-        payload = value if isinstance(value, bytes) else (
-            json.dumps(value, sort_keys=True, allow_nan=False, indent=2)+"\n").encode()
-        need(record.storage[0]+len(payload) <= 64*1024**2, "64 MiB output ceiling exceeded")
-        record.save(name, payload)
+        save_payload(record, name, value)
 
     def arrays(name, values):
         stream = io.BytesIO()
@@ -271,12 +292,7 @@ def run(config_path, config_sha, output, revision):
         save("result.json", report)
         guard()
     except Exception as error:
-        if (output/"result.json").exists():
-            (output/"result.json").rename(output/"attempted-result.json")
-        report.update(completed=False, error=f"{type(error).__name__}: {error}",
-                      elapsed_s=time.monotonic()-START,
-                      decision=dict(verdict="inconclusive", reason="execution failed"))
-        record.save("result.json", report)
+        report = save_failure(record, error, revision, config_sha)
     print(json.dumps({key: report[key] for key in ("completed", "elapsed_s", "decision", "error")
                       if key in report}, indent=2))
     return 0 if report["completed"] else 1

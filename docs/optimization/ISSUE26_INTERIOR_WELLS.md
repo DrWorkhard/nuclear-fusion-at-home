@@ -41,12 +41,14 @@ Before interpreting improvement, reference failed cells must be exactly
 be stable. On every successful cell, every alpha and both period families,
 require max |J1601/J801−1| ≤1e-3. A **promising shallow-well association** requires
 the interior contrast, restoration of both core cells and no new failed cells
-relative to reference at either grid. Stable, numerically qualified failure to
-restore them means **lower interior error was insufficient for this candidate**.
-Other cases are inconclusive. Partial changes remain visible without promotion.
+relative to reference at either grid. Any stable, numerically qualified remaining
+or new failed cell means **lower interior error was insufficient for this
+candidate's full screened domain**, even if both core cells recover. Record core
+restoration separately. Other cases are inconclusive; partial changes remain visible.
 
 One attempt, 900 s total including imports/intake/dense check/diagnostics/IO,
-one native thread, 64 MiB output, 3 GiB initial / 2 GiB live disk reserve and
+one native thread, 64 MiB output (including temporary writes, with 1 MiB reserved
+for a compact failure receipt), 3 GiB initial / 2 GiB live disk reserve and
 5 s wall/monotonic agreement. Freeze code and external input hashes before running;
 check clean source and unchanged inputs before/after. Retain timeouts and failures.
 No automatic extension, extra seed, larger grid or gate relaxation.
