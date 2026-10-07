@@ -1,6 +1,6 @@
 # Registered joint-target numerical intake
 
-Prospective implementation check, 7 October 2026. The decision is whether the
+Implemented and checked on 7 October 2026. The decision is whether the
 [frozen joint proposals](ISSUE37_JOINT_FEASIBILITY.md) can supply internally
 consistent target arrays without impersonating either archived target.
 [`joint_target.py`](../../src/fusion_baselines/joint_target.py) is a separate
@@ -37,15 +37,24 @@ measured target B² separately. Any failed check returns no target arrays.
 
 ## Validation and remaining execution prerequisites
 
-Synthetic analytic and mutation tests cover input isolation, malformed Wouts,
-force/vacuum/flux checks, representation corruption, geometry normalization and
-caller deadlines. Before using new equilibria, freeze and review this component,
-then run one bounded original-Wout software positive control: 60 s driver, 75 s
-external process-group supervision, one thread, 256 MiB output and 3/2 GiB initial/
-live disk reserves. Bind the original Wout hash and compare returned reference
-arrays to the public starter and original B² scale. Record both clocks, source/
-input hashes before/after, environment, all six field checks and failures; clock
-disagreement above 5 s is incomplete. No solves, new targets or fits occur here.
+At clean producer/evaluator `e0e3104ac954e5ca45e1a13516b802f3bf595d40`,
+337 research tests (45 focused) and 61 public tests, docs, Ruff and diff pass.
+A reviewed original-Wout software control reproduces the public starter's 64
+interior points/fields and original B² exactly. All six field checks pass;
+maximum positive representation discrepancy is 5.064e-7, independent geometry
+2.053e-15. Out-of-range interior harmonics are rejected before sampling.
+Driver 2.064 s, supervision 2.206 s within 60/75 s caps; one thread, 256 MiB,
+3/2 GiB disk reserves, unchanged source/input hashes and clock discrepancy below
+0.001 s. No equilibrium solve, proposal Wout or coil fit was produced.
+
+Local evidence `evidence-issue37-intake-control-v1` is prepared at archive
+`488614e1a9fcf91cb710dc1e187fe852457c5a7b`, payload
+`evidence/issue37-intake-control-v1`; all six raw files (23,093 bytes) are preserved.
+The 13-entry manifest SHA256 is
+`6b8407596f82508b55d9a7d3ea7b83270ec1b17624eb19b9e730a245f24e733d`.
+The archive contains the exact control/reproduction command; the original hashed
+Wout remains local-only. Synthetic tests need no historical evidence. Publication
+is pending. Agent review is not external physics review.
 
 A supplied hash proves byte identity, **not solver provenance**. The future trusted
 runner must bind each exact input to a successful budgeted solve, its executable/
