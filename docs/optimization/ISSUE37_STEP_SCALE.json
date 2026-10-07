@@ -1,0 +1,102 @@
+{
+  "budget": {
+    "clock_disagreement_limit_seconds": 5,
+    "clocks": [
+      "monotonic",
+      "UTC wall elapsed"
+    ],
+    "includes": [
+      "imports and setup",
+      "source/input verification",
+      "one cold equilibrium solve",
+      "independent numerical intake",
+      "full training-domain action score",
+      "final source/environment checks and reporting"
+    ],
+    "initial_free_bytes": 3221225472,
+    "live_free_bytes": 2147483648,
+    "native_threads": 1,
+    "retained_bytes": 268435456,
+    "total_seconds": 600
+  },
+  "claims": {
+    "actual_coil_endpoint": null,
+    "coil_feasibility_established": false,
+    "heldout_gain_established": false,
+    "optimality_established": false,
+    "physical_admission": false
+  },
+  "coordinate": {
+    "baseline_m": -0.00788128880747288,
+    "delta_m": 0.00035,
+    "field": "rbc",
+    "m": 2,
+    "n": 1
+  },
+  "decision": {
+    "inconclusive": "Uncompleted solve/intake, unclassified software/numerical failure, missing required work or resource/clock/source interruption.",
+    "negative": "Complete eligible score misses threshold, or fully recorded ineligible training domain.",
+    "no_alternative_point": true,
+    "no_budget_extension": true,
+    "no_retry": true,
+    "positive": "Complete eligible score <=0.99 times frozen reference training score: merits separately registered validation.",
+    "threshold_ratio": 0.99
+  },
+  "execution_enabled": false,
+  "execution_prerequisites": [
+    "Clean reviewed producer, exact configuration and dependency inventories.",
+    "Pre-execution software checks and adversarial review.",
+    "Fresh output, AC power and owned temporary sleep assertions."
+  ],
+  "host": {
+    "admission_to_launch_seconds_max": 30,
+    "cleanup": "After scientific session is terminal, terminate owned assertion process, poll to terminal, verify absence; use sandbox escalation if required. Preserve every attempt.",
+    "command": "caffeinate -i -s -t 720",
+    "conditions": "AC and both owned sleep assertions at admission, sampled during execution and after scientific termination; failed query or observed AC/assertion loss makes enclosing result inconclusive.",
+    "limits": "No proof of continuous host conditions or external-load control; assertion is not a scientific watchdog."
+  },
+  "input_sha256": "68dac87c81a3356805736fa874175e20041b3c5a79966e6247adb68b31460dcf",
+  "kind": "prospective single-point in-sample ideal-target screen",
+  "original_input_sha256": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+  "proposal": "scale035",
+  "protocol_id": "issue37-step-scale-v1",
+  "rationale": "Three-point quadratic of frozen training scores suggests an unvalidated interior minimum near +0.34417mm; fixed +0.35mm tests that hypothesis without fitting coils.",
+  "reference": {
+    "archive": "6241c428d47c8a5d23600915d5e0bb23f7414215",
+    "availability": "local archive only; exact source report required",
+    "producer": "b9cab3190a971d5f75387bdef29432da5bf93f22",
+    "report_path": "evidence/issue37-joint-comparison-v2/raw/C/control-score/run/result.json",
+    "report_sha256": "6832e3962a9f2fcb2cb7ef009457397108dfbb2ced408be807d3a2188b1249c0",
+    "score": 0.00023817620290847872
+  },
+  "schema_version": 1,
+  "science": {
+    "coil_fit": false,
+    "heldout_evaluation": false,
+    "intake": "Original size, equilibrium, flux/sign and independent field/geometry checks.",
+    "training": {
+      "alpha_offset": 0.0,
+      "nalpha": 16,
+      "nphi": 801,
+      "periods": 2,
+      "pitches": [
+        0.03,
+        0.1,
+        0.3,
+        0.5,
+        0.7,
+        0.9,
+        0.97
+      ],
+      "surfaces": [
+        0.1,
+        0.25,
+        0.5,
+        0.75,
+        0.9
+      ]
+    },
+    "unchanged_input_fields": "All except the one registered coefficient, with no rescaling, resolution or tolerance changes."
+  },
+  "target_id": "issue37-step-scale-v1/scale035"
+}

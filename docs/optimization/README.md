@@ -194,3 +194,6 @@ solver provenance and independent numerical intake before joint integration.
 The separately registered [awake follow-up](ISSUE37_AWAKE_FOLLOWUP.md) completed
 with [verdict change](ISSUE37_AWAKE_RESULT.md): the selected joint ideal score was
 9.17% worse, while own-target field nonregression and the other feasibility checks passed.
+
+The [single smaller-step screen](ISSUE37_STEP_SCALE.md) registers one +0.35 mm
+ideal-target check before spending on another full matched comparison.

@@ -1,4 +1,4 @@
-"""Numerical intake for the fixed issue37 control and two registered proposals.
+"""Numerical intake for fixed issue37 comparisons and a separate one-point screen.
 
 This does not authorize joint execution or certify solver provenance/physics.
 Existing reference401/selected401 intake and normalization gates stay separate.
@@ -17,17 +17,27 @@ INPUT_HASHES = {
     'control': '57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f',
     'plus': '3ad26eada826bbb0e33cadfbcf9c393acd9bcc6a72b32a4059e052d8675208b9',
     'minus': 'e7f764ab6a348225c31487696e8190dfb36aea9940b551e2e120abf6fb951599',
+    'scale035': '68dac87c81a3356805736fa874175e20041b3c5a79966e6247adb68b31460dcf',
 }
-DELTAS = {'control': 0., 'plus': .001, 'minus': -.001}
+DELTAS = {'control': 0., 'plus': .001, 'minus': -.001, 'scale035': .00035}
 PROTOCOL = 'docs/optimization/ISSUE37_JOINT_FEASIBILITY.json'
 PROTOCOL_SHA = '25a8887544c4861c1e7c40ff0c884730f2ac5784ea3460430a69fd7ece6690b7'
+SCALE_PROTOCOL = 'docs/optimization/ISSUE37_STEP_SCALE.json'
+SCALE_PROTOCOL_SHA = '583a3eeb45af28a54de0f4be100ef366d99f501efd2392b403a18024757c7d44'
 SURFACES = (.25, .5, .75)
 GRIDS = (64, 128)
 
 
+def proposal_id(proposal):
+    namespace = 'issue37-step-scale-v1' if proposal == 'scale035' else 'issue37-joint-v1'
+    return f'{namespace}/{proposal}'
+
+
 def registered_input(path, proposal, sources):
     check.need(proposal in INPUT_HASHES, 'registered issue37 proposal required')
-    check.bind(check.ROOT/PROTOCOL, PROTOCOL_SHA, sources)
+    protocol, sha = ((SCALE_PROTOCOL, SCALE_PROTOCOL_SHA) if proposal == 'scale035'
+                     else (PROTOCOL, PROTOCOL_SHA))
+    check.bind(check.ROOT/protocol, sha, sources)
     original_path = check.bind(check.ROOT/check.TARGET, INPUT_HASHES['control'], sources)
     original = check.read_json(original_path)
     data = check.read_json(check.bind(path, INPUT_HASHES[proposal], sources))
@@ -253,7 +263,7 @@ def intake(input_path, wout, proposal, expected_wout_sha256, guard=lambda: None)
             guard()
     targets = {n: archived_target(rows, n) for n in (32, 64)}
     measured = targets[64]['B2_scale']
-    target_id = f'issue37-joint-v1/{proposal}'
+    target_id = proposal_id(proposal)
     for target in targets.values():
         target.update(B2_scale=check.B2, target_id=target_id)
     guard()

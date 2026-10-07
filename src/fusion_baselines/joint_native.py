@@ -78,6 +78,12 @@ def score(request, record):
     return action.score_proposal(solved['folder'], solved['parent'], 'training', record)
 
 
+def step_score(request, record):
+    check.need(request['proposal'] == 'scale035', 'registered step-scale score required')
+    solved = request['solved']
+    return action.score_step_scale(solved['folder'], solved['parent'], record)
+
+
 def search(request, record):
     from scipy.optimize import minimize
 
@@ -211,7 +217,7 @@ def worker(request_path):
                    'native environment differs from frozen inventory')
         record.guard()
         record.save('attempt.json', report)
-        operation = {'score': score, 'fit': search,
+        operation = {'score': score, 'step-score': step_score, 'fit': search,
                      'diagnostics': diagnostics}[request['operation']]
         result = operation(request, record)
         record.guard()

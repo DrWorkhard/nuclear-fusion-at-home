@@ -27,11 +27,20 @@ def score_reference(wout, mode, record):
 
 def score_proposal(folder, parent, mode, record):
     """New proposal accepted only through the trusted solver parent's receipt."""
+    return _score_receipt(folder, parent, mode, record, ('plus', 'minus'))
+
+
+def score_step_scale(folder, parent, record):
+    """Only the separately registered screen, on training data; no coil context."""
+    return _score_receipt(folder, parent, 'training', record, ('scale035',))
+
+
+def _score_receipt(folder, parent, mode, record, allowed):
     record.guard()
     _, _, sources, numerical = solver.intake_result(folder, parent, record.guard)
     check.need(numerical['solver_provenance_verified'] and numerical['numerical_consistency_pass'],
                'verified solver intake required')
-    check.need(parent['proposal'] in ('plus', 'minus'), 'registered nonzero proposal required')
+    check.need(parent['proposal'] in allowed, 'registered nonzero proposal required')
     for path, sha in parent['sources_before'].items():
         check.bind(path, sha, sources)
     for name, key in (('parent.json', 'record_sha256'), ('solver.json', 'solver_report_sha256'),

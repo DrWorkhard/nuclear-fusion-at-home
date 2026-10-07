@@ -113,7 +113,7 @@ def numerical_rejection(row):
                 and result.get('eligible') is False and result.get('score') is None
                 and result.get('mode') == 'training', 'completed ineligible plasma domain required')
         require(result['identity']['input_sha256'] == evidence['input_sha256']
-                and result['identity']['target_id'] == f"issue37-joint-v1/{row['proposal']}",
+                and result['identity']['target_id'] == target.proposal_id(row['proposal']),
                 'plasma rejection belongs to another target')
         require(result['settings'] == dict(nphi=801, nalpha=16, alpha_offset=0., periods=2,
                     surfaces=list(bounce.SURFACES), pitches=list(bounce.HOLD_PITCHES))
