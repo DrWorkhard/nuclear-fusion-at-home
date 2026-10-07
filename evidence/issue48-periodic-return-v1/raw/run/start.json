@@ -1,0 +1,64 @@
+{
+  "completed": false,
+  "contour_qualification": false,
+  "island_boundary_established": false,
+  "original_qualification_unchanged": true,
+  "physical_admission": false,
+  "provenance": {
+    "external_repositories": {},
+    "host": {
+      "captured_at": "2026-10-07T14:41:29.331332+00:00",
+      "logical_cpu_count": 8,
+      "machine": "arm64",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+      "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+    },
+    "repository": {
+      "available": true,
+      "branch": "research/issue48-periodic-return",
+      "commit": "50e6243685af6e504cd48aab03501a0c709016f0",
+      "dirty": false,
+      "path": "/private/tmp/fusion-issue48-periodic-return-20261007"
+    },
+    "schema_version": 1
+  },
+  "resolutions": [],
+  "seed_RZ": [
+    0.9647557429095733,
+    -0.018787278020097338
+  ],
+  "seed_count": 30,
+  "seed_rule": "mean of first residue sequence in refined phi=0 crossings",
+  "sources_before": {
+    "/private/tmp/fusion-issue48-periodic-return-20261007/docs/optimization/ISSUE48_PERIODIC_RETURN.md": "fde700f40742bb8ba4458dab3dc159a7564d675e12919e33545ff86950d78a25",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/scripts/diagnose_axis_center.py": "dbd5f5d18175680eb9121b77dc53ec953e2b9cdc0bab82e40659d51a29c6f930",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/scripts/diagnose_periodic_return.py": "cae88ef4314aeecff0d9c678b26998b43ffb74484755ee78526a2813c2cd7ffc",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/scripts/diagnose_saved_recurrence.py": "c7d6fd9b6a537430cb8cb90d2582e467d5645f00c8f0ec951e835ff00f36dc99",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/__init__.py": "8d36f4ca6cbd9c95d1286a5f7914db91f020133819f8e39eb5aba6c405cc1390",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/bounce_action.py": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/clear_coil_field_audit.py": "ceb6584e9137e75b67a67b7a24ae2ab1aea01aa85b8f5748952dfbb2f5f802dd",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/coil_bounce.py": "8c2f599c2e6ca1db373e536ad6e9743a9f8f2d609bab7f55d52922f1fc90b6e2",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/coil_check.py": "b42ae92a5390ac1356222d1a3e5468d55ff9563b49d044126c92c9dac5269c78",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/coil_fit.py": "8057dec95c181379dbf85b5e229ed2943035c73a555aaed049f7e95fac26348f",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/coil_trajectory.py": "6eb8f58b4ab876cfa7dafe3b1fd527269741f523f88dd3098b503d04cdb0f219",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/coupled_coil_audit.py": "3f9a5cee83447bc61d0cd633cdaac13e90a09f2bee42b6c908166d0f42476ba5",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/documentation.py": "7fcfd5475aface32114e5845ff997edb2926f541f823d566d29185da47116aeb",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/documentation_policy.py": "72de8a9b9321992af6655b19c6bd30c81d50263ba5918c23bb8887a5d6d91dc3",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/flux_labels.py": "6a99bdada7a0bbfbcde8cbd2b0ff19c626f2bbfd7ddc16043daee6d8724edcd9",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/provenance.py": "9960f5021f8b1d80e5d524df77df986cf889e7db8391e167ecb00776ae7faa29",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/realized_field.py": "d071f01f818e0294686124f9756f564362d2f2dcfdaf9e1ecf3230eaea79e5b0",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/reference_wout.py": "f11823877c64f41f600afa133be087f0ea25dafc757215d7b07f3faae765032f",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/vmec_trace.py": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880",
+    "/private/tmp/fusion-issue48-periodic-return-20261007/src/fusion_baselines/wout_target.py": "886fdd7348566624a0c7f62c5929aedf0c72f66e160d0f648a6d5a710813bc96",
+    "/private/tmp/fusion-issue48-trace-refinement-evidence-20261007/evidence/issue48-trace-refinement-v1/inputs/inputs/continuation-snapshot.json": "73972fc86375fcffa67a44833d1c87016e7ff9d070857aac97acc1dcf335bb97",
+    "/private/tmp/fusion-issue48-trace-refinement-evidence-20261007/evidence/issue48-trace-refinement-v1/manifest.json": "a6e1708bbb3996752d331cb61485cefc656d40d59948deadabda6f9488ed39f7",
+    "/private/tmp/fusion-issue48-trace-refinement-evidence-20261007/evidence/issue48-trace-refinement-v1/raw/run/line-10.npz": "349e6e3e69bab4fbea1fb4f127a4db6d6d7e8784d1ce3b11cca359e696ef3342",
+    "/private/tmp/fusion-issue48-trace-refinement-evidence-20261007/evidence/issue48-trace-refinement-v1/raw/run/result.json": "6dad05ce4184b387e661f65b1df861d992aa4e29ca9bb01f9c88d64304da4a42"
+  }
+}

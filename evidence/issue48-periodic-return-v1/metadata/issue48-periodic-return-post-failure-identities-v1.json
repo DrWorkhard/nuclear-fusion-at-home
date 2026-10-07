@@ -1,0 +1,9 @@
+{
+  "completed": true,
+  "failed_run_still_incomplete": true,
+  "producer": "50e6243685af6e504cd48aab03501a0c709016f0",
+  "source_bindings": 55,
+  "environment_files": 1662,
+  "elapsed_s": 0.17479208391159773,
+  "scope": "Separate read-only post-failure identity verification; not a successful scientific completion receipt"
+}
