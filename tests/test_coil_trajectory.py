@@ -50,6 +50,7 @@ def test_complete_failed_and_incomplete_records_are_not_acceptance(run, tmp_path
     header, complete, failed, incomplete, footer = read(output)
     assert summary["counts"] == dict(completed=1, failed=1, incomplete=1)
     assert complete["metrics"]["normal_rms"] == .2
+    assert complete["selected"] is None  # No search summary: selection is unknown.
     assert failed["metrics"] is None and failed["objective"] is None
     assert failed["error"] == "ValueError: invalid flux" and failed["rejection_value"] == 2.
     assert incomplete["evaluation_status"] == "incomplete" and incomplete["gradient"] is None

@@ -155,7 +155,8 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
                        solver_step_status="unknown", elapsed_s=None, coefficients=x,
                        gradient=gradient, objective=row.get("value"), metrics=metrics,
                        error=row.get("error"), rejection_value=row.get("rejected_value"),
-                       selected=selected is not None and selected.get("index") == index,
+                       selected=None if search is None else
+                       selected is not None and selected.get("index") == index,
                        verification_status="not_evaluated", physical_admission=False))
         if selected is not None:
             require(selected.get("index") in grouped, "selected trial missing")
