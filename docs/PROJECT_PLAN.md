@@ -38,8 +38,10 @@ spend effort on decisions that test the path.
    The [paired label grid](optimization/ISSUE48_FULL_GRID.md) remains unqualified.
    A [lower-error continuation](optimization/ISSUE26_INTERIOR_WELLS.md) restores
    missing wells, but its [19/20 label grid](optimization/ISSUE48_CONTINUATION_LABELS.md)
-   also fails. Diagnose reconstruction before launch matching; test interior
-   fidelity in joint optimization.
+   also fails. The [local diagnosis](optimization/ISSUE48_BOUNDED_RETURN.md)
+   ends without resolving that contour. Require a qualified realized-coordinate
+   construction before launch matching; further local solver variants need a new
+   decision-relevant reason. Test interior fidelity in joint optimization.
 2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. The [conditional space screen](engineering/ISSUE27_ENVELOPE_SCREEN.md)

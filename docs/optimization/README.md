@@ -95,6 +95,8 @@ A [bounded periodic-return search](ISSUE48_PERIODIC_RETURN.md) subsequently stop
 at its locality guard and supplies no topology classification.
 An [explicit derivative check](ISSUE48_RETURN_DERIVATIVE.md) changes the proposed
 step's magnitude but still proposes leaving the same frozen neighborhood.
+The [bounded-step follow-up](ISSUE48_BOUNDED_RETURN.md) also stops at that guard;
+the local search branch is complete without a qualified periodic point.
 
 The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
 supports both frozen matched targets using only Python's standard library.
