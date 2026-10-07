@@ -1,6 +1,6 @@
 # Registered ideal-target action scoring
 
-Component qualification registered on 7 October 2026. The decision is whether
+Component qualification registered and executed on 7 October 2026. The decision is whether
 the [joint feasibility protocol](ISSUE37_JOINT_FEASIBILITY.md) has a usable,
 complete ideal-plasma selection score and separate held-out phase check before
 integrating the full comparison. Reuse `vmec_trace.trace_geometry` and the frozen
@@ -47,3 +47,22 @@ Archive complete evidence separately and keep its concise conclusion here.
 Original Wout availability is local-only unless explicitly included in that archive.
 Agent review is not external physics review. Full joint execution remains disabled
 pending orchestration; qualification timing is not a comparative performance claim.
+
+## Result
+
+The single reference qualification passed at clean producer/evaluator
+`9e0bb3e48c791ef13d2488fbdd54c55ad51157b7`. Every grid had all 35 cells eligible:
+training score 0.00023817620290847872, held-out 1601 score 0.00023891450330677452,
+and held-out 3201 score 0.00023893120600164904. Relative held-out change
+0.00006990587438964778 passes 0.001. Driver elapsed 27.174 s; total supervision
+27.351 s; clock discrepancy below 0.002 s. No new target or improvement is claimed.
+
+Local archive `a923ccb0a01925492355fe9dcc5b2cdf04c3ec12`, prepared tag
+`evidence-issue37-ideal-action-v1`, retains all 31 raw files (31,653,200 bytes),
+the original Wout, exact scripts and replay recipe. Its 36-entry manifest SHA256
+is `d83f66af8d48b375bcf48be0d8d74494a579616afc1ca6d4d35996585744a183`.
+Publication is pending. Fresh shallow replay verified 34 source/input/native
+bindings and reproduced every action, well, score and convergence verdict exactly
+in 10.685 s; it did not retrace, rerun intake or attest original timing. Producer
+checks passed 450 research tests, 61 public tests, docs, Ruff and diff. Read-only
+adversarial review preceded execution. Full joint execution remains disabled.
