@@ -25,6 +25,13 @@ checked reproducible benefits. Improving our own seed is insufficient. MSX's
 global optimum. It does not relax scientific or engineering acceptance.
 [Future comparison](squid_c/README.md).
 
+**Proposed early-feedback route (#29):** allow separately authorized technical
+feedback on a concrete question or negative result before reaching MS1. This
+does not lower MS1's matched-reference and independent-evidence requirements.
+The [draft packet](review/ISSUE29_FEEDBACK_PACKET.md) identifies a question,
+obtainable evidence and publication gaps. Maintainer adoption and any external
+contact remain pending; preparing the packet does not authorize outreach.
+
 ## Current priorities
 
 The [assessment](review/STRATEGIC_REVIEW_RESOLUTION.md) finds no demonstrated path
