@@ -1,5 +1,7 @@
 """Analytic checks of the study's linear box solution and residual weighting."""
 import importlib.util
+import json
+import time
 from pathlib import Path
 
 import numpy as np
@@ -38,3 +40,15 @@ def test_weighted_signed_residual_matches_shared_metric_and_global_current_invar
     assert not np.isclose(np.linalg.norm(residual), np.sqrt(np.mean(
         (np.sum(B*normals, axis=-1)/np.linalg.norm(normals, axis=-1)
          /np.linalg.norm(B, axis=-1))**2)))
+
+
+def test_post_publication_timeout_demotes_success_and_preserves_attempt(tmp_path):
+    report = dict(completed=True, verdict='promising-fixed-coil-step')
+    payload = json.dumps(report).encode()
+    (tmp_path/'result.json').write_bytes(payload)
+    response.failure_receipt(tmp_path, report, TimeoutError('post-write deadline'),
+                             (time.monotonic(), time.time()))
+    assert (tmp_path/'attempted-result.json').read_bytes() == payload
+    terminal = json.loads((tmp_path/'result.json').read_text())
+    assert terminal['completed'] is False
+    assert terminal['error'] == 'TimeoutError: post-write deadline'

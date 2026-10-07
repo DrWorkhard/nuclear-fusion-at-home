@@ -4,6 +4,7 @@ import copy
 import io
 import itertools
 import json
+import os
 import shutil
 import sys
 import time
@@ -54,12 +55,26 @@ def changed(data, delta):
     return result
 
 
+def failure_receipt(output, report, exc, started):
+    """Demote a success whose publication/check failed, preserving its original bytes."""
+    result = output/'result.json'
+    if result.exists():
+        result.rename(output/'attempted-result.json')
+    report.update(completed=False, error=f'{type(exc).__name__}: {exc}',
+                  elapsed_s=time.monotonic()-started[0], wall_elapsed_s=time.time()-started[1])
+    with result.open('x', encoding='utf-8') as stream:
+        json.dump(report, stream, indent=2, sort_keys=True, allow_nan=False)
+
+
 def main(started):
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
     parser.add_argument('--revision', required=True)
     args = parser.parse_args()
+    if any(os.environ.get(k) != '1' for k in ('OMP_NUM_THREADS', 'OPENBLAS_NUM_THREADS',
+           'VECLIB_MAXIMUM_THREADS', 'MKL_NUM_THREADS')):
+        raise ValueError('all four native thread limits must be one')
     sys.modules['mpi4py'] = None
     sys.path.insert(0, str(ROOT/'src'))
     from simsopt.field import BiotSavart
@@ -102,7 +117,7 @@ def main(started):
         payload = value if isinstance(value, bytes) else (
             json.dumps(value, indent=2, sort_keys=True, allow_nan=False)+'\n').encode()
         total_bytes += len(payload)
-        if total_bytes > 32*1024**2:
+        if total_bytes > 32*1024**2-256*1024:
             raise OSError('32 MiB output limit')
         with (args.output/name).open('xb') as stream:
             stream.write(payload)
@@ -226,11 +241,8 @@ def main(started):
         print(json.dumps({k: report[k] for k in ('completed', 'verdict', 'frozen_step',
                          'model_relative_error', 'refinement_relative_error', 'elapsed_s')}))
     except Exception as exc:
-        report.update(completed=False, error=f'{type(exc).__name__}: {exc}',
-                      elapsed_s=time.monotonic()-started[0], wall_elapsed_s=time.time()-started[1])
-        # Preserve failures even after a resource deadline; this is not a success receipt.
-        with (args.output/'failure.json').open('x', encoding='utf-8') as stream:
-            json.dump(report, stream, indent=2, sort_keys=True, allow_nan=False)
+        # Reserved metadata space records failure even after the scientific deadline.
+        failure_receipt(args.output, report, exc, started)
         raise
 
 
