@@ -91,6 +91,8 @@ A [periodic-center check](ISSUE48_AXIS_CENTER.md) preserves those reversals;
 target-axis miscentering does not explain this saved-sample failure.
 An [independent-integrator comparison](ISSUE48_TRACE_REFINEMENT.md) also preserves
 the reversals while matching two finite traces within 10 micrometres.
+A [bounded periodic-return search](ISSUE48_PERIODIC_RETURN.md) subsequently stops
+at its locality guard and supplies no topology classification.
 
 The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
 supports both frozen matched targets using only Python's standard library.
