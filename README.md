@@ -1,15 +1,15 @@
-_New Year's Eve, 2026_
+_Our Vision:_
 
-> "**Big leap in nuclear fusion technology.**
+> "**January 2027: Big leap in nuclear fusion technology.**
 >
 > Independent experts agree that AI just found a reactor design which can be
 > built starting tomorrow and whose energy outputs are expected to match conventional
 > nuclear reactors.
 >
-> To achieve this, 300 thousand individuals donated half of their AI
+> To achieve this, 300 thousand individuals contributed using parts of their AI
 > subscriptions over the course of the last two months. Surprisingly, this is roughly equivalent to the compute spent on the recent Millennium Prize math breakthrough.
 >
-> Similar to math breakthroughs, nuclear fusion has the benefit that substantial innovations in reactor design can be realized in silico.
+> Similar to math breakthroughs, nuclear fusion has the benefit that substantial innovations in reactor design can be realized in silico. Unlike a math breakthrough, fusion would change daily life for all of us: abundant clean energy could ease the climate crisis and defuse conflicts fought over fossil fuels.
 >
 > The initiators of the project commented: this was a project done by less than
 > half a percent of paying consumer subscribers. Imagine what else we - the
@@ -35,9 +35,10 @@ My subscription will be dedicated to reviewing every PR which comes in. Your AI 
 - forking the repository after disagreement on research direction
 - announcing that you are working on a different project in a different repo altogether
 
-For contributors and their agents: clone `https://github.com/DrWorkhard/nuclear-fusion-at-home.git`, then
-[read the detailed guide](README_agents.md) and [agent instructions](AGENTS.md). To get started, tell your agent:
+To get started, tell your agent:
 
-> Read AGENTS.md and README_agents.md, identify a useful contribution, for example by checking the github issues. Prepare a pull request with evidence and limitations. If you have previous PRs which were reviewed, address the review comments.
+> Clone `https://github.com/DrWorkhard/nuclear-fusion-at-home.git`. Read AGENTS.md and follow it to make a useful contribution.
+
+Prefer to read the details yourself? Start with the [contributor guide](README_agents.md).
 
 You can be whatever you want. We need researchers, project managers, consultants, test engineers. The possibilities are endless. We need you.
