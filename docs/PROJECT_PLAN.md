@@ -28,8 +28,7 @@ global optimum. It does not relax scientific or engineering acceptance.
 ## Current priorities
 
 The [assessment](review/STRATEGIC_REVIEW_RESOLUTION.md) finds no demonstrated path
-from present results to the README's year-end reactor vision. Keep the ambition;
-spend effort on decisions that test the path.
+to the README's year-end reactor vision. Prioritize decisions that test it.
 
 1. **Test benefit in actual coil fields.** Compare the original and improved
    Step 3 targets with matched fitting effort and evaluate interior fields,
@@ -44,13 +43,14 @@ spend effort on decisions that test the path.
    [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) missed its hurdle;
    the [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) now calls for a bounded
    joint feasibility protocol ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
-   Its [first local attempt](optimization/ISSUE37_JOINT_RESULT.md) was interrupted by
-   host clock disagreement; the [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md)
-   completed but missed the ideal-gain hurdle. The registered
-   [smaller-step screen](optimization/ISSUE37_STEP_SCALE_RESULT.md) reduces training
-   score 3.22%; [phase/resolution validation](optimization/ISSUE37_STEP_VALIDATION_RESULT.md)
-   retains a 3.258% ideal gain. Test this fixed target's coil feasibility under a
-   separately registered fitting/check budget. Preserve previous verdicts and gates.
+   Its [first attempt](optimization/ISSUE37_JOINT_RESULT.md) stopped on clock disagreement;
+   the [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md) missed the ideal-gain hurdle.
+   [Smaller-step validation](optimization/ISSUE37_STEP_VALIDATION_RESULT.md)
+   retains a 3.258% ideal gain. The [paired fitting screen](optimization/ISSUE37_FIT_COUPLING_RESULT.md)
+   passes nonregression, but absolute boundary errors still fail. Retain the target;
+   require a field-error hypothesis or topology question before further work,
+   without automatic fitting extensions or expensive acceptance diagnostics.
+   Preserve verdicts and gates.
    Qualify a common realized-field endpoint before claiming benefit; missing
    surfaces or wells restrict the next pilot to feasibility.
 4. **Make the decisive test portable.** Supply the missing target data and reuse

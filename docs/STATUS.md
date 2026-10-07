@@ -1,6 +1,6 @@
 # Scientific status
 
-Updated 7 October 2026; includes local fixed-point validation.
+Updated 7 October 2026; includes local paired fitting screen.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The matched
@@ -19,8 +19,10 @@ disagreement and remains inconclusive. A separately registered
 fail absolute field limits. The later
 [smaller-step screen](optimization/ISSUE37_STEP_SCALE_RESULT.md) reduces training
 score 3.22%; [phase/resolution validation](optimization/ISSUE37_STEP_VALIDATION_RESULT.md)
-retains **3.258% ideal gain**. Coil feasibility and actual-coil benefit remain
-unestablished. Local evidence awaits publication.
+retains **3.258% ideal gain**. The [paired fitting screen](optimization/ISSUE37_FIT_COUPLING_RESULT.md)
+passes boundary nonregression, but candidate RMS remains **19.66×** its limit.
+Coil feasibility and actual-coil benefit remain unestablished. Local evidence
+awaits publication.
 Present evidence does not substantiate the README's reactor-design timeline.
 
 The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduces
