@@ -167,13 +167,17 @@ def geometry(snapshot, folder, parent, record):
 
 def direct_trace(snapshot, folder, parent, record):
     """Ten target launches, 200 direct transits and unchanged signed-iota checks."""
+    snapshot, data, _, context = _diagnostic_inputs(snapshot, folder, parent, record)
+    return _direct_trace(snapshot, data, Path(folder)/'wout.nc', context, record)
+
+
+def _direct_trace(snapshot, data, wout, context, record):
+    """Shared tracing only after the caller's separate target/snapshot admission."""
     from simsopt.field import BiotSavart
     from simsopt.geo import SurfaceRZFourier
 
     from fusion_baselines import realized_field as rf
 
-    snapshot, data, _, context = _diagnostic_inputs(snapshot, folder, parent, record)
-    wout = Path(folder)/'wout.nc'
     traced_target = rf.Target.from_wout(wout, data)
     check.need(traced_target.sha256 == context['binding']['wout_sha256'],
                'tracing Wout differs from admitted target')

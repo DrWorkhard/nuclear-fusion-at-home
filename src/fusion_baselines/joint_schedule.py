@@ -2,7 +2,7 @@
 
 Operations own process-group supervision and source/receipt validation. This
 module supplies their absolute deadlines, never fresh per-operation allowances.
-It is not a runnable experiment until the native operations are integrated.
+The native adapter supplies supervised operations; execution requires a reviewed lock.
 """
 import time
 from dataclasses import dataclass

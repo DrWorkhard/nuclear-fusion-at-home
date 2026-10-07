@@ -1,9 +1,9 @@
 # Joint comparison integration
 
-Prospective integration of the [frozen feasibility protocol](ISSUE37_JOINT_FEASIBILITY.md).
+Implementation of the [frozen feasibility protocol](ISSUE37_JOINT_FEASIBILITY.md).
 The numerical components are qualified separately; the complete two-arm experiment
-has not run. The next decision requires connecting those components with charged
-budgets and immutable selection. No new search basis, metric or acceptance limit
+has not run. The adapter connects those components with charged
+budgets and immutable selection; software tests do not establish a physics result. No new search basis, metric or acceptance limit
 is introduced. Full execution remains disabled until the complete driver, exact
 launcher and dependencies receive adversarial review.
 
@@ -28,7 +28,7 @@ Freeze the chosen input/Wout hashes, target identity, coil coefficients,
 normalized currents and selected trial index before any held-out evaluation.
 `freeze_selection` checks the named snapshot and fit row, binds the source files,
 saves a canonical selection hash and refuses a second selection in the same cell.
-The eventual driver must recheck source/receipt hashes and this frozen state
+The native parent rechecks source/receipt hashes and this frozen state
 before and after diagnostics; helpers are not a verifier for candidate-supplied
 completion flags or arbitrary JSON reports.
 
@@ -64,9 +64,29 @@ must retain that same origin as well as their per-operation deadlines.
 Any interruption stops the attempt. A missing usable C diagnostic stops before
 spending J's budget; a completed negative C screen still permits the fixed J arm.
 
-Clock-driven tests exercise the complete schedule with synthetic operation
-receipts and the real selection/decision helpers. Still required: the native
-operation adapter, cold-solve/rejection handoff, reference diagnostics and actual
-process supervision. Each native operation needs one process-group owner; nested
-watchdogs must not leave an orphan solve. Setup/failed work cannot become free
-cached qualification work. Passing scheduler tests does not enable execution.
+`joint_native` runs scoring, fits and selected diagnostics in supervised children.
+The same parent directly owns each cold VMEC solve; there is no nested watchdog.
+Original-reference diagnostics use their own intake and the shared field/geometry
+mathematics without changing the archived target registry. Completed numerical
+nonconvergence requires bound native measurements; generic solver exceptions
+remain inconclusive. Native call records aggregate child components and exclude
+unmeasured calls internal to direct tracing.
+
+Tests exercise the assembled schedule, parent/worker receipts, selection and
+verdict with synthetic kernels, including late results, changed inputs and failed
+solves. Separate tests cover real process cleanup. The full experiment is unrun.
+Before execution, freeze both installed dependency inventories and review the
+exact source commit, configuration and invocation. The original protocol JSON
+remains the unchanged preregistration; its disabled state records these prerequisites.
+
+The launcher is `scripts/run_joint_comparison.py --config <json> --output <fresh>
+--reviewed-revision <full-commit>`, using the preserved native Python environment
+and all four OMP/OpenBLAS/vecLib/MKL thread limits set to 1. The JSON contains the
+`joint_native.Operations` constructor fields: original seed/Wout paths, preserved
+VMEC virtual-environment launcher, both environment-inventory paths and hashes,
+and the reviewed revision. Both arms recheck these sources under their own clock.
+`run_joint_stage.py --describe-native <fresh-json>` inventories the native packages;
+`solve_joint_target.py --describe <fresh-json>` inventories the VMEC environment
+when invoked by its own Python. Neither command solves or fits a target. Keep
+these lockfiles and the exact configuration with eventual evidence. A launch flag
+records the caller's reviewed revision; it does not itself attest that review.

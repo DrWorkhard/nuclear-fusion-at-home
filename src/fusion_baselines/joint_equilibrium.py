@@ -35,11 +35,11 @@ def save(path, value):
     temporary.replace(path)
 
 
-def identity():
+def identity(packages=PACKAGES):
     """Executable and installed Python/native package files, excluding bytecode caches."""
     record = dict(python=sys.version, executable=str(Path(sys.executable).resolve()),
                   executable_sha256=digest(Path(sys.executable).resolve()), packages={})
-    for name in PACKAGES:
+    for name in packages:
         distribution = importlib.metadata.distribution(name)
         files = {}
         for entry in distribution.files or []:
@@ -68,11 +68,17 @@ def retained_bytes(root):
     return total
 
 
-def stop_reason(root, deadline_monotonic, deadline_wall):
+def stop_reason(root, deadline_monotonic, deadline_wall, clock_origin=None):
     mono, wall = time.monotonic(), time.time()
     if not all(isinstance(v, (int, float)) and not isinstance(v, bool) and math.isfinite(v)
                for v in (deadline_monotonic, deadline_wall)):
         raise ValueError('finite absolute caller deadlines required')
+    if clock_origin is not None:
+        if (len(clock_origin) != 2 or not all(isinstance(v, (int, float))
+                and not isinstance(v, bool) and math.isfinite(v) for v in clock_origin)):
+            raise ValueError('finite original arm clocks required')
+        if abs((mono-clock_origin[0])-(wall-clock_origin[1])) > 5:
+            return 'arm-wide clock disagreement'
     if abs((deadline_monotonic-mono)-(deadline_wall-wall)) > 5:
         return 'clock disagreement'
     if mono >= deadline_monotonic or wall >= deadline_wall:
@@ -111,7 +117,7 @@ def stop(process):
     process.wait()
 
 
-def supervise(command, folder, arm_root, deadline_monotonic, deadline_wall):
+def supervise(command, folder, arm_root, deadline_monotonic, deadline_wall, clock_origin=None):
     """No deadline reset; all sibling outputs count against the caller's arm cap."""
     if os.name != 'posix':
         raise ValueError('POSIX process-group supervision required')
@@ -119,7 +125,7 @@ def supervise(command, folder, arm_root, deadline_monotonic, deadline_wall):
     environment = dict(PATH='/usr/bin:/bin:/usr/sbin:/sbin', TMPDIR=str(folder),
                        PYTHONDONTWRITEBYTECODE='1', OMP_NUM_THREADS='1',
                        OPENBLAS_NUM_THREADS='1', VECLIB_MAXIMUM_THREADS='1', MKL_NUM_THREADS='1')
-    reason, process = stop_reason(arm_root, deadline_monotonic, deadline_wall), None
+    reason, process = stop_reason(arm_root, deadline_monotonic, deadline_wall, clock_origin), None
     state = dict(terminate=False)
 
     def terminated(signum, frame):
@@ -137,7 +143,8 @@ def supervise(command, folder, arm_root, deadline_monotonic, deadline_wall):
                         start_new_session=True)
                     while True:
                         reason = ('supervisor SIGTERM' if state['terminate'] else
-                                  stop_reason(arm_root, deadline_monotonic, deadline_wall))
+                                  stop_reason(arm_root, deadline_monotonic, deadline_wall,
+                                              clock_origin))
                         if reason is not None or process.poll() is not None:
                             break
                         time.sleep(.1)
@@ -147,7 +154,7 @@ def supervise(command, folder, arm_root, deadline_monotonic, deadline_wall):
     finally:
         signal.signal(signal.SIGTERM, previous)
     reason = reason or ('supervisor SIGTERM' if state['terminate'] else None) or stop_reason(
-        arm_root, deadline_monotonic, deadline_wall)
+        arm_root, deadline_monotonic, deadline_wall, clock_origin)
     return dict(command=command, returncode=None if process is None else process.returncode,
                 stop_reason=reason, elapsed_s=time.monotonic()-started,
                 completed=reason is None and process is not None and process.returncode == 0)
@@ -214,7 +221,8 @@ def worker(request_path):
         if identity() != lock or digest(request_path) != request_sha:
             raise ValueError('solver environment/request changed during execution')
         report.update(completed=True, converged=converged, residuals=residuals,
-                      niter=int(result.wout.niter), wout_sha256=digest(folder/'wout.nc'),
+                      niter=int(result.wout.niter), ns=int(result.wout.ns),
+                      ier_flag=int(result.wout.ier_flag), wout_sha256=digest(folder/'wout.nc'),
                       sources_unchanged=True, environment_unchanged=True)
     except Exception as exc:
         report['error'] = f'{type(exc).__name__}: {exc}'
@@ -224,7 +232,7 @@ def worker(request_path):
 
 
 def run_solver(python, input_path, proposal, environment, environment_sha256, folder,
-               arm_root, revision, deadline_monotonic, deadline_wall):
+               arm_root, revision, deadline_monotonic, deadline_wall, clock_origin=None):
     """Run exactly one solve; retain a failure and never retry or certify its field here."""
     from fusion_baselines import joint_target as target
     from fusion_baselines.provenance import build_run_record
@@ -234,7 +242,7 @@ def run_solver(python, input_path, proposal, environment, environment_sha256, fo
         raise ValueError('fresh solver cell must be inside the caller arm root')
     if shutil.disk_usage(arm_root).free < START_RESERVE:
         raise OSError('3 GiB initial disk reserve required')
-    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall)
+    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall, clock_origin)
     if reason:
         raise TimeoutError(reason)
     folder.mkdir(exist_ok=False)
@@ -258,7 +266,7 @@ def run_solver(python, input_path, proposal, environment, environment_sha256, fo
             sources[str(path.resolve())] = digest(path)
 
         def guard():
-            reason = stop_reason(arm_root, deadline_monotonic, deadline_wall)
+            reason = stop_reason(arm_root, deadline_monotonic, deadline_wall, clock_origin)
             if reason:
                 raise TimeoutError(reason)
 
@@ -276,7 +284,8 @@ def run_solver(python, input_path, proposal, environment, environment_sha256, fo
         guard()
         command = [str(python), '-I', str(ROOT/'scripts/solve_joint_target.py'),
                    '--request', str(folder/'request.json')]
-        record['process'] = supervise(command, folder, arm_root, deadline_monotonic, deadline_wall)
+        record['process'] = supervise(command, folder, arm_root, deadline_monotonic, deadline_wall,
+                                      clock_origin=clock_origin)
         if not record['process']['completed']:
             raise RuntimeError('solver subprocess incomplete')
         result = read(folder/'solver.json')
@@ -303,16 +312,16 @@ def run_solver(python, input_path, proposal, environment, environment_sha256, fo
         record.update(completed=False, error=f'{type(exc).__name__}: {exc}',
                       cleanup_failed=isinstance(exc, CleanupError))
     record.update(elapsed_s=time.monotonic()-started, wall_elapsed_s=time.time()-wall_started)
-    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall)
+    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall, clock_origin)
     if reason:
         record.update(completed=False, stop_reason=reason)
     save(folder/'parent.json', record)
-    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall)
+    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall, clock_origin)
     if reason:
         record.update(completed=False, stop_reason=reason)
         save(folder/'parent.json', record)
     record['record_sha256'] = digest(folder/'parent.json')
-    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall)
+    reason = stop_reason(arm_root, deadline_monotonic, deadline_wall, clock_origin)
     if reason:
         record.pop('record_sha256')
         record.update(completed=False, stop_reason=reason)
