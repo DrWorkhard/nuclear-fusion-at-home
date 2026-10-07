@@ -93,6 +93,8 @@ An [independent-integrator comparison](ISSUE48_TRACE_REFINEMENT.md) also preserv
 the reversals while matching two finite traces within 10 micrometres.
 A [bounded periodic-return search](ISSUE48_PERIODIC_RETURN.md) subsequently stops
 at its locality guard and supplies no topology classification.
+An [explicit derivative check](ISSUE48_RETURN_DERIVATIVE.md) changes the proposed
+step's magnitude but still proposes leaving the same frozen neighborhood.
 
 The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
 supports both frozen matched targets using only Python's standard library.
