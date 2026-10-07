@@ -30,10 +30,19 @@ all direction changes, gaps and physical return RMS. No new long traces, spline
 selection, flux labels, launch matching or modifications to acceptance gates.
 Original 19/20 continuation and 20/20 reference grid verdicts remain unchanged.
 
-One attempt: 240 s driver / 270 s supervised total including startup and receipts,
+One numerical attempt: 240 s driver / 270 s supervised total including startup and receipts,
 one thread, 256 MiB aggregate output, 3/2 GiB initial/live disk reserves and 5 s
 clock discrepancy ceiling. Reuse the recorded supervisor/environment verification.
-Preserve solver failures and all outputs; no retries or neighborhood/tolerance
+Preserve solver failures and all outputs; no numerical retries or neighborhood/tolerance
 retuning based on the outcome. This is exploratory same-machine numerical evidence.
 Publish no result until final read-only adversarial review; external publication
 still requires authority. Agent review is not external physics review.
+
+Attempt v1 at `daff62fbce104b7d48b0210be1f899a69f49bc33` stopped during
+SIMSOPT import after 1.700 s because the launcher disabled matplotlib, a transitive
+dependency. No field/root calculation began; its receipt and traceback remain at
+`/private/tmp/issue48-axis-center-v1`. Version 2 corrects only import availability
+and sets a temporary plotting cache/headless backend. It gets one fresh attempt
+with unchanged numerical settings, input identities and 240/270 s ceilings.
+The 240 s clock starts inside the driver after imports; the 270 s clock includes
+startup/finalization. Analytic controls are retained pre-run test evidence.

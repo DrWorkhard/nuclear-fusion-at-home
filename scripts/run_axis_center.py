@@ -16,7 +16,7 @@ from pathlib import Path  # noqa: E402
 ROOT = Path(__file__).resolve().parents[1]
 HELPER_SHA = 'dfc4e8cb750e28aa8d399f6c64691659674a874a1c2f1126133424d82b3cd15b'
 ENVIRONMENT_SHA = 'ad07af4aec0b0fb54c84499c2981efe52788c63795ace8199c71fbbeee4dbe70'
-DISABLED = ('mpi4py', 'netCDF4', 'vmecpp', 'matplotlib')
+DISABLED = ('mpi4py',)
 SERIAL = (f"import runpy,sys; sys.modules.update({{k:None for k in {DISABLED!r}}}); "
           "sys.argv=sys.argv[1:]; runpy.run_path(sys.argv[0],run_name='__main__')")
 
@@ -70,7 +70,8 @@ def run(config_path, config_sha, output, revision):
                    '--reference-archive', config['reference_archive'],
                    '--revision', revision, '--output', str(output/'run')]
         environment = dict(PATH='/usr/bin:/bin:/usr/sbin:/sbin', TMPDIR='/private/tmp',
-                           PYTHONDONTWRITEBYTECODE='1', OMP_NUM_THREADS='1',
+                           PYTHONDONTWRITEBYTECODE='1', MPLCONFIGDIR='/private/tmp/fusion-mpl',
+                           MPLBACKEND='Agg', OMP_NUM_THREADS='1',
                            OPENBLAS_NUM_THREADS='1', VECLIB_MAXIMUM_THREADS='1',
                            MKL_NUM_THREADS='1')
         receipt['command'] = command
