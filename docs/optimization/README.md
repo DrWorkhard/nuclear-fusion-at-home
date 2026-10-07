@@ -67,6 +67,9 @@ the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
 ## Portable checks
 
+The prospective [spread-sampling pilot](ISSUE8_SPREAD_SAMPLING.md) checks one
+fixed boundary layout against three frozen candidates before proposing a new case.
+
 Without the maintainer's archives, supply a reference401 Wout. One can be regenerated
 by vmecpp from the committed input in about 6 minutes:
 `vmecpp.run(vmecpp.VmecInput.from_file("evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(path)`.
