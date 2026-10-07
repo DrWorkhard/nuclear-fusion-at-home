@@ -74,6 +74,8 @@ qualification and benefit transfer remain open.
 The [continuation flux-label grid](ISSUE48_CONTINUATION_LABELS.md) qualifies at
 19/20 points. A failed middle-surface reconstruction still prevents a complete
 qualified map for launch matching.
+The prospective [saved-point recurrence diagnosis](ISSUE48_CONTINUATION_RECURRENCE.md)
+examines that failed point and four controls without extending any trajectory.
 
 The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
 supports both frozen matched targets using only Python's standard library.
