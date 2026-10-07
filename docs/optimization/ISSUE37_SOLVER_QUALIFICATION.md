@@ -81,7 +81,10 @@ The 20-entry manifest SHA256 is
 Publication is pending; raw outputs remain intact locally. Native log whitespace
 is retained byte-for-byte. Fresh shallow producer checks passed 360 research tests
 (23 focused), 61 public tests, docs, Ruff and source diff checks. Read-only agent
-review preceded execution; it is not external physics review.
+review preceded execution; it is not external physics review. A fresh shallow
+archive replay verified all 20 manifest entries and 32 source/input bindings,
+then reproduced numerical intake exactly in 1.750 s. It did not rerun the solver
+or re-establish historical timing.
 
 This clears only the registered plus input and runner for subsequent integration.
 No coil fit or joint-arm verdict was produced; the full comparison remains disabled.
