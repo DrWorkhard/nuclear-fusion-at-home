@@ -177,7 +177,7 @@ def test_clock_jump_is_not_an_ordinary_fit_cap(clock, tmp_path):
 
     operations.fit = jump
     result = schedule.run(operations, tmp_path/'run')
-    assert not result['completed'] and result['reason'] == 'clock disagreement'
+    assert not result['completed'] and result['reason'] == 'arm-wide clock disagreement'
     assert not any(name == 'diagnose' for name, _ in operations.calls)
 
 
@@ -262,3 +262,18 @@ def test_late_normal_joint_fit_return_is_not_an_ordinary_cap(clock, tmp_path):
     result = schedule.run(operations, tmp_path/'run')
     assert not result['completed'] and result['reason'] == 'deadline'
     assert ('solve', 'minus') not in operations.calls
+
+
+def test_clock_disagreement_cannot_reset_at_diagnostics_transition(clock, tmp_path):
+    operations = Operations(clock)
+    original = operations.step
+
+    def jump(name, proposal):
+        original(name, proposal)
+        if (name, proposal) in (('setup', 'C'), ('diagnose', 'control')):
+            clock.wall += 4.
+
+    operations.step = jump
+    result = schedule.run(operations, tmp_path/'run')
+    assert not result['completed'] and result['reason'] == 'arm-wide clock disagreement'
+    assert result['arms'] == ['C']

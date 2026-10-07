@@ -36,6 +36,10 @@ class Arm:
         self.guard(self.search)
 
     def guard(self, window):
+        elapsed = time.monotonic()-self.started
+        wall_elapsed = time.time()-self.wall_started
+        if abs(elapsed-wall_elapsed) > 5:
+            raise ArmInterrupted('arm-wide clock disagreement')
         reason = solver.stop_reason(self.output, window.monotonic, window.wall)
         if reason:
             raise ArmInterrupted(reason)

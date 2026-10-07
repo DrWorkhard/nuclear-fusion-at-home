@@ -58,6 +58,9 @@ and receives exactly that cap. Normal C cap finalization may consume the remaini
 900 s diagnostic allowance; it never moves that allowance beyond search-end+900.
 Selection serialization consumes the active budget and must finish before any
 validation request. Source checks and final reporting also consume that budget.
+Clock disagreement is measured from the original arm start through all phases;
+neither a new fit window nor diagnostics may reset it. Native operation watchdogs
+must retain that same origin as well as their per-operation deadlines.
 Any interruption stops the attempt. A missing usable C diagnostic stops before
 spending J's budget; a completed negative C screen still permits the fixed J arm.
 
