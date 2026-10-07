@@ -67,6 +67,10 @@ the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
 ## Portable checks
 
+The bounded [interior-error/shallow-well comparison](ISSUE26_INTERIOR_WELLS.md)
+tests two existing reference-target geometries; its prospective protocol does
+not claim a completed result or confirmed benefit transfer.
+
 The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
 supports both frozen matched targets using only Python's standard library.
 It reproduces dense field metrics for the original fits; native intake contracts,
