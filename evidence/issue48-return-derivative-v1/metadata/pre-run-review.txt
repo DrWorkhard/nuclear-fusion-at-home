@@ -1,0 +1,8 @@
+Read-only adversarial pre-run review by /root/review_flux_labels.
+Exact producer: 570660c2674905f5175b47311049f98c88350843.
+No pre-run blockers. Residual Jacobian is D(P^11)-I and J delta=-F.
+Saved reconstruction agrees with rejected step within approximately 0.22 nm.
+Four-proposal agreement/margin rule matches protocol; proposed points are not
+passed to field evaluation. No root search/topology classification occurs.
+Source bindings and inherited supervision preserve incomplete outcomes.
+No native calculation performed during review. Agent review is not peer review.

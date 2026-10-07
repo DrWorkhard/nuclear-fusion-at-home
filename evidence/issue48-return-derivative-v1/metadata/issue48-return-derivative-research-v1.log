@@ -1,0 +1,24 @@
+........................................................................ [ 23%]
+........................................................................ [ 47%]
+........................................................................ [ 71%]
+........................................................................ [ 95%]
+...............                                                          [100%]
+=============================== warnings summary ===============================
+tests/test_realized_field.py::test_target_surfaces_axis_and_wout_round_trip
+tests/test_realized_field.py::test_target_surfaces_axis_and_wout_round_trip
+  /private/tmp/fusion-issue48-return-derivative-20261007/tests/test_realized_field.py:52: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+  As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+    data.createVariable(name, "f8", dims)[...] = getattr(target, name)
+
+tests/test_wout_target.py::test_archives_reject_boundary_and_resolution_mismatch
+tests/test_wout_target.py::test_archives_reject_boundary_and_resolution_mismatch
+tests/test_wout_target.py::test_archives_reject_boundary_and_resolution_mismatch
+tests/test_wout_target.py::test_archives_reject_boundary_and_resolution_mismatch
+tests/test_wout_target.py::test_wrong_period_is_rejected_before_boundary_sampling
+tests/test_wout_target.py::test_wrong_period_is_rejected_before_boundary_sampling
+  /private/tmp/fusion-issue48-return-derivative-20261007/tests/test_wout_target.py:29: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+  As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+    out.createVariable(name, "f8", ("radius", "mn_mode"))[...] = np.tile(row, (ns, 1))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+303 passed, 8 warnings in 7.15s

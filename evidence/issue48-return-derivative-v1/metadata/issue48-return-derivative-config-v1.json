@@ -1,0 +1,6 @@
+{
+  "archive": "/private/tmp/fusion-issue48-trace-refinement-evidence-20261007/evidence/issue48-trace-refinement-v1",
+  "failure_archive": "/private/tmp/fusion-issue48-periodic-return-evidence-20261007/evidence/issue48-periodic-return-v1",
+  "supervisor": "/private/tmp/fusion-issue48-continuation-evidence-20261007/scripts/run_continuation_labels.py",
+  "environment": "/private/tmp/issue37-native-environment-v1.json"
+}
