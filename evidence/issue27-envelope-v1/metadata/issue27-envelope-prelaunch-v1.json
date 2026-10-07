@@ -1,0 +1,12 @@
+{
+  "config_sha256": "de777718fdea127383fb9e0e29b668dba8fa0bae43cf855b795194046f793eba",
+  "diff_check": true,
+  "docs": true,
+  "focused_tests": 8,
+  "public_tests": 61,
+  "review": "No blocker in SI units, equal-current scaling, interval classifications, quadratic thresholds and terminal failure handling; config/input/PDF hashes matched. Invariant field error refers only to filament model; padded floating-point bounds, not interval arithmetic.",
+  "reviewer": "/root/review_flux_labels",
+  "revision": "532f3b72302ecb75a857072beae1816cbdbee4de",
+  "ruff": true,
+  "utc": "2026-10-07T09:56:29.831457+00:00"
+}

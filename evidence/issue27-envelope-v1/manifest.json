@@ -1,0 +1,14 @@
+{
+  "README.md": "9a99dd6ae6d38c8d8fa2d29fefee6e7e5ff069c80297717578563dbfd0e7d06f",
+  "inputs/arm.json": "d3ecc89989315f7413d50b8bedab19251127cc07ad790c1fb0f821ee01ebf1ff",
+  "inputs/frozen.json": "aee0442890e53f61d44f0cb99043c6af7903a10d05b69497a910ba71ecf6caca",
+  "inputs/input.json": "68dac87c81a3356805736fa874175e20041b3c5a79966e6247adb68b31460dcf",
+  "metadata/config.json": "de777718fdea127383fb9e0e29b668dba8fa0bae43cf855b795194046f793eba",
+  "metadata/issue27-envelope-focused-v1.log": "ad42a2ab3afa6fc6ecbb7c0942cf2d35150abbe8069bddd5d9cf3e35e8f08d9f",
+  "metadata/issue27-envelope-prelaunch-v1.json": "660227f608b6ae6cf0ea7d6971425658fefd2b3c40d0fea8d3327265fae5b43c",
+  "metadata/issue27-envelope-public-v1.log": "a6dbb7f7d2e439137551c359ca34d1a9f73b749e6e47e937d0652b14de75f6b0",
+  "metadata/launch.json": "2b1e9eb9d4ac9b8bb68015c8ec64c480454045b112885a425f5da8361b171319",
+  "raw/result.json": "ddcbc3bc81832a005fe193e6336087157b01955553c9a1d0185ec1261dbcbb7e",
+  "replay.py": "221464030eb7aed84be362ca021e75261dd383ffa160db4cf2cabaa2e237315a",
+  "source-map.json": "43c5de38c63778d2195bdd6817b83f7e86c8356bdb6008289a882c921d1591c9"
+}

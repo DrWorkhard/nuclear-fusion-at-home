@@ -1,0 +1,9 @@
+{
+  "/private/tmp/fusion-issue37-coupling-20261007/artifacts/issue37-fit-coupling-v1/scale035/arm.json": "inputs/arm.json",
+  "/private/tmp/fusion-issue37-coupling-20261007/artifacts/issue37-fit-coupling-v1/scale035/selection/frozen-selection.json": "inputs/frozen.json",
+  "/private/tmp/issue27-envelope-config-v1.json": "metadata/config.json",
+  "/private/tmp/issue27-envelope-focused-v1.log": "metadata/issue27-envelope-focused-v1.log",
+  "/private/tmp/issue27-envelope-prelaunch-v1.json": "metadata/issue27-envelope-prelaunch-v1.json",
+  "/private/tmp/issue27-envelope-public-v1.log": "metadata/issue27-envelope-public-v1.log",
+  "/private/tmp/issue37-scale035-input-v1.json": "inputs/input.json"
+}

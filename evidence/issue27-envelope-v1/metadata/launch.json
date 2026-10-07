@@ -1,0 +1,7 @@
+{
+  "command": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python -I -S scripts/screen_reactor_envelope.py --config /private/tmp/issue27-envelope-config-v1.json --output artifacts/issue27-envelope-v1 --revision 532f3b72302ecb75a857072beae1816cbdbee4de",
+  "cwd": "/private/tmp/fusion-issue27-envelope-20261007",
+  "exit_code": 0,
+  "recorded_utc": "2026-10-07T10:00:49.650544+00:00",
+  "terminal": true
+}

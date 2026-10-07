@@ -1,0 +1,2898 @@
+{
+  "base": {
+    "R00_m": 1.0,
+    "coil_distance_m": [
+      0.06689482823003214,
+      0.07511655508619745
+    ],
+    "current_A": 307865.3702814809,
+    "normalized_boundary_rms": 0.0019663016191886775,
+    "plasma_distance_m": [
+      0.13854873071384396,
+      0.1574011983326154
+    ]
+  },
+  "completed": true,
+  "config": {
+    "assumptions": {
+      "casing_m": [
+        0,
+        0.05,
+        0.1
+      ],
+      "casing_plasma_gap_m": 1.04,
+      "field_scales": [
+        4,
+        6,
+        8
+      ],
+      "length_scales": [
+        6,
+        8,
+        10,
+        12
+      ],
+      "winding_density_A_mm2": [
+        112,
+        120,
+        124
+      ]
+    },
+    "inputs": {
+      "arm": {
+        "path": "/private/tmp/fusion-issue37-coupling-20261007/artifacts/issue37-fit-coupling-v1/scale035/arm.json",
+        "sha256": "d3ecc89989315f7413d50b8bedab19251127cc07ad790c1fb0f821ee01ebf1ff"
+      },
+      "frozen": {
+        "path": "/private/tmp/fusion-issue37-coupling-20261007/artifacts/issue37-fit-coupling-v1/scale035/selection/frozen-selection.json",
+        "sha256": "aee0442890e53f61d44f0cb99043c6af7903a10d05b69497a910ba71ecf6caca"
+      },
+      "input": {
+        "path": "/private/tmp/issue37-scale035-input-v1.json",
+        "sha256": "68dac87c81a3356805736fa874175e20041b3c5a79966e6247adb68b31460dcf"
+      }
+    },
+    "literature": {
+      "accessed": "2026-10-07",
+      "doi": "10.1016/j.fusengdes.2025.114868",
+      "facts": "Winding-pack engineering current densities 112\u2013124 A/mm\u00b2; smallest casing-to-LCFS distance 1.04 m; square packs. Our circular envelope, casing allowances and transfer of these quantities are assumptions.",
+      "local_path": "/private/tmp/issue27-stellaris-paper-v1.pdf",
+      "pdf_page_one_based": 23,
+      "sha256": "7fd72c1242ce3a17a9c4b9a4597fcb9ff5296b942b2d8343a0b463539d8d3865",
+      "table": 8,
+      "title": "Stellaris: A high-field quasi-isodynamic stellarator for a prototypical fusion power plant",
+      "url": "https://publikationen.bibliothek.kit.edu/1000179851/172386752"
+    },
+    "scope": "Conditional uniform circular winding envelope. No operating point, magnet qualification, neutronics or acceptance. Existing field errors and pilot current cap unchanged."
+  },
+  "dirty": false,
+  "elapsed_s": 0.03338950010947883,
+  "inputs_unchanged": true,
+  "magnet_qualified": false,
+  "new_geometry_evaluation": false,
+  "operating_point_established": false,
+  "physical_admission": false,
+  "producer": "532f3b72302ecb75a857072beae1816cbdbee4de",
+  "rows": [
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.770968183243617,
+      "coil_margin_m": [
+        0.11154647546726282,
+        0.16087683660425467
+      ],
+      "exclusion_scale_below": 7.646650896397062,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.144911246956465,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.35361886267340137,
+        -0.2405040569607726
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.06597115077460304,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.144911246956465
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.15956184965893,
+      "coil_margin_m": [
+        0.01154647546726284,
+        0.06087683660425469
+      ],
+      "exclusion_scale_below": 7.987202223377879,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.194911246956465,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.4036188626734013,
+        -0.29050405696077264
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.06597115077460304,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.144911246956465
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.547530513236964,
+      "coil_margin_m": [
+        -0.0884535245327372,
+        -0.03912316339574534
+      ],
+      "exclusion_scale_below": 8.327236867837973,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.24491124695646502,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.45361886267340135,
+        -0.3405040569607727
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.06597115077460304,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.144911246956465
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.724873942612506,
+      "coil_margin_m": [
+        0.12137383945936187,
+        0.17070420059635372
+      ],
+      "exclusion_scale_below": 7.608929329734809,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.1399975649604155,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.3487051806773518,
+        -0.23559037496472313
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.061573074056296175,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.1399975649604155
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.11253328192419,
+      "coil_margin_m": [
+        0.021373839459361887,
+        0.07070420059635374
+      ],
+      "exclusion_scale_below": 7.948708268552803,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.18999756496041548,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.39870518067735183,
+        -0.28559037496472306
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.061573074056296175,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.1399975649604155
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.499588462840457,
+      "coil_margin_m": [
+        -0.07862616054063815,
+        -0.029295799403646294
+      ],
+      "exclusion_scale_below": 8.287987791031126,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2399975649604155,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.44870518067735177,
+        -0.3355903749647231
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.061573074056296175,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.1399975649604155
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.703597334108055,
+      "coil_margin_m": [
+        0.12592690923654465,
+        0.1752572703735365
+      ],
+      "exclusion_scale_below": 7.591513631173045,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.1377210300718241,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.3464286457887604,
+        -0.23331384007613176
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.059586845860931784,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.1377210300718241
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.090823609948858,
+      "coil_margin_m": [
+        0.025926909236544615,
+        0.07525727037353647
+      ],
+      "exclusion_scale_below": 7.930934583923155,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.1877210300718241,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.39642864578876047,
+        -0.2833138400761317
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.059586845860931784,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.1377210300718241
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 7388768.886755541,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.477455396920261,
+      "coil_margin_m": [
+        -0.07407309076345536,
+        -0.02474272962646351
+      ],
+      "exclusion_scale_below": 8.269864128728925,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2377210300718241,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.4464286457887604,
+        -0.33331384007613174
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.059586845860931784,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.1377210300718241
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.082436898003628,
+      "coil_margin_m": [
+        0.046410356346411774,
+        0.09574071748340363
+      ],
+      "exclusion_scale_below": 7.9012532453354085,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.17747930651689053,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.3861869222338268,
+        -0.2730721165211982
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.09895672616190457,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.17747930651689053
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.477208285156491,
+      "coil_margin_m": [
+        -0.053589643653588204,
+        -0.004259282516596352
+      ],
+      "exclusion_scale_below": 8.246913039068113,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.22747930651689052,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.4361869222338268,
+        -0.32307211652119816
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.09895672616190457,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.17747930651689053
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.871217501342514,
+      "coil_margin_m": [
+        -0.1535896436535883,
+        -0.10425928251659644
+      ],
+      "exclusion_scale_below": 8.59194243112616,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.27747930651689057,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.48618692223382687,
+        -0.3730721165211982
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.09895672616190457,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.17747930651689053
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.02409779674383,
+      "coil_margin_m": [
+        0.0584463699950335,
+        0.10777673113202535
+      ],
+      "exclusion_scale_below": 7.853603195750558,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.17146129969257967,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.38016891540951603,
+        -0.26705410969688725
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.09235961108444427,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.17146129969257967
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.417729746013878,
+      "coil_margin_m": [
+        -0.04155363000496648,
+        0.007776731132025372
+      ],
+      "exclusion_scale_below": 8.198320561933311,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.22146129969257966,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.43016891540951596,
+        -0.3170541096968873
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.09235961108444427,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.17146129969257967
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.810624732764369,
+      "coil_margin_m": [
+        -0.14155363000496657,
+        -0.09222326886797472
+      ],
+      "exclusion_scale_below": 8.542428439189743,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2714612996925797,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.480168915409516,
+        -0.36705410969688734
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.09235961108444427,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.17146129969257967
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.997190302385999,
+      "coil_margin_m": [
+        0.06402271885372612,
+        0.11335307999071798
+      ],
+      "exclusion_scale_below": 7.831619978100528,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.16867312526323336,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.3773807409801697,
+        -0.26426593526754094
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.08938026879139767,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.16867312526323336
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.390294006950786,
+      "coil_margin_m": [
+        -0.035977281146273854,
+        0.013353079990717998
+      ],
+      "exclusion_scale_below": 8.17590046695082,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.21867312526323335,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.42738074098016965,
+        -0.314265935267541
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.08938026879139767,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.16867312526323336
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 11083153.330133311,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.78267245033666,
+      "coil_margin_m": [
+        -0.13597728114627394,
+        -0.08664692000928209
+      ],
+      "exclusion_scale_below": 8.519581172016952,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2686731252632334,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.4773807409801697,
+        -0.36426593526754103
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.08938026879139767,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.16867312526323336
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.353178477714643,
+      "coil_margin_m": [
+        -0.008501932192266581,
+        0.04082842894472527
+      ],
+      "exclusion_scale_below": 8.12216877632501,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2049354507862297,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.41364306650316607,
+        -0.3005282607905373
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.753134898447925,
+      "coil_margin_m": [
+        -0.10850193219226656,
+        -0.05917157105527471
+      ],
+      "exclusion_scale_below": 8.472118424706542,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2549354507862297,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.463643066503166,
+        -0.35052826079053734
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 11.456162119780222,
+      "coil_margin_m": [
+        -0.20850193219226665,
+        -0.1591715710552748
+      ],
+      "exclusion_scale_below": 9.544488772970839,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.30493545078622974,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.513643066503166,
+        -0.4005282607905374
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.2839409835006,
+      "coil_margin_m": [
+        0.005396059247736895,
+        0.05472642038472875
+      ],
+      "exclusion_scale_below": 8.065707347732449,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.19798645506622797,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.40669407078316433,
+        -0.29357926507053556
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.682587283352797,
+      "coil_margin_m": [
+        -0.09460394075226308,
+        -0.04527357961527123
+      ],
+      "exclusion_scale_below": 8.414572849128705,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.24798645506622796,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.45669407078316426,
+        -0.3435792650705356
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 11.007212698099094,
+      "coil_margin_m": [
+        -0.19460394075226317,
+        -0.14527357961527132
+      ],
+      "exclusion_scale_below": 9.184571668014076,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.297986455066228,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.5066940707831643,
+        -0.39357926507053564
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.252027630655592,
+      "coil_margin_m": [
+        0.011835072277059877,
+        0.06116543341405173
+      ],
+      "exclusion_scale_below": 8.039675048440126,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.19476694855156648,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.4034745642685028,
+        -0.29035975855587415
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.6500664291567,
+      "coil_margin_m": [
+        -0.08816492772294016,
+        -0.038834566585948305
+      ],
+      "exclusion_scale_below": 8.388037882888742,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2447669485515665,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.45347456426850274,
+        -0.3403597585558742
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 6.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 10.803522558974372,
+      "coil_margin_m": [
+        -0.18816492772294013,
+        -0.13883456658594828
+      ],
+      "exclusion_scale_below": 9.021194639839711,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 6,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2947669485515665,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.5034745642685028,
+        -0.3903597585558741
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.770968183243617,
+      "coil_margin_m": [
+        0.20050043608457946,
+        0.266274250933902
+      ],
+      "exclusion_scale_below": 7.646650896397062,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.1673290948778388,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.09893924916708707,
+        0.051880491783084404
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.08796153436613739,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.1673290948778388
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.15956184965893,
+      "coil_margin_m": [
+        0.10050043608457948,
+        0.16627425093390202
+      ],
+      "exclusion_scale_below": 7.987202223377879,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2173290948778388,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.14893924916708712,
+        0.0018804917830843593
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.08796153436613739,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.1673290948778388
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.547530513236964,
+      "coil_margin_m": [
+        0.000500436084579392,
+        0.06627425093390193
+      ],
+      "exclusion_scale_below": 8.327236867837973,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.26732909487783885,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.19893924916708716,
+        -0.048119508216915685
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.08796153436613739,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.1673290948778388
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.724873942612506,
+      "coil_margin_m": [
+        0.21184809857710513,
+        0.27762191342642767
+      ],
+      "exclusion_scale_below": 7.608929329734809,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.16165526363157598,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.09326541792082432,
+        0.057554323029347154
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.08209743207506157,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.16165526363157598
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.11253328192419,
+      "coil_margin_m": [
+        0.11184809857710509,
+        0.17762191342642764
+      ],
+      "exclusion_scale_below": 7.948708268552803,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.211655263631576,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.14326541792082437,
+        0.00755432302934711
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.08209743207506157,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.16165526363157598
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.499588462840457,
+      "coil_margin_m": [
+        0.011848098577105115,
+        0.07762191342642766
+      ],
+      "exclusion_scale_below": 8.287987791031126,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.261655263631576,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.1932654179208243,
+        -0.042445676970652824
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.08209743207506157,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.16165526363157598
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.703597334108055,
+      "coil_margin_m": [
+        0.21710553070009636,
+        0.2828793455494189
+      ],
+      "exclusion_scale_below": 7.591513631173045,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.15902654757008036,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.0906367018593287,
+        0.06018303909084288
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.07944912781457572,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.15902654757008036
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.090823609948858,
+      "coil_margin_m": [
+        0.11710553070009633,
+        0.18287934554941887
+      ],
+      "exclusion_scale_below": 7.930934583923155,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.20902654757008038,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.14063670185932864,
+        0.010183039090842838
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.07944912781457572,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.15902654757008036
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 9851691.849007389,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.477455396920261,
+      "coil_margin_m": [
+        0.01710553070009635,
+        0.08287934554941889
+      ],
+      "exclusion_scale_below": 8.269864128728925,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.25902654757008037,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.19063670185932868,
+        -0.039816960909157206
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.07944912781457572,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.15902654757008036
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.082436898003628,
+      "coil_margin_m": [
+        0.12528772426779766,
+        0.1910615391171202
+      ],
+      "exclusion_scale_below": 7.9012532453354085,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2049354507862297,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.13654560507547808,
+        0.014274135874693394
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.477208285156491,
+      "coil_margin_m": [
+        0.025287724267797684,
+        0.09106153911712023
+      ],
+      "exclusion_scale_below": 8.246913039068113,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2549354507862297,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.18654560507547802,
+        -0.03572586412530665
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.871217501342514,
+      "coil_margin_m": [
+        -0.0747122757322024,
+        -0.008938460882879862
+      ],
+      "exclusion_scale_below": 8.59194243112616,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.30493545078622974,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.23654560507547806,
+        -0.08572586412530658
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.02409779674383,
+      "coil_margin_m": [
+        0.13918571570780114,
+        0.20495953055712368
+      ],
+      "exclusion_scale_below": 7.853603195750558,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.19798645506622797,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.12959660935547634,
+        0.021223131594695133
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.417729746013878,
+      "coil_margin_m": [
+        0.03918571570780116,
+        0.1049595305571237
+      ],
+      "exclusion_scale_below": 8.198320561933311,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.24798645506622796,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.17959660935547628,
+        -0.02877686840530469
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.810624732764369,
+      "coil_margin_m": [
+        -0.06081428429219893,
+        0.004959530557123615
+      ],
+      "exclusion_scale_below": 8.542428439189743,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.297986455066228,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.22959660935547632,
+        -0.07877686840530485
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.997190302385999,
+      "coil_margin_m": [
+        0.14562472873712412,
+        0.21139854358644666
+      ],
+      "exclusion_scale_below": 7.831619978100528,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.19476694855156648,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.12637710284081483,
+        0.024442638109356762
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.390294006950786,
+      "coil_margin_m": [
+        0.04562472873712409,
+        0.11139854358644663
+      ],
+      "exclusion_scale_below": 8.17590046695082,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2447669485515665,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.17637710284081476,
+        -0.025557361890643282
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.78267245033666,
+      "coil_margin_m": [
+        -0.05437527126287589,
+        0.011398543586446652
+      ],
+      "exclusion_scale_below": 8.519581172016952,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2947669485515665,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.2263771028408148,
+        -0.07555736189064333
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.353178477714643,
+      "coil_margin_m": [
+        0.061880475128548995,
+        0.12765428997787154
+      ],
+      "exclusion_scale_below": 8.12216877632501,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.23663907535585404,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.16824922964510236,
+        -0.017429488694930884
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.17592306873227478,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.23663907535585404
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.753134898447925,
+      "coil_margin_m": [
+        -0.03811952487145098,
+        0.02765428997787156
+      ],
+      "exclusion_scale_below": 8.472118424706542,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.28663907535585403,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.2182492296451024,
+        -0.06742948869493093
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.17592306873227478,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.23663907535585404
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 11.456162119780222,
+      "coil_margin_m": [
+        -0.13811952487145096,
+        -0.07234571002212842
+      ],
+      "exclusion_scale_below": 9.544488772970839,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.336639075355854,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.26824922964510234,
+        -0.11742948869493086
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.17592306873227478,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.23663907535585404
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.2839409835006,
+      "coil_margin_m": [
+        0.07792849332671126,
+        0.1437023081760338
+      ],
+      "exclusion_scale_below": 8.065707347732449,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.22861506625677291,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.16022522054602129,
+        -0.009405479595849808
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.16419486415012313,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.22861506625677291
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.682587283352797,
+      "coil_margin_m": [
+        -0.02207150667328872,
+        0.04370230817603382
+      ],
+      "exclusion_scale_below": 8.414572849128705,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2786150662567729,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.21022522054602122,
+        -0.05940547959584974
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.16419486415012313,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.22861506625677291
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 11.007212698099094,
+      "coil_margin_m": [
+        -0.12207150667328881,
+        -0.05629769182396627
+      ],
+      "exclusion_scale_below": 9.184571668014076,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.32861506625677295,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.26022522054602126,
+        -0.10940547959584979
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.16419486415012313,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.22861506625677291
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.252027630655592,
+      "coil_margin_m": [
+        0.08536362513830142,
+        0.15113743998762397
+      ],
+      "exclusion_scale_below": 8.039675048440126,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.22489750035097783,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.1565076546402262,
+        -0.0056879136900547245
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.15889825562915144,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.22489750035097783
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.6500664291567,
+      "coil_margin_m": [
+        -0.014636374861698553,
+        0.05113743998762399
+      ],
+      "exclusion_scale_below": 8.388037882888742,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2748975003509778,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.20650765464022613,
+        -0.05568791369005466
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.15889825562915144,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.22489750035097783
+    },
+    {
+      "R00_m": 8.0,
+      "ampere_turns_A": 19703383.698014777,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 10.803522558974372,
+      "coil_margin_m": [
+        -0.11463637486169864,
+        -0.0488625600123761
+      ],
+      "exclusion_scale_below": 9.021194639839711,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 8,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.32489750035097786,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.2565076546402262,
+        -0.1056879136900547
+      ],
+      "verdict": "excluded",
+      "winding_area_m2": 0.15889825562915144,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.22489750035097783
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.770968183243617,
+      "coil_margin_m": [
+        0.2947890515399618,
+        0.37700632010161506
+      ],
+      "exclusion_scale_below": 7.646650896397062,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.18707961538017975,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.15840769175825997,
+        0.34693236794597415
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.10995191795767176,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.18707961538017975
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.15956184965893,
+      "coil_margin_m": [
+        0.19478905153996184,
+        0.2770063201016151
+      ],
+      "exclusion_scale_below": 7.987202223377879,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.23707961538017974,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.10840769175825993,
+        0.2969323679459741
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.10995191795767176,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.18707961538017975
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.547530513236964,
+      "coil_margin_m": [
+        0.09478905153996176,
+        0.177006320101615
+      ],
+      "exclusion_scale_below": 8.327236867837973,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2870796153801798,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.05840769175825988,
+        0.24693236794597406
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.10995191795767176,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.18707961538017975
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.724873942612506,
+      "coil_margin_m": [
+        0.3074761238994679,
+        0.3896933924611211
+      ],
+      "exclusion_scale_below": 7.608929329734809,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.18073607920042672,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.164751227938013,
+        0.3532759041257272
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.10262179009382696,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.18073607920042672
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.11253328192419,
+      "coil_margin_m": [
+        0.2074761238994679,
+        0.28969339246112114
+      ],
+      "exclusion_scale_below": 7.948708268552803,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2307360792004267,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.11475122793801296,
+        0.30327590412572714
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.10262179009382696,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.18073607920042672
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.499588462840457,
+      "coil_margin_m": [
+        0.10747612389946781,
+        0.18969339246112105
+      ],
+      "exclusion_scale_below": 8.287987791031126,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.28073607920042676,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.06475122793801291,
+        0.2532759041257271
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.10262179009382696,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.18073607920042672
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.703597334108055,
+      "coil_margin_m": [
+        0.3133541117065176,
+        0.39557138026817085
+      ],
+      "exclusion_scale_below": 7.591513631173045,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.17779708529690186,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.16769022184153792,
+        0.3562148980292519
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.09931140976821964,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.17779708529690186
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.090823609948858,
+      "coil_margin_m": [
+        0.21335411170651764,
+        0.29557138026817087
+      ],
+      "exclusion_scale_below": 7.930934583923155,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.22779708529690185,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.11769022184153788,
+        0.30621489802925206
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.09931140976821964,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.17779708529690186
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 12314614.811259236,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.477455396920261,
+      "coil_margin_m": [
+        0.11335411170651766,
+        0.1955713802681709
+      ],
+      "exclusion_scale_below": 8.269864128728925,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.27779708529690184,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.06769022184153783,
+        0.256214898029252
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.09931140976821964,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.17779708529690186
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.082436898003628,
+      "coil_margin_m": [
+        0.210698683342749,
+        0.2929159519044022
+      ],
+      "exclusion_scale_below": 7.9012532453354085,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.22912479947878617,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.1163625076596535,
+        0.3048871838473677
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.16492787693650762,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.22912479947878617
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.477208285156491,
+      "coil_margin_m": [
+        0.11069868334274902,
+        0.19291595190440225
+      ],
+      "exclusion_scale_below": 8.246913039068113,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.27912479947878616,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.06636250765965346,
+        0.25488718384736764
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.16492787693650762,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.22912479947878617
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.871217501342514,
+      "coil_margin_m": [
+        0.010698683342749038,
+        0.09291595190440227
+      ],
+      "exclusion_scale_below": 8.59194243112616,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.32912479947878615,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.016362507659653414,
+        0.20488718384736782
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.16492787693650762,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.22912479947878617
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.02409779674383,
+      "coil_margin_m": [
+        0.226237110148028,
+        0.30845437870968123
+      ],
+      "exclusion_scale_below": 7.853603195750558,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.22135558607614667,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.12413172106229298,
+        0.31265639725000716
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.15393268514074043,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.22135558607614667
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.417729746013878,
+      "coil_margin_m": [
+        0.12623711014802796,
+        0.2084543787096812
+      ],
+      "exclusion_scale_below": 8.198320561933311,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2713555860761467,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.07413172106229293,
+        0.2626563972500071
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.15393268514074043,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.22135558607614667
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.810624732764369,
+      "coil_margin_m": [
+        0.026237110148027987,
+        0.10845437870968122
+      ],
+      "exclusion_scale_below": 8.542428439189743,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.32135558607614667,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.02413172106229311,
+        0.21265639725000707
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.15393268514074043,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.22135558607614667
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.997190302385999,
+      "coil_margin_m": [
+        0.23343614556881448,
+        0.3156534141304677
+      ],
+      "exclusion_scale_below": 7.831619978100528,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.21775606836575342,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.12773123877268633,
+        0.3162559149604005
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.14896711465232945,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.21775606836575342
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.390294006950786,
+      "coil_margin_m": [
+        0.13343614556881445,
+        0.21565341413046768
+      ],
+      "exclusion_scale_below": 8.17590046695082,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.26775606836575344,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.07773123877268628,
+        0.26625591496040046
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.14896711465232945,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.21775606836575342
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 18471922.216888852,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.78267245033666,
+      "coil_margin_m": [
+        0.03343614556881447,
+        0.1156534141304677
+      ],
+      "exclusion_scale_below": 8.519581172016952,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.31775606836575343,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.02773123877268624,
+        0.21625591496040042
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.14896711465232945,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.21775606836575342
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.353178477714643,
+      "coil_margin_m": [
+        0.13980722367193643,
+        0.22202449223358967
+      ],
+      "exclusion_scale_below": 8.12216877632501,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.26457052931419245,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.08091677782424722,
+        0.2694414540119614
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.21990383591534352,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.26457052931419245
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.753134898447925,
+      "coil_margin_m": [
+        0.039807223671936454,
+        0.12202449223358969
+      ],
+      "exclusion_scale_below": 8.472118424706542,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.31457052931419244,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.030916777824247177,
+        0.21944145401196136
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.21990383591534352,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.26457052931419245
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 11.456162119780222,
+      "coil_margin_m": [
+        -0.060192776328063524,
+        0.02202449223358971
+      ],
+      "exclusion_scale_below": 9.544488772970839,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.3645705293141924,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.019083222175752645,
+        0.1694414540119613
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.21990383591534352,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.26457052931419245
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.2839409835006,
+      "coil_margin_m": [
+        0.1577494534695587,
+        0.23996672203121194
+      ],
+      "exclusion_scale_below": 8.065707347732449,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2555994144153813,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.08988789272305842,
+        0.2784125689107726
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.20524358018765393,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.2555994144153813
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.682587283352797,
+      "coil_margin_m": [
+        0.05774945346955873,
+        0.13996672203121197
+      ],
+      "exclusion_scale_below": 8.414572849128705,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.3055994144153813,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.03988789272305837,
+        0.22841256891077255
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.20524358018765393,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.2555994144153813
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 11.007212698099094,
+      "coil_margin_m": [
+        -0.04225054653044136,
+        0.039966722031211876
+      ],
+      "exclusion_scale_below": 9.184571668014076,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.35559941441538134,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.010112107276941673,
+        0.1784125689107725
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.20524358018765393,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.2555994144153813
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.252027630655592,
+      "coil_margin_m": [
+        0.16606218354575208,
+        0.24827945210740532
+      ],
+      "exclusion_scale_below": 8.039675048440126,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2514430493772846,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.0940442577611551,
+        0.2825689339488693
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.1986228195364393,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.2514430493772846
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.6500664291567,
+      "coil_margin_m": [
+        0.0660621835457521,
+        0.14827945210740534
+      ],
+      "exclusion_scale_below": 8.388037882888742,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.3014430493772846,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.04404425776115506,
+        0.23256893394886924
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.1986228195364393,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.2514430493772846
+    },
+    {
+      "R00_m": 10.0,
+      "ampere_turns_A": 24629229.622518472,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 10.803522558974372,
+      "coil_margin_m": [
+        -0.03393781645424798,
+        0.04827945210740525
+      ],
+      "exclusion_scale_below": 9.021194639839711,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 10,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.35144304937728466,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        -0.0059557422388449854,
+        0.1825689339488692
+      ],
+      "verdict": "unresolved",
+      "winding_area_m2": 0.1986228195364393,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.2514430493772846
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.770968183243617,
+      "coil_margin_m": [
+        0.39286703718792626,
+        0.49152775946190996
+      ],
+      "exclusion_scale_below": 7.646650896397062,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2049354507862297,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.41764931777989767,
+        0.643878929205155
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.15956184965893,
+      "coil_margin_m": [
+        0.2928670371879263,
+        0.39152775946191
+      ],
+      "exclusion_scale_below": 7.987202223377879,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2549354507862297,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3676493177798976,
+        0.5938789292051552
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.547530513236964,
+      "coil_margin_m": [
+        0.1928670371879262,
+        0.2915277594619099
+      ],
+      "exclusion_scale_below": 8.327236867837973,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.30493545078622974,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3176493177798978,
+        0.5438789292051549
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.13194230154920608,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.2049354507862297
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.724873942612506,
+      "coil_margin_m": [
+        0.40676502862792974,
+        0.5054257509019134
+      ],
+      "exclusion_scale_below": 7.608929329734809,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.19798645506622797,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.4245983134998994,
+        0.6508279249251567
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.11253328192419,
+      "coil_margin_m": [
+        0.30676502862792976,
+        0.40542575090191346
+      ],
+      "exclusion_scale_below": 7.948708268552803,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.24798645506622796,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3745983134998996,
+        0.6008279249251567
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.499588462840457,
+      "coil_margin_m": [
+        0.20676502862792967,
+        0.3054257509019134
+      ],
+      "exclusion_scale_below": 8.287987791031126,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.297986455066228,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3245983134998993,
+        0.5508279249251569
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.12314614811259235,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.19798645506622797
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.703597334108055,
+      "coil_margin_m": [
+        0.4132040416572527,
+        0.5118647639312364
+      ],
+      "exclusion_scale_below": 7.591513631173045,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.19476694855156648,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.42781782001456103,
+        0.6540474314398184
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.090823609948858,
+      "coil_margin_m": [
+        0.3132040416572527,
+        0.4118647639312364
+      ],
+      "exclusion_scale_below": 7.930934583923155,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2447669485515665,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.377817820014561,
+        0.6040474314398183
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 14777537.773511082,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.477455396920261,
+      "coil_margin_m": [
+        0.2132040416572527,
+        0.3118647639312364
+      ],
+      "exclusion_scale_below": 8.269864128728925,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 4,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2947669485515665,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.32781782001456095,
+        0.5540474314398183
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.11917369172186357,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.19476694855156648
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.082436898003628,
+      "coil_margin_m": [
+        0.3007506541268692,
+        0.3994113764008529
+      ],
+      "exclusion_scale_below": 7.9012532453354085,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.25099364231675825,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3715911262493692,
+        0.5978207376746265
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.19791345232380914,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.25099364231675825
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.477208285156491,
+      "coil_margin_m": [
+        0.2007506541268692,
+        0.2994113764008529
+      ],
+      "exclusion_scale_below": 8.246913039068113,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.30099364231675824,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.32159112624936914,
+        0.5478207376746265
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.19791345232380914,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.25099364231675825
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.871217501342514,
+      "coil_margin_m": [
+        0.10075065412686923,
+        0.19941137640085294
+      ],
+      "exclusion_scale_below": 8.59194243112616,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.3509936423167582,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.2715911262493691,
+        0.49782073767462665
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.19791345232380914,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.25099364231675825
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.02409779674383,
+      "coil_margin_m": [
+        0.3177721478656577,
+        0.4164328701396414
+      ],
+      "exclusion_scale_below": 7.853603195750558,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.24248289544736398,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.38010187311876353,
+        0.6063314845440209
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.18471922216888853,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.24248289544736398
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.417729746013878,
+      "coil_margin_m": [
+        0.21777214786565768,
+        0.3164328701396414
+      ],
+      "exclusion_scale_below": 8.198320561933311,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.292482895447364,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3301018731187635,
+        0.5563314845440208
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.18471922216888853,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.24248289544736398
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.810624732764369,
+      "coil_margin_m": [
+        0.1177721478656577,
+        0.2164328701396414
+      ],
+      "exclusion_scale_below": 8.542428439189743,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.342482895447364,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.28010187311876344,
+        0.5063314845440208
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.18471922216888853,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.24248289544736398
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 8.997190302385999,
+      "coil_margin_m": [
+        0.3256582960501446,
+        0.4243190183241283
+      ],
+      "exclusion_scale_below": 7.831619978100528,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.23853982135512053,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3840449472110068,
+        0.6102745586362643
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.17876053758279534,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.23853982135512053
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.390294006950786,
+      "coil_margin_m": [
+        0.22565829605014465,
+        0.32431901832412835
+      ],
+      "exclusion_scale_below": 8.17590046695082,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2885398213551205,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.33404494721100697,
+        0.5602745586362643
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.17876053758279534,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.23853982135512053
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 22166306.660266623,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.78267245033666,
+      "coil_margin_m": [
+        0.12565829605014467,
+        0.22431901832412837
+      ],
+      "exclusion_scale_below": 8.519581172016952,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 6,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.3385398213551205,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.2840449472110069,
+        0.5102745586362643
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.17876053758279534,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.23853982135512053
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.353178477714643,
+      "coil_margin_m": [
+        0.22309295093452564,
+        0.32175367320850934
+      ],
+      "exclusion_scale_below": 8.12216877632501,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.28982249391293,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3327622746531973,
+        0.5589918860784548
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.26388460309841216,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.28982249391293
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.753134898447925,
+      "coil_margin_m": [
+        0.12309295093452566,
+        0.22175367320850936
+      ],
+      "exclusion_scale_below": 8.472118424706542,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.33982249391293,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.2827622746531975,
+        0.5089918860784548
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.26388460309841216,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.28982249391293
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 11.456162119780222,
+      "coil_margin_m": [
+        0.02309295093452568,
+        0.12175367320850938
+      ],
+      "exclusion_scale_below": 9.544488772970839,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.38982249391293,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.23276227465319743,
+        0.45899188607845476
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.26388460309841216,
+      "winding_density_A_mm2": 112,
+      "winding_radius_m": 0.28982249391293
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.2839409835006,
+      "coil_margin_m": [
+        0.24274767891872373,
+        0.34140840119270743
+      ],
+      "exclusion_scale_below": 8.065707347732449,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.279995129920831,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.34258963864529646,
+        0.5688192500705538
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.2462922962251847,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.279995129920831
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.682587283352797,
+      "coil_margin_m": [
+        0.14274767891872375,
+        0.24140840119270746
+      ],
+      "exclusion_scale_below": 8.414572849128705,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.32999512992083097,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.2925896386452964,
+        0.5188192500705537
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.2462922962251847,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.279995129920831
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 11.007212698099094,
+      "coil_margin_m": [
+        0.042747678918723775,
+        0.14140840119270748
+      ],
+      "exclusion_scale_below": 9.184571668014076,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.37999512992083095,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.24258963864529637,
+        0.4688192500705539
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.2462922962251847,
+      "winding_density_A_mm2": 120,
+      "winding_radius_m": 0.279995129920831
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.252027630655592,
+      "coil_margin_m": [
+        0.2518538184730893,
+        0.350514540747073
+      ],
+      "exclusion_scale_below": 8.039675048440126,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.2754420601436482,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.3471427084224792,
+        0.5733723198477365
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.23834738344372713,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.2754420601436482
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0.05,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 9.6500664291567,
+      "coil_margin_m": [
+        0.15185381847308932,
+        0.250514540747073
+      ],
+      "exclusion_scale_below": 8.388037882888742,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.3254420601436482,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.29714270842247936,
+        0.5233723198477365
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.23834738344372713,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.2754420601436482
+    },
+    {
+      "R00_m": 12.0,
+      "ampere_turns_A": 29555075.547022164,
+      "casing_m": 0.1,
+      "casing_plasma_gap_m": 1.04,
+      "clearance_scale_at_least": 10.803522558974372,
+      "coil_margin_m": [
+        0.05185381847308923,
+        0.15051454074707293
+      ],
+      "exclusion_scale_below": 9.021194639839711,
+      "existing_pilot_current_limit_met": false,
+      "field_scale": 8,
+      "length_scale": 12,
+      "normalized_boundary_rms": 0.0019663016191886775,
+      "outer_radius_m": 0.3754420601436482,
+      "physical_admission": false,
+      "plasma_margin_m": [
+        0.2471427084224791,
+        0.47337231984773664
+      ],
+      "verdict": "clears-two-separation-checks",
+      "winding_area_m2": 0.23834738344372713,
+      "winding_density_A_mm2": 124,
+      "winding_radius_m": 0.2754420601436482
+    }
+  ],
+  "runtime": {
+    "executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python",
+    "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]"
+  },
+  "source_hashes": {
+    "/private/tmp/fusion-issue27-envelope-20261007/scripts/screen_reactor_envelope.py": "3670fbd5467c1c22ae33ee4898f2dfecb5605754d664793d7c40460f4252aa9e",
+    "/private/tmp/fusion-issue37-coupling-20261007/artifacts/issue37-fit-coupling-v1/scale035/arm.json": "d3ecc89989315f7413d50b8bedab19251127cc07ad790c1fb0f821ee01ebf1ff",
+    "/private/tmp/fusion-issue37-coupling-20261007/artifacts/issue37-fit-coupling-v1/scale035/selection/frozen-selection.json": "aee0442890e53f61d44f0cb99043c6af7903a10d05b69497a910ba71ecf6caca",
+    "/private/tmp/issue27-envelope-config-v1.json": "de777718fdea127383fb9e0e29b668dba8fa0bae43cf855b795194046f793eba",
+    "/private/tmp/issue37-scale035-input-v1.json": "68dac87c81a3356805736fa874175e20041b3c5a79966e6247adb68b31460dcf"
+  },
+  "wall_elapsed_s": 0.033390045166015625
+}

@@ -1,0 +1,52 @@
+{
+  "assumptions": {
+    "casing_m": [
+      0,
+      0.05,
+      0.1
+    ],
+    "casing_plasma_gap_m": 1.04,
+    "field_scales": [
+      4,
+      6,
+      8
+    ],
+    "length_scales": [
+      6,
+      8,
+      10,
+      12
+    ],
+    "winding_density_A_mm2": [
+      112,
+      120,
+      124
+    ]
+  },
+  "inputs": {
+    "arm": {
+      "path": "/private/tmp/fusion-issue37-coupling-20261007/artifacts/issue37-fit-coupling-v1/scale035/arm.json",
+      "sha256": "d3ecc89989315f7413d50b8bedab19251127cc07ad790c1fb0f821ee01ebf1ff"
+    },
+    "frozen": {
+      "path": "/private/tmp/fusion-issue37-coupling-20261007/artifacts/issue37-fit-coupling-v1/scale035/selection/frozen-selection.json",
+      "sha256": "aee0442890e53f61d44f0cb99043c6af7903a10d05b69497a910ba71ecf6caca"
+    },
+    "input": {
+      "path": "/private/tmp/issue37-scale035-input-v1.json",
+      "sha256": "68dac87c81a3356805736fa874175e20041b3c5a79966e6247adb68b31460dcf"
+    }
+  },
+  "literature": {
+    "accessed": "2026-10-07",
+    "doi": "10.1016/j.fusengdes.2025.114868",
+    "facts": "Winding-pack engineering current densities 112\u2013124 A/mm\u00b2; smallest casing-to-LCFS distance 1.04 m; square packs. Our circular envelope, casing allowances and transfer of these quantities are assumptions.",
+    "local_path": "/private/tmp/issue27-stellaris-paper-v1.pdf",
+    "pdf_page_one_based": 23,
+    "sha256": "7fd72c1242ce3a17a9c4b9a4597fcb9ff5296b942b2d8343a0b463539d8d3865",
+    "table": 8,
+    "title": "Stellaris: A high-field quasi-isodynamic stellarator for a prototypical fusion power plant",
+    "url": "https://publikationen.bibliothek.kit.edu/1000179851/172386752"
+  },
+  "scope": "Conditional uniform circular winding envelope. No operating point, magnet qualification, neutronics or acceptance. Existing field errors and pilot current cap unchanged."
+}
