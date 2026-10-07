@@ -1,4 +1,4 @@
-# Lower interior error restores the screened shallow wells
+# Shallow wells return in the lower-error candidate
 
 **Decision: test interior field fidelity in joint optimization.** The existing
 [interior continuation](../../submissions/interior-pass-headroom-continuation/README.md)
