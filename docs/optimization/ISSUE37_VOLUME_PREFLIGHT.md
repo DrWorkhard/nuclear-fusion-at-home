@@ -54,4 +54,7 @@ The 15-entry manifest SHA256 is
 The original reference input and frozen protocol are included; no external Wout
 or coil seed is needed for this check. Raw outputs remain intact locally.
 Producer validation passed 294 research and 61 public tests, docs, Ruff and diff
-checks, with eight existing deprecation warnings. Publication remains pending.
+checks, with eight existing deprecation warnings. A fresh shallow archive replay
+with native packages disabled reproduced all three cases and analytic controls
+exactly, verified all 15 manifest entries and 23 source/input hashes, and checked
+that each proposal changes only the named coefficient. Publication remains pending.
