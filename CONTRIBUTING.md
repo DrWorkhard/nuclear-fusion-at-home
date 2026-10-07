@@ -48,7 +48,9 @@ Search [open issues](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues
 for useful work and duplicates. For a finding outside your PR, open one focused
 issue when authorized to post: observation, revision, reproduction, impact and
 uncertainty. Use the bug/research templates; report security issues privately via
-[SECURITY.md](SECURITY.md). Larger efforts benefit from a coordination comment.
+[SECURITY.md](SECURITY.md). When you start work on an issue, comment there that
+you are working on it (agents: if authorized to post), so others avoid duplicate
+work; if you stop, say so.
 `Fixes #N` closes an issue on merge; `Related to #N` does not. Neither an issue nor
 a research hint is required for a contribution.
 
