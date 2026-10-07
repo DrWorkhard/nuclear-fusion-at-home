@@ -28,7 +28,9 @@ Use the maximum fine-boundary RMS and finest 64/512 interior RMS; keep both fine
 maxima and all coarser levels. Require the registered action domains and both
 refinements, recomputing cell scores from their full phase/family arrays. Frozen
 current, independent field controls, direct trace settings and trace summary must
-agree. Geometry/current/flux, convergence and tracing failures remain failures.
+agree. Every proposal diagnostic's existing target/parent binding and canonical
+snapshot hash must match selection. A zero-score tie is not a relative gain.
+Geometry/current/flux, convergence and tracing failures remain failures.
 The three-way result never grants physical acceptance or actual-coil benefit:
 
 - **Continue:** the complete selected pair passes the protocol's 1% ideal gain,

@@ -154,6 +154,14 @@ def diagnostic_summary(frozen, report):
             'all three registered interior grids required')
     scale = frozen['snapshot']['scale']
     field_rows = report['fine']+report['interior']
+    if frozen['proposal'] != 'control':
+        expected = {k: frozen['identity'][k] for k in coil.BINDING_KEYS}
+        for row in [*field_rows, report['geometry'], report['trace']]:
+            context = row.get('joint_target')
+            require(context is not None and context['binding'] == expected
+                    and context['canonical_snapshot_sha256']
+                    == frozen['canonical_snapshot_sha256'],
+                    'diagnostic target or snapshot differs from frozen selection')
     require(all(r['checks_pass'] and r['metrics']['frozen_scale'] == scale for r in field_rows),
             'numerically checked fields with frozen currents required')
     for row in field_rows:
@@ -214,7 +222,8 @@ def decide(control, joint):
         values = [*row['holdout_scores'], row['boundary_rms'], row['interior_rms']]
         require(np.isfinite(values).all() and min(values) >= 0,
                 'finite nonnegative comparison metrics required')
-    checks = dict(ideal_gain=all(j <= .99*c for c, j in zip(
+    # A zero-to-zero tie cannot demonstrate a relative improvement.
+    checks = dict(ideal_gain=all(c > 0 and j <= .99*c for c, j in zip(
                       control['holdout_scores'], joint['holdout_scores'], strict=True)),
                   boundary_nonregression=joint['boundary_rms'] <= 1.10*control['boundary_rms'],
                   interior_nonregression=joint['interior_rms'] <= 1.10*control['interior_rms'])

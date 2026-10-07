@@ -285,6 +285,10 @@ def selected_pair(frozen):
     chosen['selection_sha256'] = decision.canonical_sha(
         {k: v for k, v in chosen.items() if k != 'selection_sha256'})
     joint = dict(frozen=chosen, diagnostics=diagnostics(chosen))
+    report = joint['diagnostics']
+    for row in [*report['fine'], *report['interior'], report['geometry'], report['trace']]:
+        row['joint_target'] = dict(binding=copy.deepcopy(chosen['identity']),
+            canonical_snapshot_sha256=chosen['canonical_snapshot_sha256'])
     for mode in ('holdout', 'holdout-refined'):
         joint['diagnostics'][mode] = score('plus', mode, amplitude=.095)
     return rows, control, joint
@@ -329,3 +333,27 @@ def test_bad_nonselected_grid_cannot_be_hidden_by_metric_aggregation(frozen, gro
     report[group][0]['metrics'][key] = float('nan')
     with pytest.raises(decision.IncompleteComparison, match='every field grid'):
         decision.diagnostic_summary(selected, report)
+
+
+@pytest.mark.parametrize('group', ['fine', 'interior', 'geometry', 'trace'])
+@pytest.mark.parametrize('fault', ['wout', 'parent', 'snapshot', 'missing'])
+def test_each_joint_diagnostic_must_belong_to_frozen_target_and_coils(frozen, group, fault):
+    rows, control, joint = selected_pair(frozen)
+    row = joint['diagnostics'][group]
+    if isinstance(row, list):
+        row = row[0]
+    if fault == 'missing':
+        del row['joint_target']
+    elif fault == 'snapshot':
+        row['joint_target']['canonical_snapshot_sha256'] = 'c'*64
+    else:
+        row['joint_target']['binding'][fault+'_sha256'] = 'c'*64
+    result = decision.assess(rows, control, joint)
+    assert result['verdict'] == 'inconclusive' and not result['completed']
+    assert 'diagnostic target or snapshot' in result['reason']
+
+
+def test_zero_score_tie_is_not_a_relative_improvement():
+    control, joint = summaries()
+    control['holdout_scores'] = joint['holdout_scores'] = [0., 0.]
+    assert decision.decide(control, joint)['verdict'] == 'change'
