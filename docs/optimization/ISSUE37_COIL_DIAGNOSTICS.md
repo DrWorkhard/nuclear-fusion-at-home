@@ -66,7 +66,7 @@ exact scripts and replay recipe. Its 28-entry manifest SHA256 is
 Publication is pending; the separate solver archive and native environment remain
 explicit dependencies. Fresh shallow array replay verified 67 source/input/native
 bindings, reproduced every saved independent B/A comparison with zero discrepancy
-and field metrics exactly in 0.430 s. It did not repeat native fields, numerical
+and boundary-error/interior field metrics exactly in 0.430 s. It did not repeat native fields, numerical
 intake, geometry, solver execution or historical timing. Fresh shallow producer
 checks passed 413 research tests (25 focused), 61 public tests, docs, Ruff and diff.
 Read-only adversarial review preceded execution; full joint execution stays disabled.
