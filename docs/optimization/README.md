@@ -171,5 +171,8 @@ frozen perturbations; new-target intake and joint execution remain gated.
 [Registered joint-target numerical intake](ISSUE37_TARGET_INTAKE.md) keeps proposal
 validation separate from archived-target checks; solver provenance remains required.
 
+[Registered-target coil adapter](ISSUE37_COIL_ADAPTER.md) connects receipt-bound
+proposals to the existing coil model; full joint execution remains disabled.
+
 The [one cold-solve qualification](ISSUE37_SOLVER_QUALIFICATION.md) will test bound
 solver provenance and independent numerical intake before joint integration.
