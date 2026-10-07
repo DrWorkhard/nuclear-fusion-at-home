@@ -42,8 +42,9 @@ spend effort on decisions that test the path.
    fidelity in joint optimization.
 2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
    power balance, pressure/confinement, magnets, blanket/shield space and heat
-   exhaust before expensive optimization. Detailed simulations follow a decision
-   need; boundary RMS alone does not determine their priority.
+   exhaust before expensive optimization. The [conditional space screen](engineering/ISSUE27_ENVELOPE_SCREEN.md)
+   excludes some scaled copies; it supplies no operating point. Detailed modelling
+   follows a decision need.
 3. **Preregister the joint comparison by 24 October.** The local
    [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) missed its 50% hurdle.
    Use the #37/#39 protocol and implementation work for joint plasma/coil
