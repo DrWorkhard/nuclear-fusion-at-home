@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import sys
 import time
+from datetime import UTC, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -101,6 +102,11 @@ def main(reader, tree_path, output):
 
     class Ranges(AbstractFileSystem):
         protocol = 'bounded'
+
+        def modified(self, path):
+            self.info(path)
+            # Cache sentinel for frozen URLs, not a claimed upstream modification time.
+            return datetime(1970, 1, 1, tzinfo=UTC)
 
         def info(self, path, **kwargs):
             path = self._strip_protocol(path)
