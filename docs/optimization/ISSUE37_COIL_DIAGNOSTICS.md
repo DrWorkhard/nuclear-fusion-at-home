@@ -1,6 +1,6 @@
 # Receipt-bound proposal coil diagnostics
 
-Prospective component qualification, 7 October 2026. The decision is whether the
+Component qualification registered and executed on 7 October 2026. The decision is whether the
 [qualified fitting adapter](ISSUE37_COIL_ADAPTER.md) can feed proposal snapshots
 through the same fine-field and continuous-geometry checks as archived targets.
 The [joint diagnostic entry points](../../src/fusion_baselines/joint_coil.py)
@@ -47,3 +47,26 @@ joint orchestration and the common realized-field endpoint remain separate
 prerequisites. Full joint execution and physical admission stay disabled.
 Agent review is not external physics review; cached solves remain chargeable under
 the future joint-arm protocol.
+
+## Result
+
+The single qualification passed at clean producer/evaluator
+`86c41991ae061e6fad5b2a12bdc58706169c9b70`: 25.531 s driver, 25.759 s supervised,
+clock discrepancy below 0.00021 s. Maximum independent field discrepancy was
+5.908e-16; physical mapping 3.670e-15. Frozen scale stayed 3.0836165035402443.
+Geometry/current/flux gates passed. Boundary RMS/max and interior gates failed:
+worst fine RMS 0.002451116292, maximum 0.009995554386; finest interior RMS
+0.012895263145. These retained failures are unoptimized seed diagnostics, not a
+joint result. No solve, optimization or tracing ran.
+
+Local archive `2b447838c523e6c63ce647aa379e8837d4bd46f5`, prepared tag
+`evidence-issue37-coil-diagnostics-v1`, preserves all 22 raw files (6,575,718 bytes),
+exact scripts and replay recipe. Its 28-entry manifest SHA256 is
+`d1a62ae25d1cab2d8909978af687b36b4254b5be3fcc694ba0161e07bf80d22a`.
+Publication is pending; the separate solver archive and native environment remain
+explicit dependencies. Fresh shallow array replay verified 67 source/input/native
+bindings, reproduced every saved independent B/A comparison with zero discrepancy
+and field metrics exactly in 0.430 s. It did not repeat native fields, numerical
+intake, geometry, solver execution or historical timing. Fresh shallow producer
+checks passed 413 research tests (25 focused), 61 public tests, docs, Ruff and diff.
+Read-only adversarial review preceded execution; full joint execution stays disabled.
