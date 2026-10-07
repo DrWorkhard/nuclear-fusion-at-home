@@ -51,10 +51,19 @@ The three-way result never grants physical acceptance or actual-coil benefit:
   missing, an arm is interrupted, a direct trajectory ends at its finite cap
   before 200 turns without a witnessed exit, or its classifier stop is unresolved.
 
-Still required: the operation scheduler, cold-solve and numerical-rejection
-handoff, shared dual-clock/storage supervision, reference diagnostics, and tests
-of the complete C-then-J sequence. Setup and every failed operation must consume
-the arm's frozen budget; cached qualification work cannot become free setup.
-Each child operation needs one process-group owner so interruption cannot leave
-an orphan solve running alongside another arm. No native comparison is authorized
-by a passing unit test of these decision helpers.
+`joint_schedule` now orders C then J with one attempt, plus then minus, no adaptive
+poll or retry. Setup, scoring, solves and fitting share each arm's original
+1800 s dual-clock deadline. Each J fit starts with at least 300 s on both clocks
+and receives exactly that cap. Normal C cap finalization may consume the remaining
+900 s diagnostic allowance; it never moves that allowance beyond search-end+900.
+Selection serialization consumes the active budget and must finish before any
+validation request. Source checks and final reporting also consume that budget.
+Any interruption stops the attempt. A missing usable C diagnostic stops before
+spending J's budget; a completed negative C screen still permits the fixed J arm.
+
+Clock-driven tests exercise the complete schedule with synthetic operation
+receipts and the real selection/decision helpers. Still required: the native
+operation adapter, cold-solve/rejection handoff, reference diagnostics and actual
+process supervision. Each native operation needs one process-group owner; nested
+watchdogs must not leave an orphan solve. Setup/failed work cannot become free
+cached qualification work. Passing scheduler tests does not enable execution.
