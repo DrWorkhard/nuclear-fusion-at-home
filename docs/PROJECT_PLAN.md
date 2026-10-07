@@ -45,8 +45,10 @@ spend effort on decisions that test the path.
    the [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) now calls for a bounded
    joint feasibility protocol ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
    Its [first local attempt](optimization/ISSUE37_JOINT_RESULT.md) was interrupted by
-   host clock disagreement. Establish uninterrupted execution conditions before a
-   separately registered follow-up; preserve the failed attempt and clock gate.
+   host clock disagreement; the [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md)
+   completed but missed the ideal-gain hurdle. Use its saved training values to
+   define a cheaper screen of step scale or direction before another full matched
+   experiment. Preserve both attempts and all gates; register any new input first.
    Qualify a common realized-field endpoint before claiming benefit; missing
    surfaces or wells restrict the next pilot to feasibility.
 4. **Make the decisive test portable.** Supply the missing target data and reuse

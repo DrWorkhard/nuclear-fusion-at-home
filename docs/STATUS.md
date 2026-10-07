@@ -1,6 +1,6 @@
 # Scientific status
 
-Updated 7 October 2026; includes the completed local coil-freedom probe.
+Updated 7 October 2026; includes the completed local joint-feasibility follow-up.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The matched
@@ -17,7 +17,12 @@ The local archive retains clock/load limitations; this is a resource-allocation
 decision, not controlled throughput or a causal/global conclusion. Publication is
 pending. The first local [joint comparison](optimization/ISSUE37_JOINT_RESULT.md)
 completed its control but was interrupted by a clock discrepancy during the first
-perturbed solve; its verdict is inconclusive, with no paired improvement measured.
+perturbed solve; its verdict remains inconclusive. A separately registered
+[awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md) completed with verdict
+**change**: the selected joint held-out ideal score was 9.17% worse. Own-target
+field nonregression and the remaining feasibility checks pass, but both candidates
+still fail absolute field limits. This rejects the bounded two-point recipe,
+not joint optimization generally; actual-coil benefit remains unresolved.
 Present evidence does not substantiate the README's reactor-design timeline.
 
 The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduces

@@ -4,8 +4,9 @@ Implementation of the [frozen feasibility protocol](ISSUE37_JOINT_FEASIBILITY.md
 The numerical components and assembled adapter have been reviewed and tested.
 The [first native attempt](ISSUE37_JOINT_RESULT.md) completed its control but was
 interrupted by clock disagreement during the first J solve. No new search basis,
-metric or acceptance limit was introduced; the paired scientific question remains
-unanswered. Further execution requires separately registered conditions and review.
+metric or acceptance limit was introduced. The separately registered
+[awake follow-up](ISSUE37_AWAKE_RESULT.md) completed with verdict change because
+the selected ideal score worsened. Any new execution needs its own registration and review.
 
 `joint_decision` provides the trusted driver's selection and decision rules.
 Both proposals must terminate, in fixed plus/minus order. Select on complete

@@ -44,3 +44,6 @@ comparison on a suitable host. A short [temporary sleep assertion check](../vali
 supports assertion availability on AC, not long-run stability. Preserve this failed attempt; do not relax the
 clock gate, reuse its control as free work, or treat interruption as evidence
 against joint optimization. The actual-coil benefit endpoint remains null.
+
+A separately registered [v2 comparison](ISSUE37_AWAKE_RESULT.md) subsequently
+completed with verdict change. This v1 record remains inconclusive.
