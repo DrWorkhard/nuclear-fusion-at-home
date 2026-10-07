@@ -40,6 +40,7 @@ timing. The archive supplies the replay command and availability limits. Review
 is by an agent, not external physics peer review.
 
 The next decision is how to obtain an uninterrupted, separately registered
-comparison on a suitable host. Preserve this failed attempt; do not relax the
+comparison on a suitable host. A short [temporary sleep assertion check](../validation/JOINT_EXECUTION_HOST.md)
+supports assertion availability on AC, not long-run stability. Preserve this failed attempt; do not relax the
 clock gate, reuse its control as free work, or treat interruption as evidence
 against joint optimization. The actual-coil benefit endpoint remains null.

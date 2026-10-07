@@ -14,6 +14,8 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
   confirmation, proportionate tests and single-writer ownership.
 - [Environment](ENVIRONMENT.md): active native dependencies, execution safeguards
   and the distinction between public CI and native checks.
+- [Joint execution host check](JOINT_EXECUTION_HOST.md): temporary sleep assertion
+  observation and limits before a separately registered comparison.
 - [Release evidence](PUBLIC_RELEASE_RESULTS.md): source-bound local and hosted
   public qualifications, failed checks and outstanding independent verification.
 - [Review policy](REVIEW_POLICY.md): open contribution intake, trusted evaluation,
