@@ -183,5 +183,8 @@ existing signed-iota/confinement checks for the registered target launches.
 [Registered ideal-action scoring](ISSUE37_IDEAL_ACTION.md) keeps the full fixed
 selection domain separate from held-out phases and grid refinement.
 
+[Joint comparison integration](ISSUE37_COMPARISON_DRIVER.md) freezes training-only
+selection and separates completed feasibility results from interrupted work.
+
 The [one cold-solve qualification](ISSUE37_SOLVER_QUALIFICATION.md) will test bound
 solver provenance and independent numerical intake before joint integration.
