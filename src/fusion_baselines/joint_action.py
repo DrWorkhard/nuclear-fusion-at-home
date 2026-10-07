@@ -35,6 +35,12 @@ def score_step_scale(folder, parent, record):
     return _score_receipt(folder, parent, 'training', record, ('scale035',))
 
 
+def score_step_validation(folder, parent, mode, record):
+    """Frozen smaller-step candidate on the separately registered validation grids."""
+    check.need(mode in ('holdout', 'holdout-refined'), 'validation grid required')
+    return _score_receipt(folder, parent, mode, record, ('scale035',))
+
+
 def _score_receipt(folder, parent, mode, record, allowed):
     record.guard()
     _, _, sources, numerical = solver.intake_result(folder, parent, record.guard)

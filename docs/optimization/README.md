@@ -198,3 +198,6 @@ with [verdict change](ISSUE37_AWAKE_RESULT.md): the selected joint ideal score w
 The [single smaller-step screen](ISSUE37_STEP_SCALE.md) registers one +0.35 mm
 ideal-target check. Its [completed result](ISSUE37_STEP_SCALE_RESULT.md) reduces
 training score 3.22%; phase/resolution validation comes before another coil comparison.
+
+The [fixed-point validation](ISSUE37_STEP_VALIDATION.md) freezes the next four
+ideal-target scores and their phase/refinement hurdles, with no new tuning.

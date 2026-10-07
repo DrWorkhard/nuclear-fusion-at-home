@@ -1,0 +1,113 @@
+{
+  "budget": {
+    "clock_disagreement_seconds": 5,
+    "includes": [
+      "imports/setup",
+      "receipt/input/source/environment verification",
+      "four numerical intakes and full scores",
+      "final verification/reporting"
+    ],
+    "initial_free_bytes": 3221225472,
+    "live_free_bytes": 2147483648,
+    "native_threads": 1,
+    "retained_bytes": 268435456,
+    "total_seconds": 180
+  },
+  "candidate": {
+    "archive": "8397e2ff56e59a41c9dff207d650a999798f358d",
+    "input_sha256": "68dac87c81a3356805736fa874175e20041b3c5a79966e6247adb68b31460dcf",
+    "parent_sha256": "ee5542eae6b386957fc0df616ddcd73eb80f35427def3f667fa8ac7f22bdfdd8",
+    "producer": "8be043b45a1d8d3a34a2608ec437c9836c0fd030",
+    "proposal": "scale035",
+    "screen_sha256": "7d1808380c41166261241e83cad996e1b7a63801b7d97ca5f1341d126fe42b16",
+    "target_id": "issue37-step-scale-v1/scale035",
+    "wout_sha256": "f2528f074ad9f146aa6b22f77c29bc8fc2d22690a828f1ada2ed6478c3c146e9"
+  },
+  "claims": {
+    "actual_coil_endpoint": null,
+    "coil_feasibility_established": false,
+    "optimality_established": false,
+    "physical_admission": false,
+    "scope": "New candidate phases/resolutions only; same score family and machine, previously used comparator grids, no external/statistical independence."
+  },
+  "decision": {
+    "inconclusive": "Missing/unclassified work, incomplete action domain/intake, source/environment/resource/clock or host interruption.",
+    "negative": "All four scores complete/eligible but score or refinement hurdle fails; refinement failure leaves true-score gain numerically unresolved, not evidence of worsening.",
+    "no_alternative_candidate": true,
+    "no_retry": true,
+    "no_tuning": true,
+    "positive": "All four full-domain scores eligible, both per-target refinement checks pass and candidate <=0.99*control on both grids.",
+    "refinement_tolerance": 0.001,
+    "threshold_ratio": 0.99
+  },
+  "domain": {
+    "periods": 2,
+    "pitches": [
+      0.03,
+      0.1,
+      0.3,
+      0.5,
+      0.7,
+      0.9,
+      0.97
+    ],
+    "surfaces": [
+      0.1,
+      0.25,
+      0.5,
+      0.75,
+      0.9
+    ]
+  },
+  "execution_enabled": false,
+  "grids": {
+    "holdout": [
+      1601,
+      32,
+      0.09817477042468103
+    ],
+    "holdout-refined": [
+      3201,
+      32,
+      0.09817477042468103
+    ]
+  },
+  "host": {
+    "admission_to_launch_seconds_max": 30,
+    "cleanup": "After scientific termination, signal owned assertion, poll terminal, verify absence; retain every attempt.",
+    "command": "caffeinate -i -s -t 240",
+    "conditions": "AC plus both owned assertions at admission, sampled during and after scientific termination; failed query or observed loss invalidates enclosing result."
+  },
+  "kind": "fixed ideal-target phase/resolution validation",
+  "order": [
+    [
+      "control",
+      "holdout"
+    ],
+    [
+      "control",
+      "holdout-refined"
+    ],
+    [
+      "scale035",
+      "holdout"
+    ],
+    [
+      "scale035",
+      "holdout-refined"
+    ]
+  ],
+  "producer_prerequisites": [
+    "clean exact reviewed revision",
+    "frozen configuration and dependency inventory",
+    "software checks and adversarial review",
+    "AC and owned sleep assertions admitted within30s"
+  ],
+  "protocol_id": "issue37-step-validation-v1",
+  "reference": {
+    "input_sha256": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "wout_sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e"
+  },
+  "reuse": "Explicitly reuse frozen equilibria; no new solve/fit and no matched-compute claim.",
+  "schema_version": 1
+}

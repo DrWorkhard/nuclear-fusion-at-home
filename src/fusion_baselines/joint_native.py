@@ -84,6 +84,15 @@ def step_score(request, record):
     return action.score_step_scale(solved['folder'], solved['parent'], record)
 
 
+def phase_score(request, record):
+    check.need(request['mode'] in ('holdout', 'holdout-refined'), 'validation grid required')
+    if request['proposal'] == 'control':
+        return action.score_reference(Path(request['wout']), request['mode'], record)
+    check.need(request['proposal'] == 'scale035', 'fixed validation candidate required')
+    solved = request['solved']
+    return action.score_step_validation(solved['folder'], solved['parent'], request['mode'], record)
+
+
 def search(request, record):
     from scipy.optimize import minimize
 
@@ -217,8 +226,8 @@ def worker(request_path):
                    'native environment differs from frozen inventory')
         record.guard()
         record.save('attempt.json', report)
-        operation = {'score': score, 'step-score': step_score, 'fit': search,
-                     'diagnostics': diagnostics}[request['operation']]
+        operation = {'score': score, 'step-score': step_score, 'phase-score': phase_score,
+                     'fit': search, 'diagnostics': diagnostics}[request['operation']]
         result = operation(request, record)
         record.guard()
         solver.check_sources(request['sources'])
