@@ -87,6 +87,8 @@ qualified map for launch matching.
 The [saved-point recurrence diagnosis](ISSUE48_CONTINUATION_RECURRENCE.md) finds
 angular reversals in the failed trace, absent in four controls; it leaves the
 qualification failure unchanged.
+A [periodic-center check](ISSUE48_AXIS_CENTER.md) preserves those reversals;
+target-axis miscentering does not explain this saved-sample failure.
 
 The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
 supports both frozen matched targets using only Python's standard library.
