@@ -203,3 +203,6 @@ The [fixed-point validation](ISSUE37_STEP_VALIDATION.md) freezes the next four
 ideal-target scores and their phase/refinement hurdles. Its
 [completed result](ISSUE37_STEP_VALIDATION_RESULT.md) preserves a 3.258% ideal
 gain on both grids; coil feasibility remains untested for this candidate.
+
+The [paired fitting-burden screen](ISSUE37_FIT_COUPLING.md) registers equal short
+fits and fine-boundary/geometry checks before further expensive diagnostics.

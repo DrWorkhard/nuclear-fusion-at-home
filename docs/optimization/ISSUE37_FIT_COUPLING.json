@@ -1,0 +1,124 @@
+{
+  "budget": {
+    "clock_disagreement_seconds": 5,
+    "clocks": [
+      "monotonic",
+      "UTC wall elapsed"
+    ],
+    "initial_free_bytes": 3221225472,
+    "live_free_bytes": 2147483648,
+    "native_threads": 1,
+    "reporting_charged": true,
+    "retained_bytes_total": 268435456,
+    "total_seconds_max": 1200
+  },
+  "candidate": {
+    "cold_archive": "8397e2ff56e59a41c9dff207d650a999798f358d",
+    "cold_producer": "8be043b45a1d8d3a34a2608ec437c9836c0fd030",
+    "input_sha256": "68dac87c81a3356805736fa874175e20041b3c5a79966e6247adb68b31460dcf",
+    "parent_sha256": "ee5542eae6b386957fc0df616ddcd73eb80f35427def3f667fa8ac7f22bdfdd8",
+    "proposal": "scale035",
+    "target_id": "issue37-step-scale-v1/scale035",
+    "training_receipt_sha256": "d310b7f5f46d5b2754295876c7c89aa132ad99c92ff0f31b8108987800025641",
+    "validation_archive": "5c73b3bdafdc112a4b10435022ad1a391d0c159d",
+    "validation_producer": "91a4ef7ec1b3cc1117242ae0abd171002d12edd1",
+    "validation_report_sha256": "96a6abc8d2d2f0d2d8d7bd859c39950c502c5808d9203e4dbd1ff3a48e51818b",
+    "wout_sha256": "f2528f074ad9f146aa6b22f77c29bc8fc2d22690a828f1ada2ed6478c3c146e9"
+  },
+  "claims": {
+    "actual_coil_endpoint": null,
+    "coil_feasibility_established": false,
+    "interior_tested": false,
+    "limits": "Different-target boundary errors measure fitting burden, not improvement in one common physical field. Equal wall allowances do not establish equal CPU/load or statistical replication.",
+    "physical_admission": false,
+    "tracing_tested": false
+  },
+  "decision": {
+    "after_fail": "Do not advance this target/recipe under this fitting allowance; no global impossibility claim.",
+    "after_pass": "Retain target as an ideal-improved starting point, not coil-feasible. If absolute boundary limits still fail, do not automatically extend fitting or run interior/long traces.",
+    "boundary_rms_ratio_max": 1.1,
+    "further_diagnostics": "Separate decision tied to substantially improved absolute field errors or a concrete topology question, registered before execution.",
+    "inconclusive": "Missing work, unresolved geometry, failed intake/startup, unclassified failure, source/environment/resource/clock/host interruption.",
+    "negative": "Complete eligible pair misses RMS/current/flux/geometry hurdle; a normal completed fit with documented no eligible candidate also rejects this bounded recipe.",
+    "no_alternative_target": true,
+    "no_extension": true,
+    "no_retry": true,
+    "pass_label": "boundary-fitting-nonregression",
+    "pass_requires": "Both normal completed fits eligible, both fine shifts and continuous geometry complete/pass with current/flux and independent field checks; candidate worst fine RMS <=1.10 times control."
+  },
+  "decision_question": "Does the fixed ideal-improved target materially worsen boundary fitting under equal short fit allowances?",
+  "diagnostics": {
+    "boundary": {
+      "coil_nodes": 512,
+      "independent_B_A_tolerance": 1e-12,
+      "n": 128,
+      "shifts": [
+        0.0,
+        0.5
+      ]
+    },
+    "ideal_scoring": false,
+    "includes": [
+      "fit finalization",
+      "freeze selected coefficients/current/index/target",
+      "two fine-boundary grids",
+      "continuous geometry",
+      "final source/environment checks and reporting"
+    ],
+    "interior": false,
+    "remaining_allowance_seconds": 300,
+    "total_arm_seconds": 600,
+    "tracing": false
+  },
+  "execution_enabled": false,
+  "execution_prerequisites": [
+    "clean exact implementation and configuration",
+    "software checks and adversarial review",
+    "frozen dependency inventories and receipt identities",
+    "fresh output and AC/owned assertion admission"
+  ],
+  "fit": {
+    "fresh_original_seed_each_arm": true,
+    "includes": [
+      "per-arm setup/source/receipt checks",
+      "numerical intake",
+      "startup derivative/repeat checks",
+      "penalized normalized search"
+    ],
+    "method": "Existing six/order5 L-BFGS-B with unchanged penalties, eligibility and boundary-RMS selection; normal cap may keep earlier eligible candidate, probes cannot win, no fallback.",
+    "seconds_per_arm": 300
+  },
+  "host": {
+    "admission_to_launch_seconds_max": 30,
+    "cleanup": "After scientific termination, signal owned assertion, poll terminal and verify absence; preserve every attempt.",
+    "command": "caffeinate -i -s -t 1320",
+    "conditions": "AC plus both owned assertions at admission, sample during and query after scientific termination; failed queries or observed loss invalidate enclosing result."
+  },
+  "kind": "paired fitting-burden screen, not coil feasibility",
+  "order": [
+    "control",
+    "scale035"
+  ],
+  "protocol_id": "issue37-fit-coupling-v1",
+  "reference": {
+    "input_sha256": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "training_receipt_sha256": "6832e3962a9f2fcb2cb7ef009457397108dfbb2ced408be807d3a2188b1249c0",
+    "wout_sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e"
+  },
+  "reuse": "Both equilibria and ideal score receipts reused explicitly. No new solve, target tuning, ideal scoring, or matched historical solve-cost claim.",
+  "schema_version": 1,
+  "seed": {
+    "description": "Same original coil geometry; existing target-specific signed-flux normalization, then freeze selected currents before checking.",
+    "nbase": 6,
+    "order": 5,
+    "sha256": "84bbdf3eca274981dfff80c967b6fd623a1a40350e583407cbb7262c26820217"
+  },
+  "unchanged_limits": {
+    "B2": 1.6293829620247962,
+    "boundary_rms": 0.0001,
+    "current_A": 500000,
+    "interior_rms": 0.01,
+    "normal_max": 0.001,
+    "signed_flux": -0.03141592653589793
+  }
+}
