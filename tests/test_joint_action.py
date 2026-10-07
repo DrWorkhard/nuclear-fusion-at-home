@@ -81,7 +81,7 @@ def test_domain_failure_retains_every_alpha_without_partial_score(score_cell, mo
 
     monkeypatch.setattr(action.bounce, 'period_actions', score)
     monkeypatch.setattr(action.bounce, 'bounce_wells', lambda *a: [
-        SimpleNamespace(record=lambda: dict(complete=False, action=None))])
+        SimpleNamespace(left=0., right=1., record=lambda: dict(complete=False, action=None))])
     result = action._score(wout, 'training', record, {}, identity)
     assert result['completed'] and not result['eligible'] and result['score'] is None
     for row in result['surfaces']:
@@ -90,6 +90,7 @@ def test_domain_failure_retains_every_alpha_without_partial_score(score_cell, mo
         assert failure['q'] == .5 and len(failure['wells_by_alpha']) == 16
         assert all(r['wells'] == [dict(complete=False, action=None)]
                    for r in failure['wells_by_alpha'])
+        assert all(np.shape(r['phi_bounds']) == (1, 2) for r in failure['wells_by_alpha'])
 
 
 @pytest.mark.parametrize('error', [ValueError, FloatingPointError, TimeoutError, OSError])

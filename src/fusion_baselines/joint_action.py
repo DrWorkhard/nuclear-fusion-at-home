@@ -82,9 +82,12 @@ def _score(wout, mode, record, sources, identity):
                 wells = []
                 for index, alpha in enumerate(trace['alpha']):
                     record.guard()
-                    wells.append(dict(alpha=float(alpha), wells=[w.record() for w in
-                        bounce.bounce_wells(trace['length'][:, index], trace['B'][:, index],
-                                           bounce.bounce_field(q))]))
+                    found = bounce.bounce_wells(trace['length'][:, index], trace['B'][:, index],
+                                               bounce.bounce_field(q))
+                    angles = np.interp(np.asarray([[w.left, w.right] for w in found]).ravel(),
+                                       trace['length'][:, index], trace['phi']).reshape(-1, 2)
+                    wells.append(dict(alpha=float(alpha), wells=[w.record() for w in found],
+                                      phi_bounds=angles.tolist()))
                 row['errors'].append(dict(q=q, error=str(exc), wells_by_alpha=wells))
             record.guard()
         record.save('action-progress.json', report)

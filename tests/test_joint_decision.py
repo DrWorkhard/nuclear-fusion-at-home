@@ -44,6 +44,29 @@ def proposals():
                  ordinary_fit_cap=False, rejection=None) for p in ('plus', 'minus')]
 
 
+def reject(row, kind='plasma-domain'):
+    if kind == 'plasma-domain':
+        result = score(row['proposal'])
+        result.update(eligible=False, score=None)
+        cell = result['surfaces'][0]
+        q = cell['cells'].pop(0)['q']
+        cell['errors'] = [dict(q=q, error='exactly two uncensored wells required on every line',
+                              wells_by_alpha=[dict(alpha=float(a), wells=[]) for a in
+                                              np.linspace(0, 2*np.pi, 16, endpoint=False)])]
+        row['training'] = result
+    else:
+        row['training'] = None
+        if kind == 'size':
+            result = dict(grids=[128, 256], original_m3=[1., 1.], proposal_m3=[1.002, 1.002])
+        else:
+            result = dict(completed=True, converged=False, ns=401, ier_flag=0,
+                          residuals=dict(fsqr=1e-9, fsqz=1e-14, fsql=1e-14))
+    row['search'] = None
+    row['rejection'] = dict(kind=kind, evidence=dict(proposal=row['proposal'],
+        input_sha256=decision.target.INPUT_HASHES[row['proposal']], completed=True,
+        resource_interrupted=False, result=result))
+
+
 def test_training_score_then_inner_objective_then_order_choose_joint():
     rows = proposals()
     assert decision.select_joint(rows) == 0
@@ -75,9 +98,9 @@ def test_missing_or_unqualified_proposals_cannot_be_selected(fault):
 
 def test_completed_explicit_rejection_does_not_hide_unfinished_other_proposal():
     rows = proposals()
-    rows[0]['rejection'] = dict(kind='plasma-domain', evidence={'failed_cells': [(.5, .97)]})
+    reject(rows[0])
     assert decision.select_joint(rows) == 1
-    rows[1]['rejection'] = dict(kind='equilibrium', evidence={'converged': False})
+    reject(rows[1], 'equilibrium')
     assert decision.select_joint(rows) is None
     rows[1]['completed'] = False
     with pytest.raises(decision.IncompleteComparison, match='unfinished'):
@@ -263,7 +286,7 @@ def test_assess_changes_only_after_both_explicit_rejections_with_complete_contro
     control = dict(frozen=selected, diagnostics=diagnostics(selected))
     rows = proposals()
     for row in rows:
-        row['rejection'] = dict(kind='plasma-domain', evidence={'failed_cells': [(.5, .97)]})
+        reject(row)
     result = decision.assess(rows, control, None)
     assert result['verdict'] == 'change' and result['completed']
     control['diagnostics']['budget_complete'] = False
@@ -357,3 +380,71 @@ def test_zero_score_tie_is_not_a_relative_improvement():
     control, joint = summaries()
     control['holdout_scores'] = joint['holdout_scores'] = [0., 0.]
     assert decision.decide(control, joint)['verdict'] == 'change'
+
+
+@pytest.mark.parametrize('kind', ['size', 'equilibrium', 'plasma-domain'])
+@pytest.mark.parametrize('fault', ['success', 'wrong-proposal', 'resource', 'unfinished'])
+def test_contradictory_or_unfinished_rejection_cannot_change_recipe(frozen, kind, fault):
+    selected, _, _ = frozen
+    control = dict(frozen=selected, diagnostics=diagnostics(selected))
+    rows = proposals()
+    for row in rows:
+        reject(row, kind)
+    assert decision.assess(rows, control, None)['verdict'] == 'change'
+    evidence = rows[0]['rejection']['evidence']
+    if fault == 'success':
+        if kind == 'size':
+            evidence['result']['proposal_m3'] = [1., 1.]
+        elif kind == 'equilibrium':
+            evidence['result']['converged'] = True
+        else:
+            evidence['result']['eligible'] = True
+    elif fault == 'wrong-proposal':
+        evidence['proposal'] = 'minus'
+    elif fault == 'resource':
+        evidence['resource_interrupted'] = True
+    else:
+        evidence['completed'] = False
+    result = decision.assess(rows, control, None)
+    assert result['verdict'] == 'inconclusive' and not result['completed']
+
+
+def test_nonempty_rejection_string_is_not_evidence(frozen):
+    selected, _, _ = frozen
+    rows = proposals()
+    for row in rows:
+        row['rejection'] = dict(kind='equilibrium', evidence={'converged': True})
+    result = decision.assess(rows, dict(frozen=selected, diagnostics=diagnostics(selected)), None)
+    assert result['verdict'] == 'inconclusive' and not result['completed']
+
+
+def test_successful_residuals_do_not_prove_nonconvergence():
+    row = proposals()[0]
+    reject(row, 'equilibrium')
+    row['rejection']['evidence']['result']['residuals']['fsqr'] = 1e-14
+    with pytest.raises(decision.IncompleteComparison, match='does not fail'):
+        decision.numerical_rejection(row)
+
+
+def test_reported_missing_wells_need_an_actual_failed_well_count_or_censor():
+    row = proposals()[0]
+    reject(row)
+    failed = row['training']['surfaces'][0]['errors'][0]
+    for line in failed['wells_by_alpha']:
+        line['wells'] = [dict(complete=True), dict(complete=True)]
+    with pytest.raises(decision.IncompleteComparison, match='no missing/censored'):
+        decision.numerical_rejection(row)
+
+
+def test_period_crossing_rejection_needs_saved_angular_bounds():
+    row = proposals()[0]
+    reject(row)
+    failed = row['training']['surfaces'][0]['errors'][0]
+    failed['error'] = 'well family crosses its registered field period'
+    for line in failed['wells_by_alpha']:
+        line['wells'] = [dict(complete=True), dict(complete=True)]
+        line['phi_bounds'] = [[.2, np.pi-.2], [np.pi+.2, 2*np.pi-.2]]
+    with pytest.raises(decision.IncompleteComparison, match='no crossing'):
+        decision.numerical_rejection(row)
+    failed['wells_by_alpha'][0]['phi_bounds'][0][1] = np.pi+.1
+    decision.numerical_rejection(row)

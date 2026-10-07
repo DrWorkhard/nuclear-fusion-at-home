@@ -15,6 +15,14 @@ passing startup. The parent must establish that the stop was its declared fit
 cap; a generic timeout or interrupted whole arm is insufficient. A probe cannot
 win. Explicit numerical rejection requires a documented size, equilibrium or
 complete plasma-domain failure; unclassified errors are software failures.
+The rejection handoff includes the exact proposal/input identity, completed
+resource state and failed numerical result. Check converged volume quadratures
+against the size limit, force residuals/status against the equilibrium gate, or
+the full ineligible action report with every failed phase. Failed action records
+now retain angular well bounds as well as length bounds, so a claimed period
+crossing can be checked explicitly. Nonempty prose or
+contradictory success evidence is insufficient; receipt provenance remains the
+parent's responsibility.
 
 Freeze the chosen input/Wout hashes, target identity, coil coefficients,
 normalized currents and selected trial index before any held-out evaluation.

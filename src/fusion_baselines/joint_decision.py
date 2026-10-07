@@ -72,6 +72,82 @@ def fit_eligible(search, ordinary_cap):
             and row['value'] >= 0 and metrics['normal_rms'] >= 0)
 
 
+def numerical_rejection(row):
+    """Validate the parent's classified failure, including contradictory success evidence."""
+    rejected = row['rejection']
+    kind, evidence = rejected['kind'], rejected['evidence']
+    require(kind in ('size', 'equilibrium', 'plasma-domain'),
+            'classified numerical failure required')
+    require(isinstance(evidence, dict) and evidence.get('proposal') == row['proposal']
+            and evidence.get('input_sha256') == target.INPUT_HASHES[row['proposal']]
+            and evidence.get('completed') is True
+            and evidence.get('resource_interrupted') is False
+            and row.get('search') is None, 'completed bound rejection before fitting required')
+    result = evidence.get('result')
+    require(isinstance(result, dict), 'structured failed check required')
+    if kind == 'size':
+        original = np.asarray(result.get('original_m3', []), dtype=float)
+        proposed = np.asarray(result.get('proposal_m3', []), dtype=float)
+        require(row.get('training') is None and result.get('grids') == [128, 256]
+                and original.shape == proposed.shape == (2,)
+                and np.isfinite([original, proposed]).all()
+                and min(original) > 0 and min(proposed) > 0, 'complete size check required')
+        require(all(abs(a[0]-a[1])/max(a) <= 1e-6 for a in (original, proposed)),
+                'unresolved volume quadrature is not an explicit size rejection')
+        require(np.max(np.abs(proposed/original-1)) > .001,
+                'size evidence does not fail registered limit')
+    elif kind == 'equilibrium':
+        residuals = result.get('residuals', {})
+        require(row.get('training') is None and result.get('completed') is True
+                and result.get('converged') is False
+                and set(residuals) == {'fsqr', 'fsqz', 'fsql'}
+                and np.isfinite(list(residuals.values())).all()
+                and min(residuals.values()) >= 0
+                and type(result.get('ier_flag')) is int and type(result.get('ns')) is int,
+                'documented completed nonconvergence required')
+        require(result['ier_flag'] != 0 or result['ns'] != 401
+                or max(residuals.values()) > 1e-12,
+                'equilibrium evidence does not fail registered convergence')
+    else:
+        require(result == row.get('training') and result.get('completed') is True
+                and result.get('eligible') is False and result.get('score') is None
+                and result.get('mode') == 'training', 'completed ineligible plasma domain required')
+        require(result['identity']['input_sha256'] == evidence['input_sha256']
+                and result['identity']['target_id'] == f"issue37-joint-v1/{row['proposal']}",
+                'plasma rejection belongs to another target')
+        require(result['settings'] == dict(nphi=801, nalpha=16, alpha_offset=0., periods=2,
+                    surfaces=list(bounce.SURFACES), pitches=list(bounce.HOLD_PITCHES))
+                and [r['s'] for r in result['surfaces']] == list(bounce.SURFACES),
+                'complete registered plasma rejection domain required')
+        failures = []
+        for surface in result['surfaces']:
+            pitches = [r['q'] for r in surface['cells']+surface['errors']]
+            require(sorted(pitches) == list(bounce.HOLD_PITCHES),
+                    'all pitch successes and failures required')
+            failures.extend(surface['errors'])
+        require(bool(failures), 'plasma rejection has no failed cells')
+        for failed in failures:
+            require(failed['error'] in ('exactly two uncensored wells required on every line',
+                    'well family crosses its registered field period')
+                    and [r['alpha'] for r in failed['wells_by_alpha']]
+                    == np.linspace(0, 2*np.pi, 16, endpoint=False).tolist(),
+                    'typed domain failure with every phase required')
+            missing = any(len(r['wells']) != 2 or any(not w['complete'] for w in r['wells'])
+                          for r in failed['wells_by_alpha'])
+            if failed['error'] == 'exactly two uncensored wells required on every line':
+                require(missing, 'reported well-domain rejection has no missing/censored wells')
+            else:
+                crossings = []
+                for line in failed['wells_by_alpha']:
+                    angles = np.asarray(line.get('phi_bounds', []), dtype=float)
+                    require(angles.shape == (len(line['wells']), 2)
+                            and np.isfinite(angles).all(), 'saved angular well bounds required')
+                    crossings.append(len(line['wells']) == 2 and any(
+                        lo < p*np.pi-1e-12 or hi > (p+1)*np.pi+1e-12
+                        for p, (lo, hi) in enumerate(angles)))
+                require(any(crossings), 'reported period rejection has no crossing well')
+
+
 def select_joint(proposals):
     """Both fixed proposals must terminate before training-only selection."""
     require([r['proposal'] for r in proposals] == ['plus', 'minus'],
@@ -80,9 +156,7 @@ def select_joint(proposals):
     candidates = []
     for index, row in enumerate(proposals):
         if row.get('rejection') is not None:
-            rejection = row['rejection']
-            require(rejection['kind'] in ('size', 'equilibrium', 'plasma-domain')
-                    and bool(rejection['evidence']), 'documented numerical rejection required')
+            numerical_rejection(row)
             continue
         score = complete_score(row['training'], 'training')
         identity = row['training']['identity']
