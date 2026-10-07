@@ -35,12 +35,11 @@ spend effort on decisions that test the path.
    Step 3 targets with matched fitting effort and evaluate interior fields,
    magnetic surfaces and benefit transfer using shared checks. The [first matched comparison](optimization/ISSUE25_MATCHED_TARGETS.md)
    leaves wide-domain benefit transfer unresolved because required wells are missing.
-   A local [comparison](optimization/ISSUE26_INTERIOR_WELLS.md) restores the missing
-   reference wells with lower interior error. Test interior fidelity in joint
-   optimization. The [continuation label grid](optimization/ISSUE48_CONTINUATION_LABELS.md)
-   qualifies 19/20 points. [Saved-point diagnosis](optimization/ISSUE48_CONTINUATION_RECURRENCE.md)
-   finds reversals in the failed reconstruction. Resolve that limitation before
-   launch matching; longer tracing is not automatically justified.
+   The [paired label grid](optimization/ISSUE48_FULL_GRID.md) remains unqualified.
+   A [lower-error continuation](optimization/ISSUE26_INTERIOR_WELLS.md) restores
+   missing wells, but its [19/20 label grid](optimization/ISSUE48_CONTINUATION_LABELS.md)
+   also fails. Diagnose reconstruction before launch matching; test interior
+   fidelity in joint optimization.
 2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. Detailed simulations follow a decision

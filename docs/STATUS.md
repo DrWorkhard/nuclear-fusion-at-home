@@ -8,6 +8,8 @@ reference-target fit reaches boundary RMS **0.001932**, about **19×** its limit
 and interior RMS **0.01072**, also failing. The improved-target fit also fails.
 [Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
 wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
+The [original paired label grid](optimization/ISSUE48_FULL_GRID.md) qualifies
+20/20 reference launches and 18/20 improved-target launches; its paired map fails.
 The local [shallow-well comparison](optimization/ISSUE26_INTERIOR_WELLS.md) recovers
 both reference core cells with a lower-interior-error candidate (35/35 screened
 cells). Its [label grid](optimization/ISSUE48_CONTINUATION_LABELS.md) qualifies

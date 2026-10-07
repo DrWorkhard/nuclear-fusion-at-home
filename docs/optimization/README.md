@@ -74,6 +74,9 @@ The [spread-sampling pilot](ISSUE8_SPREAD_SAMPLING.md) improves three known case
 but fails its accuracy hurdle; the public case stays unchanged and dense checks
 remain necessary.
 
+The original [paired flux-label grid](ISSUE48_FULL_GRID.md) qualifies 20/20
+reference points and 18/20 improved-target points. Their full map remains unqualified.
+
 The local [interior-error/shallow-well comparison](ISSUE26_INTERIOR_WELLS.md)
 finds that an existing lower-error geometry restores both missing core cells.
 This supports testing interior fidelity in joint optimization; realized-flux

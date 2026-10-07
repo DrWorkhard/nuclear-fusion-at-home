@@ -23,7 +23,7 @@ Every failed estimate and raw trace is retained.
 
 A surface receives qualified statistics only when all four phases and controls
 pass. Historical reference values come from the qualified original #25 reference
-fit in local #48 archive `2ee186bb347245072c98d983a42b06f8e02a16a9`, producer
+fit in the [original paired grid](ISSUE48_FULL_GRID.md), local #48 archive `2ee186bb347245072c98d983a42b06f8e02a16a9`, producer
 `130347fe29e03852e257a63d0ce6ab9f828d2c85`; it was not retraced here. These offsets
 are descriptive context. Different optimization histories prevent causal attribution.
 Lower interior RMS and shallow-well recovery do not establish accurate surface labels.
