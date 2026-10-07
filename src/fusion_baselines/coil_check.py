@@ -230,10 +230,16 @@ def error(actual, expected):
 
 
 def native_coils(snapshot, nodes, target_id="reference401"):
+    snapshot_identity(snapshot, target_id)
+    return _native_coils(snapshot, nodes)
+
+
+def _native_coils(snapshot, nodes):
+    """Shared physical mapping after the caller verifies target identity."""
     from simsopt.field import Current, coils_via_symmetries
     from simsopt.geo import CurveXYZFourier
 
-    snapshot_identity(snapshot, target_id)
+    independent.validate_snapshot(snapshot)
     own = independent.physical_curves(snapshot, nodes)
     curves, currents = [], []
     for i, coefficients in enumerate(snapshot["base_coefficients"]):
@@ -266,6 +272,14 @@ def native_coils(snapshot, nodes, target_id="reference401"):
 def field_metrics(B, target, A, tangents, snapshot, ninner, target_id="reference401"):
     snapshot_identity(snapshot, target_id)
     spec = target_spec(target_id)
+    return _field_metrics(B, target, A, tangents, snapshot, ninner, spec)
+
+
+def _field_metrics(B, target, A, tangents, snapshot, ninner, spec):
+    """Identical frozen-current metrics for independently admitted target routes."""
+    independent.validate_snapshot(snapshot)
+    need(snapshot["B2_scale"] == spec["B2"] and snapshot["target_flux"] == spec["flux"],
+         "snapshot and trusted normalization differ")
     B, target, A, tangents = map(np.asarray, (B, target, A, tangents))
     need(
         type(ninner) is int
@@ -347,18 +361,23 @@ class Recorder(RunRecorder):
 
 
 def screen_level(snapshot, data, target, ninner, nodes, record):
-    from simsopt.field import BiotSavart
-
     target_id = target.get("target_id", "reference401")
     spec = target_spec(target_id)
     snapshot_identity(snapshot, target_id)
+    return _screen_level(snapshot, data, target, ninner, nodes, record, spec)
+
+
+def _screen_level(snapshot, data, target, ninner, nodes, record, spec):
+    """Shared field sampling; target admission remains the caller's responsibility."""
+    from simsopt.field import BiotSavart
+
     need(
         (ninner, nodes) in LEVELS and target["ninner"] == ninner
         and target["B2_scale"] == spec["B2"],
         "one registered interior/coil grid required",
     )
     record.guard()
-    coils, own, checks = native_coils(snapshot, nodes, target_id)
+    coils, own, checks = _native_coils(snapshot, nodes)
     record.guard()
     field = BiotSavart(coils)
 
@@ -417,7 +436,7 @@ def screen_level(snapshot, data, target, ninner, nodes, record):
         independent_B=direct_B,
         independent_A=direct_A,
     )
-    metrics = field_metrics(B, target_B, A, tangent, snapshot, ninner, target_id)
+    metrics = _field_metrics(B, target_B, A, tangent, snapshot, ninner, spec)
     record.guard()
     return dict(
         ninner=ninner,

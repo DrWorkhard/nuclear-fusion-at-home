@@ -1,9 +1,11 @@
 """Prepare the frozen original coil seed for a receipt-bound issue37 target.
 
-This supplies the unchanged fitting model, not a joint driver or an acceptance
-route. Archived-target evaluators deliberately do not accept these snapshots.
+This supplies the unchanged fitting model and receipt-bound diagnostics, not a
+joint driver. Archived-target entry points do not accept these snapshots.
 """
 import copy
+import hashlib
+import json
 import re
 from pathlib import Path
 
@@ -102,3 +104,61 @@ def selected_snapshot(prepared, selected):
     check.need(result['scale'] == selected['metrics']['scale'], 'selected current scale changed')
     snapshot_identity(result, prepared['binding'])
     return result
+
+
+def _diagnostic_inputs(snapshot, folder, parent, record):
+    """Reconstruct trusted targets afresh; accept no candidate-provided target arrays."""
+    record.guard()
+    snapshot = copy.deepcopy(snapshot)
+    data, targets, sources, numerical = solver.intake_result(folder, parent, record.guard)
+    binding = {k: numerical[k] for k in BINDING_KEYS}
+    check.need(numerical['solver_provenance_verified']
+               and numerical['numerical_consistency_pass'], 'verified solver intake required')
+    snapshot_identity(snapshot, binding)
+    for path, sha in parent['sources_before'].items():
+        check.bind(path, sha, sources)
+    for name, key in (('parent.json', 'record_sha256'), ('solver.json', 'solver_report_sha256'),
+                      ('request.json', 'request_sha256')):
+        check.bind(Path(folder)/name, parent[key], sources)
+    for path in sorted((check.ROOT/'src/fusion_baselines').glob('*.py')):
+        check.bind(path, check.digest(path), sources)
+    identity = hashlib.sha256(json.dumps(snapshot, sort_keys=True, allow_nan=False,
+                                       separators=(',', ':')).encode()).hexdigest()
+    context = dict(binding=binding, canonical_snapshot_sha256=identity, intake=numerical,
+                   sources=sources, full_joint_execution_enabled=False, physical_admission=False)
+    record.guard()
+    return snapshot, data, targets, context
+
+
+def _finish_diagnostic(row, context, record):
+    record.guard()
+    solver.check_sources(context['sources'])
+    record.guard()
+    return dict(row, joint_target=context)
+
+
+def interior(snapshot, folder, parent, ninner, nodes, record):
+    """Existing three-surface B/A checks with fixed currents and reference B2."""
+    check.need((ninner, nodes) in check.LEVELS, 'registered interior/coil grid required')
+    snapshot, data, targets, context = _diagnostic_inputs(snapshot, folder, parent, record)
+    row, arrays = check._screen_level(snapshot, data, targets[ninner], ninner, nodes, record,
+                                     dict(B2=check.B2, flux=check.TARGET_FLUX))
+    return _finish_diagnostic(row, context, record), arrays
+
+
+def boundary(snapshot, folder, parent, shift, selected_index, record):
+    """Existing 128-square/512-node fine field check without current renormalization."""
+    check.need(shift in (0., .5) and type(selected_index) is int and selected_index >= 0,
+               'registered fine shift and nonnegative selection index required')
+    snapshot, data, _, context = _diagnostic_inputs(snapshot, folder, parent, record)
+    chosen = dict(index=selected_index, x=np.asarray(snapshot['base_coefficients']).ravel(),
+                  metrics=dict(scale=snapshot['scale'], unit_flux=snapshot['unit_flux']))
+    row = fit.fine(snapshot, data, chosen, record, shift)
+    return _finish_diagnostic(row, context, record)
+
+
+def geometry(snapshot, folder, parent, record):
+    """Existing continuous geometry enclosures against the admitted proposal boundary."""
+    snapshot, data, _, context = _diagnostic_inputs(snapshot, folder, parent, record)
+    row = check.geometry(snapshot, data, record.guard)
+    return _finish_diagnostic(row, context, record)

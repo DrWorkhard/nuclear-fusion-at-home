@@ -232,7 +232,7 @@ def test_full_mocked_level_blocking_frozen_fields_and_samples(
 ):
     own = screen.independent.physical_curves(snapshot, nodes)
     monkeypatch.setattr(
-        screen, "native_coils", lambda *_: ([], own, dict(position=0.0, tangent=0.0))
+        screen, "_native_coils", lambda *_: ([], own, dict(position=0.0, tangent=0.0))
     )
 
     class Field:
