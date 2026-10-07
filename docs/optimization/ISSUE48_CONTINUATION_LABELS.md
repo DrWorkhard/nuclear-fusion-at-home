@@ -51,8 +51,9 @@ It preserves 49 original raw files (58,491,480 bytes), code/tests, protocol,
 controls, frozen snapshot, commands and replay. The original Wout remains external,
 with its identity and availability recorded. Original outputs/environments are intact.
 Fresh shallow replay verifies all 66 files and 48 distributed source bindings,
-recomputes 131 A-line integrals within 7.78e-16 of recorded labels, and reproduces
-the failed qualification. It does not repeat trajectories, native B, Wout geometry
+recomputes 131 A-line integrals and reproduces the failed qualification.
+Comparisons with recorded labels agree within 7.78e-16. It does not repeat trajectories,
+native B, Wout geometry
 or timing; earlier-prefix/plane and B-fan checks use saved arithmetic.
 
 Geometric theta is not PEST alpha. Reconstruction does not establish nestedness,
