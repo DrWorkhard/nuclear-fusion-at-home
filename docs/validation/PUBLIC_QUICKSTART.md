@@ -233,12 +233,28 @@ boundary-section flux from the committed reference input. For the headroom candi
 current increases from 294,966.47 A to 308,140.58 A; sparse interior RMS changes from
 0.03610 to 0.01078. This exposes an objective difference, not a coil-shape improvement.
 The native dense interior value is about 0.01148 and still fails its 0.01 limit.
-Sparse results must not be used as a dense acceptance gate. Full interior target
-arrays are not bundled; native regeneration needs a separate environment.
+Sparse results must not be used as a dense acceptance gate. The separate
+[dense interior packet](../../examples/clear-coil-interior-v1/README.md) supplies
+all 12,288 target samples for each frozen matched target; native equilibrium
+regeneration still needs a separate environment.
 
 Existing `evaluate` and `audit` reports retain their fixed currents and evaluator
 identity. The diagnostic does not mutate the candidate or case, establish magnetic
 surfaces, or imply confinement or physical admission.
+
+### Check all interior target samples
+
+```bash
+python fusion.py public dense-interior --target selected401 --candidate examples/clear-coil-interior-v1/selected401-candidate.json
+```
+
+Choose `reference401` or `selected401` explicitly. This standard-library command
+reports equally weighted vector error on three dense target-surface grids,
+using signed flux-normalized currents. It may take several minutes and stops
+after a 600 s budget. It does not check arbitrary-candidate quadrature convergence,
+continuous geometry, realized flux labels or confinement. Read the packet's
+source identities and [qualification limits](ISSUE10_DENSE_INTERIOR.md) before
+interpreting the displayed 0.01 metric comparison as anything beyond that metric.
 
 ## Tests and optional contribution metadata
 
