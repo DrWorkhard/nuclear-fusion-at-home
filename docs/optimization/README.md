@@ -70,6 +70,10 @@ the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
 ## Portable checks
 
+The [spread-sampling pilot](ISSUE8_SPREAD_SAMPLING.md) improves three known cases
+but fails its accuracy hurdle; the public case stays unchanged and dense checks
+remain necessary.
+
 The local [interior-error/shallow-well comparison](ISSUE26_INTERIOR_WELLS.md)
 finds that an existing lower-error geometry restores both missing core cells.
 This supports testing interior fidelity in joint optimization; realized-flux
