@@ -38,8 +38,9 @@ spend effort on decisions that test the path.
    A local [comparison](optimization/ISSUE26_INTERIOR_WELLS.md) restores the missing
    reference wells with lower interior error. Test interior fidelity in joint
    optimization. The [continuation label grid](optimization/ISSUE48_CONTINUATION_LABELS.md)
-   qualifies 19/20 points; diagnose its failed middle-surface reconstruction before
-   launch matching or confirmation.
+   qualifies 19/20 points. [Saved-point diagnosis](optimization/ISSUE48_CONTINUATION_RECURRENCE.md)
+   finds reversals in the failed reconstruction. Resolve that limitation before
+   launch matching; longer tracing is not automatically justified.
 2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. Detailed simulations follow a decision

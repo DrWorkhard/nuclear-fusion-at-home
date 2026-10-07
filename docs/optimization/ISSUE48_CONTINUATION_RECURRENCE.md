@@ -1,50 +1,53 @@
-# Prospective saved-point diagnosis of the continuation failure
+# The failed continuation trace has sampled angular reversals
 
-**Decision:** whether the failed s=0.5, geometric theta=pi reconstruction in the
-[continuation grid](ISSUE48_CONTINUATION_LABELS.md) has sampled recurrence consistent
-with simple monotonic angular drift, or additional reversals that require a more
-specific reconstruction diagnosis. This is an exploratory explanation of an
-observed failure, not a confirmatory physics or surface-classification claim.
-No new trajectories, fields, coils, targets, launch matching or gate changes.
+**Decision: simple monotonic drift does not describe the failed saved samples.**
+The [continuation grid](ISSUE48_CONTINUATION_LABELS.md) still qualifies at 19/20
+launches. Its failed s=0.5, geometric theta=pi point has one resolved angular
+reversal in every one of eleven residue sequences on both section planes.
+All four qualifying controls have zero reversals. This narrows the reconstruction
+problem; it does not requalify the contour or justify automatically tracing longer.
 
-Freeze five existing cases before processing their saved crossings: continuation
-indices 8/9/10/11 (all four mid-radius phases) and original reference401 index 10
-(the same phase as the failing continuation point). The three other continuation
-phases and historical reference point are qualifying controls. Inputs resolve at
-archives `191875d231b396e5960cbd9460a37a6c462b6381` and
-`2ee186bb347245072c98d983a42b06f8e02a16a9`, respectively. Their original producers
-are `3198a16c006e731aa62dba1588fd69d17bfa0c05` and
-`130347fe29e03852e257a63d0ce6ab9f828d2c85`. Bind both manifests and every consumed
-report/array before and after processing. Original qualification verdicts stay fixed.
+| Saved launch | 11-turn return RMS, both planes (mm) | Reversals per residue sequence | Final pooled angular gap (rad) |
+| --- | ---: | ---: | ---: |
+| Continuation theta=0 | 2.590–2.600 | 0 | 0.062805 |
+| Continuation theta=pi/2 | 3.348–3.369 | 0 | 0.071860 |
+| Continuation theta=pi (failed) | 0.8321–0.8326 | 1 | 1.240256 |
+| Continuation theta=3pi/2 | 3.369–3.384 | 0 | 0.058829 |
+| Historical reference theta=pi | 2.246–2.253 | 0 | 0.048613 |
 
-Reuse the unchanged angle, gap, recurrence, interpolation and exact-circle controls
-from `70619a97df51cd8ccc34d7265e540cb26a2d70db`. Select the first 640 chronological
-pooled phi=0/pi crossings, excluding the launch event, then split into 320 per plane.
-Use the original target-axis polar center. Report physical R,Z return RMS at
-10/11/12 full toroidal turns, prefix gaps at 80/160/320 same-plane crossings, the
-last-160 gap, and all eleven residue sequences' sampled angular span, net advance,
-total variation and resolved direction changes. Eleven is fixed because the
-recorded continuation transform is near −6/11 (failed point −0.54574596).
-NumPy unwrap and the existing 1e-8-rad resolved-step cutoff remain unchanged.
+The failed point's pooled gaps remain 1.427401, 1.267474 and 1.240256 rad at
+160/320/640 crossings. Its same-plane last-160 gaps exceed 1.469 rad. All sampled
+polar-spline radii remain positive at the tested Gauss nodes, including the failed
+case; that limited check does not establish reliable interpolation. All three
+exact-circle controls pass. A regular rational circle also has sparse section
+coverage, so gaps and recurrence alone cannot establish islands or lost surfaces.
 
-Repeat the existing polar-spline positive-radius check at 160/320/640 pooled
-crossings and interval Gauss orders 4/8. This is not an integral calculation or
-label replacement. Exact rational, near-rational and well-sampled circular controls
-must pass. Retain every case, prefix and interpolation failure. Reversals or large
-gaps characterize these finite samples only; neither proves islands or loss of a
-surface. Monotonic samples do not establish future coverage or a completion time.
+The prospective comparison froze five saved launches, 10/11/12-turn returns,
+eleven residue classes and a 1e-8-rad resolved-step cutoff before processing.
+It reused the previous numerical functions and original target-axis polar center.
+These are unwrapped finite sampled angles, not continuous winding or a dynamical
+classification. The three other continuation phases and historical reference at
+the failed phase are controls, not matched realized surfaces. Geometric theta is
+not PEST alpha. No field, trajectory, fit, label or acceptance gate was changed.
 
-One saved-array attempt: 60 s driver / 75 s supervised total, one thread, 256 MiB
-aggregate output, 3/2 GiB initial/live disk reserves and 5 s clock tolerance.
-Reuse the reviewed owned-process supervision and final-receipt functions from
-`3198a16c006e731aa62dba1588fd69d17bfa0c05`, with scoped termination handling.
-Native tracing/equilibrium packages are disabled in the child. No Wout is required.
-The launcher verifies clean committed code, frozen inputs/environment before/after
-and process cleanup. No retries, longer traces, adjusted residue count or thresholds.
+Clean producer/evaluator and full prospective protocol:
+`2baca74707328b27e62a66e6515bda1a553b0f88`. One saved-array attempt completed in
+**1.184 s** supervised total. The 60-second driver allowance begins inside its
+run function; the 75-second outer allowance includes imports/setup. One thread,
+256 MiB output, 3/2 GiB disk reserves and 5-second clock tolerance remained fixed.
+All 54 direct source/input bindings and 1,662 recorded native package files matched
+before/after; owned process cleanup succeeded. Original outputs remain intact.
 
-A difference from the controls can identify the next bounded question; it cannot
-requalify the contour or support automatic retracing. Preserve the 19/20 grid
-verdict and the original #25/#48 results. Archive complete diagnostics separately
-and keep one short result record. Geometric angle is not common PEST alpha; no
-nestedness, confinement or benefit-transfer claim follows. Agent review is not
-external physics review. Archives and new results remain local pending publication.
+Local archive: `10ba631714ac78a35eaa5a35579b6ec35a44af7b`, prepared tag
+`evidence-issue48-continuation-recurrence-v1`; not published or remotely verified.
+Manifest SHA256:
+`07498e69e05a9716a173cdb70ae8ba666497366066c7453028c4e448944a34c1`.
+The snapshot preserves code/protocol, all five output files, exact consumed input
+subsets, commands, environment identity and replay. A fresh shallow replay checks
+25 payload files and all 54 direct bindings and exactly reproduces the five cases,
+110 residue sequences and analytic controls in 0.315 s. It uses the same NumPy/SciPy
+kernels; it does not reproduce native fields, trajectories, environment or timing.
+
+No nestedness, confinement, common action coordinates or benefit-transfer claim
+follows. #48 remains open. Read-only adversarial agent review is separate from
+external physics review.
