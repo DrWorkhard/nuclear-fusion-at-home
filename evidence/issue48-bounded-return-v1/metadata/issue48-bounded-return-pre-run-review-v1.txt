@@ -1,0 +1,9 @@
+Read-only adversarial pre-run review by /root/review_flux_labels.
+Exact producer 4bf5eab45b7637b94c052bc7112834e6a30130eb: no blockers.
+Equal position/residual scaling cancels correctly in the Jacobian. Euclidean
+10 mm guard rejects out-of-disk map starts and derivative probes; box bounds do
+not enlarge the neighborhood. Solver success alone cannot qualify a root.
+Frozen inputs, verification thresholds, failure retention and supervision remain
+intact. This is a separately registered solver-method experiment; prior failures
+remain unchanged. Nonzero minimum, guard violation or timeout is inconclusive.
+No native calculation was performed during review. Not external peer review.

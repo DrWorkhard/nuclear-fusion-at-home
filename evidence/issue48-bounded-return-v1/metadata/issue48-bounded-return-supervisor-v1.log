@@ -1,0 +1,19 @@
+{
+  "completed": false,
+  "revision": "4bf5eab45b7637b94c052bc7112834e6a30130eb",
+  "disabled_native_packages": [
+    "mpi4py"
+  ],
+  "driver_budget_s": 300,
+  "supervisor_budget_s": 330,
+  "output_limit_bytes": 268435456,
+  "physical_admission": false,
+  "environment_files": 1662,
+  "returncode": 1,
+  "cleanup_confirmed": true,
+  "error": "ValueError: Scientific driver failed; retain partial output",
+  "termination_requested": false,
+  "elapsed_s": 16.858087708009407,
+  "wall_elapsed_s": 16.858174800872803,
+  "retained_bytes_before_receipt": 25927
+}

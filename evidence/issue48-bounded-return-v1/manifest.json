@@ -1,0 +1,23 @@
+{
+  "README.md": "34f02a1c8e78e80953f0bf4cc0cf96735f6574e46fd3a8869526c59acf26543b",
+  "inputs/inputs/inputs/continuation-snapshot.json": "73972fc86375fcffa67a44833d1c87016e7ff9d070857aac97acc1dcf335bb97",
+  "inputs/manifest.json": "a6e1708bbb3996752d331cb61485cefc656d40d59948deadabda6f9488ed39f7",
+  "inputs/raw/run/line-10.npz": "349e6e3e69bab4fbea1fb4f127a4db6d6d7e8784d1ce3b11cca359e696ef3342",
+  "inputs/raw/run/result.json": "6dad05ce4184b387e661f65b1df861d992aa4e29ca9bb01f9c88d64304da4a42",
+  "metadata/issue37-native-environment-v1.json": "ad07af4aec0b0fb54c84499c2981efe52788c63795ace8199c71fbbeee4dbe70",
+  "metadata/issue48-bounded-return-config-v1.json": "7cbdbf2f6733408c4f3e4ed4a73fc31c9d8c412f724ab36bfe6a276029fd2928",
+  "metadata/issue48-bounded-return-post-failure-identities-v1.json": "d9ed8ed50fb0c65ab3f468ac526b9d1c7d9d4fa788349221cfa89f4767ec0624",
+  "metadata/issue48-bounded-return-pre-run-review-v1.txt": "24ee2d67aafd3cef26775b9467fccdf0975a2da654b21632048f8e947842872b",
+  "metadata/issue48-bounded-return-public-v1.log": "bcbf6fb106d1ad5ca02e162114f338a98c01e714c1670cf1ccd03539d41d52e3",
+  "metadata/issue48-bounded-return-research-v1.log": "b996a501f95e895cb8452e68c8f35e2433d5de361def6c3c1c7ca8b4a14b9c01",
+  "metadata/issue48-bounded-return-supervisor-v1.log": "a8d56e03a6b766f346e56afeb42cab764a15e7e24c03be0b4d572aef98ce01f6",
+  "metadata/run_continuation_labels.py": "dfc4e8cb750e28aa8d399f6c64691659674a874a1c2f1126133424d82b3cd15b",
+  "metadata/source-bindings.json": "868881d5b921b6e1270805a41ca898aaf33c4cdad8fd8c2759f668eedd9397d7",
+  "raw/receipt.json": "b9d70d89a39240b1495864fe3a1a229b6ccaa9fb3af01f6040470f3d38355448",
+  "raw/run/result.json": "9d549bc8697716ff7ab72560ba619ebcafa6baa641cd0d5d953b14daf30e4956",
+  "raw/run/root-512-attempt.json": "f4958bbd7c5d09a5b62079b66d3c06de0a9aee61c2c7ec0eec9be59602984032",
+  "raw/run/start.json": "be6198cd1bef78133381fa3986a0744793b352d89eec27521e8be094c98ed034",
+  "raw/run.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "raw/start.json": "21acf6fb22ebe62be1223e4a2317927a2ff254974fc85d8339b178d21d4b1e3f",
+  "replay.py": "24c117c2199602ff4285c12780abec9fc93a9df8d1e9e191a07e3a64eebc7bc2"
+}
