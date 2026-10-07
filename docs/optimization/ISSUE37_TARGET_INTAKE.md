@@ -54,7 +54,9 @@ The 13-entry manifest SHA256 is
 `6b8407596f82508b55d9a7d3ea7b83270ec1b17624eb19b9e730a245f24e733d`.
 The archive contains the exact control/reproduction command; the original hashed
 Wout remains local-only. Synthetic tests need no historical evidence. Publication
-is pending. Agent review is not external physics review.
+is pending. Fresh shallow replay reproduced the intake, starter errors and B²
+result exactly; all 13 manifest entries, 24 source hashes and three input bindings
+verified. Agent review is not external physics review.
 
 A supplied hash proves byte identity, **not solver provenance**. The future trusted
 runner must bind each exact input to a successful budgeted solve, its executable/
