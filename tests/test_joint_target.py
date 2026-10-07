@@ -58,13 +58,18 @@ def test_proposal_cannot_change_other_physics_or_settings(tmp_path, original, fa
 
 def equilibrium_fixture(original):
     """Metadata/boundary fixture only; deliberately not an equilibrium certificate."""
-    modes = sorted({(r['m'], r['n']) for k in ('rbc', 'zbs') for r in original[k]})
+    modes = [(0, n) for n in range(11)] + [(m, n) for m in range(1, 5)
+                                                  for n in range(-10, 11)]
+    nyquist = [(0, n) for n in range(25)] + [(m, n) for m in range(1, 17)
+                                                     for n in range(-24, 25)]
     d = {k: np.array(v) for k, v in dict(
         nfp=2, ns=401, lasym__logical__=0, lfreeb__logical__=0, lrfp__logical__=0,
         mpol=5, ntor=10, ier_flag=0, signgs=-1, fsqr=1e-13, fsqz=1e-13,
-        fsql=1e-13, ftolv=1e-12, ctor=0., volume_p=.19).items()}
+        fsql=1e-13, ftolv=1e-12, ctor=0., volume_p=.19, mnmax=len(modes),
+        mnmax_nyq=len(nyquist)).items()}
     d.update(xm=np.array([m for m, n in modes]), xn=np.array([2*n for m, n in modes]),
-             xm_nyq=np.array([0., 1.]), xn_nyq=np.array([0., 0.]))
+             xm_nyq=np.array([m for m, n in nyquist], dtype=float),
+             xn_nyq=np.array([2*n for m, n in nyquist], dtype=float))
     for k in ('pres', 'presf', 'iotas'):
         d[k] = np.zeros(401)
     flux = original['phiedge']
@@ -76,7 +81,7 @@ def equilibrium_fixture(original):
         d[wkey] = np.tile([coefficients.get(k, 0.) for k in modes], (401, 1))
     d['lmns'] = np.zeros((401, len(modes)))
     for key in ('gmnc', 'bmnc', 'bsupumnc', 'bsupvmnc'):
-        d[key] = np.zeros((401, 2))
+        d[key] = np.zeros((401, len(nyquist)))
     return d
 
 
@@ -213,3 +218,21 @@ def test_intake_requires_explicit_wout_identity_and_obeys_caller_guard(tmp_path,
         raise TimeoutError('caller deadline')
     with pytest.raises(TimeoutError, match='caller deadline'):
         jt.intake(ROOT/jt.check.TARGET, wrong, 'control', '0'*64, expired)
+
+
+@pytest.mark.parametrize('family,axis', [('geometry', 'm'), ('geometry', 'n'),
+                                        ('nyquist', 'm'), ('nyquist', 'n')])
+def test_hidden_aliased_interior_modes_rejected(original, family, axis):
+    data = equilibrium_fixture(original)
+    mkey, nkey, countkey, keys = ('xm', 'xn', 'mnmax', ('rmnc', 'zmns', 'lmns')) if (
+        family == 'geometry') else ('xm_nyq', 'xn_nyq', 'mnmax_nyq',
+                                    ('gmnc', 'bmnc', 'bsupumnc', 'bsupvmnc'))
+    data[mkey] = np.r_[data[mkey], 128 if axis == 'm' else 1]
+    data[nkey] = np.r_[data[nkey], 256 if axis == 'n' else 0]
+    data[countkey][...] += 1
+    for key in keys:
+        data[key] = np.column_stack((data[key], np.zeros(401)))
+    # Boundary unchanged; a large interior harmonic aliases on both 64/128 grids.
+    data[keys[1]][1:-1, -1] = .1
+    with pytest.raises(ValueError, match='frozen Fourier mode table'):
+        jt.validate_equilibrium(data, original)

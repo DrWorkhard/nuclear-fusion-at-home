@@ -81,7 +81,8 @@ def validate_equilibrium(data, target_input):
     """Strict recorded numerical state; no claim of a unique or stable equilibrium."""
     required_scalars = ('nfp', 'ns', 'lasym__logical__', 'lfreeb__logical__',
                         'lrfp__logical__', 'mpol', 'ntor', 'ier_flag', 'signgs',
-                        'fsqr', 'fsqz', 'fsql', 'ftolv', 'ctor', 'volume_p')
+                        'fsqr', 'fsqz', 'fsql', 'ftolv', 'ctor', 'volume_p',
+                        'mnmax', 'mnmax_nyq')
     required_vectors = ('phi', 'pres', 'presf', 'phipf', 'phips', 'iotas')
     keys = (*required_scalars, *required_vectors, 'xm', 'xn', 'xm_nyq', 'xn_nyq',
             'rmnc', 'zmns', 'lmns', 'gmnc', 'bmnc', 'bsupumnc', 'bsupvmnc')
@@ -94,7 +95,13 @@ def validate_equilibrium(data, target_input):
         check.need(arrays[key].shape == (), f'scalar Wout value required: {key}')
     for key in required_vectors:
         check.need(arrays[key].shape == (401,), f'401-point Wout profile required: {key}')
-    for mkey, nkey in (('xm', 'xn'), ('xm_nyq', 'xn_nyq')):
+    # Frozen input uses ntheta=32,nzeta=48; VMEC output tables have maxima
+    # (mpol-1,ntor)=(4,10) and (ntheta/2,nzeta/2)=(16,24). Exact complete
+    # sets reject out-of-band interior modes that alias on both check grids.
+    check.need((target_input['mpol'], target_input['ntor'], target_input['ntheta'],
+                target_input['nzeta']) == (5, 10, 32, 48), 'frozen mode tables required')
+    for mkey, nkey, count_key, mmax, nmax in (
+            ('xm', 'xn', 'mnmax', 4, 10), ('xm_nyq', 'xn_nyq', 'mnmax_nyq', 16, 24)):
         m, n = arrays[mkey], arrays[nkey]
         check.need(m.ndim == 1 and m.size and m.shape == n.shape,
                    'matched Fourier mode vectors required')
@@ -102,6 +109,11 @@ def validate_equilibrium(data, target_input):
         check.need(np.array_equal(pairs, np.rint(pairs)) and np.all(m >= 0)
                    and len(np.unique(pairs, axis=0)) == len(pairs),
                    'unique nonnegative integer Fourier mode pairs required')
+        expected = {(0, k) for k in range(nmax+1)} | {
+            (j, k) for j in range(1, mmax+1) for k in range(-nmax, nmax+1)}
+        check.need(set(map(tuple, pairs)) == expected
+                   and arrays[count_key] == len(expected),
+                   f'complete frozen Fourier mode table required: {mkey}')
     for key in ('rmnc', 'zmns', 'lmns'):
         check.need(arrays[key].shape == (401, len(arrays['xm'])),
                    f'full geometric coefficient matrix required: {key}')

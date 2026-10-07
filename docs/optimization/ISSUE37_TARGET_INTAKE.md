@@ -17,7 +17,8 @@ cache creates uncharged work. The caller must provide an explicit Wout hash.
 Bind it before reading and recheck all bound files before returning target arrays.
 
 Require finite complete 401-surface coefficient/profile arrays, valid unique
-geometric/Nyquist modes, fixed symmetry/resolution, matching boundary, fixed linear
+geometric/Nyquist tables (95 modes through m=4, |n|=10; 809 through m=16,
+|n|=24, respectively), fixed symmetry/resolution, matching boundary, fixed linear
 flux and its signed derivative, negative Jacobian orientation, fixed-boundary
 non-RFP state, success flag and each nonnegative force residual at most the
 original 1e-12 tolerance. Pressure must be zero; absolute recorded net current
