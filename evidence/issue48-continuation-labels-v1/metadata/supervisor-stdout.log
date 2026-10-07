@@ -1,0 +1,16 @@
+{
+  "completed": true,
+  "revision": "3198a16c006e731aa62dba1588fd69d17bfa0c05",
+  "budget_s": 1800,
+  "output_limit_bytes": 268435456,
+  "wall_start_unix": 1791373678.55835,
+  "physical_admission": false,
+  "environment_files": 1662,
+  "returncode": 0,
+  "cleanup_confirmed": true,
+  "all_points_numerically_qualified": false,
+  "termination_requested": false,
+  "elapsed_s": 991.3645046248566,
+  "wall_elapsed_s": 991.3443658351898,
+  "retained_bytes_before_receipt": 58474340
+}

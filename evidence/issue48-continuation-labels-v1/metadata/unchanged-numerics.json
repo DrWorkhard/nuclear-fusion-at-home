@@ -1,0 +1,22 @@
+{
+  "original_archive": "2ee186bb347245072c98d983a42b06f8e02a16a9",
+  "producer_evaluator": "3198a16c006e731aa62dba1588fd69d17bfa0c05",
+  "whole_files": {
+    "src/fusion_baselines/flux_labels.py": "6a99bdada7a0bbfbcde8cbd2b0ff19c626f2bbfd7ddc16043daee6d8724edcd9",
+    "src/fusion_baselines/coil_check.py": "b42ae92a5390ac1356222d1a3e5468d55ff9563b49d044126c92c9dac5269c78",
+    "src/fusion_baselines/realized_field.py": "d071f01f818e0294686124f9756f564362d2f2dcfdaf9e1ecf3230eaea79e5b0",
+    "src/fusion_baselines/coupled_coil_audit.py": "3f9a5cee83447bc61d0cd633cdaac13e90a09f2bee42b6c908166d0f42476ba5"
+  },
+  "functions": {
+    "scripts/qualify_saved_flux_labels.py:qualified": "d83f09a0b5361b3b5f7513e9af074521afb8687a481c741299e8095304a720c5",
+    "scripts/qualify_saved_flux_labels.py:independent_label": "6636950fa615c0ee73309d1a8a7e5a4da01d6dd2bdedeb56aa7a624d0e7eb690",
+    "scripts/diagnose_flux_quadrature.py:UniformY": "788f18411ea03b811f9d813193475d570eced57264e31a51454e843665b998fd",
+    "scripts/diagnose_flux_quadrature.py:controls": "c56707104dfb214dc8932cabb3e510bec25b1c193a584adac1dbb2e2e7a4b4ec",
+    "src/fusion_baselines/coil_fit.py:Recorder": "d11ff11c56eb400181ff9555efb3c5668f840ee56b904809ccce7be1a2af27e4",
+    "src/fusion_baselines/coil_fit.py:loop_geometry": "2bcdd33b8de2f4f9246d5b47aa2839e22bd71d02517883a399b12423a4491d6c",
+    "scripts/measure_flux_labels.py:launch_grid": "19cb1257e670342ea1734bc180af61e7a4a011e6b3854cd9b956e7666f69bcab",
+    "scripts/measure_flux_labels.py:grid_summary": "2721a70983df6bb73c32a66a5c89ccec215252e257750e72e9b5a202ef8da812",
+    "scripts/measure_flux_labels.py:save_trace": "96883541c846f4ca5947430a6033f0513e1ef3b2c76cc66b658bca0a2ff1f0a5",
+    "scripts/measure_flux_labels.py:half_period_symmetry": "bbf4473d086b2444009d78cdc5886b973c3867409fe52335bab318b3b77569eb"
+  }
+}

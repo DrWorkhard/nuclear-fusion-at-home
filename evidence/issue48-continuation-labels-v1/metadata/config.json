@@ -1,0 +1,5 @@
+{
+  "snapshot": "/private/tmp/issue26-shallow-wells-v1/run/continuation-snapshot.json",
+  "wout": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+  "environment": "/private/tmp/issue37-native-environment-v1.json"
+}

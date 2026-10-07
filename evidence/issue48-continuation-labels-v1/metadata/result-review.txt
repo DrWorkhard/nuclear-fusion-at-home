@@ -1,0 +1,9 @@
+Read-only result review, exact producer 3198a16c006e731aa62dba1588fd69d17bfa0c05.
+No result-level blocker. The reviewer verified all 49 copied raw files, all 49
+source/input bindings and the reported controls. Launch 10 fails six reconstruction
+checks despite completing its trace; its 0.53154 label remains explicitly unqualified.
+The supported conclusion is that shallow-well recovery did not produce a fully
+qualified label grid under this protocol. It does not demonstrate islands, lost
+surfaces or worse confinement. Historical-reference offsets are descriptive context.
+No tracing or field calculations repeated. Archive replay is a separate verification.
+Agent review is not external peer review.

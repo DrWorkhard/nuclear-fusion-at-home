@@ -1,0 +1,325 @@
+{
+  "analytic_controls": [
+    {
+      "errors": {
+        "area": 0.0,
+        "circle": 5.551115123125783e-17,
+        "line": 0.0
+      },
+      "exact_spline_area": 0.1256637061435918,
+      "modulation": 0.0,
+      "passed": true
+    },
+    {
+      "errors": {
+        "area": 8.326672684688674e-17,
+        "line": 8.326672684688674e-17
+      },
+      "exact_spline_area": 0.1281768786996913,
+      "modulation": 0.2,
+      "passed": true
+    }
+  ],
+  "benefit_transfer_confirmed": false,
+  "candidate": "interior-pass-headroom-continuation",
+  "center_RZ": [
+    0.9340295380453654,
+    0.0
+  ],
+  "completed": false,
+  "control_arrays_sha256": "47711977e1d0212ab70bbc60960a863aaa680497c77d8ca68c4df0eacdee1275",
+  "controls": [
+    {
+      "crossings": 160,
+      "exact_flux": -0.0031413151590563007,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.0031411322144369314,
+          "line_flux": -0.0031411322138881924,
+          "stokes_abs_error": 5.487390056235775e-13
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.0031411322144348375,
+          "line_flux": -0.0031411322144348375,
+          "stokes_abs_error": 0.0
+        }
+      ],
+      "label": 0.09998534377086864,
+      "label_error": 5.82330816382981e-06,
+      "max_gap_rad": 0.48214073742816144,
+      "quadrature_label_change": 1.7400256961618793e-11,
+      "s": 0.1,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 3.303226444782356e-05,
+          "label": 0.09997506689859963,
+          "max_gap_rad": 0.6152501297865127,
+          "quadrature_label_change": 9.433649426050297e-11
+        },
+        {
+          "heldout_radius_max_m": 0.0002663389816751193,
+          "label": 0.09990337418100688,
+          "max_gap_rad": 0.8717593739247107,
+          "quadrature_label_change": 3.877695326992385e-09
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.00785315202162284,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.007852711416205188,
+          "line_flux": -0.007852711415057086,
+          "stokes_abs_error": 1.148102446446586e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.007852711416200668,
+          "line_flux": -0.007852711416200671,
+          "stokes_abs_error": 3.469446951953614e-18
+        }
+      ],
+      "label": 0.24995956772342245,
+      "label_error": 1.4024906178855545e-05,
+      "max_gap_rad": 0.4734663550128291,
+      "quadrature_label_change": 3.6401448330940734e-11,
+      "s": 0.25,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 6.025689541185042e-05,
+          "label": 0.24993460069048046,
+          "max_gap_rad": 0.6041897233249331,
+          "quadrature_label_change": 1.9527981782055005e-10
+        },
+        {
+          "heldout_radius_max_m": 0.00042668758697419346,
+          "label": 0.24975551698777482,
+          "max_gap_rad": 0.8559665346464413,
+          "quadrature_label_change": 7.848720386730823e-09
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.015706157944343074,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.015705326761866676,
+          "line_flux": -0.015705326760164767,
+          "stokes_abs_error": 1.7019094467052298e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.015705326761865295,
+          "line_flux": -0.015705326761865306,
+          "stokes_abs_error": 1.0408340855860843e-17
+        }
+      ],
+      "label": 0.49991607742670563,
+      "label_error": 2.6457359990850193e-05,
+      "max_gap_rad": 0.46163362791874096,
+      "quadrature_label_change": 5.412983803900784e-11,
+      "s": 0.5,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 9.79988210247848e-05,
+          "label": 0.4998685390596447,
+          "max_gap_rad": 0.5891280256009006,
+          "quadrature_label_change": 2.743132333626159e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0006014593433036064,
+          "label": 0.49951742018101847,
+          "max_gap_rad": 0.8353845957931458,
+          "quadrature_label_change": 1.1718564216314672e-08
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.0235599324322264,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.023558746852689404,
+          "line_flux": -0.02355874685090592,
+          "stokes_abs_error": 1.7834830834395632e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.023558746852701408,
+          "line_flux": -0.023558746852701422,
+          "stokes_abs_error": 1.3877787807814457e-17
+        }
+      ],
+      "label": 0.7498982029643841,
+      "label_error": 3.773816836738497e-05,
+      "max_gap_rad": 0.4557799375203966,
+      "quadrature_label_change": 5.715257978172112e-11,
+      "s": 0.75,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 0.00013195325797714375,
+          "label": 0.7498301003746736,
+          "max_gap_rad": 0.576526505313173,
+          "quadrature_label_change": 2.4176864932682394e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0007288790071087806,
+          "label": 0.7493152978640865,
+          "max_gap_rad": 0.8184883457206684,
+          "quadrature_label_change": 1.2913637096844497e-08
+        }
+      ]
+    },
+    {
+      "crossings": 160,
+      "exact_flux": -0.02827314458758764,
+      "grids": [
+        {
+          "angular_points": 640,
+          "area_flux": -0.028271758859984703,
+          "line_flux": -0.0282717588583548,
+          "stokes_abs_error": 1.6299010752174325e-12
+        },
+        {
+          "angular_points": 1280,
+          "area_flux": -0.028271758860009738,
+          "line_flux": -0.028271758860009738,
+          "stokes_abs_error": 0.0
+        }
+      ],
+      "label": 0.899918034533855,
+      "label_error": 4.410907876228887e-05,
+      "max_gap_rad": 0.45458407303127446,
+      "quadrature_label_change": 5.2678268221820916e-11,
+      "s": 0.9,
+      "subsets": [
+        {
+          "heldout_radius_max_m": 0.00015142286819910117,
+          "label": 0.8998383733087076,
+          "max_gap_rad": 0.5698629210252868,
+          "quadrature_label_change": 1.6636310918642421e-10
+        },
+        {
+          "heldout_radius_max_m": 0.0007932265621123369,
+          "label": 0.8992283094905581,
+          "max_gap_rad": 0.8095882525992497,
+          "quadrature_label_change": 1.2581237106198365e-08
+        }
+      ]
+    }
+  ],
+  "current_A": 305178.2427715842,
+  "edge": {
+    "angular_points": 16384,
+    "area_flux": -0.0314159265345251,
+    "line_flux": -0.03141592653452502,
+    "stokes_abs_error": 8.326672684688674e-17
+  },
+  "equal_alpha_verified": false,
+  "flux_surface_proven": false,
+  "full_grid": true,
+  "half_period_sections": true,
+  "half_period_symmetry": {
+    "A": 1.3800594766410214e-16,
+    "B": 6.921931301058448e-16
+  },
+  "interval_orders": [
+    4,
+    8
+  ],
+  "kind": "realized-flux-label-grid",
+  "launch_scales": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "lines": [],
+  "mapping": {
+    "position": 5.518957082084075e-16,
+    "tangent": 3.752092455020661e-15
+  },
+  "orientation": "counterclockwise in R,Z; section normal minus e_phi",
+  "physical_admission": false,
+  "polar_edge_magnitude_error": 4.370170891832004e-11,
+  "provenance": {
+    "external_repositories": {},
+    "host": {
+      "captured_at": "2026-10-07T11:48:09.162255+00:00",
+      "logical_cpu_count": 8,
+      "machine": "arm64",
+      "platform": "macOS-15.7.4-arm64-arm-64bit",
+      "processor": "arm",
+      "python": "3.12.13 (main, Mar 25 2026, 03:16:06) [Clang 22.1.1 ]",
+      "python_executable": "/Users/sebastianwirkert/workspace/fusion/.venv/bin/python"
+    },
+    "repository": {
+      "available": true,
+      "branch": "research/issue48-continuation-labels",
+      "commit": "3198a16c006e731aa62dba1588fd69d17bfa0c05",
+      "dirty": false,
+      "path": "/private/tmp/fusion-issue48-continuation-labels-20261007"
+    },
+    "schema_version": 1
+  },
+  "quadrature_kind": "interval Gauss",
+  "radial_quadrature": 24,
+  "requested_crossings": 640,
+  "requested_transits": 320,
+  "selected_start_index": null,
+  "sources_before": {
+    "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/docs/optimization/ISSUE48_CONTINUATION_LABELS.md": "d5e5e2adb4208fa453d9e44ad4234451767f03afdd2bd1b94ea3fa79c997a7d7",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/evidence/plasma-design-v2/reference-input-401.json": "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/diagnose_flux_quadrature.py": "64dde3bd9d10e9207a020bb59ff190f41c44e6b1659c8e2b0761ea590de8478f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/measure_flux_labels.py": "0639c6f453594743122b90e8be0fd0d64a3e170d4c992a25cc8010f4148b2462",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/scripts/qualify_saved_flux_labels.py": "c571b8e4d041ddb2da2ad9afda3763dcc6a306bbe5390c831deb2bc27391562a",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/__init__.py": "8d36f4ca6cbd9c95d1286a5f7914db91f020133819f8e39eb5aba6c405cc1390",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/bounce_action.py": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/boundary_control_metrics.py": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/clear_coil_field_audit.py": "ceb6584e9137e75b67a67b7a24ae2ab1aea01aa85b8f5748952dfbb2f5f802dd",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_bounce.py": "8c2f599c2e6ca1db373e536ad6e9743a9f8f2d609bab7f55d52922f1fc90b6e2",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_check.py": "b42ae92a5390ac1356222d1a3e5468d55ff9563b49d044126c92c9dac5269c78",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_fit.py": "8057dec95c181379dbf85b5e229ed2943035c73a555aaed049f7e95fac26348f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coil_trajectory.py": "6eb8f58b4ab876cfa7dafe3b1fd527269741f523f88dd3098b503d04cdb0f219",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/coupled_coil_audit.py": "3f9a5cee83447bc61d0cd633cdaac13e90a09f2bee42b6c908166d0f42476ba5",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/curvature_bounds.py": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/documentation.py": "7fcfd5475aface32114e5845ff997edb2926f541f823d566d29185da47116aeb",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/documentation_policy.py": "72de8a9b9321992af6655b19c6bd30c81d50263ba5918c23bb8887a5d6d91dc3",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/filament_field.py": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/flux_labels.py": "6a99bdada7a0bbfbcde8cbd2b0ff19c626f2bbfd7ddc16043daee6d8724edcd9",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/provenance.py": "9960f5021f8b1d80e5d524df77df986cf889e7db8391e167ecb00776ae7faa29",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/realized_field.py": "d071f01f818e0294686124f9756f564362d2f2dcfdaf9e1ecf3230eaea79e5b0",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/reference_wout.py": "f11823877c64f41f600afa133be087f0ea25dafc757215d7b07f3faae765032f",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/sparse_coil_surface.py": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/vmec_trace.py": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880",
+    "/private/tmp/fusion-issue48-continuation-labels-20261007/src/fusion_baselines/wout_target.py": "886fdd7348566624a0c7f62c5929aedf0c72f66e160d0f648a6d5a710813bc96",
+    "/private/tmp/issue26-shallow-wells-v1/run/continuation-snapshot.json": "73972fc86375fcffa67a44833d1c87016e7ff9d070857aac97acc1dcf335bb97"
+  },
+  "target_flux_relative_error": 6.661338147750939e-16,
+  "target_id": "reference401",
+  "target_oriented_flux": -0.03141592653589795
+}

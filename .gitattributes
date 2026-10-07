@@ -16,3 +16,8 @@
 # Submission candidates whose file-byte SHA-256 is published in their README.
 /submissions/length-headroom-six-coil/candidate.json text eol=lf
 /submissions/interior-pass-headroom-continuation/candidate.json text eol=lf
+
+# Evidence snapshot: preserve byte-bound source and protocol files on checkout.
+/src/fusion_baselines/** -text
+/scripts/*.py -text
+/docs/optimization/ISSUE48_CONTINUATION_LABELS.md -text

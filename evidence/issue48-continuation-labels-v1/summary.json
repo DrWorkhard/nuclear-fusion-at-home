@@ -1,0 +1,137 @@
+{
+  "producer_evaluator": "3198a16c006e731aa62dba1588fd69d17bfa0c05",
+  "execution_completed": true,
+  "numerical_grid_qualified": false,
+  "qualified_points": 19,
+  "decision": "diagnose-failed-reconstructions-before-matching",
+  "failed_points": [
+    {
+      "index": 10,
+      "s": 0.5,
+      "theta": 3.141592653589793,
+      "failures": [
+        "label convergence",
+        "angular coverage",
+        "subset labels",
+        "heldout radius",
+        "quadrature",
+        "subset quadrature"
+      ]
+    }
+  ],
+  "surface_summary": [
+    {
+      "s": 0.1,
+      "numerically_qualified": true,
+      "labels": [
+        0.09733597328290738,
+        0.10053400640852153,
+        0.1011706763833825,
+        0.10053400604901523
+      ],
+      "line_qualified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "historical_reference_max_offset": 0.0012356674352494157,
+      "historical_reference_phase_spread": 0.002147027656223141,
+      "max_absolute_offset": 0.0026640267170926213,
+      "phase_spread": 0.003834703100475109
+    },
+    {
+      "s": 0.25,
+      "numerically_qualified": true,
+      "labels": [
+        0.24586965335783456,
+        0.25109179825195255,
+        0.24936019287498828,
+        0.2510917259131521
+      ],
+      "line_qualified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "historical_reference_max_offset": 0.004144989086122514,
+      "historical_reference_phase_spread": 0.006574910786321858,
+      "max_absolute_offset": 0.004130346642165439,
+      "phase_spread": 0.005222144894117986
+    },
+    {
+      "s": 0.5,
+      "numerically_qualified": false,
+      "labels": [
+        0.4873971484304629,
+        0.4978486271550368,
+        0.5315437914418623,
+        0.49784861816213943
+      ],
+      "line_qualified": [
+        true,
+        true,
+        false,
+        true
+      ],
+      "historical_reference_max_offset": 0.011720646115285838,
+      "historical_reference_phase_spread": 0.01371847654094055
+    },
+    {
+      "s": 0.75,
+      "numerically_qualified": true,
+      "labels": [
+        0.7097191364405696,
+        0.7246297307525406,
+        0.7259563769225058,
+        0.7246297274712872
+      ],
+      "line_qualified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "historical_reference_max_offset": 0.03477884973732226,
+      "historical_reference_phase_spread": 0.021184023189635193,
+      "max_absolute_offset": 0.04028086355943039,
+      "phase_spread": 0.0162372404819362
+    },
+    {
+      "s": 0.9,
+      "numerically_qualified": true,
+      "labels": [
+        0.8151102009823968,
+        0.8274934720874138,
+        0.8317743996075146,
+        0.8274934741989748
+      ],
+      "line_qualified": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "historical_reference_max_offset": 0.06813678263842371,
+      "historical_reference_phase_spread": 0.01937432558722685,
+      "max_absolute_offset": 0.08488979901760318,
+      "phase_spread": 0.01666419862511781
+    }
+  ],
+  "current_A": 305178.2427715842,
+  "result_sha256": "f6952fd3fc85fc3dfc97000b65d911001c42a0fa23d7055d2221ca384f19c5ba",
+  "historical_context": {
+    "source_archive": "2ee186bb347245072c98d983a42b06f8e02a16a9",
+    "original_path": "reference401/run/result.json",
+    "sha256": "de6be04dc5ec5427bb70194f2848890a08a66faa98f663cca25269774cfaf322",
+    "source_manifest_sha256": "4b39d87d53aaa47a4e1ccf599e3b45ffdd586693363689a914943d4bd54f0bb3",
+    "producer_evaluator": "130347fe29e03852e257a63d0ce6ab9f828d2c85",
+    "role": "Qualified historical reference context only; not rerun in this study."
+  },
+  "original_reference_retraced": false,
+  "elapsed_s": 991.3645046248566,
+  "physical_admission": false,
+  "common_realized_surface_proven": false,
+  "benefit_transfer_confirmed": false
+}

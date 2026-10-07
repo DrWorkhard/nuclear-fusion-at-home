@@ -1,0 +1,8 @@
+{
+  "source_archive": "2ee186bb347245072c98d983a42b06f8e02a16a9",
+  "original_path": "reference401/run/result.json",
+  "sha256": "de6be04dc5ec5427bb70194f2848890a08a66faa98f663cca25269774cfaf322",
+  "source_manifest_sha256": "4b39d87d53aaa47a4e1ccf599e3b45ffdd586693363689a914943d4bd54f0bb3",
+  "producer_evaluator": "130347fe29e03852e257a63d0ce6ab9f828d2c85",
+  "role": "Qualified historical reference context only; not rerun in this study."
+}

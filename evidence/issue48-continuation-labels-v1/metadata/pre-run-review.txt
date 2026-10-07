@@ -1,0 +1,9 @@
+Read-only adversarial review at exact producer 3198a16c006e731aa62dba1588fd69d17bfa0c05.
+The reviewer verified unchanged estimator, qualification, analytic controls and shared numerical
+helpers against archive 2ee186bb, plus the frozen config/snapshot/Wout/environment hashes.
+The initial supervisor review identified termination and exited-leader cleanup gaps.
+Both were corrected and tested before any scientific run. Scoped SIGTERM requests controlled
+shutdown, owned-group cleanup runs regardless of leader state, denied cleanup prevents success,
+and the original handler is restored. Four regressions cover these cases and late publication.
+No remaining pre-run blocker. Fresh checkout: 324 research tests, 65 public tests, Ruff, docs
+and diff checks passed. No reviewer scientific computation. Agent review is not external review.
