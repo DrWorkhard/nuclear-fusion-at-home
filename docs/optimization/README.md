@@ -208,3 +208,6 @@ The [paired fitting-burden screen](ISSUE37_FIT_COUPLING.md) registers equal shor
 fits and fine-boundary/geometry checks before further expensive diagnostics.
 Its [completed result](ISSUE37_FIT_COUPLING_RESULT.md) passes nonregression, while
 both absolute boundary gates fail; no automatic extension or long traces follow.
+
+The [fixed-coil boundary-response diagnostic](ISSUE37_BOUNDARY_RESPONSE.md) tests
+one local four-mode surface-alignment step before more coupled optimization.
