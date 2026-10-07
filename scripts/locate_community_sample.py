@@ -15,7 +15,7 @@ REVISION = '286a268c664938519af6ceacfb4ec8143f64e20e'
 SELECTED = 'DRSySxvjUFWt5VLxPVRW37N'
 
 
-def main(reader, tree_path, output):
+def main(reader, tree_path, output, reuse=None, metadata_only=False):
     assert not output.exists()
     assert shutil.disk_usage(output.parent).free >= 3*1024**3
     assert not subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT)
@@ -27,6 +27,18 @@ def main(reader, tree_path, output):
     tree = {r['path']: r for r in json.loads(tree_path.read_text(encoding='utf-8'))}
     paths = [f'coilsets/part-{n}.parquet' for n in range(3)]
     cache = {}
+    if reuse is not None:
+        prior = json.loads((reuse/'lookup.json').read_text(encoding='utf-8'))
+        assert prior['dataset_revision'] == REVISION
+        assert prior['tree_sha256'] == hashlib.sha256(tree_path.read_bytes()).hexdigest()
+        for index, entry in enumerate(prior['requests']):
+            if entry['completed']:
+                data = reuse/f'range-{index:03d}.bin'
+                assert hashlib.sha256(data.read_bytes()).hexdigest() == entry['sha256']
+                assert data.stat().st_size == entry['length']
+                cache[(entry['path'], entry['offset'], entry['length'])] = data
+        report['reused_receipt_sha256'] = hashlib.sha256(
+            (reuse/'lookup.json').read_bytes()).hexdigest()
 
     def guard():
         assert time.monotonic()-start < 180, '180 s attempt ceiling'
@@ -40,7 +52,7 @@ def main(reader, tree_path, output):
             return cache[key].read_bytes()
         guard()
         assert 0 < length <= 16*1024**2
-        assert report['downloaded_bytes']+length <= 32*1024**2
+        assert report['downloaded_bytes']+max(length, 4096) <= 32*1024**2
         assert len(report['requests']) < 60
         size = tree[path]['size']
         end = offset+length-1
@@ -54,7 +66,7 @@ def main(reader, tree_path, output):
         report['requests'].append(entry)
         command = ['curl', '--silent', '--show-error', '--fail', '--location',
                    '--max-time', str(min(30, max(1, int(180-(time.monotonic()-start))))),
-                   '--max-filesize', str(length), '--range', f'{offset}-{end}',
+                   '--max-filesize', str(max(length, 4096)), '--range', f'{offset}-{end}',
                    '--dump-header', str(headers), url, '-o', str(data)]
         child = subprocess.run(command, capture_output=True, text=True, timeout=32)
         entry.update(returncode=child.returncode, stderr=child.stderr)
@@ -125,13 +137,25 @@ def main(reader, tree_path, output):
         connection.register_filesystem(Ranges())
         counts = [connection.execute('SELECT num_rows FROM parquet_file_metadata(?)',
                                      ['bounded://'+path]).fetchone()[0] for path in paths]
-        matches = connection.execute(
-            'SELECT id, file_row_number FROM read_parquet(?, file_row_number=true) WHERE id = ?',
-            ['bounded://'+paths[2], SELECTED]).fetchall()
-        assert len(matches) == 1
-        report.update(completed=True, shard_row_counts=counts, selected_shard_row=matches[0][1],
-                      proposed_api_row=sum(counts[:2])+matches[0][1],
-                      api_row_identity_verified=False, full_shard_hash_verified=False)
+        report['shard_row_counts'] = counts
+        if metadata_only:
+            groups = connection.execute(
+                'SELECT row_group_id, row_group_num_rows, stats_min_value, stats_max_value '
+                'FROM parquet_metadata(?) WHERE path_in_schema = ? '
+                'AND stats_min_value <= ? AND stats_max_value >= ?',
+                ['bounded://'+paths[2], 'id', SELECTED, SELECTED]).fetchall()
+            report.update(completed=True, metadata_only=True,
+                          candidate_row_group_count=len(groups), first_candidate_groups=groups[:5],
+                          selected_row_located=False)
+        else:
+            matches = connection.execute(
+                'SELECT id, file_row_number FROM read_parquet(?, file_row_number=true) '
+                'WHERE id = ?',
+                ['bounded://'+paths[2], SELECTED]).fetchall()
+            assert len(matches) == 1
+            report.update(completed=True, selected_shard_row=matches[0][1],
+                          proposed_api_row=sum(counts[:2])+matches[0][1],
+                          api_row_identity_verified=False, full_shard_hash_verified=False)
         guard()
     except Exception as error:
         report.update(completed=False, error=f'{type(error).__name__}: {error}')
@@ -148,5 +172,8 @@ if __name__ == '__main__':
     parser.add_argument('--reader', type=Path, required=True)
     parser.add_argument('--tree', type=Path, required=True)
     parser.add_argument('--output', type=Path, required=True)
+    parser.add_argument('--reuse', type=Path)
+    parser.add_argument('--metadata-only', action='store_true')
     args = parser.parse_args()
-    raise SystemExit(main(args.reader.resolve(), args.tree.resolve(), args.output.resolve()))
+    raise SystemExit(main(args.reader.resolve(), args.tree.resolve(), args.output.resolve(),
+                          args.reuse.resolve() if args.reuse else None, args.metadata_only))
