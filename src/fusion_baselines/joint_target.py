@@ -247,6 +247,7 @@ def intake(input_path, wout, proposal, expected_wout_sha256, guard=lambda: None)
     guard()
     check.need(all(check.digest(p) == sha for p, sha in sources.items()),
                'intake input changed during validation')
+    guard()  # Final identity hashing also consumes the caller's budget.
     report = dict(target_id=target_id, input_sha256=INPUT_HASHES[proposal],
                   wout_sha256=expected_wout_sha256, size=sizes, equilibrium=state,
                   fields=reports, B2_scale=check.B2, measured_B2=measured,
