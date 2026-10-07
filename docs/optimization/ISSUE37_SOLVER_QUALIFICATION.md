@@ -66,7 +66,7 @@ The one registered solve **passed** at clean producer/evaluator
 `871aeb74e1e2656a9d1b32764b85618f44a94199`: 174.879 s total, 171.492 s worker
 (including identity checks/serialization), 172.173 s subprocess supervision;
 clock disagreement below 0.0001 s. No retry or environment change. At 401 surfaces,
-force residuals (r/z/lambda) were 9.980e-13 / 2.914e-13 / 3.893e-17.
+force residuals (r/z/lambda) were 9.980e-13 / 2.913e-13 / 3.893e-17.
 All six field checks passed: maximum positive representation error 5.122e-7,
 independent geometry 2.257e-15. Volume was 0.19006046531779677 m³
 (-0.0039507525% from original); measured B² 1.625766758078491, with the reference
