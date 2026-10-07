@@ -8,14 +8,11 @@ reference-target fit reaches boundary RMS **0.001932**, about **19×** its limit
 and interior RMS **0.01072**, also failing. The improved-target fit also fails.
 [Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
 wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
-**The next research route is joint plasma/coil optimization.** After the
-fixed-target recipe stalled, the [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md)
-reached boundary RMS 0.001766 versus 0.001835 for its order-5 control, a 3.78%
-improvement that missed the 50% hurdle. Geometry and tracing pass; the probe's
-interior RMS 0.009481 passes its individual limit, but both boundary gates fail.
-The local archive retains clock/load limitations; this is a resource-allocation
-decision, not controlled throughput or a causal/global conclusion. Publication is
-pending. The first local [joint comparison](optimization/ISSUE37_JOINT_RESULT.md)
+**Joint plasma/coil optimization is the current research route.** The
+[coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) improved boundary RMS
+3.78%, missing its 50% hurdle. Geometry, tracing and its individual interior
+limit pass; boundary gates fail. Clock/load limitations prevent controlled
+throughput or causal claims; publication is pending. The first local [joint comparison](optimization/ISSUE37_JOINT_RESULT.md)
 completed its control but was interrupted by a clock discrepancy during the first
 perturbed solve; its verdict remains inconclusive. A separately registered
 [awake follow-up](optimization/ISSUE37_AWAKE_RESULT.md) completed with verdict
