@@ -4,6 +4,9 @@ One normalized fitter, one set of field/geometry checks.
 [Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
 [Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md)
 
+[Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
+geometry families, label compatibility, rights and the prerequisites for a learning pilot.
+
 ## Native workflow
 
 ```bash
