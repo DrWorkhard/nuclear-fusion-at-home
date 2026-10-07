@@ -177,5 +177,8 @@ proposals to the existing coil model; full joint execution remains disabled.
 [Receipt-bound proposal diagnostics](ISSUE37_COIL_DIAGNOSTICS.md) reuse fine-field
 and continuous-geometry checks without changing the archived-target gates.
 
+[Receipt-bound direct tracing](ISSUE37_DIRECT_TRACING.md) retains paths and the
+existing signed-iota/confinement checks for the registered target launches.
+
 The [one cold-solve qualification](ISSUE37_SOLVER_QUALIFICATION.md) will test bound
 solver provenance and independent numerical intake before joint integration.

@@ -5,6 +5,7 @@ joint driver. Archived-target entry points do not accept these snapshots.
 """
 import copy
 import hashlib
+import io
 import json
 import re
 from pathlib import Path
@@ -161,4 +162,55 @@ def geometry(snapshot, folder, parent, record):
     """Existing continuous geometry enclosures against the admitted proposal boundary."""
     snapshot, data, _, context = _diagnostic_inputs(snapshot, folder, parent, record)
     row = check.geometry(snapshot, data, record.guard)
+    return _finish_diagnostic(row, context, record)
+
+
+def direct_trace(snapshot, folder, parent, record):
+    """Ten target launches, 200 direct transits and unchanged signed-iota checks."""
+    from simsopt.field import BiotSavart
+    from simsopt.geo import SurfaceRZFourier
+
+    from fusion_baselines import realized_field as rf
+
+    snapshot, data, _, context = _diagnostic_inputs(snapshot, folder, parent, record)
+    wout = Path(folder)/'wout.nc'
+    traced_target = rf.Target.from_wout(wout, data)
+    check.need(traced_target.sha256 == context['binding']['wout_sha256'],
+               'tracing Wout differs from admitted target')
+    record.guard()
+    coils, own, control = check._native_coils(snapshot, 512)
+    field = BiotSavart(coils)
+    points = rf.sample_points(traced_target, np.random.default_rng(20261005), 64)
+    field.set_points(points)
+    expected, _ = record.call('independent_BA', check.independent.filament_field_and_potential,
+                              points, own['positions'], own['tangents'], own['currents'])
+    actual = record.call('B', field.B).copy()
+    control['independent_volume'] = check.error(actual, expected)
+    check.need(max(control.values()) <= 1e-12, 'direct tracing field identity failed')
+    buffer = io.BytesIO()
+    np.savez_compressed(buffer, points=points, native_B=actual, independent_B=expected,
+                        **own)
+    record.save('trace-kernel.npz', buffer.getvalue())
+    surface = SurfaceRZFourier.from_wout(str(wout), range='full torus', nphi=128, ntheta=64)
+    record.guard()
+    row = dict(completed=False, field='direct BiotSavart', transits=200,
+               target_launches=list(rf.S_VALUES), tol=1e-10, kernel_control=control,
+               kernel_arrays_sha256=check.digest(record.output/'trace-kernel.npz'),
+               frozen_current=True, current_A=1e5*snapshot['scale'], physical_admission=False)
+    record.save('direct-trace-attempt.json', dict(row, joint_target=context))
+    record.guard()
+    lines, hits, paths = rf.trace(field, traced_target, surface, transits=200, tol=1e-10,
+                                  s_values=rf.S_VALUES, keep_paths=True)
+    record.guard()
+    check.need(len(lines) == len(hits) == len(paths) == 10, 'all ten trace records required')
+    hashes = {}
+    for index, (path, hit) in enumerate(zip(paths, hits, strict=True)):
+        record.guard()
+        buffer = io.BytesIO()
+        np.savez_compressed(buffer, path=path, hits=hit)
+        name = f'trace-line-{index}.npz'
+        record.save(name, buffer.getvalue())
+        hashes[name] = check.digest(record.output/name)
+    row.update(completed=True, lines=lines, summary=rf.summarize(lines, 200), arrays_sha256=hashes,
+               internal_native_field_call_counts_measured=False)
     return _finish_diagnostic(row, context, record)

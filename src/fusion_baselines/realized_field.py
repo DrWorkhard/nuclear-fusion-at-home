@@ -96,8 +96,9 @@ def coils(candidate, current):
     return coils_via_symmetries(curves, [Current(current) for _ in curves], 2, True)
 
 
-def trace(field, target, surface, transits=200, tol=1e-10, s_values=S_VALUES):
-    """Trace until boundary exit, requested transits or the finite integration-time cap."""
+def trace(field, target, surface, transits=200, tol=1e-10, s_values=S_VALUES,
+          keep_paths=False):
+    """Trace to a stop; optionally retain paths including the terminal stopping state."""
     from simsopt.field.tracing import (
         LevelsetStoppingCriterion,
         ToroidalTransitStoppingCriterion,
@@ -115,7 +116,7 @@ def trace(field, target, surface, transits=200, tol=1e-10, s_values=S_VALUES):
                                      stopping_criteria=[LevelsetStoppingCriterion(classifier.dist),
                                                         ToroidalTransitStoppingCriterion(
                                                             transits, False)])
-    lines = []
+    lines, retained_paths = [], []
     for s, path, hit in zip(s_values, paths, hits, strict=True):
         # SIMSOPT returns the terminal stopping state in hits, not in the path.
         if len(hit) and hit[-1, 1] < 0 and hit[-1, 0] > path[-1, 0]:
@@ -130,7 +131,9 @@ def trace(field, target, surface, transits=200, tol=1e-10, s_values=S_VALUES):
         lines.append(dict(s=s, R0=float(path[0, 1]), transits=turns, left_target=left,
                           termination=termination,
                           iota_traced=iota, iota_target=target.iota(s)))
-    return lines, hits
+        if keep_paths:
+            retained_paths.append(path)
+    return (lines, hits, retained_paths) if keep_paths else (lines, hits)
 
 
 def inside_target(target, xyz, count=2000):

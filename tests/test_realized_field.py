@@ -115,6 +115,13 @@ def test_transit_stop_is_not_an_escape_and_time_cap_cannot_pass(monkeypatch):
     assert not any(line["left_target"] for line in lines)
     assert [line["termination"] for line in lines] == ["requested_transits", "integration_limit"]
     assert not summarize(lines, 5)["all_confined_and_iota_matching"]
+    retained, hits, paths = trace(None, target, None, transits=5, s_values=(0.5, 0.5),
+                                  keep_paths=True)
+    assert retained == lines
+    np.testing.assert_array_equal(paths[0][-1], hits[0][-1, [0, 2, 3, 4]])
+    for line, path in zip(lines, paths, strict=True):
+        turns, iota = winding(path[:, 1:4], target)
+        assert (turns, iota) == (line['transits'], line['iota_traced'])
 
 
 def test_wout_target_binding_rejects_wrong_period_before_loading_surfaces(tmp_path):
