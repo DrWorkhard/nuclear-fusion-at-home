@@ -164,3 +164,6 @@ after the launch-matching pilot stopped.
 
 The [joint-proposal volume preflight](ISSUE37_VOLUME_PREFLIGHT.md) passes both
 frozen perturbations; new-target intake and joint execution remain gated.
+
+[Registered joint-target numerical intake](ISSUE37_TARGET_INTAKE.md) keeps proposal
+validation separate from archived-target checks; solver provenance remains required.
