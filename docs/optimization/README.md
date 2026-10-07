@@ -190,3 +190,6 @@ completed its control but stopped on clock disagreement during the first J solve
 
 The [one cold-solve qualification](ISSUE37_SOLVER_QUALIFICATION.md) will test bound
 solver provenance and independent numerical intake before joint integration.
+
+The separately registered [awake follow-up](ISSUE37_AWAKE_FOLLOWUP.md) repeats the
+fixed comparison with temporary macOS sleep assertions and fresh work in both arms.
