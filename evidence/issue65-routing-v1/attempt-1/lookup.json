@@ -1,0 +1,14 @@
+{
+  "completed": false,
+  "producer": "fbf8ca5bcd14cd4f108ea624646cb2f9ea898e73",
+  "dataset_revision": "286a268c664938519af6ceacfb4ec8143f64e20e",
+  "selected_id": "DRSySxvjUFWt5VLxPVRW37N",
+  "physical_admission": false,
+  "requests": [],
+  "downloaded_bytes": 0,
+  "error": "Error: NotImplementedError: <EMPTY MESSAGE>\n\nAt:\n  /private/tmp/issue65-parquet-reader-v1/fsspec/spec.py(1616): modified\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(120): main\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(146): <module>\n",
+  "elapsed_s": 0.12378670903854072,
+  "duckdb_version": "1.4.3",
+  "tree_sha256": "7025fb7c59dde2cf182f69990bfd99c50177f5da78e3e9ae4698949d70bf927b",
+  "script_sha256": "366dde0449eb253b6c3b5f2f8f2f163abbaf819cdcfc66651acbc08dcdb0195e"
+}

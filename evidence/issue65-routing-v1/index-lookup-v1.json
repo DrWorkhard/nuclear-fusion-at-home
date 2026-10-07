@@ -1,0 +1,24 @@
+{
+  "duckdb_version": "1.4.3",
+  "index_sha256": "a7e119bc38f8e2f26cbafb072c0ed159abf40c1ff8a93c7b7a870fdf2afbe2c1",
+  "query": "SELECT id, path, file_row_number FROM read_parquet(?, file_row_number=true) WHERE id IN (?, ?) ORDER BY file_row_number",
+  "parameters": [
+    "/private/tmp/issue65-coilset-id-index.parquet",
+    "D9jBQhBtwBzy7kAd8yNoEy6",
+    "DRSySxvjUFWt5VLxPVRW37N"
+  ],
+  "rows": [
+    [
+      "D9jBQhBtwBzy7kAd8yNoEy6",
+      "coilsets/part-0.parquet",
+      43830
+    ],
+    [
+      "DRSySxvjUFWt5VLxPVRW37N",
+      "coilsets/part-2.parquet",
+      312697
+    ]
+  ],
+  "elapsed_s": 0.02933058305643499,
+  "row_order_not_yet_verified_for_selected_record": true
+}

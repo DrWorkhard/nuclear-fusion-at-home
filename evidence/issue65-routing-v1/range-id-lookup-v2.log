@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py", line 152, in <module>
+    raise SystemExit(main(args.reader.resolve(), args.tree.resolve(), args.output.resolve()))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py", line 21, in main
+    assert not subprocess.check_output(['git', 'status', '--porcelain'], cwd=ROOT)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,84 @@
+{
+  "completed": false,
+  "producer": "4b32a9b44db61b77b5161b59159c76d41b0c04fd",
+  "dataset_revision": "286a268c664938519af6ceacfb4ec8143f64e20e",
+  "selected_id": "DRSySxvjUFWt5VLxPVRW37N",
+  "physical_admission": false,
+  "requests": [
+    {
+      "path": "coilsets/part-0.parquet",
+      "offset": 529563950,
+      "length": 262144,
+      "url": "https://huggingface.co/datasets/proxima-fusion/coilstellaration/resolve/286a268c664938519af6ceacfb4ec8143f64e20e/coilsets/part-0.parquet",
+      "completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "sha256": "e92842a02b46037256963a3a8acf046d46a58b9aaefb24b2596f55cb057de984"
+    },
+    {
+      "path": "coilsets/part-0.parquet",
+      "offset": 526386727,
+      "length": 3177223,
+      "url": "https://huggingface.co/datasets/proxima-fusion/coilstellaration/resolve/286a268c664938519af6ceacfb4ec8143f64e20e/coilsets/part-0.parquet",
+      "completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "sha256": "bd9e70af50be7f1332c5ee896e87de9c294ad77c9cff3795ee61667cee701824"
+    },
+    {
+      "path": "coilsets/part-1.parquet",
+      "offset": 528135627,
+      "length": 262144,
+      "url": "https://huggingface.co/datasets/proxima-fusion/coilstellaration/resolve/286a268c664938519af6ceacfb4ec8143f64e20e/coilsets/part-1.parquet",
+      "completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "sha256": "fb4876856f38c6fea3530ad80a87a1b69efcee2595c1e00e5217bb6ef8af50f5"
+    },
+    {
+      "path": "coilsets/part-1.parquet",
+      "offset": 525016899,
+      "length": 3118728,
+      "url": "https://huggingface.co/datasets/proxima-fusion/coilstellaration/resolve/286a268c664938519af6ceacfb4ec8143f64e20e/coilsets/part-1.parquet",
+      "completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "sha256": "424612348c952e9e31fed8320106eb03250cd8533d955f5c475bf0f99e6cf76d"
+    },
+    {
+      "path": "coilsets/part-2.parquet",
+      "offset": 529642140,
+      "length": 262144,
+      "url": "https://huggingface.co/datasets/proxima-fusion/coilstellaration/resolve/286a268c664938519af6ceacfb4ec8143f64e20e/coilsets/part-2.parquet",
+      "completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "sha256": "d75f757cc6e38910d289e135fa6e8debf99d7b9c71230db8c392350ea644a27a"
+    },
+    {
+      "path": "coilsets/part-2.parquet",
+      "offset": 526041049,
+      "length": 3601091,
+      "url": "https://huggingface.co/datasets/proxima-fusion/coilstellaration/resolve/286a268c664938519af6ceacfb4ec8143f64e20e/coilsets/part-2.parquet",
+      "completed": true,
+      "returncode": 0,
+      "stderr": "",
+      "sha256": "0b5418638f27fd7034bbd06b107ac98f081f2666b042f743e6b9d121db560386"
+    },
+    {
+      "path": "coilsets/part-2.parquet",
+      "offset": 4,
+      "length": 772,
+      "url": "https://huggingface.co/datasets/proxima-fusion/coilstellaration/resolve/286a268c664938519af6ceacfb4ec8143f64e20e/coilsets/part-2.parquet",
+      "completed": false,
+      "returncode": 56,
+      "stderr": "curl: (56) Maximum file size exceeded\n"
+    }
+  ],
+  "downloaded_bytes": 10683474,
+  "error": "Error: AssertionError: curl: (56) Maximum file size exceeded\n\n\nAt:\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(62): fetch\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(99): read\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(128): main\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(152): <module>\n",
+  "elapsed_s": 6.727334582945332,
+  "duckdb_version": "1.4.3",
+  "tree_sha256": "7025fb7c59dde2cf182f69990bfd99c50177f5da78e3e9ae4698949d70bf927b",
+  "script_sha256": "aea2f19852a35b9a93d6fd5e01c5a7550e91c8a34296ef5068979411fed6e3a2"
+}

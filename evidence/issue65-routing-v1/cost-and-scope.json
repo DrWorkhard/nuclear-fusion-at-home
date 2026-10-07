@@ -1,0 +1,24 @@
+{
+  "new_simulations": 0,
+  "fetched_research_code_executed": false,
+  "temporary_reader_executed": true,
+  "native_environment_modified": false,
+  "source_archive_commit": "9f3d4a5a9cbb0b85a6e07cf40bb5cc4e390e237c",
+  "reader_wheels": {
+    "duckdb-1.4.3-cp312-macos-arm64": {
+      "bytes": 13740477,
+      "sha256": "5634e40e1e2d972e4f75bced1fbdd9e9e90faa26445c1052b27de97ee546944a"
+    },
+    "fsspec-2025.12.0": {
+      "bytes": 201422,
+      "sha256": "8bf1fe301b7d8acfa6e8571e3b1c3d158f909666642431cc78a1b7b4dbc5ec5b"
+    }
+  },
+  "index_bytes": 10850062,
+  "verified_range_bytes": 10683474,
+  "additional_range_limit_bytes": 33554432,
+  "total_download_limit_bytes": 67108864,
+  "per_file_download_limit_bytes": 16777216,
+  "new_storage_limit_bytes": 134217728,
+  "scope_note": "Counts cover acquired input/reader files and range outputs. Git archive/worktree preservation copies are additional, not part of the 32 MiB transfer guard. No verified aggregate 128 MiB compliance is claimed across every checkout/copy. No full coil shard or boundary payload downloaded."
+}

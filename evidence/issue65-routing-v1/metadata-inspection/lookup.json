@@ -1,0 +1,54 @@
+{
+  "completed": true,
+  "producer": "fea6982cb91d74e83499735b96091fc0263bae57",
+  "dataset_revision": "286a268c664938519af6ceacfb4ec8143f64e20e",
+  "selected_id": "DRSySxvjUFWt5VLxPVRW37N",
+  "physical_admission": false,
+  "requests": [],
+  "downloaded_bytes": 0,
+  "reused_receipt_sha256": "5119b4f477846746d37a107321cf857b5adb16f41a3f400048666b1359988f8a",
+  "shard_row_counts": [
+    100016,
+    100010,
+    100024
+  ],
+  "metadata_only": true,
+  "candidate_row_group_count": 3410,
+  "first_candidate_groups": [
+    [
+      0,
+      26,
+      "D3mnwQWA9omPgpPeRQgk2Uh",
+      "DmyGhZYcRs7g65Jh2a8qQ7J"
+    ],
+    [
+      1,
+      26,
+      "D2AxyHidHgqQ24acZq6DYM8",
+      "DiUxbJub4G6VPtfQh3QaiJX"
+    ],
+    [
+      2,
+      26,
+      "D22fhkj6txzpJpckoHi2mEs",
+      "Dnop32hQFk9MrSGXA25oFQ5"
+    ],
+    [
+      3,
+      26,
+      "D3kcUyeuTutcXfP5eSP9oQq",
+      "DmH9PVkZ9xwAUtaGcL5FTbs"
+    ],
+    [
+      4,
+      26,
+      "D62kHxJ8Aog6J5xdmvTydxS",
+      "DjoqNkzry4QPTz7jbXubnAK"
+    ]
+  ],
+  "selected_row_located": false,
+  "elapsed_s": 0.20468079205602407,
+  "duckdb_version": "1.4.3",
+  "tree_sha256": "7025fb7c59dde2cf182f69990bfd99c50177f5da78e3e9ae4698949d70bf927b",
+  "script_sha256": "ee53205c62368b2a8dc000a4303bdbb3bf1b4c1681149698d151368b101097cf"
+}

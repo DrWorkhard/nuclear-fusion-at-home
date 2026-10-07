@@ -1,0 +1,13 @@
+{
+  "completed": false,
+  "producer": "4b32a9b44db61b77b5161b59159c76d41b0c04fd",
+  "dataset_revision": "286a268c664938519af6ceacfb4ec8143f64e20e",
+  "selected_id": "DRSySxvjUFWt5VLxPVRW37N",
+  "physical_admission": false,
+  "downloaded_bytes": 10683474,
+  "error": "Error: AssertionError: curl: (56) Maximum file size exceeded\n\n\nAt:\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(62): fetch\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(99): read\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(128): main\n  /private/tmp/fusion-issue65-range-intake-20261007/scripts/locate_community_sample.py(152): <module>\n",
+  "elapsed_s": 6.727334582945332,
+  "duckdb_version": "1.4.3",
+  "tree_sha256": "7025fb7c59dde2cf182f69990bfd99c50177f5da78e3e9ae4698949d70bf927b",
+  "script_sha256": "aea2f19852a35b9a93d6fd5e01c5a7550e91c8a34296ef5068979411fed6e3a2"
+}
