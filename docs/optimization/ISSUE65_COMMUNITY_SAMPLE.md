@@ -49,3 +49,19 @@ checks hashes and repeats the same arithmetic without network/native tools;
 it is not independent physics reproduction. Original responses remain under
 `/private/tmp/issue65-*`; archived headers retain relevant fields only.
 The snapshot is unpublished and remotely unverified. #65 remains open.
+
+**Bounded retrieval follow-up:** row access works, but the hash-verified 10.85 MB
+published ID index gives shard paths, not matching API row offsets. The selected
+coil lies in shard 2. A 10.68 MB range attempt stops at a redirect-response size
+guard; saved metadata leaves **3,410 possible row groups**. Stop this route under
+its 60-request limit; obtain the filtered record or a verified row offset instead.
+No full shard hash, selected coil payload or new physics label was verified.
+Temporary DuckDB/fsspec readers leave the native environment unchanged. Original
+failed attempts remain; total storage across later archive/checkouts was not
+audited against the 128 MiB intake allowance, so no aggregate compliance is claimed.
+Final metadata producer `fea6982cb91d74e83499735b96091fc0263bae57`; local tag
+`evidence-issue65-routing-v1`, archive `fa5db5db664f58386cdb9f7ada2f0558b1139b10`,
+payload `evidence/issue65-routing-v1/`, root-relative 35-file manifest SHA-256
+`a92046d277739c8c28986b7e33406c8a5aa07be2c0261f5f776997bfb64b335c`.
+Its README specifies offline, same-reader metadata replay and every failure;
+publication and complete sample qualification remain pending.
