@@ -167,3 +167,6 @@ frozen perturbations; new-target intake and joint execution remain gated.
 
 [Registered joint-target numerical intake](ISSUE37_TARGET_INTAKE.md) keeps proposal
 validation separate from archived-target checks; solver provenance remains required.
+
+The [one cold-solve qualification](ISSUE37_SOLVER_QUALIFICATION.md) will test bound
+solver provenance and independent numerical intake before joint integration.
