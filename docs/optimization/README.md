@@ -158,7 +158,10 @@ polygon point-in-section test of the stop point. Unconfirmed stops are reported 
 `classifier_stop_inside_target`; they count as neither confined nor complete, and
 cannot pass. The summary does not measure nestedness or island widths. Plots are exploratory, not a nested-surface proof or physical acceptance.
 The [matched experiment](ISSUE25_MATCHED_TARGETS.md) also traces the improved
-Step 3 target; full benefit transfer remains unresolved. Edge s > 0.95 remains untested.
+Step 3 target; full benefit transfer remains unresolved.
+The [edge-check summary](ISSUE20_EDGE_CHECKS.md) records later reported phase and
+radius probes through s=0.99, their incomplete runs and missing archival provenance.
+These reports do not complete the original 200-transit adversarial confirmation.
 [Confirmation, 4 October 2026](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-pr18-trace-confirmation-2026-10-04/evidence/pr18-trace-confirmation-2026-10-04)
 uses clean producer `df9db024ef6170df820649e61cccd868f65f0b88`, archive `21886ce`.
 For length-headroom-six-coil, direct and interpolated runs both complete 200
