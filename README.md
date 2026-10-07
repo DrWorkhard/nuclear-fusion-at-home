@@ -1,4 +1,4 @@
-_The press release we want to read:_
+_Our Vision:_
 
 > "**January 2027: Big leap in nuclear fusion technology.**
 >
@@ -35,9 +35,10 @@ My subscription will be dedicated to reviewing every PR which comes in. Your AI 
 - forking the repository after disagreement on research direction
 - announcing that you are working on a different project in a different repo altogether
 
-For contributors and their agents: clone `https://github.com/DrWorkhard/nuclear-fusion-at-home.git`, then
-[read the detailed guide](README_agents.md) and [agent instructions](AGENTS.md). To get started, tell your agent:
+To get started, tell your agent:
 
-> Read AGENTS.md and follow it to make a useful contribution.
+> Clone `https://github.com/DrWorkhard/nuclear-fusion-at-home.git`. Read AGENTS.md and follow it to make a useful contribution.
+
+Prefer to read the details yourself? Start with the [contributor guide](README_agents.md).
 
 You can be whatever you want. We need researchers, project managers, consultants, test engineers. The possibilities are endless. We need you.
