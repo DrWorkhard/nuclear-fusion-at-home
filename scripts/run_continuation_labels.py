@@ -58,7 +58,7 @@ def guard(output):
     need(retained_bytes(output) <= MAX_BYTES-64*1024, 'Aggregate output reserve exhausted')
 
 
-def verify_environment(path, output):
+def verify_environment(path, check_resources):
     environment = json.loads(path.read_bytes())
     need(sys.version == environment['python'], 'Frozen Python version required')
     need(digest(sys.executable) == environment['executable_sha256'], 'Python executable changed')
@@ -67,7 +67,7 @@ def verify_environment(path, output):
         distribution = importlib.metadata.distribution(name)
         need(distribution.version == row['version'], 'Native package version changed')
         for relative, expected in row['files'].items():
-            guard(output)
+            check_resources()
             need(digest(distribution.locate_file(relative)) == expected,
                  f'Native package file changed: {relative}')
             count += 1
@@ -92,7 +92,7 @@ def stop(process):
     process.wait()
 
 
-def finish_receipt(output, receipt):
+def finish_receipt(output, receipt, check_resources=None):
     def save(value):
         payload = (json.dumps(value, indent=2, allow_nan=False)+'\n').encode('utf-8')
         need(retained_bytes(output)+len(payload) <= MAX_BYTES, 'Failure receipt exceeds cap')
@@ -102,7 +102,7 @@ def finish_receipt(output, receipt):
                    retained_bytes_before_receipt=retained_bytes(output))
     save(receipt)
     try:
-        guard(output)  # Publication itself cannot complete after the declared budget.
+        (check_resources or (lambda: guard(output)))()
     except Exception as error:
         (output/'receipt.json').rename(output/'attempted-receipt.json')
         receipt = dict(completed=False, revision=receipt['revision'],
@@ -111,6 +111,33 @@ def finish_receipt(output, receipt):
                        retained_attempt='attempted-receipt.json', physical_admission=False)
         save(receipt)
     return receipt
+
+
+def supervise(command, environment, output, receipt, check_resources):
+    """Own the process group even if its leader exits before a watchdog failure."""
+    process = None
+    try:
+        check_resources()
+        with (output/'run.log').open('xb') as log:
+            process = subprocess.Popen(command, cwd=ROOT, env=environment,
+                                       stdin=subprocess.DEVNULL, stdout=log,
+                                       stderr=subprocess.STDOUT, start_new_session=True)
+            while True:
+                check_resources()
+                if process.poll() is not None:
+                    break
+                time.sleep(.1)
+        receipt['returncode'] = process.returncode
+        need(process.returncode == 0, 'Scientific driver failed; retain partial output')
+    finally:
+        if process is not None:
+            try:
+                stop(process)
+                receipt['cleanup_confirmed'] = True
+            except Exception as error:
+                receipt.update(completed=False, cleanup_confirmed=False,
+                               cleanup_error=f'{type(error).__name__}: {error}'[:1024])
+                raise RuntimeError('Owned process-group cleanup failed') from error
 
 
 def run(config_path, config_sha, output, revision):
@@ -129,9 +156,18 @@ def run(config_path, config_sha, output, revision):
     receipt = dict(completed=False, revision=revision, sources_before=sources,
                    serial_runner=SERIAL, budget_s=1800, output_limit_bytes=MAX_BYTES,
                    wall_start_unix=WALL, physical_admission=False)
-    process = None
+    termination = [False]
+
+    def request_stop(signum, frame):
+        termination[0] = True
+
+    def check_resources():
+        need(not termination[0], 'Supervisor termination requested')
+        guard(output)
+
+    previous_handler = signal.signal(signal.SIGTERM, request_stop)
     try:
-        receipt['environment_files'] = verify_environment(paths['environment'], output)
+        receipt['environment_files'] = verify_environment(paths['environment'], check_resources)
         command = [sys.executable, '-c', SERIAL, str(ROOT/'scripts/measure_flux_labels.py'),
                    '--snapshot', str(paths['snapshot']), '--wout', str(paths['wout']),
                    '--target', 'reference401', '--output', str(output/'run'),
@@ -143,35 +179,26 @@ def run(config_path, config_sha, output, revision):
         receipt['command'] = command
         with (output/'start.json').open('x', encoding='utf-8') as stream:
             json.dump(receipt, stream, indent=2)
-        guard(output)
-        with (output/'run.log').open('xb') as log:
-            process = subprocess.Popen(command, cwd=ROOT, env=environment,
-                                       stdin=subprocess.DEVNULL, stdout=log,
-                                       stderr=subprocess.STDOUT, start_new_session=True)
-            while True:
-                guard(output)
-                if process.poll() is not None:
-                    break
-                time.sleep(.1)
-        stop(process)
-        receipt['returncode'] = process.returncode
-        need(process.returncode == 0, 'Scientific driver failed; retain partial output')
+        supervise(command, environment, output, receipt, check_resources)
         report = json.loads((output/'run/result.json').read_bytes())
         need(report['completed'] and report['deadline_met'], 'Incomplete scientific driver')
         receipt['sources_after'] = {p: digest(p) for p in sources}
         need(receipt['sources_after'] == sources, 'Source/input changed during run')
-        need(verify_environment(paths['environment'], output) == receipt['environment_files'],
+        checked_files = verify_environment(paths['environment'], check_resources)
+        need(checked_files == receipt['environment_files'],
              'Native environment changed')
         clean_head(revision)
-        guard(output)
+        check_resources()
         receipt.update(completed=True,
                        all_points_numerically_qualified=report['all_points_numerically_qualified'])
     except Exception as error:
         receipt['error'] = f'{type(error).__name__}: {error}'[:1024]
     finally:
-        if process is not None and process.poll() is None:
-            stop(process)
-        receipt = finish_receipt(output, receipt)
+        try:
+            receipt['termination_requested'] = termination[0]
+            receipt = finish_receipt(output, receipt, check_resources)
+        finally:
+            signal.signal(signal.SIGTERM, previous_handler)
     print(json.dumps({k: v for k, v in receipt.items() if k not in (
         'sources_before', 'sources_after', 'serial_runner', 'command')}, indent=2))
     return 0 if receipt['completed'] else 1
