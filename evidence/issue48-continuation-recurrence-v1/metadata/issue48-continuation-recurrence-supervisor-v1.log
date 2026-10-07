@@ -1,0 +1,23 @@
+{
+  "completed": true,
+  "revision": "2baca74707328b27e62a66e6515bda1a553b0f88",
+  "disabled_native_packages": [
+    "simsopt",
+    "simsoptpp",
+    "mpi4py",
+    "netCDF4",
+    "vmecpp",
+    "matplotlib"
+  ],
+  "driver_budget_s": 60,
+  "supervisor_budget_s": 75,
+  "output_limit_bytes": 268435456,
+  "physical_admission": false,
+  "environment_files": 1662,
+  "returncode": 0,
+  "cleanup_confirmed": true,
+  "termination_requested": false,
+  "elapsed_s": 1.183997750049457,
+  "wall_elapsed_s": 1.1839969158172607,
+  "retained_bytes_before_receipt": 134289
+}

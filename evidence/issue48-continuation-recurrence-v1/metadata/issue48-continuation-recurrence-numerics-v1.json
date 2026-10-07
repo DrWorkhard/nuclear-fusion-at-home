@@ -1,0 +1,13 @@
+{
+  "producer_revision": "2baca74707328b27e62a66e6515bda1a553b0f88",
+  "original_archive": "70619a97df51cd8ccc34d7265e540cb26a2d70db",
+  "unchanged_function_asts": [
+    "angles",
+    "gap",
+    "recurrence",
+    "interpolation_check",
+    "controls"
+  ],
+  "unchanged_file": "src/fusion_baselines/flux_labels.py",
+  "unchanged_file_sha256": "6a99bdada7a0bbfbcde8cbd2b0ff19c626f2bbfd7ddc16043daee6d8724edcd9"
+}
