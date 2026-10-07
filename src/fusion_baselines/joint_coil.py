@@ -19,15 +19,27 @@ from fusion_baselines import joint_target as target
 
 SEED_SHA = '84bbdf3eca274981dfff80c967b6fd623a1a40350e583407cbb7262c26820217'
 BINDING_KEYS = ('target_id', 'input_sha256', 'wout_sha256', 'parent_sha256')
+COUPLING_PROTOCOL = 'docs/optimization/ISSUE37_FIT_COUPLING.json'
+COUPLING_SHA = 'beb9657beee9b74724414409e9692b126db28a6ad215c09e9e84f34fd33e934e'
+
+
+def coupling_registration(sources=None):
+    path = check.bind(check.ROOT/COUPLING_PROTOCOL, COUPLING_SHA,
+                      {} if sources is None else sources)
+    return solver.read(path)
 
 
 def snapshot_identity(snapshot, binding):
     """Exact proposal identity plus the existing independent physical mapping."""
     check.need(set(binding) == set(BINDING_KEYS), 'complete joint target binding required')
     proposal = binding['target_id'].removeprefix('issue37-joint-v1/')
-    check.need(proposal in ('plus', 'minus')
-               and binding['target_id'] == f'issue37-joint-v1/{proposal}'
-               and binding['input_sha256'] == target.INPUT_HASHES[proposal]
+    registered = (proposal in ('plus', 'minus')
+                  and binding['target_id'] == f'issue37-joint-v1/{proposal}'
+                  and binding['input_sha256'] == target.INPUT_HASHES[proposal])
+    if binding['target_id'] == target.proposal_id('scale035'):
+        fixed = coupling_registration()['candidate']
+        registered = all(binding[k] == fixed[k] for k in BINDING_KEYS)
+    check.need(registered
                and all(isinstance(binding[k], str) and re.fullmatch('[0-9a-f]{64}', binding[k])
                        for k in BINDING_KEYS[1:]), 'registered proposal binding required')
     check.independent.validate_snapshot(snapshot)
@@ -64,6 +76,8 @@ A cached qualification receipt does not make its solve free in a future arm.
     check.need(numerical['solver_provenance_verified']
                and numerical['numerical_consistency_pass'], 'verified solver intake required')
     binding = {k: numerical[k] for k in BINDING_KEYS}
+    if binding['target_id'] == target.proposal_id('scale035'):
+        coupling_registration(sources)
     seed_path = check.bind(seed_path, SEED_SHA, sources)
     seed = check.read_json(seed_path)
     check.snapshot_identity(seed, 'reference401')
@@ -113,6 +127,8 @@ def _diagnostic_inputs(snapshot, folder, parent, record):
     snapshot = copy.deepcopy(snapshot)
     data, targets, sources, numerical = solver.intake_result(folder, parent, record.guard)
     binding = {k: numerical[k] for k in BINDING_KEYS}
+    if binding['target_id'] == target.proposal_id('scale035'):
+        coupling_registration(sources)
     check.need(numerical['solver_provenance_verified']
                and numerical['numerical_consistency_pass'], 'verified solver intake required')
     snapshot_identity(snapshot, binding)
