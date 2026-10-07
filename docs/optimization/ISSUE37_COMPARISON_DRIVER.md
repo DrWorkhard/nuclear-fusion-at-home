@@ -1,11 +1,11 @@
 # Joint comparison integration
 
 Implementation of the [frozen feasibility protocol](ISSUE37_JOINT_FEASIBILITY.md).
-The numerical components are qualified separately; the complete two-arm experiment
-has not run. The adapter connects those components with charged
-budgets and immutable selection; software tests do not establish a physics result. No new search basis, metric or acceptance limit
-is introduced. Full execution remains disabled until the complete driver, exact
-launcher and dependencies receive adversarial review.
+The numerical components and assembled adapter have been reviewed and tested.
+The [first native attempt](ISSUE37_JOINT_RESULT.md) completed its control but was
+interrupted by clock disagreement during the first J solve. No new search basis,
+metric or acceptance limit was introduced; the paired scientific question remains
+unanswered. Further execution requires separately registered conditions and review.
 
 `joint_decision` provides the trusted driver's selection and decision rules.
 Both proposals must terminate, in fixed plus/minus order. Select on complete
@@ -74,7 +74,7 @@ unmeasured calls internal to direct tracing.
 
 Tests exercise the assembled schedule, parent/worker receipts, selection and
 verdict with synthetic kernels, including late results, changed inputs and failed
-solves. Separate tests cover real process cleanup. The full experiment is unrun.
+solves. Separate tests cover real process cleanup.
 Before execution, freeze both installed dependency inventories and review the
 exact source commit, configuration and invocation. The original protocol JSON
 remains the unchanged preregistration; its disabled state records these prerequisites.

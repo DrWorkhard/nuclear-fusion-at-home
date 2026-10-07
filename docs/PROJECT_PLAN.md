@@ -44,6 +44,9 @@ spend effort on decisions that test the path.
    [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) missed its hurdle;
    the [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) now calls for a bounded
    joint feasibility protocol ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
+   Its [first local attempt](optimization/ISSUE37_JOINT_RESULT.md) was interrupted by
+   host clock disagreement. Establish uninterrupted execution conditions before a
+   separately registered follow-up; preserve the failed attempt and clock gate.
    Qualify a common realized-field endpoint before claiming benefit; missing
    surfaces or wells restrict the next pilot to feasibility.
 4. **Make the decisive test portable.** Supply the missing target data and reuse

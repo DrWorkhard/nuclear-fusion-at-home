@@ -15,7 +15,10 @@ improvement that missed the 50% hurdle. Geometry and tracing pass; the probe's
 interior RMS 0.009481 passes its individual limit, but both boundary gates fail.
 The local archive retains clock/load limitations; this is a resource-allocation
 decision, not controlled throughput or a causal/global conclusion. Publication is
-pending. Present evidence does not substantiate the README's reactor-design timeline.
+pending. The first local [joint comparison](optimization/ISSUE37_JOINT_RESULT.md)
+completed its control but was interrupted by a clock discrepancy during the first
+perturbed solve; its verdict is inconclusive, with no paired improvement measured.
+Present evidence does not substantiate the README's reactor-design timeline.
 
 The [realized-label follow-up](optimization/ISSUE48_REALIZED_LABELS.md) reproduces
 phase-dependent offsets in both frozen fits. Its bounded

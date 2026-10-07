@@ -185,7 +185,8 @@ selection domain separate from held-out phases and grid refinement.
 
 [Joint comparison integration](ISSUE37_COMPARISON_DRIVER.md) freezes training-only
 selection and connects supervised native operations, separating completed feasibility
-results from interrupted work. The complete two-arm experiment is still unrun.
+results from interrupted work. The [first native attempt](ISSUE37_JOINT_RESULT.md)
+completed its control but stopped on clock disagreement during the first J solve.
 
 The [one cold-solve qualification](ISSUE37_SOLVER_QUALIFICATION.md) will test bound
 solver provenance and independent numerical intake before joint integration.
