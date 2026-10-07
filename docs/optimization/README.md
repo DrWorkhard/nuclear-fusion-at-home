@@ -174,3 +174,6 @@ coordinate explanation of the failed continuation samples without changing label
 
 The prospective [trace refinement](ISSUE48_TRACE_REFINEMENT.md) tests two saved
 continuation launches with an independent integrator and finer coil quadrature.
+
+The prospective [periodic-return test](ISSUE48_PERIODIC_RETURN.md) looks for a
+local eleven-period orbit near a patch of the reproduced failed samples.
