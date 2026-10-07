@@ -48,6 +48,10 @@ validate the action kernel or re-attest timing. The original Wout is identified 
 Full scientific repetition additionally needs that exact Wout and the recorded
 native environment. `metadata/runner.py` and `raw/receipt.json` retain the actual
 command and original paths; adapt paths explicitly and preserve input hashes.
+The first archive replay reproduced all cell records but its final equality check
+compared Python tuples with their JSON list representation. The corrected replay
+normalizes that representation; the failed replay log remains in `metadata/`.
+The original scientific run and its verdict are unchanged.
 
 This archive is local only, not published or remotely verified. Original Wout,
 raw files and native environments remain intact, outside this Git backup.

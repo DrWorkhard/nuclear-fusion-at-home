@@ -1,9 +1,10 @@
 {
   ".gitattributes": "705fd4d6451a31d36b3df7de96f83f30ac976c9b4a6d1e51671d8e2f33e2d0da",
-  "README.md": "b31236e35c7aeb51260e3aff53c4d09853d92562ce939eb97b94b77bb96c107f",
+  "README.md": "00a47760440c072d8a36bd771871e02c583b838532b95ffbf225e537a44ff10c",
   "metadata/config.json": "25a50f00b010f78cac7f8329a53861a9e6452e0d9f256a2aed03c5d78fe4b2d0",
   "metadata/native-environment.json": "ad07af4aec0b0fb54c84499c2981efe52788c63795ace8199c71fbbeee4dbe70",
   "metadata/public-checks.log": "e0b02a06dd6629ae11046864a6f3206e02d0dad54b1976426833147135312124",
+  "metadata/replay-v1-failure.log": "907da815d533e1d316943280872afd6544f4abf2b07653790511b88c3fc7b2f7",
   "metadata/research-checks.log": "358a7577d640a9df4b3f31dc84e07dd5b27813e157907a53bc0aad0d3cb90330",
   "metadata/review.txt": "3f674c7f1b20be9a1c4132685f267f5ff94d66e41ec62ccd0e758ad841081f8c",
   "metadata/runner.py": "06cccf2925bd24f2a0ff65e4df79c557d8e966d174e901f226184eb5b4d4ae3f",
@@ -33,6 +34,6 @@
   "raw/run/result.json": "ffcbfabbffdf6fd944327a3531bb6023e46839d5108b51e28718babe6de1c557",
   "raw/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
   "raw/stdout.log": "4549ec5fcb107bcc73bc9d5371d703fdd58969d7541c6abedc23ba88a07b5d1b",
-  "replay.py": "a37b7e01e0fc0f75807e2057372befcf26e7c760690206572bae946f269b0ca8",
+  "replay.py": "2e3621178d05614f2b9d4b8ffd2d427aee27007cdcb2cfda39e8d7acc54b5604",
   "source-map.json": "65bfa6a5b0d5a2bec5c3b31e8ef42bba3edd631b014c454e844b03ce63783eb6"
 }

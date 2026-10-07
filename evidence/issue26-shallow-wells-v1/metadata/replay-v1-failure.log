@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/private/tmp/fusion-issue26-shallow-replay-20261007/evidence/issue26-shallow-wells-v1/replay.py", line 111, in <module>
+    replay(args.root.resolve(), args.output)
+  File "/private/tmp/fusion-issue26-shallow-replay-20261007/evidence/issue26-shallow-wells-v1/replay.py", line 92, in replay
+    need(decision == report['decision'] == launch['decision'], 'Verdict not reproduced')
+  File "/private/tmp/fusion-issue26-shallow-replay-20261007/evidence/issue26-shallow-wells-v1/replay.py", line 16, in need
+    raise ValueError(message)
+ValueError: Verdict not reproduced

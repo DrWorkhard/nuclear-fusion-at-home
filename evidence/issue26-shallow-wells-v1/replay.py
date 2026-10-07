@@ -89,6 +89,7 @@ def replay(root, output):
     need(abs(rms-dense['dense_inner_vector_rms']) <= 1e-14, 'Dense RMS not reproduced')
     decision = module.compare({name: arm['surfaces'] for name, arm in report['arms'].items()},
                               report['ideal'], dense['dense_inner_vector_rms'])
+    decision = json.loads(json.dumps(decision))  # JSON represents coordinate tuples as lists.
     need(decision == report['decision'] == launch['decision'], 'Verdict not reproduced')
     need(not any(report[key] for key in ('physical_admission', 'benefit_transfer_confirmed',
                                         'realized_flux_labels_qualified')), 'Unsupported admission')
