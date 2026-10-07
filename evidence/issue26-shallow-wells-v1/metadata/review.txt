@@ -1,0 +1,12 @@
+Read-only agent review, exact producer 568a96a428fbb730ff23568ef917ab2b947fa255.
+Pre-run review identified failure-output accounting and ambiguous verdict prose.
+Both were fixed and reviewed before any scientific computation. No remaining
+pre-run blocker; focused four tests plus 295 research/65 public checks passed.
+
+Post-run reviewer found no result-level blocker. It checked 24 retained-file
+receipts and 43 source/input hashes, control masks and individual-action refinement.
+Raw core traces support restored threshold crossings. Reference s=0.25 has one
+well on alpha indices 10 and 15, still fewer than the required two. The permitted
+claim is a promising association in the target-launched diagnostic, not causality,
+realized surfaces or benefit transfer. No fitting or tracing was repeated.
+Agent review is not external physics peer review.

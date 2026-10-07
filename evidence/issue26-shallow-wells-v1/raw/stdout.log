@@ -1,0 +1,24 @@
+{
+  "completed": true,
+  "elapsed_s": 70.41473758290522,
+  "decision": {
+    "failed_cells": {
+      "ideal": [],
+      "reference": [
+        [
+          0.1,
+          0.03
+        ],
+        [
+          0.25,
+          0.03
+        ]
+      ],
+      "continuation": []
+    },
+    "max_individual_action_refinement": 0.0008004088730337866,
+    "core_restored": true,
+    "verdict": "promising-association",
+    "reason": "target-launch well coverage only"
+  }
+}

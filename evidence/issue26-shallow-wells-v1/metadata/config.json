@@ -1,0 +1,10 @@
+{
+  "wout": {
+    "path": "/Users/sebastianwirkert/workspace/fusion/artifacts/plasma-design-v2/reference-fine/wout.nc",
+    "sha256": "83dc45b911a1e8290c3e97c7e28d4de28fcff6021b93d55df2f91d6dd3751c5e"
+  },
+  "environment": {
+    "path": "/private/tmp/issue37-native-environment-v1.json",
+    "sha256": "ad07af4aec0b0fb54c84499c2981efe52788c63795ace8199c71fbbeee4dbe70"
+  }
+}
