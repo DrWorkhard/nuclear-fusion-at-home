@@ -171,3 +171,6 @@ not this prospective search. Evidence is linked from immutable tags; local raw o
 
 The prospective [axis-center sensitivity test](ISSUE48_AXIS_CENTER.md) checks a
 coordinate explanation of the failed continuation samples without changing labels.
+
+The prospective [trace refinement](ISSUE48_TRACE_REFINEMENT.md) tests two saved
+continuation launches with an independent integrator and finer coil quadrature.
