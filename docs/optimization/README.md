@@ -7,6 +7,9 @@ One normalized fitter, one set of field/geometry checks.
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
 geometry families, label compatibility, rights and the prerequisites for a learning pilot.
 
+The [bounded retention plan](ISSUE66_RETENTION_PLAN.md) measures one existing run
+and a small local restore; durable custody and remote retrieval remain open.
+
 The completed local [coil-freedom probe](ISSUE53_COIL_FREEDOM.md) misses its
 continuation hurdle and selects joint optimization as the next research route.
 
