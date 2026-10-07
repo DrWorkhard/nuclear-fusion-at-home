@@ -3,6 +3,7 @@
 import copy
 import functools
 import hashlib
+import inspect
 import io
 import json
 import shutil
@@ -225,9 +226,12 @@ class Model:
         self.loop_field = tracked_field(BiotSavart, self.coils, record)
         self.loop_points, self.loop_tangent = loop_geometry(data, ncoil)
         self.loop_field.set_points(self.loop_points)
-        self.objective = SquaredFlux(
-            self.surface, self.field, definition="local",
-            threshold=0.0)
+        # threshold=0 equals released SIMSOPT's SquaredFlux (J >= 0); only the historical fork
+        # accepts the argument. Its J < 1e-10 gradient zeroing is rejected below anyway.
+        flux_options = dict(definition="local")
+        if "threshold" in inspect.signature(SquaredFlux.__init__).parameters:
+            flux_options["threshold"] = 0.0
+        self.objective = SquaredFlux(self.surface, self.field, **flux_options)
         physical = [c.curve for c in self.coils]
         self.lengths = [CurveLength(c) for c in self.curves]
         self.cc = CurveCurveDistance(physical, 0.07, num_basecurves=24)
