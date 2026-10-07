@@ -180,5 +180,8 @@ and continuous-geometry checks without changing the archived-target gates.
 [Receipt-bound direct tracing](ISSUE37_DIRECT_TRACING.md) retains paths and the
 existing signed-iota/confinement checks for the registered target launches.
 
+[Registered ideal-action scoring](ISSUE37_IDEAL_ACTION.md) keeps the full fixed
+selection domain separate from held-out phases and grid refinement.
+
 The [one cold-solve qualification](ISSUE37_SOLVER_QUALIFICATION.md) will test bound
 solver provenance and independent numerical intake before joint integration.

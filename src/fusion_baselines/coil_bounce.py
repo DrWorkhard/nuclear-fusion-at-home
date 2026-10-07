@@ -14,6 +14,10 @@ SURFACES = (0.1, 0.25, 0.5, 0.75, 0.9)
 HOLD_PITCHES = (0.03, 0.1, 0.3, 0.5, 0.7, 0.9, 0.97)
 
 
+class IncompleteActionDomain(ValueError):
+    """Missing/extra/censored wells or a crossed registered period family."""
+
+
 def bounce_field(q):
     if q not in HOLD_PITCHES:
         raise ValueError("registered invariant required")
@@ -57,14 +61,14 @@ def period_actions(trace, q):
     for j in range(len(alpha)):
         wells = bounce_wells(length[:, j], b[:, j], bounce_field(q))
         if len(wells) != 2 or any(not w.complete for w in wells):
-            raise ValueError("exactly two uncensored wells required on every line")
+            raise IncompleteActionDomain("exactly two uncensored wells required on every line")
         edges = [[w.left, w.right] for w in wells]
         angles = np.interp(np.asarray(edges).ravel(), length[:, j], phi).reshape(2, 2)
         if any(
             lo < p * np.pi - 1e-12 or hi > (p + 1) * np.pi + 1e-12
             for p, (lo, hi) in enumerate(angles)
         ):
-            raise ValueError("well family crosses its registered field period")
+            raise IncompleteActionDomain("well family crosses its registered field period")
         actions.append([w.action for w in wells])
         bounds.append(edges)
         phi_bounds.append(angles.tolist())
