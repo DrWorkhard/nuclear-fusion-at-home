@@ -1,6 +1,6 @@
 # Registered-target coil-model adapter
 
-Prospective component qualification, 7 October 2026. The decision is whether the
+Component qualification registered and executed on 7 October 2026. The decision is whether the
 [receipt-bound plus equilibrium](ISSUE37_SOLVER_QUALIFICATION.md) can enter the
 existing normalized coil model with the exact original six/order5 seed and
 unchanged objective, derivatives, current rule and geometry penalties.
@@ -45,3 +45,25 @@ external physics review. Success clears only this fitting adapter's startup path
 the full joint comparison, ideal-action scoring, proposal diagnostics and common
 realized-field endpoint remain separate prerequisites. Cached solves must be
 charged/recomputed under the future joint-arm protocol.
+
+## Startup result
+
+At clean producer/evaluator `59f5a00aeba48f45b5e55aacf54cbbcdd8fc414f`, the single
+cached-plus startup **passed** in 14.465 s (total supervision 14.783 s).
+All ten evaluations completed, all four derivative checks passed (maximum absolute
+error 1.629e-8), and objective/gradient repeated exactly. Original named geometry
+remained exact; new-target base current was 308361.650354 A. Seed boundary RMS
+0.00245112 and maximum 0.00999555 are unoptimized sampled diagnostics above the
+physical acceptance limits. There were no optimizer iterations or new solves.
+
+Local archive `bf305779d02d4583bf13799f4d54cbcc11441296`, prepared tag
+`evidence-issue37-coil-adapter-v1`, preserves all 29 raw files (265,710 bytes),
+original seed, exact scripts and replay instructions. Its 36-entry manifest SHA256
+is `c06fe1212d8fc9af40788f9e80d3e5660b82c85811bbdebc770e8b5f4f9cb13a`.
+Replay also requires the separate solver archive and preserved native environment;
+neither is silently included. Publication is pending. Fresh shallow producer checks
+passed 388 research tests (20 adapter tests), 61 public tests, docs, Ruff and diff.
+Fresh shallow replay verified 68 source/input/native-file bindings and reproduced
+numerical intake and all ten startup rows exactly in 5.841 s; it did not rerun the
+solver or re-attest original timing. Read-only adversarial review preceded execution.
+Full joint execution and physical acceptance remain disabled.
