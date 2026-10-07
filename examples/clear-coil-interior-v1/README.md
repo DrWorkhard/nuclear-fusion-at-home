@@ -42,7 +42,9 @@ manifest, all coordinates/field components and the physical current-ratio mappin
 
 Underlying configuration: Alan Goodman, *Data for paper “Constructing precisely
 quasi-isodynamic magnetic fields”*, [DOI:10.5281/zenodo.7220257](https://doi.org/10.5281/zenodo.7220257),
-CC BY 4.0. Changes: project vacuum equilibrium calculation, improved Step 3
+version 1.0, 18 October 2022,
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Changes: project vacuum equilibrium calculation, improved Step 3
 boundary, fitted coils, dense target sampling and this JSON extraction. These
 derived data retain CC BY 4.0 attribution; project code is MIT. No endorsement
 or new physics qualification is implied. See [NOTICE](../../NOTICE.md).

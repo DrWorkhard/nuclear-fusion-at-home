@@ -22,6 +22,8 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
   safe PR execution, live repository protections and the remaining launch work.
 - [Publication inventory](PUBLICATION_INVENTORY.md): dated size/privacy-pattern
   inventory, not a full security or rights clearance of the current tree.
+- [Packet source notices](PACKET_SOURCE_NOTICES.md): verified historical source
+  links and scoped attribution corrections; full-history rights review remains open.
 
 Steps 1–3 have English [result summaries](../steps/README.md). Their detailed
 protocols, native rebuilding recipes and earlier audits are frozen in Git;
