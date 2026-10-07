@@ -16,19 +16,24 @@ or winning derivative probe. Both equilibria and ideal-score receipts are reused
 explicitly; no new solve, ideal scoring, target tuning or historical compute-cost
 equivalence is claimed. All actual work remains charged.
 
-Each arm ends within **600 s from its origin**: 300 s fit plus the remaining
-300 s for fit finalization, two 128-square/512-node fine-boundary shifts (0, 0.5),
-continuous geometry and final source/environment verification/reporting. Total
-driver budget is at most 1200 s, including initial imports/setup and final report.
+Each arm ends within **600 s from its origin**. The diagnostic deadline is
+`min(parent-observed fit-process completion, original fit deadline) + 300 s`,
+also capped by the arm and whole-driver deadlines, on both clocks. This charges
+fit finalization and bounds early-return cases. Diagnostics include two
+128-square/512-node fine-boundary shifts (0, 0.5), continuous geometry and final
+source/environment verification/reporting. Total driver budget is at most
+1200 s, including initial imports/setup and final report.
 Preserve full convergence histories, independent B/A checks, current/flux checks
 and the original absolute field limits. No interior or trajectory study is run.
 
 `boundary-fitting-nonregression` requires both eligible completed fits, complete
-passing fine/current/flux/geometry checks and candidate worst fine RMS at most
+passing numerical fine/current/flux/geometry checks and candidate worst fine RMS at most
 1.10 times control. Complete failures of those hurdles reject this bounded
 recipe; so does a normally completed fit with documented no eligible candidate.
-Missing work, unresolved geometry, failed intake/startup, unclassified failure
-or resource/clock/source/host interruption is inconclusive. Report both absolute
+Failed independent numerical checks are inconclusive: untrustworthy metrics
+cannot classify a target as harder to fit. Missing work, unresolved geometry,
+failed intake/startup, unclassified failure or resource/clock/source/host
+interruption is also inconclusive. Report both absolute
 RMS/max gates separately. Different-target errors measure fitting burden, not
 improvement in a common physical field.
 

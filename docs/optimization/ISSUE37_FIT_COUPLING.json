@@ -38,13 +38,13 @@
     "after_pass": "Retain target as an ideal-improved starting point, not coil-feasible. If absolute boundary limits still fail, do not automatically extend fitting or run interior/long traces.",
     "boundary_rms_ratio_max": 1.1,
     "further_diagnostics": "Separate decision tied to substantially improved absolute field errors or a concrete topology question, registered before execution.",
-    "inconclusive": "Missing work, unresolved geometry, failed intake/startup, unclassified failure, source/environment/resource/clock/host interruption.",
+    "inconclusive": "Failed independent numerical consistency, missing work, unresolved geometry, failed intake/startup, unclassified failure, source/environment/resource/clock/host interruption. Untrustworthy metrics cannot classify fitting burden.",
     "negative": "Complete eligible pair misses RMS/current/flux/geometry hurdle; a normal completed fit with documented no eligible candidate also rejects this bounded recipe.",
     "no_alternative_target": true,
     "no_extension": true,
     "no_retry": true,
     "pass_label": "boundary-fitting-nonregression",
-    "pass_requires": "Both normal completed fits eligible, both fine shifts and continuous geometry complete/pass with current/flux and independent field checks; candidate worst fine RMS <=1.10 times control."
+    "pass_requires": "Both normal completed fits eligible, both fine shifts and continuous geometry complete/pass with current/flux and independent numerical field checks; candidate worst fine RMS <=1.10 times control."
   },
   "decision_question": "Does the fixed ideal-improved target materially worsen boundary fitting under equal short fit allowances?",
   "diagnostics": {
@@ -57,6 +57,7 @@
         0.5
       ]
     },
+    "deadline": "On each clock: min(parent-observed fit-process completion, original fit deadline)+300s, capped by arm-origin+600s and whole-driver deadline. Fit finalization and receipt verification remain charged.",
     "ideal_scoring": false,
     "includes": [
       "fit finalization",
