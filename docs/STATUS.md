@@ -1,6 +1,6 @@
 # Scientific status
 
-Updated 6 October 2026; records the stalled fixed-target decision.
+Updated 7 October 2026; includes local dense interior portability.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The new matched
@@ -45,8 +45,9 @@ Use [historical revisions](validation/REPRODUCING_RESULTS.md) for full methods,
 budgets and failure records. Evidence and raw artifacts retain their identities;
 Git does not back up ignored data.
 
-Independent numerical checks generally mean separate calculations on the same
-machine. [Ubuntu public replay](validation/SERVER_REPRODUCTION_20261002.md) provides
+The local [dense interior checker](validation/ISSUE10_DENSE_INTERIOR.md) reproduces
+both frozen targets; checks share one machine.
+[Ubuntu public replay](validation/SERVER_REPRODUCTION_20261002.md) provides
 portability evidence. External physics review, native research reproduction,
 backup/restore and complete-history rights clearance remain open.
 [Software checks](logbook/VALIDATION_LOG.md) · [Hosting/review policy](validation/REVIEW_POLICY.md).

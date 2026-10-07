@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 6 October 2026.
+Updated 7 October 2026.
 [Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
@@ -44,9 +44,10 @@ spend effort on decisions that test the path.
    ([decision](optimization/STEP4_RESEARCH_PROGRAMME.md)). After a fitter fix
    ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)), one coil-freedom probe ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) chooses between a
    richer coil family and joint plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)).
-4. **Make the decisive test portable.** Supply the missing target data and reuse
-   existing field/geometry checks so contributors can address the actual
-   bottleneck. Prefer an existing community benchmark. Aim to resolve this now;
+4. **Make the decisive test portable.** The local
+   [dense target packet](validation/ISSUE10_DENSE_INTERIOR.md) passes numerical qualification.
+   Publish it and reuse shared field/geometry checks; prefer a community benchmark.
+   Aim to resolve this now;
    26 March 2027 is the outer MS0 decision target, not a six-month tooling project.
 
 One method, shared checks, one short record per question.

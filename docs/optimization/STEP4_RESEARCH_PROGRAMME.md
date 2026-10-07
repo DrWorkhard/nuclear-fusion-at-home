@@ -64,8 +64,9 @@ starts when that decision needs it, rather than automatically at a boundary scor
 The smallest MS0 deliverable is the matched target/coil data and existing checker
 running outside the maintainer's workspace, with a positive control and retained
 failures. Assess an adapter to existing community tools first; no new platform.
-Public dense boundary evaluation already exists, but interior targets and full
-acceptance are not portable yet. Prioritize that missing reproducibility now;
+Public dense boundary evaluation and a locally qualified
+[dense interior packet](../validation/ISSUE10_DENSE_INTERIOR.md) now exist; full
+acceptance is not portable yet. Prioritize publication and shared-check reproduction;
 26 March 2027 remains the outer MS0 decision target, not a reason to delay it.
 Publication and external contact require separate authority. No new outreach or
 physical acceptance follows from this programme.

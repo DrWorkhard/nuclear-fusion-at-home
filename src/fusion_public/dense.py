@@ -2,8 +2,8 @@
 
 Rebuilds the native 64x64 one-period target-boundary grid and the phi=0 flux loop
 from the committed reference input, whose SHA-256 the starter records as its parent.
-The normal metric is current-scale invariant. The interior metric still needs the
-native target arrays, which are not distributed, so it is not computed here.
+The normal metric is current-scale invariant. The separate dense_interior module
+uses the bundled target packets for full interior target-surface diagnostics.
 """
 
 import math
@@ -105,5 +105,6 @@ def dense_boundary(candidate, case, count=256):
         flux_scale=scale,
         flux_normalized_current_A=scale*max(abs(c["current"]) for c in case["physical"]),
         physical_admission=False,
-        interpretation="Dense boundary diagnostic only; interior target arrays not distributed",
+        interpretation="Dense boundary diagnostic only; use dense-interior for "
+        "target-surface errors",
     )

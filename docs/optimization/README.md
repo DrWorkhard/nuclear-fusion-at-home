@@ -67,6 +67,11 @@ the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
 ## Portable checks
 
+The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
+supports both frozen matched targets using only Python's standard library.
+It reproduces dense field metrics for the original fits; native intake contracts,
+geometry checks and physical acceptance remain separate.
+
 Without the maintainer's archives, supply a reference401 Wout. One can be regenerated
 by vmecpp from the committed input in about 6 minutes:
 `vmecpp.run(vmecpp.VmecInput.from_file("evidence/plasma-design-v2/reference-input-401.json"), max_threads=1).wout.save(path)`.

@@ -8,6 +8,7 @@ from pathlib import Path
 
 from .data import CASE_ID, load, load_case, save_new
 from .dense import dense_boundary
+from .dense_interior import TARGETS, evaluate_dense
 from .interior import normalized_interior
 from .report import audit, evaluate
 from .submission import validate
@@ -58,6 +59,14 @@ def parser():
         "diagnostic does not change fixed-current reports or establish physical acceptance.",
     )
     interior.add_argument("--candidate", type=Path, required=True)
+    full = commands.add_parser(
+        "dense-interior", help="Full 12,288-point interior diagnostic for either frozen target",
+        description="Compute the dense target-surface error without VMEC or installed packages. "
+        "Choose the target explicitly. This can take several minutes; it is not acceptance.",
+    )
+    full.add_argument("--candidate", type=Path, required=True)
+    full.add_argument("--target", choices=TARGETS, required=True)
+    full.add_argument("--seconds", type=int, default=600, help="Time ceiling, 1..600 seconds")
     submission = commands.add_parser("check-submission", help="Check optional PR metadata")
     submission.add_argument("--file", type=Path, required=True)
     return result
@@ -92,6 +101,11 @@ def main(argv=None):
         if args.command == "normalized-interior":
             print(json.dumps(normalized_interior(validate_for_cli(load(args.candidate)), case),
                              indent=2))
+            return 0
+        if args.command == "dense-interior":
+            report, _ = evaluate_dense(validate_for_cli(load(args.candidate)), case,
+                                       args.target, args.seconds)
+            print(json.dumps(report, indent=2, allow_nan=False))
             return 0
         fresh(args.output)
         if args.command == "set-coefficient":
