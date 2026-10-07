@@ -3,7 +3,6 @@
 import argparse
 import hashlib
 import json
-import math
 import shutil
 import sys
 import time
@@ -18,6 +17,7 @@ from fusion_public.data import canonical, load_case, parameter_names, sha  # noq
 ARCHIVE = "05a4511084912fea9bd8d03e81f01018882396b8"
 MANIFEST = "3f8ddda02e28f018c466d396aa1c93cf81a6cf90f2e63a934b0d44aa67534d1b"
 PRODUCER = "a551289e63e44d7dbae7b5d5a0e5f4b6026db257"
+FROZEN_FLUX = -0.03141592653589793
 TARGETS = {
     "reference401": ("evidence/plasma-design-v2/reference-input-401.json",
                      "57394ef682f3c6399faa03012abc02da2eb1ce40703a4f99640ece3d07e5691f",
@@ -60,7 +60,7 @@ def export(archive, output, controls):
         snapshot_name = f"{target}/fit/selected-snapshot.json"
         snapshot = json.loads((root / snapshot_name).read_bytes())
         assert (snapshot["nbase"], snapshot["order"], snapshot["nfp"]) == (6, 5, 2)
-        assert snapshot["B2_scale"] == b2 and snapshot["target_flux"] == -math.pi / 100
+        assert snapshot["B2_scale"] == b2 and snapshot["target_flux"] == FROZEN_FLUX
         factors = []
         for original, public in zip(snapshot["physical"], case["physical"], strict=True):
             for key in ("base_index", "period", "flip"):
@@ -84,7 +84,7 @@ def export(archive, output, controls):
                           phi="pi*j/64", theta="2*pi*k/64 (VMEC theta)",
                           ordering="s, geometric phi, VMEC theta; theta fastest",
                           periodic_endpoints=False, realized_flux_labels=False),
-                B2_scale_T2=b2, signed_target_flux_Wb=-math.pi / 100,
+                B2_scale_T2=b2, signed_target_flux_Wb=FROZEN_FLUX,
                 boundary={key: document[key] for key in ("nfp", "rbc", "zbs", "phiedge")},
                 provenance=dict(archive_commit=ARCHIVE, archive_manifest_sha256=MANIFEST,
                                 producer_evaluator=PRODUCER, input_sha256=input_hash,
