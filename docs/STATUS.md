@@ -11,6 +11,8 @@ wide-domain action diagnostics in both actual coil fields; benefit transfer rema
 The local [shallow-well comparison](optimization/ISSUE26_INTERIOR_WELLS.md) recovers
 both reference core cells with an existing lower-interior-error candidate (35/35
 screened cells). This is an association, not realized-flux qualification or benefit transfer.
+Its [follow-up label grid](optimization/ISSUE48_CONTINUATION_LABELS.md) qualifies
+19/20 points; a middle-surface reconstruction failure keeps the full grid unqualified.
 **The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
 30 more minutes of search lowered boundary RMS by only 6%. A coil-freedom probe
 now chooses between a richer coil family and joint plasma/coil optimization

@@ -37,7 +37,9 @@ spend effort on decisions that test the path.
    leaves wide-domain benefit transfer unresolved because required wells are missing.
    A local [comparison](optimization/ISSUE26_INTERIOR_WELLS.md) restores the missing
    reference wells with lower interior error. Test interior fidelity in joint
-   optimization and qualify realized flux labels before confirmation.
+   optimization. The [continuation label grid](optimization/ISSUE48_CONTINUATION_LABELS.md)
+   qualifies 19/20 points; diagnose its failed middle-surface reconstruction before
+   launch matching or confirmation.
 2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. Detailed simulations follow a decision
