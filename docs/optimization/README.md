@@ -89,6 +89,8 @@ angular reversals in the failed trace, absent in four controls; it leaves the
 qualification failure unchanged.
 A [periodic-center check](ISSUE48_AXIS_CENTER.md) preserves those reversals;
 target-axis miscentering does not explain this saved-sample failure.
+An [independent-integrator comparison](ISSUE48_TRACE_REFINEMENT.md) also preserves
+the reversals while matching two finite traces within 10 micrometres.
 
 The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
 supports both frozen matched targets using only Python's standard library.
