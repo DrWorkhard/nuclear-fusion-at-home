@@ -45,14 +45,15 @@ spend effort on decisions that test the path.
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. Detailed simulations follow a decision
    need; boundary RMS alone does not determine their priority.
-3. **Choose the next route by 24 October.** The fixed-target recipe has stalled
-   ([decision](optimization/STEP4_RESEARCH_PROGRAMME.md)). After a fitter fix
-   ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)), one coil-freedom probe ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) chooses between a
-   richer coil family and joint plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)).
+3. **Preregister the joint comparison by 24 October.** The local
+   [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) missed its 50% hurdle.
+   Use the #37/#39 protocol and implementation work for joint plasma/coil
+   optimization before independently checking benefit transfer. Do not extend
+   the completed probe.
 4. **Make the decisive test portable.** The local
    [dense target packet](validation/ISSUE10_DENSE_INTERIOR.md) passes numerical qualification.
    Publish it and reuse shared field/geometry checks; prefer a community benchmark.
-   Aim to resolve this now;
+
    26 March 2027 is the outer MS0 decision target, not a six-month tooling project.
 
 One method, shared checks, one short record per question.

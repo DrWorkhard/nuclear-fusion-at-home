@@ -1,6 +1,6 @@
 # One question before more fitting
 
-Updated 6 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
+Updated 7 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 
 **Can practical coils preserve a useful plasma benefit?** Boundary error is a
 necessary diagnostic in our protocol, not the project objective. The [first matched-target experiment](ISSUE25_MATCHED_TARGETS.md) now includes
@@ -25,18 +25,24 @@ physical conclusion. **We stop extending the fixed-target recipe and accept that
 Step 4 progress along this route has stalled.** Acceptance limits are unchanged.
 [Decision record](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/28).
 
-## Next: choose the route by 24 October 2026
+## Next: a bounded joint comparison by 24 October 2026
 
-1. **Fix the fitter first** ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)): one failed search trial currently
-   discards a run, and the stopping rule ends searches early.
-2. **Run one coil-freedom probe** ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)): six coils at Fourier order 8
-   against the order-5 control, 30 minutes each, same target and checks. If the
-   probe at least halves boundary RMS with passing geometry and no worse interior
-   RMS, change the coil family; otherwise move to joint plasma/coil optimization
-   ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Do not extend budgets to cross the threshold.
+The completed local [coil-freedom probe](ISSUE53_COIL_FREEDOM.md) misses the
+registered continuation hurdle. The rule selects joint plasma/coil optimization;
+its timing qualifications and the separate contributor report remain in that record.
+
+1. **Reuse the existing fitter and checks.** Failed-trial handling, the stopping-rule
+   fix and order-5/order-8 support are integrated. Do not repeat or extend the
+   completed coil-freedom search to cross its threshold.
+2. **Preregister the smallest joint comparison**
+   ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)) and use
+   the implementation work in [#39](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/39).
+   Keep optimization separate from unchanged acceptance and independent checking.
+   Compare against matched fixed-target effort before claiming actual-field benefit.
 3. **Keep inspecting actual fields.** Shallow-well fidelity and realized flux
-   labels ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)) apply to whichever route follows. If surfaces or
-   required data are missing, report the blockage, not benefit transfer.
+   labels ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48))
+   still require qualification. Missing surfaces or required data remain a blockage,
+   not evidence of benefit transfer.
 
 Keep target-specific normalization frozen and report each target separately;
 do not treat errors against different targets as a matched improvement.
@@ -45,12 +51,10 @@ and elapsed time together. The original 1e-4 / 1e-3 / 0.01 limits and continuous
 geometry checks remain unchanged. No endpoint or solver success flag admits a
 physical design; the [Step 4 requirements](../steps/STEP_4_PLASMA_AND_COILS.md) still apply.
 
-For the probe, declare at most 30 minutes per search arm, one native
-thread, 256 MiB retained output per arm and 3 GiB initial / 2 GiB live disk reserve.
-Use existing tools and one short result record. Stop at the resource ceiling,
-retain failures and make no conclusion from a run with incomplete diagnostics.
-These prospective limits do not change recorded experiments or restrict unsolicited
-contributions. Avoid running heavy jobs during controlled timing.
+The completed probe retains its original protocol, budgets, failures and limitations
+in the archive. Future experiments need their own decision and prospective limits;
+those do not change historical results or restrict unsolicited contributions.
+Avoid running heavy jobs during controlled timing.
 
 ## Reactor relevance and collaboration
 

@@ -7,6 +7,9 @@ One normalized fitter, one set of field/geometry checks.
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
 geometry families, label compatibility, rights and the prerequisites for a learning pilot.
 
+The completed local [coil-freedom probe](ISSUE53_COIL_FREEDOM.md) misses its
+continuation hurdle and selects joint optimization as the next research route.
+
 ## Native workflow
 
 ```bash
