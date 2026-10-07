@@ -177,3 +177,6 @@ continuation launches with an independent integrator and finer coil quadrature.
 
 The prospective [periodic-return test](ISSUE48_PERIODIC_RETURN.md) looks for a
 local eleven-period orbit near a patch of the reproduced failed samples.
+
+The prospective [return derivative check](ISSUE48_RETURN_DERIVATIVE.md) checks
+whether explicit derivative scales reproduce the rejected local search proposal.
