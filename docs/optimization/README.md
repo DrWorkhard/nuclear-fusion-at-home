@@ -168,3 +168,6 @@ physical acceptance. Other earlier positive summaries still need corrected rerun
 
 For old results, use their [original revisions](../validation/REPRODUCING_RESULTS.md),
 not this prospective search. Evidence is linked from immutable tags; local raw outputs are preserved.
+
+The prospective [axis-center sensitivity test](ISSUE48_AXIS_CENTER.md) checks a
+coordinate explanation of the failed continuation samples without changing labels.
