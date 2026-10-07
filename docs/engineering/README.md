@@ -13,3 +13,7 @@ finite-build, load or manufacturing-response analysis. Historical mesh/FEM code,
 environment manifests and reports resolve through
 [reproduction](../validation/REPRODUCING_RESULTS.md).
 Filament geometry checks are not engineering qualification.
+
+The [conditional finite-envelope screen](ISSUE27_ENVELOPE_SCREEN.md) tests
+whether scaled copies of the latest coils can satisfy two declared separation
+requirements, without promoting filament geometry to reactor qualification.
