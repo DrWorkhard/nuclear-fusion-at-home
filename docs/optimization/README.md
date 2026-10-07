@@ -161,3 +161,6 @@ not this prospective search. Evidence is linked from immutable tags; local raw o
 
 [Saved-contour quadrature check](ISSUE48_KNOT_QUADRATURE.md): bounded method diagnosis
 after the launch-matching pilot stopped.
+
+The [joint-proposal volume preflight](ISSUE37_VOLUME_PREFLIGHT.md) passes both
+frozen perturbations; new-target intake and joint execution remain gated.

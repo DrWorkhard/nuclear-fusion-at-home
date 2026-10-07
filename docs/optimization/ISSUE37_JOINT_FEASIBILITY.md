@@ -65,6 +65,10 @@ explicitly rejected, or a complete selected pair failing the screens, changes th
 bounded recipe. A missing C candidate, interrupted proposal or incomplete selected
 pair is inconclusive; resource interruption never counts as numerical rejection. Neither verdict establishes a general limit on joint optimization.
 
+The separate [geometry-only volume preflight](ISSUE37_VOLUME_PREFLIGHT.md)
+passes both frozen proposals. It neither executes this comparison nor removes
+the intake and implementation prerequisites below.
+
 ## Execution and scientific blockers
 
 Execution stays disabled until a reviewed implementation/dependency state is
