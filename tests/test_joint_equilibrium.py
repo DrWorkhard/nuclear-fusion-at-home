@@ -224,8 +224,9 @@ def test_sigterm_of_supervisor_cleans_live_native_group(tmp_path):
     child = "import os,time; print(os.getpid(),flush=True); time.sleep(30)"
     code = (f"import sys,time;sys.path.insert(0,{source!r});from pathlib import Path;"
             "from fusion_baselines.joint_equilibrium import supervise;"
-            f"supervise([sys.executable,'-I','-c',{child!r}],Path({str(folder)!r}),"
-            f"Path({str(tmp_path)!r}),time.monotonic()+20,time.time()+20)")
+            f"r=supervise([sys.executable,'-I','-c',{child!r}],Path({str(folder)!r}),"
+            f"Path({str(tmp_path)!r}),time.monotonic()+20,time.time()+20);"
+            "sys.exit(0 if r['completed'] else 1)")
     process = subprocess.Popen([sys.executable, '-I', '-c', code],
         stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
         env=dict(PATH='/usr/bin:/bin', PYTHONDONTWRITEBYTECODE='1'))
@@ -268,3 +269,19 @@ def test_sigterm_handler_is_restored(tmp_path):
     solver.supervise([sys.executable, '-I', '-c', 'pass'], folder, tmp_path,
                      time.monotonic()+5, time.time()+5)
     assert signal.getsignal(signal.SIGTERM) == before
+
+
+def test_sigterm_during_cleanup_does_not_interrupt_cleanup(tmp_path, monkeypatch):
+    folder = tmp_path/'cell'
+    folder.mkdir()
+    original_stop = solver.stop
+
+    def interrupted_cleanup(process):
+        try:
+            os.kill(os.getpid(), signal.SIGTERM)
+        finally:
+            original_stop(process)
+    monkeypatch.setattr(solver, 'stop', interrupted_cleanup)
+    result = solver.supervise([sys.executable, '-I', '-c', 'pass'], folder, tmp_path,
+                              time.monotonic()+5, time.time()+5)
+    assert not result['completed'] and result['stop_reason'] == 'supervisor SIGTERM'

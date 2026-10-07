@@ -31,7 +31,8 @@ Use monotonic and UTC deadlines, disagreement limit 5 s, one thread, aggregate
 256 MiB output, 3/2 GiB initial/live disk reserve and 0.1 s watchdog polling.
 Start fresh; retain logs, requests, partial/failed Wouts and receipts. Kill/reap
 the process group on every exit, including descendants of an exited leader;
-SIGTERM unwinds through cleanup and restores the prior handler; uncatchable
+SIGTERM is observed by the watchdog without interrupting process creation or
+cleanup; the prior signal handler is restored afterward; uncatchable
 SIGKILL is outside this guarantee. Uncertain cleanup forbids subsequent work. A late result is ineligible regardless
 of worker exit code. Report worker time separately from full supervised time.
 
