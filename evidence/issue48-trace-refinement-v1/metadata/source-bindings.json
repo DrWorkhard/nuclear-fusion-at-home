@@ -1,0 +1,218 @@
+{
+  "/private/tmp/issue48-trace-refinement-config-v1.json": {
+    "sha256": "f5eccbc04b6b0da97f49b94718b4d554b118445a39148e24a3770030d6d5faea",
+    "archive_path": "evidence/issue48-trace-refinement-v1/metadata/issue48-trace-refinement-config-v1.json"
+  },
+  "/private/tmp/fusion-issue48-continuation-evidence-20261007/scripts/run_continuation_labels.py": {
+    "sha256": "dfc4e8cb750e28aa8d399f6c64691659674a874a1c2f1126133424d82b3cd15b",
+    "archive_path": "evidence/issue48-trace-refinement-v1/metadata/run_continuation_labels.py"
+  },
+  "/private/tmp/issue37-native-environment-v1.json": {
+    "sha256": "ad07af4aec0b0fb54c84499c2981efe52788c63795ace8199c71fbbeee4dbe70",
+    "archive_path": "evidence/issue48-trace-refinement-v1/metadata/issue37-native-environment-v1.json"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/check_coils.py": {
+    "sha256": "dde24e085192f47e718eb95960d75dbc0667e7628fb0ecf5e1329bba3c4af32b",
+    "archive_path": "scripts/check_coils.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/check_docs.py": {
+    "sha256": "930d02cb3bd16458ee2075c8fb69396d8918c7b636638c01deb0ab95c930dc2e",
+    "archive_path": "scripts/check_docs.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/diagnose_axis_center.py": {
+    "sha256": "dbd5f5d18175680eb9121b77dc53ec953e2b9cdc0bab82e40659d51a29c6f930",
+    "archive_path": "scripts/diagnose_axis_center.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/diagnose_saved_recurrence.py": {
+    "sha256": "c7d6fd9b6a537430cb8cb90d2582e467d5645f00c8f0ec951e835ff00f36dc99",
+    "archive_path": "scripts/diagnose_saved_recurrence.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/diagnose_trace_refinement.py": {
+    "sha256": "6c9722b1d15243dbd416bc6b72a3685d89f5021f9dbcc573ff5ab175f4e2209a",
+    "archive_path": "scripts/diagnose_trace_refinement.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/export_coil_trajectory.py": {
+    "sha256": "5617992e38a63a7dbdf41b885b6ef1a0d0808a92fc5aecfb146f5cd5684c99bd",
+    "archive_path": "scripts/export_coil_trajectory.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/fit_coils.py": {
+    "sha256": "d8d6dadbd84eb50e0f0cdd33605283a3c01f12449fa5b7bb67561ef34034f56f",
+    "archive_path": "scripts/fit_coils.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/measure_coil_bounce.py": {
+    "sha256": "3a77dbd4ca21a20f04bd6aa411179f0e1c92acea34509c56375e3db6749c520f",
+    "archive_path": "scripts/measure_coil_bounce.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/publication_inventory.py": {
+    "sha256": "545b44bb6517a029097f9182ddc1f2e8d5b3bdd0ed31e893f9e2807f44406c7f",
+    "archive_path": "scripts/publication_inventory.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/run_axis_center.py": {
+    "sha256": "c28d1d5223a45d93b226ab02ed7fb3a27b6322e1633fff8fab9667c5d137197d",
+    "archive_path": "scripts/run_axis_center.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/run_saved_recurrence.py": {
+    "sha256": "acc046b1a7bfbf9b93621e8d4628260d582ceb1e4e47096879c1c8c2bfe62539",
+    "archive_path": "scripts/run_saved_recurrence.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/run_trace_refinement.py": {
+    "sha256": "414dff389e1bc11264164a9258650283b09a04dc4095d871fbeca845ec63ceae",
+    "archive_path": "scripts/run_trace_refinement.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/test_public.py": {
+    "sha256": "ced85fbfe9aaeafa732789b4acfab937615dc1ba49bde46ac77b039fb1c9eab2",
+    "archive_path": "scripts/test_public.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/trace_surfaces.py": {
+    "sha256": "06ad2e32302eae63aec0363aad9b14f8de8998caf33e96b3df91fb652805bc82",
+    "archive_path": "scripts/trace_surfaces.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/scripts/verify_public_release.py": {
+    "sha256": "be1f91d592937f2825248720d2c0b9b75d983564a74bed250583ea87cb9c21cf",
+    "archive_path": "scripts/verify_public_release.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/__init__.py": {
+    "sha256": "8d36f4ca6cbd9c95d1286a5f7914db91f020133819f8e39eb5aba6c405cc1390",
+    "archive_path": "src/fusion_baselines/__init__.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/bounce_action.py": {
+    "sha256": "2b795d832228aad3b8badb3397fbe1895d668f250f81d27257f27bd395bbbd06",
+    "archive_path": "src/fusion_baselines/bounce_action.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/boundary_control_metrics.py": {
+    "sha256": "7ab1d0a59d5a0a0eb4569d87975dae49f5b9316ac8f0cca131b0a2eb7d37eebb",
+    "archive_path": "src/fusion_baselines/boundary_control_metrics.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/clear_coil_field_audit.py": {
+    "sha256": "ceb6584e9137e75b67a67b7a24ae2ab1aea01aa85b8f5748952dfbb2f5f802dd",
+    "archive_path": "src/fusion_baselines/clear_coil_field_audit.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/coil_bounce.py": {
+    "sha256": "8c2f599c2e6ca1db373e536ad6e9743a9f8f2d609bab7f55d52922f1fc90b6e2",
+    "archive_path": "src/fusion_baselines/coil_bounce.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/coil_check.py": {
+    "sha256": "b42ae92a5390ac1356222d1a3e5468d55ff9563b49d044126c92c9dac5269c78",
+    "archive_path": "src/fusion_baselines/coil_check.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/coil_fit.py": {
+    "sha256": "8057dec95c181379dbf85b5e229ed2943035c73a555aaed049f7e95fac26348f",
+    "archive_path": "src/fusion_baselines/coil_fit.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/coil_trajectory.py": {
+    "sha256": "6eb8f58b4ab876cfa7dafe3b1fd527269741f523f88dd3098b503d04cdb0f219",
+    "archive_path": "src/fusion_baselines/coil_trajectory.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/coupled_coil_audit.py": {
+    "sha256": "3f9a5cee83447bc61d0cd633cdaac13e90a09f2bee42b6c908166d0f42476ba5",
+    "archive_path": "src/fusion_baselines/coupled_coil_audit.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/curvature_bounds.py": {
+    "sha256": "7d7f151b4fac4ccbc2bbfb0b3a6b4e311543796d722313a4af4f6c3358886128",
+    "archive_path": "src/fusion_baselines/curvature_bounds.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/documentation.py": {
+    "sha256": "7fcfd5475aface32114e5845ff997edb2926f541f823d566d29185da47116aeb",
+    "archive_path": "src/fusion_baselines/documentation.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/documentation_policy.py": {
+    "sha256": "72de8a9b9321992af6655b19c6bd30c81d50263ba5918c23bb8887a5d6d91dc3",
+    "archive_path": "src/fusion_baselines/documentation_policy.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/filament_field.py": {
+    "sha256": "dde24ee7a76bf9e8f4eb0a7127acc770c7ea6df737ee7bbe3e1e51a162b527d0",
+    "archive_path": "src/fusion_baselines/filament_field.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/flux_labels.py": {
+    "sha256": "6a99bdada7a0bbfbcde8cbd2b0ff19c626f2bbfd7ddc16043daee6d8724edcd9",
+    "archive_path": "src/fusion_baselines/flux_labels.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/provenance.py": {
+    "sha256": "9960f5021f8b1d80e5d524df77df986cf889e7db8391e167ecb00776ae7faa29",
+    "archive_path": "src/fusion_baselines/provenance.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/realized_field.py": {
+    "sha256": "d071f01f818e0294686124f9756f564362d2f2dcfdaf9e1ecf3230eaea79e5b0",
+    "archive_path": "src/fusion_baselines/realized_field.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/reference_wout.py": {
+    "sha256": "f11823877c64f41f600afa133be087f0ea25dafc757215d7b07f3faae765032f",
+    "archive_path": "src/fusion_baselines/reference_wout.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/sparse_coil_surface.py": {
+    "sha256": "f440527bce0d13144a1cc077a2e3e9a035f38ae3499b00a954526bfcebf81afe",
+    "archive_path": "src/fusion_baselines/sparse_coil_surface.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/vmec_trace.py": {
+    "sha256": "ce2d456657ff99ba1fb1d85cdf165b2a1597c4034693aed9a21bb13b4854c880",
+    "archive_path": "src/fusion_baselines/vmec_trace.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_baselines/wout_target.py": {
+    "sha256": "886fdd7348566624a0c7f62c5929aedf0c72f66e160d0f648a6d5a710813bc96",
+    "archive_path": "src/fusion_baselines/wout_target.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/__init__.py": {
+    "sha256": "1696997fcc914653281c0a32b437d4ae499e5bc19cf5d5f27f0e3f75de10bbf8",
+    "archive_path": "src/fusion_public/__init__.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/cli.py": {
+    "sha256": "1e63c4aab436d58add60c8e22e12b677fec6bdad2fd4064dbff758b7f60839d4",
+    "archive_path": "src/fusion_public/cli.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/data.py": {
+    "sha256": "c9491881b0e0ebe9a2676b100542233da2261a8440b5781feb367f936e981e93",
+    "archive_path": "src/fusion_public/data.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/dense.py": {
+    "sha256": "a1572793d8cf67896983e6f7a69d2e37c9ba7a971045ad7131cd5d1c4e6c6080",
+    "archive_path": "src/fusion_public/dense.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/dense_interior.py": {
+    "sha256": "cfef246527a61ffc435d3a182ab657b436383c6c7699e150604dd9d7e085db5d",
+    "archive_path": "src/fusion_public/dense_interior.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/field.py": {
+    "sha256": "2f7623d92bf33fffa3c79e53118928a67cde60c67a37de54da90dd06279ba690",
+    "archive_path": "src/fusion_public/field.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/interior.py": {
+    "sha256": "a6875fdd99bbf3970a07332319fa06f926160496cb25b8ec2109b735372c781b",
+    "archive_path": "src/fusion_public/interior.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/report.py": {
+    "sha256": "b27b310c5bebb6dd3ded09b3dc0dc7c5d95cc56146376b0b121ea6deb07b0b00",
+    "archive_path": "src/fusion_public/report.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/submission.py": {
+    "sha256": "9f878d2f08a44b9a1e2b4f195cb39b2dc74a8cb59b5f3eca0ec38a086a1ef8a5",
+    "archive_path": "src/fusion_public/submission.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/src/fusion_public/usability.py": {
+    "sha256": "79fb3e29d5800f74b2e2a559ef27b55af4332a390238e75a18424f86d827210d",
+    "archive_path": "src/fusion_public/usability.py"
+  },
+  "/private/tmp/fusion-issue48-trace-refinement-20261007/docs/optimization/ISSUE48_TRACE_REFINEMENT.md": {
+    "sha256": "298b35884c1712cd8554c0e7945e438e2047dfdd7a71e304539b882eb12dbe67",
+    "archive_path": "docs/optimization/ISSUE48_TRACE_REFINEMENT.md"
+  },
+  "/private/tmp/fusion-issue48-continuation-evidence-20261007/evidence/issue48-continuation-labels-v1/inputs/continuation-snapshot.json": {
+    "sha256": "73972fc86375fcffa67a44833d1c87016e7ff9d070857aac97acc1dcf335bb97",
+    "archive_path": "evidence/issue48-trace-refinement-v1/inputs/inputs/continuation-snapshot.json"
+  },
+  "/private/tmp/fusion-issue48-continuation-evidence-20261007/evidence/issue48-continuation-labels-v1/manifest.json": {
+    "sha256": "09bfe306edc73524f0c1d1270424b70ec605969f9d61e0293e6732b392395316",
+    "archive_path": "evidence/issue48-trace-refinement-v1/inputs/manifest.json"
+  },
+  "/private/tmp/fusion-issue48-continuation-evidence-20261007/evidence/issue48-continuation-labels-v1/raw/run/line-10.npz": {
+    "sha256": "64b0149bbabbb7fcaecadfded50c63a90f8e86b3da508744f2856d5d4485263e",
+    "archive_path": "evidence/issue48-trace-refinement-v1/inputs/raw/run/line-10.npz"
+  },
+  "/private/tmp/fusion-issue48-continuation-evidence-20261007/evidence/issue48-continuation-labels-v1/raw/run/line-8.npz": {
+    "sha256": "fb2960448e35bdb511d3570dea3a1d082a93f9086fabbc91fce8575810b3113a",
+    "archive_path": "evidence/issue48-trace-refinement-v1/inputs/raw/run/line-8.npz"
+  },
+  "/private/tmp/fusion-issue48-continuation-evidence-20261007/evidence/issue48-continuation-labels-v1/raw/run/result.json": {
+    "sha256": "f6952fd3fc85fc3dfc97000b65d911001c42a0fa23d7055d2221ca384f19c5ba",
+    "archive_path": "evidence/issue48-trace-refinement-v1/inputs/raw/run/result.json"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "completed": true,
+  "revision": "6323ba683698ab55ab00b8f3d8778b5b6e6fb348",
+  "disabled_native_packages": [
+    "mpi4py"
+  ],
+  "driver_budget_s": 600,
+  "supervisor_budget_s": 630,
+  "output_limit_bytes": 268435456,
+  "physical_admission": false,
+  "environment_files": 1662,
+  "returncode": 0,
+  "cleanup_confirmed": true,
+  "termination_requested": false,
+  "elapsed_s": 161.56256791600026,
+  "wall_elapsed_s": 161.56005811691284,
+  "retained_bytes_before_receipt": 121577
+}
