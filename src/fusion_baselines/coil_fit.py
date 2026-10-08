@@ -14,6 +14,34 @@ import numpy as np
 MAX_BYTES, START_RESERVE, LIVE_RESERVE = 256*1024**2, 3*1024**3, 2*1024**3
 PROBE_STEPS = (1.25e-6, 6.25e-7)
 SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=0., gtol=1e-9)
+RECORDING_FORMAT = "fusion-coil-recording-v2"
+EVALUATION_COST_SCOPE = "model.evaluate and post-evaluation guard; excludes trial-file writes"
+OBJECTIVE_WEIGHTS = dict(flux_per_area=1., length=1., coil_distance=1000.,
+                         surface_distance=1000., curvature=.01)
+PENALTY_SETTINGS = dict(length_max_m=3.44, coil_distance_min_m=.07,
+                        surface_distance_min_m=.09, curvature_threshold_per_m=10.,
+                        curvature_p=2)
+SELECTION_SETTINGS = dict(length_max_m=3.45, sampled_length_max_m=3.5,
+                          sampled_curvature_max_per_m=12., sampled_coil_distance_min_m=.06,
+                          sampled_surface_distance_min_m=.08, current_max_A=500000.)
+
+
+def recording_settings(task_id, ncoil=256, n=64, offset=0):
+    """Prospective fixed-target settings; no inferred plasma or equilibrium trajectory."""
+    return dict(format=RECORDING_FORMAT, task_id=task_id,
+                objective_weights=OBJECTIVE_WEIGHTS.copy(),
+                constraints=dict(penalties=PENALTY_SETTINGS.copy(),
+                                 selection=SELECTION_SETTINGS.copy(), coefficient_bounds=None),
+                search_resolution=dict(boundary_phi=n, boundary_theta=n, boundary_offset=offset,
+                                       boundary_phi_extent_turns=.5, coil_nodes=ncoil,
+                                       flux_loop_nodes=ncoil, geometry_phi=128,
+                                       geometry_theta=128, geometry_phi_extent_turns=1.),
+                elapsed_scope=EVALUATION_COST_SCOPE,
+                resource_limits=dict(output_bytes=MAX_BYTES, initial_reserve_bytes=START_RESERVE,
+                                     live_reserve_bytes=LIVE_RESERVE),
+                selection_rule="lowest normal_rms among completed eligible startup-seed/search",
+                current_convention="1e5 A base current scaled by target_flux/unit_flux",
+                target_policy="fixed seed target, signed flux and B2_scale throughout run")
 
 
 def mode_map(entries):
@@ -234,13 +262,20 @@ class Model:
         self.objective = SquaredFlux(self.surface, self.field, **flux_options)
         physical = [c.curve for c in self.coils]
         self.lengths = [CurveLength(c) for c in self.curves]
-        self.cc = CurveCurveDistance(physical, 0.07, num_basecurves=24)
+        self.cc = CurveCurveDistance(physical, PENALTY_SETTINGS["coil_distance_min_m"],
+                                     num_basecurves=24)
         self.cp = SparseCurveSurfaceDistance(
             physical, geometry_surface.gamma().reshape(-1, 3),
-            geometry_surface.normal().reshape(-1, 3), minimum_distance=0.09)
-        self.geometry = (sum(QuadraticPenalty(term, 3.44, "max") for term in self.lengths)
-                         + 1000*self.cc + 1000*self.cp
-                         + 1e-2*sum(LpCurveCurvature(c, 2, threshold=10) for c in self.curves))
+            geometry_surface.normal().reshape(-1, 3),
+            minimum_distance=PENALTY_SETTINGS["surface_distance_min_m"])
+        self.geometry = (sum(QuadraticPenalty(term, PENALTY_SETTINGS["length_max_m"], "max")
+                             for term in self.lengths)
+                         + OBJECTIVE_WEIGHTS["coil_distance"]*self.cc
+                         + OBJECTIVE_WEIGHTS["surface_distance"]*self.cp
+                         + OBJECTIVE_WEIGHTS["curvature"]*sum(LpCurveCurvature(
+                             c, PENALTY_SETTINGS["curvature_p"],
+                             threshold=PENALTY_SETTINGS["curvature_threshold_per_m"])
+                             for c in self.curves))
 
         from fusion_baselines.coupled_coil_audit import physical_curves
 
@@ -265,8 +300,12 @@ class Model:
         curvature = [float(np.max(c.kappa())) for c in self.curves]
         cc, cp = float(self.cc.shortest_distance()), float(self.cp.shortest_distance())
         return dict(lengths=lengths, kappa_max=curvature, coil_distance=cc, surface_distance=cp,
-                    sampled_geometry_limits_met=max(lengths) <= 3.5 and max(curvature) <= 12
-                    and cc >= 0.06 and cp >= 0.08, geometry_certified=False)
+                    sampled_geometry_limits_met=(
+                        max(lengths) <= SELECTION_SETTINGS["sampled_length_max_m"]
+                        and max(curvature) <= SELECTION_SETTINGS["sampled_curvature_max_per_m"]
+                        and cc >= SELECTION_SETTINGS["sampled_coil_distance_min_m"]
+                        and cp >= SELECTION_SETTINGS["sampled_surface_distance_min_m"]),
+                    geometry_certified=False)
 
     def unit_flux(self):
         phi = float(np.mean(np.sum(self.loop_field.A()*self.loop_tangent, axis=1)))
@@ -293,7 +332,7 @@ class Model:
                        / (self.area*self.seed["B2_scale"]),
                        geometry_penalty=penalty,
                        scale=scale, unit_flux=phi, current=1e5*scale,
-                       current_limit_met=abs(1e5*scale) <= 500000)
+                       current_limit_met=abs(1e5*scale) <= SELECTION_SETTINGS["current_max_A"])
         if not np.isfinite(value+penalty) or not np.isfinite(gradient).all():
             raise ValueError("nonfinite objective or gradient")
         return float(value+penalty), gradient, metrics
@@ -370,15 +409,17 @@ def search(model, record, minimize):
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
     largest_value = 0.
+    last_search_row, solver_iterations = None, 0
 
     def evaluate(x, role):
-        nonlocal selected, completed, largest_value
+        nonlocal selected, completed, largest_value, last_search_row
         record.guard()
         index = record.bundles
         record.bundles += 1
         record.active = dict(bundle=index, role=role)
         row = dict(index=index, role=role, x=np.asarray(x).tolist(), status="attempted")
         record.save(f"trial-{index:05}-attempt.json", row)
+        evaluation_started = time.monotonic()
         try:
             value, gradient, metrics = model.evaluate(x)
             record.guard()
@@ -392,18 +433,39 @@ def search(model, record, minimize):
             rejected_value = largest_value + max(1., abs(largest_value))
             row.update(rejected_value=rejected_value)
         finally:
-            record.save(f"trial-{index:05}.json", row)
+            # Interrupts retain the attempt only, never a fabricated terminal result.
+            if row["status"] != "attempted":
+                row.update(elapsed_s=time.monotonic()-evaluation_started,
+                           elapsed_scope=EVALUATION_COST_SCOPE)
+                record.save(f"trial-{index:05}.json", row)
         record.guard()
+        if role == "search":
+            last_search_row = row
         if row["status"] == "failed":
             return rejected_value, np.zeros_like(initial)
         largest_value = max(largest_value, value)
         completed += 1
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
-                and metrics["current_limit_met"] and max(metrics["lengths"]) <= 3.45
+                and metrics["current_limit_met"]
+                and max(metrics["lengths"]) <= SELECTION_SETTINGS["length_max_m"]
                 and (selected is None or metrics["normal_rms"]
                      < selected["metrics"]["normal_rms"])):
             selected = row
         return value, gradient
+
+    def accepted_iterate(xk):
+        nonlocal solver_iterations
+        record.guard()
+        # Link only exact coordinates from the latest returned search evaluation. Do not
+        # reevaluate, guess a cached evaluation, or call other trials line-search rejections.
+        linked = last_search_row is not None and np.array_equal(xk, last_search_row["x"])
+        record.save(f"iterate-{solver_iterations:05}.json", dict(
+            format=RECORDING_FORMAT, iteration=solver_iterations, x=np.asarray(xk).tolist(),
+            evaluation_index=last_search_row["index"] if linked else None,
+            link_status="exact_latest_evaluation" if linked else "unknown",
+            solver_step_status="accepted", physical_admission=False))
+        solver_iterations += 1
+        record.guard()
 
     try:
         value, gradient = evaluate(initial, "startup-seed")
@@ -427,7 +489,8 @@ def search(model, record, minimize):
             raise ValueError("startup derivative or exact-repeat check failed")
         search_started = time.monotonic()
         solved = minimize(lambda x: evaluate(x, "search"), initial, jac=True,
-                          method="L-BFGS-B", options=SOLVER_OPTIONS.copy())
+                          method="L-BFGS-B", options=SOLVER_OPTIONS.copy(),
+                          callback=accepted_iterate)
         record.guard()
         status = dict(reason="solver-return", success=bool(solved.success),
                       message=str(solved.message))
@@ -437,6 +500,7 @@ def search(model, record, minimize):
         status = dict(reason="failure", error=f"{type(exc).__name__}: {exc}")
     model.set_x(initial if selected is None else np.asarray(selected["x"]))
     return dict(status=status, startup_pass=startup, derivative_checks=checks,
+                recording_format=RECORDING_FORMAT, solver_iterations_recorded=solver_iterations,
                 solver_options=SOLVER_OPTIONS.copy(),
                 startup_s=(search_started if search_started is not None else time.monotonic())
                 - started,
