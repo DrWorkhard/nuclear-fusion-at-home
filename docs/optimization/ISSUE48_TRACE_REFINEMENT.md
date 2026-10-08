@@ -37,7 +37,7 @@ imports / 630 s including startup/finalization. One thread, 256 MiB output,
 package file identities matched before/after; process cleanup passed. Pre-run
 analytic map/composition tests and original outputs remain preserved.
 
-Local archive: `d12b01bedbb3d4e89ab891d03a9e6048f0690918`, proposed annotated tag
+Published archive: `d12b01bedbb3d4e89ab891d03a9e6048f0690918`, annotated tag
 [evidence-issue48-trace-refinement-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-trace-refinement-v1); published; remote identities and manifest retrieval verified.
 Manifest SHA256:
 `a6e1708bbb3996752d331cb61485cefc656d40d59948deadabda6f9488ed39f7`.

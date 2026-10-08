@@ -26,7 +26,7 @@ post-failure check verified all 55 direct source/input bindings and 1,662 native
 package files unchanged. Original output remains intact at
 `/private/tmp/issue48-periodic-return-v1`.
 
-Local archive: `5c6940bddd9f799803326c51ac2dc8ced21f69c1`, proposed annotated tag
+Published archive: `5c6940bddd9f799803326c51ac2dc8ced21f69c1`, annotated tag
 [evidence-issue48-periodic-return-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-periodic-return-v1); published; remote identities and manifest retrieval verified.
 Manifest SHA256:
 `5e9c1568ad730dddb307fc20d977b39568b5054e54edb32b66da2e7a16fdc76e`.

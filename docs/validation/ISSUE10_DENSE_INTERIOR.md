@@ -4,8 +4,8 @@
 On 7 October 2026, the scalar checker reproduced both frozen #25 fits across all
 12,288 target samples, without VMEC, SIMSOPT, NumPy or historical inputs at runtime.
 The [packet and commands](../../examples/clear-coil-interior-v1/README.md) support
-new six-coil, order-5 candidates with an explicitly selected target. Publication
-is pending; no native intake or physical acceptance gate changed.
+new six-coil, order-5 candidates with an explicitly selected target. Merge
+remains pending; no native intake or physical acceptance gate changed.
 
 | Frozen control | Portable interior RMS | Max component field discrepancy, relative |
 | --- | ---: | ---: |

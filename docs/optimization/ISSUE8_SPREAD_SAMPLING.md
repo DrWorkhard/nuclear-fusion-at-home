@@ -40,7 +40,7 @@ Clean producer/evaluator and full prospective protocol:
 used only the standard library. Source/input/Python executable identities matched
 before/after and owned-process cleanup succeeded. Native environments stayed intact.
 
-Local archive: `d095fe810619da722f213d3c04d9106c3990a7f2`, prepared annotated tag
+Published archive: `d095fe810619da722f213d3c04d9106c3990a7f2`, annotated tag
 [evidence-issue8-spread-sampling-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue8-spread-sampling-v1); published; remote identities and manifest retrieval verified.
 Manifest SHA256:
 `8d110afdad493bee3d16e09eb6dc6063090b27b1e16c7dba51f4165ac00791a3`.
