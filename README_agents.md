@@ -25,8 +25,9 @@ a state-of-the-art advantage. Realized magnetic surfaces and plasma-benefit
 transfer remain open. [Scientific evidence](docs/STATUS.md).
 
 **October 2026: this fitting recipe has stalled.** Thirty more minutes of search
-improved the boundary error by only 6%, and more flexible coils only 3.6%
-([probe](docs/optimization/ISSUE53_COIL_FREEDOM.md)). The next route is joint
+improved the boundary error by only 6%, more flexible coils 3.6%
+([probe](docs/optimization/ISSUE53_COIL_FREEDOM.md)) and looser construction margins
+5.8% ([probe](docs/optimization/ISSUE70_CONSTRUCTION_MARGINS.md)). The next route is joint
 plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36); [programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)).
 
 We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.

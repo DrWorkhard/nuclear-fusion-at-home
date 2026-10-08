@@ -75,7 +75,8 @@ reaches 2.3e-6 for a co-designed QUASR configuration. The preregistered
 so the coil family is not the binding limit and the route is joint plasma–coil
 optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Both probe arms ended at the construction penalties
 (curvature about 10 /m against 12 /m acceptance; length near 3.44 m against
-3.5 m); whether relaxing those margins helps is untested. The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
+3.5 m). Halving every margin toward its limit ([#70](../optimization/ISSUE70_CONSTRUCTION_MARGINS.md))
+gained 5.8%, so the margins are not the binding limit either. The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
 point is yet specified and defers reactor-scale search.
 
 ## Where expert input helps most
