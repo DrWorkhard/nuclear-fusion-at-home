@@ -14,8 +14,9 @@ The [matched experiment](../optimization/ISSUE25_MATCHED_TARGETS.md) fits both
 reference401 and the improved Step 3 plasma. Both scoped geometry checks pass,
 but field limits fail and wide action diagnostics are incomplete. Limited direct
 tracing passes; verified nested surfaces and physical benefit transfer remain open.
-On 6 October 2026 the fixed-target fitting recipe was declared stalled; the
-[programme](../optimization/STEP4_RESEARCH_PROGRAMME.md) records the decision and next route. QUASR/LPQA calibration checks boundary components, not the complete
+On 6 October 2026 the fixed-target fitting recipe was declared stalled; a
+[coil-freedom probe](../optimization/ISSUE53_COIL_FREEDOM.md) then selected joint
+plasma/coil optimization as the next route ([programme](../optimization/STEP4_RESEARCH_PROGRAMME.md)). QUASR/LPQA calibration checks boundary components, not the complete
 Goodman acceptance profile.
 
 Retained lessons: coarse clearance missed 1.8–6.7 mm gaps; certified small-step
