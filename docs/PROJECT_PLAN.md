@@ -32,8 +32,7 @@ outreach remain pending.
 ## Current priorities
 
 The [assessment](review/STRATEGIC_REVIEW_RESOLUTION.md) finds no demonstrated path
-from present results to the README's reactor vision. Keep the ambition;
-spend effort on decisions that test the path.
+from present results to the README's reactor vision. Prioritize decisions that test the path.
 
 1. **Test benefit in actual coil fields.** Compare the original and improved
    Step 3 targets with matched fitting effort and evaluate interior fields,

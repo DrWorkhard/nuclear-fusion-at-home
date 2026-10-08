@@ -68,12 +68,16 @@ net-electric-power balance, winding/blanket/shield space, magnet loads, heat exh
 and maintenance access. For each, record a source or an explicit unknown and the
 cheapest check that could reject the direction. Detailed pressure/engineering work
 starts when that decision needs it, rather than automatically at a boundary score.
+The completed [conditional space screen](../engineering/ISSUE27_ENVELOPE_SCREEN.md)
+provides exclusions for a specified envelope model; passing its two inequalities
+does not settle the operating point or qualify a scaled design.
 
 The smallest MS0 deliverable is the matched target/coil data and existing checker
 running outside the maintainer's workspace, with a positive control and retained
 failures. Assess an adapter to existing community tools first; no new platform.
-Public dense boundary evaluation already exists, but interior targets and full
-acceptance are not portable yet. Prioritize that missing reproducibility now;
+Public dense boundary evaluation and the published
+[dense interior packet](../validation/ISSUE10_DENSE_INTERIOR.md) now exist; full
+acceptance is not portable yet. Prioritize shared-check reproduction;
 26 March 2027 remains the outer MS0 decision target, not a reason to delay it.
 Publication and external contact require separate authority. No new outreach or
 physical acceptance follows from this programme.
