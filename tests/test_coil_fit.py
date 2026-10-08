@@ -305,6 +305,14 @@ def test_real_lbfgsb_backtracks_failed_trial_without_discarding_seed(tmp_path, c
     np.testing.assert_allclose(model.x, -model.linear, atol=1e-8)
     assert result['solver_options']['ftol'] == 0.
     assert result['solver_options']['gtol'] == 1e-9
+    iterates = [json.loads(path.read_text(encoding='utf-8'))
+                for path in sorted(record.output.glob('iterate-*.json'))]
+    assert len(iterates) == result['solver_iterations_recorded'] > 0
+    for step in iterates:
+        trial = json.loads((record.output/f"trial-{step['evaluation_index']:05}.json").read_text(
+            encoding='utf-8'))
+        assert step['x'] == trial['x'] and trial['status'] == 'completed'
+        assert step['solver_step_status'] == 'accepted' and not step['physical_admission']
 
 
 def test_failed_search_trial_output_error_cannot_be_recovered(tmp_path, clock):
@@ -473,3 +481,94 @@ def test_order_eight_canonical_gradient_uses_named_coordinates():
     np.testing.assert_array_equal(gradient[:51], np.arange(51))
     with pytest.raises(ValueError, match="registered order"):
         experiment.canonical_gradient(curves, lambda curve: np.zeros(51), 5)
+
+
+def test_evaluation_cost_excludes_trial_writes_and_includes_failed_work(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        clock[0] += .25
+        if np.all(x == 1.):
+            raise ValueError('failed cost')
+        return original(x)
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 100)
+    original_save = record.save
+
+    def save(name, value):
+        clock[0] += .5
+        original_save(name, value)
+
+    record.save = save
+
+    def solver(function, x, **kwargs):
+        function(np.ones_like(x))
+        return SimpleNamespace(success=False, message='control')
+
+    result = experiment.search(model, record, solver)
+    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
+    for path in record.output.glob('trial-*.json'):
+        row = json.loads(path.read_text(encoding='utf-8'))
+        if '-attempt' in path.name:
+            assert 'elapsed_s' not in row
+        else:
+            assert row['elapsed_s'] == .25
+            assert row['elapsed_scope'] == experiment.EVALUATION_COST_SCOPE
+    assert json.loads((record.output/'trial-00010.json').read_text(
+        encoding='utf-8'))['status'] == 'failed'
+
+
+def test_callback_does_not_evaluate_select_or_guess_cached_coordinates(tmp_path, clock):
+    model = SyntheticModel()
+    record = experiment.Recorder(tmp_path/'run', 1)
+
+    def solver(function, x, callback, **kwargs):
+        function(x-model.linear*.01)  # Eligible, but not necessarily a solver iterate.
+        function(x+model.linear*.01)  # Accepted by this control, but not the selected candidate.
+        calls = model.calls
+        callback(x+model.linear*.01)
+        callback(x)  # Cached coordinates: cannot identify the particular evaluation.
+        assert model.calls == calls
+        return SimpleNamespace(success=True, message='control')
+
+    result = experiment.search(model, record, solver)
+    assert result['selected']['index'] == 10
+    first, cached = [json.loads((record.output/f'iterate-{i:05}.json').read_text(
+        encoding='utf-8')) for i in range(2)]
+    assert first['evaluation_index'] == 11 and first['link_status'] == 'exact_latest_evaluation'
+    assert cached['evaluation_index'] is None and cached['link_status'] == 'unknown'
+
+
+def test_interruption_preserves_attempt_without_terminal_or_selection(tmp_path, clock):
+    model = SyntheticModel()
+    model.evaluate = Mock(side_effect=KeyboardInterrupt)
+    record = experiment.Recorder(tmp_path/'run', 1)
+    with pytest.raises(KeyboardInterrupt):
+        experiment.search(model, record, seed_solver)
+    assert (record.output/'trial-00000-attempt.json').is_file()
+    assert not (record.output/'trial-00000.json').exists()
+
+
+def test_callback_output_failure_stops_search_and_retains_trials(tmp_path, clock):
+    model = SyntheticModel()
+    record = experiment.Recorder(tmp_path/'run', 1)
+    save = record.save
+
+    def write(name, value):
+        if name.startswith('iterate-'):
+            raise OSError('output ceiling')
+        save(name, value)
+
+    record.save = write
+
+    def solver(function, x, callback, **kwargs):
+        function(x)
+        callback(x)
+        pytest.fail('continued after output failure')
+
+    result = experiment.search(model, record, solver)
+    assert result['status']['reason'] == 'failure'
+    assert result['solver_iterations_recorded'] == 0
+    assert (record.output/'trial-00010.json').is_file()

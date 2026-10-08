@@ -1,5 +1,9 @@
 # Existing coil-trajectory export, version 1
 
+Historical runs retain this format. New fitter runs use
+[prospective recording and export v2](COIL_TRAJECTORY_V2.md); the same exporter
+selects the format from recorded version metadata.
+
 Question: can existing fitter files supply reproducible records before joint
 optimization comparisons, without another recorder? The read-only
 [exporter](../../scripts/export_coil_trajectory.py) uses Python's standard library.
@@ -67,7 +71,7 @@ output cap is 64 MiB (maximum 256 MiB); inputs remain under the existing strict
 artifact bytes keep the same hashes; counts are not independent design coverage.
 
 This is a scoped prerequisite for [#38](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/38),
-not its full completion. Native candidate regeneration, a recording hook for
-missing costs/accepted iterates, plasma variables and future comparison fidelity
-remain separate work. Original native environments, raw evidence and acceptance
-checks are unchanged.
+not its full completion. The [v2 hook](COIL_TRAJECTORY_V2.md) supplies settings,
+costs, accepted iterates and a fixed-target replay for new runs. Plasma variables
+and future joint comparison fidelity remain separate work. Original native
+environments, raw evidence and acceptance checks are unchanged.
