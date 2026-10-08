@@ -46,6 +46,15 @@ def loop_geometry(data, count):
 
 
 ORDERS = (5, 8)  # Registered six-coil Fourier orders; order 5 is the public starter class.
+# Construction margins keep sampled fits inside the unchanged acceptance limits
+# (length 3.5 m, coil-coil 0.06 m, coil-plasma 0.08 m, curvature 12/m).
+# "halved" moves each margin halfway to its limit (issue #70).
+MARGINS = {
+    "current": dict(length=3.44, selection_length=3.45, coil_distance=0.07,
+                    surface_distance=0.09, curvature=10.),
+    "halved": dict(length=3.47, selection_length=3.475, coil_distance=0.065,
+                   surface_distance=0.085, curvature=11.),
+}
 
 
 def names(order=5):
@@ -179,7 +188,10 @@ def tracked_field(field_class, coils, record):
 
 
 class Model:
-    def __init__(self, seed, data, record, ncoil=256, n=64, offset=0):
+    def __init__(self, seed, data, record, ncoil=256, n=64, offset=0, margins="current"):
+        if margins not in MARGINS:
+            raise ValueError("registered construction margins required")
+        self.margins = dict(MARGINS[margins], name=margins)
         from simsopt.field import BiotSavart, Current, coils_via_symmetries
         from simsopt.geo import (
             CurveCurveDistance,
@@ -234,13 +246,17 @@ class Model:
         self.objective = SquaredFlux(self.surface, self.field, **flux_options)
         physical = [c.curve for c in self.coils]
         self.lengths = [CurveLength(c) for c in self.curves]
-        self.cc = CurveCurveDistance(physical, 0.07, num_basecurves=24)
+        margin = self.margins
+        self.cc = CurveCurveDistance(physical, margin["coil_distance"], num_basecurves=24)
         self.cp = SparseCurveSurfaceDistance(
             physical, geometry_surface.gamma().reshape(-1, 3),
-            geometry_surface.normal().reshape(-1, 3), minimum_distance=0.09)
-        self.geometry = (sum(QuadraticPenalty(term, 3.44, "max") for term in self.lengths)
+            geometry_surface.normal().reshape(-1, 3),
+            minimum_distance=margin["surface_distance"])
+        self.geometry = (sum(QuadraticPenalty(term, margin["length"], "max")
+                             for term in self.lengths)
                          + 1000*self.cc + 1000*self.cp
-                         + 1e-2*sum(LpCurveCurvature(c, 2, threshold=10) for c in self.curves))
+                         + 1e-2*sum(LpCurveCurvature(c, 2, threshold=margin["curvature"])
+                                    for c in self.curves))
 
         from fusion_baselines.coupled_coil_audit import physical_curves
 
@@ -367,6 +383,8 @@ def fine(seed, data, chosen, record, shift):
 def search(model, record, minimize):
     """One wall-clock-limited search; probes and incomplete points cannot win."""
     initial = model.x0.copy()
+    # Synthetic test models carry no margins; real models record their preset.
+    selection_length = getattr(model, "margins", MARGINS["current"])["selection_length"]
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
     largest_value = 0.
@@ -399,7 +417,8 @@ def search(model, record, minimize):
         largest_value = max(largest_value, value)
         completed += 1
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
-                and metrics["current_limit_met"] and max(metrics["lengths"]) <= 3.45
+                and metrics["current_limit_met"]
+                and max(metrics["lengths"]) <= selection_length
                 and (selected is None or metrics["normal_rms"]
                      < selected["metrics"]["normal_rms"])):
             selected = row
