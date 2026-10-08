@@ -5,7 +5,8 @@ plasma modes together with the coils realize **more** of the Step 3 action benef
 in actual coil fields than fitting coils to a fixed target? Settings are in
 [joint-protocol.json](joint-protocol.json). Review requests are tracked in #63.
 **Status: not ready to run.** The derivative-reliability check (below) failed its
-preregistered tolerance at the proposed search resolutions.
+preregistered tolerance at the proposed search resolutions. The target-intake contract
+is not implemented. The ns = 101/201 check is frozen but not run.
 
 ## Arms (sequential, one thread, same machine)
 
@@ -54,10 +55,35 @@ Tolerances: at most 10% spread across h; within 20% of ns = 101 with the same si
   `rbc(2,0)`, ns = 25 gives 2.1e-4 and ns = 51 gives 4.8e-4, against 6.9e-4 at ns = 101.
 - At the reference boundary, h = 3e-5 is already nonlinear (spread up to 19%).
 
-By the preregistered rule the pilot does not run. Proposed change, which needs the
-maintainer's agreement: search at ns = 101 with h = 1e-5 (about 22 s per
-evaluation, about 10 plasma-gradient steps per arm), after one more check of
-ns = 101 against ns = 201 under the same tolerances.
+By the preregistered rule the pilot does not run. Evidence:
+[joint-feasibility-n14](https://github.com/pjckoch/nuclear-fusion-at-home/tree/98af8dc1a42dd0a8aa26775caad843c4292e7188/evidence/joint-feasibility-n14) (fork commit `98af8dc1a42d`; proposed for an `evidence-*` tag), which includes
+every case, failures, the h-grids, comparability rows and regenerated-Wout identities.
+
+**Next check, frozen now (not yet run): ns = 101 against ns = 201.**
+- Inputs: the same reference401 and selected401 inputs, and the same four modes.
+- Central differences: h ∈ {5e-6, 1e-5, 2e-5} at ns = 101, and h = 1e-5 at ns = 201
+  (ns_array ending 101 or 201; ftol 1e-11 at the final stage).
+- Formula: let g be ∂A. Every component with |g201| > 0.05·max|g201| must satisfy
+  |g101 − g201| ≤ 0.2·|g201| with the same sign. Across the ns = 101 h-set it must also
+  satisfy (max g − min g) ≤ 0.10·max|g|.
+- Rule: pass at both bases means search at ns = 101 with h = 1e-5. Otherwise the J
+  arm is not viable at this budget and the result is recorded.
+- Budget: 60 min, one thread. Evidence is bound like N14.
+
+## Target intake for J (to implement and review before any run)
+
+The endpoint does not yet admit a new target: `measure_coil_bounce.py` and
+`coil_check.snapshot_identity` accept only the two registered targets and their
+original Wouts. Required, reviewed separately:
+- A frozen target specification that binds the input JSON hash, the Wout hash (with
+  vmecpp version), B² computed once from the Wout archives, the signed flux
+  (`-phiedge`), the paired coil snapshot and its current.
+- An explicit `--target-spec` in `fit_coils.py`, `check_coils.py`,
+  `trace_surfaces.py` and `measure_coil_bounce.py`. A registered `target_id` keeps
+  its exact historical meaning; any other specification gets a distinct identity
+  label.
+- Unchanged acceptance mathematics and thresholds. A J target is checked only after
+  freezing, by the same code paths as F-ref and F-sel.
 
 ## Endpoints, validation exposure and decision scope
 
@@ -77,6 +103,24 @@ ns = 101 against ns = 201 under the same tolerances.
   and own-target boundary RMS ≤ 1.10 × F-sel. This is a resource-allocation rule, not
   physical acceptance. A negative result concerns this four-mode local search at
   this budget, not joint optimization in general.
+
+## Resources and stopping
+
+Per arm, phases are sequential and their budgets **add up**. A phase starts only after
+the previous one completes.
+- Phases: search 1800 s (intake, model startup and every equilibrium solve included),
+  then for J a 600 s re-solve at ns = 401, then 900 s checks, 600 s tracing and 600 s
+  action diagnostic.
+- Total ceilings: 3,900 s for F and 4,500 s for J.
+- Storage: retained output at most 256 MiB per arm; disk reserve 3 GiB initial and
+  2 GiB live.
+- Search equilibria are deleted after scoring, except the seed, the selected
+  candidate and inputs of failed trials.
+- A phase timeout or failure keeps every output, marks the arm incomplete and skips
+  later phases. Nothing is relabelled as passing.
+- Eligible trial roles: `startup-seed` and `search`; probes never.
+- Ties on the selection key go first to the lower own-target boundary RMS, then to
+  the lower trial index.
 
 ## Equilibrium identities
 

@@ -1,79 +1,303 @@
 {
-  "protocol": "joint-plasma-coil-pilot",
-  "status": "not ready: derivative reliability failed at ns 25/51; proposed ns 101 needs maintainer agreement and an ns 201 check (#63)",
-  "arms": {
-    "F-ref": {"target": "evidence/plasma-design-v2/reference-input-401.json", "free": "coils",
-              "selection": "lowest boundary RMS among eligible completed candidates"},
-    "F-sel": {"target": "evidence/plasma-balanced-v1/selected-input-401.json", "free": "coils",
-              "selection": "lowest boundary RMS among eligible completed candidates"},
-    "J": {
-      "target": "evidence/plasma-design-v2/reference-input-401.json",
-      "free": "coils+plasma",
-      "plasma_modes": [["rbc", 1, 1], ["rbc", 2, 0], ["zbs", 1, 1], ["zbs", 2, 0]],
-      "plasma_bound_abs": 5e-4,
-      "frozen": ["phiedge", "nfp", "stellarator symmetry", "all other boundary modes"],
-      "selection": "lowest J objective among completed candidates passing coil eligibility, comparability, equilibrium convergence and complete A",
-      "comparability_tolerance": {"volume_p": 0.01, "aspect": 0.01, "Rmajor_p": 0.01, "b0": 0.01}
-    }
+ "protocol": "joint-plasma-coil-pilot",
+ "status": "not ready: derivative reliability failed at ns 25/51; target-intake contract not implemented; frozen ns101/201 check not run (#63)",
+ "arms": {
+  "F-ref": {
+   "target": "evidence/plasma-design-v2/reference-input-401.json",
+   "free": "coils",
+   "selection": "lowest boundary RMS among eligible completed candidates"
   },
-  "seed_coils": "submissions/length-headroom-six-coil/candidate.json",
-  "coil_family": {"nbase": 6, "order": 5},
-  "unchanged": ["length penalty 3.44 m", "curvature penalty 10/m", "clearance penalties",
-                "coil eligibility", "current limit", "#55 trial handling", "acceptance limits"],
-  "objective_J": {
-    "terms": "normalized SquaredFlux on current boundary + geometry penalties + w * A",
-    "A": "ideal narrow score, surfaces [0.25, 0.5, 0.75], pitches [0.1, 0.3, 0.5, 0.7, 0.9], nphi 801, nalpha 16",
-    "w": 0.09,
-    "w_rule": "dJ_flux / (A(0) - A(1)) along Step 3 direction with fixed headroom coils, one significant figure",
-    "equilibrium_search": {"code": "vmecpp", "ns_proposed": 101, "h": 1e-5, "status": "needs ns 201 check and agreement"},
-    "plasma_gradient": "central difference",
-    "failed_equilibrium": "rejected trial"
+  "F-sel": {
+   "target": "evidence/plasma-balanced-v1/selected-input-401.json",
+   "free": "coils",
+   "selection": "lowest boundary RMS among eligible completed candidates"
   },
-  "budgets_s": {"search": 1800, "checks": 900, "diagnostic": 600, "ns401_resolve": 600},
-  "threads": 1,
-  "endpoints": {
-    "exploratory": {"script": "scripts/measure_coil_bounce.py", "scores": ["coil narrow", "coil wide"],
-                    "resolution": [801, 16], "launch": "target labels (#48 limitation)"},
-    "confirmatory": "qualified matched realized-surface sampling; not yet available",
-    "pilot_can_decide": "feasibility only: runs within budget, moves plasma modes, direction of exploratory scores",
-    "incomplete": "inconclusive"
-  },
-  "validation": {
-    "previously_inspected": ["wide domain 5x7", "pitch 0.03", "pitch 0.97"],
-    "frozen_independent_check": {"surfaces": [0.35, 0.65], "nalpha": 16, "alpha_offset": "half spacing"}
-  },
-  "pilot_rule": {
-    "kind": "resource allocation, not physical acceptance",
-    "supports_further_work_if": [
-      "J exploratory coil narrow score <= 0.975 * F-sel",
-      "J continuous geometry passes",
-      "J own-target boundary RMS <= 1.10 * F-sel own-target boundary RMS"
+  "J": {
+   "target": "evidence/plasma-design-v2/reference-input-401.json",
+   "free": "coils+plasma",
+   "plasma_modes": [
+    [
+     "rbc",
+     1,
+     1
     ],
-    "negative_scope": "this four-mode local search at this budget only"
-  },
-  "equilibrium_identity_policy": {
-    "originals": "exact historical reproduction",
-    "regenerated": "distinct identity (vmecpp version + SHA-256) and preregistered parity check, same policy for all arms",
-    "reference401_vmecpp": {"starter_samples_rel": 3.4e-10, "ideal_narrow_rel": 3.4e-8, "qualified": true},
-    "selected401_vmecpp": {"ideal_narrow": 1.100894231148593e-05, "archived": 1.100894343118703e-05,
-                           "rel": 1.02e-7, "tolerance": 1e-6, "qualified": true}
-  },
-  "feasibility_N14": {
-    "comparability_max_abs_rel_change": 0.00165,
-    "derivatives_dA": {
-      "ref": {"ns25_h1e-5": [-7.714e-4, 3.104e-3, -7.310e-3, -3.834e-3],
-              "ns51_h1e-5": [-7.334e-4, 3.377e-3, -7.654e-3, -3.921e-3],
-              "ns101_h1e-5": [-6.500e-4, 3.570e-3, -7.856e-3, -3.947e-3]},
-      "sel": {"ns25_h1e-5": [-3.142e-3, 2.112e-4, -3.769e-3, -1.799e-4],
-              "ns51_h1e-5": [-3.120e-3, 4.796e-4, -4.183e-3, -2.575e-4],
-              "ns101_h1e-5": [-3.088e-3, 6.898e-4, -4.402e-3, -3.107e-4]}
-    },
-    "derivative_checks": {"ref_ns25": "resolution pass, h fail", "ref_ns51": "resolution pass, h fail",
-                          "sel_ns25": "resolution fail, h fail", "sel_ns51": "resolution fail, h pass"},
-    "calibration": {"A_t0": 1.1527288532147264e-05, "A_t1": 1.1076063301856299e-05,
-                    "J_flux_t0": 1.9925476786018833e-06, "J_flux_t1": 2.035020046679007e-06,
-                    "normal_rms_t0": 0.001996270361750573, "normal_rms_t1": 0.0020174340369285976},
-    "vmecpp_seconds": {"ns25": 3.35, "ns51": 6.91, "ns101": 19.63, "ns401": 321},
-    "action_seconds_per_wout": 2.1
+    [
+     "rbc",
+     2,
+     0
+    ],
+    [
+     "zbs",
+     1,
+     1
+    ],
+    [
+     "zbs",
+     2,
+     0
+    ]
+   ],
+   "plasma_bound_abs": 0.0005,
+   "frozen": [
+    "phiedge",
+    "nfp",
+    "stellarator symmetry",
+    "all other boundary modes"
+   ],
+   "selection": "lowest J objective among completed candidates passing coil eligibility, comparability, equilibrium convergence and complete A",
+   "comparability_tolerance": {
+    "volume_p": 0.01,
+    "aspect": 0.01,
+    "Rmajor_p": 0.01,
+    "b0": 0.01
+   },
+   "eligible_roles": [
+    "startup-seed",
+    "search"
+   ],
+   "tie_break": [
+    "lower own-target boundary RMS",
+    "lower trial index"
+   ]
   }
+ },
+ "seed_coils": "submissions/length-headroom-six-coil/candidate.json",
+ "coil_family": {
+  "nbase": 6,
+  "order": 5
+ },
+ "unchanged": [
+  "length penalty 3.44 m",
+  "curvature penalty 10/m",
+  "clearance penalties",
+  "coil eligibility",
+  "current limit",
+  "#55 trial handling",
+  "acceptance limits"
+ ],
+ "objective_J": {
+  "terms": "normalized SquaredFlux on current boundary + geometry penalties + w * A",
+  "A": "ideal narrow score, surfaces [0.25, 0.5, 0.75], pitches [0.1, 0.3, 0.5, 0.7, 0.9], nphi 801, nalpha 16",
+  "w": 0.09,
+  "w_rule": "dJ_flux / (A(0) - A(1)) along Step 3 direction with fixed headroom coils, one significant figure",
+  "equilibrium_search": {
+   "code": "vmecpp",
+   "ns_proposed": 101,
+   "h": 1e-05,
+   "status": "conditional on frozen ns101/201 check"
+  },
+  "plasma_gradient": "central difference",
+  "failed_equilibrium": "rejected trial"
+ },
+ "threads": 1,
+ "endpoints": {
+  "exploratory": {
+   "script": "scripts/measure_coil_bounce.py",
+   "scores": [
+    "coil narrow",
+    "coil wide"
+   ],
+   "resolution": [
+    801,
+    16
+   ],
+   "launch": "target labels (#48 limitation)"
+  },
+  "confirmatory": "qualified matched realized-surface sampling; not yet available",
+  "pilot_can_decide": "feasibility only: runs within budget, moves plasma modes, direction of exploratory scores",
+  "incomplete": "inconclusive"
+ },
+ "validation": {
+  "previously_inspected": [
+   "wide domain 5x7",
+   "pitch 0.03",
+   "pitch 0.97"
+  ],
+  "frozen_independent_check": {
+   "surfaces": [
+    0.35,
+    0.65
+   ],
+   "nalpha": 16,
+   "alpha_offset": "half spacing"
+  }
+ },
+ "pilot_rule": {
+  "kind": "resource allocation, not physical acceptance",
+  "supports_further_work_if": [
+   "J exploratory coil narrow score <= 0.975 * F-sel",
+   "J continuous geometry passes",
+   "J own-target boundary RMS <= 1.10 * F-sel own-target boundary RMS"
+  ],
+  "negative_scope": "this four-mode local search at this budget only"
+ },
+ "equilibrium_identity_policy": {
+  "originals": "exact historical reproduction",
+  "regenerated": "distinct identity (vmecpp version + SHA-256) and preregistered parity check, same policy for all arms",
+  "reference401_vmecpp": {
+   "starter_samples_rel": 3.4e-10,
+   "ideal_narrow_rel": 3.4e-08,
+   "qualified": true
+  },
+  "selected401_vmecpp": {
+   "ideal_narrow": 1.100894231148593e-05,
+   "archived": 1.100894343118703e-05,
+   "rel": 1.02e-07,
+   "tolerance": 1e-06,
+   "qualified": true
+  }
+ },
+ "feasibility_N14": {
+  "comparability_max_abs_rel_change": 0.00165,
+  "derivatives_dA": {
+   "ref": {
+    "ns25_h1e-5": [
+     -0.0007714,
+     0.003104,
+     -0.00731,
+     -0.003834
+    ],
+    "ns51_h1e-5": [
+     -0.0007334,
+     0.003377,
+     -0.007654,
+     -0.003921
+    ],
+    "ns101_h1e-5": [
+     -0.00065,
+     0.00357,
+     -0.007856,
+     -0.003947
+    ]
+   },
+   "sel": {
+    "ns25_h1e-5": [
+     -0.003142,
+     0.0002112,
+     -0.003769,
+     -0.0001799
+    ],
+    "ns51_h1e-5": [
+     -0.00312,
+     0.0004796,
+     -0.004183,
+     -0.0002575
+    ],
+    "ns101_h1e-5": [
+     -0.003088,
+     0.0006898,
+     -0.004402,
+     -0.0003107
+    ]
+   }
+  },
+  "derivative_checks": {
+   "ref_ns25": "resolution pass, h fail",
+   "ref_ns51": "resolution pass, h fail",
+   "sel_ns25": "resolution fail, h fail",
+   "sel_ns51": "resolution fail, h pass"
+  },
+  "calibration": {
+   "A_t0": 1.1527288532147264e-05,
+   "A_t1": 1.1076063301856299e-05,
+   "J_flux_t0": 1.9925476786018833e-06,
+   "J_flux_t1": 2.035020046679007e-06,
+   "normal_rms_t0": 0.001996270361750573,
+   "normal_rms_t1": 0.0020174340369285976
+  },
+  "vmecpp_seconds": {
+   "ns25": 3.35,
+   "ns51": 6.91,
+   "ns101": 19.63,
+   "ns401": 321
+  },
+  "action_seconds_per_wout": 2.1
+ },
+ "frozen_next_check": {
+  "bases": [
+   "reference401 input",
+   "selected401 input"
+  ],
+  "modes": [
+   [
+    "rbc",
+    1,
+    1
+   ],
+   [
+    "rbc",
+    2,
+    0
+   ],
+   [
+    "zbs",
+    1,
+    1
+   ],
+   [
+    "zbs",
+    2,
+    0
+   ]
+  ],
+  "ns101_h": [
+   5e-06,
+   1e-05,
+   2e-05
+  ],
+  "ns201_h": [
+   1e-05
+  ],
+  "final_ftol": 1e-11,
+  "big_component": "|g201| > 0.05 * max|g201|",
+  "resolution": "|g101 - g201| <= 0.2 * |g201| and same sign, for every big component",
+  "h_spread": "(max - min over ns101 h-set) <= 0.10 * max|g|",
+  "pass": "both bases pass -> search at ns 101, h 1e-5",
+  "fail": "J arm not viable at this budget; record",
+  "budget_s": 3600,
+  "threads": 1,
+  "evidence": "bound like evidence/joint-feasibility-n14"
+ },
+ "target_intake_contract": {
+  "status": "to implement and review separately before any run",
+  "binds": [
+   "input JSON SHA-256",
+   "Wout SHA-256 and vmecpp version",
+   "B2 computed once from Wout archives",
+   "signed flux -phiedge",
+   "paired coil snapshot and current"
+  ],
+  "interfaces": [
+   "fit_coils.py --target-spec",
+   "check_coils.py --target-spec",
+   "trace_surfaces.py --target-spec",
+   "measure_coil_bounce.py --target-spec"
+  ],
+  "historical": "registered target_ids keep exact meaning; other specs get distinct labels",
+  "unchanged": "acceptance mathematics and thresholds; J checked only after freezing"
+ },
+ "resources": {
+  "phase_budgets_s": {
+   "search": 1800,
+   "ns401_resolve_J_only": 600,
+   "checks": 900,
+   "tracing": 600,
+   "action_diagnostic": 600
+  },
+  "budget_rule": "sequential, additive; next phase starts only after previous completes; search includes intake, startup and all equilibrium solves",
+  "per_arm_ceiling_s": {
+   "F": 3900,
+   "J": 4500
+  },
+  "retained_output_MiB": 256,
+  "disk_reserve_GiB": {
+   "initial": 3,
+   "live": 2
+  },
+  "cleanup": "delete search equilibria after scoring except seed, selected and failed-trial inputs",
+  "failure": "keep outputs, mark arm incomplete, skip later phases; never relabel as pass"
+ },
+ "evidence": {
+  "N14": "https://github.com/pjckoch/nuclear-fusion-at-home/tree/98af8dc1a42dd0a8aa26775caad843c4292e7188/evidence/joint-feasibility-n14 (commit 98af8dc1a42dd0a8aa26775caad843c4292e7188; manifest.sha256)"
+ }
 }
