@@ -24,11 +24,13 @@ in the public starter below. This is useful progress, not an accepted design or
 a state-of-the-art advantage. Realized magnetic surfaces and plasma-benefit
 transfer remain open. [Scientific evidence](docs/STATUS.md).
 
-**7 October 2026: next, joint plasma/coil optimization.** The completed local
-[coil-freedom probe](docs/optimization/ISSUE53_COIL_FREEDOM.md) missed its registered
-hurdle. This is a research-allocation decision with recorded timing limits, not
-an accepted design or a physical explanation of the plateau.
-[Programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md).
+**October 2026: this fitting recipe has stalled.** Thirty more minutes of search
+improved the boundary error by only 6%, and more flexible coils only 3.6%
+([probe](docs/optimization/ISSUE53_COIL_FREEDOM.md)). The next route is joint
+plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36); [programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)).
+
+This is a research-allocation decision, not a causal explanation of the plateau
+or physical acceptance. The separate archived probe has its own timing limits.
 
 We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.
 

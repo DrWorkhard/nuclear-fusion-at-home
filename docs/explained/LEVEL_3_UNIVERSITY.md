@@ -1,6 +1,6 @@
 # Level 3: for a university student
 
-Updated 6 October 2026 · [All five levels](README.md) ·
+Updated 8 October 2026 · [All five levels](README.md) ·
 Previous: [Level 2](LEVEL_2_TEENAGER.md) · Next: [Level 4](LEVEL_4_GRADUATE.md)
 
 ## The physics you need
@@ -89,6 +89,7 @@ the flux-surface labels used in the coil field.
 
 The coil-fitting recipe itself has stalled. On 6 October 2026 the project recorded
 that a 30-minute run lowered the boundary error by only 6%, far from the factor of
-two required to continue. One quick test with higher-order (more flexible) coil
-shapes decides by 24 October whether to change the coil family or to optimize
-plasma and coils together ([decision](../optimization/STEP4_RESEARCH_PROGRAMME.md)).
+two required to continue. A quick test with higher-order (more flexible) coil
+shapes then lowered it by only 3.6% ([probe](../optimization/ISSUE53_COIL_FREEDOM.md)), so the project next plans to optimize
+plasma and coils together rather than one after the other
+([programme](../optimization/STEP4_RESEARCH_PROGRAMME.md)).

@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 7 October 2026.
+Updated 8 October 2026.
 [Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
@@ -51,14 +51,15 @@ spend effort on decisions that test the path.
    exhaust before expensive optimization. The [conditional space screen](engineering/ISSUE27_ENVELOPE_SCREEN.md)
    excludes some scaled copies; it supplies no operating point. Detailed modelling
    follows a decision need.
-3. **Preregister the joint comparison by 24 October.** The local
-   [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) missed its 50% hurdle.
-   Use the #37/#39 protocol and implementation work for joint plasma/coil
-   optimization before independently checking benefit transfer. Do not extend
-   the completed probe.
-4. **Make the decisive test portable.** The local
+3. **Pilot joint plasma/coil optimization.** The completed
+   [coil-freedom probes](optimization/ISSUE53_COIL_FREEDOM.md) missed their hurdle.
+   Preregister the bounded feasibility pilot (#37/#59/#63), use the existing
+   optimizer work (#39) and record costs/plasma variables (#64). Qualify
+   derivatives and realized-field endpoints before their respective claims;
+   do not extend the completed probes.
+4. **Make the decisive test portable.** The published
    [dense target packet](validation/ISSUE10_DENSE_INTERIOR.md) passes numerical qualification.
-   Publish it and reuse shared field/geometry checks; prefer a community benchmark.
+   Reuse its shared field/geometry checks; prefer a community benchmark.
 
    26 March 2027 is the outer MS0 decision target, not a six-month tooling project.
 

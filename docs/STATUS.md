@@ -20,7 +20,7 @@ cells). Its [label grid](optimization/ISSUE48_CONTINUATION_LABELS.md) qualifies
 angular reversals in the failed trace. Topology and benefit transfer remain unknown.
 **The next research route is joint plasma/coil optimization.** The local
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) lowers boundary RMS by
-3.78%, missing its 50% hurdle. Its interior RMS passes its individual limit, but
+3.78%, missing its 50% hurdle; the separate contributor run reports 3.6%. Its interior RMS passes its individual limit, but
 both boundary gates fail. Clock/load limitations prevent controlled-throughput
 or causal/global claims. Present evidence does not substantiate the README's
 reactor-design timeline.

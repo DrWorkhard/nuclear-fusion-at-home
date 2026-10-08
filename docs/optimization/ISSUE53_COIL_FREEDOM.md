@@ -46,6 +46,12 @@ at `ae29c55`, using portable target intake, reports boundary RMS 0.0018486 / 0.0
 input states, not the local numbers above. Run 1 was superseded. The comment's run-2
 artifacts have not been independently replayed here; agreement in the decision
 is not proof that coil freedom is not the binding physical limit.
+The [published contributor record](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/ce5794fdde91bbe38e046e5272cb71f5eb5bb7d9/docs/optimization/ISSUE53_COIL_FREEDOM.md)
+retains its full diagnostic table and margins: reported interior RMS 0.010240 /
+0.009859, geometry passing, and curvature near the 10/m construction penalty
+versus 12/m acceptance. Those artifacts remain contributor-retained; their
+publication or independent replay is not supplied by our separate archive.
+Relaxing construction margins is untested and does not change this decision.
 
 Published annotated tag [evidence-issue53-coil-freedom-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue53-coil-freedom-v1) resolves to archive
 `293d0a65601c8293c936617f720fcfe099b3a27f`, tag object

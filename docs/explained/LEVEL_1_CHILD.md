@@ -1,6 +1,6 @@
 # Level 1: for a child
 
-Updated 6 October 2026 · [All five levels](README.md) · Next: [Level 2](LEVEL_2_TEENAGER.md)
+Updated 8 October 2026 · [All five levels](README.md) · Next: [Level 2](LEVEL_2_TEENAGER.md)
 
 The Sun shines because, deep inside, tiny bits of hydrogen crash into each other
 and stick together. Every time they stick, a little energy comes out. Scientists
@@ -28,8 +28,8 @@ careful checker tests it, like a teacher marking homework.
 - We also made rings for our better doughnut. We are still checking whether it
   stays better once the real rings hold it. So far we cannot tell.
 - Our way of improving the rings has stopped getting better. That happens in
-  science. Next we test whether wigglier rings help, or whether we should design
-  the doughnut and the rings together.
+  science. We tested wigglier rings, and they helped only a tiny bit. So next we
+  will design the doughnut and the rings together.
 
 So we are not finished.
 

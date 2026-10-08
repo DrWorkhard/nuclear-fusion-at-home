@@ -1,6 +1,6 @@
 # One question before more fitting
 
-Updated 7 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
+Updated 8 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 
 **Can practical coils preserve a useful plasma benefit?** Boundary error is a
 necessary diagnostic in our protocol, not the project objective. The [first matched-target experiment](ISSUE25_MATCHED_TARGETS.md) now includes
@@ -25,24 +25,25 @@ physical conclusion. **We stop extending the fixed-target recipe and accept that
 Step 4 progress along this route has stalled.** Acceptance limits are unchanged.
 [Decision record](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/28).
 
-## Next: a bounded joint comparison by 24 October 2026
+## Route chosen, 8 October 2026: joint plasma/coil optimization
 
-The completed local [coil-freedom probe](ISSUE53_COIL_FREEDOM.md) misses the
-registered continuation hurdle. The rule selects joint plasma/coil optimization;
-its timing qualifications and the separate contributor report remain in that record.
+After the fitter fixes ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)), the preregistered
+[coil-freedom probe](ISSUE53_COIL_FREEDOM.md) lifted six coils from Fourier order 5
+to 8 under the same 30-minute budget. Boundary RMS improved only 3.6% (ratio 0.964,
+required ≤ 0.5), so by the fixed rule the next route is joint plasma/coil
+optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). A separate archived probe reaches the same allocation
+decision with different inputs and timing limitations. Neither establishes a
+global physical limit; do not extend completed probes to cross their hurdle.
 
-1. **Reuse the existing fitter and checks.** Failed-trial handling, the stopping-rule
-   fix and order-5/order-8 support are integrated. Do not repeat or extend the
-   completed coil-freedom search to cross its threshold.
-2. **Preregister the smallest joint comparison**
-   ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)) and use
-   the implementation work in [#39](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/39).
-   Keep optimization separate from unchanged acceptance and independent checking.
-   Compare against matched fixed-target effort before claiming actual-field benefit.
-3. **Keep inspecting actual fields.** Shallow-well fidelity and realized flux
-   labels ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48))
-   still require qualification. Missing surfaces or required data remain a blockage,
-   not evidence of benefit transfer.
+1. **Preregister the joint pilot** ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)). The draft protocol
+   ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)) and its review ([#63](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/63)) fix comparable physics, objective
+   weight, selection and confirmation rules before any run. A first pilot decides
+   feasibility only.
+2. **Build the minimal joint optimizer** with existing tools ([#39](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/39)) and
+   record weights, costs and plasma variables ([#64](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/64)).
+3. **Qualify realized-field endpoints** ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)). Until matched
+   realized-surface labels exist, coil-field action scores are exploratory; if
+   surfaces or required data are missing, report the blockage, not benefit transfer.
 
 Keep target-specific normalization frozen and report each target separately;
 do not treat errors against different targets as a matched improvement.
@@ -51,10 +52,13 @@ and elapsed time together. The original 1e-4 / 1e-3 / 0.01 limits and continuous
 geometry checks remain unchanged. No endpoint or solver success flag admits a
 physical design; the [Step 4 requirements](../steps/STEP_4_PLASMA_AND_COILS.md) still apply.
 
-The completed probe retains its original protocol, budgets, failures and limitations
-in the archive. Future experiments need their own decision and prospective limits;
-those do not change historical results or restrict unsolicited contributions.
-Avoid running heavy jobs during controlled timing.
+The contributor probe declared 30 minutes per search arm, one native thread, 256 MiB
+retained output per arm and 3 GiB initial / 2 GiB live disk reserve; the joint
+pilot declares its own limits in its protocol.
+Use existing tools and one short result record. Stop at the resource ceiling,
+retain failures and make no conclusion from a run with incomplete diagnostics.
+These prospective limits do not change recorded experiments or restrict unsolicited
+contributions. Avoid running heavy jobs during controlled timing.
 
 ## Reactor relevance and collaboration
 
@@ -64,16 +68,12 @@ net-electric-power balance, winding/blanket/shield space, magnet loads, heat exh
 and maintenance access. For each, record a source or an explicit unknown and the
 cheapest check that could reject the direction. Detailed pressure/engineering work
 starts when that decision needs it, rather than automatically at a boundary score.
-The completed [conditional space screen](../engineering/ISSUE27_ENVELOPE_SCREEN.md)
-provides exclusions for a specified envelope model; passing its two inequalities
-does not settle the operating point or qualify a scaled design.
 
 The smallest MS0 deliverable is the matched target/coil data and existing checker
 running outside the maintainer's workspace, with a positive control and retained
 failures. Assess an adapter to existing community tools first; no new platform.
-Public dense boundary evaluation and a locally qualified
-[dense interior packet](../validation/ISSUE10_DENSE_INTERIOR.md) now exist; full
-acceptance is not portable yet. Prioritize publication and shared-check reproduction;
+Public dense boundary evaluation already exists, but interior targets and full
+acceptance are not portable yet. Prioritize that missing reproducibility now;
 26 March 2027 remains the outer MS0 decision target, not a reason to delay it.
 Publication and external contact require separate authority. No new outreach or
 physical acceptance follows from this programme.
