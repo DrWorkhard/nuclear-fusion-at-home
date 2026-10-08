@@ -1,6 +1,6 @@
 # Level 5: for an expert
 
-Updated 6 October 2026 · [All five levels](README.md) · Previous: [Level 4](LEVEL_4_GRADUATE.md)
+Updated 8 October 2026 · [All five levels](README.md) · Previous: [Level 4](LEVEL_4_GRADUATE.md)
 
 An open, agent-assisted two-stage stellarator study. The plasma stage improved a
 vacuum QI diagnostic on an open target. The coil stage has not yet realized any
@@ -70,10 +70,13 @@ recipe has stalled and stopped extending it.
 
 The plateau may come from the coil family (six coils, order 5, length ≤ 3.5 m) or
 from the coupling between this QI target and practical coils; the same metric
-reaches 2.3e-6 for a co-designed QUASR configuration. A matched probe at Fourier
-order 8 ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) separates the two by 24 October: at least halving boundary
-RMS selects another coil family, otherwise joint plasma–coil optimization
-([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
+reaches 2.3e-6 for a co-designed QUASR configuration. The preregistered
+[probe at Fourier order 8](../optimization/ISSUE53_COIL_FREEDOM.md) gained only 3.6% (ratio 0.964, required ≤ 0.5),
+so the coil family is not the binding limit and the route is joint plasma–coil
+optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Both probe arms ended at the construction penalties
+(curvature about 10 /m against 12 /m acceptance; length near 3.44 m against
+3.5 m). Halving every margin toward its limit ([#70](../optimization/ISSUE70_CONSTRUCTION_MARGINS.md))
+gained 5.8%, so the margins are not the binding limit either. The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
 point is yet specified and defers reactor-scale search.
 
 ## Where expert input helps most

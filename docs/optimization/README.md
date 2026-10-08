@@ -3,6 +3,7 @@
 One normalized fitter, one set of field/geometry checks.
 [Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
 [Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md) ·
+[Coil-freedom probe](ISSUE53_COIL_FREEDOM.md) · [Construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) ·
 [Joint protocol (draft)](JOINT_PROTOCOL.md)
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
@@ -29,7 +30,9 @@ for an installation-free contribution.
    at most 3.45 m; select the lowest boundary RMS. Probes cannot win; no fallback.
    `--order 8` lifts a six-coil order-5 seed to order 8 with the new modes exactly
    zero, so a richer family starts from identical coils (#53). Snapshots record
-   their order; the public starter stays order 5.
+   their order; the public starter stays order 5. `--margins halved` moves each
+   construction penalty halfway to its unchanged acceptance limit (#70); the
+   default `current` keeps the values above, and reports record the preset.
 3. Freeze the selected currents. Check two fine boundary grids, continuous
    geometry bounds, three interior resolutions and independent B/A calculations.
 4. Save inputs, source identities, attempts, failures, fields and a short result.

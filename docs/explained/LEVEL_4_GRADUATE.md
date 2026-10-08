@@ -1,6 +1,6 @@
 # Level 4: for a graduate student
 
-Updated 6 October 2026 · [All five levels](README.md) ·
+Updated 8 October 2026 · [All five levels](README.md) ·
 Previous: [Level 3](LEVEL_3_UNIVERSITY.md) · Next: [Level 5](LEVEL_5_EXPERT.md)
 
 We run a two-stage stellarator design study in the open: improve a QI vacuum
@@ -100,11 +100,14 @@ Details: [active coil research](../optimization/README.md).
 **Decision, 6 October 2026: the fixed-target recipe has stalled.** The hurdle was
 to halve boundary RMS without worsening interior RMS. The preregistered 30-minute
 conditioning/stopping comparison ([#31](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/31)) reached 0.0018761 (−6.0%); a
-scale-free objective added about 1.2% before a trial failure. Next, a matched
-coil-freedom probe ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)) runs six coils at Fourier order 8 against the
-order-5 control. If it halves boundary RMS with passing geometry and no worse
-interior, the coil family changes; otherwise the project moves to joint plasma–coil
-optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). [Programme](../optimization/STEP4_RESEARCH_PROGRAMME.md).
+scale-free objective added about 1.2% before a trial failure. A matched
+[coil-freedom probe](../optimization/ISSUE53_COIL_FREEDOM.md) then lifted six coils to Fourier order 8 under the same
+30-minute budget: boundary RMS 0.0017815 versus 0.0018486 (ratio 0.964, required
+≤ 0.5), with both arms ending at the curvature and length construction penalties;
+halving every construction margin ([#70](../optimization/ISSUE70_CONSTRUCTION_MARGINS.md)) gained 5.8%.
+**Route chosen, 8 October 2026: joint plasma–coil optimization** ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)),
+starting with a preregistered feasibility pilot ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
+[Programme](../optimization/STEP4_RESEARCH_PROGRAMME.md).
 
 ## Good entry points
 

@@ -1,6 +1,6 @@
 # One question before more fitting
 
-Updated 6 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
+Updated 8 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 
 **Can practical coils preserve a useful plasma benefit?** Boundary error is a
 necessary diagnostic in our protocol, not the project objective. The [first matched-target experiment](ISSUE25_MATCHED_TARGETS.md) now includes
@@ -25,18 +25,25 @@ physical conclusion. **We stop extending the fixed-target recipe and accept that
 Step 4 progress along this route has stalled.** Acceptance limits are unchanged.
 [Decision record](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/28).
 
-## Next: choose the route by 24 October 2026
+## Route chosen, 8 October 2026: joint plasma/coil optimization
 
-1. **Fix the fitter first** ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)): one failed search trial currently
-   discards a run, and the stopping rule ends searches early.
-2. **Run one coil-freedom probe** ([#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53)): six coils at Fourier order 8
-   against the order-5 control, 30 minutes each, same target and checks. If the
-   probe at least halves boundary RMS with passing geometry and no worse interior
-   RMS, change the coil family; otherwise move to joint plasma/coil optimization
-   ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Do not extend budgets to cross the threshold.
-3. **Keep inspecting actual fields.** Shallow-well fidelity and realized flux
-   labels ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)) apply to whichever route follows. If surfaces or
-   required data are missing, report the blockage, not benefit transfer.
+After the fitter fixes ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/52)), the preregistered
+[coil-freedom probe](ISSUE53_COIL_FREEDOM.md) lifted six coils from Fourier order 5
+to 8 under the same 30-minute budget. Boundary RMS improved only 3.6% (ratio 0.964,
+required ≤ 0.5), so by the fixed rule the next route is joint plasma/coil
+optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)), not another coil family. A
+[construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) then halved every margin toward its acceptance
+limit and gained 5.8% (ratio 0.942), so the route stands.
+
+1. **Preregister the joint pilot** ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)). The draft protocol
+   ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)) and its review ([#63](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/63)) fix comparable physics, objective
+   weight, selection and confirmation rules before any run. A first pilot decides
+   feasibility only.
+2. **Build the minimal joint optimizer** with existing tools ([#39](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/39)) and
+   record weights, costs and plasma variables ([#64](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/64)).
+3. **Qualify realized-field endpoints** ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)). Until matched
+   realized-surface labels exist, coil-field action scores are exploratory; if
+   surfaces or required data are missing, report the blockage, not benefit transfer.
 
 Keep target-specific normalization frozen and report each target separately;
 do not treat errors against different targets as a matched improvement.
@@ -45,8 +52,9 @@ and elapsed time together. The original 1e-4 / 1e-3 / 0.01 limits and continuous
 geometry checks remain unchanged. No endpoint or solver success flag admits a
 physical design; the [Step 4 requirements](../steps/STEP_4_PLASMA_AND_COILS.md) still apply.
 
-For the probe, declare at most 30 minutes per search arm, one native
-thread, 256 MiB retained output per arm and 3 GiB initial / 2 GiB live disk reserve.
+The probe used at most 30 minutes per search arm, one native thread, 256 MiB
+retained output per arm and 3 GiB initial / 2 GiB live disk reserve; the joint
+pilot declares its own limits in its protocol.
 Use existing tools and one short result record. Stop at the resource ceiling,
 retain failures and make no conclusion from a run with incomplete diagnostics.
 These prospective limits do not change recorded experiments or restrict unsolicited
