@@ -38,8 +38,8 @@ run function; the 75-second outer allowance includes imports/setup. One thread,
 All 54 direct source/input bindings and 1,662 recorded native package files matched
 before/after; owned process cleanup succeeded. Original outputs remain intact.
 
-Local archive: `10ba631714ac78a35eaa5a35579b6ec35a44af7b`, prepared tag
-`evidence-issue48-continuation-recurrence-v1`; not published or remotely verified.
+Local archive: `10ba631714ac78a35eaa5a35579b6ec35a44af7b`, annotated tag
+[evidence-issue48-continuation-recurrence-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-continuation-recurrence-v1); published; remote identities and manifest retrieval verified.
 Manifest SHA256:
 `07498e69e05a9716a173cdb70ae8ba666497366066c7453028c4e448944a34c1`.
 The snapshot preserves code/protocol, all five output files, exact consumed input

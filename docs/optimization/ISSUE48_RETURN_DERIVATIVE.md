@@ -28,14 +28,15 @@ before and after; process cleanup was confirmed. The producer passed 303 researc
 and 65 public tests, documentation, Ruff and diff checks. Agent review preceded
 execution; it is not external peer review.
 
-Full local evidence: annotated tag `evidence-issue48-return-derivative-v1`, archive
+Published evidence: annotated tag [evidence-issue48-return-derivative-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-return-derivative-v1), archive
 commit `25ccd53ea487a7b16690443591233a9c715ad7c5`, payload
 `evidence/issue48-return-derivative-v1/`, manifest SHA-256
 `999f83cea0d64d55ea9cb856c0ec6782a2a537376f27ab4a7560b65eae37c205`.
 Its 23-file manifest and 58 source/input bindings preserve samples, reports,
 original consumed archive subsets, configuration, protocol, tests and replay.
 Raw outputs remain separately at `/private/tmp/issue48-return-derivative-v1`.
-All remain local-only, unpublished and remotely unverified.
+The archive is published; remote identities and manifest retrieval verified.
+Original local outputs and external native dependencies remain separately retained.
 
 With NumPy, the archive's `replay.py --manifest-sha <above SHA-256>` checks all
 identities and independently coded arithmetic for the original and four refined

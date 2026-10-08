@@ -45,9 +45,9 @@ unqualified. Larger size clearing two inequalities is not reactor feasibility.
 Clean arithmetic producer/evaluator: `532f3b72302ecb75a857072beae1816cbdbee4de`;
 original geometry producer: `56fd845f2ff84553092ac1690aa430283e14acdf`,
 geometry archive: `8a200dae194fc972ee535ad8532525aa17aff749`.
-Local archive: `328f9b461431ac36a0f6b7add1e91a07891397aa`; prepared tag
-`evidence-issue27-envelope-v1`, tag object
-`7adfb3d1fdf1ff64bd9603201dce1faa992a3bd2`; unpublished and not remotely verified. It preserves the 92,360-byte
+Local archive: `328f9b461431ac36a0f6b7add1e91a07891397aa`; annotated tag
+[evidence-issue27-envelope-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue27-envelope-v1), tag object
+`7adfb3d1fdf1ff64bd9603201dce1faa992a3bd2`; published; remote identities and manifest retrieval verified. It preserves the 92,360-byte
 raw result, original inputs, exact assumptions, command and completed script/tests.
 The 12-entry manifest SHA256 is
 `1b25e35d40760898c83ee1c9a0204b71bda18b253e47cdbb447ec1133e497da9`.

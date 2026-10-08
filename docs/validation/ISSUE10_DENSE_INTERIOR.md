@@ -35,9 +35,9 @@ differed from the saved flux; the corrected export retains the exact stored lite
 That failure and the successful byte-identical re-export remain in the evidence.
 
 Clean qualification producer/evaluator:
-`f40c53851e99f175f06257c17340e9b79237f3cb`. Local evidence archive:
-`c32d3bd0edaeba40648d13fe42c12d09c247da45`, prepared tag
-`evidence-issue10-interior-v1`. Its 24-file manifest SHA256 is
+`f40c53851e99f175f06257c17340e9b79237f3cb`. Published evidence archive:
+`c32d3bd0edaeba40648d13fe42c12d09c247da45`, annotated tag
+[evidence-issue10-interior-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue10-interior-v1). Its 24-file manifest SHA256 is
 `f5744132dffa27e2df54e77fd16c939ebff45bcc5bdce2a28ef1b1cc0d76bc0f`.
 It preserves raw fields, controls, commands, receipts, checks and the completed
 export/qualification scripts and regression tests. A fresh shallow stdlib replay

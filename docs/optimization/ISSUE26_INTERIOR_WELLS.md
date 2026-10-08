@@ -40,8 +40,8 @@ inside 900 s total, using one native thread, a 64 MiB output cap, 3/2 GiB disk
 reserves and 5 s clock tolerance. All 43 source/input hashes and the recorded
 native package files matched before/after. The 25 raw files total 19,127,287 bytes.
 
-Local evidence archive: `2205e4dfd2716028e04682f738346a1e4ea925ac`, prepared tag
-`evidence-issue26-shallow-wells-v1`; not published or remotely verified. Manifest
+Published evidence archive: `2205e4dfd2716028e04682f738346a1e4ea925ac`, annotated tag
+[evidence-issue26-shallow-wells-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue26-shallow-wells-v1); published; remote identities and manifest retrieval verified. Manifest
 SHA256: `2609abf2627ee3e6c0580ef8515f038c10d25672cb997c4c2802658d2c50e652`.
 The snapshot preserves code, tests, protocol, traces, failures, launcher and replay.
 Fresh shallow-checkout replay verifies all 37 manifest files, 42 distributed

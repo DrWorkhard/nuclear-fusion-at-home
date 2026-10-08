@@ -28,13 +28,13 @@ package files. It is not a successful scientific completion receipt. The produce
 passed 306 research / 65 public tests, docs, Ruff and diff checks; adversarial
 review preceded execution. Agent review is not external peer review.
 
-Local annotated tag: `evidence-issue48-bounded-return-v1`; archive commit
+Published annotated tag: [evidence-issue48-bounded-return-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-bounded-return-v1); archive commit
 `3e908b770f75b0e88979621ef75a45dfd6dbb972`; payload
 `evidence/issue48-bounded-return-v1/`; 21-file manifest SHA-256
 `556c62bbab0767bd2e84ada02e8b2bcf97d5522c1226122faf3e8363e7b3284f`.
 All six original raw files remain at `/private/tmp/issue48-bounded-return-v1`
 and are archived byte-for-byte with consumed inputs, code, protocol, configuration,
-tests and environment identities. Everything is unpublished and remotely unverified.
+tests and environment identities. The archive is published; remote identities and manifest retrieval verified.
 
 With NumPy, archive `replay.py --manifest-sha <above SHA-256>` verifies identities,
 reconstructs the seed, checks trial statuses/distances and recomputes the minimum

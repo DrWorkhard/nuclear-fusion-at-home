@@ -47,9 +47,9 @@ input states, not the local numbers above. Run 1 was superseded. The comment's r
 artifacts have not been independently replayed here; agreement in the decision
 is not proof that coil freedom is not the binding physical limit.
 
-Local annotated tag `evidence-issue53-coil-freedom-v1` resolves to archive
+Published annotated tag [evidence-issue53-coil-freedom-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue53-coil-freedom-v1) resolves to archive
 `293d0a65601c8293c936617f720fcfe099b3a27f`, tag object
-`a76dc5d124203a4556d9a5f6eecc96c129bc1d03`; **unpublished and not remotely verified**.
+`a76dc5d124203a4556d9a5f6eecc96c129bc1d03`; **published; remote identities and manifest retrieval verified**.
 Manifest SHA256: `68f33e1f56539610a5b3ae6c2a768100fb8c20062a2094063b589cbef635cfbe`.
 All 37,859 evidence entries and 40 producer source hashes were verified again in
 the shallow archive checkout. Saved fine/interior metrics, sampled independent B/A

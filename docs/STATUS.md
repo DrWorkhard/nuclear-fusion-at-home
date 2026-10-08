@@ -1,6 +1,8 @@
 # Scientific status
 
-Updated 7 October 2026; includes completed local studies pending publication.
+Updated 8 October 2026; fifteen study archives are published with remote tag/commit
+identities and manifest retrieval verified. The #66 retention archive remains local
+pending redistribution review; publication does not change scientific qualification.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The new matched

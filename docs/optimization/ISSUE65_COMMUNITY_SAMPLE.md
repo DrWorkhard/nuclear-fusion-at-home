@@ -40,7 +40,7 @@ producer/evaluator: `f485fbd79013fa3f469eb75661effb96051a0b28`. Upstream source
 `03d1dc236044b97c5bd2fdf608a151754f9479dd` was inspected as text; three Git blob
 identities were verified. This source revision is not proof of dataset production.
 
-Local annotated tag `evidence-issue65-sample-v1`, archive
+Published annotated tag [evidence-issue65-sample-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue65-sample-v1), archive
 `9f3d4a5a9cbb0b85a6e07cf40bb5cc4e390e237c`, payload
 `evidence/issue65-sample-v1/`; 26-file root-relative manifest SHA-256
 `9406c286a873848619cf5800c5ae87b0d1c8c1c8e94761bd8464c53516aa786c`.
@@ -48,7 +48,7 @@ The archive README gives source-bound inspection/replay commands. Saved replay
 checks hashes and repeats the same arithmetic without network/native tools;
 it is not independent physics reproduction. Original responses remain under
 `/private/tmp/issue65-*`; archived headers retain relevant fields only.
-The snapshot is unpublished and remotely unverified. #65 remains open.
+The snapshot is published; remote identities and manifest retrieval verified. #65 remains open.
 
 **Bounded retrieval follow-up:** row access works, but the hash-verified 10.85 MB
 published ID index gives shard paths, not matching API row offsets. The selected
@@ -59,9 +59,10 @@ No full shard hash, selected coil payload or new physics label was verified.
 Temporary DuckDB/fsspec readers leave the native environment unchanged. Original
 failed attempts remain; total storage across later archive/checkouts was not
 audited against the 128 MiB intake allowance, so no aggregate compliance is claimed.
-Final metadata producer `fea6982cb91d74e83499735b96091fc0263bae57`; local tag
-`evidence-issue65-routing-v1`, archive `fa5db5db664f58386cdb9f7ada2f0558b1139b10`,
+Final metadata producer `fea6982cb91d74e83499735b96091fc0263bae57`; published tag
+[evidence-issue65-routing-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue65-routing-v1), archive `fa5db5db664f58386cdb9f7ada2f0558b1139b10`,
 payload `evidence/issue65-routing-v1/`, root-relative 35-file manifest SHA-256
 `a92046d277739c8c28986b7e33406c8a5aa07be2c0261f5f776997bfb64b335c`.
 Its README specifies offline, same-reader metadata replay and every failure;
-publication and complete sample qualification remain pending.
+the archive is published with remote identities and manifest retrieval verified.
+Complete sample qualification remains pending.

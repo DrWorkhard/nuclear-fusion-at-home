@@ -39,7 +39,7 @@ failed during import, before field calculations. Its traceback is preserved;
 only import availability/cache settings changed before the numerical attempt.
 
 Local archive: `039a0a71c9d0e2345b1ddcae6524eb6bae7bcc42`, proposed annotated tag
-`evidence-issue48-axis-center-v1`; not published or remotely verified.
+[evidence-issue48-axis-center-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-axis-center-v1); published; remote identities and manifest retrieval verified.
 Manifest SHA256:
 `22b915308a8beb37dfafe406a89f28cb1d9dab476467887edf8f4d0c5bfafc86`.
 The snapshot preserves both attempts, code/protocol/tests, exact consumed input

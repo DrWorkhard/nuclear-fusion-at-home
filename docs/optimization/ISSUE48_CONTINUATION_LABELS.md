@@ -23,7 +23,7 @@ Every failed estimate and raw trace is retained.
 
 A surface receives qualified statistics only when all four phases and controls
 pass. Historical reference values come from the qualified original #25 reference
-fit in the [original paired grid](ISSUE48_FULL_GRID.md), local #48 archive `2ee186bb347245072c98d983a42b06f8e02a16a9`, producer
+fit in the [original paired grid](ISSUE48_FULL_GRID.md), published #48 archive `2ee186bb347245072c98d983a42b06f8e02a16a9`, producer
 `130347fe29e03852e257a63d0ce6ab9f828d2c85`; it was not retraced here. These offsets
 are descriptive context. Different optimization histories prevent causal attribution.
 Lower interior RMS and shallow-well recovery do not establish accurate surface labels.
@@ -43,8 +43,8 @@ within 1,800 s total, one native thread, a 256 MiB aggregate cap, 3/2 GiB disk
 reserves and 5 s clock tolerance. Source/input hashes and 1,662 recorded native
 package files matched before/after; owned process-group cleanup completed.
 
-Local archive: `191875d231b396e5960cbd9460a37a6c462b6381`, prepared tag
-`evidence-issue48-continuation-labels-v1`; not published or remotely verified.
+Local archive: `191875d231b396e5960cbd9460a37a6c462b6381`, annotated tag
+[evidence-issue48-continuation-labels-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-continuation-labels-v1); published; remote identities and manifest retrieval verified.
 Its 66-file manifest SHA256 is
 `09bfe306edc73524f0c1d1270424b70ec605969f9d61e0293e6732b392395316`.
 It preserves 49 original raw files (58,491,480 bytes), code/tests, protocol,

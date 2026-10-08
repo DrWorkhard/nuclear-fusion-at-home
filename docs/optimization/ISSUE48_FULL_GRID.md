@@ -52,9 +52,9 @@ Reference/selected drivers took 979.47/972.46 s; external supervision took
 58.55 MB. UTC and monotonic clocks agree within 0.001 s. External load is
 unverified; no controlled-throughput claim follows.
 
-Prepared archive `evidence-issue48-full-grid-v1`, commit
+Published archive [evidence-issue48-full-grid-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-full-grid-v1), commit
 `2ee186bb347245072c98d983a42b06f8e02a16a9`, tag object
-`c570e13034391224f8c8359941034bb4fb225aa4`; **publication is pending**. It preserves
+`c570e13034391224f8c8359941034bb4fb225aa4`; **published; remote identities and manifest retrieval verified**. It preserves
 all 103 raw files byte-for-byte, frozen snapshots/target JSON, hashes, exact
 commands, summaries, a section plot and NumPy/SciPy replay. Original Wouts remain
 local-only. Replay checks final-prefix/subset and target-control A flux plus

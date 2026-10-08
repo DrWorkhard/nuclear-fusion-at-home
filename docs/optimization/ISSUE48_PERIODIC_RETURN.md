@@ -27,7 +27,7 @@ package files unchanged. Original output remains intact at
 `/private/tmp/issue48-periodic-return-v1`.
 
 Local archive: `5c6940bddd9f799803326c51ac2dc8ced21f69c1`, proposed annotated tag
-`evidence-issue48-periodic-return-v1`; unpublished and remotely unverified.
+[evidence-issue48-periodic-return-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue48-periodic-return-v1); published; remote identities and manifest retrieval verified.
 Manifest SHA256:
 `5e9c1568ad730dddb307fc20d977b39568b5054e54edb32b66da2e7a16fdc76e`.
 It preserves code/protocol/tests, all six trials, failed receipts, the separate
