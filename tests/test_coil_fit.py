@@ -229,6 +229,38 @@ def test_no_eligible_candidate_has_no_fallback(tmp_path, clock):
     assert result['startup_pass'] and result['selected'] is None
 
 
+
+def test_margin_presets_keep_current_values_and_halve_toward_unchanged_limits():
+    current, halved = experiment.MARGINS['current'], experiment.MARGINS['halved']
+    assert current == dict(length=3.44, selection_length=3.45, coil_distance=0.07,
+                           surface_distance=0.09, curvature=10.)
+    limits = dict(length=3.5, selection_length=3.5, coil_distance=0.06,
+                  surface_distance=0.08, curvature=12.)
+    assert set(halved) == set(limits)
+    for key, limit in limits.items():
+        assert halved[key] == pytest.approx(current[key] + (limit-current[key])/2)
+
+
+def test_selection_cap_follows_the_model_margins(tmp_path, clock):
+    def long_model():
+        model = SyntheticModel()
+        original = model.evaluate
+
+        def evaluate(x):
+            value, gradient, metrics = original(x)
+            metrics['lengths'][0] = 3.46
+            return value, gradient, metrics
+
+        model.evaluate = evaluate
+        return model
+
+    current = experiment.search(long_model(), experiment.Recorder(tmp_path/'c', 1), seed_solver)
+    model = long_model()
+    model.margins = dict(experiment.MARGINS['halved'], name='halved')
+    halved = experiment.search(model, experiment.Recorder(tmp_path/'m', 1), seed_solver)
+    assert current['selected'] is None
+    assert halved['startup_pass'] and halved['selected']['index'] == 0
+
 @pytest.mark.parametrize('error', [ValueError, FloatingPointError])
 @pytest.mark.parametrize('continue_search', [False, True])
 def test_failed_search_trial_keeps_eligible_candidates(tmp_path, clock, error, continue_search):

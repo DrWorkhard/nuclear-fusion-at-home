@@ -103,7 +103,8 @@ conditioning/stopping comparison ([#31](https://github.com/DrWorkhard/nuclear-fu
 scale-free objective added about 1.2% before a trial failure. A matched
 [coil-freedom probe](../optimization/ISSUE53_COIL_FREEDOM.md) then lifted six coils to Fourier order 8 under the same
 30-minute budget: boundary RMS 0.0017815 versus 0.0018486 (ratio 0.964, required
-≤ 0.5), with both arms ending at the curvature and length construction penalties.
+≤ 0.5), with both arms ending at the curvature and length construction penalties;
+halving every construction margin ([#70](../optimization/ISSUE70_CONSTRUCTION_MARGINS.md)) gained 5.8%.
 **Route chosen, 8 October 2026: joint plasma–coil optimization** ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)),
 starting with a preregistered feasibility pilot ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
 [Programme](../optimization/STEP4_RESEARCH_PROGRAMME.md).

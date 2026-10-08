@@ -19,7 +19,7 @@ from fusion_baselines.provenance import build_run_record  # noqa: E402
 
 
 def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target_id="reference401",
-        order=None):
+        order=None, margins="current"):
     from scipy.optimize import minimize
 
     check.need(np.isfinite([seconds, check_seconds]).all()
@@ -35,7 +35,8 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
     report = dict(kind="normalized-coil-fit", completed=False, physical_admission=False,
                   step4_pass=False, provenance=build_run_record(ROOT),
                   search_seconds=seconds, check_seconds=check_seconds,
-                  coefficient_bounds=None, solver_options=fit.SOLVER_OPTIONS, fine=[], interior=[])
+                  coefficient_bounds=None, solver_options=fit.SOLVER_OPTIONS, fine=[], interior=[],
+                  construction_margins=dict(fit.MARGINS.get(margins, {}), name=margins))
     try:
         if wout is None:
             check.need(target_id == "reference401", "selected401 requires --wout")
@@ -66,7 +67,7 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
         deadline = record.deadline
         record.deadline = min(deadline, started+seconds)
         report["intake_s"] = time.monotonic()-started
-        model = fit.Model(seed, data, record)
+        model = fit.Model(seed, data, record, margins=margins)
         report["model_ready_s"] = time.monotonic()-started
         report["search"] = fit.search(model, record, minimize)
         record.save("search.json", report["search"])
@@ -116,7 +117,9 @@ if __name__ == "__main__":
     parser.add_argument("--wout", type=Path, help="portable reference401 Wout (see docs)")
     parser.add_argument("--order", type=int, choices=(5, 8),
                         help="lift the snapshot to this Fourier order with zero new modes")
+    parser.add_argument("--margins", choices=tuple(fit.MARGINS), default="current",
+                        help="construction margins; acceptance limits are unchanged")
     args = parser.parse_args()
     raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(), args.seconds,
                          args.check_seconds, None if args.wout is None else args.wout.resolve(),
-                         args.target, args.order))
+                         args.target, args.order, args.margins))
