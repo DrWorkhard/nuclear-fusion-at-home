@@ -1,61 +1,66 @@
-# Coil-freedom probe: order 5 versus order 8
+# Coil-freedom probe: allocate the next effort to joint optimization
 
-**Coil freedom is not the binding limit.** With 55% more Fourier coefficients the
-boundary RMS improves by 3.6%, far from the preregistered factor of two. By the
-rule fixed in [issue #53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53),
-the next route is joint plasma/coil optimization
-([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)).
-Recorded 8 October 2026; this is a route decision, not physical acceptance.
+**Decision: move to a bounded joint plasma/coil comparison.** The completed local
+[#53](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53) probe lowers
+boundary RMS by **3.78%**, missing its frozen **50%** hurdle. Geometry passes and
+interior error improves, but both boundary acceptance gates still fail. This
+allocates research effort; it does not prove why the fitter plateaued or rule out
+other coil families.
 
-## Question and method
+Clean producer/evaluator: `fd99245147308b9dbd23473002968e3283bd08fe`; its full
+prospective protocol is preserved at this page's path in the archive. C then P
+used the same original length-headroom snapshot and reference401 Wout. P added only
+zero Fourier modes 6–8 to the six order-5 coils. Target flux/B², penalties and
+acceptance limits stayed fixed; selected currents were frozen for diagnostics.
+Each arm had 1800 monotonic seconds for search including intake/startup, then at
+most 900 shared diagnostic seconds, one native thread and 256 MiB retained output.
+Both searches exhausted their allowance; late trials could not win. No rerun was
+used to cross the hurdle.
 
-Does the 0.0019–0.0020 boundary-RMS plateau of the
-[stalled fixed-target recipe](STEP4_RESEARCH_PROGRAMME.md#decision-of-6-october-2026)
-come from too little coil freedom? Two preregistered arms ran sequentially on one
-machine (macOS, Python 3.12, SIMSOPT fork `a79006b`, one thread), each with 1800 s
-search and 900 s checks, on reference401 through the portable Wout intake:
-
-- **C:** six base coils, Fourier order 5 (198 coefficients), length-headroom seed.
-- **P:** the same coils lifted to order 8 (306 coefficients) with exact zeros, so
-  both arms start from identical geometry.
-
-Code `ae29c55` (merged unchanged as [#57](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/57),
-`9ecdf27`), using the #55 fitter (`ftol=0`, recoverable trial failures). Objective,
-penalties, selection rule, fine-boundary, continuous-geometry, interior and
-direct-field tracing checks are unchanged.
-
-## Result (run 2, result of record)
-
-| Diagnostic | C: order 5 | P: order 8 |
+| Local diagnostic | C: order 5 | P: order 8 |
 | --- | ---: | ---: |
-| Search time; termination | 1792 s; budget | 1792 s; budget |
-| Fine boundary RMS | 0.0018486 | 0.0017815 |
-| Fine boundary maximum (shift 0 / 0.5) | 0.008566 / 0.008426 | 0.008398 / 0.008660 |
-| Interior RMS (64/512) | 0.010240 | 0.009859 |
-| Continuous geometry | Pass | Pass |
-| Maximum length bound | 3.4698 m | 3.4642 m |
-| Coil–coil / coil–plasma lower bound | 0.0613 / 0.1387 m | 0.0649 / 0.1451 m |
-| Traced lines (10, 200 transits); max \|Δι\| | 10/10; 0.0058 | 10/10; 0.0069 |
+| Fine boundary RMS, worst of two shifts | 0.00183501529 | 0.00176571369 |
+| Fine maximum normal error | 0.00844233727 | 0.00827467258 |
+| Finest interior vector RMS | 0.0101035400 | 0.00948113791 |
+| Continuous geometry checks | Pass | Pass |
+| Frozen current (A) | 307796.43 | 307603.43 |
+| Direct lines completing 200 transits | 10/10 | 10/10 |
+| Maximum signed-iota mismatch | 0.00629386 | 0.00584157 |
+| Total monotonic seconds, including diagnostics | 2046.71 | 2078.83 |
 
-**Rule:** P/C boundary RMS = **0.964**, against the required ≤ 0.5. P's geometry
-passes and its interior RMS is lower, but the boundary condition fails, so the
-alternative is joint plasma/coil optimization. A first run on a superseded fitter
-gave 0.963. Both arms still fail the boundary limits by about 18×; P's interior RMS
-is below 0.01 in this single run.
+P/C boundary RMS is **0.9622337751**, above the required 0.5. P passes the individual
+0.01 interior limit; neither arm passes boundary RMS 1e-4 or maximum error 1e-3.
+Length upper bounds are 3.47012 / 3.46487 m against 3.5 m; coil-clearance lower
+bounds are 0.060715 / 0.064766 m against 0.06 m. Full geometry and per-line records
+remain in the archive. Target-labelled vacuum traces do not establish nestedness,
+common realized flux labels, confinement or benefit transfer.
 
-## Active margins and open question
+**Timing qualification:** fit-to-trace wall timestamps span 10239 / 5039 s, versus
+1806 / 1819 monotonic seconds for fitting and its checks. The discrepancy's cause
+is unknown; suspension or clock adjustment is possible. External host load was not
+verified. Do not claim controlled wall-time throughput or a causal/global comparison.
 
-Both arms end at the optimizer's construction penalties, not at the acceptance
-limits: curvature at about 10 /m (acceptance 12 /m) and length at 3.46–3.47 m
-(penalty from 3.44 m, acceptance 3.5 m); C is also near the 0.06 m coil–coil
-clearance. Whether relaxing these margins toward the acceptance limits would help
-is untested and needs its own preregistration; it does not change this decision.
+Separately, pjckoch's [reported run 2](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53#issuecomment-6026203139)
+at `ae29c55`, using portable target intake, reports boundary RMS 0.0018486 / 0.0017815
+(P/C approximately 0.964) and the same next-step choice. Those are different source/
+input states, not the local numbers above. Run 1 was superseded. The comment's run-2
+artifacts have not been independently replayed here; agreement in the decision
+is not proof that coil freedom is not the binding physical limit.
+The [published contributor record](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/ce5794fdde91bbe38e046e5272cb71f5eb5bb7d9/docs/optimization/ISSUE53_COIL_FREEDOM.md)
+retains its full diagnostic table and margins: reported interior RMS 0.010240 /
+0.009859, geometry passing, and curvature near the 10/m construction penalty
+versus 12/m acceptance. Those artifacts remain contributor-retained; their
+publication or independent replay is not supplied by our separate archive.
+Relaxing construction margins is untested and does not change this decision.
 
-## Limits and availability
-
-One seed, one budget and one local optimizer per arm on one machine; order 8 is one
-point in coil-family space. Geometry bounds are padded floating point; tracing is a
-vacuum diagnostic. Results were reported by the contributor (@pjckoch) and have not
-been rerun by the maintainer. The preregistration, logs, selected snapshots and
-hashes are retained by the contributor, not archived in this repository. Full
-report: [issue #53, run 2](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53).
+Published annotated tag [evidence-issue53-coil-freedom-v1](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-issue53-coil-freedom-v1) resolves to archive
+`293d0a65601c8293c936617f720fcfe099b3a27f`, tag object
+`a76dc5d124203a4556d9a5f6eecc96c129bc1d03`; **published; remote identities and manifest retrieval verified**.
+Manifest SHA256: `68f33e1f56539610a5b3ae6c2a768100fb8c20062a2094063b589cbef635cfbe`.
+All 37,859 evidence entries and 40 producer source hashes were verified again in
+the shallow archive checkout. Saved fine/interior metrics, sampled independent B/A
+and line summaries replay; optimization, geometry and trajectories do not. The
+original Wout remains local; NumPy/SciPy suffice for saved-array replay. The archive
+README supplies commands and exact inputs. Original outputs/environments are
+preserved. Agent review is not external peer review; [Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)
+remains incomplete.

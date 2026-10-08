@@ -72,7 +72,7 @@ The plateau may come from the coil family (six coils, order 5, length ≤ 3.5 m)
 from the coupling between this QI target and practical coils; the same metric
 reaches 2.3e-6 for a co-designed QUASR configuration. The preregistered
 [probe at Fourier order 8](../optimization/ISSUE53_COIL_FREEDOM.md) gained only 3.6% (ratio 0.964, required ≤ 0.5),
-so the coil family is not the binding limit and the route is joint plasma–coil
+so this local test misses the coil-family expansion hurdle; the route is joint plasma–coil
 optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Both probe arms ended at the construction penalties
 (curvature about 10 /m against 12 /m acceptance; length near 3.44 m against
 3.5 m); whether relaxing those margins helps is untested. The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating

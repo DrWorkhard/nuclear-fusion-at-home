@@ -6,6 +6,8 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
 
 - [Public quickstart](PUBLIC_QUICKSTART.md): dependency-free commands, named
   coefficients, score interpretation and troubleshooting.
+- [Dense interior qualification](ISSUE10_DENSE_INTERIOR.md): exact target export
+  and bounded scalar-field comparison for both frozen matched targets.
 - [Ubuntu server reproduction, 2 October 2026](SERVER_REPRODUCTION_20261002.md):
   pinned public-reference outputs, both sampled errors, hashes and replay limits.
 - [Reproducing results](REPRODUCING_RESULTS.md): current tools and the freeze tag;
@@ -20,6 +22,8 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
   safe PR execution, live repository protections and the remaining launch work.
 - [Publication inventory](PUBLICATION_INVENTORY.md): dated size/privacy-pattern
   inventory, not a full security or rights clearance of the current tree.
+- [Packet source notices](PACKET_SOURCE_NOTICES.md): verified historical source
+  links and scoped attribution corrections; full-history rights review remains open.
 
 Steps 1–3 have English [result summaries](../steps/README.md). Their detailed
 protocols, native rebuilding recipes and earlier audits are frozen in Git;

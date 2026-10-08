@@ -1,6 +1,8 @@
 # Scientific status
 
-Updated 8 October 2026; records the coil-freedom probe and the chosen route.
+Updated 8 October 2026; fifteen study archives are published with remote tag/commit
+identities and manifest retrieval verified. The #66 retention archive remains local
+pending redistribution review; publication does not change scientific qualification.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The new matched
@@ -8,12 +10,20 @@ reference-target fit reaches boundary RMS **0.001932**, about **19×** its limit
 and interior RMS **0.01072**, also failing. The improved-target fit also fails.
 [Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
 wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
-**The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
-30 more minutes of search lowered boundary RMS by only 6%. The
-[coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) then gained only 3.6%
-at Fourier order 8, so the next route is joint plasma/coil optimization
-([programme](optimization/STEP4_RESEARCH_PROGRAMME.md)). Present evidence does not
-substantiate the README's reactor-design timeline.
+The [original paired label grid](optimization/ISSUE48_FULL_GRID.md) qualifies
+20/20 reference launches and 18/20 improved-target launches; its paired map fails.
+The local [shallow-well comparison](optimization/ISSUE26_INTERIOR_WELLS.md) recovers
+both reference core cells with a lower-interior-error candidate (35/35 screened
+cells). Its [label grid](optimization/ISSUE48_CONTINUATION_LABELS.md) qualifies
+19/20 points; the full grid remains unqualified.
+[Saved-point diagnosis](optimization/ISSUE48_CONTINUATION_RECURRENCE.md) finds
+angular reversals in the failed trace. Topology and benefit transfer remain unknown.
+**The next research route is joint plasma/coil optimization.** The local
+[coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) lowers boundary RMS by
+3.78%, missing its 50% hurdle; the separate contributor run reports 3.6%. Its interior RMS passes its individual limit, but
+both boundary gates fail. Clock/load limitations prevent controlled-throughput
+or causal/global claims. Present evidence does not substantiate the README's
+reactor-design timeline.
 
 ## Established results and their limits
 
@@ -46,8 +56,9 @@ Use [historical revisions](validation/REPRODUCING_RESULTS.md) for full methods,
 budgets and failure records. Evidence and raw artifacts retain their identities;
 Git does not back up ignored data.
 
-Independent numerical checks generally mean separate calculations on the same
-machine. [Ubuntu public replay](validation/SERVER_REPRODUCTION_20261002.md) provides
+The local [dense interior checker](validation/ISSUE10_DENSE_INTERIOR.md) reproduces
+both frozen targets; checks share one machine.
+[Ubuntu public replay](validation/SERVER_REPRODUCTION_20261002.md) provides
 portability evidence. External physics review, native research reproduction,
 backup/restore and complete-history rights clearance remain open.
 [Software checks](logbook/VALIDATION_LOG.md) · [Hosting/review policy](validation/REVIEW_POLICY.md).

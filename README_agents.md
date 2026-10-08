@@ -29,6 +29,9 @@ improved the boundary error by only 6%, and more flexible coils only 3.6%
 ([probe](docs/optimization/ISSUE53_COIL_FREEDOM.md)). The next route is joint
 plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36); [programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)).
 
+This is a research-allocation decision, not a causal explanation of the plateau
+or physical acceptance. The separate archived probe has its own timing limits.
+
 We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.
 
 ## Project plan and progress

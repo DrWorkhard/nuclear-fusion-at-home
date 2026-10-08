@@ -31,7 +31,9 @@ After the fitter fixes ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-ho
 [coil-freedom probe](ISSUE53_COIL_FREEDOM.md) lifted six coils from Fourier order 5
 to 8 under the same 30-minute budget. Boundary RMS improved only 3.6% (ratio 0.964,
 required ≤ 0.5), so by the fixed rule the next route is joint plasma/coil
-optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)), not another coil family.
+optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). A separate archived probe reaches the same allocation
+decision with different inputs and timing limitations. Neither establishes a
+global physical limit; do not extend completed probes to cross their hurdle.
 
 1. **Preregister the joint pilot** ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)). The draft protocol
    ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)) and its review ([#63](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/63)) fix comparable physics, objective
@@ -50,7 +52,7 @@ and elapsed time together. The original 1e-4 / 1e-3 / 0.01 limits and continuous
 geometry checks remain unchanged. No endpoint or solver success flag admits a
 physical design; the [Step 4 requirements](../steps/STEP_4_PLASMA_AND_COILS.md) still apply.
 
-The probe used at most 30 minutes per search arm, one native thread, 256 MiB
+The contributor probe declared 30 minutes per search arm, one native thread, 256 MiB
 retained output per arm and 3 GiB initial / 2 GiB live disk reserve; the joint
 pilot declares its own limits in its protocol.
 Use existing tools and one short result record. Stop at the resource ceiling,
@@ -66,12 +68,16 @@ net-electric-power balance, winding/blanket/shield space, magnet loads, heat exh
 and maintenance access. For each, record a source or an explicit unknown and the
 cheapest check that could reject the direction. Detailed pressure/engineering work
 starts when that decision needs it, rather than automatically at a boundary score.
+The completed [conditional space screen](../engineering/ISSUE27_ENVELOPE_SCREEN.md)
+provides exclusions for a specified envelope model; passing its two inequalities
+does not settle the operating point or qualify a scaled design.
 
 The smallest MS0 deliverable is the matched target/coil data and existing checker
 running outside the maintainer's workspace, with a positive control and retained
 failures. Assess an adapter to existing community tools first; no new platform.
-Public dense boundary evaluation already exists, but interior targets and full
-acceptance are not portable yet. Prioritize that missing reproducibility now;
+Public dense boundary evaluation and the published
+[dense interior packet](../validation/ISSUE10_DENSE_INTERIOR.md) now exist; full
+acceptance is not portable yet. Prioritize shared-check reproduction;
 26 March 2027 remains the outer MS0 decision target, not a reason to delay it.
 Publication and external contact require separate authority. No new outreach or
 physical acceptance follows from this programme.

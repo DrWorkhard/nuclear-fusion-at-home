@@ -25,29 +25,41 @@ checked reproducible benefits. Improving our own seed is insufficient. MSX's
 global optimum. It does not relax scientific or engineering acceptance.
 [Future comparison](squid_c/README.md).
 
+Proposed [early feedback (#29)](review/ISSUE29_FEEDBACK_PACKET.md): permissioned
+technical review before MS1, preserving its evidence requirements. Adoption and
+outreach remain pending.
+
 ## Current priorities
 
 The [assessment](review/STRATEGIC_REVIEW_RESOLUTION.md) finds no demonstrated path
-from present results to the README's reactor vision. Keep the ambition;
-spend effort on decisions that test the path.
+from present results to the README's reactor vision. Prioritize decisions that test the path.
 
 1. **Test benefit in actual coil fields.** Compare the original and improved
    Step 3 targets with matched fitting effort and evaluate interior fields,
    magnetic surfaces and benefit transfer using shared checks. The [first matched comparison](optimization/ISSUE25_MATCHED_TARGETS.md)
    leaves wide-domain benefit transfer unresolved because required wells are missing.
-   Diagnose shallow-well fidelity and qualify realized flux labels before confirmation.
+   The [paired label grid](optimization/ISSUE48_FULL_GRID.md) remains unqualified.
+   A [lower-error continuation](optimization/ISSUE26_INTERIOR_WELLS.md) restores
+   missing wells, but its [19/20 label grid](optimization/ISSUE48_CONTINUATION_LABELS.md)
+   also fails. The [local diagnosis](optimization/ISSUE48_BOUNDED_RETURN.md)
+   ends without resolving that contour. Require a qualified realized-coordinate
+   construction before launch matching; further local solver variants need a new
+   decision-relevant reason. Test interior fidelity in joint optimization.
 2. **Screen reactor feasibility now.** Expose assumptions and unknowns about
    power balance, pressure/confinement, magnets, blanket/shield space and heat
-   exhaust before expensive optimization. Detailed simulations follow a decision
-   need; boundary RMS alone does not determine their priority.
-3. **Pilot joint plasma/coil optimization.** The fixed-target recipe stalled and
-   a [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) gained only 3.6%,
-   so the [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) chose joint
-   optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Preregister a bounded feasibility pilot first
-   ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
-4. **Make the decisive test portable.** Supply the missing target data and reuse
-   existing field/geometry checks so contributors can address the actual
-   bottleneck. Prefer an existing community benchmark. Aim to resolve this now;
+   exhaust before expensive optimization. The [conditional space screen](engineering/ISSUE27_ENVELOPE_SCREEN.md)
+   excludes some scaled copies; it supplies no operating point. Detailed modelling
+   follows a decision need.
+3. **Pilot joint plasma/coil optimization.** The completed
+   [coil-freedom probes](optimization/ISSUE53_COIL_FREEDOM.md) missed their hurdle.
+   Preregister the bounded feasibility pilot (#37/#59/#63), use the existing
+   optimizer work (#39) and record costs/plasma variables (#64). Qualify
+   derivatives and realized-field endpoints before their respective claims;
+   do not extend the completed probes.
+4. **Make the decisive test portable.** The published
+   [dense target packet](validation/ISSUE10_DENSE_INTERIOR.md) passes numerical qualification.
+   Reuse its shared field/geometry checks; prefer a community benchmark.
+
    26 March 2027 is the outer MS0 decision target, not a six-month tooling project.
 
 One method, shared checks, one short record per question.

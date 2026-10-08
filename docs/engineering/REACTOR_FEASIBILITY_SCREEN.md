@@ -5,7 +5,7 @@ A coupled power-plant operating point is missing; neither viability nor impossib
 is established.
 [Issue #27](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/27) remains
 open until the missing inputs below support a numerical continue/change decision.
-Assessed source: `3a7ba6d`; desk analysis only.
+Original desk assessment: `3a7ba6d`; subsequent conditional space result below.
 
 ## What is specified
 
@@ -21,7 +21,11 @@ shield, structure and coil thickness. None is allocated reactor space.
 ## Unknowns and cheapest rejection checks
 
 D–T is a **conditional branch**, not a selected fuel. Other fuels need their own
-reaction/confinement/exhaust assumptions. These proposed checks have not passed.
+reaction/confinement/exhaust assumptions. These requirements remain unqualified.
+The [conditional envelope screen](ISSUE27_ENVELOPE_SCREEN.md) applies only two
+separation tests to a different frozen trial-427 geometry. Some scenarios are
+excluded; clearing both tests supplies neither an operating point nor finite-build
+field or engineering qualification.
 
 | Input missing | Cheapest check before a detailed solver |
 | --- | --- |
@@ -49,5 +53,7 @@ and all other electrical loads `P_other`. Then
 Count each recovered heat source and electrical load once. No numerical net-power
 estimate is justified until these quantities and the operating profiles are supplied.
 
-**Next:** supply one operating point and finite envelope with sourced ranges.
+**Next:** supply one coupled operating point and physically justified component
+envelopes. Retain the conditional exclusions; a scenario clearing the two space
+checks still needs field/load, neutronics, confinement and net-power evidence.
 Reuse system-design/geometry tools only for unresolved decision needs.

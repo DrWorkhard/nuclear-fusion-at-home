@@ -7,6 +7,14 @@ One normalized fitter, one set of field/geometry checks.
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
 geometry families, label compatibility, rights and the prerequisites for a learning pilot.
+The [first sample intake](ISSUE65_COMMUNITY_SAMPLE.md) verifies a requirements
+join and scalar arithmetic; unavailable coil/boundary joins leave qualification open.
+
+The [bounded retention plan](ISSUE66_RETENTION_PLAN.md) measures one existing run
+and a small local restore; durable custody and remote retrieval remain open.
+
+The completed local [coil-freedom probe](ISSUE53_COIL_FREEDOM.md) misses its
+continuation hurdle and selects joint optimization as the next research route.
 
 ## Native workflow
 
@@ -67,6 +75,39 @@ selects the hash-bound improved Step 3 target with its frozen normalization.
 the fitted current. [Matched comparison and limits](ISSUE25_MATCHED_TARGETS.md).
 
 ## Portable checks
+
+The [spread-sampling pilot](ISSUE8_SPREAD_SAMPLING.md) improves three known cases
+but fails its accuracy hurdle; the public case stays unchanged and dense checks
+remain necessary.
+
+The original [paired flux-label grid](ISSUE48_FULL_GRID.md) qualifies 20/20
+reference points and 18/20 improved-target points. Their full map remains unqualified.
+
+The local [interior-error/shallow-well comparison](ISSUE26_INTERIOR_WELLS.md)
+finds that an existing lower-error geometry restores both missing core cells.
+This supports testing interior fidelity in joint optimization; realized-flux
+qualification and benefit transfer remain open.
+The [continuation flux-label grid](ISSUE48_CONTINUATION_LABELS.md) qualifies at
+19/20 points. A failed middle-surface reconstruction still prevents a complete
+qualified map for launch matching.
+The [saved-point recurrence diagnosis](ISSUE48_CONTINUATION_RECURRENCE.md) finds
+angular reversals in the failed trace, absent in four controls; it leaves the
+qualification failure unchanged.
+A [periodic-center check](ISSUE48_AXIS_CENTER.md) preserves those reversals;
+target-axis miscentering does not explain this saved-sample failure.
+An [independent-integrator comparison](ISSUE48_TRACE_REFINEMENT.md) also preserves
+the reversals while matching two finite traces within 10 micrometres.
+A [bounded periodic-return search](ISSUE48_PERIODIC_RETURN.md) subsequently stops
+at its locality guard and supplies no topology classification.
+An [explicit derivative check](ISSUE48_RETURN_DERIVATIVE.md) changes the proposed
+step's magnitude but still proposes leaving the same frozen neighborhood.
+The [bounded-step follow-up](ISSUE48_BOUNDED_RETURN.md) also stops at that guard;
+the local search branch is complete without a qualified periodic point.
+
+The separate [dense interior packet](../../examples/clear-coil-interior-v1/README.md)
+supports both frozen matched targets using only Python's standard library.
+It reproduces dense field metrics for the original fits; native intake contracts,
+geometry checks and physical acceptance remain separate.
 
 Without the maintainer's archives, supply a reference401 Wout. One can be regenerated
 by vmecpp from the committed input in about 6 minutes:
@@ -143,7 +184,10 @@ polygon point-in-section test of the stop point. Unconfirmed stops are reported 
 `classifier_stop_inside_target`; they count as neither confined nor complete, and
 cannot pass. The summary does not measure nestedness or island widths. Plots are exploratory, not a nested-surface proof or physical acceptance.
 The [matched experiment](ISSUE25_MATCHED_TARGETS.md) also traces the improved
-Step 3 target; full benefit transfer remains unresolved. Edge s > 0.95 remains untested.
+Step 3 target; full benefit transfer remains unresolved.
+The [edge-check summary](ISSUE20_EDGE_CHECKS.md) records later reported phase and
+radius probes through s=0.99, their incomplete runs and missing archival provenance.
+These reports do not complete the original 200-transit adversarial confirmation.
 [Confirmation, 4 October 2026](https://github.com/DrWorkhard/nuclear-fusion-at-home/tree/evidence-pr18-trace-confirmation-2026-10-04/evidence/pr18-trace-confirmation-2026-10-04)
 uses clean producer `df9db024ef6170df820649e61cccd868f65f0b88`, archive `21886ce`.
 For length-headroom-six-coil, direct and interpolated runs both complete 200
