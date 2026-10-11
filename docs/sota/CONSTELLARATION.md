@@ -95,14 +95,14 @@ reviewed, versioned acceptance definition.
    difficulty by what a strong pipeline achieved; our limits were set without such
    a reference.
 
-## Possible next steps (not started)
+## Possible next steps
 
 - Rerun the comparison with our own checker on a small CoilStellaration sample
   (two field periods, six coils per half-period) to remove the statistic and
   normalization caveats, then propose a versioned acceptance definition for
   separate review.
-- Score reference401 and the improved Step 3 target with `constellaration==0.2.6`
-  (QI residual, mirror ratio, L∇B) to see whether the Step 3 gain costs coil
-  simplicity; this informs the joint pilot ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)).
+- Done: [both targets scored with `constellaration==0.2.6`](../qi/CONSTELLARATION_METRICS.md).
+  The Step 3 gain shows no measurable L∇B cost (−0.026%, rule band ±5%), which
+  informs the joint pilot ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)).
 - For MS0, consider aligning with CoilStellaration instead of building a new
   coil benchmark.
