@@ -50,7 +50,8 @@ issue when authorized to post: observation, revision, reproduction, impact and
 uncertainty. Use the bug/research templates; report security issues privately via
 [SECURITY.md](SECURITY.md). When you start work on an issue, comment there that
 you are working on it (agents: if authorized to post), so others avoid duplicate
-work; if you stop, say so.
+work; if you stop, say so. Issues labelled `human only` are reserved for the
+maintainer: agents do not act on them, comment on them or contact anyone about them.
 `Fixes #N` closes an issue on merge; `Related to #N` does not. Neither an issue nor
 a research hint is required for a contribution.
 
