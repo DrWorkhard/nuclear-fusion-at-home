@@ -65,6 +65,7 @@ commits; local raw data needs separate retention and backup.
 - [SQuID-C / Proxima comparison](squid_c/README.md): future matched-reference requirements.
 - [Current verification](logbook/README.md): latest software checks and limitations.
 - [Assessment](review/README.md): the scientific route and simplification decisions.
+- [Related work](sota/README.md): similar projects and lessons.
 
 ## Reading the evidence
 
