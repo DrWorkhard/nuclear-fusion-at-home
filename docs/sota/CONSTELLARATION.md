@@ -97,10 +97,10 @@ reviewed, versioned acceptance definition.
 
 ## Possible next steps
 
-- Rerun the comparison with our own checker on a small CoilStellaration sample
-  (two field periods, six coils per half-period) to remove the statistic and
-  normalization caveats, then propose a versioned acceptance definition for
-  separate review.
+- Done: [ten cases recomputed with our own checker](COILSTELLARATION_CALIBRATION.md).
+  The mapping to their statistic is confirmed, and every case has a boundary RMS
+  above 1e-3 (0.0014–0.0039). A versioned acceptance definition is proposed for
+  separate review in [#82](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/82).
 - Done: [both targets scored with `constellaration==0.2.6`](../qi/CONSTELLARATION_METRICS.md).
   The Step 3 gain shows no measurable L∇B cost (−0.026%, rule band ±5%), which
   informs the joint pilot ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)).
