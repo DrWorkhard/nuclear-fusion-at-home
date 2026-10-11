@@ -261,6 +261,49 @@ def test_selection_cap_follows_the_model_margins(tmp_path, clock):
     assert current['selected'] is None
     assert halved['startup_pass'] and halved['selected']['index'] == 0
 
+
+def test_current_margin_recording_keeps_original_settings():
+    recorded = experiment.recording_settings('task')
+    # Constants recorded before the margin presets existed (#71); bytes must not change.
+    original = dict(
+        objective_weights=dict(flux_per_area=1., length=1., coil_distance=1000.,
+                               surface_distance=1000., curvature=.01),
+        penalties=dict(length_max_m=3.44, coil_distance_min_m=.07, surface_distance_min_m=.09,
+                       curvature_threshold_per_m=10., curvature_p=2),
+        selection=dict(length_max_m=3.45, sampled_length_max_m=3.5,
+                       sampled_curvature_max_per_m=12., sampled_coil_distance_min_m=.06,
+                       sampled_surface_distance_min_m=.08, current_max_A=500000.))
+    constraints = recorded['constraints']
+    assert json.dumps(recorded['objective_weights']) == json.dumps(original['objective_weights'])
+    assert json.dumps(constraints['penalties']) == json.dumps(original['penalties'])
+    assert json.dumps(constraints['selection']) == json.dumps(original['selection'])
+    assert constraints['margin_preset'] == 'current' and constraints['coefficient_bounds'] is None
+    assert recorded == experiment.recording_settings('task', 'current')
+
+
+def test_halved_margin_recording_uses_preset_and_unchanged_limits():
+    halved = experiment.MARGINS['halved']
+    current = experiment.recording_settings('task')
+    recorded = experiment.recording_settings('task', margins='halved')
+    constraints = recorded['constraints']
+    assert constraints['margin_preset'] == 'halved'
+    assert constraints['penalties'] == dict(
+        length_max_m=halved['length'], coil_distance_min_m=halved['coil_distance'],
+        surface_distance_min_m=halved['surface_distance'],
+        curvature_threshold_per_m=halved['curvature'], curvature_p=2)
+    assert constraints['penalties'] == dict(length_max_m=3.47, coil_distance_min_m=.065,
+                                            surface_distance_min_m=.085,
+                                            curvature_threshold_per_m=11., curvature_p=2)
+    # Only the selection length cap moves; sampled acceptance limits and weights do not.
+    assert constraints['selection'] == dict(current['constraints']['selection'],
+                                            length_max_m=halved['selection_length'])
+    assert recorded['objective_weights'] == current['objective_weights']
+    assert constraints['penalties'] == experiment.penalty_settings('halved')
+    assert constraints['selection'] == experiment.selection_settings('halved')
+    with pytest.raises(ValueError, match='registered construction margins'):
+        experiment.recording_settings('task', margins='unregistered')
+
+
 @pytest.mark.parametrize('error', [ValueError, FloatingPointError])
 @pytest.mark.parametrize('continue_search', [False, True])
 def test_failed_search_trial_keeps_eligible_candidates(tmp_path, clock, error, continue_search):

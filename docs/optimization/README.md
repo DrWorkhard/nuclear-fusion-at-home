@@ -31,7 +31,8 @@ for an installation-free contribution.
    zero, so a richer family starts from identical coils (#53). Snapshots record
    their order; the public starter stays order 5. `--margins halved` moves each
    construction penalty halfway to its unchanged acceptance limit (#70); the
-   default `current` keeps the values above, and reports record the preset.
+   default `current` keeps the values above, and reports record the preset. The
+   v2 recording derives its penalty and selection thresholds from that preset.
 3. Freeze the selected currents. Check two fine boundary grids, continuous
    geometry bounds, three interior resolutions and independent B/A calculations.
 4. Save inputs, source identities, attempts, failures, fields and a short result.

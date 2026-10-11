@@ -11,7 +11,10 @@ joint-run qualification is implied; those require the joint optimizer in #39.
 before model construction. `--task-id` names the experiment; its default is
 `fixed-target/<target>`. Metadata records objective weights, penalty thresholds,
 selection limits, boundary/coil/geometry grids, resource ceilings and the fixed
-target/current policy. Named coils, target flux/B² and input/source hashes retain
+target/current policy. Penalty thresholds and the selection length cap are derived
+from the `--margins` preset (#70) that the model and search also use;
+`constraints.margin_preset` names it. Weights and sampled acceptance limits do not
+depend on the preset. Named coils, target flux/B² and input/source hashes retain
 their existing seed/provenance locations. The objective and selection rules stay
 unchanged; fine verification remains separate.
 
