@@ -1,6 +1,6 @@
 # Level 5: for an expert
 
-Updated 8 October 2026 · [All five levels](README.md) · Previous: [Level 4](LEVEL_4_GRADUATE.md)
+Updated 11 October 2026 · [All five levels](README.md) · Previous: [Level 4](LEVEL_4_GRADUATE.md)
 
 An open, agent-assisted two-stage stellarator study. The plasma stage improved a
 vacuum QI diagnostic on an open target. The coil stage has not yet realized any
@@ -51,7 +51,11 @@ Both targets are nfp = 2, zero-β configurations at a normalized scale. Detail:
 - **Tolerance calibration.** The 1e-4 / 1e-3 / 0.01 pilot limits and the
   geometry limits are project choices at a normalized scale. The boundary metric
   itself was checked against QUASR and LPQA boundary components, which does not
-  cover the complete Goodman acceptance profile or any engineering standard.
+  cover the complete Goodman acceptance profile or any engineering standard. In
+  Proxima's CoilStellaration benchmark no QI case reaches a mean |B·n|/|B| of 1e-4,
+  and our fits beat about 91–95% of its coil sets
+  ([comparison](../sota/CONSTELLARATION.md)), so 1e-4 looks out of reach for
+  practical filament coils; any revision needs separate, versioned review.
 - **Verification depth.** Geometry bounds use padded floating point rather than
   interval arithmetic; numerical independence mostly means separate calculations
   on one machine; the filament model has no finite build, forces or strain.
@@ -75,7 +79,8 @@ reaches 2.3e-6 for a co-designed QUASR configuration. The preregistered
 so the coil family is not the binding limit and the route is joint plasma–coil
 optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Both probe arms ended at the construction penalties
 (curvature about 10 /m against 12 /m acceptance; length near 3.44 m against
-3.5 m); whether relaxing those margins helps is untested. The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
+3.5 m). Halving every margin toward its limit ([#70](../optimization/ISSUE70_CONSTRUCTION_MARGINS.md))
+gained 5.8%, so the margins are not the binding limit either. The [feasibility screen](../engineering/REACTOR_FEASIBILITY_SCREEN.md) records that no reactor operating
 point is yet specified and defers reactor-scale search.
 
 ## Where expert input helps most

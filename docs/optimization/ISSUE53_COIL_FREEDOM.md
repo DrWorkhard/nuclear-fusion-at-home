@@ -48,8 +48,8 @@ is below 0.01 in this single run.
 Both arms end at the optimizer's construction penalties, not at the acceptance
 limits: curvature at about 10 /m (acceptance 12 /m) and length at 3.46–3.47 m
 (penalty from 3.44 m, acceptance 3.5 m); C is also near the 0.06 m coil–coil
-clearance. Whether relaxing these margins toward the acceptance limits would help
-is untested and needs its own preregistration; it does not change this decision.
+clearance. A separately preregistered [construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md)
+later halved every margin and gained 5.8%; it does not change this decision.
 
 ## Limits and availability
 

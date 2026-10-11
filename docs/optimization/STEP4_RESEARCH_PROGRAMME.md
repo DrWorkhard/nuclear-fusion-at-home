@@ -31,7 +31,9 @@ After the fitter fixes ([#52](https://github.com/DrWorkhard/nuclear-fusion-at-ho
 [coil-freedom probe](ISSUE53_COIL_FREEDOM.md) lifted six coils from Fourier order 5
 to 8 under the same 30-minute budget. Boundary RMS improved only 3.6% (ratio 0.964,
 required ≤ 0.5), so by the fixed rule the next route is joint plasma/coil
-optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)), not another coil family.
+optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)), not another coil family. A
+[construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) then halved every margin toward its acceptance
+limit and gained 5.8% (ratio 0.942), so the route stands.
 
 1. **Preregister the joint pilot** ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)). The draft protocol
    ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)) and its review ([#63](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/63)) fix comparable physics, objective

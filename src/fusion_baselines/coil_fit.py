@@ -18,20 +18,48 @@ RECORDING_FORMAT = "fusion-coil-recording-v2"
 EVALUATION_COST_SCOPE = "model.evaluate and post-evaluation guard; excludes trial-file writes"
 OBJECTIVE_WEIGHTS = dict(flux_per_area=1., length=1., coil_distance=1000.,
                          surface_distance=1000., curvature=.01)
-PENALTY_SETTINGS = dict(length_max_m=3.44, coil_distance_min_m=.07,
-                        surface_distance_min_m=.09, curvature_threshold_per_m=10.,
-                        curvature_p=2)
-SELECTION_SETTINGS = dict(length_max_m=3.45, sampled_length_max_m=3.5,
-                          sampled_curvature_max_per_m=12., sampled_coil_distance_min_m=.06,
-                          sampled_surface_distance_min_m=.08, current_max_A=500000.)
+# Construction margins keep sampled fits inside the unchanged acceptance limits
+# (length 3.5 m, coil-coil 0.06 m, coil-plasma 0.08 m, curvature 12/m).
+# "halved" moves each margin halfway to its limit (issue #70). A preset is the only
+# source of the penalty thresholds and selection length cap that are used and recorded.
+MARGINS = {
+    "current": dict(length=3.44, selection_length=3.45, coil_distance=0.07,
+                    surface_distance=0.09, curvature=10.),
+    "halved": dict(length=3.47, selection_length=3.475, coil_distance=0.065,
+                   surface_distance=0.085, curvature=11.),
+}
+# Sampled acceptance limits for selection eligibility; independent of the margin preset.
+SAMPLED_LIMITS = dict(sampled_length_max_m=3.5, sampled_curvature_max_per_m=12.,
+                      sampled_coil_distance_min_m=.06, sampled_surface_distance_min_m=.08,
+                      current_max_A=500000.)
 
 
-def recording_settings(task_id, ncoil=256, n=64, offset=0):
+def margin_preset(name="current"):
+    if name not in MARGINS:
+        raise ValueError("registered construction margins required")
+    return dict(MARGINS[name], name=name)
+
+
+def penalty_settings(margins="current"):
+    """Objective penalty thresholds derived from one registered margin preset."""
+    margin = margin_preset(margins)
+    return dict(length_max_m=margin["length"], coil_distance_min_m=margin["coil_distance"],
+                surface_distance_min_m=margin["surface_distance"],
+                curvature_threshold_per_m=margin["curvature"], curvature_p=2)
+
+
+def selection_settings(margins="current"):
+    """Preset selection length cap plus the unchanged sampled acceptance limits."""
+    return dict(length_max_m=margin_preset(margins)["selection_length"], **SAMPLED_LIMITS)
+
+
+def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0):
     """Prospective fixed-target settings; no inferred plasma or equilibrium trajectory."""
     return dict(format=RECORDING_FORMAT, task_id=task_id,
                 objective_weights=OBJECTIVE_WEIGHTS.copy(),
-                constraints=dict(penalties=PENALTY_SETTINGS.copy(),
-                                 selection=SELECTION_SETTINGS.copy(), coefficient_bounds=None),
+                constraints=dict(margin_preset=margins,
+                                 penalties=penalty_settings(margins),
+                                 selection=selection_settings(margins), coefficient_bounds=None),
                 search_resolution=dict(boundary_phi=n, boundary_theta=n, boundary_offset=offset,
                                        boundary_phi_extent_turns=.5, coil_nodes=ncoil,
                                        flux_loop_nodes=ncoil, geometry_phi=128,
@@ -207,7 +235,9 @@ def tracked_field(field_class, coils, record):
 
 
 class Model:
-    def __init__(self, seed, data, record, ncoil=256, n=64, offset=0):
+    def __init__(self, seed, data, record, ncoil=256, n=64, offset=0, margins="current"):
+        self.margins = margin_preset(margins)
+        self.penalties = penalty_settings(margins)
         from simsopt.field import BiotSavart, Current, coils_via_symmetries
         from simsopt.geo import (
             CurveCurveDistance,
@@ -262,19 +292,19 @@ class Model:
         self.objective = SquaredFlux(self.surface, self.field, **flux_options)
         physical = [c.curve for c in self.coils]
         self.lengths = [CurveLength(c) for c in self.curves]
-        self.cc = CurveCurveDistance(physical, PENALTY_SETTINGS["coil_distance_min_m"],
-                                     num_basecurves=24)
+        penalty = self.penalties
+        self.cc = CurveCurveDistance(physical, penalty["coil_distance_min_m"], num_basecurves=24)
         self.cp = SparseCurveSurfaceDistance(
             physical, geometry_surface.gamma().reshape(-1, 3),
             geometry_surface.normal().reshape(-1, 3),
-            minimum_distance=PENALTY_SETTINGS["surface_distance_min_m"])
-        self.geometry = (sum(QuadraticPenalty(term, PENALTY_SETTINGS["length_max_m"], "max")
+            minimum_distance=penalty["surface_distance_min_m"])
+        self.geometry = (sum(QuadraticPenalty(term, penalty["length_max_m"], "max")
                              for term in self.lengths)
                          + OBJECTIVE_WEIGHTS["coil_distance"]*self.cc
                          + OBJECTIVE_WEIGHTS["surface_distance"]*self.cp
                          + OBJECTIVE_WEIGHTS["curvature"]*sum(LpCurveCurvature(
-                             c, PENALTY_SETTINGS["curvature_p"],
-                             threshold=PENALTY_SETTINGS["curvature_threshold_per_m"])
+                             c, penalty["curvature_p"],
+                             threshold=penalty["curvature_threshold_per_m"])
                              for c in self.curves))
 
         from fusion_baselines.coupled_coil_audit import physical_curves
@@ -301,10 +331,10 @@ class Model:
         cc, cp = float(self.cc.shortest_distance()), float(self.cp.shortest_distance())
         return dict(lengths=lengths, kappa_max=curvature, coil_distance=cc, surface_distance=cp,
                     sampled_geometry_limits_met=(
-                        max(lengths) <= SELECTION_SETTINGS["sampled_length_max_m"]
-                        and max(curvature) <= SELECTION_SETTINGS["sampled_curvature_max_per_m"]
-                        and cc >= SELECTION_SETTINGS["sampled_coil_distance_min_m"]
-                        and cp >= SELECTION_SETTINGS["sampled_surface_distance_min_m"]),
+                        max(lengths) <= SAMPLED_LIMITS["sampled_length_max_m"]
+                        and max(curvature) <= SAMPLED_LIMITS["sampled_curvature_max_per_m"]
+                        and cc >= SAMPLED_LIMITS["sampled_coil_distance_min_m"]
+                        and cp >= SAMPLED_LIMITS["sampled_surface_distance_min_m"]),
                     geometry_certified=False)
 
     def unit_flux(self):
@@ -332,7 +362,7 @@ class Model:
                        / (self.area*self.seed["B2_scale"]),
                        geometry_penalty=penalty,
                        scale=scale, unit_flux=phi, current=1e5*scale,
-                       current_limit_met=abs(1e5*scale) <= SELECTION_SETTINGS["current_max_A"])
+                       current_limit_met=abs(1e5*scale) <= SAMPLED_LIMITS["current_max_A"])
         if not np.isfinite(value+penalty) or not np.isfinite(gradient).all():
             raise ValueError("nonfinite objective or gradient")
         return float(value+penalty), gradient, metrics
@@ -406,6 +436,8 @@ def fine(seed, data, chosen, record, shift):
 def search(model, record, minimize):
     """One wall-clock-limited search; probes and incomplete points cannot win."""
     initial = model.x0.copy()
+    # Synthetic test models carry no margins; real models record their preset.
+    selection = selection_settings(getattr(model, "margins", margin_preset())["name"])
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
     largest_value = 0.
@@ -447,7 +479,7 @@ def search(model, record, minimize):
         completed += 1
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
                 and metrics["current_limit_met"]
-                and max(metrics["lengths"]) <= SELECTION_SETTINGS["length_max_m"]
+                and max(metrics["lengths"]) <= selection["length_max_m"]
                 and (selected is None or metrics["normal_rms"]
                      < selected["metrics"]["normal_rms"])):
             selected = row
