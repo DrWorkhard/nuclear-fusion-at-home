@@ -19,7 +19,7 @@ from fusion_baselines.provenance import build_run_record  # noqa: E402
 
 
 def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target_id="reference401",
-        order=None, margins="current"):
+        order=None, margins="current", task_id=None):
     from scipy.optimize import minimize
 
     check.need(np.isfinite([seconds, check_seconds]).all()
@@ -28,6 +28,7 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
     check.need(all(os.environ.get(k) == "1" for k in (
         "OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "VECLIB_MAXIMUM_THREADS",
         "MKL_NUM_THREADS")), "one-thread execution required")
+    check.need(margins in fit.MARGINS, "registered construction margins required")
     check.need(fit.shutil.disk_usage(ROOT).free >= fit.START_RESERVE,
                "3 GiB initial disk reserve required")
     started = time.monotonic()
@@ -35,8 +36,10 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
     report = dict(kind="normalized-coil-fit", completed=False, physical_admission=False,
                   step4_pass=False, provenance=build_run_record(ROOT),
                   search_seconds=seconds, check_seconds=check_seconds,
+                  recording=fit.recording_settings(task_id or f"fixed-target/{target_id}",
+                                                   margins),
                   coefficient_bounds=None, solver_options=fit.SOLVER_OPTIONS, fine=[], interior=[],
-                  construction_margins=dict(fit.MARGINS.get(margins, {}), name=margins))
+                  construction_margins=fit.margin_preset(margins))
     try:
         if wout is None:
             check.need(target_id == "reference401", "selected401 requires --wout")
@@ -119,7 +122,9 @@ if __name__ == "__main__":
                         help="lift the snapshot to this Fourier order with zero new modes")
     parser.add_argument("--margins", choices=tuple(fit.MARGINS), default="current",
                         help="construction margins; acceptance limits are unchanged")
+    parser.add_argument("--task-id",
+                        help="experiment task identity (default: fixed-target/<target>)")
     args = parser.parse_args()
     raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(), args.seconds,
                          args.check_seconds, None if args.wout is None else args.wout.resolve(),
-                         args.target, args.order, args.margins))
+                         args.target, args.order, args.margins, args.task_id))

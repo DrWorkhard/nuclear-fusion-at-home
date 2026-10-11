@@ -9,7 +9,10 @@ from pathlib import Path
 from fusion_public.data import canonical, loads, require
 
 FORMAT = "fusion-coil-trajectory-v1"
+FORMAT_V2 = "fusion-coil-trajectory-v2"
+RECORDING_FORMAT = "fusion-coil-recording-v2"
 TRIAL = re.compile(r"trial-(\d+)(-attempt)?\.json$")
+ITERATE = re.compile(r"iterate-(\d+)\.json$")
 ROLES = {"startup-seed", "probe", "startup-repeat", "search"}
 UNITS = dict(normal_rms="1", normal_max="1", lengths="m", kappa_max="1/m",
              coil_distance="m", surface_distance="m", current="A", unit_flux="Wb",
@@ -70,8 +73,47 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
     _vector([x for row in coefficients for axis in row for x in axis], len(names))
     search, result = read("search.json", True), read("result.json", True)
     paths = sorted(p.name for p in run.iterdir() if TRIAL.fullmatch(p.name))
+    iterate_paths = sorted(p.name for p in run.iterdir() if ITERATE.fullmatch(p.name))
     for name in paths:
         read(name)  # Bind trajectory identity to every attempt and terminal file.
+    recording = inputs.get("recording")
+    if recording is not None:
+        require(isinstance(recording, dict) and recording.get("format") == RECORDING_FORMAT,
+                "known recording format required")
+    search_format = None if search is None else search.get("recording_format")
+    require(search_format in (None, RECORDING_FORMAT), "known search recording format required")
+    prospective = recording is not None or search_format == RECORDING_FORMAT
+    require(prospective or not iterate_paths, "iterate records require recording version")
+    format_name = FORMAT_V2 if prospective else FORMAT
+    recording = recording or {}
+    iterates, accepted_indices = [], set()
+    for name in iterate_paths:
+        step = read(name)
+        iteration = int(ITERATE.fullmatch(name)[1])
+        require(type(step.get("iteration")) is int and step["iteration"] == iteration,
+                "iterate index mismatch")
+        require(step.get("format") == RECORDING_FORMAT
+                and step.get("solver_step_status") == "accepted"
+                and step.get("physical_admission") is False, "solver callback record required")
+        _vector(step.get("x"), len(names))
+        index = step.get("evaluation_index")
+        require(step.get("link_status") == (
+            "unknown" if index is None else "exact_latest_evaluation"), "iterate link status")
+        if index is not None:
+            require(type(index) is int and index >= 0, "iterate evaluation index required")
+            trial = read(f"trial-{index:05}.json")
+            require(trial.get("index") == index and trial.get("role") == "search"
+                    and trial.get("status") in ("completed", "failed")
+                    and trial.get("x") == step["x"], "iterate/evaluation identity mismatch")
+            accepted_indices.add(index)
+        iterates.append(step)
+    iterates.sort(key=lambda step: step["iteration"])
+    require([step["iteration"] for step in iterates] == list(range(len(iterates))),
+            "contiguous solver iteration records required")
+    if search_format == RECORDING_FORMAT:
+        require(type(search.get("solver_iterations_recorded")) is int
+                and search["solver_iterations_recorded"] == len(iterates),
+                "solver iteration count mismatch")
     provenance = inputs.get("provenance", {})
     repository, host = provenance.get("repository", {}), provenance.get("host", {})
     # A content identity, not an assertion that repeats of the same seed are independent runs.
@@ -81,7 +123,7 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
         require(type(selected.get("index")) is int, "selected integer index required")
     if search is not None and result is not None:
         require(result.get("search") == search, "result/search identity mismatch")
-    header = dict(format=FORMAT, type="run", run_id=run_id, trajectory_id=run_id,
+    header = dict(format=format_name, type="run", run_id=run_id, trajectory_id=run_id,
                   parent_seed_sha256=sources["seed.json"]["sha256"], task_id=None,
                   coefficient_names=names, coefficient_unit="m", order=order,
                   conventions=dict(nfp=seed.get("nfp"), parameter="t in [0,1)",
@@ -102,6 +144,13 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
                   metric_units=UNITS, search_resolution=None,
                   missing="null means not recorded; no accepted-iterate history",
                   physical_admission=False)
+    if prospective:
+        header.update(task_id=recording.get("task_id"),
+                      constraints=recording.get("constraints"),
+                      objective_weights=recording.get("objective_weights"),
+                      search_resolution=recording.get("search_resolution"),
+                      recording=recording or None,
+                      missing="null means not recorded; unlinked solver-step status is unknown")
     grouped = {}
     for name in paths:
         match = TRIAL.fullmatch(name)
@@ -110,6 +159,7 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
         grouped[index][attempt] = name
     require(grouped, "at least one trial required")
     counts = dict(completed=0, failed=0, incomplete=0)
+    candidate_ids = {}
     partial = output.with_name(output.name+".partial")
     with partial.open("xb") as stream:
         def write(row):
@@ -150,9 +200,18 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
             identity = hashlib.sha256(canonical(dict(seed_sha256=header["parent_seed_sha256"],
                                       names=names, x=x,
                                       target=header["target"], scale=scale))).hexdigest()
-            write(dict(format=FORMAT, type="evaluation", run_id=run_id, index=index,
+            candidate_ids[index] = identity
+            elapsed = row.get("elapsed_s") if prospective else None
+            require(elapsed is None or (type(elapsed) in (int, float)
+                    and math.isfinite(elapsed) and elapsed >= 0),
+                    "nonnegative elapsed cost required")
+            timing = {} if not prospective else dict(elapsed_scope=row.get("elapsed_scope"))
+            require(elapsed is None or isinstance(timing["elapsed_scope"], str),
+                    "recorded cost scope required")
+            write(dict(format=format_name, type="evaluation", run_id=run_id, index=index,
                        candidate_id=identity, role=row["role"], evaluation_status=state,
-                       solver_step_status="unknown", elapsed_s=None, coefficients=x,
+                       solver_step_status="accepted" if index in accepted_indices else "unknown",
+                       elapsed_s=elapsed, coefficients=x, **timing,
                        gradient=gradient, objective=row.get("value"), metrics=metrics,
                        error=row.get("error"), rejection_value=row.get("rejected_value"),
                        selected=None if search is None else
@@ -160,9 +219,17 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
                        verification_status="not_evaluated", physical_admission=False))
         if selected is not None:
             require(selected.get("index") in grouped, "selected trial missing")
+        for step in iterates:
+            index = step["evaluation_index"]
+            require(index is None or index in candidate_ids, "solver iterate trial missing")
+            write(dict(format=format_name, type="solver_iterate", run_id=run_id,
+                       iteration=step["iteration"], evaluation_index=index,
+                       candidate_id=None if index is None else candidate_ids[index],
+                       coefficients=step["x"], link_status=step["link_status"],
+                       solver_step_status="accepted", physical_admission=False))
         # Final checks are not coarse search labels; attach only to the selected trial.
         if result is not None:
-            write(dict(format=FORMAT, type="verification", run_id=run_id,
+            write(dict(format=format_name, type="verification", run_id=run_id,
                        selected_index=None if selected is None else selected["index"],
                        recorded={k: result.get(k) for k in (
                            "completed", "error", "deadline_met", "step4_pass", "fine", "geometry",
@@ -175,7 +242,9 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
             read(name)  # Bounded reread; rejects changed bytes or replaced symlinks.
         require(paths == sorted(p.name for p in run.iterdir() if TRIAL.fullmatch(p.name)),
                 "trial inventory changed during export")
-        write(dict(format=FORMAT, type="export_complete", run_id=run_id, counts=counts,
+        require(iterate_paths == sorted(p.name for p in run.iterdir() if ITERATE.fullmatch(p.name)),
+                "iterate inventory changed during export")
+        write(dict(format=format_name, type="export_complete", run_id=run_id, counts=counts,
                    artifacts=sources, physical_admission=False))
     os.link(partial, output)  # Exclusive publication also protects against a racing writer.
     partial.unlink()
