@@ -10,5 +10,8 @@ desk reviews of public sources, not evaluations of the projects' results.
 - [ConStellaration and CoilStellaration](CONSTELLARATION.md): how Proxima's open
   benchmarks work, how the community responded, and a calibration showing that no
   QI case in the coil benchmark reaches our 1e-4 boundary limit.
+- [CoilStellaration calibration](COILSTELLARATION_CALIBRATION.md): ten coil sets
+  recomputed with our own checker, as preregistered in issue #75. Every case has a
+  boundary RMS above 1e-3.
 - [EinsteinArena](EINSTEINARENA.md): how an open agent platform produces verified
   results, and what that implies for an MS0 challenge.
