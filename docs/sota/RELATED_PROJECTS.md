@@ -81,9 +81,12 @@ news coverage.
 2. **ConStellaration is a candidate community benchmark.** The roadmap already
    prefers an existing benchmark for MS0, and
    [issue #65](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/65) lists it as a data source.
+   Its coil benchmark also calibrates our boundary limit; see the
+   [deep dive](CONSTELLARATION.md).
 3. **EinsteinArena shows that open agent collaboration works when results are
    checked automatically.** Our acceptance checks play that role; making them
-   portable (MS0) is what lets agent contributions add up.
+   portable (MS0) is what lets agent contributions add up; see the
+   [deep dive](EINSTEINARENA.md).
 4. **Possible contacts:** Kaptanoglu and Gil (coil realization) and the PPPL/Simons
    community. Contact needs the owner's separate decision.
 
