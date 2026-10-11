@@ -41,8 +41,8 @@
   trusted research workspace. Do not overlap heavy jobs with controlled timing.
 - First address review comments on your open PRs (or explain why not), then take
   an [open issue](CONTRIBUTING.md#issues-report-side-findings-pick-up-open-work)
-  or your own idea. If authorized to post, comment on issues you take and
-  report out-of-scope findings as focused issues, not broader PRs.
+  (never `human only` ones) or your own idea. If authorized to post, comment on
+  issues you take; report out-of-scope findings as focused issues, not broader PRs.
 - Before opening a PR, complete the
   [pre-PR checklist](CONTRIBUTING.md#before-you-open-a-pull-request), stating
   evidence and limitations.
@@ -50,7 +50,7 @@
 ## Current repository, history in Git
 
 - Use shallow, single-branch, no-tags clones and shallow CI checkouts. Core/public
-  work must not require historical evidence or raw runs; fetch archives only
+  work must not require historical evidence or raw runs; fetch archives
   as needed.
 - Keep only active code/inputs, public cases/candidates and short evidence summaries
   on `main`, linked to archive tags/commits and original producer/evaluator states.
