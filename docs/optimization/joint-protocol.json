@@ -299,5 +299,13 @@
  },
  "evidence": {
   "N14": "https://github.com/pjckoch/nuclear-fusion-at-home/tree/98af8dc1a42dd0a8aa26775caad843c4292e7188/evidence/joint-feasibility-n14 (commit 98af8dc1a42dd0a8aa26775caad843c4292e7188; manifest.sha256)"
+ },
+ "diagnostics_reported_only": {
+  "L_gradB": {
+   "source": "#81 / constellaration==0.2.6",
+   "reference401": 6.14039,
+   "selected401": 6.13881,
+   "rule": "no measurable cost (within \u00b15%), so not in objective; report for selected J boundary"
+  }
  }
 }

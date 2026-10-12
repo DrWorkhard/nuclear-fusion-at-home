@@ -132,5 +132,11 @@ parity check; the same policy applies to every arm.
 - **Selected401 (vmecpp):** passes, with the ideal narrow score matching to 1.0e-7
   (`ier_flag` 0).
 
+Coil-simplicity proxy: #81 found no measurable L∇B cost for Step 3 (minimum normalized
+L∇B 6.14039 for reference401 and 6.13881 for selected401, −0.026%, inside the ±5% band).
+It is therefore not an objective term or constraint here. If J moves the boundary,
+L∇B (`constellaration==0.2.6`) is reported for the selected J boundary as a cheap
+diagnostic only.
+
 Not included: finite pressure, transport, winding packs, other optimizers or
 targets. One seed, one budget per arm; not physical acceptance.
