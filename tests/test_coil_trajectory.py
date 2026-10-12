@@ -1,5 +1,6 @@
 """Portable controls for record fidelity, identity and failure preservation."""
 
+import hashlib
 import json
 import time
 from pathlib import Path
@@ -60,6 +61,14 @@ def test_complete_failed_and_incomplete_records_are_not_acceptance(run, tmp_path
     assert footer["artifacts"]["seed.json"]["uri"].endswith("/seed.json")
     assert "/private/" not in output.read_text(encoding="utf-8")
     assert footer["type"] == "export_complete" and not footer["physical_admission"]
+
+
+def test_historical_v1_export_bytes_match_pre_recording_exporter(run, tmp_path):
+    # Captured from the ce5794f exporter on this fixture, without an artifact base.
+    output = tmp_path/'historical.jsonl'
+    export(run, output)
+    assert hashlib.sha256(output.read_bytes()).hexdigest() == (
+        '41a142f21f7f6ffc3dfaccab0bda759cf053ac5b42080ac2cf09b8559397baee')
 
 
 def test_stable_identity_is_independent_of_output_and_artifact_location(run, tmp_path):
@@ -196,3 +205,171 @@ def test_tiny_new_search_uses_existing_recorder_without_native_calls(run, tmp_pa
     rows = read(output)
     assert rows[11]["error"] == "ValueError: synthetic invalid trial"
     assert rows[12]["selected"] and rows[13]["evaluation_status"] == "incomplete"
+
+
+def prospective(run):
+    """A minimal prospective record, including a known zero cost (not missing)."""
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2', task_id='controlled-example',
+                               objective_weights=dict(flux_per_area=1.))
+    save(run, 'inputs.json', inputs)
+    row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+    row.update(elapsed_s=0., elapsed_scope='controlled clock')
+    save(run, 'trial-00000.json', row)
+    save(run, 'iterate-00000.json', dict(format='fusion-coil-recording-v2', iteration=0,
+        evaluation_index=0, x=row['x'], link_status='exact_latest_evaluation',
+        solver_step_status='accepted', physical_admission=False))
+
+
+def test_v2_links_callbacks_costs_and_settings_without_backfilling(run, tmp_path):
+    prospective(run)
+    output = tmp_path/'v2.jsonl'
+    before = {p.name: p.read_bytes() for p in run.iterdir()}
+    export(run, output)
+    header, completed, failed, incomplete, step, footer = read(output)
+    assert all(row['format'] == 'fusion-coil-trajectory-v2' for row in read(output))
+    assert header['task_id'] == 'controlled-example'
+    assert header['objective_weights'] == dict(flux_per_area=1.)
+    assert completed['solver_step_status'] == 'accepted' and completed['elapsed_s'] == 0.
+    assert step['candidate_id'] == completed['candidate_id'] and step['evaluation_index'] == 0
+    assert failed['solver_step_status'] == incomplete['solver_step_status'] == 'unknown'
+    assert failed['elapsed_s'] is None and incomplete['elapsed_s'] is None
+    assert completed['elapsed_scope'] == 'controlled clock' and completed['selected'] is None
+    assert footer['artifacts']['iterate-00000.json']['sha256']
+    assert before == {p.name: p.read_bytes() for p in run.iterdir()}
+
+
+@pytest.mark.parametrize('fault', ['coordinates', 'index', 'probe', 'version', 'count', 'gap',
+                                  'negative_cost', 'missing_scope', 'link_status'])
+def test_v2_rejects_inconsistent_solver_links_and_costs(run, tmp_path, fault):
+    prospective(run)
+    name = 'iterate-00000.json'
+    step = json.loads((run/name).read_text(encoding='utf-8'))
+    if fault == 'coordinates':
+        step['x'][0] = 99.
+    elif fault == 'index':
+        step['evaluation_index'] = 2  # An attempt-only trial is not a returned evaluation.
+    elif fault == 'version':
+        step['format'] = 'unknown'
+    elif fault == 'link_status':
+        step['link_status'] = 'unknown'
+    elif fault == 'gap':
+        step['iteration'] = 2
+    elif fault == 'count':
+        save(run, 'search.json', dict(recording_format='fusion-coil-recording-v2',
+                                     solver_iterations_recorded=2))
+    else:
+        row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+        if fault == 'probe':
+            row['role'] = 'probe'
+        elif fault == 'negative_cost':
+            row['elapsed_s'] = -1.
+        else:
+            row.pop('elapsed_scope')
+        save(run, 'trial-00000.json', row)
+    save(run, name, step)
+    with pytest.raises((ValueError, OSError)):
+        export(run, tmp_path/'invalid.jsonl')
+
+
+def test_v2_unlinked_callback_does_not_invent_candidate_identity(run, tmp_path):
+    prospective(run)
+    step = json.loads((run/'iterate-00000.json').read_text(encoding='utf-8'))
+    step.update(evaluation_index=None, link_status='unknown')
+    save(run, 'iterate-00000.json', step)
+    output = tmp_path/'unknown.jsonl'
+    export(run, output)
+    rows = read(output)
+    assert rows[1]['solver_step_status'] == 'unknown'
+    assert rows[-2]['solver_step_status'] == 'accepted' and rows[-2]['candidate_id'] is None
+
+
+def test_prospective_control_records_real_interruption_after_callback(run, tmp_path):
+    np = pytest.importorskip('numpy')
+    from fusion_baselines.coil_fit import Recorder, recording_settings, search
+
+    class Model:
+        x0 = np.zeros(198)
+
+        def set_x(self, x):
+            pass
+
+        def evaluate(self, x):
+            if x[0] == 1.:
+                raise ValueError('controlled failed trial')
+            if x[0] == 2.:
+                raise KeyboardInterrupt
+            return float(1+x.sum()+.5*x@x), 1+x, dict(
+                normal_rms=float(1+x.sum()), lengths=[3.]*6,
+                sampled_geometry_limits_met=True, current_limit_met=True)
+
+    def minimize(function, x, callback, **kwargs):
+        function(x-.001)
+        callback(x-.001)
+        function(np.ones_like(x))
+        function(np.full_like(x, 2.))
+
+    recorded = tmp_path/'prospective-control'
+    recorder = Recorder(recorded, time.monotonic()+10)
+    recorder.save('seed.json', (run/'seed.json').read_bytes())
+    # The settings describe the control honestly; it has no native field grid or equilibrium.
+    settings = recording_settings('synthetic-recording-control')
+    settings.update(objective_weights=None, constraints=None, search_resolution=None,
+                    current_convention=None, target_policy='synthetic fixed seed')
+    recorder.save('inputs.json', dict(kind='normalized-coil-fit', recording=settings))
+    with pytest.raises(KeyboardInterrupt):
+        search(Model(), recorder, minimize)
+    output = tmp_path/'prospective-control-v2.jsonl'
+    result = export(recorded, output)
+    rows = read(output)
+    assert result['counts'] == dict(completed=11, failed=1, incomplete=1)
+    accepted, failed, interrupted, step = rows[11:15]
+    assert accepted['solver_step_status'] == 'accepted'
+    assert accepted['candidate_id'] == step['candidate_id']
+    assert failed['error'] == 'ValueError: controlled failed trial'
+    assert failed['elapsed_s'] >= 0 and failed['metrics'] is None
+    assert interrupted['evaluation_status'] == 'incomplete' and interrupted['elapsed_s'] is None
+    assert all(row['selected'] is None for row in rows if row['type'] == 'evaluation')
+
+
+def test_native_fixed_target_candidate_replays_from_recorded_inputs(tmp_path, monkeypatch):
+    np = pytest.importorskip('numpy')
+    pytest.importorskip('simsopt')
+    from scipy.optimize import minimize
+
+    from fusion_baselines import coil_check, coil_fit
+    from fusion_baselines.provenance import build_run_record
+
+    root = Path(__file__).resolve().parents[1]
+    input_path = root/coil_check.TARGET
+    candidate_path = root/'submissions/length-headroom-six-coil/candidate.json'
+    data = json.loads(input_path.read_text(encoding='utf-8'))
+    candidate = json.loads(candidate_path.read_text(encoding='utf-8'))
+    seed = coil_check.candidate_snapshot(candidate, data)
+    # A single native optimizer iteration is a recording/replay control, not a new fit study.
+    monkeypatch.setattr(coil_fit, 'SOLVER_OPTIONS', dict(coil_fit.SOLVER_OPTIONS, maxiter=1))
+    recorder = coil_fit.Recorder(tmp_path/'native-control', time.monotonic()+60)
+    recorder.save('seed.json', seed)
+    sources = [input_path, candidate_path, Path(coil_fit.__file__), Path(coil_check.__file__)]
+    recorder.save('inputs.json', dict(kind='normalized-coil-fit',
+        recording=coil_fit.recording_settings('native-fixed-target-recording-control'),
+        solver_options=coil_fit.SOLVER_OPTIONS, search_seconds=60, check_seconds=None,
+        provenance=build_run_record(root),
+        sources_before={str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources}))
+    result = coil_fit.search(coil_fit.Model(seed, data, recorder), recorder, minimize)
+    recorder.save('search.json', result)
+    assert result['startup_pass'] and result['status']['reason'] == 'solver-return'
+    assert result['solver_iterations_recorded'] == 1
+    output = tmp_path/'native-control-v2.jsonl'
+    export(recorder.output, output)
+    rows = read(output)
+    selected = next(row for row in rows if row['type'] == 'evaluation' and row['selected'])
+    # New model and seed loaded from disk, using only committed target/candidate inputs.
+    saved_seed = json.loads((recorder.output/'seed.json').read_text(encoding='utf-8'))
+    replay = coil_fit.Model(saved_seed, data, recorder)
+    value, gradient, metrics = replay.evaluate(np.asarray(selected['coefficients']))
+    assert value == selected['objective'] and metrics == selected['metrics']
+    np.testing.assert_array_equal(gradient, selected['gradient'])
+    step = next(row for row in rows if row['type'] == 'solver_iterate')
+    assert step['candidate_id'] in {row['candidate_id'] for row in rows
+                                  if row['type'] == 'evaluation'}

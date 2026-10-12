@@ -1,6 +1,6 @@
 # Scientific status
 
-Updated 8 October 2026; records the coil-freedom and construction-margin probes.
+Updated 11 October 2026; adds an external calibration of the boundary limit.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **No accepted coil design or demonstrated reactor advantage.** The new matched
@@ -13,8 +13,10 @@ wide-domain action diagnostics in both actual coil fields; benefit transfer rema
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) then gained only 3.6%
 at Fourier order 8 and [halved construction margins](optimization/ISSUE70_CONSTRUCTION_MARGINS.md)
 5.8%, so the next route is joint plasma/coil optimization
-([programme](optimization/STEP4_RESEARCH_PROGRAMME.md)). Present evidence does not
-substantiate the README's reactor-design timeline.
+([programme](optimization/STEP4_RESEARCH_PROGRAMME.md)). In Proxima's public coil
+benchmark no QI case reaches the 1e-4 boundary limit, and our fits beat about 91–95%
+of its coil sets ([comparison](sota/CONSTELLARATION.md)); limits stay unchanged.
+Present evidence does not substantiate the README's reactor-design timeline.
 
 ## Established results and their limits
 

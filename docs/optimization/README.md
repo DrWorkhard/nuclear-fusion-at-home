@@ -32,7 +32,8 @@ for an installation-free contribution.
    zero, so a richer family starts from identical coils (#53). Snapshots record
    their order; the public starter stays order 5. `--margins halved` moves each
    construction penalty halfway to its unchanged acceptance limit (#70); the
-   default `current` keeps the values above, and reports record the preset.
+   default `current` keeps the values above, and reports record the preset. The
+   v2 recording derives its penalty and selection thresholds from that preset.
 3. Freeze the selected currents. Check two fine boundary grids, continuous
    geometry bounds, three interior resolutions and independent B/A calculations.
 4. Save inputs, source identities, attempts, failures, fields and a short result.
@@ -61,9 +62,11 @@ Implementation: [driver](../../scripts/fit_coils.py),
 [objective and search](../../src/fusion_baselines/coil_fit.py),
 [checks and target intake](../../src/fusion_baselines/coil_check.py).
 Independent geometry/field mathematics stay separate from optimization penalties.
-The [versioned trajectory export](COIL_TRAJECTORY_V1.md) joins existing run files
+The [historical trajectory export](COIL_TRAJECTORY_V1.md) joins existing run files
 without native dependencies, retaining failed/incomplete evaluations and unknown
-optimizer-step labels. It does not change recording or acceptance checks.
+optimizer-step labels. [Prospective recording v2](COIL_TRAJECTORY_V2.md) adds
+settings, per-evaluation costs and linked solver callbacks for new fixed-target
+runs. Neither export changes scientific acceptance checks.
 The default remains reference401. `--target selected401 --wout <archived-wout>`
 selects the hash-bound improved Step 3 target with its frozen normalization.
 `check_coils.py` supports the same option; `trace_surfaces.py --snapshot` preserves

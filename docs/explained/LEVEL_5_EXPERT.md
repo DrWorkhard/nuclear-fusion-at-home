@@ -1,6 +1,6 @@
 # Level 5: for an expert
 
-Updated 8 October 2026 · [All five levels](README.md) · Previous: [Level 4](LEVEL_4_GRADUATE.md)
+Updated 11 October 2026 · [All five levels](README.md) · Previous: [Level 4](LEVEL_4_GRADUATE.md)
 
 An open, agent-assisted two-stage stellarator study. The plasma stage improved a
 vacuum QI diagnostic on an open target. The coil stage has not yet realized any
@@ -51,7 +51,11 @@ Both targets are nfp = 2, zero-β configurations at a normalized scale. Detail:
 - **Tolerance calibration.** The 1e-4 / 1e-3 / 0.01 pilot limits and the
   geometry limits are project choices at a normalized scale. The boundary metric
   itself was checked against QUASR and LPQA boundary components, which does not
-  cover the complete Goodman acceptance profile or any engineering standard.
+  cover the complete Goodman acceptance profile or any engineering standard. In
+  Proxima's CoilStellaration benchmark no QI case reaches a mean |B·n|/|B| of 1e-4,
+  and our fits beat about 91–95% of its coil sets
+  ([comparison](../sota/CONSTELLARATION.md)), so 1e-4 looks out of reach for
+  practical filament coils; any revision needs separate, versioned review.
 - **Verification depth.** Geometry bounds use padded floating point rather than
   interval arithmetic; numerical independence mostly means separate calculations
   on one machine; the filament model has no finite build, forces or strain.
