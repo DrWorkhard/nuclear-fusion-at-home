@@ -10,7 +10,7 @@ This directory is tracked by Git. Use a unique descriptive folder, for example
   Credit any reused work. Compute spending and agent/model details are optional.
 
 Start from the bundled reference or our
-[lowest boundary-error example](halved-margin-six-coil/README.md), which passes
+[halved-margin example](halved-margin-six-coil/README.md), which passes
 [acceptance v2](../docs/validation/ACCEPTANCE_V2.md); the
 [leaderboard](../docs/validation/LEADERBOARD.md) ranks every candidate. The earlier
 [length-headroom example](length-headroom-six-coil/README.md) and the

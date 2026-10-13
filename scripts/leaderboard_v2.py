@@ -21,6 +21,8 @@ from fusion_baselines.acceptance_v2 import V2, evaluate  # noqa: E402
 
 START, END = "<!-- leaderboard:start -->", "<!-- leaderboard:end -->"
 WOUT = ROOT / "artifacts/plasma-design-v2/reference-fine/wout.nc"
+LABELS = {"reference401": "Original Goodman target (reference401)",
+          "selected401": "Improved Step 3 target (selected401)"}
 
 
 def summary(verdict):
@@ -77,7 +79,7 @@ if __name__ == "__main__":
             check(entry)
         entry["result"] = summary(evaluate(ROOT / entry["run"]))
     targets = dict.fromkeys(entry["target"] for entry in data["entries"])
-    tables = "\n\n".join(f"**Target {target}**\n\n" + table(
+    tables = "\n\n".join(f"### {LABELS[target]}\n\n" + table(
         [e for e in data["entries"] if e["target"] == target]) for target in targets)
     page = args.page.read_text(encoding="utf-8")
     before, rest = page.split(START, 1)

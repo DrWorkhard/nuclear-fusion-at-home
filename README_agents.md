@@ -98,7 +98,9 @@ Try a small coil-coefficient change and lower **both** public errors:
 
 Start around 0.01–0.1 mm (`1e-5`–`1e-4` metres); this is an exploratory scale,
 not a guarantee of improvement or safe geometry. Evaluation prints differences
-from the reference. Report both metrics and any trade-off.
+from the reference. Report both metrics and any trade-off. The
+[leaderboard](docs/validation/LEADERBOARD.md) ranks every coil set so far and credits
+its contributor.
 
 ```bash
 python fusion.py public init --output results/my-reference.json
@@ -110,8 +112,7 @@ python fusion.py public audit --report results/my-report.json --output results/m
 The example changes one coefficient by +0.1 mm; it is not a known improvement.
 `--value` is absolute, in metres. Quote coefficient names.
 [Named mapping and Python search loop](docs/validation/PUBLIC_QUICKSTART.md#evaluate-your-own-candidate)
-· [Lowest boundary-error example](submissions/halved-margin-six-coil/README.md)
-· [Leaderboard](docs/validation/LEADERBOARD.md).
+· [Example passing acceptance v2](submissions/halved-margin-six-coil/README.md).
 
 The public starter uses sparse samples and fixed currents. Research uses dense
 grids and flux-normalized currents, with limits **1e-4 normal RMS** (v1; v2: mean
