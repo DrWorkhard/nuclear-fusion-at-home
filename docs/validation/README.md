@@ -10,6 +10,8 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
   pinned public-reference outputs, both sampled errors, hashes and replay limits.
 - [Reproducing results](REPRODUCING_RESULTS.md): current tools and the freeze tag;
   how old evidence paths resolve without changing their identities.
+- [Retention pilot proposal](RETENTION_PILOT_V1.md): measured capacity, artifact
+  responsibilities and a local restore control; storage choices remain pending.
 - [Research workflow](RESEARCH_WORKFLOW.md): short explorations, separate
   confirmation, proportionate tests and single-writer ownership.
 - [Environment](ENVIRONMENT.md): active native dependencies, execution safeguards

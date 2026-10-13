@@ -1,7 +1,10 @@
 """Portable controls for record fidelity, identity and failure preservation."""
 
+import errno
 import hashlib
 import json
+import subprocess
+import sys
 import time
 from pathlib import Path
 
@@ -142,9 +145,47 @@ def test_existing_output_and_symlink_inputs_are_not_overwritten_or_followed(run,
     assert output.read_text(encoding="utf-8") == "preserved"
     original = run/"trial-00000.json"
     original.rename(run/"hidden.json")
-    original.symlink_to(run/"hidden.json")
+    try:
+        original.symlink_to(run/"hidden.json")
+    except OSError as exc:
+        if (exc.errno in (errno.EACCES, errno.EPERM, errno.ENOTSUP)
+                or getattr(exc, "winerror", 0) == 1314):
+            pytest.skip(f"symlink creation unavailable: {exc}")
+        raise
     with pytest.raises(ValueError, match="regular"):
         export(run, tmp_path/"symlink.jsonl")
+
+
+@pytest.mark.parametrize("error", [errno.EPERM, errno.EIO])
+def test_symlink_control_skips_privilege_failure_but_not_io_errors(
+        run, tmp_path, monkeypatch, error):
+    def unavailable(*args, **kwargs):
+        raise OSError(error, "controlled symlink failure")
+
+    monkeypatch.setattr(Path, "symlink_to", unavailable)
+    expected = pytest.skip.Exception if error == errno.EPERM else OSError
+    with pytest.raises(expected):
+        test_existing_output_and_symlink_inputs_are_not_overwritten_or_followed(run, tmp_path)
+
+
+@pytest.mark.parametrize("selected", [[], "candidate", 1, False])
+@pytest.mark.parametrize("prospective", [False, True])
+def test_non_object_selection_has_clear_library_and_cli_failure(
+        run, tmp_path, selected, prospective):
+    if prospective:
+        inputs = json.loads((run/"inputs.json").read_text(encoding="utf-8"))
+        inputs["recording"] = dict(format="fusion-coil-recording-v2")
+        save(run, "inputs.json", inputs)
+    save(run, "search.json", dict(selected=selected))
+    output = tmp_path/"malformed.jsonl"
+    with pytest.raises(ValueError, match="selected object or null required"):
+        export(run, output)
+    script = Path(__file__).resolve().parents[1]/"scripts/export_coil_trajectory.py"
+    result = subprocess.run([sys.executable, "-I", "-S", str(script), "--run", str(run),
+                             "--output", str(output)], capture_output=True, text=True, check=False)
+    assert result.returncode == 1
+    assert result.stderr == "Export failed: selected object or null required\n"
+    assert not output.exists() and not Path(str(output)+".partial").exists()
 
 
 def test_order_eight_names_and_gradients_are_preserved(run, tmp_path):

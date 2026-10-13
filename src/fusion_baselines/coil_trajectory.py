@@ -120,6 +120,7 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
     run_id = hashlib.sha256(canonical({k: v["sha256"] for k, v in sources.items()})).hexdigest()
     selected = None if search is None else search.get("selected")
     if selected is not None:
+        require(isinstance(selected, dict), "selected object or null required")
         require(type(selected.get("index")) is int, "selected integer index required")
     if search is not None and result is not None:
         require(result.get("search") == search, "result/search identity mismatch")
