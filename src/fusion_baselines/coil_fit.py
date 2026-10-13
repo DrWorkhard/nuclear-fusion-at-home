@@ -12,6 +12,12 @@ import time
 import numpy as np
 
 MAX_BYTES, START_RESERVE, LIVE_RESERVE = 256*1024**2, 3*1024**3, 2*1024**3
+# Output kept free during search so the selected candidate can still be checked (#90).
+CHECK_STORAGE_RESERVE = 48*1024**2
+
+
+class StorageLimit(OSError):
+    """The output ceiling for the current phase was reached; prior records are intact."""
 PROBE_STEPS = (1.25e-6, 6.25e-7)
 SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=0., gtol=1e-9)
 RECORDING_FORMAT = "fusion-coil-recording-v2"
@@ -151,6 +157,7 @@ class Recorder:
                        for name in ("B", "A", "B_vjp", "A_vjp", "independent_B", "independent_BA")}
         self.bundles, self.bytes, self.active = 0, 0, None
         self.storage = [0] if storage is None else storage
+        self.limit = None  # None means the full MAX_BYTES ceiling, read at write time.
 
     def guard(self):
         if time.monotonic() >= self.deadline:
@@ -165,8 +172,10 @@ class Recorder:
         temporary = path.with_suffix(path.suffix+".tmp")
         if temporary.exists():
             raise FileExistsError("existing failed temporary output must not be overwritten")
-        if self.storage[0]+len(payload) > MAX_BYTES:
-            raise OSError("256 MiB aggregate output ceiling including temporary publication")
+        limit = MAX_BYTES if self.limit is None else self.limit
+        if self.storage[0]+len(payload) > limit:
+            raise StorageLimit(f"{limit} byte output ceiling for this phase reached "
+                               "(256 MiB aggregate including temporary publication)")
         difference = len(payload)-(path.stat().st_size if path.exists() else 0)
         try:
             with temporary.open("xb") as stream:
@@ -441,6 +450,7 @@ def search(model, record, minimize):
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
     largest_value = 0.
+    record.limit = MAX_BYTES - CHECK_STORAGE_RESERVE
     last_search_row, solver_iterations = None, 0
 
     def evaluate(x, role):
@@ -526,10 +536,15 @@ def search(model, record, minimize):
         record.guard()
         status = dict(reason="solver-return", success=bool(solved.success),
                       message=str(solved.message))
+    except StorageLimit as exc:
+        # Like the time budget: stop searching, keep every record and the selection.
+        status = dict(reason="storage", error=str(exc))
     except TimeoutError as exc:
         status = dict(reason="budget", error=str(exc))
     except Exception as exc:
         status = dict(reason="failure", error=f"{type(exc).__name__}: {exc}")
+    finally:
+        record.limit = None  # Checks may use the reserved allowance.
     model.set_x(initial if selected is None else np.asarray(selected["x"]))
     return dict(status=status, startup_pass=startup, derivative_checks=checks,
                 recording_format=RECORDING_FORMAT, solver_iterations_recorded=solver_iterations,
