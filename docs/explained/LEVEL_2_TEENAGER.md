@@ -44,13 +44,13 @@ failures are kept, not hidden.
 - **Steps 1–3 are done, in a small scope.** We can reproduce known results, repeat
   a design cycle reliably, and we improved a plasma shape by 5–11% on one specific
   computer test of particle confinement.
-- **Step 4 is in progress: coils.** Our best coil set satisfies the shape rules,
-  but its field leaks through the plasma boundary about **19 times** more than our
-  limit, and the field inside is about 7% further off than allowed. Its field
+- **Step 4 is in progress: coils.** Our best coil set satisfies the shape rules
+  and the rule for the field inside, but its field leaks through the plasma
+  boundary about **17 times** more than our original limit. Its field
   lines stay inside and twist by about the right amount, which is encouraging but
   not proof. Professional coil designs miss that limit too, so we added a second,
-  versioned acceptance test that the best 10% of a public benchmark pass; one of our
-  coil sets now passes it.
+  versioned acceptance test that the best 10% of a public benchmark pass; three of
+  our coil sets now pass it ([leaderboard](../validation/LEADERBOARD.md)).
 - We have now fitted coils, with equal effort, to both the original and our
   improved plasma shape. Both miss the limits by similar amounts. Our particle
   test could only be finished in a narrow region, where the improved shape is

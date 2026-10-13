@@ -33,7 +33,11 @@ to 8 under the same 30-minute budget. Boundary RMS improved only 3.6% (ratio 0.9
 required ≤ 0.5), so by the fixed rule the next route is joint plasma/coil
 optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)), not another coil family. A
 [construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) then halved every margin toward its acceptance
-limit and gained 5.8% (ratio 0.942), so the route stands.
+limit and gained 5.8% (ratio 0.942). Under the owner-approved
+[acceptance v2](../validation/ACCEPTANCE_V2.md), three fixed-target coil sets pass the field
+and geometry checks ([leaderboard](../validation/LEADERBOARD.md)), but in the best of
+them the wide bounce diagnostic is still incomplete ([#89](ISSUE89_V2_COIL_BOUNCE.md)).
+The route stands.
 
 1. **Preregister the joint pilot** ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)). The draft protocol
    ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)) and its review ([#63](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/63)) fix comparable physics, objective
@@ -48,8 +52,9 @@ limit and gained 5.8% (ratio 0.942), so the route stands.
 Keep target-specific normalization frozen and report each target separately;
 do not treat errors against different targets as a matched improvement.
 Report boundary RMS/max, interior RMS, geometry, current, realized-field findings
-and elapsed time together. The original 1e-4 / 1e-3 / 0.01 limits and continuous
-geometry checks remain unchanged. No endpoint or solver success flag admits a
+and elapsed time together. The original 1e-4 / 1e-3 / 0.01 limits (v1) and continuous
+geometry checks remain unchanged; results also report the v2 verdict. No endpoint
+or solver success flag admits a
 physical design; the [Step 4 requirements](../steps/STEP_4_PLASMA_AND_COILS.md) still apply.
 
 The probe used at most 30 minutes per search arm, one native thread, 256 MiB

@@ -3,7 +3,8 @@
 One normalized fitter, one set of field/geometry checks.
 [Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
 [Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md) ·
-[Coil-freedom probe](ISSUE53_COIL_FREEDOM.md) · [Construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md)
+[Coil-freedom probe](ISSUE53_COIL_FREEDOM.md) · [Construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) ·
+[Bounce fidelity of the v2 coil set](ISSUE89_V2_COIL_BOUNCE.md)
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
 geometry families, label compatibility, rights and the prerequisites for a learning pilot.
@@ -20,8 +21,8 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREAD
 Requires the preserved [native environment](../validation/ENVIRONMENT.md) and local
 reference401 field archives. The snapshot is explicit; the driver no longer loads
 an entire chain of previous experiments. Historical absolute artifact paths are
-not portable. Use the [public candidate](../../submissions/length-headroom-six-coil/README.md)
-for an installation-free contribution.
+not portable. Use a [public candidate](../../submissions/README.md) for an installation-free
+contribution; the [leaderboard](../validation/LEADERBOARD.md) ranks them under acceptance v2.
 
 1. Verify fixed target/source hashes and named physical coil/current mapping.
 2. Check derivatives and exact repeat, then run penalized normalized L-BFGS-B.

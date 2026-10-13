@@ -1,15 +1,16 @@
 # Scientific status
 
-Updated 13 October 2026; adds acceptance v2 and its first evaluation.
+Updated 13 October 2026; adds the complete acceptance v2 evaluation and leaderboard.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
-**One coil set passes the owner-approved [acceptance v2](validation/ACCEPTANCE_V2.md); none passes the
-original v1 limits; no demonstrated reactor advantage.** The passing set is the
-halved-margin reference401 fit (boundary mean 0.00143, interior 0.00902; [results](validation/ACCEPTANCE_V2_RESULTS.md)).
-Under v1 the matched reference-target fit reaches boundary RMS **0.001932**, about
-**19×** its limit, and interior RMS **0.01072**. The improved-target fit also fails v1.
-[Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
-wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
+**Three reference401 coil sets pass the owner-approved [acceptance v2](validation/ACCEPTANCE_V2.md); none passes the
+original v1 limits; no demonstrated reactor advantage.** The [leaderboard](validation/LEADERBOARD.md)
+ranks them: the halved-margin fit has the lowest boundary error (mean 0.00143), and
+@pjckoch's #12 continuation passed first ([results](validation/ACCEPTANCE_V2_RESULTS.md)).
+Under v1 the best boundary RMS is **0.00173**, about **17×** its limit.
+[Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) and the
+[best v2 coil field](optimization/ISSUE89_V2_COIL_BOUNCE.md) leave wide-domain action
+diagnostics incomplete; benefit transfer remains unresolved.
 **The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
 30 more minutes of search lowered boundary RMS by only 6%. The
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) then gained only 3.6%
@@ -49,8 +50,8 @@ engineering. Solver stopping does not prove an optimum.
 
 ## Reproduce or contribute
 
-The [best portable geometry](../submissions/length-headroom-six-coil/README.md)
-is available; public sparse and dense diagnostics are not physical acceptance.
+[Public candidates](../submissions/README.md), ranked on the [leaderboard](validation/LEADERBOARD.md),
+are available; public sparse and dense diagnostics are not physical acceptance.
 Use [historical revisions](validation/REPRODUCING_RESULTS.md) for full methods,
 budgets and failure records. Evidence and raw artifacts retain their identities;
 Git does not back up ignored data.
