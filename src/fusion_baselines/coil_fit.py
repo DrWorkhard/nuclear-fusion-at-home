@@ -38,6 +38,9 @@ VECTOR_STORE = "vectors.f64"
 EVALUATION_COST_SCOPE = "model.evaluate and post-evaluation guard; excludes trial-file writes"
 OBJECTIVE_WEIGHTS = dict(flux_per_area=1., length=1., coil_distance=1000.,
                          surface_distance=1000., curvature=.01)
+# Optional interior objective (method of #12). Its surfaces lie between the checked
+# s = 0.25/0.5/0.75 surfaces, so no objective point is an acceptance point.
+INTERIOR_OBJECTIVE = dict(surfaces=(.125, .375, .625, .875), resolution=16, shift=.5)
 # Construction margins keep sampled fits inside the unchanged acceptance limits
 # (length 3.5 m, coil-coil 0.06 m, coil-plasma 0.08 m, curvature 12/m).
 # "halved" moves each margin halfway to its limit (issue #70). A preset is the only
@@ -73,10 +76,15 @@ def selection_settings(margins="current"):
     return dict(length_max_m=margin_preset(margins)["selection_length"], **SAMPLED_LIMITS)
 
 
-def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0):
+def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0,
+                       interior_weight=0.):
     """Prospective fixed-target settings; no inferred plasma or equilibrium trajectory."""
+    interior = interior_weight > 0
+    # Boundary-only settings keep their original recorded bytes; the term adds two keys.
+    extra = dict(interior_objective=dict(INTERIOR_OBJECTIVE)) if interior else {}
     return dict(format=RECORDING_FORMAT, task_id=task_id,
-                objective_weights=OBJECTIVE_WEIGHTS.copy(),
+                objective_weights=dict(OBJECTIVE_WEIGHTS, **(
+                    dict(interior=float(interior_weight)) if interior else {})), **extra,
                 constraints=dict(margin_preset=margins,
                                  penalties=penalty_settings(margins),
                                  selection=selection_settings(margins), coefficient_bounds=None),
@@ -87,9 +95,25 @@ def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0):
                 elapsed_scope=EVALUATION_COST_SCOPE,
                 resource_limits=dict(output_bytes=MAX_BYTES, initial_reserve_bytes=START_RESERVE,
                                      live_reserve_bytes=LIVE_RESERVE),
-                selection_rule="lowest normal_rms among completed eligible startup-seed/search",
+                selection_rule=("lowest flux_objective + interior_objective" if interior
+                                else "lowest normal_rms")
+                + " among completed eligible startup-seed/search",
                 current_convention="1e5 A base current scaled by target_flux/unit_flux",
                 target_policy="fixed seed target, signed flux and B2_scale throughout run")
+
+
+def interior_target(data):
+    """Objective-only interior points and VMEC field from an open, already bound Wout."""
+    from fusion_baselines import wout_target
+
+    points, field = [], []
+    for surface in INTERIOR_OBJECTIVE["surfaces"]:
+        row = wout_target.sample(data, surface, INTERIOR_OBJECTIVE["resolution"],
+                                 INTERIOR_OBJECTIVE["shift"])
+        points.append(np.stack((row["radius"]*np.cos(row["phi"]), row["radius"]*np.sin(row["phi"]),
+                                row["height"]), axis=-1).reshape(-1, 3))
+        field.append(row["native"].reshape(-1, 3))
+    return dict(points=np.concatenate(points), target=np.concatenate(field))
 
 
 def mode_map(entries):
@@ -278,7 +302,12 @@ def tracked_field(field_class, coils, record):
 
 
 class Model:
-    def __init__(self, seed, data, record, ncoil=256, n=64, offset=0, margins="current"):
+    def __init__(self, seed, data, record, ncoil=256, n=64, offset=0, margins="current",
+                 interior=None, interior_weight=0.):
+        if not (np.isfinite(interior_weight) and interior_weight >= 0
+                and (interior is None) == (interior_weight == 0)):
+            raise ValueError("an interior target exactly when the interior weight is positive")
+        self.interior_weight = float(interior_weight)
         self.margins = margin_preset(margins)
         self.penalties = penalty_settings(margins)
         from simsopt.field import BiotSavart, Current, coils_via_symmetries
@@ -327,6 +356,15 @@ class Model:
         self.loop_field = tracked_field(BiotSavart, self.coils, record)
         self.loop_points, self.loop_tangent = loop_geometry(data, ncoil)
         self.loop_field.set_points(self.loop_points)
+        self.interior = None
+        if interior is not None:
+            self.interior = {k: np.ascontiguousarray(interior[k], dtype=float)
+                             for k in ("points", "target")}
+            if (self.interior["points"].shape != self.interior["target"].shape
+                    or not np.isfinite(list(self.interior.values())).all()):
+                raise ValueError("finite matching interior points and target required")
+            self.interior_field = tracked_field(BiotSavart, self.coils, record)
+            self.interior_field.set_points(self.interior["points"])
         # threshold=0 equals released SIMSOPT's SquaredFlux (J >= 0); only the historical fork
         # accepts the argument. Its J < 1e-10 gradient zeroing is rejected below anyway.
         flux_options = dict(definition="local")
@@ -400,7 +438,25 @@ class Model:
         gradient += canonical_gradient(self.curves, self.geometry.dJ(partials=True), self.order)
         scale = self.seed["target_flux"]/phi
         metrics = boundary_metrics(scale*self.field.B().reshape(self.points.shape), self.normals)
-        metrics.update(self.geometry_metrics(), flux_objective=float(value),
+        metrics["selection_value"] = metrics["normal_rms"]
+        if self.interior is not None:
+            # 0.5 mean |s B - B_target|^2 / B2 at the flux-normalizing scale s = target/phi(x),
+            # differentiated through s like #12; the boundary term is scale-invariant.
+            unit = self.interior_field.B().copy()
+            b2, count = self.seed["B2_scale"], len(unit)
+            residual = scale*unit - self.interior["target"]
+            interior = .5*float(np.mean(np.sum(residual**2, axis=1)))/b2
+            weights = self.interior_weight*residual/(count*b2)
+            contraction = float(np.sum(weights*unit))
+            derivative = (self.interior_field.B_vjp(scale*weights)
+                          - (scale*contraction/phi)*self.loop_field.A_vjp(
+                              self.loop_tangent/len(self.loop_tangent)))
+            value += self.interior_weight*interior
+            gradient += canonical_gradient(self.curves, derivative, self.order)
+            metrics.update(interior_objective=self.interior_weight*interior,
+                           interior_objective_rms=float(np.sqrt(2*interior)),
+                           selection_value=float(value))
+        metrics.update(self.geometry_metrics(), flux_objective=float(q/self.area),
                        flux_normalized_raw=metrics["raw_quadratic_flux"]
                        / (self.area*self.seed["B2_scale"]),
                        geometry_penalty=penalty,
@@ -533,8 +589,9 @@ def search(model, record, minimize):
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
                 and metrics["current_limit_met"]
                 and max(metrics["lengths"]) <= selection["length_max_m"]
-                and (selected is None or metrics["normal_rms"]
-                     < selected["metrics"]["normal_rms"])):
+                and (selected is None or metrics.get("selection_value", metrics["normal_rms"])
+                     < selected["metrics"].get("selection_value",
+                                               selected["metrics"]["normal_rms"]))):
             selected = row
         return value, gradient
 

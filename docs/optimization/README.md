@@ -5,7 +5,8 @@ One normalized fitter, one set of field/geometry checks.
 [Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md) ·
 [Coil-freedom probe](ISSUE53_COIL_FREEDOM.md) · [Construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) ·
 [Bounce fidelity of the v2 coil set](ISSUE89_V2_COIL_BOUNCE.md) ·
-[Passing methods on the Step 3 target](STEP3_V2_METHODS.md)
+[Passing methods on the Step 3 target](STEP3_V2_METHODS.md) ·
+[Interior field term](ISSUE98_INTERIOR_TERM.md)
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
 geometry families, label compatibility, rights and the prerequisites for a learning pilot.
@@ -35,6 +36,11 @@ contribution; the [leaderboard](../validation/LEADERBOARD.md) ranks them under a
    construction penalty halfway to its unchanged acceptance limit (#70); the
    default `current` keeps the values above, and reports record the preset. The
    v2 recording derives its penalty and selection thresholds from that preset.
+   `--interior-weight W` adds #12's interior field term, W · ½ mean|s·B − B_target|²/B2
+   at the flux-normalizing scale s (#98). It is sampled from the bound Wout on
+   s = 0.125/0.375/0.625/0.875 (16 × 16, half-cell shift), so no objective point is a
+   checked interior point. With W > 0, the eligible point with the lowest boundary +
+   interior objective is selected. The default 0 keeps the boundary-only fit.
 3. Freeze the selected currents. Check two fine boundary grids, continuous
    geometry bounds, three interior resolutions and independent B/A calculations.
 4. Save inputs, source identities, attempts, failures, fields and a short result.

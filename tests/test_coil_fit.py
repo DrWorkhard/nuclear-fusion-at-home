@@ -673,3 +673,64 @@ def test_search_storage_ceiling_stops_like_budget_and_keeps_check_allowance(
     record.save('fine-check.json', b'x'*40_000)  # The reserved allowance remains usable.
     with pytest.raises(experiment.StorageLimit, match="output ceiling"):
         record.save('too-much.json', b'x'*20_000)
+
+
+def test_interior_selection_uses_the_recorded_selection_value(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        value, gradient, metrics = original(x)
+        # Boundary RMS improves while boundary + interior objective worsens: the latter wins.
+        metrics.update(normal_rms=-model.calls, selection_value=float(model.calls))
+        return value, gradient, metrics
+
+    model.evaluate = evaluate
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
+    assert result['startup_pass'] and result['selected']['index'] == 0
+
+
+def test_interior_recording_adds_weight_and_grid_only_when_used():
+    plain = experiment.recording_settings('task', 'halved')
+    interior = experiment.recording_settings('task', 'halved', interior_weight=.05)
+    assert 'interior' not in plain['objective_weights'] and 'interior_objective' not in plain
+    assert interior['objective_weights'] == dict(plain['objective_weights'], interior=.05)
+    assert interior['interior_objective'] == experiment.INTERIOR_OBJECTIVE
+    assert interior['selection_rule'].startswith('lowest flux_objective + interior_objective')
+    # Objective surfaces never coincide with the checked s = 0.25/0.5/0.75 surfaces.
+    assert not set(experiment.INTERIOR_OBJECTIVE['surfaces']) & {.25, .5, .75}
+
+
+def test_interior_term_value_and_gradient_through_flux_scale(tmp_path, clock):
+    pytest.importorskip("simsopt")
+    from fusion_baselines import coil_check as check
+
+    data = check.read_json(check.ROOT/check.TARGETS['reference401']['input'])
+    candidate = check.read_json(
+        check.ROOT/'submissions/length-headroom-six-coil/candidate.json')
+    seed = check.candidate_snapshot(candidate, data, nodes=64)
+    record = experiment.Recorder(tmp_path/'run', 1)
+    plain = experiment.Model(seed, data, record, ncoil=64, n=16)
+    points = .97*plain.points.reshape(-1, 3)[::7]
+    plain.interior_field = experiment.tracked_field(
+        __import__('simsopt.field', fromlist=['BiotSavart']).BiotSavart, plain.coils, record)
+    plain.interior_field.set_points(points)
+    target = 1.1*seed['scale']*plain.interior_field.B()
+    interior = dict(points=points, target=target)
+    with pytest.raises(ValueError, match='interior target exactly'):
+        experiment.Model(seed, data, record, ncoil=64, n=16, interior=interior)
+    model = experiment.Model(seed, data, record, ncoil=64, n=16, interior=interior,
+                             interior_weight=.3)
+    base, _, base_metrics = plain.evaluate(model.x0)
+    value, gradient, metrics = model.evaluate(model.x0)
+    residual = metrics['scale']*plain.interior_field.B() - target
+    term = .5*np.mean(np.sum(residual**2, axis=1))/seed['B2_scale']
+    assert metrics['interior_objective_rms'] == pytest.approx(np.sqrt(2*term), rel=1e-12)
+    assert value == pytest.approx(base + .3*term, rel=1e-12)
+    assert metrics['selection_value'] == pytest.approx(metrics['flux_objective'] + .3*term)
+    direction = np.sin(np.arange(len(model.x0))+1)
+    direction /= np.linalg.norm(direction)
+    h = 1e-6
+    fd = (model.evaluate(model.x0+h*direction)[0]
+          - model.evaluate(model.x0-h*direction)[0])/(2*h)
+    assert fd == pytest.approx(gradient@direction, rel=1e-5)
