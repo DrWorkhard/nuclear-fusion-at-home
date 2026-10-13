@@ -57,7 +57,10 @@ Both targets are nfp = 2, zero-β configurations at a normalized scale. Detail:
   ([comparison](../sota/CONSTELLARATION.md)), so 1e-4 looks out of reach for
   practical filament coils. The owner therefore froze a benchmark-relative
   [acceptance v2](../validation/ACCEPTANCE_V2.md) (best 10% of that benchmark pass), knowing our fits rank
-  near that level; one halved-margin fit passes it ([results](../validation/ACCEPTANCE_V2_RESULTS.md)).
+  near that level; three reference401 coil sets pass it
+  ([leaderboard](../validation/LEADERBOARD.md)). In the best, the wide bounce-action
+  diagnostic still lacks the q = 0.03 wells at s = 0.1
+  ([#89](../optimization/ISSUE89_V2_COIL_BOUNCE.md)).
 - **Verification depth.** Geometry bounds use padded floating point rather than
   interval arithmetic; numerical independence mostly means separate calculations
   on one machine; the filament model has no finite build, forces or strain.

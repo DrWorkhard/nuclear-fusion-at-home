@@ -21,7 +21,9 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
 - [Field acceptance v2](ACCEPTANCE_V2.md): owner-approved, benchmark-calibrated
   boundary limits next to the unchanged v1 limits, with how to evaluate a run.
 - [Acceptance v2 results](ACCEPTANCE_V2_RESULTS.md): every locally available run
-  evaluated under v1 and v2; one coil set passes v2, none passes v1.
+  evaluated under v1 and v2, with a same-day correction; none passes v1.
+- [Leaderboard](LEADERBOARD.md): every public candidate and recorded coil set ranked
+  under v2 with its original contributor; three pass.
 - [Review policy](REVIEW_POLICY.md): open contribution intake, trusted evaluation,
   safe PR execution, live repository protections and the remaining launch work.
 - [Publication inventory](PUBLICATION_INVENTORY.md): dated size/privacy-pattern

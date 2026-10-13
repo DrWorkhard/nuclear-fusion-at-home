@@ -53,9 +53,12 @@ the wide one by 15.53% and remains rejected.
   (normalized scale). Widening the coefficient box gained only 2.64% boundary RMS.
 - [Acceptance v2](../validation/ACCEPTANCE_V2.md) (owner-approved, frozen 13 October 2026) replaces only the
   boundary limits with plain mean ≤ 0.0018 and maximum ≤ 0.013, the joint 10% level
-  of 8,058 CoilStellaration coil sets. Every local run passes those; only the
-  halved-margin fit (interior 0.00902) passes the unchanged interior limit
-  ([results](../validation/ACCEPTANCE_V2_RESULTS.md)).
+  of 8,058 CoilStellaration coil sets. Recent fits pass those; three distinct coil
+  sets also pass the unchanged interior limit: the halved-margin fit (0.00902), the
+  #53 order-8 fit (0.00949) and @pjckoch's #12 continuation (0.0020, with a 2.6%
+  higher boundary error) ([leaderboard](../validation/LEADERBOARD.md)). In the
+  halved-margin field the wide bounce diagnostic is still incomplete
+  ([#89](../optimization/ISSUE89_V2_COIL_BOUNCE.md)).
 - A matched restart lowered boundary RMS by 55% with 8.6% less current. A wider
   run passed the interior limit (0.00977), but its length bounds were
   unresolved. Construction headroom then fixed geometry and lost the interior pass.
