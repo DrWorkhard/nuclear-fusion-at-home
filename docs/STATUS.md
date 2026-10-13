@@ -1,11 +1,13 @@
 # Scientific status
 
-Updated 11 October 2026; adds an external calibration of the boundary limit.
+Updated 13 October 2026; adds acceptance v2 and its first evaluation.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
-**No accepted coil design or demonstrated reactor advantage.** The new matched
-reference-target fit reaches boundary RMS **0.001932**, about **19×** its limit,
-and interior RMS **0.01072**, also failing. The improved-target fit also fails.
+**One coil set passes the owner-approved [acceptance v2](validation/ACCEPTANCE_V2.md); none passes the
+original v1 limits; no demonstrated reactor advantage.** The passing set is the
+halved-margin reference401 fit (boundary mean 0.00143, interior 0.00902; [results](validation/ACCEPTANCE_V2_RESULTS.md)).
+Under v1 the matched reference-target fit reaches boundary RMS **0.001932**, about
+**19×** its limit, and interior RMS **0.01072**. The improved-target fit also fails v1.
 [Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
 wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
 **The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
@@ -15,7 +17,8 @@ at Fourier order 8 and [halved construction margins](optimization/ISSUE70_CONSTR
 5.8%, so the next route is joint plasma/coil optimization
 ([programme](optimization/STEP4_RESEARCH_PROGRAMME.md)). In Proxima's public coil
 benchmark no QI case reaches the 1e-4 boundary limit, and our fits beat about 91–95%
-of its coil sets ([comparison](sota/CONSTELLARATION.md)); limits stay unchanged.
+of its coil sets ([comparison](sota/CONSTELLARATION.md)); v2 is calibrated so its best
+10% pass, a benchmark-relative criterion set with our results known.
 Present evidence does not substantiate the README's reactor-design timeline.
 
 ## Established results and their limits

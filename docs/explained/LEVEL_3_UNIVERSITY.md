@@ -1,6 +1,6 @@
 # Level 3: for a university student
 
-Updated 8 October 2026 · [All five levels](README.md) ·
+Updated 13 October 2026 · [All five levels](README.md) ·
 Previous: [Level 2](LEVEL_2_TEENAGER.md) · Next: [Level 4](LEVEL_4_GRADUATE.md)
 
 ## The physics you need
@@ -58,7 +58,10 @@ The acceptance limits are fixed in advance. Our best geometry-checked coil set
 | Coil length (≤ 3.5 m at this scale), spacing, plasma distance, curvature | Project limits | Within limits | Passes |
 
 A coil set fitted the same way to the improved target scores almost the same
-(0.001953 and 0.01089) and also fails.
+(0.001953 and 0.01089) and also fails. The owner-approved [acceptance v2](../validation/ACCEPTANCE_V2.md)
+keeps the interior and geometry limits but sets the boundary limits so that the best
+10% of a public coil benchmark pass (mean ≤ 0.0018, maximum ≤ 0.013). The
+halved-margin fit passes it ([results](../validation/ACCEPTANCE_V2_RESULTS.md)).
 
 ## Status by step
 
