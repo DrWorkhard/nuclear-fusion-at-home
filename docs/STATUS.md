@@ -36,8 +36,11 @@ The [archive workflow](validation/REPRODUCING_RESULTS.md) explains retrieval.
 | [Length headroom](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coil-headroom-v3.json) | Boundary/interior RMS 0.001996 / 0.01148; length bound 3.474220 m | Geometry passes; fields fail; expanded box gains only 2.64% boundary RMS | [`5a3c1d0`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/5a3c1d02f90746b9fd061d1174fa02f9e58784d6) |
 | [Earlier failures](validation/REPRODUCING_RESULTS.md) | Fine clearance, objective alignment and current-only studies exposed limitations | Remain failures; no retired method is relabelled successful | Per archived record |
 
-Acceptance still requires boundary RMS **1e-4**, maximum normal error **1e-3**
-and interior RMS **0.01**, plus the [Step 4 requirements](steps/STEP_4_PLASMA_AND_COILS.md).
+Acceptance v1 requires boundary RMS **1e-4**, maximum normal error **1e-3**
+and interior RMS **0.01**. The owner-approved [acceptance v2](validation/ACCEPTANCE_V2.md)
+replaces only the boundary limits (mean **0.0018**, maximum **0.013**, the best 10% of a
+public coil benchmark); results report both. Neither replaces the
+[Step 4 requirements](steps/STEP_4_PLASMA_AND_COILS.md).
 Geometry bounds use padded floating point, not interval proofs or finite-build
 engineering. Solver stopping does not prove an optimum.
 
