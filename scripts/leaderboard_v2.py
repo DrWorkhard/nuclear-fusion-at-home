@@ -20,7 +20,9 @@ sys.path.insert(0, str(ROOT / "src"))
 from fusion_baselines.acceptance_v2 import V2, evaluate  # noqa: E402
 
 START, END = "<!-- leaderboard:start -->", "<!-- leaderboard:end -->"
-WOUT = ROOT / "artifacts/plasma-design-v2/reference-fine/wout.nc"
+WOUTS = {"reference401": ROOT / "artifacts/plasma-design-v2/reference-fine/wout.nc",
+         "selected401": ROOT / "artifacts/plasma-balanced-v1/endpoints/selected-fine/native"
+                        / "wout.nc"}
 LABELS = {"reference401": "Original Goodman target (reference401)",
           "selected401": "Improved Step 3 target (selected401)"}
 
@@ -41,13 +43,12 @@ def check(entry):
     run = ROOT / entry["run"]
     if (run / "result.json").is_file():
         return
-    if entry["target"] != "reference401":
-        raise ValueError(f"no stored run for {entry['name']}; checks support reference401 only")
     (kind, path), = entry["input"].items()
     env = dict(os.environ, OMP_NUM_THREADS="1", OPENBLAS_NUM_THREADS="1",
                VECLIB_MAXIMUM_THREADS="1", MKL_NUM_THREADS="1")
     subprocess.run([sys.executable, str(ROOT / "scripts/check_coils.py"), f"--{kind}",
-                    str(ROOT / path), "--wout", str(WOUT), "--output", str(run)],
+                    str(ROOT / path), "--target", entry["target"], "--wout",
+                    str(WOUTS[entry["target"]]), "--output", str(run)],
                    check=True, env=env)
 
 

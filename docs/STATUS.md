@@ -1,16 +1,17 @@
 # Scientific status
 
-Updated 13 October 2026; adds the complete acceptance v2 evaluation and leaderboard.
+Updated 13 October 2026; adds acceptance v2, the leaderboard and the Step 3 reproductions.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
-**Three reference401 coil sets pass the owner-approved [acceptance v2](validation/ACCEPTANCE_V2.md); none passes the
-original v1 limits; no demonstrated reactor advantage.** The [leaderboard](validation/LEADERBOARD.md)
-ranks them: the halved-margin fit has the lowest boundary error (mean 0.00143), and
-@pjckoch's #12 continuation passed first ([results](validation/ACCEPTANCE_V2_RESULTS.md)).
-Under v1 the best boundary RMS is **0.00173**, about **17×** its limit.
-[Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) and the
-[best v2 coil field](optimization/ISSUE89_V2_COIL_BOUNCE.md) leave wide-domain action
-diagnostics incomplete; benefit transfer remains unresolved.
+**Coil sets from three methods pass the owner-approved [acceptance v2](validation/ACCEPTANCE_V2.md)
+on both the original and the improved Step 3 target; none passes the original v1
+limits; no demonstrated reactor advantage.** The [leaderboard](validation/LEADERBOARD.md)
+ranks them; @pjckoch's #12 continuation passed first ([results](validation/ACCEPTANCE_V2_RESULTS.md)).
+Under v1 the best boundary RMS is about **0.0017**, **17×** its limit. Only
+that continuation's field on the improved target completes the wide bounce-action
+diagnostic ([record](optimization/STEP3_V2_METHODS.md)); without realized flux
+labels or a [matched comparison](optimization/ISSUE25_MATCHED_TARGETS.md), benefit
+transfer remains unresolved.
 **The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
 30 more minutes of search lowered boundary RMS by only 6%. The
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) then gained only 3.6%

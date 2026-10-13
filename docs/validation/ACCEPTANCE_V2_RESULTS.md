@@ -9,7 +9,8 @@ order-8 fit of #53's configuration and the halved-margin fit of #70 (lowest boun
 error). The [leaderboard](LEADERBOARD.md) ranks them. No coil set passes the original
 v1 limits. This is not Step 4 or
 physical acceptance: magnetic surfaces, benefit transfer, pressure and engineering
-remain open.
+remain open. **Update (same day):** all three methods also pass on the improved
+Step 3 target ([record](../optimization/STEP3_V2_METHODS.md)).
 
 **Correction (same day).** The first version of this page (#87) reported one passing
 coil set, the halved-margin fit, and called it the first in the project. Both claims
@@ -73,5 +74,6 @@ and five of them also fail geometry.
   lowered both slightly.
 - **Margins are thin.** The halved-margin set is 0.6 mm above the coil–coil limit;
   several passing sets sit at their length and curvature penalties.
-- **All fit reference401, not the improved Step 3 target**, and traced field lines do
-  not prove nested surfaces. Benefit transfer is unresolved.
+- **All runs above fit reference401** except the two #35 improved-target rows; the
+  later [Step 3 reproductions](../optimization/STEP3_V2_METHODS.md) pass too. Traced
+  field lines do not prove nested surfaces, and benefit transfer is unresolved.
