@@ -647,3 +647,27 @@ def test_callback_output_failure_stops_search_and_retains_trials(tmp_path, clock
     assert result['status']['reason'] == 'failure'
     assert result['solver_iterations_recorded'] == 0
     assert (record.output/'trial-00010.json').is_file()
+
+
+def test_search_storage_ceiling_stops_like_budget_and_keeps_check_allowance(
+        tmp_path, clock, monkeypatch):
+    monkeypatch.setattr(experiment, "MAX_BYTES", 400_000)
+    monkeypatch.setattr(experiment, "CHECK_STORAGE_RESERVE", 50_000)
+
+    def many(function, x, **kwargs):
+        for _ in range(100):
+            function(x)
+        return seed_solver(function, x, **kwargs)
+
+    model = SyntheticModel()
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, many)
+    assert result['startup_pass'] and result['status']['reason'] == 'storage'
+    assert 10 < result['bundles_completed'] < 111
+    assert result['selected']['role'] in ('startup-seed', 'search')
+    assert record.storage[0] <= 350_000 and record.limit is None
+    kept = sorted(record.output.glob('trial-?????.json'))
+    assert len(kept) == result['bundles_completed']
+    record.save('fine-check.json', b'x'*40_000)  # The reserved allowance remains usable.
+    with pytest.raises(experiment.StorageLimit, match="output ceiling"):
+        record.save('too-much.json', b'x'*20_000)
