@@ -70,7 +70,8 @@ The [historical trajectory export](COIL_TRAJECTORY_V1.md) joins existing run fil
 without native dependencies, retaining failed/incomplete evaluations and unknown
 optimizer-step labels. [Prospective recording v2](COIL_TRAJECTORY_V2.md) adds
 settings, per-evaluation costs and linked solver callbacks for new fixed-target
-runs. Neither export changes scientific acceptance checks.
+runs. New runs write v3, which moves the vectors into one hashed binary file (#90).
+Neither export changes scientific acceptance checks.
 The default remains reference401. `--target selected401 --wout <archived-wout>`
 selects the hash-bound improved Step 3 target with its frozen normalization.
 `check_coils.py` supports the same option; `trace_surfaces.py --snapshot` preserves

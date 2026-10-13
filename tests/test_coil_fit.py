@@ -386,7 +386,9 @@ def test_real_lbfgsb_backtracks_failed_trial_without_discarding_seed(tmp_path, c
     for step in iterates:
         trial = json.loads((record.output/f"trial-{step['evaluation_index']:05}.json").read_text(
             encoding='utf-8'))
-        assert step['x'] == trial['x'] and trial['status'] == 'completed'
+        assert step['x_ref'] == trial['x_ref'] and trial['status'] == 'completed'
+        assert 'x' not in step and 'x' not in trial
+        assert len(experiment.read_vector(record.output, step['x_ref'])) == 198
         assert step['solver_step_status'] == 'accepted' and not step['physical_admission']
 
 
