@@ -48,6 +48,9 @@ and 120 s checking, each capped at 1,800 s; output is capped at 256 MiB includin
 interior files, with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
 before and after execution: in-flight native work can overrun, and late checks
 cannot claim completion. Use a fresh output directory. Failures remain on disk.
+The search keeps 48 MiB of the output cap free. Reaching the remaining search
+allowance stops the search with reason `storage`, like the time budget: every record
+and the selection are kept, and the checks run within the reserve (#90).
 
 For prospective searches, numerical trial failures (`ValueError` or
 `FloatingPointError`) are retained as failed and return a finite rejection value
