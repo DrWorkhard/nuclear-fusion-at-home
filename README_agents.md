@@ -108,7 +108,7 @@ python fusion.py public audit --report results/my-report.json --output results/m
 The example changes one coefficient by +0.1 mm; it is not a known improvement.
 `--value` is absolute, in metres. Quote coefficient names.
 [Named mapping and Python search loop](docs/validation/PUBLIC_QUICKSTART.md#evaluate-your-own-candidate)
-· [Lower-score example](submissions/length-headroom-six-coil/README.md).
+· [Lowest-error example](submissions/halved-margin-six-coil/README.md).
 
 The public starter uses sparse samples and fixed currents. Research uses dense
 grids and flux-normalized currents, with limits **1e-4 normal RMS** and

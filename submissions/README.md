@@ -10,10 +10,12 @@ This directory is tracked by Git. Use a unique descriptive folder, for example
   Credit any reused work. Compute spending and agent/model details are optional.
 
 Start from the bundled reference or our
-[lower-error six-coil example](length-headroom-six-coil/README.md). The
-[shorter-coil example](constraint-aware-shape52/README.md) illustrates a different
-length/field trade-off. Both preserve public currents and improve both sampled
-scores; neither replaces the reference benchmark or establishes acceptance.
+[lowest-error six-coil example](halved-margin-six-coil/README.md), which passes
+[acceptance v2](../docs/validation/ACCEPTANCE_V2.md). The earlier
+[length-headroom example](length-headroom-six-coil/README.md) and the
+[shorter-coil example](constraint-aware-shape52/README.md) illustrate other
+length/field trade-offs. All preserve public currents and improve both sampled
+scores; none replaces the reference benchmark or establishes physical acceptance.
 
 Keep generated reports, audit JSON and raw runs in `results/` (intentionally
 ignored); include their command outputs or a concise summary in the PR. Do not
