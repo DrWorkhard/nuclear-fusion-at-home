@@ -56,9 +56,10 @@ the wide one by 15.53% and remains rejected.
   of 8,058 CoilStellaration coil sets. Recent fits pass those; three distinct coil
   sets also pass the unchanged interior limit: the halved-margin fit (0.00902), the
   #53 order-8 fit (0.00949) and @pjckoch's #12 continuation (0.0020, with a 2.6%
-  higher boundary error) ([leaderboard](../validation/LEADERBOARD.md)). In the
-  halved-margin field the wide bounce diagnostic is still incomplete
-  ([#89](../optimization/ISSUE89_V2_COIL_BOUNCE.md)).
+  higher boundary error) ([leaderboard](../validation/LEADERBOARD.md)). All three
+  methods pass again on the improved target; only the continuation's field
+  completes the wide bounce diagnostic there, without a matched comparison yet
+  ([record](../optimization/STEP3_V2_METHODS.md)).
 - A matched restart lowered boundary RMS by 55% with 8.6% less current. A wider
   run passed the interior limit (0.00977), but its length bounds were
   unresolved. Construction headroom then fixed geometry and lost the interior pass.

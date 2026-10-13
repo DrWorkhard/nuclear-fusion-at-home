@@ -1,6 +1,6 @@
 # One question before more fitting
 
-Updated 8 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
+Updated 13 October 2026. [Roadmap](../PROJECT_PLAN.md) · [Assessment](../review/STRATEGIC_REVIEW_RESOLUTION.md)
 
 **Can practical coils preserve a useful plasma benefit?** Boundary error is a
 necessary diagnostic in our protocol, not the project objective. The [first matched-target experiment](ISSUE25_MATCHED_TARGETS.md) now includes
@@ -34,9 +34,11 @@ required ≤ 0.5), so by the fixed rule the next route is joint plasma/coil
 optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)), not another coil family. A
 [construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) then halved every margin toward its acceptance
 limit and gained 5.8% (ratio 0.942). Under the owner-approved
-[acceptance v2](../validation/ACCEPTANCE_V2.md), three fixed-target coil sets pass the field
-and geometry checks ([leaderboard](../validation/LEADERBOARD.md)), but in the best of
-them the wide bounce diagnostic is still incomplete ([#89](ISSUE89_V2_COIL_BOUNCE.md)).
+[acceptance v2](../validation/ACCEPTANCE_V2.md), coil sets from three fixed-target
+methods pass the field and geometry checks on both targets
+([leaderboard](../validation/LEADERBOARD.md)). The wide bounce diagnostic completes
+only in the field of the interior-weighted continuation on the improved target
+([Step 3 record](STEP3_V2_METHODS.md), exploratory; [#89](ISSUE89_V2_COIL_BOUNCE.md)).
 The route stands.
 
 1. **Preregister the joint pilot** ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)). The draft protocol

@@ -229,6 +229,80 @@
         "v2": false,
         "worst_v2_ratio": 1.3625228265735496
       }
+    },
+    {
+      "name": "Halved-margin fit on the improved target",
+      "link": "docs/optimization/STEP3_V2_METHODS.md",
+      "contributor": "@DrWorkhard (maintainer)",
+      "record": "#92 arm M",
+      "target": "selected401",
+      "run": "artifacts/step3-v2-methods/M",
+      "result": {
+        "boundary_mean": 0.0014252521701479549,
+        "boundary_max": 0.008015828583878377,
+        "interior_vector_rms": 0.00889525279651952,
+        "checks_pass": true,
+        "v1": false,
+        "v2": true,
+        "worst_v2_ratio": 0.8895252796519519
+      }
+    },
+    {
+      "name": "Headroom continuation on the improved target",
+      "link": "docs/optimization/STEP3_V2_METHODS.md",
+      "contributor": "@pjckoch (method and code; maintainer run)",
+      "record": "#94",
+      "target": "selected401",
+      "input": {
+        "candidate": "artifacts/step3-v2-methods/X/final-candidate.json"
+      },
+      "run": "artifacts/step3-v2-methods/X-check",
+      "result": {
+        "boundary_mean": 0.00168626999543886,
+        "boundary_max": 0.009638932227652271,
+        "interior_vector_rms": 0.0019984953974234044,
+        "checks_pass": true,
+        "v1": false,
+        "v2": true,
+        "worst_v2_ratio": 0.9368166641327
+      }
+    },
+    {
+      "name": "Order-8 fit on the improved target",
+      "link": "docs/optimization/STEP3_V2_METHODS.md",
+      "contributor": "@pjckoch (configuration and code; maintainer run)",
+      "record": "#93",
+      "target": "selected401",
+      "input": {
+        "snapshot": "artifacts/step3-v2-methods/P/selected-snapshot.json"
+      },
+      "run": "artifacts/leaderboard-v2/step3-order8",
+      "result": {
+        "boundary_mean": 0.0014702579674631183,
+        "boundary_max": 0.008567328766361388,
+        "interior_vector_rms": 0.00980990458846562,
+        "checks_pass": true,
+        "v1": false,
+        "v2": true,
+        "worst_v2_ratio": 0.9809904588465619
+      }
+    },
+    {
+      "name": "Current-margin fit on the improved target (control)",
+      "link": "docs/optimization/STEP3_V2_METHODS.md",
+      "contributor": "@DrWorkhard (maintainer)",
+      "record": "#92 arm C",
+      "target": "selected401",
+      "run": "artifacts/step3-v2-methods/C",
+      "result": {
+        "boundary_mean": 0.001515454975187614,
+        "boundary_max": 0.008582489383184086,
+        "interior_vector_rms": 0.010140964299512334,
+        "checks_pass": true,
+        "v1": false,
+        "v2": false,
+        "worst_v2_ratio": 1.0140964299512334
+      }
     }
   ]
 }

@@ -3,9 +3,10 @@
 Updated 13 October 2026. [Validation index](README.md) · [Acceptance v2](ACCEPTANCE_V2.md) ·
 [Entries and results](../../submissions/leaderboard-v2.json)
 
-**Three coil sets pass acceptance v2,** all fitted to reference401: the halved-margin
-fit (lowest boundary error), @pjckoch's headroom continuation (lowest interior
-error, and the earliest to pass) and the order-8 fit of #53's configuration. None
+**Six coil sets pass acceptance v2, three on each target,** from the same three
+methods: the halved-margin fit (lowest boundary error), @pjckoch's headroom
+continuation (lowest interior error, and the earliest to pass) and the order-8 fit
+of #53's configuration ([Step 3 record](../optimization/STEP3_V2_METHODS.md)). None
 passes the original v1 limits. Passing v2 accepts the field
 and geometry checks only; magnetic surfaces, benefit transfer, pressure and
 engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
@@ -20,8 +21,9 @@ engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
 - **How it is checked:** on the maintainer's machine, with flux-normalized current,
   the 128 × 128 fine boundary grid at both shifts, three interior resolutions and
   continuous geometry. Public candidates and the #53 snapshots were checked with
-  `scripts/check_coils.py` at main `44beb11`; the #70 and #35 rows use their stored
-  completed runs. `scripts/acceptance_v2.py` then gives both verdicts.
+  `scripts/check_coils.py` at main `44beb11`, the improved-target order-8 set at
+  `fb7756d` and continuation at `3f769ce` (same check code); the other rows use
+  their stored completed runs. `scripts/acceptance_v2.py` then gives both verdicts.
 - **Ranking:** v2 passes first, then the worst v2 ratio: the largest of
   mean/0.0018, maximum/0.013 and interior/0.01. A ratio of 0.90 means all three
   field limits could tighten by 10% before the set fails. Lower is better.
@@ -64,8 +66,12 @@ engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
 
 | Rank | Coil set | Original contributor | Record | v2 | v1 | Boundary mean | Boundary max | Interior RMS | Other checks | Worst v2 ratio |
 | ---: | --- | --- | --- | --- | --- | ---: | ---: | ---: | --- | ---: |
-| 1 | [Matched improved-target fit](../../docs/optimization/ISSUE25_MATCHED_TARGETS.md) | @DrWorkhard (maintainer) | #35 | fail | fail | 0.00165 | 0.0093 | 0.01089 | pass | 1.089 |
-| 2 | [Length-headroom coils on the improved target (control)](../../submissions/length-headroom-six-coil/README.md) | @DrWorkhard (maintainer) | #35 control | fail | fail | 0.00172 | 0.0094 | 0.01363 | pass | 1.363 |
+| 1 | [Halved-margin fit on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @DrWorkhard (maintainer) | #92 arm M | **pass** | fail | 0.00143 | 0.0080 | 0.00890 | pass | 0.890 |
+| 2 | [Headroom continuation on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @pjckoch (method and code; maintainer run) | #94 | **pass** | fail | 0.00169 | 0.0096 | 0.00200 | pass | 0.937 |
+| 3 | [Order-8 fit on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @pjckoch (configuration and code; maintainer run) | #93 | **pass** | fail | 0.00147 | 0.0086 | 0.00981 | pass | 0.981 |
+| 4 | [Current-margin fit on the improved target (control)](../../docs/optimization/STEP3_V2_METHODS.md) | @DrWorkhard (maintainer) | #92 arm C | fail | fail | 0.00152 | 0.0086 | 0.01014 | pass | 1.014 |
+| 5 | [Matched improved-target fit](../../docs/optimization/ISSUE25_MATCHED_TARGETS.md) | @DrWorkhard (maintainer) | #35 | fail | fail | 0.00165 | 0.0093 | 0.01089 | pass | 1.089 |
+| 6 | [Length-headroom coils on the improved target (control)](../../submissions/length-headroom-six-coil/README.md) | @DrWorkhard (maintainer) | #35 control | fail | fail | 0.00172 | 0.0094 | 0.01363 | pass | 1.363 |
 <!-- leaderboard:end -->
 
 Boundary values are the larger of the two grid shifts; interior is the largest of
