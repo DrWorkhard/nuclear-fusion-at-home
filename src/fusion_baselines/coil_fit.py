@@ -7,6 +7,7 @@ import inspect
 import io
 import json
 import shutil
+import struct
 import time
 
 import numpy as np
@@ -16,11 +17,24 @@ MAX_BYTES, START_RESERVE, LIVE_RESERVE = 256*1024**2, 3*1024**3, 2*1024**3
 CHECK_STORAGE_RESERVE = 48*1024**2
 
 
+def read_vector(run, ref):
+    """Read one referenced vector from a v3 run and verify its SHA-256."""
+    with (run/ref["store"]).open("rb") as stream:
+        stream.seek(ref["offset_bytes"])
+        payload = stream.read(8*ref["count"])
+    if len(payload) != 8*ref["count"] or hashlib.sha256(payload).hexdigest() != ref["sha256"]:
+        raise ValueError("vector reference does not match the store")
+    return list(struct.unpack(f"<{ref['count']}d", payload))
+
+
 class StorageLimit(OSError):
     """The output ceiling for the current phase was reached; prior records are intact."""
 PROBE_STEPS = (1.25e-6, 6.25e-7)
 SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=0., gtol=1e-9)
-RECORDING_FORMAT = "fusion-coil-recording-v2"
+RECORDING_FORMAT = "fusion-coil-recording-v3"
+# v3 stores each coordinate/gradient vector once as little-endian float64 in this file;
+# trial and iterate JSON reference it by byte offset, count and SHA-256 (#90).
+VECTOR_STORE = "vectors.f64"
 EVALUATION_COST_SCOPE = "model.evaluate and post-evaluation guard; excludes trial-file writes"
 OBJECTIVE_WEIGHTS = dict(flux_per_area=1., length=1., coil_distance=1000.,
                          surface_distance=1000., curvature=.01)
@@ -191,6 +205,26 @@ class Recorder:
             raise
         self.bytes += difference
         self.storage[0] += difference
+
+    def vector(self, values):
+        """Append one float64 vector to the run's store and return its reference."""
+        values = [float(v) for v in values]
+        payload = struct.pack(f"<{len(values)}d", *values)
+        limit = MAX_BYTES if self.limit is None else self.limit
+        if self.storage[0]+len(payload) > limit:
+            raise StorageLimit(f"{limit} byte output ceiling for this phase reached "
+                               "(256 MiB aggregate including temporary publication)")
+        path = self.output/VECTOR_STORE
+        offset = path.stat().st_size if path.exists() else 0
+        with path.open("ab") as stream:
+            written = stream.write(payload)
+            stream.flush()
+        self.storage[0] += written
+        self.bytes += written
+        if written != len(payload):
+            raise OSError("short vector-store write; publication incomplete")
+        return dict(store=VECTOR_STORE, offset_bytes=offset, count=len(values),
+                    sha256=hashlib.sha256(payload).hexdigest())
 
     def call(self, name, function, *args):
         self.guard()
@@ -450,6 +484,11 @@ def search(model, record, minimize):
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
     largest_value = 0.
+    x_refs = {}
+
+    def stored(row, refs):
+        """On-disk record: vectors are referenced in the store, never repeated inline."""
+        return {**{k: v for k, v in row.items() if k not in ("x", "gradient")}, **refs}
     record.limit = MAX_BYTES - CHECK_STORAGE_RESERVE
     last_search_row, solver_iterations = None, 0
 
@@ -460,7 +499,9 @@ def search(model, record, minimize):
         record.bundles += 1
         record.active = dict(bundle=index, role=role)
         row = dict(index=index, role=role, x=np.asarray(x).tolist(), status="attempted")
-        record.save(f"trial-{index:05}-attempt.json", row)
+        refs = dict(x_ref=record.vector(row["x"]))
+        x_refs[index] = refs["x_ref"]
+        record.save(f"trial-{index:05}-attempt.json", stored(row, refs))
         evaluation_started = time.monotonic()
         try:
             value, gradient, metrics = model.evaluate(x)
@@ -479,7 +520,9 @@ def search(model, record, minimize):
             if row["status"] != "attempted":
                 row.update(elapsed_s=time.monotonic()-evaluation_started,
                            elapsed_scope=EVALUATION_COST_SCOPE)
-                record.save(f"trial-{index:05}.json", row)
+                if "gradient" in row:
+                    refs["gradient_ref"] = record.vector(row["gradient"])
+                record.save(f"trial-{index:05}.json", stored(row, refs))
         record.guard()
         if role == "search":
             last_search_row = row
@@ -501,8 +544,10 @@ def search(model, record, minimize):
         # Link only exact coordinates from the latest returned search evaluation. Do not
         # reevaluate, guess a cached evaluation, or call other trials line-search rejections.
         linked = last_search_row is not None and np.array_equal(xk, last_search_row["x"])
+        x_ref = (x_refs[last_search_row["index"]] if linked
+                 else record.vector(np.asarray(xk).tolist()))
         record.save(f"iterate-{solver_iterations:05}.json", dict(
-            format=RECORDING_FORMAT, iteration=solver_iterations, x=np.asarray(xk).tolist(),
+            format=RECORDING_FORMAT, iteration=solver_iterations, x_ref=x_ref,
             evaluation_index=last_search_row["index"] if linked else None,
             link_status="exact_latest_evaluation" if linked else "unknown",
             solver_step_status="accepted", physical_admission=False))

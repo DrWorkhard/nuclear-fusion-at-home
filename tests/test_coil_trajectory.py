@@ -233,13 +233,14 @@ def test_tiny_new_search_uses_existing_recorder_without_native_calls(run, tmp_pa
         return SimpleNamespace(success=True, message="synthetic control")
 
     recorded = tmp_path/"recorded"
-    report = search(Model(), Recorder(recorded, time.monotonic()+5), minimize)
+    recorder = Recorder(recorded, time.monotonic()+5)
+    report = search(Model(), recorder, minimize)
     for name in ("seed.json", "inputs.json"):
         (recorded/name).write_bytes((run/name).read_bytes())
     save(recorded, "search.json", report)
     # A deliberately retained interrupted attempt, separate from the finished search.
     save(recorded, "trial-00012-attempt.json", dict(
-        index=12, role="search", status="attempted", x=[0.]*198))
+        index=12, role="search", status="attempted", x_ref=recorder.vector([0.]*198)))
     output = tmp_path/"control.jsonl"
     result = export(recorded, output)
     assert result["counts"] == dict(completed=11, failed=1, incomplete=1)
@@ -414,3 +415,85 @@ def test_native_fixed_target_candidate_replays_from_recorded_inputs(tmp_path, mo
     step = next(row for row in rows if row['type'] == 'solver_iterate')
     assert step['candidate_id'] in {row['candidate_id'] for row in rows
                                   if row['type'] == 'evaluation'}
+
+
+def v3_run(tmp_path, order=5):
+    """A real v3 recording from the fitter's search with a synthetic model."""
+    np = pytest.importorskip('numpy')
+    from fusion_baselines.coil_fit import Recorder, recording_settings, search
+
+    count = 6*3*(2*order+1)
+    names = [f"coil[{i}]/{axis}{kind}({mode})" for i in range(6) for axis in "xyz"
+             for kind, mode in [("c", 0)]+[(k, m) for m in range(1, order+1) for k in "sc"]]
+
+    class Model:
+        x0 = np.zeros(count)
+
+        def set_x(self, x):
+            pass
+
+        def evaluate(self, x):
+            return float(1+x.sum()+.5*x@x), 1+x, dict(
+                normal_rms=float(1+x.sum()), lengths=[3.]*6,
+                sampled_geometry_limits_met=True, current_limit_met=True)
+
+    def minimize(function, x, callback, **kwargs):
+        from types import SimpleNamespace
+        for step in range(1, 21):
+            function(x-.001*step)
+            callback(x-.001*step)
+        return SimpleNamespace(success=True, message="synthetic")
+
+    recorder = Recorder(tmp_path/f'v3-order{order}', time.monotonic()+30)
+    recorder.save('seed.json', dict(nbase=6, nfp=2, order=order, names=names,
+                                    base_coefficients=[[[0.]*(2*order+1)]*3]*6,
+                                    target_id="synthetic", target_flux=-.01, B2_scale=1.))
+    recorder.save('inputs.json', dict(kind='normalized-coil-fit',
+                                      recording=recording_settings('v3-control')))
+    report = search(Model(), recorder, minimize)
+    recorder.save('search.json', report)
+    return recorder, report
+
+
+@pytest.mark.parametrize('order', [5, 8])
+def test_v3_export_resolves_store_and_records_bytes_per_trial(tmp_path, order):
+    recorder, report = v3_run(tmp_path, order)
+    count = 6*3*(2*order+1)
+    output = tmp_path/f'v3-{order}.jsonl'
+    result = export(recorder.output, output)
+    rows = read(output)
+    evaluations = [row for row in rows if row['type'] == 'evaluation']
+    assert result['counts']['completed'] == report['bundles_completed'] == len(evaluations)
+    assert all(len(row['coefficients']) == count for row in evaluations)
+    steps = [row for row in rows if row['type'] == 'solver_iterate']
+    assert len(steps) == 20 and all(len(step['coefficients']) == count for step in steps)
+    # Every trial: one compact attempt + terminal + x and gradient in the store, once each.
+    trials = report['bundles_completed']
+    per_trial = recorder.storage[0]/trials
+    inline_estimate = 2*count*25  # indented JSON floats, x twice and gradient once, ~25 B each
+    assert per_trial < 0.6*inline_estimate
+    assert (recorder.output/'vectors.f64').stat().st_size == 8*count*(2*trials)
+
+
+@pytest.mark.parametrize('fault', ['tamper', 'range', 'inline', 'v2-store'])
+def test_v3_store_faults_fail_closed(tmp_path, fault):
+    recorder, _ = v3_run(tmp_path)
+    run = recorder.output
+    if fault == 'tamper':
+        data = bytearray((run/'vectors.f64').read_bytes())
+        data[8] ^= 1
+        (run/'vectors.f64').write_bytes(bytes(data))
+    elif fault == 'range':
+        row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+        row['x_ref']['offset_bytes'] = 10**9
+        save(run, 'trial-00000.json', row)
+    elif fault == 'inline':
+        row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+        row['x'] = [0.]*198
+        save(run, 'trial-00000.json', row)
+    else:
+        inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+        inputs['recording']['format'] = 'fusion-coil-recording-v2'
+        save(run, 'inputs.json', inputs)
+    with pytest.raises(ValueError):
+        export(run, tmp_path/'faulty.jsonl')

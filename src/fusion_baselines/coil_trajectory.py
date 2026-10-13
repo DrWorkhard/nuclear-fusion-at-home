@@ -4,6 +4,7 @@ import hashlib
 import math
 import os
 import re
+import struct
 from pathlib import Path
 
 from fusion_public.data import canonical, loads, require
@@ -11,6 +12,9 @@ from fusion_public.data import canonical, loads, require
 FORMAT = "fusion-coil-trajectory-v1"
 FORMAT_V2 = "fusion-coil-trajectory-v2"
 RECORDING_FORMAT = "fusion-coil-recording-v2"
+RECORDING_FORMAT_V3 = "fusion-coil-recording-v3"  # Vectors referenced in VECTOR_STORE.
+RECORDING_FORMATS = (RECORDING_FORMAT, RECORDING_FORMAT_V3)
+VECTOR_STORE = "vectors.f64"
 TRIAL = re.compile(r"trial-(\d+)(-attempt)?\.json$")
 ITERATE = re.compile(r"iterate-(\d+)\.json$")
 ROLES = {"startup-seed", "probe", "startup-repeat", "search"}
@@ -57,6 +61,36 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
                              else artifact_base.rstrip("/")+"/"+name)
         return value
 
+    store_path, store = run/VECTOR_STORE, None
+    if store_path.exists() or store_path.is_symlink():
+        require(store_path.is_file() and not store_path.is_symlink(), "regular vector store")
+        with store_path.open("rb") as stream:
+            store = stream.read(256*1024**2+1)
+        require(len(store) <= 256*1024**2, "vector store exceeds the output ceiling")
+        sources[VECTOR_STORE] = dict(sha256=hashlib.sha256(store).hexdigest(),
+                                     uri=None if artifact_base is None
+                                     else artifact_base.rstrip("/")+"/"+VECTOR_STORE)
+
+    def resolve(record, referenced):
+        """Materialize x/gradient from the v3 store, verifying range and SHA-256."""
+        value = dict(record)
+        require(not referenced or "x" not in value, "v3 records reference vectors")
+        for key in ("x", "gradient"):
+            ref = value.pop(key+"_ref", None)
+            if ref is None:
+                continue
+            require(referenced and key not in value, "unexpected vector reference")
+            require(store is not None and isinstance(ref, dict)
+                    and ref.get("store") == VECTOR_STORE, "vector store required")
+            offset, count = ref.get("offset_bytes"), ref.get("count")
+            require(type(offset) is int and type(count) is int and offset >= 0 and count > 0
+                    and offset+8*count <= len(store), "vector reference out of range")
+            payload = store[offset:offset+8*count]
+            require(hashlib.sha256(payload).hexdigest() == ref.get("sha256"),
+                    "vector reference hash mismatch")
+            value[key] = list(struct.unpack(f"<{count}d", payload))
+        return value
+
     seed, inputs = read("seed.json"), read("inputs.json")
     require(type(seed.get("nbase")) is int and seed["nbase"] == 6
             and type(seed.get("order")) is int and seed["order"] in (5, 8)
@@ -78,21 +112,25 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
         read(name)  # Bind trajectory identity to every attempt and terminal file.
     recording = inputs.get("recording")
     if recording is not None:
-        require(isinstance(recording, dict) and recording.get("format") == RECORDING_FORMAT,
+        require(isinstance(recording, dict) and recording.get("format") in RECORDING_FORMATS,
                 "known recording format required")
     search_format = None if search is None else search.get("recording_format")
-    require(search_format in (None, RECORDING_FORMAT), "known search recording format required")
-    prospective = recording is not None or search_format == RECORDING_FORMAT
+    require(search_format in (None, *RECORDING_FORMATS), "known search recording format required")
+    run_format = (recording or {}).get("format") or search_format
+    require(search_format in (None, run_format), "search/input recording format mismatch")
+    referenced = run_format == RECORDING_FORMAT_V3
+    require(referenced or store is None, "vector store requires recording v3")
+    prospective = recording is not None or search_format in RECORDING_FORMATS
     require(prospective or not iterate_paths, "iterate records require recording version")
     format_name = FORMAT_V2 if prospective else FORMAT
     recording = recording or {}
     iterates, accepted_indices = [], set()
     for name in iterate_paths:
-        step = read(name)
+        step = resolve(read(name), referenced)
         iteration = int(ITERATE.fullmatch(name)[1])
         require(type(step.get("iteration")) is int and step["iteration"] == iteration,
                 "iterate index mismatch")
-        require(step.get("format") == RECORDING_FORMAT
+        require(step.get("format") == run_format
                 and step.get("solver_step_status") == "accepted"
                 and step.get("physical_admission") is False, "solver callback record required")
         _vector(step.get("x"), len(names))
@@ -101,7 +139,7 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
             "unknown" if index is None else "exact_latest_evaluation"), "iterate link status")
         if index is not None:
             require(type(index) is int and index >= 0, "iterate evaluation index required")
-            trial = read(f"trial-{index:05}.json")
+            trial = resolve(read(f"trial-{index:05}.json"), referenced)
             require(trial.get("index") == index and trial.get("role") == "search"
                     and trial.get("status") in ("completed", "failed")
                     and trial.get("x") == step["x"], "iterate/evaluation identity mismatch")
@@ -110,7 +148,7 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
     iterates.sort(key=lambda step: step["iteration"])
     require([step["iteration"] for step in iterates] == list(range(len(iterates))),
             "contiguous solver iteration records required")
-    if search_format == RECORDING_FORMAT:
+    if search_format in RECORDING_FORMATS:
         require(type(search.get("solver_iterations_recorded")) is int
                 and search["solver_iterations_recorded"] == len(iterates),
                 "solver iteration count mismatch")
@@ -172,8 +210,8 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
 
         write(header)
         for index, files in sorted(grouped.items()):
-            attempt = read(files[True]) if True in files else None
-            terminal = read(files[False]) if False in files else None
+            attempt = resolve(read(files[True]), referenced) if True in files else None
+            terminal = resolve(read(files[False]), referenced) if False in files else None
             row = terminal if terminal is not None else attempt
             require(type(row.get("index")) is int and row["index"] == index, "trial index mismatch")
             require(row.get("role") in ROLES, "known evaluation role required")
@@ -240,6 +278,11 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
                        source_hashes=_sources(result.get("sources_after", {})),
                        physical_admission=result.get("physical_admission")))
         for name in sources:
+            if name == VECTOR_STORE:
+                with store_path.open("rb") as again:
+                    require(hashlib.sha256(again.read(256*1024**2+1)).hexdigest()
+                            == sources[name]["sha256"], "source changed during export")
+                continue
             read(name)  # Bounded reread; rejects changed bytes or replaced symlinks.
         require(paths == sorted(p.name for p in run.iterdir() if TRIAL.fullmatch(p.name)),
                 "trial inventory changed during export")
