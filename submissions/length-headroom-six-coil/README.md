@@ -28,7 +28,7 @@ on 27 September 2026:
 `physical_admission: false`. The trusted public evaluator is unchanged from
 revision `39a1e13`; no separate-machine reproduction is claimed.
 The older [shorter-coil example](../constraint-aware-shape52/README.md) remains
-useful for the length/field trade-off, not as our lowest-error starting point.
+useful for the length/field trade-off.
 
 ## Native result and limits
 

@@ -3,10 +3,8 @@
 The halved-margin arm of the
 [construction-margin probe](../../docs/optimization/ISSUE70_CONSTRUCTION_MARGINS.md)
 (#70, arm M; reference401; maintainer run). It passes
-[acceptance v2](../../docs/validation/ACCEPTANCE_V2.md) with the lowest boundary error
-on the [leaderboard](../../docs/validation/LEADERBOARD.md) and fails the original v1
-limits. It was not the first set to pass v2: the
-[headroom continuation](../interior-pass-headroom-continuation/README.md) did earlier.
+[acceptance v2](../../docs/validation/ACCEPTANCE_V2.md) and fails the original v1
+limits; see also the [leaderboard](../../docs/validation/LEADERBOARD.md).
 It is **not an accepted reactor design**: magnetic surfaces, transfer of the
 Step 3 benefit, pressure and engineering remain open.
 

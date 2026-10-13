@@ -5,13 +5,10 @@ An exploratory six-coil geometry from 327 more L-BFGS-B iterations, started at t
 higher boundary error for a 5.8× lower interior error, with scoped geometry intact.
 **Both boundary limits still fail. This is not an accepted design.**
 
-> **Later evaluation (maintainer, 13 October 2026):** under the owner-approved
-> [acceptance v2](../../docs/validation/ACCEPTANCE_V2.md), introduced after this
-> submission, this geometry **passes** the field and geometry checks (boundary mean
-> 0.00168, maximum 0.0095, interior 0.0020; [leaderboard](../../docs/validation/LEADERBOARD.md)).
-> It is the earliest passing coil set found among all public candidates and
-> maintainer runs. The statement above refers to the original v1 limits, which it
-> still fails.
+> **Note (maintainer, 13 October 2026):** the statement above refers to the
+> original acceptance limits (v1). For the later
+> [acceptance v2](../../docs/validation/ACCEPTANCE_V2.md), see the
+> [leaderboard](../../docs/validation/LEADERBOARD.md).
 
 ## Original results (all checks on public inputs; evaluator revision `dc75fb3`)
 

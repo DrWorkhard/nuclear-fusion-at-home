@@ -29,8 +29,23 @@ engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
   produced it. "Maintainer run" means the maintainer executed a contributor's
   configuration.
 
+## Terms
+
+- **Targets:** reference401 is the original Goodman plasma; selected401 is our
+  improved [Step 3](../steps/README.md#step-3-vacuum-plasma-diagnostic) plasma.
+  Errors against different targets are not directly comparable.
+- **Halved margins:** the fitter penalizes coils before they reach an acceptance
+  limit. Halved margins move each penalty threshold halfway to the unchanged limit
+  (length 3.44 → 3.47 m, coil–coil 0.07 → 0.065 m, coil–plasma 0.09 → 0.085 m,
+  curvature 10 → 11 /m): more freedom, thinner safety margins
+  ([#70](../optimization/ISSUE70_CONSTRUCTION_MARGINS.md)).
+- **Order 8:** coil shapes with Fourier order 8 instead of 5 (306 instead of 198
+  coefficients; [#53](../optimization/ISSUE53_COIL_FREEDOM.md)).
+- **Headroom continuation:** 327 further optimizer iterations with an added
+  interior-field term ([#12](../../submissions/interior-pass-headroom-continuation/README.md)).
+
 <!-- leaderboard:start -->
-**Target reference401**
+### Original Goodman target (reference401)
 
 | Rank | Coil set | Original contributor | Record | v2 | v1 | Boundary mean | Boundary max | Interior RMS | Other checks | Worst v2 ratio |
 | ---: | --- | --- | --- | --- | --- | ---: | ---: | ---: | --- | ---: |
@@ -45,7 +60,7 @@ engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
 | 9 | [Base-coil translation sweep](../../submissions/server-public-exploration-001/README.md) | @alexanderlehner | #5 | fail | fail | 0.21546 | 0.5980 | 0.37124 | pass | 119.699 |
 | 10 | [Public starter coils](../../examples/clear-coil-samples-v1/README.md) | @DrWorkhard (starter) | starter | fail | fail | 0.21547 | 0.5980 | 0.37124 | pass | 119.708 |
 
-**Target selected401**
+### Improved Step 3 target (selected401)
 
 | Rank | Coil set | Original contributor | Record | v2 | v1 | Boundary mean | Boundary max | Interior RMS | Other checks | Worst v2 ratio |
 | ---: | --- | --- | --- | --- | --- | ---: | ---: | ---: | --- | ---: |
