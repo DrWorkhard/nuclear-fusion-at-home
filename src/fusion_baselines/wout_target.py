@@ -23,8 +23,11 @@ def need(condition, message):
         raise ValueError(message)
 
 
-def sample(data, surface, resolution=64):
-    """VMEC contravariant field on one interpolated surface, one field period in phi."""
+def sample(data, surface, resolution=64, shift=0.):
+    """VMEC contravariant field on one interpolated surface, one field period in phi.
+
+    ``shift`` moves both angle grids by that fraction of a cell; checks use 0.
+    """
     def read(key):
         value = np.ma.asarray(data[key][...], dtype=float).filled(np.nan)
         need(np.isfinite(value).all(), f"nonfinite Wout value: {key}")
@@ -42,8 +45,9 @@ def sample(data, surface, resolution=64):
         return np.array([np.interp(surface, grid, v) for v in values.T])
 
     m, n, mn, nn = (read(k) for k in ("xm", "xn", "xm_nyq", "xn_nyq"))
-    phi, theta = np.meshgrid(2*np.pi*np.arange(resolution)/(resolution*nfp),
-                             2*np.pi*np.arange(resolution)/resolution, indexing="ij")
+    cells = np.arange(resolution)+shift
+    phi, theta = np.meshgrid(2*np.pi*cells/(resolution*nfp), 2*np.pi*cells/resolution,
+                             indexing="ij")
     phase = m[:, None]*theta.ravel() - n[:, None]*phi.ravel()
     c, s = np.cos(phase), np.sin(phase)
 
