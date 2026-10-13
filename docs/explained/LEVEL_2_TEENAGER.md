@@ -1,6 +1,6 @@
 # Level 2: for a teenager
 
-Updated 8 October 2026 · [All five levels](README.md) ·
+Updated 13 October 2026 · [All five levels](README.md) ·
 Previous: [Level 1](LEVEL_1_CHILD.md) · Next: [Level 3](LEVEL_3_UNIVERSITY.md)
 
 ## Fusion in one paragraph
@@ -48,7 +48,9 @@ failures are kept, not hidden.
   but its field leaks through the plasma boundary about **19 times** more than our
   limit, and the field inside is about 7% further off than allowed. Its field
   lines stay inside and twist by about the right amount, which is encouraging but
-  not proof.
+  not proof. Professional coil designs miss that limit too, so we added a second,
+  versioned acceptance test that the best 10% of a public benchmark pass; one of our
+  coil sets now passes it.
 - We have now fitted coils, with equal effort, to both the original and our
   improved plasma shape. Both miss the limits by similar amounts. Our particle
   test could only be finished in a narrow region, where the improved shape is

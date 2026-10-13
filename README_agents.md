@@ -29,6 +29,9 @@ improved the boundary error by only 6%, more flexible coils 3.6%
 ([probe](docs/optimization/ISSUE53_COIL_FREEDOM.md)) and looser construction margins
 5.8% ([probe](docs/optimization/ISSUE70_CONSTRUCTION_MARGINS.md)). The next route is joint
 plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36); [programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)).
+Under the owner-approved [acceptance v2](docs/validation/ACCEPTANCE_V2.md), calibrated so the best 10% of a
+public coil benchmark passes, one coil set passes field and geometry acceptance; none
+passes the original limits ([results](docs/validation/ACCEPTANCE_V2_RESULTS.md)).
 
 We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.
 
