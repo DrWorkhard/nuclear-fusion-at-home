@@ -52,6 +52,24 @@ the run identity. Source files remain read-only; failures retain partial exports
 
 ## Reproduction and limits
 
+Prospective records also carry optional search-relative timestamps in seconds:
+`search_elapsed_start_s` before vector/attempt publication and
+`search_elapsed_end_s` after model evaluation/post-guard, before terminal
+publication. Both use a monotonic origin immediately after startup, before the
+optimizer call; startup records use nulls. Interrupted attempts keep their known
+start and an unknown end. Failed terminal evaluations retain their measured end.
+Callbacks record `search_elapsed_s` before iterate publication. Run metadata
+`search_timing` names these scopes. Existing `elapsed_s` still excludes the
+surrounding trial writes; it is not the same interval as end minus start.
+
+These observations support future variable-cost budget diagnostics without
+assuming trial index is proportional to wall time. They exclude model preparation
+and startup, and do not timestamp completed publication, candidate availability
+or physical acceptance. They do not change the frozen #105 protocol or invent
+times for older runs. Export preserves and validates optional fields; when absent,
+historical output bytes remain unchanged. Extra clock reads/bytes can affect how
+many evaluations fit a budget; no timing overhead or speed benefit is claimed.
+
 With the preserved [native environment](../validation/ENVIRONMENT.md), set all
 four documented native thread variables to `1`, then run from a fresh checkout:
 
