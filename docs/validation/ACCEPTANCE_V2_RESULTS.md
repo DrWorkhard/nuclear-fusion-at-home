@@ -14,6 +14,8 @@ Step 3 target ([record](../optimization/STEP3_V2_METHODS.md)). **Update (14 Octo
 combinations of them pass too and lead on both targets
 ([record](../optimization/ISSUE102_COMBINED_METHODS.md)); a 4-hour search of the
 leading one fails on continuous geometry ([record](../optimization/ISSUE105_SEARCH_BUDGET.md)).
+With the current margins, or selected at its latest certified point, a 4-hour
+search passes and leads on the improved target ([record](../optimization/ISSUE109_PASSING_LONG_SEARCH.md)).
 
 **Correction (same day).** The first version of this page (#87) reported one passing
 coil set, the halved-margin fit, and called it the first in the project. Both claims

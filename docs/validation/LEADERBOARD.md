@@ -3,15 +3,17 @@
 Updated 14 October 2026. [Validation index](README.md) · [Acceptance v2](ACCEPTANCE_V2.md) ·
 [Entries and results](../../submissions/leaderboard-v2.json)
 
-**Nine coil sets pass acceptance v2, four on the original and five on the improved
+**Eleven coil sets pass acceptance v2, four on the original and seven on the improved
 target.** They come from three methods and their combinations: halved margins,
 @pjckoch's interior field term (as the headroom continuation or inside the active
-fitter) and the order-8 fit of #53's configuration. On both targets a combination
-ranks first: halved margins with the interior term, plus order 8 on the improved
-target ([combination record](../optimization/ISSUE102_COMBINED_METHODS.md),
-[Step 3 record](../optimization/STEP3_V2_METHODS.md)). A 4-hour search of the
-leading combination lowered its field errors further but left its geometry
-uncertified, so it fails ([#105](../optimization/ISSUE105_SEARCH_BUDGET.md)).
+fitter) and the order-8 fit of #53's configuration. On the original target halved
+margins with the interior term rank first
+([combination record](../optimization/ISSUE102_COMBINED_METHODS.md),
+[Step 3 record](../optimization/STEP3_V2_METHODS.md)). On the improved target the
+interior term and order 8 lead after a 4-hour search, either with the current margins
+or at the latest geometry-certified point of a halved-margin search
+([#109](../optimization/ISSUE109_PASSING_LONG_SEARCH.md)). That halved-margin search's own end point fails on uncertified
+geometry ([#105](../optimization/ISSUE105_SEARCH_BUDGET.md)).
 None passes the original v1 limits. Passing v2 accepts the field and geometry
 checks only; magnetic surfaces, benefit transfer, pressure and
 engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
@@ -75,15 +77,17 @@ engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
 
 | Rank | Coil set | Original contributor | Record | v2 | v1 | Boundary mean | Boundary max | Interior RMS | Other checks | Worst v2 ratio |
 | ---: | --- | --- | --- | --- | --- | ---: | ---: | ---: | --- | ---: |
-| 1 | [Interior term, halved margins and order 8 on the improved target](../../docs/optimization/ISSUE102_COMBINED_METHODS.md) | @pjckoch (interior term and order 8; maintainer run) | #102 arm A | **pass** | fail | 0.00140 | 0.0082 | 0.00174 | pass | 0.778 |
-| 2 | [Interior term with halved margins on the improved target](../../docs/optimization/ISSUE102_COMBINED_METHODS.md) | @pjckoch (interior term; maintainer run) | #102 arm I | **pass** | fail | 0.00147 | 0.0080 | 0.00182 | pass | 0.815 |
-| 3 | [Halved-margin fit on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @DrWorkhard (maintainer) | #92 arm M | **pass** | fail | 0.00143 | 0.0080 | 0.00890 | pass | 0.890 |
-| 4 | [Headroom continuation on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @pjckoch (method and code; maintainer run) | #94 | **pass** | fail | 0.00169 | 0.0096 | 0.00200 | pass | 0.937 |
-| 5 | [Order-8 fit on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @pjckoch (configuration and code; maintainer run) | #93 | **pass** | fail | 0.00147 | 0.0086 | 0.00981 | pass | 0.981 |
-| 6 | [Current-margin fit on the improved target (control)](../../docs/optimization/STEP3_V2_METHODS.md) | @DrWorkhard (maintainer) | #92 arm C | fail | fail | 0.00152 | 0.0086 | 0.01014 | pass | 1.014 |
-| 7 | [Matched improved-target fit](../../docs/optimization/ISSUE25_MATCHED_TARGETS.md) | @DrWorkhard (maintainer) | #35 | fail | fail | 0.00165 | 0.0093 | 0.01089 | pass | 1.089 |
-| 8 | [Length-headroom coils on the improved target (control)](../../submissions/length-headroom-six-coil/README.md) | @DrWorkhard (maintainer) | #35 control | fail | fail | 0.00172 | 0.0094 | 0.01363 | pass | 1.363 |
-| 9 | [Interior term, halved margins and order 8 with a 4-hour search](../../docs/optimization/ISSUE105_SEARCH_BUDGET.md) | @pjckoch (interior term and order 8; maintainer run) | #105 arm L | fail | fail | 0.00128 | 0.0075 | 0.00156 | fail | 0.709 |
+| 1 | [Interior term and order 8 with current margins and a 4-hour search](../../docs/optimization/ISSUE109_PASSING_LONG_SEARCH.md) | @pjckoch (interior term and order 8; maintainer run) | #109 arm W | **pass** | fail | 0.00137 | 0.0079 | 0.00168 | pass | 0.761 |
+| 2 | [Interior term, halved margins and order 8: latest certified point of the 4-hour search](../../docs/optimization/ISSUE109_PASSING_LONG_SEARCH.md) | @pjckoch (interior term and order 8; maintainer run) | #109 arm S | **pass** | fail | 0.00138 | 0.0075 | 0.00171 | pass | 0.765 |
+| 3 | [Interior term, halved margins and order 8 on the improved target](../../docs/optimization/ISSUE102_COMBINED_METHODS.md) | @pjckoch (interior term and order 8; maintainer run) | #102 arm A | **pass** | fail | 0.00140 | 0.0082 | 0.00174 | pass | 0.778 |
+| 4 | [Interior term with halved margins on the improved target](../../docs/optimization/ISSUE102_COMBINED_METHODS.md) | @pjckoch (interior term; maintainer run) | #102 arm I | **pass** | fail | 0.00147 | 0.0080 | 0.00182 | pass | 0.815 |
+| 5 | [Halved-margin fit on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @DrWorkhard (maintainer) | #92 arm M | **pass** | fail | 0.00143 | 0.0080 | 0.00890 | pass | 0.890 |
+| 6 | [Headroom continuation on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @pjckoch (method and code; maintainer run) | #94 | **pass** | fail | 0.00169 | 0.0096 | 0.00200 | pass | 0.937 |
+| 7 | [Order-8 fit on the improved target](../../docs/optimization/STEP3_V2_METHODS.md) | @pjckoch (configuration and code; maintainer run) | #93 | **pass** | fail | 0.00147 | 0.0086 | 0.00981 | pass | 0.981 |
+| 8 | [Current-margin fit on the improved target (control)](../../docs/optimization/STEP3_V2_METHODS.md) | @DrWorkhard (maintainer) | #92 arm C | fail | fail | 0.00152 | 0.0086 | 0.01014 | pass | 1.014 |
+| 9 | [Matched improved-target fit](../../docs/optimization/ISSUE25_MATCHED_TARGETS.md) | @DrWorkhard (maintainer) | #35 | fail | fail | 0.00165 | 0.0093 | 0.01089 | pass | 1.089 |
+| 10 | [Length-headroom coils on the improved target (control)](../../submissions/length-headroom-six-coil/README.md) | @DrWorkhard (maintainer) | #35 control | fail | fail | 0.00172 | 0.0094 | 0.01363 | pass | 1.363 |
+| 11 | [Interior term, halved margins and order 8 with a 4-hour search](../../docs/optimization/ISSUE105_SEARCH_BUDGET.md) | @pjckoch (interior term and order 8; maintainer run) | #105 arm L | fail | fail | 0.00128 | 0.0075 | 0.00156 | fail | 0.709 |
 <!-- leaderboard:end -->
 
 Boundary values are the larger of the two grid shifts; interior is the largest of

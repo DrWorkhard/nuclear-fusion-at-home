@@ -60,7 +60,8 @@ the wide one by 15.53% and remains rejected.
   interior term to halved margins (0.00184) ([leaderboard](../validation/LEADERBOARD.md)).
   All three methods pass again on the improved target, and combining them lowers the
   worst v2 ratio from 0.890 to 0.815, or 0.778 with order 8
-  ([combinations](../optimization/ISSUE102_COMBINED_METHODS.md)). Only
+  ([combinations](../optimization/ISSUE102_COMBINED_METHODS.md)) and 0.761 after
+  a 4-hour search ([#109](../optimization/ISSUE109_PASSING_LONG_SEARCH.md)). Only
   interior-weighted fields complete the wide bounce diagnostic; in one matched pair
   61% of the ideal improvement remains, exploratory without realized flux labels
   ([record](../optimization/STEP3_V2_METHODS.md)).

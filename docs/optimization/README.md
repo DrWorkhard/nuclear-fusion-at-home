@@ -9,6 +9,7 @@ One normalized fitter, one set of field/geometry checks.
 [Interior field term](ISSUE98_INTERIOR_TERM.md) ·
 [Combined methods](ISSUE102_COMBINED_METHODS.md) ·
 [4-hour search](ISSUE105_SEARCH_BUDGET.md) ·
+[Passing 4-hour searches](ISSUE109_PASSING_LONG_SEARCH.md) ·
 [Joint protocol (draft)](JOINT_PROTOCOL.md)
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
@@ -128,6 +129,7 @@ the run's selected point with the same continuous geometry check. The first that
 passes becomes its `selected-snapshot.json`; run `check_coils.py --snapshot` on it.
 Before certifying any earlier point it must reproduce the run's selected snapshot and
 recorded geometry exactly. Geometry then passes by construction; the field does not.
+#109 applied it to #105's 4-hour search ([record](ISSUE109_PASSING_LONG_SEARCH.md)).
 
 ## Realized-field surfaces
 
