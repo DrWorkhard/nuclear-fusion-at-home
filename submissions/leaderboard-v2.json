@@ -268,6 +268,23 @@
       }
     },
     {
+      "name": "Interior term, halved margins and order 8 with a 4-hour search",
+      "link": "docs/optimization/ISSUE105_SEARCH_BUDGET.md",
+      "contributor": "@pjckoch (interior term and order 8; maintainer run)",
+      "record": "#105 arm L",
+      "target": "selected401",
+      "run": "artifacts/budget-v1/L",
+      "result": {
+        "boundary_mean": 0.0012753244639970795,
+        "boundary_max": 0.0074662493955221275,
+        "interior_vector_rms": 0.0015574137670968432,
+        "checks_pass": false,
+        "v1": false,
+        "v2": false,
+        "worst_v2_ratio": 0.7085135911094886
+      }
+    },
+    {
       "name": "Interior term, halved margins and order 8 on the improved target",
       "link": "docs/optimization/ISSUE102_COMBINED_METHODS.md",
       "contributor": "@pjckoch (interior term and order 8; maintainer run)",

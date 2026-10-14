@@ -12,7 +12,8 @@ physical acceptance: magnetic surfaces, benefit transfer, pressure and engineeri
 remain open. **Update (same day):** all three methods also pass on the improved
 Step 3 target ([record](../optimization/STEP3_V2_METHODS.md)). **Update (14 October):**
 combinations of them pass too and lead on both targets
-([record](../optimization/ISSUE102_COMBINED_METHODS.md)).
+([record](../optimization/ISSUE102_COMBINED_METHODS.md)); a 4-hour search of the
+leading one fails on continuous geometry ([record](../optimization/ISSUE105_SEARCH_BUDGET.md)).
 
 **Correction (same day).** The first version of this page (#87) reported one passing
 coil set, the halved-margin fit, and called it the first in the project. Both claims
