@@ -65,7 +65,9 @@ Review capacity limits what maintainers can rerun, not what others may contribut
 
 Public candidate PRs use `submissions/<study>/candidate.json` and a short adjacent
 `README.md` with both sampled errors and a replay outcome. Keep generated reports
-in ignored `results/`; see the [submission layout](submissions/README.md).
+in ignored `results/`; see the [submission layout](submissions/README.md). Merged
+candidates are checked natively and ranked on the
+[leaderboard](docs/validation/LEADERBOARD.md) with your name.
 Sparse and dense boundary scores are diagnostics, not full physical acceptance.
 Other designs/methods are welcome outside the six-coil schema; explain the checks
 they need. Optional metadata uses [contribution.json](examples/contribution.json)

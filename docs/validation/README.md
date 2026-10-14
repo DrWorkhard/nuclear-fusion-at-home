@@ -10,12 +10,21 @@ environment and data. [Status](../STATUS.md) records the scientific limits.
   pinned public-reference outputs, both sampled errors, hashes and replay limits.
 - [Reproducing results](REPRODUCING_RESULTS.md): current tools and the freeze tag;
   how old evidence paths resolve without changing their identities.
+- [Retention pilot proposal](RETENTION_PILOT_V1.md): measured capacity, artifact
+  responsibilities and a local restore control; storage choices remain pending.
 - [Research workflow](RESEARCH_WORKFLOW.md): short explorations, separate
   confirmation, proportionate tests and single-writer ownership.
 - [Environment](ENVIRONMENT.md): active native dependencies, execution safeguards
   and the distinction between public CI and native checks.
 - [Release evidence](PUBLIC_RELEASE_RESULTS.md): source-bound local and hosted
   public qualifications, failed checks and outstanding independent verification.
+- [Field acceptance v2](ACCEPTANCE_V2.md): owner-approved, benchmark-calibrated
+  boundary limits next to the unchanged v1 limits, with how to evaluate a run.
+- [Acceptance v2 results](ACCEPTANCE_V2_RESULTS.md): every locally available run
+  evaluated under v1 and v2, with a same-day correction; none passes v1.
+- [Leaderboard](LEADERBOARD.md): every public candidate and recorded coil set ranked
+  under v2 with its original contributor; four pass on the original target and five
+  on the improved one.
 - [Review policy](REVIEW_POLICY.md): open contribution intake, trusted evaluation,
   safe PR execution, live repository protections and the remaining launch work.
 - [Publication inventory](PUBLICATION_INVENTORY.md): dated size/privacy-pattern

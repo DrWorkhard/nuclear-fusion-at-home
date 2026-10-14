@@ -1,7 +1,10 @@
 """Portable controls for record fidelity, identity and failure preservation."""
 
+import errno
 import hashlib
 import json
+import subprocess
+import sys
 import time
 from pathlib import Path
 
@@ -142,9 +145,47 @@ def test_existing_output_and_symlink_inputs_are_not_overwritten_or_followed(run,
     assert output.read_text(encoding="utf-8") == "preserved"
     original = run/"trial-00000.json"
     original.rename(run/"hidden.json")
-    original.symlink_to(run/"hidden.json")
+    try:
+        original.symlink_to(run/"hidden.json")
+    except OSError as exc:
+        if (exc.errno in (errno.EACCES, errno.EPERM, errno.ENOTSUP)
+                or getattr(exc, "winerror", 0) == 1314):
+            pytest.skip(f"symlink creation unavailable: {exc}")
+        raise
     with pytest.raises(ValueError, match="regular"):
         export(run, tmp_path/"symlink.jsonl")
+
+
+@pytest.mark.parametrize("error", [errno.EPERM, errno.EIO])
+def test_symlink_control_skips_privilege_failure_but_not_io_errors(
+        run, tmp_path, monkeypatch, error):
+    def unavailable(*args, **kwargs):
+        raise OSError(error, "controlled symlink failure")
+
+    monkeypatch.setattr(Path, "symlink_to", unavailable)
+    expected = pytest.skip.Exception if error == errno.EPERM else OSError
+    with pytest.raises(expected):
+        test_existing_output_and_symlink_inputs_are_not_overwritten_or_followed(run, tmp_path)
+
+
+@pytest.mark.parametrize("selected", [[], "candidate", 1, False])
+@pytest.mark.parametrize("prospective", [False, True])
+def test_non_object_selection_has_clear_library_and_cli_failure(
+        run, tmp_path, selected, prospective):
+    if prospective:
+        inputs = json.loads((run/"inputs.json").read_text(encoding="utf-8"))
+        inputs["recording"] = dict(format="fusion-coil-recording-v2")
+        save(run, "inputs.json", inputs)
+    save(run, "search.json", dict(selected=selected))
+    output = tmp_path/"malformed.jsonl"
+    with pytest.raises(ValueError, match="selected object or null required"):
+        export(run, output)
+    script = Path(__file__).resolve().parents[1]/"scripts/export_coil_trajectory.py"
+    result = subprocess.run([sys.executable, "-I", "-S", str(script), "--run", str(run),
+                             "--output", str(output)], capture_output=True, text=True, check=False)
+    assert result.returncode == 1
+    assert result.stderr == "Export failed: selected object or null required\n"
+    assert not output.exists() and not Path(str(output)+".partial").exists()
 
 
 def test_order_eight_names_and_gradients_are_preserved(run, tmp_path):
@@ -164,6 +205,85 @@ def test_order_eight_names_and_gradients_are_preserved(run, tmp_path):
     export(run, output)
     assert len(read(output)[0]["coefficient_names"]) == 306
     assert len(read(output)[1]["gradient"]) == 306
+
+
+@pytest.mark.parametrize('invalid', [
+    'negative', 'boolean', 'reversed', 'missing-start', 'mismatch',
+    'attempt-boolean', 'attempt-end',
+])
+def test_search_relative_clock_rejects_malformed_intervals(run, tmp_path, invalid):
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2')
+    save(run, 'inputs.json', inputs)
+    terminal = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+    attempt = json.loads((run/'trial-00000-attempt.json').read_text(encoding='utf-8'))
+    start, end = 1., 2.
+    if invalid == 'negative':
+        start = -1.
+    elif invalid == 'boolean':
+        start = True
+    elif invalid == 'reversed':
+        end = .5
+    elif invalid == 'missing-start':
+        start = None
+    terminal.update(search_elapsed_start_s=start, search_elapsed_end_s=end)
+    attempt['search_elapsed_start_s'] = 0. if invalid == 'mismatch' else start
+    if invalid == 'attempt-boolean':
+        attempt['search_elapsed_start_s'] = True  # True == 1.0 must not bypass type validation.
+    if invalid == 'attempt-end':
+        attempt['search_elapsed_end_s'] = 1.5
+    save(run, 'trial-00000.json', terminal)
+    save(run, 'trial-00000-attempt.json', attempt)
+    with pytest.raises(ValueError, match='timing'):
+        export(run, tmp_path/'invalid.jsonl')
+
+
+def test_export_keeps_known_attempt_clock_and_unknown_end(run, tmp_path):
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2')
+    save(run, 'inputs.json', inputs)
+    attempt = json.loads((run/'trial-00002-attempt.json').read_text(encoding='utf-8'))
+    attempt['search_elapsed_start_s'] = 4.5
+    save(run, 'trial-00002-attempt.json', attempt)
+    output = tmp_path/'known-start.jsonl'
+    export(run, output)
+    rows = read(output)
+    assert 'search_elapsed_start_s' not in rows[1]  # Untimed historical row remains unchanged.
+    assert rows[3]['search_elapsed_start_s'] == 4.5
+    assert rows[3]['search_elapsed_end_s'] is None and rows[3]['elapsed_s'] is None
+
+
+@pytest.mark.parametrize('elapsed', [-1., False, 2.5])
+def test_export_validates_callback_clock(run, tmp_path, elapsed):
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2')
+    save(run, 'inputs.json', inputs)
+    save(run, 'iterate-00000.json', dict(format='fusion-coil-recording-v2', iteration=0,
+        x=[0.]*198, evaluation_index=0, link_status='exact_latest_evaluation',
+        solver_step_status='accepted', physical_admission=False, search_elapsed_s=elapsed))
+    output = tmp_path/'callback-clock.jsonl'
+    if type(elapsed) is bool or elapsed < 0:
+        with pytest.raises(ValueError, match='timing'):
+            export(run, output)
+    else:
+        export(run, output)
+        step = next(row for row in read(output) if row['type'] == 'solver_iterate')
+        assert step['search_elapsed_s'] == elapsed
+
+
+def test_untimed_v2_export_keeps_pre_timestamp_bytes(run, tmp_path):
+    # Captured with the ffdd6a0 exporter, before optional clock fields were introduced.
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2', task_id='historical-v2')
+    save(run, 'inputs.json', inputs)
+    save(run, 'iterate-00000.json', dict(format='fusion-coil-recording-v2', iteration=0,
+        x=[0.]*198, evaluation_index=0, link_status='exact_latest_evaluation',
+        solver_step_status='accepted', physical_admission=False))
+    output = tmp_path/'untimed-v2.jsonl'
+    export(run, output)
+    assert output.stat().st_size == 11843
+    assert hashlib.sha256(output.read_bytes()).hexdigest() == (
+        'fd9dc9c47bc55edd249b844b3ae9ce1ff7550b1772d908cb4cf97a0fbe6ca28a')
 
 
 def test_tiny_new_search_uses_existing_recorder_without_native_calls(run, tmp_path):
@@ -192,13 +312,14 @@ def test_tiny_new_search_uses_existing_recorder_without_native_calls(run, tmp_pa
         return SimpleNamespace(success=True, message="synthetic control")
 
     recorded = tmp_path/"recorded"
-    report = search(Model(), Recorder(recorded, time.monotonic()+5), minimize)
+    recorder = Recorder(recorded, time.monotonic()+5)
+    report = search(Model(), recorder, minimize)
     for name in ("seed.json", "inputs.json"):
         (recorded/name).write_bytes((run/name).read_bytes())
     save(recorded, "search.json", report)
     # A deliberately retained interrupted attempt, separate from the finished search.
     save(recorded, "trial-00012-attempt.json", dict(
-        index=12, role="search", status="attempted", x=[0.]*198))
+        index=12, role="search", status="attempted", x_ref=recorder.vector([0.]*198)))
     output = tmp_path/"control.jsonl"
     result = export(recorded, output)
     assert result["counts"] == dict(completed=11, failed=1, incomplete=1)
@@ -373,3 +494,90 @@ def test_native_fixed_target_candidate_replays_from_recorded_inputs(tmp_path, mo
     step = next(row for row in rows if row['type'] == 'solver_iterate')
     assert step['candidate_id'] in {row['candidate_id'] for row in rows
                                   if row['type'] == 'evaluation'}
+
+
+def v3_run(tmp_path, order=5):
+    """A real v3 recording from the fitter's search with a synthetic model."""
+    np = pytest.importorskip('numpy')
+    from fusion_baselines.coil_fit import Recorder, recording_settings, search
+
+    count = 6*3*(2*order+1)
+    names = [f"coil[{i}]/{axis}{kind}({mode})" for i in range(6) for axis in "xyz"
+             for kind, mode in [("c", 0)]+[(k, m) for m in range(1, order+1) for k in "sc"]]
+
+    class Model:
+        x0 = np.zeros(count)
+
+        def set_x(self, x):
+            pass
+
+        def evaluate(self, x):
+            return float(1+x.sum()+.5*x@x), 1+x, dict(
+                normal_rms=float(1+x.sum()), lengths=[3.]*6,
+                sampled_geometry_limits_met=True, current_limit_met=True)
+
+    def minimize(function, x, callback, **kwargs):
+        from types import SimpleNamespace
+        for step in range(1, 21):
+            function(x-.001*step)
+            callback(x-.001*step)
+        return SimpleNamespace(success=True, message="synthetic")
+
+    recorder = Recorder(tmp_path/f'v3-order{order}', time.monotonic()+30)
+    recorder.save('seed.json', dict(nbase=6, nfp=2, order=order, names=names,
+                                    base_coefficients=[[[0.]*(2*order+1)]*3]*6,
+                                    target_id="synthetic", target_flux=-.01, B2_scale=1.))
+    recorder.save('inputs.json', dict(kind='normalized-coil-fit',
+                                      recording=recording_settings('v3-control')))
+    report = search(Model(), recorder, minimize)
+    recorder.save('search.json', report)
+    return recorder, report
+
+
+@pytest.mark.parametrize('order', [5, 8])
+def test_v3_export_resolves_store_and_records_bytes_per_trial(tmp_path, order):
+    recorder, report = v3_run(tmp_path, order)
+    count = 6*3*(2*order+1)
+    output = tmp_path/f'v3-{order}.jsonl'
+    result = export(recorder.output, output)
+    rows = read(output)
+    evaluations = [row for row in rows if row['type'] == 'evaluation']
+    assert result['counts']['completed'] == report['bundles_completed'] == len(evaluations)
+    assert all(len(row['coefficients']) == count for row in evaluations)
+    steps = [row for row in rows if row['type'] == 'solver_iterate']
+    assert len(steps) == 20 and all(len(step['coefficients']) == count for step in steps)
+    # Every trial: one compact attempt + terminal + x and gradient in the store, once each.
+    trials = report['bundles_completed']
+    per_trial = recorder.storage[0]/trials
+    inline_estimate = 2*count*25  # indented JSON floats, x twice and gradient once, ~25 B each
+    assert per_trial < 0.6*inline_estimate
+    assert (recorder.output/'vectors.f64').stat().st_size == 8*count*(2*trials)
+
+
+@pytest.mark.parametrize('fault', ['tamper', 'range', 'inline', 'inline-gradient', 'v2-store'])
+def test_v3_store_faults_fail_closed(tmp_path, fault):
+    recorder, _ = v3_run(tmp_path)
+    run = recorder.output
+    if fault == 'tamper':
+        data = bytearray((run/'vectors.f64').read_bytes())
+        data[8] ^= 1
+        (run/'vectors.f64').write_bytes(bytes(data))
+    elif fault == 'range':
+        row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+        row['x_ref']['offset_bytes'] = 10**9
+        save(run, 'trial-00000.json', row)
+    elif fault == 'inline':
+        row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+        row['x'] = [0.]*198
+        save(run, 'trial-00000.json', row)
+    elif fault == 'inline-gradient':
+        row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+        del row['gradient_ref']
+        row['gradient'] = [0.]*198
+        save(run, 'trial-00000.json', row)
+    else:
+        inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+        inputs['recording']['format'] = 'fusion-coil-recording-v2'
+        save(run, 'inputs.json', inputs)
+    with pytest.raises(ValueError):
+        export(run, tmp_path/'faulty.jsonl')

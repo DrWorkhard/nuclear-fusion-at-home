@@ -4,6 +4,10 @@ One normalized fitter, one set of field/geometry checks.
 [Evidence](../STATUS.md) · [Next decision](STEP4_RESEARCH_PROGRAMME.md) ·
 [Contribution ideas](RESEARCH_HINTS.md) · [Matched-target experiment](ISSUE25_MATCHED_TARGETS.md) ·
 [Coil-freedom probe](ISSUE53_COIL_FREEDOM.md) · [Construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) ·
+[Bounce fidelity of the v2 coil set](ISSUE89_V2_COIL_BOUNCE.md) ·
+[Passing methods on the Step 3 target](STEP3_V2_METHODS.md) ·
+[Interior field term](ISSUE98_INTERIOR_TERM.md) ·
+[Combined methods](ISSUE102_COMBINED_METHODS.md) ·
 [Joint protocol (draft)](JOINT_PROTOCOL.md)
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
@@ -21,8 +25,8 @@ OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREAD
 Requires the preserved [native environment](../validation/ENVIRONMENT.md) and local
 reference401 field archives. The snapshot is explicit; the driver no longer loads
 an entire chain of previous experiments. Historical absolute artifact paths are
-not portable. Use the [public candidate](../../submissions/length-headroom-six-coil/README.md)
-for an installation-free contribution.
+not portable. Use a [public candidate](../../submissions/README.md) for an installation-free
+contribution; the [leaderboard](../validation/LEADERBOARD.md) ranks them under acceptance v2.
 
 1. Verify fixed target/source hashes and named physical coil/current mapping.
 2. Check derivatives and exact repeat, then run penalized normalized L-BFGS-B.
@@ -34,6 +38,11 @@ for an installation-free contribution.
    construction penalty halfway to its unchanged acceptance limit (#70); the
    default `current` keeps the values above, and reports record the preset. The
    v2 recording derives its penalty and selection thresholds from that preset.
+   `--interior-weight W` adds #12's interior field term, W · ½ mean|s·B − B_target|²/B2
+   at the flux-normalizing scale s (#98). It is sampled from the bound Wout on
+   s = 0.125/0.375/0.625/0.875 (16 × 16, half-cell shift), so no objective point is a
+   checked interior point. With W > 0, the eligible point with the lowest boundary +
+   interior objective is selected. The default 0 keeps the boundary-only fit.
 3. Freeze the selected currents. Check two fine boundary grids, continuous
    geometry bounds, three interior resolutions and independent B/A calculations.
 4. Save inputs, source identities, attempts, failures, fields and a short result.
@@ -43,10 +52,14 @@ for an installation-free contribution.
 The prospective search removes inherited coefficient boxes and evaluation caps;
 its objective and acceptance limits are unchanged. Length construction target is
 3.44 m, acceptance is 3.5 m. Default budgets are 300 s search (including startup)
-and 120 s checking, each capped at 1,800 s; output is capped at 256 MiB including
-interior files, with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
+and 120 s checking, capped at 4 h (14,400 s) and 1,800 s; arms that are compared
+must share one budget. Output is capped at 1 GiB including interior files (about
+8 kB per evaluation at order 8 with recording v3), with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
 before and after execution: in-flight native work can overrun, and late checks
 cannot claim completion. Use a fresh output directory. Failures remain on disk.
+The search keeps 48 MiB of the output cap free. Reaching the remaining search
+allowance stops the search with reason `storage`, like the time budget: every record
+and the selection are kept, and the checks run within the reserve (#90).
 
 For prospective searches, numerical trial failures (`ValueError` or
 `FloatingPointError`) are retained as failed and return a finite rejection value
@@ -66,7 +79,8 @@ The [historical trajectory export](COIL_TRAJECTORY_V1.md) joins existing run fil
 without native dependencies, retaining failed/incomplete evaluations and unknown
 optimizer-step labels. [Prospective recording v2](COIL_TRAJECTORY_V2.md) adds
 settings, per-evaluation costs and linked solver callbacks for new fixed-target
-runs. Neither export changes scientific acceptance checks.
+runs. New runs write v3, which moves the vectors into one hashed binary file (#90).
+Neither export changes scientific acceptance checks.
 The default remains reference401. `--target selected401 --wout <archived-wout>`
 selects the hash-bound improved Step 3 target with its frozen normalization.
 `check_coils.py` supports the same option; `trace_surfaces.py --snapshot` preserves

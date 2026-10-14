@@ -5,6 +5,11 @@ An exploratory six-coil geometry from 327 more L-BFGS-B iterations, started at t
 higher boundary error for a 5.8× lower interior error, with scoped geometry intact.
 **Both boundary limits still fail. This is not an accepted design.**
 
+> **Note (maintainer, 13 October 2026):** the statement above refers to the
+> original acceptance limits (v1). For the later
+> [acceptance v2](../../docs/validation/ACCEPTANCE_V2.md), see the
+> [leaderboard](../../docs/validation/LEADERBOARD.md).
+
 ## Original results (all checks on public inputs; evaluator revision `dc75fb3`)
 
 | Check | Headroom start | This geometry | Limit |

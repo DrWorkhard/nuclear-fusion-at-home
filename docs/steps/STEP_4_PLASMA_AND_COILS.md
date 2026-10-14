@@ -5,7 +5,7 @@
 
 | Package | Required result | Status |
 | --- | --- | --- |
-| 4A — Realization and transfer | Accepted coil fields/geometry, verified magnetic surfaces and transfer of the Step 3 benefit | Open; active focus |
+| 4A — Realization and transfer | Accepted coil fields/geometry, verified magnetic surfaces and transfer of the Step 3 benefit | Open; coil sets from three methods and their combinations pass field/geometry acceptance v2 on both targets; surfaces and transfer open |
 | 4B — Coupled improvement | Independently accepted plasma/coil improvement against coil-only controls | Open |
 | 4C — Pressure and confinement | Validated finite-pressure/current response and realized-field confinement diagnostics | Open; detailed work deferred |
 | 4D — Finite geometry and robustness | Qualified winding/build/load models and manufacturing-perturbation response | Open; detailed work deferred |
@@ -16,8 +16,15 @@ but field limits fail and wide action diagnostics are incomplete. Limited direct
 tracing passes; verified nested surfaces and physical benefit transfer remain open.
 On 6 October 2026 the fixed-target fitting recipe was declared stalled; a
 [coil-freedom probe](../optimization/ISSUE53_COIL_FREEDOM.md) then selected joint
-plasma/coil optimization as the next route ([programme](../optimization/STEP4_RESEARCH_PROGRAMME.md)). QUASR/LPQA calibration checks boundary components, not the complete
-Goodman acceptance profile.
+plasma/coil optimization as the next route ([programme](../optimization/STEP4_RESEARCH_PROGRAMME.md)).
+Under the owner-approved [acceptance v2](../validation/ACCEPTANCE_V2.md) coil sets from
+three methods pass the field and geometry checks on both targets
+([leaderboard](../validation/LEADERBOARD.md)); no fit passes v1. Combinations of the methods lead
+([record](../optimization/ISSUE102_COMBINED_METHODS.md)). The wide bounce diagnostic
+completes only in interior-weighted fields; in one matched pair 61% of the ideal
+improvement remains, without realized flux labels
+([record](../optimization/STEP3_V2_METHODS.md)). QUASR/LPQA calibration checks
+boundary components, not the complete Goodman acceptance profile.
 
 Retained lessons: coarse clearance missed 1.8–6.7 mm gaps; certified small-step
 search followed a poorly aligned objective; current-only freedom did not close

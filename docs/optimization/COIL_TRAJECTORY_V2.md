@@ -7,8 +7,14 @@ joint-run qualification is implied; those require the joint optimizer in #39.
 
 ## Recording and export
 
-`fit_coils.py` writes `inputs.json.recording.format = fusion-coil-recording-v2`
-before model construction. `--task-id` names the experiment; its default is
+`fit_coils.py` writes `inputs.json.recording.format`, `fusion-coil-recording-v3` since
+#90, before model construction. v3 keeps every field and record of v2. It moves each
+coordinate and gradient vector into one append-only little-endian float64 file,
+`vectors.f64`, written once per vector. Trial and iterate JSON reference it as
+`x_ref`/`gradient_ref` (byte offset, count, SHA-256), and a linked iterate reuses its
+trial's reference. A real order-8 fit uses 7.3 kB per bundle, against 38.3 kB in v2.
+The exporter reads v2 and v3, verifies every reference against the hashed store, and
+writes the same trajectory format. `--task-id` names the experiment; its default is
 `fixed-target/<target>`. Metadata records objective weights, penalty thresholds,
 selection limits, boundary/coil/geometry grids, resource ceilings and the fixed
 target/current policy. Penalty thresholds and the selection length cap are derived
@@ -45,6 +51,24 @@ and bytes; missing values stay null. Closed-run input and callback hashes bind
 the run identity. Source files remain read-only; failures retain partial exports.
 
 ## Reproduction and limits
+
+Prospective records also carry optional search-relative timestamps in seconds:
+`search_elapsed_start_s` before vector/attempt publication and
+`search_elapsed_end_s` after model evaluation/post-guard, before terminal
+publication. Both use a monotonic origin immediately after startup, before the
+optimizer call; startup records use nulls. Interrupted attempts keep their known
+start and an unknown end. Failed terminal evaluations retain their measured end.
+Callbacks record `search_elapsed_s` before iterate publication. Run metadata
+`search_timing` names these scopes. Existing `elapsed_s` still excludes the
+surrounding trial writes; it is not the same interval as end minus start.
+
+These observations support future variable-cost budget diagnostics without
+assuming trial index is proportional to wall time. They exclude model preparation
+and startup, and do not timestamp completed publication, candidate availability
+or physical acceptance. They do not change the frozen #105 protocol or invent
+times for older runs. Export preserves and validates optional fields; when absent,
+historical output bytes remain unchanged. Extra clock reads/bytes can affect how
+many evaluations fit a budget; no timing overhead or speed benefit is claimed.
 
 With the preserved [native environment](../validation/ENVIRONMENT.md), set all
 four documented native thread variables to `1`, then run from a fresh checkout:

@@ -1,6 +1,8 @@
 """Named gradients, independent fine fields, budgets and candidate selection."""
 
+import hashlib
 import json
+import struct
 from types import SimpleNamespace
 from unittest.mock import Mock
 
@@ -113,6 +115,13 @@ def test_progress_write_crossing_deadline_cannot_start_native_call(tmp_path, clo
     with pytest.raises(TimeoutError):
         record.call("B", native)
     assert not native.called and record.counts["B"] == dict(attempted=1, completed=0)
+
+
+def read_vector(run, ref):
+    """One referenced vector from a v3 run, checked against its SHA-256."""
+    payload = (run/ref['store']).read_bytes()[ref['offset_bytes']:][:8*ref['count']]
+    assert hashlib.sha256(payload).hexdigest() == ref['sha256']
+    return list(struct.unpack(f"<{ref['count']}d", payload))
 
 
 class SyntheticModel:
@@ -386,7 +395,9 @@ def test_real_lbfgsb_backtracks_failed_trial_without_discarding_seed(tmp_path, c
     for step in iterates:
         trial = json.loads((record.output/f"trial-{step['evaluation_index']:05}.json").read_text(
             encoding='utf-8'))
-        assert step['x'] == trial['x'] and trial['status'] == 'completed'
+        assert step['x_ref'] == trial['x_ref'] and trial['status'] == 'completed'
+        assert 'x' not in step and 'x' not in trial
+        assert len(read_vector(record.output, step['x_ref'])) == 198
         assert step['solver_step_status'] == 'accepted' and not step['physical_admission']
 
 
@@ -647,3 +658,165 @@ def test_callback_output_failure_stops_search_and_retains_trials(tmp_path, clock
     assert result['status']['reason'] == 'failure'
     assert result['solver_iterations_recorded'] == 0
     assert (record.output/'trial-00010.json').is_file()
+
+
+def test_search_clock_records_irregular_costs_io_failure_and_interruption(tmp_path, clock):
+    from fusion_baselines.coil_trajectory import export
+
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        value = original(x)
+        clock[0] += .5 if model.calls <= 10 else {11: 1., 12: 10., 13: 3., 14: 4.}[model.calls]
+        if model.calls == 13:
+            raise ValueError('controlled failed trial')
+        if model.calls == 14:
+            raise KeyboardInterrupt
+        return value
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1000)
+    save = record.save
+
+    def write(name, value):
+        save(name, value)
+        if name.startswith(('trial-', 'iterate-')):
+            clock[0] += .25  # Deliberately distinct publication and model costs.
+
+    record.save = write
+
+    def solver(function, x, callback, **kwargs):
+        function(x)
+        function(x)
+        callback(x)
+        function(x)
+        function(x)
+
+    with pytest.raises(KeyboardInterrupt):
+        experiment.search(model, record, solver)
+    startup = json.loads((record.output/'trial-00000.json').read_text(encoding='utf-8'))
+    assert startup['search_elapsed_start_s'] is startup['search_elapsed_end_s'] is None
+    rows = [json.loads((record.output/f'trial-{i:05}.json').read_text(encoding='utf-8'))
+            for i in (10, 11, 12)]
+    assert [row['search_elapsed_start_s'] for row in rows] == [0., 1.5, 12.25]
+    assert [row['search_elapsed_end_s'] for row in rows] == [1.25, 11.75, 15.5]
+    assert [row['elapsed_s'] for row in rows] == [1., 10., 3.]
+    assert rows[-1]['status'] == 'failed'
+    attempt = json.loads((record.output/'trial-00013-attempt.json').read_text(encoding='utf-8'))
+    assert attempt['search_elapsed_start_s'] == 15.75
+    assert 'search_elapsed_end_s' not in attempt and 'elapsed_s' not in attempt
+    assert not (record.output/'trial-00013.json').exists()
+    callback = json.loads((record.output/'iterate-00000.json').read_text(encoding='utf-8'))
+    assert callback['search_elapsed_s'] == 12.
+
+    # Export a real v3 vector store from the interrupted synthetic producer.
+    seed = dict(nbase=6, nfp=2, order=5,
+                names=[f'coil[{i}]/{name}' for i in range(6) for name in experiment.names()],
+                base_coefficients=[[[0.]*11 for _ in range(3)] for _ in range(6)])
+    record.save('seed.json', seed)
+    record.save('inputs.json', dict(kind='normalized-coil-fit',
+                                   recording=experiment.recording_settings('irregular-clock')))
+    output = tmp_path/'clock.jsonl'
+    export(record.output, output)
+    exported = [json.loads(line) for line in output.read_text(encoding='utf-8').splitlines()]
+    evaluations = {row['index']: row for row in exported if row['type'] == 'evaluation'}
+    assert evaluations[11]['search_elapsed_end_s'] == 11.75
+    assert evaluations[12]['search_elapsed_end_s'] == 15.5
+    assert evaluations[13]['search_elapsed_end_s'] is None
+    assert evaluations[13]['elapsed_s'] is None
+    exported_step = next(row for row in exported if row['type'] == 'solver_iterate')
+    assert exported_step['search_elapsed_s'] == 12.
+
+
+def test_search_storage_ceiling_stops_like_budget_and_keeps_check_allowance(
+        tmp_path, clock, monkeypatch):
+    monkeypatch.setattr(experiment, "MAX_BYTES", 400_000)
+    monkeypatch.setattr(experiment, "CHECK_STORAGE_RESERVE", 50_000)
+
+    def many(function, x, **kwargs):
+        for _ in range(100):
+            function(x)
+        return seed_solver(function, x, **kwargs)
+
+    model = SyntheticModel()
+    record = experiment.Recorder(tmp_path/'run', 1)
+    result = experiment.search(model, record, many)
+    assert result['startup_pass'] and result['status']['reason'] == 'storage'
+    assert 10 < result['bundles_completed'] < 111
+    assert result['selected']['role'] in ('startup-seed', 'search')
+    assert record.storage[0] <= 350_000 and record.limit is None
+    kept = sorted(record.output.glob('trial-?????.json'))
+    assert len(kept) == result['bundles_completed']
+    record.save('fine-check.json', b'x'*40_000)  # The reserved allowance remains usable.
+    with pytest.raises(experiment.StorageLimit, match="output ceiling"):
+        record.save('too-much.json', b'x'*20_000)
+
+
+def test_output_cap_holds_a_full_length_order8_search():
+    # #102 arm A: 8,168 bundles and 67,422,546 retained bytes in a 1795 s order-8 search.
+    bytes_per_bundle, seconds_per_bundle = 67_422_546/8168, 1795/8168
+    projected = experiment.MAX_SEARCH_SECONDS/seconds_per_bundle*bytes_per_bundle
+    assert experiment.MAX_SEARCH_SECONDS == 4*3600 and experiment.MAX_CHECK_SECONDS == 1800
+    assert projected < 0.75*(experiment.MAX_BYTES-experiment.CHECK_STORAGE_RESERVE)
+
+
+def test_interior_selection_uses_the_recorded_selection_value(tmp_path, clock):
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        value, gradient, metrics = original(x)
+        # Boundary RMS improves while boundary + interior objective worsens: the latter wins.
+        metrics.update(normal_rms=-model.calls, selection_value=float(model.calls))
+        return value, gradient, metrics
+
+    model.evaluate = evaluate
+    result = experiment.search(model, experiment.Recorder(tmp_path/'run', 1), seed_solver)
+    assert result['startup_pass'] and result['selected']['index'] == 0
+
+
+def test_interior_recording_adds_weight_and_grid_only_when_used():
+    plain = experiment.recording_settings('task', 'halved')
+    interior = experiment.recording_settings('task', 'halved', interior_weight=.05)
+    assert 'interior' not in plain['objective_weights'] and 'interior_objective' not in plain
+    assert interior['objective_weights'] == dict(plain['objective_weights'], interior=.05)
+    assert interior['interior_objective'] == experiment.INTERIOR_OBJECTIVE
+    assert interior['selection_rule'].startswith('lowest flux_objective + interior_objective')
+    # Objective surfaces never coincide with the checked s = 0.25/0.5/0.75 surfaces.
+    assert not set(experiment.INTERIOR_OBJECTIVE['surfaces']) & {.25, .5, .75}
+
+
+def test_interior_term_value_and_gradient_through_flux_scale(tmp_path, clock):
+    pytest.importorskip("simsopt")
+    from fusion_baselines import coil_check as check
+
+    data = check.read_json(check.ROOT/check.TARGETS['reference401']['input'])
+    candidate = check.read_json(
+        check.ROOT/'submissions/length-headroom-six-coil/candidate.json')
+    seed = check.candidate_snapshot(candidate, data, nodes=64)
+    record = experiment.Recorder(tmp_path/'run', 1)
+    plain = experiment.Model(seed, data, record, ncoil=64, n=16)
+    points = .97*plain.points.reshape(-1, 3)[::7]
+    plain.interior_field = experiment.tracked_field(
+        __import__('simsopt.field', fromlist=['BiotSavart']).BiotSavart, plain.coils, record)
+    plain.interior_field.set_points(points)
+    target = 1.1*seed['scale']*plain.interior_field.B()
+    interior = dict(points=points, target=target)
+    with pytest.raises(ValueError, match='interior target exactly'):
+        experiment.Model(seed, data, record, ncoil=64, n=16, interior=interior)
+    model = experiment.Model(seed, data, record, ncoil=64, n=16, interior=interior,
+                             interior_weight=.3)
+    base, _, base_metrics = plain.evaluate(model.x0)
+    value, gradient, metrics = model.evaluate(model.x0)
+    residual = metrics['scale']*plain.interior_field.B() - target
+    term = .5*np.mean(np.sum(residual**2, axis=1))/seed['B2_scale']
+    assert metrics['interior_objective_rms'] == pytest.approx(np.sqrt(2*term), rel=1e-12)
+    assert value == pytest.approx(base + .3*term, rel=1e-12)
+    assert metrics['selection_value'] == pytest.approx(metrics['flux_objective'] + .3*term)
+    direction = np.sin(np.arange(len(model.x0))+1)
+    direction /= np.linalg.norm(direction)
+    h = 1e-6
+    fd = (model.evaluate(model.x0+h*direction)[0]
+          - model.evaluate(model.x0-h*direction)[0])/(2*h)
+    assert fd == pytest.approx(gradient@direction, rel=1e-5)

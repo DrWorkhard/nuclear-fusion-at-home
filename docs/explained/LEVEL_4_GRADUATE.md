@@ -1,6 +1,6 @@
 # Level 4: for a graduate student
 
-Updated 8 October 2026 · [All five levels](README.md) ·
+Updated 13 October 2026 · [All five levels](README.md) ·
 Previous: [Level 3](LEVEL_3_UNIVERSITY.md) · Next: [Level 5](LEVEL_5_EXPERT.md)
 
 We run a two-stage stellarator design study in the open: improve a QI vacuum
@@ -51,6 +51,19 @@ the wide one by 15.53% and remains rejected.
   **0.00943**, interior RMS **0.01148**; all three field limits fail. Geometry passes: length
   ≤ 3.474 m, coil–coil ≥ 0.068 m, coil–plasma ≥ 0.133 m, curvature ≤ 10.05/m
   (normalized scale). Widening the coefficient box gained only 2.64% boundary RMS.
+- [Acceptance v2](../validation/ACCEPTANCE_V2.md) (owner-approved, frozen 13 October 2026) replaces only the
+  boundary limits with plain mean ≤ 0.0018 and maximum ≤ 0.013, the joint 10% level
+  of 8,058 CoilStellaration coil sets. Recent fits pass those; four distinct coil
+  sets also pass the unchanged interior limit on reference401: the halved-margin fit
+  (0.00902), the #53 order-8 fit (0.00949), @pjckoch's #12 continuation (0.0020,
+  with a 2.6% higher boundary error) and @pjckoch's #98 fit, which adds the same
+  interior term to halved margins (0.00184) ([leaderboard](../validation/LEADERBOARD.md)).
+  All three methods pass again on the improved target, and combining them lowers the
+  worst v2 ratio from 0.890 to 0.815, or 0.778 with order 8
+  ([combinations](../optimization/ISSUE102_COMBINED_METHODS.md)). Only
+  interior-weighted fields complete the wide bounce diagnostic; in one matched pair
+  61% of the ideal improvement remains, exploratory without realized flux labels
+  ([record](../optimization/STEP3_V2_METHODS.md)).
 - A matched restart lowered boundary RMS by 55% with 8.6% less current. A wider
   run passed the interior limit (0.00977), but its length bounds were
   unresolved. Construction headroom then fixed geometry and lost the interior pass.

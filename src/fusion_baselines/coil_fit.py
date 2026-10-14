@@ -7,17 +7,32 @@ import inspect
 import io
 import json
 import shutil
+import struct
 import time
 
 import numpy as np
 
-MAX_BYTES, START_RESERVE, LIVE_RESERVE = 256*1024**2, 3*1024**3, 2*1024**3
+MAX_BYTES, START_RESERVE, LIVE_RESERVE = 1024**3, 3*1024**3, 2*1024**3
+# Wall-clock caps; arms compared with each other must still share one budget.
+MAX_SEARCH_SECONDS, MAX_CHECK_SECONDS = 4*3600, 1800
+# Output kept free during search so the selected candidate can still be checked (#90).
+CHECK_STORAGE_RESERVE = 48*1024**2
+
+
+class StorageLimit(OSError):
+    """The output ceiling for the current phase was reached; prior records are intact."""
 PROBE_STEPS = (1.25e-6, 6.25e-7)
 SOLVER_OPTIONS = dict(maxiter=2**31-1, maxfun=2**31-1, maxls=20, ftol=0., gtol=1e-9)
-RECORDING_FORMAT = "fusion-coil-recording-v2"
+RECORDING_FORMAT = "fusion-coil-recording-v3"
+# v3 stores each coordinate/gradient vector once as little-endian float64 in this file;
+# trial and iterate JSON reference it by byte offset, count and SHA-256 (#90).
+VECTOR_STORE = "vectors.f64"
 EVALUATION_COST_SCOPE = "model.evaluate and post-evaluation guard; excludes trial-file writes"
 OBJECTIVE_WEIGHTS = dict(flux_per_area=1., length=1., coil_distance=1000.,
                          surface_distance=1000., curvature=.01)
+# Optional interior objective (method of #12). Its surfaces lie between the checked
+# s = 0.25/0.5/0.75 surfaces, so no objective point is an acceptance point.
+INTERIOR_OBJECTIVE = dict(surfaces=(.125, .375, .625, .875), resolution=16, shift=.5)
 # Construction margins keep sampled fits inside the unchanged acceptance limits
 # (length 3.5 m, coil-coil 0.06 m, coil-plasma 0.08 m, curvature 12/m).
 # "halved" moves each margin halfway to its limit (issue #70). A preset is the only
@@ -53,10 +68,15 @@ def selection_settings(margins="current"):
     return dict(length_max_m=margin_preset(margins)["selection_length"], **SAMPLED_LIMITS)
 
 
-def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0):
+def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0,
+                       interior_weight=0.):
     """Prospective fixed-target settings; no inferred plasma or equilibrium trajectory."""
+    interior = interior_weight > 0
+    # Interior-specific settings add no keys for boundary-only runs.
+    extra = dict(interior_objective=dict(INTERIOR_OBJECTIVE)) if interior else {}
     return dict(format=RECORDING_FORMAT, task_id=task_id,
-                objective_weights=OBJECTIVE_WEIGHTS.copy(),
+                objective_weights=dict(OBJECTIVE_WEIGHTS, **(
+                    dict(interior=float(interior_weight)) if interior else {})), **extra,
                 constraints=dict(margin_preset=margins,
                                  penalties=penalty_settings(margins),
                                  selection=selection_settings(margins), coefficient_bounds=None),
@@ -65,11 +85,32 @@ def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0):
                                        flux_loop_nodes=ncoil, geometry_phi=128,
                                        geometry_theta=128, geometry_phi_extent_turns=1.),
                 elapsed_scope=EVALUATION_COST_SCOPE,
+                search_timing=dict(clock="time.monotonic; seconds",
+                    origin="after startup, before minimize",
+                    start="before vector and attempt publication",
+                    end="after model evaluation/post-guard, before terminal publication",
+                    callback="before iterate publication"),
                 resource_limits=dict(output_bytes=MAX_BYTES, initial_reserve_bytes=START_RESERVE,
                                      live_reserve_bytes=LIVE_RESERVE),
-                selection_rule="lowest normal_rms among completed eligible startup-seed/search",
+                selection_rule=("lowest flux_objective + interior_objective" if interior
+                                else "lowest normal_rms")
+                + " among completed eligible startup-seed/search",
                 current_convention="1e5 A base current scaled by target_flux/unit_flux",
                 target_policy="fixed seed target, signed flux and B2_scale throughout run")
+
+
+def interior_target(data):
+    """Objective-only interior points and VMEC field from an open, already bound Wout."""
+    from fusion_baselines import wout_target
+
+    points, field = [], []
+    for surface in INTERIOR_OBJECTIVE["surfaces"]:
+        row = wout_target.sample(data, surface, INTERIOR_OBJECTIVE["resolution"],
+                                 INTERIOR_OBJECTIVE["shift"])
+        points.append(np.stack((row["radius"]*np.cos(row["phi"]), row["radius"]*np.sin(row["phi"]),
+                                row["height"]), axis=-1).reshape(-1, 3))
+        field.append(row["native"].reshape(-1, 3))
+    return dict(points=np.concatenate(points), target=np.concatenate(field))
 
 
 def mode_map(entries):
@@ -151,6 +192,7 @@ class Recorder:
                        for name in ("B", "A", "B_vjp", "A_vjp", "independent_B", "independent_BA")}
         self.bundles, self.bytes, self.active = 0, 0, None
         self.storage = [0] if storage is None else storage
+        self.limit = None  # None means the full MAX_BYTES ceiling, read at write time.
 
     def guard(self):
         if time.monotonic() >= self.deadline:
@@ -165,8 +207,10 @@ class Recorder:
         temporary = path.with_suffix(path.suffix+".tmp")
         if temporary.exists():
             raise FileExistsError("existing failed temporary output must not be overwritten")
-        if self.storage[0]+len(payload) > MAX_BYTES:
-            raise OSError("256 MiB aggregate output ceiling including temporary publication")
+        limit = MAX_BYTES if self.limit is None else self.limit
+        if self.storage[0]+len(payload) > limit:
+            raise StorageLimit(f"{limit} byte output ceiling for this phase reached "
+                               "(aggregate including temporary publication)")
         difference = len(payload)-(path.stat().st_size if path.exists() else 0)
         try:
             with temporary.open("xb") as stream:
@@ -182,6 +226,26 @@ class Recorder:
             raise
         self.bytes += difference
         self.storage[0] += difference
+
+    def vector(self, values):
+        """Append one float64 vector to the run's store and return its reference."""
+        values = [float(v) for v in values]
+        payload = struct.pack(f"<{len(values)}d", *values)
+        limit = MAX_BYTES if self.limit is None else self.limit
+        if self.storage[0]+len(payload) > limit:
+            raise StorageLimit(f"{limit} byte output ceiling for this phase reached "
+                               "(aggregate including temporary publication)")
+        path = self.output/VECTOR_STORE
+        offset = path.stat().st_size if path.exists() else 0
+        with path.open("ab") as stream:
+            written = stream.write(payload)
+            stream.flush()
+        self.storage[0] += written
+        self.bytes += written
+        if written != len(payload):
+            raise OSError("short vector-store write; publication incomplete")
+        return dict(store=VECTOR_STORE, offset_bytes=offset, count=len(values),
+                    sha256=hashlib.sha256(payload).hexdigest())
 
     def call(self, name, function, *args):
         self.guard()
@@ -235,7 +299,12 @@ def tracked_field(field_class, coils, record):
 
 
 class Model:
-    def __init__(self, seed, data, record, ncoil=256, n=64, offset=0, margins="current"):
+    def __init__(self, seed, data, record, ncoil=256, n=64, offset=0, margins="current",
+                 interior=None, interior_weight=0.):
+        if not (np.isfinite(interior_weight) and interior_weight >= 0
+                and (interior is None) == (interior_weight == 0)):
+            raise ValueError("an interior target exactly when the interior weight is positive")
+        self.interior_weight = float(interior_weight)
         self.margins = margin_preset(margins)
         self.penalties = penalty_settings(margins)
         from simsopt.field import BiotSavart, Current, coils_via_symmetries
@@ -284,6 +353,15 @@ class Model:
         self.loop_field = tracked_field(BiotSavart, self.coils, record)
         self.loop_points, self.loop_tangent = loop_geometry(data, ncoil)
         self.loop_field.set_points(self.loop_points)
+        self.interior = None
+        if interior is not None:
+            self.interior = {k: np.ascontiguousarray(interior[k], dtype=float)
+                             for k in ("points", "target")}
+            if (self.interior["points"].shape != self.interior["target"].shape
+                    or not np.isfinite(list(self.interior.values())).all()):
+                raise ValueError("finite matching interior points and target required")
+            self.interior_field = tracked_field(BiotSavart, self.coils, record)
+            self.interior_field.set_points(self.interior["points"])
         # threshold=0 equals released SIMSOPT's SquaredFlux (J >= 0); only the historical fork
         # accepts the argument. Its J < 1e-10 gradient zeroing is rejected below anyway.
         flux_options = dict(definition="local")
@@ -357,7 +435,25 @@ class Model:
         gradient += canonical_gradient(self.curves, self.geometry.dJ(partials=True), self.order)
         scale = self.seed["target_flux"]/phi
         metrics = boundary_metrics(scale*self.field.B().reshape(self.points.shape), self.normals)
-        metrics.update(self.geometry_metrics(), flux_objective=float(value),
+        metrics["selection_value"] = metrics["normal_rms"]
+        if self.interior is not None:
+            # 0.5 mean |s B - B_target|^2 / B2 at the flux-normalizing scale s = target/phi(x),
+            # differentiated through s like #12; the boundary term is scale-invariant.
+            unit = self.interior_field.B().copy()
+            b2, count = self.seed["B2_scale"], len(unit)
+            residual = scale*unit - self.interior["target"]
+            interior = .5*float(np.mean(np.sum(residual**2, axis=1)))/b2
+            weights = self.interior_weight*residual/(count*b2)
+            contraction = float(np.sum(weights*unit))
+            derivative = (self.interior_field.B_vjp(scale*weights)
+                          - (scale*contraction/phi)*self.loop_field.A_vjp(
+                              self.loop_tangent/len(self.loop_tangent)))
+            value += self.interior_weight*interior
+            gradient += canonical_gradient(self.curves, derivative, self.order)
+            metrics.update(interior_objective=self.interior_weight*interior,
+                           interior_objective_rms=float(np.sqrt(2*interior)),
+                           selection_value=float(value))
+        metrics.update(self.geometry_metrics(), flux_objective=float(q/self.area),
                        flux_normalized_raw=metrics["raw_quadratic_flux"]
                        / (self.area*self.seed["B2_scale"]),
                        geometry_penalty=penalty,
@@ -441,6 +537,12 @@ def search(model, record, minimize):
     selected, completed, checks, startup = None, 0, [], False
     started, search_started = time.monotonic(), None
     largest_value = 0.
+    x_refs = {}
+
+    def stored(row, refs):
+        """On-disk record: vectors are referenced in the store, never repeated inline."""
+        return {**{k: v for k, v in row.items() if k not in ("x", "gradient")}, **refs}
+    record.limit = MAX_BYTES - CHECK_STORAGE_RESERVE
     last_search_row, solver_iterations = None, 0
 
     def evaluate(x, role):
@@ -449,8 +551,13 @@ def search(model, record, minimize):
         index = record.bundles
         record.bundles += 1
         record.active = dict(bundle=index, role=role)
-        row = dict(index=index, role=role, x=np.asarray(x).tolist(), status="attempted")
-        record.save(f"trial-{index:05}-attempt.json", row)
+        attempt_started = time.monotonic()
+        row = dict(index=index, role=role, x=np.asarray(x).tolist(), status="attempted",
+                   search_elapsed_start_s=None if search_started is None
+                   else attempt_started-search_started)
+        refs = dict(x_ref=record.vector(row["x"]))
+        x_refs[index] = refs["x_ref"]
+        record.save(f"trial-{index:05}-attempt.json", stored(row, refs))
         evaluation_started = time.monotonic()
         try:
             value, gradient, metrics = model.evaluate(x)
@@ -467,9 +574,14 @@ def search(model, record, minimize):
         finally:
             # Interrupts retain the attempt only, never a fabricated terminal result.
             if row["status"] != "attempted":
-                row.update(elapsed_s=time.monotonic()-evaluation_started,
-                           elapsed_scope=EVALUATION_COST_SCOPE)
-                record.save(f"trial-{index:05}.json", row)
+                evaluation_finished = time.monotonic()
+                row.update(elapsed_s=evaluation_finished-evaluation_started,
+                           elapsed_scope=EVALUATION_COST_SCOPE,
+                           search_elapsed_end_s=None if search_started is None
+                           else evaluation_finished-search_started)
+                if "gradient" in row:
+                    refs["gradient_ref"] = record.vector(row["gradient"])
+                record.save(f"trial-{index:05}.json", stored(row, refs))
         record.guard()
         if role == "search":
             last_search_row = row
@@ -480,22 +592,27 @@ def search(model, record, minimize):
         if (role in ("startup-seed", "search") and metrics["sampled_geometry_limits_met"]
                 and metrics["current_limit_met"]
                 and max(metrics["lengths"]) <= selection["length_max_m"]
-                and (selected is None or metrics["normal_rms"]
-                     < selected["metrics"]["normal_rms"])):
+                and (selected is None or metrics.get("selection_value", metrics["normal_rms"])
+                     < selected["metrics"].get("selection_value",
+                                               selected["metrics"]["normal_rms"]))):
             selected = row
         return value, gradient
 
     def accepted_iterate(xk):
         nonlocal solver_iterations
         record.guard()
+        callback_elapsed = time.monotonic()-search_started
         # Link only exact coordinates from the latest returned search evaluation. Do not
         # reevaluate, guess a cached evaluation, or call other trials line-search rejections.
         linked = last_search_row is not None and np.array_equal(xk, last_search_row["x"])
+        x_ref = (x_refs[last_search_row["index"]] if linked
+                 else record.vector(np.asarray(xk).tolist()))
         record.save(f"iterate-{solver_iterations:05}.json", dict(
-            format=RECORDING_FORMAT, iteration=solver_iterations, x=np.asarray(xk).tolist(),
+            format=RECORDING_FORMAT, iteration=solver_iterations, x_ref=x_ref,
             evaluation_index=last_search_row["index"] if linked else None,
             link_status="exact_latest_evaluation" if linked else "unknown",
-            solver_step_status="accepted", physical_admission=False))
+            solver_step_status="accepted", search_elapsed_s=callback_elapsed,
+            physical_admission=False))
         solver_iterations += 1
         record.guard()
 
@@ -526,10 +643,15 @@ def search(model, record, minimize):
         record.guard()
         status = dict(reason="solver-return", success=bool(solved.success),
                       message=str(solved.message))
+    except StorageLimit as exc:
+        # Like the time budget: stop searching, keep every record and the selection.
+        status = dict(reason="storage", error=str(exc))
     except TimeoutError as exc:
         status = dict(reason="budget", error=str(exc))
     except Exception as exc:
         status = dict(reason="failure", error=f"{type(exc).__name__}: {exc}")
+    finally:
+        record.limit = None  # Checks may use the reserved allowance.
     model.set_x(initial if selected is None else np.asarray(selected["x"]))
     return dict(status=status, startup_pass=startup, derivative_checks=checks,
                 recording_format=RECORDING_FORMAT, solver_iterations_recorded=solver_iterations,

@@ -1,6 +1,6 @@
 # Roadmap and completion criteria
 
-Updated 8 October 2026.
+Updated 13 October 2026.
 [Overview](README.md) · [Status](STATUS.md) · [Step results](steps/README.md)
 
 ## Roadmap
@@ -47,12 +47,14 @@ spend effort on decisions that test the path.
    ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
 4. **Make the decisive test portable.** Supply the missing target data and reuse
    existing field/geometry checks so contributors can address the actual
-   bottleneck. Prefer an existing community benchmark. Aim to resolve this now;
+   bottleneck. Prefer an existing community benchmark; the maintainer-run
+   [v2 leaderboard](validation/LEADERBOARD.md) is a first step. Aim to resolve this now;
    26 March 2027 is the outer MS0 decision target, not a six-month tooling project.
 
 One method, shared checks, one short record per question.
 [Active scope and workflows](review/ACTIVE_SCOPE.md) identify the code required. Maintain only code
 needed for active work or reproduction; completed tools resolve at their recorded
-Git revisions. Preserve evidence and raw data. Existing acceptance limits remain
-unchanged. Dates allocate effort; they do not promise scientific success.
+Git revisions. Preserve evidence and raw data. Acceptance limits change only by
+an owner-approved new version (v2 added benchmark-relative boundary limits; v1
+stays). Dates allocate effort; they do not promise scientific success.
 Unsolicited alternatives remain welcome. Publishing/contact need separate authority.

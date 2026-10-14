@@ -1,6 +1,6 @@
 # Level 3: for a university student
 
-Updated 8 October 2026 · [All five levels](README.md) ·
+Updated 13 October 2026 · [All five levels](README.md) ·
 Previous: [Level 2](LEVEL_2_TEENAGER.md) · Next: [Level 4](LEVEL_4_GRADUATE.md)
 
 ## The physics you need
@@ -47,18 +47,22 @@ does our target.
   test domain and 4.85% in a narrow one. This is a computed diagnostic of a vacuum
   field, not measured confinement.
 
-The acceptance limits are fixed in advance. Our best geometry-checked coil set
-(fitted to reference401):
+The original acceptance limits are fixed in advance. Our best geometry-checked coil
+set (the halved-margin fit to reference401):
 
 | Check | Limit | Best so far | Result |
 | --- | --- | --- | --- |
-| Boundary normal-field RMS, B·n/\|B\| | 1e-4 | 0.001932 | Fails, about 19× |
-| Maximum boundary normal error | 1e-3 | 0.00907 | Fails |
-| Interior field mismatch (RMS) | 0.01 | 0.01072 | Fails |
+| Boundary normal-field RMS, B·n/\|B\| | 1e-4 | 0.00173 | Fails, about 17× |
+| Maximum boundary normal error | 1e-3 | 0.00806 | Fails |
+| Interior field mismatch (RMS) | 0.01 | 0.00902 | Passes |
 | Coil length (≤ 3.5 m at this scale), spacing, plasma distance, curvature | Project limits | Within limits | Passes |
 
-A coil set fitted the same way to the improved target scores almost the same
-(0.001953 and 0.01089) and also fails.
+With equal fitting effort, coil sets for the original and the improved target score
+almost the same (boundary 0.001932 and 0.001953, interior 0.01072 and 0.01089). The owner-approved [acceptance v2](../validation/ACCEPTANCE_V2.md)
+keeps the interior and geometry limits but sets the boundary limits so that the best
+10% of a public coil benchmark pass (mean ≤ 0.0018, maximum ≤ 0.013). Three later
+reference401 coil sets pass it, one of them a contributor's
+([leaderboard](../validation/LEADERBOARD.md)).
 
 ## Status by step
 

@@ -1,13 +1,18 @@
 # Scientific status
 
-Updated 11 October 2026; adds an external calibration of the boundary limit.
+Updated 14 October 2026; adds method combinations and a matched bounce comparison.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
-**No accepted coil design or demonstrated reactor advantage.** The new matched
-reference-target fit reaches boundary RMS **0.001932**, about **19×** its limit,
-and interior RMS **0.01072**, also failing. The improved-target fit also fails.
-[Matched-target evidence](optimization/ISSUE25_MATCHED_TARGETS.md) finds incomplete
-wide-domain action diagnostics in both actual coil fields; benefit transfer remains unresolved.
+**Coil sets from three methods and their combinations pass the owner-approved
+[acceptance v2](validation/ACCEPTANCE_V2.md) on the original and the improved
+Step 3 target; none passes v1; no demonstrated reactor advantage.**
+The [leaderboard](validation/LEADERBOARD.md) ranks them; @pjckoch's #12 continuation
+passed first ([results](validation/ACCEPTANCE_V2_RESULTS.md)); halved margins with the
+interior term lead on both targets ([combinations](optimization/ISSUE102_COMBINED_METHODS.md)).
+Under v1 the best boundary RMS is about **0.0017**, **17×** its limit. Only
+interior-term fits complete the wide bounce-action diagnostic; in one
+matched pair 61% of the ideal improvement remains ([record](optimization/STEP3_V2_METHODS.md));
+without realized flux labels this is exploratory.
 **The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
 30 more minutes of search lowered boundary RMS by only 6%. The
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) then gained only 3.6%
@@ -15,7 +20,8 @@ at Fourier order 8 and [halved construction margins](optimization/ISSUE70_CONSTR
 5.8%, so the next route is joint plasma/coil optimization
 ([programme](optimization/STEP4_RESEARCH_PROGRAMME.md)). In Proxima's public coil
 benchmark no QI case reaches the 1e-4 boundary limit, and our fits beat about 91–95%
-of its coil sets ([comparison](sota/CONSTELLARATION.md)); limits stay unchanged.
+of its coil sets ([comparison](sota/CONSTELLARATION.md)); v2 is calibrated so its best
+10% pass, a benchmark-relative criterion set with our results known.
 Present evidence does not substantiate the README's reactor-design timeline.
 
 ## Established results and their limits
@@ -36,15 +42,18 @@ The [archive workflow](validation/REPRODUCING_RESULTS.md) explains retrieval.
 | [Length headroom](https://github.com/DrWorkhard/nuclear-fusion-at-home/blob/68db098b664bb072854b687040e103aaafee463c/evidence/coil-headroom-v3.json) | Boundary/interior RMS 0.001996 / 0.01148; length bound 3.474220 m | Geometry passes; fields fail; expanded box gains only 2.64% boundary RMS | [`5a3c1d0`](https://github.com/DrWorkhard/nuclear-fusion-at-home/commit/5a3c1d02f90746b9fd061d1174fa02f9e58784d6) |
 | [Earlier failures](validation/REPRODUCING_RESULTS.md) | Fine clearance, objective alignment and current-only studies exposed limitations | Remain failures; no retired method is relabelled successful | Per archived record |
 
-Acceptance still requires boundary RMS **1e-4**, maximum normal error **1e-3**
-and interior RMS **0.01**, plus the [Step 4 requirements](steps/STEP_4_PLASMA_AND_COILS.md).
+Acceptance v1 requires boundary RMS **1e-4**, maximum normal error **1e-3**
+and interior RMS **0.01**. The owner-approved [acceptance v2](validation/ACCEPTANCE_V2.md)
+replaces only the boundary limits (mean **0.0018**, maximum **0.013**, the best 10% of a
+public coil benchmark); results report both. Neither replaces the
+[Step 4 requirements](steps/STEP_4_PLASMA_AND_COILS.md).
 Geometry bounds use padded floating point, not interval proofs or finite-build
 engineering. Solver stopping does not prove an optimum.
 
 ## Reproduce or contribute
 
-The [best portable geometry](../submissions/length-headroom-six-coil/README.md)
-is available; public sparse and dense diagnostics are not physical acceptance.
+[Public candidates](../submissions/README.md), ranked on the [leaderboard](validation/LEADERBOARD.md),
+are available; public sparse and dense diagnostics are not physical acceptance.
 Use [historical revisions](validation/REPRODUCING_RESULTS.md) for full methods,
 budgets and failure records. Evidence and raw artifacts retain their identities;
 Git does not back up ignored data.

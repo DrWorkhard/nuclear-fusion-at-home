@@ -55,7 +55,16 @@ later halved every margin and gained 5.8%; it does not change this decision.
 
 One seed, one budget and one local optimizer per arm on one machine; order 8 is one
 point in coil-family space. Geometry bounds are padded floating point; tracing is a
-vacuum diagnostic. Results were reported by the contributor (@pjckoch) and have not
-been rerun by the maintainer. The preregistration, logs, selected snapshots and
-hashes are retained by the contributor, not archived in this repository. Full
-report: [issue #53, run 2](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53).
+vacuum diagnostic. Results were reported by the contributor (@pjckoch); the
+preregistration, logs, selected snapshots and hashes are retained by the
+contributor, not archived in this repository. Full report:
+[issue #53, run 2](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/53).
+
+**Maintainer reruns (13 October 2026).** Arm P was rerun on `9ecdf27` with the same
+seed and budgets on the maintainer's machine (9,397 trials): boundary RMS 0.0017658
+and interior RMS 0.00949, against the reported 0.0017815 and 0.009859. It passes the
+later [acceptance v2](../validation/ACCEPTANCE_V2.md) ([leaderboard](../validation/LEADERBOARD.md)).
+An earlier, previously unrecorded maintainer run of both arms (6 October, unpublished
+integration commit) gave a P/C ratio of 0.962. Arm C was not rerun on `9ecdf27`; the
+rule's outcome is unchanged. On current `main` the same arm P stops at the output
+ceiling ([#90](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/90)).

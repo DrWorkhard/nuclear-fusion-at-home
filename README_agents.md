@@ -17,10 +17,14 @@ We study stellarators: devices whose shaped external coils create a twisted
 magnetic field that confines plasma. Our immediate question is whether practical
 coil shapes can accurately reproduce a promising plasma target.
 
-**Research preview · 27 September 2026.** A geometry-checked exploratory fit reaches
-normal-field RMS **0.001996 versus a 1e-4 pilot limit**, with interior RMS
-**0.01148 versus 0.01**. Both field limits still fail. The geometry is available
-in the public starter below. This is useful progress, not an accepted design or
+**Research preview · 14 October 2026.** Geometry-checked six-coil sets from three
+methods and their combinations pass the owner-approved [acceptance v2](docs/validation/ACCEPTANCE_V2.md) for
+field errors on both the original and the improved plasma target; v2 is calibrated
+so the best 10% of a public coil benchmark passes. The best set reaches normal-field
+RMS **about 0.0017 versus the original 1e-4 pilot limit** and interior RMS
+**0.0017 versus 0.01**; no coil set passes the original limits. The
+[leaderboard](docs/validation/LEADERBOARD.md) credits each contributor; three of the
+order-5 geometries are public candidates. This is useful progress, not an accepted design or
 a state-of-the-art advantage. Realized magnetic surfaces and plasma-benefit
 transfer remain open. [Scientific evidence](docs/STATUS.md).
 
@@ -29,6 +33,10 @@ improved the boundary error by only 6%, more flexible coils 3.6%
 ([probe](docs/optimization/ISSUE53_COIL_FREEDOM.md)) and looser construction margins
 5.8% ([probe](docs/optimization/ISSUE70_CONSTRUCTION_MARGINS.md)). The next route is joint
 plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36); [programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)).
+Passing v2 does not settle the plasma question: the wide bounce-action diagnostic
+completes only in interior-weighted coil fields, and in one matched pair 61% of the
+ideal improvement remains, without verified flux labels
+([record](docs/optimization/STEP3_V2_METHODS.md)).
 
 We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.
 
@@ -93,7 +101,9 @@ Try a small coil-coefficient change and lower **both** public errors:
 
 Start around 0.01–0.1 mm (`1e-5`–`1e-4` metres); this is an exploratory scale,
 not a guarantee of improvement or safe geometry. Evaluation prints differences
-from the reference. Report both metrics and any trade-off.
+from the reference. Report both metrics and any trade-off. The
+[leaderboard](docs/validation/LEADERBOARD.md) ranks every coil set so far and credits
+its contributor.
 
 ```bash
 python fusion.py public init --output results/my-reference.json
@@ -105,11 +115,11 @@ python fusion.py public audit --report results/my-report.json --output results/m
 The example changes one coefficient by +0.1 mm; it is not a known improvement.
 `--value` is absolute, in metres. Quote coefficient names.
 [Named mapping and Python search loop](docs/validation/PUBLIC_QUICKSTART.md#evaluate-your-own-candidate)
-· [Lower-score example](submissions/length-headroom-six-coil/README.md).
+· [Example passing acceptance v2](submissions/halved-margin-six-coil/README.md).
 
 The public starter uses sparse samples and fixed currents. Research uses dense
-grids and flux-normalized currents, with limits **1e-4 normal RMS** and
-**0.01 interior-vector RMS**. Those are different checks. Public `audit` is a
+grids and flux-normalized currents, with limits **1e-4 normal RMS** (v1; v2: mean
+0.0018, maximum 0.013) and **0.01 interior-vector RMS**. Those are different checks. Public `audit` is a
 same-code replay, not independent physical acceptance.
 
 ## Contribute
@@ -127,8 +137,8 @@ seek counterexamples, test failure cases, and question whether the evidence
 supports the claims. Report reproducible findings tied to the reviewed commit.
 Criticize methods and claims, not people.
 
-The active research path is penalized coil fitting plus shared field/geometry
-checks. Keep short evidence summaries on `main`, linked to immutable annotated
+The active research path builds joint plasma/coil optimization on the penalized
+coil fitter and shared field/geometry checks. Keep short evidence summaries on `main`, linked to immutable annotated
 `evidence-*` tags and the original producer/evaluator revisions. Full evidence
 is stored as files in the tagged commit; the tag description explains its scope
 and reproduction. Verify the published archive before removing payloads from
