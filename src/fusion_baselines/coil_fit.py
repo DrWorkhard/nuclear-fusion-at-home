@@ -72,7 +72,7 @@ def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0,
                        interior_weight=0.):
     """Prospective fixed-target settings; no inferred plasma or equilibrium trajectory."""
     interior = interior_weight > 0
-    # Boundary-only settings keep their original recorded bytes; the term adds two keys.
+    # Interior-specific settings add no keys for boundary-only runs.
     extra = dict(interior_objective=dict(INTERIOR_OBJECTIVE)) if interior else {}
     return dict(format=RECORDING_FORMAT, task_id=task_id,
                 objective_weights=dict(OBJECTIVE_WEIGHTS, **(
@@ -85,6 +85,11 @@ def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0,
                                        flux_loop_nodes=ncoil, geometry_phi=128,
                                        geometry_theta=128, geometry_phi_extent_turns=1.),
                 elapsed_scope=EVALUATION_COST_SCOPE,
+                search_timing=dict(clock="time.monotonic; seconds",
+                    origin="after startup, before minimize",
+                    start="before vector and attempt publication",
+                    end="after model evaluation/post-guard, before terminal publication",
+                    callback="before iterate publication"),
                 resource_limits=dict(output_bytes=MAX_BYTES, initial_reserve_bytes=START_RESERVE,
                                      live_reserve_bytes=LIVE_RESERVE),
                 selection_rule=("lowest flux_objective + interior_objective" if interior
@@ -546,7 +551,10 @@ def search(model, record, minimize):
         index = record.bundles
         record.bundles += 1
         record.active = dict(bundle=index, role=role)
-        row = dict(index=index, role=role, x=np.asarray(x).tolist(), status="attempted")
+        attempt_started = time.monotonic()
+        row = dict(index=index, role=role, x=np.asarray(x).tolist(), status="attempted",
+                   search_elapsed_start_s=None if search_started is None
+                   else attempt_started-search_started)
         refs = dict(x_ref=record.vector(row["x"]))
         x_refs[index] = refs["x_ref"]
         record.save(f"trial-{index:05}-attempt.json", stored(row, refs))
@@ -566,8 +574,11 @@ def search(model, record, minimize):
         finally:
             # Interrupts retain the attempt only, never a fabricated terminal result.
             if row["status"] != "attempted":
-                row.update(elapsed_s=time.monotonic()-evaluation_started,
-                           elapsed_scope=EVALUATION_COST_SCOPE)
+                evaluation_finished = time.monotonic()
+                row.update(elapsed_s=evaluation_finished-evaluation_started,
+                           elapsed_scope=EVALUATION_COST_SCOPE,
+                           search_elapsed_end_s=None if search_started is None
+                           else evaluation_finished-search_started)
                 if "gradient" in row:
                     refs["gradient_ref"] = record.vector(row["gradient"])
                 record.save(f"trial-{index:05}.json", stored(row, refs))
@@ -590,6 +601,7 @@ def search(model, record, minimize):
     def accepted_iterate(xk):
         nonlocal solver_iterations
         record.guard()
+        callback_elapsed = time.monotonic()-search_started
         # Link only exact coordinates from the latest returned search evaluation. Do not
         # reevaluate, guess a cached evaluation, or call other trials line-search rejections.
         linked = last_search_row is not None and np.array_equal(xk, last_search_row["x"])
@@ -599,7 +611,8 @@ def search(model, record, minimize):
             format=RECORDING_FORMAT, iteration=solver_iterations, x_ref=x_ref,
             evaluation_index=last_search_row["index"] if linked else None,
             link_status="exact_latest_evaluation" if linked else "unknown",
-            solver_step_status="accepted", physical_admission=False))
+            solver_step_status="accepted", search_elapsed_s=callback_elapsed,
+            physical_admission=False))
         solver_iterations += 1
         record.guard()
 

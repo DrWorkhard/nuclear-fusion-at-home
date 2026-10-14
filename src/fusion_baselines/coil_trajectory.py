@@ -30,6 +30,27 @@ def _vector(value, count):
     return value
 
 
+def _search_timing(row, callback=False):
+    """Optional prospective relative clocks; absent historical fields stay absent."""
+    keys = ("search_elapsed_s",) if callback else (
+        "search_elapsed_start_s", "search_elapsed_end_s")
+    if not any(key in row for key in keys):
+        return {}
+    times = {key: row.get(key) for key in keys}
+    require(all(value is None or (type(value) in (int, float)
+                and math.isfinite(value) and value >= 0) for value in times.values()),
+            "nonnegative search-relative timing required")
+    if not callback:
+        start, end = (times[key] for key in keys)
+        require(end is None or (start is not None and end >= start),
+                "ordered search-relative timing required")
+        require((start is None and end is None) or row.get("role") == "search",
+                "startup has no search-relative timing")
+        require(row.get("status") != "attempted" or end is None,
+                "attempt has no recorded end timing")
+    return times
+
+
 def _sources(values):
     """Keep exact identities without making original machine paths artifact locations."""
     return [dict(label=path.replace("\\", "/").rsplit("/", 1)[-1], sha256=digest,
@@ -221,6 +242,11 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
                 require(attempt.get("status") == "attempted", "attempt status mismatch")
                 require(all(attempt.get(k) == row.get(k) for k in ("index", "role", "x")),
                         "attempt/terminal identity mismatch")
+                if prospective:
+                    _search_timing(attempt)
+                    require(attempt.get("search_elapsed_start_s")
+                            == row.get("search_elapsed_start_s"),
+                            "attempt/terminal timing mismatch")
             status = row.get("status")
             require(status in ("attempted", "completed", "failed"), "known trial status required")
             require(terminal is None or status != "attempted", "terminal status required")
@@ -246,6 +272,8 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
                     and math.isfinite(elapsed) and elapsed >= 0),
                     "nonnegative elapsed cost required")
             timing = {} if not prospective else dict(elapsed_scope=row.get("elapsed_scope"))
+            if prospective:
+                timing.update(_search_timing(row))
             require(elapsed is None or isinstance(timing["elapsed_scope"], str),
                     "recorded cost scope required")
             write(dict(format=format_name, type="evaluation", run_id=run_id, index=index,
@@ -266,6 +294,7 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
                        iteration=step["iteration"], evaluation_index=index,
                        candidate_id=None if index is None else candidate_ids[index],
                        coefficients=step["x"], link_status=step["link_status"],
+                       **_search_timing(step, callback=True),
                        solver_step_status="accepted", physical_admission=False))
         # Final checks are not coarse search labels; attach only to the selected trial.
         if result is not None:
