@@ -675,6 +675,14 @@ def test_search_storage_ceiling_stops_like_budget_and_keeps_check_allowance(
         record.save('too-much.json', b'x'*20_000)
 
 
+def test_output_cap_holds_a_full_length_order8_search():
+    # #102 arm A: 8,168 bundles and 67,422,546 retained bytes in a 1795 s order-8 search.
+    bytes_per_bundle, seconds_per_bundle = 67_422_546/8168, 1795/8168
+    projected = experiment.MAX_SEARCH_SECONDS/seconds_per_bundle*bytes_per_bundle
+    assert experiment.MAX_SEARCH_SECONDS == 4*3600 and experiment.MAX_CHECK_SECONDS == 1800
+    assert projected < 0.75*(experiment.MAX_BYTES-experiment.CHECK_STORAGE_RESERVE)
+
+
 def test_interior_selection_uses_the_recorded_selection_value(tmp_path, clock):
     model = SyntheticModel()
     original = model.evaluate

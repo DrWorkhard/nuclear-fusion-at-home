@@ -12,7 +12,9 @@ import time
 
 import numpy as np
 
-MAX_BYTES, START_RESERVE, LIVE_RESERVE = 256*1024**2, 3*1024**3, 2*1024**3
+MAX_BYTES, START_RESERVE, LIVE_RESERVE = 1024**3, 3*1024**3, 2*1024**3
+# Wall-clock caps; arms compared with each other must still share one budget.
+MAX_SEARCH_SECONDS, MAX_CHECK_SECONDS = 4*3600, 1800
 # Output kept free during search so the selected candidate can still be checked (#90).
 CHECK_STORAGE_RESERVE = 48*1024**2
 
@@ -213,7 +215,7 @@ class Recorder:
         limit = MAX_BYTES if self.limit is None else self.limit
         if self.storage[0]+len(payload) > limit:
             raise StorageLimit(f"{limit} byte output ceiling for this phase reached "
-                               "(256 MiB aggregate including temporary publication)")
+                               "(aggregate including temporary publication)")
         difference = len(payload)-(path.stat().st_size if path.exists() else 0)
         try:
             with temporary.open("xb") as stream:
@@ -237,7 +239,7 @@ class Recorder:
         limit = MAX_BYTES if self.limit is None else self.limit
         if self.storage[0]+len(payload) > limit:
             raise StorageLimit(f"{limit} byte output ceiling for this phase reached "
-                               "(256 MiB aggregate including temporary publication)")
+                               "(aggregate including temporary publication)")
         path = self.output/VECTOR_STORE
         offset = path.stat().st_size if path.exists() else 0
         with path.open("ab") as stream:

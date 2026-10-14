@@ -23,8 +23,9 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
     from scipy.optimize import minimize
 
     check.need(np.isfinite([seconds, check_seconds]).all()
-               and 0 < seconds <= 1800 and 0 < check_seconds <= 1800,
-               "positive finite search/check budgets, at most 1800 seconds each")
+               and 0 < seconds <= fit.MAX_SEARCH_SECONDS
+               and 0 < check_seconds <= fit.MAX_CHECK_SECONDS,
+               "positive finite budgets: search at most 4 h, checks at most 1800 s")
     check.need(all(os.environ.get(k) == "1" for k in (
         "OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "VECLIB_MAXIMUM_THREADS",
         "MKL_NUM_THREADS")), "one-thread execution required")
@@ -126,8 +127,10 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
-    parser.add_argument("--seconds", type=float, default=300)
-    parser.add_argument("--check-seconds", type=float, default=120)
+    parser.add_argument("--seconds", type=float, default=300,
+                        help="search budget in seconds, including startup (at most 14400)")
+    parser.add_argument("--check-seconds", type=float, default=120,
+                        help="check budget in seconds (at most 1800)")
     parser.add_argument("--target", choices=tuple(check.TARGETS), default="reference401")
     parser.add_argument("--wout", type=Path, help="portable reference401 Wout (see docs)")
     parser.add_argument("--order", type=int, choices=(5, 8),
