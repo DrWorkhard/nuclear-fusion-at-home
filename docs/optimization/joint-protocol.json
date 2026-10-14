@@ -1,6 +1,6 @@
 {
  "protocol": "joint-plasma-coil-pilot",
- "status": "not ready: derivative reliability failed at ns 25/51; target-intake contract not implemented; frozen ns101/201 check not run (#63)",
+ "status": "not viable as frozen: derivative reliability failed at ns 25/51; frozen ns101/201 check failed h-spread at reference401 (N17); target-intake contract not implemented (#63)",
  "arms": {
   "F-ref": {
    "target": "evidence/plasma-design-v2/reference-input-401.json",
@@ -305,7 +305,35 @@
    "source": "#81 / constellaration==0.2.6",
    "reference401": 6.14039,
    "selected401": 6.13881,
-   "rule": "no measurable cost (within \u00b15%), so not in objective; report for selected J boundary"
+   "rule": "no measurable cost (within ±5%), so not in objective; report for selected J boundary"
+  }
+ },
+ "frozen_check_N17": {
+  "evidence": "pjckoch/nuclear-fusion-at-home@ed513796ffc5ac773ca0829ccb63078915cc26c3:evidence/joint-frozen-check-n17",
+  "producer_sha256": "dd7da683f1e24980a2d656cde94cdf62719ed143ca40e46adb70681e0856a778",
+  "seconds": 2029,
+  "verdict": "fail: J arm not viable at this budget",
+  "resolution_max_rel": {
+   "ref": 0.0284,
+   "sel": 0.0287
+  },
+  "h_spread": {
+   "ref": [
+    0.0021,
+    0.1426,
+    0.0011,
+    0.0952
+   ],
+   "sel": [
+    0.0024,
+    0.0035,
+    0.0018,
+    0.0006
+   ]
+  },
+  "passed": {
+   "ref": false,
+   "sel": true
   }
  }
 }

@@ -4,9 +4,10 @@ Question: under matched coil constraints and budgets, does releasing the Step 3
 plasma modes together with the coils realize **more** of the Step 3 action benefit
 in actual coil fields than fitting coils to a fixed target? Settings are in
 [joint-protocol.json](joint-protocol.json). Review requests are tracked in #63.
-**Status: not ready to run.** The derivative-reliability check (below) failed its
-preregistered tolerance at the proposed search resolutions. The target-intake contract
-is not implemented. The ns = 101/201 check is frozen but not run.
+**Status: not viable as frozen.** The derivative-reliability check (below) failed at
+ns = 25/51. The frozen ns = 101/201 check (N17) then failed its h-spread rule at
+reference401, so by its rule the J arm is not viable at this budget. The target-intake
+contract is not implemented. Any changed rule is a new protocol version for the owner.
 
 ## Arms (sequential, one thread, same machine)
 
@@ -59,7 +60,7 @@ By the preregistered rule the pilot does not run. Evidence:
 [joint-feasibility-n14](https://github.com/pjckoch/nuclear-fusion-at-home/tree/98af8dc1a42dd0a8aa26775caad843c4292e7188/evidence/joint-feasibility-n14) (fork commit `98af8dc1a42d`; proposed for an `evidence-*` tag), which includes
 every case, failures, the h-grids, comparability rows and regenerated-Wout identities.
 
-**Next check, frozen now (not yet run): ns = 101 against ns = 201.**
+**Frozen check, run 14 October 2026 (N17): ns = 101 against ns = 201. Result: fail.**
 - Inputs: the same reference401 and selected401 inputs, and the same four modes.
 - Central differences: h ∈ {5e-6, 1e-5, 2e-5} at ns = 101, and h = 1e-5 at ns = 201
   (ns_array ending 101 or 201; ftol 1e-11 at the final stage).
@@ -69,6 +70,13 @@ every case, failures, the h-grids, comparability rows and regenerated-Wout ident
 - Rule: pass at both bases means search at ns = 101 with h = 1e-5. Otherwise the J
   arm is not viable at this budget and the result is recorded.
 - Budget: 60 min, one thread. Evidence is bound like N14.
+- Result ([evidence](https://github.com/pjckoch/nuclear-fusion-at-home/tree/ed513796ffc5ac773ca0829ccb63078915cc26c3/evidence/joint-frozen-check-n17),
+  2,029 s): resolution passes at both bases (ns = 101 within 2.9% of ns = 201).
+  selected401 passes the h-spread rule (at most 0.35%). reference401 fails it:
+  `rbc(2,0)` 14.3%, `zbs(2,0)` 9.5%. Only h = 2e-5 deviates; at h = 5e-6 and 1e-5,
+  `rbc(2,0)` agrees to 0.08%. Along −`rbc(2,0)`, the score's slope halves between
+  −1e-5 and −2e-5 while the + side stays linear. This one-sided bend is 25 times smaller
+  than the ±5e-4 search box. The reading is diagnostic, not part of the verdict.
 
 ## Target intake for J (to implement and review before any run)
 
