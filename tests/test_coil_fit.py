@@ -1,6 +1,8 @@
 """Named gradients, independent fine fields, budgets and candidate selection."""
 
+import hashlib
 import json
+import struct
 from types import SimpleNamespace
 from unittest.mock import Mock
 
@@ -113,6 +115,13 @@ def test_progress_write_crossing_deadline_cannot_start_native_call(tmp_path, clo
     with pytest.raises(TimeoutError):
         record.call("B", native)
     assert not native.called and record.counts["B"] == dict(attempted=1, completed=0)
+
+
+def read_vector(run, ref):
+    """One referenced vector from a v3 run, checked against its SHA-256."""
+    payload = (run/ref['store']).read_bytes()[ref['offset_bytes']:][:8*ref['count']]
+    assert hashlib.sha256(payload).hexdigest() == ref['sha256']
+    return list(struct.unpack(f"<{ref['count']}d", payload))
 
 
 class SyntheticModel:
@@ -388,7 +397,7 @@ def test_real_lbfgsb_backtracks_failed_trial_without_discarding_seed(tmp_path, c
             encoding='utf-8'))
         assert step['x_ref'] == trial['x_ref'] and trial['status'] == 'completed'
         assert 'x' not in step and 'x' not in trial
-        assert len(experiment.read_vector(record.output, step['x_ref'])) == 198
+        assert len(read_vector(record.output, step['x_ref'])) == 198
         assert step['solver_step_status'] == 'accepted' and not step['physical_admission']
 
 

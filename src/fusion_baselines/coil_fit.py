@@ -19,16 +19,6 @@ MAX_SEARCH_SECONDS, MAX_CHECK_SECONDS = 4*3600, 1800
 CHECK_STORAGE_RESERVE = 48*1024**2
 
 
-def read_vector(run, ref):
-    """Read one referenced vector from a v3 run and verify its SHA-256."""
-    with (run/ref["store"]).open("rb") as stream:
-        stream.seek(ref["offset_bytes"])
-        payload = stream.read(8*ref["count"])
-    if len(payload) != 8*ref["count"] or hashlib.sha256(payload).hexdigest() != ref["sha256"]:
-        raise ValueError("vector reference does not match the store")
-    return list(struct.unpack(f"<{ref['count']}d", payload))
-
-
 class StorageLimit(OSError):
     """The output ceiling for the current phase was reached; prior records are intact."""
 PROBE_STEPS = (1.25e-6, 6.25e-7)
