@@ -40,11 +40,12 @@ spend effort on decisions that test the path.
    power balance, pressure/confinement, magnets, blanket/shield space and heat
    exhaust before expensive optimization. Detailed simulations follow a decision
    need; boundary RMS alone does not determine their priority.
-3. **Pilot joint plasma/coil optimization.** The fixed-target recipe stalled and
+3. **Joint plasma/coil optimization with a high-quality plasma.** The fixed-target recipe stalled and
    a [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) gained only 3.6%,
    so the [programme](optimization/STEP4_RESEARCH_PROGRAMME.md) chose joint
-   optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). Preregister a bounded feasibility pilot first
-   ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)).
+   optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36)). The first pilot design did not qualify (#59). The
+   plasma must also meet stability, turbulence and coil-simplicity requirements
+   ([#111](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/111)). Order of work: pinned [#116](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/116).
 4. **Make the decisive test portable.** Supply the missing target data and reuse
    existing field/geometry checks so contributors can address the actual
    bottleneck. Prefer an existing community benchmark; the maintainer-run

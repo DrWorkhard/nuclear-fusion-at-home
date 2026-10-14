@@ -45,13 +45,21 @@ interior-weighted fields; in one matched pair 61% of the ideal improvement remai
 ([Step 3 record](STEP3_V2_METHODS.md), exploratory; [#89](ISSUE89_V2_COIL_BOUNCE.md)).
 The route stands.
 
-1. **Preregister the joint pilot** ([#37](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/37)). The draft protocol
-   ([#59](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/59)) and its review ([#63](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/63)) fix comparable physics, objective
-   weight, selection and confirmation rules before any run. A first pilot decides
-   feasibility only.
-2. **Build the minimal joint optimizer** with existing tools ([#39](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/39)) and
-   record weights, costs and plasma variables ([#64](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/64)).
-3. **Qualify realized-field endpoints** ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)). Until matched
+**Owner direction, 14 October 2026:** the plasma itself must be of the best achievable
+quality, judged also by ConStellaration's stability, turbulence and coil-simplicity
+criteria ([#111](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/111)). Both targets lack a vacuum well and exceed the
+flux-compression bound. The first joint protocol ([JOINT_PROTOCOL.md](JOINT_PROTOCOL.md),
+#59) is kept as a negative result: its derivative checks failed, and its ±5e-4 moves
+cannot reach those requirements. The order of work is in the pinned
+[#116](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/116) and the `P0`–`P2` issue labels:
+
+1. **Score every plasma** ([#112](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/112)) and freeze **plasma requirements v1**
+   after calibration on the ConStellaration dataset ([#113](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/113)).
+2. **Plasma-only feasibility under v1** ([#114](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/114), stage 1), with target
+   intake for new plasmas ([#115](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/115)).
+3. **Coils for a v1 plasma, then a new joint protocol and optimizer** (#114 stages
+   2–3, [#39](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/39)).
+4. **Qualify realized-field endpoints** ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)). Until matched
    realized-surface labels exist, coil-field action scores are exploratory; if
    surfaces or required data are missing, report the blockage, not benefit transfer.
 

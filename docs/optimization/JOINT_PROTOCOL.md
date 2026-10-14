@@ -8,6 +8,11 @@ in actual coil fields than fitting coils to a fixed target? Settings are in
 ns = 25/51. The frozen ns = 101/201 check (N17) then failed its h-spread rule at
 reference401, so by its rule the J arm is not viable at this budget. The target-intake
 contract is not implemented. Any changed rule is a new protocol version for the owner.
+**Maintainer note (14 October 2026):** merged as the record of a pilot that did not
+qualify; the owner chose not to revise it ([#116](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/116)). Evidence tags:
+`evidence-issue37-joint-feasibility-n14-v1` (N14) and
+`evidence-issue37-joint-frozen-check-n17-v1` (N17). The target-intake contract
+continues in [#115](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/115).
 
 ## Arms (sequential, one thread, same machine)
 
