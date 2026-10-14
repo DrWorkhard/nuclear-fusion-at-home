@@ -17,13 +17,13 @@ We study stellarators: devices whose shaped external coils create a twisted
 magnetic field that confines plasma. Our immediate question is whether practical
 coil shapes can accurately reproduce a promising plasma target.
 
-**Research preview · 13 October 2026.** Geometry-checked six-coil sets from three
-methods pass the owner-approved [acceptance v2](docs/validation/ACCEPTANCE_V2.md) for
+**Research preview · 14 October 2026.** Geometry-checked six-coil sets from three
+methods and their combinations pass the owner-approved [acceptance v2](docs/validation/ACCEPTANCE_V2.md) for
 field errors on both the original and the improved plasma target; v2 is calibrated
-so the best 10% of a public coil benchmark passes. The lowest errors, in different
-sets, are normal-field RMS **about 0.0017 versus the original 1e-4 pilot limit** and
-interior RMS **0.0020 versus 0.01**; no coil set passes the original limits. The
-[leaderboard](docs/validation/LEADERBOARD.md) credits each contributor; two of the
+so the best 10% of a public coil benchmark passes. The best set reaches normal-field
+RMS **about 0.0017 versus the original 1e-4 pilot limit** and interior RMS
+**0.0017 versus 0.01**; no coil set passes the original limits. The
+[leaderboard](docs/validation/LEADERBOARD.md) credits each contributor; three of the
 order-5 geometries are public candidates. This is useful progress, not an accepted design or
 a state-of-the-art advantage. Realized magnetic surfaces and plasma-benefit
 transfer remain open. [Scientific evidence](docs/STATUS.md).
@@ -34,7 +34,8 @@ improved the boundary error by only 6%, more flexible coils 3.6%
 5.8% ([probe](docs/optimization/ISSUE70_CONSTRUCTION_MARGINS.md)). The next route is joint
 plasma/coil optimization ([#36](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/36); [programme](docs/optimization/STEP4_RESEARCH_PROGRAMME.md)).
 Passing v2 does not settle the plasma question: the wide bounce-action diagnostic
-completes only in one coil field, without a matched comparison yet
+completes only in interior-weighted coil fields, and in one matched pair 61% of the
+ideal improvement remains, without verified flux labels
 ([record](docs/optimization/STEP3_V2_METHODS.md)).
 
 We are independent of, and not endorsed by, Proxima Fusion or the Max Planck Institute.

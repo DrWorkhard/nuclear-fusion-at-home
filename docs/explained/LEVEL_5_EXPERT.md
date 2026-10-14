@@ -57,10 +57,12 @@ Both targets are nfp = 2, zero-β configurations at a normalized scale. Detail:
   ([comparison](../sota/CONSTELLARATION.md)), so 1e-4 looks out of reach for
   practical filament coils. The owner therefore froze a benchmark-relative
   [acceptance v2](../validation/ACCEPTANCE_V2.md) (best 10% of that benchmark pass), knowing our fits rank
-  near that level; coil sets from three methods pass it on both targets
-  ([leaderboard](../validation/LEADERBOARD.md)). Only the interior-weighted
-  continuation's field on the improved target has the q = 0.03 wells at s = 0.1 the
-  wide bounce-action diagnostic needs; its launch labels are target coordinates
+  near that level; coil sets from three methods and their combinations pass it on
+  both targets ([leaderboard](../validation/LEADERBOARD.md),
+  [combinations](../optimization/ISSUE102_COMBINED_METHODS.md)). Only
+  interior-weighted fields have the q = 0.03 wells at s = 0.1 that the wide
+  bounce-action diagnostic needs. In one matched pair 61% of the ideal wide
+  improvement remains, but launch labels are target coordinates
   ([record](../optimization/STEP3_V2_METHODS.md)).
 - **Verification depth.** Geometry bounds use padded floating point rather than
   interval arithmetic; numerical independence mostly means separate calculations

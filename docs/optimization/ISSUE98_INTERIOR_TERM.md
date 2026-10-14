@@ -53,7 +53,9 @@ with reference401 results known. The fit targets reference401, not the improved
 Step 3 plasma. On selected401, #12's continuation passes v2 and is the only fit to
 complete the wide bounce diagnostic ([#99](STEP3_V2_METHODS.md)), so the next test is
 this arm on selected401. It needs the archived Wout `8cd6bebf…`; a vmecpp
-regeneration hashes `3d5df9a4…`. This is not physical acceptance.
+regeneration hashes `3d5df9a4…`. This is not physical acceptance. **Update
+(14 October):** in [#102](ISSUE102_COMBINED_METHODS.md) this arm passes on selected401
+(worst ratio 0.815) and completes the wide bounce domain.
 
 Raw outputs (60 MB) are kept outside the repository, in the contributor's
 coordination log N16, with SHA-256 identities: result `6b4ee1af…`, selected snapshot
