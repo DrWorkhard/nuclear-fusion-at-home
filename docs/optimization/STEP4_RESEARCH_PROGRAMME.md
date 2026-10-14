@@ -38,7 +38,9 @@ limit and gained 5.8% (ratio 0.942). Under the owner-approved
 methods and their combinations pass the field and geometry checks on both targets
 ([leaderboard](../validation/LEADERBOARD.md)). The best combination lowers the
 worst v2 ratio by 12.5% but boundary RMS by under 1%
-([#102](ISSUE102_COMBINED_METHODS.md)). The wide bounce diagnostic completes only in
+([#102](ISSUE102_COMBINED_METHODS.md)); an 8× longer search lowers its field
+errors by 9% more but loses the continuous geometry certificate
+([#105](ISSUE105_SEARCH_BUDGET.md)). The wide bounce diagnostic completes only in
 interior-weighted fields; in one matched pair 61% of the ideal improvement remains
 ([Step 3 record](STEP3_V2_METHODS.md), exploratory; [#89](ISSUE89_V2_COIL_BOUNCE.md)).
 The route stands.

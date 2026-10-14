@@ -7,7 +7,8 @@ One normalized fitter, one set of field/geometry checks.
 [Bounce fidelity of the v2 coil set](ISSUE89_V2_COIL_BOUNCE.md) ·
 [Passing methods on the Step 3 target](STEP3_V2_METHODS.md) ·
 [Interior field term](ISSUE98_INTERIOR_TERM.md) ·
-[Combined methods](ISSUE102_COMBINED_METHODS.md)
+[Combined methods](ISSUE102_COMBINED_METHODS.md) ·
+[4-hour search](ISSUE105_SEARCH_BUDGET.md)
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
 geometry families, label compatibility, rights and the prerequisites for a learning pilot.
@@ -53,7 +54,8 @@ its objective and acceptance limits are unchanged. Length construction target is
 3.44 m, acceptance is 3.5 m. Default budgets are 300 s search (including startup)
 and 120 s checking, capped at 4 h (14,400 s) and 1,800 s; arms that are compared
 must share one budget. Output is capped at 1 GiB including interior files (about
-8 kB per evaluation at order 8 with recording v3), with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
+8 kB per evaluation at order 8 with recording v3; a 4-hour order-8 search kept
+483 MiB, [#105](ISSUE105_SEARCH_BUDGET.md)), with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
 before and after execution: in-flight native work can overrun, and late checks
 cannot claim completion. Use a fresh output directory. Failures remain on disk.
 The search keeps 48 MiB of the output cap free. Reaching the remaining search
