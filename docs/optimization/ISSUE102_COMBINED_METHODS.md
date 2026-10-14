@@ -68,7 +68,8 @@ Secondary measurements:
   (5,133). Both stopped on the time budget, and in each the selected point is the
   last completed bundle, so neither search had converged. A 4-hour rerun of A
   ([#105](ISSUE105_SEARCH_BUDGET.md)) lowered its field errors by a further 9% but
-  did not pass continuous geometry.
+  did not pass continuous geometry; with the current margins a 4-hour search passes
+  at 0.761 ([#109](ISSUE109_PASSING_LONG_SEARCH.md)).
 - **Interior on the objective's own surfaces:** 0.00165 (I) and 0.00157 (A), close
   to the checked values.
 - **Output:** 51.5 and 64.3 MiB retained (recording v3), against 204 MiB for M.

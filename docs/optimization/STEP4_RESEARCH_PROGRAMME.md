@@ -40,7 +40,9 @@ methods and their combinations pass the field and geometry checks on both target
 worst v2 ratio by 12.5% but boundary RMS by under 1%
 ([#102](ISSUE102_COMBINED_METHODS.md)); an 8× longer search lowers its field
 errors by 9% more but loses the continuous geometry certificate
-([#105](ISSUE105_SEARCH_BUDGET.md)). The wide bounce diagnostic completes only in
+([#105](ISSUE105_SEARCH_BUDGET.md)). With the current margins, or at its latest
+certified point, a 4-hour search passes but gains only about 2% on the 30-minute set
+([#109](ISSUE109_PASSING_LONG_SEARCH.md)). The wide bounce diagnostic completes only in
 interior-weighted fields; in one matched pair 61% of the ideal improvement remains
 ([Step 3 record](STEP3_V2_METHODS.md), exploratory; [#89](ISSUE89_V2_COIL_BOUNCE.md)).
 The route stands.

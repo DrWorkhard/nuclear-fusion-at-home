@@ -13,6 +13,10 @@ coil–coil bound (0.0596 m) and the length bound (3.509 m) miss their limits, s
 set fails v2. Recorded 14 October 2026; field and geometry acceptance only, not
 physical acceptance or benefit transfer.
 
+**Follow-up ([#109](ISSUE109_PASSING_LONG_SEARCH.md)):** with the current margins, or
+at L's latest certified point (bundle 10,994), a 4-hour search passes v2 at worst
+ratios 0.761 and 0.765. Neither clears the 0.739 bar.
+
 ## Question and method
 
 The [#102 searches](ISSUE102_COMBINED_METHODS.md) stopped on their 30-minute

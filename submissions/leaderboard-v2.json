@@ -285,6 +285,40 @@
       }
     },
     {
+      "name": "Interior term and order 8 with current margins and a 4-hour search",
+      "link": "docs/optimization/ISSUE109_PASSING_LONG_SEARCH.md",
+      "contributor": "@pjckoch (interior term and order 8; maintainer run)",
+      "record": "#109 arm W",
+      "target": "selected401",
+      "run": "artifacts/budget-v2/W",
+      "result": {
+        "boundary_mean": 0.0013692009839993756,
+        "boundary_max": 0.007949510403305233,
+        "interior_vector_rms": 0.0016831822603337277,
+        "checks_pass": true,
+        "v1": false,
+        "v2": true,
+        "worst_v2_ratio": 0.7606672133329865
+      }
+    },
+    {
+      "name": "Interior term, halved margins and order 8: latest certified point of the 4-hour search",
+      "link": "docs/optimization/ISSUE109_PASSING_LONG_SEARCH.md",
+      "contributor": "@pjckoch (interior term and order 8; maintainer run)",
+      "record": "#109 arm S",
+      "target": "selected401",
+      "run": "artifacts/budget-v2/S",
+      "result": {
+        "boundary_mean": 0.001376124025109074,
+        "boundary_max": 0.007497852927854733,
+        "interior_vector_rms": 0.0017146760724868323,
+        "checks_pass": true,
+        "v1": false,
+        "v2": true,
+        "worst_v2_ratio": 0.7645133472828188
+      }
+    },
+    {
       "name": "Interior term, halved margins and order 8 on the improved target",
       "link": "docs/optimization/ISSUE102_COMBINED_METHODS.md",
       "contributor": "@pjckoch (interior term and order 8; maintainer run)",

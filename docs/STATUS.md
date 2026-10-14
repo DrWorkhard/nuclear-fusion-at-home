@@ -1,14 +1,15 @@
 # Scientific status
 
-Updated 14 October 2026; adds method combinations and a matched bounce comparison.
+Updated 14 October 2026; adds method combinations, a bounce comparison and 4-hour searches.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
 **Coil sets from three methods and their combinations pass the owner-approved
 [acceptance v2](validation/ACCEPTANCE_V2.md) on the original and the improved
 Step 3 target; none passes v1; no demonstrated reactor advantage.**
 The [leaderboard](validation/LEADERBOARD.md) ranks them; @pjckoch's #12 continuation
-passed first ([results](validation/ACCEPTANCE_V2_RESULTS.md)); halved margins with the
-interior term lead on both targets ([combinations](optimization/ISSUE102_COMBINED_METHODS.md)).
+passed first ([results](validation/ACCEPTANCE_V2_RESULTS.md)); the interior term
+leads on both targets ([combinations](optimization/ISSUE102_COMBINED_METHODS.md),
+[4-hour searches](optimization/ISSUE109_PASSING_LONG_SEARCH.md)).
 Under v1 the best boundary RMS is about **0.0017**, **17×** its limit. Only
 interior-term fits complete the wide bounce-action diagnostic; in one
 matched pair 61% of the ideal improvement remains ([record](optimization/STEP3_V2_METHODS.md));
