@@ -8,7 +8,8 @@ One normalized fitter, one set of field/geometry checks.
 [Passing methods on the Step 3 target](STEP3_V2_METHODS.md) ·
 [Interior field term](ISSUE98_INTERIOR_TERM.md) ·
 [Combined methods](ISSUE102_COMBINED_METHODS.md) ·
-[4-hour search](ISSUE105_SEARCH_BUDGET.md)
+[4-hour search](ISSUE105_SEARCH_BUDGET.md) ·
+[Joint protocol (draft)](JOINT_PROTOCOL.md)
 
 [Community data readiness v1](COMMUNITY_DATA_READINESS_V1.md) inventories obtainable
 geometry families, label compatibility, rights and the prerequisites for a learning pilot.
