@@ -120,6 +120,14 @@ validation.
 `check_coils.py` saves its converted `seed.json`, which `fit_coils.py --snapshot … --wout …`
 accepts for a portable search.
 
+[`certified_selection.py`](../../scripts/certified_selection.py) (#109) re-reads a
+completed fit (recording v3). It takes the fitter's best-so-far eligible point every
+`--every` completed bundles (default 500) and certifies these points backward from
+the run's selected point with the same continuous geometry check. The first that
+passes becomes its `selected-snapshot.json`; run `check_coils.py --snapshot` on it.
+Before certifying any earlier point it must reproduce the run's selected snapshot and
+recorded geometry exactly. Geometry then passes by construction; the field does not.
+
 ## Realized-field surfaces
 
 [`scripts/trace_surfaces.py`](../../scripts/trace_surfaces.py) traces a public
