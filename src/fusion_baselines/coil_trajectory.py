@@ -74,7 +74,8 @@ def export(run, output, artifact_base=None, max_bytes=64*1024**2):
     def resolve(record, referenced):
         """Materialize x/gradient from the v3 store, verifying range and SHA-256."""
         value = dict(record)
-        require(not referenced or "x" not in value, "v3 records reference vectors")
+        require(not referenced or ("x" not in value and "gradient" not in value),
+                "v3 records reference vectors")
         for key in ("x", "gradient"):
             ref = value.pop(key+"_ref", None)
             if ref is None:

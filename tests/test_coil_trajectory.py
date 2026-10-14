@@ -475,7 +475,7 @@ def test_v3_export_resolves_store_and_records_bytes_per_trial(tmp_path, order):
     assert (recorder.output/'vectors.f64').stat().st_size == 8*count*(2*trials)
 
 
-@pytest.mark.parametrize('fault', ['tamper', 'range', 'inline', 'v2-store'])
+@pytest.mark.parametrize('fault', ['tamper', 'range', 'inline', 'inline-gradient', 'v2-store'])
 def test_v3_store_faults_fail_closed(tmp_path, fault):
     recorder, _ = v3_run(tmp_path)
     run = recorder.output
@@ -490,6 +490,11 @@ def test_v3_store_faults_fail_closed(tmp_path, fault):
     elif fault == 'inline':
         row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
         row['x'] = [0.]*198
+        save(run, 'trial-00000.json', row)
+    elif fault == 'inline-gradient':
+        row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+        del row['gradient_ref']
+        row['gradient'] = [0.]*198
         save(run, 'trial-00000.json', row)
     else:
         inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
