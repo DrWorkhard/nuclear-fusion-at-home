@@ -9,9 +9,11 @@ target.** They come from three methods and their combinations: halved margins,
 fitter) and the order-8 fit of #53's configuration. On both targets a combination
 ranks first: halved margins with the interior term, plus order 8 on the improved
 target ([combination record](../optimization/ISSUE102_COMBINED_METHODS.md),
-[Step 3 record](../optimization/STEP3_V2_METHODS.md)). None passes the original v1
-limits. Passing v2 accepts the field
-and geometry checks only; magnetic surfaces, benefit transfer, pressure and
+[Step 3 record](../optimization/STEP3_V2_METHODS.md)). A 4-hour search of the
+leading combination lowered its field errors further but left its geometry
+uncertified, so it fails ([#105](../optimization/ISSUE105_SEARCH_BUDGET.md)).
+None passes the original v1 limits. Passing v2 accepts the field and geometry
+checks only; magnetic surfaces, benefit transfer, pressure and
 engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
 
 ## Rules
@@ -81,6 +83,7 @@ engineering remain open ([Step 4](../steps/STEP_4_PLASMA_AND_COILS.md)).
 | 6 | [Current-margin fit on the improved target (control)](../../docs/optimization/STEP3_V2_METHODS.md) | @DrWorkhard (maintainer) | #92 arm C | fail | fail | 0.00152 | 0.0086 | 0.01014 | pass | 1.014 |
 | 7 | [Matched improved-target fit](../../docs/optimization/ISSUE25_MATCHED_TARGETS.md) | @DrWorkhard (maintainer) | #35 | fail | fail | 0.00165 | 0.0093 | 0.01089 | pass | 1.089 |
 | 8 | [Length-headroom coils on the improved target (control)](../../submissions/length-headroom-six-coil/README.md) | @DrWorkhard (maintainer) | #35 control | fail | fail | 0.00172 | 0.0094 | 0.01363 | pass | 1.363 |
+| 9 | [Interior term, halved margins and order 8 with a 4-hour search](../../docs/optimization/ISSUE105_SEARCH_BUDGET.md) | @pjckoch (interior term and order 8; maintainer run) | #105 arm L | fail | fail | 0.00128 | 0.0075 | 0.00156 | fail | 0.709 |
 <!-- leaderboard:end -->
 
 Boundary values are the larger of the two grid shifts; interior is the largest of

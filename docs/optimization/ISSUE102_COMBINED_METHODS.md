@@ -66,7 +66,9 @@ Secondary measurements:
 
 - **Search.** I ran 8,227 completed bundles (6,246 solver iterations) and A 8,168
   (5,133). Both stopped on the time budget, and in each the selected point is the
-  last completed bundle, so neither search had converged.
+  last completed bundle, so neither search had converged. A 4-hour rerun of A
+  ([#105](ISSUE105_SEARCH_BUDGET.md)) lowered its field errors by a further 9% but
+  did not pass continuous geometry.
 - **Interior on the objective's own surfaces:** 0.00165 (I) and 0.00157 (A), close
   to the checked values.
 - **Output:** 51.5 and 64.3 MiB retained (recording v3), against 204 MiB for M.
