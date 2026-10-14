@@ -72,8 +72,10 @@ Secondary measurements:
 
 ## How the search improved
 
-Best-so-far eligible point in L's own recording (search-grid metrics). Trials carry
-no timestamps, so time is estimated as index × 14,395 s / 66,653 bundles.
+Best-so-far eligible point in L's own recording (search-grid metrics). L's trials
+carry no timestamps (optional ones were added after the run, in
+[#107](https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/107)), so time is
+estimated as index × 14,395 s / 66,653 bundles.
 
 | Time | Bundle | Selection value | Boundary mean | Boundary RMS | Interior RMS |
 | ---: | ---: | ---: | ---: | ---: | ---: |
