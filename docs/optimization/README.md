@@ -51,8 +51,9 @@ contribution; the [leaderboard](../validation/LEADERBOARD.md) ranks them under a
 The prospective search removes inherited coefficient boxes and evaluation caps;
 its objective and acceptance limits are unchanged. Length construction target is
 3.44 m, acceptance is 3.5 m. Default budgets are 300 s search (including startup)
-and 120 s checking, each capped at 1,800 s; output is capped at 256 MiB including
-interior files, with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
+and 120 s checking, capped at 4 h (14,400 s) and 1,800 s; arms that are compared
+must share one budget. Output is capped at 1 GiB including interior files (about
+8 kB per evaluation at order 8 with recording v3), with 3 GiB initial / 2 GiB live disk reserve. Calls are checked
 before and after execution: in-flight native work can overrun, and late checks
 cannot claim completion. Use a fresh output directory. Failures remain on disk.
 The search keeps 48 MiB of the output cap free. Reaching the remaining search
