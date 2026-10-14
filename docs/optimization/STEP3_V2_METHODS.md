@@ -3,7 +3,11 @@
 **All three methods that pass acceptance v2 on the original target also pass on the
 improved Step 3 target; a matched control does not.** The field of @pjckoch's
 interior-weighted continuation is the first of seven measured coil fields to complete
-the wide bounce diagnostic. Recorded 13 October 2026 for issues
+the wide bounce diagnostic; in the matched comparison with its reference401 twin,
+61% of the ideal wide-domain advantage remains (50% against the committed #12 coils;
+#101, exploratory). Combining the methods does better
+([#102](ISSUE102_COMBINED_METHODS.md)). Recorded
+13 October 2026 for issues
 [#92](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/92),
 [#93](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/93) and
 [#94](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/94); field and
@@ -92,9 +96,32 @@ q = 0.03).
   1.67× the ideal target's. In the three fits the s = 0.1 field stays above the well
   threshold, as for reference401 in #89.
 - **Benefit transfer is still unresolved.** Launch labels are target coordinates,
-  not realized flux labels ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)),
-  and the same method's field on reference401 has not been measured, so there is no
-  matched comparison yet.
+  not realized flux labels ([#48](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/48)).
+  The matched comparison below (#101) is exploratory.
+
+## Matched bounce comparison (#101)
+
+Preregistered in [#101](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/101):
+the continuation's coil fields on both targets (primary reference401 arm: the #94
+environment check), remeasured on main `49dd45e`. R = 1 − score(selected401) /
+score(reference401); the ideal targets give 11.14% (wide) and 4.82% (narrow).
+
+| Field | Failed launch lines | Wide score | Narrow score (×10⁻⁵) |
+| --- | ---: | ---: | ---: |
+| Ideal reference401 / selected401 | 0 / 0 | 2.382e-4 / 2.116e-4 | 1.157 / 1.101 |
+| Continuation, reference401 (#94 check) | 0 | 2.698e-4 | 1.805 |
+| Continuation, reference401 (committed #12, secondary) | 0 | 2.663e-4 | 1.855 |
+| Continuation, selected401 (#94) | 0 | 2.514e-4 | 1.841 |
+
+**R_wide = 6.85%** (secondary 5.60%), above the preregistered 5.57%: by the rule, the
+wide advantage **largely survives** in these coil fields. R_narrow = −1.95%
+(secondary +0.79%): the narrow advantage is lost. The verdict is fragile: two
+reference401 coil sets within 0.74 mm of each other move R_wide by 1.25 points, about
+the margin above the threshold. On both targets the coil fields have lower action
+variance than the ideal at s = 0.1 and 0.25 (0.18–0.68×) and higher at s = 0.5–0.9
+(1.25–1.85×). Exploratory: launch labels are target coordinates (#48), so
+`benefit_transfer_confirmed` stays false. The selected401 field reproduced its #94
+scores exactly.
 
 Limits: one seed, one budget and one machine per arm; v2 was calibrated with
 reference401 results known; vacuum field; launch labels in target coordinates.

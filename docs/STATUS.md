@@ -1,17 +1,18 @@
 # Scientific status
 
-Updated 13 October 2026; adds acceptance v2, the leaderboard and the Step 3 reproductions.
+Updated 14 October 2026; adds method combinations and a matched bounce comparison.
 [Roadmap](PROJECT_PLAN.md) · [Step conclusions](steps/README.md)
 
-**Coil sets from three methods pass the owner-approved [acceptance v2](validation/ACCEPTANCE_V2.md)
-on both the original and the improved Step 3 target; none passes the original v1
-limits; no demonstrated reactor advantage.** The [leaderboard](validation/LEADERBOARD.md)
-ranks them; @pjckoch's #12 continuation passed first ([results](validation/ACCEPTANCE_V2_RESULTS.md)).
+**Coil sets from three methods and their combinations pass the owner-approved
+[acceptance v2](validation/ACCEPTANCE_V2.md) on the original and the improved
+Step 3 target; none passes v1; no demonstrated reactor advantage.**
+The [leaderboard](validation/LEADERBOARD.md) ranks them; @pjckoch's #12 continuation
+passed first ([results](validation/ACCEPTANCE_V2_RESULTS.md)); halved margins with the
+interior term lead on both targets ([combinations](optimization/ISSUE102_COMBINED_METHODS.md)).
 Under v1 the best boundary RMS is about **0.0017**, **17×** its limit. Only
-that continuation's field on the improved target completes the wide bounce-action
-diagnostic ([record](optimization/STEP3_V2_METHODS.md)); without realized flux
-labels or a [matched comparison](optimization/ISSUE25_MATCHED_TARGETS.md), benefit
-transfer remains unresolved.
+interior-term fits complete the wide bounce-action diagnostic; in one
+matched pair 61% of the ideal improvement remains ([record](optimization/STEP3_V2_METHODS.md));
+without realized flux labels this is exploratory.
 **The fixed-target fitting recipe has stalled** (decision of 6 October 2026):
 30 more minutes of search lowered boundary RMS by only 6%. The
 [coil-freedom probe](optimization/ISSUE53_COIL_FREEDOM.md) then gained only 3.6%

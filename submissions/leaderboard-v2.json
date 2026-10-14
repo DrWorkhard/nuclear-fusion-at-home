@@ -117,6 +117,26 @@
       }
     },
     {
+      "name": "Interior term with halved margins",
+      "link": "submissions/interior-term-halved-margin/README.md",
+      "contributor": "@pjckoch",
+      "record": "#98 arm I, #100",
+      "target": "reference401",
+      "input": {
+        "candidate": "submissions/interior-term-halved-margin/candidate.json"
+      },
+      "run": "artifacts/leaderboard-v2/interior-term-halved-margin",
+      "result": {
+        "boundary_mean": 0.0015048119633145553,
+        "boundary_max": 0.008326070825910178,
+        "interior_vector_rms": 0.0018407138484982757,
+        "checks_pass": true,
+        "v1": false,
+        "v2": true,
+        "worst_v2_ratio": 0.8360066462858641
+      }
+    },
+    {
       "name": "Millimetre ranking counterexample",
       "link": "submissions/millimetre-ranking-counterexample/README.md",
       "contributor": "@alexanderlehner",
@@ -228,6 +248,40 @@
         "v1": false,
         "v2": false,
         "worst_v2_ratio": 1.3625228265735496
+      }
+    },
+    {
+      "name": "Interior term with halved margins on the improved target",
+      "link": "docs/optimization/ISSUE102_COMBINED_METHODS.md",
+      "contributor": "@pjckoch (interior term; maintainer run)",
+      "record": "#102 arm I",
+      "target": "selected401",
+      "run": "artifacts/combo-v1/I",
+      "result": {
+        "boundary_mean": 0.0014666816033785952,
+        "boundary_max": 0.008029236090133882,
+        "interior_vector_rms": 0.0018200730907845025,
+        "checks_pass": true,
+        "v1": false,
+        "v2": true,
+        "worst_v2_ratio": 0.8148231129881085
+      }
+    },
+    {
+      "name": "Interior term, halved margins and order 8 on the improved target",
+      "link": "docs/optimization/ISSUE102_COMBINED_METHODS.md",
+      "contributor": "@pjckoch (interior term and order 8; maintainer run)",
+      "record": "#102 arm A",
+      "target": "selected401",
+      "run": "artifacts/combo-v1/A",
+      "result": {
+        "boundary_mean": 0.001400294524515792,
+        "boundary_max": 0.008219748545474612,
+        "interior_vector_rms": 0.001741498072970534,
+        "checks_pass": true,
+        "v1": false,
+        "v2": true,
+        "worst_v2_ratio": 0.7779414025087733
       }
     },
     {

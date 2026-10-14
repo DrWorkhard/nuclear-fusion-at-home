@@ -47,7 +47,8 @@ checks agree to 6e-16 in position.
   completes the wide domain.
 
 **Update (same day):** on the improved target, the interior-weighted continuation's
-field completes the wide domain ([Step 3 record](STEP3_V2_METHODS.md)).
+field completes the wide domain ([Step 3 record](STEP3_V2_METHODS.md)). **Update
+(14 October):** so do both interior-term combinations ([#102](ISSUE102_COMBINED_METHODS.md)).
 
 Limits: one coil set, vacuum field, target-coordinate launch labels, one resolution.
 Raw outputs: maintainer's ignored `artifacts/issue89-bounce-armM/`.
