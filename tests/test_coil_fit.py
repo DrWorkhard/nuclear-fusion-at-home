@@ -1,6 +1,8 @@
 """Named gradients, independent fine fields, budgets and candidate selection."""
 
+import hashlib
 import json
+import struct
 from types import SimpleNamespace
 from unittest.mock import Mock
 
@@ -113,6 +115,13 @@ def test_progress_write_crossing_deadline_cannot_start_native_call(tmp_path, clo
     with pytest.raises(TimeoutError):
         record.call("B", native)
     assert not native.called and record.counts["B"] == dict(attempted=1, completed=0)
+
+
+def read_vector(run, ref):
+    """One referenced vector from a v3 run, checked against its SHA-256."""
+    payload = (run/ref['store']).read_bytes()[ref['offset_bytes']:][:8*ref['count']]
+    assert hashlib.sha256(payload).hexdigest() == ref['sha256']
+    return list(struct.unpack(f"<{ref['count']}d", payload))
 
 
 class SyntheticModel:
@@ -388,7 +397,7 @@ def test_real_lbfgsb_backtracks_failed_trial_without_discarding_seed(tmp_path, c
             encoding='utf-8'))
         assert step['x_ref'] == trial['x_ref'] and trial['status'] == 'completed'
         assert 'x' not in step and 'x' not in trial
-        assert len(experiment.read_vector(record.output, step['x_ref'])) == 198
+        assert len(read_vector(record.output, step['x_ref'])) == 198
         assert step['solver_step_status'] == 'accepted' and not step['physical_admission']
 
 
@@ -649,6 +658,75 @@ def test_callback_output_failure_stops_search_and_retains_trials(tmp_path, clock
     assert result['status']['reason'] == 'failure'
     assert result['solver_iterations_recorded'] == 0
     assert (record.output/'trial-00010.json').is_file()
+
+
+def test_search_clock_records_irregular_costs_io_failure_and_interruption(tmp_path, clock):
+    from fusion_baselines.coil_trajectory import export
+
+    model = SyntheticModel()
+    original = model.evaluate
+
+    def evaluate(x):
+        value = original(x)
+        clock[0] += .5 if model.calls <= 10 else {11: 1., 12: 10., 13: 3., 14: 4.}[model.calls]
+        if model.calls == 13:
+            raise ValueError('controlled failed trial')
+        if model.calls == 14:
+            raise KeyboardInterrupt
+        return value
+
+    model.evaluate = evaluate
+    record = experiment.Recorder(tmp_path/'run', 1000)
+    save = record.save
+
+    def write(name, value):
+        save(name, value)
+        if name.startswith(('trial-', 'iterate-')):
+            clock[0] += .25  # Deliberately distinct publication and model costs.
+
+    record.save = write
+
+    def solver(function, x, callback, **kwargs):
+        function(x)
+        function(x)
+        callback(x)
+        function(x)
+        function(x)
+
+    with pytest.raises(KeyboardInterrupt):
+        experiment.search(model, record, solver)
+    startup = json.loads((record.output/'trial-00000.json').read_text(encoding='utf-8'))
+    assert startup['search_elapsed_start_s'] is startup['search_elapsed_end_s'] is None
+    rows = [json.loads((record.output/f'trial-{i:05}.json').read_text(encoding='utf-8'))
+            for i in (10, 11, 12)]
+    assert [row['search_elapsed_start_s'] for row in rows] == [0., 1.5, 12.25]
+    assert [row['search_elapsed_end_s'] for row in rows] == [1.25, 11.75, 15.5]
+    assert [row['elapsed_s'] for row in rows] == [1., 10., 3.]
+    assert rows[-1]['status'] == 'failed'
+    attempt = json.loads((record.output/'trial-00013-attempt.json').read_text(encoding='utf-8'))
+    assert attempt['search_elapsed_start_s'] == 15.75
+    assert 'search_elapsed_end_s' not in attempt and 'elapsed_s' not in attempt
+    assert not (record.output/'trial-00013.json').exists()
+    callback = json.loads((record.output/'iterate-00000.json').read_text(encoding='utf-8'))
+    assert callback['search_elapsed_s'] == 12.
+
+    # Export a real v3 vector store from the interrupted synthetic producer.
+    seed = dict(nbase=6, nfp=2, order=5,
+                names=[f'coil[{i}]/{name}' for i in range(6) for name in experiment.names()],
+                base_coefficients=[[[0.]*11 for _ in range(3)] for _ in range(6)])
+    record.save('seed.json', seed)
+    record.save('inputs.json', dict(kind='normalized-coil-fit',
+                                   recording=experiment.recording_settings('irregular-clock')))
+    output = tmp_path/'clock.jsonl'
+    export(record.output, output)
+    exported = [json.loads(line) for line in output.read_text(encoding='utf-8').splitlines()]
+    evaluations = {row['index']: row for row in exported if row['type'] == 'evaluation'}
+    assert evaluations[11]['search_elapsed_end_s'] == 11.75
+    assert evaluations[12]['search_elapsed_end_s'] == 15.5
+    assert evaluations[13]['search_elapsed_end_s'] is None
+    assert evaluations[13]['elapsed_s'] is None
+    exported_step = next(row for row in exported if row['type'] == 'solver_iterate')
+    assert exported_step['search_elapsed_s'] == 12.
 
 
 def test_search_storage_ceiling_stops_like_budget_and_keeps_check_allowance(

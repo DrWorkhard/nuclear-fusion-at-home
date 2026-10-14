@@ -207,6 +207,85 @@ def test_order_eight_names_and_gradients_are_preserved(run, tmp_path):
     assert len(read(output)[1]["gradient"]) == 306
 
 
+@pytest.mark.parametrize('invalid', [
+    'negative', 'boolean', 'reversed', 'missing-start', 'mismatch',
+    'attempt-boolean', 'attempt-end',
+])
+def test_search_relative_clock_rejects_malformed_intervals(run, tmp_path, invalid):
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2')
+    save(run, 'inputs.json', inputs)
+    terminal = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+    attempt = json.loads((run/'trial-00000-attempt.json').read_text(encoding='utf-8'))
+    start, end = 1., 2.
+    if invalid == 'negative':
+        start = -1.
+    elif invalid == 'boolean':
+        start = True
+    elif invalid == 'reversed':
+        end = .5
+    elif invalid == 'missing-start':
+        start = None
+    terminal.update(search_elapsed_start_s=start, search_elapsed_end_s=end)
+    attempt['search_elapsed_start_s'] = 0. if invalid == 'mismatch' else start
+    if invalid == 'attempt-boolean':
+        attempt['search_elapsed_start_s'] = True  # True == 1.0 must not bypass type validation.
+    if invalid == 'attempt-end':
+        attempt['search_elapsed_end_s'] = 1.5
+    save(run, 'trial-00000.json', terminal)
+    save(run, 'trial-00000-attempt.json', attempt)
+    with pytest.raises(ValueError, match='timing'):
+        export(run, tmp_path/'invalid.jsonl')
+
+
+def test_export_keeps_known_attempt_clock_and_unknown_end(run, tmp_path):
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2')
+    save(run, 'inputs.json', inputs)
+    attempt = json.loads((run/'trial-00002-attempt.json').read_text(encoding='utf-8'))
+    attempt['search_elapsed_start_s'] = 4.5
+    save(run, 'trial-00002-attempt.json', attempt)
+    output = tmp_path/'known-start.jsonl'
+    export(run, output)
+    rows = read(output)
+    assert 'search_elapsed_start_s' not in rows[1]  # Untimed historical row remains unchanged.
+    assert rows[3]['search_elapsed_start_s'] == 4.5
+    assert rows[3]['search_elapsed_end_s'] is None and rows[3]['elapsed_s'] is None
+
+
+@pytest.mark.parametrize('elapsed', [-1., False, 2.5])
+def test_export_validates_callback_clock(run, tmp_path, elapsed):
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2')
+    save(run, 'inputs.json', inputs)
+    save(run, 'iterate-00000.json', dict(format='fusion-coil-recording-v2', iteration=0,
+        x=[0.]*198, evaluation_index=0, link_status='exact_latest_evaluation',
+        solver_step_status='accepted', physical_admission=False, search_elapsed_s=elapsed))
+    output = tmp_path/'callback-clock.jsonl'
+    if type(elapsed) is bool or elapsed < 0:
+        with pytest.raises(ValueError, match='timing'):
+            export(run, output)
+    else:
+        export(run, output)
+        step = next(row for row in read(output) if row['type'] == 'solver_iterate')
+        assert step['search_elapsed_s'] == elapsed
+
+
+def test_untimed_v2_export_keeps_pre_timestamp_bytes(run, tmp_path):
+    # Captured with the ffdd6a0 exporter, before optional clock fields were introduced.
+    inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
+    inputs['recording'] = dict(format='fusion-coil-recording-v2', task_id='historical-v2')
+    save(run, 'inputs.json', inputs)
+    save(run, 'iterate-00000.json', dict(format='fusion-coil-recording-v2', iteration=0,
+        x=[0.]*198, evaluation_index=0, link_status='exact_latest_evaluation',
+        solver_step_status='accepted', physical_admission=False))
+    output = tmp_path/'untimed-v2.jsonl'
+    export(run, output)
+    assert output.stat().st_size == 11843
+    assert hashlib.sha256(output.read_bytes()).hexdigest() == (
+        'fd9dc9c47bc55edd249b844b3ae9ce1ff7550b1772d908cb4cf97a0fbe6ca28a')
+
+
 def test_tiny_new_search_uses_existing_recorder_without_native_calls(run, tmp_path):
     np = pytest.importorskip("numpy")
     from fusion_baselines.coil_fit import Recorder, search
@@ -475,7 +554,7 @@ def test_v3_export_resolves_store_and_records_bytes_per_trial(tmp_path, order):
     assert (recorder.output/'vectors.f64').stat().st_size == 8*count*(2*trials)
 
 
-@pytest.mark.parametrize('fault', ['tamper', 'range', 'inline', 'v2-store'])
+@pytest.mark.parametrize('fault', ['tamper', 'range', 'inline', 'inline-gradient', 'v2-store'])
 def test_v3_store_faults_fail_closed(tmp_path, fault):
     recorder, _ = v3_run(tmp_path)
     run = recorder.output
@@ -490,6 +569,11 @@ def test_v3_store_faults_fail_closed(tmp_path, fault):
     elif fault == 'inline':
         row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
         row['x'] = [0.]*198
+        save(run, 'trial-00000.json', row)
+    elif fault == 'inline-gradient':
+        row = json.loads((run/'trial-00000.json').read_text(encoding='utf-8'))
+        del row['gradient_ref']
+        row['gradient'] = [0.]*198
         save(run, 'trial-00000.json', row)
     else:
         inputs = json.loads((run/'inputs.json').read_text(encoding='utf-8'))
