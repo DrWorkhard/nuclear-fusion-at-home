@@ -14,3 +14,7 @@ remain in the source tree. Current transfer requirements are on the
 `constellaration==0.2.6`, the improved Step 3 target shows no measurable change in
 the L∇B coil-simplicity proxy compared with reference401 (−0.026%). Neither target
 is feasible for any of the three benchmark problems.
+
+[Unapproved plasma-requirements proposal](PLASMA_REQUIREMENTS.md): static JSON
+for the #113 owner decision, with hard bounds, preferences/objectives and explicit
+unresolved items. No optimizer or acceptance check consumes this draft.
