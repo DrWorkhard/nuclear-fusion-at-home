@@ -3,7 +3,7 @@
 15 October 2026. Input for [#113](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/113),
 not approved requirements. [Protocol](PLASMA_CALIBRATION_PROTOCOL.md) frozen before
 outcome access at `64ac4f2`, clarified at `d516c1e`; producer base `ed72af9`.
-[Complete evidence and replay](https://github.com/pjckoch/nuclear-fusion-at-home/tree/3ec6875df956cdaeb87df7b4cfeea8bdacd5a6e5/evidence/plasma-requirements-calibration-2026-10-15).
+[Complete evidence and replay](https://github.com/pjckoch/nuclear-fusion-at-home/tree/0efdc425c56d55cbc5d09090888c9748650d77ce/evidence/plasma-requirements-calibration-2026-10-15).
 
 **No comparable stored dataset row meets the proposed QI bound; joint passes are
 therefore zero. Flag this for the owner before freezing v1.** This does not
@@ -34,7 +34,9 @@ and the separate zero flag. No thresholds or subpopulations changed. Joint-pass
 L-gradient-B and elongation distributions are **empty**, not zero-valued.
 For context, selected-population L-gradient-B median is 5.071 (5th–95th percentiles
 2.202–6.881), elongation median 5.364 (3.457–7.094); full linear quantiles are in
-the evidence. Unique-boundary sensitivity is identical.
+the evidence. Unique-boundary sensitivity is identical. A separately preregistered exploratory
+co-occurrence check finds only ten rows (0.08087%) meeting the four non-QI bounds
+together. Those rows do not pass v1; no requirement was dropped or relaxed.
 
 ## Checks and limits
 
@@ -62,6 +64,8 @@ Only projected columns were fetched: 692 individually verified ranges,
 nonrange outputs below 1 MiB within the 20 MiB output ceiling. Published
 whole-shard LFS identities are recorded, not independently verified. Raw cache
 is retained locally and obtainable by pinned URLs plus range hashes; scripts,
-results, manifests and provenance are in the evidence snapshot. No gate, archived
+results, manifests and provenance are in the evidence snapshot. Its v2 tag fixes
+the independent probe's path arguments; arithmetic and the original tag remain
+unchanged. Upstream mirroring of the fork evidence is a maintainer action. No gate, archived
 result, plasma requirement or optimization was changed. Owner approval remains
 required before freezing `plasma-requirements-v1`.
