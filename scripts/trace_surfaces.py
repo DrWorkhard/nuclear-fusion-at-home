@@ -65,7 +65,7 @@ def run(candidate_path, wout, output, transits=200, direct=False,
             "exactly one public candidate or frozen snapshot required")
     spec = check.target_spec(target_id)
     target_input = check.read_json(check.bind(ROOT/spec["input"], spec["input_sha256"], {}))
-    if target_id == "selected401":
+    if target_id != "reference401":
         check.bind(wout, spec["wout_sha256"], {})
     target = rf.Target.from_wout(wout, target_input)
     report = dict(kind="realized-field-surfaces", completed=False,
@@ -74,6 +74,8 @@ def run(candidate_path, wout, output, transits=200, direct=False,
                   target_check="boundary/flux consistency; not dense identity",
                   wout_sha256=target.sha256, transits=transits,
                   physical_admission=False, step4_pass=False)
+    if "spec_sha256" in spec:
+        report["target_spec_sha256"] = spec["spec_sha256"]
     if snapshot_path is not None:
         snapshot = check.read_json(snapshot_path)
         coils, own, control = check.native_coils(snapshot, 512, target_id)
@@ -154,14 +156,18 @@ def main():
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--candidate", type=Path)
     source.add_argument("--snapshot", type=Path, help="frozen-current native snapshot")
-    parser.add_argument("--target", choices=tuple(check.TARGETS), default="reference401")
+    target = parser.add_mutually_exclusive_group()
+    target.add_argument("--target", choices=check.REGISTERED, default="reference401")
+    target.add_argument("--target-spec", type=Path,
+                        help="frozen non-registered target specification (#115)")
     parser.add_argument("--wout", type=Path, required=True, help="reference401 VMEC output")
     parser.add_argument("--output", type=Path, required=True, help="fresh directory")
     parser.add_argument("--transits", type=int, default=200)
     parser.add_argument("--direct", action="store_true", help="trace the exact coil field")
     args = parser.parse_args()
     report = run(args.candidate, args.wout, args.output, args.transits, args.direct,
-                 args.snapshot, args.target)
+                 args.snapshot, check.load_target_spec(args.target_spec.resolve())
+                 if args.target_spec else args.target)
     print(json.dumps(report["summary"], indent=1))
 
 

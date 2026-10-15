@@ -42,6 +42,8 @@ def run(snapshot_path, wout, target_id, output, seconds=600, nphi=801, nalpha=16
         spec = check.target_spec(target_id)
         input_path = check.bind(ROOT/spec["input"], spec["input_sha256"], sources)
         check.bind(wout, spec["wout_sha256"], sources)
+        if "spec_sha256" in spec:
+            report["target_spec_sha256"] = spec["spec_sha256"]
         check.bind(snapshot_path, check.digest(snapshot_path), sources)
         for path in [Path(__file__), *sorted((ROOT/"src/fusion_baselines").glob("*.py"))]:
             check.bind(path, check.digest(path), sources)
@@ -92,11 +94,16 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", type=Path, required=True)
     parser.add_argument("--wout", type=Path, required=True)
-    parser.add_argument("--target", choices=tuple(check.TARGETS), required=True)
+    target = parser.add_mutually_exclusive_group(required=True)
+    target.add_argument("--target", choices=check.REGISTERED)
+    target.add_argument("--target-spec", type=Path,
+                        help="frozen non-registered target specification (#115); needs --wout")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seconds", type=float, default=600)
     parser.add_argument("--nphi", type=int, choices=(801, 1601), default=801)
     parser.add_argument("--nalpha", type=int, choices=(16, 32), default=16)
     args = parser.parse_args()
-    raise SystemExit(run(args.snapshot.resolve(), args.wout.resolve(), args.target,
+    target_id = (check.load_target_spec(args.target_spec.resolve()) if args.target_spec
+                 else args.target)
+    raise SystemExit(run(args.snapshot.resolve(), args.wout.resolve(), target_id,
                          args.output.resolve(), args.seconds, args.nphi, args.nalpha))
