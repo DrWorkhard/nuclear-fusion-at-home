@@ -34,9 +34,11 @@ and the separate zero flag. No thresholds or subpopulations changed. Joint-pass
 L-gradient-B and elongation distributions are **empty**, not zero-valued.
 For context, selected-population L-gradient-B median is 5.071 (5th–95th percentiles
 2.202–6.881), elongation median 5.364 (3.457–7.094); full linear quantiles are in
-the evidence. Unique-boundary sensitivity is identical. A separately preregistered exploratory
-co-occurrence check finds only ten rows (0.08087%) meeting the four non-QI bounds
-together. Those rows do not pass v1; no requirement was dropped or relaxed.
+the evidence. Unique-boundary sensitivity is identical. An exploratory co-occurrence check
+finds only ten rows (0.08087%) meeting the four non-QI bounds together. Its
+protocol was written before counting (self-reported), but was not publicly
+preregistered; protocol and results entered the same evidence commit. Those rows
+do not pass v1; no requirement was dropped or relaxed.
 
 ## Checks and limits
 
