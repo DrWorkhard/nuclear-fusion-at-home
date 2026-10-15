@@ -50,6 +50,37 @@ VMEC++ settings (mpol = ntor = 10, ns = 25/51/99).
   converged equilibrium differs from the input by at most 4.4e-16, with no θ flip.
   Both runs converged with fsqr ≈ 1.0e-15 and `ier_flag` 0.
 
+## Hash-bound custom intake (#112; software support)
+
+The current script also accepts a stellarator-symmetric VMEC++ JSON boundary:
+
+```bash
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 \
+  <separate-venv>/bin/python scripts/constellaration_metrics.py \
+  --input <boundary.json> --sha256 <full-input-sha256> --target-id <name> --output <new-dir>
+```
+
+The exact bytes are checked before JSON parsing. Coefficients must be finite,
+mode identities unique and R00 positive. The script requires the separate pinned
+`constellaration==0.2.6` environment; it does not modify the native environment.
+Only boundary geometry is used. Input pressure, current, flux and solver settings
+do not replace the frozen forward model defaults. Omitting `--input` replays the
+two registered targets; `--confirm` retains the extra public evaluator calls.
+
+Conversion checks compare the actual surface coefficients and outer Wout
+coefficients with the input in physical modes `(m, n*nfp)`. Wout `xn` already
+contains `nfp`. Canonical cosine/sine coefficients give a numerical L1 bound on
+each full-torus coordinate residual, avoiding modes that vanish on the sampled
+grid. Both bounds must be at most `1e-10*R00`; the unchanged 64×128 sampled
+checks must also pass. This is floating-point validation, not interval arithmetic
+or a physical requirement. Nonfinite coordinates and failed checks leave an
+incomplete record and a nonzero CLI status; metrics alone do not establish success.
+
+This implements software intake only. The historical results above and below are
+unchanged. Reproducing #76, seeded dataset controls, resolution sensitivity and
+the complete scorecard remain separate qualification work under
+[issue #112](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/112).
+
 ## Metrics: default high-fidelity forward model
 
 | Metric | reference401 | selected401 | Difference |
