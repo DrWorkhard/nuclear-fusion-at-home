@@ -36,9 +36,42 @@ TARGETS = {
 }
 
 
+REGISTERED = tuple(TARGETS)
+SPEC_SCHEMA = "coil-target-spec/v1"
+LABEL = re.compile("[a-z0-9][a-z0-9_.-]{2,63}")
+
+
 def target_spec(target_id):
-    need(target_id in TARGETS, "registered target required")
+    need(target_id in TARGETS, "registered target or loaded --target-spec required")
     return TARGETS[target_id]
+
+
+def load_target_spec(path):
+    """Admit a frozen non-registered target (#115) under its own label; returns the label.
+
+    Registered targets keep their exact historical meaning: a specification may not use
+    their labels. The Wout, B2 and flux are frozen in the file and checked at intake.
+    """
+    spec = read_json(path)
+    need(isinstance(spec, dict) and spec.get("schema") == SPEC_SCHEMA, "target spec schema")
+    label = spec.get("target_id")
+    need(isinstance(label, str) and LABEL.fullmatch(label) and label not in REGISTERED,
+         "distinct lowercase target label required (not a registered target)")
+    hashes = (spec["input"]["sha256"], spec["wout"]["sha256"], spec["seed"]["snapshot_sha256"])
+    need(all(isinstance(h, str) and re.fullmatch("[0-9a-f]{64}", h) for h in hashes),
+         "explicit lowercase SHA256 identities required")
+    need(isinstance(spec["wout"].get("vmecpp"), str), "Wout producer version required")
+    B2, flux = spec["B2"], spec["flux"]
+    need(all(type(v) is float and np.isfinite(v) for v in (B2, flux)) and B2 > 0 and flux != 0,
+         "finite frozen B2 and signed flux required")
+    data = read_json(bind(ROOT/spec["input"]["path"], spec["input"]["sha256"], {}))
+    need(data.get("phiedge") == -flux, "signed flux must equal -phiedge of the bound input")
+    entry = dict(input=str(ROOT/spec["input"]["path"]), input_sha256=spec["input"]["sha256"],
+                 wout_sha256=spec["wout"]["sha256"], B2=B2, flux=flux,
+                 spec_sha256=digest(path))
+    need(TARGETS.get(label, entry) == entry, "conflicting specification for this label")
+    TARGETS[label] = entry
+    return label
 
 
 
@@ -90,6 +123,23 @@ def candidate_snapshot(candidate, data, nodes=256, target_id="reference401"):
     candidate enters fitting and checks exactly like a native seed.
     """
     validate_candidate(candidate)
+    return normalized_snapshot(candidate["base_coefficients"], 5, data, nodes, target_id,
+                               dict(source="public candidate", nloop=nodes, ncoil=nodes))
+
+
+def retarget_snapshot(snapshot, data, target_id, nodes=256):
+    """Seed for a new target: the same coils, re-normalized to that target's flux loop.
+
+    Field errors against different targets are not directly comparable.
+    """
+    snapshot_identity(snapshot, snapshot.get("target_id", "reference401"))
+    construction = dict(source="retargeted snapshot", nloop=nodes, ncoil=nodes,
+                        from_target=snapshot.get("target_id", "reference401"))
+    return normalized_snapshot(snapshot["base_coefficients"], snapshot["order"], data, nodes,
+                               target_id, construction)
+
+
+def normalized_snapshot(base_coefficients, order, data, nodes, target_id, construction):
     spec = target_spec(target_id)
     need(data == read_json(bind(ROOT/spec["input"], spec["input_sha256"], {})),
          "candidate conversion requires the exact target input")
@@ -99,10 +149,10 @@ def candidate_snapshot(candidate, data, nodes=256, target_id="reference401"):
 
     from fusion_baselines.coil_fit import loop_geometry
 
-    names = independent.parameter_names(6, 5)
+    names = independent.parameter_names(6, order)
     curves = []
-    for coefficients in candidate["base_coefficients"]:
-        curve = CurveXYZFourier(nodes, 5)
+    for coefficients in base_coefficients:
+        curve = CurveXYZFourier(nodes, order)
         curve.local_full_x = np.asarray(coefficients, dtype=float).ravel()
         curves.append(curve)
     field = BiotSavart(coils_via_symmetries(curves, [Current(1e5) for _ in curves], 2, True))
@@ -119,11 +169,11 @@ def candidate_snapshot(candidate, data, nodes=256, target_id="reference401"):
             matrix = rotation.T @ (np.diag([1.0, -1.0, -1.0]) if flip else np.eye(3))
             physical.extend(dict(base_index=i, period=period, flip=flip, matrix=matrix.tolist(),
                                  current=1e5*scale*(-1 if flip else 1)) for i in range(6))
-    snapshot = dict(schema_version=1, nfp=2, nbase=6, order=5, names=names,
-                    base_coefficients=np.asarray(candidate["base_coefficients"]).tolist(),
+    snapshot = dict(schema_version=1, nfp=2, nbase=6, order=order, names=names,
+                    base_coefficients=np.asarray(base_coefficients).tolist(),
                     physical=physical, scale=scale, B2_scale=spec["B2"], unit_flux=unit_flux,
                     target_id=target_id, target_flux=spec["flux"], seed_unit_flux=unit_flux,
-                    construction=dict(source="public candidate", nloop=nodes, ncoil=nodes))
+                    construction=construction)
     snapshot_identity(snapshot, target_id)
     return snapshot
 
@@ -137,9 +187,9 @@ def portable_intake(wout, guard=lambda: None, target_id="reference401"):
     bind(ROOT/spec["input"], spec["input_sha256"], sources)
     data = read_json(ROOT/spec["input"])
     need(data["phiedge"] == -spec["flux"], "exact source-bound target flux required")
-    # The improved target has no public sample packet: require the archived Wout
-    # identity rather than silently trusting only its boundary or a new normalization.
-    if target_id == "selected401":
+    # Only reference401 has a public sample packet: every other target requires its frozen
+    # Wout identity rather than silently trusting only its boundary or a new normalization.
+    if target_id != "reference401":
         bind(wout, spec["wout_sha256"], sources)
     guard()
     archives, sha256 = wout_target.archives(wout, data)
@@ -160,12 +210,18 @@ def portable_intake(wout, guard=lambda: None, target_id="reference401"):
         target["target_id"] = target_id
     portable = dict(target_id=target_id,
                     check="consistency with public starter" if target_id == "reference401"
-                    else "archived selected401 Wout identity and input consistency",
+                    else "archived selected401 Wout identity and input consistency"
+                    if target_id == "selected401"
+                    else "frozen target-spec Wout identity and input consistency",
                     dense_identity_verified=False,
-                    archived_wout_identity=sha256 == spec["wout_sha256"],
+                    archived_wout_identity=(target_id in REGISTERED
+                                            and sha256 == spec["wout_sha256"]),
                     input_sha256=spec["input_sha256"], B2_scale=spec["B2"],
                     target_flux=spec["flux"], wout_sha256=sha256,
                     starter_errors=errors, measured_B2=measured[64])
+    if "spec_sha256" in spec:  # Only for --target-spec, so registered records keep their bytes.
+        portable["target_spec_sha256"] = spec["spec_sha256"]
+        portable["frozen_wout_identity"] = sha256 == spec["wout_sha256"]
     return data, targets, sources, portable
 
 
