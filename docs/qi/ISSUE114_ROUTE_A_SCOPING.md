@@ -7,7 +7,8 @@
 flux compression FC = 1.40 (needs ≤ 0.9). Can boundary changes near it meet them at aspect ratio ≈ 10 while
 keeping QI? This scopes #114 stage 1. It is exploratory, not the preregistered stage-1 run, which waits for a
 frozen v1 (#113). Each step below was preregistered before running.
-[Evidence](https://github.com/pjckoch/nuclear-fusion-at-home/tree/9b3d62508481ed5f4d5df941accda7757194c2ff/evidence/issue114-route-a-scoping):
+[Evidence N19–N24](https://github.com/pjckoch/nuclear-fusion-at-home/tree/9b3d62508481ed5f4d5df941accda7757194c2ff/evidence/issue114-route-a-scoping),
+[N25–N27](https://github.com/pjckoch/nuclear-fusion-at-home/tree/ed1b8c30058279acc728b29fdda393f58651288d/evidence/issue114-route-a-scoping-2):
 preregistrations, deviations, scripts, outputs, SHA-256 sums.
 
 **Tools.**
@@ -25,6 +26,8 @@ preregistrations, deviations, scripts, outputs, SHA-256 sums.
 | N22 | Dataset correlation (nfp 2, A 9–11, n = 12,366) | FC tracks maximum elongation (Spearman +0.66). Better QI goes with higher FC. No nfp-2 row with QI ≤ −3.5 has FC ≤ 0.9. |
 | N23 | ConStellaration ALM-NGOpt from near-axis seeds, nfp 3 (control) vs nfp 2, ~4k evaluations each | Inconclusive: the nfp-3 control is also infeasible at this budget. |
 | N24 | ALM-NGOpt from selected401 (modes 4/6, signed-ι defect corrected) | Best normalized violation 0.22. FC floors at **1.09**; QI degrades to −2.77. |
+| N25 | ALM-NGOpt from the 3 best-QI MIT-dataset nfp-2 rows already meeting W, FC, mirror and ι | Best normalized violation 0.24–0.31. FC (0.84) and W hold, but QI stays at −2.4 to −2.7 (needs −3.5). |
+| N26 | ConStellaration's DESC omnigenity pipeline with an extra well term and elongation ≤ 4.5, on 2 QI-good nfp-2 rows | The control reproduces the stored rows. Capping elongation cuts FC 0.93 → 0.77, but QI falls to −3.17. DESC's well term barely moves W. |
 
 **Two defects found when using the 0.2.6 optimizer on our plasmas.**
 1. Its ALM runner constrains *signed* ι, while the problem scores \|ι\|. Our targets have ι < 0, so the runner
@@ -37,7 +40,8 @@ preregistrations, deviations, scripts, outputs, SHA-256 sums.
   feasible one has L∇B 12.67, compared with 6.14 for selected401. ConStellaration's own baseline seed is nfp 3.
 
 **Conclusion.** Near selected401, three independent methods meet W ≥ 0 and mirror ≤ 0.25, but not FC ≤ 0.9.
-FC floors at 1.06–1.09, and pushing on it costs QI. At nfp 2 and A ≈ 10, QI quality and low flux compression
+FC floors at 1.06–1.09, and pushing on it costs QI. Starting from the other side does not close the gap either:
+low-FC nfp-2 plasmas (N25) and QI-good ones (N26) both trade QI against FC. At nfp 2 and A ≈ 10, QI quality and low flux compression
 pull against each other through elongation. This is evidence for the owner's design-class decision (stay at
 nfp 2, or allow nfp 3), not proof of infeasibility. A larger budget or another starting family could still
 succeed. The coil tools are nfp-2-only today.
