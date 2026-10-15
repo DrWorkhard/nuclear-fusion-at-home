@@ -45,7 +45,7 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
                   construction_margins=fit.margin_preset(margins))
     try:
         if wout is None:
-            check.need(target_id == "reference401", "selected401 requires --wout")
+            check.need(target_id == "reference401", "non-reference targets require --wout")
             data, targets, sources = check.intake(record.guard)
         else:
             data, targets, sources, report["portable_target"] = check.portable_intake(
@@ -123,6 +123,10 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
     return 0 if report["completed"] else 1
 
 
+def chosen_target(args):
+    return check.load_target_spec(args.target_spec.resolve()) if args.target_spec else args.target
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--snapshot", required=True, type=Path)
@@ -131,7 +135,10 @@ if __name__ == "__main__":
                         help="search budget in seconds, including startup (at most 14400)")
     parser.add_argument("--check-seconds", type=float, default=120,
                         help="check budget in seconds (at most 1800)")
-    parser.add_argument("--target", choices=tuple(check.TARGETS), default="reference401")
+    target = parser.add_mutually_exclusive_group()
+    target.add_argument("--target", choices=check.REGISTERED, default="reference401")
+    target.add_argument("--target-spec", type=Path,
+                        help="frozen non-registered target specification (#115); needs --wout")
     parser.add_argument("--wout", type=Path, help="portable reference401 Wout (see docs)")
     parser.add_argument("--order", type=int, choices=(5, 8),
                         help="lift the snapshot to this Fourier order with zero new modes")
@@ -144,5 +151,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
     raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(), args.seconds,
                          args.check_seconds, None if args.wout is None else args.wout.resolve(),
-                         args.target, args.order, args.margins, args.task_id,
+                         chosen_target(args), args.order, args.margins, args.task_id,
                          args.interior_weight))

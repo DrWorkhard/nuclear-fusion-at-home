@@ -39,7 +39,7 @@ def run(output, snapshot=None, candidate=None, wout=None, seconds=600, target_id
                   fine=[], interior=[])
     try:
         if wout is None:
-            check.need(target_id == "reference401", "selected401 requires --wout")
+            check.need(target_id == "reference401", "non-reference targets require --wout")
             data, targets, sources = check.intake(record.guard)
         else:
             data, targets, sources, report["portable_target"] = check.portable_intake(
@@ -95,10 +95,15 @@ if __name__ == "__main__":
     source = parser.add_mutually_exclusive_group(required=True)
     source.add_argument("--snapshot", type=Path)
     source.add_argument("--candidate", type=Path, help="public six-coil candidate JSON")
-    parser.add_argument("--target", choices=tuple(check.TARGETS), default="reference401")
+    target = parser.add_mutually_exclusive_group()
+    target.add_argument("--target", choices=check.REGISTERED, default="reference401")
+    target.add_argument("--target-spec", type=Path,
+                        help="frozen non-registered target specification (#115); needs --wout")
     parser.add_argument("--wout", type=Path, help="portable reference401 Wout")
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--seconds", type=float, default=600)
     args = parser.parse_args()
     paths = [None if p is None else p.resolve() for p in (args.snapshot, args.candidate, args.wout)]
-    raise SystemExit(run(args.output.resolve(), *paths, args.seconds, args.target))
+    target_id = (check.load_target_spec(args.target_spec.resolve()) if args.target_spec
+                 else args.target)
+    raise SystemExit(run(args.output.resolve(), *paths, args.seconds, target_id))
