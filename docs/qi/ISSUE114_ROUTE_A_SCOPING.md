@@ -42,6 +42,6 @@ preregistrations, deviations, scripts, outputs, SHA-256 sums.
 **Conclusion.** Near selected401, three independent methods meet W ≥ 0 and mirror ≤ 0.25, but not FC ≤ 0.9.
 FC floors at 1.06–1.09, and pushing on it costs QI. Starting from the other side does not close the gap
 either: low-FC nfp-2 plasmas (N25) and QI-good ones (N26) both trade QI against FC. At nfp 2 and A ≈ 10,
-QI quality and low flux compression pull against each other through elongation. This is evidence for the owner's design-class decision (stay at
-nfp 2, or allow nfp 3), not proof of infeasibility. A larger budget or another starting family could still
-succeed. The coil tools are nfp-2-only today.
+QI quality and low flux compression pull against each other through elongation. This is evidence for the
+owner's design-class decision (stay at nfp 2, or allow nfp 3), not proof of infeasibility. A larger budget or
+another starting family could still succeed. The coil tools are nfp-2-only today.
