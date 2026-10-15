@@ -142,8 +142,7 @@
     "Hash-bound qualified scorer, settings and resolution policy from issue112, including stored-label comparability.",
     "Owner-selected aspect-ratio interval or another explicit near-10 rule; do not reuse the calibration slice as a gate.",
     "Hash-bound selected401 wide/narrow bounce baseline and executable diagnostic, with fixed units and domain definitions.",
-    "Whether bounce non-regression is a hard constraint or a preference/objective, including any tolerance.",
-    "Objective combination, selection rule, uncertainty and missing/failure applicability policy before optimization."
+    "Whether bounce non-regression is a hard constraint or a preference/objective, including any tolerance."
   ],
   "freeze_rule": "Only the owner may approve and freeze plasma-requirements-v1. After freezing, changes require a new requirements version; prior records remain as recorded.",
   "later_qualification": [
@@ -151,5 +150,9 @@
     "neoclassical transport",
     "bootstrap current",
     "fast-particle losses in a realized coil field"
+  ],
+  "unresolved_before_optimization": [
+    "Objective combination, selection rule, uncertainty and missing/failure applicability policy before optimization.",
+    "A preregistered experiment fixes search variables, bounds, budgets and selection before any optimization."
   ]
 }

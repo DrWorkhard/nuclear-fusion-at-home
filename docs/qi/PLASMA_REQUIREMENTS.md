@@ -29,9 +29,11 @@ The issue leaves decisions that this draft does not invent:
   also mean a non-regression constraint. Its role, tolerance, executable
   diagnostic, domains, units and hash-bound wide/narrow reference values must be
   fixed before use. No archived scalar is silently reused under a new evaluator.
-- Objective weights/selection and the qualified scorer/settings/resolution,
-  uncertainty and failure policy remain unspecified. Historical pipeline flags
-  may be inapplicable; unknown flags alone do not demonstrate solver failure.
+- The qualified scorer/settings/resolution and comparison policy remain
+  unspecified. Historical pipeline flags may be inapplicable; unknown flags
+  alone do not demonstrate solver failure. Objective weights and search selection
+  belong to a later preregistered experiment, before optimization; they are not
+  additional plasma-quality bounds.
 
 ## Before the owner freezes v1
 
@@ -39,7 +41,7 @@ Review [calibration PR #119](https://github.com/DrWorkhard/nuclear-fusion-at-hom
 and qualify the scorer through [#112](https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/112).
 The stored-label calibration flags QI and joint attainability; it does not prove
 physical infeasibility or authorize changing a bound. Choose or amend the draft
-values openly, resolve the JSON's listed unknowns, and record explicit owner
+values openly, resolve the JSON's freeze items, and record explicit owner
 approval with the scorer/input identities in a frozen `plasma-requirements-v1`
 JSON and this page. This proposal remains visibly unapproved until then.
 
