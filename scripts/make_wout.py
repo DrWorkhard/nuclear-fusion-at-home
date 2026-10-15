@@ -86,13 +86,15 @@ def run(source, sha256, output, seconds=900, reference=None):
         manifest["wout"] = dict(path=str(wout), sha256=digest(wout))
         if reference:
             comparison = compare(reference, wout)
-            (output/"comparison.json").write_text(json.dumps(comparison, indent=2) + "\n")
+            (output/"comparison.json").write_text(
+                json.dumps(comparison, indent=2) + "\n", encoding="utf-8")
             manifest["comparison"] = {k: comparison[k] for k in (
                 "identical", "worst_variable", "worst_max_rel", "only_first", "only_second")}
         manifest["completed"] = True
     except ValueError as exc:
         manifest["error"] = str(exc)
-    (output/"manifest.json").write_text(json.dumps(manifest, indent=2, allow_nan=False) + "\n")
+    (output/"manifest.json").write_text(
+        json.dumps(manifest, indent=2, allow_nan=False) + "\n", encoding="utf-8")
     return manifest
 
 
@@ -108,7 +110,8 @@ def main():
     if args.input is None:
         build.need(args.compare and args.wout and args.output, "--compare, --wout, --output")
         result = compare(args.compare, args.wout)
-        args.output.write_text(json.dumps(result, indent=2) + "\n")
+        args.output.write_text(
+            json.dumps(result, indent=2) + "\n", encoding="utf-8")
     else:
         result = run(args.input, args.input_sha256, args.output, args.seconds, args.compare)
         result = {k: result.get(k) for k in ("completed", "error", "wall_seconds", "wout",

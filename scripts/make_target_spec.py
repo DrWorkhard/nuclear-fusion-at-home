@@ -44,7 +44,8 @@ def run(label, source, sha256, wout, vmecpp, output, snapshot=None, candidate=No
         origin = dict(candidate=stored(candidate), sha256=check.digest(candidate))
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
-    (output/"seed.json").write_text(json.dumps(seed, sort_keys=True, indent=2) + "\n")
+    (output/"seed.json").write_text(
+        json.dumps(seed, sort_keys=True, indent=2) + "\n", encoding="utf-8")
     spec = dict(schema=check.SPEC_SCHEMA, target_id=label,
                 input=dict(path=stored(source), sha256=sha256),
                 wout=dict(sha256=wout_sha256, vmecpp=vmecpp),
@@ -52,7 +53,8 @@ def run(label, source, sha256, wout, vmecpp, output, snapshot=None, candidate=No
                 seed=dict(snapshot_sha256=check.digest(output/"seed.json"),
                           current_A=1e5*seed["scale"], origin=origin),
                 note="errors against different targets are not directly comparable")
-    (output/"spec.json").write_text(json.dumps(spec, indent=2) + "\n")
+    (output/"spec.json").write_text(
+        json.dumps(spec, indent=2) + "\n", encoding="utf-8")
     del check.TARGETS[label]
     check.need(check.load_target_spec(output/"spec.json") == label, "spec round trip")
     return spec

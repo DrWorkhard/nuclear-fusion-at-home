@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def spec(tmp_path):
     source = tmp_path/'input.json'
     source.write_bytes((ROOT/check.TARGET).read_bytes())
-    data = json.loads(source.read_text())
+    data = json.loads(source.read_text(encoding='utf-8'))
     value = dict(schema=check.SPEC_SCHEMA, target_id='new-plasma.v1',
                  input=dict(path=str(source), sha256=check.digest(source)),
                  wout=dict(sha256='a'*64, vmecpp='0.8.0'), B2=1.5, flux=-data['phiedge'],
@@ -28,7 +28,7 @@ def spec(tmp_path):
 
 def write(tmp_path, value, name='spec.json'):
     path = tmp_path/name
-    path.write_text(json.dumps(value))
+    path.write_text(json.dumps(value), encoding='utf-8')
     return path
 
 
