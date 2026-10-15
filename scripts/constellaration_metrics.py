@@ -109,12 +109,17 @@ def geometry_check(data, surface, info, wout):
     angle = (wout.xm[:, None, None]*theta - wout.xn[:, None, None]*phi)
     rw = np.einsum("k,kij->ij", wout.rmnc[:, -1], np.cos(angle))/info["scale"]
     zw = np.einsum("k,kij->ij", wout.zmns[:, -1], np.sin(angle))/info["scale"]
-    result = dict(grid=[64, 128], surface_vs_input=float(max(np.abs(rz[..., 0]-r0).max(),
-                                             np.abs(rz[..., 1]-z0).max())))
+    dr, dz = np.abs(rz[..., 0]-r0), np.abs(rz[..., 1]-z0)
+    need(np.isfinite(dr).all() and np.isfinite(dz).all(),
+         "non-finite geometry residual: surface versus input")
+    result = dict(grid=[64, 128], surface_vs_input=float(max(dr.max(), dz.max())))
     for label, flip in (("vmec_boundary_vs_input", False),
                         ("vmec_boundary_vs_input_theta_flipped", True)):
         r1, z1 = direct_rz(data, theta, phi, flip)
-        result[label] = float(max(np.abs(rw-r1).max(), np.abs(zw-z1).max()))
+        dr, dz = np.abs(rw-r1), np.abs(zw-z1)
+        need(np.isfinite(dr).all() and np.isfinite(dz).all(),
+             f"non-finite geometry residual: {label}")
+        result[label] = float(max(dr.max(), dz.max()))
     return result
 
 
