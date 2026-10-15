@@ -17,4 +17,6 @@ is feasible for any of the three benchmark problems.
 
 [Proposed plasma-requirements calibration](PLASMA_REQUIREMENTS_CALIBRATION.md),
 15 October 2026: no comparable stored dataset row meets the proposed QI bound;
-conditional input for owner approval, not a frozen requirement.
+conditional input for owner approval, not a frozen requirement. The
+[preregistered analysis protocol](PLASMA_CALIBRATION_PROTOCOL.md) fixes selection,
+missingness, inequalities and rarity flags before outcome access.
