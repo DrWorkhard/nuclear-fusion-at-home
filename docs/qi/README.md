@@ -14,3 +14,6 @@ remain in the source tree. Current transfer requirements are on the
 `constellaration==0.2.6`, the improved Step 3 target shows no measurable change in
 the L∇B coil-simplicity proxy compared with reference401 (−0.026%). Neither target
 is feasible for any of the three benchmark problems.
+
+[Route A scoping for #114](ISSUE114_ROUTE_A_SCOPING.md), 15 October 2026: near selected401, vacuum well
+and mirror ratio can be repaired, but flux compression floors at 1.06–1.09 (bound 0.9) and pushing it costs QI.
