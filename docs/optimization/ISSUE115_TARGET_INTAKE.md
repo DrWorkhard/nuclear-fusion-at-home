@@ -15,7 +15,7 @@ label, and every tool then binds exactly its Wout. Acceptance code is unchanged.
 
 **Inputs.** Committed reference401/selected401 inputs (`57394ef6…`, `6bec3483…`);
 vmecpp 0.8.0, SIMSOPT 1.11.1, Python 3.12, one thread, macOS x86_64. Raw outputs are in
-ignored `results/n18/`.
+ignored `results/n18/`; JSON evidence and SHA-256 sums are in fork commit [`5b149e3`](https://github.com/pjckoch/nuclear-fusion-at-home/tree/5b149e3f4f6333c37db7c373edebed00772e89bb/evidence/issue115-target-intake).
 
 **Wout path.** Both regenerations completed (`ier_flag` 0, about 335 s each) and are
 byte-identical to the regenerations from 3–14 October (`0f2b626c…`, `3d5df9a4…`), so the
