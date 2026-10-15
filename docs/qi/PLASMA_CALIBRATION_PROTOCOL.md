@@ -55,3 +55,16 @@ missingness, distributions and limitations. Stored labels remain conditional on
 #112 scorer controls and resolution qualification. Dataset selection bias and
 ancestry prevent general feasibility claims. The owner alone approves/freezes
 `plasma-requirements-v1`; no optimization may use this draft as an adopted gate.
+
+Schema clarification before outcome access: pinned dataset revision
+`8da71572eb63ce93e77ce89bec0d7c30b7eba89e` has three default vacuum shards,
+182,222 rows in its card (not the older approximate 158,000). Use `metrics.*`,
+`boundary.n_field_periods`, `plasma_config_id` and all five `misc.has_*_error`
+columns. QI is raw, so compare valid nonnegative values to 1e-4 (equivalent to
+the frozen log bound). Upstream `problems.py` at
+`d083b75b79386e95a3490a75b1498ad0958d9da8` explicitly takes absolute edge
+transform; apply that convention and report signed-negative counts. Use exact
+proposed bounds, without upstream's 1% feasibility tolerance. Any true error
+flag excludes a joint pass; missing/nonboolean flags also exclude it. Report
+per-flag counts so upstream-generation failures remain distinguishable from
+forward-model failures. No outcome metrics have been read at this clarification.
