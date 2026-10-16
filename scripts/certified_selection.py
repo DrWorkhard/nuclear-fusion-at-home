@@ -125,7 +125,9 @@ def run(source, output, wout, target_id, every=500, seconds=1800):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--run", required=True, type=Path, help="completed fit_coils.py output")
-    parser.add_argument("--target", choices=tuple(check.TARGETS), required=True)
+    target = parser.add_mutually_exclusive_group(required=True)
+    target.add_argument("--target", choices=check.REGISTERED)
+    target.add_argument("--target-spec", type=Path, help="frozen target specification (#115)")
     parser.add_argument("--wout", required=True, type=Path, help="the run's target Wout")
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--every", type=int, default=500,
@@ -134,4 +136,5 @@ if __name__ == "__main__":
                         help="certification budget, at most 1800 s")
     args = parser.parse_args()
     raise SystemExit(run(args.run.resolve(), args.output.resolve(), args.wout.resolve(),
-                         args.target, args.every, args.seconds))
+                         check.load_target_spec(args.target_spec.resolve()) if args.target_spec
+                         else args.target, args.every, args.seconds))

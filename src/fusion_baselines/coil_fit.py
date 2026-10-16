@@ -73,15 +73,15 @@ MEAN_ABS_EPSILON = 1e-4
 
 
 def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0,
-                       interior_weight=0., flux_objective="local"):
+                       interior_weight=0., flux_objective="local", flux_power=1.):
     """Prospective fixed-target settings; no inferred plasma or equilibrium trajectory."""
     interior = interior_weight > 0
     # Interior-specific settings add no keys for boundary-only runs.
     extra = dict(interior_objective=dict(INTERIOR_OBJECTIVE)) if interior else {}
     if flux_objective != "local":  # Opt-in; default runs keep their recorded bytes.
         extra["flux_objective"] = dict(
-            name=flux_objective, epsilon=MEAN_ABS_EPSILON,
-            definition="0.5*mean_i(sqrt(e_i^2+eps^2))^2, e_i=B.n/|B| per boundary point")
+            name=flux_objective, epsilon=MEAN_ABS_EPSILON, power=float(flux_power),
+            definition="0.5*m^2, m=(mean_i (e_i^2+eps^2)^(p/2))^(1/p), e_i=B.n/|B| per point")
     return dict(format=RECORDING_FORMAT, task_id=task_id,
                 objective_weights=dict(OBJECTIVE_WEIGHTS, **(
                     dict(interior=float(interior_weight)) if interior else {})), **extra,
@@ -308,10 +308,13 @@ def tracked_field(field_class, coils, record):
 
 class Model:
     def __init__(self, seed, data, record, ncoil=256, n=64, offset=0, margins="current",
-                 interior=None, interior_weight=0., flux_objective="local"):
+                 interior=None, interior_weight=0., flux_objective="local", flux_power=1.):
         if flux_objective not in FLUX_OBJECTIVES:
             raise ValueError("registered flux objective required")
-        self.flux_objective = flux_objective
+        if not (np.isfinite(flux_power) and 1 <= flux_power <= 4
+                and (flux_objective != "local" or flux_power == 1)):
+            raise ValueError("flux power in [1, 4], only with the mean-abs objective")
+        self.flux_objective, self.flux_power = flux_objective, float(flux_power)
         if not (np.isfinite(interior_weight) and interior_weight >= 0
                 and (interior is None) == (interior_weight == 0)):
             raise ValueError("an interior target exactly when the interior weight is positive")
@@ -452,8 +455,9 @@ class Model:
             strength = np.linalg.norm(B, axis=1)
             e = np.sum(B*unit, axis=1)/strength
             smooth = np.sqrt(e**2 + MEAN_ABS_EPSILON**2)
-            m = float(np.mean(smooth))
-            dm_de = e/smooth/len(e)
+            p = self.flux_power  # p = 1: plain mean of |B.n|/|B|; larger p weights peaks more
+            m = float(np.mean(smooth**p))**(1/p)
+            dm_de = m**(1-p)*smooth**(p-2)*e/len(e)
             dB = m*dm_de[:, None]*(unit/strength[:, None] - e[:, None]*B/strength[:, None]**2)
             value = .5*m*m
             gradient = canonical_gradient(self.curves, self.field.B_vjp(dB), self.order)

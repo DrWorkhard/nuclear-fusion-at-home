@@ -856,3 +856,31 @@ def test_mean_abs_recording_adds_keys_only_when_used():
     assert 'flux_objective' not in plain and plain['selection_rule'].startswith('lowest normal_rms')
     assert used['flux_objective']['name'] == 'mean-abs'
     assert used['selection_rule'].startswith('lowest flux_objective')
+
+
+def test_mean_abs_power_gradient_and_validation(tmp_path, clock):
+    pytest.importorskip("simsopt")
+    from fusion_baselines import coil_check as check
+
+    data = check.read_json(check.ROOT/check.TARGETS['reference401']['input'])
+    candidate = check.read_json(
+        check.ROOT/'submissions/length-headroom-six-coil/candidate.json')
+    seed = check.candidate_snapshot(candidate, data, nodes=64)
+    record = experiment.Recorder(tmp_path/'run', 1)
+    for bad in (dict(flux_power=1.5), dict(flux_objective='mean-abs', flux_power=.5)):
+        with pytest.raises(ValueError, match='flux power'):
+            experiment.Model(seed, data, record, ncoil=64, n=16, **bad)
+    model = experiment.Model(seed, data, record, ncoil=64, n=16, flux_objective='mean-abs',
+                             flux_power=1.5)
+    value, gradient, metrics = model.evaluate(model.x0)
+    B = model.field.B()
+    normals = model.normals.reshape(-1, 3)
+    e = np.sum(B*normals, axis=1)/np.linalg.norm(normals, axis=1)/np.linalg.norm(B, axis=1)
+    m = np.mean((e**2 + experiment.MEAN_ABS_EPSILON**2)**.75)**(1/1.5)
+    assert metrics['flux_objective'] == pytest.approx(.5*m*m, rel=1e-12)
+    direction = np.cos(np.arange(len(model.x0))+3)
+    direction /= np.linalg.norm(direction)
+    h = 1e-7
+    fd = (model.evaluate(model.x0+h*direction)[0]
+          - model.evaluate(model.x0-h*direction)[0])/(2*h)
+    assert fd == pytest.approx(gradient@direction, rel=1e-5)
