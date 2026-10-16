@@ -48,6 +48,13 @@ surface lies outside the target, so the wide domain cannot be matched this way.
 (selected). Matching changes s = 0.25 and 0.5 by ≤ 10% per cell. It changes the deeply trapped cells at
 s = 0.75 (q 0.1/0.3) by ×1.6–2.3, where the label drift is largest.
 
+**Robustness** ([evidence](https://github.com/pjckoch/nuclear-fusion-at-home/tree/ebf2c7a3da250acaf1daf8870e3be5f16fc5f81c/evidence/issue48-robustness)).
+- At the registered higher resolution (32 α lines), the differences are −5.02% with target launches and
+  −0.27% with matched launches (preregistered rule: matched ≤ ⅓ of target-launch; ratio 0.05).
+- A Poincaré section of the selected fit across s 0.44–0.58 shows nested surfaces with monotone labels and
+  no island chain. The s = 0.5 phase failure is most likely a construction limit at the sharp tips of the
+  thin crescent section.
+
 **Conclusion.** On realized surfaces, the selected fit's 5% narrow-domain advantage almost disappears. #35's
 coil-field difference therefore came mostly from where the lines were launched, and is not evidence of
 transfer. This does not show that transfer fails. Confirming it needs the original selected401 Wout and an
