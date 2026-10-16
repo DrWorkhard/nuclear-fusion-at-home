@@ -10,6 +10,10 @@ evidence remain available; small field-grid helpers needed by active coil checks
 remain in the source tree. Current transfer requirements are on the
 [Step 4 page](../steps/STEP_4_PLASMA_AND_COILS.md).
 
+[Unapproved plasma-requirements proposal](PLASMA_REQUIREMENTS.md): static JSON
+for the #113 owner decision, with hard bounds, preferences/objectives and explicit
+unresolved items. No optimizer or acceptance check consumes this draft.
+
 [ConStellaration metrics](CONSTELLARATION_METRICS.md), 11 October 2026: scored with
 `constellaration==0.2.6`, the improved Step 3 target shows no measurable change in
 the L∇B coil-simplicity proxy compared with reference401 (−0.026%). Neither target
