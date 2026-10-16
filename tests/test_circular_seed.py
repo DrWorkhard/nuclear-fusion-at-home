@@ -14,7 +14,8 @@ ROOT = Path(__file__).resolve().parents[1]
 spec = importlib.util.spec_from_file_location("seed", ROOT/"scripts/make_circular_seed.py")
 seed = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(seed)
-SELECTED = json.loads((ROOT/"evidence/plasma-balanced-v1/selected-input-401.json").read_text(encoding="utf-8"))
+SELECTED = json.loads(
+    (ROOT/"evidence/plasma-balanced-v1/selected-input-401.json").read_text(encoding="utf-8"))
 
 
 def points(coefficients, count=64):
