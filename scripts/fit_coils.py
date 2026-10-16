@@ -19,7 +19,8 @@ from fusion_baselines.provenance import build_run_record  # noqa: E402
 
 
 def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target_id="reference401",
-        order=None, margins="current", task_id=None, interior_weight=0.):
+        order=None, margins="current", task_id=None, interior_weight=0.,
+        flux_objective="local", flux_power=1.):
     from scipy.optimize import minimize
 
     check.need(np.isfinite([seconds, check_seconds]).all()
@@ -40,7 +41,9 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
                   step4_pass=False, provenance=build_run_record(ROOT),
                   search_seconds=seconds, check_seconds=check_seconds,
                   recording=fit.recording_settings(task_id or f"fixed-target/{target_id}",
-                                                   margins, interior_weight=interior_weight),
+                                                   margins, interior_weight=interior_weight,
+                                                   flux_objective=flux_objective,
+                                                   flux_power=flux_power),
                   coefficient_bounds=None, solver_options=fit.SOLVER_OPTIONS, fine=[], interior=[],
                   construction_margins=fit.margin_preset(margins))
     try:
@@ -83,7 +86,8 @@ def run(snapshot_path, output, seconds=300, check_seconds=120, wout=None, target
         record.deadline = min(deadline, started+seconds)
         report["intake_s"] = time.monotonic()-started
         model = fit.Model(seed, data, record, margins=margins, interior=interior_target,
-                          interior_weight=interior_weight)
+                          interior_weight=interior_weight, flux_objective=flux_objective,
+                          flux_power=flux_power)
         report["model_ready_s"] = time.monotonic()-started
         report["search"] = fit.search(model, record, minimize)
         record.save("search.json", report["search"])
@@ -146,10 +150,15 @@ if __name__ == "__main__":
                         help="construction margins; acceptance limits are unchanged")
     parser.add_argument("--interior-weight", type=float, default=0.,
                         help="weight of the interior field term (0 = boundary only; #12 used 0.05)")
+    parser.add_argument("--flux-objective", choices=fit.FLUX_OBJECTIVES, default="local",
+                        help="boundary term: SIMSOPT local squared flux (default) or the smoothed "
+                             "per-point mean of |B.n|/|B| that acceptance v2 scores")
+    parser.add_argument("--flux-power", type=float, default=1.,
+                        help="with --flux-objective mean-abs: power p of the per-point mean (1-4)")
     parser.add_argument("--task-id",
                         help="experiment task identity (default: fixed-target/<target>)")
     args = parser.parse_args()
     raise SystemExit(run(args.snapshot.resolve(), args.output.resolve(), args.seconds,
                          args.check_seconds, None if args.wout is None else args.wout.resolve(),
                          chosen_target(args), args.order, args.margins, args.task_id,
-                         args.interior_weight))
+                         args.interior_weight, args.flux_objective, args.flux_power))

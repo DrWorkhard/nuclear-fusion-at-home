@@ -6,6 +6,7 @@ One normalized fitter, one set of field/geometry checks.
 [Coil-freedom probe](ISSUE53_COIL_FREEDOM.md) · [Construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) ·
 [Bounce fidelity of the v2 coil set](ISSUE89_V2_COIL_BOUNCE.md) ·
 [Action on realized surfaces](ISSUE48_MATCHED_LABELS.md) ·
+[Acceptance-matched objective](MATCHED_OBJECTIVE.md) ·
 [Passing methods on the Step 3 target](STEP3_V2_METHODS.md) ·
 [Interior field term](ISSUE98_INTERIOR_TERM.md) ·
 [Combined methods](ISSUE102_COMBINED_METHODS.md) ·
@@ -37,7 +38,9 @@ contribution; the [leaderboard](../validation/LEADERBOARD.md) ranks them under a
    Retain completed candidates with sampled geometry/current limits and length
    at most 3.45 m; select the lowest boundary RMS. Probes cannot win; no fallback.
    `--order 8` lifts a six-coil order-5 seed to order 8 with the new modes exactly
-   zero, so a richer family starts from identical coils (#53). Snapshots record
+   zero, so a richer family starts from identical coils (#53). `--flux-objective mean-abs --flux-power 1.25`
+   fits the per-point mean of |B·n|/|B| that acceptance v2 scores instead of the area-weighted
+   squared flux ([record](MATCHED_OBJECTIVE.md)). Snapshots record
    their order; the public starter stays order 5. `--margins halved` moves each
    construction penalty halfway to its unchanged acceptance limit (#70); the
    default `current` keeps the values above, and reports record the preset. The
