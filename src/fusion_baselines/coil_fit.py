@@ -68,12 +68,20 @@ def selection_settings(margins="current"):
     return dict(length_max_m=margin_preset(margins)["selection_length"], **SAMPLED_LIMITS)
 
 
+FLUX_OBJECTIVES = ("local", "mean-abs")
+MEAN_ABS_EPSILON = 1e-4
+
+
 def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0,
-                       interior_weight=0.):
+                       interior_weight=0., flux_objective="local"):
     """Prospective fixed-target settings; no inferred plasma or equilibrium trajectory."""
     interior = interior_weight > 0
     # Interior-specific settings add no keys for boundary-only runs.
     extra = dict(interior_objective=dict(INTERIOR_OBJECTIVE)) if interior else {}
+    if flux_objective != "local":  # Opt-in; default runs keep their recorded bytes.
+        extra["flux_objective"] = dict(
+            name=flux_objective, epsilon=MEAN_ABS_EPSILON,
+            definition="0.5*mean_i(sqrt(e_i^2+eps^2))^2, e_i=B.n/|B| per boundary point")
     return dict(format=RECORDING_FORMAT, task_id=task_id,
                 objective_weights=dict(OBJECTIVE_WEIGHTS, **(
                     dict(interior=float(interior_weight)) if interior else {})), **extra,
@@ -92,8 +100,8 @@ def recording_settings(task_id, margins="current", ncoil=256, n=64, offset=0,
                     callback="before iterate publication"),
                 resource_limits=dict(output_bytes=MAX_BYTES, initial_reserve_bytes=START_RESERVE,
                                      live_reserve_bytes=LIVE_RESERVE),
-                selection_rule=("lowest flux_objective + interior_objective" if interior
-                                else "lowest normal_rms")
+                selection_rule=("lowest flux_objective + interior_objective"
+                                if interior or flux_objective != "local" else "lowest normal_rms")
                 + " among completed eligible startup-seed/search",
                 current_convention="1e5 A base current scaled by target_flux/unit_flux",
                 target_policy="fixed seed target, signed flux and B2_scale throughout run")
@@ -300,7 +308,10 @@ def tracked_field(field_class, coils, record):
 
 class Model:
     def __init__(self, seed, data, record, ncoil=256, n=64, offset=0, margins="current",
-                 interior=None, interior_weight=0.):
+                 interior=None, interior_weight=0., flux_objective="local"):
+        if flux_objective not in FLUX_OBJECTIVES:
+            raise ValueError("registered flux objective required")
+        self.flux_objective = flux_objective
         if not (np.isfinite(interior_weight) and interior_weight >= 0
                 and (interior is None) == (interior_weight == 0)):
             raise ValueError("an interior target exactly when the interior weight is positive")
@@ -429,13 +440,30 @@ class Model:
         phi, q = self.unit_flux(), float(self.objective.J())
         if q <= 1e-10:
             raise ValueError("native SquaredFlux dJ truncation region")
-        dq = canonical_gradient(self.curves, self.objective.dJ(partials=True), self.order)
-        value, gradient = q / self.area, dq / self.area
+        if self.flux_objective == "local":
+            dq = canonical_gradient(self.curves, self.objective.dJ(partials=True), self.order)
+            value, gradient = q / self.area, dq / self.area
+        else:
+            # Acceptance v2 scores the plain per-point mean of |B.n|/|B|; minimize 0.5 m^2 with
+            # m the smoothed per-point mean, so the scale stays comparable to the local flux term.
+            B = self.field.B()
+            normals = self.normals.reshape(-1, 3)
+            unit = normals/np.linalg.norm(normals, axis=1)[:, None]
+            strength = np.linalg.norm(B, axis=1)
+            e = np.sum(B*unit, axis=1)/strength
+            smooth = np.sqrt(e**2 + MEAN_ABS_EPSILON**2)
+            m = float(np.mean(smooth))
+            dm_de = e/smooth/len(e)
+            dB = m*dm_de[:, None]*(unit/strength[:, None] - e[:, None]*B/strength[:, None]**2)
+            value = .5*m*m
+            gradient = canonical_gradient(self.curves, self.field.B_vjp(dB), self.order)
+        flux_value = value
         penalty = float(self.geometry.J())
         gradient += canonical_gradient(self.curves, self.geometry.dJ(partials=True), self.order)
         scale = self.seed["target_flux"]/phi
         metrics = boundary_metrics(scale*self.field.B().reshape(self.points.shape), self.normals)
-        metrics["selection_value"] = metrics["normal_rms"]
+        metrics["selection_value"] = (metrics["normal_rms"] if self.flux_objective == "local"
+                                      else float(value))
         if self.interior is not None:
             # 0.5 mean |s B - B_target|^2 / B2 at the flux-normalizing scale s = target/phi(x),
             # differentiated through s like #12; the boundary term is scale-invariant.
@@ -453,7 +481,7 @@ class Model:
             metrics.update(interior_objective=self.interior_weight*interior,
                            interior_objective_rms=float(np.sqrt(2*interior)),
                            selection_value=float(value))
-        metrics.update(self.geometry_metrics(), flux_objective=float(q/self.area),
+        metrics.update(self.geometry_metrics(), flux_objective=float(flux_value),
                        flux_normalized_raw=metrics["raw_quadratic_flux"]
                        / (self.area*self.seed["B2_scale"]),
                        geometry_penalty=penalty,

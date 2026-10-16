@@ -820,3 +820,39 @@ def test_interior_term_value_and_gradient_through_flux_scale(tmp_path, clock):
     fd = (model.evaluate(model.x0+h*direction)[0]
           - model.evaluate(model.x0-h*direction)[0])/(2*h)
     assert fd == pytest.approx(gradient@direction, rel=1e-5)
+
+
+def test_mean_abs_objective_matches_acceptance_mean_and_its_gradient(tmp_path, clock):
+    pytest.importorskip("simsopt")
+    from fusion_baselines import coil_check as check
+
+    data = check.read_json(check.ROOT/check.TARGETS['reference401']['input'])
+    candidate = check.read_json(
+        check.ROOT/'submissions/length-headroom-six-coil/candidate.json')
+    seed = check.candidate_snapshot(candidate, data, nodes=64)
+    record = experiment.Recorder(tmp_path/'run', 1)
+    with pytest.raises(ValueError, match='registered flux objective'):
+        experiment.Model(seed, data, record, ncoil=64, n=16, flux_objective='l1')
+    model = experiment.Model(seed, data, record, ncoil=64, n=16, flux_objective='mean-abs')
+    value, gradient, metrics = model.evaluate(model.x0)
+    B = model.field.B()
+    normals = model.normals.reshape(-1, 3)
+    e = np.abs(np.sum(B*normals, axis=1))/np.linalg.norm(normals, axis=1)/np.linalg.norm(B, axis=1)
+    m = np.mean(np.sqrt(e**2 + experiment.MEAN_ABS_EPSILON**2))
+    assert metrics['flux_objective'] == pytest.approx(.5*m*m, rel=1e-12)
+    assert metrics['selection_value'] == pytest.approx(metrics['flux_objective'])
+    assert abs(m - e.mean()) <= experiment.MEAN_ABS_EPSILON
+    direction = np.cos(np.arange(len(model.x0))+2)
+    direction /= np.linalg.norm(direction)
+    h = 1e-7  # penalties make 1e-6 too coarse here, for the default objective too
+    fd = (model.evaluate(model.x0+h*direction)[0]
+          - model.evaluate(model.x0-h*direction)[0])/(2*h)
+    assert fd == pytest.approx(gradient@direction, rel=1e-5)
+
+
+def test_mean_abs_recording_adds_keys_only_when_used():
+    plain = experiment.recording_settings('task', 'halved')
+    used = experiment.recording_settings('task', 'halved', flux_objective='mean-abs')
+    assert 'flux_objective' not in plain and plain['selection_rule'].startswith('lowest normal_rms')
+    assert used['flux_objective']['name'] == 'mean-abs'
+    assert used['selection_rule'].startswith('lowest flux_objective')
