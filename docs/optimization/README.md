@@ -142,9 +142,10 @@ A plasma other than reference401 or selected401 enters the coil tools in three s
 export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM_THREADS=1
 .native/bin/python scripts/make_wout.py --input my-input.json --input-sha256 <sha> \
   --output results/my-wout                   # wout.nc + manifest.json, about 6 minutes
+python scripts/make_circular_seed.py --input my-input.json --output results/my-seed.json
 .native/bin/python scripts/make_target_spec.py --target-id my-plasma.v1 \
   --input my-input.json --input-sha256 <sha> --wout results/my-wout/wout.nc \
-  --vmecpp 0.8.0 --seed-candidate submissions/length-headroom-six-coil/candidate.json \
+  --vmecpp 0.8.0 --seed-candidate results/my-seed.json \
   --output results/my-target                 # spec.json + seed.json
 .native/bin/python scripts/fit_coils.py --target-spec results/my-target/spec.json \
   --wout results/my-wout/wout.nc --snapshot results/my-target/seed.json --output results/my-fit
@@ -163,9 +164,19 @@ export OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 VECLIB_MAXIMUM_THREADS=1 MKL_NUM
   label. Acceptance mathematics and thresholds are unchanged.
 - **Seed.** `--seed-candidate` converts a public six-coil candidate;
   `--seed-snapshot` takes a native snapshot of another target. Both keep the coil
-  shapes and rescale the current to the new target's flux loop. Use the nearest
-  registered target's coils. Field errors against different targets are not directly
+  shapes and rescale the current to the new target's flux loop. For a plasma unlike
+  ours, use the neutral seed from `make_circular_seed.py`: six planar circles
+  (default radius 0.4 m), each centred on the plasma's section at its toroidal angle.
+  In #114 N33 it passed continuous geometry on five nfp-2 plasmas, and a 30-minute fit
+  reached boundary mean 0.00161 on selected401. The registered targets' coils start
+  at boundary RMS ≈ 0.4 on such plasmas, and in one case their fit found no eligible
+  point. Check the seed with `check_coils.py` before fitting; enlarge the radius if
+  it clips the plasma. Field errors against different targets are not directly
   comparable; rank each target separately.
+- **Orientation.** VMEC++ re-orients a boundary whose poloidal angle runs the other
+  way, so `make_wout.py` then rejects its Wout ("boundary differs from input"). The
+  ConStellaration dataset boundaries do this. Convert them with θ → −θ first, i.e.
+  rbc(m, n) → rbc(m, −n) and zbs(m, n) → −zbs(m, −n) for m ≥ 1; this is the same surface.
 
 ## Realized-field surfaces
 
