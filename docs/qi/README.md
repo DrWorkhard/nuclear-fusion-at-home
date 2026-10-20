@@ -17,3 +17,7 @@ is feasible for any of the three benchmark problems.
 
 [Route A scoping for #114](ISSUE114_ROUTE_A_SCOPING.md), 15 October 2026: near selected401, vacuum well
 and mirror ratio can be repaired, but flux compression floors at 1.06–1.09 (bound 0.9) and pushing it costs QI.
+
+[Plasma scorecard](PLASMA_SCORECARD.md): full metric rows and benchmark-bound
+verdicts for the two registered targets, with unscored historical inputs and
+remaining qualification work explicit.
