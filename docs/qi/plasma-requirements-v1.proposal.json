@@ -1,0 +1,158 @@
+{
+  "proposal_id": "plasma-requirements-v1-proposal",
+  "proposal_revision": 1,
+  "requirements_id": null,
+  "status": "unapproved_proposal",
+  "usable_for_optimization": false,
+  "owner_approval": null,
+  "qualified_scorer": null,
+  "source_issue": {
+    "issue_url": "https://github.com/DrWorkhard/nuclear-fusion-at-home/issues/113",
+    "body_sha256": "b15ca2c967cf23497585e84fe5f671a91c79a6154690ad748657654d30e0b779",
+    "retrieved_body_updated_at": "2026-10-15T05:00:35Z"
+  },
+  "calibration": {
+    "pull_request": "https://github.com/DrWorkhard/nuclear-fusion-at-home/pull/119",
+    "evidence_commit": "0efdc425c56d55cbc5d09090888c9748650d77ce",
+    "primary_report_sha256": "31c519c9fa166d0dc2e776a15f22389f292eb1786018229a659f2479e293fb96",
+    "qualification": "Stored-label comparison remains conditional on issue112 controls."
+  },
+  "scope": {
+    "physics": "Vacuum-field, ideal-MHD and geometric proxies; no pressure or plasma current.",
+    "prospective_only": true,
+    "physical_design_admission": false
+  },
+  "hard_constraints": [
+    {
+      "metric": "vacuum_well",
+      "transform": "identity",
+      "operator": ">=",
+      "limit": 0,
+      "units": "dimensionless",
+      "source_role": "MHD-stable problem"
+    },
+    {
+      "metric": "flux_compression_in_regions_of_bad_curvature",
+      "transform": "identity",
+      "operator": "<=",
+      "limit": 0.9,
+      "units": "dimensionless",
+      "source_role": "MHD-stable problem"
+    },
+    {
+      "metric": "qi",
+      "transform": "log10",
+      "operator": "<=",
+      "limit": -4,
+      "units": "dimensionless",
+      "source_role": "Simple-to-build problem; stricter than MHD-stable -3.5"
+    },
+    {
+      "metric": "edge_rotational_transform_over_n_field_periods",
+      "transform": "absolute_value",
+      "operator": ">=",
+      "limit": 0.25,
+      "units": "dimensionless",
+      "source_role": "Both QI problems; preserve upstream absolute-value convention"
+    },
+    {
+      "metric": "edge_magnetic_mirror_ratio",
+      "transform": "identity",
+      "operator": "<=",
+      "limit": 0.25,
+      "units": "dimensionless",
+      "source_role": "MHD-stable problem"
+    }
+  ],
+  "soft_preferences": [
+    {
+      "metric": "edge_magnetic_mirror_ratio",
+      "operator": "<=",
+      "preferred_value": 0.2,
+      "units": "dimensionless",
+      "hard_constraint": false
+    },
+    {
+      "metric": "max_elongation",
+      "operator": "<=",
+      "preferred_value": 5,
+      "units": "dimensionless",
+      "hard_constraint": false
+    }
+  ],
+  "objectives": [
+    {
+      "metric": "flux_compression_in_regions_of_bad_curvature",
+      "direction": "minimize",
+      "scope": "After satisfying its proposed hard bound."
+    },
+    {
+      "metric": "minimum_normalized_magnetic_gradient_scale_length",
+      "direction": "maximize",
+      "hard_bound": null,
+      "units": "dimensionless"
+    },
+    {
+      "diagnostic": "Step 3 bounce-action variance",
+      "domains": [
+        "wide",
+        "narrow"
+      ],
+      "direction": "minimize",
+      "reference_target": "selected401",
+      "comparison_requested": "No worse than selected401; hard versus soft role unresolved.",
+      "reference_values": null,
+      "reference_input_sha256": null,
+      "qualified_diagnostic_revision": null
+    }
+  ],
+  "objective_combination": null,
+  "design_class": {
+    "metric": "aspect_ratio",
+    "nominal_value": 10,
+    "units": "dimensionless",
+    "permitted_interval": null,
+    "quality_objective": false,
+    "note": "The calibration selection [9,11] is not an adopted design gate."
+  },
+  "not_adopted": [
+    {
+      "metric": "aspect_ratio",
+      "operator": "<=",
+      "limit": 4,
+      "reason": "Geometric compactness choice; not plasma quality in this proposal."
+    },
+    {
+      "metric": "average_triangularity",
+      "operator": "<=",
+      "limit": -0.5,
+      "reason": "Geometric compactness choice; not plasma quality in this proposal."
+    }
+  ],
+  "comparison_semantics_proposal": {
+    "bounds_inclusive": true,
+    "benchmark_one_percent_feasibility_tolerance": false,
+    "missing_nonfinite_metric_may_pass": false,
+    "negative_raw_qi_valid": false,
+    "zero_raw_qi": "Passes the log upper bound as the limiting value; owner must confirm this convention.",
+    "signed_iota_tracing_gate": "Unchanged; the absolute plasma-quality metric does not replace signed realized-field checks."
+  },
+  "unresolved_before_freeze": [
+    "Owner approval or amendment of every role and bound after calibration; do not infer approval from this draft.",
+    "Hash-bound qualified scorer, settings and resolution policy from issue112, including stored-label comparability.",
+    "Owner-selected aspect-ratio interval or another explicit near-10 rule; do not reuse the calibration slice as a gate.",
+    "Hash-bound selected401 wide/narrow bounce baseline and executable diagnostic, with fixed units and domain definitions.",
+    "Whether bounce non-regression is a hard constraint or a preference/objective, including any tolerance."
+  ],
+  "freeze_rule": "Only the owner may approve and freeze plasma-requirements-v1. After freezing, changes require a new requirements version; prior records remain as recorded.",
+  "later_qualification": [
+    "finite-beta Mercier/ballooning stability",
+    "neoclassical transport",
+    "bootstrap current",
+    "fast-particle losses in a realized coil field"
+  ],
+  "unresolved_before_optimization": [
+    "Objective combination, selection rule, uncertainty and missing/failure applicability policy before optimization.",
+    "A preregistered experiment fixes search variables, bounds, budgets and selection before any optimization."
+  ]
+}
