@@ -79,9 +79,9 @@ execution logs are not included. The [public replay result](https://github.com/D
 records its frozen protocol and limits.
 
 All metrics/settings/benchmark fields match N23 exactly; this does not establish
-bitwise reproduction of the unavailable original #76 report. Seeded dataset
-validation, ns199 sensitivity, the unscored boundaries and historical candidate
-retrieval remain open. Add each future scored plasma with its full input hash,
+bitwise reproduction of the unavailable original #76 report. The [ns99/ns199 radial probe](PLASMA_RADIAL_SENSITIVITY.md) is complete: no benchmark
+bound or verdict changes. Seeded dataset validation, the unscored boundaries and
+historical candidate retrieval remain open. Add each future scored plasma with its full input hash,
 evaluator/settings identity, cost and benchmark results. Keep missing or failed
 rows explicit. Vacuum proxies do not establish pressure stability, confinement,
 fusion power or an accepted reactor.
