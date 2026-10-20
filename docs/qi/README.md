@@ -21,3 +21,6 @@ and mirror ratio can be repaired, but flux compression floors at 1.06–1.09 (bo
 [Plasma scorecard](PLASMA_SCORECARD.md): full metric rows and benchmark-bound
 verdicts for the two registered targets, with unscored historical inputs and
 remaining qualification work explicit.
+
+[Radial sensitivity](PLASMA_RADIAL_SENSITIVITY.md): ns99/ns199 changes QI by
+1.1–1.5%, less for the other three metrics, with no benchmark-bound crossing.
