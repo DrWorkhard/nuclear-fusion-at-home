@@ -6,6 +6,7 @@ One normalized fitter, one set of field/geometry checks.
 [Coil-freedom probe](ISSUE53_COIL_FREEDOM.md) · [Construction-margin probe](ISSUE70_CONSTRUCTION_MARGINS.md) ·
 [Bounce fidelity of the v2 coil set](ISSUE89_V2_COIL_BOUNCE.md) ·
 [Action on realized surfaces](ISSUE48_MATCHED_LABELS.md) ·
+[Coil-difficulty proxy](ISSUE39_COIL_DIFFICULTY_PROXY.md) ·
 [Acceptance-matched objective](MATCHED_OBJECTIVE.md) ·
 [Passing methods on the Step 3 target](STEP3_V2_METHODS.md) ·
 [Interior field term](ISSUE98_INTERIOR_TERM.md) ·
