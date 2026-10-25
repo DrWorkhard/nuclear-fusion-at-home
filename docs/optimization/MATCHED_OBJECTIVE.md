@@ -18,6 +18,8 @@ against finite differences. The default objective, its recorded bytes and select
 **Inputs.**
 - Recipe as #102 arm A: `--order 8 --margins halved --interior-weight 0.05`, 1800 s search and 900 s
   checks, from the length-headroom seed.
+- Rows naming another interior weight change only that; the 4-hour row uses a 14400 s search and
+  1800 s checks, run alone.
 - Target: selected401 via `--target-spec` on the regenerated Wout `3d5df9a4…` (B² within 1.5e-11
   of the registered value).
 - Each pair runs in parallel on one machine, one thread per fit.
@@ -54,6 +56,6 @@ at coil spacing 0.0599 m against 0.06 m (unresolved) at interior weight 0.05; th
 - A circular-seed multistart with the default objective was worse (0.819 at best).
 
 **Limits.** This uses the regenerated Wout, not the archived one, so the target identity differs from
-the leaderboard's. There are two runs per arm on one machine. The entries need a maintainer run on the
+the leaderboard's. Each arm has one or two runs, all on one machine. The entries need a maintainer run on the
 registered selected401 before ranking. Fitting the scored quantity sharpens the trade against the other
 v2 limits; it is not a physics gain.
