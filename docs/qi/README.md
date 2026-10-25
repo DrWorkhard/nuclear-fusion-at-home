@@ -24,3 +24,6 @@ remaining qualification work explicit.
 
 [Radial sensitivity](PLASMA_RADIAL_SENSITIVITY.md): ns99/ns199 changes QI by
 1.1–1.5%, less for the other three metrics, with no benchmark-bound crossing.
+
+The [scorecard](PLASMA_SCORECARD.md#recorded-boundary-attempt-25-october-2026) also
+records the rejected first design and N21’s frozen-model VMEC nonconvergence.
