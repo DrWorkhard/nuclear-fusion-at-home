@@ -36,7 +36,7 @@ preregistration and amendment, scripts, per-fit results, SHA-256.
 | log10 QI | +0.11 |
 | Maximum elongation | +0.09 |
 
-- Boundary means run from 0.0045–0.0067 at L∇B 2–3.5 down to 0.0016–0.0031 at L∇B 6–7.4.
+- Boundary means run from 0.0045–0.0067 at L∇B 2–3.5 down to 0.0016–0.0038 at L∇B 6–7.4.
 - L∇B also ranks the boundary maximum (ρ = −0.78) and the interior RMS (−0.61).
 - The result is robust:
   - without selected401, on which the fitter was developed, ρ = −0.82;
