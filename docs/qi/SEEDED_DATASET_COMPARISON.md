@@ -115,3 +115,6 @@ identifies their producer. A failed prospective comparison can be reported witho
 attributing a scorer defect or declaring a plasma physically infeasible. This
 does not qualify the scorer globally, freeze #113 requirements, change acceptance
 gates, or repeat the completed registered controls, radial study, closed pilot or N21.
+
+The [first execution attempt](SEEDED_DATASET_ATTEMPT.md) was incomplete after a
+geometry failure. This prospective protocol and its tolerances remain unchanged.
