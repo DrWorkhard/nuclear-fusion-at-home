@@ -55,14 +55,23 @@ Normalize R00 to one with the existing scorer; preserve
 `m*theta-(n*nfp)*phi`, without a theta flip. Historical normalization is unknown.
 
 Run `scripts/compare_seeded_constellaration.py --help` for byte-bound protocol and
-report inputs. The comparator rechecks identity, finite metrics, runtime, settings,
+report inputs on POSIX systems (macOS/Linux). The comparator imports the scorer,
+whose `resource` import is unavailable on Windows; Windows public CI does not
+exercise this command. The comparator rechecks identity, finite metrics, runtime, settings,
 VMEC convergence and the scorer's unchanged `1e-10*R00` geometry gate. It does not
 run a model. The scorer's settings field is a repr fallback; the final native
 launcher must separately capture and verify every effective VMEC settings object
-against the JSON. Official benchmark outputs remain unchanged diagnostics.
+against the JSON. The model-free
+[`capture_row_settings`](../../scripts/capture_seeded_vmec_settings.py) helper
+requires exactly one settings factory call per row, preserves the actual settings,
+and compares every field and JSON type before returning the settings to the solver.
+It restores the original factory on success or failure. Synthetic tests cover all
+three rows; the final launcher must still integrate and bind this helper. Official
+benchmark outputs remain unchanged diagnostics.
 
 Before execution, publish the final hash-bound launcher/task and full runtime/input
-manifest. Require a new explicit current peer window, controller-owned single-worker
+manifest. The comparison freeze and PR review do not grant native execution.
+Require an explicit current task-specific peer window, controller-owned single-worker
 lock, empty process inventory refreshed within 60 seconds, and no STOP. Expired
 grants and a general “lane free” note are insufficient. Limits: 1800 seconds total,
 child at most 1740 seconds, one thread, 100 MiB output, 3 GiB initial/2 GiB live disk
@@ -70,6 +79,15 @@ reserve. Check both UTC and monotonic elapsed time, reject late completion and s
 at the confirmed resource-window end. Preserve all partial outputs.
 
 ## Interpretation
+
+The #112 decision is whether the three seeded controls can be recorded as agreeing
+with stored labels under this precise compatibility criterion. Agreement fills that
+limited scorecard item. A mismatch records failed prospective compatibility and
+leaves stored-label reproduction unqualified; a software or solver failure records
+an incomplete control instead. Neither outcome blocks descriptive plasma scoring
+or supplies a reason to optimize, retry, change tolerance or declare infeasibility.
+The strict criterion may fail across runtime stacks; this experiment does not
+estimate cross-platform error or choose a more permissive tolerance afterward.
 
 Agreement supports only these rows under this criterion. Historical producer
 source, environment and fidelity remain unknown, so neither agreement nor mismatch
