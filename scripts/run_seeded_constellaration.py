@@ -71,7 +71,7 @@ def run_rows(scorer, settings_module, protocol_path, inputs, output, *, check_re
             require(result["status"] in ("agree", "mismatch"),
                     "invalid scorer report: " + result.get("reason", "unknown"))
             record["completed"] = True
-        except Exception:
+        except (Exception, SystemExit):
             failed_row = row["global_row"]
             record["error"] = traceback.format_exc()
         finally:

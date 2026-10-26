@@ -185,6 +185,32 @@ class SeededWorkflowTests(unittest.TestCase):
             self.assertEqual([row["status"] for row in result["rows"]],
                              ["invalid", "not-run", "not-run"])
 
+    def test_system_exit_before_and_after_report_preserves_failure(self):
+        original = sys.argv
+        for after_report in (False, True):
+            with self.subTest(after_report=after_report):
+                self.calls.clear()
+                self.output = self.root / f"system-exit-{after_report}"
+
+                def exit_scorer():
+                    if after_report:
+                        self.score()
+                    raise SystemExit(2)
+
+                self.scorer.main = exit_scorer
+                result = self.run_rows()
+                self.assertIs(sys.argv, original)
+                self.assertFalse(result["completed"])
+                self.assertFalse(result["all_agree"])
+                self.assertEqual([row["status"] for row in result["rows"]],
+                                 ["invalid", "not-run", "not-run"])
+                self.assertEqual(len(result["execution"]), 1)
+                self.assertIn("SystemExit: 2", result["execution"][0]["error"])
+                self.assertEqual(len(result["report_sha256"]), int(after_report))
+                self.assertEqual(len(list(self.output.glob("*-execution.json"))), 1)
+                self.assertEqual(json.loads((self.output / "comparison.json").read_text()),
+                                 json.loads(json.dumps(result)))
+
     def test_input_changed_between_rows_rejected_before_second_call(self):
         def check():
             self.checks += 1
