@@ -80,9 +80,10 @@ outputs remain unchanged diagnostics.
 The workspace-specific launcher is local tooling, outside the public scripts and
 core CI. Its [pre-run source and input/support snapshot](https://github.com/patrickmahlstein/nuclear-fusion-at-home/tree/4df7fde2c2c2a1641cb6f4b6957c50fa25f67b4e/evidence/seeded-native-protocol-v1)
 preserves the reviewed runtime/input manifest and exact support bytes, with their
-provenance and limitations. The corrected annotated tag is
+provenance and limitations. The corrected annotated tag in the contributor’s fork is
 `evidence-seeded-native-protocol-v2-2026-10-26`; the earlier v1 tag is preserved and
-its packaging error documented there. These are reproduction artifacts, not a
+its packaging error documented there. Neither tag is in the upstream repository.
+These are reproduction artifacts, not a
 requirement to use the contributor's private agent coordination. Other launchers
 may use the workflow's documented `check_ready` callback and supply their own
 resource supervisor. No native result or execution permission follows from this
