@@ -52,8 +52,8 @@ s = 0.75 (q 0.1/0.3) by ×1.6–2.3, where the label drift is largest.
 - At the registered higher resolution (32 α lines), the differences are −5.02% with target launches and
   −0.27% with matched launches (preregistered rule: matched ≤ ⅓ of target-launch; ratio 0.05).
 - A Poincaré section of the selected fit across s 0.44–0.58 shows nested surfaces with monotone labels and
-  no island chain. The s = 0.5 phase failure is most likely a construction limit at the sharp tips of the
-  thin crescent section.
+  no island chain. N34 read the s = 0.5 phase failure as a construction limit at the sharp tips of the thin
+  crescent section; N46 below revisits that reading.
 
 **The s = 0.5 phase failure** ([evidence](https://github.com/patrickmahlstein/nuclear-fusion-at-home/tree/6c12441ef54069db7fa892ce013d9d4d6fce6361/evidence/issue48-phase-n46);
 N46, preregistered; verdict **unresolved**).
@@ -71,6 +71,6 @@ N46, preregistered; verdict **unresolved**).
 
 **Conclusion.** On realized surfaces, the selected fit's 5% narrow-domain advantage almost disappears. #35's
 coil-field difference therefore came mostly from where the lines were launched, and is not evidence of
-transfer. This does not show that transfer fails. Confirming it needs the original selected401 Wout; the s = 0.5 phase spread most likely comes from the
-6/11 rational surface (above). The joint-versus-fixed comparison (#40) should use matched labels and
-report this qualification.
+transfer. This does not show that transfer fails. Confirming it needs the original selected401 Wout. The
+s = 0.5 phase spread more plausibly comes from the 6/11 rational surface than from the construction (N46,
+unresolved). The joint-versus-fixed comparison (#40) should use matched labels and report this qualification.
