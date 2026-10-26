@@ -20,3 +20,4 @@
 
 # Prospective dataset comparison protocol is bound by its exact file bytes.
 /docs/qi/seeded-comparison-v1.json text eol=lf
+/docs/qi/seeded-native-v1.json text eol=lf
