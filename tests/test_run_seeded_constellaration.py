@@ -192,7 +192,7 @@ class SeededWorkflowTests(unittest.TestCase):
                 self.calls.clear()
                 self.output = self.root / f"system-exit-{after_report}"
 
-                def exit_scorer():
+                def exit_scorer(after_report=after_report):
                     if after_report:
                         self.score()
                     raise SystemExit(2)
