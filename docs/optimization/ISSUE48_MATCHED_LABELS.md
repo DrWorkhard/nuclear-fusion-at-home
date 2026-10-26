@@ -52,11 +52,25 @@ s = 0.75 (q 0.1/0.3) by ×1.6–2.3, where the label drift is largest.
 - At the registered higher resolution (32 α lines), the differences are −5.02% with target launches and
   −0.27% with matched launches (preregistered rule: matched ≤ ⅓ of target-launch; ratio 0.05).
 - A Poincaré section of the selected fit across s 0.44–0.58 shows nested surfaces with monotone labels and
-  no island chain. The s = 0.5 phase failure is most likely a construction limit at the sharp tips of the
-  thin crescent section.
+  no island chain. N34 read the s = 0.5 phase failure as a construction limit at the sharp tips of the thin
+  crescent section; N46 below revisits that reading.
+
+**The s = 0.5 phase failure** ([evidence](https://github.com/patrickmahlstein/nuclear-fusion-at-home/tree/6c12441ef54069db7fa892ce013d9d4d6fce6361/evidence/issue48-phase-n46);
+N46, preregistered; verdict **unresolved**).
+- The four matched s = 0.5 lines were retraced for 240 transits. The N28 phase metric falls from 1.70 mm (60
+  transits, reproduced) to 0.75 mm. A sparse 60-transit sample therefore inflates it.
+- The preregistered construction-free metric was invalid. It ordered crossings by a rotation number from the
+  unwrapped angle, but ι per turn exceeds ½, so that estimate aliases; it fails even on the s = 0.75 control.
+- A post-hoc fix (minimum-perimeter ordering) passes the s = 0.75 control (0.05 mm). At s = 0.5 it gives
+  0.4–2.8 mm, asymmetric between phases.
+- The s = 0.5 lines rotate 0.4542 per transit, 3e-4 from 5/11, so |ι| ≈ 6/11. The target reaches ι = −6/11 at
+  s = 0.495. The cell therefore sits on the 6/11 rational surface (m = 11, n = 6 = 3·nfp, allowed by the
+  symmetry). Its phase spread is more plausibly resonant, for example an island chain below N34's visual
+  resolution, than a construction effect. No island width was measured.
+- For #40: avoid matched cells at low-order rational surfaces, or qualify them with a resonance-aware method.
 
 **Conclusion.** On realized surfaces, the selected fit's 5% narrow-domain advantage almost disappears. #35's
 coil-field difference therefore came mostly from where the lines were launched, and is not evidence of
-transfer. This does not show that transfer fails. Confirming it needs the original selected401 Wout and an
-explanation of its s = 0.5 phase spread. The joint-versus-fixed comparison (#40) should use matched labels and
-report this qualification.
+transfer. This does not show that transfer fails. Confirming it needs the original selected401 Wout. The
+s = 0.5 phase spread more plausibly comes from the 6/11 rational surface than from the construction (N46,
+unresolved). The joint-versus-fixed comparison (#40) should use matched labels and report this qualification.
