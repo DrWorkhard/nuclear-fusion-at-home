@@ -27,3 +27,7 @@ remaining qualification work explicit.
 
 The [scorecard](PLASMA_SCORECARD.md#recorded-boundary-attempt-25-october-2026) also
 records the rejected first design and N21’s frozen-model VMEC nonconvergence.
+
+[Seeded dataset comparison protocol](SEEDED_DATASET_COMPARISON.md): prospective
+twelve-metric compatibility rule for the three fixed #112 rows; native execution
+still requires a frozen launcher and a current resource handoff.

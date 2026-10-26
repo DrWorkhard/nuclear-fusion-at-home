@@ -17,3 +17,6 @@
 /submissions/length-headroom-six-coil/candidate.json text eol=lf
 /submissions/interior-pass-headroom-continuation/candidate.json text eol=lf
 /submissions/interior-term-halved-margin/candidate.json text eol=lf
+
+# Prospective dataset comparison protocol is bound by its exact file bytes.
+/docs/qi/seeded-comparison-v1.json text eol=lf
