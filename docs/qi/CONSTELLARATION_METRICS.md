@@ -76,6 +76,13 @@ checks must also pass. This is floating-point validation, not interval arithmeti
 or a physical requirement. Nonfinite coordinates and failed checks leave an
 incomplete record and a nonzero CLI status; metrics alone do not establish success.
 
+Once the forward model returns a Wout, the script attempts to save it even if
+later geometry validation fails. A save failure is recorded separately as
+`wout_save_error`; it does not replace the original rejection or change completion.
+Retained Wouts from incomplete records are diagnostic artifacts, not qualified
+controls. This prospective retention change neither recovers missing historical
+Wouts nor authorizes rerunning failed controls.
+
 This implements software intake only. The historical results above and below are
 unchanged. Reproducing #76, seeded dataset controls, resolution sensitivity and
 the complete scorecard remain separate qualification work under

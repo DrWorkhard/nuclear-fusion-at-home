@@ -272,6 +272,7 @@ def check_geometry(conversion, geometry):
 
 def evaluate(target_id, output, confirm=False, source=None):
     record = dict(completed=False)
+    wout = None
     try:
         import numpy as np
         from constellaration import forward_model
@@ -308,14 +309,16 @@ def evaluate(target_id, output, confirm=False, source=None):
             started = time.monotonic()
             record["evaluate_calls"] = leaderboard_path(output/f"boundary_{target_id}.json")
             record["evaluate_calls_seconds"] = time.monotonic() - started
-        try:
-            wout.save(str(output/f"wout_{target_id}.nc"))
-        except Exception as error:  # retention is optional, the metrics are not
-            record["wout_save_error"] = repr(error)
         json.dumps(record, allow_nan=False)
         record["completed"] = True
     except Exception:
         record["error"] = traceback.format_exc()
+    finally:
+        if wout is not None:
+            try:
+                wout.save(str(output/f"wout_{target_id}.nc"))
+            except Exception as error:  # retention must not erase a validation failure
+                record["wout_save_error"] = repr(error)
     return record
 
 
