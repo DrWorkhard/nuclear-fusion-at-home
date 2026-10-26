@@ -77,23 +77,16 @@ Synthetic scorer tests exercise this integration, not native execution. The fina
 launcher must bind it and supply the live checks and supervisor. Official benchmark
 outputs remain unchanged diagnostics.
 
-The final task-specific [`launcher`](../../scripts/launch_seeded_constellaration.py)
-uses the [native manifest](seeded-native-v1.json), with alignment-relative paths
-rather than personal paths. It reuses the unchanged recorded-v2 dual-clock
-supervisor and radial resource guard. The manifest binds those support files,
-the workflow/settings/comparison code, original scorer, all nine input/label files,
-thirteen distribution records, fifty ConStellaration sources, interpreter and every
-installed native extension. This coverage is not a complete environment image.
-`--manifest FILE --manifest-sha256 SHA --alignment-root ROOT` checks readiness only;
-`--execute` additionally starts the supervised child. A public support/input snapshot
-must accompany this freeze so the ignored local files are explicitly obtainable.
-Before imports and each row, require the current CAL-REQ-008 peer grant, an owned
-manifest-specific claim, fresh controller inventory and unchanged identities.
-Inventory must be empty before launch; during execution it may contain only the
-owned native child's PID. No peer process is inspected or controlled. Parent and
-child reject late completion. A mismatch can complete the workflow while keeping
-`all_agree=false`; execution failure cannot. Synthetic integration and harmless
-supervisor-child tests do not establish native startup or numerical agreement.
+The workspace-specific launcher is local tooling, outside the public scripts and
+core CI. Its [pre-run source and input/support snapshot](https://github.com/patrickmahlstein/nuclear-fusion-at-home/tree/4df7fde2c2c2a1641cb6f4b6957c50fa25f67b4e/evidence/seeded-native-protocol-v1)
+preserves the reviewed runtime/input manifest and exact support bytes, with their
+provenance and limitations. The corrected annotated tag is
+`evidence-seeded-native-protocol-v2-2026-10-26`; the earlier v1 tag is preserved and
+its packaging error documented there. These are reproduction artifacts, not a
+requirement to use the contributor's private agent coordination. Other launchers
+may use the workflow's documented `check_ready` callback and supply their own
+resource supervisor. No native result or execution permission follows from this
+snapshot; the local launcher's relocation requires a new path-binding freeze.
 
 Before execution, publish the final hash-bound launcher/task and full runtime/input
 manifest. The comparison freeze and PR review do not grant native execution.
