@@ -66,7 +66,15 @@ against the JSON. The model-free
 requires exactly one settings factory call per row, preserves the actual settings,
 and compares every field and JSON type before returning the settings to the solver.
 It restores the original factory on success or failure. Synthetic tests cover all
-three rows; the final launcher must still integrate and bind this helper. Official
+three rows. The model-free [`run_rows`](../../scripts/run_seeded_constellaration.py)
+workflow integrates that helper with serial scorer calls and the unchanged
+comparator. It binds all inputs before starting, restores the scorer arguments,
+retains partial reports and all three row statuses, stops on execution/validation
+failure, and continues after a valid numerical mismatch. Its required live-check
+callback runs before and after each call; a separate supervisor must enforce
+limits during blocking calls. It has no executable CLI or resource authorization.
+Synthetic scorer tests exercise this integration, not native execution. The final
+launcher must still bind it and supply the live checks and supervisor. Official
 benchmark outputs remain unchanged diagnostics.
 
 Before execution, publish the final hash-bound launcher/task and full runtime/input
