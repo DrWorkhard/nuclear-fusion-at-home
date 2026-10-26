@@ -11,4 +11,6 @@ uv run --locked --extra dev ruff check .
 uv run --locked --extra dev python -I -S scripts/test_public.py
 uv run --locked --extra dev python -I -S scripts/check_docs.py
 uv run --locked --extra dev pytest -q tests/test_documentation.py tests/test_release_maintenance.py \
-  tests/test_coil_trajectory.py tests/test_constellaration_metrics.py
+  tests/test_coil_trajectory.py tests/test_constellaration_metrics.py \
+  tests/test_compare_seeded_constellaration.py tests/test_capture_seeded_vmec_settings.py \
+  tests/test_run_seeded_constellaration.py

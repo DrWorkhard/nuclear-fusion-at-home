@@ -1,0 +1,210 @@
+{
+  "schema": "c18-seeded-comparison-v1",
+  "status": "prospective; no seeded native results",
+  "dataset": {
+    "repository": "proxima-fusion/constellaration",
+    "revision": "8da71572eb63ce93e77ce89bec0d7c30b7eba89e",
+    "split": "default/train",
+    "seed": "C18-112-dataset-v1-20261016",
+    "ordering": "zero-based physical rows, lexical shard order",
+    "selection": "lowest three SHA256(ASCII(seed + \":\" + decimal(i))) priorities over range(182222), ties by row; no replacement"
+  },
+  "rows": [
+    {
+      "global_row": 146128,
+      "target_id": "dataset-146128",
+      "input_sha256": "b7b0b8574ad1fa373b5f847052e621857488852de08bf0776dc3f5100847afc7",
+      "boundary_sha256": "36035f75ddcabe51261472616d2580e802d98d9ea027a7443f34a0fb00b243d3",
+      "label_sha256": "3fc595024f189542cf1065571ae4ba239ca44de1285659c3e2ca0a1b36594d81",
+      "plasma_config_id": "DF3XRJuxoFstg4CvniQQoP9",
+      "metrics_id": "DBcZ8ftc5jWEDAQAnMZ48E5",
+      "R00": 0.998755402197538,
+      "stored_metrics": {
+        "qi": 0.08464970881962719,
+        "vacuum_well": -0.18420436505156004,
+        "aspect_ratio": 11.003785904647755,
+        "max_elongation": 6.775928229902191,
+        "average_triangularity": 0.16929737985866847,
+        "axis_magnetic_mirror_ratio": 0.23295356326824673,
+        "edge_magnetic_mirror_ratio": 0.40644754617483503,
+        "aspect_ratio_over_edge_rotational_transform": 15.658670976675431,
+        "flux_compression_in_regions_of_bad_curvature": 1.1764961354073389,
+        "axis_rotational_transform_over_n_field_periods": 0.15584074785921487,
+        "edge_rotational_transform_over_n_field_periods": 0.23424265318213747,
+        "minimum_normalized_magnetic_gradient_scale_length": 4.231157368286894
+      },
+      "conversion": {
+        "mpol": 5,
+        "ntor": 4,
+        "n_field_periods": 3,
+        "scale": 1.001246148756466
+      }
+    },
+    {
+      "global_row": 141151,
+      "target_id": "dataset-141151",
+      "input_sha256": "340181fb15b10ff435776fa763f9ff466bb5880a2103a239ac30a62313945e6b",
+      "boundary_sha256": "a7ae8a4a216be61eedfeb3e47055ddba13c66db043f24f3a7e03af81a0bd40d7",
+      "label_sha256": "7f2975aa1cabca7c2bbb9a08a5946d8009a510938451b217900db521dcba1da2",
+      "plasma_config_id": "DNzggV6gm5WANv4kYqxFkbA",
+      "metrics_id": "D6mZsNyFNYgvZvajnLNFZqe",
+      "R00": 0.9651277335191317,
+      "stored_metrics": {
+        "qi": 0.0608979306153103,
+        "vacuum_well": -0.6791608046981096,
+        "aspect_ratio": 4.076133827388293,
+        "max_elongation": 2.0103904842877567,
+        "average_triangularity": 0.004975124378108679,
+        "axis_magnetic_mirror_ratio": 0.18242239638698374,
+        "edge_magnetic_mirror_ratio": 0.509445262232233,
+        "aspect_ratio_over_edge_rotational_transform": 98.06371295778582,
+        "flux_compression_in_regions_of_bad_curvature": 0.5892745112513053,
+        "axis_rotational_transform_over_n_field_periods": 0.042706476141730045,
+        "edge_rotational_transform_over_n_field_periods": 0.01385539293602917,
+        "minimum_normalized_magnetic_gradient_scale_length": 3.2011226117653004
+      },
+      "conversion": {
+        "mpol": 5,
+        "ntor": 4,
+        "n_field_periods": 3,
+        "scale": 1.036132281012912
+      }
+    },
+    {
+      "global_row": 116646,
+      "target_id": "dataset-116646",
+      "input_sha256": "568a1bf99c14e3b74510bcae3a9d4d9f0c55acec9e48bb80a0fb7e15b0a12924",
+      "boundary_sha256": "e43f76a6c8c7fccad8fdf6266975de157f4dadcf6d2ed08d9e90ba89b2ba70f3",
+      "label_sha256": "011170397a04f61fd8375ceee3ba6571ad06898283e1998daa2cfb8d7a757720",
+      "plasma_config_id": "DH7Lh39RqypRyHRa62SnipY",
+      "metrics_id": "DRXUHVrZMD6gSx6dWJJ3iiG",
+      "R00": 1.0,
+      "stored_metrics": {
+        "qi": 0.07092842718270906,
+        "vacuum_well": -0.8600239058728298,
+        "aspect_ratio": 4.098655522391731,
+        "max_elongation": 3.5444751770542138,
+        "average_triangularity": 0.004975124378108933,
+        "axis_magnetic_mirror_ratio": 0.24037362100484633,
+        "edge_magnetic_mirror_ratio": 0.6293762074350576,
+        "aspect_ratio_over_edge_rotational_transform": 2.3703285401416267,
+        "flux_compression_in_regions_of_bad_curvature": 0.924446754874976,
+        "axis_rotational_transform_over_n_field_periods": 0.18428549329860702,
+        "edge_rotational_transform_over_n_field_periods": 0.5763836043514369,
+        "minimum_normalized_magnetic_gradient_scale_length": 2.1992419347393106
+      },
+      "conversion": {
+        "mpol": 5,
+        "ntor": 4,
+        "n_field_periods": 3,
+        "scale": 1.0
+      }
+    }
+  ],
+  "comparison": {
+    "absolute_tolerance": 1e-08,
+    "relative_tolerance": 1e-06,
+    "rule": "abs(computed-stored) <= absolute_tolerance + relative_tolerance*abs(stored)",
+    "rationale": "Prospective high-precision compatibility criterion: one part per million away from zero, absolute floor 1e-8 near zero. Chosen without any new seeded forward-model results; not an error estimate or physical acceptance tolerance.",
+    "metrics": [
+      "aspect_ratio",
+      "aspect_ratio_over_edge_rotational_transform",
+      "average_triangularity",
+      "axis_magnetic_mirror_ratio",
+      "axis_rotational_transform_over_n_field_periods",
+      "edge_magnetic_mirror_ratio",
+      "edge_rotational_transform_over_n_field_periods",
+      "flux_compression_in_regions_of_bad_curvature",
+      "max_elongation",
+      "minimum_normalized_magnetic_gradient_scale_length",
+      "qi",
+      "vacuum_well"
+    ],
+    "aggregation": "all 12 metrics for all 3 fixed rows must pass; missing, invalid, failed or unstarted rows prevent an overall pass; no averaging"
+  },
+  "scorer": {
+    "commit": "32fe8ecd198a8615549b1086bca37682290f4e57",
+    "sha256": "1b394999a89891c84329e406ed8a80a3849c56151bb922ec291a86d73cf749d6",
+    "normalization": "R00 -> 1; cos/sin(m*theta-(n*nfp)*phi), no theta flip",
+    "geometry_relative_tolerance": 1e-10
+  },
+  "environment": {
+    "python": "3.12.15 (main, Oct 13 2026, 17:19:37) [Clang 21.1.8 ]",
+    "platform": "macOS-15.7.9-x86_64-i386-64bit",
+    "machine": "x86_64",
+    "versions": {
+      "constellaration": "0.2.6",
+      "vmecpp": "0.4.11",
+      "booz-xform": "0.1.0",
+      "simsopt": "1.8.1",
+      "desc-opt": "0.15.0",
+      "jax": "0.4.38",
+      "jaxlib": "0.4.38",
+      "numpy": "2.2.6",
+      "scipy": "1.15.3",
+      "pymoo": "0.6.1.5",
+      "netCDF4": "1.7.2",
+      "pydantic": "2.14.1",
+      "pydantic-core": "2.50.1"
+    }
+  },
+  "report_versions": {
+    "constellaration": "0.2.6",
+    "vmecpp": "0.4.11",
+    "booz-xform": "0.1.0",
+    "simsopt": "1.8.1",
+    "desc-opt": "0.15.0",
+    "jax": "0.4.38",
+    "jaxlib": "0.4.38",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "pymoo": "0.6.1.5",
+    "netCDF4": "1.7.2"
+  },
+  "settings": "ConstellarationSettings(vmec_preset_settings=VmecPresetSettings(fidelity='high_fidelity', verbose=False, multithreaded=False), boozer_preset_settings=BoozerPresetSettings(normalized_toroidal_flux=[1.0], verbose=False), qi_settings=QISettings(n_field_lines=75, n_toroidal_points=601, n_field_contours=401, n_output_toroidal_points=2000), turbulent_settings=IdealMHDTurbulentTransportMetricsSettings(normalized_toroidal_flux=array([0.49]), n_field_lines=101, n_toroidal_points=64))",
+  "vmec": {
+    "ns": 99,
+    "mpol": 10,
+    "ntor": 10,
+    "ier_flag": 0
+  },
+  "limits": {
+    "global_seconds": 1800,
+    "child_seconds": 1740,
+    "threads": 1,
+    "output_bytes": 104857600,
+    "start_disk_reserve_bytes": 3221225472,
+    "runtime_disk_reserve_bytes": 2147483648,
+    "deadline": "max(monotonic elapsed, UTC elapsed); reject late completion; stop at current resource-window end"
+  },
+  "interpretation": "A pass is numerical agreement for these rows under this criterion, not historical producer identification or scorer-wide qualification. A mismatch is failed prospective compatibility, not proof of scorer defect or physical infeasibility. Historical producer source/environment/fidelity remain unknown.",
+  "native_gate": "Not authorized by this comparison file. Final hash-bound native launcher/task and public runtime/input/source freeze, new current explicit Claude window, owned controller lock, <=60-second fresh empty inventory and no STOP required. No repeats, fallback tolerances, replacement rows or environment changes.",
+  "effective_vmec_settings": {
+    "n_poloidal_modes": 10,
+    "max_toroidal_mode": 10,
+    "n_poloidal_grid_points": 26,
+    "n_toroidal_grid_points": 24,
+    "multigrid_steps": [
+      {
+        "n_flux_surfaces": 25,
+        "force_tolerance": 1e-17,
+        "n_max_iterations": 2000
+      },
+      {
+        "n_flux_surfaces": 51,
+        "force_tolerance": 1e-17,
+        "n_max_iterations": 2000
+      },
+      {
+        "n_flux_surfaces": 99,
+        "force_tolerance": 1e-15,
+        "n_max_iterations": 40000
+      }
+    ],
+    "time_step": 0.5,
+    "full_vacuum_field_update_every": 1,
+    "verbose": false,
+    "max_threads": 1
+  },
+  "settings_record_policy": "Scorer settings are its frozen repr fallback, not complete effective settings. Native launcher must independently capture and require effective_vmec_settings for every call; this comparator alone is not an execution/settings verifier."
+}
